@@ -2,9 +2,9 @@
 <html lang="en" ng-app="giddhWebsite">
 <head>
 
-  <meta name="description" content="Forget about the painful and tedious ways to create custom invoice. Giddh offers the best accounting software to create your own invoice online easily for small businesses. You can create invoice bill online anytime and anywhere. 24/7 Customer Support! Start your free trial today!"/>
+  <meta name="description" content="Searching for the best Accounting invoice software that can seamlessly prepare invoices and fulfil other needs of your business! Look no further than Giddh.com, the providers of best invoice software for Small business in the industry! Generate, share, email invoices and get paid via this amazing Easy invoice software."/>
  
-  <title>Create Invoice Online | Create Custom Billing Invoice Software - Giddh.com</title>
+  <title>Best Accounting Invoice Software | Sales Invoice Software Online – Giddh.com</title>
 
   <?php include 'head.php';?>
 
