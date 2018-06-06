@@ -25,11 +25,11 @@
             </p>
           <ul class="app_download">
             <h3>Desktop App</h3>
-            <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg" target="_Blank" title="mac os"><i class="fab fa-apple"></i></a></li>
+            <li><a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app-{{apkVersion}}.dmg" target="_Blank" title="mac os"><i class="fab fa-apple"></i></a></li>
 
-            <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe" target="_Blank" title="windows"><i class="fab fa-windows"></i></a></li>
+            <li><a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app+Setup+{{apkVersion}}.exe" target="_Blank" title="windows"><i class="fab fa-windows"></i></a></li>
 
-            <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz" target="_Blank" title="linux"><i class="fab fa-linux"></i></a></li>
+<!--             <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz" target="_Blank" title="linux"><i class="fab fa-linux"></i></a></li> -->
           </ul>
             <div id="farzi" class="visible-md-block visible-lg-block"></div>
           </div>
