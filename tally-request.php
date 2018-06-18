@@ -16,10 +16,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     fclose($fh);
   }
 
+  $urlx = $_SERVER['REQUEST_URI'];
+  $rx = "(company/(.+)/import)Ui" ;
+  preg_match($rx, $urlx, $data);
+echo $data[1];
 
-$url = "http://api.giddh.com/company/".$_SERVER['HTTP_COMPANYID']."/import-master-data";
-
-
+$url = "http://api.giddh.com/company/".$data[1]."/import-master-data";
+echo $url;
+    
+   
 $ch = curl_init();
   curl_setopt_array($ch, array(
       CURLOPT_RETURNTRANSFER => true,
