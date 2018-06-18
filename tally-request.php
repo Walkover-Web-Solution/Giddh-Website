@@ -25,6 +25,7 @@ $ch = curl_init();
       CURLOPT_RETURNTRANSFER => true,
       CURLOPT_URL => $url,
       CURLOPT_POST => 1,
+      CURLOPT_CUSTOMREQUEST=>'POST',
       CURLOPT_HTTPHEADER => array('Content-Type:text/plain','Auth-Key:'.$_SERVER['HTTP_AUTH_KEY']),
       CURLOPT_POSTFIELDS=>$body
   ));
