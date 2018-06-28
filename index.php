@@ -5,7 +5,7 @@
   <meta name="keywords" content="bookkeeping software, Accounting softwares, online accounting software, bookkeeping software for small business"/>
   
   <title>Best Business Accounting Software on Cloud | Bookkeeping Software, Online & Easy to Use – Giddh.com</title>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <?php include 'head.php';?>
 
 </head>
@@ -24,59 +24,65 @@
   <!-- end navigation -->
 
   <section id="videoBg" class="pr black-back">
-    <div class="scroll-btn">
+    <!-- <div class="scroll-btn">
       <a href="#feature" class="page-scroll"></a>
-    </div>
-    <div class="intro home">
-
-      <vid-bg resources="vm.videoObj.resources" poster="vm.videoObj.poster" full-screen="vm.videoObj.fullScreen" muted="vm.videoObj.muted" z-index="vm.videoObj.zIndex" play-info="vm.videoObj.playInfo" pause-play="vm.videoObj.pausePlay" class="visible-md-block visible-lg-block"></vid-bg>
-      <!-- hidden-md hidden-xs hidden-sm -->
-
-      <!-- banner content -->
-      <div class="intro-body">
-        <div class="container adjust-width">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="pr clearfix">
-                <div class="brand-wrap">
-                  <div class="brand-heading arvo">
-                    <div class="pr">
-                      <label>An</label><h1> accounting software</h1> <label> that meets your cash flow,  invoicing and basic business needs.</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <a href="/app" class="btn btn-primary  btn-lg">Start Today - it's free!</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    </div> -->
+    
+    <div class="intro home flex-box-banner slide_1">
+        <div class="banner_intro">
+              <p class="banner_sub_heading">The future one of Indian Accounting</p>
+              <h1 class="banner_heading">Take your<br> Tally books online</h1>
+              <p class="m-t-20">
+                <button class="btn btn-sync">Sync with Tally</button>
+                <a href="" class="talktosale"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+            </p>
+            <p class="banner_heading_secondry">Switch eventually or start a fresh book with <a>giddh</a></p>
         </div>
-      </div>
+        <div class="right-section">
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one">
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two">
+          <img src="../assets/images/slide-1.png" alt=""></div>
     </div>
+    <div class="intro home flex-box-banner slide_2">
+        <div class="banner_intro">
+              <p class="banner_sub_heading">The future two of Indian Accounting</p>
+              <h1 class="banner_heading">Take your<br> Tally books online</h1>
+              <p class="m-t-20">
+                <button class="btn btn-sync">Sync with Tally</button>
+                <a href="" class="talktosale"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+            </p>
+            <p class="banner_heading_secondry">Switch eventually or start a fresh book with <a>giddh</a></p>
+        </div>
+        <div><img src="../assets/images/slide-1.png" alt=""></div>
+    </div>
+    <div class="intro home flex-box-banner slide_3">
+        <div class="banner_intro">
+              <p class="banner_sub_heading">The future three of Indian Accounting</p>
+              <h1 class="banner_heading">Take your<br> Tally books online</h1>
+              <p class="m-t-20">
+                <button class="btn btn-sync">Sync with Tally</button>
+                <a href="" class="talktosale"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+            </p>
+            <p class="banner_heading_secondry">Switch eventually or start a fresh book with <a>giddh</a></p>
+        </div>
+        <div><img src="../assets/images/slide-1.png" alt=""></div>
+    </div>
+    <div class="intro home flex-box-banner slide_4">
+        <div class="banner_intro">
+              <p class="banner_sub_heading">The future four of Indian Accounting</p>
+              <h1 class="banner_heading">Take your<br> Tally books online</h1>
+              <p class="m-t-20">
+                <button class="btn btn-sync">Sync with Tally</button>
+                <a href="" class="talktosale"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+            </p>
+            <p class="banner_heading_secondry">Switch eventually or start a fresh book with <a>giddh</a></p>
+        </div>
+        <div><img src="../assets/images/slide-1.png" alt=""></div>
+    </div>
+   
+   
 
   </section> <!-- end of videoBg -->
-
-
-<!--   <section class="pr black-back hide-sm">
-    <div class="scroll-btn">
-      <a href="#feature" class="page-scroll"></a>
-    </div>
-    <div class="intro home">
-
-      <div class="col-xs-10 center-block">
-        <img src="assets/images/giddh_dashboard.png" class="img-responsive" alt="accounting" /> 
-      </div>
-
-      <div class="col-xs-10 center-block">
-        <img src="assets/images/tally.png" class="img-responsive" alt="accounting" />
-      </div>
-
-    </div>
-
-  </section> -->
-
-
   <section class="blueBg homeContent" id="feature">
     <div class="container adjust-width">
       <div class="row">
@@ -215,6 +221,7 @@ with its unmatched data encryption</h3>
   </section>
   <!-- end of page -->
   <?php include 'footScript.php';?>
-  <?php include 'footer.php';?>  
+  <?php include 'footer.php';?> 
+ 
 </body>
 </html>
