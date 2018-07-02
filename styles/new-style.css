@@ -592,10 +592,7 @@ body.light .navbar.transparent{
 /*affix navbar*/
 .navbar.affix, body.light .navbar.affix{
 	min-height: 60px;
-	background:#29293E !important;
-	-webkit-box-shadow: 0 2px 10px -4px;
-	-moz-box-shadow: 0 2px 10px -4px;
-	box-shadow: 0 2px 10px -4px;
+	background:#262639 !important;
 }
 
 .navbar.affix .navbar-brand{
@@ -674,9 +671,7 @@ body.light .navbar.transparent{
     background-color: transparent;
 }
 
-.navbar-custom .navbar-nav > li > a:after{
-    border-bottom: 1px solid #e34b26;
-}
+
 
 
 /*navigation dark theme*/
@@ -1760,6 +1755,29 @@ opacity: 0 !important;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;;
+}
+.slide{
+  display:none;
+  z-index: 1;
+  
+}
+
+.show{
+  display:flex !important;
+  z-index: 2;
+  opacity:1;
+}
+.usernavi li a.active:after{
+  position: absolute;
+    width: 100%;
+    background: #e34b26;
+    height: 2px;
+    content: "";
+    bottom: 27px;
+    left: 0;
+}
+.navbar-custom .navbar-nav > li > a.talktoexpert:hover:after{
+  background:transparent;
 }
 
 
@@ -3246,6 +3264,10 @@ margin-right:23px;
   }
 }
 @media only screen and (max-width:900px){
+  .rotate_wheel{
+    top: -25px !important;
+    left: 300px !important;
+  }
   .nav-tabs-footer{
     width:100%;
   }
@@ -3408,7 +3430,7 @@ margin-right:23px;
 }
 }
 #footer{
-  font-family: "Conv_CAMBRIAB";
+  font-family: 'CambriaRegular' !important;
 }
 
 .app-download h3{
@@ -3446,7 +3468,7 @@ margin-right:23px;
   .footer-contacts p{
     font-size:15px !important;
     color:#BFBFC4;
-    line-height: 25px !important;
+    line-height: 23px !important;
   }
   
 
@@ -3462,8 +3484,8 @@ margin-right:23px;
     right:5px;
   }
   p.allright{
-    color:#444455 !important;
-    font-size: 11px !important;
+    color:#5C5C6C !important;
+    font-size: 10px !important;
   }
   .m-l-10{
     margin-left:10px;
@@ -3659,10 +3681,11 @@ margin-right:23px;
     line-height:20px !important;
     margin-right:20px;
   }
+  
 
   @media only screen and (max-width:1000px){
     .flex-box-banner{
-      display: block;
+      display: block !important;
       padding-top:100px;
       text-align:center;
     }
@@ -3752,8 +3775,26 @@ margin-right:23px;
   font-size: 20px;
 }
 }
- 
- 
+
+
+.rotate_wheel{
+  position: absolute;
+  top: -36px;
+  left: 155px;
+  width: 70px;
+  height: 70px;
+  width:70px;
+  height:70px;
+}
+.img-res{
+  max-width:100%;
+}
+
+
+
+
+
+
   
   
 

@@ -12,7 +12,7 @@
 
           <a href="/" class="navbar-brand" ng-if="!showBlack">
             <img class="showWhite" src="/assets/images/new/giddh-logo-white.png" alt="Giddh - online accounting software" ng-if="!magicLinkPage">
-            <img src="/assets/images/new/giddh-logo.png" alt="Giddh - online accounting software" ng-class="{'showWhite':magicLinkPage, 'showBlack':!magicLinkPage}">
+            <img src="/assets/images/new/giddh-logo-white.png" alt="Giddh - online accounting software" ng-class="{'showWhite':magicLinkPage, 'showBlack':!magicLinkPage}">
           </a>
           <a href="/" class="navbar-brand" ng-if="showBlack">
             <img src="/assets/images/new/giddh-logo.png" alt="Giddh - online accounting software">
@@ -29,7 +29,7 @@
                   <a href="/" ng-class="{white:whiteLinks && !loginPage}">Home</a>
                 </li>
                 <li class="">
-                    <a href="#features" class="page-scroll" ng-class="{white:whiteLinks && !loginPage}">Features</a>
+                    <a href="/features.php" class="page-scroll" ng-class="{white:whiteLinks && !loginPage}">Features</a>
                 </li>
                 <li class="">
                   <a href="gst.php" class="page-scroll" ng-class="{white:whiteLinks && !loginPage}">GST</a>
@@ -83,5 +83,37 @@
         </div>
       </div>
   </div>
-  
 </nav>
+
+<script>
+jQuery(function ($) {
+    $(".usernavi li a")
+        .click(function(e) {
+            var link = $(this);
+            // refresh = false;
+            var item = link.parent("li");
+            
+            if (item.hasClass("active")) {
+                item.removeClass("active").children("a").removeClass("active");
+            } else {
+                item.addClass("active").children("a").addClass("active");
+            }
+
+            if (item.children("ul").length > 0) {
+                var href = link.attr("href");
+                link.attr("href", "#");
+                setTimeout(function () { 
+                    link.attr("href", href);
+                }, 300);
+                e.preventDefault();
+            }
+        })
+        .each(function() {
+            var link = $(this);
+            if (link.get(0).href === location.href) {
+                link.addClass("active").parents("li").addClass("active");
+                return false;
+            }
+        });
+});
+</script>
