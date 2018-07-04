@@ -559,8 +559,8 @@ a.anchBtn {
 .navbar .navbar-btn{
 	margin: 9px 0 0;
 	height: 34px;
-	line-height: 15px;
-	padding: 8px 15px 8px 15px;
+	line-height: 16px;
+	padding: 6px 15px 8px 15px;
 	font-size: 18px;
 }
 .navbar-dark{
@@ -669,6 +669,7 @@ body.light .navbar.transparent{
 }
 .navbar-custom .navbar-nav > li > a:active, .navbar-custom .navbar-nav > li > a:focus{
     background-color: transparent;
+    outline:none;
 }
 
 
@@ -1104,7 +1105,9 @@ body.light .navbar.transparent{
 .homeContent figure figcaption.right{text-align:right; padding-left:50px}
 .homeContent figure figcaption.left{text-align:left; padding-right:50px}
 .homeContent figure figcaption span{color:#fff}
-
+.blueBg {
+  background-color: #28283C;
+}
 figure h1{margin-bottom:5px;}
 .blueBg.homeContent.details{text-align:left; background:#28283C url('/assets/images/new/banner-grid-design.png') repeat top left}
 .blueBg.homeContent.details h2{font-size:46px}
@@ -1211,6 +1214,7 @@ figure h1{margin-bottom:5px;}
 .navbar-right{
   margin-right:0;
 }
+
 
 }
 
@@ -1825,7 +1829,10 @@ opacity: 0 !important;
 	.navbar-collapse.navbar-main-collapse{
     background-color: #fff;
     
-	}
+  }
+  .section-left h1{
+    margin-top:0;
+    }
 	
     .navbar .navbar-nav{
         padding: 0
@@ -2397,8 +2404,21 @@ body.unresponsive .container {
   color: #e34b26;
 }
 @media only screen and (max-width: 991px) {
+  .allmenu{
+    background: #191923;
+    width:100vw;
+  }
+  .navbar .navbar-nav {
+    /* background: #191923; */
+    position: relative;
+    top: 0;
+}
+.navbar-custom .navbar-nav > li > a{
+  margin-left:36px;
+}
   .navbar-header {
       float: none;
+      background: #262639;
   }
   .navbar-toggle {
       display: block;
@@ -2412,7 +2432,7 @@ body.unresponsive .container {
   }
   .navbar-nav {
       float: none!important;
-      margin: 7.5px -15px;
+      margin: 1px -15px;
   }
   .navbar-nav>li {
       float: none;
@@ -3018,7 +3038,7 @@ margin-top:70px;
   max-width:100%;
   text-align: justify;
 }
-.flex-box-banner{
+.flex-box-banner.slide.show{
   display: block;
   padding-top:100px;
   text-align:center;
@@ -3637,10 +3657,7 @@ margin-right:23px;
   font-family: 'CambriaRegular' !important;
   line-height:70px;
 }
-  .btn-sync{
-    background:#C9E6CA;
-    color:#125446;
-  }
+ 
   .glyphicon-earphone{
     position:relative;
     top:3px;
@@ -3655,7 +3672,7 @@ margin-right:23px;
     text-decoration: underline;
   }
   .navbar-right .btn{
-    margin-left:21px;
+    margin-left:36px;
   }
   .sky-one{
     width: 223px;
@@ -3681,10 +3698,22 @@ margin-right:23px;
     line-height:20px !important;
     margin-right:20px;
   }
-  
+ .intro .btn.btn-sync{
+    background:#C9E6CA;
+    color:#125446;
+    line-height:26px !important;
+}
+a:hover{
+  text-decoration:none;
+}
 
   @media only screen and (max-width:1000px){
-    .flex-box-banner{
+    .rotate_wheel {
+      position: absolute;
+      top: -26px;
+      left: 376px;
+    }
+    .flex-box-banner.slide.show{
       display: block !important;
       padding-top:100px;
       text-align:center;
@@ -3707,23 +3736,22 @@ margin-right:23px;
       color:#FFF;
       line-height: 20px;  
     }
+    .navbar-custom .navbar-nav > li > a:hover:after{
+        bottom:12px;
+    }
     .usernavi{
       display: block;
     }
     .allmenu{
       display: block;
       width: 100vw;
-    }
-    .navbar .navbar-nav{
-      background: #191923;
-      position: relative;
-      top:-7px;
-    }
-    .allmenu{
       height:100vh;
-      background: #191923;
-      width:100vw;
     }
+    .usernavi li a.active:after{
+      bottom:18px;
+    }
+   
+   
     .navbar .navbar-right{
       top:-16px;
       margin-right:0 !important;
@@ -3736,7 +3764,7 @@ margin-right:23px;
       text-align: left;
   }
   .navbar-right .btn{
-    margin-left:25px;   
+    margin-left:36px;   
   }
   .right-section{
     padding: 15px;

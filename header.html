@@ -1,4 +1,4 @@
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <nav role="navigation" class="navbar navbar-custom navbar-fixed-top" ng-class="{'transparent':!magicLinkPage, 'fixedHeader' : fixedHeader}">
   <div class="container-fluid">
     <div class="row">
@@ -40,51 +40,43 @@
                 <li class="">
                   <a href="about.php" ng-class="{white:whiteLinks && !loginPage}">About</a>
                 </li>
-              
               </ul>
-          <!-- <ul class="nav navbar-nav">
-            <li class="hidden active">
-              <a href="#page-top"></a>
-            </li>
-            <li>
-              <a href="tel:07939593939" ng-class="{white:whiteLinks && !loginPage}">1800-2121-322</a>
-            </li>
-            <li class="">
-                <a href="#contact" class="page-scroll" ng-class="{white:whiteLinks && !loginPage}">Contact Us</a>
-            </li>
-            <li class="">
-              <a href="gst.php" class="page-scroll" ng-class="{white:whiteLinks && !loginPage}">GST</a>
-            </li>
-            <li class="">
-              <a href="tallyplusgiddh.php" ng-class="{white:whiteLinks && !loginPage}">Tally</a>
-            </li>
-            <li class="">
-              <a href="pricing.php" ng-class="{white:whiteLinks && !loginPage}">Pricing</a>
-            </li>
-            <li ng-hide="signupPage">
-              <button onclick="location.href='app/signup'" class="btn btn-primary navbar-btn mrL2">Sign Up</button>
-            </li>
-            <li class="">
-              <button onclick="location.href='app/'" class="btn btn-secondary navbar-btn" style="margin-left:20px">Login</button>
-            </li>
-          </ul> -->
-          <ul class="nav navbar-nav navbar-right">
-              <li ng-hide="signupPage">
-                  <a href="tel:07939593939" class="talktoexpert" ng-class="{white:whiteLinks && !loginPage}"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
-                </li>
-                <li class="">
-                    <button onclick="location.href='app/signup'" class="btn btn-primary navbar-btn m-t-20">Signup</button>
-                  </li>
-                <li class="">
-                  <button onclick="location.href='app/'" class="btn btn-bordered navbar-btn m-t-20">Login</button>
-                </li>
-            </ul>
+              <ul class="nav navbar-nav navbar-right">
+                  <li ng-hide="signupPage">
+                      <!-- <a href="tel:07939593939" class="talktoexpert" ng-class="{white:whiteLinks && !loginPage}"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a> -->
+                      <a href="" data-toggle="modal" data-target="#talktosale" class="talktoexpert"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                    </li>
+                    <li class="">
+                        <button onclick="location.href='app/signup'" class="btn btn-primary navbar-btn m-t-20">Signup</button>
+                      </li>
+                    <li class="">
+                      <button onclick="location.href='app/'" class="btn btn-bordered navbar-btn m-t-20">Login</button>
+                    </li>
+                </ul>
           </div>
         </div>
       </div>
   </div>
 </nav>
 
+<div id="talktosale" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <iframe width="560" height="315" src="https://app.intercom.io/a/meeting-scheduler/calendar/VEd2SmtLSyt2YisyTUpEYXBCRWg1YXkwQktZWmFwckF6TEtwM3J5Qm00R2dCcE5IWVZyS0JjSXF2L05BZVVWYS0tck81a21EMVZ5Z01SQWFIaG00RlozUT09--c6f3880a4ca63a84887d346889b11b56a82dd98f" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 <script>
 jQuery(function ($) {
     $(".usernavi li a")

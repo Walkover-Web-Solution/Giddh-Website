@@ -34,8 +34,8 @@
               <p class="banner_sub_heading">The future one of Indian Accounting</p>
               <h1 class="banner_heading">Take your<br> Tally books online</h1>
               <p class="m-t-20">
-                <button class="btn btn-sync">Sync with Tally</button>
-                <a href="tel:07939593939" class="talktosale"><span class="glyphicon glyphicon-e arphone"></span>Talk to Expert</a>
+                <a class="btn btn-sync" href="tallyplusgiddh.php">Sync with Tally</a>
+                <a href="tel:07939593939" class="talktosale"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
             <p class="banner_heading_secondry">Switch eventually or start a fresh book with <a>giddh</a></p>
         </div>
@@ -72,7 +72,7 @@
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one">
           <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two"> -->
-          <img src="../assets/images/accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive">
+          <!-- <img src="../assets/images/accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive"> -->
         </div>
     </div>
   </section> <!-- end of videoBg -->
