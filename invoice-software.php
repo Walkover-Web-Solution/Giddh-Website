@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="en" ng-app="giddhWebsite">
 <head>
-  <meta name="description" content="Giddh GST accounting software simplifies the filing of GST return online. Enjoy automated filing with details like GST return form, tax invoice & GST online payments. Simple and easy to use, GST billing software and gst return software help to manage businesses smartly. No need to download! Try it for free today! "/>
-  <meta name="keywords" content="bookkeeping software, Accounting softwares, online accounting software, bookkeeping software for small business"/>
-  
-  <title>Online GST Return Filing Automation | Best GST Accounting Software India</title>
+
+  <meta name="description" content="Searching for the best Accounting invoice software that can seamlessly prepare invoices and fulfil other needs of your business! Look no further than Giddh.com, the providers of best invoice software for Small business in the industry! Generate, share, email invoices and get paid via this amazing Easy invoice software."/>
+ 
+  <title>Best Accounting Invoice Software | Sales Invoice Software Online – Giddh.com</title>
 
   <?php include 'head.php';?>
 
@@ -26,8 +26,8 @@
 <!--Banner-->
 <div id="gstBanner" class="ylwBg gridBg">
     <div class="container text-center">
-    	<img src="/assets/images/new/gst.png" class="img-responsive"/>
-        <h3>Goods and Service Tax (GST)</h3>
+    	<img src="/assets/images/new/invoice-banner.png" class="img-responsive"/>
+        <h3>Invoice Software</h3>
     </div>
 </div>
 <!--//Banner-->
@@ -35,11 +35,14 @@
 <!--try giddh-->
 <div id="tryG">
     <div class="container text-center">
-    	<p>Don't get confused</p>
-        <h3>File your GST RETURN automatically</h3><br>
+    
+    
+        <h3>Save Time with Invoicing Solutions</h3>
+        <p>Giddh makes the dull job of creating invoices so simple, you'll be amazed how much time you can save to focus on your core business activities. With its beautiful templates and customization options, Giddh is the best invoicing partner for all kinds of business owners</p>
+       <a class="trBox" href="signup.php"><span>Try </span><img src="/assets/images/new/giddh-logo-white.png"/></a> 
+
         
-        <a class="trBox" href="signup.php"><span>Try </span><img src="/assets/images/new/giddh-logo-white.png"/></a>
-        <p>Cloud Based Accounting Software to File GST return online</p>
+       
     </div>
 </div>
 <!--//try giddh-->
@@ -47,57 +50,144 @@
 <!--Filling process-->
 <div id="filling">
     <div class="container text-center">
-    <div class="col-md-12 mrB3">
-	    	<h1>Invoice</h1>
-            
-   
-
-
-
-	    </div>
     	
         <div class="row">
-       <h2>Save Time with Invoicing Solutions</h2>
+     
+        
+        <br>
 
-<p>Giddh makes the dull job of creating invoices so simple, you'll be amazed how much time you can save to focus on your core business activities. With its beautiful templates and customization options, Giddh is the best invoicing partner for all kinds of business owners </p>
+        <div class="col-lg-3"></div>
+        
+        <div class="col-lg-6">
+        
+<div class="col-lg-12 giddh">
+<br>
 
-<h2>Professional Looking Invoices within Minutes!</h2>
+<p><strong>Professional Looking Invoices within Minutes!</strong></p>
 <p>You are the real deal, so why not create professional looking invoices that say the same? With a variety of templates and customizations at your disposal, create the best looking invoices for your business and wow your clients. </p>
+<br>
 
-<h2>Run your business on autopilot with automation!</h2>
-<p>From setting payment reminders to sending invoices to clients on a recurring basis, you can utilize the complete potential of automation with Giddh! So let Giddh follow-up with customer and focus on your core business activities.</p>
+</div>
+<div class="clearfix"></div>
+<img src="/assets/images/new/ar-down.png">
 
-<h2>Lock your Invoices and Move On!</h2>
-<p> Tired of unwanted tampering to your finalized invoices? With Giddh's invoice locking feature, lock your invoices from being edited or deleted once they are finalized. </p>
+<div class="col-lg-12 others">
+<br>
+
+<p><strong>Run your business on autopilot with automation!</strong></p>
+<p>From setting payment reminders to sending invoices to clients on a recurring basis, you can utilize the complete potential of automation with Giddh! So let Giddh follow-up with customer and focus on your core business activities.
+</p>
+<br>
+
+</div>
+
+<div class="clearfix"></div>
+
+<img src="/assets/images/new/ar-down.png">
+
+<div class="col-lg-12 giddh">
+<br>
+
+<p><strong>Lock your Invoices and Move On!</strong></p>
+<p>Tired of unwanted tampering to your finalized invoices? With Giddh's invoice locking feature, lock your invoices from being edited or deleted once they are finalized.</p>
+<br>
+
+</div>
+        
+        </div>
         
         
         
-      <p><strong><em>  Other Equally Important Invoicing Features</em></strong></p>
-<ul>
-<li>Add invoice due dates</li>
-<li>Customize invoice terms </li>
-<li>Preview invoices before sending</li>
-<li>Choose your preferred currency with our multi currency option. </li>
-<li>Automatic Updates once an invoice has been paid</li>
-<li>Always on the go? Create Invoices without logging in!</li>
-</ul>
-
-
         </div>
         
     </div>
 </div>
 <!--//Filling process-->
 
-<!--question-->
+
+<!--adv process-->
+<div class="caseStd">
+    <div class="container text-center">
+    	
+        <div class="row">
+ 
+
+<div class="col-lg-6">
+       
+<br>
+        <div id="filling" style="padding: 20px;">
+        <br>
+
+<h3>Other Equally Important Invoicing Features</h3>
+
+
+
+
+  <div class="clearfix">
+                <div class="ic-32 gidd"></div>
+                <p>Add invoice due dates</p>
+  </div>
+  
+  
+    <div class="clearfix">
+                <div class="ic-32 gidd"></div>
+                <p>Customize invoice terms</p>
+  </div>
+  
+   <div class="clearfix">
+                <div class="ic-32 gidd"></div>
+                <p>Preview invoices before sending</p>
+  </div>
+  
+   <div class="clearfix">
+                <div class="ic-32 gidd"></div>
+                <p> Choose your preferred currency with our multi currency option.</p>
+  </div>
+  
+  
+   <div class="clearfix">
+                <div class="ic-32 gidd"></div>
+                <p>Automatic Updates once an invoice has been paid</p>
+  </div>
+  
+  <div class="clearfix">
+                <div class="ic-32 gidd"></div>
+                <p>Always on the go? Create Invoices without logging in!</p>
+  </div>
+  
+  
+<br>
+
+
+</div>
+    
+
+
+        </div>
+        
+        
+        
+        <div class="col-lg-6">
+        
+        	<img src="/assets/images/new/features.png" class="img-responsive"/>
+        
+        </div>
+        
+        
+        </div>
+        </div>
+        
+        </div>
+<!-- adv -->
+<!--question
 <div id="ques">
     <div class="container text-center">
         <h3>Have question on GST Accounting? Have free discussion <a href="#contact">Contact Us</a></h3>
     </div>
-</div>
+</div>-->
 <!--//question-->
 
-<!--Advantages-->
+<!--Advantages
 <div id="adv">
     <div class="container text-center">
     	<h3>Advantages of filing GST Return with us</h3>
@@ -118,34 +208,11 @@
             <br>Full<br> confidential
         </div>
     </div>
-</div>
+</div>-->
 
 <!--//Advantages-->
 
-<!-- Collaborators -->
-<div class="cmnPd80 ylwBg">
-    <div class="container text-center">
-        <h3 class="mrB5 mrT">GST Return Collaborators</h3>
-        <div class="pdT4 clearfix">
-            <div class="col-md-4 col-xs-12 collaborator">
-                <div>
-                    <img src="assets/images/collaborator1.png" alt="jio gst" />
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 collaborator bdrL bdrR">
-                <div>
-                    <img src="assets/images/collaborator2.png" alt="cleartax" />
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 collaborator">
-                <div>
-                    <img src="assets/images/collaborator3.png" alt="tax raahi" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //Collaborators -->
+
 
 
   <!-- include footer -->

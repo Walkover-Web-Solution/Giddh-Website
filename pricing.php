@@ -117,7 +117,7 @@
       <div class="row text-center mrT4">
         <div class="col-sm-12">
           <h2 class="mrB3 pClr">18/6 Instant Support</h2>
-          <a href="signup.php" id="pBtn" class="pScroll btn btn-bdr-whte btn-lg btn-bdr">Try Now</a>
+          <a href="/app/signup" id="pBtn" class="pScroll btn btn-bdr-whte btn-lg btn-bdr">Try Now</a>
         </div>
       </div>
 

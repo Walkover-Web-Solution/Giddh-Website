@@ -82,11 +82,11 @@
                   <h1>Talk to Expert</h1>
                   <form class="contact" novalidate name="contactForm">
                     <div class="form-group">
-                        <input name="contactForm.name" ng-model="vm.cForm.name" type="text" required class="form-control" placeholder="Your name">
+                        <input name="contactForm.name" ng-model="vm.cForm.name" type="text" required class="form-control" placeholder="Your Name">
                     </div>
-                    <div class="form-group">
-                        <label for="">Email ID</label>
-                        <input name="contactForm.email" ng-model="vm.cForm.email" type="email" required class="form-control focus" placeholder="Shubhendraagrawal@walkover.in">
+                    <div class="form-group  m-t-36">
+                        <label for="" id="emailid">Email ID</label>
+                        <input name="contactForm.email" ng-model="vm.cForm.email" type="email" required class="form-control focus" placeholder="Email ID">
                     </div>
                     <div class="form-group m-t-36">
                         <input class="form-control" type="text" name="contactForm.number" ng-model="vm.cForm.number" ng-min="7" ng-max="12" required valid-number placeholder="Contact No.">
@@ -123,11 +123,11 @@
             </p>
           <ul class="app_download">
             <h3>Desktop App</h3>
-            <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg" target="_Blank" title="mac os"><i class="fab fa-apple"></i></a></li>
+            <li><a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app-{{apkVersion}}.dmg" target="_Blank" title="mac os"><i class="fab fa-apple"></i></a></li>
 
-            <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe" target="_Blank" title="windows"><i class="fab fa-windows"></i></a></li>
+            <li><a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app+Setup+{{apkVersion}}.exe" target="_Blank" title="windows"><i class="fab fa-windows"></i></a></li>
 
-            <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz" target="_Blank" title="linux"><i class="fab fa-linux"></i></a></li>
+<!--             <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz" target="_Blank" title="linux"><i class="fab fa-linux"></i></a></li>
           </ul>
             <div id="farzi" class="visible-md-block visible-lg-block"></div>
           </div>
@@ -259,5 +259,13 @@ jQuery(document).ready(function($){
     // });
   });
 });
+$("input[type='email']").focus(function(){
+ $("#emailid").css({
+   'display':'block',
+   'top':'-2px',
+   'position':'relative',
+ });
+ $("input[type='email']").removeAttr('placeholder');
+})
 </script>
 

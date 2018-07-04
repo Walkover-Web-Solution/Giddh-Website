@@ -112,6 +112,7 @@ function runBlock($rootScope, $window, $http, localStorageService, $anchorScroll
   $rootScope.isNavCollapsed = true;
   $rootScope.isUae = false;
   $anchorScroll.yOffset = 216;
+  $rootScope.apkVersion = '';
   
   // ----------------------------------------------------------
 
@@ -217,6 +218,26 @@ function runBlock($rootScope, $window, $http, localStorageService, $anchorScroll
     
   }
   // console.log($rootScope.);
+
+  function GetElectronAppVersion() {
+      var args = { headers: {} };
+      args.headers['cache-control'] = 'no-cache';
+      args.headers['Content-Type'] = 'application/xml';
+      // args.headers['Content-Type'] = 'application/xml';
+    $http.get('https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/latest.yml', {
+      headers: args.headers,
+      responseType: 'text',
+    }).then(function(response){
+      // console.log(response);
+      var version = res.split('files')[0];
+      var versNum = version.split(' ')[1];
+      $rootScope.apkVersion = versNum;
+    },function(error){
+      console.log(error);
+    });
+  }
+
+  GetElectronAppVersion();
 
 }
 

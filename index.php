@@ -56,7 +56,7 @@
             </p>
         </div>
         <div class="right-section">
-          <img src="../assets/images/accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive">
+          <img src="../assets/images/accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive ac-img">
         </div>
     </div>
     <div class="intro home flex-box-banner slide slide-3">
