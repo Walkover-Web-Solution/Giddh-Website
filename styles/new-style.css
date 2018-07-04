@@ -2772,10 +2772,12 @@ body.unresponsive .container {
   color:#156BB3;
 }
 
+
 .see-company{
   background:#FFF8EA url('../assets/images/new/banner-grid-design.png') 0 0 repeat;
   padding:80px 0;
   text-align: center;
+  margin-bottom: 80px;
 }
 .see-company .btn{
   line-height:43px;
@@ -3839,6 +3841,195 @@ a:hover{
   max-width:100%;
 }
 
+/*modal css*/
+@media (min-width: 768px){
+.modal-dialog {
+    width: 500px;
+    margin: 30px auto;
+}
+}
+.custom-dialog {
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.custom-dialog .modal-header {
+  padding: 0;
+  border-bottom: none;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #ececec;
+}
+.custom-dialog .modal-header h3 {
+  font-family: "AvenirLTStdMedium";
+  font-size: 20px;
+  color: #333333 !important;
+  margin-bottom: 15px;
+}
+
+.brdB.left {
+  margin-left: 26px;
+}
+.custom-dialog .modal-header {
+  padding: 0;
+  border-bottom: none;
+}
+.close-glyph {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  color: #222 !important;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none!important;
+  display: none;
+}
+#shortner_tabs {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #c3c3c3;
+  margin-bottom: 0;
+}
+
+.height42 {
+  height: 42px !important;
+}
+#shortner_tabs>li {
+  text-align: left;
+  width: 156px;
+}
+.nav-tabs-talk{
+  padding-left:0;
+}
+.nav-tabs-talk> li {
+  float: left;
+  margin-bottom: -1px;
+  list-style: none;
+}
+#shortner_tabs>li.active>a {
+  font-weight: 500;
+  position: relative;
+}
+
+#shortner_tabs>li>a {
+  color: #333;
+  font-family: 'CambriaBold';
+  padding-left: 28px !important;
+  line-height:35px;
+}
+#shortner_tabs>li>a:hover, #shortner_tabs>li>a:focus{
+  border-color:transparent;
+  text-decoration:none;
+}
+#shortner_tabs>li.active>a:after {
+    background: #e34b26;
+    position: absolute;
+    bottom: -19px;
+    content: "";
+    width: 79%;
+    height: 2px;
+    left: 25px;
+}
+.custom-padding-20 {
+  padding: 10px 31px !important;
+}
+
+.height-460 {
+  height: 65vh;
+  width: 100%;
+  overflow-y: auto;
+}
+.tab-content-modal {
+  background: #fff;
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.nav-tabs-talk.nav-tabs>li.active>a{
+  background:transparent;
+  border:none;
+}
+
+.talktosale-superform input{
+	 font-family:"AvenirLTStdMedium" !important;
+}
+.talktosale-superform .sf-header{
+	padding:20px !important;
+	margin-bottom:0 !important;
+	margin-top:0 !important;
+}
+.talktosale-superform  .help-block{
+	margin-top:0 !important;
+	font-size:13px !important;
+}
+#sFform-V6Lc input{
+	font-family:"AvenirLTStdMedium" !important;
+}
+@media (max-width: 600px){
+.white-popup {
+    width: 90%;
+}
+	#shortner_tabs>li{
+		width:auto;
+	}
+}
+#sFSection-V6Lc {
+  font-family: Roboto;
+  background: #fefdfe;
+}
+.talktosale-superform .sFSection .sFformfield {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.sFSection .sFformfield {
+  padding: 40px;
+  background: #fafafa;
+  border: 1px solid #ccc;
+}
+.sFSection .fieldset {
+  max-width: 600px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.talktosale-superform .panel {
+  box-shadow: none !important;
+}
+.talktosale-superform .sFSection .sFformfield .form-group {
+  margin-bottom: 10px !important;
+}
+.talktosale-superform .sFSection .sFformfield label {
+  font-size: 15px !important;
+  color: #333 !important;
+  line-height: 26px !important;
+  margin-top: 20px !important;
+}
+.talktosale-superform .sFSection .sFformfield .form-group {
+  margin-bottom: 10px !important;
+}
+.talktosale-superform .sFSection .sFformfield label {
+  font-size: 15px !important;
+  color: #333 !important;
+  line-height: 26px !important;
+  margin-top: 20px !important;
+}
+.talktosale-superform .sFSection {
+  padding: 0 !important;
+  font-family: 'CambriaRegular' !important;
+}
+.talktosale-superform .sFSection .sFform textarea {
+  width: 50% !important;
+  min-height: 100px !important;
+}
+.talktosale-superform .sFSection .form-control {
+  height: 40px !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  font-size: 16px !important;
+}
 
 
 

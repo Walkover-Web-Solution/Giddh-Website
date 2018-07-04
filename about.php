@@ -903,7 +903,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
       }
     }
   });
-  $('.nav-tab-principle li a[href^="#"]').click(function() {
+  $('.nav-tab-principle li a[href^="#"]').click(function(e) {
         // debugger;
     if  ((location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname)) {
       var target = $(this.hash);
@@ -915,6 +915,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
           scrollTop: target.offset().top - 200 //offsets for fixed header
         }, 800);
         return false;
+        
       }
     }
   });

@@ -44,7 +44,7 @@
               <ul class="nav navbar-nav navbar-right">
                   <li ng-hide="signupPage">
                       <!-- <a href="tel:07939593939" class="talktoexpert" ng-class="{white:whiteLinks && !loginPage}"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a> -->
-                      <a href="" data-toggle="modal" data-target="#talktosale" class="talktoexpert"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                      <a href="" data-toggle="modal" data-target="#talkToSales_dialog" class="talktoexpert"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
                     </li>
                     <li class="">
                         <button onclick="location.href='app/signup'" class="btn btn-primary navbar-btn m-t-20">Signup</button>
@@ -59,24 +59,32 @@
   </div>
 </nav>
 
-<div id="talktosale" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- Modal content-->
-    <div class="modal-content">
+<div class="modal fade" id="talkToSales_dialog" role="dialog">
+  <div class="modal-dialog custom-dialog">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <iframe width="560" height="315" src="https://app.intercom.io/a/meeting-scheduler/calendar/VEd2SmtLSyt2YisyTUpEYXBCRWg1YXkwQktZWmFwckF6TEtwM3J5Qm00R2dCcE5IWVZyS0JjSXF2L05BZVVWYS0tck81a21EMVZ5Z01SQWFIaG00RlozUT09--c6f3880a4ca63a84887d346889b11b56a82dd98f" frameborder="0" allowfullscreen></iframe>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
+       <h3 class="brdB left">Talk to Sales</h3>
+       <a data-dismiss="modal" aria-label="Close" class="close-glyph"><img src="https://msg912.wpengine.com/wp-content/uploads/2018/06/cross.svg"></a>
+       <ul class="nav-tabs nav-tabs-talk height42" id="shortner_tabs">
+           <li class="active"><a href="#scheduleCall"  data-toggle="tab">Arrange a Call</a></li>
+           <li><a href="#dropEmail"  data-toggle="tab">Drop us a mail</a></li>
 
-  </div>
-</div>
+       </ul>
+    </div>
+       <div class="pd2 tab-content custom-padding-20 height-460 tab-content-modal">
+
+         <div id="dropEmail" class="tab-pane">
+           <div id="Jkvq" class="talktosale-superform"></div>
+
+           <div class='alert alert-succcess successsales'></div>
+         </div>
+
+         <div id="scheduleCall" class="tab-pane active">
+         
+         </div>
+       </div>
+       
+     </div>
+ </div>
 <script>
 jQuery(function ($) {
     $(".usernavi li a")
@@ -109,3 +117,14 @@ jQuery(function ($) {
         });
 });
 </script>
+
+<link rel="stylesheet" media="screen" href="https://random-scripts.herokuapp.com/superform/superform.css" />
+<script>
+	/*// Set hidden values
+	window.superformHiddens = {
+		"id": "12345",
+		"name": "superform"
+	}*/
+	window.superformIds = ['Jkvq'];
+</script>
+<script src="https://random-scripts.herokuapp.com/superform/superform.js"></script>
