@@ -650,7 +650,7 @@ body.light .navbar.transparent{
   background:#e34b26;
   height:2px;
   content:"";
-  bottom:27px;
+  bottom:15px;
   left:0;
 }
 
@@ -672,8 +672,9 @@ body.light .navbar.transparent{
     background-color: transparent;
     outline:none;
 }
-
-
+.small-img{
+  display:none;
+}
 
 
 /*navigation dark theme*/
@@ -1753,9 +1754,8 @@ opacity: 0 !important;
   color:#fff;
 }
 .btn-bordered:hover{
-  border:1px solid #E34B26;
-  background: transparent;
   color:#fff;
+  background: #E34B26;
 }
 .affix .btn-bordered{
   color:#E34B26;
@@ -1784,7 +1784,7 @@ opacity: 0 !important;
     background: #e34b26;
     height: 2px;
     content: "";
-    bottom: 27px;
+    bottom: 15px;
     left: 0;
 }
 .navbar-custom .navbar-nav > li > a.talktoexpert:hover:after{
@@ -3059,6 +3059,12 @@ margin-top:70px;
 }
 
 @media only screen and (max-width:768px){
+  .big-img{
+    display:none;
+  }
+  .small-img{
+    display:block;
+  }
   .rotate_wheel {
     display:none;
 }
@@ -3872,7 +3878,7 @@ a:hover{
   background: #ececec;
 }
 .custom-dialog .modal-header h3 {
-  font-family: "AvenirLTStdMedium";
+  font-family: 'CambriaBold';
   font-size: 20px;
   color: #333333 !important;
   margin-bottom: 15px;
@@ -3926,20 +3932,22 @@ a:hover{
   font-family: 'CambriaBold';
   padding-left: 28px !important;
   line-height:35px;
+  font-size:16px;
 }
 #shortner_tabs>li>a:hover, #shortner_tabs>li>a:focus{
   border-color:transparent;
   text-decoration:none;
 }
 #shortner_tabs>li.active>a:after {
-    background: #e34b26;
-    position: absolute;
-    bottom: -19px;
-    content: "";
-    width: 79%;
-    height: 2px;
-    left: 25px;
+  background: #e34b26;
+  position: absolute;
+  bottom: -14px;
+  content: "";
+  width: 79%;
+  height: 2px;
+  left: 29px;
 }
+
 .custom-padding-20 {
   padding: 0 31px !important;
 }
@@ -4027,6 +4035,7 @@ a:hover{
 .talktosale-superform .sFSection .sFform textarea {
   width: 50% !important;
   min-height: 100px !important;
+  width:340px !important;
 }
 .talktosale-superform .sFSection .form-control {
   height: 40px !important;
@@ -4064,6 +4073,7 @@ a:hover{
   text-align:center !important;
   padding:0 !important;
 }
+
 ::-webkit-scrollbar {
   width: 1px;
   height: 1px;
@@ -4080,6 +4090,18 @@ body {
 
 div {
   box-sizing: border-box;
+}
+.sFSection .valid-msg, .sFSection .error-msg {
+  margin-left: 54px !important;
+}
+.vertical-center{
+  position: relative;
+  top:50%;
+  transform:translateY(-50%);
+  text-align:center;
+}
+.vertical-center p{
+  font-size:16px;
 }
 
 

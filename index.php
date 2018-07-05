@@ -41,7 +41,8 @@
         </div>
         <div class="right-section">
           <img src="../assets/images/circle.gif" alt="" class="rotate_wheel">
-          <img src="../assets/images/slide-1.png" alt="Tally your books with giddh" class="img-responsive">
+          <img src="../assets/images/slide-1.png" alt="Tally your books with giddh" class="img-responsive big-img">
+          <img src="../assets/images/slide_1_small.png" alt="Tally your books with giddh" class="img-responsive small-img">
         </div>
     </div>
    
@@ -52,7 +53,7 @@
               <p class="banner_sub_heading m-t-15">By automation and giddh</p>
               <p class="m-t-20">
                 <button class="btn btn-primary">Download Free</button>
-                <a href="tel:07939593939" class="talktosale"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                <a class="talktosale" href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
         </div>
         <div class="right-section">
@@ -236,6 +237,7 @@
                 </div>
               </div>
       </div>
+      
   </section>  
   <!-- end of page -->
   <?php include 'footScript.php';?>
