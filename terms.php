@@ -246,7 +246,8 @@
   </section>
 
 
-  <ng-include src="'footer.html'"></ng-include>
+  <!-- <ng-include src="'footer.html'"></ng-include> -->
   <?php include 'footScript.php';?>
+  <?php include 'footer.php';?>
 </body>
 </html>

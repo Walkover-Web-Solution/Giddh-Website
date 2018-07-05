@@ -10,6 +10,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/styles/new-style.css" rel="stylesheet">
   
 <style>
       html, body{
@@ -17,11 +18,11 @@
       }
 </style>
 </head>
-<body  ng-controller="homeController as vm" id="aboutPage" class="about-section-body lightTrans notAffix">
+<body  ng-controller="homeController as vm" id="aboutPage" class="about-section-body lightTrans">
   
-  <ng-include src="'about-header.html'"></ng-include>
-
- <section>
+  <!-- <ng-include src="'about-header.html'"></ng-include> -->
+  <ng-include src="'header.html'"></ng-include>
+ <section class="cus-about-sec">
     <div class="container-fluid">
         <div class="row">
             <div class="about-head">
@@ -844,41 +845,14 @@
 </section>
 <!-- include footer -->
 <?php include 'footScript.php';?>
-  <?php include 'footer.php';?>  
-
-
-
-  <!-- end of directive -->
-  <?php include 'footScript.php';?>
-
-  <script type="text/javascript">
-    jQuery(document).ready(function($){
-    'use strict';
-      $(window).resize(function(){
-        $(".navbar").removeClass('navbar-fixed-top')
-        var imgs = $('.section .img-responsive')
-        $.each( imgs , function( key, ths ) {
-          $(ths).next('div').css({ 
-            'height' : $(ths).height(),
-            'width' : $(ths).width()
-          })
-        });
-      });
-      
-    });
-    window.onload = function() {
-      $(window).trigger('resize');
-      $(".navbar").removeClass('navbar-fixed-top')
-    }
-
-  </script>
+  <?php include 'footer.php';?> 
   <script>
   $(document).ready(function(){
         
 //  
 $("html, body").animate({ scrollTop: 0 }, "slow");
 $(window).scroll(function(){
-  if ($(window).scrollTop() >= 362) {
+  if ($(window).scrollTop() >= 262) {
     $('.fixabout').addClass('fixed');
     $('#custComFirst').css('margin-top', '215px');
    }
@@ -889,7 +863,7 @@ $(window).scroll(function(){
 });
 
 $(window).scroll(function(){
-  if ($(window).scrollTop() >= 380) {
+  if ($(window).scrollTop() >= 300) {
     $('.fixedprinciple').addClass('fixed');
     $('.bgNurture').css('margin-top', '215px');
    }
@@ -929,7 +903,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
       }
     }
   });
-  $('.nav-tab-principle li a[href^="#"]').click(function() {
+  $('.nav-tab-principle li a[href^="#"]').click(function(e) {
         // debugger;
     if  ((location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname)) {
       var target = $(this.hash);
@@ -941,6 +915,7 @@ $("html, body").animate({ scrollTop: 0 }, 0);
           scrollTop: target.offset().top - 200 //offsets for fixed header
         }, 800);
         return false;
+        
       }
     }
   });

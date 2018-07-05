@@ -7,7 +7,7 @@
   <?php include 'head.php';?>
 </head>
 <!-- {oh:geo.country != 'IN'} -->
-<body id="page-top" class="tally_page" ng-controller="homeController as vm">
+<body id="page-top" class="tally_page about-section-body lightTrans" ng-controller="homeController as vm">
   
   <!-- <div ng-class="{'other-country': geo.country != 'IN'}" ng-if="geo.country != 'IN'">
     <iframe src="global.html" style="height:100%;width:100%;padding: 0;margin:0"></iframe>
