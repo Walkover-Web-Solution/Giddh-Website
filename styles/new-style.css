@@ -2288,7 +2288,7 @@ body.unresponsive .container {
   z-index: 1;
 }
 .app_download {
-  margin: 7px 0 30px;
+  margin: 15px 0 30px;
   padding: 0
 }
 .app_download h3 {
@@ -3479,6 +3479,7 @@ margin-right:23px;
 .app-download h3{
   color:#7F7F8A;
   font-size: 17px;
+  margin-top:0;
   }
   .footerlink li{
     float: none;
@@ -3538,6 +3539,8 @@ margin-right:23px;
   }
   .contact-form h1{
     font-size:34px;
+    margin-top:0;
+    line-height:28px;
   }
   .contact{
     margin-top:52px;
@@ -4029,6 +4032,31 @@ a:hover{
 .talktosale-superform .form-group{
   margin-top:20px;
 }
+#sFSection-xZyf{
+  background: transparent !important;
+}
+#sFform-xZyf input, #sFform-xZyf textarea, #sFform-xZyf select{
+  border:1px solid #525265 !important;
+  background: transparent !important;
+  width:230px !important;
+}
+#sFform-xZyf textarea{
+  width:340px !important;
+}
+#sFformfield-xZyf label{
+  color:#73737f !important;
+}
+#sFformfield-xZyf .btn-primary{
+  background:#0A0A21 !important;
+  width:103px !important;
+  height:39px !important;
+  border-radius:0 !important;
+  border:1px solid transparent !important;
+  font-size:16px !important;
+  text-align:center !important;
+  padding:0 !important;
+}
+
 
 
 

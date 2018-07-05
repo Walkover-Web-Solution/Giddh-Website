@@ -1,4 +1,6 @@
-﻿<!-- footer start -->
+﻿<link rel="stylesheet" media="screen" href="https://random-scripts.herokuapp.com/superform/superform.css" />
+<script src="https://random-scripts.herokuapp.com/superform/superform.js"></script>
+<!-- footer start -->
   <section id="footer">
     <section id="contact">
       <div class="container">
@@ -80,7 +82,7 @@
                 <div class="contact-form">
                   <img src="/assets/images/Footer_Caricature.png" alt="" class="img-caricature">
                   <h1>Talk to Expert</h1>
-                  <form class="contact" novalidate name="contactForm">
+                  <!-- <form class="contact" novalidate name="contactForm">
                     <div class="form-group">
                         <input name="contactForm.name" ng-model="vm.cForm.name" type="text" required class="form-control" placeholder="Your Name">
                     </div>
@@ -96,7 +98,8 @@
                         <button class="btn btn-send" ng-click="vm.submitForm(cForm)" type="submit" ng-disabled="contactForm.$invalid">Send</button>
                     </div>
                     
-                  </form>
+                  </form> -->
+                  <div id="xZyf" class="talktosale-superform"></div>
                 </div>
               </div>
           </div>
@@ -267,5 +270,10 @@ $("input[type='email']").focus(function(){
  });
  $("input[type='email']").removeAttr('placeholder');
 })
+</script>
+
+
+<script>
+	window.superformIds = ['Jkvq','xZyf'];
 </script>
 
