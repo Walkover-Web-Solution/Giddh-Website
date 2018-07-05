@@ -35,7 +35,7 @@
               <h1 class="banner_heading">Take your<br> Tally books online</h1>
               <p class="m-t-20">
                 <a class="btn btn-sync" href="tallyplusgiddh.php">Sync with Tally</a>
-                <a href="tel:07939593939" class="talktosale"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                <a class="talktosale"  href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
             <p class="banner_heading_secondry">Switch eventually or start a fresh book with <a>giddh</a></p>
         </div>
