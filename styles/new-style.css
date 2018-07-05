@@ -3734,7 +3734,7 @@ margin-right:23px;
     max-width:138px;
     height:42px !important;
     font-size:16px !important;
-    line-height:20px !important;
+    line-height:26px !important;
     margin-right:20px;
   }
  .intro .btn.btn-sync{
@@ -4102,6 +4102,15 @@ div {
 }
 .vertical-center p{
   font-size:16px;
+}
+#downloadWindows, #downloadMacOS, #downloadLinux{
+  display:none;
+}
+.knownOS{
+  display:inline-block !important;
+}
+.intl-tel-input.allow-dropdown{
+margin-top:5px;
 }
 
 

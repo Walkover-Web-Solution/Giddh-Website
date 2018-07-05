@@ -52,7 +52,9 @@
               <h1 class="banner_heading">Give your account<br> department an extra edge</h1>
               <p class="banner_sub_heading m-t-15">By automation and giddh</p>
               <p class="m-t-20">
-                <button class="btn btn-primary">Download Free</button>
+                <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
+                <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
+                <a class="btn btn-primary" id="downloadLinux" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz">Download Free</a>
                 <a class="talktosale" href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
         </div>
@@ -251,6 +253,26 @@
   $(document).ready(function(){
     showRandomBanner();
   })
+
+  osName = 'Unknown';
+
+function detectBrowser(x, y, z) {
+    z = z || y;
+    if (navigator[x] && navigator[x].indexOf(y) !== -1) {
+        osName = z;
+    }
+}
+
+/*   navigator     value     download  */
+detectBrowser( "appVersion", "Mac",    "MacOS"   );
+detectBrowser( "appVersion", "Linux"             );
+detectBrowser( "userAgent",  "Linux"             );
+detectBrowser( "platform",   "Linux"             );
+detectBrowser( "appVersion", "Win",    "Windows" );
+detectBrowser( "userAgent",  "Windows"           );
+detectBrowser( "platform",   "Win",    "Windows" );
+detectBrowser( "oscpu",      "Windows"           );
+document.getElementById("download"+osName).className = "btn btn-primary knownOS";
 </script>
 </body>
 </html>
