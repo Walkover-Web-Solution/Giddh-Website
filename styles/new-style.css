@@ -2674,6 +2674,9 @@ body.unresponsive .container {
   text-decoration:underline;
   font-weight:bold;
 }
+.about-content-body{
+  background: #fff;
+}
 .about-content-body .about{
   background: #FFF7E9;
   padding:0;
@@ -2701,7 +2704,7 @@ body.unresponsive .container {
   text-decoration: underline;
 }
 .about-content-body .product{
-  /* background: #FFF; */
+  background: #FFF;
   padding:80px 0 125px 0;
   font-family: 'RobotoRegular';
 }
