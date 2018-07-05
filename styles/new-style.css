@@ -11,6 +11,7 @@ body {
     -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'CambriaRegular';
+  overflow-x:hidden;
 }
 
 @font-face {
@@ -1952,6 +1953,7 @@ body.unresponsive .container {
   .black-back{
     background-position: 150px 30px;
   }
+ 
 }
 
 
@@ -2313,11 +2315,10 @@ body.unresponsive .container {
     box-shadow: 0px 1px 4px #f76845;  
 }
 .intro.home .btn:hover {
-  border-color: #bc1d07;
+  border-color: #bc1d07;  
   background: #e44a27;
   color: #fff;
 }
-
 
 #footer {
   margin-top: -20px;
@@ -2501,7 +2502,9 @@ body.unresponsive .container {
 .affix {
   position: fixed;
 }
-
+.nav-tabs-values{
+  width:1140px;
+}
 .nav-tabs-values{
   border-bottom:none !important;
   padding:51px 0 51px 0;
@@ -2679,6 +2682,8 @@ body.unresponsive .container {
   color:#26263A;
   line-height:31px;
   text-align: justify;
+  max-width: 100%;
+  overflow-x: scroll;
   /* padding-bottom:70px; */
 }
 .about-content-body .head-left:after{
@@ -3050,11 +3055,10 @@ margin-top:70px;
   font-size:18px;
 }
 
-
-
-
-
 @media only screen and (max-width:768px){
+  .rotate_wheel {
+    display:none;
+}
   .product .walkover-logo{
   max-width:100%;
 }
@@ -3734,6 +3738,7 @@ a:hover{
 }
 
   @media only screen and (max-width:1000px){
+   
     .rotate_wheel {
       position: absolute;
       top: -26px;
@@ -4055,6 +4060,30 @@ a:hover{
   font-size:16px !important;
   text-align:center !important;
   padding:0 !important;
+}
+::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+
+::-webkit-scrollbar-button {
+  width: 1px;
+  height: 1px;
+}
+
+body {
+  background: #111;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+
+@media only screen and (max-width:1000px){
+  #sFform-xZyf textarea{
+    width:240px !important;
+  }
 }
 
 
