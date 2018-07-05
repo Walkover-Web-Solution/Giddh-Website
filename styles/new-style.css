@@ -3930,11 +3930,11 @@ a:hover{
     left: 25px;
 }
 .custom-padding-20 {
-  padding: 10px 31px !important;
+  padding: 0 31px !important;
 }
 
-.height-460 {
-  height: 65vh;
+.height-52 {
+  height: 52vh;
   width: 100%;
   overflow-y: auto;
 }
@@ -4001,12 +4001,6 @@ a:hover{
 .talktosale-superform .sFSection .sFformfield .form-group {
   margin-bottom: 10px !important;
 }
-.talktosale-superform .sFSection .sFformfield label {
-  font-size: 15px !important;
-  color: #333 !important;
-  line-height: 26px !important;
-  margin-top: 20px !important;
-}
 .talktosale-superform .sFSection .sFformfield .form-group {
   margin-bottom: 10px !important;
 }
@@ -4014,7 +4008,6 @@ a:hover{
   font-size: 15px !important;
   color: #333 !important;
   line-height: 26px !important;
-  margin-top: 20px !important;
 }
 .talktosale-superform .sFSection {
   padding: 0 !important;
@@ -4030,6 +4023,14 @@ a:hover{
   box-shadow: none !important;
   font-size: 16px !important;
 }
+.custom-dialog .tab-pane{
+  padding:0;
+}
+.talktosale-superform .form-group{
+  margin-top:20px;
+}
+
+
 
 
 
