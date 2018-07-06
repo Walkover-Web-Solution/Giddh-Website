@@ -1,3 +1,7 @@
+<?php
+    header('Location: https://giddh.com/app/signup');
+?>
+
 <!DOCTYPE HTML>
 <html lang="en" ng-app='giddhWebsite'>
 <head>
