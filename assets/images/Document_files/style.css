@@ -9826,6 +9826,9 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.mh-ios:before {
+  content: "\e915";
+}
 
 .mh-google:before {
   content: "";

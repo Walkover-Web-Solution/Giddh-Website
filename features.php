@@ -56,7 +56,7 @@
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/GST.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>GST Ready</h3>
+                                <h3>GST Compliance</h3>
                                 <p>Compliance is no more a challenge! Create GST compliant invoices & file GST returns.</p>
                               </div>
                             </div>
@@ -72,10 +72,10 @@
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/inventory.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/Dashboard.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Inventory</h3>
-                                <p>Create inventory easily and track inventory expenses. Managing inventory is no more a hassle!</p>
+                                <h3>Dashboard</h3>
+                                <p>Get a bird’s eye view of revenue, net-worth of your business, all on one screen.</p>
                               </div>
                             </div>
                       </div>
@@ -83,10 +83,10 @@
               <div class="row p-t-30">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/bank.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/anywhere_anytime.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Linked Bank Account</h3>
-                                <p>Link multiple bank accounts and view transaction history whenever and wherever you want.</p>
+                                <h3>Anywhere Anytime</h3>
+                                <p>Jump on the cloud and manage your accounting whenever and wherever you want.</p>
                               </div>
                             </div>
                       </div>
@@ -130,10 +130,10 @@
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/anywhere_anytime.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/bank.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Anywhere Anytime</h3>
-                                <p>Jump on the cloud and manage your accounting whenever and wherever you want.</p>
+                                <h3>Linked Bank Account</h3>
+                                <p>Link multiple bank accounts and view transaction history whenever and wherever you want.</p>
                               </div>
                             </div>
                       </div>
@@ -170,10 +170,10 @@
               <div class="row p-t-30">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/Dashboard.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/inventory.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Dashboard</h3>
-                                <p>Get a bird’s eye view of revenue, net-worth of your business, all on one screen.</p>
+                                <h3>Inventory</h3>
+                                <p>Create inventory easily and track inventory expenses. Managing inventory is no more a hassle!</p>
                               </div>
                             </div>
                       </div>

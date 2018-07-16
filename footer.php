@@ -32,7 +32,7 @@
                           <ul class="app_download">
                                   <li>
                                       <a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">
-                                          <i class="fab fa-apple"></i>
+                                          <i class="icon icon-ios"></i>
                                       </a>
                                   </li>
                                   <li>
