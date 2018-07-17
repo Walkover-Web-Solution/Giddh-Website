@@ -31,17 +31,18 @@
     <div class="intro home flex-box-banner slide slide-1">
         <div class="banner_intro">
         <div id="first"></div>
-              <p class="banner_sub_heading">The future one of Indian Accounting</p>
+              <p class="banner_sub_heading">The future of Indian Accounting</p>
               <h1 class="banner_heading">Take your<br> Tally books online</h1>
               <p class="m-t-20">
                 <a class="btn btn-sync" href="tallyplusgiddh.php">Sync with Tally</a>
                 <a class="talktosale"  href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
-            <p class="banner_heading_secondry">Switch eventually or start a fresh book with <a>giddh</a></p>
+            <p class="banner_heading_secondry">Switch eventually or start a fresh book with 
+              <a onclick="location.href='app/signup'">giddh</a></p>
         </div>
         <div class="right-section">
-        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one">
-        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two">
+        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-1">
+        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-1">
           <img src="../assets/images/circle.gif" alt="" class="rotate_wheel">
           <img src="../assets/images/slide-1.png" alt="Tally your books with giddh" class="img-responsive big-img">
           <img src="../assets/images/slide_1_small.png" alt="Tally your books with giddh" class="img-responsive small-img">
@@ -61,6 +62,8 @@
             </p>
         </div>
         <div class="right-section">
+        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-2">
+        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-2">
           <img src="../assets/images/accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive ac-img">
         </div>
     </div>
@@ -71,7 +74,7 @@
               <p class="banner_sub_heading m-t-15">Make your finance realtime, accessible, automated...</p>
               <p class="m-t-20">
                 <button class="btn btn-primary">Download Free</button>
-                <a href="tel:07939593939" class="talktosale"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                <a class="talktosale" ata-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
         </div>
         <div class="right-section">
@@ -104,7 +107,7 @@
                   </div>
               </div>
               <div class="row">
-                  <div class="area-flex">
+                  <div class="area-flex col-reverse">
                     <div class="col-sm-5">
                     <img src="../assets/images/access_data.svg" alt="Access your data with giddh" class="img-responsive">
                     </div>
@@ -130,7 +133,7 @@
                   </div>
               </div>
               <div class="row">
-                  <div class="area-flex">
+                  <div class="area-flex col-reverse">
                     <div class="col-sm-5">
                     <img src="../assets/images/Simplified.svg" alt="" class="img-responsive">
                     </div>
@@ -162,7 +165,7 @@
   <section class="p-tb-65 homeBtmhalf gridBg">
     <div class="container adjust-width">
       <div class="row text-center">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-10 col-sm-offset-1">
           <h3>Why use local database? When Giddh gives you bank level security with its unmatched data encryption</h3>
           <a href="security.php" class="btn btn-primary">See How</a>
         </div>
@@ -227,7 +230,7 @@
               </div>
               <div class="row">
                 <div class="col-sm-10 col-sm-offset-1 testimonial">
-                  <ul class="nav">
+                  <ul class="nav nav-testimonial">
                     <li class="card-custom">
                       <p>
                       “Running campaigns at Ice ball is a huge success. We love being able to reach out to customers who are at risk of forgetting about us and bringing them back in"
@@ -242,7 +245,7 @@
                     </li>
                   </ul>
                   <!-- <a href="" class="arrow-left"><i class="fa fa-angle-left" aria-hidden="true"></i></a> -->
-                  <a href="" class="arrow-right"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                  <!-- <a href="" class="arrow-right"><i class="fa fa-angle-right" aria-hidden="true"></i></a> -->
                 </div>
               </div> 
       </div>
@@ -251,16 +254,44 @@
 <!-- client section start -->
 <section class="darkbg homeContent" id="feature">
       <div class="container">
-              <div class="row p-b-0">
+              <div class="row p-tb-0">
                     <div class="col-sm-12 client-logo">
                       <img src="../assets/images/yash_telecom.png" alt="">
                       <img src="../assets/images/greyfriars.png" alt="">
-                      <img src="../assets/images/satpura.png" alt="">
+                      <img src="../assets/images/satpura.png" alt="" class="satpura">
                       <img src="../assets/images/range.png" alt="">
                     </div>
               </div>
       </div>
   </section> 
+  <div class="modal fade" id="talkToSales_dialog" role="dialog">
+  <div class="modal-dialog custom-dialog">
+    <div class="modal-header">
+      <h3 class="brdB left">Talk to Expert</h3>
+      <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
+       <ul class="nav-tabs nav-tabs-talk height42" id="shortner_tabs">
+           <li class="active"><a href="#scheduleCall"  data-toggle="tab">Arrange a Demo</a></li>
+           <li><a href="#dropEmail"  data-toggle="tab">Drop us a mail</a></li>
+
+       </ul>
+    </div>
+       <div class="pd2 tab-content custom-padding-20 height-52 tab-content-modal">
+
+         <div id="dropEmail" class="tab-pane">
+           <div id="Jkvq" class="talktosale-superform"></div>
+
+           <div class='alert alert-succcess successsales'></div>
+         </div>
+
+         <div id="scheduleCall" class="tab-pane active vertical-center">
+                <p>Choose your preferred time to schedule<br>
+                   a demo with an expert. </p>
+                <button class="btn btn-primary">Click Here</button>
+         </div>
+       </div>
+       
+     </div>
+ </div>
 <!-- client section end -->
 <!-- home content end -->     
   <!-- end of page -->
@@ -295,9 +326,8 @@ detectBrowser( "userAgent",  "Windows"           );
 detectBrowser( "platform",   "Win",    "Windows" );
 detectBrowser( "oscpu",      "Windows"           );
 document.getElementById("download"+osName).className = "btn btn-primary knownOS";
-
-
 </script>
+
 
 </body>
 </html>
