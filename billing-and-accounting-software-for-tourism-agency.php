@@ -27,7 +27,7 @@
 <!--Banner-->
 <div id="gstBanner" class="ylwBg gridBg">
     <div class="container text-center">
-    	<img src="/gidh/assets/images/new/tourism-software.png" class="img-responsive"/>
+    	<img src="/assets/images/new/tourism-software.png" class="img-responsive"/>
         <h1>Tourism Accounting Software</h1>
     </div>
 </div>
@@ -38,7 +38,7 @@
     <div class="container text-center">
     	<p>Don't get confused</p>
      
-        <a class="trBox" href="signup.php" style="margin: 15px 0 10px;"><span>Try </span><img src="/gidh/assets/images/new/giddh-logo-white.png"/></a>
+        <a class="trBox" href="signup.php" style="margin: 15px 0 10px;"><span>Try </span><img src="/assets/images/new/giddh-logo-white.png"/></a>
 
 <br><br>
         <p>Managing a business in the travel sector can be challenging. With Giddh, create professional invoices, keep track of your transactions & easily automate your operations. Maintain reliable accounting whether you own a hotel or travel & tour agency.</p>
@@ -72,7 +72,7 @@
 
 </div>
 <div class="clearfix"></div>
-<img src="/gidh/assets/images/new/ar-down.png">
+<img src="/assets/images/new/ar-down.png">
 
 <div class="col-lg-12 others">
 <br>
@@ -86,7 +86,7 @@
 
 <div class="clearfix"></div>
 
-<img src="/gidh/assets/images/new/ar-down.png">
+<img src="/assets/images/new/ar-down.png">
 
 <div class="col-lg-12 giddh">
 <br>
@@ -141,7 +141,6 @@
 <!--//Advantages-->
 
 <!-- Collaborators -->
-
 <!-- //Collaborators -->
 
 

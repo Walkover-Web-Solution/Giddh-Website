@@ -27,7 +27,7 @@
 <!--Banner-->
 <div id="gstBanner" class="ylwBg gridBg">
     <div class="container text-center">
-    	<img src="/gidh/assets/images/new/billing-and-accounting-software-for-startup.png" class="img-responsive"/>
+    	<img src="/assets/images/new/billing-and-accounting-software-for-startup.png" class="img-responsive"/>
         <h1>Billing & Accounting Software For Startup</h1>
     </div>
 </div>
@@ -38,7 +38,7 @@
     <div class="container text-center">
     	<p>Don't get confused</p>
      
-        <a class="trBox" href="signup.php" style="margin: 15px 0 10px;"><span>Try </span><img src="/gidh/assets/images/new/giddh-logo-white.png"/></a>
+        <a class="trBox" href="signup.php" style="margin: 15px 0 10px;"><span>Try </span><img src="/assets/images/new/giddh-logo-white.png"/></a>
 
 <br><br>
         <p>Thanks to the emergence of cloud technology, entrepreneurs of 21st century have found automated invoicing and accounting solutions in Giddh!
@@ -77,7 +77,7 @@ Entrepreneurs in India run startups that have limited means and rely heavily on 
 
 </div>
 <div class="clearfix"></div>
-<img src="/gidh/assets/images/new/ar-down.png">
+<img src="/assets/images/new/ar-down.png">
 
 <div class="col-lg-12 others">
 <br>
@@ -92,7 +92,7 @@ Create easily shareable balance sheets and P/L accounts so that when an investor
 
 <div class="clearfix"></div>
 
-<img src="/gidh/assets/images/new/ar-down.png">
+<img src="/assets/images/new/ar-down.png">
 
 <div class="col-lg-12 giddh">
 <br>
@@ -149,7 +149,6 @@ Got an yearly revenue between Rs. 12-20 Lakh? Enjoy lifetime free subscription a
 <!--//Advantages-->
 
 <!-- Collaborators -->
-
 <!-- //Collaborators -->
 
 
