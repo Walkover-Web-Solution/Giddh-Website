@@ -29,41 +29,43 @@
     </div> -->
    
     <div class="intro home flex-box-banner slide show">
-        <div class="banner_intro">
+        <div class="banner_intro features_banner">
               <h1 class="banner_heading">Access your books<br> anytime anywhere</h1>
-              <p class="banner_sub_heading">Manage your business finances anytime, from any <br>internet-connected device – phone, laptop or computer.</p>
+              <p class="banner_sub_heading m-t-20">Manage your business finances anytime, from any internet-connected device – phone, laptop or computer.</p>
               <p class="m-t-20">
                 <button class="btn btn-primary">Download Free</button>
-                <a href="tel:07939593939" class="talktosale"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                <a class="talktosale" ata-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
         </div>
         <div class="right-section">
-          <img src="../assets/images/feature_banner.png" alt="Tally your books with giddh">
+        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3">
+        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-3">
+          <img src="../assets/images/feature_banner_big.png" alt="Tally your books with giddh" class="tallybook">
         </div>
     </div>
   </section> <!-- end of videoBg -->
   
   <!-- home content end -->
   <section class="whitebg homeContent" id="feature">
-      <div class="container adjust-width">
+      <div class="container">
               <div class="row">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Features to run every part of your business</h2>
                   </div>
               </div>
-              <div class="row p-t-30">
+             <div class="row">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/GST.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>GST Ready</h3>
+                                <h3>GST Compliance</h3>
                                 <p>Compliance is no more a challenge! Create GST compliant invoices & file GST returns.</p>
                               </div>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/invoicing.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/invoicing-gray.svg" alt="Manage GST with Giddh">
                               <div class="caption">
                                 <h3>Invoicing</h3>
                                 <p>Get paid faster by creating professional looking invoices and send them automatically.</p>
@@ -72,21 +74,19 @@
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/inventory.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/Dashboard.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Inventory</h3>
-                                <p>Create inventory easily and track inventory expenses. Managing inventory is no more a hassle!</p>
+                                <h3>Dashboard</h3>
+                                <p>Get a bird’s eye view of revenue, net-worth of your business, all on one screen.</p>
                               </div>
                             </div>
                       </div>
-              </div>
-              <div class="row p-t-30">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/bank.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/anywhere_anytime.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Linked Bank Account</h3>
-                                <p>Link multiple bank accounts and view transaction history whenever and wherever you want.</p>
+                                <h3>Anywhere Anytime</h3>
+                                <p>Jump on the cloud and manage your accounting whenever and wherever you want.</p>
                               </div>
                             </div>
                       </div>
@@ -108,8 +108,6 @@
                               </div>
                             </div>
                       </div>
-              </div>
-              <div class="row p-t-30">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/report.svg" alt="Manage GST with Giddh">
@@ -130,15 +128,13 @@
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/anywhere_anytime.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/bank.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Anywhere Anytime</h3>
-                                <p>Jump on the cloud and manage your accounting whenever and wherever you want.</p>
+                                <h3>Linked Bank Account</h3>
+                                <p>Link multiple bank accounts and view transaction history whenever and wherever you want.</p>
                               </div>
                             </div>
                       </div>
-              </div>
-              <div class="row p-t-30">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/Multi_Currency.svg" alt="Manage GST with Giddh">
@@ -166,14 +162,12 @@
                               </div>
                             </div>
                       </div>
-              </div>
-              <div class="row p-t-30">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/Dashboard.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/inventory-gray.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Dashboard</h3>
-                                <p>Get a bird’s eye view of revenue, net-worth of your business, all on one screen.</p>
+                                <h3>Inventory</h3>
+                                <p>Create inventory easily and track inventory expenses. Managing inventory is no more a hassle!</p>
                               </div>
                             </div>
                       </div>
@@ -195,8 +189,6 @@
                               </div>
                             </div>
                       </div>
-              </div>
-              <div class="row p-t-30">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/Automation.svg" alt="Manage GST with Giddh">
@@ -224,9 +216,38 @@
                               </div>
                             </div>
                       </div>
-              </div>
+               </div>
+             </div>
       </div>
   </section>  
+  <div class="modal fade" id="talkToSales_dialog" role="dialog">
+  <div class="modal-dialog custom-dialog">
+    <div class="modal-header">
+      <h3 class="brdB left">Talk to Expert</h3>
+      <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
+       <ul class="nav-tabs nav-tabs-talk height42" id="shortner_tabs">
+           <li class="active"><a href="#scheduleCall"  data-toggle="tab">Arrange a Demo</a></li>
+           <li><a href="#dropEmail"  data-toggle="tab">Drop us a mail</a></li>
+
+       </ul>
+    </div>
+       <div class="pd2 tab-content custom-padding-20 height-52 tab-content-modal">
+
+         <div id="dropEmail" class="tab-pane">
+           <div id="Jkvq" class="talktosale-superform"></div>
+
+           <div class='alert alert-succcess successsales'></div>
+         </div>
+
+         <div id="scheduleCall" class="tab-pane active vertical-center">
+                <p>Choose your preferred time to schedule<br>
+                   a demo with an expert. </p>
+                <button class="btn btn-primary">Click Here</button>
+         </div>
+       </div>
+       
+     </div>
+ </div>
   <!-- end of page -->
   <?php include 'footScript.php';?>
   <?php include 'footer.php';?> 
