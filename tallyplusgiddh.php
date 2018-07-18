@@ -28,9 +28,9 @@
         </div>
         </div>
         <div class="col-md-8 center-block mrT6 pdT2" style="margin-bottom: 2px;">
-          <img src="assets/images/tally.png" class="img-responsive" alt="accounting" />
-          <span class="img_plane"></span>
+          <img src="assets/images/tally.png" class="img-responsive pull-right" alt="accounting" />
         </div>
+            <img src="assets/images/plane_ico.svg" alt="" class="img_plane">
       </div>
 
       <div class="col-md-6 col-xs-12 col-sm-6 height100 bg_dark_blue intro_col">
@@ -80,7 +80,7 @@
   </section>
 
   <!-- tally plugin -->
-  <section class="oh w100 cmnPd80 ylwBg homeBtmhalf gridBg">
+  <section class="oh w100 cmnPd80 ylwBg homeBtmhalf gridBg tallybg">
     <div class="container adjust-width">
       <div class="row  text-center">
         <div class="col-sm-12">

@@ -110,7 +110,7 @@
 <!--question-->
 <div id="ques">
     <div class="container text-center">
-        <h3>Have question on GST Accounting? Have free discussion <a href="#contact">Contact Us</a></h3>
+        <h3>Have question on Tourism Accounting? Have free discussion <a href="#contact">Contact Us</a></h3>
     </div>
 </div>
 <!--//question-->
@@ -118,7 +118,7 @@
 <!--Advantages-->
 <div id="adv">
     <div class="container text-center">
-    	<h3>Advantages of filing GST Return with us</h3>
+    	<h3>Advantages of Tourism Accounting Software with us</h3>
     	<div class="col-md-3 col-xs-6">
         	<div class="ic-52 circ"></div>
             <br>100%<br> accurate
@@ -141,28 +141,6 @@
 <!--//Advantages-->
 
 <!-- Collaborators -->
-<div class="cmnPd80 ylwBg">
-    <div class="container text-center">
-        <h3 class="mrB5 mrT">GST Return Collaborators</h3>
-        <div class="pdT4 clearfix">
-            <div class="col-md-4 col-xs-12 collaborator">
-                <div>
-                    <img src="assets/images/collaborator1.png" alt="jio gst" />
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 collaborator bdrL bdrR">
-                <div>
-                    <img src="assets/images/collaborator2.png" alt="cleartax" />
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 collaborator">
-                <div>
-                    <img src="assets/images/collaborator3.png" alt="tax raahi" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- //Collaborators -->
 
 

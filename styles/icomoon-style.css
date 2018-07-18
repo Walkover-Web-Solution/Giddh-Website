@@ -23,6 +23,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-ios:before {
+  content: "\e915";
+}
 
 .icon-alwaysbefore:before {
   content: "\e900";

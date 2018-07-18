@@ -31,15 +31,18 @@
     <div class="intro home flex-box-banner slide slide-1">
         <div class="banner_intro">
         <div id="first"></div>
-              <p class="banner_sub_heading">The future one of Indian Accounting</p>
+              <p class="banner_sub_heading">The future of Indian Accounting</p>
               <h1 class="banner_heading">Take your<br> Tally books online</h1>
               <p class="m-t-20">
                 <a class="btn btn-sync" href="tallyplusgiddh.php">Sync with Tally</a>
                 <a class="talktosale"  href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
-            <p class="banner_heading_secondry">Switch eventually or start a fresh book with <a>giddh</a></p>
+            <p class="banner_heading_secondry">Switch eventually or start a fresh book with 
+              <a onclick="location.href='app/signup'">giddh</a></p>
         </div>
         <div class="right-section">
+        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-1">
+        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-1">
           <img src="../assets/images/circle.gif" alt="" class="rotate_wheel">
           <img src="../assets/images/slide-1.png" alt="Tally your books with giddh" class="img-responsive big-img">
           <img src="../assets/images/slide_1_small.png" alt="Tally your books with giddh" class="img-responsive small-img">
@@ -59,6 +62,8 @@
             </p>
         </div>
         <div class="right-section">
+        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-2">
+        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-2">
           <img src="../assets/images/accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive ac-img">
         </div>
     </div>
@@ -69,7 +74,7 @@
               <p class="banner_sub_heading m-t-15">Make your finance realtime, accessible, automated...</p>
               <p class="m-t-20">
                 <button class="btn btn-primary">Download Free</button>
-                <a href="tel:07939593939" class="talktosale"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                <a class="talktosale" ata-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
         </div>
         <div class="right-section">
@@ -79,83 +84,105 @@
         </div>
     </div>
   </section> <!-- end of videoBg -->
+  <!-- giddh usage section start -->
   <section class="whitebg homeContent" id="feature">
-      <div class="container adjust-width">
+      <div class="container">
               <div class="row">
                     <div class="col-sm-12">
-                      <h2 class="center_heading">Built for Accountants</h2><br>
-                        <span class="center_sub_heading">Friendly with all other departments Sales, Support, Managment etc...</span>
+                      <h2 class="center_heading">Why Giddh is your business’s best friend!</h2>
                   </div>
               </div>
-              <div class="row bottomline p-t-30">
-                  <div class="col-sm-12">
+              <div class="row p-t-30">
+                  <div class="area-flex">
                     <div class="col-sm-5">
                         <div class="section-left">
-                        <h1>GST Ready</h1>
-                        <p>Giddh keeps you GST compliant. Send GST compliant invoices and file GST returns without any hassles, all with just a few clicks!</p>
+                        <h1>GST Compliant</h1>
+                        <p>Create GST compliant invoices, business reports, and file your returns seamlessly with automatic data reconciliation.</p>
+                        <a href="/gst.php">Learn More</a>
                         </div>
                     </div>
-                    <div class="col-sm-5 col-sm-offset-1">
+                    <div class="col-sm-5 col-sm-offset-2">
                       <img src="../assets/images/invoice-screen.svg" alt="Ready your GST with giddh" class="img-responsive">
                     </div>
                   </div>
               </div>
-              <div class="row bottomline">
-                  <div class="col-sm-12">
+              <div class="row">
+                  <div class="area-flex col-reverse">
                     <div class="col-sm-5">
-                      <img src="../assets/images/cashAccount.svg" alt="Access your data with giddh" class="img-responsive">
+                    <img src="../assets/images/access_data.svg" alt="Access your data with giddh" class="img-responsive">
                     </div>
-                    <div class="col-sm-5 col-sm-offset-1">
+                    <div class="col-sm-5 col-sm-offset-2">
                         <div class="section-left">
-                        <h1>Anywhere. Anytime</h1>
-                        <p>Log in from anywhere. Desktop or mobile. Manage your business accouting online, create an invoice or update customer data on the go.</p>
+                        <h1>Collaborative</h1>
+                        <p>Easily share the key financial insights in real time to your investors, CA along with your sales and marketing managers so that they can make better decisions at the appropriate time..</p>
                         </div>
                     </div>
                   </div>
               </div>
               <div class="row">
-                  <div class="col-sm-12">
+                  <div class="area-flex">
                     <div class="col-sm-5">
                         <div class="section-left">
-                        <h1>Access Data</h1>
-                        <p>With Giddh you are always on the driver’s seat. Give access to your accountants and work together seamlessly & securely.</p>
+                        <h1>Automated</h1>
+                        <p>Easily automate time consuming tasks like generating and sending invoices, sharing ledger, adding payment reminders OR just integrate our API to automate your accounting.</p>
                         </div>
                     </div>
-                    <div class="col-sm-5 col-sm-offset-1">
-                      <img src="../assets/images/access_data.svg" alt="Access your data with giddh" class="img-responsive">
+                    <div class="col-sm-5 col-sm-offset-2">
+                      <img src="../assets/images/Automates.svg" alt="" class="img-responsive">
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="area-flex col-reverse">
+                    <div class="col-sm-5">
+                    <img src="../assets/images/Simplified.svg" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-2">
+                        <div class="section-left">
+                        <h1>Simplified</h1>
+                        <p>A slick and straightforward user interface will help you start managing your finances within minutes of setting up. <b>Confused or stuck?</b> Our support team will be ever-ready to rescue you.</p>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="area-flex">
+                    <div class="col-sm-5">
+                        <div class="section-left">
+                        <h1>Scalable</h1>
+                        <p>Multi-currency and multi-branch accounting enables your business to go from local to global so that you can keep up with growing demand.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-sm-offset-2">
+                      <img src="../assets/images/Scalable.svg" alt="" class="img-responsive">
                     </div>
                   </div>
               </div>
         </div>
   </section>
-  <!-- home content end -->
+   <!-- giddh usage section end -->
+  <!-- start local database -->
   <section class="p-tb-65 homeBtmhalf gridBg">
     <div class="container adjust-width">
       <div class="row text-center">
-        <div class="col-sm-8 col-sm-offset-2">
+        <div class="col-sm-10 col-sm-offset-1">
           <h3>Why use local database? When Giddh gives you bank level security with its unmatched data encryption</h3>
-          <a href="security.php" class="btn btn-black">See How</a>
+          <a href="security.php" class="btn btn-primary">See How</a>
         </div>
       </div>
     </div>
   </section>
+   <!-- end local database -->
+  <!-- built for account -->
   <section class="whitebg homeContent" id="feature">
-      <div class="container adjust-width">
+      <div class="container">
               <div class="row">
                     <div class="col-sm-12">
-                      <h2 class="center_heading">Features to run every part of your business</h2>
+                      <h2 class="center_heading">Built for Accountants</h2><br>
+                      <span class="center_sub_heading">Friendly with all other departments Sales, Support, Managment etc...</span>
                   </div>
               </div>
               <div class="row p-t-30">
-                      <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/GST.svg" alt="Manage GST with Giddh">
-                              <div class="caption">
-                                <h3>GST Ready</h3>
-                                <p>Compliance is no more a challenge! Create GST compliant invoices & file GST returns.</p>
-                              </div>
-                            </div>
-                      </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/invoicing.svg" alt="Manage GST with Giddh">
@@ -174,73 +201,99 @@
                               </div>
                             </div>
                       </div>
-              </div>
-              <div class="row p-t-30">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/bank.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/connect-bank-account.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Linked Bank Account</h3>
-                                <p>Link multiple bank accounts and view transaction history whenever and wherever you want.</p>
-                              </div>
-                            </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/reconciliation.svg" alt="Manage GST with Giddh">
-                              <div class="caption">
-                                <h3>Bank Reconciliation</h3>
-                                <p>Giddh makes the confusing work of bank reconciliation easy & simple. Know your cash position anytime.</p>
-                              </div>
-                            </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/share_data.svg" alt="Manage GST with Giddh">
-                              <div class="caption">
-                                <h3>Mobile App</h3>
-                                <p>The power of automated accounting in your hands now with Giddh’s robust mobile application.</p>
-                              </div>
-                            </div>
-                      </div>
-              </div>
-              <div class="row p-t-30">
-                      <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/report.svg" alt="Manage GST with Giddh">
-                              <div class="caption">
-                                <h3>Report & Analysis</h3>
-                                <p>Analyse your business’s health using Giddh’s finance reporting tools such as daybook and audit log.</p>
-                              </div>
-                            </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/import_excel.svg" alt="Manage GST with Giddh">
-                              <div class="caption">
-                                <h3>Import Excel Files</h3>
-                                <p>Bring in and add your financial data from different excel files easily in Giddh..</p>
-                              </div>
-                            </div>
-                      </div>
-                      <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/anywhere_anytime.svg" alt="Manage GST with Giddh">
-                              <div class="caption">
-                                <h3>Anywhere Anytime</h3>
-                                <p>Jump on the cloud and manage your accounting whenever and wherever you want.</p>
+                                <h3>Connect Bank Account</h3>
+                                <p>Link multiple bank accounts to track your transaction activities and save time.</p>
                               </div>
                             </div>
                       </div>
               </div>
               <div class="row p-t-0">
                 <div class="col-sm-12 text-center">
-                  <a class="btn btn-black btn-lg" href="/features.php">Explore more Features</a>
+                  <a class="btn btn-black btn-lg" href="/features.php">See More Features</a>
                 </div>
               </div>
       </div>
       
   </section>  
+<!-- built for account end -->
+<!-- trusted by expert carousel start -->
+<section class="graybg homeContent" id="feature">
+      <div class="container">
+              <div class="row p-b-0">
+                    <div class="col-sm-12">
+                      <h2 class="center_heading">Trusted by the Experts</h2><br>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 testimonial">
+                  <ul class="nav nav-testimonial">
+                    <li class="card-custom">
+                      <p>
+                      “Running campaigns at Ice ball is a huge success. We love being able to reach out to customers who are at risk of forgetting about us and bringing them back in"
+                      </p><br>
+                      <span>
+                      - Mr. Tushar Ladha <br>
+                       CEO
+                      </span>
+                      <div class="logo-box">
+                        <img src="../assets/images/mitti_logo_final.jpg" alt="" class="img-responsive">
+                      </div>
+                    </li>
+                  </ul>
+                  <!-- <a href="" class="arrow-left"><i class="fa fa-angle-left" aria-hidden="true"></i></a> -->
+                  <!-- <a href="" class="arrow-right"><i class="fa fa-angle-right" aria-hidden="true"></i></a> -->
+                </div>
+              </div> 
+      </div>
+  </section> 
+<!-- trusted by expert carousel end -->
+<!-- client section start -->
+<section class="darkbg homeContent" id="feature">
+      <div class="container">
+              <div class="row p-tb-0">
+                    <div class="col-sm-12 client-logo">
+                      <img src="../assets/images/yash_telecom.png" alt="">
+                      <img src="../assets/images/greyfriars.png" alt="">
+                      <img src="../assets/images/satpura.png" alt="" class="satpura">
+                      <img src="../assets/images/range.png" alt="">
+                    </div>
+              </div>
+      </div>
+  </section> 
+  <div class="modal fade" id="talkToSales_dialog" role="dialog">
+  <div class="modal-dialog custom-dialog">
+    <div class="modal-header">
+      <h3 class="brdB left">Talk to Expert</h3>
+      <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
+       <ul class="nav-tabs nav-tabs-talk height42" id="shortner_tabs">
+           <li class="active"><a href="#scheduleCall"  data-toggle="tab">Arrange a Demo</a></li>
+           <li><a href="#dropEmail"  data-toggle="tab">Drop us a mail</a></li>
+
+       </ul>
+    </div>
+       <div class="pd2 tab-content custom-padding-20 height-52 tab-content-modal">
+
+         <div id="dropEmail" class="tab-pane">
+           <div id="Jkvq" class="talktosale-superform"></div>
+
+           <div class='alert alert-succcess successsales'></div>
+         </div>
+
+         <div id="scheduleCall" class="tab-pane active vertical-center">
+                <p>Choose your preferred time to schedule<br>
+                   a demo with an expert. </p>
+                <button class="btn btn-primary">Click Here</button>
+         </div>
+       </div>
+       
+     </div>
+ </div>
+<!-- client section end -->
+<!-- home content end -->     
   <!-- end of page -->
   <?php include 'footScript.php';?>
   <?php include 'footer.php';?> 
@@ -274,5 +327,7 @@ detectBrowser( "platform",   "Win",    "Windows" );
 detectBrowser( "oscpu",      "Windows"           );
 document.getElementById("download"+osName).className = "btn btn-primary knownOS";
 </script>
+
+
 </body>
 </html>
