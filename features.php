@@ -28,7 +28,7 @@
       <a href="#feature" class="page-scroll"></a>
     </div> -->
    
-    <div class="intro home flex-box-banner slide show">
+    <div class="intro home flex-box-banner slide show container">
         <div class="banner_intro features_banner">
               <h1 class="banner_heading">Access your books<br> anytime anywhere</h1>
               <p class="banner_sub_heading m-t-20">Manage your business finances anytime, from any internet-connected device – phone, laptop or computer.</p>
@@ -81,6 +81,7 @@
                               </div>
                             </div>
                       </div>
+                      <div class="clearfix"></div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/anywhere_anytime.svg" alt="Manage GST with Giddh">
@@ -108,6 +109,7 @@
                               </div>
                             </div>
                       </div>
+                      <div class="clearfix"></div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/report.svg" alt="Manage GST with Giddh">
@@ -135,6 +137,7 @@
                               </div>
                             </div>
                       </div>
+                      <div class="clearfix"></div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/Multi_Currency.svg" alt="Manage GST with Giddh">
@@ -162,6 +165,7 @@
                               </div>
                             </div>
                       </div>
+                      <div class="clearfix"></div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/inventory-gray.svg" alt="Manage GST with Giddh">
@@ -189,6 +193,7 @@
                               </div>
                             </div>
                       </div>
+                      <div class="clearfix"></div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/Automation.svg" alt="Manage GST with Giddh">

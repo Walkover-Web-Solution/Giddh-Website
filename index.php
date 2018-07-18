@@ -28,7 +28,7 @@
       <a href="#feature" class="page-scroll"></a>
     </div> -->
    
-    <div class="intro home flex-box-banner slide slide-1">
+    <div class="intro home flex-box-banner slide slide-1 container">
         <div class="banner_intro">
         <div id="first"></div>
               <p class="banner_sub_heading">The future of Indian Accounting</p>
@@ -49,11 +49,11 @@
         </div>
     </div>
    
-    <div class="intro home flex-box-banner slide slide-2">
+    <div class="intro home flex-box-banner slide slide-2 container">
         <div class="banner_intro">
               <p class="banner_sub_heading">The future of Indian Accounting</p>
-              <h1 class="banner_heading">Give your account<br> department an extra edge</h1>
-              <p class="banner_sub_heading m-t-15">By automation and giddh</p>
+              <h1 class="banner_heading">Where accounting <br>happens </h1>
+              <p class="banner_sub_heading m-t-15">Make your finance realtime, accessible, automated...</p>
               <p class="m-t-20">
                 <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
                 <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
@@ -67,22 +67,7 @@
           <img src="../assets/images/accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive ac-img">
         </div>
     </div>
-    <div class="intro home flex-box-banner slide slide-3">
-        <div class="banner_intro">
-              <p class="banner_sub_heading">The future of Indian Accounting</p>
-              <h1 class="banner_heading">Where accounting<br> happens</h1>
-              <p class="banner_sub_heading m-t-15">Make your finance realtime, accessible, automated...</p>
-              <p class="m-t-20">
-                <button class="btn btn-primary">Download Free</button>
-                <a class="talktosale" ata-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
-            </p>
-        </div>
-        <div class="right-section">
-          <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one">
-          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two"> -->
-          <!-- <img src="../assets/images/accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive"> -->
-        </div>
-    </div>
+   
   </section> <!-- end of videoBg -->
   <!-- giddh usage section start -->
   <section class="whitebg homeContent" id="feature">
@@ -92,7 +77,7 @@
                       <h2 class="center_heading">Why Giddh is your business’s best friend!</h2>
                   </div>
               </div>
-              <div class="row p-t-30">
+              <div class="row">
                   <div class="area-flex">
                     <div class="col-sm-5">
                         <div class="section-left">
@@ -162,19 +147,19 @@
   </section>
    <!-- giddh usage section end -->
   <!-- start local database -->
-  <section class="p-tb-65 homeBtmhalf gridBg">
+  <section class="p-tb-75 homeBtmhalf gridBg">
     <div class="container adjust-width">
       <div class="row text-center">
         <div class="col-sm-10 col-sm-offset-1">
           <h3>Why use local database? When Giddh gives you bank level security with its unmatched data encryption</h3>
-          <a href="security.php" class="btn btn-primary">See How</a>
+          <a href="security.php" class="btn btn-primary btn-lg">See How</a>
         </div>
       </div>
     </div>
   </section>
    <!-- end local database -->
   <!-- built for account -->
-  <section class="whitebg homeContent" id="feature">
+  <section class="whitebg homeContent small-mg" id="feature">
       <div class="container">
               <div class="row">
                     <div class="col-sm-12">
@@ -233,11 +218,11 @@
                   <ul class="nav nav-testimonial">
                     <li class="card-custom">
                       <p>
-                      “Running campaigns at Ice ball is a huge success. We love being able to reach out to customers who are at risk of forgetting about us and bringing them back in"
+                      “I  used to maintain Excel sheets thinking it was simpler. Someone suggested Giddh and now I can’t stop using it! I can see all my ledgers, invoices & dues. The best part- they have an awesome support team for assistance”
                       </p><br>
                       <span>
-                      - Mr. Tushar Ladha <br>
-                       CEO
+                      - Ankita Chadha <br>
+                       Owner
                       </span>
                       <div class="logo-box">
                         <img src="../assets/images/mitti_logo_final.jpg" alt="" class="img-responsive">

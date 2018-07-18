@@ -81,7 +81,7 @@
               <div class="col-sm-4 col-xs-10 contact-area">
                 <div class="contact-form">
                   <img src="/assets/images/Footer_Caricature.png" alt="" class="img-caricature">
-                  <h1>Talk to Expert</h1>
+                  <h1 class="center_heading">Talk to Expert</h1>
                   <!-- <form class="contact" novalidate name="contactForm">
                     <div class="form-group">
                         <input name="contactForm.name" ng-model="vm.cForm.name" type="text" required class="form-control" placeholder="Your Name">

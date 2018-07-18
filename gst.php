@@ -11,7 +11,7 @@
 </head>
 
 <!-- {oh:geo.country != 'IN'} -->
-<body id="page-top" class="gst arvo about-section-body lightTrans" ng-controller="homeController as vm">
+<body id="page-top" ng-controller="homeController as vm" class="gstbody">
   
   <!-- <div ng-class="{'other-country': geo.country != 'IN'}" ng-if="geo.country != 'IN'">
     <iframe src="global.html" style="height:100%;width:100%;padding: 0;margin:0"></iframe>
@@ -24,154 +24,132 @@
   <!-- end navigation -->
 
 <!--Banner-->
-<div id="gstBanner" class="ylwBg gridBg">
-    <div class="container text-center">
-    	<img src="/assets/images/new/gst.png" class="img-responsive"/>
-        <h3>Goods and Service Tax (GST)</h3>
+<section id="videoBg" class="gst-full-banner">
+    <div class="intro-gst flex-box-banner container"><!--id="gstBanner"--> 
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="banner-gst">
+                        <h6>From creating error-free GST invoice to</h6>
+                        <h1>File your GSTR Automatically</h1>
+                        <img src="/assets/images/new/GSTR-banner.png" class="img-responsive"/>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
+</section>
+<section class="bg-gray-dark small-mg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <h1 class="center_heading">Advantages of filing GSTR with us</h1>   
+                    </div>
+                </div>
+            </div>
+            <div class="row m-t-20">
+                      <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail feature_thumbnail">
+                                <img src="../assets/images/new/Direct-Filing.svg" alt="">
+                              <div class="caption">
+                                <h3>Direct Filing</h3>
+                                <p>Giddh gives you the ease of direct GST filing by pushing your data to the portal automatically.</p>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail feature_thumbnail">
+                                <img src="../assets/images/new/Accurate.svg" alt="">
+                              <div class="caption">
+                                <h3>100% Accurate</h3>
+                                <p>Easily identify and rectify errors before submitting your return file and ensure absolutely accurate compliance.</p>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail feature_thumbnail">
+                                <img src="../assets/images/new/get-notified.svg" alt="">
+                              <div class="caption">
+                                <h3>Get Notified Timely</h3>
+                                <p>Avoid last minute compliance stress & get duly notified. You will never miss another deadline or suffer penalty.</p>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail feature_thumbnail">
+                                <img src="../assets/images/new/easy-fast.svg" alt="">
+                              <div class="caption">
+                                <h3>Easy & Fast</h3>
+                                <p>Designed to be simple, fast and delightful. From entrepreneurs to CA, anyone can now manage GST filing.</p>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail feature_thumbnail">
+                                <img src="../assets/images/new/Secure-relaible.svg" alt="">
+                              <div class="caption">
+                                <h3>Secure & Reliable</h3>
+                                <p>Your data is protected with several layers of industry leading security measures, keeping your GST filing experience is secure and fail proof.</p>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail feature_thumbnail">
+                                <img src="../assets/images/new/best-Support.svg" alt="">
+                              <div class="caption">
+                                <h3>Best in Class Support</h3>
+                                <p>Our round the clock team of accounting and GST experts are always at your service.</p>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="clearfix"></div>
+               </div>
+             </div> 
+        </div>
+</section>
+<section class="whitebg know">
+<div class="container">
+<div class="row p-tb-0">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <h1 class="center_heading">Did you know?</h1>  
+                        <h2>"Most Indian business owners depend on their accountants to stay tax compliant".</h2> 
+                        <p>Eliminate the dependency on accountants for filing your GST returns and take charge of your business today</p>
+                        <button class="btn btn-primary btn-lg">Talk to Expert</button>
+                    </div>
+                </div>
+            </div>
 </div>
+
+</section>
+<section class="bg-gray-darker p-tb-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                    <h1>GST Return Collaborators</h1>
+            </div>
+            <div class="col-sm-10">
+                <div class="right-image pull-right">
+                <img src="../assets/images/new/Jio-GST.svg" alt="">
+                <hr>
+                <img src="../assets/images/new/GST.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!--//Banner-->
 
-<!--try giddh-->
-<div id="tryG">
-    <div class="container text-center">
-    	<p>Don't get confused</p>
-        <h3>File your GST RETURN automatically</h3><br>
-        
-        <a class="trBox" href="signup.php"><span>Try </span><img src="/assets/images/new/giddh-logo-white.png"/></a>
-        <p>Cloud Based Accounting Software to File GST return online</p>
-    </div>
-</div>
-<!--//try giddh-->
 
-<!--Filling process-->
-<div id="filling">
-    <div class="container text-center">
-    <div class="col-md-12 mrB3">
-	    	<h1>GST Return Filing Process</h1>
-	    </div>
-    	<div class="col-sm-6 others">
-        	<h3>With Others</h3>
-            <br>
-            <div class="clearfix">
-                <div class="ic-32"></div>
-                <p>You file GSTR-1 for sales made. (GST due date 10th of every month)</p>
-            </div>
-            <img src="/assets/images/new/ar-down.png" />
-            
-            <div class="clearfix">
-                <div class="ic-32 view"></div>
-                <p>Your buyer views the sales made by you in GSTR-2A</p>
-            </div>
-            <img src="/assets/images/new/ar-down.png" />
-            
-            <div class="clearfix">
-                <div class="ic-32 tick"></div>
-                <p>Your buyer views the sales made by you in GSTR-2A</p>
-            </div>
-            <img src="/assets/images/new/ar-down.png" />
-            
-            <div class="clearfix">
-                <div class="ic-32 eq"></div>
-                <p>Your buyer views the sales marked by you, you can see that in GSTR-1A and approve or disapprove it and file GSTR-3.</p>
-            </div>
-            <img src="/assets/images/new/ar-down.png" />
-            
-            <div class="clearfix">
-                <div class="ic-32 card"></div>
-                <p>Get a GST tax return amount & pay seperately to bank</p>
-            </div>
-        </div>
-        
-        <div class="col-sm-6 giddh">
-        	<h3>With Giddh</h3>
-            <br>
-            <div class="clearfix">
-                <div class="ic-32 gidd"></div>
-                <p>Focus on your business</p>
-            </div>
-            <img src="/assets/images/new/ar-down.png" />
-            <div class="clearfix">
-                <div class="ic-32 gidd"></div>
-                <p>Focus on your business</p>
-            </div>
-            <img src="/assets/images/new/ar-down.png" />
-            <div class="clearfix">
-                <div class="ic-32 gidd"></div>
-                <p>Focus on your business</p>
-            </div>
-            <img src="/assets/images/new/ar-down.png" />
-            <div class="clearfix">
-                <div class="ic-32 gidd"></div>
-                <p>Approve and submit GST return online</p>
-            </div>
-            <img src="/assets/images/new/ar-down.png" />
-            <div class="clearfix">
-                <div class="ic-32 gidd"></div>
-                <p>Determine & pay the tax amount directly via Giddh <a href="https://giddh.com" class="sClr" title="Accounting Software">Accounting Software</a></p>
-            </div>
-        </div>
-    </div>
-</div>
-<!--//Filling process-->
 
-<!--question-->
-<div id="ques">
-    <div class="container text-center">
-        <h3>Have question on GST Accounting? Have free discussion <a href="#contact">Contact Us</a></h3>
-    </div>
-</div>
-<!--//question-->
 
-<!--Advantages-->
-<div id="adv">
-    <div class="container text-center">
-    	<h3>Advantages of filing GST Return with us</h3>
-    	<div class="col-md-3 col-xs-6">
-        	<div class="ic-52 circ"></div>
-            <br>100%<br> accurate
-        </div>
-        <div class="col-md-3 col-xs-6">
-        	<div class="ic-52 tick"></div>
-            <br>Easy, Secure<br>and Fast
-        </div>
-        <div class="col-md-3 col-xs-6">
-        	<div class="ic-52 ldm"></div>
-            <br>Status<br> Tracking
-        </div>
-        <div class="col-md-3 col-xs-6">
-        	<div class="ic-52 lock"></div>
-            <br>Full<br> confidential
-        </div>
-    </div>
-</div>
 
-<!--//Advantages-->
 
-<!-- Collaborators -->
-<div class="cmnPd80 ylwBg">
-    <div class="container text-center">
-        <h3 class="mrB5 mrT">GST Return Collaborators</h3>
-        <div class="pdT4 clearfix">
-            <div class="col-md-4 col-xs-12 collaborator">
-                <div>
-                    <img src="assets/images/collaborator1.png" alt="jio gst" />
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 collaborator bdrL bdrR">
-                <div>
-                    <img src="assets/images/collaborator2.png" alt="cleartax" />
-                </div>
-            </div>
-            <div class="col-md-4 col-xs-12 collaborator">
-                <div>
-                    <img src="assets/images/collaborator3.png" alt="tax raahi" />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- //Collaborators -->
+
+
 
 
   <!-- include footer -->
