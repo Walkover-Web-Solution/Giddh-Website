@@ -85,7 +85,7 @@
                                 <img src="../assets/images/new/easy-fast.svg" alt="">
                               <div class="caption">
                                 <h3>Easy & Fast</h3>
-                                <p>Designed to be simple, fast and delightful. From entrepreneurs to CA, anyone can now manage GST filing.</p>
+                                <p>We have made the process of filing returns incredibly easy and blazing fast.</p>
                               </div>
                             </div>
                       </div>
@@ -117,10 +117,10 @@
 <div class="row p-tb-0">
                 <div class="col-sm-12">
                     <div class="text-center">
-                        <h1 class="center_heading">Did you know?</h1>  
-                        <h2>"Most Indian business owners depend on their accountants to stay tax compliant".</h2> 
-                        <p>Eliminate the dependency on accountants for filing your GST returns and take charge of your business today</p>
-                        <button class="btn btn-primary btn-lg">Talk to Expert</button>
+                        <!-- <h1 class="center_heading">Did you know?</h1>   -->
+                        <p class="m-t-0">Take charge of your business with Giddh and enjoy a direct, fast and secure GST return filing.</p> 
+                        <!-- <p>Eliminate the dependency on accountants for filing your GST returns and take charge of your business today</p> -->
+                        <button class="btn btn-primary btn-md">Talk to Expert</button>
                     </div>
                 </div>
             </div>
