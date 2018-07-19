@@ -33,8 +33,10 @@
               <h1 class="banner_heading">Access your books<br> anytime anywhere</h1>
               <p class="banner_sub_heading m-t-20">Manage your business finances anytime, from any internet-connected device – phone, laptop or computer.</p>
               <p class="m-t-20">
-                <button class="btn btn-primary">Download Free</button>
-                <a class="talktosale" ata-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+              <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
+                <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
+                <a class="btn btn-primary" id="downloadLinux" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz">Download Free</a>
+                <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
         </div>
         <div class="right-section">
@@ -59,7 +61,7 @@
                                 <img src="../assets/images/GST.svg" alt="Manage GST with Giddh">
                               <div class="caption">
                                 <h3>GST Compliance</h3>
-                                <p>Compliance is no more a challenge! Create GST compliant invoices & file GST returns.</p>
+                                <p>Compliance is no more a challenge! Create GST compliant invoices & file <a href="/gst.php">GST returns</a>.</p>
                               </div>
                             </div>
                       </div>
@@ -256,5 +258,25 @@
   <!-- end of page -->
   <?php include 'footScript.php';?>
   <?php include 'footer.php';?> 
+  <script>
+  function detectBrowser(x, y, z) {
+    z = z || y;
+    if (navigator[x] && navigator[x].indexOf(y) !== -1) {
+        osName = z;
+    }
+}
+
+/*   navigator     value     download  */
+detectBrowser( "appVersion", "Mac",    "MacOS"   );
+detectBrowser( "appVersion", "Linux"             );
+detectBrowser( "userAgent",  "Linux"             );
+detectBrowser( "platform",   "Linux"             );
+detectBrowser( "appVersion", "Win",    "Windows" );
+detectBrowser( "userAgent",  "Windows"           );
+detectBrowser( "platform",   "Win",    "Windows" );
+detectBrowser( "oscpu",      "Windows"           );
+document.getElementById("download"+osName).className = "btn btn-primary knownOS";
+
+  </script>
 </body>
 </html>
