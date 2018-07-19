@@ -1404,7 +1404,7 @@ figure h1{margin-bottom:5px;}
 .know p{
   font-size:21px;
   width: 59%;
-  margin: 50px auto;
+  margin: 30px auto;
 }
 .right-image img{
   height:70px;
@@ -4640,6 +4640,9 @@ margin-top:5px;
 .m-tb-60{
   margin-top:60px;
   margin-bottom: 60px;
+}
+.m-t-0{
+  margin-top:0 !important;
 }
 
 
