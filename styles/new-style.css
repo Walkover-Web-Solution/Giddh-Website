@@ -870,6 +870,7 @@ body.light .navbar.transparent{
 }
 .testimonial{
   position: relative;
+  margin-bottom: 80px;
 }
 .testimonial .arrow-left, .testimonial .arrow-right{
   position:absolute;
@@ -1201,7 +1202,7 @@ margin:0 48px;
 
 /*home content styles*/
 .homeContent{
-	padding: 90px 0 60px 0;
+	padding: 90px 0 30px 0;
 	text-align: center;
 	color: white;
   font-family: 'CambriaRegular' !important;
@@ -1250,7 +1251,7 @@ figure h1{margin-bottom:5px;}
 .homeContent figure:last-child figcaption{
 	margin-bottom: 0;
 }
-.homeBtmhalf h3{line-height: 36px;margin-bottom: 20px; margin-top:0; color:#fff;}
+.homeBtmhalf h3{line-height: 36px;margin-bottom: 40px; margin-top:0; color:#fff;}
 .caseStd aside{max-width:180px; text-align:left; margin:0 auto 30px;}
 .caseStd h2{font-size:46px; margin:30px 0 40px}
 .caseStd aside p{margin:4px 0 2px}
@@ -1298,6 +1299,12 @@ figure h1{margin-bottom:5px;}
   height:4px;
   margin-top:24px;
 }
+.contact-form .center_heading{
+  color:#fff;
+}
+.contact-form .center_heading:after{
+  bottom:-16px;
+}
 .center_sub_heading{
   font-size:24px;
 }
@@ -1311,7 +1318,7 @@ figure h1{margin-bottom:5px;}
   width: 100%;
   /* overflow-x: hidden;
   overflow-y: visible; */
-  height: 320px;
+  /* height: 320px; */
   white-space: nowrap;
 }
 .nav-testimonial li{
@@ -1324,8 +1331,9 @@ figure h1{margin-bottom:5px;}
 .feature_thumbnail{
   border:none;
   background:transparent;
-  max-width: 271px;
+  max-width: 318px;
   margin:59px auto;
+  text-align:center;
 }
 .feature_thumbnail img{
   height:90px;
@@ -1335,23 +1343,78 @@ figure h1{margin-bottom:5px;}
   margin:9px 0 9px 0;
   font-family: "CambriaBold";
   font-size:20px;
-  margin-top:50px;
+}
+.small-mg .feature_thumbnail h3{
+  margin-top:10px;
+}
+.small-mg .feature_thumbnail{
+  margin-bottom: 0;
+}
+.gstbody section{
+  padding:63px 0;
 }
 #feature .row{
   padding:60px 0 0 0;
 }
 #feature .center_heading{
   font-size:45px !important;
-  font-family: "CambriaRegular";  
+  font-family: "CambriaBold";  
 }
 .feature_thumbnail .caption p{
-  font-size:16px;
+  font-size:18px;
   color:#565B73;  
   line-height: 25px;
 }
 
 .features_banner{
   max-width:473px;
+}
+.area-flex-gst{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+.banner-gst{
+  text-align:center;
+  color:#26263A;
+  position: relative;
+  top: 50px;
+}
+.banner-gst h6{
+  font-size:24px;
+  font-family: "CambriaRegular";
+}
+.banner-gst h1{
+  font-size:54px;
+  font-family: "CambriaBold";
+  margin-top:0;
+}
+.know h2{
+  font-family:"CambriaBold";
+  font-size:26px;
+  margin-top:90px;
+}
+.know p{
+  font-size:21px;
+  width: 59%;
+  margin: 50px auto;
+}
+.right-image img{
+  height:70px;
+  float: left;
+  margin-top: 46px;
+  margin-bottom: 46px;
+  margin-right:60px;
+}
+.right-image hr{
+  width: 1px;
+  float: left;
+  height: 162px;
+  background: #CCCCCD;
+  border: none;
+  margin: 0;
+  margin-right:60px;
 }
 
 @media(min-width:768px) {
@@ -1396,6 +1459,7 @@ figure h1{margin-bottom:5px;}
 .gst p{font-size:19px;}
 .gst h3{font-size:32px;}
 #gstBanner{padding-bottom:40px}
+
 
 #tryG{background:#28283C; color:#fff; padding:40px 0}
 .trBox{border:2px solid #fff; margin:80px 0 10px; padding:5px; display:inline-block}
@@ -1647,6 +1711,11 @@ footer small a{
 }
 .navbar-collapse.navbar-main-collapse{
   float: none;
+  background:var(--primary-color);
+}
+.p-tb-0{
+  padding-top:0;
+  padding-bottom: 0;
 }
 /*about page end*/
 
@@ -2370,6 +2439,13 @@ body.unresponsive .container {
 #gst p{font-size:19px;}
 #gst h3{font-size:32px;}
 #gstBanner{background:#FFF6E6 url('/assets/images/new/banner-grid-design.png'); padding-bottom:40px;padding-top:100px;}
+.gst-full-banner{
+  background: #FFFFFF;
+}
+.intro-gst{
+  width:100%;
+  height:100%;
+}
 
 #tryG{background:#28283C; color:#fff; padding:40px 0}
 .trBox{border:2px solid #fff; margin:80px 0 10px; padding:5px; display:inline-block; transition:.3s all}
@@ -2502,6 +2578,7 @@ body.unresponsive .container {
   background: #2A2A3E;
   position: relative;
   z-index:2;
+  padding: 0;
 }
 #footer:before{
 background:  #28283C;
@@ -3210,6 +3287,10 @@ figure.member:last-child span.empty{
   padding-top:65px;
   padding-bottom:65px;
 }
+.p-tb-75{
+  padding-top:75px;
+  padding-bottom:75px;
+}
 .p-t-30{
   padding-top:30px !important;
 }
@@ -3265,6 +3346,29 @@ margin-bottom: 15px;
 }
 
 @media only screen and (max-width:768px){
+  .gstbody section{
+    padding:20px 0;
+  }
+  .know h2{
+    margin-top:20px;
+  }
+  #footer:before{
+    display: none;
+  }
+  .darkbg.homeContent{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .client-logo img{
+    display: block;
+    margin: 30px auto;
+  }
+  .client-logo img:first-child{
+    margin-left:auto;
+  }
+  .client-logo img:last-child{
+    margin-right:auto;
+  }
   .features_banner{
     max-width:auto !important;
   }
@@ -3275,8 +3379,8 @@ margin-bottom: 15px;
   #feature .row{
     padding:20px 0 0 0;
   }
-  #feature .center_heading{
-    font-size:35px !important;
+  .section-left h1{
+    font-size:23px !important;
   }
   .section-left p {
     font-size: 18px;
@@ -3285,12 +3389,8 @@ margin-bottom: 15px;
   .section-left{
     text-align: center;
   }
-  .big-img{
-    display:none;
-  }
-  .small-img{
-    display:block;
-  }
+ 
+ 
   .rotate_wheel {
     display:none;
 }
@@ -3505,6 +3605,19 @@ margin-right:23px;
   }
   .bg-gray{
     background: #F3F3F3;
+  }
+  .bg-gray-dark{
+    background: #F7F7F7;
+  }
+  .bg-gray-darker{
+    background: #DEDEDE;
+  }
+  .bg-gray-darker h1{
+    color:#757575;
+    font-size:24px;
+    font-family:"CambriaBold";
+    line-height:35px;
+    margin-top:46px;
   }
   .container{
     position: relative;
@@ -3999,13 +4112,17 @@ a:hover{
 }
 
   @media only screen and (max-width:1000px){
+    .small-img{
+      display:block;
+    }
+    .big-img{
+      display:none;
+    }
     #feature .row{
       padding:0 0 20px 0 !important;
       
     }
-    .testimonial{
-      margin-bottom: 70px;
-    }
+  
     .img_plane{
       display:none;
     }
@@ -4087,8 +4204,14 @@ a:hover{
 .m-t-90{
   margin-top:0 !important;
 }
+.rotate_wheel{
+  display:none;
+}
 }
 @media all and (min-width: 241px) and (max-width: 480px) {
+  .app_download li{
+    margin-right:0;
+  }
   #toast-container > div {
     padding: 8px 8px 8px 50px;
     width: 18em;
@@ -4389,6 +4512,9 @@ margin-top:5px;
 }
 
 @media only screen and (max-width:1600px){
+  .big-img{
+    width:557px;
+   }
   .img_plane{
     top: 75%;
     right: -70px;
@@ -4405,7 +4531,7 @@ margin-top:5px;
 
 .sky-one{
   top: -100px;
-  right: -55px;
+  right: -107px;
 }
 .sky-one.bn-3{
   top:-60px;
@@ -4420,9 +4546,7 @@ margin-top:5px;
 }
 
 
-.banner_intro{
-  padding-left:20px;
-}
+
 .section-left h1{
   font-size: 28px;
 }
@@ -4431,21 +4555,25 @@ margin-top:5px;
   line-height: 50px;
 }
 .tallybook{
-  width:445px;
+  width:450px;
+}
+.ac-img{
+  width:545px;
 }
 }
-@media only screen and (max-width:1200px){
+@media only screen and (max-width:1240px){
   .sky-two {
     top: 200px;
     right: 450px;
+}
+.sky-one{
+  right:0;
 }
 
 }
 @media only screen and (min-width:1440px){
   
-  .big-img{
-    width:657px;
-   }
+
    .sky-two {
     width:356px;
     height:auto;  
@@ -4481,7 +4609,11 @@ margin-top:5px;
   right: -200px;
 }
 .tallybook{
-  width:550px;
+  width:681px;
+}
+.banner_heading{
+  font-size:70px !important;
+  line-height: 80px !important;
 }
 
 
