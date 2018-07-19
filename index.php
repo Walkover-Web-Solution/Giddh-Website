@@ -74,7 +74,7 @@
       <div class="container">
               <div class="row">
                     <div class="col-sm-12">
-                      <h2 class="center_heading">Why Giddh is your business’s best friend!</h2>
+                      <h2 class="center_heading">Why Giddh is your business best friend!</h2>
                   </div>
               </div>
               <div class="row">
@@ -82,7 +82,7 @@
                     <div class="col-sm-5">
                         <div class="section-left">
                         <h1>GST Compliant</h1>
-                        <p>Create GST compliant invoices, business reports, and file your returns seamlessly with automatic data reconciliation.</p>
+                        <p>Create GST compliant invoices, business reports using our</p> <h1 class="ac-heading">accounting software</h1> <p>and file your returns seamlessly with automatic data reconciliation.</p><br>
                         <a href="/gst.php">Learn More</a>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
                     <div class="col-sm-5 col-sm-offset-2">
                         <div class="section-left">
                         <h1>Collaborative</h1>
-                        <p>Easily share the key financial insights in real time to your investors, CA along with your sales and marketing managers so that they can make better decisions at the appropriate time..</p>
+                        <p>Easily share the key financial insights in real time to your investors, CA along with your sales & marketing managers. Our accounting software enables making better decisions at the appropriate time.</p>
                         </div>
                     </div>
                   </div>
@@ -125,7 +125,7 @@
                     <div class="col-sm-5 col-sm-offset-2">
                         <div class="section-left">
                         <h1>Simplified</h1>
-                        <p>A slick and straightforward user interface will help you start managing your finances within minutes of setting up. <b>Confused or stuck?</b> Our support team will be ever-ready to rescue you.</p>
+                        <p>Our slick and straightforward accounting software will help you start managing your finances within minutes of setting up. Confused or stuck? Our support team will be ever-ready to rescue you.</p>
                         </div>
                     </div>
                   </div>
@@ -135,7 +135,7 @@
                     <div class="col-sm-5">
                         <div class="section-left">
                         <h1>Scalable</h1>
-                        <p>Multi-currency and multi-branch accounting enables your business to go from local to global so that you can keep up with growing demand.</p>
+                        <p>Multi-currency and multi-branch accounting enables your business to go from local to global. Now easily serve your International clients with our accounting software.</p>
                         </div>
                     </div>
                     <div class="col-sm-5 col-sm-offset-2">
@@ -198,7 +198,7 @@
               </div>
               <div class="row p-t-0">
                 <div class="col-sm-12 text-center">
-                  <a class="btn btn-black btn-lg" href="/features.php">See More Features</a>
+                  <a class="btn btn-black btn-lg m-t-60" href="/features.php">See More Features</a>
                 </div>
               </div>
       </div>
@@ -218,7 +218,7 @@
                   <ul class="nav nav-testimonial">
                     <li class="card-custom">
                       <p>
-                      “I  used to maintain Excel sheets thinking it was simpler. Someone suggested Giddh and now I can’t stop using it! I can see all my ledgers, invoices & dues. The best part- they have an awesome support team for assistance”
+                      “After transitioning from Excel, I can finally manage everything- from inventory to invoicing. And the queries are handled quickly by their awesome support team.”
                       </p><br>
                       <span>
                       - Ankita Chadha <br>
@@ -237,18 +237,18 @@
   </section> 
 <!-- trusted by expert carousel end -->
 <!-- client section start -->
-<section class="darkbg homeContent" id="feature">
+<!-- <section class="darkbg homeContent" id="feature">
       <div class="container">
               <div class="row p-tb-0">
                     <div class="col-sm-12 client-logo">
                       <img src="../assets/images/yash_telecom.png" alt="">
                       <img src="../assets/images/greyfriars.png" alt="">
                       <img src="../assets/images/satpura.png" alt="" class="satpura">
-                      <img src="../assets/images/range.png" alt="">
+                      <img src="../assets/images/rack-bank.png" alt="">
                     </div>
               </div>
       </div>
-  </section> 
+  </section>  -->
   <div class="modal fade" id="talkToSales_dialog" role="dialog">
   <div class="modal-dialog custom-dialog">
     <div class="modal-header">
@@ -269,9 +269,13 @@
          </div>
 
          <div id="scheduleCall" class="tab-pane active vertical-center">
-                <p>Choose your preferred time to schedule<br>
+                <!-- <p>Choose your preferred time to schedule<br>
                    a demo with an expert. </p>
-                <button class="btn btn-primary">Click Here</button>
+                <button class="btn btn-primary">Click Here</button> -->
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/giddh" style="min-width:320px;height:580px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+                <!-- Calendly inline widget end -->
          </div>
        </div>
        

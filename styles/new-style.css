@@ -826,6 +826,9 @@ body.light .navbar.transparent{
   padding-top:59px;
   padding-bottom: 59px;
 }
+/* #feature{
+  padding-bottom: 30px !important;
+} */
 .features_banner .banner_heading{
   font-size:50px !important;
   line-height:60px !important;
@@ -838,7 +841,7 @@ body.light .navbar.transparent{
   position: relative;
 }
 .card-custom p{
-  font-size:21px;
+  font-size:20px;
   line-height: 35px;
    max-width: 80%;
   margin: auto;
@@ -887,7 +890,7 @@ body.light .navbar.transparent{
   right:-40px ;
 }
 .client-logo{
-  text-align:left;
+  text-align:center;
 }
 .client-logo img{
 margin:0 48px;
@@ -1201,6 +1204,9 @@ margin:0 48px;
 
 
 /*home content styles*/
+.whitebg.homeContent{
+  padding-bottom: 90px;
+}
 .homeContent{
 	padding: 90px 0 30px 0;
 	text-align: center;
@@ -1415,6 +1421,12 @@ figure h1{margin-bottom:5px;}
   border: none;
   margin: 0;
   margin-right:60px;
+}
+.ac-heading{
+  font-size: 20px !important;
+  display:inline-block;
+  font-family: 'CambriaRegular' !important;
+  margin: 0 !important;
 }
 
 @media(min-width:768px) {
@@ -3335,6 +3347,7 @@ margin-bottom: 15px;
 .section-left p{
   font-size:20px;
   line-height: 35px;
+  display: inline;
 }
 .img_plane{
   position:absolute;
@@ -4234,7 +4247,7 @@ a:hover{
 .rotate_wheel{
   position: absolute;
   top: -36px;
-  left: 155px;
+  left: 210px;
   width: 70px;
   height: 70px;
   width:70px;
@@ -4588,7 +4601,10 @@ margin-top:5px;
 .sky-one.bn-1{
   width:269px;
   top: -200px;
-  right: -200px;
+  right: 0;
+}
+.rotate_wheel{
+  left:160px;
 }
 .sky-one.bn-2{
     width: 269px;
@@ -4615,8 +4631,15 @@ margin-top:5px;
   font-size:70px !important;
   line-height: 80px !important;
 }
+}
 
+.calendly-box{
+  position:relative; top:30px;
+}
 
+.m-tb-60{
+  margin-top:60px;
+  margin-bottom: 60px;
 }
 
 
