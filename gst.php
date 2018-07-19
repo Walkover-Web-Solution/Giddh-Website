@@ -28,17 +28,19 @@
     <div class="intro-gst flex-box-banner container"><!--id="gstBanner"--> 
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 area-flex-gst">
                     <div class="banner-gst">
-                        <h6>From creating error-free GST invoice to</h6>
-                        <h1>File your GSTR Automatically</h1>
-                        <img src="/assets/images/new/GSTR-banner.png" class="img-responsive"/>
-                        </div>
+                            <h6>From creating error-free GST invoice to</h6>
+                            <h1>File your GSTR Automatically</h1>
+                    </div>
+                    <div>
+                            <img src="/assets/images/new/GSTR-banner.png" class="img-responsive"/>
+                    </div>
                 </div>
-                
             </div>
         </div>
     </div>
+
 </section>
 <section class="bg-gray-dark small-mg">
         <div class="container">

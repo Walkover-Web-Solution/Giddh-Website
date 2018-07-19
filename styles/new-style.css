@@ -1302,6 +1302,9 @@ figure h1{margin-bottom:5px;}
 .contact-form .center_heading{
   color:#fff;
 }
+.contact-form .center_heading:after{
+  bottom:-16px;
+}
 .center_sub_heading{
   font-size:24px;
 }
@@ -1366,9 +1369,17 @@ figure h1{margin-bottom:5px;}
 .features_banner{
   max-width:473px;
 }
+.area-flex-gst{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-evenly;
+}
 .banner-gst{
   text-align:center;
   color:#26263A;
+  position: relative;
+  top: 50px;
 }
 .banner-gst h6{
   font-size:24px;
@@ -1377,6 +1388,7 @@ figure h1{margin-bottom:5px;}
 .banner-gst h1{
   font-size:54px;
   font-family: "CambriaBold";
+  margin-top:0;
 }
 .know h2{
   font-family:"CambriaBold";
@@ -2566,6 +2578,7 @@ body.unresponsive .container {
   background: #2A2A3E;
   position: relative;
   z-index:2;
+  padding: 0;
 }
 #footer:before{
 background:  #28283C;
@@ -3333,6 +3346,12 @@ margin-bottom: 15px;
 }
 
 @media only screen and (max-width:768px){
+  .gstbody section{
+    padding:20px 0;
+  }
+  .know h2{
+    margin-top:20px;
+  }
   #footer:before{
     display: none;
   }
