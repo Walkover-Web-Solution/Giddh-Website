@@ -432,7 +432,7 @@ a.anchBtn {
     font-size: 30px;
     color: white;
     font-weight: normal;
-    font-family: 'Roboto', sans-serif;
+    font-family: "CambriaBold" !important;
 }
 .black-back{
     background:#26263A;
@@ -829,10 +829,7 @@ body.light .navbar.transparent{
 /* #feature{
   padding-bottom: 30px !important;
 } */
-.features_banner .banner_heading{
-  font-size:50px !important;
-  line-height:60px !important;
-}
+
 .card-custom{ 
   background: #FFFFFF;
   box-shadow: 2px 3px 6px rgba(0,0,0,0.16);
@@ -1298,7 +1295,7 @@ figure h1{margin-bottom:5px;}
 .center_heading:after{
   position: absolute;
   bottom:-4px;
-  width:69px;
+  width:60px;
   background: var(--secondry-color) ;
   content: "";
   left:2px;
@@ -1373,7 +1370,7 @@ figure h1{margin-bottom:5px;}
 }
 
 .features_banner{
-  max-width:473px;
+  max-width:573px;
 }
 .area-flex-gst{
   display: flex;
@@ -1525,8 +1522,10 @@ figure h1{margin-bottom:5px;}
 	background-color: #CC3F1C;
 	border-color:  #CC3F1C;
 	border-radius: 0;
-	color: #FFECDF;
+  color: #FFECDF;
+  font-family:"CambriaRegular" !important;
 }
+
 #contact textarea.form-control{
 	resize:none;
 	height: 150px;
@@ -1985,7 +1984,7 @@ opacity: 0 !important;
   margin-right:0 !important;
 }
 .btn-bordered{
-  border:1px solid var(--secondry-color) ;
+  border:1px solid #FFF;
   background: transparent;
   color:#fff;
 }
@@ -1993,10 +1992,7 @@ opacity: 0 !important;
   color:#fff;
   background: var(--secondry-color) ;
 }
-.affix .btn-bordered{
-  
-  color:var(--secondry-color) ;
-}
+
 .affix .btn-bordered:hover{
   color:#FFF;
 }
@@ -2066,6 +2062,9 @@ opacity: 0 !important;
 }
 }
 @media only screen and (max-width:1100px){
+  .navbar-custom .navbar-nav > li > a{
+    margin:0 17px;
+  }
   .allmenu{
     width:81%;
     margin: auto;
@@ -2540,6 +2539,7 @@ body.unresponsive .container {
 .middle_cell {
   vertical-align: middle;
   display: table-cell;
+  font-family:"CambriaBold";
 }
 .middle_cell h3 {
   font-size: 21px;
@@ -2621,7 +2621,7 @@ height:100%;
   padding: 7px 18px;
   background: #ff5f00;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: "CambriaRegular";
 }
 
 #enterprise .inline-text {
@@ -3966,6 +3966,9 @@ margin-right:23px;
     font-size: 12px !important;
     color:#73737F !important;
   }
+  #contact label{
+    font-family:"CambriaRegular" !important;
+  }
   .app-download .app_download{
     margin-bottom: 0;
   }
@@ -4125,6 +4128,12 @@ a:hover{
 }
 
   @media only screen and (max-width:1000px){
+    .navbar-custom .usernavi li a{
+      line-height: 30px !important;
+    }
+    .navbar-custom .navbar-right li a{
+      line-height:35px !important;
+    }
     .small-img{
       display:block;
     }
@@ -4146,7 +4155,7 @@ a:hover{
     .rotate_wheel {
       position: absolute;
       top: -26px;
-      left: 376px;
+      left: 500px;
     }
     .flex-box-banner.slide.show{
       display: block !important;
@@ -4177,11 +4186,7 @@ a:hover{
     .usernavi{
       display: block;
     }
-    .allmenu{
-      display: block;
-      width: 100vw;
-      height:100vh;
-    }
+  
     .usernavi li a.active:after{
       bottom:18px;
     }
@@ -4220,6 +4225,15 @@ a:hover{
 .rotate_wheel{
   display:none;
 }
+.allmenu{
+  display: block;
+  width: 100vw;
+}
+}
+@media only screen and (max-width:991px){
+  .allmenu{
+    height:100vh;
+  }
 }
 @media all and (min-width: 241px) and (max-width: 480px) {
   .app_download li{
@@ -4536,6 +4550,7 @@ margin-top:5px;
   .sky-two {
     top: 90px;
     left: -240px;
+    width:235px !important;
 }
 .sky-two.bn-1{
     left: -140px;
@@ -4557,9 +4572,6 @@ margin-top:5px;
     left: 50%;
     transform: translateX(-50%);
 }
-
-
-
 .section-left h1{
   font-size: 28px;
 }
@@ -4568,10 +4580,13 @@ margin-top:5px;
   line-height: 50px;
 }
 .tallybook{
-  width:450px;
+  width:350px;
 }
 .ac-img{
   width:545px;
+}
+.rotate_wheel{
+  left:160px !important;
 }
 }
 @media only screen and (max-width:1240px){
@@ -4601,10 +4616,10 @@ margin-top:5px;
 .sky-one.bn-1{
   width:269px;
   top: -200px;
-  right: 0;
+  right: -260px;
 }
 .rotate_wheel{
-  left:160px;
+  left:210px;
 }
 .sky-one.bn-2{
     width: 269px;
@@ -4625,7 +4640,7 @@ margin-top:5px;
   right: -200px;
 }
 .tallybook{
-  width:681px;
+  width:581px;
 }
 .banner_heading{
   font-size:70px !important;

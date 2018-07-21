@@ -30,7 +30,7 @@
    
     <div class="intro home flex-box-banner slide show container">
         <div class="banner_intro features_banner">
-              <h1 class="banner_heading">Access your books<br> anytime anywhere</h1>
+              <h1 class="banner_heading">Access your books anytime anywhere</h1>
               <p class="banner_sub_heading m-t-20">Manage your business finances anytime, from any internet-connected device – phone, laptop or computer.</p>
               <p class="m-t-20">
               <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
