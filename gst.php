@@ -51,13 +51,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row m-t-20">
+            <div class="row m-t-20 row-gst">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/new/Direct-Filing.svg" alt="">
                               <div class="caption">
                                 <h3>Direct Filing</h3>
-                                <p>Giddh gives you the ease of direct GST filing by pushing your data to the portal automatically.</p>
+                                <p>We prepare your GST return file automatically and do the heavy lifting for you. Now file your Goods and Service Tax (GST) directly on portal.</p>
                               </div>
                             </div>
                       </div>
@@ -66,7 +66,7 @@
                                 <img src="../assets/images/new/Accurate.svg" alt="">
                               <div class="caption">
                                 <h3>100% Accurate</h3>
-                                <p>Easily identify and rectify errors before submitting your return file and ensure absolutely accurate compliance.</p>
+                                <p>Get 10/10 on accuracy by identifying errors right before submitting your GST return online with the help of our straightforward error sheet.</p>
                               </div>
                             </div>
                       </div>
@@ -74,18 +74,18 @@
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/new/get-notified.svg" alt="">
                               <div class="caption">
-                                <h3>Get Notified Timely</h3>
-                                <p>Avoid last minute compliance stress & get duly notified. You will never miss another deadline or suffer penalty.</p>
+                                <h3>Timely Notifications</h3>
+                                <p>Frustrated with last minute tax return stress? With Giddh GST accounting, you will never miss another deadline or suffer penalty.</p>
                               </div>
                             </div>
                       </div>
-                      <div class="clearfix"></div>
+                     
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/new/easy-fast.svg" alt="">
                               <div class="caption">
-                                <h3>Easy & Fast</h3>
-                                <p>We have made the process of filing returns incredibly easy and blazing fast.</p>
+                                <h3>Highly Collaborative</h3>
+                                <p>Be on the same page with your team. With our role based model, you can grant your CA the access to view the relevant GST tax return data.</p>
                               </div>
                             </div>
                       </div>
@@ -94,7 +94,7 @@
                                 <img src="../assets/images/new/Secure-relaible.svg" alt="">
                               <div class="caption">
                                 <h3>Secure & Reliable</h3>
-                                <p>Your data is protected with several layers of industry leading security measures, keeping your GST filing experience is secure and fail proof.</p>
+                                <p>With 2-factor authentication, industry leading security and OTP verification, your GST return filing process is secure from the beginning till the end.</p>
                               </div>
                             </div>
                       </div>
@@ -103,7 +103,7 @@
                                 <img src="../assets/images/new/best-Support.svg" alt="">
                               <div class="caption">
                                 <h3>Best in Class Support</h3>
-                                <p>Our round the clock team of accounting and GST experts are always at your service.</p>
+                                <p>Stuck somewhere? You can always count on our friendly and knowledgeable accounting support team to help you with your queries regarding GST return filing and overall accounting!</p>
                               </div>
                             </div>
                       </div>
@@ -117,10 +117,13 @@
 <div class="row p-tb-0">
                 <div class="col-sm-12">
                     <div class="text-center">
-                        <!-- <h1 class="center_heading">Did you know?</h1>   -->
-                        <p class="m-t-0">Take charge of your business with Giddh and enjoy a direct, fast and secure GST return filing.</p> 
+                        <h2>Don't get confused</h2> 
+                        <span>Make Your</span> <h1>GST Return filing process</h1> <span>automatically</span><br>
+                       
+                        <!-- <p class="m-t-0">Make Your GST Return filing process automatically</p>  -->
                         <!-- <p>Eliminate the dependency on accountants for filing your GST returns and take charge of your business today</p> -->
-                        <button class="btn btn-primary btn-md">Talk to Expert</button>
+                        <button class="btn btn-primary btn-lg m-t-70 try-giddh" onclick="location.href='app/signup'">Try Giddh</button>
+                        <p>Cloud Based Accounting Software to File GST return online</p>
                     </div>
                 </div>
             </div>

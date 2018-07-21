@@ -1254,7 +1254,7 @@ figure h1{margin-bottom:5px;}
 .homeContent figure:last-child figcaption{
 	margin-bottom: 0;
 }
-.homeBtmhalf h3{line-height: 36px;margin-bottom: 40px; margin-top:0; color:#fff;}
+.homeBtmhalf h3{line-height: 36px;margin-bottom: 40px; margin-top:0; color:#fff; font-size:21px;}
 .caseStd aside{max-width:180px; text-align:left; margin:0 auto 30px;}
 .caseStd h2{font-size:46px; margin:30px 0 40px}
 .caseStd aside p{margin:4px 0 2px}
@@ -1286,11 +1286,20 @@ figure h1{margin-bottom:5px;}
 .caseStudy .blueBg, .caseStudy .blueBg p{color:#fff;}
 .caseStudy .moreAbout p{color:#363636}
 .caseStudy .container > img{margin:100px 0 30px;}
-.center_heading{
+.center_heading, .center_heading_span, .know h1, .know span{
   position: relative;
   display: inline-block;
   font-size:38px !important;
   font-family: 'CambriaBold';
+}
+.know h1, .know span{
+  font-size:34px !important;
+  margin:0;
+}
+
+.center_heading_span, .know span{
+  display: inline-block;
+  margin-left:5px;
 }
 .center_heading:after{
   position: absolute;
@@ -1299,8 +1308,11 @@ figure h1{margin-bottom:5px;}
   background: var(--secondry-color) ;
   content: "";
   left:2px;
-  height:4px;
+  height:5px;
   margin-top:24px;
+}
+.center_heading_span:after{
+  display: none;
 }
 .contact-form .center_heading{
   color:#fff;
@@ -1331,10 +1343,18 @@ figure h1{margin-bottom:5px;}
 .whitebg.homeContent, .graybg.homeContent{
   padding-top:0;
 }
+.row-features .feature_thumbnail{
+  min-height:322px;
+  margin-top:0;
+}
+.bigthumb .feature_thumbnail{
+  min-height: 313px;
+  margin:0 auto;
+}
 .feature_thumbnail{
   border:none;
   background:transparent;
-  max-width: 318px;
+  max-width: 322px;
   margin:59px auto;
   text-align:center;
 }
@@ -1360,13 +1380,13 @@ figure h1{margin-bottom:5px;}
   padding:60px 0 0 0;
 }
 #feature .center_heading{
-  font-size:45px !important;
+  font-size:38px !important;
   font-family: "CambriaBold";  
 }
 .feature_thumbnail .caption p{
   font-size:18px;
   color:#565B73;  
-  line-height: 25px;
+  line-height: 28px;
 }
 
 .features_banner{
@@ -1396,12 +1416,12 @@ figure h1{margin-bottom:5px;}
 .know h2{
   font-family:"CambriaBold";
   font-size:26px;
-  margin-top:90px;
+  color:#262639;
 }
 .know p{
   font-size:21px;
   width: 59%;
-  margin: 30px auto;
+  margin: 15px auto;
 }
 .right-image img{
   height:70px;
@@ -1425,7 +1445,13 @@ figure h1{margin-bottom:5px;}
   font-family: 'CambriaRegular' !important;
   margin: 0 !important;
 }
-
+.row-gst .feature_thumbnail{
+min-height:322px;
+}
+.try-giddh{
+  width: 200px;
+  padding: 15px 0;
+}
 @media(min-width:768px) {
   .intro {
     padding: 0;
@@ -1728,6 +1754,9 @@ footer small a{
   padding-top:0;
   padding-bottom: 0;
 }
+.p-b-90{
+  padding-bottom:90px !important;
+}
 /*about page end*/
 
 /*privacy page and terms page*/
@@ -2028,6 +2057,7 @@ opacity: 0 !important;
 }
 
 
+
 /*media queries*/
 @media only screen and (max-width:1900px){
   .nav.navbar-nav.navbar-right{
@@ -2048,6 +2078,23 @@ opacity: 0 !important;
   } 
 }
 @media only screen and (max-width:1200px){
+  .bg-gray-darker h1 {
+    font-size: 18px !important;
+    line-height: 24px !important;
+    margin-top: 20px !important;
+}
+  .right-image img{
+    margin-top:26px;
+    margin-bottom: 26px;
+    height:44px;
+  }
+  .right-image hr{
+    height: 93px;
+    margin-top: 10px;
+  }
+  .right-image img{
+    height:40px;
+  }
   .allmenu{
     width:82%;
     margin: auto;
@@ -3269,6 +3316,9 @@ figure.member:last-child span.empty{
 .m-t-90{
   margin-top:90px !important;
 }
+.m-b-60{
+  margin-bottom:60px;
+}
 
 .m-t-70{
   margin-top:70px;
@@ -3345,7 +3395,7 @@ font-family: "CambriaBold";
 margin-bottom: 15px;
 }
 .section-left p{
-  font-size:20px;
+  font-size:26px;
   line-height: 35px;
   display: inline;
 }
@@ -3357,8 +3407,50 @@ margin-bottom: 15px;
   width: 265px;
   right: -110px;
 }
-
+@media only screen and (max-width:900px){
+  .right-image img{
+    width:auto !important;
+  }
+  .right-image{
+    float:right !important
+  }
+  .app_download li{
+    margin-right:1px;
+  }
+}
 @media only screen and (max-width:768px){
+  .know h1, .know span{
+    font-size:25px !important;
+  }
+  .banner-gst h1{
+    font-size: 28px;
+  }
+  .row-features .feature_thumbnail, .row-gst .feature_thumbnail{
+    margin-bottom:0;
+    min-height: 270px
+  }
+  .row-gst .feature_thumbnail{
+    margin-top:15px;
+  }
+  #feature .center_heading{
+    margin-top:40px;
+  }
+  .m-b-60{
+    margin-bottom: 15px;
+  }
+  .right-image img{
+    width:100% !important;
+    margin-top:16px;
+    margin-bottom:16px;
+    float:none;
+    margin-right:0;
+  }
+  .right-image{
+    float:none !important;
+  }
+  .right-image hr{
+    display:none;
+  }
   .gstbody section{
     padding:20px 0;
   }
@@ -3413,6 +3505,29 @@ margin-bottom: 15px;
 .product .thumbnail{
   max-width:100%;
   text-align: justify;
+  padding: 23px 43px;
+}
+.product .thumbnail p{
+  margin: 26px 0 50px 0;
+}
+.see-company{
+  padding:20px 0;
+}
+.see-company h1{
+  margin-bottom: 24px;
+  font-size:30px;
+}
+.see-company .text-primary{
+  font-size:22px;
+}
+.walkover-logo{
+  width:216px !important;
+}
+.see-company h1 span:after{
+  display: none;
+}
+.see-company .text-secondry{
+  margin-bottom: 24px;
 }
 .flex-box-banner.slide.show{
   display: block;
@@ -3707,7 +3822,22 @@ margin-right:23px;
   }
 }
 
-@media only screen and (max-width:768px){
+@media only screen and (max-width:768px){ 
+  .about-content-head h1{
+    font-size:30px;
+  }
+.product{
+  padding-top:20px !important;padding-bottom: 0 !important;
+}
+.product-info{
+  margin-top:15px !important;
+}
+  .bg-gray-darker h1{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top:26px;
+  }
   .area-flex{
     /* display: block;
     text-align:center; */
@@ -3736,7 +3866,17 @@ margin-right:23px;
     margin-top:10px;
   }
   .about-content-body .product h1{
-    text-align: left;
+    text-align: center;
+    font-size:25px;
+  }
+  .about-text{
+    padding:24px 0;
+  }
+  .theTeam{
+    padding:20px 0;
+  }
+  .list_team{
+    text-align:center;
   }
   .about-content-body .product h1:after{
     background:none;
@@ -3789,10 +3929,16 @@ margin-right:23px;
   }
   .about-content-head span{
     margin-left:10px;
+    font-size: 18px;
+    margin-top: 20px;
   }
   .theTeam h1{
     text-align:center;
-    margin:20px 0;
+    margin:20px 0 !important;
+  }
+  .about-content-body .mentors-info p .name{
+    display: inline-block;
+    margin-top: 20px;
   }
   .theTeam h1:after{
     background: none;
@@ -3808,7 +3954,7 @@ margin-right:23px;
   }
   .about-content-body .mentors-info p{
     width: 95%;
-    padding: 20px 30px;
+    padding: 0 30px;
   }
   .founder p{
     width: 100%;
@@ -4306,8 +4452,8 @@ a:hover{
 }
 .close-glyph {
   position: absolute;
-  top: 4px;
-  right: 10px;
+  top: 19px;
+  right: 27px;
   color: #222 !important;
   cursor: pointer;
   font-weight: bold;

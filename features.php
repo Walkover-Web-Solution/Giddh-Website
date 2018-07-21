@@ -48,14 +48,14 @@
   </section> <!-- end of videoBg -->
   
   <!-- home content end -->
-  <section class="whitebg homeContent" id="feature">
+  <section class="whitebg homeContent p-b-0" id="feature">
       <div class="container">
-              <div class="row">
+              <div class="row m-b-60">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Features to run every part of your business</h2>
                   </div>
               </div>
-             <div class="row">
+             <div class="row row-features">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/GST.svg" alt="Manage GST with Giddh">
@@ -83,7 +83,7 @@
                               </div>
                             </div>
                       </div>
-                      <div class="clearfix"></div>
+                     
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/anywhere_anytime.svg" alt="Manage GST with Giddh">
@@ -111,7 +111,7 @@
                               </div>
                             </div>
                       </div>
-                      <div class="clearfix"></div>
+                     
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/report.svg" alt="Manage GST with Giddh">
@@ -139,7 +139,7 @@
                               </div>
                             </div>
                       </div>
-                      <div class="clearfix"></div>
+                     
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/Multi_Currency.svg" alt="Manage GST with Giddh">
@@ -167,7 +167,7 @@
                               </div>
                             </div>
                       </div>
-                      <div class="clearfix"></div>
+                     
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/inventory-gray.svg" alt="Manage GST with Giddh">
@@ -195,7 +195,7 @@
                               </div>
                             </div>
                       </div>
-                      <div class="clearfix"></div>
+                     
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/Automation.svg" alt="Manage GST with Giddh">

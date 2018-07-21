@@ -74,32 +74,31 @@
       <div class="container">
               <div class="row">
                     <div class="col-sm-12">
-                      <h2 class="center_heading">Why Giddh is your business best friend!</h2>
+                      <div>
+                      <h1 class="center_heading">Accounting software </h1><span class="center_heading_span"> that’s not just limited to accountants</span>
+                      </div>
                   </div>
               </div>
               <div class="row">
                   <div class="area-flex">
                     <div class="col-sm-5">
                         <div class="section-left">
-                        <h1>GST Compliant</h1>
-                        <p>Create GST compliant invoices, business reports using our</p> <h1 class="ac-heading">accounting software</h1> <p>and file your returns seamlessly with automatic data reconciliation.</p><br>
-                        <a href="/gst.php">Learn More</a>
+                        <p>Stop logging into your bank account. Your <b>bank syncs</b> with Giddh.</p>
                         </div>
                     </div>
                     <div class="col-sm-5 col-sm-offset-2">
-                      <img src="../assets/images/invoice-screen.svg" alt="Ready your GST with giddh" class="img-responsive">
+                      <img src="../assets/images/sync-with-bank.svg" alt="Ready your GST with giddh" class="img-responsive">
                     </div>
                   </div>
               </div>
               <div class="row">
                   <div class="area-flex col-reverse">
                     <div class="col-sm-5">
-                    <img src="../assets/images/access_data.svg" alt="Access your data with giddh" class="img-responsive">
+                    <img src="../assets/images/bussiness-report.svg" alt="Access your data with giddh" class="img-responsive">
                     </div>
                     <div class="col-sm-5 col-sm-offset-2">
                         <div class="section-left">
-                        <h1>Collaborative</h1>
-                        <p>Easily share the key financial insights in real time to your investors, CA along with your sales & marketing managers. Our accounting software enables making better decisions at the appropriate time.</p>
+                        <p>You are not dependent on your accountant for your <b>business reports</b>.</p>
                         </div>
                     </div>
                   </div>
@@ -108,38 +107,23 @@
                   <div class="area-flex">
                     <div class="col-sm-5">
                         <div class="section-left">
-                        <h1>Automated</h1>
-                        <p>Easily automate time consuming tasks like generating and sending invoices, sharing ledger, adding payment reminders OR just integrate our API to automate your accounting.</p>
+                        <p>Every key person in your company can see the <b>numbers relevant</b> to them.</p>
                         </div>
                     </div>
                     <div class="col-sm-5 col-sm-offset-2">
-                      <img src="../assets/images/Automates.svg" alt="" class="img-responsive">
+                      <img src="../assets/images/number-relevent.svg" alt="" class="img-responsive">
                     </div>
                   </div>
               </div>
               <div class="row">
                   <div class="area-flex col-reverse">
                     <div class="col-sm-5">
-                    <img src="../assets/images/Simplified.svg" alt="" class="img-responsive">
+                    <img src="../assets/images/bussiness-inventory.svg" alt="" class="img-responsive">
                     </div>
                     <div class="col-sm-5 col-sm-offset-2">
                         <div class="section-left">
-                        <h1>Simplified</h1>
-                        <p>Our slick and straightforward accounting software will help you start managing your finances within minutes of setting up. Confused or stuck? Our support team will be ever-ready to rescue you.</p>
+                        <p>Bird's eyeview to manage your <b>business inventory</b> efficiently and smartly.</p>
                         </div>
-                    </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="area-flex">
-                    <div class="col-sm-5">
-                        <div class="section-left">
-                        <h1>Scalable</h1>
-                        <p>Multi-currency and multi-branch accounting enables your business to go from local to global. Now easily serve your International clients with our accounting software.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-5 col-sm-offset-2">
-                      <img src="../assets/images/Scalable.svg" alt="" class="img-responsive">
                     </div>
                   </div>
               </div>
@@ -150,7 +134,7 @@
   <section class="p-tb-75 homeBtmhalf gridBg">
     <div class="container adjust-width">
       <div class="row text-center">
-        <div class="col-sm-10 col-sm-offset-1">
+        <div class="col-sm-8 col-sm-offset-2">
           <h3>Why use local database? When Giddh gives you bank level security with its unmatched data encryption</h3>
           <a href="security.php" class="btn btn-primary btn-lg">See How</a>
         </div>
@@ -159,9 +143,9 @@
   </section>
    <!-- end local database -->
   <!-- built for account -->
-  <section class="whitebg homeContent small-mg" id="feature">
+  <section class="whitebg homeContent bigthumb" id="feature">
       <div class="container">
-              <div class="row">
+              <div class="row p-b-90">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Built for Accountants</h2><br>
                       <span class="center_sub_heading">Friendly with all other departments Sales, Support, Managment etc...</span>
@@ -173,32 +157,60 @@
                                 <img src="../assets/images/invoicing.svg" alt="Manage GST with Giddh">
                               <div class="caption">
                                 <h3>Invoicing</h3>
-                                <p>Get paid faster by creating professional looking invoices and send them automatically.</p>
+                                <p>Add logos and use fully customizable templates to generate and send professional looking invoices.</p>
                               </div>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/inventory.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/GSt-complian.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Inventory</h3>
-                                <p>Create inventory easily and track inventory expenses. Managing inventory is no more a hassle!</p>
+                                <h3>GST Compliance</h3>
+                                <p>Compliance is no more a challenge with our accounting software! File your GST returns directly on time.</p>
                               </div>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/connect-bank-account.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/report-analyst.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3>Connect Bank Account</h3>
-                                <p>Link multiple bank accounts to track your transaction activities and save time.</p>
+                                <h3>Report & Analysis</h3>
+                                <p>With instant reporting & analysis tools present in our accounting software, you can finally make faster decisions.</p>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail feature_thumbnail">
+                                <img src="../assets/images/share-data.svg" alt="Manage GST with Giddh">
+                              <div class="caption">
+                                <h3>Multi-User</h3>
+                                <p>Our accounting software lets you share data with your team members so that they can be on top of what’s most important to them.</p>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail feature_thumbnail">
+                                <img src="../assets/images/multi-currency.svg" alt="Manage GST with Giddh">
+                              <div class="caption">
+                                <h3>Multi Currency</h3>
+                                <p>Our accounting software enables you sending invoices and reports to your clients in their currency and getting paid in your own.</p>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail feature_thumbnail">
+                                <img src="../assets/images/support-c.svg" alt="Manage GST with Giddh">
+                              <div class="caption">
+                                <h3>Support</h3>
+                                <p>Your queries regarding accounting or a feature request for your specific needs is one call or email away from resolution.</p>
                               </div>
                             </div>
                       </div>
               </div>
+             
               <div class="row p-t-0">
                 <div class="col-sm-12 text-center">
-                  <a class="btn btn-black btn-lg m-t-60" href="/features.php">See More Features</a>
+                  <a class="btn btn-primary btn-lg m-t-60" onclick="location.href='app/signup'">Start your Free Trial Now</a>
                 </div>
               </div>
       </div>
