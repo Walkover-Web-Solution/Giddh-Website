@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="en" ng-app="giddhWebsite">
   <meta charset="UTF-8">
-  <meta name="description" content="Giddh, the best online accounting and bookkeeping software, provides you an outstanding solution for business accounting management. This personal, toprated simple accounting software and account management software will help you properly keep a track of your entire financial records easily."/>
-  <meta name="keywords" content="bookkeeping software, Accounting softwares, online accounting software, bookkeeping software for small business"/>
+  <!-- <meta name="description" content=""/>
+  <meta name="keywords" content=""/> -->
   
-  <title>Best Business Accounting Software on Cloud | Bookkeeping Software, Online & Easy to Use – Giddh.com</title>
+  <title>Giddh Features</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <?php include 'head.php';?>
 
@@ -238,7 +238,7 @@
 
        </ul>
     </div>
-       <div class="pd2 tab-content custom-padding-20 height-52 tab-content-modal">
+       <div class="pd2 tab-content custom-padding-20 height-552 tab-content-modal">
 
          <div id="dropEmail" class="tab-pane">
            <div id="Jkvq" class="talktosale-superform"></div>
