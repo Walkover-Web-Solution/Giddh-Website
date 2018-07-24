@@ -1422,7 +1422,7 @@ figure h1{margin-bottom:5px;}
   font-size:24px;
   font-family: "CambriaRegular";
 }
-.banner-gst h1{
+.banner-gst h2{
   font-size:54px;
   font-family: "CambriaBold";
   margin-top:0;
@@ -3470,7 +3470,7 @@ margin-bottom: 15px;
   .m-t-70{
     margin-top:30px;
   }
-  .banner-gst h1{
+  .banner-gst h2{
     font-size: 28px;
   }
   .row-features .feature_thumbnail, .row-gst .feature_thumbnail{
@@ -4141,7 +4141,7 @@ margin-right:23px;
     color:#fff;
     margin-top:80px;
   }
-  .footer-contacts h1{
+  .footer-contacts h2{
     font-size: 21px;
     color:#EAEAEC;
   }
@@ -4404,7 +4404,7 @@ a:hover{
 }
 
   @media only screen and (max-width:1000px){
-    .banner-gst h1{
+    .banner-gst h2{
       font-size:35px;
     }
     .navbar-custom .usernavi li a{

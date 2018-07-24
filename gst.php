@@ -31,7 +31,7 @@
                 <div class="col-sm-12 area-flex-gst">
                     <div class="banner-gst">
                             <h6>From creating error-free GST invoice to</h6>
-                            <h1>File your GSTR Automatically</h1>
+                            <h2>File your GSTR Automatically</h2>
                     </div>
                     <div>
                             <img src="/assets/images/new/GSTR-banner.png" class="img-responsive"/>
@@ -47,7 +47,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="text-center">
-                        <h1 class="center_heading">Advantages of filing GSTR with us</h1>   
+                        <h2 class="center_heading">Advantages of filing GSTR with us</h2>   
                     </div>
                 </div>
             </div>
