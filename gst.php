@@ -103,7 +103,7 @@
                                 <img src="../assets/images/new/best-Support.svg" alt="">
                               <div class="caption">
                                 <h3>Best in Class Support</h3>
-                                <p>Stuck somewhere? You can always count on our friendly and knowledgeable accounting support team to help you with your queries regarding GST return filing and overall accounting!</p>
+                                <p>Stuck somewhere? Count on our friendly and knowledgable support team for your accounting & GST filing queries.</p>
                               </div>
                             </div>
                       </div>
