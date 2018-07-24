@@ -72,12 +72,13 @@
                               <div class="col-sm-12">
                                     <h1>A product from Walkover</h1>
                               </div>
-                              <div class="col-sm-12">
+                              <div class="col-sm-12 text-align-center">
+                              <img src="../assets/images/logo-big.svg" alt="" class="walkover-logo display-small-sc">
                                     <p class="product-info">
                                         Walkover is a closely knit team of technology enthusiasts with a reputation for adding significant value to a range of products for more than 8 years. We combine our technical expertise with business awareness to enable innovation that helps our clients to have a competitive edge.<br><br>
                                          We are transforming everyday workflow and businesses by building products that simplify processes. Our unique technology-based products has served over 100 clients to run more innovative and efficient businesses.
                                     </p>
-                                    <img src="../assets/images/logo-big.svg" alt="" class="walkover-logo">
+                                    <img src="../assets/images/logo-big.svg" alt="" class="walkover-logo display-large-sc">
                               </div>
                         </div>
                         <div class="row">
@@ -915,7 +916,6 @@ $("html, body").animate({ scrollTop: 0 }, 0);
           scrollTop: target.offset().top - 200 //offsets for fixed header
         }, 800);
         return false;
-        
       }
     }
   });

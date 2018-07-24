@@ -117,8 +117,9 @@
 <div class="row p-tb-0">
                 <div class="col-sm-12">
                     <div class="text-center">
-                        <h2>Don't get confused</h2> 
-                        <span>Make Your</span> <h1>GST Return filing process</h1> <span>automatically</span><br>
+                        <span class="center_sub_heading">Take charge of your business with Giddh and</span>
+                       <span> Make <h1>GST return</h1> process automatic</span><br>
+                       
                        
                         <!-- <p class="m-t-0">Make Your GST Return filing process automatically</p>  -->
                         <!-- <p>Eliminate the dependency on accountants for filing your GST returns and take charge of your business today</p> -->

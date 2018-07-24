@@ -1202,7 +1202,7 @@ margin:0 48px;
 
 /*home content styles*/
 .whitebg.homeContent{
-  padding-bottom: 90px;
+  padding: 73px 0;
 }
 .homeContent{
 	padding: 90px 0 30px 0;
@@ -1214,8 +1214,17 @@ margin:0 48px;
   font-size:18px;
   color:#1062BF;
 }
+#homepage{
+  padding:90px 0;
+}
+#homepage .head{
+  margin-bottom: 60px;
+}
+#homepage .row{
+  padding:0;
+}
 
-#feature figure{
+#homepage figure, #feature figure{
 	display: block;
 	margin-top:50px;
 	padding-bottom:20px;
@@ -1234,7 +1243,7 @@ margin:0 48px;
 	color:#E43626;
 	padding:0;
 }
-#feature figure figcaption{margin-top: 15%;}
+#homepage figure figcaption, #feature figure figcaption{margin-top: 15%;}
 .homeContent figure figcaption.right{text-align:right; padding-left:50px}
 .homeContent figure figcaption.left{text-align:left; padding-right:50px}
 .homeContent figure figcaption span{color:#fff}
@@ -1254,12 +1263,12 @@ figure h1{margin-bottom:5px;}
 .homeContent figure:last-child figcaption{
 	margin-bottom: 0;
 }
-.homeBtmhalf h3{line-height: 36px;margin-bottom: 40px; margin-top:0; color:#fff; font-size:21px;}
+.homeBtmhalf h3{line-height: 36px;margin-bottom: 40px; margin-top:0; color:#fff; font-size:21px; }
 .caseStd aside{max-width:180px; text-align:left; margin:0 auto 30px;}
 .caseStd h2{font-size:46px; margin:30px 0 40px}
 .caseStd aside p{margin:4px 0 2px}
 .caseStd{font-family: 'Roboto', sans-serif;}
-.homeBtmhalf{font-family: 'CambriaRegular';}
+.homeBtmhalf{font-family: 'CambriaRegular'; padding:60px 0;}
 .btn-black{
   background: #28283C;
   color:#FFF !important;
@@ -1295,6 +1304,11 @@ figure h1{margin-bottom:5px;}
 .know h1, .know span{
   font-size:34px !important;
   margin:0;
+}
+.know .center_sub_heading{
+  font-size:24px !important;
+  font-family: 'CambriaRegular';
+  display:block;
 }
 
 .center_heading_span, .know span{
@@ -1340,23 +1354,22 @@ figure h1{margin-bottom:5px;}
   display: inline-block;
   width:100%;
 }
-.whitebg.homeContent, .graybg.homeContent{
-  padding-top:0;
-}
+
 .row-features .feature_thumbnail{
   min-height:322px;
   margin-top:0;
 }
 .bigthumb .feature_thumbnail{
-  min-height: 313px;
-  margin:0 auto;
+  min-height: 276px !important;
+  margin:0 auto !important;
 }
 .feature_thumbnail{
   border:none;
   background:transparent;
   max-width: 322px;
-  margin:59px auto;
+  margin:30px auto 0 auto !important;
   text-align:center;
+  min-height:277px !important;
 }
 .feature_thumbnail img{
   height:90px;
@@ -1377,11 +1390,12 @@ figure h1{margin-bottom:5px;}
   padding:63px 0;
 }
 #feature .row{
-  padding:60px 0 0 0;
+  padding:8px 0 0 0;
 }
-#feature .center_heading{
+#homepage .center_heading, #feature .center_heading{
   font-size:38px !important;
   font-family: "CambriaBold";  
+  margin-top:0;
 }
 .feature_thumbnail .caption p{
   font-size:18px;
@@ -1452,7 +1466,24 @@ min-height:322px;
   width: 200px;
   padding: 15px 0;
 }
+.display-small-sc{
+  display: none;
+}
+.accounting-img img{
+  height:290px;
+}
+.devider{
+width:150px;
+border:0.5px solid #4E4D7E;
+margin:55px auto 69px auto;
+}
 @media(min-width:768px) {
+  .display-small-sc{
+    display: block;
+  }
+  .display-large-sc{
+    display: none;
+  }
   .intro {
     padding: 0;
   }
@@ -1753,6 +1784,9 @@ footer small a{
 .p-tb-0{
   padding-top:0;
   padding-bottom: 0;
+}
+.p-t-60{
+  padding-top:60px !important;
 }
 .p-b-90{
   padding-bottom:90px !important;
@@ -2079,7 +2113,6 @@ opacity: 0 !important;
 }
 @media only screen and (max-width:1200px){
   .bg-gray-darker h1 {
-    font-size: 18px !important;
     line-height: 24px !important;
     margin-top: 20px !important;
 }
@@ -2121,7 +2154,8 @@ opacity: 0 !important;
   }
   #feature .center_heading{
     font-size:27px !important;
-  }
+  } 
+
 }
 @media only screen and (max-width: 980px) {
 	#aboutPage .img-responsive, body.unresponsive .section{
@@ -3349,6 +3383,7 @@ figure.member:last-child span.empty{
   padding-top:65px;
   padding-bottom:65px;
 }
+
 .p-tb-75{
   padding-top:75px;
   padding-bottom:75px;
@@ -3408,6 +3443,9 @@ margin-bottom: 15px;
   right: -110px;
 }
 @media only screen and (max-width:900px){
+  .bg-gray-darker h1 {
+   font-size:17px !important;
+}
   .right-image img{
     width:auto !important;
   }
@@ -3419,11 +3457,18 @@ margin-bottom: 15px;
   }
 }
 @media only screen and (max-width:768px){
+ 
   .center_heading_span{
     font-size:27px !important;
   }
   .know h1, .know span{
-    font-size:25px !important;
+    font-size:21px !important;
+  }
+  .try-giddh{
+    width:150px;
+  }
+  .m-t-70{
+    margin-top:30px;
   }
   .banner-gst h1{
     font-size: 28px;
@@ -3435,9 +3480,10 @@ margin-bottom: 15px;
   .row-gst .feature_thumbnail{
     margin-top:15px;
   }
-  #feature .center_heading{
-    margin-top:40px;
+  #homepage{
+    padding:20px 0;
   }
+
   .m-b-60{
     margin-bottom: 15px;
   }
@@ -3459,6 +3505,7 @@ margin-bottom: 15px;
   }
   .know h2{
     margin-top:20px;
+    font-size:21px;
   }
   #footer:before{
     display: none;
@@ -3484,7 +3531,7 @@ margin-bottom: 15px;
     font-size: 35px !important;
     line-height: 40px !important;
 }
-  #feature .row{
+ #feature .row{
     padding:20px 0 0 0;
   }
   .section-left h1{
@@ -3496,7 +3543,24 @@ margin-bottom: 15px;
 }
   .section-left{
     text-align: center;
+    margin:20px 0;
   }
+  .whitebg.homeContent{
+    padding-bottom:0;
+  }
+  
+  #homepage .center_heading, #homepage .center_heading_span, #feature .center_heading, #feature .center_heading_span {
+    font-size: 22px !important;
+}
+.center_sub_heading{
+  font-size: 20px;
+}
+.bigthumb .feature_thumbnail{
+  min-height:250px;
+}
+.m-t-60{
+  margin-top:0;
+}
  
  
   .rotate_wheel {
@@ -3511,7 +3575,7 @@ margin-bottom: 15px;
   padding: 23px 43px;
 }
 .product .thumbnail p{
-  margin: 26px 0 50px 0;
+  margin: 26px 0 10px 0;
 }
 .see-company{
   padding:20px 0;
@@ -3530,7 +3594,7 @@ margin-bottom: 15px;
   display: none;
 }
 .see-company .text-secondry{
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 .flex-box-banner.slide.show{
   display: block;
@@ -3797,7 +3861,30 @@ margin-right:23px;
     margin-right:31px !important;
   }
 }
-@media only screen and (max-width:900px){
+
+@media only screen and (max-width:991px){
+  .product .thumbnail{
+    margin-top:20px;
+  }
+  .product .product-info{
+    margin-top:10px;
+  }
+  .product .thumbnail p{
+    margin-bottom: 20px;
+  }
+  .about-content-body .product{
+    text-align:center;
+    padding:20px 0;
+  }
+  .about-content-body .product h1:after{
+    display:none;
+  }
+  .see-company{
+    padding:30px 0;
+  }
+  .see-company h1{
+    margin-bottom: 20px;
+  }
   .rotate_wheel{
     top: -25px !important;
     left: 300px !important;
@@ -3817,20 +3904,39 @@ margin-right:23px;
     width:100%;
   }
   .product .walkover-logo{
-    float:left;
-    margin-top:0;
+    float:none;
+    margin:10px auto;
+    width:216px !important;
+    height:auto;
   }
   .see-company .btn-default{
     min-width:191px;
   }
+ 
 }
 
 @media only screen and (max-width:768px){ 
+  .area-flex-gst{
+    display: block;
+    height:auto;
+    padding:50px 0;
+  }
+  .testimonial{
+    margin-bottom: 20px;
+  }
+  .head{
+    width:80%;
+    margin:20px auto;
+  }
+  .p-tb-75{
+    padding-top:25px;
+    padding-bottom: 25px;
+  }
   .about-content-head h1{
     font-size:30px;
   }
 .product{
-  padding-top:20px !important;padding-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 .product-info{
   margin-top:15px !important;
@@ -3854,6 +3960,7 @@ margin-right:23px;
   }
   .about-content-head span{
     margin-left:0;
+    text-align:center;
   }
   .about-content-head h1:after{
     background:none;
@@ -3894,10 +4001,7 @@ margin-right:23px;
   .product-info{
     margin-bottom:0 !important;
   }
-  .product .walkover-logo{
-    margin-top:0;
-    float:left;
-  }
+ 
   .see-company .btn-default{
     margin-right:0;
   }
@@ -3933,7 +4037,7 @@ margin-right:23px;
   .about-content-head span{
     margin-left:10px;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 0;
   }
   .theTeam h1{
     text-align:center;
@@ -4153,6 +4257,16 @@ margin-right:23px;
 
 
   @media only screen and (max-width: 900px) {
+    #homepage .head{
+      margin-bottom: 0;
+    }
+    .devider{
+      margin:30px auto 0 auto;
+    }
+    .customer-big{
+      float:none;
+      margin:auto;
+    }
     .screen_thumbnail img {
         object-fit: contain;
         object-position: top;
@@ -4178,6 +4292,19 @@ margin-right:23px;
   }
   }
   @media(max-width:768px) {
+    .about-content-head h1{
+      padding-top:10px;
+      padding-bottom: 10px;
+    }
+    .text-align-center{
+      text-align:center;
+    }
+    .about-content-body .product{
+      padding-top:20px;
+    }
+    .about-content-head{
+      padding:20px 0;
+    }
     .intro .intro-body {
       padding: 30px 0;
     }
@@ -4277,6 +4404,9 @@ a:hover{
 }
 
   @media only screen and (max-width:1000px){
+    .banner-gst h1{
+      font-size:35px;
+    }
     .navbar-custom .usernavi li a{
       line-height: 30px !important;
     }
@@ -4366,7 +4496,13 @@ a:hover{
     height:auto !important;
   }
   .homeContent {
-    padding: 30px 0;
+    padding: 30px 0 !important;
+}
+.m-b-60{
+  margin-bottom: 0;
+}
+.feature_thumbnail{
+  margin-top:0 !important;
 }
 .m-t-90{
   margin-top:0 !important;
@@ -4517,8 +4653,8 @@ a:hover{
   padding: 0 31px !important;
 }
 
-.height-52 {
-  height: 52vh;
+.height-552 {
+  height: 552px;
   width: 100%;
   overflow-y: auto;
 }
@@ -4798,7 +4934,8 @@ margin-top:5px;
 }
 
 .calendly-box{
-  position:relative; top:30px;
+  position:relative; 
+  top:9px;
 }
 
 .m-tb-60{
