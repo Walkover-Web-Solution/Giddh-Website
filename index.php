@@ -32,7 +32,7 @@
         <div class="banner_intro">
         <div id="first"></div>
               <p class="banner_sub_heading">The future of Indian Accounting</p>
-              <h1 class="banner_heading">Take your<br> Tally books online</h1>
+              <h2 class="banner_heading">Take your<br> Tally books online</h2>
               <p class="m-t-20">
                 <a class="btn btn-sync" href="tallyplusgiddh.php">Sync with Tally</a>
                 <a class="talktosale"  href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
@@ -52,7 +52,7 @@
     <div class="intro home flex-box-banner slide slide-2 container">
         <div class="banner_intro">
               <p class="banner_sub_heading">The future of Indian Accounting</p>
-              <h1 class="banner_heading">Where accounting <br>happens </h1>
+              <h2 class="banner_heading">Where accounting <br>happens </h2>
               <p class="banner_sub_heading m-t-15">Make your finance realtime, accessible, automated...</p>
               <p class="m-t-20">
                 <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>

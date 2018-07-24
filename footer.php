@@ -66,7 +66,7 @@
                   </div>
                   <div class="row footer-contacts">
                     <div class="col-sm-6">
-                      <h1>Contact Us</h1>
+                      <h2>Contact Us</h2>
                       <p>
                       Sales : shubhendra@giddh.com <br>
                       Support: support@giddh.com<br>
@@ -81,7 +81,7 @@
               <div class="col-sm-4 col-xs-10 contact-area">
                 <div class="contact-form">
                   <img src="/assets/images/Footer_Caricature.png" alt="" class="img-caricature">
-                  <h1 class="center_heading">Tell us!</h1>
+                  <h2 class="center_heading">Tell us!</h2>
                   <!-- <form class="contact" novalidate name="contactForm">
                     <div class="form-group">
                         <input name="contactForm.name" ng-model="vm.cForm.name" type="text" required class="form-control" placeholder="Your Name">
