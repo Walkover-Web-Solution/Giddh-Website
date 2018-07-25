@@ -1497,7 +1497,6 @@ margin:55px auto 69px auto;
   margin-right:10px;
 }
 
-
 }
 
 
@@ -4935,6 +4934,7 @@ margin-top:5px;
 .banner_heading{
   font-size:70px !important;
   line-height: 80px !important;
+  margin:0;
 }
 }
 

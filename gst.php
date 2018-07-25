@@ -123,7 +123,7 @@
                        
                         <!-- <p class="m-t-0">Make Your GST Return filing process automatically</p>  -->
                         <!-- <p>Eliminate the dependency on accountants for filing your GST returns and take charge of your business today</p> -->
-                        <a class="btn btn-primary btn-lg m-t-70 try-giddh" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Expert</a>
+                        <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Expert</a>
                         <p>Cloud Based Accounting Software to File GST Return Online</p>
                     </div>
                 </div>

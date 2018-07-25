@@ -238,7 +238,7 @@
       <div class="container">
               <div class="row p-tb-0">
                     <div class="col-sm-12">
-                      <h2 class="center_heading">Trusted by Our Customers</h2><br>
+                      <h2 class="center_heading">Trusted by our Customers</h2><br>
                   </div>
               </div>
               <div class="row m-t-60">
