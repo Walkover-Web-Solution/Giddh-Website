@@ -4696,6 +4696,29 @@ a:hover{
 		width:auto;
 	}
 }
+.sFSection h1{
+  color:#000 !important;
+}
+#sFSection-xZyf #sFSection-xZyf{
+  background: transparent !important;
+}
+#xZyf .sFSection h1{
+  color:#fff !important;
+  font-size: 1.6em;
+}
+#xZyf .sFSection .sFthanks{
+    text-align: left;
+    margin: 0;
+}
+#xZyf .sFSection .sFthanks{
+  padding:0;
+}
+#xZyf .sFSection h1{
+  line-height: 40px;
+}
+#xZyf .sFSection .sFthanks{
+background: transparent;
+}
 #sFSection-V6Lc {
   font-family: Roboto;
   background: #fefdfe;
