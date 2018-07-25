@@ -226,7 +226,7 @@
              
               <div class="row p-t-0">
                 <div class="col-sm-12 text-center">
-                  <a class="btn btn-primary btn-lg m-t-60" onclick="location.href='app/signup'">Start your Free Trial Now</a>
+                  <a class="btn btn-primary btn-lg m-t-60" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Expert</a>
                 </div>
               </div>
       </div>

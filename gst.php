@@ -103,7 +103,7 @@
                                 <img src="../assets/images/new/best-Support.svg" alt="">
                               <div class="caption">
                                 <h3>Best in Class Support</h3>
-                                <p>Stuck somewhere? You can always count on our friendly and knowledgeable accounting support team to help you with your queries regarding GST return filing and overall accounting!</p>
+                                <p>Stuck somewhere? Count on our friendly and knowledgable support team for your accounting & GST filing queries.</p>
                               </div>
                             </div>
                       </div>
@@ -117,14 +117,14 @@
 <div class="row p-tb-0">
                 <div class="col-sm-12">
                     <div class="text-center">
-                        <span class="center_sub_heading">Take charge of your business with Giddh and</span>
-                       <span> Make <h1>GST return</h1> process automatic</span><br>
+                        <span class="center_sub_heading">Take charge of your business with Giddh &</span>
+                       <span> Make <h1>GST Return</h1> Process Automatic.</span><br>
                        
                        
                         <!-- <p class="m-t-0">Make Your GST Return filing process automatically</p>  -->
                         <!-- <p>Eliminate the dependency on accountants for filing your GST returns and take charge of your business today</p> -->
-                        <button class="btn btn-primary btn-lg m-t-70 try-giddh" onclick="location.href='app/signup'">Try Giddh</button>
-                        <p>Cloud Based Accounting Software to File GST return online</p>
+                        <a class="btn btn-primary btn-lg m-t-70 try-giddh" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Expert</a>
+                        <p>Cloud Based Accounting Software to File GST Return Online</p>
                     </div>
                 </div>
             </div>
