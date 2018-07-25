@@ -40,8 +40,8 @@
             </p>
         </div>
         <div class="right-section">
-        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3">
-        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-3">
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3">
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-3">
           <img src="../assets/images/feature_banner_big.png" alt="Tally your books with giddh" class="tallybook">
         </div>
     </div>
@@ -67,7 +67,7 @@
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/invoicing-gray.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/Invoicing-gray.svg" alt="Manage GST with Giddh">
                               <div class="caption">
                                 <h3>Invoicing</h3>
                                 <p>Get paid faster by creating professional looking invoices and send them automatically.</p>
@@ -170,7 +170,7 @@
                      
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/inventory-gray.svg" alt="Manage GST with Giddh">
+                                <img src="../assets/images/Inventory-gray.svg" alt="Manage GST with Giddh">
                               <div class="caption">
                                 <h3>Inventory</h3>
                                 <p>Create inventory easily and track inventory expenses. Managing inventory is no more a hassle!</p>
