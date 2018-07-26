@@ -38,7 +38,7 @@
                 <a class="talktosale"  href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
             </p>
             <p class="banner_heading_secondry">Switch eventually or start a fresh book with 
-              <a onclick="location.href='app/signup'">giddh</a></p>
+              <a href="javascript:void(0)">giddh</a></p>
         </div>
         <div class="right-section">
         <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-1">
