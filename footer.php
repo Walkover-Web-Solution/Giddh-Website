@@ -11,32 +11,32 @@
                             <h3>Desktop App</h3>
                                 <ul class="app_download">
                                     <li>
-                                        <a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">
+                                        <a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app-6.5.12.dmg">
                                             <i class="fab fa-apple"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">
+                                        <a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app+Setup+6.5.12.exe">
                                             <i class="fab fa-windows"></i>
                                         </a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz">
                                             <i class="fab fa-linux"></i>
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                         </div>
                         <div class="col-sm-6 col-xs-6">
                           <h3>Mobile App</h3>
                           <ul class="app_download">
                                   <li>
-                                      <a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">
+                                      <a href="https://itunes.apple.com/in/app/giddh-tb/id999743672?mt=8">
                                           <i class="icon icon-ios"></i>
                                       </a>
                                   </li>
                                   <li>
-                                      <a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">
+                                      <a href="https://play.google.com/store/apps/details?id=com.giddh.app">
                                           <i class="fab fa-android"></i>
                                       </a>
                                   </li>
