@@ -11,12 +11,12 @@
                             <h3>Desktop App</h3>
                                 <ul class="app_download">
                                     <li>
-                                        <a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app-6.5.12.dmg">
+                                        <a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app-{{apkVersion}}.dmg">
                                             <i class="fab fa-apple"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app+Setup+6.5.12.exe">
+                                        <a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh%20Setup%20{{apkVersion}}.exe">
                                             <i class="fab fa-windows"></i>
                                         </a>
                                     </li>
