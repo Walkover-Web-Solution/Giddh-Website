@@ -227,7 +227,7 @@
              </div>
       </div>
   </section>  
-  <div class="modal fade" id="talkToSales_dialog" role="dialog">
+  <!-- <div class="modal fade" id="talkToSales_dialog" role="dialog">
   <div class="modal-dialog custom-dialog">
     <div class="modal-header">
       <h3 class="brdB left">Talk to Expert</h3>
@@ -254,7 +254,7 @@
        </div>
        
      </div>
- </div>
+ </div> -->
   <!-- end of page -->
   <?php include 'footScript.php';?>
   <?php include 'footer.php';?> 
