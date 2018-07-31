@@ -1,6 +1,4 @@
-﻿<link rel="stylesheet" media="screen" href="https://random-scripts.herokuapp.com/superform/superform.css" />
-<script src="https://random-scripts.herokuapp.com/superform/superform.js"></script>
-<!-- footer start -->
+﻿<!-- footer start -->
   <section id="footer">
     <section id="contact">
       <div class="container">
@@ -204,9 +202,13 @@
       if(type == "state") {window.location = state
       }else {window.open(state)}
     }
+	window.superformIds = ['Jkvq','xZyf'];
 
 </script>
+<link rel="stylesheet" media="screen" href="https://random-scripts.herokuapp.com/superform/superform.css" />
 
+
+<script src="https://random-scripts.herokuapp.com/superform/superform.js"></script>
 <script type="text/javascript">
 /*-------------------------------------------------------------------*/
 /*  FULL SCREEN FIRST SECTION
@@ -270,10 +272,5 @@ $("input[type='email']").focus(function(){
  });
  $("input[type='email']").removeAttr('placeholder');
 })
-</script>
-
-
-<script>
-	window.superformIds = ['Jkvq','xZyf'];
 </script>
 
