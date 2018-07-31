@@ -202,13 +202,9 @@
       if(type == "state") {window.location = state
       }else {window.open(state)}
     }
-	window.superformIds = ['Jkvq','xZyf'];
 
 </script>
-<link rel="stylesheet" media="screen" href="https://random-scripts.herokuapp.com/superform/superform.css" />
 
-
-<script src="https://random-scripts.herokuapp.com/superform/superform.js"></script>
 <script type="text/javascript">
 /*-------------------------------------------------------------------*/
 /*  FULL SCREEN FIRST SECTION
