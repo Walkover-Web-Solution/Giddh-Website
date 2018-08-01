@@ -1,4 +1,4 @@
-﻿<link rel="stylesheet" media="screen" href="https://random-scripts.herokuapp.com/superform/superform.css" />
+﻿<link rel="stylesheet" media="screen" href="/styles/superform.css" />
 <script src="https://random-scripts.herokuapp.com/superform/superform.js"></script>
 <!-- footer start -->
   <section id="footer">
