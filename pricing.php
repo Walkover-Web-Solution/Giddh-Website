@@ -50,7 +50,7 @@
   <section id="enterprise" class="witBg cmnPd80">
     <div class="text-center clearfix">
       <h1 class="inline-text">Big Enterprises?</h1>
-      <a href="#footer" class="btn btn-lg btn-primary mrL4">Talk to us</a>
+      <a href="#footer" class="btn btn-lg btn-primary mrL4" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
     </div>
   </section>
 
@@ -117,7 +117,7 @@
       <div class="row text-center mrT4">
         <div class="col-sm-12">
           <h2 class="mrB3 pClr">18/6 Instant Support</h2>
-          <a href="/app/signup" id="pBtn" class="pScroll btn btn-bdr-whte btn-lg btn-bdr">Try Now</a>
+          <a href="/app/signup" id="pBtn" class="pScroll btn btn-bdr-whte btn-lg btn-bdr" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
         </div>
       </div>
 

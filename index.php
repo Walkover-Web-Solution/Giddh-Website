@@ -164,7 +164,7 @@
               <div class="row">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Built for Accountants</h2><br>
-                      <span class="center_sub_heading">Friendly with all other departments Sales, Support, Managment etc...</span>
+                      <span class="center_sub_heading">Friendly with all other departments Sales, Support, Management etc...</span>
                   </div>
               </div>
               <div class="row p-t-60">
@@ -277,7 +277,7 @@
               </div>
       </div>
   </section>  -->
-  <!-- <div class="modal fade" id="talkToSales_dialog" role="dialog">
+  <div class="modal fade" id="talkToSales_dialog" role="dialog">
    <div class="modal-dialog custom-dialog">
     <div class="modal-header">
       <h3 class="brdB left">Talk to Expert</h3>
@@ -297,14 +297,18 @@
          </div>
 
          <div id="scheduleCall" class="tab-pane active vertical-center">
+                <!-- <p>Choose your preferred time to schedule<br>
+                   a demo with an expert. </p>
+                <button class="btn btn-primary">Click Here</button> -->
+                <!-- Calendly inline widget begin -->
                 <div class="calendly-inline-widget" data-url="https://calendly.com/giddh" style="min-width:320px;height:580px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-
+                <!-- Calendly inline widget end -->
          </div>
        </div>
        
      </div>
- </div>  -->
+ </div>
 <!-- client section end -->
 <!-- home content end -->     
   <!-- end of page -->
