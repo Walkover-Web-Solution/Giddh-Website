@@ -7,7 +7,7 @@
 }
 @font-face {
   font-family: 'icomoon';
-  src:  url('../assets/fonts/icomoon/icomoon.eot?s0mgzj');
+@media  src:  url('../assets/fonts/icomoon/icomoon.eot?s0mgzj');
   src:  url('../assets/fonts/icomoon/icomoon.eot?s0mgzj#iefix') format('embedded-opentype'),
     url('../assets/fonts/icomoon/icomoon.ttf?s0mgzj') format('truetype'),
     url('../assets/fonts/icomoon/icomoon.woff?s0mgzj') format('woff'),
@@ -1476,6 +1476,12 @@ min-height:322px;
 width:150px;
 border:0.5px solid #4E4D7E;
 margin:55px auto 69px auto;
+}
+#footer .center_heading{
+margin-top:0;
+}
+.tallybook {
+  width: 681px;
 }
 @media(min-width:768px) {
   .display-small-sc{
@@ -4001,7 +4007,7 @@ margin-right:23px;
   .about-text{
     padding:24px 0;
     font-size:15px;
-    line-height: 28px;
+    line-height: 23px;
   }
   .theTeam{
     padding:20px 0 40px 0;
@@ -4438,6 +4444,11 @@ a:hover{
 }
 
   @media only screen and (max-width:1000px){
+    .banner_intro{
+      text-align: center;
+      max-width: 86%;
+      margin: auto;
+    }
     .figure .topSection p.left .heading {
       font-size: 18px;
       font-family: 'CambriaRegular';
@@ -4930,6 +4941,8 @@ margin-top:5px;
 }
 
 
+
+
 @media only screen and (max-width:1000px){
   #sFform-xZyf textarea{
     width:240px !important;
@@ -5061,6 +5074,9 @@ margin-top:5px;
   margin-top:0 !important;
 }
 @media only screen and (max-width:768px){
+  .sky-one, .sky-two{
+    display: none;
+  }
   .banner_heading, .features_banner .banner_heading{
     font-size: 28px !important;
     line-height: 30px;
@@ -5123,7 +5139,7 @@ margin-top:5px;
   font-size:18px;
 }
 .banner-gst h2{
-  font-size:25px;
+  font-size:23px;
 }
 .center_heading{
   font-size:20px;
@@ -5278,6 +5294,11 @@ figure.member:last-child{
   padding-left: 6px;
   padding-right: 6px;
 }
+}
+
+#sFform-Jkvq input, #sFform-Jkvq textarea, #sFform-Jkvq select {
+  font-family: "CambriaRegular" !important;
+  color: #444444;
 }
 
 
