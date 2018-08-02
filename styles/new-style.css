@@ -1054,6 +1054,9 @@ margin:0 48px;
 
 /*end login page*/
 /*pricing page styles*/
+.pricing .btn:focus{
+  color:#fff;
+}
 .intro.pricing figure .img-responsive {
     margin: 0 auto;
 }
@@ -5300,6 +5303,8 @@ figure.member:last-child{
   font-family: "CambriaRegular" !important;
   color: #444444;
 }
+
+
 
 
 
