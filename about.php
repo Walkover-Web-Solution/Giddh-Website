@@ -7,9 +7,6 @@
   <!-- <meta http-equiv=“Content-Type” content=“text/html; charset=utf-8"> -->
   <title>Giddh ~ About Us</title>
   <?php include 'head.php';?>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link href="/styles/new-style.css" rel="stylesheet">
   
 <style>
@@ -58,7 +55,7 @@
                                 <div class="container">
                                             <div class="tab-content">
                                                     <div class="about-text"><span class="company">Giddh</span> is a team with members who have accounting running in their blood, be it a member of development team or sales team. We are working relentlessly to push forward the automation revolution in bookkeeping industry with our tech solutions.<br><br>
-                                                     Since years Indian bookkeeping industry had fallen behind and failed to embrace the technological evolution.To change that once and forever, we have taken the initiative to keep adapting to the latest and greatest technologies making accounting simpler, faster and more secure.<br><br>
+                                                     Since years Indian bookkeeping industry had fallen behind and failed to embrace the technological evolution. To change that once and forever, we have taken the initiative to keep adapting to the latest and greatest technologies making accounting simpler, faster and more secure.<br><br>
                                                       <a><i>As farsighted as a vulture:</i></a><br>
                                                        As the name suggests, Giddh provides you with analytical tools that can help you to keep a sharp vision on your accounts so that you can invest your time on analysing them.
                                                         We believe in making accounting not only automated but simple like an elementary task by creating a product that can be used by everyone; from a simple web user who wants to simplify his accounting to a highly proficient business owners looking to scale up, above and ahead.</div>
@@ -73,16 +70,16 @@
                                     <h1>A product from Walkover</h1>
                               </div>
                               <div class="col-sm-12 text-align-center">
-                              <img src="../assets/images/logo-big.svg" alt="" class="walkover-logo display-small-sc">
+                              <img src="../assets/images/logo-big.svg" alt="" class="walkover-logo display-small-cs-top">
                                     <p class="product-info">
                                         Walkover is a closely knit team of technology enthusiasts with a reputation for adding significant value to a range of products for more than 8 years. We combine our technical expertise with business awareness to enable innovation that helps our clients to have a competitive edge.<br><br>
                                          We are transforming everyday workflow and businesses by building products that simplify processes. Our unique technology-based products has served over 100 clients to run more innovative and efficient businesses.
                                     </p>
-                                    <img src="../assets/images/logo-big.svg" alt="" class="walkover-logo display-large-sc">
+                                    <img src="../assets/images/logo-big.svg" alt="" class="walkover-logo display-large-sc bottom">
                               </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-6 msg91">
                             <a href="http://www.msg91.com/" target="_blank" class="website-link"></a>
                                           <div class="thumbnail">
                                                 <img src="../assets/images/msg-logo-big.svg" alt="msg" class="msg">
@@ -97,7 +94,7 @@
 
                               </div>
                             
-                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-6 col-sm-6 col-xs-6 viasocket">
                             <a href="http://www.viasocket.com/" target="_blank" class="website-link"></a>
                               <div class="thumbnail pull-right">
                                   <img src="../assets/images/socket-logo-big.svg" class="socket" alt="socket">
@@ -176,7 +173,7 @@
                                             <div class="col-sm-12">
                                                         <h1>Customers Come First</h1>
                                                   </div>
-                                                  <div class="col-sm-12">
+                                                  <div class="col-sm-12 d-flex">
                                                         <p class="product-info">
                                                         We are the leaders that solve problems from the perspective of the customer's experiences. Before wearing our corporate jacket, we wear our customer’s shoes to provide them the solutions they need.
                                                         </p>
@@ -193,7 +190,7 @@
                                                       <div class="col-sm-12">
                                                                   <h1>Embracing Setbacks to Break Boundaries</h1>
                                                             </div>
-                                                            <div class="col-sm-12">
+                                                            <div class="col-sm-12 d-flex">
                                                                   <p class="product-info">
                                                                         Everytime we hit a wall of setback, we push ourselves harder to create new milestones and leave a legacy behind. Once a setback is experienced, we strive on with a deeper understanding of what is need to be done to eventually succeed. 
                                                                   </p>
@@ -212,7 +209,7 @@
                                                             
                                                               <h1>We Set Impossible Goals</h1>
                                                         </div>
-                                                        <div class="col-sm-12">
+                                                        <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               We are fueled with a healthy disrespect for the impossible. We make sure to never get distracted with trying to improve things by 10% when we have the certainty and the ability to improve them by 10x.
                                                               </p>
@@ -230,7 +227,7 @@
                                                        
                                                               <h1>People are our Power</h1>
                                                         </div>
-                                                        <div class="col-sm-12">
+                                                        <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               We know that technology is merely an enabler to challenge boundaries and true success is achieved by a honest, efficient and fearless individuals. We make sure to never stop in our pursuit of bringing out the best in people.
 
@@ -249,7 +246,7 @@
                                                           
                                                               <h1>We Focus on ‘Why?’ & ‘How?’</h1>
                                                         </div>
-                                                        <div class="col-sm-12">
+                                                        <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               Our philosophy revolves around two important questions -’Why’ and ‘How’. Asking ‘Why’ to ourselves and those around us gives the purpose for our actions and ‘How’ gives us the shortest path to execute them.
 
@@ -268,7 +265,7 @@
                                                            
                                                                 <h1>Always We Before Me</h1>
                                                           </div>
-                                                          <div class="col-sm-12">
+                                                          <div class="col-sm-12 d-flex">
                                                                 <p class="product-info">
                                                                 We believe in collaborating both inside and outside the organization to maximize our shared knowledge and bring great value to our customers. We are self-centred in our preparation, but selfless in our execution.
 
@@ -287,7 +284,7 @@
                                                             
                                                               <h1>We Don’t Settle</h1>
                                                         </div>
-                                                        <div class="col-sm-12">
+                                                        <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               We don’t settle for anything less than excellent and extraordinary in every group of our organization and possess the honesty to admit when we’re wrong and the courage to change, evolve and adapt according to the situation.
 
@@ -306,7 +303,7 @@
                                                            
                                                               <h1>We Empower The Future</h1>
                                                         </div>
-                                                        <div class="col-sm-12">
+                                                        <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               We focus on ways by which our organization can harness the power of technology to transform today which can create a better & brighter tomorrow in the most sustainable way. 
                                                               </p>
@@ -324,7 +321,7 @@
                                                             
                                                               <h1>Transparency and Honesty</h1>
                                                         </div>
-                                                        <div class="col-sm-12">
+                                                        <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               We apply due care in maintaining transparency in our work by providing honest, accurate and impartial services to our clients. We avoid tricks, hidden agendas and make information accessible to our employees and our clients alike.
                                                               </p>
@@ -718,7 +715,7 @@
                                           </div>
                                     </div>
                                     <div class="container-fluid">
-                                           <div class="row founder theTeam m-t-60">
+                                           <div class="row founder theTeam m-t-60 hidden-xs">
                                            <div class="container">
                                                 <div class="row">
                                                             <div class="col-sm-12">
@@ -734,6 +731,28 @@
                                           </div>
                                     </div>
                                     <div class="container">
+                                    <div class="row visible-xs">
+                                                <div class="col-sm-3">
+                                                      <h1 class="head-left m-t-90">Founder</h1>
+                                                </div>
+                                          </div>
+                                          <div class="row visible-xs">
+                                                <div class="col-sm-12">
+                                                <div class="mentors-info">
+                                                         <div class="row">
+                                                               <div class="col-sm-6">
+                                                                        <img src="/assets/images/team/Shubhendra_thumb.png" alt=""> 
+                                                               </div>
+                                                               <div class="col-sm-6">
+                                                                  <p>
+                                                                        <span class="name">Shubhendra Agrawal,</span><br>Founder, Tech Visionary<br><br>Shubhendra Agrawal is the founder of Giddh. An entrepreneur at heart and an engineer by choice, he founded Giddh in 2016 with the idea of unifying accounting with automation. Prior to Giddh, Shubhendra was the co-founder and CFO of MSG91, one of India’s top 5 messaging solutions firm.<br><br>
+                                                                        With experience lasting over a decade in engineering, he has been a keen analyser of consumer behavior helping him cultivate a team that creates simple yet highly functional IT products.
+                                                                  </p>
+                                                              </div>
+                                                        </div>
+                                                   </div>
+                                                </div>
+                                          </div>
                                           <div class="row">
                                                 <div class="col-sm-3">
                                                       <h1 class="head-left m-t-90">Mentors</h1>
