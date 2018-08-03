@@ -1088,7 +1088,7 @@ margin:0 48px;
 }
 .pricing .thumbnail{
 	border: 0;
-	background-color: transparent;
+  background-color: transparent;
 }
 .pricing .thumbnail img {
   max-width: 80px;
@@ -5297,6 +5297,21 @@ figure.member:last-child{
   padding-left: 6px;
   padding-right: 6px;
 }
+}
+@media only screen and (max-width:480px){
+  .footerlink li a{
+    font-size:14px;
+  }
+  .footer-contacts h2{
+    font-size:18px;
+  }
+  #footer .center_heading{
+    margin-top:20px;
+    margin-bottom: 0;
+  }
+  .app-download h3{
+    font-size:15px;
+  }
 }
 
 #sFform-Jkvq input, #sFform-Jkvq textarea, #sFform-Jkvq select {
