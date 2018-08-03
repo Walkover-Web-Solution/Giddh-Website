@@ -129,10 +129,12 @@ function runBlock($rootScope, $window, $http, localStorageService, $anchorScroll
         } else {
             var args = { headers: {} };
             args.headers['Content-Type'] = 'application/xml';
-            $http.get('http://api.ipstack.com/111.118.250.236?access_key=32543cb08d74213e8667298cc340b72e', {
+            // args.headers['withCredentials'] = true;
+
+            $http.get('https://control.msg91.com/api/getVisitorCountry.php', {
                 headers: args.headers
             }).then(function(response) {
-                localStorageService.set('country_code', response.data.country_code);
+                localStorageService.set('country_code', response.data.visitorCountryISO);
                 checkUserCountry(userCountry);
             }, function(error) {
                 console.log("failed to locate users location");
