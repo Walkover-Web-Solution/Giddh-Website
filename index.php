@@ -51,7 +51,7 @@
    
     <div class="intro home flex-box-banner slide slide-2 container">
         <div class="banner_intro">
-              <p class="banner_sub_heading">The future of Indian Accounting</p>
+              <p class="banner_sub_heading home">The future of Indian Accounting</p>
               <h2 class="banner_heading">Where accounting <br>happens </h2>
               <p class="banner_sub_heading m-t-15">Make your finance realtime, accessible, automated...</p>
               <p class="m-t-20">
