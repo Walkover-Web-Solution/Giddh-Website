@@ -8,6 +8,7 @@
   <title>Giddh ~ About Us</title>
   <?php include 'head.php';?>
   <link href="/styles/new-style.css" rel="stylesheet">
+
   
 <style>
       html, body{
@@ -171,13 +172,15 @@
                                           <div class="container">
                                             <div class="row">
                                             <div class="col-sm-12">
-                                                        <h1>Customers Come First</h1>
+                                                        <h1 class="hidden-xs">Customers Come First</h1>
                                                   </div>
                                                   <div class="col-sm-12 d-flex">
                                                         <p class="product-info">
                                                         We are the leaders that solve problems from the perspective of the customer's experiences. Before wearing our corporate jacket, we wear our customer’s shoes to provide them the solutions they need.
+                                                        <h1 class="visible-xs">Customers Come First</h1>
                                                         </p>
                                                        <img src="../assets/images/about/customer.svg" alt="" class="customer-big">
+                                                      
                                                   </div>
                                             </div>
                                           </div>
@@ -188,11 +191,12 @@
                                                 <div class="container">
                                                       <div class="row">
                                                       <div class="col-sm-12">
-                                                                  <h1>Embracing Setbacks to Break Boundaries</h1>
+                                                                  <h1 class="hidden-xs">Embracing Setbacks to Break Boundaries</h1>
                                                             </div>
                                                             <div class="col-sm-12 d-flex">
                                                                   <p class="product-info">
                                                                         Everytime we hit a wall of setback, we push ourselves harder to create new milestones and leave a legacy behind. Once a setback is experienced, we strive on with a deeper understanding of what is need to be done to eventually succeed. 
+                                                                        <h1 class="visible-xs">Embracing Setbacks to Break Boundaries</h1>
                                                                   </p>
                                                                   <img src="../assets/images/about/Boundaries.svg" alt="" class="customer-big">
                                                             </div>
@@ -206,12 +210,12 @@
                                                 <div class="container">
                                                   <div class="row">
                                                         <div class="col-sm-12">
-                                                            
-                                                              <h1>We Set Impossible Goals</h1>
+                                                              <h1 class="hidden-xs">We Set Impossible Goals</h1>
                                                         </div>
                                                         <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               We are fueled with a healthy disrespect for the impossible. We make sure to never get distracted with trying to improve things by 10% when we have the certainty and the ability to improve them by 10x.
+                                                              <h1 class="visible-xs">We Set Impossible Goals</h1>
                                                               </p>
                                                               <img src="../assets/images/about/Goals.svg" alt="" class="customer-big">
                                                         </div>
@@ -224,13 +228,12 @@
                                                 <div class="container">
                                                   <div class="row">
                                                         <div class="col-sm-12">
-                                                       
-                                                              <h1>People are our Power</h1>
+                                                              <h1 class="hidden-xs">People are our Power</h1>
                                                         </div>
                                                         <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               We know that technology is merely an enabler to challenge boundaries and true success is achieved by a honest, efficient and fearless individuals. We make sure to never stop in our pursuit of bringing out the best in people.
-
+                                                              <h1 class="visible-xs">People are our Power</h1>
                                                               </p>
                                                               <img src="../assets/images/about/hands.svg" alt="" class="customer-big">
                                                         </div>
@@ -243,13 +246,12 @@
                                                 <div class="container">
                                                   <div class="row">
                                                         <div class="col-sm-12">
-                                                          
-                                                              <h1>We Focus on ‘Why?’ & ‘How?’</h1>
+                                                              <h1 class="hidden-xs">We Focus on ‘Why?’ & ‘How?’</h1>
                                                         </div>
                                                         <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               Our philosophy revolves around two important questions -’Why’ and ‘How’. Asking ‘Why’ to ourselves and those around us gives the purpose for our actions and ‘How’ gives us the shortest path to execute them.
-
+                                                              <h1 class="visible-xs">We Focus on ‘Why?’ & ‘How?’</h1>
                                                               </p>
                                                               <img src="../assets/images/about/Focus.svg" alt="" class="customer-big">
                                                         </div>
@@ -262,13 +264,12 @@
                                                   <div class="container">
                                                     <div class="row">
                                                           <div class="col-sm-12">
-                                                           
-                                                                <h1>Always We Before Me</h1>
+                                                                <h1 class="hidden-xs">Always We Before Me</h1>
                                                           </div>
                                                           <div class="col-sm-12 d-flex">
                                                                 <p class="product-info">
                                                                 We believe in collaborating both inside and outside the organization to maximize our shared knowledge and bring great value to our customers. We are self-centred in our preparation, but selfless in our execution.
-
+                                                                <h1 class="visible-xs">Always We Before Me</h1>
                                                                 </p>
                                                                 <img src="../assets/images/about/man-circle.svg" alt="" class="customer-big">
                                                           </div>
@@ -281,13 +282,12 @@
                                                 <div class="container">
                                                   <div class="row">
                                                         <div class="col-sm-12">
-                                                            
-                                                              <h1>We Don’t Settle</h1>
+                                                              <h1 class="hidden-xs">We Don’t Settle</h1>
                                                         </div>
                                                         <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               We don’t settle for anything less than excellent and extraordinary in every group of our organization and possess the honesty to admit when we’re wrong and the courage to change, evolve and adapt according to the situation.
-
+                                                              <h1 class="visible-xs">We Don’t Settle</h1>
                                                               </p>
                                                               <img src="../assets/images/about/Settle.svg" alt="" class="customer-big">
                                                         </div>
@@ -300,12 +300,12 @@
                                                 <div class="container">
                                                   <div class="row">
                                                         <div class="col-sm-12">
-                                                           
-                                                              <h1>We Empower The Future</h1>
+                                                              <h1 class="hidden-xs">We Empower The Future</h1>
                                                         </div>
                                                         <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               We focus on ways by which our organization can harness the power of technology to transform today which can create a better & brighter tomorrow in the most sustainable way. 
+                                                              <h1 class="visible-xs">We Empower The Future</h1>
                                                               </p>
                                                               <img src="../assets/images/about/Future.svg" alt="" class="customer-big">
                                                         </div>
@@ -318,12 +318,12 @@
                                                 <div class="container">
                                                   <div class="row">
                                                         <div class="col-sm-12">
-                                                            
-                                                              <h1>Transparency and Honesty</h1>
+                                                              <h1 class="hidden-xs">Transparency and Honesty</h1>
                                                         </div>
                                                         <div class="col-sm-12 d-flex">
                                                               <p class="product-info">
                                                               We apply due care in maintaining transparency in our work by providing honest, accurate and impartial services to our clients. We avoid tricks, hidden agendas and make information accessible to our employees and our clients alike.
+                                                              <h1 class="visible-xs">Transparency and Honesty</h1>
                                                               </p>
                                                               <img src="../assets/images/about/Transparency.svg" alt="" class="customer-big">
                                                         </div>
@@ -400,7 +400,8 @@
                                                                               <span class="icon icon-Nurtures"></span>
                                                                               <span class="heading">Nurtures <br>Collaboration</span>
                                                                               </p>
-                                                                        <p class="right">
+                                                                        <p class="right multiline-ellipsis">
+                                                                        <span class="heading insideright">Nurtures Collaboration</span>
                                                                               A good leader always nurtures collaboration and acts as an active
                                                                               part in the process of co-creation with his team and the entire
                                                                               ecosystem. A bad leader fails to grasp the importance of
@@ -420,7 +421,8 @@
                                                                         <span class="icon icon-Communication"></span>
                                                                         <span class="heading">Leads through<br> Communication</span>
                                                                         </p>
-                                                                  <p class="right">
+                                                                  <p class="right multiline-ellipsis">
+                                                                  <span class="heading insideright">Leads through Communication</span>
                                                                   A Good leader creates an environment that promotes honest and open communications without the fear of judgement. A bad leaders creates an hostile environment that restricts open lines of communication.
                                                                   </p>
                                                             </div>
@@ -437,7 +439,8 @@
                                                                         <span class="icon icon-leadsByExample"></span>
                                                                         <span class="heading">Leads By Example</span>
                                                                         </p>
-                                                                  <p class="right">
+                                                                  <p class="right multiline-ellipsis">
+                                                                  <span class="heading insideright">Leads By Example</span>
                                                                         A good leader always leads by example. He is the first to take actions, sets milestones and then encourages his team follow. A bad leader is passive and fails to take initiative.
                                                                   </p>
                                                                   </div>
@@ -454,7 +457,8 @@
                                                                         <span class="icon icon-consult"></span>
                                                                         <span class="heading">Consults and<br> Delegates</span>
                                                                         </p>
-                                                                  <p class="right">
+                                                                  <p class="right multiline-ellipsis">
+                                                                  <span class="heading insideright">Consults and Delegates</span>
                                                                   A good leader has the ability to seek consultation from subordinates and also has the ability to assign tasks to the right employees taking their skills into account. A bad leader is a bad judge of skill set and delegates poorly.
                                                                   </p>
                                                             </div>
@@ -471,7 +475,8 @@
                                                                   <span class="icon icon-Courageous"></span>
                                                                   <span class="heading">Is Courageous</span>
                                                                   </p>
-                                                            <p class="right">
+                                                            <p class="right multiline-ellipsis">
+                                                                  <span class="heading insideright">Is Courageous</span>
                                                                   A good leader has the strength of self to act with intention on behalf of the common good. A bad leader does not possess the courage to take a stand during adversity.
                                                             </p>
                                                       </div>
@@ -488,7 +493,8 @@
                                                                   <span class="icon icon-integrity"></span>
                                                                   <span class="heading">Adds Integrity</span>
                                                                   </p>
-                                                            <p class="right">
+                                                            <p class="right multiline-ellipsis">
+                                                                  <span class="heading insideright">Adds Integrity</span>
                                                                   A good leader has moral courage, ethical strength, and trustworthiness. He is able to keep promises and fulfill expectations. A bad leader lacks integrity that inspires his team to take ethical measures in all their actions.
                                                             </p>
                                                       </div>
@@ -505,7 +511,8 @@
                                                                   <span class="icon icon-ServeGood"></span>
                                                                   <span class="heading">Serves for the<br> Greater Good</span>
                                                                   </p>
-                                                            <p class="right">
+                                                            <p class="right multiline-ellipsis">
+                                                            <span class="heading insideright">Serves for the Greater Good</span>
                                                                   A good leader shows commitment that extends beyond one’s own self interest; personal humility for the sake of a greater cause. A bad leader is self serving and does not believe in serving for a greater good.
                                                             </p>
                                                       </div>
@@ -522,7 +529,8 @@
                                                                   <span class="icon icon-process"></span>
                                                                   <span class="heading">Defines and<br> Creates Processes</span>
                                                                   </p>
-                                                            <p class="right">
+                                                            <p class="right multiline-ellipsis">
+                                                            <span class="heading insideright">Defines and Creates Processes</span>
                                                                   A good leader creates new processes before indulging into a new project and makes sure to change that process if it is rectifiable. A bad leader takes the shortest path to complete a project without rectifying the process.
                                                             </p>
                                                       </div>
@@ -539,7 +547,8 @@
                                                                         <span class="icon icon-adaptToEvolve"></span>
                                                                         <span class="heading">Adapts to Evolve</span>
                                                                         </p>
-                                                                  <p class="right">
+                                                                  <p class="right multiline-ellipsis">
+                                                                  <span class="heading insideright">Adapts to Evolve</span>
                                                                         A good leader uses his experience to recognize different situations and take actions according to the context. A bad leader make the mistake of taking the same actions regardless of the facts.
                                                                   </p>
                                                             </div>
@@ -939,6 +948,19 @@ $("html, body").animate({ scrollTop: 0 }, 0);
     }
   });
 });
+
+
+
+
+if ( $(window).width() < 768 ){
+      $(".multiline-ellipsis").click(function(){
+    $(this).toggleClass('expand');
+   
+     var abc = $(".multiline-ellipsis").text();
+     $(this).siblings().children('.heading').toggleClass('sphideshow');
+})
+}
+
 </script>
 
 
