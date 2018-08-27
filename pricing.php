@@ -54,7 +54,7 @@
     </div>
   </section>
 
-  <section class="blueBg cmnPd100 pricing">
+  <section class="blueBg cmnPd100 pricing ">
     <div class="container">
       
       <div class="row">

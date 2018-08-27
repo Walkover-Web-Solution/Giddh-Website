@@ -10,7 +10,7 @@
   
   <ng-include src="'header.html'"></ng-include>
 
-  <section class="cmnPd100">
+  <section class="cmnPd100 whitebg">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
