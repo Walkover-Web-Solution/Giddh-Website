@@ -2793,6 +2793,8 @@ height:100%;
 }
 .navbar-custom .navbar-nav > li > a{
   margin-left:36px;
+  margin-right: 36px;
+  display: block;
 }
   .navbar-header {
       float: none;
@@ -4056,7 +4058,7 @@ margin-right:23px;
   .about-content-body .product h1{
     text-align: center;
     font-size:18px;
-    margin-top: -15px;
+    margin-top: 30px;
   }
   .about-text{
     padding:24px 0;
@@ -4521,10 +4523,10 @@ a:hover{
   }
   .figure {
     height: auto;
-}
-.figure.bgNurture{
-  margin-top:0 !important;
-}
+  }
+  .figure.bgNurture{
+    margin-top:0 !important;
+  }
   .container-principle{
     display: flex;
     padding-left: 10px;
@@ -4557,86 +4559,86 @@ a:hover{
     min-width: 48px;
     padding: 0;
   }
-    .see-company h1 span:after {
-      left: 250px !important;
-    }
-    .banner-gst h2{
-      font-size:35px;
-    }
-    .navbar-custom .usernavi li a{
-      line-height: 30px !important;
-    }
-    .navbar-custom .navbar-right li a{
-      line-height:35px !important;
-    }
-    .small-img{
-      display:block;
-    }
-    .big-img{
-      display:none;
-    }
-    #feature .row{
-      padding:0 0 20px 0 !important;
-      
-    }
+  .see-company h1 span:after {
+    left: 250px !important;
+  }
+  .banner-gst h2{
+    font-size:35px;
+  }
+  .navbar-custom .usernavi li a{
+    line-height: 30px !important;
+  }
+  .navbar-custom .navbar-right li a{
+    line-height:35px !important;
+  }
+  .small-img{
+    display:block;
+  }
+  .big-img{
+    display:none;
+  }
+  #feature .row{
+    padding:0 0 20px 0 !important;
+    
+  }
+
+  .img_plane{
+    display:none;
+  }
+  .features_banner{
+    padding:30px 0;
+  }
   
-    .img_plane{
-      display:none;
-    }
-    .features_banner{
-      padding:30px 0;
-    }
-   
-    .rotate_wheel {
-      position: absolute;
-      top: -26px;
-      left: 500px;
-    }
-    .flex-box-banner.slide.show{
-      display: block !important;
-      padding-top:100px;
-      text-align:center;
-    }
-    .banner_heading {
-      font-size: 38px !important;
-      line-height: 50px;
-    }
-    .banner_intro{
-      float: none;
-    }
-    .right-section img{
-      max-width: 100%;
-      margin-top:70px;
-    }
-    .navbar-main-collapse{
-      background-color: #28283C;
-    }
-    .navbar-custom .navbar-nav > li > a{
-      color:#FFF;
-      line-height: 20px;  
-    }
-    .navbar-custom .navbar-nav > li > a:hover:after{
-        bottom:12px;
-    }
-    .usernavi{
-      display: block;
-    }
+  .rotate_wheel {
+    position: absolute;
+    top: -26px;
+    left: 500px;
+  }
+  .flex-box-banner.slide.show{
+    display: block !important;
+    padding-top:100px;
+    text-align:center;
+  }
+  .banner_heading {
+    font-size: 38px !important;
+    line-height: 50px;
+  }
+  .banner_intro{
+    float: none;
+  }
+  .right-section img{
+    max-width: 100%;
+    margin-top:70px;
+  }
+  .navbar-main-collapse{
+    background-color: #28283C;
+  }
+  .navbar-custom .navbar-nav > li > a{
+    color:#FFF;
+    line-height: 20px;  
+  }
+  .navbar-custom .navbar-nav > li > a:hover:after{
+      bottom:12px;
+  }
+  .usernavi{
+    display: block;
+  }
+
+  .usernavi li a.active:after{
+    bottom: 0px;
+  }
   
-    .usernavi li a.active:after{
-      bottom:18px;
-    }
-   
-   
-    .navbar .navbar-right{
-      top:-16px;
-      margin-right:0 !important;
-    }
-    .navbar-collapse{
-      padding-right:0;
-      padding-left:0;
-    }
-    .navbar-custom .navbar-nav > li > a, .navbar-custom .navbar-nav > li{
-      text-align: left;
+  
+  .navbar .navbar-right{
+    top:-16px;
+    margin-right:0 !important;
+  }
+  .navbar-collapse{
+    padding-right:0;
+    padding-left:0;
+  }
+  .navbar-custom .navbar-nav > li > a, .navbar-custom .navbar-nav > li{
+    text-align: left;
   }
   .navbar-right .btn{
     margin-left:36px;   
@@ -4653,23 +4655,23 @@ a:hover{
   }
   .homeContent {
     padding: 30px 0 !important;
-}
-.m-b-60{
-  margin-bottom: 0;
-}
-.feature_thumbnail{
-  margin-top:0 !important;
-}
-.m-t-90{
-  margin-top:0 !important;
-}
-.rotate_wheel{
-  display:none;
-}
-.allmenu{
-  display: block;
-  width: 100vw;
-}
+  }
+  .m-b-60{
+    margin-bottom: 0;
+  }
+  .feature_thumbnail{
+    margin-top:20px !important;
+  }
+  .m-t-90{
+    margin-top:0 !important;
+  }
+  .rotate_wheel{
+    display:none;
+  }
+  .allmenu{
+    display: block;
+    width: 100vw;
+  }
 }
 @media only screen and (max-width:991px){
   .allmenu{
@@ -5390,6 +5392,16 @@ margin-top:5px;
     padding-left: 6px;
     padding-right: 6px;
   }
+  .banner_intro a {
+    display: inline-block;
+  }
+  figure.member {
+    width:140px;
+    height:140px;
+   }
+   .list_team li figure img {
+      width: 140px;
+    }
 }
 
 #sFform-Jkvq input, #sFform-Jkvq textarea, #sFform-Jkvq select {
