@@ -9,7 +9,7 @@
                             <h3>Desktop App</h3>
                                 <ul class="app_download">
                                     <li>
-                                        <a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app-{{apkVersion}}.dmg">
+                                        <a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-{{apkVersion}}.dmg">
                                             <i class="fab fa-apple"></i>
                                         </a>
                                     </li>
