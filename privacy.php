@@ -48,6 +48,79 @@
 <h3 class="lead">You can opt-out of any email communications</h3>
 <p>Giddh sends billing information, product information, Service updates and Service notifications to You via email, where appropriate email communication will contain clear and obvious instructions describing how You can opt to be removed from the mailing list. Giddh will remove You upon Your request.</p>
 
+
+
+<!-- new text -->
+<h3 class="lead">Why does Giddh need permissions to access your Gmail / Google Account and how those permissions are used?</h3>
+
+<p><strong>Sending the email : </strong> The Service needs to send the invoice from your gmail account. No one at the Giddh will read your email & manage your inbox. The Giddh will never send emails on your behalf and will never share the content of your emails.</p>
+
+<ul>
+  <li>No one at Giddh reads your emails</li>
+  <li>Giddh will never send emails on your behalf</li>
+  <li>Giddh will never share the content of your emails with third parties</li>
+</ul>
+
+<h3 class="lead tdUndr">Information that you provide us</h3>
+
+<p><strong>Account signup :</strong> When you sign up for an account to access one or more of our services, we ask for information like your name, contact number, email address, company name and country to complete the account signup process. You'll also be required to choose a unique username and a password for accessing the created account. </p>
+<p><strong>Form submissions : </strong> We record information that you submit when you contact us to speak with our representative, a software demo request, and submit a form to request a customer support or to contact Giddh for any other purpose.
+</p>
+<p><strong>Payment processing : </strong> When you buy something from us, we ask you to provide your name, contact information, and credit/debit card information or other payment account information. When you submit your card information, we store the name and address of the cardholder, the expiry date and the last four digits of the credit/debit card number. We do not store the actual credit card number. We store your payment information in an encrypted format in the secured servers of our Payment Gateway Service Providers.</p>
+<p><strong>Interactions with Giddh : </strong> We may record, analyze and use your interactions with us, including email, telephone, and chat conversations with our sales and customer support professionals, for improving our interactions with you and other customers. 
+</p>
+
+
+<h3 class="lead tdUndr">Information that we collect from third parties</h3>
+<p><strong>Signups using federated authentication service providers : </strong>You can log in to Giddh Services using supported federated authentication service providers such as LinkedIn, and Google. These services will authenticate your identity and give you the option to share certain personal information with us, such as your name and email address.
+</p>
+<p><strong>Information from social media sites and other publicly available sources : </strong> When you interact or engage with us on social media sites such as Facebook, Twitter, Google+ and Instagram through posts, comments, questions and other interactions, we may collect such publicly available information, including profile information, to allow us to connect with you, improve our products, or better understand user reactions and issues. We must tell you that once collected, this information may remain with us even if you delete it from the social media sites. Giddh may also add and update information about you, from other publicly available sources.
+</p>
+
+<h3 class="text-left lead">Purposes for using information</h3>
+
+<p>In addition to the purposes mentioned above, we may use your information for the following purposes:</p>
+
+<ul>
+  <li>To communicate with you (such as through email) about products that you have downloaded and services that you have signed up for, changes to this Privacy Policy, changes to the Terms of Service, or important notices;</li>
+  <li>To keep you posted on new products and services, upcoming events, offers, promotions and other information that we think will be of interest to you;</li>
+  <li>To ask you to participate in surveys, or to solicit feedback on our products and services;</li>
+  <li>To set up and maintain your account, and to do all other things required for providing our services, such as enabling collaboration, and backing up and restoring your data;</li>
+  <li>To understand how users use our products and services, to monitor and prevent problems, and to improve our products and services;</li>
+  <li>To provide customer support, and to analyze and improve our interactions with customers;</li>
+  <li>To detect and prevent fraudulent transactions and other illegal activities, to report spam, and to protect the rights and interests of Giddh, Giddh’s users, third parties and the public;</li>
+  <li>To update, expand and analyze our records, identify new customers, and provide products and services that may be of interest to you;</li>
+  <li>To analyze trends, administer our websites, and track visitor navigations on our websites to understand what visitors are looking for and to better help them;</li>
+  <li>To monitor and improve marketing campaigns and make suggestions relevant to the user.</li>
+</ul>
+
+<h3 class="lead">What third-party services do we use to process your information?</h3>
+
+<p>We do not sell, trade, or otherwise transfer to outside parties your personal information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, as long as those parties are obliged to keep this information confidential (such as payment processing or accounting services). </p>
+<p>Depending on your engagement with our Website, Blog, and Service, we may process your information using third party processors listed below.</p>
+<p><ul class="d-inline"><li>Facebook</li></ul> <a href="">(Privacy Policy)</a> <br>
+We may process the data you provided in one of the forms at our Website or Blog using Facebook tools for customizing the content we promote and for more precise targeting of our promotional materials.
+</p>
+
+
+<p><ul class="d-inline"><li>Google</li> </ul><a href="">(Privacy Policy)
+</a> <br>Upon your registration to our Service, we start processing your user id with Google Analytics, Google AdWords, Google Tag Manager. We use Google Analytics to access statistical data about our users and to discover which parts of our website and software need improvement. We promote our service and our content with Google AdWords, the data we collect about our users allows us to better target our ads as well as customize our remarketing campaigns. Google Tag Manager helps us sync all the stats we collect across all the systems we use.
+</p>
+
+<p><ul class="d-inline"><li>FullStory</li></ul> <a href=""> (Privacy Policy)
+</a> <br>FullStory is an analytical solution that helps us understand our subscribers behavior in our service and assist our users with solving some of their technical problems. At the moment of signing up for the free trial, we start processing your user id in FullStory.
+</p>
+
+<p><ul class="d-inline"><li>Intercom</li></ul> <a href="">(Privacy Policy)</a> <br>
+Intercom is a help desk software we use to respond to questions from our users as well as contact users offering some help during their free & subscription period. We process email addresses, first and last names as well as user id numbers via Intercom, as those are the data necessary for sales and support communication with our users.
+</p>
+
+<p><ul class="d-inline"><li>Leadsquared</li></ul> <a href="">(Privacy Policy)</a> <br>
+Leadsquared is the CRM (customer relationship management) solution we use to keep track of our trial and subscribe users’ activities and our contact with them since the beginning of their trial period. At the moment of signing up for the subscription, we start processing your user id, username, email address, first and last name and company website address, phone with Leadsquared.
+</p>
+
+
+
 <h3 class="lead">You are responsible for checking the Privacy Policy of any third-party applications the Service links to</h3>
 <p>The Service may contain links enabling the electronic transfer of data with third-party applications. Giddh takes no responsibility for the privacy practices or content of these applications.</p>
 
@@ -57,6 +130,7 @@
 <h3 class="lead">Please read our Terms of Use</h3>
 <p>Use of the Service is subject to Giddh's Terms of Use and this Privacy Policy should be read in conjunction with this. In the event of a conflict or disagreement between this Privacy Policy and the Terms of Use, the Terms of Use will prevail.</p>
 <p>Last updated: 10 May 2016</p>
+
 </div>
 </div>
   </div>

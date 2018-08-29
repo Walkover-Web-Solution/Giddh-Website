@@ -687,7 +687,11 @@
                                                                               </p>
                                                                   </figure>
                                                             </li>
-                                                            <li>
+
+                                                            
+
+                                                            
+                                                            <!-- <li>
                                                                   <figure class="member">
                                                                         <img src="../assets/images/team/devendra.png" alt="">
                                                                         <p class="member-footer">
@@ -704,7 +708,7 @@
                                                                               <span class="designation">Sales Executive</span>
                                                                               </p>
                                                                   </figure>
-                                                            </li>
+                                                            </li> -->
                                                             <li>
                                                                   <figure class="member">
                                                                         <img src="../assets/images/team/jinesh.png" alt="">
@@ -714,6 +718,8 @@
                                                                               </p>
                                                                   </figure>
                                                             </li>
+
+                                                            
                                                             <li>
                                                                   <figure class="member m-r-zero">
                                                                         <a href="https://www.walkover.in/career.php" target="_blank" class="empty-link"><span class="empty">Interested to <br>join our<br> team.</span></a>
