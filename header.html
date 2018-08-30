@@ -51,10 +51,10 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li ng-hide="signupPage">
                             <!-- <a href="tel:07939593939" class="talktoexpert" ng-class="{white:whiteLinks && !loginPage}"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a> -->
-                            <a href="" data-toggle="modal" data-target="#talkToSales_dialog" class="talktoexpert"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                            <button type="button" data-toggle="modal" data-target="#talkToSales_dialog" class="talktoexpert btn btn-primary navbar-btn">Talk to Sales</button>
                         </li>
-                        <li class="">
-                            <button data-toggle="modal" data-target="#tryademo" class="btn btn-primary navbar-btn m-t-20">Book a Demo</button>
+                        <li>
+                            <button type="button" href="javascript:void(0)" data-toggle="modal" data-target="#tryademo" class="book-demo btn btn-primary navbar-btn">Book a Demo</button>
                         </li>
                         <!-- <li class="">
                       <button onclick="location.href='app/'" class="btn btn-bordered navbar-btn m-t-20 m-r-15">Login</button>
@@ -99,7 +99,7 @@
 <div class="modal fade" id="talkToSales_dialog" role="dialog">
     <div class="modal-dialog custom-dialog">
         <div class="modal-header">
-            <h3 class="brdB left">Talk to Expert</h3>
+            <h3 class="brdB left">Talk to Sales</h3>
             <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
         </div>
         <div class="pd2 tab-content custom-padding-20 height-600 tab-content-modal">

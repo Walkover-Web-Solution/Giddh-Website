@@ -29,6 +29,7 @@
     </div> -->
    
     <div class="intro home flex-box-banner slide show container">
+    <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
         <div class="banner_intro features_banner">
               <h1 class="banner_heading">Access your books anytime anywhere</h1>
               <p class="banner_sub_heading m-t-20">Manage your business finances anytime, from any internet-connected device – phone, laptop or computer.</p>
@@ -36,11 +37,11 @@
               <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
                 <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
                 <a class="btn btn-primary" id="downloadLinux" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz">Download Free</a>
-                <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
             </p>
         </div>
         <div class="right-section">
-          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3">
+          <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
           <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-3">
           <img src="../assets/images/feature_banner_big.png" alt="Tally your books with giddh" class="tallybook">
         </div>
@@ -48,7 +49,7 @@
   </section> <!-- end of videoBg -->
   
   <!-- home content end -->
-  <section class="whitebg homeContent p-b-0" id="feature">
+  <section class="whitebg homeContent" id="feature">
       <div class="container">
               <div class="row m-b-60">
                     <div class="col-sm-12">

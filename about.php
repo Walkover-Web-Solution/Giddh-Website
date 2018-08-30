@@ -770,7 +770,7 @@
                                           </div>
                                           <div class="row">
                                                 <div class="col-sm-3">
-                                                      <h1 class="head-left m-t-90">Mentors</h1>
+                                                      <h1 class="head-left">Mentors</h1>
                                                 </div>
                                           </div>
                                           <div class="row">
@@ -857,13 +857,13 @@
                           </div>
                         <div class="col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
                         <ul class="nav nav-tabs nav-tabs-footer area-flex wd-100per noborder" role="tablist">
-                                    <li role="presentation" class="active"><a href="javascript:void(0)" aria-controls="about" role="tab" data-toggle="tab" class="one btn btn-default" ng-click="vm.selectedTab = 'about'" ng-show="vm.selectedTab != 'about'">About Us</a></li>
+                                    <li role="presentation" class="active" ng-show="vm.selectedTab != 'about'"><a href="javascript:void(0)" aria-controls="about" role="tab" data-toggle="tab" class="one btn btn-default" ng-click="vm.selectedTab = 'about'">About Us</a></li>
                                     
-                                    <li role="presentation"><a href="javascript:void(0)" aria-controls="profile" role="tab" data-toggle="tab" class="two btn btn-default" ng-click="vm.selectedTab = 'values'" ng-show="vm.selectedTab != 'values'">Our Values</a></li>
+                                    <li role="presentation"  ng-show="vm.selectedTab != 'values'"><a href="javascript:void(0)" aria-controls="profile" role="tab" data-toggle="tab" class="two btn btn-default" ng-click="vm.selectedTab = 'values'">Our Values</a></li>
 
-                                    <li role="presentation"><a href="javascript:void(0)" aria-controls="principle" role="tab" data-toggle="tab" class="three btn btn-default" ng-click="vm.selectedTab = 'principle'" ng-show="vm.selectedTab != 'principle'">Leadership Principles</a></li>
+                                    <li role="presentation" ng-show="vm.selectedTab != 'principle'"><a href="javascript:void(0)" aria-controls="principle" role="tab" data-toggle="tab" class="three btn btn-default" ng-click="vm.selectedTab = 'principle'">Leadership Principles</a></li>
 
-                                    <li role="presentation"><a href="javascript:void(0)" aria-controls="settings" role="tab" data-toggle="tab" class="four btn btn-default"  ng-click="vm.selectedTab = 'team'" ng-show="vm.selectedTab != 'team'">The Team</a></li>
+                                    <li role="presentation" ng-show="vm.selectedTab != 'team'"><a href="javascript:void(0)" aria-controls="settings" role="tab" data-toggle="tab" class="four btn btn-default"  ng-click="vm.selectedTab = 'team'">The Team</a></li>
                               </ul>
                         </div>
 
