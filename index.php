@@ -29,19 +29,22 @@
     </div> -->
    
     <div class="intro home flex-box-banner slide slide-1 container">
+
+    <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
+
         <div class="banner_intro">
         <div id="first"></div>
               <p class="banner_sub_heading">The future of Indian Accounting</p>
               <h2 class="banner_heading">Take your<br> Tally books online</h2>
               <p class="m-t-20">
                 <a class="btn btn-sync" href="tallyplusgiddh.php">Sync with Tally</a>
-                <a class="talktosale"  href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                <a class="talktosale"  href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
             </p>
             <p class="banner_heading_secondry">Switch eventually or start a fresh book with 
               <span>giddh</span></p>
         </div>
         <div class="right-section">
-        <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-1">
+        <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-1"> -->
         <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-1">
           <img src="../assets/images/circle.gif" alt="" class="rotate_wheel">
           <img src="../assets/images/slide-1.png" alt="Tally your books with giddh" class="img-responsive big-img">
@@ -58,7 +61,7 @@
                 <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
                 <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
                 <a class="btn btn-primary" id="downloadLinux" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz">Download Free</a>
-                <a class="talktosale" href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a>
+                <a class="talktosale" href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
             </p>
         </div>
         <div class="right-section">
@@ -226,7 +229,7 @@
              
               <div class="row p-t-0">
                 <div class="col-sm-12 text-center">
-                  <a class="btn btn-primary btn-lg m-t-60" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Expert</a>
+                  <a class="btn btn-primary btn-lg m-t-60" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
                 </div>
               </div>
       </div>
@@ -280,7 +283,7 @@
   <div class="modal fade" id="talkToSales_dialog" role="dialog">
    <div class="modal-dialog custom-dialog">
     <div class="modal-header">
-      <h3 class="brdB left">Talk to Expert</h3>
+      <h3 class="brdB left">Talk to Sales</h3>
       <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
        <ul class="nav-tabs nav-tabs-talk height42" id="shortner_tabs">
            <li class="active"><a href="#scheduleCall"  data-toggle="tab">Arrange a Demo</a></li>

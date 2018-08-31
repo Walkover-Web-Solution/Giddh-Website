@@ -54,7 +54,7 @@
     </div>
   </section>
 
-  <section class="blueBg cmnPd100 pricing ">
+  <section class="cmnPd100 pricing ">
     <div class="container">
       
       <div class="row">
@@ -117,7 +117,7 @@
       <div class="row text-center mrT4">
         <div class="col-sm-12">
           <h2 class="mrB3 pClr">18/6 Instant Support</h2>
-          <a href="/app/signup" id="pBtn" class="pScroll btn btn-bdr-whte btn-lg btn-bdr" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+          <a href="/app/signup" id="pBtn" class="pScroll btn btn-lg btn-bdr" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
         </div>
       </div>
 
