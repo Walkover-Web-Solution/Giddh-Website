@@ -1,5 +1,5 @@
 <?php
-echo '<script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+echo '
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&render=explicit" async defer></script>

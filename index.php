@@ -5,7 +5,6 @@
   <meta name="keywords" content="bookkeeping software, Accounting softwares, online accounting software, bookkeeping software for small business"/>
   
   <title>Best Business Accounting Software on Cloud | Bookkeeping Software, Online & Easy to Use – Giddh.com</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <?php include 'head.php';?>
 
 </head>
@@ -16,8 +15,6 @@
   <!-- <div ng-class="{'other-country': geo.country != 'IN'}" ng-if="geo.country != 'IN'">
     <iframe src="global.html" style="height:100%;width:100%;padding: 0;margin:0"></iframe>
   </div> -->
-
-
 
   <ng-include src="'header.html'"></ng-include>
 
@@ -280,38 +277,40 @@
               </div>
       </div>
   </section>  -->
-  <div class="modal fade" id="talkToSales_dialog" role="dialog">
-   <div class="modal-dialog custom-dialog">
-    <div class="modal-header">
-      <h3 class="brdB left">Talk to Sales</h3>
-      <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
-       <ul class="nav-tabs nav-tabs-talk height42" id="shortner_tabs">
-           <li class="active"><a href="#scheduleCall"  data-toggle="tab">Arrange a Demo</a></li>
-           <li><a href="#dropEmail"  data-toggle="tab">Drop us a mail</a></li>
+<!-- <div class="modal fade" id="talkToSales_dialog" role="dialog">
+    <div class="modal-dialog custom-dialog">
+        <div class="modal-header">
+            <h3 class="brdB left">Talk to Sales</h3>
+            <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
+        </div>
+        <div class="pd2 tab-content custom-padding-20 height-600 tab-content-modal">
 
-       </ul>
+            <div id="dropEmail">
+                <div id="Jkvq" class="talktosale-superform"></div>
+
+                <div class='alert alert-succcess successsales'></div>
+            </div>
+        </div>
     </div>
-       <div class="pd2 tab-content custom-padding-20 height-552 tab-content-modal">
-
-         <div id="dropEmail" class="tab-pane">
-           <div id="Jkvq" class="talktosale-superform"></div>
-
-           <div class='alert alert-succcess successsales'></div>
-         </div>
-
-         <div id="scheduleCall" class="tab-pane active vertical-center">
-                <!-- <p>Choose your preferred time to schedule<br>
-                   a demo with an expert. </p>
-                <button class="btn btn-primary">Click Here</button> -->
-                <!-- Calendly inline widget begin -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/giddh" style="min-width:320px;height:580px;"></div>
+</div> -->
+<!-- try a demo -->
+<!-- <div class="modal fade" id="tryademo" role="dialog">
+    <div class="modal-dialog custom-dialog">
+        <div class="modal-header">
+            <h3 class="brdB left">Try a Demo</h3>
+            <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
+        </div>
+        <div class="pd2 tab-content custom-padding-20 height-552 tab-content-modal">
+            <div id="scheduleCall" class="tab-pane active vertical-center">
+                <div class="calendly-box">
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/giddh/15min" style="min-width:320px;height:580px;"></div>
+                </div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-                <!-- Calendly inline widget end -->
-         </div>
-       </div>
-       
-     </div>
- </div>
+
+            </div>
+        </div>
+    </div>
+</div> -->
 <!-- client section end -->
 <!-- home content end -->     
   <!-- end of page -->
