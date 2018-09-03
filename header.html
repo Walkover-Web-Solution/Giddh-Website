@@ -1,11 +1,37 @@
-<script src="/scripts/bootstrap.min.js"></script>
-<script type="text/javascript">
-    window.superformIds = ['Jkvq', 'xZyf'];
-</script>
-<link rel="stylesheet" media="screen" href="https://random-scripts.herokuapp.com/superform/superform.css" />
+<div class="modal fade" id="talkToSales_dialog" role="dialog">
+    <div class="modal-dialog custom-dialog">
+        <div class="modal-header">
+            <h3 class="brdB left">Talk to Sales</h3>
+            <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
+        </div>
+        <div class="pd2 tab-content custom-padding-20 height-600 tab-content-modal">
 
+            <div id="dropEmail">
+                <div id="Jkvq" class="talktosale-superform"></div>
 
-<script src="https://random-scripts.herokuapp.com/superform/superform.js"></script>
+                <div class='alert alert-succcess successsales'></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- try a demo -->
+<div class="modal fade" id="tryademo" role="dialog">
+    <div class="modal-dialog custom-dialog">
+        <div class="modal-header">
+            <h3 class="brdB left">Try a Demo</h3>
+            <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
+        </div>
+        <div class="pd2 tab-content custom-padding-20 height-552 tab-content-modal">
+            <div id="scheduleCall" class="tab-pane active vertical-center">
+                <div class="calendly-box">
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/giddh/15min" style="min-width:320px;height:580px;"></div>
+                </div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <nav role="navigation" class="navbar navbar-custom navbar-fixed-top" ng-class="{'transparent':!magicLinkPage, 'fixedHeader' : fixedHeader}">
     <div class="container-fluid">
@@ -96,7 +122,7 @@
      </div>
  </div> -->
 <!-- talk to expert -->
-<div class="modal fade" id="talkToSales_dialog" role="dialog">
+<!-- <div class="modal fade" id="talkToSales_dialog" role="dialog">
     <div class="modal-dialog custom-dialog">
         <div class="modal-header">
             <h3 class="brdB left">Talk to Sales</h3>
@@ -111,9 +137,9 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- try a demo -->
-<div class="modal fade" id="tryademo" role="dialog">
+<!-- <div class="modal fade" id="tryademo" role="dialog">
     <div class="modal-dialog custom-dialog">
         <div class="modal-header">
             <h3 class="brdB left">Try a Demo</h3>
@@ -129,9 +155,39 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
+<!-- <div class="modal fade" id="talkToSales_dialog" role="dialog">
+    <div class="modal-dialog custom-dialog">
+        <div class="modal-header">
+            <h3 class="brdB left">Talk to Sales</h3>
+            <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
+            <ul class="nav-tabs nav-tabs-talk height42" id="shortner_tabs">
+                <li class="active"><a href="#scheduleCall" data-toggle="tab">Arrange a Demo</a></li>
+                <li><a href="#dropEmail" data-toggle="tab">Drop us a mail</a></li>
 
+            </ul>
+        </div>
+        <div class="pd2 tab-content custom-padding-20 height-552 tab-content-modal">
+
+            <div id="dropEmail" class="tab-pane">
+                <div id="Jkvq" class="talktosale-superform"></div>
+
+                <div class='alert alert-succcess successsales'></div>
+            </div>
+
+            <div id="scheduleCall" class="tab-pane active vertical-center"> -->
+<!-- <p>Choose your preferred time to schedule<br>
+                   a demo with an expert. </p>
+                <button class="btn btn-primary">Click Here</button> -->
+<!-- Calendly inline widget begin -->
+<!-- <div class="calendly-inline-widget" data-url="https://calendly.com/giddh" style="min-width:320px;height:580px;"></div> -->
+<!-- Calendly inline widget end -->
+<!-- </div>
+        </div>
+
+    </div>
+</div> -->
 
 <script>
     $(".nav-tabs-talk li a").click(function(e) {
