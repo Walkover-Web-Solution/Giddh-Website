@@ -17,8 +17,8 @@ echo '<meta charset="UTF-8"/>
   <script type="text/javascript">
       window.superformIds = ["Jkvq", "xZyf"];
   </script>
-  <link rel="stylesheet" media="screen" href="https://random-scripts.herokuapp.com/superform/superform.css" />
-  <script src="https://random-scripts.herokuapp.com/superform/superform.js"></script>
+  <link rel="stylesheet" media="screen" href="https://assets.sokt.io/superform/superform.css" />
+  <script src="https://assets.sokt.io/superform/superform.js"></script>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
   ';
 ?>
