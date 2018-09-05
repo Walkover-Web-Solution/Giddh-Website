@@ -8,7 +8,8 @@
 </head>
 <body ng-controller="homeController as vm" id="page-top">
 
-  <ng-include src="'header.html'"></ng-include>
+  <!-- <ng-include src="'header.html'"></ng-include> -->
+  <?php include 'header.php';?>  
 
   <section id="videoBg" class="intro pricing">
     <!-- banner content -->

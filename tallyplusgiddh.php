@@ -15,8 +15,8 @@
 
 
 
-  <ng-include src="'header.html'"></ng-include>
-
+  <!-- <ng-include src="'header.html'"></ng-include> -->
+  <?php include 'header.php';?>  
   <section id="" class="pr black-back hide-xs">
     <div class="home vh100">
       <div class="col-md-6 col-xs-12 col-sm-6 height100 bg_light_blue intro_col pr">

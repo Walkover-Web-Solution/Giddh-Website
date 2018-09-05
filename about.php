@@ -19,7 +19,8 @@
 <body  ng-controller="homeController as vm" id="aboutPage" class="about-section-body lightTrans">
   
   <!-- <ng-include src="'about-header.html'"></ng-include> -->
-  <ng-include src="'header.html'"></ng-include>
+  <!-- <ng-include src="'header.html'"></ng-include> -->
+<?php include 'header.php';?>  
  <section class="cus-about-sec">
     <div class="container-fluid">
         <div class="row">

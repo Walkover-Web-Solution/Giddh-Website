@@ -8,8 +8,8 @@
 </head>
 <body ng-controller="homeController as vm" class="gridBg txtBody privacy">
   
-  <ng-include src="'header.html'"></ng-include>
-
+  <!-- <ng-include src="'header.html'"></ng-include> -->
+  <?php include 'header.php';?>  
 <section class="cmnPd100 whitebg">
   <div class="container">
     <div class="row">
