@@ -19,8 +19,8 @@
 
 
 
-  <ng-include src="'header.html'"></ng-include>
-
+  <!-- <ng-include src="'header.html'"></ng-include> -->
+  <?php include 'header.php';?>  
   <!-- end navigation -->
 
 <!--Banner-->
