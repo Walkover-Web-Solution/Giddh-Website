@@ -1062,6 +1062,13 @@ img.img-responsive.ac-img {
   position: relative;
   top: 70px;
 }
+.slide-3 {
+
+}
+.slide-3 h2.banner_heading {
+  margin-top: 7px;
+}
+
 /* my css end */
 
 
@@ -2138,7 +2145,38 @@ button.toast-close-button {
   background: transparent !important;
   border-color: #fff !important;
 }
-
+.slide-3 {
+  background: url(/assets/images/subtraction.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom -20px center;
+  align-items: flex-start;
+  padding-top: 190px;
+}
+.banner-3-bottom {
+  position: absolute;
+  bottom: 80px;
+  width: 600px;
+  text-align: center;
+}
+.banner-3-bottom a.btn-lg-red {
+  display: inline-block;
+  width: 290px;
+  height: 60px;
+  background: #E34B26;
+  color: #fff;
+  font-size: 29px;
+  line-height: 55px;
+  box-shadow: 0 3px 10px #2c2c3e;
+  border-radius: 2px;
+}
+.banner-3-bottom img {
+  display: inline-block;
+  width: 175px;
+  position: relative;
+  top: -7px;
+  left: -4px;
+}
 /*media queries*/
 @media only screen and (max-width:1900px){
   .nav.navbar-nav.navbar-right{
@@ -4530,7 +4568,7 @@ margin-bottom: 15px;
   .sky-two{
     width: 236px;
     position: absolute;
-    top: 30px;
+    top: 25px;
     left: -180px;
     opacity: 0.05;
     z-index: -9;
@@ -4986,7 +5024,6 @@ background: transparent;
 }
 #sFformfield-xZyf label{
   color:#fff !important;
-  font-weight:600;
 }
 #sFformfield-xZyf .btn-primary{
   background:#0A0A21 !important;

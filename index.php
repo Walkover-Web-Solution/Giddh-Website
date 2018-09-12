@@ -67,6 +67,23 @@
           <img src="../assets/images/accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive ac-img">
         </div>
     </div>
+
+
+<!-- banner 3 start -->
+  <div class="intro home flex-box-banner slide slide-3 container">
+        <div class="banner_intro text-center">
+              <p class="banner_sub_heading home">The future of Indian Accounting</p>
+              <h2 class="banner_heading">Give your account<br>department an extra edge </h2>
+              <p class="banner_sub_heading m-t-15">By automation and giddh</p>
+        </div>
+        
+        <div class="banner-3-bottom">
+          <a href="#" class="btn-lg-red">Start the Discussion</a> <img src="../assets/images/airimg.svg" alt="">
+        </div>
+    </div>
+<!-- banner 3 end -->
+
+
    
   </section> <!-- end of videoBg -->
   <!-- giddh usage section start -->
@@ -318,7 +335,7 @@
   <?php include 'footer.php';?> 
 <script>
   function showRandomBanner(){
-    var slideArray = [1,2];
+    var slideArray = [1,2,3];
     var ranNum = slideArray[Math.floor(Math.random()*slideArray.length)];
     $(".slide-" + ranNum).addClass("show");
   }
