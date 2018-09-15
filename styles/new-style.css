@@ -1060,7 +1060,7 @@ margin:0 48px;
 }
 img.img-responsive.ac-img {
   position: relative;
-  top: 70px;
+  /* top: 70px; */
 }
 .slide-3 {
 
