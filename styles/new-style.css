@@ -2161,20 +2161,21 @@ button.toast-close-button {
 }
 .banner-3-bottom a.btn-lg-red {
   display: inline-block;
-  width: 290px;
-  height: 60px;
+  /* width: auto; */
+  /* height: auto; */
   background: #E34B26;
   color: #fff;
   font-size: 29px;
-  line-height: 55px;
+  /* line-height: 55px; */
   box-shadow: 0 3px 10px #2c2c3e;
   border-radius: 2px;
+  padding: 12px 20px;
 }
 .banner-3-bottom img {
   display: inline-block;
   width: 175px;
   position: relative;
-  top: -7px;
+  top: -9px;
   left: -4px;
 }
 /*media queries*/
@@ -2264,13 +2265,27 @@ button.toast-close-button {
     background-color: #fff;
     
   }
-  .section-left h1{
+  .section-left h1 {
     margin-top:0;
-    }
-
-    #loginButton{
-        margin-left:0 !important; 
-    }
+  }
+  #loginButton{
+    margin-left:0 !important; 
+  }
+  .banner-3-bottom {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 30px;
+  }
+  .banner-3-bottom a.btn-lg-red {
+    font-size: 18px;
+  }
+  .banner-3-bottom img {
+    display: none;
+  }
+  img.img-responsive.ac-img {
+    top: 0px;
+  }
 }
 /*footer and main navigation hover effect*/
 /* Underline From Center */
