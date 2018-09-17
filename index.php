@@ -55,9 +55,9 @@
               <h2 class="banner_heading">Where accounting <br>happens </h2>
               <p class="banner_sub_heading m-t-15">Make your finance realtime, accessible, automated...</p>
               <p class="m-t-20">
-                <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
-                <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
-                <a class="btn btn-primary" id="downloadLinux" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz">Download Free</a>
+                <a class="btn btn-primary" id="downloadWindows" href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh%20Setup%20{{apkVersion}}.exe">Download Free</a>
+                <a class="btn btn-primary" id="downloadMacOS" href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-{{apkVersion}}.dmg">Download Free</a>
+                <a class="btn btn-primary" id="downloadLinux" href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh%20Setup%20{{apkVersion}}.exe">Download Free</a>
                 <a class="talktosale" href="#" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
             </p>
         </div>
