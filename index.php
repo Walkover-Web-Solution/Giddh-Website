@@ -78,7 +78,7 @@
         </div>
         
         <div class="banner-3-bottom">
-          <a href="#" class="btn-lg-red">Start the Discussion</a> <img src="../assets/images/airimg.svg" alt="">
+          <a href="#" data-toggle="modal" data-target="#talkToSales_dialog" class="btn-lg-red">Start the Discussion</a> <img src="../assets/images/airimg.svg" alt="">
         </div>
     </div>
 <!-- banner 3 end -->

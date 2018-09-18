@@ -155,7 +155,7 @@ body.lightTrans .navbar{background-color:rgba(255, 255, 255, 0);}
 body.light .navbar.transparent{background:transparent;box-shadow:none;}
 .navbar.affix, body.light .navbar.affix{min-height:60px;background:var(--primary-color);}
 .navbar.affix .navbar-brand{height:80px;}
-.navbar.affix .navbar-brand .showWhite{display:none;}
+/* .navbar.affix .navbar-brand .showWhite{display:none;} */
 .navbar.affix .navbar-brand .showBlack{display:block;}
 .navbar.affix .navbar.affix .navbar-nav{padding-top:12px;}
 .notAffix .navbar.affix{min-height:80px;position:inherit;}
@@ -1053,7 +1053,7 @@ p.allright{color:#5C5C6C !important;font-size:12px !important;}
 }
 .m-t-20{margin-top:21px !important;}
 .banner_intro{font-family:'CambriaRegular' !important;color:#FFF;}
-.banner_intro a{color:#fff;font-size:18px;}
+.banner_intro a{color:#fff;font-size:18px;cursor: pointer;}
 .talktosale{position:relative;top:6px;}
 .banner_sub_heading{font-size:20px;color:#C8C8C8;font-family:'CambriaRegular' !important;margin-bottom:0;}
 .banner_heading{color:#fff !important;font-size:60px !important;font-family:'CambriaRegular' !important;line-height:70px;}
