@@ -1,4 +1,10 @@
 <?php
+// redirect www to non-www
+if (substr($_SERVER['HTTP_HOST'], 0, 4) === 'www.') {
+    header('Location: http'.(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on' ? 's':'').'://' . substr($_SERVER['HTTP_HOST'], 4).$_SERVER['REQUEST_URI']);
+    exit;
+}
+
 echo '<meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=egde"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
