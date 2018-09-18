@@ -45,11 +45,11 @@
           </button>
                 <a href="/" class="navbar-brand" ng-if="!showBlack">
                     <img class="showWhite" src="/assets/images/new/giddh-logo-white.png" alt="Giddh - online accounting software" ng-if="!magicLinkPage">
-                    <img src="/assets/images/new/giddh-logo-white.png" alt="Giddh - online accounting software" ng-class="{'showWhite':magicLinkPage, 'showBlack':!magicLinkPage}">
+                    
                 </a>
-                <a href="/" class="navbar-brand" ng-if="showBlack" style="color:red;">
+                <!-- <a href="/" class="navbar-brand" ng-if="showBlack" style="color:red;">
                     <img src="/assets/images/new/giddh-logo.png" alt="Giddh - online accounting software">
-                </a>
+                </a> -->
             </div>
 
             <div ng-class="{collapse: isNavCollapsed}" class="navbar-collapse navbar-main-collapse col-sm-8">
