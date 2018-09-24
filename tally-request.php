@@ -16,12 +16,12 @@
       fclose($fh);
     }
   
-  #$urlx = $_SERVER['REQUEST_URI'];
-  # $rx = "(company/(.+)/import)Ui" ;
-  # preg_match($rx, $urlx, $data);
+   $urlx = $_SERVER['REQUEST_URI'];
+   $rx = "(company/(.+)/import)Ui" ;
+   preg_match($rx, $urlx, $data);
   
   
-  $url = "http://api.giddh.com/company/".$_SERVER['HTTP_COMPANYID']."/import-master-data";
+  $url = "http://api.giddh.com/company/".$data[1]."/import-master-data";
   
   
   
