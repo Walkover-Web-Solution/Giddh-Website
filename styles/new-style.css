@@ -347,6 +347,10 @@ figure h1{margin-bottom:5px;}
 .devider{width:150px;border:0.5px solid #4E4D7E;margin:55px auto 69px auto;}
 #footer .center_heading{margin-top:0;}
 .tallybook{width:681px;}
+
+/* my css start */
+.go-top {width: 60px;display: inline-block;position: fixed;right: 19px;bottom: 100px;background: #45455f;padding: 17px;border-radius: 90px;z-index: 9999999;}
+
 @media(min-width:768px){.display-small-sc{display:block;}
 .display-large-sc{display:none;}
 .intro{padding:0;}
