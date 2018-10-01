@@ -9,12 +9,12 @@
                             <h3>Desktop App</h3>
                                 <ul class="app_download">
                                     <li>
-                                        <a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-{{apkVersion}}.dmg">
+                                        <a href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-{{apkVersion}}.dmg">
                                             <i class="fab fa-apple"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh%20Setup%20{{apkVersion}}.exe">
+                                        <a href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20{{apkVersion}}.exe">
                                             <i class="fab fa-windows"></i>
                                         </a>
                                     </li>
@@ -124,9 +124,9 @@
             </p>
           <ul class="app_download">
             <h3>Desktop App</h3>
-            <li><a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app-{{apkVersion}}.dmg" target="_Blank" title="mac os"><i class="fab fa-apple"></i></a></li>
+            <li><a href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-app-{{apkVersion}}.dmg" target="_Blank" title="mac os"><i class="fab fa-apple"></i></a></li>
 
-            <li><a href="https://s3-ap-southeast-1.amazonaws.com/tetingmankuuuuu/giddh-app+Setup+{{apkVersion}}.exe" target="_Blank" title="windows"><i class="fab fa-windows"></i></a></li>
+            <li><a href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-app+Setup+{{apkVersion}}.exe" target="_Blank" title="windows"><i class="fab fa-windows"></i></a></li>
 
 <!--             <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz" target="_Blank" title="linux"><i class="fab fa-linux"></i></a></li>
           </ul>
