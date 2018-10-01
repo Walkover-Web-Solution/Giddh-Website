@@ -335,6 +335,7 @@
                                     </div>           
                             </div>
                     
+                            <a href="#" class="go-top"><img src="../assets/images/arrow.svg" alt="" /></a>
                   
                     </div>
            
@@ -563,6 +564,9 @@
                                </div>
                                </div>
                         </div>
+
+                        <a href="#" class="go-top"><img src="../assets/images/arrow.svg" alt="" /></a>
+                        
               </div>
             
             <!-- our principle end -->
@@ -967,6 +971,21 @@ if ( $(window).width() < 768 ){
      $(this).siblings().children('.heading').toggleClass('sphideshow');
 })
 }
+
+
+$(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('.go-top').fadeIn();
+    } else {
+        $('.go-top').fadeOut();
+    }
+});
+
+// go to top jump jQuery
+$(".go-top").click(function() {
+    $("html, body").animate({scrollTop: 0}, 1000);
+ });
+
 
 </script>
 

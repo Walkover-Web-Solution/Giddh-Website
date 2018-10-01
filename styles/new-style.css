@@ -347,6 +347,10 @@ figure h1{margin-bottom:5px;}
 .devider{width:150px;border:0.5px solid #4E4D7E;margin:55px auto 69px auto;}
 #footer .center_heading{margin-top:0;}
 .tallybook{width:681px;}
+
+/* my css start */
+.go-top {width: 60px;display: inline-block;position: fixed;right: 19px;bottom: 100px;background: #45455f;padding: 17px;border-radius: 90px;z-index: 9999999;}
+
 @media(min-width:768px){.display-small-sc{display:block;}
 .display-large-sc{display:none;}
 .intro{padding:0;}
@@ -511,6 +515,7 @@ button.toast-close-button{padding:0;cursor:pointer;background:transparent;border
 .slide-3{background:url(/assets/images/subtraction.svg);background-repeat:no-repeat;background-size:100%;background-position:bottom -20px center;align-items:flex-start;padding-top:190px;}
 .banner-3-bottom{position:absolute;bottom:80px;width:600px;text-align:center;}
 .banner-3-bottom a.btn-lg-red{display:inline-block;background:#E34B26;color:#fff;font-size:29px;box-shadow:0 3px 10px #2c2c3e;border-radius:2px;padding:12px 20px;}
+.banner-3-bottom a.btn-lg-red:hover, .banner-3-bottom a.btn-lg-red:focus {text-decoration: none;}
 .banner-3-bottom img{display:inline-block;width:175px;position:relative;top:-9px;left:-4px;}
 @media only screen and (max-width:1900px){.nav.navbar-nav.navbar-right{margin-right:15px;}
 .allmenu{width:86%;margin:auto;}

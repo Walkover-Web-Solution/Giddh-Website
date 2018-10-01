@@ -18,14 +18,14 @@ echo '<meta charset="UTF-8"/>
   <link href="/bower_components/angular-toastr/dist/angular-toastr.min.css" rel="stylesheet">
   <link href="/bower_components/ui-bootstrap-custom-build/ui-bootstrap-custom-2.5.0-csp.css" rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/scripts/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
+  <script src="/scripts/bootstrap.min.js" async></script>
   <script type="text/javascript">
       window.superformIds = ["Jkvq", "xZyf"];
   </script>
   <link rel="stylesheet" media="screen" href="https://assets.sokt.io/superform/superform.css" />
-  <script src="https://assets.sokt.io/superform/superform.js"></script>
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+  <script src="https://assets.sokt.io/superform/superform.js" async></script>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   ';
 ?>
 <!-- Google Tag Manager -->
