@@ -335,7 +335,7 @@
                                     </div>           
                             </div>
                     
-                            <a href="#" class="go-top"><img src="../assets/images/arrow.svg" alt="" /></a>
+                           
                   
                     </div>
            
@@ -565,7 +565,6 @@
                                </div>
                         </div>
 
-                        <a href="#" class="go-top"><img src="../assets/images/arrow.svg" alt="" /></a>
                         
               </div>
             
@@ -847,6 +846,8 @@
                                     </div>
                                     </div>
                               </div>
+                             
+
                   </div>
 
              <!-- the team end    -->
@@ -883,6 +884,11 @@
         </div>              
     </div>
 </section>
+
+
+<a href="#" class="go-top"><img src="../assets/images/arrow.svg" alt="" /></a>
+ 
+
 <!-- include footer -->
 <?php include 'footScript.php';?>
   <?php include 'footer.php';?> 

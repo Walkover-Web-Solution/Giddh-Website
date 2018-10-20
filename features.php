@@ -23,7 +23,7 @@
   <?php include 'header.php';?>  
   <!-- end navigation -->
 
-  <section id="videoBg" class="pr black-back">
+  <section id="videoBg" class="black-back">
     <!-- <div class="scroll-btn">
       <a href="#feature" class="page-scroll"></a>
     </div> -->
