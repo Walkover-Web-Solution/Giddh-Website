@@ -1196,6 +1196,8 @@ div{box-sizing:border-box;}
 @media only screen and (max-width:1000px){#sFform-xZyf textarea{width:240px !important;}
 }
 @media only screen and (max-width:1680px){.img_plane{top:60%;width:32%;}
+}
+
 @media only screen and (max-width:1600px){.big-img{width:557px;}
 .sky-two{top:90px;left:-240px;width:235px !important;}
 .sky-two.bn-1{left:-140px;top:0;}
@@ -1305,4 +1307,141 @@ figure.member:last-child{margin-right:0 !important;}
 }
 #sFform-Jkvq input, #sFform-Jkvq textarea, #sFform-Jkvq select{font-family:"CambriaRegular" !important;color:#444444;}
 @media only screen and (max-width:360px){.intro.home .btn{margin-right:0px;}
+}
+
+
+/*======================reporting page css start===============================================*/
+
+.graybg-reporting p {
+    font-size: 18px;
+    color: #565B73;
+    line-height: 28px;
+}
+
+.graybg-reporting h2 {
+    margin-bottom: 60px;
+}
+section.whitebg.homeContent.left-text {
+    text-align: left;
+}
+.left-text h2{font-family: "CambriaBold";
+    font-size: 24px; margin:30px 0px 17px 0px;}
+	
+.left-text  p{font-size: 18px;
+    color: #565B73;
+    line-height: 28px;}
+	.left-text h2.collab {
+    margin-top: 0;
+}
+section.reporting-solution {
+    background: #fff;
+    text-align: center;
+}
+
+.reporting-solution h2.center_heading {
+    font-size: 38px !important;
+    font-family: "CambriaBold";
+    margin-top: 0;
+}
+.reporting-solution p{font-size: 18px;
+    color: #565B73;
+    line-height: 28px;}
+
+li {}
+
+ul.reportint-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+ul.reportint-list li {
+    display: block;
+    font-size: 18px;
+    color: #565B73;
+    line-height: 50px;
+    background: url(../assets/images/reporting/Tick.svg) no-repeat 0px 18px;
+    background-size: 24px;
+    padding-left: 34px;
+}
+
+ul.reportint-list li img {
+    width: auto;
+    margin-left: -5px;
+    margin-right: 5px;
+}
+.p-t-70 {
+    padding: 70px 0px;
+}
+.pioneer {
+    position: relative;
+    padding-right: 50px;
+}
+
+.pioneer:after {
+    height: 100%;
+    width: 1px;
+    content: "";
+    position: absolute;
+    background: rgba(38, 38, 57, 0.48);
+    top: 0;
+    right: 0;
+}
+
+span.blog-reporting {
+    font-family: "CambriaBold";
+    font-size: 24px;
+    color: #28283C;
+    margin-left: 42px;
+    display: inline-block;
+    text-align: justify;
+}
+span.blog-reporting a {
+    font-size: 18px;
+    color: #1062BF;
+    font-family: "CambriaRegular";
+}
+.p-t-80{padding: 80px 0;}
+img.peopel-img{width:230px;}
+
+ul.reporting-blog-menu {
+    margin: 24px 0 0 0px;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+}
+
+ul.reporting-blog-menu li a {
+    font-family: 'CambriaRegular';
+    display: block;
+    margin-top: -3px;
+}
+
+ul.reporting-blog-menu li:last-child {
+    border-right: 0px;
+}
+
+.reporting-blog-text {
+    margin-top: 40px;
+}
+ul.reporting-blog-menu li {
+    display: inline-block;
+    border-right: 1px solid #222;
+    padding: 0px 10px;
+    margin-left: -4px;
+    font-size: 16px;
+    line-height: normal;
+}
+img{max-width:100%;}
+
+.invoicing h2.center_heading {
+    font-size: 38px !important;
+    font-family: "CambriaBold";
+    margin-top: 0;
+}
+section.invoicing {
+    background: #fff;
+    padding-bottom: 73px;
 }
