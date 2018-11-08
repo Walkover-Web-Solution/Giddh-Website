@@ -33,7 +33,7 @@
     <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
         <div class="banner_intro features_banner">
               <h1 class="banner_heading_new">For business owners and <br><nobr>accountants who are always on the go</nobr></h1>
-              <p class="banner_sub_heading m-t-20">Generate invoices, view reports & manage your books <br>wherever you are.</p>
+              <p class="banner_sub_heading m-t-15">Generate invoices, view reports & manage your books <br>wherever you are.</p>
               <p class="m-t-20">
               <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
                 <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
@@ -43,8 +43,8 @@
         </div>
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
-          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-3">
-          <img src="../assets/images/anywhere-anytime/banner.png" alt="Tally your books with giddh" class="tallybook">
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="cloud_sky bn-3">
+          <img src="../assets/images/anywhere-anytime/banner.png" alt="Tally your books with giddh" class="cloud-accounting-software-img">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -55,7 +55,7 @@
               <div class="row m-b-60">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Run your business from any corner of the world!</h2>
-                      <p>All you ever need to be on top of your accounting is just an active internet connection. Conduct your business from anywhere with our cloud based accounting solution. Manage inventory, file GST returns, or reconcile your books; the possibilities are truly limitless with Giddh cloud accounting.</p>
+                      <div class="width-900"><p>All you ever need to be on top of your accounting is just an active internet connection. Conduct your business from anywhere with our cloud based accounting solution. Manage inventory, file GST returns, or reconcile your books; the possibilities are truly limitless with Giddh cloud accounting.</p></div>
                       <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
                   </div>
               </div>
@@ -80,7 +80,7 @@
   <hr>
   
   <div class="row">
-  <div class="col-sm-6 text-center">
+  <div class="col-sm-6 ">
    <img src="../assets/images/anywhere-anytime/Group-4857.png" alt="">
   </div>
   <div class="col-sm-6">
@@ -110,7 +110,7 @@
 
  
  <div class="row">
-   <div class="col-sm-6 text-center">
+   <div class="col-sm-6 ">
    <img src="../assets/images/anywhere-anytime/Group-4861.png" alt="">
   </div>
    
@@ -136,13 +136,14 @@
   
   
   <section class="graybg p-t-70">
-                      <div class="container area-flex">
-                           <div class="pioneer col-md-offset-2"><img src="../assets/images/dashboard/Blog.png" alt=""></div>
+                      <div class="container area-flex  blog_center_new">
+                           <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/dashboard/Blog.png" alt=""></div>
                             <span class="blog-reporting">How to make the best of your <br>
 online accounting software?<br>
 
                             <a href="#">Read more...</a>
                             </span>
+                            </div>
                       </div>
                   </section>
   
@@ -154,9 +155,9 @@ online accounting software?<br>
                     <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
                        
                        <div class="reporting-blog-text">
-                       <h2>People interested in invoicing also looked at</h2>
+                       <h2>People interested in <span>Anywhere-Anytime</span> also looked at</h2>
                        <ul class="reporting-blog-menu">
-                       <li><a href="#">Invoicing</a></li>
+                       <li><a href="#">Reporting</a></li>
                        <li><a href="#">Multi-Currency</a></li>
                        <li><a href="#">Security</a></li>
                        <li><a href="#">All features</a></li>

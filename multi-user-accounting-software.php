@@ -32,8 +32,9 @@
     <div class="intro home flex-box-banner slide show container">
     <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
         <div class="banner_intro features_banner">
-              <h1 class="banner_heading_new">Work better together by sharing business insights</h1>
-              <p class="banner_sub_heading m-t-20">Allow external accountants & internal team members <br>across different departments to work together <br>seamlessly.</p>
+              <h1 class="banner_heading_new">Work better together by <br>
+sharing business insights</h1>
+              <p class="banner_sub_heading m-t-15">Allow external accountants & internal team members <br>across different departments to work together <br>seamlessly.</p>
               <p class="m-t-20">
               <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
                 <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
@@ -43,8 +44,8 @@
         </div>
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
-          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-3">
-          <img src="../assets/images/share-data/Banner.png" alt="Tally your books with giddh" class="tallybook">
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-new_2 bn-3">
+          <img src="../assets/images/share-data/Banner.png" alt="Tally your books with giddh" class="multi-user-accounting-software-img">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -55,7 +56,7 @@
               <div class="row m-b-60">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Smart collaboration across all departments</h2>
-                      <p>Multi user accounting software enables business owners & accountants to collaborate and make the best of their numbers. With real time sharing of financial data, you can derive meaningful insight and run your business with efficiency.</p>
+                     <div class="middle-width"> <p>Multi user accounting software enables business owners & accountants to collaborate and make the best of their numbers. With real time sharing of financial data, you can derive meaningful insight and run your business with efficiency.</p></div>
                       <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
                   </div>
               </div>
@@ -75,7 +76,7 @@
    <img src="../assets/images/share-data/Group-4865.png" alt="">
   </div>
   <div class="col-sm-12">
-  <ul class="reportint-list">
+  <ul class="reportint-list small-font-new">
                   <li>Give permission to multiple users based on their email addresses.</li>
                   <li>Control which user sees what part of your financial data and always be in control.</li>
                   <li>Give IP based access to your accountants in case you want them to work on your books at only your office or premise.</li>
@@ -92,7 +93,7 @@
   <hr>
   
   <div class="row">
-  <div class="col-sm-6 text-center">
+  <div class="col-sm-6">
    <img src="../assets/images/share-data/Group-4883.png" alt="">
   </div>
   <div class="col-sm-6">
@@ -137,13 +138,15 @@
   
   
   <section class="graybg p-t-70">
-                      <div class="container area-flex">
-                           <div class="pioneer col-md-offset-2"><img src="../assets/images/share-data/Blog.png" alt=""></div>
+                      <div class="container blog_center_new area-flex">
+                           <div class="center-divbox">
+                            <div class="pioneer"><img src="../assets/images/share-data/Blog.png" alt=""></div>
                             <span class="blog-reporting">Real time success with <br>
 real time accounting!<br>
 
                             <a href="#">Read more...</a>
                             </span>
+                            </div>
                       </div>
                   </section>
   
@@ -155,7 +158,7 @@ real time accounting!<br>
                     <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
                        
                        <div class="reporting-blog-text">
-                       <h2>People interested in invoicing also looked at</h2>
+                       <h2>People interested in <span>Share-data</span> also looked at</h2>
                        <ul class="reporting-blog-menu">
                        <li><a href="#">Invoicing</a></li>
                        <li><a href="#">Multi-Currency</a></li>
