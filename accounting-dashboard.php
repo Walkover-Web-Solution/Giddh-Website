@@ -32,8 +32,9 @@
     <div class="intro home flex-box-banner slide show container">
     <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
         <div class="banner_intro features_banner">
-              <h1 class="banner_heading_new">Know your business' worth with simple online dashboard</h1>
-              <p class="banner_sub_heading m-t-20">Turn your accounting data into business intelligence <br>with Giddh Dashboard.</p>
+              <h1 class="banner_heading_new">Know your business' worth <br>
+with simple online dashboard</h1>
+              <p class="banner_sub_heading m-t-15">Turn your accounting data into business intelligence <br>with Giddh Dashboard.</p>
               <p class="m-t-20">
               <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
                 <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
@@ -43,8 +44,8 @@
         </div>
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
-          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-3">
-          <img src="../assets/images/dashboard/Banner.png" alt="Tally your books with giddh" class="tallybook">
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-new bn-3">
+          <img src="../assets/images/dashboard/Banner.png" alt="Tally your books with giddh" class="new-banner-width">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -55,7 +56,7 @@
               <div class="row m-b-60">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Assess your numbers in one glance</h2>
-                      <p>Gain actionable insights and easily evaluate growth of your business. Real-time accounting dashboard offers you a bird eye’s view to your business health on a single window. Actively keep an eye on the net worth, revenue, profit/loss and other key information of your business.</p>
+                     <div class="middle-width"> <p>Gain actionable insights and easily evaluate growth of your business. Real-time accounting dashboard offers you a bird eye’s view to your business health on a single window. Actively keep an eye on the net worth, revenue, profit/loss and other key information of your business.</p></div>
                       <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
                   </div>
               </div>
@@ -80,7 +81,7 @@
   <hr>
   
   <div class="row">
-  <div class="col-sm-6 text-center">
+  <div class="col-sm-6 ">
    <img src="../assets/images/dashboard/Group-4786.png" alt="">
   </div>
   <div class="col-sm-6">
@@ -110,7 +111,7 @@
 
  
  <div class="row">
-   <div class="col-sm-6 text-center">
+   <div class="col-sm-6 ">
    <img src="../assets/images/dashboard/Group-4809.png" alt="">
   </div>
    
@@ -149,13 +150,14 @@
   
   
   <section class="graybg p-t-70">
-                      <div class="container area-flex">
-                           <div class="pioneer col-md-offset-2"><img src="../assets/images/dashboard/Blog.png" alt=""></div>
+                      <div class="container area-flex  blog_center_new">
+                      <div class="center-divbox">
+                           <div class="pioneer blog_center_new"><img src="../assets/images/dashboard/Blog.png" alt=""></div>
                             <span class="blog-reporting">Optimise, Analyse and Evaluate with <br>
 Giddh Dynamic Dashboard<br>
 
                             <a href="#">Read more...</a>
-                            </span>
+                            </span></div>
                       </div>
                   </section>
   
@@ -167,7 +169,7 @@ Giddh Dynamic Dashboard<br>
                     <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
                        
                        <div class="reporting-blog-text">
-                       <h2>People interested in invoicing also looked at</h2>
+                       <h2>People interested in <span>invoicing</span> also looked at</h2>
                        <ul class="reporting-blog-menu">
                        <li><a href="#">Invoicing</a></li>
                        <li><a href="#">Multi-Currency</a></li>

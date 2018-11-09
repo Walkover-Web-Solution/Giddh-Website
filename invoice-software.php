@@ -32,8 +32,9 @@
     <div class="intro home flex-box-banner slide show container">
     <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
         <div class="banner_intro features_banner">
-              <h1 class="banner_heading_new">Smart Accounting Software for all your Invoicing Needs</h1>
-              <p class="banner_sub_heading m-t-20">Creating and sending invoices doesn't have to be a pain.</p>
+              <h1 class="banner_heading_new">Smart Accounting Software <br>
+for all your Invoicing Needs</h1>
+              <p class="banner_sub_heading m-t-15">Creating and sending invoices doesn't have to be a pain.</p>
               <p class="m-t-20">
               <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
                 <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
@@ -43,8 +44,8 @@
         </div>
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
-          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-3">
-          <img src="../assets/images/inovicing/Banner.png" alt="Tally your books with giddh" class="tallybook">
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-new_2 bn-3">
+          <img src="../assets/images/inovicing/Banner.png" alt="Tally your books with giddh" class="invoice-software-img">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -55,7 +56,7 @@
               <div class="row m-b-60">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Save time with Invoicing Solutions</h2>
-                      <p>Giddh makes the dull job of creating invoices so simple, you'll be amazed how much time you can save to focus on your core business activities. With its beautiful templates and customization options, Giddh is the best invoicing partner for all kinds of business owners.</p>
+                     <div class="middle-width"> <p>Giddh makes the dull job of creating invoices so simple, you'll be amazed how much time you can save to focus on your core business activities. With its beautiful templates and customization options, Giddh is the best invoicing partner for all kinds of business owners.</p></div>
                       <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
                   </div>
               </div>
@@ -80,7 +81,7 @@
   <hr>
   
   <div class="row">
-  <div class="col-sm-6 text-center">
+  <div class="col-sm-6">
    <img src="../assets/images/inovicing/Group-4729.png" alt="">
   </div>
   <div class="col-sm-6">
@@ -109,12 +110,12 @@
    <hr>
    
    <div class="row">
-   <div class="col-sm-6 text-center">
+   <div class="col-sm-6">
    <img src="../assets/images/inovicing/Group-4709.png" alt="">
   </div>
    
   <div class="col-sm-6">
-  <h2 class="collab">BRun your business with automation!</h2>
+  <h2 class="collab">Run your business with automation!</h2>
   <p>From setting payment reminders to sending invoices to clients on a recurring basis, you can utilize the complete potential of automation with Giddh! So let Giddh follow-up with customer and focus on your core business activities.</p>
   </div>
   
@@ -136,6 +137,7 @@
                       <h2 class="center_heading">Other equally important invoicing feature</h2>
                   </div>
               </div>
+              <div class="w-900">
              <div class="row row-features">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
@@ -215,6 +217,7 @@
                       
                       
                </div>
+               </div>
              </div>
       
   </section>
@@ -222,13 +225,15 @@
   
   
   <section class="graybg p-t-70">
-                      <div class="container area-flex">
-                           <div class="pioneer col-md-offset-2"><img src="../assets/images/inovicing/Blog.png" alt=""></div>
+                      <div class="container area-flex  blog_center_new">
+                            <div class="center-divbox">
+                            <div class="pioneer"><img src="../assets/images/inovicing/Blog.png" alt=""></div>
                             <span class="blog-reporting">3 Most common invoicing mistakes <br>
 you might be making (and their fixes)<br>
 
                             <a href="#">Read more...</a>
                             </span>
+                            </div>
                       </div>
                   </section>
   
@@ -240,9 +245,9 @@ you might be making (and their fixes)<br>
                     <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
                        
                        <div class="reporting-blog-text">
-                       <h2>People interested in invoicing also looked at</h2>
+                       <h2>People interested in <span>Invoicing</span> also looked at</h2>
                        <ul class="reporting-blog-menu">
-                       <li><a href="#">Invoicing</a></li>
+                       <li><a href="#">Reporting</a></li>
                        <li><a href="#">Multi-Currency</a></li>
                        <li><a href="#">Security</a></li>
                        <li><a href="#">All features</a></li>

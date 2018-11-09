@@ -32,8 +32,9 @@
     <div class="intro home flex-box-banner slide show container">
     <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
         <div class="banner_intro features_banner">
-              <h1 class="banner_heading_new multi-currency">Make sense of your numbers by automatic Financial Reports</h1>
-              <p class="banner_sub_heading m-t-20">Financial reports will help in evaluating the strengths<br> and weaknesses of any business, be it a small retail one <br>or a growing e-commerce one.</p>
+              <h1 class="banner_heading_new multi-currency">Make sense of your numbers<br>
+ by automatic Financial Reports</h1>
+              <p class="banner_sub_heading m-t-15">Financial reports will help in evaluating the strengths<br> and weaknesses of any business, be it a small retail one <br>or a growing e-commerce one.</p>
               <p class="m-t-20">
               <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
                 <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
@@ -43,8 +44,8 @@
         </div>
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
-          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-3">
-          <img src="../assets/images/reporting/banner.png" alt="Tally your books with giddh" class="tallybook">
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-new_2 bn-3">
+          <img src="../assets/images/reporting/banner.png" alt="Tally your books with giddh" class="financial-reporting-img">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -55,7 +56,7 @@
               <div class="row m-b-60">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Smart accounting reports for business of any size</h2>
-                      <p>Stay on top of your numbers and make informed business decisions. Analyse and share your vital financial reports like- balance sheet, trial balance, profit/loss to the key decision maker of your business. Giddh gives you all reports you may need to run your business better.</p>
+                      <div class="middle-width"><p>Stay on top of your numbers and make informed business decisions. Analyse and share your vital financial reports like- balance sheet, trial balance, profit/loss to the key decision maker of your business. Giddh gives you all reports you may need to run your business better.</p></div>
                       <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Expert</a>
                   </div>
               </div>
@@ -80,7 +81,7 @@
   <hr>
   
   <div class="row">
-  <div class="col-sm-6 text-center">
+  <div class="col-sm-6">
    <img src="../assets/images/reporting/group-4767.png" alt="">
   </div>
   <div class="col-sm-6">
@@ -106,7 +107,7 @@
  </div>
    <hr>
   <div class="row">
-   <div class="col-sm-6 text-center">
+   <div class="col-sm-6">
    <img src="../assets/images/reporting/group-4709.png" alt="">
   </div>
   <div class="col-sm-6">
@@ -145,13 +146,15 @@
   </section>
   
   <section class="graybg p-t-70">
-                      <div class="container area-flex">
-                           <div class="pioneer col-md-offset-2"><img src="../assets/images/reporting/blog.png" alt=""></div>
+                      <div class="container area-flex  blog_center_new">
+                       <div class="center-divbox">
+                           <div class="pioneer blog_center_new"><img src="../assets/images/reporting/blog.png" alt=""></div>
                             <span class="blog-reporting">Business reporting tools: Turning data <br>
 into information & information into insight.<br>
 
                             <a href="#">Read more...</a>
                             </span>
+                            </div>
                       </div>
                   </section>
   
@@ -163,7 +166,7 @@ into information & information into insight.<br>
                     <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
                        
                        <div class="reporting-blog-text">
-                       <h2>People interested in Reporting also looked at</h2>
+                       <h2>People interested in <span>Reporting</span> also looked at</h2>
                        <ul class="reporting-blog-menu">
                        <li><a href="#">Invoicing</a></li>
                        <li><a href="#">Multi-Currency</a></li>

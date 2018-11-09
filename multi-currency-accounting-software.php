@@ -31,10 +31,10 @@
    
     <div class="intro home flex-box-banner slide show container">
     <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
-        <div class="banner_intro features_banner">
-              <h1 class="banner_heading_new multi-currency">Serve International customers with Multi-Currency Accounting</h1>
-              <p class="banner_sub_heading m-t-20">Multi-Currency Accounting enables you to serve overseasclients & turn
- your business into an International brand.</p>
+        <div class="banner_intro features_banner left-align_new">
+              <h1 class="banner_heading_new">Serve International Customers with Multi-Currency Accounting</h1>
+              <p class="banner_sub_heading m-t-15">Multi-currency accounting enables you to serve overseas clients <br>
+& turn your business into an International brand.</p>
               <p class="m-t-20">
               <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
                 <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
@@ -44,8 +44,8 @@
         </div>
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
-          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-3">
-          <img src="../assets/images/multi-currency/banner.png" alt="Tally your books with giddh" class="tallybook">
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="multi_sky bn-3">
+          <img src="../assets/images/multi-currency/banner.png" alt="Tally your books with giddh" class="multi-currency-accounting-software-img">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -55,8 +55,9 @@
       <div class="container">
               <div class="row m-b-60">
                     <div class="col-sm-12">
-                      <h2 class="center_heading">Profits Should Know No Borders</h2>
-                      <p>Multi currency accounting software makes it easy to manage your accounting in more than 100 currencies for your fast & growing business. Giddh makes managing multi-currency payments, invoicing and accounts easy.</p>
+                      <h2 class="center_heading">Profits should know no borders</h2>
+                     <div class="width-900"> <p>Multi currency accounting software makes it easy to manage your accounting in more than 100 currencies for your fast & growing business. Giddh makes managing multi-currency payments, 
+invoicing <br>and accounts easy.</p></div>
                       <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
                   </div>
               </div>
@@ -68,7 +69,8 @@
   <div class="container">
   <div class="row">
   <div class="col-sm-6">
-  <h2>Eliminate Confusion with Automatic Currency Conversion</h2>
+  <h2>Eliminate Confusion with Automatic <br>
+Currency Conversion</h2>
   <p>Say goodbye to unnecessary exchange rate confusions and accounting mismatch with multi-currency accounting. Giddh does all the heavy lifting & automatically converts the International currencies into your base currency. The best part? You have the option to modify and enter your own rate manually.</p>
   </div>
   
@@ -81,7 +83,7 @@
   <hr>
   
   <div class="row">
-  <div class="col-sm-6 text-center">
+  <div class="col-sm-6 ">
    <img src="../assets/images/multi-currency/Group-4757.png" alt="">
   </div>
   <div class="col-sm-6">
@@ -110,7 +112,7 @@
    <hr>
    
    <div class="row">
-   <div class="col-sm-6 text-center">
+   <div class="col-sm-6 ">
    <img src="../assets/images/multi-currency/Group-4758.png" alt="">
   </div>
    
@@ -132,13 +134,15 @@
   
   
   <section class="graybg p-t-70">
-                      <div class="container area-flex">
-                           <div class="pioneer col-md-offset-2"><img src="../assets/images/multi-currency/blog.png" alt=""></div>
+                      <div class="container blog_center_new area-flex">
+                           <div class="center-divbox">
+                            <div class="pioneer "><img src="../assets/images/multi-currency/blog.png" alt=""></div>
                             <span class="blog-reporting">Multi-currency Solutions: <br>
 The secret ingredient to your Business’s Success!<br>
 
                             <a href="#">Read more...</a>
                             </span>
+                            </div>
                       </div>
                   </section>
   
@@ -150,9 +154,9 @@ The secret ingredient to your Business’s Success!<br>
                     <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
                        
                        <div class="reporting-blog-text">
-                       <h2>People interested in Reporting also looked at</h2>
+                       <h2>People interested in <span>Multi-Currency</span> also looked at</h2>
                        <ul class="reporting-blog-menu">
-                       <li><a href="#">Invoicing</a></li>
+                       <li><a href="#">Reporting</a></li>
                        <li><a href="#">Multi-Currency</a></li>
                        <li><a href="#">Security</a></li>
                        <li><a href="#">All features</a></li>
