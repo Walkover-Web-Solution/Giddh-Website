@@ -231,7 +231,7 @@ body.light .navbar.transparent{background:transparent;box-shadow:none;}
 @keyframes rotate{0%{transform:rotate(0deg);}
 100%{transform:rotate(360deg);}
 }
-#feature{padding:80px 0 35px 0;}
+#feature{padding:50px 0 35px 0;}
 img.img-responsive.ac-img{position:relative;}
 .slide-3{}
 .slide-3 h2.banner_heading{margin-top:7px;}
@@ -328,7 +328,7 @@ figure h1{margin-bottom:5px;}
 .small-mg .feature_thumbnail{margin-bottom:0;}
 .gstbody section{padding:80px 0;}
 #feature .row{padding:8px 0 0 0;}
-#homepage .center_heading, #feature .center_heading{font-size:38px !important;font-family:"CambriaBold";margin-top:0;}
+#homepage .center_heading, #feature .center_heading{font-size:45px !important;font-family:"CambriaBold";margin-top:0;}
 .feature_thumbnail .caption p{font-size:18px;color:#565B73;line-height:28px;}
 .features_banner{max-width:573px;}
 .area-flex-gst{display:flex;flex-direction:column;height:100vh;justify-content:space-evenly;}
@@ -802,7 +802,8 @@ figure.member:last-child span.empty{vertical-align:middle;position:relative;top:
 .team-head h1{width:39%;}
 .m-t-90{margin-top:90px !important;}
 .m-b-60{margin-bottom:60px;}
-.m-t-70{margin-top:70px;}
+
+.m-t-70{margin-top:60px;}
 .m-t-60{margin-top:60px;}
 .m-t-263{margin-top:263px;}
 .m-t-15{margin-top:15px;}
@@ -1207,7 +1208,26 @@ div{box-sizing:border-box;}
 .sky-two.bn-4{top:6%;left:50%;transform:translateX(-50%);}
 .section-left h1{font-size:28px;}
 .banner_heading{font-size:45px !important;line-height:50px;}
+.banner_heading_new {
+    font-size: 40px !important;
+    line-height: 50px;
+  margin-bottom:0px;
+	font-family: 'CambriaRegular' !important;
+}
+h1.banner_heading_new.multi-currency {
+    font-size: 41px !important;
+}
+
 .tallybook{width:350px;}
+.new-banner-width{width:563px;}
+.cloud-accounting-software-img{width:572px;}
+.financial-reporting-img{width:564px;}
+.invoice-software-img{width:563px;}
+.multi-currency-accounting-software-img{width:283px;}
+.banner_intro.features_banner.left-align_new {
+    margin: 0px 98px 0px -92px;
+}
+.multi-user-accounting-software-img{width:563px; margin-top: -55px;}
 .ac-img{width:545px;}
 .rotate_wheel{left:160px !important;}
 }
@@ -1311,9 +1331,10 @@ figure.member:last-child{margin-right:0 !important;}
 
 
 /*======================reporting page css start===============================================*/
+.middle-width{max-width:926px; margin: 0 auto;}
 
 .graybg-reporting p {
-    font-size: 18px;
+    font-size: 20px;
     color: #565B73;
     line-height: 28px;
 }
@@ -1327,9 +1348,9 @@ section.whitebg.homeContent.left-text {
 .left-text h2{font-family: "CambriaBold";
     font-size: 24px; margin:30px 0px 17px 0px;}
 	
-.left-text  p{font-size: 18px;
+.left-text  p{font-size: 16px;
     color: #565B73;
-    line-height: 28px;}
+    }
 	.left-text h2.collab {
     margin-top: 0;
 }
@@ -1343,7 +1364,7 @@ section.reporting-solution {
     font-family: "CambriaBold";
     margin-top: 0;
 }
-.reporting-solution p{font-size: 18px;
+.reporting-solution p{font-size: 20px;
     color: #565B73;
     line-height: 28px;}
 
@@ -1358,12 +1379,12 @@ ul.reportint-list {
 
 ul.reportint-list li {
     display: block;
-    font-size: 18px;
+    font-size: 20px;
     color: #565B73;
     line-height: 50px;
     background: url(../assets/images/reporting/Tick.svg) no-repeat 0px 18px;
     background-size: 24px;
-    padding-left: 34px;
+    padding-left: 45px;
 }
 
 ul.reportint-list li img {
@@ -1391,11 +1412,11 @@ ul.reportint-list li img {
 
 span.blog-reporting {
     font-family: "CambriaBold";
-    font-size: 24px;
+    font-size: 28px;
     color: #28283C;
     margin-left: 42px;
     display: inline-block;
-    text-align: justify;
+    text-align: left;
 }
 span.blog-reporting a {
     font-size: 18px;
@@ -1406,7 +1427,7 @@ span.blog-reporting a {
 img.peopel-img{width:230px;}
 
 ul.reporting-blog-menu {
-    margin: 24px 0 0 0px;
+    margin: 25px 0 0 0px;
     padding: 0;
     list-style: none;
     display: inline-block;
@@ -1444,4 +1465,76 @@ img{max-width:100%;}
 section.invoicing {
     background: #fff;
     padding-bottom: 73px;
+}
+.width-900{max-width:900px; margin:0 auto;}
+.container.blog_center_new {
+    width: 70%;
+}
+.center-divbox {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+ul.reportint-list.small-font-new li {
+    font-size: 16px;
+    line-height: 46px;
+}
+.sky-new {
+        width: 235px !important;
+    position: absolute;
+    top: 25px;
+    left: -115px;
+    opacity: 0.05;
+    z-index: -9;
+}
+.multi_sky{top: 90px;
+position: absolute;
+    left: -285px;
+	opacity: 0.05;
+    z-index: -9;
+    width: 235px !important;}
+	.sky-new_1 {
+    width: 235px !important;
+    position: absolute;
+    top: -6px;
+    left: -100px;
+    opacity: 0.05;
+    z-index: -9;
+}
+.cloud_sky{
+    width: 236px !important;
+    position: absolute;
+    top: 90px;
+    left: -169px;
+    opacity: 0.05;
+    z-index: -9;
+}
+
+.sky-new_2{ width: 235px !important;
+    position: absolute;
+    top: 0px;
+    left: -115px;
+    opacity: 0.05;
+    z-index: -9;}
+	.left-text p{ padding: 0px 53px 0px 0px;}
+	.know h2 span {
+    color: #e34b26;
+    font-size: 26px !important;
+    margin: 0px;
+}
+@media only screen and (min-width:992px){
+.w-900 {
+    width: 777px;
+    margin: auto;
+}
+}
+section#videoBg {
+    height: 546px !important;
+}
+section#videoBg {
+    height: 546px !important;
+}
+
+.intro.home.flex-box-banner.slide.show.container {
+    padding-top: 85px;
 }
