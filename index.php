@@ -70,10 +70,10 @@
 
 
 <!-- banner 3 start -->
-  <div class="intro home flex-box-banner slide slide-3 container">
+  <div class="intro home flex-box-banner slide slide-3 container" style="padding-top: 190px;">
         <div class="banner_intro text-center">
               <p class="banner_sub_heading home">The future of Indian Accounting</p>
-              <h2 class="banner_heading">Give your account<br>department an extra edge </h2>
+              <h2 class="banner_heading" style="font-size: 60px !important;line-height: 70px !important;">Give your account<br>department an extra edge </h2>
               <p class="banner_sub_heading m-t-15">By automation and giddh</p>
         </div>
         
