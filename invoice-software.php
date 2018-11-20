@@ -18,13 +18,11 @@
     <iframe src="global.html" style="height:100%;width:100%;padding: 0;margin:0"></iframe>
   </div> -->
 
-
-
   <!-- <ng-include src="'header.html'"></ng-include> -->
   <?php include 'header.php';?>  
   <!-- end navigation -->
 
-  <section id="videoBg" class="black-back height-half">
+  <section id="videoBg" class="black-back main-banner">
     <!-- <div class="scroll-btn">
       <a href="#feature" class="page-scroll"></a>
     </div> -->
@@ -51,9 +49,9 @@ for all your Invoicing Needs</h1>
   </section> <!-- end of videoBg -->
   
   <!-- home content end -->
-  <section class="graybg graybg-reporting  homeContent" id="feature">
+  <section class="graybg graybg-reporting homeContent" id="feature">
       <div class="container">
-              <div class="row m-b-60">
+              <div class="row">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Save time with Invoicing Solutions</h2>
                      <div class="middle-width"> <p>Giddh makes the dull job of creating invoices so simple, you'll be amazed how much time you can save to focus on your core business activities. With its beautiful templates and customization options, Giddh is the best invoicing partner for all kinds of business owners.</p></div>
@@ -64,9 +62,9 @@ for all your Invoicing Needs</h1>
              </div>
       
   </section> 
-  <section class="whitebg homeContent left-text">
+  <section class="whitebg left-text">
   <div class="container">
-  <div class="row">
+  <div class="row financial-services">
   <div class="col-sm-6">
   <h2>Professional looking invoices within minutes!</h2>
   <p>You are the real deal, so why not create professional looking invoices that say the same? With a variety of templates and customizations at your disposal, create the best looking invoices for your business and wow your clients.</p>
@@ -75,12 +73,9 @@ for all your Invoicing Needs</h1>
   <div class="col-sm-6 text-center">
    <img src="../assets/images/inovicing/Group-4647.png" alt="">
   </div>
-  <hr>
-  
   </div>
-  <hr>
   
-  <div class="row">
+  <div class="row financial-services">
   <div class="col-sm-6">
    <img src="../assets/images/inovicing/Group-4729.png" alt="">
   </div>
@@ -88,16 +83,10 @@ for all your Invoicing Needs</h1>
   <h2>Stay GST Compliant</h2>
   <p>Stay Goods and Service Tax(GST) compliant by creating invoices that are GST compliant. Giddh invoice templates have fields for HSN or SAC code, GSTIN number, state of business operation which are mandatory for business owners in order to stay compliant.</p>
   </div>
-  
-  
- 
-  
   </div>
-   <hr>
   
 
-  <div class="row">
-   
+  <div class="row financial-services">
   <div class="col-sm-6">
   <h2 class="collab">Lock your invoices and move on!</h2>
   <p>Tired of unwanted tampering to your finalized invoices? With Giddh's invoice locking feature, lock your invoices from being edited or deleted once they are finalized.</p>
@@ -107,9 +96,8 @@ for all your Invoicing Needs</h1>
    <img src="../assets/images/inovicing/Group-4684.png" alt="">
   </div>
  </div>
-   <hr>
    
-   <div class="row">
+   <div class="row financial-services">
    <div class="col-sm-6">
    <img src="../assets/images/inovicing/Group-4709.png" alt="">
   </div>
@@ -118,21 +106,14 @@ for all your Invoicing Needs</h1>
   <h2 class="collab">Run your business with automation!</h2>
   <p>From setting payment reminders to sending invoices to clients on a recurring basis, you can utilize the complete potential of automation with Giddh! So let Giddh follow-up with customer and focus on your core business activities.</p>
   </div>
-  
-  
  </div>
- <hr style="border-bottom:1px solid #000;">
- 
-   
-   
-              
    
   </div>
   </section> 
   
-  <section class="invoicing" >
+  <section class="invoicing">
       <div class="container">
-              <div class="row m-b-60">
+              <div class="row m-b-90">
                     <div class="col-sm-12 text-center">
                       <h2 class="center_heading">Other equally important invoicing feature</h2>
                   </div>
@@ -140,16 +121,15 @@ for all your Invoicing Needs</h1>
               <div class="w-900">
              <div class="row row-features">
                       <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
+                            <div class="invoice-feature">
                                 <img src="../assets/images/inovicing/Group-4694.png" alt="#">
                               <div class="caption">
                                 <p>Add invoice due dates</p>
-                                
                               </div>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
+                            <div class="invoice-feature">
                                 <img src="../assets/images/inovicing/Group-4706.png" alt="#">
                               <div class="caption">
                                 <p>Customize invoice terms</p>
@@ -158,7 +138,7 @@ for all your Invoicing Needs</h1>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
+                            <div class="invoice-feature">
                                 <img src="../assets/images/inovicing/Group-4700.png" alt="#">
                               <div class="caption">
                                 <p>Preview invoices before sending</p>
@@ -168,7 +148,7 @@ for all your Invoicing Needs</h1>
                       </div>
                      
                       <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
+                            <div class="invoice-feature">
                                 <img src="../assets/images/inovicing/Group-4702.png" alt="">
                               <div class="caption">
                                 <p>Choose preferred currency with multi currency option.</p>
@@ -177,18 +157,15 @@ for all your Invoicing Needs</h1>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
+                            <div class="invoice-feature">
                                 <img src="../assets/images/inovicing/Group-4703.png" alt="#">
                               <div class="caption">
-                                <p>Automatic updates once an invoice has been paid
-
-</p>
-                                
+                                <p>Automatic updates once an invoice has been paid</p>
                               </div>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail feature_thumbnail">
+                            <div class="invoice-feature">
                                 <img src="../assets/images/inovicing/Group-4704.png" alt="">
                               <div class="caption">
                                 <p>Always on the go? Create Invoices without logging in!</p>

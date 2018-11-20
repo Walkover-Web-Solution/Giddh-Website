@@ -231,7 +231,7 @@ body.light .navbar.transparent{background:transparent;box-shadow:none;}
 @keyframes rotate{0%{transform:rotate(0deg);}
 100%{transform:rotate(360deg);}
 }
-#feature{padding:50px 0 35px 0;}
+#feature{padding:45px 0 60px 0;}
 img.img-responsive.ac-img{position:relative;}
 .slide-3{}
 .slide-3 h2.banner_heading{margin-top:7px;}
@@ -319,7 +319,7 @@ figure h1{margin-bottom:5px;}
 .whitebg .container .row, .graybg .container .row{padding:60px 0;}
 .nav-testimonial{width:100%;white-space:nowrap;}
 .nav-testimonial li{display:inline-block;width:100%;}
-.row-features .feature_thumbnail{min-height:322px;margin-top:0;}
+/* .row-features .feature_thumbnail{min-height:322px;margin-top:0;} */
 .bigthumb .feature_thumbnail{min-height:276px !important;margin:0 auto !important;}
 .feature_thumbnail{border:none;background:transparent;max-width:322px;margin:30px auto 0 auto !important;text-align:center;min-height:278px !important;}
 .feature_thumbnail img{height:90px;width:auto;}
@@ -330,7 +330,8 @@ figure h1{margin-bottom:5px;}
 #feature .row{padding:8px 0 0 0;}
 #homepage .center_heading, #feature .center_heading{font-size:45px !important;font-family:"CambriaBold";margin-top:0;}
 .feature_thumbnail .caption p{font-size:18px;color:#565B73;line-height:28px;}
-.features_banner{max-width:573px;}
+/* .features_banner{max-width:573px;} */
+.features_banner{max-width: 690px;}
 .area-flex-gst{display:flex;flex-direction:column;height:100vh;justify-content:space-evenly;}
 .banner-gst{text-align:center;color:#26263A;position:relative;top:50px;}
 .banner-gst h6{font-size:24px;font-family:"CambriaRegular";}
@@ -349,6 +350,40 @@ figure h1{margin-bottom:5px;}
 .tallybook{width:681px;}
 
 /* my css start */
+ .main-banner {
+    height: calc(100vh - 150px) !important;
+}
+.invoice-feature {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.invoice-feature img {
+    margin-bottom: 10px;
+}
+.financial-services {
+    padding: 0px 25px !important;
+    border-bottom: 1px solid #9797A5;
+    min-height: 380px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.main-banner .banner_heading_new {
+    font-size: 50px;
+    line-height: 60px;
+}
+.financial-services p {
+    margin-bottom: 0px;
+}
+.financial-services h2 {
+    margin-top: 0px !important;
+}
+.no-padding {
+    padding: 0px !important;
+}
+
+
 .go-top {width: 60px;display: inline-block;position: fixed;right: 19px;bottom: 100px;background: #45455f;padding: 17px;border-radius: 90px;z-index: 9999999;}
 
 @media(min-width:768px){.display-small-sc{display:block;}
@@ -801,8 +836,8 @@ figure.member:last-child span.empty{vertical-align:middle;position:relative;top:
 .about-content-body .mentors-info img{float:left;}
 .team-head h1{width:39%;}
 .m-t-90{margin-top:90px !important;}
+.m-b-90{margin-bottom:90px;}
 .m-b-60{margin-bottom:60px;}
-
 .m-t-70{margin-top:60px;}
 .m-t-60{margin-top:60px;}
 .m-t-263{margin-top:263px;}
@@ -1335,7 +1370,6 @@ figure.member:last-child{margin-right:0 !important;}
 
 .graybg-reporting p {
     font-size: 20px;
-    color: #565B73;
     line-height: 28px;
 }
 
@@ -1357,6 +1391,7 @@ section.whitebg.homeContent.left-text {
 section.reporting-solution {
     background: #fff;
     text-align: center;
+    padding: 90px 0;
 }
 
 .reporting-solution h2.center_heading {
@@ -1364,27 +1399,31 @@ section.reporting-solution {
     font-family: "CambriaBold";
     margin-top: 0;
 }
-.reporting-solution p{font-size: 20px;
-    color: #565B73;
-    line-height: 28px;}
-
-li {}
+.reporting-solution p {
+    font-size: 20px;
+    color: #26263A;
+    margin-bottom: 0px;
+}
 
 ul.reportint-list {
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: left;
+    display: inline-block;
 }
 
 ul.reportint-list li {
     display: block;
     font-size: 20px;
     color: #565B73;
-    line-height: 50px;
+    /* line-height: 24px !important; */
     background: url(../assets/images/reporting/Tick.svg) no-repeat 0px 18px;
     background-size: 24px;
     padding-left: 45px;
+    background-position: left center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 ul.reportint-list li img {
@@ -1393,7 +1432,7 @@ ul.reportint-list li img {
     margin-right: 5px;
 }
 .p-t-70 {
-    padding: 70px 0px;
+    padding: 70px 0px !important;
 }
 .pioneer {
     position: relative;
@@ -1412,7 +1451,7 @@ ul.reportint-list li img {
 
 span.blog-reporting {
     font-family: "CambriaBold";
-    font-size: 28px;
+    font-size: 26px;
     color: #28283C;
     margin-left: 42px;
     display: inline-block;
@@ -1464,7 +1503,7 @@ img{max-width:100%;}
 }
 section.invoicing {
     background: #fff;
-    padding-bottom: 73px;
+    padding: 90px 0;
 }
 .width-900{max-width:900px; margin:0 auto;}
 .container.blog_center_new {
@@ -1477,7 +1516,8 @@ section.invoicing {
 }
 ul.reportint-list.small-font-new li {
     font-size: 16px;
-    line-height: 46px;
+    /* line-height: 46px; */
+    padding: 15px 0 15px 45px;
 }
 .sky-new {
         width: 235px !important;

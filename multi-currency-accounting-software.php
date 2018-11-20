@@ -24,7 +24,7 @@
   <?php include 'header.php';?>  
   <!-- end navigation -->
 
-  <section id="videoBg" class="black-back height-half">
+  <section id="videoBg" class="black-back main-banner">
     <!-- <div class="scroll-btn">
       <a href="#feature" class="page-scroll"></a>
     </div> -->
@@ -53,7 +53,7 @@
   <!-- home content end -->
   <section class="graybg graybg-reporting  homeContent" id="feature">
       <div class="container">
-              <div class="row m-b-60">
+              <div class="row">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Profits should know no borders</h2>
                      <div class="width-900"> <p>Multi currency accounting software makes it easy to manage your accounting in more than 100 currencies for your fast & growing business. Giddh makes managing multi-currency payments, 
@@ -65,9 +65,9 @@ invoicing <br>and accounts easy.</p></div>
              </div>
       
   </section> 
-  <section class="whitebg homeContent left-text">
+  <section class="whitebg left-text">
   <div class="container">
-  <div class="row">
+  <div class="row financial-services">
   <div class="col-sm-6">
   <h2>Eliminate Confusion with Automatic <br>
 Currency Conversion</h2>
@@ -77,12 +77,12 @@ Currency Conversion</h2>
   <div class="col-sm-6 text-center">
    <img src="../assets/images/multi-currency/Group-4756.png" alt="">
   </div>
-  <hr>
+
   
   </div>
-  <hr>
+
   
-  <div class="row">
+  <div class="row financial-services">
   <div class="col-sm-6 ">
    <img src="../assets/images/multi-currency/Group-4757.png" alt="">
   </div>
@@ -91,14 +91,10 @@ Currency Conversion</h2>
   <p>Easily accept payments from your International customers & invoice them with easy to use multi currency accounting software. Send invoices in your customer’s currency, and keep your books updated in the currency you manage your business in.</p>
   </div>
   
-  
- 
-  
   </div>
-   <hr>
   
 
-  <div class="row">
+  <div class="row financial-services">
    
   <div class="col-sm-6">
   <h2 class="collab">Set Preferred Currency to Business Accounts</h2>
@@ -109,9 +105,8 @@ Currency Conversion</h2>
    <img src="../assets/images/multi-currency/Group-4759.png" alt="">
   </div>
  </div>
-   <hr>
    
-   <div class="row">
+   <div class="row financial-services">
    <div class="col-sm-6 ">
    <img src="../assets/images/multi-currency/Group-4758.png" alt="">
   </div>
@@ -122,11 +117,7 @@ Currency Conversion</h2>
   </div>
   
   
- </div>
- 
-   
-   
-              
+ </div> 
    
   </div>
   </section> 
@@ -149,24 +140,24 @@ The secret ingredient to your Business’s Success!<br>
   <section class="whitebg know p-t-80">
 <div class="container">
 <div class="row p-tb-0">
-                <div class="col-sm-12">
-                    <div class="text-center">
-                    <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
-                       
-                       <div class="reporting-blog-text">
-                       <h2>People interested in <span>Multi-Currency</span> also looked at</h2>
-                       <ul class="reporting-blog-menu">
-                       <li><a href="#">Reporting</a></li>
-                       <li><a href="#">Multi-Currency</a></li>
-                       <li><a href="#">Security</a></li>
-                       <li><a href="#">All features</a></li>
-                       </ul>
-                       
-                       </div>
-                       
-                    </div>
-                </div>
-            </div>
+  <div class="col-sm-12">
+      <div class="text-center">
+      <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
+          
+          <div class="reporting-blog-text">
+          <h2>People interested in <span>Multi-Currency</span> also looked at</h2>
+          <ul class="reporting-blog-menu">
+          <li><a href="#">Reporting</a></li>
+          <li><a href="#">Multi-Currency</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">All features</a></li>
+          </ul>
+          
+          </div>
+          
+      </div>
+  </div>
+</div>
 </div>
 
 </section>
