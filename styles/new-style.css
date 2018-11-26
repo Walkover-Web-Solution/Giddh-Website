@@ -353,6 +353,7 @@ figure h1{margin-bottom:5px;}
  .main-banner {
     height: calc(100vh - 150px) !important;
 }
+
 .invoice-feature {
     text-align: center;
     font-size: 20px;
@@ -578,13 +579,52 @@ button.toast-close-button{padding:0;cursor:pointer;background:transparent;border
 @media only screen and (max-width:980px){#aboutPage .img-responsive, body.unresponsive .section{max-width:none;width:980px;}
 .homeContent{padding:60px 0;}
 }
-@media only screen and (max-width:767px){.navbar-collapse.navbar-main-collapse{background-color:#fff;}
+@media only screen and (max-width:767px) {
+.navbar-collapse.navbar-main-collapse{background-color:#fff;}
 .section-left h1{margin-top:0;}
 #loginButton{margin-left:0 !important;}
 .banner-3-bottom{position:relative;width:100%;bottom:0;margin-bottom:30px;}
 .banner-3-bottom a.btn-lg-red{font-size:18px;}
 .banner-3-bottom img{display:none;}
 img.img-responsive.ac-img{top:0px;}
+.main-banner .right-section img {
+    margin: 0px auto;
+    width: 300px;
+}
+.main-banner {
+    height: auto !important;
+}
+.container.blog_center_new {
+    width: auto !important;
+}
+.blog_center_new .center-divbox {
+    display: block;
+}
+.pioneer {
+    padding-right: 0px !important;
+}
+span.blog-reporting {
+    font-size: 20px !important;
+    margin-left: 0 !important;
+    display: inline-block !important;
+}
+.financial-services {
+    padding: 30px 15px !important;
+    border-bottom: 1px solid #9797A5;
+    min-height: auto;
+    display: block;
+    flex-wrap: wrap;
+    text-align: left;
+}
+ul.reportint-list li {
+    background-position: 10px center !important;
+}
+.financial-services p {
+    padding-right: 0px  !important;
+}
+.pioneer:after {
+    width: 0px !important;
+}
 }
 .navbar-custom .navbar-nav > li > a, footer>div>a{display:inline-block;vertical-align:middle;-webkit-transform:translateZ(0);transform:translateZ(0);box-shadow:0 0 1px rgba(0, 0, 0, 0);-webkit-backface-visibility:hidden;backface-visibility:hidden;-moz-osx-font-smoothing:grayscale;position:relative;overflow:hidden;}
 footer>div>a:before{background:#C5C5B8;height:2px;}
@@ -743,8 +783,14 @@ body.unresponsive .container{width:970px !important;max-width:none !important;}
 .main-banner .banner_heading_new {
     font-size: 26px !important;
     line-height: initial;
+    /* white-space: nowrap; */
 }
-
+.main-banner .banner_heading_new nobr {
+    white-space: initial;
+}
+.main-banner .banner_heading_new br {
+    display: none;
+}
 }
 @media only screen and (max-width:767px){.center-block img{margin:0 auto;}
 .hide-xs{display:none;}
@@ -1268,9 +1314,9 @@ div{box-sizing:border-box;}
 .financial-reporting-img{width:564px;}
 .invoice-software-img{width:563px;}
 .multi-currency-accounting-software-img{width:283px;}
-.banner_intro.features_banner.left-align_new {
+/* .banner_intro.features_banner.left-align_new {
     margin: 0px 98px 0px -92px;
-}
+} */
 .multi-user-accounting-software-img{width:563px; margin-top: -55px;}
 .ac-img{width:545px;}
 .rotate_wheel{left:160px !important;}
@@ -1464,7 +1510,6 @@ span.blog-reporting {
     color: #28283C;
     margin-left: 42px;
     display: inline-block;
-    text-align: left;
 }
 span.blog-reporting a {
     font-size: 18px;
