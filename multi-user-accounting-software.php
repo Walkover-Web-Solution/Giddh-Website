@@ -45,7 +45,7 @@ sharing business insights</h1>
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
           <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-new_2 bn-3">
-          <img src="../assets/images/share-data/Banner.png" alt="Tally your books with giddh" class="multi-user-accounting-software-img">
+          <img src="../assets/images/share-data/share-data-banner.png" alt="Tally your books with giddh" class="multi-user-accounting-software-img">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -54,25 +54,25 @@ sharing business insights</h1>
   <section class="graybg graybg-reporting  homeContent" id="feature">
       <div class="container">
           <div class="row">
-                <div class="col-sm-12">
-                  <h2 class="center_heading">Smart collaboration across all departments</h2>
-                  <div class="middle-width"> <p>Multi user accounting software enables business owners & accountants to collaborate and make the best of their numbers. With real time sharing of financial data, you can derive meaningful insight and run your business with efficiency.</p></div>
-                  <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
-              </div>
+            <div class="col-sm-12">
+              <h2 class="center_heading">Smart collaboration across all departments</h2>
+              <div class="middle-width"> <p>Multi user accounting software enables business owners & accountants to collaborate and make the best of their numbers. With real time sharing of financial data, you can derive meaningful insight and run your business with efficiency.</p></div>
+              <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+          </div>
           </div>
           </div>
       
   </section> 
   <section class="whitebg left-text">
-  <div class="container">
-  <div class="row financial-services p-t-70">
-  <div class="col-sm-6">
-  <h2>Always be on the driver’s seat.</h2>
-  <p>Giddh multi-user online accounting software gives you the power to provide specified controlled access to different stakeholders who want access to a specific part of your financial data. With our unique role-based model sharing becomes easy, fast and super secure. You can </p>
-  </div>
+    <div class="container">
+      <div class="row financial-services p-t-70">
+      <div class="col-sm-6">
+        <h2>Always be on the driver’s seat.</h2>
+        <p>Giddh multi-user online accounting software gives you the power to provide specified controlled access to different stakeholders who want access to a specific part of your financial data. With our unique role-based model sharing becomes easy, fast and super secure. You can </p>
+      </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/share-data/Group-4865.png" alt="">
+   <img src="../assets/images/share-data/share-data-feature-1.png" alt="">
   </div>
   <div class="col-sm-12 text-left">
   <ul class="reportint-list small-font-new">
@@ -88,7 +88,7 @@ sharing business insights</h1>
   
   <div class="row financial-services">
   <div class="col-sm-6">
-   <img src="../assets/images/share-data/Group-4883.png" alt="">
+   <img src="../assets/images/share-data/share-data-feature-2.png" alt="">
   </div>
   <div class="col-sm-6">
   <h2>Collaborate across multiple departments</h2>
@@ -99,13 +99,13 @@ sharing business insights</h1>
   
 
   <div class="row financial-services">
-  <div class="col-sm-6">
-  <h2 class="collab">Avoid unnecessary confusion with ledger sharing</h2>
-  <p>Giddh multi-user accounting software lets you share your ledger with view access to external accounting team or client so that all the discrepancies can be avoided. Additionally, witness the magic of magic link in ledger sharing. Magic link comes with the validity of 24 hours, after which your shared ledger will not be accessible.</p>
+    <div class="col-sm-6">
+    <h2 class="collab">Avoid unnecessary confusion with ledger sharing</h2>
+    <p>Giddh multi-user accounting software lets you share your ledger with view access to external accounting team or client so that all the discrepancies can be avoided. Additionally, witness the magic of magic link in ledger sharing. Magic link comes with the validity of 24 hours, after which your shared ledger will not be accessible.</p>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/share-data/Group-4871.png" alt="">
+   <img src="../assets/images/share-data/share-data-feature-3.png" alt="">
   </div>
  </div>     
    
@@ -113,17 +113,16 @@ sharing business insights</h1>
   </section> 
 
   <section class="graybg p-t-70">
-                      <div class="container blog_center_new area-flex">
-                           <div class="center-divbox">
-                            <div class="pioneer"><img src="../assets/images/share-data/Blog.png" alt=""></div>
-                            <span class="blog-reporting">Real time success with <br>
-real time accounting!<br>
+      <div class="container blog_center_new area-flex">
+        <div class="center-divbox">
+        <div class="pioneer"><img src="../assets/images/share-data/share-data-blog.png" alt=""></div>
+        <span class="blog-reporting">Real time success with <br>real time accounting!<br>
 
-                            <a href="#">Read more...</a>
-                            </span>
-                            </div>
-                      </div>
-                  </section>
+        <a href="https://blog.giddh.com/real-time-success-with-real-time-accounting-76db1f38fb1b" target="_blank">Read more...</a>
+        </span>
+        </div>
+      </div>
+  </section>
   
   <section class="whitebg know p-t-80">
 <div class="container">

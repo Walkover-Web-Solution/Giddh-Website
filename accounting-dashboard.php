@@ -45,7 +45,7 @@ with simple online dashboard</h1>
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
           <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-new bn-3">
-          <img src="../assets/images/dashboard/Banner.png" alt="Tally your books with giddh" class="new-banner-width">
+          <img src="../assets/images/dashboard/dashboard-banner.png" alt="Tally your books with giddh" class="new-banner-width">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -53,15 +53,15 @@ with simple online dashboard</h1>
   <!-- home content end -->
   <section class="graybg graybg-reporting  homeContent" id="feature">
       <div class="container">
-              <div class="row">
-                    <div class="col-sm-12">
-                      <h2 class="center_heading">Assess your numbers in one glance</h2>
-                     <div class="middle-width"> <p>Gain actionable insights and easily evaluate growth of your business. Real-time accounting dashboard offers you a bird eye’s view to your business health on a single window. Actively keep an eye on the net worth, revenue, profit/loss and other key information of your business.</p></div>
-                      <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
-                  </div>
-              </div>
-              
-             </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="center_heading">Assess your numbers in one glance</h2>
+              <div class="middle-width"> <p>Gain actionable insights and easily evaluate growth of your business. Real-time accounting dashboard offers you a bird eye’s view to your business health on a single window. Actively keep an eye on the net worth, revenue, profit/loss and other key information of your business.</p></div>
+              <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+          </div>
+      </div>
+      
+      </div>
       
   </section> 
   <section class="whitebg left-text">
@@ -73,14 +73,14 @@ with simple online dashboard</h1>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/dashboard/Group-4870.png" alt="">
+   <img src="../assets/images/dashboard/dashboard-feature-1.png" alt="">
   </div>
   
   </div>
   
   <div class="row financial-services">
   <div class="col-sm-6 ">
-   <img src="../assets/images/dashboard/Group-4786.png" alt="">
+   <img src="../assets/images/dashboard/dashboard-feature-2.png" alt="">
   </div>
   <div class="col-sm-6">
   <h2>Track your monthly overdues</h2>
@@ -96,13 +96,13 @@ with simple online dashboard</h1>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/dashboard/Group-4808.png" alt="">
+   <img src="../assets/images/dashboard/dashboard-feature-3.png" alt="">
   </div>
  </div>
  
  <div class="row financial-services">
    <div class="col-sm-6 ">
-   <img src="../assets/images/dashboard/Group-4809.png" alt="">
+   <img src="../assets/images/dashboard/dashboard-feature-4.png" alt="">
   </div>
    
   <div class="col-sm-6">
@@ -120,7 +120,7 @@ with simple online dashboard</h1>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/dashboard/Group-4832.png" alt="">
+   <img src="../assets/images/dashboard/dashboard-feature-5.png" alt="">
   </div>
  </div>
    
@@ -128,20 +128,17 @@ with simple online dashboard</h1>
   </section> 
   
   
-  
-  
-  
   <section class="graybg p-t-70">
-                      <div class="container area-flex  blog_center_new">
-                      <div class="center-divbox">
-                           <div class="pioneer blog_center_new"><img src="../assets/images/dashboard/Blog.png" alt=""></div>
-                            <span class="blog-reporting">Optimise, Analyse and Evaluate with <br>
-Giddh Dynamic Dashboard<br>
+    <div class="container area-flex  blog_center_new">
+    <div class="center-divbox">
+      <div class="pioneer blog_center_new"><img src="../assets/images/dashboard/dashboard-blog.png" alt=""></div>
+      <span class="blog-reporting">Optimise, Analyse and Evaluate with <br>
+      Giddh Dynamic Dashboard<br>
 
-                            <a href="#">Read more...</a>
-                            </span></div>
-                      </div>
-                  </section>
+      <a href="https://blog.giddh.com/optimise-analyse-and-evaluate-with-giddhs-dynamic-dashboard-43560ea66ad" target="_blank">Read more...</a>
+      </span></div>
+    </div>
+  </section>
   
   <section class="whitebg know p-t-80">
 <div class="container">

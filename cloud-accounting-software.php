@@ -44,7 +44,7 @@
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
           <img src="../assets/images/Cloud Icon.svg" alt="" class="cloud_sky bn-3">
-          <img src="../assets/images/anywhere-anytime/banner.png" alt="Tally your books with giddh" class="cloud-accounting-software-img">
+          <img src="../assets/images/anywhere-anytime/anywhere-anytime-banner.png" alt="Tally your books with giddh" class="cloud-accounting-software-img">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -72,13 +72,13 @@
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/anywhere-anytime/Group-4878.png" alt="">
+   <img src="../assets/images/anywhere-anytime/anywhere-anytime-feature-1.png" alt="">
   </div>
   </div>
   
   <div class="row financial-services">
   <div class="col-sm-6 ">
-   <img src="../assets/images/anywhere-anytime/Group-4857.png" alt="">
+   <img src="../assets/images/anywhere-anytime/anywhere-anytime-feature-2.png" alt="">
   </div>
   <div class="col-sm-6">
   <h2>Stay ahead with automatic updates</h2>
@@ -95,13 +95,13 @@
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/anywhere-anytime/Group-4866.png" alt="">
+   <img src="../assets/images/anywhere-anytime/anywhere-anytime-feature-3.png" alt="">
   </div>
  </div>
  
  <div class="row financial-services">
    <div class="col-sm-6 ">
-   <img src="../assets/images/anywhere-anytime/Group-4861.png" alt="">
+   <img src="../assets/images/anywhere-anytime/anywhere-anytime-feature-4.png" alt="">
   </div>
    
   <div class="col-sm-6">
@@ -115,11 +115,10 @@
   
   <section class="graybg p-t-70">
     <div class="container area-flex  blog_center_new">
-          <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/dashboard/Blog.png" alt=""></div>
+          <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/anywhere-anytime/anywhere-anytime-blog.png" alt=""></div>
           <span class="blog-reporting">How to make the best of your <br>
 online accounting software?<br>
-
-          <a href="#">Read more...</a>
+          <a href="https://blog.giddh.com/how-to-make-the-best-of-your-online-accounting-software-719b33022dee" target="_blank">Read more...</a>
           </span>
           </div>
     </div>
@@ -135,8 +134,8 @@ online accounting software?<br>
                        <div class="reporting-blog-text">
                        <h2>People interested in <span>Anywhere-Anytime</span> also looked at</h2>
                        <ul class="reporting-blog-menu">
-                       <li><a href="#">Reporting</a></li>
-                       <li><a href="#">Multi-Currency</a></li>
+                       <li><a href="financial-reporting.php">Reporting</a></li>
+                       <li><a href="multi-currency-accounting-software.php">Multi-Currency</a></li>
                        <li><a href="#">Security</a></li>
                        <li><a href="#">All features</a></li>
                        </ul>

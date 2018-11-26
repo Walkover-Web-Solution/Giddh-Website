@@ -369,6 +369,9 @@ figure h1{margin-bottom:5px;}
     flex-wrap: wrap;
     align-items: center;
 }
+.financial-services:last-child {
+    border-bottom: 0px solid;
+}
 .main-banner .banner_heading_new {
     font-size: 50px;
     line-height: 60px;
@@ -736,6 +739,12 @@ body.unresponsive .container{width:970px !important;max-width:none !important;}
 #farzi{height:50px;}
 .navbar-custom .navbar-nav > li > a:hover:after{display:none;}
 .contact-form{min-height:auto;margin-top:30px;}
+
+.main-banner .banner_heading_new {
+    font-size: 26px !important;
+    line-height: initial;
+}
+
 }
 @media only screen and (max-width:767px){.center-block img{margin:0 auto;}
 .hide-xs{display:none;}
@@ -1249,9 +1258,9 @@ div{box-sizing:border-box;}
   margin-bottom:0px;
 	font-family: 'CambriaRegular' !important;
 }
-h1.banner_heading_new.multi-currency {
+/* h1.banner_heading_new.multi-currency {
     font-size: 41px !important;
-}
+} */
 
 .tallybook{width:350px;}
 .new-banner-width{width:563px;}
@@ -1451,7 +1460,7 @@ ul.reportint-list li img {
 
 span.blog-reporting {
     font-family: "CambriaBold";
-    font-size: 26px;
+    font-size: 28px;
     color: #28283C;
     margin-left: 42px;
     display: inline-block;

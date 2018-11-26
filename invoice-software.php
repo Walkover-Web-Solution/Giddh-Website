@@ -43,7 +43,7 @@ for all your Invoicing Needs</h1>
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
           <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-new_2 bn-3">
-          <img src="../assets/images/inovicing/Banner.png" alt="Tally your books with giddh" class="invoice-software-img">
+          <img src="../assets/images/inovicing/invoicing-banner.png" alt="Tally your books with giddh" class="invoice-software-img">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -71,13 +71,13 @@ for all your Invoicing Needs</h1>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/inovicing/Group-4647.png" alt="">
+   <img src="../assets/images/inovicing/invoicing-feature-1.png" alt="">
   </div>
   </div>
   
   <div class="row financial-services">
   <div class="col-sm-6">
-   <img src="../assets/images/inovicing/Group-4729.png" alt="">
+   <img src="../assets/images/inovicing/invoicing-feature-2.png" alt="">
   </div>
   <div class="col-sm-6">
   <h2>Stay GST Compliant</h2>
@@ -93,13 +93,13 @@ for all your Invoicing Needs</h1>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/inovicing/Group-4684.png" alt="">
+   <img src="../assets/images/inovicing/invoicing-feature-3.png" alt="">
   </div>
  </div>
    
    <div class="row financial-services">
    <div class="col-sm-6">
-   <img src="../assets/images/inovicing/Group-4709.png" alt="">
+   <img src="../assets/images/inovicing/invoicing-feature-4.png" alt="">
   </div>
    
   <div class="col-sm-6">
@@ -122,7 +122,7 @@ for all your Invoicing Needs</h1>
              <div class="row row-features">
                       <div class="col-sm-6 col-md-4">
                             <div class="invoice-feature">
-                                <img src="../assets/images/inovicing/Group-4694.png" alt="#">
+                                <img src="../assets/images/inovicing/invoicing-feature-5.png" alt="#">
                               <div class="caption">
                                 <p>Add invoice due dates</p>
                               </div>
@@ -130,7 +130,7 @@ for all your Invoicing Needs</h1>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="invoice-feature">
-                                <img src="../assets/images/inovicing/Group-4706.png" alt="#">
+                                <img src="../assets/images/inovicing/invoicing-feature-6.png" alt="#">
                               <div class="caption">
                                 <p>Customize invoice terms</p>
                                
@@ -139,7 +139,7 @@ for all your Invoicing Needs</h1>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="invoice-feature">
-                                <img src="../assets/images/inovicing/Group-4700.png" alt="#">
+                                <img src="../assets/images/inovicing/invoicing-feature-7.png" alt="#">
                               <div class="caption">
                                 <p>Preview invoices before sending</p>
                                 
@@ -149,7 +149,7 @@ for all your Invoicing Needs</h1>
                      
                       <div class="col-sm-6 col-md-4">
                             <div class="invoice-feature">
-                                <img src="../assets/images/inovicing/Group-4702.png" alt="">
+                                <img src="../assets/images/inovicing/invoicing-feature-8.png" alt="">
                               <div class="caption">
                                 <p>Choose preferred currency with multi currency option.</p>
                               
@@ -158,7 +158,7 @@ for all your Invoicing Needs</h1>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="invoice-feature">
-                                <img src="../assets/images/inovicing/Group-4703.png" alt="#">
+                                <img src="../assets/images/inovicing/invoicing-feature-9.png" alt="#">
                               <div class="caption">
                                 <p>Automatic updates once an invoice has been paid</p>
                               </div>
@@ -166,7 +166,7 @@ for all your Invoicing Needs</h1>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="invoice-feature">
-                                <img src="../assets/images/inovicing/Group-4704.png" alt="">
+                                <img src="../assets/images/inovicing/invoicing-feature-10.png" alt="">
                               <div class="caption">
                                 <p>Always on the go? Create Invoices without logging in!</p>
                                 
@@ -178,21 +178,6 @@ for all your Invoicing Needs</h1>
                       <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#talkToSales_dialog">Create Invoice</a>
                       </div>
                      
-                      
-                      
-                      
-                     
-                      
-                      
-                      
-                     
-                      
-                      
-                      
-                     
-                      
-                      
-                      
                </div>
                </div>
              </div>
@@ -202,17 +187,17 @@ for all your Invoicing Needs</h1>
   
   
   <section class="graybg p-t-70">
-                      <div class="container area-flex  blog_center_new">
-                            <div class="center-divbox">
-                            <div class="pioneer"><img src="../assets/images/inovicing/Blog.png" alt=""></div>
-                            <span class="blog-reporting">3 Most common invoicing mistakes <br>
+    <div class="container area-flex  blog_center_new">
+      <div class="center-divbox">
+      <div class="pioneer"><img src="../assets/images/inovicing/invoicing-blog.png" alt=""></div>
+      <span class="blog-reporting">3 Most common invoicing mistakes <br>
 you might be making (and their fixes)<br>
 
-                            <a href="#">Read more...</a>
-                            </span>
-                            </div>
-                      </div>
-                  </section>
+      <a href="https://blog.giddh.com/3-most-common-invoicing-mistakes-you-might-be-making-and-their-fixes-bd179ca76b21" target="_blank">Read more...</a>
+      </span>
+      </div>
+    </div>
+</section>
   
   <section class="whitebg know p-t-80">
 <div class="container">

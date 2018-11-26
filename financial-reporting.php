@@ -45,23 +45,23 @@
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
           <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-new_2 bn-3">
-          <img src="../assets/images/reporting/banner.png" alt="Tally your books with giddh" class="financial-reporting-img">
+          <img src="../assets/images/reporting/reporting-banner.png" alt="Tally your books with giddh" class="financial-reporting-img">
         </div>
     </div>
   </section> <!-- end of videoBg -->
   
   <!-- home content end -->
   <section class="graybg graybg-reporting  homeContent" id="feature">
-      <div class="container">
-              <div class="row">
-                    <div class="col-sm-12">
-                      <h2 class="center_heading">Smart accounting reports for business of any size</h2>
-                      <div class="middle-width"><p>Stay on top of your numbers and make informed business decisions. Analyse and share your vital financial reports like- balance sheet, trial balance, profit/loss to the key decision maker of your business. Giddh gives you all reports you may need to run your business better.</p></div>
-                      <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Expert</a>
-                  </div>
-              </div>
-             
-             </div>
+    <div class="container">
+    <div class="row">
+          <div class="col-sm-12">
+            <h2 class="center_heading">Smart accounting reports for business of any size</h2>
+            <div class="middle-width"><p>Stay on top of your numbers and make informed business decisions. Analyse and share your vital financial reports like- balance sheet, trial balance, profit/loss to the key decision maker of your business. Giddh gives you all reports you may need to run your business better.</p></div>
+            <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Expert</a>
+        </div>
+    </div>
+    
+    </div>
       
   </section> 
 
@@ -75,7 +75,7 @@
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/reporting/group-4761.png" alt="">
+   <img src="../assets/images/reporting/reporting-feature-1.png" alt="">
   </div>
   </div>
   <!-- row end -->
@@ -83,7 +83,7 @@
   
   <div class="row financial-services">
   <div class="col-sm-6">
-   <img src="../assets/images/reporting/group-4767.png" alt="">
+   <img src="../assets/images/reporting/reporting-feature-2.png" alt="">
   </div>
   <div class="col-sm-6">
   <h2>Ready-made reports when you need them</h2>
@@ -98,14 +98,14 @@
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/reporting/group-4770.png" alt="">
+   <img src="../assets/images/reporting/reporting-feature-3.png" alt="">
   </div>
  </div>
  <!-- col end -->
  
   <div class="row financial-services">
    <div class="col-sm-6">
-   <img src="../assets/images/reporting/group-4709.png" alt="">
+   <img src="../assets/images/reporting/reporting-feature-4.png" alt="">
   </div>
   <div class="col-sm-6">
   <h2 class="collab">Collaborate & grow</h2>
@@ -120,59 +120,57 @@
   <section class="reporting-solution">
   <div class="container">
   <div class="row">
-                    <div class="col-sm-12 m-b-60">
-                      <h2 class="center_heading m-b-60">Your all round reporting solution</h2>
-                      <p>Giddh online accounting software produces all of the standard financial reports required by a forward-<br> 
-                      thinking business to make smarter and faster business decisions.</p>
-                  </div>
-                  
-                  <div class="text-center">
-                  <ul class="reportint-list">
-                  <li>Profit/Loss Statement, Balance Sheet, General Ledger and Trial Balance.</li>
-                  <li>Drill down the reports by date, financial year, or even project type.</li>
-                  <li>Export reports in any of the two supported formats: PDF or Excel.</li>
-                  <li>Invite your accountant, partners or investors.</li>
-                  </ul>
-                  </div>
-                  
-              </div>
+    <div class="col-sm-12 m-b-60">
+    <h2 class="center_heading m-b-60">Your all round reporting solution</h2>
+    <p>Giddh online accounting software produces all of the standard financial reports required by a forward-<br> 
+    thinking business to make smarter and faster business decisions.</p>
+    </div>
+
+    <div class="text-center">
+      <ul class="reportint-list">
+      <li>Profit/Loss Statement, Balance Sheet, General Ledger and Trial Balance.</li>
+      <li>Drill down the reports by date, financial year, or even project type.</li>
+      <li>Export reports in any of the two supported formats: PDF or Excel.</li>
+      <li>Invite your accountant, partners or investors.</li>
+      </ul>
+    </div>
+      
+    </div>
   </div>
   </section>
   
   <section class="graybg p-t-70">
-                      <div class="container area-flex  blog_center_new">
-                       <div class="center-divbox">
-                           <div class="pioneer blog_center_new"><img src="../assets/images/reporting/blog.png" alt=""></div>
-                            <span class="blog-reporting">Business reporting tools: Turning data <br>
-into information & information into insight.<br>
+    <div class="container area-flex  blog_center_new">
+      <div class="center-divbox">
+          <div class="pioneer blog_center_new"><img src="../assets/images/reporting/reporting-blog.png" alt=""></div>
+          <span class="blog-reporting">Business reporting tools: Turning data <br> into information & information into insight.<br>
 
-                            <a href="#">Read more...</a>
-                            </span>
-                            </div>
-                      </div>
-                  </section>
+          <a href="https://blog.giddh.com/business-reporting-tools-turning-data-into-information-information-into-insight-8facc67ba1" target="blank">Read more...</a>
+          </span>
+          </div>
+    </div>
+</section>
   
-  <section class="whitebg know p-t-80">
+<section class="whitebg know p-t-80">
 <div class="container">
 <div class="row p-tb-0">
-                <div class="col-sm-12">
-                    <div class="text-center">
-                    <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
-                       
-                       <div class="reporting-blog-text">
-                       <h2>People interested in <span>Reporting</span> also looked at</h2>
-                       <ul class="reporting-blog-menu">
-                       <li><a href="#">Invoicing</a></li>
-                       <li><a href="#">Multi-Currency</a></li>
-                       <li><a href="#">Security</a></li>
-                       <li><a href="#">All features</a></li>
-                       </ul>
-                       
-                       </div>
-                       
-                    </div>
-                </div>
-            </div>
+  <div class="col-sm-12">
+      <div class="text-center">
+      <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
+          
+          <div class="reporting-blog-text">
+          <h2>People interested in <span>Reporting</span> also looked at</h2>
+          <ul class="reporting-blog-menu">
+          <li><a href="#">Invoicing</a></li>
+          <li><a href="#">Multi-Currency</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">All features</a></li>
+          </ul>
+          
+          </div>
+      </div>
+  </div>
+</div>
 </div>
 
 </section>
