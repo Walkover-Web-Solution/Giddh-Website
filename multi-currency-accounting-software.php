@@ -24,7 +24,7 @@
   <?php include 'header.php';?>  
   <!-- end navigation -->
 
-  <section id="videoBg" class="black-back height-half">
+  <section id="videoBg" class="black-back main-banner">
     <!-- <div class="scroll-btn">
       <a href="#feature" class="page-scroll"></a>
     </div> -->
@@ -45,7 +45,7 @@
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
           <img src="../assets/images/Cloud Icon.svg" alt="" class="multi_sky bn-3">
-          <img src="../assets/images/multi-currency/banner.png" alt="Tally your books with giddh" class="multi-currency-accounting-software-img">
+          <img src="../assets/images/multi-currency/multi-currency-banner.png" alt="Tally your books with giddh" class="multi-currency-accounting-software-img">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -53,7 +53,7 @@
   <!-- home content end -->
   <section class="graybg graybg-reporting  homeContent" id="feature">
       <div class="container">
-              <div class="row m-b-60">
+              <div class="row">
                     <div class="col-sm-12">
                       <h2 class="center_heading">Profits should know no borders</h2>
                      <div class="width-900"> <p>Multi currency accounting software makes it easy to manage your accounting in more than 100 currencies for your fast & growing business. Giddh makes managing multi-currency payments, 
@@ -65,9 +65,9 @@ invoicing <br>and accounts easy.</p></div>
              </div>
       
   </section> 
-  <section class="whitebg homeContent left-text">
+  <section class="whitebg left-text">
   <div class="container">
-  <div class="row">
+  <div class="row financial-services">
   <div class="col-sm-6">
   <h2>Eliminate Confusion with Automatic <br>
 Currency Conversion</h2>
@@ -75,30 +75,26 @@ Currency Conversion</h2>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/multi-currency/Group-4756.png" alt="">
+   <img src="../assets/images/multi-currency/multi-currency-feature-1.png" alt="">
   </div>
-  <hr>
+
   
   </div>
-  <hr>
+
   
-  <div class="row">
+  <div class="row financial-services">
   <div class="col-sm-6 ">
-   <img src="../assets/images/multi-currency/Group-4757.png" alt="">
+   <img src="../assets/images/multi-currency/multi-currency-feature-2.png" alt="">
   </div>
   <div class="col-sm-6">
   <h2>Keep Your International Customers Smiling</h2>
   <p>Easily accept payments from your International customers & invoice them with easy to use multi currency accounting software. Send invoices in your customer’s currency, and keep your books updated in the currency you manage your business in.</p>
   </div>
   
-  
- 
-  
   </div>
-   <hr>
   
 
-  <div class="row">
+  <div class="row financial-services">
    
   <div class="col-sm-6">
   <h2 class="collab">Set Preferred Currency to Business Accounts</h2>
@@ -106,67 +102,57 @@ Currency Conversion</h2>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/multi-currency/Group-4759.png" alt="">
+   <img src="../assets/images/multi-currency/multi-currency-feature-3.png" alt="">
   </div>
  </div>
-   <hr>
    
-   <div class="row">
+   <div class="row financial-services">
    <div class="col-sm-6 ">
-   <img src="../assets/images/multi-currency/Group-4758.png" alt="">
+   <img src="../assets/images/multi-currency/multi-currency-feature-4.png" alt="">
   </div>
    
   <div class="col-sm-6">
   <h2 class="collab">Benefit from Dynamic Business Reporting</h2>
   <p>All your financial reports; trial balance, profit & loss, balance sheet, will be automatically created in your company base currency so you have an accurate view of your financial position and be well aware of your cash flow.</p>
   </div>
-  
-  
- </div>
- 
-   
-   
-              
-   
+ </div> 
   </div>
   </section> 
   
-  
-  
   <section class="graybg p-t-70">
-                      <div class="container blog_center_new area-flex">
-                           <div class="center-divbox">
-                            <div class="pioneer "><img src="../assets/images/multi-currency/blog.png" alt=""></div>
-                            <span class="blog-reporting">Multi-currency Solutions: <br>
-The secret ingredient to your Business’s Success!<br>
+    <div class="container blog_center_new area-flex">
+      <div class="center-divbox">
+      <div class="pioneer "><img src="../assets/images/multi-currency/multi-currency-blog.png" alt=""></div>
+      <span class="blog-reporting">Multi-currency Solutions: <br>
+      The secret ingredient to your Business’s Success!<br>
 
-                            <a href="#">Read more...</a>
-                            </span>
-                            </div>
-                      </div>
-                  </section>
+      <a href="https://blog.giddh.com/multi-currency-solutions-the-secret-ingredient-to-your-businesss-success-91c0c7c3e9e" target="_blank">Read more...</a>
+      </span>
+      </div>
+    </div>
+</section>
   
   <section class="whitebg know p-t-80">
 <div class="container">
 <div class="row p-tb-0">
-                <div class="col-sm-12">
-                    <div class="text-center">
-                    <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
-                       
-                       <div class="reporting-blog-text">
-                       <h2>People interested in <span>Multi-Currency</span> also looked at</h2>
-                       <ul class="reporting-blog-menu">
-                       <li><a href="#">Reporting</a></li>
-                       <li><a href="#">Multi-Currency</a></li>
-                       <li><a href="#">Security</a></li>
-                       <li><a href="#">All features</a></li>
-                       </ul>
-                       
-                       </div>
-                       
-                    </div>
-                </div>
-            </div>
+  <div class="col-sm-12">
+      <div class="text-center">
+      <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
+          
+          <div class="reporting-blog-text">
+          <h2>People interested in <span>Multi-Currency</span> also looked at</h2>
+          <ul class="reporting-blog-menu">
+          <li><a href="#">Reporting</a></li>
+          <li><a href="#">Multi-Currency</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">All features</a></li>
+          </ul>
+          
+          </div>
+          
+      </div>
+  </div>
+</div>
 </div>
 
 </section>

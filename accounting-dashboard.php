@@ -24,7 +24,7 @@
   <?php include 'header.php';?>  
   <!-- end navigation -->
 
-  <section id="videoBg" class="black-back height-half">
+  <section id="videoBg" class="black-back main-banner">
     <!-- <div class="scroll-btn">
       <a href="#feature" class="page-scroll"></a>
     </div> -->
@@ -45,7 +45,7 @@ with simple online dashboard</h1>
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
           <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-new bn-3">
-          <img src="../assets/images/dashboard/Banner.png" alt="Tally your books with giddh" class="new-banner-width">
+          <img src="../assets/images/dashboard/dashboard-banner.png" alt="Tally your books with giddh" class="new-banner-width">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -53,50 +53,42 @@ with simple online dashboard</h1>
   <!-- home content end -->
   <section class="graybg graybg-reporting  homeContent" id="feature">
       <div class="container">
-              <div class="row m-b-60">
-                    <div class="col-sm-12">
-                      <h2 class="center_heading">Assess your numbers in one glance</h2>
-                     <div class="middle-width"> <p>Gain actionable insights and easily evaluate growth of your business. Real-time accounting dashboard offers you a bird eye’s view to your business health on a single window. Actively keep an eye on the net worth, revenue, profit/loss and other key information of your business.</p></div>
-                      <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
-                  </div>
-              </div>
-             
-             </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <h2 class="center_heading">Assess your numbers in one glance</h2>
+              <div class="middle-width"> <p>Gain actionable insights and easily evaluate growth of your business. Real-time accounting dashboard offers you a bird eye’s view to your business health on a single window. Actively keep an eye on the net worth, revenue, profit/loss and other key information of your business.</p></div>
+              <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+          </div>
+      </div>
+      
+      </div>
       
   </section> 
-  <section class="whitebg homeContent left-text">
+  <section class="whitebg left-text">
   <div class="container">
-  <div class="row">
+  <div class="row financial-services">
   <div class="col-sm-6">
   <h2>Know the true worth of your business</h2>
-  <p>There’s no way to know exactly where your business stands without knowing what your net worth is, whether your revenue is growing and where your expenses lie. Online accounting dashboard gives you the real position of your all these values by automatically crunching your numbers and presenting them on an easy to evaluate graph.</p>
+  <p>There’s no way to know exactly where your business stands without knowing what your net worth is, whether your revenue is grow financial-servicesing and where your expenses lie. Online accounting dashboard gives you the real position of your all these values by automatically crunching your numbers and presenting them on an easy to evaluate graph.</p>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/dashboard/Group-4870.png" alt="">
+   <img src="../assets/images/dashboard/dashboard-feature-1.png" alt="">
   </div>
-  <hr>
   
   </div>
-  <hr>
   
-  <div class="row">
+  <div class="row financial-services">
   <div class="col-sm-6 ">
-   <img src="../assets/images/dashboard/Group-4786.png" alt="">
+   <img src="../assets/images/dashboard/dashboard-feature-2.png" alt="">
   </div>
   <div class="col-sm-6">
   <h2>Track your monthly overdues</h2>
   <p>Pay and get paid quicker by easily following up on your monthly overdues. Dashboard gives a summary of what you owe to your clients and what’s owed to you in the form of receivable and payable right on your home window.</p>
   </div>
-  
-  
- 
-  
   </div>
-   <hr>
-  
 
-  <div class="row">
+  <div class="row financial-services">
    
   <div class="col-sm-6">
   <h2 class="collab">Keep an eye on where your money goes</h2>
@@ -104,15 +96,13 @@ with simple online dashboard</h1>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/dashboard/Group-4808.png" alt="">
+   <img src="../assets/images/dashboard/dashboard-feature-3.png" alt="">
   </div>
  </div>
-   <hr>
-
  
- <div class="row">
+ <div class="row financial-services">
    <div class="col-sm-6 ">
-   <img src="../assets/images/dashboard/Group-4809.png" alt="">
+   <img src="../assets/images/dashboard/dashboard-feature-4.png" alt="">
   </div>
    
   <div class="col-sm-6">
@@ -120,46 +110,35 @@ with simple online dashboard</h1>
   <p>Giddh takes the pain out from your prediction process. With one-click yearly comparison of revenues, profit/loss & expenses, you can make better assumptions of how the business will behave in the future by the past trends.</p>
   </div>
   
-  
  </div>
  
- <div class="row">
-   
-   
+ <div class="row financial-services">
+
   <div class="col-sm-6">
   <h2 class="collab">Financial ratio analysis</h2>
   <p>Will your business be able to pay short-term and long-term obligations? What is its liquidity and profitability? The ratio analysis calculated automatically from the standard business formulas gives you an idea about your liability, equity and more so that you can take appropriate measures at the right time.</p>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/dashboard/Group-4832.png" alt="">
+   <img src="../assets/images/dashboard/dashboard-feature-5.png" alt="">
   </div>
-  
-  
  </div>
- 
-   
-   
-              
    
   </div>
   </section> 
   
   
-  
-  
-  
   <section class="graybg p-t-70">
-                      <div class="container area-flex  blog_center_new">
-                      <div class="center-divbox">
-                           <div class="pioneer blog_center_new"><img src="../assets/images/dashboard/Blog.png" alt=""></div>
-                            <span class="blog-reporting">Optimise, Analyse and Evaluate with <br>
-Giddh Dynamic Dashboard<br>
+    <div class="container area-flex  blog_center_new">
+    <div class="center-divbox">
+      <div class="pioneer blog_center_new"><img src="../assets/images/dashboard/dashboard-blog.png" alt=""></div>
+      <span class="blog-reporting">Optimise, Analyse and Evaluate with <br>
+      Giddh Dynamic Dashboard<br>
 
-                            <a href="#">Read more...</a>
-                            </span></div>
-                      </div>
-                  </section>
+      <a href="https://blog.giddh.com/optimise-analyse-and-evaluate-with-giddhs-dynamic-dashboard-43560ea66ad" target="_blank">Read more...</a>
+      </span></div>
+    </div>
+  </section>
   
   <section class="whitebg know p-t-80">
 <div class="container">

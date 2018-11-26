@@ -32,8 +32,8 @@
     <div class="intro home flex-box-banner slide show container">
     <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
         <div class="banner_intro features_banner">
-              <h1 class="banner_heading_new">For business owners and <br><nobr>accountants who are always on the go</nobr></h1>
-              <p class="banner_sub_heading m-t-15">Generate invoices, view reports & manage your books <br>wherever you are.</p>
+              <h1 class="banner_heading_new">Inventory management <br>features for business of any size.</h1>
+              <p class="banner_sub_heading m-t-15">Manage your entire product catalog on the cloud and get a real-time overview of your stocks.</p>
               <p class="m-t-20">
               <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
                 <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
@@ -44,7 +44,7 @@
         <div class="right-section">
           <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
           <img src="../assets/images/Cloud Icon.svg" alt="" class="cloud_sky bn-3">
-          <img src="../assets/images/anywhere-anytime/anywhere-anytime-banner.png" alt="Tally your books with giddh" class="cloud-accounting-software-img">
+            <img src="../assets/images/inventory/inventory-banner.svg" class="cloud-accounting-software-img" width="555">
         </div>
     </div>
   </section> <!-- end of videoBg -->
@@ -54,8 +54,8 @@
       <div class="container">
               <div class="row">
                     <div class="col-sm-12">
-                      <h2 class="center_heading">Run your business from any corner of the world!</h2>
-                      <div class="width-900"><p>All you ever need to be on top of your accounting is just an active internet connection. Conduct your business from anywhere with our cloud based accounting solution. Manage inventory, file GST returns, or reconcile your books; the possibilities are truly limitless with Giddh cloud accounting.</p></div>
+                      <h2 class="center_heading">Keep track of your inventory</h2>
+                      <div class="width-900"><p>Modern inventory management software for the modern entrepreneur no stress, no hassles, no hidden costs. Managing inventory is a priority for any growing business. Inventory management feature helps you to track your stock movements accurately so you can get back to doing the thing you are best at: Grow and Earn!</p></div>
                       <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
                   </div>
               </div>
@@ -67,84 +67,90 @@
   <div class="container">
   <div class="row financial-services">
   <div class="col-sm-6">
-  <h2>Turn your browser into your office</h2>
-  <p>Crunch numbers, reconcile books or send an urgent invoice to customers. With Giddh, turn your browser into your office and access all your financial data sitting at your local coffee shop or while you’re on a commute.</p>
+  <h2>Maintain stock visibility with inventory reports</h2>
+  <p>Inventory management software will let you keep track of your stock When you buy and sell products, your inventory quantities will be automatically updated, making it easy to view your inventory reports so that you can keep up with what’s selling fast and what to reorder.</p>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/anywhere-anytime/anywhere-anytime-feature-1.png" alt="">
+   <img src="../assets/images/inventory/inventory-feature-1.svg" width="360" alt="">
   </div>
   </div>
   
   <div class="row financial-services">
-  <div class="col-sm-6 ">
-   <img src="../assets/images/anywhere-anytime/anywhere-anytime-feature-2.png" alt="">
+  <div class="col-sm-6 text-center">
+   <img src="../assets/images/inventory/inventory-feature-2.svg" width="360" alt="">
   </div>
   <div class="col-sm-6">
-  <h2>Stay ahead with automatic updates</h2>
-  <p>With cloud based accounting platform you will automatically receive OTA(on the air) updates of the greatest and newest features that are added to Giddh. That means less effort on your part—which we all love. Now isn’t that awesome!</p>
+  <h2>Complete support for measurement units</h2>
+  <p>Where units of measurement are concerned, Giddh has got you covered. Our software allows you to create custom units of measurements for effective inventory management. With custom units, you can buy stocks in one unit and sell the same stock in a completely different one.</p>
   </div>
   </div>
   
 
   <div class="row financial-services">
-   
   <div class="col-sm-6">
-  <h2 class="collab">Save more on all fronts</h2>
-  <p>No matter what your business is all about, making money must be your number one priority. By using cloud accounting software, you can save money as you would no longer need to worry about expensive version upgrades, maintenance costs & even the cost of hiring an entire accounting department.</p>
+  <h2 class="collab">Inter-branch stock transfer</h2>
+  <p>Are you a growing business with multiple inventory branches to manage? Do you often struggle to keep up with stock requirements from multiple branches? With the Giddh inter-branch transfer feature, you can easily replenish your stock by transferring them from one branch to other.</p>
   </div>
   
   <div class="col-sm-6 text-center">
-   <img src="../assets/images/anywhere-anytime/anywhere-anytime-feature-3.png" alt="">
+   <img src="../assets/images/inventory/inventory-feature-3.svg" width="360" alt="">
   </div>
  </div>
  
  <div class="row financial-services">
-   <div class="col-sm-6 ">
-   <img src="../assets/images/anywhere-anytime/anywhere-anytime-feature-4.png" alt="">
+   <div class="col-sm-6 text-center">
+   <img src="../assets/images/inventory/inventory-feature-4.svg" width="360" alt="">
   </div>
    
   <div class="col-sm-6">
-  <h2 class="collab">Work smarter, grow faster</h2>
-  <p>With cloud accounting software, your team-members don’t need to be all at the same time to collaborate or make major decisions. Thanks to easily shareable online reports, decision makers and accountants can be on the same page, even when they are not at the same place.</p>
+  <h2 class="collab">Save more time with bulk inventory import</h2>
+  <p>Take the pain out of manually adding your entire inventory on Giddh by bulk inventory import. Just use our simple Excel template and have your inventory uploaded and ready in no time.</p>
   </div>
  </div>
- 
+
+ <div class="row financial-services">
+  <div class="col-sm-6">
+  <h2 class="collab">Giddh inventory software is GST ready!</h2>
+  <p>Giddh inventory management software is fully compliant with the GST system. Track inventory, manage orders, assign HSN & SAC codes to items and send GST compliant invoices. Your search for a GST compliant inventory management software ends with Giddh.</p>
+  </div>
+  
+  <div class="col-sm-6 text-center">
+   <img src="../assets/images/inventory/inventory-feature-5.svg" width="360" alt="">
+  </div>
+ </div>
+
   </div>
   </section> 
   
   <section class="graybg p-t-70">
     <div class="container area-flex  blog_center_new">
-          <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/anywhere-anytime/anywhere-anytime-blog.png" alt=""></div>
-          <span class="blog-reporting">How to make the best of your <br>
-online accounting software?<br>
-          <a href="https://blog.giddh.com/how-to-make-the-best-of-your-online-accounting-software-719b33022dee" target="_blank">Read more...</a>
-          </span>
-          </div>
+      <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/inventory/inventory-feature-6.png" width="200" alt=""></div>
+      <span class="blog-reporting">A piece of peace with<br>Inventory Management
+      <a href="https://blog.giddh.com/have-a-piece-of-peace-with-inventory-management-a77f56736a7c" target="_blank">Read more...</a>
+      </span>
+      </div>
     </div>
-</section>
+  </section>
   
   <section class="whitebg know p-t-80">
 <div class="container">
 <div class="row p-tb-0">
-                <div class="col-sm-12">
-                    <div class="text-center">
-                    <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
-                       
-                       <div class="reporting-blog-text">
-                       <h2>People interested in <span>Anywhere-Anytime</span> also looked at</h2>
-                       <ul class="reporting-blog-menu">
-                       <li><a href="financial-reporting.php">Reporting</a></li>
-                       <li><a href="multi-currency-accounting-software.php">Multi-Currency</a></li>
-                       <li><a href="#">Security</a></li>
-                       <li><a href="#">All features</a></li>
-                       </ul>
-                       
-                       </div>
-                       
-                    </div>
-                </div>
-            </div>
+    <div class="col-sm-12">
+      <div class="text-center">
+        <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
+          <div class="reporting-blog-text">
+          <h2>People interested in Dashboard also looked at</h2>
+          <ul class="reporting-blog-menu">
+          <li><a href="#">Reporting</a></li>
+          <li><a href="#">Multi-Currency</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">All features</a></li>
+          </ul>
+          </div>
+        </div>
+    </div>
+  </div>
 </div>
 
 </section>
