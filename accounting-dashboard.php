@@ -148,14 +148,13 @@ with simple online dashboard</h1>
                     <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
                        
                        <div class="reporting-blog-text">
-                       <h2>People interested in <span>invoicing</span> also looked at</h2>
-                       <ul class="reporting-blog-menu">
-                       <li><a href="#">Invoicing</a></li>
-                       <li><a href="#">Multi-Currency</a></li>
-                       <li><a href="#">Security</a></li>
-                       <li><a href="#">All features</a></li>
-                       </ul>
-                       
+                        <h2>People interested in <span>invoicing</span> also looked at</h2>
+                        <ul class="reporting-blog-menu">
+                          <li><a href="invoice-software.php">Invoicing</a></li>
+                          <li><a href="multi-currency-accounting-software.php">Multi-Currency</a></li>
+                          <li><a href="security.php">Security</a></li>
+                          <li><a href="features.php">All features</a></li>
+                        </ul>
                        </div>
                        
                     </div>

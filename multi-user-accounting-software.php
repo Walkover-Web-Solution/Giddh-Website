@@ -107,7 +107,7 @@ sharing business insights</h1>
   <div class="col-sm-6 text-center">
    <img src="../assets/images/share-data/share-data-feature-3.png" alt="">
   </div>
- </div>     
+ </div>
    
   </div>
   </section> 
@@ -133,12 +133,12 @@ sharing business insights</h1>
                        
                        <div class="reporting-blog-text">
                        <h2>People interested in <span>Share-data</span> also looked at</h2>
-                       <ul class="reporting-blog-menu">
-                       <li><a href="#">Invoicing</a></li>
-                       <li><a href="#">Multi-Currency</a></li>
-                       <li><a href="#">Security</a></li>
-                       <li><a href="#">All features</a></li>
-                       </ul>
+                        <ul class="reporting-blog-menu">
+                          <li><a href="invoice-software.php">Invoicing</a></li>
+                          <li><a href="multi-currency-accounting-software.php">Multi-Currency</a></li>
+                          <li><a href="security.php">Security</a></li>
+                          <li><a href="features.php">All features</a></li>
+                        </ul>
                        
                        </div>
                        

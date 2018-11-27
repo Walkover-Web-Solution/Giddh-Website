@@ -265,7 +265,7 @@ img.img-responsive.ac-img{position:relative;}
 .scroll-btn:hover{opacity:.5;background-color:rgba(0, 0, 0, 0.3);}
 .whitebg.homeContent{padding:73px 0;}
 .homeContent{padding:90px 0 30px 0;text-align:center;color:white;font-family:'CambriaRegular' !important;}
-.homeContent a{font-size:18px;color:#1062BF;}
+.homeContent a{font-size:18px;color:#1062BF;display: block;}
 #homepage{padding:80px 0;}
 #homepage .head{margin-bottom:60px;}
 #homepage .row{padding:0;}
@@ -322,8 +322,8 @@ figure h1{margin-bottom:5px;}
 /* .row-features .feature_thumbnail{min-height:322px;margin-top:0;} */
 .bigthumb .feature_thumbnail{min-height:276px !important;margin:0 auto !important;}
 .feature_thumbnail{border:none;background:transparent;max-width:322px;margin:30px auto 0 auto !important;text-align:center;min-height:278px !important;}
-.feature_thumbnail img{height:90px;width:auto;}
-.feature_thumbnail h3{margin:9px 0 9px 0;font-family:"CambriaBold";font-size:20px;}
+.feature_thumbnail img, .feature_thumbnail a img{height:90px;width:auto;}
+.feature_thumbnail h3, .feature_thumbnail h3 a {margin:9px 0 9px 0;font-family:"CambriaBold";font-size:20px;color: #333;}
 .small-mg .feature_thumbnail h3{margin-top:10px;}
 .small-mg .feature_thumbnail{margin-bottom:0;}
 .gstbody section{padding:80px 0;}

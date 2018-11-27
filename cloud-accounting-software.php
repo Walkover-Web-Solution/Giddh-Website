@@ -132,12 +132,12 @@ online accounting software?<br>
                     <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
                        
                        <div class="reporting-blog-text">
-                       <h2>People interested in <span>Anywhere-Anytime</span> also looked at</h2>
-                       <ul class="reporting-blog-menu">
-                       <li><a href="financial-reporting.php">Reporting</a></li>
-                       <li><a href="multi-currency-accounting-software.php">Multi-Currency</a></li>
-                       <li><a href="#">Security</a></li>
-                       <li><a href="#">All features</a></li>
+                        <h2>People interested in <span>Anywhere-Anytime</span> also looked at</h2>
+                        <ul class="reporting-blog-menu">
+                          <li><a href="financial-reporting.php">Reporting</a></li>
+                          <li><a href="invoice-software.php">Invoicing</a></li>
+                          <li><a href="security.php">Security</a></li>
+                          <li><a href="features.php">All features</a></li>
                        </ul>
                        
                        </div>
