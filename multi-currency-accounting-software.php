@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <!-- 
   <meta name="keywords" content=""/> -->
-  <meta name="description" content="Multi-currency accounting system enables businesses to send multi-currency invoices in customer’s foreign currency & get paid easily in over 160 currency. "/>
+  <meta name="description" content="Multi-currency accounting system enables businesses to send multi-currency invoices in customer’s foreign currency & get paid easily in over 160 currency."/>
   
   <title>Multi Currency Accounting Software</title>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
@@ -140,13 +140,13 @@ Currency Conversion</h2>
       <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
           
           <div class="reporting-blog-text">
-          <h2>People interested in <span>Multi-Currency</span> also looked at</h2>
-          <ul class="reporting-blog-menu">
-          <li><a href="#">Reporting</a></li>
-          <li><a href="#">Multi-Currency</a></li>
-          <li><a href="#">Security</a></li>
-          <li><a href="#">All features</a></li>
-          </ul>
+            <h2>People interested in <span>Multi-Currency</span> also looked at</h2>
+            <ul class="reporting-blog-menu">
+              <li><a href="financial-reporting.php">Reporting</a></li>
+              <li><a href="invoice-software.php">Invoicing</a></li>
+              <li><a href="security.php">Security</a></li>
+              <li><a href="features.php">All features</a></li>
+            </ul>
           
           </div>
           

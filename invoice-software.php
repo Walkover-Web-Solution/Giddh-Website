@@ -209,11 +209,11 @@ you might be making (and their fixes)<br>
                        <div class="reporting-blog-text">
                        <h2>People interested in <span>Invoicing</span> also looked at</h2>
                        <ul class="reporting-blog-menu">
-                       <li><a href="#">Reporting</a></li>
-                       <li><a href="#">Multi-Currency</a></li>
-                       <li><a href="#">Security</a></li>
-                       <li><a href="#">All features</a></li>
-                       </ul>
+                        <li><a href="financial-reporting.php">Reporting</a></li>
+                        <li><a href="multi-currency-accounting-software.php">Multi-Currency</a></li>
+                        <li><a href="security.php">Security</a></li>
+                        <li><a href="features.php">All features</a></li>
+                      </ul>
                        
                        </div>
                        

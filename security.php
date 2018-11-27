@@ -28,8 +28,8 @@
       <div class="row">
         <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-4">
         <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-4">
-          <h3>Still managing your accounts offline? Go online with Giddh. 
-          It gives you high level data security with its unmatched data encryption algorithm.</h3>
+          <h3>Still managing your accounts offline? <br> Go online with Giddh. 
+          It gives you high level data security with <br> its unmatched data encryption algorithm.</h3>
           <img src="/assets/images/new/security.png" class="img-responsive"/>
       </div>
     </div>
