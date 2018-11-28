@@ -127,7 +127,7 @@
   <section class="graybg p-t-70">
     <div class="container area-flex  blog_center_new">
           <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/import-data/import-data-blog.png" width="200" alt=""></div>
-          <span class="blog-reporting">Why you need freedom from the clutter of spreadsheets.<br>
+          <span class="blog-reporting">Why you need freedom from the clutter of <br>spreadsheets.<br>
 
           <a href="https://blog.giddh.com/why-you-need-freedom-from-the-clutter-of-spreadsheets-97a31cdcd146" target="_blank">Read more...</a>
           </span>

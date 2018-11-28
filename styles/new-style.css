@@ -265,7 +265,7 @@ img.img-responsive.ac-img{position:relative;}
 .scroll-btn:hover{opacity:.5;background-color:rgba(0, 0, 0, 0.3);}
 .whitebg.homeContent{padding:73px 0;}
 .homeContent{padding:90px 0 30px 0;text-align:center;color:white;font-family:'CambriaRegular' !important;}
-.homeContent a{font-size:18px;color:#1062BF;display: block;}
+.homeContent a{font-size:18px;color:#1062BF;}
 #homepage{padding:80px 0;}
 #homepage .head{margin-bottom:60px;}
 #homepage .row{padding:0;}
@@ -331,7 +331,7 @@ figure h1{margin-bottom:5px;}
 #homepage .center_heading, #feature .center_heading{font-size:45px !important;font-family:"CambriaBold";margin-top:0;}
 .feature_thumbnail .caption p{font-size:18px;color:#565B73;line-height:28px;}
 /* .features_banner{max-width:573px;} */
-.features_banner{max-width: 690px;}
+.features_banner{max-width: 710px;}
 .area-flex-gst{display:flex;flex-direction:column;height:100vh;justify-content:space-evenly;}
 .banner-gst{text-align:center;color:#26263A;position:relative;top:50px;}
 .banner-gst h6{font-size:24px;font-family:"CambriaRegular";}

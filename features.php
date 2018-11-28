@@ -204,7 +204,7 @@
                                 <img src="../assets/images/Automation.svg" alt="Manage GST with Giddh">
                               <div class="caption">
                                 <h3>Contact</h3>
-                                <p>Accounting and Contact is a match made in heaven. Save time by automating your accounting.</p>
+                                <p>Your customers, vendors and their business information at one place.</p>
                               </div>
                             </div>
                       </div>
