@@ -187,54 +187,54 @@
               <div class="row p-t-60">
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/invoicing.svg" alt="Manage GST with Giddh">
+                            <a href="invoice-software.php"><img src="../assets/images/invoicing.svg" alt="Manage GST with Giddh"></a>
                               <div class="caption">
-                                <h3>Invoicing</h3>
+                                <h3><a href="invoice-software.php">Invoicing</a></h3>
                                 <p>Add logos and use fully customizable templates to generate and send professional looking invoices.</p>
                               </div>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/GSt-complian.svg" alt="Manage GST with Giddh">
+                              <a href="gst.php"><img src="../assets/images/GSt-complian.svg" alt="Manage GST with Giddh"></a>
                               <div class="caption">
-                                <h3>GST Compliance</h3>
+                                <h3><a href="gst.php">GST Compliance</a></h3>
                                 <p>Compliance is no more a challenge with our accounting software! File your GST returns directly on time.</p>
                               </div>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/report-analyst.svg" alt="Manage GST with Giddh">
+                                <a href="financial-reporting.php"><img src="../assets/images/report-analyst.svg" alt="Manage GST with Giddh"></a>
                               <div class="caption">
-                                <h3>Report & Analysis</h3>
+                                <h3><a href="financial-reporting.php">Report & Analysis</a></h3>
                                 <p>With instant reporting & analysis tools present in our accounting software, you can finally make faster decisions.</p>
                               </div>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/share-data.svg" alt="Manage GST with Giddh">
+                            <a href="multi-user-accounting-software.php"><img src="../assets/images/share-data.svg" alt="Manage GST with Giddh"></a>
                               <div class="caption">
-                                <h3>Multi-User</h3>
+                                <h3><a href="multi-user-accounting-software.php">Multi-User</a></h3>
                                 <p>Our accounting software lets you share data with your team members so that they can be on top of what’s most important to them.</p>
                               </div>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/multi-currency.svg" alt="Manage GST with Giddh">
+                            <a href="multi-currency-accounting-software.php"><img src="../assets/images/multi-currency.svg" alt="Manage GST with Giddh"></a>
                               <div class="caption">
-                                <h3>Multi Currency</h3>
+                                <h3><a href="multi-currency-accounting-software.php">Multi Currency</a></h3>
                                 <p>Our accounting software enables you sending invoices and reports to your clients in their currency and getting paid in your own.</p>
                               </div>
                             </div>
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/support-c.svg" alt="Manage GST with Giddh">
+                            <a href="javascri[t:void(0)" data-toggle="modal" data-target="#talkToSales_dialog"><img src="../assets/images/support-c.svg" alt="Manage GST with Giddh"></a>
                               <div class="caption">
-                                <h3>Support</h3>
+                                <h3><a href="javascri[t:void(0)" data-toggle="modal" data-target="#talkToSales_dialog">Support</a></h3>
                                 <p>Your queries regarding accounting or a feature request for your specific needs is one call or email away from resolution.</p>
                               </div>
                             </div>

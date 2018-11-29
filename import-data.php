@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en" ng-app="giddhWebsite">
   <meta charset="UTF-8">
-  <meta name="description" content="Best Cloud based accounting software in India for small and medium sized business to manage their day to day invoicing, taxes, accounting and bookkeeping. "/>
+  <meta name="description" content="Import your offline accounting data & start managing it on the cloud or switch to Giddh from your old accounting software by importing your financial data."/>
   <!-- 
   <meta name="keywords" content=""/> -->
   
-  <title>Cloud Accounting Software to Grow your Business Online - Giddh</title>
+  <title>Import accounting data to cloud</title>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <?php include 'head.php';?>
 
@@ -127,7 +127,7 @@
   <section class="graybg p-t-70">
     <div class="container area-flex  blog_center_new">
           <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/import-data/import-data-blog.png" width="200" alt=""></div>
-          <span class="blog-reporting">Why you need freedom from the clutter of spreadsheets.<br>
+          <span class="blog-reporting">Why you need freedom from the clutter of <br>spreadsheets.<br>
 
           <a href="https://blog.giddh.com/why-you-need-freedom-from-the-clutter-of-spreadsheets-97a31cdcd146" target="_blank">Read more...</a>
           </span>
