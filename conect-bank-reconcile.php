@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en" ng-app="giddhWebsite">
   <meta charset="UTF-8">
-  <meta name="description" content="Best Cloud based accounting software in India for small and medium sized business to manage their day to day invoicing, taxes, accounting and bookkeeping. "/>
+  <meta name="description" content="Save your time by connecting bank account with Giddh to match and move your transaction according to income and expense account. Bank reconciliation software speeds reconciliation & keeps you on top of your business."/>
   <!-- 
   <meta name="keywords" content=""/> -->
   
-  <title>Cloud Accounting Software to Grow your Business Online - Giddh</title>
+  <title>Connect bank account & bank reconciliation software Giddh</title>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <?php include 'head.php';?>
 

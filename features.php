@@ -98,9 +98,9 @@
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <a href="link-account-reconcile.php"><img src="../assets/images/reconciliation.svg" alt="Manage GST with Giddh"></a>
+                                <a href="conect-bank-reconcile.php"><img src="../assets/images/reconciliation.svg" alt="Manage GST with Giddh"></a>
                               <div class="caption">
-                                <h3><a href="link-account-reconcile.php">Bank Reconciliation</a></h3>
+                                <h3><a href="conect-bank-reconcile.php">Bank Reconciliation</a></h3>
                                 <p>Giddh makes the confusing work of bank reconciliation easy & simple. Know your cash position anytime.</p>
                               </div>
                             </div>
@@ -135,9 +135,9 @@
                       </div>
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                            <a href="link-account-reconcile.php"><img src="../assets/images/bank.svg" alt="Manage GST with Giddh"></a>
+                            <a href="conect-bank-reconcile.php"><img src="../assets/images/bank.svg" alt="Manage GST with Giddh"></a>
                               <div class="caption">
-                                <h3><a href="link-account-reconcile.php">Linked Bank Account</a></h3>
+                                <h3><a href="conect-bank-reconcile.php">Linked Bank Account</a></h3>
                                 <p>Link multiple bank accounts and view transaction history whenever and wherever you want.</p>
                               </div>
                             </div>
@@ -173,9 +173,9 @@
                      
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                            <a href="inventory.php"><img src="../assets/images/Inventory-gray.svg" alt="Manage GST with Giddh"></a>
+                            <a href="inventory-management-software.php"><img src="../assets/images/Inventory-gray.svg" alt="Manage GST with Giddh"></a>
                               <div class="caption">
-                                <h3><a href="inventory.php">Inventory</a></h3>
+                                <h3><a href="inventory-management-software.php">Inventory</a></h3>
                                 <p>Create inventory easily and track inventory expenses. Managing inventory is no more a hassle!</p>
                               </div>
                             </div>

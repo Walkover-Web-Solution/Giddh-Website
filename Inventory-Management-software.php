@@ -1,17 +1,18 @@
 <!DOCTYPE HTML>
 <html lang="en" ng-app="giddhWebsite">
-<head>
-  <meta name="description" content="Are you looking for the best inventory management system software that can deal with an immense database anywhere anytime? Try Giddh’s cloud inventory management software to access particular parts of the inventory at lightning-fast speeds. Prevent stock outs and overstock issues effectively with our software.  "/>
-  <meta name="keywords" content="bookkeeping software, Accounting softwares, online accounting software, bookkeeping software for small business"/>
+  <meta charset="UTF-8">
+  <meta name="description" content="Best Cloud based accounting software in India for small and medium sized business to manage their day to day invoicing, taxes, accounting and bookkeeping. "/>
+  <!-- 
+  <meta name="keywords" content=""/> -->
   
-  <title>Online Inventory Management Software | Custom Inventory Management Software - Giddh.com </title>
-
+  <title>Cloud Accounting Software to Grow your Business Online - Giddh</title>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
   <?php include 'head.php';?>
 
 </head>
 
 <!-- {oh:geo.country != 'IN'} -->
-<body id="page-top" class="gst arvo" ng-controller="homeController as vm">
+<body id="page-top" class="light" ng-controller="homeController as vm">
   
   <!-- <div ng-class="{'other-country': geo.country != 'IN'}" ng-if="geo.country != 'IN'">
     <iframe src="global.html" style="height:100%;width:100%;padding: 0;margin:0"></iframe>
@@ -23,148 +24,187 @@
   <?php include 'header.php';?>  
   <!-- end navigation -->
 
-<!--Banner-->
-<div id="gstBanner" class="ylwBg gridBg">
-    <div class="container text-center">
-    	<img src="/assets/images/new/Inventory-Management-software.png" class="img-responsive"/>
-        <h1>Inventory Management Software</h1>
+  <section id="videoBg" class="black-back main-banner">
+    <!-- <div class="scroll-btn">
+      <a href="#feature" class="page-scroll"></a>
+    </div> -->
+   
+    <div class="intro home flex-box-banner slide show container">
+    <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
+        <div class="banner_intro features_banner">
+              <h1 class="banner_heading_new">Inventory management <br>features for business of any size.</h1>
+              <p class="banner_sub_heading m-t-15">Manage your entire product catalog on the cloud and get a real-time overview of your stocks.</p>
+              <p class="m-t-20">
+              <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
+                <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
+                <a class="btn btn-primary" id="downloadLinux" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz">Download Free</a>
+                <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
+            </p>
+        </div>
+        <div class="right-section">
+          <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
+          <img src="../assets/images/Cloud Icon.svg" alt="" class="cloud_sky bn-3">
+            <img src="../assets/images/inventory/inventory-banner.svg" class="cloud-accounting-software-img" width="555">
+        </div>
     </div>
-</div>
-<!--//Banner-->
-
-<!--try giddh-->
-<div id="tryG">
-    <div class="container text-center">
-        <h3>Cloud Based Accounting Software for Businesses of All Sizes</h3>
-        
-        <p>
-        Modern Inventory Management Software for the Modern Entrepreneur 
-                                   No stress, No hassles, No hidden costs.
-        </p>
-        
-          
-        <p>
-        Managing inventory is a priority for any growing business. Giddh's inventory management feature helps you control and track your stock movements accurately so you can get back to doing the thing you are best at: Grow and Earn!
-
-        </p>
-
-    </div>
-</div>
-<!--//try giddh-->
-
-<!--Filling process-->
-<div id="filling">
-    <div class="container">
+  </section> <!-- end of videoBg -->
   
-    	
-        <div class="col-lg-6">
+  <!-- home content end -->
+  <section class="graybg graybg-reporting  homeContent" id="feature">
+      <div class="container">
+              <div class="row">
+                    <div class="col-sm-12">
+                      <h2 class="center_heading">Keep track of your inventory</h2>
+                      <div class="width-900"><p>Modern inventory management software for the modern entrepreneur no stress, no hassles, no hidden costs. Managing inventory is a priority for any growing business. Inventory management feature helps you to track your stock movements accurately so you can get back to doing the thing you are best at: Grow and Earn!</p></div>
+                      <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+                  </div>
+              </div>
+             
+             </div>
       
-<h3>Complete Inventory Management </h3>
-
-<p>Easily add services rendered or product manufactured. With Giddh's inventory management features, keeping track of your inventory and stocks is as easy as counting 1,2,3.</p>
-
-<h3>Full Support for Measurement Units</h3>
-
-<p>When measurement units are concerned, Giddh comes with limitless combination of units. From hours to boxes to kilograms, use whatever measure you need. </p>
-
-
-
-        </div>
-        
-        
-        <div class="col-lg-6">
-        
-        <img src="/assets/images/new/invetn-xyz.png" class="img-responsive"/>
-        
-        </div>
-        
-        
-        
-        
-    </div>
-</div>
-<!--//Filling process-->
-
-
-<!--Filling process-->
-<div id="ques">
-    <div class="container">
+  </section> 
+  <section class="whitebg left-text">
+  <div class="container">
+  <div class="row financial-services">
+  <div class="col-sm-6">
+  <h2>Maintain stock visibility with inventory reports</h2>
+  <p>Inventory management software will let you keep track of your stock When you buy and sell products, your inventory quantities will be automatically updated, making it easy to view your inventory reports so that you can keep up with what’s selling fast and what to reorder.</p>
+  </div>
   
+  <div class="col-sm-6 text-center">
+   <img src="../assets/images/inventory/inventory-feature-1.svg" width="360" alt="">
+  </div>
+  </div>
   
-     
-        <div class="col-lg-6">
-        
-        <img src="/assets/images/new/GST_multi_cru.png" class="img-responsive"/>
-        
-        </div>
-        
-        
-    	
-        <div class="col-lg-6">
-
-<h3>GST Ready</h3>
-
-<p>With Giddh's being GST ready, now you don't have to worry about applying GST, CGST or SGST to your products in inventory. </p>
-
-<h3>Multi-Currency Functionality </h3>
-
-<p>Giddh's multi-currency functionality automatically converts amounts to your mentioned base currency to maintain consistency across all stock actions.</p>
-
-
-
-        </div>
-
-        
-    </div>
-</div>
-<!--//Filling process-->
-
-
-
-<!--Filling process-->
-<div id="filling">
-    <div class="container">
+  <div class="row financial-services">
+  <div class="col-sm-6 text-center">
+   <img src="../assets/images/inventory/inventory-feature-2.svg" width="360" alt="">
+  </div>
+  <div class="col-sm-6">
+  <h2>Complete support for measurement units</h2>
+  <p>Where units of measurement are concerned, Giddh has got you covered. Our software allows you to create custom units of measurements for effective inventory management. With custom units, you can buy stocks in one unit and sell the same stock in a completely different one.</p>
+  </div>
+  </div>
   
-    	
-        <div class="col-lg-6">
 
-<h3>Create Detailed Professional Invoices</h3>
+  <div class="row financial-services">
+  <div class="col-sm-6">
+  <h2 class="collab">Inter-branch stock transfer</h2>
+  <p>Are you a growing business with multiple inventory branches to manage? Do you often struggle to keep up with stock requirements from multiple branches? With the Giddh inter-branch transfer feature, you can easily replenish your stock by transferring them from one branch to other.</p>
+  </div>
+  
+  <div class="col-sm-6 text-center">
+   <img src="../assets/images/inventory/inventory-feature-3.svg" width="360" alt="">
+  </div>
+ </div>
+ 
+ <div class="row financial-services">
+   <div class="col-sm-6 text-center">
+   <img src="../assets/images/inventory/inventory-feature-4.svg" width="360" alt="">
+  </div>
+   
+  <div class="col-sm-6">
+  <h2 class="collab">Save more time with bulk inventory import</h2>
+  <p>Take the pain out of manually adding your entire inventory on Giddh by bulk inventory import. Just use our simple Excel template and have your inventory uploaded and ready in no time.</p>
+  </div>
+ </div>
 
-<p>Create fully detailed invoices with Giddh's customizable invoicing options. No other accounting software puts so much emphasis on the design of documents. </p>
+ <div class="row financial-services">
+  <div class="col-sm-6">
+  <h2 class="collab">Giddh inventory software is GST ready!</h2>
+  <p>Giddh inventory management software is fully compliant with the GST system. Track inventory, manage orders, assign HSN & SAC codes to items and send GST compliant invoices. Your search for a GST compliant inventory management software ends with Giddh.</p>
+  </div>
+  
+  <div class="col-sm-6 text-center">
+   <img src="../assets/images/inventory/inventory-feature-5.svg" width="360" alt="">
+  </div>
+ </div>
 
-
-        </div>
-        
-        
-        <div class="col-lg-6">
-        
-        <img src="/assets/images/new/invoice-xyz.png" class="img-responsive"/>
-        
-        </div>
-        
-        
-        
-        
+  </div>
+  </section> 
+  
+  <section class="graybg p-t-70">
+    <div class="container area-flex  blog_center_new">
+      <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/inventory/inventory-feature-6.png" width="200" alt=""></div>
+      <span class="blog-reporting">A piece of peace with<br>Inventory Management
+      <a href="https://blog.giddh.com/have-a-piece-of-peace-with-inventory-management-a77f56736a7c" target="_blank">Read more...</a>
+      </span>
+      </div>
     </div>
-</div>
-<!--//Filling process-->
-
-
-
-
-<!--question-->
-<div id="ques">
-    <div class="container text-center">
-        <h3>Have question on Inventory Management? Have free discussion <a href="#contact">Contact Us</a></h3>
+  </section>
+  
+  <section class="whitebg know p-t-80">
+<div class="container">
+<div class="row p-tb-0">
+    <div class="col-sm-12">
+      <div class="text-center">
+        <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
+          <div class="reporting-blog-text">
+          <h2>People interested in Dashboard also looked at</h2>
+          <ul class="reporting-blog-menu">
+            <li><a href="invoice-software.php">Invoicing</a></li>
+            <li><a href="multi-currency-accounting-software.php">Multi-Currency</a></li>
+            <li><a href="security.php">Security</a></li>
+            <li><a href="features.php">All features</a></li>
+          </ul>
+          </div>
+        </div>
     </div>
+  </div>
 </div>
-<!--//question-->
 
+</section>
+  
+  <!-- <div class="modal fade" id="talkToSales_dialog" role="dialog">
+  <div class="modal-dialog custom-dialog">
+    <div class="modal-header">
+      <h3 class="brdB left">Talk to Expert</h3>
+      <a data-dismiss="modal" aria-label="Close" class="close-glyph">✕</a>
+       <ul class="nav-tabs nav-tabs-talk height42" id="shortner_tabs">
+           <li class="active"><a href="#scheduleCall"  data-toggle="tab">Arrange a Demo</a></li>
+           <li><a href="#dropEmail"  data-toggle="tab">Drop us a mail</a></li>
 
+       </ul>
+    </div>
+       <div class="pd2 tab-content custom-padding-20 height-552 tab-content-modal">
 
+         <div id="dropEmail" class="tab-pane">
+           <div id="Jkvq" class="talktosale-superform"></div>
 
-  <!-- include footer -->
+           <div class='alert alert-succcess successsales'></div>
+         </div>
+
+         <div id="scheduleCall" class="tab-pane active vertical-center">
+                <p>Choose your preferred time to schedule<br>
+                   a demo with an expert. </p>
+                <button class="btn btn-primary">Click Here</button>
+         </div>
+       </div>
+       
+     </div>
+ </div> -->
+  <!-- end of page -->
   <?php include 'footScript.php';?>
-  <?php include 'footer.php';?>  
+  <?php include 'footer.php';?> 
+  <script>
+  function detectBrowser(x, y, z) {
+    z = z || y;
+    if (navigator[x] && navigator[x].indexOf(y) !== -1) {
+        osName = z;
+    }
+}
+
+/*   navigator     value     download  */
+detectBrowser( "appVersion", "Mac",    "MacOS"   );
+detectBrowser( "appVersion", "Linux"             );
+detectBrowser( "userAgent",  "Linux"             );
+detectBrowser( "platform",   "Linux"             );
+detectBrowser( "appVersion", "Win",    "Windows" );
+detectBrowser( "userAgent",  "Windows"           );
+detectBrowser( "platform",   "Win",    "Windows" );
+detectBrowser( "oscpu",      "Windows"           );
+document.getElementById("download"+osName).className = "btn btn-primary knownOS";
+
+  </script>
 </body>
 </html>
