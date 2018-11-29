@@ -201,10 +201,10 @@
                      
                       <div class="col-sm-6 col-md-4">
                             <div class="thumbnail feature_thumbnail">
-                                <img src="../assets/images/Automation.svg" alt="Manage GST with Giddh">
+                            <a href="contacts.php"><img src="../assets/images/Automation.svg" alt="Manage GST with Giddh"></a>
                               <div class="caption">
-                                <h3>Contact</h3>
-                                <p>Your customers, vendors and their business information at one place.</p>
+                                <h3><a href="contacts.php">Contact</a></h3>
+                                <p>Get an overview of your customers, vendors and their business information at one place.</p>
                               </div>
                             </div>
                       </div>
