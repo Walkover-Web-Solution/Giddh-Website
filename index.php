@@ -64,7 +64,7 @@
         <div class="right-section">
         <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-2">
         <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-two bn-2">
-          <img src="../assets/images/accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive ac-img">
+          <img src="../assets/images/new_accounting_right.png" alt="Indian Accounting with giddh" class="img-responsive ac-img">
         </div>
     </div>
 
