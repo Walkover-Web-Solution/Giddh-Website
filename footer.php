@@ -267,6 +267,25 @@ $("input[type='email']").focus(function(){
    'position':'relative',
  });
  $("input[type='email']").removeAttr('placeholder');
-})
+});
+
+
+// sadique css start
+var ul = document.querySelector('#cardList');
+for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
+}
+console.log(ul.children.length);
+var listPosition = ul.children.length;
+console.log("List position = +" + listPosition);
+$(document).ready(function () {
+    size_li = $("#cardList li").length;
+    x = 0;
+    numToShow = 3;
+    numToIncrement = 3;
+    $('#cardList').find('li').hide().slice(x, x + numToShow).show();
+});
+
+
 </script>
 

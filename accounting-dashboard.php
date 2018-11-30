@@ -148,13 +148,25 @@ with simple online dashboard</h1>
                     <img src="../assets/images/reporting/footer.svg" class="peopel-img" alt="">
                        
                        <div class="reporting-blog-text">
-                        <h2>People interested in <span>invoicing</span> also looked at</h2>
-                        <ul class="reporting-blog-menu">
-                          <li><a href="invoice-software.php">Invoicing</a></li>
-                          <li><a href="multi-currency-accounting-software.php">Multi-Currency</a></li>
-                          <li><a href="security.php">Security</a></li>
-                          <li><a href="features.php">All features</a></li>
-                        </ul>
+                         
+                       <div class="reporting-blog-text">
+                        <div class="footer-meta-heading"> <span>People interested in <h1> accounting dashboard </h1> also looked at</span></div>
+
+                        
+                        <div class="clearfix text-center mrT2">
+                          <a class="all-features" href="features.php">All features</a>
+                            <ul id="cardList">
+                              <li><a href="cloud-accounting-software.php">Cloud accounting</a></li>
+                              <li><a href="invoice-software.php">Invoicing</a></li>
+                              <li><a href="multi-currency-accounting-software.php">Multi-Currency</a></li>
+                              <li><a href="financial-reporting.php">Financial reporting</a></li>
+                              <li><a href="multi-user-accounting-software.php">Share Data</a></li>
+                              <li><a href="import-data.php">Import data</a></li>
+                              <li><a href="conect-bank-reconcile.php">Bank reconcile</a></li>
+                              <li><a href="inventory-management-software.php">Management software</a></li>
+                            </ul>
+                          </div>
+
                        </div>
                        
                     </div>
