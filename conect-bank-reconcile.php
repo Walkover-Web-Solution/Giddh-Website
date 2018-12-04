@@ -45,7 +45,7 @@
   <!-- col end -->
   <div class="col-md-5">
     <div class="right-section">
-      <img src="../assets/images/link-account-reconcile/banner-link-account-reconcile.svg" style="width: 380px;" alt="Tally your books with giddh" class="cloud-accounting-software-img">
+      <img src="../assets/images/link-account-reconcile/banner-link-account-reconcile.svg" style="width: 480px;" alt="Tally your books with giddh" class="cloud-accounting-software-img">
     </div>
   </div>
   <!-- col end -->

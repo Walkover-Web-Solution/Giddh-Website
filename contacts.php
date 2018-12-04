@@ -24,31 +24,37 @@
   <?php include 'header.php';?>  
   <!-- end navigation -->
 
-  <section id="videoBg" class="black-back main-banner">
-    <!-- <div class="scroll-btn">
-      <a href="#feature" class="page-scroll"></a>
-    </div> -->
-   
-    <div class="intro home flex-box-banner slide show container">
-    <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
-        <div class="banner_intro features_banner">
-              <h1 class="banner_heading_new">Elevate productivity by accessing
-              your business contacts.</h1>
-              <p class="banner_sub_heading m-t-15">Contacts is all about making use of the information you have stored about your customers – their transaction history, how much you have bought from-and-sold to them, where they’re located and so on.</p>
-              <p class="m-t-20">
-              <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
-                <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
-                <a class="btn btn-primary" id="downloadLinux" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz">Download Free</a>
-                <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
+  
+    
+<section id="videoBg" class="black-back main-banner">
+  <div class="container">
+    <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-small">
+    <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-large">
+    
+    <div class="row">
+      <div class="col-md-7">
+      <div class="banner_intro features_banner">
+            <h2 class="banner_heading_new">Elevate productivity by accessing  <br>your business contacts.</h2>
+            <p class="banner_sub_heading m-t-15">Contacts is all about making use of the information you have stored about your customers – their transaction history, how much you have bought from-and-sold to them, where they’re located and so on.</p>
+            <p class="m-t-20 banner-btn">
+              <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
+              <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
             </p>
         </div>
-        <div class="right-section">
-          <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
-          <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-new_2 bn-3">
-          <img src="../assets/images/share-data/share-data-banner.png" alt="Tally your books with giddh" class="multi-user-accounting-software-img">
-        </div>
+      </div>
+  <!-- col end -->
+  <div class="col-md-5">
+    <div class="right-section">
+      <img src="../assets/images/contact/contact.svg" style="width: 440px;" alt="Tally your books with giddh" class="cloud-accounting-software-img">
     </div>
-  </section> <!-- end of videoBg -->
+  </div>
+  <!-- col end -->
+  </div>
+<!-- row end -->
+  </div>
+<!-- container end -->
+</section> <!-- end of videoBg -->
+
   
   <!-- home content end -->
   <section class="graybg graybg-reporting  homeContent" id="feature">
