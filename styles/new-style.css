@@ -413,6 +413,9 @@ ul#cardList {
 .no-padding {
     padding: 0px !important;
 }
+.main-banner .container {
+    max-width: 1220px;
+}
 
 
 .go-top {width: 60px;display: inline-block;position: fixed;right: 19px;bottom: 100px;background: #45455f;padding: 17px;border-radius: 90px;z-index: 9999999;}
