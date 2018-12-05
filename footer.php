@@ -25,7 +25,7 @@
                                     </li> -->
                                 </ul>
                         </div>
-                        <div class="col-sm-6 col-xs-6">
+                        <div id="mobile-app" class="col-sm-6 col-xs-6">
                           <h3>Mobile App</h3>
                           <ul class="app_download">
                                   <li>
@@ -38,7 +38,6 @@
                                           <i class="fab fa-android"></i>
                                       </a>
                                   </li>
-                                
                               </ul>
                         </div>
                   </div>
@@ -239,6 +238,15 @@ jQuery(document).ready(function($){
     }
   });
 
+
+//sadik smooth scroller
+$('a[rel="relativeanchor"]').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+}); 
+
   // onwindow scroll
   $(window).scroll(function(){
     
@@ -285,6 +293,9 @@ $(document).ready(function () {
     numToIncrement = 3;
     $('#cardList').find('li').hide().slice(x, x + numToShow).show();
 });
+
+
+
 
 
 </script>

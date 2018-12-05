@@ -24,31 +24,36 @@
   <?php include 'header.php';?>  
   <!-- end navigation -->
 
+  
   <section id="videoBg" class="black-back main-banner">
-    <!-- <div class="scroll-btn">
-      <a href="#feature" class="page-scroll"></a>
-    </div> -->
-   
-    <div class="intro home flex-box-banner slide show container">
-    <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one-01">
-        <div class="banner_intro features_banner left-align_new">
-              <h1 class="banner_heading_new">Serve International Customers with Multi-Currency Accounting</h1>
-              <p class="banner_sub_heading m-t-15">Multi-currency accounting enables you to serve overseas clients <br>
-& turn your business into an International brand.</p>
-              <p class="m-t-20">
-              <a class="btn btn-primary" id="downloadWindows" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app+Setup+6.4.0.exe">Download Free</a>
-                <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
-                <a class="btn btn-primary" id="downloadLinux" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz">Download Free</a>
-                <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
+  <div class="container">
+    <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-small">
+    <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-large">
+    
+    <div class="row">
+      <div class="col-md-7">
+      <div class="banner_intro features_banner">
+            <h2 class="banner_heading_new">Serve International Customers <br>with Multi-Currency Accounting</h2>
+            <p class="banner_sub_heading m-t-15">Multi-currency accounting enables you to serve overseas clients <br>& turn your business into an International brand.  </p>
+            <p class="m-t-20 banner-btn">
+              <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
+              <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
             </p>
         </div>
-        <div class="right-section">
-          <!-- <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-one bn-3"> -->
-          <img src="../assets/images/Cloud Icon.svg" alt="" class="multi_sky bn-3">
-          <img src="../assets/images/multi-currency/multi-currency-banner.png" alt="Tally your books with giddh" class="multi-currency-accounting-software-img">
-        </div>
+      </div>
+    <!-- col end -->
+    <div class="col-md-5">
+      <div class="right-section">
+        <img src="../assets/images/multi-currency/multi-currency-banner.png" alt="Tally your books with giddh" style="width: 350px;" class="cloud-accounting-software-img">
+      </div>
     </div>
+    <!-- col end -->
+    </div>
+  <!-- row end -->
+    </div>
+  <!-- container end -->
   </section> <!-- end of videoBg -->
+
   
   <!-- home content end -->
   <section class="graybg graybg-reporting  homeContent" id="feature">

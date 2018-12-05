@@ -109,7 +109,7 @@
                             <div class="thumbnail feature_thumbnail">
                                 <img src="../assets/images/share_data.svg" alt="Manage GST with Giddh">
                               <div class="caption">
-                                <h3><a href="">Mobile App</a></h3>
+                                <h3><a rel="relativeanchor" href="#mobile-app">Mobile App</a></h3>
                                 <p>The power of automated accounting in your hands now with Giddh’s robust mobile application.</p>
                               </div>
                             </div>

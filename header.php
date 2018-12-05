@@ -63,6 +63,45 @@
                         </li>
                         <li class="">
                             <a href="/features.php" class="page-scroll" ng-class="{white:whiteLinks && !loginPage}">Features</a>
+
+                            <div class="sub-nav">
+                                <h3>Giddh product features</h3>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <ul>
+                                            <li><a href="gst.php">GST Compliance</a></li>
+                                            <li><a href="invoice-software.php">Invoicing</a></li>
+                                            <li><a href="accounting-dashboard.php">Dashboard</a></li>
+                                            <li><a href="cloud-accounting-software.php">Anywhere-Anytime</a></li>
+                                            <li><a href="conect-bank-reconcile.php">Bank Reconciliation</a></li>
+                                            <li><a href="#mobile-app" rel="relativeanchor">Mobile App</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul>
+                                            <li><a href="financial-reporting.php">Reports & Analysis</a></li>
+                                            <li><a href="import-data.php">Import Excel Files</a></li>
+                                            <li><a href="conect-bank-reconcile.php">Linked Bank Account</a></li>
+                                            <li><a href="multi-currency-accounting-software.php">Multi Currency</a></li>
+                                            <li><a href="#">Search</a></li>
+                                            <li><a href="multi-user-accounting-software.php">Share Data</a></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <ul>
+                                            <li><a href="inventory-management-software.php">Inventory</a></li>
+                                            <li><a href="https://developers.giddh.com/collection" target="_blank">API Integration</a></li>
+                                            <li><a href="tallyplusgiddh.php">Tally Integration</a></li>
+                                            <li><a href="contacts.php">Contact</a></li>
+                                            <li><a href="security.php">Security</a></li>
+                                            <li><a href="features.php">All Features</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </li>
                         <li class="">
                             <a href="gst.php" class="page-scroll" ng-class="{white:whiteLinks && !loginPage}">GST</a>
@@ -194,7 +233,7 @@
         e.preventDefault();
     })
     jQuery(function($) {
-        $(".usernavi li a")
+        $(".usernavi > li > a")
             .click(function(e) {
                 var link = $(this);
                 // refresh = false;
