@@ -123,9 +123,8 @@
   <section class="graybg p-t-70">
     <div class="container area-flex  blog_center_new">
           <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/link-account-reconcile/link-account-reconcile-blog.png" width="200" alt=""></div>
-          <span class="blog-reporting">How do I find my Bank account <br>transactions automatically in Giddh?<br>
-
-          <a href="#" target="_blank">Read more...</a>
+          <span class="blog-reporting">Online accounting software <br>that lead to business growth<br>
+          <a href="https://blog.giddh.com/6-features-of-online-accounting-software-that-lead-to-business-growth-4eab1cb0c95e" target="_blank">Read more...</a>
           </span>
           </div>
     </div>
