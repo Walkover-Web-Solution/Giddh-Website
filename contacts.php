@@ -45,7 +45,7 @@
   <!-- col end -->
   <div class="col-md-5">
     <div class="right-section">
-      <img src="../assets/images/contact/contact.svg" style="width: 440px;" alt="Tally your books with giddh" class="cloud-accounting-software-img">
+      <img src="../assets/images/contact/contact.svg" style="width: 400px;" alt="Tally your books with giddh" class="cloud-accounting-software-img">
     </div>
   </div>
   <!-- col end -->
