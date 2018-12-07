@@ -1415,7 +1415,7 @@ div{box-sizing:border-box;}
 .sFSection .valid-msg, .sFSection .error-msg{margin-left:54px !important;}
 .vertical-center{position:relative;top:50%;transform:translateY(-50%);text-align:center;}
 .vertical-center p{font-size:18px;margin-bottom:20px;}
-#downloadWindows, #downloadMacOS, #downloadLinux{display:none;}
+/* #downloadWindows, #downloadMacOS, #downloadLinux{display:none;} */
 .knownOS{display:inline-block !important;}
 .intl-tel-input.allow-dropdown{margin-top:5px;}
 @media (min-width:768px){.modal-dialog{width:500px;margin:30px auto;}
