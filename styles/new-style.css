@@ -354,7 +354,13 @@ figure h1{margin-bottom:5px;}
 /* html {
     scroll-behavior: smooth;
 } */
-
+.main-banner .row {
+    display: flex;
+    align-items: flex-end;
+}
+.main-banner .banner-btn {
+    margin-bottom: 0px;
+}
 .navbar-custom .navbar-nav > li:hover .sub-nav {
     visibility: visible;
     opacity: 1;
