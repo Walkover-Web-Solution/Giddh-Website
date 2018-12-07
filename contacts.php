@@ -35,7 +35,7 @@
       <div class="col-md-7">
       <div class="banner_intro features_banner">
             <h2 class="banner_heading_new">Elevate productivity by accessing  <br>your business contacts.</h2>
-            <p class="banner_sub_heading m-t-15">Contacts is all about making use of the information you have stored about your customers – their transaction history, how much you have bought from-and-sold to them, where they’re located and so on.</p>
+            <p class="banner_sub_heading m-t-15">All the information you have stored about your customers – their transaction history, balance to be paid or received, personal info and so on.</p>
             <p class="m-t-20 banner-btn">
               <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
               <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>

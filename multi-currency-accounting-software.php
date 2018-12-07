@@ -44,7 +44,7 @@
     <!-- col end -->
     <div class="col-md-5">
       <div class="right-section">
-        <img src="../assets/images/multi-currency/multi-currency-banner.png" alt="Tally your books with giddh" style="width: 350px;" class="cloud-accounting-software-img">
+        <img src="../assets/images/multi-currency/multi-currency-banner.svg" alt="Tally your books with giddh" style="width: 350px;" class="cloud-accounting-software-img">
       </div>
     </div>
     <!-- col end -->
