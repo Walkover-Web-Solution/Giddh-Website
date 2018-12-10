@@ -36,7 +36,10 @@
             <h2 class="banner_heading_new">Serve International Customers <br>with Multi-Currency Accounting</h2>
             <p class="banner_sub_heading m-t-15">Multi-currency accounting enables you to serve overseas clients <br>& turn your business into an International brand.  </p>
             <p class="m-t-20 banner-btn">
-              <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
+            <a class="btn btn-primary" id="downloadWindows" href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20{{apkVersion}}.exe">Download Free</a>
+              <a class="btn btn-primary" id="downloadMacOS" href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-{{apkVersion}}.dmg">Download Free</a>
+              <a class="btn btn-primary" id="downloadLinux" href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20{{apkVersion}}.exe">Download Free</a>
+              
               <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
             </p>
         </div>

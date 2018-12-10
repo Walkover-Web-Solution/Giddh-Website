@@ -37,7 +37,9 @@
             <h2 class="banner_heading_new">Elevate productivity by accessing  <br>your business contacts.</h2>
             <p class="banner_sub_heading m-t-15">All the information you have stored about your customers – their transaction history, balance to be paid or received, personal info and so on.</p>
             <p class="m-t-20 banner-btn">
-              <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
+              <a class="btn btn-primary" id="downloadWindows" href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20{{apkVersion}}.exe">Download Free</a>
+                <a class="btn btn-primary" id="downloadMacOS" href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-{{apkVersion}}.dmg">Download Free</a>
+                <a class="btn btn-primary" id="downloadLinux" href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20{{apkVersion}}.exe">Download Free</a>
               <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
             </p>
         </div>
@@ -45,7 +47,7 @@
   <!-- col end -->
   <div class="col-md-5">
     <div class="right-section">
-      <img src="../assets/images/contact/contact.svg" style="width: 440px;" alt="Tally your books with giddh" class="cloud-accounting-software-img">
+      <img src="../assets/images/contact/contact.svg" style="width: 400px;" alt="Tally your books with giddh" class="cloud-accounting-software-img">
     </div>
   </div>
   <!-- col end -->

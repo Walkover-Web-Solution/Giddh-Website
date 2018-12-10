@@ -37,7 +37,9 @@
             <h2 class="banner_heading_new">Monitor your transactions by  <br>connecting bank accounts</h2>
             <p class="banner_sub_heading m-t-15">Once your bank account connects to Giddh, you get an overview of the most important asset of your business – cash.</p>
             <p class="m-t-20 banner-btn">
-              <a class="btn btn-primary" id="downloadMacOS" href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.dmg">Download Free</a>
+            <a class="btn btn-primary" id="downloadWindows" href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20{{apkVersion}}.exe">Download Free</a>
+              <a class="btn btn-primary" id="downloadMacOS" href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-{{apkVersion}}.dmg">Download Free</a>
+              <a class="btn btn-primary" id="downloadLinux" href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20{{apkVersion}}.exe">Download Free</a>
               <a class="talktosale" data-toggle="modal" data-target="#talkToSales_dialog"><span class="glyphicon glyphicon-earphone"></span>Talk to Sales</a>
             </p>
         </div>
@@ -122,7 +124,7 @@
   
   <section class="graybg p-t-70">
     <div class="container area-flex  blog_center_new">
-          <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/link-account-reconcile/link-account-reconcile-blog.png" width="200" alt=""></div>
+          <div class="center-divbox"><div class="pioneer blog_center_new"><img src="../assets/images/link-account-reconcile/link-account-reconcile-blog.png" width="200" alt=""></div>  
           <span class="blog-reporting">Online accounting software <br>that lead to business growth<br>
           <a href="https://blog.giddh.com/6-features-of-online-accounting-software-that-lead-to-business-growth-4eab1cb0c95e" target="_blank">Read more...</a>
           </span>
