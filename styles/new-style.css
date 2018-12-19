@@ -715,7 +715,21 @@ img.img-responsive.ac-img{top:0px;}
     margin: 0px auto;
     width: 300px;
 }
-
+.footer-meta-heading h1 {
+    display: block;
+}
+.invoicing h2.center_heading {
+    font-size: 28px !important;
+}
+.financial-services img {
+    margin-bottom: 20px;
+}
+.main-banner .row {
+    display: block;
+}
+.financial-services h2 {
+    font-size: 20px !important;
+}
 .container.blog_center_new {
     width: auto !important;
 }
@@ -724,6 +738,7 @@ img.img-responsive.ac-img{top:0px;}
 }
 .pioneer {
     padding-right: 0px !important;
+    margin-bottom: 20px;
 }
 span.blog-reporting {
     font-size: 20px !important;
@@ -931,9 +946,14 @@ body.unresponsive .container{width:970px !important;max-width:none !important;}
     width: 80%;
 }
 }
-@media only screen and (max-width:767px){.center-block img{margin:0 auto;}
+@media only screen and (max-width:767px){
+.center-block img{margin:0 auto;}
 .hide-xs{display:none;}
 .hide-sm{display:block;}
+}
+ul.reportint-list li {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .vh100{height:100vh;}
 .about-tab-content{padding:0 !important;}
