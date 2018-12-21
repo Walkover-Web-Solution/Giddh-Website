@@ -715,6 +715,15 @@ img.img-responsive.ac-img{top:0px;}
     margin: 0px auto;
     width: 300px;
 }
+
+ul#cardList {
+    text-align: center;
+    float: none;
+}
+#cardList li {
+    float: none;
+    display: inline-block;
+}
 .footer-meta-heading h1 {
     display: block;
 }
@@ -951,6 +960,12 @@ body.unresponsive .container{width:970px !important;max-width:none !important;}
 .hide-xs{display:none;}
 .hide-sm{display:block;}
 }
+
+.all-features {
+    border-right: 0px solid #222;
+    display: inline-block;
+}
+
 ul.reportint-list li {
     padding-top: 10px;
     padding-bottom: 10px;
