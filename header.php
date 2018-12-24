@@ -67,7 +67,7 @@
                             <div class="sub-nav">
                                 <h3>Giddh product features</h3>
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-xs-6">
                                         <ul>
                                             <li><a href="gst.php">GST Compliance</a></li>
                                             <li><a href="invoice-software.php">Invoicing</a></li>
@@ -77,7 +77,7 @@
                                             <li><a href="#mobile-app" rel="relativeanchor">Mobile App</a></li>
                                         </ul>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-xs-6">
                                         <ul>
                                             <li><a href="financial-reporting.php">Reports & Analysis</a></li>
                                             <li><a href="import-data.php">Import Excel Files</a></li>
@@ -88,7 +88,7 @@
                                         </ul>
                                     </div>
                                     
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-xs-6">
                                         <ul>
                                             <li><a href="inventory-management-software.php">Inventory</a></li>
                                             <li><a href="https://developers.giddh.com/collection" target="_blank">API Integration</a></li>
