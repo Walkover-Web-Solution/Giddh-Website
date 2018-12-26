@@ -22,8 +22,6 @@
   <?php include 'header.php';?>  
   <!-- end navigation -->
 
-
-  
 <section id="videoBg" class="black-back main-banner">
   <div class="container">
     <img src="../assets/images/Cloud Icon.svg" alt="" class="sky-small">
