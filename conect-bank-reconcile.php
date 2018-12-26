@@ -152,7 +152,7 @@
               <li><a href="financial-reporting.php">Financial reporting</a></li>
               <li><a href="multi-user-accounting-software.php">Share Data</a></li>
               <li><a href="import-data.php">Import data</a></li>
-              <li><a href="inventorymanagement-software.php">Management software</a></li>
+              <li><a href="inventory-management-software.php">Management software</a></li>
             </ul>
           </div>
 

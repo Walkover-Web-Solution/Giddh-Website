@@ -90,7 +90,7 @@
                                     
                                     <div class="col-md-4 col-xs-6">
                                         <ul>
-                                            <li><a href="inventorymanagement-software.php">Inventory</a></li>
+                                            <li><a href="inventory-management-software.php">Inventory</a></li>
                                             <li><a href="https://developers.giddh.com/collection" target="_blank">API Integration</a></li>
                                             <li><a href="tallyplusgiddh.php">Tally Integration</a></li>
                                             <li><a href="contacts.php">Contact</a></li>
