@@ -266,6 +266,7 @@ img.img-responsive.ac-img{position:relative;}
 .whitebg.homeContent{padding:73px 0;}
 .homeContent{padding:90px 0 30px 0;text-align:center;color:white;font-family:'CambriaRegular' !important;}
 .homeContent a{font-size:18px;color:#1062BF;}
+.homeContent a:focus{text-decoration: none;}
 #homepage{padding:80px 0;}
 #homepage .head{margin-bottom:60px;}
 #homepage .row{padding:0;}
