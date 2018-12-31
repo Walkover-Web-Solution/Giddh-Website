@@ -280,7 +280,7 @@ img.img-responsive.ac-img{position:relative;}
 .homeContent figure figcaption span{color:#fff}
 .blueBg{background-color:#28283C;}
 figure h1{margin-bottom:5px;}
-.blueBg.homeContent.details{text-align:left;background:#28283C url('/assets/images/new/banner-grid-design.png') repeat top left}
+.blueBg.homeContent.details{text-align:left;background:#28283C url('../assets/images/new/banner-grid-design.png') repeat top left}
 .blueBg.homeContent.details h2{font-size:46px}
 .blueBg.homeContent.details figure figcaption{color:#F05038;font-size:20px;margin:10px 0;}
 .blueBg.homeContent.details figure p{color:#8888B5;font-size:16px;margin-bottom:50px;}
