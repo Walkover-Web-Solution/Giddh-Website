@@ -266,6 +266,7 @@ img.img-responsive.ac-img{position:relative;}
 .whitebg.homeContent{padding:73px 0;}
 .homeContent{padding:90px 0 30px 0;text-align:center;color:white;font-family:'CambriaRegular' !important;}
 .homeContent a{font-size:18px;color:#1062BF;}
+.homeContent a:focus{text-decoration: none;}
 #homepage{padding:80px 0;}
 #homepage .head{margin-bottom:60px;}
 #homepage .row{padding:0;}
@@ -279,7 +280,7 @@ img.img-responsive.ac-img{position:relative;}
 .homeContent figure figcaption span{color:#fff}
 .blueBg{background-color:#28283C;}
 figure h1{margin-bottom:5px;}
-.blueBg.homeContent.details{text-align:left;background:#28283C url('/assets/images/new/banner-grid-design.png') repeat top left}
+.blueBg.homeContent.details{text-align:left;background:#28283C url('../assets/images/new/banner-grid-design.png') repeat top left}
 .blueBg.homeContent.details h2{font-size:46px}
 .blueBg.homeContent.details figure figcaption{color:#F05038;font-size:20px;margin:10px 0;}
 .blueBg.homeContent.details figure p{color:#8888B5;font-size:16px;margin-bottom:50px;}
@@ -352,7 +353,7 @@ figure h1{margin-bottom:5px;}
 /* my css start */
 
 .feature_thumbnail {
-    transition: .5s all ease;
+    transition: .3s all ease;
     overflow: hidden;
 }
 .feature_thumbnail:hover {

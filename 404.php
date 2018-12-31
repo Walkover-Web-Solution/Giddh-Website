@@ -6,9 +6,8 @@
   <title>Page Not Found | Giddh</title>
   <?php include 'head.php';?>
 </head>
-<body ng-controller="homeController as vm" id="page-top">
+<body style="background: none;" ng-controller="homeController as vm" id="page-top">
 
-  <!-- <ng-include src="'header.html'"></ng-include> -->
   <?php include 'header.php';?>  
 
   <section id="videoBg" class="intro no-result">
@@ -26,9 +25,8 @@
   </section> 
 
 
-  <ng-include src="'footer.html'"></ng-include>
-  
   <?php include 'footScript.php';?>
+  <?php include 'footer.php';?> 
 
 </body>
 </html>
