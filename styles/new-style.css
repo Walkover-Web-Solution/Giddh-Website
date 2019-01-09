@@ -351,7 +351,9 @@ figure h1{margin-bottom:5px;}
 .tallybook{width:681px;}
 
 /* my css start */
-
+.privacy-text ol {
+    padding-left: 15px;
+}
 .feature_thumbnail {
     transition: .3s all ease;
     overflow: hidden;
@@ -362,7 +364,6 @@ figure h1{margin-bottom:5px;}
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     box-shadow: 0 3px 5px 0 rgba(0,0,0,0.08);
-
 }
 .small-mg .feature_thumbnail:hover {
     transform: scale(1);
