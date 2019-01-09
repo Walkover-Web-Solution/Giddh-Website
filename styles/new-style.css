@@ -1317,6 +1317,7 @@ body{background:#EDECEC;}
 .footer-contacts p{font-size:15px !important;color:#BFBFC4;line-height:23px !important;}
 
 .footer-contacts p a {color:#BFBFC4;}
+.footer-contacts p a:hover {text-decoration: underline;}
 .fa-rotate-109{-moz-transform:rotate(109deg);-ms-transform:rotate(109deg);-o-transform:rotate(109deg);transform:rotate(109deg);}
 .fa.fa-phone{font-size:11px;position:relative;right:5px;}
 p.allright{color:#5C5C6C !important;font-size:12px !important;}
