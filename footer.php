@@ -65,9 +65,9 @@
                     <div class="col-sm-6">
                       <h2>Contact Us</h2>
                       <p>
-                      Sales : shubhendra@giddh.com <br>
-                      Support: support@giddh.com<br>
-                      <i class="fa fa-phone fa-rotate-109"></i>079 39 59 3939<i class="fa fa-phone fa-rotate-109 m-l-10"></i>080 33 03 7089
+                      Sales : <a href="mailto:shubhendra@giddh.com">shubhendra@giddh.com</a> <br>
+                      Support: <a href="mailto:support@giddh.com"> support@giddh.com</a><br>
+                      <i class="fa fa-phone fa-rotate-109"></i><a href="tel:07939593939">079 39 59 3939</a> <i class="fa fa-phone fa-rotate-109 m-l-10"></i><a href="tel:08033037089">080 33 03 7089</a>
                       </p>
                       <p class="allright">
                       all rights are reserved 2020 Walkover Giddh.com
