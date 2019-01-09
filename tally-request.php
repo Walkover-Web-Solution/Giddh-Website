@@ -21,9 +21,8 @@
    preg_match($rx, $urlx, $data);
   
   
-  $url = "http://api.giddh.com/company/".$data[1]."/import-master-data?isMaster="+$_GET['isMaster'];
-  
-  $ch = curl_init();
+    $url = "http://api.giddh.com/company/".$data[1]."/import-master-data?isMaster=".$_GET['isMaster'];
+    $ch = curl_init();
     curl_setopt_array($ch, array(
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_URL => $url,
