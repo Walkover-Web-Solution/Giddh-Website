@@ -351,6 +351,9 @@ figure h1{margin-bottom:5px;}
 .tallybook{width:681px;}
 
 /* my css start */
+h4.heading-4 {
+    font-size: 30px;
+}
 .privacy-text ol {
     padding-left: 15px;
 }
