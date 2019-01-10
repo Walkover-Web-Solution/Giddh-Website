@@ -98,33 +98,32 @@
 
 <p>We do not sell, trade, or otherwise transfer to outside parties your personal information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, as long as those parties are obliged to keep this information confidential (such as payment processing or accounting services). </p>
 <p>Depending on your engagement with our Website, Blog, and Service, we may process your information using third party processors listed below.</p>
-<p><ul class="d-inline"><li>Facebook</li></ul> <a href="">(Privacy Policy)</a> <br>
+
+<p><ul class="d-inline"><li>Facebook</li></ul> <a target="_blank" href="https://www.facebook.com/policy.php">(Privacy Policy)</a> <br>
 We may process the data you provided in one of the forms at our Website or Blog using Facebook tools for customizing the content we promote and for more precise targeting of our promotional materials.
 </p>
 
 
-<p><ul class="d-inline"><li>Google</li> </ul><a href="">(Privacy Policy)
+<p><ul class="d-inline"><li>Google</li> </ul><a target="_blank" href="https://policies.google.com/privacy?hl=en">(Privacy Policy)
 </a> <br>Upon your registration to our Service, we start processing your user id with Google Analytics, Google AdWords, Google Tag Manager. We use Google Analytics to access statistical data about our users and to discover which parts of our website and software need improvement. We promote our service and our content with Google AdWords, the data we collect about our users allows us to better target our ads as well as customize our remarketing campaigns. Google Tag Manager helps us sync all the stats we collect across all the systems we use.
 </p>
 
-<p><ul class="d-inline"><li>FullStory</li></ul> <a href=""> (Privacy Policy)
+<p><ul class="d-inline"><li>FullStory</li></ul> <a target="_blank" href="https://www.fullstory.com/legal/privacy/"> (Privacy Policy)
 </a> <br>FullStory is an analytical solution that helps us understand our subscribers behavior in our service and assist our users with solving some of their technical problems. At the moment of signing up for the free trial, we start processing your user id in FullStory.
 </p>
 
-<p><ul class="d-inline"><li>Intercom</li></ul> <a href="">(Privacy Policy)</a> <br>
+<p><ul class="d-inline"><li>Intercom</li></ul> <a target="_blank" href="https://www.intercom.com/terms-and-policies">(Privacy Policy)</a> <br>
 Intercom is a help desk software we use to respond to questions from our users as well as contact users offering some help during their free & subscription period. We process email addresses, first and last names as well as user id numbers via Intercom, as those are the data necessary for sales and support communication with our users.
 </p>
 
-<p><ul class="d-inline"><li>Leadsquared</li></ul> <a href="">(Privacy Policy)</a> <br>
+<p><ul class="d-inline"><li>Leadsquared</li></ul> <a target="_blank" href="https://www.leadsquared.com/privacy-policy/">(Privacy Policy)</a> <br>
 Leadsquared is the CRM (customer relationship management) solution we use to keep track of our trial and subscribe users’ activities and our contact with them since the beginning of their trial period. At the moment of signing up for the subscription, we start processing your user id, username, email address, first and last name and company website address, phone with Leadsquared.
 </p>
 
 
 
-<h3 class="lead">You are responsible for checking the Privacy Policy of any third-party applications the Service links to</h3>
-<p>The Service may contain links enabling the electronic transfer of data with third-party applications. Giddh takes no responsibility for the privacy practices or content of these applications.</p>
-
-
+<div class="text-left">
+<h4 class="heading-4">Yodlee terms of use</h4></div>
 
 <div class="privacy-text">
 	<p><i>Your use of automated bank account feeds enabled by the Yodlee data gathering service (Yodlee Service) from within the Giddh Service (Service) is subject to the following terms. These terms should be read in conjunction with the terms and conditions for your own Internet Banking services.</i></p>
@@ -153,6 +152,9 @@ Leadsquared is the CRM (customer relationship management) solution we use to kee
 </div>
 
 
+<h3 class="lead">You are responsible for checking the Privacy Policy of any third-party applications the Service links to</h3>
+
+<p>The Service may contain links enabling the electronic transfer of data with third-party applications. Giddh takes no responsibility for the privacy practices or content of these applications.</p>
 
 <h3 class="lead">This policy may be updated from time to time</h3>
 <p>Giddh reserves the right to change this policy at any time and any amended policy is effective upon the posting on this website. Giddh will make every effort to communicate these changes to You via email or notification via the website.</p>
