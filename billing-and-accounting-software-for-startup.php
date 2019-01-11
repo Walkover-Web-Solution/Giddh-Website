@@ -8,7 +8,7 @@
   <title>Accounting Software for Startup Agency | Online Invoicing and Billing Software for Startup Agencies- Giddh</title>
 
   <?php include 'head.php';?>
-
+  
 </head>
 
 <!-- {oh:geo.country != 'IN'} -->

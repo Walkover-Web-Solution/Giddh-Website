@@ -7,6 +7,7 @@
   <!-- <meta http-equiv=“Content-Type” content=“text/html; charset=utf-8"> -->
   <title>Giddh ~ About Us</title>
   <?php include 'head.php';?>
+
   <link href="/styles/new-style.css" rel="stylesheet">
 
   

@@ -5,6 +5,7 @@
   <meta name="keywords" content="bookkeeping software affiliate, Accounting softwares reseller"/>
   <title> Accounting Software Affiliate | Giddh</title>
   <?php include 'head.php';?>
+
 </head>
 <body ng-controller="homeController as vm" id="page-top">
 
