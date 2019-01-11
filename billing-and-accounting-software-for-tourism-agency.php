@@ -8,7 +8,7 @@
   <title>Accounting Software for Tourism Agency | Online Invoicing and Billing Software for Tourism Agencies-  Giddh</title>
 
   <?php include 'head.php';?>
-
+  
 </head>
 
 <!-- {oh:geo.country != 'IN'} -->
