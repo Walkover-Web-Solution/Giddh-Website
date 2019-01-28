@@ -33,7 +33,7 @@
     </div>
 </div>
 
-<nav role="navigation" class="navbar navbar-custom navbar-fixed-top" ng-class="{'transparent':!magicLinkPage, 'fixedHeader' : fixedHeader}">
+<nav role="navigation" class="navbar navbar-custom navbar-fixed-top nav-testing" ng-class="{'transparent':!magicLinkPage, 'fixedHeader' : fixedHeader}">
     <div class="container-fluid">
         <div class="row">
             <div class="navbar-header">
