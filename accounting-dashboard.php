@@ -62,7 +62,9 @@
             <div class="col-sm-12">
               <h2 class="center_heading">Assess your numbers in one glance</h2>
               <div class="middle-width"> <p>Gain actionable insights and easily evaluate growth of your business. Real-time accounting dashboard offers you a bird eye’s view to your business health on a single window. Actively keep an eye on the net worth, revenue, profit/loss and other key information of your business.</p></div>
-              <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+              <!-- <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a> -->
+              <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-70">Try Now</a>
+                      </div>
           </div>
       </div>
       

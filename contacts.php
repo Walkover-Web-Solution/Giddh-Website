@@ -65,11 +65,11 @@
             <div class="col-sm-12">
               <h2 class="center_heading">Track and manage your contacts in one glance</h2>
               <div class="middle-width"> <p>Keeping track of information about customers and business done with them can get overwhelming. Giddh Contacts solves this problem once and for all by giving a single screen view of all your contacts and your business history with them.</p></div>
-              <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+              <!-- <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a> -->
+              <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-70">Try Now</a>
           </div>
           </div>
           </div>
-      
   </section> 
   <section class="whitebg left-text">
     <div class="container">

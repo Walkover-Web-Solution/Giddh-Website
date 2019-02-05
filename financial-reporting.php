@@ -68,7 +68,8 @@ or a growing e-commerce one.</p>
           <div class="col-sm-12">
             <h2 class="center_heading">Smart accounting reports for business of any size</h2>
             <div class="middle-width"><p>Stay on top of your numbers and make informed business decisions. Analyse and share your vital financial reports like- balance sheet, trial balance, profit/loss to the key decision maker of your business. Giddh gives you all reports you may need to run your business better.</p></div>
-            <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Expert</a>
+            <!-- <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Expert</a> -->
+            <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-70">Try Now</a>
         </div>
     </div>
     

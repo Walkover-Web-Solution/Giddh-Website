@@ -225,8 +225,33 @@ body.light .navbar.transparent{background:transparent;box-shadow:none;}
 .google{background:#DE4D3C;}
 .linkedin{background:#0E78AA;}
 .mobile{background:#26263A;}
-.btn-login{letter-spacing:1px;text-transform:uppercase;color:#fff;margin-bottom:10px;display:inline-block;vertical-align:middle;-webkit-transform:translateZ(0);transform:translateZ(0);box-shadow:0 0 1px rgba(0, 0, 0, 0);-webkit-backface-visibility:hidden;backface-visibility:hidden;-moz-osx-font-smoothing:grayscale;-webkit-transition-duration:0.3s;transition-duration:0.3s;-webkit-transition-property:transform;transition-property:transform;}
-.btn-login:hover, .btn-login:focus, .btn-login:active{-webkit-transform:scale(1.1);transform:scale(1.1);}
+.btn-login {
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: inline-block !important;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    padding: 0px 20px !important;
+    height: 36px;
+    margin-right: 10px;
+    line-height: 33px;
+    font-size: 18px;
+    transition: .3s all ease;
+}
+.btn-login:hover {
+    background: transparent;
+}
+.btn-login:hover {
+    background-color: transparent !important;
+    border-color: #fff !important;
+}
+/* .btn-login:hover, .btn-login:focus, .btn-login:active{-webkit-transform:scale(1.1);transform:scale(1.1);} */
 .giddh-spinner{animation:rotate 1.5s infinite linear;background:#221F1F none repeat scroll 0 0;border:7px solid #C63B13;border-radius:50%;box-shadow:0 -10px 0 14px #fff inset;box-sizing:border-box;height:60px;width:60px;margin:0 auto 20px;}
 @keyframes rotate{0%{transform:rotate(0deg);}
 100%{transform:rotate(360deg);}
@@ -353,6 +378,14 @@ figure h1{margin-bottom:5px;}
 /* my css start */
 h4.heading-4 {
     font-size: 30px;
+}
+.head-btn li {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+}
+.head-btn {
+    margin-top: 17px;
 }
 .privacy-text ol {
     padding-left: 15px;
@@ -705,7 +738,18 @@ button.toast-close-button{padding:0;cursor:pointer;background:transparent;border
 .usernavi li a.active:after{position:absolute;width:60px;background:var(--secondry-color);height:2px;content:"";bottom:15px;left:0;}
 .navbar-custom .navbar-nav > li > a.talktoexpert:hover:after{background:transparent;}
 .d-inline{display:inline-block;}
-.book-demo{background:transparent !important;border-color:#fff !important;}
+.book-demo {
+    background: transparent !important;
+    border-color: #fff !important;
+    margin-top: 0px;
+    height: 36px !important;
+    line-height: 20px !important;
+    margin-right: 10px;
+}
+.book-demo:hover {
+    background: var(--secondry-color) !important;
+    border-color: var(--secondry-color) !important;
+}
 .slide-3{background:url(/assets/images/subtraction.svg);background-repeat:no-repeat;background-size:100%;background-position:bottom -20px center;align-items:flex-start;padding-top:190px;}
 .banner-3-bottom{position:absolute;bottom:80px;width:600px;text-align:center;}
 .banner-3-bottom a.btn-lg-red{display:inline-block;background:#E34B26;color:#fff;font-size:29px;box-shadow:0 3px 10px #2c2c3e;border-radius:2px;padding:12px 20px;}
@@ -740,6 +784,11 @@ button.toast-close-button{padding:0;cursor:pointer;background:transparent;border
 .homeContent{padding:60px 0;}
 }
 @media only screen and (max-width:767px) {
+.head-btn {
+    float: none;
+    margin-left: 20px;
+}
+
 .navbar-collapse.navbar-main-collapse{background-color:#fff;}
 .section-left h1{margin-top:0;}
 #loginButton{margin-left:0 !important;}
@@ -1373,7 +1422,7 @@ p.allright{color:#5C5C6C !important;font-size:12px !important;}
 .glyphicon-earphone{position:relative;top:3px;}
 .banner_heading_secondry{font-size:18px;color:#C8C8C8;margin-top:15px;}
 .banner_heading_secondry a{color:var(--secondry-color);}
-.navbar-right .btn{margin-left:17px;}
+/* .navbar-right .btn{margin-left:17px;} */
 .m-r-15{margin-right:15px !important;}
 .sky-one-01{width:179px;position:absolute;top:100px;right:20px;opacity:0.05;z-index:9999999;}
 .sky-one{width:179px;position:absolute;top:-200px;right:-300px;opacity:0.05;}
@@ -1395,7 +1444,7 @@ a:hover{text-decoration:none;}
 .see-company h1 span:after{left:250px !important;}
 .banner-gst h2{font-size:35px;}
 .navbar-custom .usernavi li a{line-height:30px !important;}
-.navbar-custom .navbar-right li a{line-height:35px !important;}
+/* .navbar-custom .navbar-right li a{line-height:35px !important;} */
 .small-img{display:block;}
 .big-img{display:none;}
 #feature .row{padding:0 0 20px 0 !important;}
@@ -1414,7 +1463,7 @@ a:hover{text-decoration:none;}
 .navbar .navbar-right{top:-16px;margin-right:0 !important;}
 .navbar-collapse{padding-right:0;padding-left:0;}
 .navbar-custom .navbar-nav > li > a, .navbar-custom .navbar-nav > li{text-align:left;}
-.navbar-right .btn{margin-left:36px;}
+/* .navbar-right .btn{margin-left:36px;} */
 .right-section{padding:15px;}
 .right-section img{margin:50px auto;}
 section{height:auto !important;}
