@@ -66,7 +66,8 @@
                     <div class="col-sm-12">
                       <h2 class="center_heading">Run your business from any corner of the world!</h2>
                       <div class="width-900"><p>All you ever need to be on top of your accounting is just an active internet connection. Conduct your business from anywhere with our cloud based accounting solution. Manage inventory, file GST returns, or reconcile your books; the possibilities are truly limitless with Giddh cloud accounting.</p></div>
-                      <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+                      <!-- <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a> -->
+                      <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-70">Try Now</a>
                   </div>
               </div>
              

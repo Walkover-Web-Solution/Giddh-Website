@@ -64,7 +64,8 @@
                     <div class="col-sm-12">
                       <h2 class="center_heading">Save time with Invoicing Solutions</h2>
                      <div class="middle-width"> <p>Giddh makes the dull job of creating invoices so simple, you'll be amazed how much time you can save to focus on your core business activities. With its beautiful templates and customization options, Giddh is the best invoicing partner for all kinds of business owners.</p></div>
-                      <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+                      <!-- <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a> -->
+                      <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-70">Start Your Trial</a>
                   </div>
               </div>
              
@@ -184,9 +185,9 @@
                       </div>
                       
                       <div class="col-sm-12 text-center">
-                      <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#talkToSales_dialog">Create Invoice</a>
+                      <!-- <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#talkToSales_dialog">Create Invoice</a> -->
+                      <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-70">Try Now</a>
                       </div>
-                     
                </div>
                </div>
              </div>

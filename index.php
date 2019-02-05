@@ -116,11 +116,11 @@
         </div>
         
         <div class="banner-3-bottom">
-          <a href="#" data-toggle="modal" data-target="#talkToSales_dialog" class="btn-lg-red">Start the Discussion</a> <img src="../assets/images/airimg.svg" alt="">
+          <!-- <a href="#" data-toggle="modal" data-target="#talkToSales_dialog" class="btn-lg-red">Start your Trial Now</a> <img src="../assets/images/airimg.svg" alt=""> -->
+          <a href="https://giddh.com/app/signup" target="_blank" class="btn-lg-red">Start your Trial Now</a> <img src="../assets/images/airimg.svg" alt="">
         </div>
     </div>
 <!-- banner 3 end -->
-
 
    
   </section> <!-- end of videoBg -->
@@ -287,7 +287,8 @@
              
               <div class="row p-t-0">
                 <div class="col-sm-12 text-center">
-                  <a class="btn btn-primary btn-lg m-t-60" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+                  <!-- <a class="btn btn-primary btn-lg m-t-60" data-toggle="modal" data-target="#talkToSales_dialog">Start Trial</a> -->
+                  <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-60">Start Trial</a>
                 </div>
               </div>
       </div>
