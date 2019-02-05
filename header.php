@@ -46,6 +46,8 @@
                 <a href="/" class="navbar-brand" ng-if="!showBlack">
                     <img class="showWhite" src="/assets/images/new/giddh-logo-white.png" alt="Giddh - online accounting software" ng-if="!magicLinkPage">
                     
+                    <!-- <img class="showWhite" src="/assets/images/new/giddh_republicday.png" alt="Giddh - online accounting software" ng-if="!magicLinkPage"> -->
+                    
                 </a>
                 <!-- <a href="/" class="navbar-brand" ng-if="showBlack" style="color:red;">
                     <img src="/assets/images/new/giddh-logo.png" alt="Giddh - online accounting software">
@@ -69,7 +71,7 @@
                                 <div class="row">
                                     <div class="col-md-4 col-xs-6">
                                         <ul>
-                                            <li><a href="gst.php">GST Compliance</a></li>
+                                            <li><a href="gst.php">GST Compliances</a></li>
                                             <li><a href="invoice-software.php">Invoicing</a></li>
                                             <li><a href="accounting-dashboard.php">Dashboard</a></li>
                                             <li><a href="cloud-accounting-software.php">Anywhere-Anytime</a></li>
