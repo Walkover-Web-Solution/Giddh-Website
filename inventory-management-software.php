@@ -62,7 +62,7 @@
                       <h2 class="center_heading">Keep track of your inventory</h2>
                       <div class="width-900"><p>Modern inventory management software for the modern entrepreneur no stress, no hassles, no hidden costs. Managing inventory is a priority for any growing business. Inventory management feature helps you to track your stock movements accurately so you can get back to doing the thing you are best at: Grow and Earn!</p></div>
                       <!-- <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a> -->
-                      <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-70">Try Now</a>
+                      <a href="https://giddh.com/app/signup" class="btn btn-primary btn-lg m-t-70">Try Now</a>
                   </div>
               </div>
              

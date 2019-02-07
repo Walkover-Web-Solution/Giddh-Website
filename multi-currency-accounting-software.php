@@ -66,7 +66,7 @@
                       <h2 class="center_heading">Profits should know no borders</h2>
                      <div class="width-900"> <p>Multi currency accounting software makes it easy to manage your accounting in more than 100 currencies for your fast & growing business. Giddh makes managing multi-currency payments, 
 invoicing <br>and accounts easy.</p></div>
-              <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-70">Try Now</a>
+              <a href="https://giddh.com/app/signup" class="btn btn-primary btn-lg m-t-70">Try Now</a>
                   </div>
               </div>
              
