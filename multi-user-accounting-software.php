@@ -67,7 +67,7 @@ seamlessly.</p>
               <h2 class="center_heading">Smart collaboration across all departments</h2>
               <div class="middle-width"> <p>Multi user accounting software enables business owners & accountants to collaborate and make the best of their numbers. With real time sharing of financial data, you can derive meaningful insight and run your business with efficiency.</p></div>
               <!-- <a class="btn btn-primary btn-lg m-t-70" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a> -->
-              <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-70">Try Now</a>
+              <a href="https://giddh.com/app/signup" class="btn btn-primary btn-lg m-t-70">Try Now</a>
           </div>
           </div>
           </div>

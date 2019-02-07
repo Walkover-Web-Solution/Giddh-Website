@@ -120,10 +120,10 @@
                             <!-- <a href="tel:07939593939" class="talktoexpert" ng-class="{white:whiteLinks && !loginPage}"><span class="glyphicon glyphicon-earphone"></span>Talk to Expert</a> 
                             <button type="button" data-toggle="modal" data-target="#talkToSales_dialog" class="talktoexpert btn btn-primary navbar-btn">Talk to Sales</button>-->
                             
-                            <a href="https://giddh.com/app/login" target="_blank" class="book-demo btn btn-primary navbar-btn mr-2">Login </a>
+                            <a href="https://giddh.com/app/login" class="book-demo btn btn-primary navbar-btn mr-2">Login </a>
                         </li>
                         <li>
-                        <a target="_blank" href="https://giddh.com/app/signup" class=" btn btn-primary btn-login">Sign up</a>
+                        <a href="https://giddh.com/app/signup" class=" btn btn-primary btn-login">Sign up</a>
                             <!-- <button type="button" href="javascript:void(0)" data-toggle="modal" data-target="#tryademo" class="book-demo btn btn-primary navbar-btn">Book a Demo</button> -->
                         </li>
                         <!-- <li class="">

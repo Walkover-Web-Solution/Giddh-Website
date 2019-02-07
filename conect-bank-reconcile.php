@@ -65,7 +65,7 @@
                     <div class="col-sm-12">
                       <h2 class="center_heading">Link your bank account seamlessly with Giddh</h2>
                       <div class="width-900"><p>Get new transactions delivered from your bank account into Giddh– automatically & securely. By linking your bank accounts you can actively monitor your day to day transactions and reconcile your books. Bank link helps you keep track of your cash flow in the most secure, fast and reliable way.</p></div>
-                      <a href="https://giddh.com/app/signup" target="_blank" class="btn btn-primary btn-lg m-t-70">Try Now</a>
+                      <a href="https://giddh.com/app/signup" class="btn btn-primary btn-lg m-t-70">Try Now</a>
                   </div>
               </div>
              
