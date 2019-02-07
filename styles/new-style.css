@@ -143,7 +143,7 @@ f
 .navbar-brand .showWhite{display:block;}
 .navbar-brand .showBlack{display:none;}
 .navbar{min-height:80px;margin-bottom:0;border:0;font-family:'CambriaRegular';background:rgba(0, 0, 0, 0.12)}
-.navbar-brand{height:80px;padding:18px 15px !important;}
+.navbar-brand{height:80px;}
 .navbar-brand img{width:160px;}
 .navbar .navbar-btn{height:34px;line-height:16px;padding:6px 15px 8px 15px;font-size:18px;}
 .navbar-dark{background:#26263A !important;margin-bottom:0 !important;min-height:80px !important;}

@@ -44,7 +44,7 @@
               <span class="icon-bar"></span>
           </button>
                 <a href="/" class="navbar-brand" ng-if="!showBlack">
-                    <img class="showWhite" src="/assets/images/new/giddh-logo-white.png" alt="Giddh - online accounting software" ng-if="!magicLinkPage">
+                    <img class="showWhite" src="/assets/images/new/giddh-logo-white.svg" alt="Giddh - online accounting software" ng-if="!magicLinkPage">
                     
                     <!-- <img class="showWhite" src="/assets/images/new/giddh_republicday.png" alt="Giddh - online accounting software" ng-if="!magicLinkPage"> -->
                     
