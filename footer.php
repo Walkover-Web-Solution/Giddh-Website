@@ -54,6 +54,7 @@
                         <div class="col-sm-6 col-xs-6">
                             <ul class="nav navbar-nav footerlink">    
                             <li>
+                              <!-- <a href="/app/create-invoice">Create Invoice</a> -->
                               <a href="/app/create-invoice">Create Invoice</a>
                             </li>
                                <li><a href="/pricing.php">Pricing</a></li>
