@@ -53,9 +53,9 @@
                         </div>
                         <div class="col-sm-6 col-xs-6">
                             <ul class="nav navbar-nav footerlink">    
-                            <!-- <li>
+                            <li>
                               <a href="/app/create-invoice">Create Invoice</a>
-                            </li> -->
+                            </li>
                                <li><a href="/pricing.php">Pricing</a></li>
                                <li><a href="/privacy.php">Privacy Policy</a></li>
                                <li><a href="https://www.walkover.in/currentopening.php" target="_Blank">Work With Us</a></li>
