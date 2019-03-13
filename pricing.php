@@ -8,29 +8,53 @@
 </head>
 <body ng-controller="homeController as vm" id="page-top">
 
-  <ng-include src="'header.html'"></ng-include>
-
+  <!-- <ng-include src="'header.html'"></ng-include> -->
+  <?php include 'header.php';?>  
   <section id="videoBg" class="intro pricing">
     <div class="intro-body">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
-            <h1 class="brand-heading arvo">Don’t expect long tables here.<br> We are flat <span>₹ 800 a month.</span></h1>
-            <figure>
+            <h1 class="brand-heading">Don’t expect long tables here<br> Flat Rate <span>₹4000</span> yearly</h1>
+            <figure class="price_box">
               <img class="img-responsive" src="/assets/images/Pricing-Icon.png" alt="business accounting software">
-              <h3 class=""><span class="pClr head3">Free</span>, If Revenue is less than 1 Lac per month.</h3>
-            </figure>
-            <div class="text-center pBnrBtm clearfix">
-              <span class="head3 pClr">Still Confused?</span>
-              <a href="#footer" class="pScroll btn btn-p-bdr btn-lg btn-bdr">Talk to us</a>
+              <div class="price_container">
+                <h1>₹4000</h1>
             </div>
+            </figure>
+            <div class="price_wrapper">
+              <div class="col-lg-6 center-block text-left mrB5">
+                <h1 class="pClr">FREE <small>lifetime<span class="pClr"> *</span></small></h1>
+                <ul>
+                  <li>Teacher <small>or</small> Student</li>
+                  <li>Startup <small>(Revenue less than 12 lacs yearly)</small></li>
+                </ul>
+              </div>
+
+              <div class="col-lg-6 center-block text-left">
+                <h1 class="pClr">₹800 <small>yearly</small></h1>
+                <ul>
+                  <li>Chartered Accountant <small>or</small> Company Secretary</li>
+                  <li>Non Profit Organisation</li>
+                  <li>Startup <small>(Revenue more than 12 and less than 20 lacs yearly)</small></li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </div>
   </section> 
 
-  <section class="blueBg cmnPd100 pricing">
+  <section id="enterprise" class="witBg cmnPd80">
+    <div class="text-center clearfix">
+      <h1 class="inline-text">Big Enterprises?</h1>
+      <a href="#footer" class="btn btn-lg btn-primary mrL4" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
+    </div>
+  </section>
+
+  <section class="cmnPd100 pricing ">
     <div class="container">
       
       <div class="row">
@@ -45,9 +69,9 @@
 
         <div class="col-sm-4">
           <div class="thumbnail">
-            <img src="/assets/images/new/business-reports.png" alt="best small business accounting software">
+            <img src="/assets/images/new/tally.svg" alt="best small business accounting software">
             <div class="caption">
-              <h3>Business Reports</h3>
+              <h3>Tally Sync</h3>
             </div>
           </div>
         </div>
@@ -60,21 +84,48 @@
             </div>
           </div>
         </div>
+
+
+        <div class="col-sm-4 mrT4">
+          <div class="thumbnail">
+            <img src="/assets/images/new/invoice.svg" alt="account software">
+            <div class="caption">
+              <h3>Invoice</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 mrT4">
+          <div class="thumbnail">
+            <img src="/assets/images/new/gst_report.svg" alt="best small business accounting software">
+            <div class="caption">
+              <h3>GST Reports</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 mrT4">
+          <div class="thumbnail">
+            <img src="/assets/images/new/business-reports.png" alt="simple accounting software">
+            <div class="caption">
+              <h3>Business Reports</h3>
+            </div>
+          </div>
+        </div>
       </div>
       
       <div class="row text-center mrT4">
         <div class="col-sm-12">
-          <h2 class="arvo-b bigger-text mrB5 pClr">24/7 instant support</h2>
-          <a href="signup.php" id="pBtn" class="btn btn-primary btn-lg arvo">Try Now</a>
+          <h2 class="mrB3 pClr">18/6 Instant Support</h2>
+          <a href="/app/signup" id="pBtn" class="pScroll btn btn-lg btn-bdr" data-toggle="modal" data-target="#talkToSales_dialog">Talk to Sales</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <ng-include src="'footer.html'"></ng-include>
-  
   <?php include 'footScript.php';?>
+  <?php include 'footer.php';?>  
 
 </body>
 </html>

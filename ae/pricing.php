@@ -17,7 +17,7 @@
           <div class="col-sm-12">
             <h1 class="brand-heading arvo">Don’t expect long tables here.<br> We are flat <span>AED 100 a month.</span></h1>
             <figure>
-              <img class="img-responsive" src="/assets/images/Pricing-Icon-01.png" alt="business accounting software">
+              <img class="img-responsive" src="/ae/assets/images/Pricing-Icon-01.png" alt="business accounting software">
               <!-- <h3 class=""><span class="pClr head3">Free</span>, If Revenue is less than 1 Lac per month.</h3> -->
             </figure>
             <div class="text-center pBnrBtm clearfix">
@@ -65,7 +65,7 @@
       <div class="row text-center mrT4">
         <div class="col-sm-12">
           <h2 class="arvo-b bigger-text mrB5 pClr">24/7 instant support</h2>
-          <a href="signup.php" id="pBtn" class="btn btn-primary btn-lg arvo">Try Now</a>
+          <a onclick="location.href='/app/signup'" id="pBtn" class="btn btn-primary btn-lg arvo">Try Now</a>
         </div>
       </div>
 

@@ -2025,3 +2025,13 @@ button.toast-close-button {
 .datePickr table:focus {
   outline: 0;
 }
+
+
+/* about css */
+
+
+.about-head{
+    background:#FFF7E9;
+    padding:20px 0;
+    
+  }

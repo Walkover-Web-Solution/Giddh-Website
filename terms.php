@@ -8,9 +8,9 @@
 </head>
 <body class="gridBg txtBody terms">
   
-  <ng-include src="'header.html'"></ng-include>
-
-  <section class="cmnPd100">
+  <!-- <ng-include src="'header.html'"></ng-include> -->
+  <?php include 'header.php';?>  
+  <section class="cmnPd100 whitebg">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -246,7 +246,8 @@
   </section>
 
 
-  <ng-include src="'footer.html'"></ng-include>
+  <!-- <ng-include src="'footer.html'"></ng-include> -->
   <?php include 'footScript.php';?>
+  <?php include 'footer.php';?>
 </body>
 </html>

@@ -19,8 +19,8 @@
 
 
 
-<ng-include src="'header.html'"></ng-include>
-
+<!-- <ng-include src="'header.html'"></ng-include> -->
+  <?php include 'header.php';?>  
 
 <section class="container-fluid">
       <div style="min-height:600px" ng-hide="magicReady">
