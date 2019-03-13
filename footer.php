@@ -54,7 +54,7 @@
                         <div class="col-sm-6 col-xs-6">
                             <ul class="nav navbar-nav footerlink">    
                             <li>
-                              <a href="/app/create-invoice">Create Invoice</a>
+                              <!-- <a href="/app/create-invoice">Create Invoice</a> -->
                             </li>
                                <li><a href="/pricing.php">Pricing</a></li>
                                <li><a href="/privacy.php">Privacy Policy</a></li>
@@ -69,7 +69,11 @@
                       <p>
                       Sales : <a href="mailto:shubhendra@giddh.com">shubhendra@giddh.com</a> <br>
                       Support: <a href="mailto:support@giddh.com"> support@giddh.com</a><br>
-                      <i class="fa fa-phone fa-rotate-109"></i><a href="tel:07939593939">079 39 59 3939</a> <i class="fa fa-phone fa-rotate-109 m-l-10"></i><a href="tel:08033037089">080 33 03 7089</a>
+
+                      <i class="fa fa-phone fa-rotate-109"></i><a href="tel: 02238128654"> 022-38128654</a>
+                      
+                       <!-- <i class="fa fa-phone fa-rotate-109"></i><a href="tel:07939593939">079 39 59 3939</a>
+                       <i class="fa fa-phone fa-rotate-109 m-l-10"></i><a href="tel:08033037089">080 33 03 7089</a> -->
                       </p>
                       <p class="allright">
                       all rights are reserved 2020 Walkover Giddh.com
@@ -129,7 +133,7 @@
 
             <li><a href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-app+Setup+{{apkVersion}}.exe" target="_Blank" title="windows"><i class="fab fa-windows"></i></a></li>
 
-<!--             <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz" target="_Blank" title="linux"><i class="fab fa-linux"></i></a></li>
+            <li><a href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/giddh-app-6.4.0.tar.gz" target="_Blank" title="linux"><i class="fab fa-linux"></i></a></li>
           </ul>
             <div id="farzi" class="visible-md-block visible-lg-block"></div>
           </div>
