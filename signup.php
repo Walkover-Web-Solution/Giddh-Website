@@ -1,3 +1,7 @@
+<?php
+    header('Location: https://giddh.com/app/signup');
+?>
+
 <!DOCTYPE HTML>
 <html lang="en" ng-app='giddhWebsite'>
 <head>
@@ -7,8 +11,8 @@
     <?php include 'head.php';?>
 </head>
 <body ng-controller="loginController" class="lightTrans">
-<ng-include src="'header.html'"></ng-include>
-
+<!-- <ng-include src="'header.html'"></ng-include> -->
+  <?php include 'header.php';?>  
 <section id="videoBg" class="intro login">
     <!-- banner content -->
     <div class="intro-body">

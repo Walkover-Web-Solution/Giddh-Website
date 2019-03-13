@@ -46,7 +46,7 @@
                   </div>
                 </div>
                 <div class="row">
-                  <a href="signup.php" class="btn btn-primary  btn-lg">Start Today - it's free!</a>
+                  <a href="/app/signup" class="btn btn-primary  btn-lg">Start Today - it's free!</a>
                 </div>
               </div>
             </div>
