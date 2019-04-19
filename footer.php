@@ -70,7 +70,7 @@
                       Sales : <a href="mailto:shubhendra@giddh.com">shubhendra@giddh.com</a> <br>
                       Support: <a href="mailto:support@giddh.com"> support@giddh.com</a><br>
 
-                      <i class="fa fa-phone fa-rotate-109"></i><a href="tel: 02238128654"> 022-38128654, </a>
+                      <i class="fa fa-phone fa-rotate-109"></i><!--<a href="tel: 02238128654"> 022-38128654, </a>-->
                        <a href="tel: 02268210057"> 022-68210057</a>
                       
                        <!-- <i class="fa fa-phone fa-rotate-109"></i><a href="tel:07939593939">079 39 59 3939</a>
