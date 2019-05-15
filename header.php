@@ -123,7 +123,8 @@
                             <a onclick="location.href='app/'" class="book-demo btn btn-primary navbar-btn mr-2">Login </a>
                         </li>
                         <li>
-                        <a onclick="location.href='app/'" class=" btn btn-primary btn-login">Sign up</a>
+
+                        <a onclick="location.href='app/signup'" class=" btn btn-primary btn-login">Sign up</a>
                             <!-- <button type="button" href="javascript:void(0)" data-toggle="modal" data-target="#tryademo" class="book-demo btn btn-primary navbar-btn">Book a Demo</button> -->
                         </li>
                         <!-- <li class="">
