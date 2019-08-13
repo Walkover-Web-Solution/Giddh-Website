@@ -596,137 +596,187 @@
                                                                   <img src="../assets/images/team/alok.png" alt="">
                                                                   <p class="member-footer">
                                                                         <span class="name">Alok</span>
-                                                                        <span class="designation">Product Associate  </span>
+                                                                        <span class="designation">Brand Head</span>
                                                                         </p>
                                                             </figure>
                                                             </li>
                                                             <li>
                                                                         <figure class="member">
+                                                                              <img src="../assets/images/team/sheba.png" alt="">
+                                                                              <p class="member-footer">
+                                                                                    <span class="name">Sheba</span>
+                                                                                    <span class="designation">Product Consultant</span>
+                                                                                    </p>
+                                                                        </figure>
+                                                            </li>
+                                                            <li>
+                                                                        <figure class="member">
+                                                                              <img src="../assets/images/team/fabien-varghese.png" alt="">
+                                                                              <p class="member-footer">
+                                                                                    <span class="name">Faiben</span>
+                                                                                    <span class="designation">Senior Sales Representative</span>
+                                                                                    </p>
+                                                                        </figure>
+                                                            </li>
+                                                            <li>
+                                                                        <figure class="member">
+                                                                              <img src="../assets/images/team/naman.png" alt="">
+                                                                              <p class="member-footer">
+                                                                                    <span class="name">Naman</span>
+                                                                                    <span class="designation">Sales Tyrant</span>
+                                                                                    </p>
+                                                                        </figure>
+                                                            </li>
+
+                                                            <li>
+                                                                        <figure class="member">
+                                                                              <img src="../assets/images/team/meghna.png" alt="">
+                                                                              <p class="member-footer">
+                                                                                    <span class="name">Meghna</span>
+                                                                                    <span class="designation">UI/UX Designer</span>
+                                                                                    </p>
+                                                                        </figure>
+                                                            </li>
+
+                                                            <li>
+                                                                        <figure class="member">
                                                                               <img src="../assets/images/team/gaurav.png" alt="">
                                                                               <p class="member-footer">
                                                                                     <span class="name">Gaurav</span>
-                                                                                    <span class="designation">Web Development Engineer</span>
+                                                                                    <span class="designation">Software Developer</span>
                                                                                     </p>
                                                                         </figure>
                                                             </li>
+
                                                             <li>
                                                                         <figure class="member">
-                                                                              <img src="../assets/images/team/nidhi.png" alt="">
+                                                                              <img src="../assets/images/team/aditya-soni.png" alt="">
                                                                               <p class="member-footer">
-                                                                                    <span class="name">Nidhi</span>
-                                                                                    <span class="designation">Programmer & Database Architect</span>
+                                                                                    <span class="name">Aditya</span>
+                                                                                    <span class="designation">Java Developer</span>
                                                                                     </p>
                                                                         </figure>
                                                             </li>
+
                                                             <li>
                                                                         <figure class="member">
-                                                                              <img src="../assets/images/team/mayank.png" alt="">
+                                                                              <img src="../assets/images/team/leena.png" alt="">
                                                                               <p class="member-footer">
-                                                                                    <span class="name">Mayank</span>
-                                                                                    <span class="designation">Software Engineer</span>
+                                                                                    <span class="name">Leena</span>
+                                                                                    <span class="designation">Java Developer</span>
                                                                                     </p>
                                                                         </figure>
                                                             </li>
+
                                                             <li>
-                                                                        <figure class="member m-r-zero">
-                                                                              <img src="../assets/images/team/sagar.png" alt="">
+                                                                        <figure class="member">
+                                                                              <img src="../assets/images/team/arpit.png" alt="">
                                                                               <p class="member-footer">
-                                                                                    <span class="name">Sagar</span>
-                                                                                    <span class="designation">QA Specialist</span>
+                                                                                    <span class="name">Arpit</span>
+                                                                                    <span class="designation">Sr. Software Developer</span>
+                                                                                    </p>
+                                                                        </figure>
+                                                            </li>
+
+                                                            <li>
+                                                                        <figure class="member">
+                                                                              <img src="../assets/images/team/shalini.png" alt="">
+                                                                              <p class="member-footer">
+                                                                                    <span class="name">Shalini</span>
+                                                                                    <span class="designation">UI Developer</span>
                                                                                     </p>
                                                                         </figure>
                                                             </li>
                                                   
                                                             <li>
                                                                   <figure class="member">
-                                                                        <img src="../assets/images/team/mustafa.png" alt="">
+                                                                        <img src="../assets/images/team/rohit.png" alt="">
                                                                         <p class="member-footer">
-                                                                              <span class="name">Mustafa</span>
-                                                                              <span class="designation">UI/UX Designer and Developer</span>
+                                                                              <span class="name">Rohit</span>
+                                                                              <span class="designation">Software Developer</span>
                                                                               </p>
                                                                   </figure>
                                                             </li>
                                                             <li>
                                                                   <figure class="member">
-                                                                        <img src="../assets/images/team/aditya.png" alt="">
+                                                                        <img src="../assets/images/team/sadique-sheikh.png" alt="">
+                                                                        <p class="member-footer">
+                                                                              <span class="name">Sadique</span>
+                                                                              <span class="designation">UI/UX & Frontend Developer</span>
+                                                                              </p>
+                                                                  </figure>
+                                                            </li>
+                                                            <li>
+                                                                  <figure class="member">
+                                                                        <img src="../assets/images/team/shubham.png" alt="">
+                                                                        <p class="member-footer">
+                                                                              <span class="name">Shubham</span>
+                                                                              <span class="designation">Full Stack Developer</span>
+                                                                              </p>
+                                                                  </figure>
+                                                            </li>
+                                                            <li>
+                                                                  <figure class="member">
+                                                                        <img src="../assets/images/team/aditya-chandeliya.png" alt="">
                                                                         <p class="member-footer">
                                                                               <span class="name">Aditya</span>
-                                                                              <span class="designation">Java Developer</span>
-                                                                              </p>
-                                                                  </figure>
-                                                            </li>
-                                                            <li>
-                                                                  <figure class="member">
-                                                                        <img src="../assets/images/team/leena.png" alt="">
-                                                                        <p class="member-footer">
-                                                                              <span class="name">Leena</span>
-                                                                              <span class="designation">Full Stack Developer</span>
-                                                                              </p>
-                                                                  </figure>
-                                                            </li>
-                                                            <li>
-                                                                  <figure class="member">
-                                                                        <img src="../assets/images/team/arpit.png" alt="">
-                                                                        <p class="member-footer">
-                                                                              <span class="name">Arpit</span>
-                                                                              <span class="designation">Full Stack Developer</span>
+                                                                              <span class="designation">Software Developer</span>
                                                                               </p>
                                                                   </figure>
                                                             </li>
                                                    
                                                             <li>
-                                                                  <figure class="member m-r-zero">
-                                                                        <img src="../assets/images/team/meghna.png" alt="">
+                                                                  <figure class="member">
+                                                                        <img src="../assets/images/team/rajat.png" alt="">
                                                                         <p class="member-footer">
-                                                                              <span class="name">Meghna</span>
-                                                                              <span class="designation">UI/UX Designer</span>
+                                                                              <span class="name">Rajat</span>
+                                                                              <span class="designation">Full Stack Developer</span>
                                                                               </p>
                                                                   </figure>
                                                             </li>
                                                             <li>
                                                                   <figure class="member">
-                                                                        <img src="../assets/images/team/sheba.png" alt="">
+                                                                        <img src="../assets/images/team/shehbaz.png" alt="">
                                                                         <p class="member-footer">
-                                                                              <span class="name">Sheba</span>
-                                                                              <span class="designation">Inbound Sales Executive </span>
+                                                                              <span class="name">Shehbaz</span>
+                                                                              <span class="designation">Sr. Software Developer</span>
+                                                                              </p>
+                                                                  </figure>
+                                                            </li>
+
+                                                            <li>
+                                                                  <figure class="member">
+                                                                        <img src="../assets/images/team/sameer.png" alt="">
+                                                                        <p class="member-footer">
+                                                                              <span class="name">Sameer</span>
+                                                                              <span class="designation">QA Lead</span>
+                                                                              </p>
+                                                                  </figure>
+                                                            </li>
+
+                                                            <li>
+                                                                  <figure class="member">
+                                                                        <img src="../assets/images/team/shreya.png" alt="">
+                                                                        <p class="member-footer">
+                                                                              <span class="name">Shreya</span>
+                                                                              <span class="designation">Software test Engineer</span>
+                                                                              </p>
+                                                                  </figure>
+                                                            </li>
+
+                                                            <li>
+                                                                  <figure class="member">
+                                                                        <img src="../assets/images/team/chetan.png" alt="">
+                                                                        <p class="member-footer">
+                                                                              <span class="name">Chetan</span>
+                                                                              <span class="designation">Software test Engineer</span>
                                                                               </p>
                                                                   </figure>
                                                             </li>
 
                                                             
-
-                                                            
-                                                            <!-- <li>
-                                                                  <figure class="member">
-                                                                        <img src="../assets/images/team/devendra.png" alt="">
-                                                                        <p class="member-footer">
-                                                                              <span class="name">Devendra</span>
-                                                                              <span class="designation">Sales Executive</span>
-                                                                              </p>
-                                                                  </figure>
-                                                            </li>
                                                             <li>
                                                                   <figure class="member">
-                                                                        <img src="../assets/images/team/pranay.png" alt="">
-                                                                        <p class="member-footer">
-                                                                              <span class="name">Pranay</span>
-                                                                              <span class="designation">Sales Executive</span>
-                                                                              </p>
-                                                                  </figure>
-                                                            </li> -->
-                                                            <li>
-                                                                  <figure class="member">
-                                                                        <img src="../assets/images/team/jinesh.png" alt="">
-                                                                        <p class="member-footer">
-                                                                              <span class="name">Jinesh</span>
-                                                                              <span class="designation">Content Writer</span>
-                                                                              </p>
-                                                                  </figure>
-                                                            </li>
-
-                                                            
-                                                            <li>
-                                                                  <figure class="member m-r-zero">
                                                                         <a href="https://www.walkover.in/career.php" target="_blank" class="empty-link"><span class="empty">Interested to <br>join our<br> team.</span></a>
                                                                   </figure>
                                                             </li>
@@ -804,7 +854,7 @@
                                                                </div>
                                                         </div>
                                                    </div>
-                                                   <div class="mentors-info m-t-70">
+                                                   <!-- <div class="mentors-info m-t-70">
                                                          <div class="row">
                                                                <div class="col-sm-6">
                                                                         <img src="/assets/images/team/priyanka.png" alt=""> 
@@ -828,7 +878,7 @@
                                                                         <img src="/assets/images/team/ravindra-big.png" alt="" class="pull-right"> 
                                                                </div>
                                                         </div>
-                                                   </div>
+                                                   </div> -->
                                                    <div class="mentors-info m-t-70">
                                                          <div class="row">
                                                                <div class="col-sm-6">
