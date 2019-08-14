@@ -212,19 +212,18 @@
 
 <script type="text/javascript">
 
+$(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('.go-top').fadeIn();
+    } else {
+        $('.go-top').fadeOut();
+    }
+});
+
 // go to top jump jQuery
-// jQuery(document).ready(function($) {
-// $(window).scroll(function() {
-//     if ($(this).scrollTop()) {
-//         $('.go-top').fadeIn();
-//     } else {
-//         $('.go-top').fadeOut();
-//     }
-// });
-// $(".go-top").click(function() {
-//     $("html, body").animate({scrollTop: 0}, 1000);
-//  });
-// });
+$(".go-top").click(function() {
+    $("html, body").animate({scrollTop: 0}, 1000);
+ });
  
 /*-------------------------------------------------------------------*/
 /*  FULL SCREEN FIRST SECTION
@@ -279,14 +278,6 @@ $('a[rel="relativeanchor"]').click(function(){
     else {
       $('.navbar').removeClass('affix')
     }
-    
-    // $('.page-scroll').each(function(){
-    //   var scrollHref = $(this).attr('href');
-    //   if( $(window).scrollTop() > $(scrollHref).offset().top - 100 ) {
-    //     $('.page-scroll').removeClass('active');
-    //     $(this).addClass('active');
-    //   }
-    // });
   });
 });
 $("input[type='email']").focus(function(){
