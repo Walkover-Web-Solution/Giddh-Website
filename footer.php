@@ -201,17 +201,32 @@
   <!-- end of footer -->
 
 
+<a href="javascript:void(0)" class="go-top"><img src="../assets/images/arrow.svg" alt="" /></a>
+
+
 <script type="text/javascript">
-  
-
-    function goTo (state, type) {
-      if(type == "state") {window.location = state
-      }else {window.open(state)}
-    }
-
+  function goTo (state, type) {
+    if(type == "state") {window.location = state
+    }else {window.open(state)}
+  }
 </script>
 
 <script type="text/javascript">
+
+jQuery(document).ready(function($) {
+$(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('.go-top').fadeIn();
+    } else {
+        $('.go-top').fadeOut();
+    }
+});
+// go to top jump jQuery
+$(".go-top").click(function() {
+    $("html, body").animate({scrollTop: 0}, 1000);
+ });
+});
+ 
 /*-------------------------------------------------------------------*/
 /*  FULL SCREEN FIRST SECTION
 /*-------------------------------------------------------------------*/
@@ -300,10 +315,5 @@ $(document).ready(function () {
     numToIncrement = 3;
     $('#cardList').find('li').hide().slice(x, x + numToShow).show();
 });
-
-
-
-
-
 </script>
 

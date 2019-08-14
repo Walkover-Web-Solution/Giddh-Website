@@ -83,32 +83,33 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-6 msg91">
-                            <a href="http://www.msg91.com/" target="_blank" class="website-link"></a>
-                                          <div class="thumbnail">
-                                                <img src="../assets/images/msg-logo-big.svg" alt="msg" class="msg">
-                                                <div class="caption">
-                                                      <p>
-                                                      MSG91 is the flagship product under the Walkover umbrella with over 8 years of experience making it one of the best messaging solution companies. With its easily configurable APIs and a global reach of over 90 countries, MSG91 provides its clients with messaging & mobile solutions whenever they want, where ever they are.
-                                                      </p>
-                                                    
-                                                      <a href="http://www.msg91.com/" target="_blank" class="know-more-link">Know More</a>
-                                                </div>
-                                          </div>
-
+                            <a href="http://www.msg91.com/" target="_blank" class="website-link">
+                              <div class="thumbnail">
+                                    <img src="../assets/images/msg-logo-big.svg" alt="msg" class="msg">
+                                    <div class="caption">
+                                          <p>
+                                          MSG91 is the flagship product under the Walkover umbrella with over 8 years of experience making it one of the best messaging solution companies. With its easily configurable APIs and a global reach of over 90 countries, MSG91 provides its clients with messaging & mobile solutions whenever they want, where ever they are.
+                                          </p>
+                                          
+                                          <p class="know-more-link">Know More</p>
+                                    </div>
+                              </div>
+                              </a>
                               </div>
                             
                             <div class="col-md-6 col-sm-6 col-xs-6 viasocket">
-                            <a href="http://www.viasocket.com/" target="_blank" class="website-link"></a>
+                            <a href="http://www.viasocket.com/" target="_blank" class="website-link">
                               <div class="thumbnail pull-right">
                                   <img src="../assets/images/socket-logo-big.svg" class="socket" alt="socket">
                                   <div class="caption">
                                     <p>
                                         Socket is a multiple API integration and automation tool that makes data flow faster and easier than ever to automate the services. It is the youngest and the smartest member in the family of Walkover products having its own API marketplace that makes developers’ lives easier and adds more power to your business.
                                     </p>
-                                    <a href="http://www.viasocket.com/" target="_blank">Know More</a>
+                                    <p class="know-more-link">Know More</p>
                                   </div>
                               
                               </div>
+                              </a>
                             </div>
                            
                         </div>
@@ -923,21 +924,14 @@
                                     <li role="presentation" ng-show="vm.selectedTab != 'team'"><a href="javascript:void(0)" aria-controls="settings" role="tab" data-toggle="tab" class="four btn btn-default"  ng-click="vm.selectedTab = 'team'">The Team</a></li>
                               </ul>
                         </div>
-
-
-                        
                         </div>
                       </div>
                 </div>
                 <!-- see company end -->
-
           </div>
         </div>              
     </div>
 </section>
-
-
-<a href="#" class="go-top"><img src="../assets/images/arrow.svg" alt="" /></a>
  
 
 <!-- include footer -->
@@ -1017,9 +1011,6 @@ $("html, body").animate({ scrollTop: 0 }, 0);
   });
 });
 
-
-
-
 if ( $(window).width() < 768 ){
       $(".multiline-ellipsis").click(function(){
     $(this).toggleClass('expand');
@@ -1028,24 +1019,6 @@ if ( $(window).width() < 768 ){
      $(this).siblings().children('.heading').toggleClass('sphideshow');
 })
 }
-
-
-$(window).scroll(function() {
-    if ($(this).scrollTop()) {
-        $('.go-top').fadeIn();
-    } else {
-        $('.go-top').fadeOut();
-    }
-});
-
-// go to top jump jQuery
-$(".go-top").click(function() {
-    $("html, body").animate({scrollTop: 0}, 1000);
- });
-
-
-</script>
-
-  
+</script> 
 </body>
 </html>
