@@ -19,6 +19,8 @@
 </head>
 <body  ng-controller="homeController as vm" id="aboutPage" class="about-section-body lightTrans">
   
+
+
   <!-- <ng-include src="'about-header.html'"></ng-include> -->
   <!-- <ng-include src="'header.html'"></ng-include> -->
 <?php include 'header.php';?>  
@@ -352,45 +354,45 @@
                   </div>
                     <div class="about-content-body">
                     <div class="about fixedprinciple">
-                                <div class="container">
-                                            <div class="tab-content">
-                                                <!-- start secondry tabs -->
-                                                <div>
-                                                      <ul class="nav nav-tabs nav-tabs-values  nav-tab-principle navs-principle">
-                                                            <li>
-                                                                  <a href="#Nurture" data-toggle="tab" class="activepr">
-                                                                  <span class="icon icon-Nurtures"></span>
-                                                                        Nurtures Collaboration</a>
-                                                            </li>
-                                                            <li><a href="#lcommunication"  data-toggle="tab">
-                                                            <span class="icon icon-Communication"></span>
-                                                            Leads through Communication</a></li>
-                                                            <li><a href="#lexample"  data-toggle="tab">
-                                                            <span class="icon icon-leadsByExample"></span>
-                                                            Leads By Example</a></li>
-                                                            <li><a href="#consults" data-toggle="tab">
-                                                            <span class="icon icon-consult"></span>
-                                                            Consults and Delegates</a></li>
-                                                            <li><a href="#courageous" data-toggle="tab">
-                                                            <span class="icon icon-Courageous"></span>
-                                                            Is Courageous</a></li>
-                                                            <li><a href="#integrity" data-toggle="tab">
-                                                            <span class="icon icon-integrity"></span>
-                                                            Adds Integrity</a></li>
-                                                            <li><a href="#serves" data-toggle="tab">
-                                                            <span class="icon icon-ServeGood"></span>
-                                                            Serves for the Greater Good</a></li>
-                                                            <li><a href="#process" data-toggle="tab">
-                                                            <span class="icon icon-process"></span>
-                                                            Defines & Creates Processes</a></li>
-                                                            <li><a href="#evolve" data-toggle="tab">
-                                                            <span class="icon icon-adaptToEvolve"></span>
-                                                            Adapts to Evolve</a></li>
-                                                      </ul>
-                                              </div>
-                                           </div>
+                        <div class="container">
+                        <div class="tab-content">
+                        <!-- start secondry tabs -->
+                        <div id="menu-center">
+                        <ul class="nav nav-tabs nav-tabs-values nav-tab-principle navs-principle">
+                              <li>
+                              <a href="#Nurture" class="active">
+                              <span class="icon icon-Nurtures"></span>
+                              Nurtures Collaboration</a>
+                              </li>
+                              <li><a href="#lcommunication">
+                              <span class="icon icon-Communication"></span>
+                              Leads through Communication</a></li>
+                              <li><a href="#lexample" >
+                              <span class="icon icon-leadsByExample"></span>
+                              Leads By Example</a></li>
+                              <li><a href="#consults">
+                              <span class="icon icon-consult"></span>
+                              Consults and Delegates</a></li>
+                              <li><a href="#courageous">
+                              <span class="icon icon-Courageous"></span>
+                              Is Courageous</a></li>
+                              <li><a href="#integrity">
+                              <span class="icon icon-integrity"></span>
+                              Adds Integrity</a></li>
+                              <li><a href="#serves">
+                              <span class="icon icon-ServeGood"></span>
+                              Serves for the Greater Good</a></li>
+                              <li><a href="#process">
+                              <span class="icon icon-process"></span>
+                              Defines & Creates Processes</a></li>
+                              <li><a href="#evolve">
+                              <span class="icon icon-adaptToEvolve"></span>
+                              Adapts to Evolve</a></li>
+                        </ul>
+                        </div>
+                        </div>
                                </div>
-            </div>
+                  </div>
                                <div class="container-fluid fixedPrContainer">
                                     <div class="product p-t-0 p-b-0">
                                     <div class="row" id="Nurture">
@@ -937,7 +939,9 @@
 </section>
 
 
-<a href="#" class="go-top"><img src="../assets/images/arrow.svg" alt="" /></a>
+<div class="clearfix" id="sadik">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum officia fugiat ab temporibus? Cumque aspernatur dicta natus velit enim saepe at iste praesentium placeat, dolor nam eaque harum blanditiis animi!</p>
+</div>
  
 
 <!-- include footer -->
@@ -969,50 +973,41 @@ $(window).scroll(function(){
     $('.bgNurture').css('margin-top', '0');
    }
 });
-
-
-
 });
-
-
 $('.nav-tabs-footer li a').click(function(){
       $("html, body").animate({ scrollTop: 0 }, 0);
 });
 
-
-//   $(function() {  
-//   $('.nav-tabs-values li a[href^="#"]').click(function() {
-//     if  ((location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname)) {
-//       var target = $(this.hash);
-//       $("a.activeValue").removeClass("activeValue");
-//       $(this).addClass("activeValue");
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-//       if (target.length) {
-//         $('html,body').animate({
-//           scrollTop: target.offset().top - 200
-//         }, 800);
-//         return false;
-//       }
-//     }
-//   });
-//   $('.nav-tab-principle li a[href^="#"]').click(function(e) {
-//     if  ((location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname)) {
-//       var target = $(this.hash);
-//       $("a.activepr").removeClass("activepr");
-//       $(this).addClass("activepr");
-//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-//       if (target.length) {
-//         $('html,body').animate({
-//           scrollTop: target.offset().top - 200
-//         }, 800);
-//         return false;
-//       }
-//     }
-//   });
-// });
-
-
-
+  $(function() {
+  $('.nav-tabs-values li a[href^="#"]').click(function() {
+    if  ((location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname)) {
+      var target = $(this.hash);
+      $("a.activeValue").removeClass("activeValue");
+      $(this).addClass("activeValue");
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 200
+        }, 800);
+        return false;
+      }
+    }
+  });
+  $('.nav-tab-principle li a[href^="#"]').click(function(e) {
+    if  ((location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname)) {
+      var target = $(this.hash);
+      $("a.activepr").removeClass("activepr");
+      $(this).addClass("activepr");
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 200
+        }, 800);
+        return false;
+      }
+    }
+  });
+});
 
 if ( $(window).width() < 768 ){
       $(".multiline-ellipsis").click(function(){
@@ -1023,13 +1018,54 @@ if ( $(window).width() < 768 ){
 })
 }
 
+// $(document).ready(function() {
+//       $('a[rel="relativeanchor"]').click(function(){
+//             $('html, body').animate({
+//                   scrollTop: $( $.attr(this, 'href') ).offset(1000).top
+//             }, 5000);
+//             return false;
+//       }); 
+// });
 
+// sadique sheikh
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
 
-
-
+function onScroll(event) {
+    var scrollPos = $(document).scrollTop();
+    $('#menu-center a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+      //   if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+      //       $('#menu-center ul li a').removeClass("active");
+      //       currLink.addClass("active");
+      //   }
+      //   else{
+      //       currLink.removeClass("active");
+      //   }
+    });
+}
+//
 </script>
-
-
-  
 </body>
 </html>
