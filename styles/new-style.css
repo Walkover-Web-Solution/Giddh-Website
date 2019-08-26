@@ -381,6 +381,11 @@ figure h1{margin-bottom:5px;}
 .tallybook{width:681px;}
 
 /* my css start */
+* {
+    transition: .5s all ease !important;
+}
+
+
 h4.heading-4 {
     font-size: 30px;
 }

@@ -134,31 +134,31 @@
                                                 <!-- start secondry tabs -->
                                                 <div>
                                                         <ul class="nav nav-tabs nav-tabs-values" role="tablist">
-                                                          <li role="presentation"><a href="#custComFirst" aria-controls="custComFirst" data-toggle="tab" class="activeValue">
+                                                          <li role="presentation"><a href="#custComFirst" aria-controls="custComFirst" data-toggle="tab" rel="relativeanchor" class="activeValue">
                                                            <span class="icon icon-custcome"></span>     
                                                           Customers Come First</a></li>
-                                                          <li role="presentation"><a href="#breakBound" aria-controls="breakBound" data-toggle="tab">
+                                                          <li role="presentation"><a href="#breakBound" aria-controls="breakBound" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-setbacks"></span>       
                                                           Setbacks to Break Boundaries</a></li>
-                                                          <li role="presentation"><a href="#impoGoals" aria-controls="impoGoals" data-toggle="tab">
+                                                          <li role="presentation"><a href="#impoGoals" aria-controls="impoGoals" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-impossible"></span> 
                                                           We Set Impossible Goals</a></li>
-                                                          <li role="presentation"><a href="#peoplePower" aria-controls="peoplePower" data-toggle="tab">
+                                                          <li role="presentation"><a href="#peoplePower" aria-controls="peoplePower" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-peoplepower"></span>     
                                                           People are our Power</a></li>
-                                                          <li role="presentation"><a href="#peopleFocus" aria-controls="peopleFocus" data-toggle="tab">
+                                                          <li role="presentation"><a href="#peopleFocus" aria-controls="peopleFocus" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-alwaysbefore"></span>      
                                                           We Focus on Why & How?</a></li>
-                                                          <li role="presentation"><a href="#alwaysBefore" aria-controls="alwaysBefore" data-toggle="tab">
+                                                          <li role="presentation"><a href="#alwaysBefore" aria-controls="alwaysBefore" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-focus"></span>          
                                                           Always We Before Me</a></li>
-                                                          <li role="presentation"><a href="#doNotSettle" aria-controls="doNotSettle" data-toggle="tab">
+                                                          <li role="presentation"><a href="#doNotSettle" aria-controls="doNotSettle" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-settle"></span>
                                                                 We Don’t Settle</a></li>
-                                                          <li role="presentation"><a href="#empowerFut" aria-controls="empowerFut" data-toggle="tab">
+                                                          <li role="presentation"><a href="#empowerFut" aria-controls="empowerFut" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-empower"></span>      
                                                           We Empower The Future</a></li>
-                                                          <li role="presentation"><a href="#transparency" aria-controls="transparency" data-toggle="tab">
+                                                          <li role="presentation"><a href="#transparency" aria-controls="transparency" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-transparency"></span>         
                                                           Transparency and Honesty</a></li>
                                                         </ul>
@@ -360,32 +360,32 @@
                         <div id="menu-center">
                         <ul class="nav nav-tabs nav-tabs-values nav-tab-principle navs-principle">
                               <li>
-                              <a href="#Nurture" class="active">
+                              <a href="#Nurture" class="active" rel="relativeanchor">
                               <span class="icon icon-Nurtures"></span>
                               Nurtures Collaboration</a>
                               </li>
-                              <li><a href="#lcommunication">
+                              <li><a href="#lcommunication" rel="relativeanchor">
                               <span class="icon icon-Communication"></span>
                               Leads through Communication</a></li>
-                              <li><a href="#lexample" >
+                              <li><a href="#lexample" rel="relativeanchor">
                               <span class="icon icon-leadsByExample"></span>
                               Leads By Example</a></li>
-                              <li><a href="#consults">
+                              <li><a href="#consults" rel="relativeanchor">
                               <span class="icon icon-consult"></span>
                               Consults and Delegates</a></li>
-                              <li><a href="#courageous">
+                              <li><a href="#courageous" rel="relativeanchor">
                               <span class="icon icon-Courageous"></span>
                               Is Courageous</a></li>
-                              <li><a href="#integrity">
+                              <li><a href="#integrity" rel="relativeanchor">
                               <span class="icon icon-integrity"></span>
                               Adds Integrity</a></li>
-                              <li><a href="#serves">
+                              <li><a href="#serves" rel="relativeanchor">
                               <span class="icon icon-ServeGood"></span>
                               Serves for the Greater Good</a></li>
-                              <li><a href="#process">
+                              <li><a href="#process" rel="relativeanchor">
                               <span class="icon icon-process"></span>
                               Defines & Creates Processes</a></li>
-                              <li><a href="#evolve">
+                              <li><a href="#evolve" rel="relativeanchor">
                               <span class="icon icon-adaptToEvolve"></span>
                               Adapts to Evolve</a></li>
                         </ul>
@@ -939,15 +939,64 @@
 </section>
 
 
-<div class="clearfix" id="sadik">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum officia fugiat ab temporibus? Cumque aspernatur dicta natus velit enim saepe at iste praesentium placeat, dolor nam eaque harum blanditiis animi!</p>
-</div>
- 
+
 
 <!-- include footer -->
 <?php include 'footScript.php';?>
   <?php include 'footer.php';?> 
+
   <script>
+
+
+// sadique sheikh
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+            $target = $(target);
+      //   $('html, body').stop().animate({
+      //       'scrollTop': $target.offset().top+2
+      //   }
+      //   , 600, 'swing', function () {
+      //       window.location.hash = target;
+      //       $(document).on("scroll", onScroll);
+      //   });
+    });
+
+$('a[rel="relativeanchor"]').click(function(){
+      $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset(100).top
+      }, 1000);
+      return false;
+}); 
+
+function onScroll(event) {
+    var scrollPos = $(document).scrollTop();
+    $('#menu-center a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+      //   if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+      //       $('#menu-center ul li a').removeClass("active");
+      //       currLink.addClass("active");
+      //   }
+      //   else{
+      //       currLink.removeClass("active");
+      //   }
+    });
+}
+});
+// sadik js end
+
+
   $(document).ready(function(){
         
 //  
@@ -987,12 +1036,13 @@ $('.nav-tabs-footer li a').click(function(){
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top - 200
+          scrollTop: target.offset().top - 500
         }, 800);
         return false;
       }
     }
   });
+
   $('.nav-tab-principle li a[href^="#"]').click(function(e) {
     if  ((location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname)) {
       var target = $(this.hash);
@@ -1001,7 +1051,7 @@ $('.nav-tabs-footer li a').click(function(){
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top - 200
+          scrollTop: target.offset().top - 500
         }, 800);
         return false;
       }
@@ -1027,45 +1077,44 @@ if ( $(window).width() < 768 ){
 //       }); 
 // });
 
-// sadique sheikh
-$(document).ready(function () {
-    $(document).on("scroll", onScroll);
-    $('a[href^="#"]').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
-        
-        $('a').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
-      
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $('html, body').stop().animate({
-            'scrollTop': $target.offset().top+2
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", onScroll);
-        });
-    });
-});
 
-function onScroll(event) {
-    var scrollPos = $(document).scrollTop();
-    $('#menu-center a').each(function () {
-        var currLink = $(this);
-        var refElement = $(currLink.attr("href"));
-      //   if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-      //       $('#menu-center ul li a').removeClass("active");
-      //       currLink.addClass("active");
-      //   }
-      //   else{
-      //       currLink.removeClass("active");
-      //   }
-    });
-}
-//
+
+
+
+
+
+
+
+
+// function getTargetTop(elem){
+//       var id = elem.attr("href");
+//       var offset = $('.nav').height();
+//       return $(id).offset().top - offset;
+// }
+// $('a[href^="#"]').click(function(event) {
+//       var target = getTargetTop($(this));
+//       $('html, body').animate({scrollTop:target}, 500);
+//       event.preventDefault();
+// });
+// var sections = $('a[href^="#"]');
+// function checkSectionSelected(scrolledTo){
+//       var threshold = 30;
+//       var i;
+//       for (i = 0; i < sections.length; i++) {
+//             var section = $(sections[i]);
+//             var target = getTargetTop(section);
+//             if (scrolledTo > target - threshold && scrolledTo < target + threshold) {
+//                   sections.removeClass("active");
+//                   section.addClass("active");
+//             }
+//       };
+// }
+// checkSectionSelected($(window).scrollTop());
+// $(window).scroll(function(e){
+//       checkSectionSelected($(window).scrollTop())
+// });
+
+
 </script>
 </body>
 </html>

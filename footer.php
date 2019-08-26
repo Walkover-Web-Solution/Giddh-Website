@@ -262,7 +262,7 @@ jQuery(document).ready(function($){
 //sadik smooth scroller
 $('a[rel="relativeanchor"]').click(function(){
     $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
+        scrollTop: $( $.attr(this, 'href') ).offset().top - 400
     }, 500);
     return false;
 }); 
