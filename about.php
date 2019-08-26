@@ -19,6 +19,8 @@
 </head>
 <body  ng-controller="homeController as vm" id="aboutPage" class="about-section-body lightTrans">
   
+
+
   <!-- <ng-include src="'about-header.html'"></ng-include> -->
   <!-- <ng-include src="'header.html'"></ng-include> -->
 <?php include 'header.php';?>  
@@ -132,31 +134,31 @@
                                                 <!-- start secondry tabs -->
                                                 <div>
                                                         <ul class="nav nav-tabs nav-tabs-values" role="tablist">
-                                                          <li role="presentation"><a href="#custComFirst" aria-controls="custComFirst" data-toggle="tab" class="activeValue">
+                                                          <li role="presentation"><a href="#custComFirst" aria-controls="custComFirst" data-toggle="tab" rel="relativeanchor" class="activeValue">
                                                            <span class="icon icon-custcome"></span>     
                                                           Customers Come First</a></li>
-                                                          <li role="presentation"><a href="#breakBound" aria-controls="breakBound" data-toggle="tab">
+                                                          <li role="presentation"><a href="#breakBound" aria-controls="breakBound" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-setbacks"></span>       
                                                           Setbacks to Break Boundaries</a></li>
-                                                          <li role="presentation"><a href="#impoGoals" aria-controls="impoGoals" data-toggle="tab">
+                                                          <li role="presentation"><a href="#impoGoals" aria-controls="impoGoals" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-impossible"></span> 
                                                           We Set Impossible Goals</a></li>
-                                                          <li role="presentation"><a href="#peoplePower" aria-controls="peoplePower" data-toggle="tab">
+                                                          <li role="presentation"><a href="#peoplePower" aria-controls="peoplePower" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-peoplepower"></span>     
                                                           People are our Power</a></li>
-                                                          <li role="presentation"><a href="#peopleFocus" aria-controls="peopleFocus" data-toggle="tab">
+                                                          <li role="presentation"><a href="#peopleFocus" aria-controls="peopleFocus" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-alwaysbefore"></span>      
                                                           We Focus on Why & How?</a></li>
-                                                          <li role="presentation"><a href="#alwaysBefore" aria-controls="alwaysBefore" data-toggle="tab">
+                                                          <li role="presentation"><a href="#alwaysBefore" aria-controls="alwaysBefore" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-focus"></span>          
                                                           Always We Before Me</a></li>
-                                                          <li role="presentation"><a href="#doNotSettle" aria-controls="doNotSettle" data-toggle="tab">
+                                                          <li role="presentation"><a href="#doNotSettle" aria-controls="doNotSettle" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-settle"></span>
                                                                 We Don’t Settle</a></li>
-                                                          <li role="presentation"><a href="#empowerFut" aria-controls="empowerFut" data-toggle="tab">
+                                                          <li role="presentation"><a href="#empowerFut" aria-controls="empowerFut" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-empower"></span>      
                                                           We Empower The Future</a></li>
-                                                          <li role="presentation"><a href="#transparency" aria-controls="transparency" data-toggle="tab">
+                                                          <li role="presentation"><a href="#transparency" aria-controls="transparency" data-toggle="tab" rel="relativeanchor">
                                                           <span class="icon icon-transparency"></span>         
                                                           Transparency and Honesty</a></li>
                                                         </ul>
@@ -352,45 +354,45 @@
                   </div>
                     <div class="about-content-body">
                     <div class="about fixedprinciple">
-                                <div class="container">
-                                            <div class="tab-content">
-                                                <!-- start secondry tabs -->
-                                                <div>
-                                                      <ul class="nav nav-tabs nav-tabs-values  nav-tab-principle navs-principle">
-                                                            <li>
-                                                                  <a href="#Nurture" data-toggle="tab" class="activepr">
-                                                                  <span class="icon icon-Nurtures"></span>
-                                                                        Nurtures Collaboration</a>
-                                                            </li>
-                                                            <li><a href="#lcommunication"  data-toggle="tab">
-                                                            <span class="icon icon-Communication"></span>
-                                                            Leads through Communication</a></li>
-                                                            <li><a href="#lexample"  data-toggle="tab">
-                                                            <span class="icon icon-leadsByExample"></span>
-                                                            Leads By Example</a></li>
-                                                            <li><a href="#consults" data-toggle="tab">
-                                                            <span class="icon icon-consult"></span>
-                                                            Consults and Delegates</a></li>
-                                                            <li><a href="#courageous" data-toggle="tab">
-                                                            <span class="icon icon-Courageous"></span>
-                                                            Is Courageous</a></li>
-                                                            <li><a href="#integrity" data-toggle="tab">
-                                                            <span class="icon icon-integrity"></span>
-                                                            Adds Integrity</a></li>
-                                                            <li><a href="#serves" data-toggle="tab">
-                                                            <span class="icon icon-ServeGood"></span>
-                                                            Serves for the Greater Good</a></li>
-                                                            <li><a href="#process" data-toggle="tab">
-                                                            <span class="icon icon-process"></span>
-                                                            Defines & Creates Processes</a></li>
-                                                            <li><a href="#evolve" data-toggle="tab">
-                                                            <span class="icon icon-adaptToEvolve"></span>
-                                                            Adapts to Evolve</a></li>
-                                                      </ul>
-                                              </div>
-                                           </div>
+                        <div class="container">
+                        <div class="tab-content">
+                        <!-- start secondry tabs -->
+                        <div id="menu-center">
+                        <ul class="nav nav-tabs nav-tabs-values nav-tab-principle navs-principle">
+                              <li>
+                              <a href="#Nurture" class="active" rel="relativeanchor">
+                              <span class="icon icon-Nurtures"></span>
+                              Nurtures Collaboration</a>
+                              </li>
+                              <li><a href="#lcommunication" rel="relativeanchor">
+                              <span class="icon icon-Communication"></span>
+                              Leads through Communication</a></li>
+                              <li><a href="#lexample" rel="relativeanchor">
+                              <span class="icon icon-leadsByExample"></span>
+                              Leads By Example</a></li>
+                              <li><a href="#consults" rel="relativeanchor">
+                              <span class="icon icon-consult"></span>
+                              Consults and Delegates</a></li>
+                              <li><a href="#courageous" rel="relativeanchor">
+                              <span class="icon icon-Courageous"></span>
+                              Is Courageous</a></li>
+                              <li><a href="#integrity" rel="relativeanchor">
+                              <span class="icon icon-integrity"></span>
+                              Adds Integrity</a></li>
+                              <li><a href="#serves" rel="relativeanchor">
+                              <span class="icon icon-ServeGood"></span>
+                              Serves for the Greater Good</a></li>
+                              <li><a href="#process" rel="relativeanchor">
+                              <span class="icon icon-process"></span>
+                              Defines & Creates Processes</a></li>
+                              <li><a href="#evolve" rel="relativeanchor">
+                              <span class="icon icon-adaptToEvolve"></span>
+                              Adapts to Evolve</a></li>
+                        </ul>
+                        </div>
+                        </div>
                                </div>
-            </div>
+                  </div>
                                <div class="container-fluid fixedPrContainer">
                                     <div class="product p-t-0 p-b-0">
                                     <div class="row" id="Nurture">
@@ -937,13 +939,64 @@
 </section>
 
 
-<a href="#" class="go-top"><img src="../assets/images/arrow.svg" alt="" /></a>
- 
+
 
 <!-- include footer -->
 <?php include 'footScript.php';?>
   <?php include 'footer.php';?> 
+
   <script>
+
+
+// sadique sheikh
+$(document).ready(function () {
+    $(document).on("scroll", onScroll);
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+        
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+      
+        var target = this.hash,
+            menu = target;
+            $target = $(target);
+      //   $('html, body').stop().animate({
+      //       'scrollTop': $target.offset().top+2
+      //   }
+      //   , 600, 'swing', function () {
+      //       window.location.hash = target;
+      //       $(document).on("scroll", onScroll);
+      //   });
+    });
+
+$('a[rel="relativeanchor"]').click(function(){
+      $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset(100).top
+      }, 1000);
+      return false;
+}); 
+
+function onScroll(event) {
+    var scrollPos = $(document).scrollTop();
+    $('#menu-center a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+      //   if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+      //       $('#menu-center ul li a').removeClass("active");
+      //       currLink.addClass("active");
+      //   }
+      //   else{
+      //       currLink.removeClass("active");
+      //   }
+    });
+}
+});
+// sadik js end
+
+
   $(document).ready(function(){
         
 //  
@@ -969,24 +1022,13 @@ $(window).scroll(function(){
     $('.bgNurture').css('margin-top', '0');
    }
 });
-
-
-
 });
-
-
 $('.nav-tabs-footer li a').click(function(){
-         
-//  $('html, body').scroll(0,0);
-// $('html,body').scroll(0, 'slow');
-$("html, body").animate({ scrollTop: 0 }, 0);
+      $("html, body").animate({ scrollTop: 0 }, 0);
 });
-
 
   $(function() {
-      
   $('.nav-tabs-values li a[href^="#"]').click(function() {
-        // debugger;
     if  ((location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname)) {
       var target = $(this.hash);
       $("a.activeValue").removeClass("activeValue");
@@ -994,14 +1036,14 @@ $("html, body").animate({ scrollTop: 0 }, 0);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top - 200 //offsets for fixed header
+          scrollTop: target.offset().top - 500
         }, 800);
         return false;
       }
     }
   });
+
   $('.nav-tab-principle li a[href^="#"]').click(function(e) {
-        // debugger;
     if  ((location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname)) {
       var target = $(this.hash);
       $("a.activepr").removeClass("activepr");
@@ -1009,16 +1051,13 @@ $("html, body").animate({ scrollTop: 0 }, 0);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top - 200 //offsets for fixed header
+          scrollTop: target.offset().top - 500
         }, 800);
         return false;
       }
     }
   });
 });
-
-
-
 
 if ( $(window).width() < 768 ){
       $(".multiline-ellipsis").click(function(){
@@ -1029,24 +1068,53 @@ if ( $(window).width() < 768 ){
 })
 }
 
+// $(document).ready(function() {
+//       $('a[rel="relativeanchor"]').click(function(){
+//             $('html, body').animate({
+//                   scrollTop: $( $.attr(this, 'href') ).offset(1000).top
+//             }, 5000);
+//             return false;
+//       }); 
+// });
 
-$(window).scroll(function() {
-    if ($(this).scrollTop()) {
-        $('.go-top').fadeIn();
-    } else {
-        $('.go-top').fadeOut();
-    }
-});
 
-// go to top jump jQuery
-$(".go-top").click(function() {
-    $("html, body").animate({scrollTop: 0}, 1000);
- });
+
+
+
+
+
+
+
+
+// function getTargetTop(elem){
+//       var id = elem.attr("href");
+//       var offset = $('.nav').height();
+//       return $(id).offset().top - offset;
+// }
+// $('a[href^="#"]').click(function(event) {
+//       var target = getTargetTop($(this));
+//       $('html, body').animate({scrollTop:target}, 500);
+//       event.preventDefault();
+// });
+// var sections = $('a[href^="#"]');
+// function checkSectionSelected(scrolledTo){
+//       var threshold = 30;
+//       var i;
+//       for (i = 0; i < sections.length; i++) {
+//             var section = $(sections[i]);
+//             var target = getTargetTop(section);
+//             if (scrolledTo > target - threshold && scrolledTo < target + threshold) {
+//                   sections.removeClass("active");
+//                   section.addClass("active");
+//             }
+//       };
+// }
+// checkSectionSelected($(window).scrollTop());
+// $(window).scroll(function(e){
+//       checkSectionSelected($(window).scrollTop())
+// });
 
 
 </script>
-
-
-  
 </body>
 </html>

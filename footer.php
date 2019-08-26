@@ -201,17 +201,30 @@
   <!-- end of footer -->
 
 
+<a href="javascript:void(0)" class="go-top"><img src="../assets/images/arrow.svg" alt="" /></a>
+
 <script type="text/javascript">
-  
-
-    function goTo (state, type) {
-      if(type == "state") {window.location = state
-      }else {window.open(state)}
-    }
-
+  function goTo (state, type) {
+    if(type == "state") {window.location = state
+    }else {window.open(state)}
+  }
 </script>
 
 <script type="text/javascript">
+
+$(window).scroll(function() {
+    if ($(this).scrollTop()) {
+        $('.go-top').fadeIn();
+    } else {
+        $('.go-top').fadeOut();
+    }
+});
+
+// go to top jump jQuery
+$(".go-top").click(function() {
+    $("html, body").animate({scrollTop: 0}, 1000);
+ });
+ 
 /*-------------------------------------------------------------------*/
 /*  FULL SCREEN FIRST SECTION
 /*-------------------------------------------------------------------*/
@@ -249,7 +262,7 @@ jQuery(document).ready(function($){
 //sadik smooth scroller
 $('a[rel="relativeanchor"]').click(function(){
     $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
+        scrollTop: $( $.attr(this, 'href') ).offset().top - 400
     }, 500);
     return false;
 }); 
@@ -265,14 +278,6 @@ $('a[rel="relativeanchor"]').click(function(){
     else {
       $('.navbar').removeClass('affix')
     }
-    
-    // $('.page-scroll').each(function(){
-    //   var scrollHref = $(this).attr('href');
-    //   if( $(window).scrollTop() > $(scrollHref).offset().top - 100 ) {
-    //     $('.page-scroll').removeClass('active');
-    //     $(this).addClass('active');
-    //   }
-    // });
   });
 });
 $("input[type='email']").focus(function(){
@@ -300,10 +305,5 @@ $(document).ready(function () {
     numToIncrement = 3;
     $('#cardList').find('li').hide().slice(x, x + numToShow).show();
 });
-
-
-
-
-
 </script>
 

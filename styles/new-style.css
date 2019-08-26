@@ -381,6 +381,11 @@ figure h1{margin-bottom:5px;}
 .tallybook{width:681px;}
 
 /* my css start */
+* {
+    transition: .5s all ease !important;
+}
+
+
 h4.heading-4 {
     font-size: 30px;
 }
@@ -581,7 +586,7 @@ ul#cardList {
     float: right;
 }
 
-.go-top {width: 60px;display: inline-block;position: fixed;right: 19px;bottom: 100px;background: #45455f;padding: 17px;border-radius: 90px;z-index: 9999999;}
+.go-top {width: 60px;display: none; position: fixed;right: 19px;bottom: 100px;background: #45455f;padding: 17px;border-radius: 90px;z-index: 9999999;}
 
 @media(min-width:768px){.display-small-sc{display:block;}
 .display-large-sc{display:none;}
@@ -1095,8 +1100,8 @@ ul.reportint-list li {
 .nav-tabs-about > li.active > a, .nav-tabs-about > li > a:hover{border:none !important;background:transparent !important;color:var(--secondry-color);}
 .nav-tabs-about > li > a::after{content:"";background:var(--secondry-color);height:4px;position:absolute;width:100%;left:0;bottom:-1px;transition:all 250ms ease 0s;transform:scale(0);}
 .nav-tabs-about > li.active > a::after{transform:scale(1);}
-.website-link{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;}
-.know-more-link{z-index:2;position:relative;}
+/* .website-link{position:absolute;top:0;bottom:0;left:0;right:0;z-index:1;} */
+.know-more-link{margin: 0px !important; text-decoration: underline; color: #156BB3;}
 .tab-pane{padding:15px 0;}
 .about-content-head{background:#26263A;padding:40px 0;}
 .about-content-head h1{font-size:60px;display:inline-block;vertical-align:middle;position:relative;margin-top:0;margin-bottom:0;padding-top:30px;line-height:1;padding-bottom:30px;padding-right:85px;color:rgba(255,255,255,0.2);font-family:"CambriaRegular";max-width:400px;}
