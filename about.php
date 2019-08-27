@@ -710,15 +710,6 @@
                                                             </li>
                                                             <li>
                                                                   <figure class="member">
-                                                                        <img src="../assets/images/team/shubham.png" alt="">
-                                                                        <p class="member-footer">
-                                                                              <span class="name">Shubham</span>
-                                                                              <span class="designation">Full Stack Developer</span>
-                                                                              </p>
-                                                                  </figure>
-                                                            </li>
-                                                            <li>
-                                                                  <figure class="member">
                                                                         <img src="../assets/images/team/aditya-chandeliya.png" alt="">
                                                                         <p class="member-footer">
                                                                               <span class="name">Aditya</span>
@@ -761,7 +752,7 @@
                                                                         <img src="../assets/images/team/shreya.png" alt="">
                                                                         <p class="member-footer">
                                                                               <span class="name">Shreya</span>
-                                                                              <span class="designation">Software test Engineer</span>
+                                                                              <span class="designation">Software Test Engineer</span>
                                                                               </p>
                                                                   </figure>
                                                             </li>
@@ -771,7 +762,7 @@
                                                                         <img src="../assets/images/team/chetan.png" alt="">
                                                                         <p class="member-footer">
                                                                               <span class="name">Chetan</span>
-                                                                              <span class="designation">Software test Engineer</span>
+                                                                              <span class="designation">Software Test Engineer</span>
                                                                               </p>
                                                                   </figure>
                                                             </li>
@@ -782,6 +773,8 @@
                                                                         <a href="https://www.walkover.in/career.php" target="_blank" class="empty-link"><span class="empty">Interested to <br>join our<br> team.</span></a>
                                                                   </figure>
                                                             </li>
+
+                                                            <li><figure class="member blank-member"></figure></li>
                                                      </ul>
                                                 </div>
                                           </div>
