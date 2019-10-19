@@ -615,7 +615,7 @@
                                                                         <figure class="member">
                                                                               <img src="../assets/images/team/fabien-varghese.png" alt="">
                                                                               <p class="member-footer">
-                                                                                    <span class="name">Faiben</span>
+                                                                                    <span class="name">Fabien</span>
                                                                                     <span class="designation">Senior Sales Representative</span>
                                                                                     </p>
                                                                         </figure>
