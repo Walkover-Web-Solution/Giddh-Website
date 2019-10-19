@@ -8,11 +8,11 @@
                         <div class="col-sm-4 col-xs-6">
                             <h3>Desktop App</h3>
                                 <ul class="app_download">
-                                    <li>
+                                    <!-- <li>
                                         <a href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-{{apkVersion}}.dmg">
                                             <i class="fab fa-apple"></i>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <a href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20{{apkVersion}}.exe">
                                             <i class="fab fa-windows"></i>
