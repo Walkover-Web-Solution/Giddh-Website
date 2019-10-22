@@ -8,6 +8,10 @@
 </head>
 <body style="background: none;" ng-controller="homeController as vm" id="page-top">
 
+<?php
+header("sadik");
+?>
+
   <?php include 'header.php';?>  
 
   <section id="videoBg" class="intro no-result">

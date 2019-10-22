@@ -1,0 +1,2 @@
+RewriteEngine on
+ErrorDocument 404 /404.php # change this to your own 404 file path
