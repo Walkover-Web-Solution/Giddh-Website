@@ -208,6 +208,8 @@ ul.reportint-list li {
 	height: 90px;
 	width: auto;
 }
+
+
 @media (max-width: 1199px) {
 	#features_page .col {
 		min-width: 50% !important;
@@ -344,7 +346,8 @@ h1.instant-heading {
 	position: relative;
 	background:#e7e7e8 url('https://giddh.com/wp-content/uploads/2019/11/2065.jpg') no-repeat;
 	background-size: inherit;
-	background-position: top right;
+  background-position: top right;
+  background-size: contain;
 }
 section.switch-online, .accounting-solution {
     padding: 150px 0;

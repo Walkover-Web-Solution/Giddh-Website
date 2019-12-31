@@ -89,7 +89,7 @@
 				<h4>Contact Us</h4>
 				<p class="mb-4">For complete accounting solution for your business</p>
 				<!-- <?php // echo do_shortcode('[contact-form-7 id="281" title="contact form"]'); ?> -->
-				<div class="footer-form">
+				<div class="footer-form" id="footer-contact">
 					<script src='https://giddh.freshsales.io/web_forms/107a322374f7547d5957d9b38c19c33c9e212d45612a1c060d5b140bc59a8d9c/form.js' crossorigin='anonymous' id='fs_107a322374f7547d5957d9b38c19c33c9e212d45612a1c060d5b140bc59a8d9c'></script>
 				</div>
 			</div>
