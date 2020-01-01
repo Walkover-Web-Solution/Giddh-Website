@@ -233,7 +233,7 @@ ul.reportint-list li {
     align-items: center;
     height: 100%;
     width: 100%;
-    max-width: 662px;
+    /* max-width: 662px; */
     float: right;
 }
 .pricing-benner .padding-img {
