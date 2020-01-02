@@ -2,15 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Giddh Signup</title>
-	<link rel='stylesheet' id='muteweb-vendor-style-css'  href='https://giddh.com/wp-content/themes/muteweb/assets/css/vendor.min.css?ver=1.5' type='text/css' media='all' />
-	<link rel='stylesheet' id='muteweb-style-css'  href='https://giddh.com/wp-content/themes/muteweb/style.css?ver=1.5' type='text/css' media='all' />
-	<link rel="icon" href="https://giddh.com/wp-content/uploads/2019/11/favicon.ico" sizes="32x32" />
-<link rel="icon" href="https://giddh.com/wp-content/uploads/2019/11/favicon.ico" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://giddh.com/wp-content/uploads/2019/11/favicon.ico" />
-<meta name="msapplication-TileImage" content="https://giddh.com/wp-content/uploads/2019/11/favicon.ico" />
-
-<meta charset="utf-8">
+    <title>Signup ~ Giddh</title>
+    <link rel='stylesheet' id='muteweb-vendor-style-css'  href='<?php echo site_url(); ?>/wp-content/themes/muteweb/assets/css/vendor.min.css?ver=1.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='muteweb-style-css'  href='<?php echo site_url(); ?>/wp-content/themes/muteweb/style.css?ver=1.5' type='text/css' media='all' />
+    <link rel="icon" href="<?php echo site_url(); ?>/wp-content/uploads/2019/11/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="<?php echo site_url(); ?>/wp-content/uploads/2019/11/favicon.ico" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="<?php echo site_url(); ?>/wp-content/uploads/2019/11/favicon.ico" />
+    <meta name="msapplication-TileImage" content="<?php echo site_url(); ?>/wp-content/uploads/2019/11/favicon.ico" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <style type="text/css">
@@ -32,7 +31,7 @@ span.abcRioButtonContents {
     line-height: 40px !important;
 }
 .login_right{
-	background-image: url(https://giddh.com/wp-content/uploads/2019/11/Login-Page-Image.png);
+	background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/11/Login-Page-Image.png);
 	height: 100vh;
 	justify-content: flex-start;
 	    background-position: top right;
@@ -151,6 +150,13 @@ span.buttonText {
   display: inline-block;
   vertical-align: middle;
 }
+#otp-message-parent{
+    float: left;
+    margin-top: 14px;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
 </style>
 </head>
 <body>
@@ -175,7 +181,7 @@ span.buttonText {
               <ul class="pl-0">
                 <li class="list-unstyled pt-3">
                 <div id="gSignInWrapper">
-                  <div id="customBtn" class="customGPlusSignIn">
+                  <div id="customBtn" class="customGPlusSignIn" onclick="initGoogleSignup();">
                     <span class="icon"></span>
                     <span class="buttonText">Signup with google</span>
                   </div>
@@ -203,7 +209,7 @@ span.buttonText {
                   </div>
                   <button type="submit" class="btn btn-block btn-primary">Verify Email</button>
                   <div class="d-flex justify-content-end mt-2">
-                    <a onclick="resendOtp()" href="javascript:void(0)">Resend code</a>
+                    <a onclick="resendOtpEmail()" href="javascript:void(0)">Resend code</a>
                   </div>
                 </form>
               </section>
@@ -225,7 +231,7 @@ span.buttonText {
 
 <!-- Modal start -->
 <div class="modal fade" id="otpVerifyModal" tabindex="-1" role="dialog" aria-labelledby="otpVerifyLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-md" role="document">
     <div class="modal-content">
     <div class="modal-header">
     <h3>Giddh Two Factor Auth</h3>
@@ -241,6 +247,10 @@ span.buttonText {
         <div class="form-group">
         <button type="submit" class="btn btn-block btn-primary">Submit</button>
         </div>
+        <div class="form-group" style="text-align: center;font-size: 14px;">
+          <span>Didn't receive OTP?</span>&nbsp;<a href="javascript:;" onclick="resendOtp()">Resend OTP</a>
+          <div id="otp-message-parent"><span id="otp-message" class="alert"></span></div>
+        </div>
         </form>
       </div>
     </div>
@@ -248,8 +258,8 @@ span.buttonText {
 </div>
 <!-- Modal ends -->
 
-<script type='text/javascript' src='https://giddh.com/wp-content/themes/muteweb/assets/js/vendor.min.js?ver=20141010'></script>
-<script type='text/javascript' src='https://giddh.com/wp-content/themes/muteweb/assets/js/front-script.js?ver=20141010'></script>
+<script type='text/javascript' src='<?php echo site_url(); ?>/wp-content/themes/muteweb/assets/js/vendor.min.js?ver=20141010'></script>
+<script type='text/javascript' src='<?php echo site_url(); ?>/wp-content/themes/muteweb/assets/js/front-script.js?ver=20141010'></script>
 <script src="https://apis.google.com/js/api:client.js"></script>
 <script type='text/javascript'>
 var _GID_API_RES = null;
@@ -264,15 +274,13 @@ if($_COOKIE['utm_source'] || $_COOKIE['utm_medium'] || $_COOKIE['utm_campaign'] 
 }
 ?>
 
-var startApp = function() {
-  gapi.load('auth2', function(){
-    auth2 = gapi.auth2.init({
-      client_id: '641015054140-3cl9c3kh18vctdjlrt9c8v0vs85dorv2.apps.googleusercontent.com',
-      cookiepolicy: 'single_host_origin',
-    });
-    attachSignin(document.getElementById('customBtn'));
-  });
-};
+function initGoogleSignup() {
+    var width = 600;
+    var height = 500;
+    var left = (screen.width/2)-(width/2);
+    var top = (screen.height/2)-(height/2);
+    window.open("<?php echo getGoogleAuthUrl(); ?>", "Giddh - Google Login", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+width+', height='+height+', top='+top+', left='+left);
+}
 
 function deleteUtmCookies() {
     document.cookie = 'utm_source=; Path=/; Domain=giddh.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
@@ -280,27 +288,6 @@ function deleteUtmCookies() {
     document.cookie = 'utm_campaign=; Path=/; Domain=giddh.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     document.cookie = 'utm_term=; Path=/; Domain=giddh.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     document.cookie = 'utm_content=; Path=/; Domain=giddh.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-}
-
-function attachSignin(element) {
-  auth2.attachClickHandler(element, {},
-  function(googleUser) {
-    onGoogleSuccess(googleUser);
-  }, function(error) {
-    console.log(JSON.stringify(error, undefined, 2));
-  });
-}
-
-function onGoogleSuccess(googleUser) {
-  if (googleUser && googleUser['Zi']) {
-    let token = googleUser['Zi'].access_token;
-    if (token) {
-      checkToken(token);
-      // window.location = "https://app.giddh.com/app/token-verify?token="+token;
-    } else {
-      signOut();
-    }
-  }
 }
 
 function checkToken(token) {
@@ -326,19 +313,6 @@ function checkToken(token) {
     });
   }
 }
-
-function signOut() {
-  localStorage.setItem('logout', false);
-  var auth2 = gapi.auth2.getAuthInstance();
-  auth2.signOut().then(function () {
-    console.log('User signed out.');
-  });
-  localStorage.getItem('logout')
-}
-
-window.addEventListener('load', function() {
-  startApp();
-});
 
 jQuery("#otpForm").submit(function(e) {
   e.preventDefault();
@@ -452,7 +426,6 @@ jQuery(function(){
 
 }); 
 
-
 function showVerificationStep() {
   jQuery("#signup_form_wrap").hide();
   jQuery("#verify_form_wrap").show();
@@ -469,7 +442,7 @@ function showMsg(msg, type) {
   }, 30000);
 }
 
-function resendOtp() {
+function resendOtpEmail() {
   resetFormButton('#verifyOtpForm');
   jQuery('#verificationCode').val('');
   var email= jQuery('#email').val();
@@ -499,6 +472,45 @@ function resendOtp() {
   }
 }
 
+var resendInProgress = false;
+
+function resendOtp() {
+    jQuery("#otp-message-parent").hide();
+
+    if(!resendInProgress && _GID_API_RES && _GID_API_RES.contactNumber && _GID_API_RES.countryCode) {
+        resendInProgress = true;
+
+        jQuery.ajax({
+            url: "https://api.giddh.com/generate-otp",
+            type: "POST",
+            dataType: "json",
+            contentType: 'application/json',
+            data: JSON.stringify({mobileNumber: _GID_API_RES.contactNumber, countryCode: _GID_API_RES.countryCode }),
+            success: function(data) {
+                resendInProgress = false;
+
+                jQuery("#otp-message-parent").show();
+
+                if (data.status === 'success') {
+                    jQuery("#otp-message").removeClass("alert-danger").addClass("alert-success").html(data.body);
+                } else {
+                    jQuery("#otp-message").removeClass("alert-success").addClass("alert-danger").html(data.body);
+                }
+            },
+            error: function(err) {
+                resendInProgress = false;
+
+                jQuery("#otp-message-parent").show();
+                jQuery("#otp-message").removeClass("alert-success").addClass("alert-danger").html("Something went wrong! Please try again.");
+            }
+        });
+    }
+}
+
+function resetTwoWayAuthModal() {
+    jQuery("#otp-message-parent").hide();
+    jQuery("#otp-message").removeClass("alert-success alert-danger").html("");
+}
 </script>
 </body>
 </html>
