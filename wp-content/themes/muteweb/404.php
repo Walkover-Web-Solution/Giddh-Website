@@ -1,1 +1,13 @@
-<?php/** * The template for displaying 404 pages (not found) * * @package WordPress * @subpackage Twenty_Sixteen * @since Twenty Sixteen 1.0 */get_header(); ?><div class="row text-center">	<div class="container">		<h1 class="page-title">Oops! That page can&rsquo;t be found.</h1>		<p>It looks like nothing was found at this location. Maybe try a search?</p>	</div></div><?php get_footer(); ?>
+<?php /* Template Name: 404 */ ?>
+<?php get_header(); ?>
+
+<section id="videoBg" class="intro no-result">
+  <div class="intro-body">
+    <div class="center-block text-center">
+      <figure>
+        <img src="<?php echo site_url()?>/wp-content/themes/muteweb/assets/images/404.png" alt="business accounting software">
+      </figure>
+    </div>
+  </div>
+</section> 
+  <?php get_footer();  ?>

@@ -64,13 +64,13 @@ var wpcf7 = {"apiSettings":{"root":"https:\/\/giddh.com\/wp-json\/contact-form-7
 </script>
 
 <!-- Modal start -->
-<div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel" aria-hidden="true">
+<div class="modal fade custom-modal" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
 			<div class="modal-header">
       	<h4>Downloads</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="https://giddh.com/wp-content/themes/muteweb/assets/images/close.svg"></span>
+          <span aria-hidden="true"><img src="<?php echo site_url()?>/wp-content/themes/muteweb/assets/images/close.svg"></span>
         </button>
       </div>
       <div class="modal-body">
@@ -86,13 +86,13 @@ var wpcf7 = {"apiSettings":{"root":"https:\/\/giddh.com\/wp-json\/contact-form-7
 	
 <?php if ( is_front_page()) { ?>
 	<!-- Modal start -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade custom-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
     <div class="modal-content">
       <div class="modal-header">
       	<h4 id="featuredHeading"></h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"><img src="https://staginglabs.in/giddh/wp-content/themes/muteweb/assets/images/close.svg"></span>
+          <span aria-hidden="true"><img src="<?php echo site_url()?>/wp-content/themes/muteweb/assets/images/close.svg"></span>
         </button>
       </div>
       <div class="modal-body pt-0">

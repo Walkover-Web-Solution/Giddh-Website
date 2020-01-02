@@ -298,6 +298,21 @@ button.navbar-toggler:focus {
 	    height: 6.2rem;
 	width: auto;
 }
+.modal.fade.custom-modal.show {
+  opacity: 1;
+}
+.center-block {
+  padding: 100px;
+}
+.center-block img {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.custom-modal .close img {
+  width: 20px;
+}
+
+
 @media(max-width: 1199px){
 	.bills_pay a.w-50 {
     	width: initial !important;
