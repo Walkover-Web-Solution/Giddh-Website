@@ -57,6 +57,10 @@ define( 'NONCE_SALT',       'ny2gclyj5o6xiqr62sx05lfcq2ocyklmnnwkqedavfvu60qcvj9
 
 /**#@-*/
 
+define("GOOGLE_CLIENT_ID", "338599525291-niqmd5lthqhg3ih1r7tmrp4dei91p28n.apps.googleusercontent.com");
+define("GOOGLE_CLIENT_SECRET", "uO_9kraxv3ka8MXJFjp1SqZZ");
+define("GOOGLE_REDIRECT_URL", 'http://localhost/giddh/googleauth.php');
+
 /**
  * WordPress Database Table prefix.
  *

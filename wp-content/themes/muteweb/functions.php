@@ -295,3 +295,18 @@ function unlisted_jobs_redirect()
         exit();
     }
 }
+
+function getGoogleAuthUrl() {
+    require_once ABSPATH.'vendor/autoload.php';
+ 
+    // create Client Request to access Google API
+    $client = new Google_Client();
+    $client->setClientId(GOOGLE_CLIENT_ID);
+    $client->setClientSecret(GOOGLE_CLIENT_SECRET);
+    $client->setRedirectUri(GOOGLE_REDIRECT_URL);
+    $client->setAccessType("offline");
+    $client->addScope("email");
+    $client->addScope("profile");
+    
+    return $client->createAuthUrl();
+}

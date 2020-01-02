@@ -1,18 +1,16 @@
 <?php /* Template Name: login*/ ?>
-<?php $action = $_GET['action']; ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login ~ Giddh</title>
-	<link rel="icon" href="https://giddh.com/wp-content/uploads/2019/11/favicon.ico" sizes="32x32" />
-<link rel="icon" href="https://giddh.com/wp-content/uploads/2019/11/favicon.ico" sizes="192x192" />
-<link rel="apple-touch-icon-precomposed" href="https://giddh.com/wp-content/uploads/2019/11/favicon.ico" />
-<meta name="msapplication-TileImage" content="https://giddh.com/wp-content/uploads/2019/11/favicon.ico" />
-<meta charset="utf-8">
+    <title>Login ~ Giddh</title>
+    <link rel="icon" href="<?php echo site_url(); ?>/wp-content/uploads/2019/11/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="<?php echo site_url(); ?>/wp-content/uploads/2019/11/favicon.ico" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="<?php echo site_url(); ?>/wp-content/uploads/2019/11/favicon.ico" />
+    <meta name="msapplication-TileImage" content="<?php echo site_url(); ?>/wp-content/uploads/2019/11/favicon.ico" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="google-signin-client_id" content="641015054140-3cl9c3kh18vctdjlrt9c8v0vs85dorv2.apps.googleusercontent.com">
-	<link rel='stylesheet' id='muteweb-vendor-style-css'  href='https://giddh.com/wp-content/themes/muteweb/assets/css/vendor.min.css?ver=1.5' type='text/css' media='all' />
-	<link rel='stylesheet' id='muteweb-style-css'  href='https://giddh.com/wp-content/themes/muteweb/style.css?ver=1.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='muteweb-vendor-style-css'  href='<?php echo site_url(); ?>/wp-content/themes/muteweb/assets/css/vendor.min.css?ver=1.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='muteweb-style-css'  href='<?php echo site_url(); ?>/wp-content/themes/muteweb/style.css?ver=1.5' type='text/css' media='all' />
 
 <style type="text/css">
 	body{padding: 0}
@@ -33,7 +31,7 @@ span.abcRioButtonContents {
   line-height: 40px !important;
 }
 .login_right{
-	background-image: url(https://giddh.com/wp-content/uploads/2019/11/Login-Page-Image.png);
+	background-image: url(<?php echo site_url(); ?>/wp-content/uploads/2019/11/Login-Page-Image.png);
 	height: 100vh;
 	justify-content: flex-start;
 	background-position: top right;
@@ -158,11 +156,9 @@ border-color: #36396e;
               <section id="fullView">
                 <h4>Login to your secure accounting space</h4>
                 <ul class="pl-0">
-                  <li class="list-unstyled pt-3"><a onclick="someErrands()" href="javascript:void()"
-                      class="btn btn-outline-primary p-0 g-signin2" data-onsuccess="onSignIn"><span
-                        class="p-2 d-inline-block bg-primary text-white w-70">Login with google</span></a></li>
+                  <li class="list-unstyled pt-3"><a href="javascript:;" onclick="initGoogleLogin();" class="btn btn-outline-primary p-0 g-signin2"><span class="p-2 d-inline-block bg-primary text-white w-70">Login with google</span></a></li>
                 </ul>
-                <p class="login-with mb-2">Login with<a href="javascript:void()" data-toggle="collapse" data-target="#demo"> email and password</a></p>
+                <p class="login-with mb-2">Login with<a href="javascript:;" data-toggle="collapse" data-target="#demo"> email and password</a></p>
                 <form id="demo" class="collapse">
                   <div class="form-group">
                     <input autocomplete="off" type="email" id="email" class="form-control" placeholder="Email Id" />
@@ -173,13 +169,13 @@ border-color: #36396e;
                   </div>
                   <button type="submit" class="btn btn-block btn-primary">Login</button>
                   <div class="d-flex justify-content-end mt-2">
-                    <a href="javascript:void(0)" onclick="showForgotPasswordStep1()">Forgot password?</a>
+                    <a href="javascript:;" onclick="showForgotPasswordStep1()">Forgot password?</a>
                   </div>
                 </form>
                 <div class="d-flex align-items-center account mt-2">
                   <p class="mb-0 mr-2">Don't have an account?</p>
                   <!-- <?php echo site_url();?> -->
-                  <a href="https://giddh.com/signup/" class="btn btn-secondary"> signup</a>
+                  <a href="<?php echo site_url(); ?>/signup/" class="btn btn-secondary"> signup</a>
                 </div>
               </section>
               <!-- end of full view -->
@@ -187,7 +183,7 @@ border-color: #36396e;
               <section id="forgotStep-1" class="forgotStep">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="javascript:void(0)" onclick="hideForgotPasswordSteps()">Back</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:;" onclick="hideForgotPasswordSteps()">Back</a></li>
                   </ol>
                 </nav>
                 <form id="forgotFormStep1" class="">
@@ -200,7 +196,7 @@ border-color: #36396e;
                 <section id="forgotStep-2" class="forgotStep">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a onclick="hideForgotPasswordStep2()" href="javascript:void(0)">Reset Password</a></li>
+                    <li class="breadcrumb-item"><a onclick="hideForgotPasswordStep2()" href="javascript:;">Reset Password</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Verification</li>
                   </ol>
                 </nav>
@@ -252,9 +248,8 @@ border-color: #36396e;
 </div>
 <!-- Modal ends -->
 
-<script type='text/javascript' src='https://giddh.com/wp-content/themes/muteweb/assets/js/vendor.min.js?ver=20141010'></script>
-<script type='text/javascript' src='https://giddh.com/wp-content/themes/muteweb/assets/js/front-script.js?ver=20141010'></script>
-<script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+<script type='text/javascript' src='<?php echo site_url(); ?>/wp-content/themes/muteweb/assets/js/vendor.min.js?ver=20141010'></script>
+<script type='text/javascript' src='<?php echo site_url(); ?>/wp-content/themes/muteweb/assets/js/front-script.js?ver=20141010'></script>
 <script type="text/javascript">
 var _GID_API_RES = null;
 var EMAIL_REGEX = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
@@ -268,6 +263,14 @@ if($_COOKIE['utm_source'] || $_COOKIE['utm_medium'] || $_COOKIE['utm_campaign'] 
     <?php
 }
 ?>
+
+function initGoogleLogin() {
+    var width = 600;
+    var height = 500;
+    var left = (screen.width/2)-(width/2);
+    var top = (screen.height/2)-(height/2);
+    window.open("<?php echo getGoogleAuthUrl(); ?>", "Giddh - Google Login", 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+width+', height='+height+', top='+top+', left='+left);
+}
 
 function deleteUtmCookies() {
     document.cookie = 'utm_source=; Path=/; Domain=giddh.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
@@ -537,35 +540,5 @@ function resendOtp() {
     }
 }
 </script>
-<?php if ( !empty($action) && $action == 'logout') { ?>
-<script type="text/javascript">
-function onSignIn(googleUser) {
-  
-}
-window.onLoadCallback = function(){
-    signOut();
-}
-</script>
-<?php } else { ?>
-<script type="text/javascript">
-function onSignIn(googleUser) {
-    if(!initialLoad) {
-        var profile = googleUser.getBasicProfile();
-        if (googleUser && googleUser['Zi']) {
-          let token = googleUser['Zi'].access_token;
-          if (token && localStorage.getItem('logout') !== 'true') {
-            checkToken(token);
-          } else {
-            signOut();
-          }
-        }
-    }
-}
-
-window.onLoadCallback = function() {
-	 
-};
-</script>
-<?php } ?>
 </body>
 </html>
