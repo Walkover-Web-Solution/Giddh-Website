@@ -456,7 +456,7 @@ jQuery("#demo").submit(function(e) {
     var k = jQuery('#email').val();
     var p = jQuery('#password').val();
 
-  	if (k && p) {
+    if (k && p) {
         jQuery(this).find(":submit").attr('disabled', 'disabled');
         jQuery.ajax({
             url: "https://api.giddh.com/v2/login-with-password",
@@ -465,26 +465,29 @@ jQuery("#demo").submit(function(e) {
             contentType: 'application/json',
             cache: false,
             data: JSON.stringify({"password": p , "uniqueKey": k}),
-            success: function(data){
-            	if (data.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
-		            jQuery('#otpVerifyModal').modal({backdrop: 'static', keyboard: false});
-		            jQuery('#otpVerifyModal').modal('show');
-		            _GID_API_RES = data.body;
-		        } else {
-	                jQuery("#demo").find(":submit").prop("disabled", false);
-	                window.location = "https://app.giddh.com/token-verify?request="+JSON.stringify(data);
-	            }
+            success: function(data) {
+                if (data.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
+                    jQuery('#otpVerifyModal').modal({backdrop: 'static', keyboard: false});
+                    jQuery('#otpVerifyModal').modal('show');
+                    _GID_API_RES = data.body;
+                } else {
+                    if(data.body.user.isVerified) {
+                        jQuery("#demo").find(":submit").prop("disabled", false);
+                        window.location = "https://app.giddh.com/token-verify?request="+JSON.stringify(data);
+                    } else {
+                        jQuery("#demo").find(":submit").prop("disabled", false);
+                        showMsg('#infoSpan', "Your account is not verified! Please verify your account to continue.");    
+                    }
+                }
             },
             error: function(err) {
                 jQuery("#demo").find(":submit").prop("disabled", false);
                 if (err && err.responseJSON) {
-                        showMsg('#infoSpan', err.responseJSON.message);
-                } else {
-                  console.log(err);
+                    showMsg('#infoSpan', err.responseJSON.message);
                 }
             }
         });
-  	}
+    }
 });
 
 var redirectUri = "<?php echo site_url(); ?>/login";
