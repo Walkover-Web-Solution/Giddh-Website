@@ -1,0 +1,10 @@
+// Navbar SCSS Code
+.navbar{
+    #giddh_logo{
+        &.logo-white{
+            .giddh-logo-svg{
+                fill: var(--white);
+            }
+        }
+        }
+}
