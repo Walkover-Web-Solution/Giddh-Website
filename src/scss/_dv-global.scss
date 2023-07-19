@@ -1,10 +1,100 @@
 // Navbar SCSS Code
-.navbar{
-    #giddh_logo{
-        &.logo-white{
-            .giddh-logo-svg{
-                fill: var(--white);
-            }
+.navbar {
+  .giddh-logo-svg {
+    fill: var(--white);
+  }
+  .website-globe-icon {
+    .a {
+      fill: var(--white);
+    }
+    .b,
+    .d {
+      fill: none;
+    }
+    .b {
+      stroke: var(--white);
+    }
+    .c {
+      stroke: none;
+    }
+  }
+  .navbar-nav {
+    margin-right: 5%;
+    .nav-item {
+      .nav-link {
+        color: var(--white);
+        padding: 15px 14px;
+        &:hover{
+            color: var(--blue);
         }
+        &.active {
+            color: var(--blue);
         }
+      }
+      &:hover{
+        .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            border-top: 4px solid var(--purple);
+        }
+      }
+    }
+  }
+
+  .login_page_link {
+    padding: 3px 20px;
+    margin-left: 15px;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    display: inline-block;
+    transition: all 600ms ease;
+    &:hover {
+      background-color: var(--white);
+      color: var(--indigo);
+    }
+  }
+  .signup_page_link {
+    padding: 3px 20px;
+    margin-left: 15px;
+    background-color: var(--blue);
+    color: var(--white);
+    border: 1px solid var(--blue);
+    border-radius: 20px;
+    display: inline-block;
+  }
+
+  &--theme-white {
+    .giddh-logo-svg {
+      fill: var(--indigo);
+    }
+    .website-globe-icon {
+        .a {
+          fill: var(--indigo);
+        }
+        .b,
+        .d {
+          fill: none;
+        }
+        .b {
+          stroke: var(--indigo);
+        }
+        .c {
+          stroke: none;
+        }
+      }
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: var(--dark);
+          }
+        }
+      }
+      .login_page_link {
+        background-color: var(--white);
+        color: var(--indigo);
+        border: 1px solid var(--indigo);
+      }
+  }
 }
