@@ -1,7 +1,7 @@
 const navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg position-fixed w-100">
+      <nav className="navbar navbar--theme-white navbar-expand-lg position-fixed w-100">
         <div className="container-fluid">
           <a className="navbar--navbar_brand" href="/">
             <svg
@@ -10,49 +10,37 @@ const navbar = () => {
               height="25"
               viewBox="0 0 126.833 25"
             >
-              <g
-                id="giddh_logo"
-                className="logo-white"
-                data-name="Group 1"
+              <g                
+                className="logo-white"                
                 transform="translate(-319.076 -1919.767)"
               >
-                <rect
-                  id="giddh_0"
+                <rect                 
                   className="giddh-logo-svg"
-                  data-name="Giddh-logo"
                   width="5.491"
                   height="24.999"
                   transform="translate(349.463 1919.767)"
                   fill="#1a237e"
                 />
                 <path
-                  id="giddh_1"
                   className="giddh-logo-svg"
-                  data-name="Giddh-logo"
                   d="M1156.769,1954.394h-8.975c-7.426,0-14.009-4.343-14.009-12.429,0-9.145,6.723-12.57,14.748-12.57h8.236v11.683h-5.491v-6.6h-3.238c-4.646,0-8.553,2.295-8.553,7.2,0,5.685,3.837,7.627,8.94,7.627h8.342Z"
                   transform="translate(-771.519 -9.628)"
                   fill="#1a237e"
                 />
                 <path
-                  id="giddh_2"
                   className="giddh-logo-svg"
-                  data-name="Giddh-logo"
                   d="M2174.323,1954.4h5.49v-10.8h10.665v10.8h5.491v-25h-5.491v9.322h-10.665V1929.4h-5.49Z"
                   transform="translate(-1750.06 -9.635)"
                   fill="#1a237e"
                 />
                 <path
-                  id="giddh_3"
                   className="giddh-logo-svg"
-                  data-name="Giddh-logo"
                   d="M1698.978,1929.4h8.975c7.427,0,14.008,4.343,14.008,12.429,0,9.146-6.723,12.57-14.748,12.57h-8.236v-11.683h5.49v6.6h3.238c4.646,0,8.553-2.295,8.553-7.2,0-5.685-3.836-7.627-8.94-7.627h-8.342Z"
                   transform="translate(-1304.837 -9.628)"
                   fill="#1a237e"
                 />
                 <path
-                  id="giddh_4"
                   className="giddh-logo-svg"
-                  data-name="Giddh-logo"
                   d="M341.488,1929.686h-9.278v4.838h4.254v3.865a10.206,10.206,0,0,1-4.924,1.176c-4.455,0-7.368-3.225-7.368-7.661s2.914-7.661,7.368-7.661a7.283,7.283,0,0,1,5.761,2.251l3.684-4.032c-2.378-2.218-5.694-3.058-9.445-3.058-7.4,0-12.795,4.873-12.795,12.5s5.392,12.5,12.795,12.5a21.2,21.2,0,0,0,9.948-2.285Z"
                   transform="translate(0.33 0.363)"
                   fill="#1a237e"
@@ -82,7 +70,7 @@ const navbar = () => {
                 x2="33"
                 y2="18.5"
                 stroke="#444444"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <line
                 className="hamberger_icon"
@@ -90,7 +78,7 @@ const navbar = () => {
                 x2="33"
                 y2="9.5"
                 stroke="#444444"
-                stroke-width="3"
+                strokeWidth="3"
               />
               <line
                 className="hamberger_icon"
@@ -98,7 +86,7 @@ const navbar = () => {
                 x2="33"
                 y2="1.5"
                 stroke="#444444"
-                stroke-width="3"
+                strokeWidth="3"
               />
             </svg>
           </button>
@@ -246,7 +234,7 @@ const navbar = () => {
                 <ul class="dropdown-menu country_dropdown__menu" aria-labelledby="countryDropdown">
                   <li><a class="dropdown-item" href="#">IN - India</a></li>
                   <li><a class="dropdown-item" href="#">UAE - United Arab Emirates</a></li>
-                  <li><a class="dropdown-item" href="#">EmiratesUK - United Kingdom</a></li>
+                  <li><a class="dropdown-item" href="#">UK - United Kingdom</a></li>
                 </ul>
               </div>
               <div>

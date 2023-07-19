@@ -1,5 +1,6 @@
-// Navbar SCSS Code
+// ======================================== NAVBAR SCSS CODE===============START=====================================
 .navbar {
+  top: 0;
   padding-left: 15px !important;
   padding-right: 15px !important;
   .giddh-logo-svg {
@@ -186,7 +187,7 @@
       }
     }
     .navbar-collapse{
-        max-height: calc(100vh - 47.8px);
+        height: calc(100vh - 47.8px);
         overflow-y: auto;
     }
     .navbar-nav {
@@ -243,8 +244,73 @@
     .nav_right {
       padding-bottom: 1.5rem;
       padding-top: 15px;
-      border-top: 1px solid white;
+      border-top: 1px solid var(--white);
       justify-content: center;
+
+      .country_dropdown{
+       &__menu{
+        background: transparent;
+        border: 0;
+        color: var(--white);
+        border-left: 1px solid var(--white);
+        border-radius: 0;
+        transform: translateX(16px);
+
+        li{
+          a{
+            color: var(--white);
+            &:hover{
+              background-color: rgba(0,0,0, 0.1);
+            }
+          }
+        }
+       }
+      }
+    }
+    &--theme-white {
+      .giddh-logo-svg {
+        fill: var(--white);
+      }
+      .website-globe-icon {
+        .a {
+          fill: var(--white);
+        }
+        .b,
+        .d {
+          fill: none;
+        }
+        .b {
+          stroke: var(--white);
+        }
+        .c {
+          stroke: none;
+        }
+      }
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: var(--white);
+          }
+        }
+      }
+      .login_page_link {
+        background-color: var(--white);
+        color: var(--indigo);
+        border: 1px solid var(--indigo);
+      }
     }
   }
 }
+// ======================================== NAVBAR SCSS CODE===============END=======================================
+
+// ================================ Index Page GST-SECTION SCSS CODE==============START==============================
+.gst_section{
+  margin-top: 47.8px;
+  text-align: center;
+
+  &__content{
+    background-color: var(--light);
+  }
+
+}
+// ================================ Index Page GST-SECTION SCSS CODE===============END===============================
