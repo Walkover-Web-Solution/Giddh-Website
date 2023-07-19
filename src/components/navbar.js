@@ -1,7 +1,7 @@
 const navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg py-0 position-fixed w-100">
+      <nav className="navbar navbar-expand-lg position-fixed w-100">
         <div className="container-fluid">
           <a className="navbar--navbar_brand" href="/">
             <svg
@@ -110,10 +110,10 @@ const navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#" id="featuresDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                   Features
                 </a>
-                <ul className="dropdown-menu dropdown-menu--position-left">
+                <ul className="dropdown-menu dropdown-menu--position-left" aria-labelledby="featuresDropdown">
                   <li>
                     <ul className="dropdown-menu__wapper d-flex flex-wrap ps-0">
                       <li className="col-lg-3 col-md-4 col-sm-6">
@@ -220,9 +220,9 @@ const navbar = () => {
                 </ul>
               </li>
             </ul>
-            <div className="nav_right d-md-flex align-items-center">
-              <div>
-                <a href="#">
+            <div className="nav_right d-flex align-items-center">
+              <div className="dropdown country_dropdown">
+                <a href="#" id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="34"
@@ -243,6 +243,11 @@ const navbar = () => {
                     </g>
                   </svg>
                 </a>
+                <ul class="dropdown-menu country_dropdown__menu" aria-labelledby="countryDropdown">
+                  <li><a class="dropdown-item" href="#">IN - India</a></li>
+                  <li><a class="dropdown-item" href="#">UAE - United Arab Emirates</a></li>
+                  <li><a class="dropdown-item" href="#">EmiratesUK - United Kingdom</a></li>
+                </ul>
               </div>
               <div>
                 <a href="#" className="login_page_link">
