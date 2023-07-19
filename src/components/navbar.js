@@ -4,7 +4,7 @@ const navbar = () => {
       <nav className="navbar navbar-expand-lg bg-dark px-2 py-0 position-fixed w-100">
         <div className="container-fluid">
           <button
-            className="navbar-toggler"
+            className="navbar-toggler text-light"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarTogglerDemo01"
@@ -74,19 +74,94 @@ const navbar = () => {
             </a>
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                    Make the Switch
+                <a className="nav-link active" href="#">
+                  Make the Switch
                 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                    Features
+                  Features
                 </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <ul className="dropdown-menu__wapper d-flex flex-wrap ps-0">
+                      <li className="col-3">
+                        <ul className="ps-0">
+                          <li></li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li className="col-3">
+                        <ul className="ps-0">
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li className="col-3">
+                        <ul className="ps-0">
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li className="col-3">
+                        <ul className="ps-0">
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                          <li>
+                            <a href="#">Menu name 1</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
@@ -95,22 +170,27 @@ const navbar = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                GST
+                  GST
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                    About
+                  About
                 </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   Resources
                 </a>
+                <ul className="dropdown-menu">
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Guide</a></li>
+                  <li><a href="#">Help</a></li>
+                </ul>
               </li>
             </ul>
             <div className="navright d-md-flex align-items-center">
-              {/* <div>
+              <div>
                 <div className="dropdown">
                   <button
                     className="btn btn-secondary dropdown-toggle"
@@ -138,7 +218,7 @@ const navbar = () => {
                     </li>
                   </ul>
                 </div>
-              </div> */}
+              </div>
               <div>
                 <a href="#">
                   <svg
@@ -150,13 +230,13 @@ const navbar = () => {
                   >
                     <g transform="translate(-1039 -41)">
                       <path
-                        class="a"
+                        className="a"
                         d="M633.3,978.4a9.506,9.506,0,0,1,7.1-2.9,9.9,9.9,0,0,1,7.1,2.9,9.356,9.356,0,0,1,2.9,7.1,9.9,9.9,0,0,1-2.9,7.1,9.356,9.356,0,0,1-7.1,2.9,9.9,9.9,0,0,1-7.1-2.9,10.141,10.141,0,0,1,0-14.2Zm6,14.9v-1.9a2.051,2.051,0,0,1-2-2v-1l-4.8-4.8a5.537,5.537,0,0,0-.2,1.8,7.941,7.941,0,0,0,2,5.3A7.67,7.67,0,0,0,639.3,993.3Zm6.9-2.5a7.636,7.636,0,0,0,2.1-5.4,7.749,7.749,0,0,0-1.4-4.5,7.9,7.9,0,0,0-3.6-2.9v.4a2.051,2.051,0,0,1-2,2h-2v2a1.025,1.025,0,0,1-1,1h-2v2h6a1.025,1.025,0,0,1,1,1v3h1A1.921,1.921,0,0,1,646.2,990.8Z"
                         transform="translate(415.6 -927.5)"
                       />
-                      <g class="b" transform="translate(1039 41)">
-                        <circle class="c" cx="17" cy="17" r="17" />
-                        <circle class="d" cx="17" cy="17" r="16.5" />
+                      <g className="b" transform="translate(1039 41)">
+                        <circle className="c" cx="17" cy="17" r="17" />
+                        <circle className="d" cx="17" cy="17" r="16.5" />
                       </g>
                     </g>
                   </svg>

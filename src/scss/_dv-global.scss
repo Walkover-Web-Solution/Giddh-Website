@@ -33,9 +33,43 @@
       }
       &:hover{
         .dropdown-menu {
-            display: block;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            display: block !important;
             margin-top: 0;
             border-top: 4px solid var(--purple);
+            padding: 10px 15px;
+
+            &__wapper{
+                li{
+                    ul{
+                        li{
+                            a{
+                                display: inline-block;
+                                padding: 6px 5px;
+                                min-width: 200px;
+                                color: var(--dark);
+                                transition: all 200ms;
+                                &:hover{
+                                    color: var(--purple);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            li{
+                &>a{
+                    display: inline-block;
+                    padding: 6px 5px;
+                    width: max-content;
+                    color: var(--dark);
+                    transition: all 200ms;
+                    &:hover{
+                        color: var(--purple);
+                    }
+                }
+            }
         }
       }
     }
