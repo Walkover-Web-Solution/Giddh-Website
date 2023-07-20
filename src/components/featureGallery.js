@@ -31,7 +31,7 @@ const featureGallery = () => {
             <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
               <div className="feature-gallery__card"> 
                 <figure>
-                  <img src="/img/feature-gallery-icons/inventory.png" alt="Bank Reconciliation Icon" />
+                  <img src="/img/feature-gallery-icons/bank-reconciliation.png" alt="Bank Reconciliation Icon" />
                   <figcaption>Bank Reconciliation</figcaption>
                 </figure>
               </div>
@@ -40,7 +40,7 @@ const featureGallery = () => {
             <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
               <div className="feature-gallery__card"> 
                 <figure>
-                  <img src="/img/feature-gallery-icons/inventory.png" alt="Multi Currency Icon" />
+                  <img src="/img/feature-gallery-icons/multicurrency.png" alt="Multi Currency Icon" />
                   <figcaption>Multi Currency</figcaption>
                 </figure>
               </div>
@@ -48,7 +48,7 @@ const featureGallery = () => {
             <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
               <div className="feature-gallery__card"> 
                 <figure>
-                  <img src="/img/feature-gallery-icons/inventory.png" alt="Import Data Icon" />
+                  <img src="/img/feature-gallery-icons/import-data.png" alt="Import Data Icon" />
                   <figcaption>Import Data</figcaption>
                 </figure>
               </div>
@@ -56,7 +56,7 @@ const featureGallery = () => {
             <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
               <div className="feature-gallery__card"> 
                 <figure>
-                  <img src="/img/feature-gallery-icons/inventory.png" alt="GST Compliances Icon" />
+                  <img src="/img/feature-gallery-icons/gst-compiance.png" alt="GST Compliances Icon" />
                   <figcaption>GST Compliances</figcaption>
                 </figure>
               </div>
@@ -64,7 +64,7 @@ const featureGallery = () => {
             <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
               <div className="feature-gallery__card"> 
                 <figure>
-                  <img src="/img/feature-gallery-icons/inventory.png" alt="Reports & Analysis Icon" />
+                  <img src="/img/feature-gallery-icons/report-analysis.png" alt="Reports & Analysis Icon" />
                   <figcaption>Reports & Analysis</figcaption>
                 </figure>
               </div>
@@ -73,7 +73,7 @@ const featureGallery = () => {
             <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
               <div className="feature-gallery__card"> 
                 <figure>
-                  <img src="/img/feature-gallery-icons/inventory.png" alt="Share Data Icon" />
+                  <img src="/img/feature-gallery-icons/share-data.png" alt="Share Data Icon" />
                   <figcaption>Share Data</figcaption>
                 </figure>
               </div>
@@ -81,7 +81,7 @@ const featureGallery = () => {
             <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
               <div className="feature-gallery__card"> 
                 <figure>
-                  <img src="/img/feature-gallery-icons/inventory.png" alt="Dashboard Icon" />
+                  <img src="/img/feature-gallery-icons/dashboard-icon.png" alt="Dashboard Icon" />
                   <figcaption>Dashboard</figcaption>
                 </figure>
               </div>
@@ -89,7 +89,7 @@ const featureGallery = () => {
             <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
               <div className="feature-gallery__card"> 
                 <figure>
-                  <img src="/img/feature-gallery-icons/inventory.png" alt="Audit Trail Icon" />
+                  <img src="/img/feature-gallery-icons/support.png" alt="Audit Trail Icon" />
                   <figcaption>Audit Trail</figcaption>
                 </figure>
               </div>
