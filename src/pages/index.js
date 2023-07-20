@@ -1,4 +1,6 @@
 import FEATUREGALLERY from "@/components/featureGallery";
+import MAKETHESWITCH from "@/components/makeTheSwitch";
+
 const index = () => {
   return (
     <>
@@ -21,6 +23,7 @@ const index = () => {
         </div>
       </section>      
       <FEATUREGALLERY />
+      <MAKETHESWITCH />
     </>
   );
 };
