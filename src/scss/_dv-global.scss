@@ -540,3 +540,31 @@
   }
 }
 // ========================== Index Page Enquiry Section SCSS CODE===============END=============================
+
+// ================================= LOGIN PAGE SCSS CODE=====================START============================
+.login{
+  width: 100vw;
+  height: 100vh;
+  background-color: #6c757d ; 
+
+  &__left_section{
+    width: 30vw;
+    background-color: #e0f0fe;
+    position: relative;
+    
+    img{
+      position: absolute;
+      top: 22%;
+    }
+  }
+  &__right_section{
+    width: 70vw;
+
+    &__container{ 
+      padding-top: 60px;
+      padding-left: 60px; 
+    }
+  }
+}
+
+// ================================= LOGIN PAGE SCSS CODE======================END=============================
