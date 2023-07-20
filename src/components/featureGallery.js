@@ -3,6 +3,12 @@ const featureGallery = () => {
       <>
         <section className="container-fluid feature-gallery">
         <div className="container">
+        <div className="row">
+        <div className="feature-gallery__title text-center mb-3">
+            <h2>Features that empower your business</h2>
+            <p className="c-fs-4">Friendly with all other departments Sales, Support, Management etc…</p>
+        </div>
+        </div>
           <div className="row">
             <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
               <div className="feature-gallery__card"> 
