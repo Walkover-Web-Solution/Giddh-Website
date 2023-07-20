@@ -70,6 +70,7 @@ const enquiryForm = () => {
                           class="form-control"
                           rows="4"
                           placeholder="Description"
+                          autoComplete="on"
                         ></textarea>
                       </div>
                     </div>
