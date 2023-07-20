@@ -1,3 +1,4 @@
+import FEATUREGALLERY from "@/components/featureGallery";
 const index = () => {
   return (
     <>
@@ -18,7 +19,8 @@ const index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section>      
+      <FEATUREGALLERY />
     </>
   );
 };
