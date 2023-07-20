@@ -46,7 +46,7 @@ npm run start
 # scss files
 # global.scss - use for global styles
 # _var.scss - use for variables declarations
-# _retest.scss - use for reseting styles of bootstrap
+# _reset.scss - use for reseting styles of bootstrap
 # _import.scss - use for importing files
 # _text.scss - use for text styles.
 

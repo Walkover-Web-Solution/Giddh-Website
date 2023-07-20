@@ -1,5 +1,19 @@
 @import 'import';
 body{
     background: rgb(102, 102, 102);
-    font-family: 'Opel Sans';
+}
+*{
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    width: 10px;
+    border-radius: 10px;
+    background-color: var(--secondary);
+}
+::-webkit-scrollbar-track{
+    background: rgba(0,0,0,0.1);
+    width: 10px;
 }
