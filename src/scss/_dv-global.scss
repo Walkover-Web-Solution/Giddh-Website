@@ -472,3 +472,71 @@
   }
 }
 // ========================== Index Page MAKE THE SWITCH SCSS CODE===============END=============================
+
+// ========================== Index Page Enquiry Section SCSS CODE==============START============================
+.enquiry_form{
+  padding-top: 110px;
+  min-height: 100vh;
+  display: flex;
+  padding-bottom: 65px;
+  background-image: url(/img/home-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapper{
+    &__title{
+        color: var(--white);
+        h1{
+          font-size: 48px;
+          margin-bottom: 20px;
+        }
+    }
+    &__form_wrapper{
+      background: rgba(255,255,255,.2) !important;
+      padding: 30px 20px!important;
+      position: relative;
+      min-height: 270px !important;
+
+      form{
+        .form-control,.form-select{
+          font-size: var(--c-fs-5);
+          min-height: 46px;
+          border: none;
+
+          &:focus{
+            border-color: unset !important;
+            box-shadow: unset !important;            
+          }
+        }
+        textarea {
+          resize: none;
+        }
+
+        button{
+          &.submit__button{
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            
+            font-weight: 600;
+            padding: 0px 36px;
+            height: 50px;
+            width: clamp(200px,100%,200px);
+            color: var(--indigo);
+            background-color: var(--white);
+            border: 1px solid var(--white);
+            border-radius: 25px;
+          }
+        }
+      }
+    }
+
+  }
+
+  &--max-width-unset{
+    max-width: 1140px !important;
+  }
+}
+// ========================== Index Page Enquiry Section SCSS CODE===============END=============================

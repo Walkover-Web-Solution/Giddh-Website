@@ -1,9 +1,11 @@
 import FEATUREGALLERY from "@/components/featureGallery";
 import MAKETHESWITCH from "@/components/makeTheSwitch";
+import ENQUIRYFORM from "@/components/enquiryForm";
 
 const index = () => {
   return (
     <>
+    <ENQUIRYFORM />
       <section className="container-fluid gst text-center">
         <div className="gst__content_wapper">
           <figure>
