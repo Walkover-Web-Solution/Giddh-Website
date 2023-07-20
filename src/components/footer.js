@@ -60,10 +60,11 @@ const Footer = () => {
                     <p className="d-flex flex-column gap-3">Desktop Apps</p>
                     <ul className="list-unstyled d-flex gap-3">
                       <li  className="">
-                        <a className="download-icon rounded-circle" href="">
-                          <img
+                        <a className="download-icon " href="">
+                        <img class =""
                     src="/img/window-icon.svg"
                           />
+                          
                         </a>
                       </li >
                       <li >
@@ -92,7 +93,6 @@ const Footer = () => {
                         aria-expanded="false"
                       >
                         <img
-                         
                           src="img/earth.svg"
                           alt=""
                         />
@@ -124,7 +124,7 @@ const Footer = () => {
                             Sales :{" "}
                             <a
                               href="/cdn-cgi/l/email-protection"
-                              className="__cf_email__"
+                              className="cf_email"
                               data-cfemail="4e3d2f222b3d0e29272a2a26602d2123"
                             >
                               [email&#160;protected]
@@ -134,7 +134,7 @@ const Footer = () => {
                             Support:{" "}
                             <a
                               href="/cdn-cgi/l/email-protection"
-                              className="__cf_email__"
+                              className="cf_email"
                               data-cfemail="fd8e888d8d928f89bd9a94999995d39e9290"
                             >
                               [email&#160;protected]

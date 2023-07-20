@@ -20,16 +20,29 @@ footer .footer-list li a{
 
 
 .download-icon{
-    width: 26px;
-    height: 26px;
-    vertical-align: middle;
-    color: #6d71cd;
-    background-color: transparent;
-    img{
-        width: 26px; height:25px;
-    }
+    // width: 30px;
+    // height: 30px;
+    // vertical-align: middle;
+    // color: #6d71cd;
+    // background-color: blue;
+    // border-radius: 50%;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 7px;
+    background-color: #e2e2f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-}
+    img{
+        
+    width: 30px;
+    height: 30px;
+        }}
 .contry-icon{
     img{
         width: 15px;   height: 15px;
