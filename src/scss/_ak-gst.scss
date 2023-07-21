@@ -1,13 +1,39 @@
 
-.gst-hading{
-    color: var(--indigo);
-    font-size: 24px;
-    color: #6c757d;
-    font-family: "Opel Sans" !important;
-    font-weight: normal;
-}
+
 
 .gst-image {
+    width: 50vh;
+}
+
+@media screen and (min-width: 480px) {
+    #leftsidebar {
+        width: 200px;
+        float: left;
+    }
+
+    #main {
+        margin-left: 216px;
+    }
+}
+
+.filing-gstr-card {
+    img {
+        height: 90px        ;
+        width: 151px;
+    }
+}
+
+.filing-gstr{
+    background-color:#f7f7f7;
+   
+
+}
+.gst-hero-container{
+    height: 100vh;
+}
+
+
+.gst-image {    
     width: 50vh;
 }
 
@@ -29,38 +55,3 @@
     }
 
 }
-
-.hadding-color {
-    color: #000074;
-    font-size: 37px;
-}
-
-.gst-hading {
-    color: var(--indigo);
-    font-size: 24px;
-}
-
-.gst-image {
-    width: 50vh;
-}
-
-@media screen and (min-width: 480px) {
-    #leftsidebar {
-        width: 200px;
-        float: left;
-    }
-
-    #main {
-        margin-left: 216px;
-    }
-}
-
-.filing-gstr {
-    img {
-        height: 90px;
-        width: 151px;
-    }
-
-}
-
-.caption {}
