@@ -49,3 +49,40 @@
 // class="fw-lighter">Lighter weight text (relative to the parent element).
 // class="fst-italic">Italic text.
 // class="fst-normal">Text with normal font style
+
+
+//font color
+
+.col-primary{
+    color: var(--col-primary);
+}
+.col-dark{
+    color: var(--col-dark);
+}
+.col-grey{
+    color: var(--col-grey);
+}
+.col-dark-light{
+    color: var(--col-dark-light);
+}
+.col-light{
+    color: var(--col-light);
+}
+.col-white{
+    color: var(--col-white);
+}
+.col-blue{
+    color: var(--col-blue);
+}
+.col-success{
+    color: var(--col-success);
+}
+.col-warning{
+    color: var(--col-warning);
+}
+.col-info{
+    color: var(--col-info);
+}
+.col-danger{
+    color: var(--col-danger);
+}
