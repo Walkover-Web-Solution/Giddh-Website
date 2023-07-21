@@ -474,7 +474,7 @@
 // ========================== Index Page MAKE THE SWITCH SCSS CODE===============END=============================
 
 // ========================== Index Page Enquiry Section SCSS CODE==============START============================
-.enquiry_form{
+.enquiry_form {
   padding-top: 110px;
   min-height: 100vh;
   display: flex;
@@ -483,47 +483,47 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  &__wrapper{
-    &__title{
-        color: var(--white);
-        h1{
-          font-size: 48px;
-          margin-bottom: 20px;
-        }
+  &__wrapper {
+    &__title {
+      color: var(--white);
+      h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
     }
-    &__form_wrapper{
-      background: rgba(255,255,255,.2) !important;
-      padding: 30px 20px!important;
+    &__form_wrapper {
+      background: rgba(255, 255, 255, 0.2) !important;
+      padding: 30px 20px !important;
       position: relative;
       min-height: 270px !important;
 
-      form{
-        .form-control,.form-select{
+      form {
+        .form-control,
+        .form-select {
           font-size: var(--c-fs-5);
           min-height: 46px;
           border: none;
 
-          &:focus{
+          &:focus {
             border-color: unset !important;
-            box-shadow: unset !important;            
+            box-shadow: unset !important;
           }
         }
         textarea {
           resize: none;
         }
 
-        button{
-          &.submit__button{
+        button {
+          &.submit__button {
             position: absolute;
             bottom: -25px;
             left: 50%;
             transform: translateX(-50%);
 
-            
             font-weight: 600;
             padding: 0px 36px;
             height: 50px;
-            width: clamp(200px,100%,200px);
+            width: clamp(200px, 100%, 200px);
             color: var(--indigo);
             background-color: var(--white);
             border: 1px solid var(--white);
@@ -532,49 +532,46 @@
         }
       }
     }
-
   }
 
-  &--max-width-unset{
+  &--max-width-unset {
     max-width: 1140px !important;
   }
 }
 // ========================== Index Page Enquiry Section SCSS CODE===============END=============================
 
 // ================================= LOGIN PAGE SCSS CODE=====================START============================
-.login{
+.login {
   width: 100vw;
   height: 100vh;
 
-  &__left_section{
-    // width: 30vw;
+  &__left_section {
     background-color: #e0f0fe;
     position: relative;
-    
-    img{
+
+    img {
       position: absolute;
     }
-    &__banner{
+    &__banner {
       top: 22%;
     }
-    &__brand_logo{
+    &__brand_logo {
       top: 80px;
       left: 40px;
     }
   }
-  &__right_section{
-    // width: 70vw;
+  &__right_section {
 
-    &__container{ 
+    &__container {
       padding-top: 70px;
       padding-left: 80px;
 
-      h1{
+      h1 {
         color: #212528;
         margin-bottom: 24px;
       }
-      &__login_with{
-      button{
+      &__login_with {
+        button {
           display: flex;
           height: 40px;
           padding: 16px;
@@ -587,25 +584,25 @@
           color: var(--indigo);
           background-color: var(--white);
         }
-        &--btn-with-text{
+        &--btn-with-text {
           padding: 0px 16px;
-        } 
+        }
       }
 
-      .line_on_right{
+      .line_on_right {
         position: relative;
         margin-bottom: 24px;
-        &::after{
+        &::after {
           content: "";
           position: absolute;
           left: 28px;
           display: block;
           width: 420px;
-          border-top: 1px solid #D5D9DC;
-          top: 12px;          
+          border-top: 1px solid #d5d9dc;
+          top: 12px;
         }
       }
-      &__login_button{
+      &__login_button {
         height: 40px;
         width: auto;
         padding: 0px 16px;
@@ -614,20 +611,20 @@
         background-color: var(--indigo);
         border: 1px solid var(--indigo);
       }
-      .text_blue{
+      .text_blue {
         color: var(--indigo);
       }
     }
   }
 }
 
-@media (max-width: 767px){
-  .login{  
-    &__left_section{      
+@media (max-width: 767px) {
+  .login {
+    &__left_section {
       display: none !important;
     }
-    &__right_section{
-      &__container{
+    &__right_section {
+      &__container {
         margin: 0 auto;
         margin-top: 2rem;
         max-width: 350px;
@@ -637,20 +634,19 @@
         align-items: flex-start;
         justify-content: flex-start;
 
-        .line_on_right{
-          &::after{
-            width: 220px;       
+        .line_on_right {
+          &::after {
+            width: 220px;
           }
         }
-        &--logo-visible-in-small{
-          &.d-none{
+        &--logo-visible-in-small {
+          &.d-none {
             display: block !important;
           }
         }
       }
     }
   }
-
 }
 
 // ================================= LOGIN PAGE SCSS CODE======================END=============================
