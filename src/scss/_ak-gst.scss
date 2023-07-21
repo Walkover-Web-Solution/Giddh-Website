@@ -59,3 +59,28 @@
     margin-bottom: 46px;
     margin-right: 60px;
 }
+
+.gst-features{
+    .gst-feature-container{
+        &__text{
+            h4{
+
+            }
+            p{
+
+            }
+            a{
+
+            }
+
+        }
+        &__img{
+            width: clamp(300px,30vw,500px);
+            @media only screen and (max-width:var(--break-md)) {
+            width: clamp(300px,10vw,500px);
+            }
+
+
+        }
+    }
+}
