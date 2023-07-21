@@ -132,23 +132,34 @@ const gst = () => {
         </div>
       </section>
       <section className=" py-4 my-4 mx-2 mx-md-0 ">
-           
-            <div className="d-flex flex-column gap-4 c-fs-3 text-center ">
-              <span>
-                Take charge of your business with Giddh &
-              </span>
-              <div className="c-fs-1 col-primary fw-bold ">
-                Make GST Return Process Automatic.
-              </div>
-              <div className="">
-                <a className="c-fs-4 btn btn-primary btn-lg ">Try Now</a>{" "}
-              </div>
-              <span className="c-fs-4 m-3">
-                Cloud Based Accounting Software to File GST Return Online
-              </span>
-            </div>
-          
+        <div className="d-flex flex-column gap-4 c-fs-3 text-center ">
+          <span>Take charge of your business with Giddh &</span>
+          <div className="c-fs-1 col-primary fw-bold ">
+            Make GST Return Process Automatic.
+          </div>
+          <div className="">
+            <a className="c-fs-4 btn btn-primary btn-lg ">Try Now</a>{" "}
+          </div>
+          <span className="c-fs-4 m-3">
+            Cloud Based Accounting Software to File GST Return Online
+          </span>
+        </div>
       </section>
+      <section className="container ">
+        <div className="justify-content-between d-flex my-5 flex-column flex-md-row">
+          <div className=" col-dark-light md-8 d-flex align-items-center gap-4" >
+            <h3 className="">GST Return Collaborators</h3>{" "}
+            
+              <img className="col-6" src="/img/jio-GST.png" />
+            
+          </div>
+          <span className="h-100% border-end"></span>
+          <div className="md-4">
+            <img  className="gst-image  mt-4  mb-4 mr-6 col-12" src="/img/GST.png"/>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 };
