@@ -1,7 +1,9 @@
 // ================================= LOGIN PAGE SCSS CODE=====================START============================
-.login {
+.entry {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
+    overflow-y: auto;
   
     &__left_section {
       background-color: #e0f0fe;
@@ -16,6 +18,7 @@
       &__brand_logo {
         top: 80px;
         left: 40px;
+        height: 32px;
       }
     }
     &__right_section {
@@ -28,7 +31,7 @@
           color: #212528;
           margin-bottom: 24px;
         }
-        &__login_with {
+        &__entry_with {
           button {
             display: flex;
             height: 40px;
@@ -60,7 +63,7 @@
             top: 12px;
           }
         }
-        &__login_button {
+        &__entry_button {
           height: 40px;
           width: auto;
           padding: 0px 16px;
@@ -77,7 +80,7 @@
   }
   
   @media (max-width: 767px) {
-    .login {
+    .entry {
       &__left_section {
         display: none !important;
       }
