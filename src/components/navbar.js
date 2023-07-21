@@ -98,7 +98,7 @@ const navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" id="featuresDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <a className="nav-link chevron_down nav-link--feature-menu" href="#" id="featuresDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                   Features
                 </a>
                 <ul className="dropdown-menu dropdown-menu--position-left" aria-labelledby="featuresDropdown">
@@ -120,9 +120,6 @@ const navbar = () => {
                             <a href="#">ICICI Integration</a>
                           </li>
                           <li>
-                            <a href="#">API Integration</a>
-                          </li>
-                          <li>
                             <a href="#">E-Invoice</a>
                           </li>
                         </ul>
@@ -133,13 +130,13 @@ const navbar = () => {
                             <a href="#">Invoicing</a>
                           </li>
                           <li>
-                            <a href="#">Reports & Analysis</a>
-                          </li>
-                          <li>
                             <a href="#">Share Data</a>
                           </li>
                           <li>
                             <a href="#">Contacts</a>
+                          </li>
+                          <li>
+                            <a href="#">API Integration</a>
                           </li>
                         </ul>
                       </li>
@@ -149,13 +146,13 @@ const navbar = () => {
                             <a href="#">Dashboard</a>
                           </li>
                           <li>
-                            <a href="#">Import Excel Files</a>
-                          </li>
-                          <li>
                             <a href="#">Inventory</a>
                           </li>
                           <li>
                             <a href="#">Security</a>
+                          </li>
+                          <li>
+                            <a href="#">All Features</a>
                           </li>
                         </ul>
                       </li>
@@ -168,7 +165,10 @@ const navbar = () => {
                             <a href="#">Linked Bank Account</a>
                           </li>
                           <li>
-                            <a href="#">All Features</a>
+                            <a href="#">Import Excel Files</a>
+                          </li>
+                          <li>
+                            <a href="#">Reports & Analysis</a>
                           </li>
                         </ul>
                       </li>
@@ -192,7 +192,7 @@ const navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link chevron_down nav-link--resource-menu" href="#">
                   Resources
                 </a>
                 <ul className="dropdown-menu">
