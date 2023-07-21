@@ -1,7 +1,7 @@
 const navbar = () => {
   return (
     <>
-      <nav className="navbar navbar--theme-white navbar-expand-lg position-fixed w-100">
+      <nav className="navbar navbar-expand-lg position-fixed w-100">
         <div className="container-fluid">
           <a className="navbar--navbar_brand" href="/">
             <svg
@@ -231,10 +231,10 @@ const navbar = () => {
                     </g>
                   </svg>
                 </a>
-                <ul class="dropdown-menu country_dropdown__menu" aria-labelledby="countryDropdown">
-                  <li><a class="dropdown-item" href="#">IN - India</a></li>
-                  <li><a class="dropdown-item" href="#">UAE - United Arab Emirates</a></li>
-                  <li><a class="dropdown-item" href="#">UK - United Kingdom</a></li>
+                <ul className="dropdown-menu country_dropdown__menu" aria-labelledby="countryDropdown">
+                  <li><a className="dropdown-item" href="#">IN - India</a></li>
+                  <li><a className="dropdown-item" href="#">UAE - United Arab Emirates</a></li>
+                  <li><a className="dropdown-item" href="#">UK - United Kingdom</a></li>
                 </ul>
               </div>
               <div>

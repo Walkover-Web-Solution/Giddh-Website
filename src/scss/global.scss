@@ -1,6 +1,7 @@
 @import 'import';
 body{
     background: rgb(102, 102, 102);
+    font-family: 'Manrope', sans-serif!important;
 }
 *{
     box-sizing: border-box;
@@ -16,4 +17,9 @@ body{
 ::-webkit-scrollbar-track{
     background: rgba(0,0,0,0.1);
     width: 10px;
+}
+@media (max-width: 991px) {
+    ::-webkit-scrollbar{
+        display: none;
+    }
 }
