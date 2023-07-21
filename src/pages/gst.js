@@ -13,7 +13,7 @@ const gst = () => {
                   File your GSTR Automatically
                 </h1>
               </div>
-              <div class="gst-image">
+              <div className="gst-image">
                 <img
                   className="col-12"
                   alt="gst"

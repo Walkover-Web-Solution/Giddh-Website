@@ -98,10 +98,10 @@ const navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link chevron_down nav-link--feature-menu" href="#" id="featuresDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <a className="nav-link chevron_down nav-link--feature-menu" href="#">
                   Features
                 </a>
-                <ul className="dropdown-menu dropdown-menu--position-left" aria-labelledby="featuresDropdown">
+                <ul className="dropdown-menu dropdown-menu--position-left">
                   <li>
                     <ul className="dropdown-menu__wapper d-flex flex-wrap ps-0">
                       <li className="col-lg-3 col-md-4 col-sm-6">

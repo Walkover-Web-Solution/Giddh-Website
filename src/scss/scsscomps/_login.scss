@@ -1,0 +1,110 @@
+// ================================= LOGIN PAGE SCSS CODE=====================START============================
+.login {
+    width: 100vw;
+    height: 100vh;
+  
+    &__left_section {
+      background-color: #e0f0fe;
+      position: relative;
+  
+      img {
+        position: absolute;
+      }
+      &__banner {
+        top: 22%;
+      }
+      &__brand_logo {
+        top: 80px;
+        left: 40px;
+      }
+    }
+    &__right_section {
+  
+      &__container {
+        padding-top: 70px;
+        padding-left: 80px;
+  
+        h1 {
+          color: #212528;
+          margin-bottom: 24px;
+        }
+        &__login_with {
+          button {
+            display: flex;
+            height: 40px;
+            padding: 16px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid var(--col-primary);
+            border-radius: 4px;
+            font-weight: 500;
+            color: var(--col-primary);
+            background-color: var(--col-white);
+          }
+          &--btn-with-text {
+            padding: 0px 16px;
+          }
+        }
+  
+        .line_on_right {
+          position: relative;
+          margin-bottom: 24px;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 28px;
+            display: block;
+            width: 420px;
+            border-top: 1px solid #d5d9dc;
+            top: 12px;
+          }
+        }
+        &__login_button {
+          height: 40px;
+          width: auto;
+          padding: 0px 16px;
+          color: var(--col-white);
+          border-radius: 4px;
+          background-color: var(--col-primary);
+          border: 1px solid var(--col-primary);
+        }
+        .text_blue {
+          color: var(--col-primary);
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .login {
+      &__left_section {
+        display: none !important;
+      }
+      &__right_section {
+        &__container {
+          margin: 0 auto;
+          margin-top: 2rem;
+          max-width: 350px;
+          padding: 15px !important;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+  
+          .line_on_right {
+            &::after {
+              width: 220px;
+            }
+          }
+          &--logo-visible-in-small {
+            &.d-none {
+              display: block !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // ================================= LOGIN PAGE SCSS CODE======================END=============================

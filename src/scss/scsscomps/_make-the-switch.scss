@@ -1,0 +1,76 @@
+// ========================== Index Page MAKE THE SWITCH SCSS CODE==============START============================
+.switch-section {
+    background: #e7e7e8 url(/img/make-the-switch-banner-image.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: relative;
+    height: 659px;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: center;
+    margin-top: 90px;
+  
+    &__content {
+      p {
+        color: #6c757d;
+        margin-bottom: 15px;
+      }
+      a {
+        border: 1px solid var(--col-primary);
+        color: var(--col-primary);
+        font-size: 18px;
+        border-radius: 50px;
+        padding: 12px 96px;
+        display: inline-block;
+        transition: all 200ms ease-out;
+        &:hover {
+          background-color: var(--col-primary);
+          color: var(--col-white);
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .switch-section {
+      height: 600px;
+  
+      &::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: rgba(0, 0, 0, 0.43);
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+  
+      &__content {
+        position: relative;
+        z-index: 1;
+        p {
+          color: var(--col-white);
+        }
+        a {
+          border: 1px solid var(--col-white) !important;
+          background-color: var(--col-white) !important;
+          color: var(--col-primary) !important;
+          &:hover {
+            border: 1px solid var(--col-primary) !important;
+            background-color: var(--col-primary) !important;
+            color: var(--col-white) !important;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .switch-section {
+      height: 300px;
+    }
+  }
+  // ========================== Index Page MAKE THE SWITCH SCSS CODE===============END=============================

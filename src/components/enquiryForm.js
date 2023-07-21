@@ -67,7 +67,7 @@ const enquiryForm = () => {
                     <div className="col-12">
                       <div className="mt-2">
                         <textarea
-                          class="form-control"
+                          className="form-control"
                           rows="4"
                           placeholder="Description"
                           autoComplete="on"
