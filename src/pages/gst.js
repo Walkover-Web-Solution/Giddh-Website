@@ -2,14 +2,14 @@ const gst = () => {
   return (
     <>
       <section>
-        <div className="container text-center ">
+        <div className="container text-center h-100  ">
           <div className="row d-flex">
-            <div className="row">
+            
               <div className="col">
-                <span className="gst-hading">
+                <span className="c-fs-3 fw-light">
                   From creating error-free GST invoice to
                 </span>
-                <h1 className=" hadding-color banner-h1 text-indigo mb-5">
+                <h1 className="heading fw-bold  mb-6">
                   File your GSTR Automatically
                 </h1>
               </div>
@@ -22,7 +22,7 @@ const gst = () => {
               </div>
             </div>
           </div>
-        </div>
+        
       </section>
       <section className="mt-4">
         <div className="container mt-20">
@@ -96,6 +96,9 @@ const gst = () => {
               </div></div>
           </div>
         </div>
+      </section>
+      <section>
+
       </section>
     </>
   );
