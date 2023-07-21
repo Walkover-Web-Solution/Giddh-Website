@@ -20,22 +20,22 @@
     font-size: var(--small-heading);
 }
 .c-fs-1{
-    font-size: var(--c-fs-1);
+    font-size: var(--c-fs-1); // 32px
 }
 .c-fs-2{
-    font-size: var(--c-fs-2);
+    font-size: var(--c-fs-2); // 28px
 }
 .c-fs-3{
-    font-size: var(--c-fs-3);
+    font-size: var(--c-fs-3); // 24px
 }
 .c-fs-4{
-    font-size: var(--c-fs-4);
+    font-size: var(--c-fs-4); // 20px
 }
 .c-fs-5{
-    font-size: var(--c-fs-5);
+    font-size: var(--c-fs-5); // 16px
 }
 .c-fs-6{
-    font-size: var(--c-fs-6);
+    font-size: var(--c-fs-6); // 14px
 }
 
 
@@ -52,3 +52,40 @@
 // class="fw-lighter">Lighter weight text (relative to the parent element).
 // class="fst-italic">Italic text.
 // class="fst-normal">Text with normal font style
+
+
+//font color
+
+.col-primary{
+    color: var(--col-primary);
+}
+.col-dark{
+    color: var(--col-dark);
+}
+.col-grey{
+    color: var(--col-grey);
+}
+.col-dark-light{
+    color: var(--col-dark-light);
+}
+.col-light{
+    color: var(--col-light);
+}
+.col-white{
+    color: var(--col-white);
+}
+.col-blue{
+    color: var(--col-blue);
+}
+.col-success{
+    color: var(--col-success);
+}
+.col-warning{
+    color: var(--col-warning);
+}
+.col-info{
+    color: var(--col-info);
+}
+.col-danger{
+    color: var(--col-danger);
+}
