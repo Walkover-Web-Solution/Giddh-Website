@@ -11,10 +11,10 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
       <Header />
       <Component {...pageProps} />
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

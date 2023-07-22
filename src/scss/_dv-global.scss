@@ -5,18 +5,18 @@
   padding-left: 15px !important;
   padding-right: 15px !important;
   .giddh-logo-svg {
-    fill: var(--white);
+    fill: var(--col-white);
   }
   .website-globe-icon {
     .a {
-      fill: var(--white);
+      fill: var(--col-white);
     }
     .b,
     .d {
       fill: none;
     }
     .b {
-      stroke: var(--white);
+      stroke: var(--col-white);
     }
     .c {
       stroke: none;
@@ -25,20 +25,40 @@
   .navbar-toggler {
     box-shadow: none !important;
     .hamberger_icon {
-      stroke: var(--white);
+      stroke: var(--col-white);
     }
   }
   .navbar-nav {
     margin-right: 5%;
     .nav-item {
       .nav-link {
-        color: var(--white);
+        color: var(--col-white);
         padding: 7px 14px;
+
+        &.chevron_down {
+          position: relative;
+          padding-right: 18px;
+          margin-right: 14px;
+          &::after {
+            content: "";
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid;
+            border-right: 2px solid;
+            transform: rotate(45deg);
+            right: 0;
+            top: 12px;
+          }
+        }
+
         &:hover {
-          color: var(--blue);
+          color: var(--col-blue);
         }
         &.active {
-          color: var(--blue);
+          color: var(--col-blue);
         }
       }
       &:hover {
@@ -47,7 +67,7 @@
           border-top-right-radius: 0;
           display: block !important;
           margin-top: 0;
-          border-top: 4px solid var(--purple);
+          border-top: 4px solid var(--col-blue);
           padding: 10px 15px;
 
           &--position-left {
@@ -62,10 +82,10 @@
                     display: inline-block;
                     padding: 6px 5px;
                     min-width: 200px;
-                    color: var(--dark);
+                    color: var(--col-dark);
                     transition: all 200ms;
                     &:hover {
-                      color: var(--purple);
+                      color: var(--col-blue);
                     }
                   }
                 }
@@ -77,10 +97,10 @@
               display: inline-block;
               padding: 6px 5px;
               width: max-content;
-              color: var(--dark);
+              color: var(--col-dark);
               transition: all 200ms;
               &:hover {
-                color: var(--purple);
+                color: var(--col-blue);
               }
             }
           }
@@ -93,22 +113,22 @@
     padding: 3px 20px;
     margin-left: 30px;
     background-color: transparent;
-    color: var(--white);
+    color: var(--col-white);
     border: 1px solid;
     border-radius: 20px;
     display: inline-block;
     transition: all 600ms ease;
     &:hover {
-      background-color: var(--white);
-      color: var(--indigo);
+      background-color: var(--col-white);
+      color: var(--col-primary);
     }
   }
   .signup_page_link {
     padding: 3px 20px;
     margin-left: 15px;
-    background-color: var(--blue);
-    color: var(--white);
-    border: 1px solid var(--blue);
+    background-color: var(--col-blue);
+    color: var(--col-white);
+    border: 1px solid var(--col-blue);
     border-radius: 20px;
     display: inline-block;
   }
@@ -116,11 +136,11 @@
     &__menu {
       li {
         a {
-          color: var(--dark);
+          color: var(--col-dark);
           transition: all 200ms;
           &:hover {
-            background-color: var(--purple);
-            color: var(--white);
+            background-color: var(--col-blue);
+            color: var(--col-white);
           }
         }
       }
@@ -135,20 +155,20 @@
   }
 
   &--theme-white {
-    background-color: var(--white);
+    background-color: var(--col-white);
     .giddh-logo-svg {
-      fill: var(--indigo);
+      fill: var(--col-primary);
     }
     .website-globe-icon {
       .a {
-        fill: var(--indigo);
+        fill: var(--col-primary);
       }
       .b,
       .d {
         fill: none;
       }
       .b {
-        stroke: var(--indigo);
+        stroke: var(--col-primary);
       }
       .c {
         stroke: none;
@@ -157,35 +177,50 @@
     .navbar-nav {
       .nav-item {
         .nav-link {
-          color: var(--dark);
+          color: var(--col-dark);
         }
       }
     }
     .login_page_link {
-      background-color: var(--white);
-      color: var(--indigo);
+      background-color: var(--col-white);
+      color: var(--col-primary);
     }
   }
 }
 
 // Media Query
 @media (max-width: 1199px) {
-  .navbar-nav {
-    margin-right: 15px !important;
-    .nav-item {
-      .nav-link {
-        padding: 7px 12px !important;
+  .navbar {
+    .navbar-nav {
+      margin-right: 15px !important;
+      .nav-item {
+        .nav-link {
+          padding: 7px 10px !important;
+          font-size: var(--c-fs-6) !important;
+          &--feature-menu {
+            padding-right: 16px !important;
+          }
+          &--resource-menu {
+            padding-right: 16px !important;
+          }
+        }
       }
     }
-  }
-  .login_page_link {
-    margin-left: 15px !important;
+    .login_page_link {
+      margin-left: 15px !important;
+    }
+    &--navbar_brand {
+      svg {
+        width: auto;
+        height: 26px;
+      }
+    }
   }
 }
 
 @media (max-width: 991px) {
   .navbar {
-    background-color: var(--indigo) !important;
+    background-color: var(--col-primary) !important;
     padding: 8px 0 !important;
 
     &--navbar_brand {
@@ -205,7 +240,22 @@
           font-size: 14px !important;
           &:hover,
           &.active {
-            color: var(--white);
+            color: var(--col-white);
+          }
+
+          &--feature-menu {
+            &::after {
+              width: 8px !important;
+              height: 8px !important;
+              left: 64px;
+            }
+          }
+          &--resource-menu {
+            &::after {
+              width: 8px !important;
+              height: 8px !important;
+              left: 76px;
+            }
           }
         }
         &:hover {
@@ -226,9 +276,11 @@
                     a {
                       font-size: 12px;
                       min-width: 150px;
-                      color: var(--white);
+                      color: var(--col-white);
+                      transition: unset !important;
                       &:hover {
-                        color: var(--white) !important;
+                        color: var(--col-white) !important;
+                        font-weight: 600;
                       }
                     }
                   }
@@ -238,9 +290,11 @@
             li {
               & > a {
                 font-size: 12px;
-                color: var(--white);
+                color: var(--col-white);
+                transition: unset !important;
                 &:hover {
-                  color: var(--white) !important;
+                  color: var(--col-white) !important;
+                  font-weight: 600;
                 }
               }
             }
@@ -251,21 +305,21 @@
     .nav_right {
       padding-bottom: 1.5rem;
       padding-top: 15px;
-      border-top: 1px solid var(--white);
+      border-top: 1px solid var(--col-white);
       justify-content: center;
 
       .country_dropdown {
         &__menu {
           background: transparent;
           border: 0;
-          color: var(--white);
+          color: var(--col-white);
           border-left: 1px solid;
           border-radius: 0;
           transform: translateX(16px);
 
           li {
             a {
-              color: var(--white);
+              color: var(--col-white);
               &:hover {
                 background-color: rgba(0, 0, 0, 0.1);
               }
@@ -276,18 +330,18 @@
     }
     &--theme-white {
       .giddh-logo-svg {
-        fill: var(--white);
+        fill: var(--col-white);
       }
       .website-globe-icon {
         .a {
-          fill: var(--white);
+          fill: var(--col-white);
         }
         .b,
         .d {
           fill: none;
         }
         .b {
-          stroke: var(--white);
+          stroke: var(--col-white);
         }
         .c {
           stroke: none;
@@ -296,13 +350,13 @@
       .navbar-nav {
         .nav-item {
           .nav-link {
-            color: var(--white);
+            color: var(--col-white);
           }
         }
       }
       .login_page_link {
-        background-color: var(--white);
-        color: var(--indigo);
+        background-color: var(--col-white);
+        color: var(--col-primary);
         border: 1px solid;
       }
     }
@@ -331,7 +385,7 @@
       h2 {
         font-size: 32px;
         margin-bottom: 16px;
-        color: var(--indigo);
+        color: var(--col-primary);
       }
       p {
         font-size: 18px;
@@ -340,14 +394,14 @@
       }
       a {
         border: 1px solid;
-        color: var(--indigo);
+        color: var(--col-primary);
         font-size: 18px;
         border-radius: 50px;
         padding: 12px 96px;
         transition: all 200ms ease-out;
         &:hover {
-          background-color: var(--indigo);
-          color: var(--white);
+          background-color: var(--col-primary);
+          color: var(--col-white);
         }
       }
     }
@@ -360,14 +414,14 @@
 .feature-gallery {
   background-color: #f9f9f9;
   padding: 4rem 0;
-  &__title{
-    h2{
-      color: var(--indigo);
+  &__title {
+    h2 {
+      color: var(--col-primary);
     }
-    p{
+    p {
       color: #707070;
     }
-  } 
+  }
   &__card {
     display: flex;
     justify-content: center;
@@ -396,7 +450,7 @@
     }
     a,
     figcaption {
-      color: var(--indigo);
+      color: var(--col-primary);
     }
   }
 }
@@ -422,16 +476,16 @@
       margin-bottom: 15px;
     }
     a {
-      border: 1px solid var(--indigo);
-      color: var(--indigo);
+      border: 1px solid var(--col-primary);
+      color: var(--col-primary);
       font-size: 18px;
       border-radius: 50px;
       padding: 12px 96px;
       display: inline-block;
       transition: all 200ms ease-out;
       &:hover {
-        background-color: var(--indigo);
-        color: var(--white);
+        background-color: var(--col-primary);
+        color: var(--col-white);
       }
     }
   }
@@ -457,16 +511,16 @@
       position: relative;
       z-index: 1;
       p {
-        color: var(--white);
+        color: var(--col-white);
       }
       a {
-        border: 1px solid var(--white) !important;
-        background-color: var(--white) !important;
-        color: var(--indigo) !important;
+        border: 1px solid var(--col-white) !important;
+        background-color: var(--col-white) !important;
+        color: var(--col-primary) !important;
         &:hover {
-          border: 1px solid var(--indigo) !important;
-          background-color: var(--indigo) !important;
-          color: var(--white) !important;
+          border: 1px solid var(--col-primary) !important;
+          background-color: var(--col-primary) !important;
+          color: var(--col-white) !important;
         }
       }
     }
@@ -481,7 +535,7 @@
 // ========================== Index Page MAKE THE SWITCH SCSS CODE===============END=============================
 
 // ========================== Index Page Enquiry Section SCSS CODE==============START============================
-.enquiry_form{
+.enquiry_form {
   padding-top: 110px;
   min-height: 100vh;
   display: flex;
@@ -490,60 +544,170 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  &__wrapper{
-    &__title{
-        color: var(--white);
-        h1{
-          font-size: 48px;
-          margin-bottom: 20px;
-        }
+  &__wrapper {
+    &__title {
+      color: var(--col-white);
+      h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
     }
-    &__form_wrapper{
-      background: rgba(255,255,255,.2) !important;
-      padding: 30px 20px!important;
+    &__form_wrapper {
+      background: rgba(255, 255, 255, 0.2) !important;
+      padding: 30px 20px !important;
       position: relative;
       min-height: 270px !important;
 
-      form{
-        .form-control,.form-select{
+      form {
+        .form-control,
+        .form-select {
           font-size: var(--c-fs-5);
           min-height: 46px;
           border: none;
 
-          &:focus{
+          &:focus {
             border-color: unset !important;
-            box-shadow: unset !important;            
+            box-shadow: unset !important;
           }
         }
         textarea {
           resize: none;
         }
 
-        button{
-          &.submit__button{
+        button {
+          &.submit__button {
             position: absolute;
             bottom: -25px;
             left: 50%;
             transform: translateX(-50%);
 
-            
             font-weight: 600;
             padding: 0px 36px;
             height: 50px;
-            width: clamp(200px,100%,200px);
-            color: var(--indigo);
-            background-color: var(--white);
-            border: 1px solid var(--white);
+            width: clamp(200px, 100%, 200px);
+            color: var(--col-primary);
+            background-color: var(--col-white);
+            border: 1px solid var(--col-white);
             border-radius: 25px;
           }
         }
       }
     }
-
   }
 
-  &--max-width-unset{
+  &--max-width-unset {
     max-width: 1140px !important;
   }
 }
 // ========================== Index Page Enquiry Section SCSS CODE===============END=============================
+
+// ================================= LOGIN PAGE SCSS CODE=====================START============================
+.login {
+  width: 100vw;
+  height: 100vh;
+
+  &__left_section {
+    background-color: #e0f0fe;
+    position: relative;
+
+    img {
+      position: absolute;
+    }
+    &__banner {
+      top: 22%;
+    }
+    &__brand_logo {
+      top: 80px;
+      left: 40px;
+    }
+  }
+  &__right_section {
+
+    &__container {
+      padding-top: 70px;
+      padding-left: 80px;
+
+      h1 {
+        color: #212528;
+        margin-bottom: 24px;
+      }
+      &__login_with {
+        button {
+          display: flex;
+          height: 40px;
+          padding: 16px;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          border: 1px solid var(--col-primary);
+          border-radius: 4px;
+          font-weight: 500;
+          color: var(--col-primary);
+          background-color: var(--col-white);
+        }
+        &--btn-with-text {
+          padding: 0px 16px;
+        }
+      }
+
+      .line_on_right {
+        position: relative;
+        margin-bottom: 24px;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 28px;
+          display: block;
+          width: 420px;
+          border-top: 1px solid #d5d9dc;
+          top: 12px;
+        }
+      }
+      &__login_button {
+        height: 40px;
+        width: auto;
+        padding: 0px 16px;
+        color: var(--col-white);
+        border-radius: 4px;
+        background-color: var(--col-primary);
+        border: 1px solid var(--col-primary);
+      }
+      .text_blue {
+        color: var(--col-primary);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .login {
+    &__left_section {
+      display: none !important;
+    }
+    &__right_section {
+      &__container {
+        margin: 0 auto;
+        margin-top: 2rem;
+        max-width: 350px;
+        padding: 15px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .line_on_right {
+          &::after {
+            width: 220px;
+          }
+        }
+        &--logo-visible-in-small {
+          &.d-none {
+            display: block !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ================================= LOGIN PAGE SCSS CODE======================END=============================
