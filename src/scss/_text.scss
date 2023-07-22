@@ -39,6 +39,7 @@
 }
 
 
+
 //font weight
 
 //use bootstrap font weight classes
@@ -88,4 +89,10 @@
 }
 .col-danger{
     color: var(--col-danger);
+}
+.col-grey-deep{
+    color:var(--col-deep);
+}
+.col-light-gray{
+    color:var(--col-light-gray);
 }
