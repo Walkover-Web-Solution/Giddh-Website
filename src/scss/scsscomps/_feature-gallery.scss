@@ -1,0 +1,47 @@
+// ========================== Index Page LINK FEATURE GALLERY SCSS CODE==============START===========================
+
+.feature-gallery {
+    background-color: #f9f9f9;
+    padding: 4rem 0;
+    &__title {
+      h2 {
+        color: var(--col-primary);
+      }
+      p {
+        color: #707070;
+      }
+    }
+    &__card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 250px;
+  
+      border: 1px solid #f1f1f1;
+      background: #fff;
+      text-align: center;
+      margin: 30px auto 0 auto !important;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      cursor: pointer;
+      transition: 200ms all cubic-bezier(0.4, 0, 1, 1);
+  
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
+      }
+  
+      figure {
+        figcaption {
+          margin-top: 15px;
+          font-size: var(--c-fs-3);
+        }
+      }
+      a,
+      figcaption {
+        color: var(--col-primary);
+      }
+    }
+  }
+  
+  // ========================== Index Page LINK FEATURE GALLERY SCSS CODE===============END============================

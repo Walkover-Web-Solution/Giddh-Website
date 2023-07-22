@@ -1,0 +1,110 @@
+// ================================= SIGN-UP PAGE SCSS CODE=====================START============================
+
+.entry {
+  display: none;
+  &__left_section {
+    &__details {
+      margin-top: 160px;
+      margin-left: 40px;
+
+      h1 {
+        line-height: 36px;
+      }
+
+      ul {
+        li {
+          font-size: var(--c-fs-6);
+          margin: 12px 0px;
+          svg {
+            margin-right: 8px;
+            font-size: 20px;
+            color: var(--col-primary);
+          }
+        }
+      }
+    }
+  }
+  &__right_section {
+    &__container {
+      &__entry_with {
+        .signup_with__left {
+          border-right: 1px solid #d5d9dc;
+        }
+        .signup_with__right {
+        }
+      }
+      &__entry_button {
+        svg {
+          font-size: 22px;
+          margin-bottom: 3px;
+        }
+      }
+      .text_blue {
+        color: var(--col-primary);
+      }
+      .line_on_right {                
+        &::after {                  
+          width: 500px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+    .entry {
+        display: none;
+        &__right_section {
+          &__container {
+            &__entry_with {
+                flex-direction: column;
+              .signup_with__left {
+                border-right: none !important;
+                border-bottom: 1px solid #d5d9dc;
+                padding-bottom: 24px;
+                padding-right: 0 !important;
+              }
+              .signup_with__right {
+                padding-top: 24px;
+                padding-left: 0 !important;
+              }
+            }
+            .line_on_right {                
+                &::after {                  
+                  width: 210px;
+                }
+              }
+          }
+        }
+      }
+}
+@media (max-width: 767px) {
+  .entry {
+    &__left_section {
+      display: none !important;
+    }
+    &__right_section {
+      &__container {
+        margin: 0 auto;
+        margin-top: 2rem;
+        max-width: 350px;
+        padding: 15px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .line_on_right {
+          &::after {
+            width: 220px;
+          }
+        }
+        &--logo-visible-in-small {
+          &.d-none {
+            display: block !important;
+          }
+        }
+      }
+    }
+  }
+}
+// ================================= SIGN-UP PAGE SCSS CODE======================END=============================

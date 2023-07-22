@@ -1,6 +1,7 @@
 const gst = () => {
   return (
     <>
+
       <section className="container mb-5 ">
         <div className="gst-hero-container  text-center">
           <div className="row d-flex h-100 align-content-end">

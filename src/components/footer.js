@@ -57,7 +57,7 @@ const Footer = () => {
                     <ul className="list-unstyled d-flex gap-3">
                       <li className="">
                         <a className="download-icon " href="">
-                          <img class="" src="/img/window-icon.svg" />
+                          <img className="" src="/img/window-icon.svg" />
                         </a>
                       </li>
                       <li>
