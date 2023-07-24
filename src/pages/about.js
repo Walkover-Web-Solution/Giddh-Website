@@ -1,7 +1,7 @@
 const about = () => {
   return (
     <>
-    <section className="about ">
+    <section className="about_container ">
         <div className="container p-5 ">
           <div className="row align-items-center ">
             <div className="col-lg-6  ">
@@ -17,7 +17,7 @@ const about = () => {
         </div>
       </section>
 
-      <section className=" py-5 container__about ">
+      <section className=" py-5 about_content ">
         <div className="container  d-flex flex-column gap-5 ">
           <p className="c-fs-5   ">
             Giddh is a team with members who have accounting running in their
@@ -51,15 +51,15 @@ const about = () => {
         </div>
       </section>
 
-      <section className="container  p-5 about-features d-grid border-bottom px-3  ">
-        <div className="container">
+      <section className="container  p-5 about-walkover d-grid border-bottom px-3  ">
+        <div className="container about-walkover-container">
           <h4 className=" heading  col-primary fw-bold  p-4">
             A product from Walkover
           </h4>
         </div>
-        
-        <div className="about-feature-container d-flex flex-column flex-md-row align-items-center my-3">
-          <div className="about-feature-container__text col-12 col-md-6 g-4">
+        <div className="container about-walkover gap-3 mt-4"></div>
+        <div className="  about-walkover-container d-flex flex-column-reverse  flex-md-row   align-items-center my-3">
+          <div className=" about-walkover-container__text col-12 col-md-6 g-4">
             <p className="c-fs-5 col-grey-deep  ">
               Walkover is a closely knit team of technology enthusiasts with a
               reputation for adding significant value to a range of products for
@@ -68,7 +68,7 @@ const about = () => {
               have a competitive edge.
             </p>
 
-            <p className="col-grey-deep">
+            <p className=" c-fs-5 col-grey-deep">
               We are transforming everyday workflow and businesses by building
               products that simplify processes. Our unique technology-based
               products has served over 100 clients to run more innovative and
@@ -76,16 +76,17 @@ const about = () => {
             </p>
           </div>
           <img
-            className="about-feature-container__img mx-auto"
+            className="about-walkover-container__img"
             src="\companylogo.svg"
           />
         </div>
 
-        <div className="row ">
+        <div className=" d-flex  gap-3 flex-column flex-md-row about_mg_sockect h-100 h-md-h-100 ">
+          
           <div className="col-6 ">
-            <div className="container d-flex flex-column justify-content-center border py-5">
-              <div className="text-center py-4  ">
-                <img  className="about__socket" src="/img/about/giddh-logo-message.svg" />
+            <div className="container d-flex flex-column  justify-content-center border py-5">
+              <div className="d-flex justify-content-center  ">
+                <img  className="about_logo_card_section" src="/img/about/giddh-logo-message.svg" />
               </div>
               <p className="c-fs-5 py-4 p-4 m-5 gap-5  line-height-lg">
                 MSG91 is the flagship product under the Walkover umbrella with
@@ -101,12 +102,12 @@ const about = () => {
             </div>
           </div>
 
-          <div className="col-6">
+          <div className="col-6 ">
             <div className="container d-flex flex-column justify-content-center border py-5">
-              <div className="text-center py-4  ">
-                <img className="about__socket" src="\img\about\socket-logo-big.svg" />
+              <div className="d-flex justify-content-center">
+                <img className="about_logo_card_section" src="\img\about\socket-logo-big.svg" />
               </div>
-              <p className="c-fs-5 py-4 p-4 m-5 gap-5 line-height-lg">
+              <p className="c-fs-5  p-4 m-5 gap-5 line-height-lg">
                 Socket is a multiple API integration and automation tool that
                 makes data flow faster and easier than ever to automate the
                 services. It is the youngest and the smartest member in the

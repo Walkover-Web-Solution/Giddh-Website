@@ -160,6 +160,7 @@ const gst = () => {
               height="auto"
                 src="/img/GST.png"
               />
+              
             </div>
           </div>
          

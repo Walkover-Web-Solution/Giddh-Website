@@ -1,36 +1,28 @@
-.about{
+.about_container{
 background-color: var(--col-primary);
 
 }
-.about-features{
-    .about-feature-container{
-        &__text{
-            h4{
-
-            }
-            p{
-
-            }
-            a{
-
-            }
-
-        }
+.about-walkover-container{
+    .about-walkover-container{
         &__img{
             width: clamp(300px,30vw,500px);
-            @media only screen and (max-width:var(--break-md)) {
-            width: clamp(300px,10vw,500px);
-            }
 
-
+            
+            @media  screen and (max-width:var(--break-sm)) {
+                width: clamp(100px,40vh,300px);}
+     
         }
     }
 }
 
 
-.container__about{
+
+
+
+
+.about_content{
     background-color: var(--col-light-gray);
 }
-.about__socket{
+.about_logo_card_section{
     width: 20vh;
 }
