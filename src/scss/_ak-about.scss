@@ -1,0 +1,36 @@
+.about{
+background-color: var(--col-primary);
+
+}
+.about-features{
+    .about-feature-container{
+        &__text{
+            h4{
+
+            }
+            p{
+
+            }
+            a{
+
+            }
+
+        }
+        &__img{
+            width: clamp(300px,30vw,500px);
+            @media only screen and (max-width:var(--break-md)) {
+            width: clamp(300px,10vw,500px);
+            }
+
+
+        }
+    }
+}
+
+
+.container__about{
+    background-color: var(--col-light-gray);
+}
+.about__socket{
+    width: 20vh;
+}

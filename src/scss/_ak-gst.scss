@@ -1,0 +1,86 @@
+
+.gst-image {
+    width: 50vh;
+}
+
+@media screen and (min-width: 480px) {
+    #leftsidebar {
+        width: 200px;
+        float: left;
+    }
+
+    #main {
+        margin-left: 216px;
+    }   
+}
+
+.filing-gstr-card {
+    img {
+        height: 90px;
+        width: 151px;
+    }
+}
+
+.filing-gstr {
+    background-color: #f7f7f7;
+
+
+}
+
+.gst-hero-container {
+    height: 100vh;
+}
+
+
+.gst-image {
+    width: 50vh;
+}
+
+@media screen and (min-width: 480px) {
+    #leftsidebar {
+        width: 200px;
+        float: left;
+    }
+
+    #main {
+        margin-left: 216px;
+    }
+}
+
+.filing-gstr {
+    img {
+        height: 90px;
+        width: 151px;
+    }
+
+}
+.gst-image{
+    margin-top: 46px;
+    margin-bottom: 46px;
+    margin-right: 60px;
+}
+
+.gst-features{
+    .gst-feature-container{
+        &__text{
+            h4{
+
+            }
+            p{
+
+            }
+            a{
+
+            }
+
+        }
+        &__img{
+            width: clamp(300px,30vw,500px);
+            @media only screen and (max-width:var(--break-md)) {
+            width: clamp(300px,10vw,500px);
+            }
+
+
+        }
+    }
+}
