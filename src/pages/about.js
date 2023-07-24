@@ -1,8 +1,8 @@
 const about = () => {
   return (
     <>
-    <section className="about ">
-        <div className="container p-3 ">
+    <section className=" about_container">
+        <div className="container  p-3 ">
           <div className="d-flex align-items-center justify-content-between my-5">
             <div className="border-end col-6 ">
               <h3 className="heading  col-white ">
@@ -51,14 +51,14 @@ const about = () => {
         </div>
       </section>
 
-      <section className="container  p-5 about-walkover d-grid border-bottom px-3  ">
+      <section className="container  p-5 about-walkover d-grid border-bottom px-3 ">
         <div className="container about-walkover-container">
           <h4 className=" heading  col-primary fw-bold  p-4">
             A product from Walkover
           </h4>
         </div>
         <div className="container about-walkover gap-3 mt-4"></div>
-        <div className="  about-walkover-container d-flex flex-column-reverse  flex-md-row   align-items-center my-3">
+        <div className="  about-walkover-container d-flex flex-column-reverse  flex-md-row   align-items-center my-3 ">
           <div className=" about-walkover-container__text col-12 col-md-6 g-4">
             <p className="c-fs-5 col-grey-deep  ">
               Walkover is a closely knit team of technology enthusiasts with a
@@ -76,19 +76,19 @@ const about = () => {
             </p>
           </div>
           <img
-            className="about-walkover-container__img"
+            className="about-walkover-container__img "
             src="\companylogo.svg"
           />
         </div>
 
-        <div className=" d-flex  gap-3 flex-column flex-md-row about_mg_sockect h-100 h-md-h-100 ">
+        <div className=" d-flex gap-3 flex-column align-items-stretch flex-md-row about_mg_sockect h-100  ">
           
-          <div className="col-6 ">
-            <div className="container d-flex flex-column  justify-content-center border py-5">
-              <div className="d-flex justify-content-center  ">
-                <img  className="about_logo_card_section" src="/img/about/giddh-logo-message.svg" />
+          <div className="col-12 col-md-6">
+            <div className="container  d-flex flex-column  justify-content-between border h-100 py-5 ">
+              <div className="d-flex  justify-content-center  ">
+                <img  className="about-logo-card-section " src="/img/about/giddh-logo-message.svg" />
               </div>
-              <p className="c-fs-5 py-4 p-4 m-5 gap-5  line-height-lg">
+              <p className="c-fs-5 p-4 m-5 gap-5  ">
                 MSG91 is the flagship product under the Walkover umbrella with
                 over 8 years of experience making it one of the best messaging
                 solution companies. With its easily configurable APIs and a
@@ -102,12 +102,12 @@ const about = () => {
             </div>
           </div>
 
-          <div className="col-6 ">
-            <div className="container d-flex flex-column justify-content-center border py-5">
-              <div className="d-flex justify-content-center">
-                <img className="about_logo_card_section" src="\img\about\socket-logo-big.svg" />
+          <div className="col-12 col-md-6 ">
+            <div className="container d-flex flex-column justify-content-between border h-100  py-5">
+              <div className="d-flex justify-content-center ">
+                <img className="about-logo-card-section" src="\img\about\socket-logo-big.svg" />
               </div>
-              <p className="c-fs-5  p-4 m-5 gap-5 line-height-lg">
+              <p className="c-fs-5  p-4 m-5 gap-5 ">
                 Socket is a multiple API integration and automation tool that
                 makes data flow faster and easier than ever to automate the
                 services. It is the youngest and the smartest member in the
@@ -122,6 +122,31 @@ const about = () => {
           </div>
         </div>
       </section>
+<section className="seemore-conatiner">
+  <div className="see-company d-flex py-4 ">
+    <div className="container d-flex gap-4  flex-column   text-center">
+      <h1 className=" heading fw-bold col-primary">See More</h1>
+
+      <h3 className="c-fs-3">See more about the Company</h3>
+
+      <span className="c-fs-5">Learn more about how Giddh can provide the solution you need.</span>
+<br></br>
+
+      <div  className="col-12 d-flex flex-column flex-md-row gap-3 g ">
+        <div  className="col-12 col-md-8 d-flex flex-column flex-sm-row gap-3">
+       <a className="col-12 col-sm-6  c-fs-5 col-dark  border border-3  ">Our Values</a>
+       <a className="col-12 col-sm-6  c-fs-5 col-dark  border border-3  ">Leadership Principles
+       </a>
+        </div>
+       <a className="col-12 col-md-4 c-fs-3 c-fs-5 col-dark border border-3 ms-0 ms-md-3">The Team</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
     </>
   );
 };
