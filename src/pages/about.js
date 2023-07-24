@@ -2,15 +2,15 @@ const about = () => {
   return (
     <>
     <section className="about ">
-        <div className="container p-5 ">
-          <div className="row align-items-center ">
-            <div className="col-lg-6  ">
-              <h3 className="heading border-end col-white text-center">
+        <div className="container p-3 ">
+          <div className="d-flex align-items-center justify-content-between my-5">
+            <div className="border-end col-6 ">
+              <h3 className="heading  col-white ">
                 About Us
               </h3>
             </div>
 
-            <div className="col-lg-6 c-fs-5  col-white ">
+            <div className="c-fs-5  col-white col-6 ms-4">
               <span>Pioneering the Automation Revolution in Accounting!</span>
             </div>
           </div>
