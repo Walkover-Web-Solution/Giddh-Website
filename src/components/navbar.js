@@ -1,7 +1,7 @@
 const navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg position-fixed w-100">
+      <nav className="navbar navbar--box-shadow navbar--theme-white navbar-expand-lg position-fixed w-100">
         <div className="container-fluid">
           <a className="navbar--navbar_brand" href="/">
             <svg

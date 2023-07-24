@@ -188,6 +188,9 @@
         color: var(--col-primary);
       }
     }
+    &--box-shadow{
+      box-shadow: 0 0 10px 0 #e2e2e2 !important;
+    }
   }
   
   // Media Query
