@@ -5,10 +5,10 @@ background-color: var(--col-primary);
 .about-walkover-container{
     .about-walkover-container{
         &__img{
-            width: clamp(300px,30vw,500px);
+            width: clamp(300px,50vh,500px);
 
-            
-            @media  screen and (max-width:var(--break-sm)) {
+            //breakpoints variables did not work  
+            @media  screen and (max-width:768px) {
                 width: clamp(100px,40vh,300px);}
      
         }

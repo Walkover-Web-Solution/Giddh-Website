@@ -146,18 +146,16 @@ const gst = () => {
           </span>
         </div>
       </section>
-      <section className="container">
-          <div className="row align-items-center col-dark-light ">
-            <div className="col-lg-3">
+      <section className="container gst-return ">
+          <div className="row  gst-return-coll gap-2   align-items-center col-dark-light ">
+            <div className="col-lg-3 ">
               <h3 className="">GST Return Collaborators</h3>
             </div>
-            <div className="col-lg-3">
-              <img className="col-6" src="/img/jio-GST.png" />
+            <div className="col-lg-3 gst-return-coll__img1">
+              <img className="col-6 " src="/img/jio-GST.png" />
             </div>  
-            <div className="col-lg-6 border-start text-end">
-              <img 
-              width="auto"
-              height="auto"
+            <div className="gst-return-coll__img2 col-lg-6 border-start text-end">
+              <img  className=" gst-return-coll__img2"
                 src="/img/GST.png"
               />
               
