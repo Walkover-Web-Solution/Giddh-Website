@@ -1,13 +1,11 @@
 const about = () => {
   return (
     <>
-    <section className=" about_container">
+      <section className=" about_container">
         <div className="container  p-3 ">
           <div className="d-flex align-items-center justify-content-between my-5">
             <div className="border-end col-6 ">
-              <h3 className="heading  col-white ">
-                About Us
-              </h3>
+              <h3 className="heading  col-white ">About Us</h3>
             </div>
 
             <div className="c-fs-5  col-white col-6 ms-4">
@@ -82,11 +80,13 @@ const about = () => {
         </div>
 
         <div className=" d-flex gap-3 flex-column align-items-stretch flex-md-row about_mg_sockect h-100  ">
-          
           <div className="col-12 col-md-6">
             <div className="container  d-flex flex-column  justify-content-between border h-100 py-5 ">
               <div className="d-flex  justify-content-center  ">
-                <img  className="about-logo-card-section " src="/img/about/giddh-logo-message.svg" />
+                <img
+                  className="about-logo-card-section "
+                  src="/img/about/giddh-logo-message.svg"
+                />
               </div>
               <p className="c-fs-5 p-4 m-5 gap-5  ">
                 MSG91 is the flagship product under the Walkover umbrella with
@@ -105,7 +105,10 @@ const about = () => {
           <div className="col-12 col-md-6 ">
             <div className="container d-flex flex-column justify-content-between border h-100  py-5">
               <div className="d-flex justify-content-center ">
-                <img className="about-logo-card-section" src="\img\about\socket-logo-big.svg" />
+                <img
+                  className="about-logo-card-section"
+                  src="\img\about\socket-logo-big.svg"
+                />
               </div>
               <p className="c-fs-5  p-4 m-5 gap-5 ">
                 Socket is a multiple API integration and automation tool that
@@ -122,31 +125,34 @@ const about = () => {
           </div>
         </div>
       </section>
-<section className="seemore-conatiner">
-  <div className="see-company d-flex py-4 ">
-    <div className="container d-flex gap-4  flex-column   text-center">
-      <h1 className=" heading fw-bold col-primary">See More</h1>
+      <section className="seemore-conatiner">
+        <div className="see-company d-flex py-4 ">
+          <div className="container d-flex gap-4  flex-column   text-center">
+            <h1 className=" heading fw-bold col-primary">See More</h1>
 
-      <h3 className="c-fs-3">See more about the Company</h3>
+            <h3 className="c-fs-3">See more about the Company</h3>
 
-      <span className="c-fs-5">Learn more about how Giddh can provide the solution you need.</span>
-<br></br>
+            <span className="c-fs-5">
+              Learn more about how Giddh can provide the solution you need.
+            </span>
+            <br></br>
 
-      <div  className="col-12 d-flex flex-column flex-md-row gap-3 g ">
-        <div  className="col-12 col-md-8 d-flex flex-column flex-sm-row gap-3">
-       <a className="col-12 col-sm-6  c-fs-5 col-dark  border border-3  ">Our Values</a>
-       <a className="col-12 col-sm-6  c-fs-5 col-dark  border border-3  ">Leadership Principles
-       </a>
+            <div className="col-12 d-flex flex-column flex-md-row gap-3 g ">
+              <div className="col-12 col-md-8 d-flex flex-column flex-sm-row gap-3">
+                <a className="col-12 col-sm-6  c-fs-5 col-dark  border border-3  ">
+                  Our Values
+                </a>
+                <a className="col-12 col-sm-6  c-fs-5 col-dark  border border-3  ">
+                  Leadership Principles
+                </a>
+              </div>
+              <a className="col-12 col-md-4 c-fs-3 c-fs-5 col-dark border border-3 ms-0 ms-md-3">
+                The Team
+              </a>
+            </div>
+          </div>
         </div>
-       <a className="col-12 col-md-4 c-fs-3 c-fs-5 col-dark border border-3 ms-0 ms-md-3">The Team</a>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
+      </section>
     </>
   );
 };
