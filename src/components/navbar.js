@@ -106,7 +106,6 @@ const navbar = () => {
                     <ul className="dropdown-menu__wapper d-flex flex-wrap ps-0">
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
-                          <li></li>
                           <li>
                             <a href="#">GST Compliances</a>
                           </li>
