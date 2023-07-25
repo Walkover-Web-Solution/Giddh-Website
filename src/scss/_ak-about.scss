@@ -1,7 +1,24 @@
-.about_container{
-background-color: var(--col-primary);
+
+.about-nav-bar:hover{
+    border-bottom: 4px solid #333;  
+    color: var(--col-primary);
 
 }
+
+
+.about_container{
+background-color: var(--col-primary);
+border-radius: 4px;
+}
+
+
+.border-bottom-hadding{
+    border-bottom: 4px solid ;
+    
+    
+}
+
+
 .about-walkover-container{
     .about-walkover-container{
         &__img{
@@ -26,10 +43,27 @@ background-color: var(--col-primary);
 .about-logo-card-section{
     width: 40vh;
 }
-.seemore-conatiner{
-    background: #e7e8ea url(/wp-content/uploads/2019/10/banner-grid-design-1.png) 0 0 repeat;
-
+.see-more-conatiner{
+    background: #e7e8ea url(/img/about/banner-grid-design-1.png) 0 0 repeat;
 }
 .see-more-button{
     background-color: white;
+    min-width: 240px;
+    padding: 10px 16px;
+    font-size: 20px;
 }
+
+@media (max-width:768px) {
+    .about_container{
+        .border-end{
+            border: 0 !important;
+            text-align: start !important;
+        }
+        &__title{
+            &.ms-4{
+                margin-left: 0 !important;
+            }
+        }
+
+    }
+  }
