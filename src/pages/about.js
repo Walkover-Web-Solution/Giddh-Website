@@ -1,27 +1,32 @@
 const about = () => {
   return (
     <>
-     
-
-      <nav className=" mt-5 pb-2  accordion-body ">
-    <ul className="col-12 mb-3 d-flex flex-column flex-md-row justify-content-center gap-0 gap-sm-2 gap-md-5">
-      <li className="about-nav-bar ">
-        <a className="col-dark" href="#">About Us</a>
-      </li>
-      <li className="about-nav-bar nav-item">
-        <a className=" nav-link " href="#">Our Values</a>
-      </li>
-      <li className=" about-nav-bar nav-item">
-        <a className="nav-link" href="#">Leadership Principles</a>
-      </li>
-      <li className=" about-nav-bar nav-item">
-        <a className="nav-link " href="#">The Team</a>
-      </li>
-    </ul>
-  
-</nav>
+      <nav className=" mt-5 pb-2  accordion-body">
+        <ul className="col-12 mb-3 d-flex flex-column flex-md-row justify-content-center gap-0 gap-sm-2 gap-md-5">
+          <li className="">
+            <a className="about-nav-bar active p-2" href="#">
+              About Us
+            </a>
+          </li>
+          <li className="">
+            <a className="about-nav-bar p-2" href="#">
+              Our Values
+            </a>
+          </li>
+          <li className=" ">
+            <a className=" about-nav-bar p-2" href="#">
+              Leadership Principles 
+            </a>
+          </li>
+          <li className=" ">
+            <a className="about-nav-bar p-2" href="#">
+              The Team
+            </a>
+          </li>
+        </ul>
+      </nav>
       <section className="about_container">
-        <div className="container p-3  ">
+        <div className="container p-3">
           <div className="d-flex flex-column flex-md-row align-items-center justify-content-between my-5">
             <div className=" col-6 col-md-row">
               <h3 className="heading col-white text-center border-end">
@@ -70,7 +75,9 @@ const about = () => {
       <section className="container p-5 about-walkover d-grid px-3">
         <div className="container about-walkover gap-3 mt-4"></div>
         <h4 className=" heading col-primary fw-bold ms-0 py-4">
-         <span className="border-bottom-hadding "> A product from Walkover</span>
+          <span className="border-bottom-hadding">
+            A product from Walkover
+          </span>
         </h4>
         <div className="about-walkover-container d-flex flex-column-reverse flex-md-row   align-items-center my-3">
           <div className="about-walkover-container__text col-12 col-md-6 g-4">
