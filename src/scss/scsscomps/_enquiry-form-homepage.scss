@@ -27,12 +27,6 @@
           .form-select {
             font-size: var(--c-fs-5);
             min-height: 46px;
-            border: none;
-  
-            &:focus {
-              border-color: unset !important;
-              box-shadow: unset !important;
-            }
           }
           textarea {
             resize: none;
