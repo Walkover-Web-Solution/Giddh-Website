@@ -153,13 +153,13 @@ const about = () => {
             </span>
             <br></br>
             <div className="col-12 d-flex justify-content-center flex-wrap gap-3">
-              <a className="col-primary d-inline-block see-more-button  border col-primary border-3">
+              <a className="col-primary d-inline-block see-more-button fw-bold  border col-primary border-3">
                 Our Values
               </a>
-              <a className="see-more-button col-primary  border border-3">
+              <a className="see-more-button col-primary fw-bold  border bo  rder-3">
                 Leadership Principles
               </a>
-              <a className="see-more-button col-primary border border-3">
+              <a className="see-more-button col-primary fw-bold border border-3">
                 The Team
               </a>
             </div>
