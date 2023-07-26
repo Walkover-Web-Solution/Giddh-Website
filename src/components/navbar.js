@@ -110,10 +110,10 @@ const navbar = () => {
                             <a href="#">GST Compliances</a>
                           </li>
                           <li>
-                            <a href="#">Bank Reconcile</a>
+                            <a href="conectBankReconcile">Bank Reconcile</a>
                           </li>
                           <li>
-                            <a href="#">Multi Currency</a>
+                            <a href="multiCurrencyAccountingSoftware">Multi Currency</a>
                           </li>
                           <li>
                             <a href="#">ICICI Integration</a>
@@ -126,7 +126,7 @@ const navbar = () => {
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
                           <li>
-                            <a href="#">Invoicing</a>
+                            <a href="invoiceSoftware">Invoicing</a>
                           </li>
                           <li>
                             <a href="#">Share Data</a>
