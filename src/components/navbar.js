@@ -167,7 +167,7 @@ const navbar = () => {
                             <a href="#">Import Excel Files</a>
                           </li>
                           <li>
-                            <a href="#">Reports & Analysis</a>
+                            <a href="financial-reporting">Reports & Analysis</a>
                           </li>
                         </ul>
                       </li>

@@ -1,17 +1,19 @@
 import { MdRemove, MdAdd } from "react-icons/md";
-const multiCurrencyAccountingSoftware =()=>{
-    return(
-        <>
-        <div className="features">
+const financialReporting = () => {
+  return (
+    <>
+      <div className="features">
         <section className="container-fluid">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
                 <h2 className="heading col-primary c-fw-600 mb-4">
-                Serve International Customers with Multi-Currency Accounting
+                  Make sense of your numbers by automatic Financial Reports
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
-                Multi-currency accounting enables you to serve overseas clients & turn your business into an International brand.
+                  Financial reports will help in evaluating the strengths and
+                  weaknesses of any business, be it a small retail one or a
+                  growing e-commerce one.
                 </p>
                 <div className="features__heading_container__links">
                   <a href="#" className="btn download_free_btn me-4">
@@ -24,7 +26,10 @@ const multiCurrencyAccountingSoftware =()=>{
               </div>
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
-                  <img src="/img/feature-gallery-icons/multi-currency-banner.svg" width="90%" />
+                  <img
+                    src="/img/feature-gallery-icons/report-banner.svg"
+                    width="90%"
+                  />
                   <img
                     src="img/all-features-cloud_icon.svg"
                     className="features__heading_container__right_banner_img"
@@ -41,10 +46,14 @@ const multiCurrencyAccountingSoftware =()=>{
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <h3 className="sub-heading col-primary c-fw-600 mb-3">
-                Profits should know no borders
+                  Smart accounting reports for business of any size
                 </h3>
                 <p className="c-fs-4 mb-5">
-                Multi currency accounting software makes it easy to manage your accounting in more than 100 currencies for your fast & growing business. Giddh makes managing multi-currency payments, invoicing and accounts easy.
+                  Stay on top of your numbers and make informed business
+                  decisions. Analyse and share your vital financial reports
+                  like- balance sheet, trial balance, profit/loss to the key
+                  decision maker of your business. Giddh gives you all reports
+                  you may need to run your business better.
                 </p>
                 <a href="#" className="btn bg_color_blue col-white">
                   Start Your Trial
@@ -60,17 +69,21 @@ const multiCurrencyAccountingSoftware =()=>{
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                  Eliminate Confusion with Automatic Currency Conversion
+                    Big picture analysis made easy
                   </h4>
                   <p className="">
-                  Say goodbye to unnecessary exchange rate confusions and accounting mismatch with multi-currency accounting. Giddh does all the heavy lifting & automatically converts the International currencies into your base currency. The best part? You have the option to modify and enter your own rate manually.
+                    You don’t need to be an accounting professional to know how
+                    your business is doing. Giddh financial reports are
+                    color-coded so that the process of analysis is simple like
+                    an elementary task for you. And if you want to bring an
+                    accountant overboard, you can seamlessly share your reports.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-create.svg"
+                    src="/img/feature-gallery-icons/report-sales-graph.svg"
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -81,17 +94,20 @@ const multiCurrencyAccountingSoftware =()=>{
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                  Keep Your International Customers Smilin
+                    Ready-made reports when you need them
                   </h4>
                   <p className="">
-                  Easily accept payments from your International customers & invoice them with easy to use multi currency accounting software. Send invoices in your customer’s currency, and keep your books updated in the currency you manage your business in.
+                    With cloud-based business reporting, you don’t need to wait
+                    for the month’s end to know where your business stands as
+                    the reports can be viewed whenever you want and wherever you
+                    like.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-invoice-3.svg"
+                    src="/img/feature-gallery-icons/report-ready.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
@@ -103,17 +119,21 @@ const multiCurrencyAccountingSoftware =()=>{
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                  Set Preferred Currency to Business Accounts
+                    Keep an eye on the money owed to you
                   </h4>
                   <p className="">
-                  With Giddh you are always in control! You can set a default foreign currency to all the business accounts of your foreign customers. After which, all the invoices and reports of that account will be generated in the set currency.
+                    Keep tabs on your unpaid invoices and customers who owe
+                    money to your business with Aging report. Aging report
+                    provides clear answers to questions like - “how much do my
+                    customers customers owe me” & “how long have they owed that
+                    money”, enabling you to prepare better collection strategy.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-setting.svg"
+                    src="/img/feature-gallery-icons/report-aging.svg"
                     className="img-fluid"
                     alt="bank account image"
                   />
@@ -124,26 +144,27 @@ const multiCurrencyAccountingSoftware =()=>{
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                  Benefit from Dynamic Business Reporting
+                    Collaborate & grow
                   </h4>
                   <p className="">
-                  All your financial reports; trial balance, profit & loss, balance sheet, will be automatically created in your company base currency so you have an accurate view of your financial position and be well aware of your cash flow.
+                    Bring your accountant in so they can identify trends and
+                    actions. Download your automatically generated financial
+                    reports and share them with the stakeholders of your
+                    business: investors, executives, sales, finance, and other
+                    departments in formats like PDF and Excel.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-reports.svg"
+                    src="/img/feature-gallery-icons/report-collaborate.svg"
                     className="img-fluid"
                     alt="bank overview image"
                   />
                 </figure>
               </div>
             </div>
-
-            
-        
           </div>
         </section>
 
@@ -160,7 +181,7 @@ const multiCurrencyAccountingSoftware =()=>{
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
-                  <span className="col-blue">Multi Currency Accounting Software</span> also
+                  <span className="col-blue">Financial Reporting</span> also
                   looked at
                 </h2>
 
@@ -186,12 +207,14 @@ const multiCurrencyAccountingSoftware =()=>{
         <section className="container-fluid features__accordion_container">
           <div className="container">
             <div className="row">
+            
               <div className="col-12">
+              
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
                   <h2 className="fw-bold col-primary ">FAQs</h2> 
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
+                  <div className="accordion-item">   
+                    <h2 className="accordion-header" id="headingOne"> 
                       <button
                         className="accordion-button collapsed"
                         type="button"
@@ -206,7 +229,7 @@ const multiCurrencyAccountingSoftware =()=>{
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        What type of businesses can use the Giddh multi-currency accounting software?
+                        What is financial reporting software?
                       </button>
                     </h2>
                     <div
@@ -216,7 +239,19 @@ const multiCurrencyAccountingSoftware =()=>{
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Giddh’s innovative multi-currency accounting software is designed to cater to all the accounting, invoicing and related activities of businesses at a budget-friendly price. Hence, it is widely used by start-ups, agencies, enterprises and SMEs that require managing accounts that deal with multiple currencies.
+                        Financial reporting is a crucial part of business
+                        accounting functions. A financial reporting software
+                        helps a business automate the financial and accounting
+                        tasks. The financial reports software is available as a
+                        basic single-entry system and complex double-entry
+                        solutions. In this competitive business environment,
+                        adopting the best financial reporting tools are
+                        essential to ensure accuracy in accounting functions,
+                        cut down on expenses and boost efficiency. Top financial
+                        analysis software like Giddh can help you do that and
+                        offer greater visibility of your current financial
+                        standing and insights on factors that can impact your
+                        profitability.
                       </div>
                     </div>
                   </div>
@@ -237,10 +272,8 @@ const multiCurrencyAccountingSoftware =()=>{
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        What are the advantages of using the Giddh multi-currency accounting software?                       
-                       
+                        What does financial reporting include?
                       </button>
-                     
                     </h2>
                     <div
                       id="collapseTwo"
@@ -249,22 +282,31 @@ const multiCurrencyAccountingSoftware =()=>{
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      <p>The following are the advantages of using the Giddh multi-currency accounting software that make it worth the try.</p>
+                        <p>
+                          The financial reporting process produces statements
+                          that present a business’s financial standing to the
+                          management, investors as well as the government. It
+                          includes the following.
+                        </p>
                         <ul>
                           <li>
-                          Flexibility: Giddh offers you flexibility in payment options. It helps you handle transactions involving different currencies.
+                            Financial statements of income, comprehensive
+                            income, cash flows, stockholders’ equities and
+                            balance sheet
                           </li>
                           <li>
-                          Money-saving: With Giddh, you get the increased convenience of dealing with multiple accounts without investing in an expert or a manual system.
+                            Any financial information available on the
+                            enterprise’s website
+                          </li>
+                          <li>Documents of common stock and securities</li>
+                          <li>
+                            Communication regarding quarterly earning and other
+                            relevant information
                           </li>
                           <li>
-                          Better security: Your financial reports are safe from any security breaches with Giddh.
-                          </li>
-                          <li>
-                          Linked bank accounts: Giddh allows you to link multiple bank accounts so that you can check your transaction history anywhere and anytime you want.
-                          </li>
-                          <li>
-                          Diligent support team: Giddh’s support team is just a call or email away to help you with any issue that arises.
+                            Quarterly and annual reports to stockholders as well
+                            as government agencies and SEC (Securities and
+                            Exchange Commission
                           </li>
                         </ul>
                       </div>
@@ -287,7 +329,7 @@ const multiCurrencyAccountingSoftware =()=>{
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        Are the currency rates mentioned updated and accurate?
+                        What types of reports are available in Giddh?
                       </button>
                     </h2>
                     <div
@@ -297,10 +339,35 @@ const multiCurrencyAccountingSoftware =()=>{
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Yes, the mentioned currency rates are updated and accurate. Giddh periodically pulls in the exchange rates online to ensure that businesses and financial advisors have the accurate data needed to make effective decisions. 
-                      Giddh also allows you to set a default currency so that you can receive your invoices according to the set currency.
+                        <p>
+                          Giddh’s financial analysis software offers different
+                          financial reports to help you understand the financial
+                          condition of your business. The four major reports
+                          that are necessary to indicate the financial
+                          well-being of business are–
+                        </p>
+                        <ul>
+                          <li>
+                            Balance Sheet: These offer a comparison between the
+                            assets against liabilities and equity.
+                          </li>
+                          <li>
+                            Income Statement: These reports are an indication of
+                            the income earned in an annual reporting period.
+                          </li>
+                          <li>
+                            Capital Statement: These statements present an
+                            estimate of the increase or decrease in the capital
+                            accounts of the owner over a certain period.{" "}
+                          </li>
+                          <li>
+                            Cash Flows: Cash flows are budgeting tools that are
+                            used for making predictions of the cash flow
+                            fluctuations in the future by analysing the
+                            performance of the past.
+                          </li>
+                        </ul>
                       </div>
-                  
                     </div>
                   </div>
                   {/*============ Accordion #4 ===============*/}
@@ -320,7 +387,7 @@ const multiCurrencyAccountingSoftware =()=>{
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        How does the currency converter work?
+                        What are the three objectives of financial reporting?
                       </button>
                     </h2>
                     <div
@@ -330,13 +397,29 @@ const multiCurrencyAccountingSoftware =()=>{
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      We save the latest data of currency conversion in our system. So, when the user creates an invoice or uses a related functionality for bookkeeping, the conversion amount is shown in the respective entry form/field.
+                        <p>
+                          Majorly, there are three essential objectives of
+                          financial reporting, which are:
+                        </p>
+                        <ul>
+                          <li>
+                            Inform investors about how efficiently their cash is
+                            being utilised and being reinvested in the business.
+                          </li>
+                          <li>
+                            Track the cash flow to determine the source of
+                            incoming business finances
+                          </li>
+                          <li>
+                            Offer an analysis of the assets, liabilities and
+                            owner’s equity
+                          </li>
+                        </ul>
                       </div>
-                  
                     </div>
                   </div>
-                    {/*============ Accordion #5 ===============*/}
-                    <div className="accordion-item">
+                  {/*============ Accordion #5 ===============*/}
+                  <div className="accordion-item">
                     <h2 className="accordion-header" id="headingFive">
                       <button
                         className="accordion-button collapsed"
@@ -352,7 +435,7 @@ const multiCurrencyAccountingSoftware =()=>{
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        Can I customize the exchange rates?
+                        Does Giddh provide a Balance sheet, P&amp;L and Balance sheet reports?
                       </button>
                     </h2>
                     <div
@@ -362,9 +445,39 @@ const multiCurrencyAccountingSoftware =()=>{
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Yes, you can customize the currency exchange rate and enter the desired amount as per the situation or requirement.
+                      Giddh’s financial reporting and analysis software offers all the essential financial reports that an organisation or enterprise needs to make critical business decisions. They include a balance sheet, P&L statements, general ledger, trial balance, etc.
                       </div>
-                  
+                    </div>
+                  </div>
+                  {/*============ Accordion #6 ===============*/}
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingSix">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <span className="me-2 collapse_icon collapse_icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse_icon collapse_icon--close">
+                          <MdRemove />
+                        </span>
+                        Can I download or directly share the report to the CA or accountant or anyone from Giddh?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingSix"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                      Giddh’s finance reporting software offers the financial reports in formats like PDF and Excel, which make it easier to download or directly share the report to the CA or accountant, stakeholders of your business as well as other departments of your organisation.
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -373,8 +486,7 @@ const multiCurrencyAccountingSoftware =()=>{
           </div>
         </section>
       </div>
-        </>
-    );
+    </>
+  );
 };
-export default multiCurrencyAccountingSoftware;
-
+export default financialReporting;
