@@ -1,7 +1,7 @@
 const navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg position-fixed w-100">
+      <nav className="navbar navbar--box-shadow navbar--theme-white navbar-expand-lg position-fixed w-100">
         <div className="container-fluid">
           <a className="navbar--navbar_brand" href="/">
             <svg
@@ -106,7 +106,6 @@ const navbar = () => {
                     <ul className="dropdown-menu__wapper d-flex flex-wrap ps-0">
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
-                          <li></li>
                           <li>
                             <a href="#">GST Compliances</a>
                           </li>
