@@ -30,24 +30,14 @@
     --col-danger: #dc3545;
     --col-grey-deep:#6c757d;
     --col-light-gray: #e7e8ea
-
-    --break-xs: 0;
+   
     --break-sm: 576px;
-    --break-md: 768px;
-    --break-lg: 992px;
-    --break-xl: 1200px;
-    --break-xxl: 1440px;
+
+  --break-md: 768px;
+  --break-lg: 992px;
+  --break-xl: 1200px;
+  --break-xxl: 1400px;
+
 }
 
-@media (max-width: 575px){
-    :root {
-        --heading:30px;
-        --sub-heading:24px;
-        --small-heading:20px;
 
-        --c-fs-1:28px;
-        --c-fs-2:24px;
-        --c-fs-3:20px;
-        --c-fs-4:18px;
-    }
-}
