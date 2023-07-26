@@ -153,7 +153,7 @@ const featureGallery = () => {
         id="featureModal"
         aria-hidden="true"
         aria-labelledby="exampleModalToggleLabel"
-        tabindex="-1"
+        tabIndex="-1"
       >
         <div className="modal-dialog modal-dialog-centered feature_gallery_modal">
           <div className="modal-content">

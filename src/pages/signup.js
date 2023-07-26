@@ -155,7 +155,7 @@ const signUp = () => {
               </div>
               <h1>Create an account</h1>
               <div className="entry__right_section__container__step_one mt-5">
-                <div className="step_status_bar d-flex justify-content-between align-items-center">
+                <div className="step_status_bar d-flex justify-content-between align-items-center ps-0">
                   <div>
                     <MdCheckCircle className="step_status_bar--invisible-on-md" />{" "}
                     Verify email & mobile number
@@ -166,7 +166,7 @@ const signUp = () => {
                   </div>
                 </div>
                 <div className="row mx-0 px-0 step_input_wrapper mt-4">
-                  <label htmlFor="email" className="mb-3">
+                  <label htmlFor="email" className="mb-3 ps-0">
                     Verify email
                   </label>
                   <div className="d-flex flex-wrap p-0">
@@ -229,7 +229,7 @@ const signUp = () => {
                   </div>
                 </div>
                 <div className="row mx-0 px-0 step_input_wrapper mt-4 mb-5">
-                  <label htmlFor="contact" className="mb-3">
+                  <label htmlFor="contact" className="mb-3 ps-0">
                     Verify Mobile number
                   </label>
                   <div className="d-flex flex-wrap p-0">
@@ -322,16 +322,16 @@ const signUp = () => {
                 />
               </div>
               <h1>Create an account</h1>
-              <div className="entry__right_section__container__step_two mt-5">
-                <div className="step_status_bar d-flex justify-content-between align-items-center">
+              <div className="entry__right_section__container__step_one entry__right_section__container__step_two mt-5">
+                <div className="step_status_bar d-flex justify-content-between align-items-center ps-0">
                   <div className="col-success">
                     <MdCheckCircle className="step_status_bar--invisible-on-md" />{" "}
                     Verify email & mobile number
                   </div>
                   <span className="step_status_bar__line step_status_bar--invisible-on-md"></span>
                   <div className="step_status_bar--invisible-on-md">
-                    <MdCheckCircleOutline className="icon_enter_details" />
-                    <MdCheckCircle className="visible_on_success"/>
+                    <MdCheckCircleOutline className="icon_enter_details me-1" />
+                    <MdCheckCircle className="visible_on_success me-1"/>
                     Enter details
                   </div>
                 </div>
@@ -474,8 +474,8 @@ const signUp = () => {
                         id="termsCheckBox"
                       />
                       <label
-                        class="form-check-label c-fs-6 c-fw-500"
-                        for="termsCheckBox"
+                        class="form-check-label c-fs-6 c-fw-500 ps-0"
+                        htmlFor="termsCheckBox"
                       >
                         I agree to the{" "}
                         <span className="col-primary">Terms of Service </span>{" "}
