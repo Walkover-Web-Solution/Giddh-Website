@@ -1,7 +1,5 @@
 // ================================= SIGN-UP PAGE SCSS CODE=====================START============================
-
 .entry {
-  display: none;
   &__left_section {
     &__details {
       margin-top: 160px;
@@ -30,8 +28,6 @@
         .signup_with__left {
           border-right: 1px solid #d5d9dc;
         }
-        .signup_with__right {
-        }
       }
       &__entry_button {
         svg {
@@ -47,9 +43,135 @@
           width: 500px;
         }
       }
+      &--step{
+        display: none;
+      }
+      &--active{
+        display: block !important;
+      }
+      &__step_one{
+        .step_status_bar{
+          max-width: 500px;
+
+          &__line{
+            border: 1px solid #8F9396;
+            width: 60px;
+          }
+          svg{
+            font-size: 22px;
+            height: 25px;
+            fill: #8F9396;
+          }
+        }
+        .step_input_wrapper{
+           max-width: 964px;
+
+          .form-control{
+            max-width: 300px;
+            height: 40px;
+          }
+          .otp_input{
+            width: 40px;
+            margin-left: 1rem;
+            text-align: center;
+            &:first-child{
+              margin-left: 0;
+            }
+          }
+          &__left{
+            padding-right: 3rem;
+          }
+          &__right{
+            padding-left: 3rem;
+            border-left: 1px solid #D5D9DC;
+            a{
+              word-spacing: 12px;
+            }
+          }
+          &__left, &__right{
+            .otp_verified_icon{              
+              font-size: 18px;
+              position: absolute;
+              top: 25%;
+              right: 8px;
+
+            }
+          }
+
+        }
+      }
+      .custom-signup-btn{
+        color: var(--col-primary);
+        background-color: var(--col-white);
+        border: 1px solid var(--col-primary);
+        padding: 0 16px;
+        border-radius: 4px;
+        font-weight: 500;
+        min-height: 40px;
+        min-width: 98px;
+        margin-left: 1rem;
+        transition: all 200ms ease;
+
+        &:hover,&:active,&:focus-visible{
+          color: var(--col-white);
+          background-color: var(--col-primary);
+        }
+      }
+      .back_btn{
+        background-color: rgba(123, 127, 130, 0.10);
+        font-weight: var(--c-fw-500);
+        &:hover,&:active,&:focus-visible{
+          background-color: rgba(123, 127, 130, 0.10);
+        }
+      }
+      .next_btn{
+        background-color: var(--col-primary);
+        font-weight: var(--c-fw-500);
+        &:hover,&:active,&:focus-visible{
+          background-color: var(--col-primary);
+        }
+      }
+      .back_btn,.next_btn{
+        svg{
+            font-size: 23px;
+            padding-bottom: 1px;
+        }
+      }
+      .icon-success{
+        fill: var(--col-success);
+      }
     }
   }
 }
+@media (max-width: 1199px){
+  .entry {
+    &__right_section {
+      &__container {
+        &__step_one{
+          
+          .step_input_wrapper{
+             max-width: 844px;
+  
+            .form-control{
+              max-width: 250px;
+              height: 40px;
+            }
+            &__left{
+              padding-right: 0rem;
+            }
+            &__right{
+              padding-left: 0rem;
+              border-left: 0;
+              margin-top: 24px;
+            }
+  
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 991px) {
     .entry {
         display: none;
@@ -59,12 +181,11 @@
                 flex-direction: column;
               .signup_with__left {
                 border-right: none !important;
-                border-bottom: 1px solid #d5d9dc;
-                padding-bottom: 24px;
+                padding-bottom: 14px;
                 padding-right: 0 !important;
               }
               .signup_with__right {
-                padding-top: 24px;
+                padding-top: 14px;
                 padding-left: 0 !important;
               }
             }
