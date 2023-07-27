@@ -107,26 +107,26 @@ const navbar = () => {
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
                           <li>
-                            <a href="#">GST Compliances</a>
+                            <a href="gst">GST Compliances</a>
                           </li>
                           <li>
-                            <a href="#">Bank Reconcile</a>
+                            <a href="conect-bank-reconcile">Bank Reconcile</a>
                           </li>
                           <li>
-                            <a href="#">Multi Currency</a>
+                            <a href="multi-currency-accounting-software">Multi Currency</a>
                           </li>
                           <li>
                             <a href="#">ICICI Integration</a>
                           </li>
                           <li>
-                            <a href="#">E-Invoice</a>
+                            <a href="e-invoice">E-Invoice</a>
                           </li>
                         </ul>
                       </li>
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
                           <li>
-                            <a href="#">Invoicing</a>
+                            <a href="invoice-software">Invoicing</a>
                           </li>
                           <li>
                             <a href="#">Share Data</a>
@@ -167,7 +167,7 @@ const navbar = () => {
                             <a href="#">Import Excel Files</a>
                           </li>
                           <li>
-                            <a href="#">Reports & Analysis</a>
+                            <a href="financial-reporting">Reports & Analysis</a>
                           </li>
                         </ul>
                       </li>
