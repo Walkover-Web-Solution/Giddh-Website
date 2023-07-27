@@ -145,7 +145,7 @@ const navbar = () => {
                             <a href="accounting-dashboard">Dashboard</a>
                           </li>
                           <li>
-                            <a href="#">Inventory</a>
+                            <a href="inventory-management-software">Inventory</a>
                           </li>
                           <li>
                             <a href="#">Security</a>
@@ -161,7 +161,7 @@ const navbar = () => {
                             <a href="#">Anywhere-Anytime</a>
                           </li>
                           <li>
-                            <a href="#">Linked Bank Account</a>
+                            <a href="conect-bank-reconcile">Linked Bank Account</a>
                           </li>
                           <li>
                             <a href="#">Import Excel Files</a>
