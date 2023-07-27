@@ -129,7 +129,7 @@ const navbar = () => {
                             <a href="invoice-software">Invoicing</a>
                           </li>
                           <li>
-                            <a href="#">Share Data</a>
+                            <a href="multi-user-accounting-software">Share Data</a>
                           </li>
                           <li>
                             <a href="contacts">Contacts</a>
@@ -164,7 +164,7 @@ const navbar = () => {
                             <a href="conect-bank-reconcile">Linked Bank Account</a>
                           </li>
                           <li>
-                            <a href="#">Import Excel Files</a>
+                            <a href="import-data">Import Excel Files</a>
                           </li>
                           <li>
                             <a href="financial-reporting">Reports & Analysis</a>

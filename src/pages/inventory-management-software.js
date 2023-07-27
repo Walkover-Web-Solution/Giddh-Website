@@ -433,35 +433,33 @@ const inventoryManagementSoftware =()=>{
                   </div>
                    {/*============ Accordion #7 ===============*/}
                    <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingSix">
+                    <h2 className="accordion-header" id="headingSeven">
                       <button
                         className="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix"
+                        data-bs-target="#collapseSeven"
                         aria-expanded="false"
-                        aria-controls="collapseSix"
-                      >
+                        aria-controls="collapseSeven"
+                      > 
                         <span className="me-2 collapse_icon collapse_icon--open">
                           <MdAdd />
                         </span>
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        Can I manage inventory in Giddh?    
+                        Can I manage inventory in a different group or category? 
                       </button>
                     </h2>
                     <div
-                      id="collapseSix"
+                      id="collapseSeven"
                       className="accordion-collapse collapse"
-                      aria-labelledby="headingSix"
+                      aria-labelledby="headingSeven"
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Yes, you can. Giddh offers inventory management for every kind of business be it a small manufacturer or reseller or a large organisation with operations across multiple locations. It helps you stay on top of your supply chain and ensure that your business is making more profits while reducing wastage. It also helps you track your inventory with minimal efforts. If you are looking for the best inventory management software in India, Giddh is your best bet.
-
+                      Giddh’s inventory management software comes with default groups and accounts. You can also manage your inventory by creating different groups and accounts as is necessary for your business. However, you need to reach out to our customer support team for assistance in creating main groups. A new group can always be created under the main groups only.
                       </div>
-                  
                     </div>
                   </div>
                 </div>
