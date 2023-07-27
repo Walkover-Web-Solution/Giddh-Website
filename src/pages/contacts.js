@@ -126,33 +126,31 @@ const contacts = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     What could you do with giddh smart list?
                   </h4>
-                  <span className="gap-3">
-                    <ul>
-                      <li>
-                        <span className="col-primary ">
-                          <GiCheckMark />
-                        </span>{" "}
-                        Add new customers or vendors directly to your Giddh
-                        books.
-                      </li>
-                      <li>
-                        <span className="col-primary ">
-                          <GiCheckMark />
-                        </span>
-                        Find all those customers who haven’t paid you back in
-                        the past few weeks or months listed in one place, so you
-                        can follow-up with them and improve your cash flow
-                      </li>
-                      <li>
-                        <span className="col-primary ">
-                          <GiCheckMark />
-                        </span>
-                        See how many customers you have in a particular city or
-                        region, helping you assess your customer base and create
-                        a more targeted sales or marketing effort.
-                      </li>
-                    </ul>
-                  </span>
+
+                  <ul className="ps-0">
+                    <li className="mb-3">
+                      <span className="col-primary c-fs-2 me-3">
+                        <GiCheckMark />
+                      </span>{" "}
+                      Add new customers or vendors directly to your Giddh books.
+                    </li>
+                    <li className="mb-3">
+                      <span className="col-primary c-fs-2 me-3">
+                        <GiCheckMark />
+                      </span>
+                      Find all those customers who haven’t paid you back in the
+                      past few weeks or months listed in one place, so you can
+                      follow-up with them and improve your cash flow
+                    </li>
+                    <li>
+                      <span className="col-primary c-fs-2 me-3">
+                        <GiCheckMark />
+                      </span>
+                      See how many customers you have in a particular city or
+                      region, helping you assess your customer base and create a
+                      more targeted sales or marketing effort.
+                    </li>
+                  </ul>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
@@ -181,10 +179,7 @@ const contacts = () => {
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
-                  <span className="col-blue">
-                  Contacts 
-                  </span>{" "}
-                  also looked at
+                  <span className="col-blue">Contacts</span> also looked at
                 </h2>
 
                 <div className="features__suggestion_container__links">
@@ -205,8 +200,6 @@ const contacts = () => {
             </div>
           </div>
         </section>
-
-        
       </div>
     </>
   );
