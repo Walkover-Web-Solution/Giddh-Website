@@ -1,4 +1,4 @@
-const makeTheSwitch = () => {
+const security = () => {
     return (
       <>
         <section className="container-fluid security">
@@ -24,5 +24,5 @@ const makeTheSwitch = () => {
       </>
     );
   };
-  export default makeTheSwitch;
+  export default security;
   
