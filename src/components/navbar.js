@@ -132,10 +132,10 @@ const navbar = () => {
                             <a href="#">Share Data</a>
                           </li>
                           <li>
-                            <a href="#">Contacts</a>
+                            <a href="contacts">Contacts</a>
                           </li>
                           <li>
-                            <a href="#">API Integration</a>
+                            <a href="https://apidoc.giddh.com">API Integration</a>
                           </li>
                         </ul>
                       </li>

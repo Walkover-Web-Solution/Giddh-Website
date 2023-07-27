@@ -199,7 +199,7 @@ const conectBankReconcile =()=>{
               <div className="col-12">
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ">FAQs</h2> 
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2> 
                   <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                       <button
