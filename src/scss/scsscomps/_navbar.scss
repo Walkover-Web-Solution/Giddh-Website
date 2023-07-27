@@ -227,6 +227,7 @@
     .navbar {
       background-color: var(--col-primary) !important;
       padding: 8px 0 !important;
+      box-shadow: none !important;
   
       &--navbar_brand {
         svg {

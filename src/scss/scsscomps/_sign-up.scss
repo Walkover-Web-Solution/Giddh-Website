@@ -3,7 +3,7 @@
   &__left_section {
     &__details {
       margin-top: 160px;
-      margin-left: 40px;
+      margin-left: 30px !important;
 
       h1 {
         line-height: 36px;
@@ -24,6 +24,8 @@
   }
   &__right_section {
     &__container {
+        max-height: 100vh;
+        overflow-x: auto;
       &__entry_with {
         .signup_with__left {
           border-right: 1px solid #d5d9dc;
@@ -38,69 +40,154 @@
       .text_blue {
         color: var(--col-primary);
       }
-      .line_on_right {                
-        &::after {                  
+      .line_on_right {
+        &::after {
           width: 500px;
         }
       }
-      &--step{
+      &--step {
         display: none;
       }
-      &--active{
+      &--active {
         display: block !important;
       }
-      &__step_one{
-        .step_status_bar{
+      &__step_one {
+        margin-top: 3rem;
+        .step_status_bar {
           max-width: 500px;
 
-          &__line{
-            border: 1px solid #8F9396;
+          &__line {
+            border: 1px solid #8f9396;
             width: 60px;
           }
-          svg{
+          svg {
             font-size: 22px;
             height: 25px;
-            fill: #8F9396;
+            fill: #8f9396;
           }
         }
-        .step_input_wrapper{
-           max-width: 964px;
+        .step_input_wrapper {
+          max-width: 964px;
 
-          .form-control{
+          .form-control {
             max-width: 300px;
             height: 40px;
           }
-          .otp_input{
+          .otp_input {
             width: 40px;
             margin-left: 1rem;
             text-align: center;
-            &:first-child{
+            &:first-child {
               margin-left: 0;
             }
           }
-          &__left{
+          &__left {
             padding-right: 3rem;
           }
-          &__right{
+          &__right {
             padding-left: 3rem;
-            border-left: 1px solid #D5D9DC;
-            a{
+            border-left: 1px solid #d5d9dc;
+            a {
               word-spacing: 12px;
             }
           }
-          &__left, &__right{
-            .otp_verified_icon{              
+          &__left,
+          &__right {
+            .otp_verified_icon {
               font-size: 18px;
               position: absolute;
               top: 25%;
               right: 8px;
-
             }
           }
-
         }
       }
-      .custom-signup-btn{
+      &__step_two {
+        .redirect-text{
+          display: none;
+        }
+        .step_status_bar {
+          max-width: 500px;
+          .visible_on_success{
+            display: none;
+          }         
+          &__line {
+            border: 1px solid var(--col-success);
+            width: 60px;
+          }
+
+          svg{
+            font-size: 22px;
+            height: 25px;
+            &.icon_enter_details{              
+                fill: #8f9396;     
+            }
+          }
+          &.success-form{
+            color: var(--col-success);
+            svg{                       
+                  fill: var(--col-success);
+                  &.icon_enter_details{
+                    display: none;
+                  }
+                  &.visible_on_success{
+                    display: inline !important;
+                  }
+            }
+            .redirect-text{
+              display: block;
+            }
+          }
+        }
+
+        .step_two_wrapper{
+          &__toggle_button{
+            button{
+              background-color: var(--col-white);
+              color: #3F4346;
+              outline: none;
+              padding: 8px 16px;
+              font-size: var(--c-fs-6);
+              font-weight: var(--c-fw-500);
+              border: 1px solid #8f9396;
+              transition: all 300ms ease-in-out;
+            }
+            &__left{
+              border-top-left-radius: 4px;
+              border-bottom-left-radius: 4px;
+              &:focus,&:active,&.active{
+                background-color: var(--col-primary);
+                color: var(--col-white);
+              }
+            }
+            &__right{
+              border-top-right-radius: 4px;
+              border-bottom-right-radius: 4px;
+              border-left: 0 !important;
+              &:focus,&:active,&.active{
+                background-color: var(--col-primary);
+                color: var(--col-white);
+              }
+            }
+          }
+          &--company-form{
+            display: block;
+          }
+          &--personal-form{
+            display: none;
+          }
+          .form-check-input{
+            &:checked {
+              background-color: var(--col-primary);
+              border-color: var(--col-primary);
+            }
+            &:focus{
+              box-shadow: unset !important;
+            }
+          }
+        }
+      }
+      .custom-signup-btn {
         color: var(--col-primary);
         background-color: var(--col-white);
         border: 1px solid var(--col-primary);
@@ -112,59 +199,79 @@
         margin-left: 1rem;
         transition: all 200ms ease;
 
-        &:hover,&:active,&:focus-visible{
+        &:hover,
+        &:active,
+        &:focus-visible {
           color: var(--col-white);
           background-color: var(--col-primary);
         }
       }
-      .back_btn{
-        background-color: rgba(123, 127, 130, 0.10);
+      .back_btn {
+        background-color: rgba(123, 127, 130, 0.1);
         font-weight: var(--c-fw-500);
-        &:hover,&:active,&:focus-visible{
-          background-color: rgba(123, 127, 130, 0.10);
+        border: 0 !important;
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-visible {
+          background-color: rgba(123, 127, 130, 0.1) !important;
         }
       }
-      .next_btn{
+      .next_btn {
         background-color: var(--col-primary);
         font-weight: var(--c-fw-500);
-        &:hover,&:active,&:focus-visible{
-          background-color: var(--col-primary);
+        &:hover,
+        &:active,
+        &:focus,
+        &:focus-visible {
+          background-color: var(--col-primary) !important;
         }
       }
-      .back_btn,.next_btn{
-        svg{
-            font-size: 23px;
-            padding-bottom: 1px;
+      .back_btn,
+      .next_btn {
+        svg {
+          font-size: 23px;
+          padding-bottom: 1px;
         }
       }
-      .icon-success{
+      .icon-success {
         fill: var(--col-success);
+      }
+      &--logo-visible-in-small{
+        margin-bottom: 3rem;
       }
     }
   }
 }
-@media (max-width: 1199px){
+@media (max-width: 1199px) {
   .entry {
     &__right_section {
       &__container {
-        &__step_one{
-          
-          .step_input_wrapper{
-             max-width: 844px;
-  
-            .form-control{
-              max-width: 250px;
-              height: 40px;
-            }
-            &__left{
+        &__step_one {
+          .step_input_wrapper {
+            max-width: 525px;
+
+            &__left {
               padding-right: 0rem;
+              div {
+                button {
+                  margin-left: auto !important;
+                }
+              }
             }
-            &__right{
+            &__right {
               padding-left: 0rem;
               border-left: 0;
               margin-top: 24px;
+              div {
+                button {
+                  margin-left: auto !important;
+                }
+              }
             }
-  
+          }
+          .custom-signup-btn {
+            min-width: 140px;
           }
         }
       }
@@ -173,56 +280,121 @@
 }
 
 @media (max-width: 991px) {
-    .entry {
-        display: none;
-        &__right_section {
-          &__container {
-            &__entry_with {
-                flex-direction: column;
-              .signup_with__left {
-                border-right: none !important;
-                padding-bottom: 14px;
-                padding-right: 0 !important;
-              }
-              .signup_with__right {
-                padding-top: 14px;
-                padding-left: 0 !important;
-              }
+  .entry {
+    &__right_section {
+      &__container {        
+        &.container{
+          padding-left: 40px !important;
+          padding-right: 40px !important;
+        }
+        &__entry_with {
+          flex-direction: column;
+          .signup_with__left {
+            border-right: none !important;
+            padding-bottom: 14px;
+            padding-right: 0 !important;
+          }
+          .signup_with__right {
+            padding-top: 14px;
+            padding-left: 0 !important;
+          }
+        }
+        .line_on_right {
+          &::after {
+            width: 210px;
+          }
+        }
+        .step_status_bar__line{
+          width: 40px;
+        }
+        &__step_one {
+          .step_status_bar{
+            padding-left: 10px;
+            &--invisible-on-md{
+             display: none;
             }
-            .line_on_right {                
-                &::after {                  
-                  width: 210px;
+           }
+          .step_input_wrapper {                       
+            max-width: 100%;
+            padding: 0 10px;
+
+            .form-control {
+              max-width: 100% !important;
+            }
+
+            &__left {
+              width: 100%;
+              padding-right: 0rem;
+              margin-bottom: 24px;
+            }
+            &__right {
+              width: 100%;
+              padding-left: 0rem;
+              border-left: 0;
+              margin-top: 24px;
+              div {
+                button {
+                  margin-left: auto !important;
                 }
               }
+            }
+            &__mobile_veiw {
+              flex-direction: column;
+              .otp_verified_icon {
+                top: -28px !important;
+              }
+              button {
+                &.btn {
+                  margin-left: 0 !important;
+                  margin-top: 24px;
+                }
+              }
+            }
+          }
+          .custom-signup-btn {
+            min-width: 140px;
           }
         }
       }
+      &--step{
+        width: 100%;
+      }
+    }
+  }
 }
+
 @media (max-width: 767px) {
   .entry {
     &__left_section {
-      display: none !important;
+      &__details{
+        margin-top: 40px;
+        margin-left: 3px !important;
+        &.pe-5 {
+          padding-right: 0 !important;
+      }
+      }
     }
     &__right_section {
       &__container {
-        margin: 0 auto;
-        margin-top: 2rem;
-        max-width: 350px;
-        padding: 15px !important;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-
-        .line_on_right {
-          &::after {
-            width: 220px;
-          }
+        &.container{
+          padding-left: 15px !important;
+          padding-right: 15px !important;
+          max-width: unset;
+          h1{
+            margin-bottom: 16px;
+          }          
+           max-width: 540px; 
         }
-        &--logo-visible-in-small {
-          &.d-none {
-            display: block !important;
-          }
+        max-height: unset;
+        max-width: unset;
+        &__step_one{
+          margin-top: 1.5rem;
+          .custom-signup-btn {
+            min-width: 90px;
+          } 
+        }
+        &--logo-visible-in-small{
+          margin-bottom: 2rem !important;
         }
       }
     }
