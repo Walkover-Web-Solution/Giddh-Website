@@ -148,7 +148,7 @@ const navbar = () => {
                             <a href="inventory-management-software">Inventory</a>
                           </li>
                           <li>
-                            <a href="#">Security</a>
+                            <a href="security">Security</a>
                           </li>
                           <li>
                             <a href="#">All Features</a>
@@ -158,7 +158,7 @@ const navbar = () => {
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
                           <li>
-                            <a href="#">Anywhere-Anytime</a>
+                            <a href="cloud-accounting-software">Anywhere-Anytime</a>
                           </li>
                           <li>
                             <a href="conect-bank-reconcile">Linked Bank Account</a>

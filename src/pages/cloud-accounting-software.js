@@ -88,7 +88,7 @@ const anywhereAnytime = () => {
                                     Stay ahead with automatic updates
                                 </h4>
                                 <p className="">
-                                    With Giddh’s cloud based accounting software, you will automatically receive OTA (on the air) updates of the
+                                    With Giddh’s <u>cloud based accounting software</u>, you will automatically receive OTA (on the air) updates of the
                                     greatest and newest features that are added to Giddh. That means less effort on your part—which we all love.
                                     Now isn’t that awesome?
                                 </p>
@@ -134,7 +134,7 @@ const anywhereAnytime = () => {
 
                                 </h4>
                                 <p className="">
-                                    With a cloud based accounting software, your team-members don’t need to be all at the same time to collaborate
+                                    With a <u>cloud based accounting software</u>, your team-members don’t need to be all at the same time to collaborate
                                     or make major decisions. Thanks to easily shareable online reports, decision makers and accountants can be on
                                     the same page, even when they are not at the same place.
                                 </p>
@@ -157,7 +157,7 @@ const anywhereAnytime = () => {
                                     Online Vs. Offline Accounting Software
                                 </h4>
                                 <p className="">
-                                    Online cloud accounting software has become the new norm for carrying out finance operations in the present day. In view of its rising popularity,
+                                <u>Online cloud accounting software</u> has become the new norm for carrying out finance operations in the present day. In view of its rising popularity,
                                     let’s look at the major differences between a traditional desktop accounting software and a cloud accounting software:
                                 </p>
                             </div>
@@ -225,7 +225,7 @@ const anywhereAnytime = () => {
                             </figure>
                             <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                                 People interested in{" "}
-                                <span className="col-blue">Multi Currency Accounting Software</span> also
+                                <span className="col-blue">Cloud Accounting Software</span> also
                                 looked at
                             </h2>
                             <div className="features__suggestion_container__links">
