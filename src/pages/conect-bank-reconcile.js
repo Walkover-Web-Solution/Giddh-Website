@@ -1,7 +1,7 @@
 import { MdRemove, MdAdd } from "react-icons/md";
-const conectBankReconcile =()=>{
-    return(
-<>
+const conectBankReconcile = () => {
+  return (
+    <>
       <div className="features">
         <section className="container-fluid">
           <div className="container features__heading_container">
@@ -91,10 +91,14 @@ const conectBankReconcile =()=>{
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading fw-bold mb-3">
-                  Reconcile with a snap of fingers
+                    Reconcile with a snap of fingers
                   </h4>
                   <p className="">
-                  With one-click reconciliation feature, we have made the process of reconciliation so easy, it is no more a complicated chore you would want to avoid. With just one click, you would know your balances as per bank and as per your books.
+                    With one-click reconciliation feature, we have made the
+                    process of reconciliation so easy, it is no more a
+                    complicated chore you would want to avoid. With just one
+                    click, you would know your balances as per bank and as per
+                    your books.
                   </p>
                 </div>
               </div>
@@ -113,10 +117,13 @@ const conectBankReconcile =()=>{
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading fw-bold mb-3">
-                  Got Multiple Bank Accounts? We got you Covered
+                    Got Multiple Bank Accounts? We got you Covered
                   </h4>
                   <p className="">
-                  With Giddh bank account linking, you can monitor the deposit, transfer, and withdrawals of cash whether you hold a single bank account or several accounts from multiple banks, right from our easy and friendly interface.
+                    With Giddh bank account linking, you can monitor the
+                    deposit, transfer, and withdrawals of cash whether you hold
+                    a single bank account or several accounts from multiple
+                    banks, right from our easy and friendly interface.
                   </p>
                 </div>
               </div>
@@ -130,14 +137,17 @@ const conectBankReconcile =()=>{
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading fw-bold mb-3">
-                  Giddh will connect to your favorite bank
+                    Giddh will connect to your favorite bank
                   </h4>
                   <p className="">
-                  Major national banks like SBI, ICICI and many more can be linked with Giddh to let your transactions to flow automatically. Can’t find your bank? Just let us know and we’ll try to help you out.
+                    Major national banks like SBI, ICICI and many more can be
+                    linked with Giddh to let your transactions to flow
+                    automatically. Can’t find your bank? Just let us know and
+                    we’ll try to help you out.
                   </p>
                 </div>
               </div>
@@ -151,9 +161,6 @@ const conectBankReconcile =()=>{
                 </figure>
               </div>
             </div>
-
-            
-        
           </div>
         </section>
 
@@ -199,7 +206,7 @@ const conectBankReconcile =()=>{
               <div className="col-12">
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2> 
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
                   <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                       <button
@@ -373,6 +380,6 @@ const conectBankReconcile =()=>{
         </section>
       </div>
     </>
-    );
+  );
 };
-export default  conectBankReconcile;
+export default conectBankReconcile;

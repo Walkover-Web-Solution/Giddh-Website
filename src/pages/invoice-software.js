@@ -123,7 +123,7 @@ Tired of unwanted tampering to your finalized invoices? Giddh’s invoicing soft
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading fw-bold mb-3">
@@ -162,7 +162,7 @@ Tired of unwanted tampering to your finalized invoices? Giddh’s invoicing soft
                   />
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
-                  People interested in{" "}
+                  People interested in
                   <span className="col-blue">Invoicing Software </span> also
                   looked at
                 </h2>
