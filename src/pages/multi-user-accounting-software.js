@@ -124,7 +124,7 @@ const multiUserAccountingSoftware = () => {
                             </figure>
                         </div>
                     </div>
-                    <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                    <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
                         <div className="col-md-12 col-lg-6">
                             <div className="features__description_container__content">
                                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -190,7 +190,7 @@ const multiUserAccountingSoftware = () => {
                         <div className="col-12">
                             <div className="accordion" id="accordionAllFeatures">
                                 {/*============ Accordion #1 ===============*/}
-                                <h2 className="fw-bold col-primary ">FAQs</h2>
+                                <h2 className="fw-bold col-primary ps-3 ">FAQs</h2>
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingOne">
                                         <button
@@ -253,12 +253,41 @@ const multiUserAccountingSoftware = () => {
                                         <div className="accordion-body">
                                             The Giddh software has a really simple interface that can be used by a layman without a technical background.
                                             The cloud-based system also means that you can access the software from anywhere and on any device.
-
                                         </div>
                                     </div>
                                 </div>
                                 {/*============ Accordion #3 ===============*/}
-                                
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingThree">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree"
+                                            aria-expanded="false"
+                                            aria-controls="collapseThree"
+                                        >
+                                            <span className="me-2 collapse_icon collapse_icon--open">
+                                                <MdAdd />
+                                            </span>
+                                            <span className="me-2 collapse_icon collapse_icon--close">
+                                                <MdRemove />
+                                            </span>
+                                            Do I need to have bookkeeping or accounting experience to use the Giddh software?
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseThree"
+                                        className="accordion-collapse collapse"
+                                        aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionAllFeatures"
+                                    >
+                                        <div className="accordion-body">
+                                        The Giddh software is designed in such a way that any person without an accounting
+                                         experience can operate all the features of the software.
+                                        </div>
+                                    </div>
+                                </div>
                                 {/*============ Accordion #4 ===============*/}
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingFour">
@@ -294,7 +323,6 @@ const multiUserAccountingSoftware = () => {
                                     </div>
                                 </div>
                                 {/*============ Accordion #5 ===============*/}
-
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingFive">
                                         <button
@@ -358,11 +386,9 @@ const multiUserAccountingSoftware = () => {
                                             access to multiple users within an organization. Multi-accounting software also makes it easy to create
                                             groups and share only a portion of data to various departments. Its monitoring capabilities helps keep
                                             track of what data is accessible to whom.
-
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
