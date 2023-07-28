@@ -11,7 +11,7 @@ const gst = () => {
               <span className="c-fs-3  col-dark-light fw-light m-3">
                 From creating error-free GST invoice to
               </span>
-              <h1 className="heading fw-bold  col-primary ">
+              <h1 className="heading c-fw-600  col-primary ">
                 File your GSTR Automatically
               </h1>
             </div>
@@ -28,7 +28,7 @@ const gst = () => {
       <section className=" filing-gstr py-5">
         <div className="container mt-5">
           <div className="text-center">
-            <p className="sub-heading c-fs-1 col-primary fw-bold ">
+            <p className="sub-heading c-fs-1 col-primary c-fw-600 ">
               Advantages of filing GSTR with us
             </p>
           </div>
@@ -38,7 +38,7 @@ const gst = () => {
               <div className="filing-gstr-card d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/gst-images/Direct-Filing.svg" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary fw-bold">
+                  <h3 className="small-heading col-primary c-fw-600">
                     Direct Filing
                   </h3>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
@@ -54,7 +54,7 @@ const gst = () => {
               <div className="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/gst-images/accurate.svg" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary fw-bold">
+                  <h3 className="small-heading col-primary c-fw-600">
                     100% Accurate
                   </h3>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
@@ -70,7 +70,7 @@ const gst = () => {
               <div className="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/gst-images/get-notified.svg" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary fw-bold">
+                  <h3 className="small-heading col-primary c-fw-600">
                     Timely Notifications
                   </h3>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
@@ -89,7 +89,7 @@ const gst = () => {
               <div className="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/gst-images/easy-fast.svg" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary fw-bold">
+                  <h3 className="small-heading col-primary c-fw-600">
                     Highly Collaborative
                   </h3>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
@@ -105,7 +105,7 @@ const gst = () => {
               <div className="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/gst-images/secure-reliable.svg" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary fw-bold">
+                  <h3 className="small-heading col-primary c-fw-600">
                     Secure & Reliable
                   </h3>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
@@ -121,7 +121,7 @@ const gst = () => {
               <div className="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/gst-images/best-support.svg" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary fw-bold">
+                  <h3 className="small-heading col-primary c-fw-600">
                     Best in Class Support
                   </h3>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
@@ -137,7 +137,7 @@ const gst = () => {
       <section className=" py-4 my-4 mx-2 mx-md-0 ">
         <div className="d-flex flex-column gap-4 c-fs-3 text-center ">
           <span>Take charge of your business with Giddh &</span>
-          <div className="c-fs-1 col-primary fw-bold ">
+          <div className="c-fs-1 col-primary c-fw-600 ">
             Make GST Return Process Automatic.
           </div>
           <div className="">
@@ -170,7 +170,7 @@ const gst = () => {
       <section className="container gst-features d-grid gap-3  border-bottom my-5 ">
         <div className="gst-feature-container d-flex flex-column flex-md-row gap-2 align-items-center my-3">
           <div className="gst-feature-container__text col-12 col-md-6">
-            <h4 className="c-fs-4 col-primary fw-bold">Understanding GST</h4>
+            <h4 className="c-fs-4 col-primary c-fw-600">Understanding GST</h4>
             <p p className="c-fs-5 ">
               The full form of GST is Goods and Services tax. It’s a value-added
               tax that is levied on many goods and services that are sold for
@@ -195,7 +195,7 @@ const gst = () => {
           />
 
           <div className="gst-feature-container__text   col-12 col-md-6">
-            <h4 className="c-fs-4 col-primary fw-bold">
+            <h4 className="c-fs-4 col-primary c-fw-600">
               Indian GST Software for business owners
             </h4>
             <p p className="c-fs-5 ">
@@ -214,7 +214,7 @@ const gst = () => {
       <section className="container gst-features d-grid gap-3  mt-4">
         <div className="gst-feature-container d-flex flex-column flex-md-row gap-2 align-items-center my-3">
           <div className="gst-feature-container__text col-12 col-md-6">
-            <h4 className="c-fs-4 col-primary fw-bold">
+            <h4 className="c-fs-4 col-primary c-fw-600">
               Benefits of using GST software:
             </h4>
             <p p className="c-fs-5 ">

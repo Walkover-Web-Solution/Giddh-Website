@@ -6,7 +6,7 @@ const anywhereAnytime = () => {
         <div className="container features__heading_container">
           <div className="row">
             <div className="col-lg-7 order-lg-0 order-1">
-              <h2 className="heading col-primary fw-bold mb-4">
+              <h2 className="heading col-primary c-fw-600 mb-4">
                 Cloud Accounting Software
               </h2>
               <p className="col-grey c-fs-3 mb-5">
@@ -42,7 +42,7 @@ const anywhereAnytime = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center features__sub_heading_container--pull-top">
-              <h3 className="sub-heading col-primary fw-bold mb-3">
+              <h3 className="sub-heading col-primary c-fw-600 mb-3">
                 Run your business from any corner of the world!
               </h3>
               <p className="c-fs-4 mb-5">
@@ -64,7 +64,7 @@ const anywhereAnytime = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Turn your browser into your office
                 </h4>
                 <p className="">
@@ -89,14 +89,13 @@ const anywhereAnytime = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Stay ahead with automatic updates
                 </h4>
                 <p className="">
-                  With Giddh’s{" "}
+                  With Giddh’s
                   <a href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/">
-                    {" "}
-                    <u>cloud based accounting software </u>{" "}
+                    <u>cloud based accounting software </u>
                   </a>
                   , you will automatically receive OTA (on the air) updates of
                   the greatest and newest features that are added to Giddh. That
@@ -118,7 +117,7 @@ const anywhereAnytime = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Save more on all fronts
                 </h4>
                 <p className="">
@@ -144,7 +143,7 @@ const anywhereAnytime = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Work smarter, grow faster!
                 </h4>
                 <p className="">
@@ -172,7 +171,7 @@ const anywhereAnytime = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Online Vs. Offline Accounting Software
                 </h4>
                 <p className="">
@@ -199,7 +198,7 @@ const anywhereAnytime = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Advantages of Cloud Accounting Software
                 </h4>
                 <p className="">
@@ -222,12 +221,63 @@ const anywhereAnytime = () => {
             </div>
           </div>
         </div>
+
+        <section>
+          <div className="text-center px-5 g-4 ">
+            <h1 className="col-primary c-fs-3">Why Giddh is Better Than Conventional Accounting Software</h1>
+            <p className="c-fs-4 my-3">
+              Although there exist some of the oldest tallying and accounting
+              software players in the market, with more emerging choices people
+              are opting for modern and advanced software. There are several
+              ways in which Giddh as a cloud accounting software can make a
+              better option:
+            </p>
+
+            <div className="py-4">
+              <ul>
+                <li className="c-fs-4">
+                  <span className="c-fw-600">Setup–</span>Firstly, the entire
+                  ergonomics is designed to make any layman use it efficiently.
+                  The dashboard is customised so that people from a
+                  non-accounting background can also use it effectively. Also,
+                  it’s as simple as signing up and using it. Offline,
+                  conventional, on the other hand, needs to be installed on
+                  every computer.
+                </li>
+                <li className="c-fs-4">
+                <span className="c-fw-600">Accessibility–</span>As mentioned above, Non-cloud based software
+                  can only be accessed from the computer or desktop it’s
+                  installed in. Giddh’s cloud software, on the other hand, can
+                  be accessed from anywhere and on any device.
+                </li>
+                <li>
+                <span className="c-fw-600">Invoices–</span>Since invoicing is a core part of accounting
+                  processes, so a software such as Giddh which helps you
+                  customise invoices is better than one which just creates the
+                  same ones repetitively. You can also stop worrying about GSTs
+                  in your invoices since they’ll be calculated automatically.
+                </li>
+                <li className="c-fs-4">
+                <span className="c-fw-600">Customer support</span>You also get the benefit of 24*7 customer
+                  support through chat or phone calls for resolving any of your
+                  problems. All your doubts are easily solved by experts.
+                </li>
+                <li className="c-fs-4">
+                <span className=" c-fw-600">Cost-expensive–</span>Instead of the hefty one-one time fee, you can choose the smart-priced plans of Giddh designed for your
+                  convenience. You can choose from the basic free plan, the
+                  moderate Rs. 800 per organisation per year plan or the premium
+                  Rs. 4000 per organisation per year plan. Here are the details:
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </section>
       <section className="container-fluid features__sub_heading_container">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center features__sub_heading_container--pull-top">
-              <h3 className="sub-heading col-primary fw-bold mb-3">
+              <h3 className="sub-heading col-primary c-fw-600 mb-3">
                 Why Giddh is Better Than Conventional Accounting Software
               </h3>
               <p className="c-fs-4 mb-5">
@@ -432,7 +482,7 @@ const anywhereAnytime = () => {
                         multiple users and multiple devices at the same time.
                         Besides, you can set the access permission for each user
                         so that you can control which data can be accessed by a
-                        particular user.{" "}
+                        particular user.
                       </p>
                     </div>
                   </div>
@@ -467,7 +517,6 @@ const anywhereAnytime = () => {
                   >
                     <div className="accordion-body">
                       <p>
-                        {" "}
                         Online cloud accounting software offers several
                         advantages over offline solutions, which are described
                         below.
