@@ -7,7 +7,7 @@ const accountingDashboard = () => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
+                <h2 className="heading col-primary fw-bold mb-4">
                   Know your business' worth with simple online dashboard
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
@@ -44,7 +44,7 @@ const accountingDashboard = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                <h3 className="sub-heading col-primary fw-bold mb-3 ">
                   Assess your numbers in one glance
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -67,7 +67,7 @@ const accountingDashboard = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                     Know the true worth of your business
                   </h4>
                   <p className="">
@@ -93,7 +93,7 @@ const accountingDashboard = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                     Track your monthly overdues
                   </h4>
                   <p className="">
@@ -118,7 +118,7 @@ const accountingDashboard = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                     Keep an eye on where your money goes
                   </h4>
                   <p className="">
@@ -142,7 +142,7 @@ const accountingDashboard = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                     Predict with more precision
                   </h4>
                   <p className="">
@@ -164,10 +164,10 @@ const accountingDashboard = () => {
               </div>
             </div>
 
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                     Financial ratio analysis
                   </h4>
                   <p className="">
@@ -185,7 +185,7 @@ const accountingDashboard = () => {
                   <img
                     src="/img/feature-gallery-icons/financial-ratio.svg"
                     className="img-fluid"
-                    alt="bank overview image"
+                    alt="bank account image"
                   />
                 </figure>
               </div>
@@ -235,7 +235,7 @@ const accountingDashboard = () => {
               <div className="col-12">
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2> 
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
                   <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                       <button
@@ -327,12 +327,8 @@ const accountingDashboard = () => {
                             Peer benchmark metric to compare margins against
                             market peers
                           </li>
-                          <li>
-                            Industry performance metrics
-                            </li>
-                          <li>
-                            Value drivers over the long-term
-                            </li>
+                          <li>Industry performance metrics</li>
+                          <li>Value drivers over the long-term</li>
                           <li>
                             Performance metrics to measure the progress of
                             current initiatives
@@ -358,7 +354,8 @@ const accountingDashboard = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        How does Giddh accounting dashboard help to understand my accounting data and make a decision?
+                        How does Giddh accounting dashboard help to understand
+                        my accounting data and make a decision?
                       </button>
                     </h2>
                     <div
@@ -368,10 +365,18 @@ const accountingDashboard = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Giddh’s real-time accounting dashboard provides you with clarity and insights about the core KPIs of your business. The dashboard highlights the metrics that directly impact your bottom line thereby saving up your time that would have otherwise been spent in building custom reports in Excel. This enables your finance professionals to access figures faster and understand the financial details that are needed to make proper decisions and ensure a stable financial environment.
+                        Giddh’s real-time accounting dashboard provides you with
+                        clarity and insights about the core KPIs of your
+                        business. The dashboard highlights the metrics that
+                        directly impact your bottom line thereby saving up your
+                        time that would have otherwise been spent in building
+                        custom reports in Excel. This enables your finance
+                        professionals to access figures faster and understand
+                        the financial details that are needed to make proper
+                        decisions and ensure a stable financial environment.
                       </div>
                     </div>
-                  </div> 
+                  </div>
                 </div>
               </div>
             </div>

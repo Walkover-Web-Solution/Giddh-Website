@@ -6,7 +6,7 @@ const anywhereAnytime = () => {
                 <div className="container features__heading_container">
                     <div className="row">
                         <div className="col-lg-7 order-lg-0 order-1">
-                            <h2 className="heading col-primary c-fw-600 mb-4">
+                            <h2 className="heading col-primary fw-bold mb-4">
                                 Cloud Accounting Software
 
                             </h2>
@@ -41,7 +41,7 @@ const anywhereAnytime = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 text-center features__sub_heading_container--pull-top">
-                            <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                            <h3 className="sub-heading col-primary fw-bold mb-3">
                                 Run your business from any corner of the world!
                             </h3>
                             <p className="c-fs-4 mb-5">
@@ -61,7 +61,7 @@ const anywhereAnytime = () => {
                     <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
                         <div className="col-md-12 col-lg-6">
                             <div className="features__description_container__content">
-                                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                                <h4 className="col-primary small-heading fw-bold mb-3">
                                     Turn your browser into your office
                                 </h4>
                                 <p className="">
@@ -84,7 +84,7 @@ const anywhereAnytime = () => {
                     <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
                         <div className="col-md-12 col-lg-6">
                             <div className="features__description_container__content">
-                                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                                <h4 className="col-primary small-heading fw-bold mb-3">
                                     Stay ahead with automatic updates
                                 </h4>
                                 <p className="">
@@ -107,7 +107,7 @@ const anywhereAnytime = () => {
                     <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
                         <div className="col-md-12 col-lg-6">
                             <div className="features__description_container__content">
-                                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                                <h4 className="col-primary small-heading fw-bold mb-3">
                                     Save more on all fronts
                                 </h4>
                                 <p className="">
@@ -129,7 +129,7 @@ const anywhereAnytime = () => {
                     <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
                         <div className="col-md-12 col-lg-6">
                             <div className="features__description_container__content">
-                                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                                <h4 className="col-primary small-heading fw-bold mb-3">
                                     Work smarter, grow faster!
 
                                 </h4>
@@ -153,7 +153,7 @@ const anywhereAnytime = () => {
                     <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
                         <div className="col-md-12 col-lg-6">
                             <div className="features__description_container__content">
-                                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                                <h4 className="col-primary small-heading fw-bold mb-3">
                                     Online Vs. Offline Accounting Software
                                 </h4>
                                 <p className="">
@@ -175,7 +175,7 @@ const anywhereAnytime = () => {
                     <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
                         <div className="col-md-12 col-lg-6">
                             <div className="features__description_container__content">
-                                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                                <h4 className="col-primary small-heading fw-bold mb-3">
                                     Advantages of Cloud Accounting Software
                                 </h4>
                                 <p className="">
@@ -201,7 +201,7 @@ const anywhereAnytime = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 text-center features__sub_heading_container--pull-top">
-                            <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                            <h3 className="sub-heading col-primary fw-bold mb-3">
                                 Why Giddh is Better Than Conventional Accounting Software
                             </h3>
                             <p className="c-fs-4 mb-5">

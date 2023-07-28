@@ -9,7 +9,7 @@ const invoiceSoftware=()=>{
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
+                <h2 className="heading col-primary fw-bold mb-4">
                 Smart Online Invoice Software for all your Invoicing Needs
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
@@ -42,7 +42,7 @@ const invoiceSoftware=()=>{
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                <h3 className="sub-heading col-primary fw-bold mb-3">
                 Save time with Invoicing Software
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -61,7 +61,7 @@ const invoiceSoftware=()=>{
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                   Create professional-looking invoices within minutes!
                   </h4>
                   <p className="">
@@ -82,7 +82,7 @@ const invoiceSoftware=()=>{
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                   Stay GST Compliant
                   </h4>
                   <p className="">
@@ -104,7 +104,7 @@ const invoiceSoftware=()=>{
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                   Lock your invoices and move on!
                   </h4>
                   <p className="">
@@ -126,7 +126,7 @@ Tired of unwanted tampering to your finalized invoices? Giddh’s invoicing soft
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                   Run your business with automation!
                   </h4>
                   <p className="">

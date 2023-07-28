@@ -7,7 +7,7 @@ const inventoryManagementSoftware =()=>{
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
+                <h2 className="heading col-primary fw-bold mb-4">
                 Inventory management features for business of any size.
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
@@ -40,7 +40,7 @@ const inventoryManagementSoftware =()=>{
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                <h3 className="sub-heading col-primary fw-bold mb-3">
                 Keep track of your inventory
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -59,7 +59,7 @@ const inventoryManagementSoftware =()=>{
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                   Maintain stock visibility with inventory reports
                   </h4>
                   <p className="">
@@ -80,7 +80,7 @@ const inventoryManagementSoftware =()=>{
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                   Complete support for measurement units
                   </h4>
                   <p className="">
@@ -102,7 +102,7 @@ const inventoryManagementSoftware =()=>{
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                   Inter-branch stock transfer
                   </h4>
                   <p className="">
@@ -123,7 +123,7 @@ const inventoryManagementSoftware =()=>{
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                  Save more time with bulk inventory import
                   </h4>
                   <p className="">
@@ -141,10 +141,10 @@ const inventoryManagementSoftware =()=>{
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                   Giddh inventory software is GST ready!
                   </h4>
                   <p className="">
