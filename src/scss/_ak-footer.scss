@@ -1,6 +1,4 @@
 .footer-list{
-  
-    
     font-size: 16px;
     margin-bottom: 20px !important;
     display: contents;  
@@ -20,12 +18,6 @@ footer .footer-list li a{
 
 
 .download-icon{
-    // width: 30px;
-    // height: 30px;
-    // vertical-align: middle;
-    // color: #6d71cd;
-    // background-color: blue;
-    // border-radius: 50%;
     margin-bottom: 1.5rem;
     cursor: pointer;
     display: flex;
@@ -39,13 +31,13 @@ footer .footer-list li a{
     justify-content: center;
 
     img{
-        
     width: 30px;
     height: 30px;
         }}
 .contry-icon{
     img{
-        width: 15px;   height: 15px;
+        width: 15px;
+        height: 15px;
     }
 
 
@@ -57,3 +49,10 @@ footer .footer-list li a{
     margin-bottom: 0;
 }
 
+.earth-button{
+    background-color: #e2e2f8;
+    img{
+        width: 20px;
+        margin-right: 8px;
+    }
+}
