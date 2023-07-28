@@ -98,7 +98,7 @@ const navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link chevron_down nav-link--feature-menu" href="#">
+                <a className="nav-link chevron_down nav-link--feature-menu" href="all-features">
                   Features
                 </a>
                 <ul className="dropdown-menu dropdown-menu--position-left">
@@ -116,7 +116,7 @@ const navbar = () => {
                             <a href="multi-currency-accounting-software">Multi Currency</a>
                           </li>
                           <li>
-                            <a href="#">ICICI Integration</a>
+                            <a href="icici-integration">ICICI Integration</a>
                           </li>
                           <li>
                             <a href="e-invoice">E-Invoice</a>
@@ -151,7 +151,7 @@ const navbar = () => {
                             <a href="security">Security</a>
                           </li>
                           <li>
-                            <a href="#">All Features</a>
+                            <a href="all-features">All Features</a>
                           </li>
                         </ul>
                       </li>
@@ -176,12 +176,12 @@ const navbar = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="pricing">
                   Pricing
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="gst">
                   GST
                 </a>
               </li>
@@ -237,12 +237,12 @@ const navbar = () => {
                 </ul>
               </div>
               <div>
-                <a href="#" className="login_page_link">
+                <a href="login" className="login_page_link">
                   Login
                 </a>
               </div>
               <div>
-                <a href="#" className="signup_page_link">
+                <a href="signup" className="signup_page_link">
                   Sign Up
                 </a>
               </div>

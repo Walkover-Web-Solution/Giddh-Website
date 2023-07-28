@@ -1,3 +1,6 @@
+// COLOR VARIBALES
+$light-silver: #d5d9dc;
+
 // ================================= SIGN-UP PAGE SCSS CODE=====================START============================
 .entry {
   &__left_section {
@@ -28,7 +31,7 @@
         overflow-x: auto;
       &__entry_with {
         .signup_with__left {
-          border-right: 1px solid #d5d9dc;
+          border-right: 1px solid $light-silver;
         }
       }
       &__entry_button {
@@ -86,7 +89,7 @@
           }
           &__right {
             padding-left: 3rem;
-            border-left: 1px solid #d5d9dc;
+            border-left: 1px solid $light-silver;
             a {
               word-spacing: 12px;
             }

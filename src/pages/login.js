@@ -2,7 +2,7 @@ const logIn = () => {
   return (
     <>
       <section className="entry d-flex  ">
-        <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
+        <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">  
           <img
             src="/img/giddh-logo.svg"
             className="entry__left_section__brand_logo"

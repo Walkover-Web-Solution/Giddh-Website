@@ -143,7 +143,7 @@ const signUp = () => {
             </div>
 
             {/* STEP #2 */}
-            <div className="entry__right_section__container--step">
+            <div className="entry__right_section__container--step entry__right_section__container--active">
               <div className="d-none entry__right_section__container--logo-visible-in-small">
                 <img
                   src="/img/giddh-logo.svg"
@@ -311,7 +311,7 @@ const signUp = () => {
             </div>
 
             {/* STEP #3 */}
-            <div className="entry__right_section__container--step entry__right_section__container--active">
+            <div className="entry__right_section__container--step">
               <div className="d-none entry__right_section__container--logo-visible-in-small">
                 <img
                   src="/img/giddh-logo.svg"
