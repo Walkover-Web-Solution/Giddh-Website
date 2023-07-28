@@ -23,6 +23,8 @@
   &__grid {
     display: grid;
     margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
     max-width: 1100px;
     font-weight: var(--c-fw-500);
     grid-template-rows: 60px 100px 60px 50px 50px 50px 50px 50px 50px 46px;
@@ -362,7 +364,7 @@
         font-size: 12px;
       }
     }
-    svg{
+    svg {
       font-size: 24px;
     }
   }
@@ -379,11 +381,38 @@
   }
 }
 @media (max-width: 991px) {
+  .pricing_top_section {
+    &__column-reverse {
+      flex-direction: column-reverse;
+
+      img {
+        &.img-fluid {
+          max-width: 50%;
+          float: right;
+          margin-bottom: 25%;
+        }
+      }
+    }
+  }
+
   .pricing_main_section {
+    .benefits-link {
+      width: 100%;
+      background-color: #494d50;
+    }
+
     &__grid {
       max-width: 720px;
-      grid-template-rows: auto auto;
-      grid-template-columns: auto auto;
+      align-items: center;
+      grid-template-rows:
+        70px 60px
+        auto 60px 50px 50px 50px 50px 50px 50px
+        auto 60px 50px 50px 50px 50px 50px 50px
+        auto 60px 50px 50px 50px 50px 50px 50px
+        auto 60px 50px 50px 50px 50px 50px 50px
+        auto 60px 50px 50px 50px 50px 50px 50px
+        40px;
+      grid-template-columns: 50% 50%;
       grid-template-areas:
         "logo logo"
         "title title"
@@ -467,71 +496,114 @@
       &__birch,
       &__oak,
       &__vine,
-      &__sequoia,
+      &__sequoia {
+        background-color: inherit;
+      }
+      &__b1,
+      &__b2,
       &__b3,
       &__b4,
       &__b5,
+      &__t1,
+      &__t2,
       &__t3,
       &__t4,
       &__t5,
+      &__c1,
+      &__c2,
       &__c3,
       &__c4,
       &__c5,
+      &__ac1,
+      &__ac2,
       &__ac3,
       &__ac4,
       &__ac5,
+      &__u1,
+      &__u2,
       &__u3,
       &__u4,
       &__u5,
+      &__cv1,
+      &__cv2,
       &__cv3,
       &__cv4,
       &__cv5,
+      &__d1,
+      &__d2,
       &__d3,
       &__d4,
       &__d5 {
-        background-color: inherit;
+        background-color: var(--col-white);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__link_all_feature {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__oak {
+        .plan_tag {
+          top: unset;
+          bottom: -82px;
+        }
+      }
+      &__guarantee_logo {
+        
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .pricing_support_section {
+    .col-sm-12 {
+      text-align: center;
+      &.text-end {
+        text-align: center !important;
+      }
+    }
+    a {
+      margin-top: 1rem;
+      margin-left: 0 !important;
+      text-align: center;
+    }
+  }
+}
+
+.pricing_grid_section {
+  background-color: #e6e7e9;
+  margin: 2rem 0;
+  padding: 5rem 0 4rem;
+
+  &__card {
+    text-align: center;
+    figure {
+      img {
+        height: auto;
+        width: 100px;
+      }
+      figcaption {
+        margin-top: 1.5rem;
+        font-weight: var(--c-fw-600);
+        font-size: var(--c-fs-4);
+        color: var(--col-primary);
       }
     }
   }
 }
-.pricing_description{
-    max-width: 1000px;
-    margin: 0 auto;
-    
-    a{
-        text-decoration: underline !important;
-        color: var(--col-dark);
-    }
-}
-.pricing_grid_section{
-    background-color: #e6e7e9;
-    margin: 2rem 0;
-    padding: 5rem 0 4rem;
-
-    &__card{
-        text-align: center;
-        figure{
-            img{
-                height: 100px;
-                width: auto;
-            }
-            figcaption{
-                margin-top: 1.5rem;
-                font-weight: var(--c-fw-600);
-                font-size: var(--c-fs-4);
-                color: var(--col-primary);
-            }
-        }
-    }
-}
-.pricing_support_section{
-  padding: 2.5rem  0;
+.pricing_support_section {
+  padding: 3rem 0;
   background-color: var(--col-primary);
-  a{
+  a {
     display: inline-block;
     font-size: var(--c-fs-3);
     font-weight: var(--c-fw-600);
-    padding: 0 40px; 
+    padding: 0 40px;
     border-radius: 50px;
     color: var(--col-primary);
     background-color: var(--col-white);
@@ -540,12 +612,12 @@
   }
 }
 
-.pricing_start_trail_section{
+.pricing_start_trail_section {
   background-color: #fafafa;
   padding: 5rem 0;
   margin-top: 2.5rem;
 
-  a{
+  a {
     display: inline-block;
     background: var(--col-blue);
     color: var(--col-white);
@@ -553,10 +625,23 @@
     border-radius: 6px;
     padding: 9px 17px;
     margin-top: 36px !important;
-    transition: all 300ms ease;
 
-    &:hover{
+    &:hover {
       background-color: var(--col-primary);
+    }
+  }
+}
+
+.readmore_section {
+  padding: 1.5rem 15px !important;
+  // transition: height 400ms ease-in-out;
+  .pricing_description {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    a {
+      text-decoration: underline !important;
+      color: var(--col-dark);
     }
   }
 }

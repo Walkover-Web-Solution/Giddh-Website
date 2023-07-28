@@ -4,7 +4,6 @@ body{
     font-family: 'Manrope', sans-serif!important;
 }
 *{
-    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -31,5 +30,20 @@ body{
 @media (max-width: 991px) {
     ::-webkit-scrollbar{
         display: none;
+    }
+}
+
+// For Ul list with right tick in each li (list element)
+ul{
+    &.custom-ul-with-right-tick{
+        padding: 0;
+        li{
+            padding-left: 50px;
+            background: url(/img/right-tick-icon.svg);
+            background-repeat: no-repeat;
+            background-position: left top 8px;
+            background-size: 25px;
+            margin-bottom: 1.5rem;
+        }
     }
 }

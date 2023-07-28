@@ -1,15 +1,17 @@
+import { useState } from "react";
 import { MdDone, MdClose } from "react-icons/md";
 const pricing = () => {
+  const [readMoreStatus, readmoreAction] = useState(false);
   return (
     <>
       <section className="container-fluid pricing_top_section">
-        <div className="row align-items-center mt-auto">
-          <div className="col-md-6 col-sm-12">
+        <div className="row align-items-center mt-auto pricing_top_section__column-reverse">
+          <div className="col-lg-6 col-md-12">
             <h3 className=" heading col-primary c-fw-800 ms-4">
               Powerful solution. Affordable pricing.
             </h3>
           </div>
-          <div className="col-md-6 col-sm-12">
+          <div className="col-lg-6 col-md-12">
             <figure>
               <img
                 className="img-fluid"
@@ -327,10 +329,10 @@ const pricing = () => {
             </h2>
             <p className="c-fs-4 c-fw-500">
               Are you still entering your financial data manually into
-              spreadsheets to manage your finances? 
-              <br/>If yes, it’s time to Make
-              the Switch and purchase a dedicated online accounting software
-              like GIDDH.
+              spreadsheets to manage your finances?
+              <br />
+              If yes, it’s time to Make the Switch and purchase a dedicated
+              online accounting software like GIDDH.
             </p>
             <a href="#">Start your trial</a>
           </div>
@@ -471,31 +473,75 @@ const pricing = () => {
               </figure>
             </div>
           </div>
-          <div className="row mb-5 pb-5">
-            <div className="col-12">
-              <div className="features__description_container__content pricing_description text-center">
-                <h4 className="col-primary c-fs-3 c-fw-600 mb-3">
-                  Free Accounting Software For Students and Teachers
-                </h4>
-                <p className="c-fs-4">
-                  Here at Giddh, we want to spread awareness about the power and
-                  convenience of cloud accounting to everyone. In this regard,
-                  we are offering our tool completely free of cost for students
-                  and teachers to help them get acquainted with our powerful
-                  features and practice using our various options.
-                </p>
-                <a href="#" className="c-fs-4">
-                  Read More...
-                </a>
-              </div>
+        </div>
+      </section>
+
+      <section
+        className="container-fluid readmore_section"
+        style={{ maxHeight: readMoreStatus ? "100%" : "max-content" }}
+      >
+        <div className="container">
+          <div className="col-12 pricing_description text-center">
+            <h4 className="col-primary c-fs-3 fw-bold mb-3">
+              Traditional Vs Cloud Accounting Software: A Comparison
+            </h4>
+            <p className="c-fs-4 my-4">
+              Not long ago, traditional accounting software like Tally was quite
+              a rage and was considered an integral part of both small to
+              medium-sized businesses. However, as tech improvements came to the
+              fore with concepts of cloud, AI, ML emerging, organizations
+              started looking for better options and started incorporating
+              cloud-based software.
+            </p>
+            <div style={{ display: readMoreStatus ? "block" : "none" }}>
+              <p className="c-fs-4 text-start">
+                Apart from tech improvements, other factors that led to this
+                tremendous shift include:
+              </p>
+
+              <ul className="custom-ul-with-right-tick text-start">
+                <li className="c-fs-4">
+                  <span className="c-fw-600">Hardware Costs:</span> Traditional
+                  accounting software demanded physical setup of hardware which
+                  meant additional expense as it involved purchasing cost,
+                  insurance, installation charges, along with its maintenance
+                  costs. However, you don’t have to worry about cloud{" "}
+                  <span className="c-fw-600">account software price</span>{" "}
+                  fluctuations as you don’t require any specialized hardware for
+                  operating it. Your entire financial data is encrypted and
+                  stored offsite in the cloud and you pay quite a nominal charge
+                  for constant usage.
+                </li>
+                <li className="c-fs-4">
+                  <span className="c-fw-600">Accessibility is a Concern:</span>{" "}
+                  Traditional accounting software demanded physical setup of
+                  hardware which meant additional expense as it involved
+                  purchasing cost, insurance, installation charges, along with
+                  its maintenance costs. However, you don’t have to worry about
+                  cloud account software price fluctuations as you don’t require
+                  any specialized hardware for operating it. Your entire
+                  financial data is encrypted and stored offsite in the cloud
+                  and you pay quite a nominal charge for constant usage.
+                </li>
+              </ul>
             </div>
+
+            <a
+              href="javascript:;"
+              onClick={() =>
+                readmoreAction((readmoreDisplay) => !readmoreDisplay)
+              }
+            >
+              {readMoreStatus ? "Read Less..." : "Read More..."}
+            </a>
           </div>
         </div>
       </section>
+
       <section className="container-fluid pricing_grid_section">
         <div className="container">
           <div className="row flex-wrap row-gap-5">
-            <div className="col-4">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
                   <img src="/img/feature-invoice.svg" alt="Invoicing-logo" />
@@ -503,7 +549,7 @@ const pricing = () => {
                 </figure>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
                   <img
@@ -514,7 +560,7 @@ const pricing = () => {
                 </figure>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
                   <img
@@ -525,7 +571,7 @@ const pricing = () => {
                 </figure>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
                   <img
@@ -536,7 +582,7 @@ const pricing = () => {
                 </figure>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
                   <img src="/img/feature-gst.svg" alt="Tax-Compliant-logo" />
@@ -544,7 +590,7 @@ const pricing = () => {
                 </figure>
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
                   <img
@@ -561,9 +607,13 @@ const pricing = () => {
 
       <section className="container-fluid pricing_support_section">
         <div className="container">
-          <div className="d-flex justify-content-center">
-            <h2 className="sub-heading col-white">18X6 Instant Support</h2>
-            <a href="contact-us">CONTACT US</a>
+          <div className="row justify-content-center align-items-center">
+            <div className="col-md-6 col-sm-12 text-end">
+              <h2 className="sub-heading col-white">18X6 Instant Support</h2>
+            </div>
+            <div className="col-md-6 col-sm-12">
+              <a href="contact-us">CONTACT US</a>
+            </div>
           </div>
         </div>
       </section>
