@@ -6,7 +6,7 @@ const importExeclFiles = () => {
         <div className="container features__heading_container">
           <div className="row">
             <div className="col-lg-7 order-lg-0 order-1">
-              <h2 className="heading col-primary fw-bold mb-4">
+              <h2 className="heading col-primary c-fw-600 mb-4">
                 Seamlessly bring your old accounting data to giddh
               </h2>
               <p className="col-grey c-fs-3 mb-5">
@@ -43,7 +43,7 @@ const importExeclFiles = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center features__sub_heading_container--pull-top">
-              <h3 className="sub-heading col-primary fw-bold mb-3">
+              <h3 className="sub-heading col-primary c-fw-600 mb-3">
                 Switch from old accounting software or excel to giddh
               </h3>
               <p className="c-fs-4 mb-5">
@@ -65,7 +65,7 @@ const importExeclFiles = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Excel isn’t a long term solution
                 </h4>
                 <p className="">
@@ -91,7 +91,7 @@ const importExeclFiles = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Simple transition to powerful alternative.
                 </h4>
                 <p className="">
@@ -117,7 +117,7 @@ const importExeclFiles = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   No data category left behind
                 </h4>
                 <p className="">
@@ -141,7 +141,7 @@ const importExeclFiles = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Prepare your data with a little help
                 </h4>
                 <p className="">
@@ -163,10 +163,10 @@ const importExeclFiles = () => {
             </div>
           </div>
 
-          <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
+          <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading fw-bold mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Stuck somewhere? Help us help you!
                 </h4>
                 <p className="">
@@ -400,63 +400,57 @@ const importExeclFiles = () => {
                   </div>
                 </div>
 
-                {/*============ Accordion #5 ===============*/}
+                                {/*============ Accordion #5 ===============*/}
 
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingFive">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFive"
-                      aria-expanded="false"
-                      aria-controls="collapseFive"
-                    >
-                      <span className="me-2 collapse_icon collapse_icon--open">
-                        <MdAdd />
-                      </span>
-                      <span className="me-2 collapse_icon collapse_icon--close">
-                        <MdRemove />
-                      </span>
-                      How does integrating a bank account with Giddh benefit me?
-                    </button>
-                  </h2>
-                  <div
-                    id="collapseFive"
-                    className="accordion-collapse collapse"
-                    aria-labelledby="headingFive"
-                    data-bs-parent="#accordionAllFeatures"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Here are some advantages of using cloud accounting
-                        software over Excel
-                      </p>
-                      <ul>
-                        <li>
-                          Unlike Excel, accounting software is well-designed to
-                          handle simple and complex accounting tasks.
-                        </li>
-                        <li>
-                          It can generate better and high-level reports than
-                          Excel to indicate different aspects of your accounting
-                          functions.
-                        </li>
-                        <li>
-                          The mathematical operations are handled by the backend
-                          processes of accounting software that reduces the
-                          chances of manual errors.
-                        </li>
-                      </ul>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingFive">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFive"
+                                            aria-expanded="false"
+                                            aria-controls="collapseFive"
+                                        >
+                                            <span className="me-2 collapse_icon collapse_icon--open">
+                                                <MdAdd />
+                                            </span>
+                                            <span className="me-2 collapse_icon collapse_icon--close">
+                                                <MdRemove />
+                                            </span>
+                                            How does integrating a bank account with Giddh benefit me?
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseFive"
+                                        className="accordion-collapse collapse"
+                                        aria-labelledby="headingFive"
+                                        data-bs-parent="#accordionAllFeatures"
+                                    >
+                                        <div className="accordion-body">
+                                            <p> Here are some advantages of using cloud accounting software over Excel</p>
+                                            <ul>
+                                                <li>
+                                                    Unlike Excel, accounting software is well-designed to handle simple and complex accounting tasks.
+                                                </li>
+                                                <li>
+                                                    It can generate better and high-level reports than Excel to indicate different aspects of your accounting functions.
+                                                </li>
+                                                <li>
+                                                    The mathematical operations are handled by the backend processes of accounting
+                                                    software that reduces the chances of manual errors.
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
-  );
+            </section>
+        </>
+    );
 };
 export default importExeclFiles;

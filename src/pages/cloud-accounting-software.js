@@ -76,7 +76,7 @@ const anywhereAnytime = () => {
                                 <img
                                     src="/img/feature-gallery-icons/Group-5628-1.svg"
                                     className="img-fluid"
-                                    alt="connect bank image"
+                                     alt="connect bank image"
                                 />
                             </figure>
                         </div>
@@ -88,7 +88,7 @@ const anywhereAnytime = () => {
                                     Stay ahead with automatic updates
                                 </h4>
                                 <p className="">
-                                    With Giddh’s <u>cloud based accounting software</u>, you will automatically receive OTA (on the air) updates of the
+                                    With Giddh’s  <a  href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/"> <u>cloud based accounting software </u> </a>, you will automatically receive OTA (on the air) updates of the
                                     greatest and newest features that are added to Giddh. That means less effort on your part—which we all love.
                                     Now isn’t that awesome?
                                 </p>
@@ -134,7 +134,7 @@ const anywhereAnytime = () => {
 
                                 </h4>
                                 <p className="">
-                                    With a <u>cloud based accounting software</u>, your team-members don’t need to be all at the same time to collaborate
+                                    With <a href="https://giddh.com/blog/10-new-awesome-features-on-the-giddh-software-2020/"><u>cloud based accounting software</u></a> , your team-members don’t need to be all at the same time to collaborate
                                     or make major decisions. Thanks to easily shareable online reports, decision makers and accountants can be on
                                     the same page, even when they are not at the same place.
                                 </p>
@@ -157,7 +157,7 @@ const anywhereAnytime = () => {
                                     Online Vs. Offline Accounting Software
                                 </h4>
                                 <p className="">
-                                <u>Online cloud accounting software</u> has become the new norm for carrying out finance operations in the present day. In view of its rising popularity,
+                                 <a href="https://giddh.com/blog/desktop-accounting-software-and-its-limitations/"><u>Online cloud accounting software</u></a> has become the new norm for carrying out finance operations in the present day. In view of its rising popularity,
                                     let’s look at the major differences between a traditional desktop accounting software and a cloud accounting software:
                                 </p>
                             </div>
@@ -167,12 +167,11 @@ const anywhereAnytime = () => {
                                 <img
                                     src="/img/feature-gallery-icons/Group-5651.svg"
                                     className="img-fluid"
-                                    alt="bank account image"
-                                />
+                                    alt="bank account image"/>
                             </figure>
                         </div>
                     </div>
-                    <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                    <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
                         <div className="col-md-12 col-lg-6">
                             <div className="features__description_container__content">
                                 <h4 className="col-primary small-heading fw-bold mb-3">
@@ -252,7 +251,7 @@ const anywhereAnytime = () => {
                         <div className="col-12">
                             <div className="accordion" id="accordionAllFeatures">
                                 {/*============ Accordion #1 ===============*/}
-                                <h2 className="fw-bold col-primary ">FAQs</h2>
+                                <h2 className="fw-bold col-primary ps-3 ">FAQs</h2>
                                 <div className="accordion-item">
                                     <h2 className="accordion-header" id="headingOne">
                                         <button
