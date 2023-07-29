@@ -129,26 +129,26 @@ const navbar = () => {
                             <a href="invoice-software">Invoicing</a>
                           </li>
                           <li>
-                            <a href="#">Share Data</a>
+                            <a href="multi-user-accounting-software">Share Data</a>
                           </li>
                           <li>
-                            <a href="#">Contacts</a>
+                            <a href="contacts">Contacts</a>
                           </li>
                           <li>
-                            <a href="#">API Integration</a>
+                            <a href="https://apidoc.giddh.com">API Integration</a>
                           </li>
                         </ul>
                       </li>
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
                           <li>
-                            <a href="#">Dashboard</a>
+                            <a href="accounting-dashboard">Dashboard</a>
                           </li>
                           <li>
-                            <a href="#">Inventory</a>
+                            <a href="inventory-management-software">Inventory</a>
                           </li>
                           <li>
-                            <a href="#">Security</a>
+                            <a href="security">Security</a>
                           </li>
                           <li>
                             <a href="#">All Features</a>
@@ -158,13 +158,13 @@ const navbar = () => {
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
                           <li>
-                            <a href="#">Anywhere-Anytime</a>
+                            <a href="cloud-accounting-software">Anywhere-Anytime</a>
                           </li>
                           <li>
-                            <a href="#">Linked Bank Account</a>
+                            <a href="conect-bank-reconcile">Linked Bank Account</a>
                           </li>
                           <li>
-                            <a href="#">Import Excel Files</a>
+                            <a href="import-data">Import Excel Files</a>
                           </li>
                           <li>
                             <a href="financial-reporting">Reports & Analysis</a>

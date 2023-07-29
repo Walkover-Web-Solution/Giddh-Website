@@ -9,7 +9,6 @@
     flex-direction: column;
     vertical-align: middle;
     justify-content: center;
-    margin-top: 90px;
   
     &__content {
       p {
@@ -71,6 +70,7 @@
   @media (max-width: 767px) {
     .switch-section {
       height: 300px;
+      background-position: center;
     }
   }
   // ========================== Index Page MAKE THE SWITCH SCSS CODE===============END=============================
