@@ -1,0 +1,647 @@
+.pricing_top_section {
+  min-height: 100vh;
+  display: flex;
+  padding-bottom: 3rem;
+}
+
+.pricing_main_section {
+  background-color: #fafafa;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .benefits-link {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 6px 14px;
+    font-size: 14px;
+    color: var(--col-white);
+    background-color: var(--col-primary);
+    &.bg-grey {
+      background-color: #494d50;
+    }
+  }
+  &__grid {
+    display: grid;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1100px;
+    font-weight: var(--c-fw-500);
+    grid-template-rows: 60px 100px 60px 50px 50px 50px 50px 50px 50px 46px;
+    grid-template-columns: auto 180px 180px 180px 180px 180px;
+    grid-template-areas:
+      "title title title title title title"
+      "logo trial birch oak vine sequoia"
+      "benefits b1 b2 b3 b4 b5"
+      "transactions t1 t2 t3 t4 t5"
+      "companies c1 c2 c3 c4 c5"
+      "accountant_consultant ac1 ac2 ac3 ac4 ac5"
+      "unlimited_users u1 u2 u3 u4 u5"
+      "customers_vendors cv1 cv2 cv3 cv4 cv5"
+      "desktop_mobile_app d1 d2 d3 d4 d5"
+      "link_all_feature extra_charges extra_charges extra_charges extra_charges extra_charges";
+
+    &__title {
+      grid-area: title;
+      text-align: center;
+    }
+
+    &__guarantee_logo {
+      grid-area: logo;
+      figure {
+        img {
+          max-width: 70px;
+          width: 100%;
+        }
+      }
+    }
+    &__trial {
+      grid-area: trial;
+    }
+    &__birch {
+      grid-area: birch;
+    }
+    &__oak {
+      grid-area: oak;
+      background-color: var(--col-white);
+      .plan_tag {
+        position: absolute;
+        right: -5px;
+        top: -4px;
+      }
+    }
+    &__vine {
+      grid-area: vine;
+      background-color: #e6fff5;
+    }
+    &__sequoia {
+      grid-area: sequoia;
+      background-color: #ffe5e8;
+    }
+
+    &__benefits {
+      grid-area: benefits;
+    }
+    &__b1 {
+      grid-area: b1;
+    }
+    &__b2 {
+      grid-area: b2;
+    }
+    &__b3 {
+      grid-area: b3;
+      background-color: var(--col-white);
+    }
+    &__b4 {
+      grid-area: b4;
+      background-color: #e6fff5;
+    }
+    &__b5 {
+      grid-area: b5;
+      background-color: #ffe5e8;
+    }
+
+    &__transactions {
+      grid-area: transactions;
+    }
+    &__transactions_2 {
+      grid-area: transactions_2;
+      display: none;
+    }
+    &__transactions_3 {
+      grid-area: transactions_3;
+      display: none;
+    }
+    &__transactions_4 {
+      grid-area: transactions_4;
+      display: none;
+    }
+    &__transactions_5 {
+      grid-area: transactions_5;
+      display: none;
+    }
+    &__t1 {
+      grid-area: t1;
+    }
+    &__t2 {
+      grid-area: t2;
+    }
+    &__t3 {
+      grid-area: t3;
+      background-color: var(--col-white);
+    }
+    &__t4 {
+      grid-area: t4;
+      background-color: #e6fff5;
+    }
+    &__t5 {
+      grid-area: t5;
+      background-color: #ffe5e8;
+    }
+
+    &__companies {
+      grid-area: companies;
+    }
+    &__companies_2 {
+      grid-area: companies_2;
+      display: none;
+    }
+    &__companies_3 {
+      grid-area: companies_3;
+      display: none;
+    }
+    &__companies_4 {
+      grid-area: companies_4;
+      display: none;
+    }
+    &__companies_5 {
+      grid-area: companies_5;
+      display: none;
+    }
+    &__c1 {
+      grid-area: c1;
+    }
+    &__c2 {
+      grid-area: c2;
+    }
+    &__c3 {
+      grid-area: c3;
+      background-color: var(--col-white);
+    }
+    &__c4 {
+      grid-area: c4;
+      background-color: #e6fff5;
+    }
+    &__c5 {
+      grid-area: c5;
+      background-color: #ffe5e8;
+    }
+
+    &__accountant_consultant {
+      grid-area: accountant_consultant;
+    }
+    &__accountant_consultant_2 {
+      grid-area: accountant_consultant_2;
+      display: none;
+    }
+    &__accountant_consultant_3 {
+      grid-area: accountant_consultant_3;
+      display: none;
+    }
+    &__accountant_consultant_4 {
+      grid-area: accountant_consultant_4;
+      display: none;
+    }
+    &__accountant_consultant_5 {
+      grid-area: accountant_consultant_5;
+      display: none;
+    }
+    &__ac1 {
+      grid-area: ac1;
+    }
+    &__ac2 {
+      grid-area: ac2;
+    }
+    &__ac3 {
+      grid-area: ac3;
+      background-color: var(--col-white);
+    }
+    &__ac4 {
+      grid-area: ac4;
+      background-color: #e6fff5;
+    }
+    &__ac5 {
+      grid-area: ac5;
+      background-color: #ffe5e8;
+    }
+
+    &__unlimited_users {
+      grid-area: unlimited_users;
+    }
+    &__unlimited_users_2 {
+      grid-area: unlimited_users_2;
+      display: none;
+    }
+    &__unlimited_users_3 {
+      grid-area: unlimited_users_3;
+      display: none;
+    }
+    &__unlimited_users_4 {
+      grid-area: unlimited_users_4;
+      display: none;
+    }
+    &__unlimited_users_5 {
+      grid-area: unlimited_users_5;
+      display: none;
+    }
+    &__u1 {
+      grid-area: u1;
+    }
+    &__u2 {
+      grid-area: u2;
+    }
+    &__u3 {
+      grid-area: u3;
+      background-color: var(--col-white);
+    }
+    &__u4 {
+      grid-area: u4;
+      background-color: #e6fff5;
+    }
+    &__u5 {
+      grid-area: u5;
+      background-color: #ffe5e8;
+    }
+
+    &__customers_vendors {
+      grid-area: customers_vendors;
+    }
+    &__customers_vendors_2 {
+      grid-area: customers_vendors_2;
+      display: none;
+    }
+    &__customers_vendors_3 {
+      grid-area: customers_vendors_3;
+      display: none;
+    }
+    &__customers_vendors_4 {
+      grid-area: customers_vendors_4;
+      display: none;
+    }
+    &__customers_vendors_5 {
+      grid-area: customers_vendors_5;
+      display: none;
+    }
+    &__cv1 {
+      grid-area: cv1;
+    }
+    &__cv2 {
+      grid-area: cv2;
+    }
+    &__cv3 {
+      grid-area: cv3;
+      background-color: var(--col-white);
+    }
+    &__cv4 {
+      grid-area: cv4;
+      background-color: #e6fff5;
+    }
+    &__cv5 {
+      grid-area: cv5;
+      background-color: #ffe5e8;
+    }
+
+    &__desktop_mobile_app {
+      grid-area: desktop_mobile_app;
+    }
+    &__desktop_mobile_app_2 {
+      grid-area: desktop_mobile_app_2;
+      display: none;
+    }
+    &__desktop_mobile_app_3 {
+      grid-area: desktop_mobile_app_3;
+      display: none;
+    }
+    &__desktop_mobile_app_4 {
+      grid-area: desktop_mobile_app_4;
+      display: none;
+    }
+    &__desktop_mobile_app_5 {
+      grid-area: desktop_mobile_app_5;
+      display: none;
+    }
+
+    &__d1 {
+      grid-area: d1;
+    }
+    &__d2 {
+      grid-area: d2;
+    }
+    &__d3 {
+      grid-area: d3;
+      background-color: var(--col-white);
+    }
+    &__d4 {
+      grid-area: d4;
+      background-color: #e6fff5;
+    }
+    &__d5 {
+      grid-area: d5;
+      background-color: #ffe5e8;
+    }
+    &__link_all_feature {
+      grid-area: link_all_feature;
+      margin-top: auto;
+    }
+    &__extra_charges {
+      grid-area: extra_charges;
+      margin-top: auto;
+      text-align: end;
+      p {
+        background-color: #edf3ff;
+        width: fit-content;
+        padding: 6px 8px;
+        margin-left: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    .pricing__heading {
+      padding: 12px;
+      &__name {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      &__cost {
+        font-size: 22px;
+        font-weight: 700;
+        span {
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+      &__period {
+        font-size: 12px;
+      }
+    }
+    svg {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .pricing_main_section {
+    &__grid {
+      padding-left: 15px;
+      padding-right: 15px;
+      max-width: 1000px;
+      grid-template-columns: auto 160px 160px 160px 160px 160px;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .pricing_top_section {
+    &__column-reverse {
+      flex-direction: column-reverse;
+
+      img {
+        &.img-fluid {
+          max-width: 50%;
+          float: right;
+          margin-bottom: 25%;
+        }
+      }
+    }
+  }
+
+  .pricing_main_section {
+    .benefits-link {
+      width: 100%;
+      background-color: #494d50;
+    }
+
+    &__grid {
+      max-width: 720px;
+      align-items: center;
+      grid-template-rows:
+        70px 60px
+        auto 60px 50px 50px 50px 50px 50px 50px
+        auto 60px 50px 50px 50px 50px 50px 50px
+        auto 60px 50px 50px 50px 50px 50px 50px
+        auto 60px 50px 50px 50px 50px 50px 50px
+        auto 60px 50px 50px 50px 50px 50px 50px
+        40px;
+      grid-template-columns: 50% 50%;
+      grid-template-areas:
+        "logo logo"
+        "title title"
+        "trial trial"
+        "b1 b1"
+        "transactions t1"
+        "companies c1"
+        "accountant_consultant ac1"
+        "unlimited_users u1"
+        "customers_vendors cv1"
+        "desktop_mobile_app d1"
+        "birch birch"
+        "b2 b2"
+        "transactions_2 t2"
+        "companies_2 c2"
+        "accountant_consultant_2 ac2"
+        "unlimited_users_2 u2"
+        "customers_vendors_2 cv2"
+        "desktop_mobile_app_2 d2"
+        "oak oak"
+        "b3 b3"
+        "transactions_3 t3"
+        "companies_3 c3"
+        "accountant_consultant_3 ac3"
+        "unlimited_users_3 u3"
+        "customers_vendors_3 cv3"
+        "desktop_mobile_app_3 d3"
+        "vine vine"
+        "b4 b4"
+        "transactions_4 t4"
+        "companies_4 c4"
+        "accountant_consultant_4 ac4"
+        "unlimited_users_4 u4"
+        "customers_vendors_4 cv4"
+        "desktop_mobile_app_4 d4"
+        "sequoia sequoia"
+        "b5 b5"
+        "transactions_5 t5"
+        "companies_5 c5"
+        "accountant_consultant_5 ac5"
+        "unlimited_users_5 u5"
+        "customers_vendors_5 cv5"
+        "desktop_mobile_app_5 d5"
+        "link_all_feature link_all_feature"
+        "extra_charges extra_charges";
+
+      &__benefits {
+        display: none;
+      }
+      &__link_all_feature,
+      &__extra_charges {
+        text-align: center;
+      }
+      &__transactions_2,
+      &__transactions_3,
+      &__transactions_4,
+      &__transactions_5,
+      &__companies_2,
+      &__companies_3,
+      &__companies_4,
+      &__companies_5,
+      &__accountant_consultant_2,
+      &__accountant_consultant_3,
+      &__accountant_consultant_4,
+      &__accountant_consultant_5,
+      &__unlimited_users_2,
+      &__unlimited_users_3,
+      &__unlimited_users_4,
+      &__unlimited_users_5,
+      &__customers_vendors_2,
+      &__customers_vendors_3,
+      &__customers_vendors_4,
+      &__customers_vendors_5,
+      &__desktop_mobile_app_2,
+      &__desktop_mobile_app_3,
+      &__desktop_mobile_app_4,
+      &__desktop_mobile_app_5 {
+        display: block;
+      }
+      &__trial,
+      &__birch,
+      &__oak,
+      &__vine,
+      &__sequoia {
+        background-color: inherit;
+      }
+      &__b1,
+      &__b2,
+      &__b3,
+      &__b4,
+      &__b5,
+      &__t1,
+      &__t2,
+      &__t3,
+      &__t4,
+      &__t5,
+      &__c1,
+      &__c2,
+      &__c3,
+      &__c4,
+      &__c5,
+      &__ac1,
+      &__ac2,
+      &__ac3,
+      &__ac4,
+      &__ac5,
+      &__u1,
+      &__u2,
+      &__u3,
+      &__u4,
+      &__u5,
+      &__cv1,
+      &__cv2,
+      &__cv3,
+      &__cv4,
+      &__cv5,
+      &__d1,
+      &__d2,
+      &__d3,
+      &__d4,
+      &__d5 {
+        background-color: var(--col-white);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__link_all_feature {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__oak {
+        .plan_tag {
+          top: unset;
+          bottom: -82px;
+        }
+      }
+      &__guarantee_logo {
+        
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .pricing_support_section {
+    .col-sm-12 {
+      text-align: center;
+      &.text-end {
+        text-align: center !important;
+      }
+    }
+    a {
+      margin-top: 1rem;
+      margin-left: 0 !important;
+      text-align: center;
+    }
+  }
+}
+
+.pricing_grid_section {
+  background-color: #e6e7e9;
+  margin: 2rem 0;
+  padding: 5rem 0 4rem;
+
+  &__card {
+    text-align: center;
+    figure {
+      img {
+        height: auto;
+        width: 100px;
+      }
+      figcaption {
+        margin-top: 1.5rem;
+        font-weight: var(--c-fw-600);
+        font-size: var(--c-fs-4);
+        color: var(--col-primary);
+      }
+    }
+  }
+}
+.pricing_support_section {
+  padding: 3rem 0;
+  background-color: var(--col-primary);
+  a {
+    display: inline-block;
+    font-size: var(--c-fs-3);
+    font-weight: var(--c-fw-600);
+    padding: 0 40px;
+    border-radius: 50px;
+    color: var(--col-primary);
+    background-color: var(--col-white);
+    height: fit-content;
+    margin-left: 1.5rem;
+  }
+}
+
+.pricing_start_trail_section {
+  background-color: #fafafa;
+  padding: 5rem 0;
+  margin-top: 2.5rem;
+
+  a {
+    display: inline-block;
+    background: var(--col-blue);
+    color: var(--col-white);
+    font-size: var(--c-fs-4);
+    border-radius: 6px;
+    padding: 9px 17px;
+    margin-top: 36px !important;
+
+    &:hover {
+      background-color: var(--col-primary);
+    }
+  }
+}
+
+.readmore_section {
+  padding: 1.5rem 15px !important;
+  // transition: height 400ms ease-in-out;
+  .pricing_description {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    a {
+      text-decoration: underline !important;
+      color: var(--col-dark);
+    }
+  }
+}
