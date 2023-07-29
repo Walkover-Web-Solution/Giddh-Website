@@ -1,6 +1,6 @@
 import React from "react";
 
-const Affiliate = () => {
+const affiliate = () => {
   return (
     <>
       <section className="p-5">
@@ -198,4 +198,4 @@ const Affiliate = () => {
   );
 };
 
-export default Affiliate;
+export default affiliate;
