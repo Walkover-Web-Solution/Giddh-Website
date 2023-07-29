@@ -4,6 +4,9 @@ ul {
 }
 a {
   text-decoration: none !important;
+  &:focus-visible{
+    outline: none;
+  }
 }
 ul {
   list-style: none;
