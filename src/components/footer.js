@@ -28,7 +28,7 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="">Affiliate With Us</a>
+                        <a href="affiliate">Affiliate With Us</a>
                       </li>
                       <li>
                         <a href="">Terms of Use</a>
