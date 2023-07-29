@@ -79,8 +79,6 @@
       .accordion-item {
         border: 0 !important;
       }
-      .accordion-header {
-      }
       .accordion-button {
         color: var(--col-deep) !important;
         background-color: unset !important;
@@ -165,9 +163,6 @@
       padding-top: 60px;
       &--pull-top {
         margin-top: 0 !important;
-        &.text-center{
-          text-align: start !important;
-        }
       }
     }
 

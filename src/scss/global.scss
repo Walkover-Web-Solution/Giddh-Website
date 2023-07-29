@@ -53,3 +53,9 @@ ul{
         }
     }
 }
+
+a{
+    &.read-more-text{
+        text-decoration: underline !important;
+    }
+}

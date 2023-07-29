@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { MdRemove, MdAdd } from "react-icons/md";
 const anywhereAnytime = () => {
+  const [readMoreStatus, readmoreAction] = useState(false);
   return (
     <>
       <section className="container-fluid">
@@ -222,8 +224,8 @@ const anywhereAnytime = () => {
           </div>
         </div>
 
-        <section>
-          <div className="text-center px-5 g-4 ">
+        <section className="container-fluid">
+          <div className="container text-center " style={{ maxHeight: readMoreStatus ? "100%" : "max-content" }}>
             <h1 className="col-primary c-fs-3">Why Giddh is Better Than Conventional Accounting Software</h1>
             <p className="c-fs-4 my-3">
               Although there exist some of the oldest tallying and accounting
@@ -233,8 +235,8 @@ const anywhereAnytime = () => {
               better option:
             </p>
 
-            <div className="py-4">
-              <ul>
+            <div className="py-4" style={{ display: readMoreStatus ? "block" : "none" }}>
+              <ul className="custom-ul-with-right-tick text-start" >
                 <li className="c-fs-4">
                   <span className="c-fw-600">Setup–</span>Firstly, the entire
                   ergonomics is designed to make any layman use it efficiently.
@@ -268,28 +270,19 @@ const anywhereAnytime = () => {
                   moderate Rs. 800 per organisation per year plan or the premium
                   Rs. 4000 per organisation per year plan. Here are the details:
                 </li>
-              </ul>
+              </ul>              
             </div>
+              <a
+              href="javascript:;"
+              className="text-center col-dark c-fs-4 read-more-text"
+              onClick={() =>
+                readmoreAction((readmoreDisplay) => !readmoreDisplay)
+              }
+            >
+              {readMoreStatus ? "Read Less..." : "Read More..."}
+            </a>
           </div>
         </section>
-      </section>
-      <section className="container-fluid features__sub_heading_container">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center features__sub_heading_container--pull-top">
-              <h3 className="sub-heading col-primary c-fw-600 mb-3">
-                Why Giddh is Better Than Conventional Accounting Software
-              </h3>
-              <p className="c-fs-4 mb-5">
-                Although there exist some of the oldest tallying and accounting
-                software players in the market, with more emerging choices
-                people are opting for modern and advanced software. There are
-                several ways in which Giddh as a cloud accounting software can
-                make a better option:
-              </p>
-            </div>
-          </div>
-        </div>
       </section>
       <section className="container-fluid features__suggestion_container">
         <div className="container">
