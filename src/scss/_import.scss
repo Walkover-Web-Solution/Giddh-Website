@@ -1,10 +1,6 @@
 @import 'reset';
 @import 'text';
 @import 'var';
-@import 'ak-footer';
-@import 'dv-global';
-@import 'ak-gst';
-@import 'ak-about';
 
 // SCSS Components
 @import 'scsscomps/navbar';
@@ -20,6 +16,8 @@
 @import 'scsscomps/security';
 @import 'scsscomps/all-feature-main-page';
 @import 'scsscomps/icici-integration';
+@import 'scsscomps/footer';
+@import 'scsscomps/gst';
 
 
 

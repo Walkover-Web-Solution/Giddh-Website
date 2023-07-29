@@ -282,7 +282,7 @@ const allFeatures = () => {
                 <figure>
                   <img
                     src="/img/feature-bank.svg"
-                    alt="Audit Trail Icon"
+                    alt="Linked Bank Account Icon"
                     height="90px"
                     widht="auto"
                   />
@@ -303,7 +303,7 @@ const allFeatures = () => {
                 <figure>
                   <img
                     src="/img/feature-api.svg"
-                    alt="Audit Trail Icon"
+                    alt="Search Icon"
                     height="90px"
                     widht="auto"
                   />
@@ -324,7 +324,7 @@ const allFeatures = () => {
                 <figure>
                   <img
                     src="/img/feature-api.svg"
-                    alt="Audit Trail Icon"
+                    alt="API Integration Icon"
                     height="90px"
                     widht="auto"
                   />
@@ -345,7 +345,7 @@ const allFeatures = () => {
                 <figure>
                   <img
                     src="/img/feature-contact.svg"
-                    alt="Audit Trail Icon"
+                    alt="Contact Icon"
                     height="90px"
                     widht="auto"
                   />
@@ -366,7 +366,7 @@ const allFeatures = () => {
                 <figure>
                   <img
                     src="/img/feature-security.svg"
-                    alt="Audit Trail Icon"
+                    alt="Security Icon"
                     height="90px"
                     widht="auto"
                   />
@@ -387,7 +387,7 @@ const allFeatures = () => {
                 <figure>
                   <img
                     src="/img/feature-support.svg"
-                    alt="Audit Trail Icon"
+                    alt="Support Icon"
                     height="90px"
                     widht="auto"
                   />
