@@ -27,6 +27,11 @@ body{
     background: rgba(0,0,0,0.1);
     width: 10px;
 }
+
+::selection{
+    background-color: var(--col-primary);
+    color: var(--col-white);
+}
 @media (max-width: 991px) {
     ::-webkit-scrollbar{
         display: none;

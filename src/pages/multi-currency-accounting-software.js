@@ -1,18 +1,17 @@
 import { MdRemove, MdAdd } from "react-icons/md";
-const features = () => {
-  return (
-    <>
-      <div className="features">
+const multiCurrencyAccountingSoftware =()=>{
+    return(
+        <>
+        <div className="features">
         <section className="container-fluid">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
-                  Monitor your transactions by connecting bank accounts
+                <h2 className="heading col-primary fw-bold mb-4">
+                Serve International Customers with Multi-Currency Accounting
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
-                  Once your bank account connects to Giddh, you get an overview
-                  of the most important asset of your business – cash.
+                Multi-currency accounting enables you to serve overseas clients & turn your business into an International brand.
                 </p>
                 <div className="features__heading_container__links">
                   <a href="#" className="btn download_free_btn me-4">
@@ -25,7 +24,7 @@ const features = () => {
               </div>
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
-                  <img src="img/bank-banner.svg" width="90%" />
+                  <img src="/img/feature-gallery-icons/multi-currency-banner.svg" width="90%" />
                   <img
                     src="img/all-features-cloud_icon.svg"
                     className="features__heading_container__right_banner_img"
@@ -41,15 +40,11 @@ const features = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
-                  Link your bank account seamlessly with Giddh
+                <h3 className="sub-heading col-primary fw-bold mb-3">
+                Profits should know no borders
                 </h3>
                 <p className="c-fs-4 mb-5">
-                  Get new transactions delivered from your bank account into
-                  Giddh– automatically & securely. By linking your bank accounts
-                  you can actively monitor your day to day transactions and
-                  reconcile your books. Bank link helps you keep track of your
-                  cash flow in the most secure, fast and reliable way.
+                Multi currency accounting software makes it easy to manage your accounting in more than 100 currencies for your fast & growing business. Giddh makes managing multi-currency payments, invoicing and accounts easy.
                 </p>
                 <a href="#" className="btn bg_color_blue col-white">
                   Start Your Trial
@@ -64,23 +59,18 @@ const features = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  Eliminate Confusion with Automatic Currency Conversion
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                  Say goodbye to unnecessary exchange rate confusions and accounting mismatch with multi-currency accounting. Giddh does all the heavy lifting & automatically converts the International currencies into your base currency. The best part? You have the option to modify and enter your own rate manually.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/bank-connect.svg"
+                    src="/img/feature-gallery-icons/multi-currency-create.svg"
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -90,23 +80,18 @@ const features = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  Keep Your International Customers Smilin
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                  Easily accept payments from your International customers & invoice them with easy to use multi currency accounting software. Send invoices in your customer’s currency, and keep your books updated in the currency you manage your business in.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/bank-reconcile.svg"
+                    src="/img/feature-gallery-icons/multi-currency-invoice-3.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
@@ -117,49 +102,39 @@ const features = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  Set Preferred Currency to Business Accounts
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                  With Giddh you are always in control! You can set a default foreign currency to all the business accounts of your foreign customers. After which, all the invoices and reports of that account will be generated in the set currency.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/bank-account.svg"
+                    src="/img/feature-gallery-icons/multi-currency-setting.svg"
                     className="img-fluid"
                     alt="bank account image"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  Benefit from Dynamic Business Reporting
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                  All your financial reports; trial balance, profit & loss, balance sheet, will be automatically created in your company base currency so you have an accurate view of your financial position and be well aware of your cash flow.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/bank-overview.svg"
+                    src="/img/feature-gallery-icons/multi-currency-reports.svg"
                     className="img-fluid"
                     alt="bank overview image"
                   />
@@ -167,58 +142,8 @@ const features = () => {
               </div>
             </div>
 
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
-              <div className="col-md-12 col-lg-6">
-                <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
-                  </h4>
-                  <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
-                <figure>
-                  <img
-                    src="/img/bank-connect.svg"
-                    className="img-fluid"
-                    alt="connect bank image"
-                  />
-                </figure>
-              </div>
-            </div>
-            <div className="row pb-5 align-items-center features__description_container--row-even">
-              <div className="col-md-12 col-lg-6">
-                <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
-                  </h4>
-                  <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
-                <figure>
-                  <img
-                    src="/img/bank-connect.svg"
-                    className="img-fluid"
-                    alt="connect bank image"
-                  />
-                </figure>
-              </div>
-            </div>
+            
+        
           </div>
         </section>
 
@@ -235,7 +160,7 @@ const features = () => {
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
-                  <span className="col-blue">Connect Bank Reconcile</span> also
+                  <span className="col-blue">Multi Currency Accounting Software</span> also
                   looked at
                 </h2>
 
@@ -281,7 +206,7 @@ const features = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        What is bank reconciliation? Why is it done?
+                        What type of businesses can use the Giddh multi-currency accounting software?
                       </button>
                     </h2>
                     <div
@@ -291,13 +216,7 @@ const features = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                        A bank reconciliation compares the difference between
-                        the bank balance on the bank statement with the balance
-                        on the accounting records of the company. Sometimes,
-                        certain transactions may be accounted for in the bank’s
-                        system before it is integrated into the company’s
-                        accounting system. Hence, bank reconciliation is done so
-                        that such differences can be detected.
+                      Giddh’s innovative multi-currency accounting software is designed to cater to all the accounting, invoicing and related activities of businesses at a budget-friendly price. Hence, it is widely used by start-ups, agencies, enterprises and SMEs that require managing accounts that deal with multiple currencies.
                       </div>
                     </div>
                   </div>
@@ -318,8 +237,10 @@ const features = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        What is reconciliation software?
+                        What are the advantages of using the Giddh multi-currency accounting software?                       
+                       
                       </button>
+                     
                     </h2>
                     <div
                       id="collapseTwo"
@@ -328,14 +249,24 @@ const features = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                        A reconciliation software is a tool that can help you
-                        automate and standardise the reconciliation process to
-                        ensure quality and accuracy in preparing financial
-                        statements. With a bank reconciliation software, it
-                        becomes easier for accountants to compare bank, general
-                        ledger and other data, verify the correctness of balance
-                        sheets as well as identify any discrepancies, attach
-                        supporting documentation, etc.
+                      <p>The following are the advantages of using the Giddh multi-currency accounting software that make it worth the try.</p>
+                        <ul>
+                          <li>
+                          Flexibility: Giddh offers you flexibility in payment options. It helps you handle transactions involving different currencies.
+                          </li>
+                          <li>
+                          Money-saving: With Giddh, you get the increased convenience of dealing with multiple accounts without investing in an expert or a manual system.
+                          </li>
+                          <li>
+                          Better security: Your financial reports are safe from any security breaches with Giddh.
+                          </li>
+                          <li>
+                          Linked bank accounts: Giddh allows you to link multiple bank accounts so that you can check your transaction history anywhere and anytime you want.
+                          </li>
+                          <li>
+                          Diligent support team: Giddh’s support team is just a call or email away to help you with any issue that arises.
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -356,7 +287,7 @@ const features = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        How can Giddh help streamline bank transactions?
+                        Are the currency rates mentioned updated and accurate?
                       </button>
                     </h2>
                     <div
@@ -366,16 +297,10 @@ const features = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                        Giddh, one of the best bank reconciliation software in
-                        India, can directly be integrated with your respective
-                        banking partner. As a result you can easily make
-                        payments to vendors from a single window, without the
-                        need for opening your online banking website and
-                        reentering your credentials. Since the bank’s API is
-                        integrated directly within the app, Giddh automatically
-                        monitors and categorizes your bank transactions and
-                        makes the reconciliation process smoother and smarter.
+                      Yes, the mentioned currency rates are updated and accurate. Giddh periodically pulls in the exchange rates online to ensure that businesses and financial advisors have the accurate data needed to make effective decisions. 
+                      Giddh also allows you to set a default currency so that you can receive your invoices according to the set currency.
                       </div>
+                  
                     </div>
                   </div>
                   {/*============ Accordion #4 ===============*/}
@@ -395,8 +320,7 @@ const features = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        How does integrating a bank account with Giddh benefit
-                        me?
+                        How does the currency converter work?
                       </button>
                     </h2>
                     <div
@@ -406,29 +330,41 @@ const features = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                        <ul>
-                          <li>
-                            Easily send and receive vendor payments from a
-                            single window in a convenient manner.
-                          </li>
-                          <li>
-                            Have a clearer view of the company’s cash status in
-                            no time
-                          </li>
-                          <li>
-                            Easy and automated import of bank statement
-                            transactions
-                          </li>
-                          <li>
-                            Automated reconciliation of transactions by value
-                            and reconciliation code
-                          </li>
-                          <li>
-                            Detailed reporting of bank activities and daily
-                            payments
-                          </li>
-                        </ul>
+                      We save the latest data of currency conversion in our system. So, when the user creates an invoice or uses a related functionality for bookkeeping, the conversion amount is shown in the respective entry form/field.
                       </div>
+                  
+                    </div>
+                  </div>
+                    {/*============ Accordion #5 ===============*/}
+                    <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingFive">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <span className="me-2 collapse_icon collapse_icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse_icon collapse_icon--close">
+                          <MdRemove />
+                        </span>
+                        Can I customize the exchange rates?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingFive"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                      Yes, you can customize the currency exchange rate and enter the desired amount as per the situation or requirement.
+                      </div>
+                  
                     </div>
                   </div>
                 </div>
@@ -437,7 +373,8 @@ const features = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+        </>
+    );
 };
-export default features;
+export default multiCurrencyAccountingSoftware;
+

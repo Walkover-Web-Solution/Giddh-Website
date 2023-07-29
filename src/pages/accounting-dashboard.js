@@ -1,5 +1,5 @@
 import { MdRemove, MdAdd } from "react-icons/md";
-const features = () => {
+const accountingDashboard = () => {
   return (
     <>
       <div className="features">
@@ -7,12 +7,12 @@ const features = () => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
-                  Monitor your transactions by connecting bank accounts
+                <h2 className="heading col-primary fw-bold mb-4">
+                  Know your business' worth with simple online dashboard
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
-                  Once your bank account connects to Giddh, you get an overview
-                  of the most important asset of your business – cash.
+                  Turn your accounting data into business intelligence with
+                  Giddh Dashboard.
                 </p>
                 <div className="features__heading_container__links">
                   <a href="#" className="btn download_free_btn me-4">
@@ -25,7 +25,10 @@ const features = () => {
               </div>
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
-                  <img src="img/bank-banner.svg" width="90%" />
+                  <img
+                    src="/img/feature-gallery-icons/dashboard-banner.svg"
+                    width="90%"
+                  />
                   <img
                     src="img/all-features-cloud_icon.svg"
                     className="features__heading_container__right_banner_img"
@@ -41,15 +44,15 @@ const features = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
-                  Link your bank account seamlessly with Giddh
+                <h3 className="sub-heading col-primary fw-bold mb-3 ">
+                  Assess your numbers in one glance
                 </h3>
                 <p className="c-fs-4 mb-5">
-                  Get new transactions delivered from your bank account into
-                  Giddh– automatically & securely. By linking your bank accounts
-                  you can actively monitor your day to day transactions and
-                  reconcile your books. Bank link helps you keep track of your
-                  cash flow in the most secure, fast and reliable way.
+                  Gain actionable insights and easily evaluate growth of your
+                  business. Real-time accounting dashboard offers you a bird
+                  eye’s view to your business health on a single window.
+                  Actively keep an eye on the net worth, revenue, profit/loss
+                  and other key information of your business.
                 </p>
                 <a href="#" className="btn bg_color_blue col-white">
                   Start Your Trial
@@ -64,23 +67,23 @@ const features = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                    Know the true worth of your business
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                    There’s no way to know exactly where your business stands
+                    without knowing what your net worth is, whether your revenue
+                    is grow financial-servicesing and where your expenses lie.
+                    Online accounting dashboard gives you the real position of
+                    your all these values by automatically crunching your
+                    numbers and presenting them on an easy to evaluate graph.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/bank-connect.svg"
+                    src="/img/feature-gallery-icons/networth.svg"
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -90,23 +93,21 @@ const features = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                    Track your monthly overdues
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                    Pay and get paid quicker by easily following up on your
+                    monthly overdues. Dashboard gives a summary of what you owe
+                    to your clients and what’s owed to you in the form of
+                    receivable and payable right on your home window.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/bank-reconcile.svg"
+                    src="/img/feature-gallery-icons/totaloverdue.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
@@ -117,23 +118,21 @@ const features = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                    Keep an eye on where your money goes
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                    Keep track of your expenses & discounts you give. Giddh
+                    accounting dashboard provides you with easy to understand
+                    expense graph so that you can create better strategies to
+                    minimise expenses & maximise profits.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/bank-account.svg"
+                    src="/img/feature-gallery-icons/expense-report.svg"
                     className="img-fluid"
                     alt="bank account image"
                   />
@@ -143,23 +142,21 @@ const features = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                    Predict with more precision
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                    Giddh takes the pain out from your prediction process. With
+                    one-click yearly comparison of revenues, profit/loss &
+                    expenses, you can make better assumptions of how the
+                    business will behave in the future by the past trends.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/bank-overview.svg"
+                    src="/img/feature-gallery-icons/precision.svg"
                     className="img-fluid"
                     alt="bank overview image"
                   />
@@ -167,54 +164,28 @@ const features = () => {
               </div>
             </div>
 
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                    Financial ratio analysis
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                    Will your business be able to pay short-term and long-term
+                    obligations? What is its liquidity and profitability? The
+                    ratio analysis calculated automatically from the standard
+                    business formulas gives you an idea about your liability,
+                    equity and more so that you can take appropriate measures at
+                    the right time.
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/bank-connect.svg"
+                    src="/img/feature-gallery-icons/financial-ratio.svg"
                     className="img-fluid"
-                    alt="connect bank image"
-                  />
-                </figure>
-              </div>
-            </div>
-            <div className="row pb-5 align-items-center features__description_container--row-even">
-              <div className="col-md-12 col-lg-6">
-                <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
-                  </h4>
-                  <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
-                <figure>
-                  <img
-                    src="/img/bank-connect.svg"
-                    className="img-fluid"
-                    alt="connect bank image"
+                    alt="bank account image"
                   />
                 </figure>
               </div>
@@ -235,7 +206,7 @@ const features = () => {
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
-                  <span className="col-blue">Connect Bank Reconcile</span> also
+                  <span className="col-blue">Accounting Dashboard </span> also
                   looked at
                 </h2>
 
@@ -264,7 +235,7 @@ const features = () => {
               <div className="col-12">
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2> 
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
                   <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                       <button
@@ -281,7 +252,7 @@ const features = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        What is bank reconciliation? Why is it done?
+                        What is an accounting dashboard?
                       </button>
                     </h2>
                     <div
@@ -291,13 +262,16 @@ const features = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                        A bank reconciliation compares the difference between
-                        the bank balance on the bank statement with the balance
-                        on the accounting records of the company. Sometimes,
-                        certain transactions may be accounted for in the bank’s
-                        system before it is integrated into the company’s
-                        accounting system. Hence, bank reconciliation is done so
-                        that such differences can be detected.
+                        An accounting dashboard is a management tool that helps
+                        you to view your financial data and other essential
+                        metrics from several sources all at one place. It offers
+                        a real-time view of the cash flow, invoices, accounts
+                        payable and receivable, profit and loss, etc. so that
+                        business owners, bookkeeping professionals or
+                        accountants always have an idea about where the business
+                        is heading towards at all times. Keeping track of the
+                        relevant finance KPIs ensures that the financial
+                        objectives of a company are met.
                       </div>
                     </div>
                   </div>
@@ -318,7 +292,7 @@ const features = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        What is reconciliation software?
+                        What should be on a financial dashboard?
                       </button>
                     </h2>
                     <div
@@ -328,14 +302,38 @@ const features = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                        A reconciliation software is a tool that can help you
-                        automate and standardise the reconciliation process to
-                        ensure quality and accuracy in preparing financial
-                        statements. With a bank reconciliation software, it
-                        becomes easier for accountants to compare bank, general
-                        ledger and other data, verify the correctness of balance
-                        sheets as well as identify any discrepancies, attach
-                        supporting documentation, etc.
+                        <p>
+                          A financial dashboard software should be able to
+                          present all the relevant financial metrics in an
+                          actionable way to enable a business to understand and
+                          measure the data accurately. Here are some metrics
+                          that a good financial dashboard must display.
+                        </p>
+                        <ul>
+                          <li>
+                            A graphic budget-to-actual table that shows how a
+                            business is working in alignment with the set goals
+                            or objectives
+                          </li>
+                          <li>
+                            Sales report that shows the data of sales and orders
+                            invoiced during a specific period
+                          </li>
+                          <li>
+                            Cash flow projection to assist during periods of
+                            thin cash availability and cash-intensive growth
+                          </li>
+                          <li>
+                            Peer benchmark metric to compare margins against
+                            market peers
+                          </li>
+                          <li>Industry performance metrics</li>
+                          <li>Value drivers over the long-term</li>
+                          <li>
+                            Performance metrics to measure the progress of
+                            current initiatives
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -356,7 +354,8 @@ const features = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        How can Giddh help streamline bank transactions?
+                        How does Giddh accounting dashboard help to understand
+                        my accounting data and make a decision?
                       </button>
                     </h2>
                     <div
@@ -366,68 +365,15 @@ const features = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                        Giddh, one of the best bank reconciliation software in
-                        India, can directly be integrated with your respective
-                        banking partner. As a result you can easily make
-                        payments to vendors from a single window, without the
-                        need for opening your online banking website and
-                        reentering your credentials. Since the bank’s API is
-                        integrated directly within the app, Giddh automatically
-                        monitors and categorizes your bank transactions and
-                        makes the reconciliation process smoother and smarter.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #4 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        <span className="me-2 collapse_icon collapse_icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
-                          <MdRemove />
-                        </span>
-                        How does integrating a bank account with Giddh benefit
-                        me?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <ul>
-                          <li>
-                            Easily send and receive vendor payments from a
-                            single window in a convenient manner.
-                          </li>
-                          <li>
-                            Have a clearer view of the company’s cash status in
-                            no time
-                          </li>
-                          <li>
-                            Easy and automated import of bank statement
-                            transactions
-                          </li>
-                          <li>
-                            Automated reconciliation of transactions by value
-                            and reconciliation code
-                          </li>
-                          <li>
-                            Detailed reporting of bank activities and daily
-                            payments
-                          </li>
-                        </ul>
+                        Giddh’s real-time accounting dashboard provides you with
+                        clarity and insights about the core KPIs of your
+                        business. The dashboard highlights the metrics that
+                        directly impact your bottom line thereby saving up your
+                        time that would have otherwise been spent in building
+                        custom reports in Excel. This enables your finance
+                        professionals to access figures faster and understand
+                        the financial details that are needed to make proper
+                        decisions and ensure a stable financial environment.
                       </div>
                     </div>
                   </div>
@@ -440,4 +386,5 @@ const features = () => {
     </>
   );
 };
-export default features;
+
+export default accountingDashboard;

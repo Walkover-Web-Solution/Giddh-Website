@@ -1,5 +1,5 @@
 import { MdRemove, MdAdd } from "react-icons/md";
-const features = () => {
+const conectBankReconcile = () => {
   return (
     <>
       <div className="features">
@@ -7,7 +7,7 @@ const features = () => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
+                <h2 className="heading col-primary fw-bold mb-4">
                   Monitor your transactions by connecting bank accounts
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
@@ -41,7 +41,7 @@ const features = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                <h3 className="sub-heading col-primary fw-bold mb-3">
                   Link your bank account seamlessly with Giddh
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -64,7 +64,7 @@ const features = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading fw-bold mb-3">
                     Connect bank and get automatic updates
                   </h4>
                   <p className="">
@@ -90,16 +90,15 @@ const features = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                    Reconcile with a snap of fingers
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                    With one-click reconciliation feature, we have made the
+                    process of reconciliation so easy, it is no more a
+                    complicated chore you would want to avoid. With just one
+                    click, you would know your balances as per bank and as per
+                    your books.
                   </p>
                 </div>
               </div>
@@ -117,16 +116,14 @@ const features = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                    Got Multiple Bank Accounts? We got you Covered
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                    With Giddh bank account linking, you can monitor the
+                    deposit, transfer, and withdrawals of cash whether you hold
+                    a single bank account or several accounts from multiple
+                    banks, right from our easy and friendly interface.
                   </p>
                 </div>
               </div>
@@ -140,19 +137,17 @@ const features = () => {
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
+                  <h4 className="col-primary small-heading fw-bold mb-3">
+                    Giddh will connect to your favorite bank
                   </h4>
                   <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
+                    Major national banks like SBI, ICICI and many more can be
+                    linked with Giddh to let your transactions to flow
+                    automatically. Can’t find your bank? Just let us know and
+                    we’ll try to help you out.
                   </p>
                 </div>
               </div>
@@ -162,59 +157,6 @@ const features = () => {
                     src="/img/bank-overview.svg"
                     className="img-fluid"
                     alt="bank overview image"
-                  />
-                </figure>
-              </div>
-            </div>
-
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
-              <div className="col-md-12 col-lg-6">
-                <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
-                  </h4>
-                  <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
-                <figure>
-                  <img
-                    src="/img/bank-connect.svg"
-                    className="img-fluid"
-                    alt="connect bank image"
-                  />
-                </figure>
-              </div>
-            </div>
-            <div className="row pb-5 align-items-center features__description_container--row-even">
-              <div className="col-md-12 col-lg-6">
-                <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Connect bank and get automatic updates
-                  </h4>
-                  <p className="">
-                    As a growing business, your volume of bank transactions must
-                    be growing. With bank account linking, you no longer have to
-                    upload those transactions one after the other at week’s or
-                    month’s end. Giddh fetches all your transactions
-                    automatically for you so that you can stay on top of your
-                    finances.
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
-                <figure>
-                  <img
-                    src="/img/bank-connect.svg"
-                    className="img-fluid"
-                    alt="connect bank image"
                   />
                 </figure>
               </div>
@@ -264,7 +206,7 @@ const features = () => {
               <div className="col-12">
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2> 
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
                   <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                       <button
@@ -440,4 +382,4 @@ const features = () => {
     </>
   );
 };
-export default features;
+export default conectBankReconcile;
