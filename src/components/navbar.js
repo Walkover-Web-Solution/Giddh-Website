@@ -119,14 +119,14 @@ const navbar = () => {
                             <a href="icici-integration">ICICI Integration</a>
                           </li>
                           <li>
-                            <a href="e-invoice">E-Invoice</a>
+                            <a href="#">E-Invoice</a>
                           </li>
                         </ul>
                       </li>
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
                           <li>
-                            <a href="invoice-software">Invoicing</a>
+                            <a href="#">Invoicing</a>
                           </li>
                           <li>
                             <a href="multi-user-accounting-software">Share Data</a>

@@ -1,5 +1,3 @@
-import { MdRemove, MdAdd } from "react-icons/md";
-import { GiCheckMark } from "react-icons/gi";
 const contacts = () => {
   return (
     <>
@@ -127,25 +125,16 @@ const contacts = () => {
                     What could you do with giddh smart list?
                   </h4>
 
-                  <ul className="ps-0">
-                    <li className="mb-3">
-                      <span className="col-primary c-fs-2 me-3">
-                        <GiCheckMark />
-                      </span>{" "}
+                  <ul className="custom-ul-with-right-tick">
+                    <li>
                       Add new customers or vendors directly to your Giddh books.
                     </li>
-                    <li className="mb-3">
-                      <span className="col-primary c-fs-2 me-3">
-                        <GiCheckMark />
-                      </span>
+                    <li>
                       Find all those customers who haven’t paid you back in the
                       past few weeks or months listed in one place, so you can
                       follow-up with them and improve your cash flow
                     </li>
                     <li>
-                      <span className="col-primary c-fs-2 me-3">
-                        <GiCheckMark />
-                      </span>
                       See how many customers you have in a particular city or
                       region, helping you assess your customer base and create a
                       more targeted sales or marketing effort.

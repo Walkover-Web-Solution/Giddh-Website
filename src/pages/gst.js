@@ -3,7 +3,6 @@ import { MdRemove, MdAdd } from "react-icons/md";
 const gst = () => {
   return (
     <>
-
       <section className="container mb-5 ">
         <div className="gst-hero-container  text-center">
           <div className="row d-flex h-100 align-content-end">
@@ -28,7 +27,7 @@ const gst = () => {
       <section className=" filing-gstr py-5">
         <div className="container mt-5">
           <div className="text-center">
-            <p className="sub-heading c-fs-1 col-primary fw-bold ">
+            <p className="sub-heading c-fs-1 col-primary fw-bold mb-5">
               Advantages of filing GSTR with us
             </p>
           </div>
@@ -102,7 +101,7 @@ const gst = () => {
             </div>
             <div className="col">
               {" "}
-              <div className="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
+              <div c  lassName="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/gst-images/secure-reliable.svg" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary fw-bold">
@@ -141,31 +140,30 @@ const gst = () => {
             Make GST Return Process Automatic.
           </div>
           <div className="">
-            <a className="c-fs-4 btn btn-primary btn-lg ">Try Now</a>{" "}
+            <a className="c-fs-4 gst-hero-container__try_now_btn">Try Now</a>
           </div>
           <span className="c-fs-4 m-3">
             Cloud Based Accounting Software to File GST Return Online
           </span>
         </div>
       </section>
-      <section className="container gst-return ">
-        <div className="row  gst-return-coll gap-2   align-items-center col-dark-light ">
-          <div className="col-lg-3 ">
-            <h3 className="">GST Return Collaborators</h3>
+      <section className="container-fluid gst-return">
+        <div className="container">
+          <div className="row">
+            <div className="gst-return__wrapper d-flex  flex-wrap align-items-center">
+            <div className="col">
+              <h3 className="">GST Return Collaborators</h3>
+            </div>
+            <div className="col text-center">
+              <img src="/img/Jio-GST.png" />
+            </div>
+            <div className="col">
+              <img className=" gst-return__wrapper__large_img" src="/img/GST.png" />
+            </div>
           </div>
-          <div className="col-lg-3 gst-return-coll__img1">
-            <img className="col-6 " src="/img/jio-GST.png" />
-          </div>
-          <div className="gst-return-coll__img2 col-lg-6 border-start text-end">
-            <img className=" gst-return-coll__img2"
-              src="/img/GST.png"
-            />
-
-          </div>
+            </div>
         </div>
-
       </section>
-
 
       <section className="container gst-features d-grid gap-3  border-bottom my-5 ">
         <div className="gst-feature-container d-flex flex-column flex-md-row gap-2 align-items-center my-3">
@@ -247,7 +245,8 @@ const gst = () => {
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseOne"
                       aria-expanded="false"
-                      aria-controls="collapseOne">
+                      aria-controls="collapseOne"
+                    >
                       <span className="me-2 collapse_icon collapse_icon--open">
                         <MdAdd />
                       </span>
@@ -261,11 +260,17 @@ const gst = () => {
                     id="collapseOne"
                     className="accordion-collapse collapse"
                     aria-labelledby="headingOne"
-                    data-bs-parent="#accordionAllFeatures">
+                    data-bs-parent="#accordionAllFeatures"
+                  >
                     <div className="accordion-body">
-                      GST (also known as Goods and Services Tax) is a value-added tax that is levied on a majority of goods and services that are
-                      sold for domestic consumption. This tax is paid by consumers while availing a service or purchasing a product, but it is remitted
-                      to the government by businesses that are selling the respective goods and services. In other words, GST provides a means of revenue for the government.
+                      GST (also known as Goods and Services Tax) is a
+                      value-added tax that is levied on a majority of goods and
+                      services that are sold for domestic consumption. This tax
+                      is paid by consumers while availing a service or
+                      purchasing a product, but it is remitted to the government
+                      by businesses that are selling the respective goods and
+                      services. In other words, GST provides a means of revenue
+                      for the government.
                     </div>
                   </div>
                 </div>
@@ -278,7 +283,8 @@ const gst = () => {
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseTwo"
                       aria-expanded="false"
-                      aria-controls="collapseTwo">
+                      aria-controls="collapseTwo"
+                    >
                       <span className="me-2 collapse_icon collapse_icon--open">
                         <MdAdd />
                       </span>
@@ -295,8 +301,10 @@ const gst = () => {
                     data-bs-parent="#accordionAllFeatures"
                   >
                     <div className="accordion-body">
-                      GST Identification Number or GSTIN is a unique 15-digit identification number allotted to every registered
-                      person under GST. Every person who crosses the threshold for GST registration is required to get a GSTIN.
+                      GST Identification Number or GSTIN is a unique 15-digit
+                      identification number allotted to every registered person
+                      under GST. Every person who crosses the threshold for GST
+                      registration is required to get a GSTIN.
                     </div>
                   </div>
                 </div>
@@ -327,38 +335,62 @@ const gst = () => {
                     data-bs-parent="#accordionAllFeatures"
                   >
                     <div className="accordion-body">
-                      <p>As per the GST rules, a business having a turnover of Rs 40 lakhs
-                        ( Rs 10 lakhs for businesses in hill states and North East states) has to register as a taxable entity,
-                        known as GST registration process. It can be completed online on the official GST website within 6 working days.
-                        Here’s the step-by-step process for GST registration:</p>
+                      <p>
+                        As per the GST rules, a business having a turnover of Rs
+                        40 lakhs ( Rs 10 lakhs for businesses in hill states and
+                        North East states) has to register as a taxable entity,
+                        known as GST registration process. It can be completed
+                        online on the official GST website within 6 working
+                        days. Here’s the step-by-step process for GST
+                        registration:
+                      </p>
                       <ul>
                         <li>
-                          Log in to the GST portal (https://www.gst.gov.in/) or visit a facilitation center and submit your PAN, email id, and mobile number in Part A of Form GST REG–01
+                          Log in to the GST portal (https://www.gst.gov.in/) or
+                          visit a facilitation center and submit your PAN, email
+                          id, and mobile number in Part A of Form GST REG–01
                         </li>
                         <li>
-                          The PAN is verified on the portal, while the email id and mobile number are verified through an OTP.
+                          The PAN is verified on the portal, while the email id
+                          and mobile number are verified through an OTP.
                         </li>
                         <li>
-                          Once verified, you’ll receive an application reference number on your registered mobile number and email id.
-                        </li>
-                        <li>You can file and submit Part- B of Form GST REG-01 with the required documents and the application reference number.
-                        </li>
-                        <li>In case any additional information is required, GST REG-03 will be issued.
-                        </li>
-                        <li>You’ll need to respond to GST REG-04 within 7 days from the date of receipt of GST REG-03.
+                          Once verified, you’ll receive an application reference
+                          number on your registered mobile number and email id.
                         </li>
                         <li>
-                          Once you’ve provided all details from Form 01-04, the registration certificate will be issued in Form GST REG –06.
+                          You can file and submit Part- B of Form GST REG-01
+                          with the required documents and the application
+                          reference number.
                         </li>
                         <li>
-                          If you’ve multiple businesses, then you’ll need to file separate GSTs for your separate businesses.
+                          In case any additional information is required, GST
+                          REG-03 will be issued.
                         </li>
-                        <li>Form GST REG-05 is used to reject the applications which don’t meet the criteria. </li>
                         <li>
-                          If you deduct TDS and collect TCS, then you can submit Form GST REG – 07 at the time of registration.
+                          You’ll need to respond to GST REG-04 within 7 days
+                          from the date of receipt of GST REG-03.
+                        </li>
+                        <li>
+                          Once you’ve provided all details from Form 01-04, the
+                          registration certificate will be issued in Form GST
+                          REG –06.
+                        </li>
+                        <li>
+                          If you’ve multiple businesses, then you’ll need to
+                          file separate GSTs for your separate businesses.
+                        </li>
+                        <li>
+                          Form GST REG-05 is used to reject the applications
+                          which don’t meet the criteria.{" "}
+                        </li>
+                        <li>
+                          If you deduct TDS and collect TCS, then you can submit
+                          Form GST REG – 07 at the time of registration.
                         </li>
                       </ul>
-                      Giddh makes this even easier by letting business owners directly file their GST from within the software.
+                      Giddh makes this even easier by letting business owners
+                      directly file their GST from within the software.
                     </div>
                   </div>
                 </div>
@@ -389,20 +421,19 @@ const gst = () => {
                     data-bs-parent="#accordionAllFeatures"
                   >
                     <div className="accordion-body">
-                      <p> GST Returns filing is the registration of GST Returns document,
-                        which contains all details concerning GST invoices, payments, and receipts during a specific period.
-                        The details that need to be filed in the GST Returns document are: </p>
+                      <p>
+                        {" "}
+                        GST Returns filing is the registration of GST Returns
+                        document, which contains all details concerning GST
+                        invoices, payments, and receipts during a specific
+                        period. The details that need to be filed in the GST
+                        Returns document are:{" "}
+                      </p>
                       <ul>
-                        <li>
-                          Total sales
-                        </li>
+                        <li>Total sales</li>
                         Total purchases
-                        <li>
-                          Output GST (paid by customers)
-                        </li>
-                        <li>
-                          Input Tax Credit (ITC paid by businesses)
-                        </li>
+                        <li>Output GST (paid by customers)</li>
+                        <li>Input Tax Credit (ITC paid by businesses)</li>
                       </ul>
                     </div>
                   </div>
@@ -424,7 +455,8 @@ const gst = () => {
                       <span className="me-2 collapse_icon collapse_icon--close">
                         <MdRemove />
                       </span>
-                      What are the benefits of using Giddh software for GST Returns Filing?
+                      What are the benefits of using Giddh software for GST
+                      Returns Filing?
                     </button>
                   </h2>
                   <div
@@ -434,19 +466,31 @@ const gst = () => {
                     data-bs-parent="#accordionAllFeatures"
                   >
                     <div className="accordion-body">
-                      <p>There are several benefits to using the Giddh software for GST Returns Filing:</p>
+                      <p>
+                        There are several benefits to using the Giddh software
+                        for GST Returns Filing:
+                      </p>
                       <ul>
-                        <li>Prepare your GST return file automatically on the portal</li>
-                        <li>100% accurate filing with zero chances of errors
+                        <li>
+                          Prepare your GST return file automatically on the
+                          portal
                         </li>
-                        <li>Notifications of deadlines so that you don’t miss any deadline
+                        <li>
+                          100% accurate filing with zero chances of errors
                         </li>
-                        <li>Collaborate with your team and allow access of GST data to your CA
+                        <li>
+                          Notifications of deadlines so that you don’t miss any
+                          deadline
                         </li>
-                        <li>Secure and reliable with 2-factor authentication and OTP verification
+                        <li>
+                          Collaborate with your team and allow access of GST
+                          data to your CA
                         </li>
-                        <li>Complete support for all GST-related issues
+                        <li>
+                          Secure and reliable with 2-factor authentication and
+                          OTP verification
                         </li>
+                        <li>Complete support for all GST-related issues</li>
                       </ul>
                     </div>
                   </div>
