@@ -1,7 +1,7 @@
 const navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg position-fixed w-100">
+      <nav className="navbar navbar--box-shadow navbar--theme-white navbar-expand-lg position-fixed w-100">
         <div className="container-fluid">
           <a className="navbar--navbar_brand" href="/">
             <svg
@@ -98,7 +98,7 @@ const navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link chevron_down nav-link--feature-menu" href="#">
+                <a className="nav-link chevron_down nav-link--feature-menu" href="all-features">
                   Features
                 </a>
                 <ul className="dropdown-menu dropdown-menu--position-left">
@@ -106,18 +106,17 @@ const navbar = () => {
                     <ul className="dropdown-menu__wapper d-flex flex-wrap ps-0">
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
-                          <li></li>
                           <li>
-                            <a href="#">GST Compliances</a>
+                            <a href="gst">GST Compliances</a>
                           </li>
                           <li>
-                            <a href="#">Bank Reconcile</a>
+                            <a href="conect-bank-reconcile">Bank Reconcile</a>
                           </li>
                           <li>
-                            <a href="#">Multi Currency</a>
+                            <a href="multi-currency-accounting-software">Multi Currency</a>
                           </li>
                           <li>
-                            <a href="#">ICICI Integration</a>
+                            <a href="icici-integration">ICICI Integration</a>
                           </li>
                           <li>
                             <a href="#">E-Invoice</a>
@@ -130,45 +129,45 @@ const navbar = () => {
                             <a href="#">Invoicing</a>
                           </li>
                           <li>
-                            <a href="#">Share Data</a>
+                            <a href="multi-user-accounting-software">Share Data</a>
                           </li>
                           <li>
-                            <a href="#">Contacts</a>
+                            <a href="contacts">Contacts</a>
                           </li>
                           <li>
-                            <a href="#">API Integration</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="col-lg-3 col-md-4 col-sm-6">
-                        <ul className="ps-0">
-                          <li>
-                            <a href="#">Dashboard</a>
-                          </li>
-                          <li>
-                            <a href="#">Inventory</a>
-                          </li>
-                          <li>
-                            <a href="#">Security</a>
-                          </li>
-                          <li>
-                            <a href="#">All Features</a>
+                            <a href="https://apidoc.giddh.com">API Integration</a>
                           </li>
                         </ul>
                       </li>
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
                           <li>
-                            <a href="#">Anywhere-Anytime</a>
+                            <a href="accounting-dashboard">Dashboard</a>
                           </li>
                           <li>
-                            <a href="#">Linked Bank Account</a>
+                            <a href="inventory-management-software">Inventory</a>
                           </li>
                           <li>
-                            <a href="#">Import Excel Files</a>
+                            <a href="security">Security</a>
                           </li>
                           <li>
-                            <a href="#">Reports & Analysis</a>
+                            <a href="all-features">All Features</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li className="col-lg-3 col-md-4 col-sm-6">
+                        <ul className="ps-0">
+                          <li>
+                            <a href="cloud-accounting-software">Anywhere-Anytime</a>
+                          </li>
+                          <li>
+                            <a href="conect-bank-reconcile">Linked Bank Account</a>
+                          </li>
+                          <li>
+                            <a href="import-data">Import Excel Files</a>
+                          </li>
+                          <li>
+                            <a href="financial-reporting">Reports & Analysis</a>
                           </li>
                         </ul>
                       </li>
@@ -177,12 +176,12 @@ const navbar = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="pricing">
                   Pricing
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="gst">
                   GST
                 </a>
               </li>
@@ -238,12 +237,12 @@ const navbar = () => {
                 </ul>
               </div>
               <div>
-                <a href="#" className="login_page_link">
+                <a href="login" className="login_page_link">
                   Login
                 </a>
               </div>
               <div>
-                <a href="#" className="signup_page_link">
+                <a href="signup" className="signup_page_link">
                   Sign Up
                 </a>
               </div>

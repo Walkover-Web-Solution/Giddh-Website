@@ -24,9 +24,12 @@
     &__right_section {
   
       &__container {
-        padding-top: 70px;
-        padding-left: 80px;
-  
+        &.container{
+          padding-top: 70px;
+          padding-bottom: 40px;
+          padding-left: 80px !important;
+        }
+   
         h1 {
           color: #212528;
           margin-bottom: 24px;
@@ -81,19 +84,28 @@
   
   @media (max-width: 767px) {
     .entry {
+      flex-direction: column-reverse;
       &__left_section {
-        display: none !important;
+        &__brand_logo{
+          display: none;
+        }
+        img {
+          position: unset !important;
+          margin: 1rem 0;
+          padding-right: 0px !important;
+        }
       }
       &__right_section {
         &__container {
-          margin: 0 auto;
-          margin-top: 2rem;
-          max-width: 350px;
-          padding: 15px !important;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
+          &.container{
+            margin: 2rem auto;
+            max-width: 350px;
+            padding-top: 0 !important;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
   
           .line_on_right {
             &::after {

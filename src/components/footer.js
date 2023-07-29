@@ -11,27 +11,27 @@ const Footer = () => {
                     <h5>Quick Links</h5>
                     <ul className="footer-list list-unstyled mb-3">
                       <li>
-                        <a href="">Pricing</a>
+                        <a href="pricing">Pricing</a>
                       </li>
                       <li>
-                        <a href="">About</a>
+                        <a href="#">About</a>
                       </li>
                       <li>
-                        <a href="">Blog</a>
+                        <a href="#">Blog</a>
                       </li>
                       <li>
-                        <a href="">Privacy Policy</a>
+                        <a href="privacy-policy">Privacy Policy</a>
                       </li>
                       <li>
-                        <a target="_blank" rel="noopener" href="">
+                        <a target="_blank" rel="noopener" href="#">
                           Work With Us
                         </a>
                       </li>
                       <li>
-                        <a href="">Affiliate With Us</a>
+                        <a href="#">Affiliate With Us</a>
                       </li>
                       <li>
-                        <a href="">Terms of Use</a>
+                        <a href="terms">Terms of Use</a>
                       </li>
                     </ul>
                   </div>
@@ -45,7 +45,7 @@ const Footer = () => {
                     <p className="">Mobile Apps</p>
                     <ul className="list-unstyled">
                       <li>
-                        <a className="download-icon" href="">
+                        <a className="download-icon" href="#">
                           <img alt="" src="/img/androide_icon.svg" />
                         </a>
                       </li>
@@ -56,12 +56,12 @@ const Footer = () => {
                     <p className="d-flex flex-column gap-3">Desktop Apps</p>
                     <ul className="list-unstyled d-flex gap-3">
                       <li className="">
-                        <a className="download-icon " href="">
+                        <a className="download-icon " href="#">
                           <img className="" src="/img/window-icon.svg" />
                         </a>
                       </li>
                       <li>
-                        <a className="download-icon rounded-circle" href="">
+                        <a className="download-icon rounded-circle" href="#">
                           <img src="/img/mac_icon.svg" />
                         </a>
                       </li>
@@ -87,13 +87,13 @@ const Footer = () => {
                         <img src="img/earth.svg" alt="" /> IN - India
                       </button>
                       <div className="dropdown-menu">
-                        <a href="" className="dropdown-item">
+                        <a href="#" className="dropdown-item">
                           IN - India
                         </a>
-                        <a href="" className="dropdown-item">
+                        <a href="#" className="dropdown-item">
                           UAE - United Arab Emirates
                         </a>
-                        <a href="" className="dropdown-item">
+                        <a href="#" className="dropdown-item">
                           UK - United Kingdom
                         </a>
                       </div>
@@ -125,7 +125,7 @@ const Footer = () => {
                           </li>
                         </ul>
                         <p className="contact-link">
-                          <a href="">Contact Us</a>
+                          <a href="#">Contact Us</a>
                         </p>
                       </div>
                     </li>

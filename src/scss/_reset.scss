@@ -1,18 +1,37 @@
-ul{
-    padding: 0;
-    margin: 0;
+ul {
+  padding: 0;
+  margin: 0;
 }
-a{
-    text-decoration: none !important;
+a {
+  text-decoration: none !important;
+  &:focus-visible{
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-body{
-    // background: rgb(20, 18, 18) !important;
+body {
+  // background: rgb(20, 18, 18) !important;
 }
-h1,h2,h3,h4,h5,h6,p{
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+.form-control,
+.form-select {
+  border: none;
+
+  &:focus {
+    border-color: unset !important;
+    box-shadow: unset !important;
+  }
 }

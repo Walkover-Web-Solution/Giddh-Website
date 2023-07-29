@@ -1,0 +1,20 @@
+.all_features{
+    .container{
+        max-width: 1160px !important;
+    }
+    .feature-gallery__card{
+        width: clamp(350px,20vw,350px);
+        min-height: 350px;
+        figure{
+                max-width: 72%;
+                figcaption{
+                    font-size: var(--c-fs-4) !important;
+                    margin-top: 2rem;
+                }
+                p{
+                    margin-top: 10px;
+                    font-weight: var(--c-fw-500);
+                }
+        }
+    }
+}

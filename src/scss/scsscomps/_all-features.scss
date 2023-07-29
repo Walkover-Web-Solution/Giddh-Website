@@ -1,0 +1,208 @@
+.features {
+  &__heading_container {
+    position: relative;
+    height: 90vh;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 60px;
+
+    &__links {
+      .download_free_btn {
+        color: var(--col-white);
+        background-color: var(--col-primary);
+        border-radius: 0;
+        border: 1px solid var(--col-primary);
+        padding: 10px 16px;
+      }
+    }
+    &__right_banner_img {
+      position: absolute;
+      width: 60%;
+      left: -20%;
+      top: 10%;
+      z-index: -1;
+    }
+  }
+
+  &__sub_heading_container {
+    background-color: #f7f7f7;
+    padding-bottom: 60px;
+
+    .bg_color_blue {
+      background-color: var(--col-blue);
+      padding: 10px 18px;
+      transition: all 400ms ease;
+      &:hover {
+        background-color: var(--col-primary);
+      }
+    }
+
+    &--pull-top {
+      margin-top: -25px !important;
+    }
+  }
+
+  &__description_container {
+    &--row-odd {
+      .__image-alignment {
+        text-align: end;
+      }
+    }
+    &--row-even {
+      flex-direction: row-reverse;
+      .__image-alignment {
+        text-align: start;
+      }
+    }
+  }
+
+  &__suggestion_container {
+    padding: 64px 0;
+
+    &__links {
+      a {
+        padding: 2px 14px;
+        &:hover {
+          color: var(--col-primary) !important;
+        }
+      }
+    }
+  }
+  &__accordion_container {
+    .accordion {
+      max-width: 1000px;
+      margin: 0 auto;
+      .accordion-item {
+        border: 0 !important;
+      }
+      .accordion-button {
+        color: var(--col-deep) !important;
+        background-color: unset !important;
+        box-shadow: unset !important;
+
+        &::after {
+          display: none;
+        }
+        &:focus {
+          box-shadow: none !important;
+          border: none !important;
+        }
+
+        &.collapsed {
+          .collapse_icon--open {
+            display: inline-block;
+          }
+          .collapse_icon--close {
+            display: none !important;
+          }
+        }
+        &:not(.collapsed) {
+          .collapse_icon--open {
+            display: none !important;
+          }
+          .collapse_icon--close {
+            display: inline-block !important;
+          }
+        }
+        .collapse_icon {
+          width: 30px;
+          height: 30px;
+          min-width: 30px;
+          min-height: 30px;
+          background-color: var(--col-blue);
+          color: var(--col-white);
+          font-size: var(--c-fs-3);
+          text-align: center;
+          line-height: 25px;
+        }
+      }
+      &-body {
+        padding: 0 0 0 60px;
+        color: var(--col-deep);
+
+        ul {
+          list-style: disc;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .features {
+    &__heading_container {
+      height: auto !important;
+      padding-top: 90px;
+      padding-bottom: 40px;
+      &__links {
+        .download_free_btn {
+        }
+      }
+      figure {
+        &.text-end {
+          text-align: center !important;
+          img {
+            &:first-child {
+              width: 60%;
+              transform: translateX(60px);
+            }
+          }
+        }
+      }
+      &__right_banner_img {
+        left: 60px !important;
+      }
+    }
+
+    &__sub_heading_container {
+      padding-top: 60px;
+      &--pull-top {
+        margin-top: 0 !important;
+      }
+    }
+
+    &__description_container {
+      .border-horizontal {
+        border: 0 !important;
+      }
+      .__image-alignment {
+        text-align: center;
+      }
+      &__content {
+        margin-top: 25px;
+      }
+      &--row-odd {
+        flex-direction: column-reverse !important;
+      }
+      &--row-even {
+        flex-direction: column-reverse !important;
+      }
+      .row {
+        &.border-horizontal {
+          margin-bottom: 1rem !important;
+          padding-bottom: 1rem !important;
+        }
+      }
+    }
+
+    &__suggestion_container {
+      padding: 34px 0;
+
+      &__links {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        a {
+          padding: 0px 6px;
+          min-width: 80px;
+          font-size: var(--c-fs-6);
+        }
+      }
+    }
+  }
+}

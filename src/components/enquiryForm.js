@@ -17,7 +17,7 @@ const enquiryForm = () => {
                     <div className="col-lg-4 col-md-12 ">
                       <div className="mb-3">
                         <input
-                          autocomplete="name"
+                          autoComplete="name"
                           type="email"
                           className="form-control"
                           placeholder="Name"
@@ -27,7 +27,7 @@ const enquiryForm = () => {
                     <div className="col-lg-4 col-md-12 ">
                       <div className="mb-3">
                         <input
-                          autocomplete="email"
+                          autoComplete="email"
                           type="email"
                           className="form-control"
                           placeholder="example@gmail.com"
@@ -43,7 +43,7 @@ const enquiryForm = () => {
                               className="form-select"
                               aria-label="Default select example"
                             >
-                              <option value="+91" selected>
+                              <option value="+91" defaultValue>
                                 +91
                               </option>
                               <option value="+652">+652</option>
@@ -55,7 +55,7 @@ const enquiryForm = () => {
                         <div className="col-8">
                           <div className="mb-3">
                             <input
-                              autocomplete="tel-national"
+                              autoComplete="tel-national"
                               type="email"
                               className="form-control"
                               placeholder="Mobile Number"

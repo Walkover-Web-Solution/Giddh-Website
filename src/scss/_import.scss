@@ -1,10 +1,6 @@
 @import 'reset';
 @import 'text';
 @import 'var';
-@import 'ak-footer';
-@import 'dv-global';
-@import 'ak-gst';
-@import 'ak-about';
 
 // SCSS Components
 @import 'scsscomps/navbar';
@@ -14,5 +10,14 @@
 @import 'scsscomps/enquiry-form-homepage';
 @import 'scsscomps/login';
 @import 'scsscomps/sign-up';
+@import 'scsscomps/all-features';
+@import 'scsscomps/privacy';
+@import 'scsscomps/pricing';
+@import 'scsscomps/security';
+@import 'scsscomps/all-feature-main-page';
+@import 'scsscomps/icici-integration';
+@import 'scsscomps/footer';
+@import 'scsscomps/gst';
+
 
 

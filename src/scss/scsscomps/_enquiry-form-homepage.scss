@@ -27,12 +27,6 @@
           .form-select {
             font-size: var(--c-fs-5);
             min-height: 46px;
-            border: none;
-  
-            &:focus {
-              border-color: unset !important;
-              box-shadow: unset !important;
-            }
           }
           textarea {
             resize: none;
@@ -62,5 +56,15 @@
     &--max-width-unset {
       max-width: 1140px !important;
     }
+  }
+  @media (max-width: 991px){
+    .enquiry_form {         
+      &__wrapper {        
+        &__form_wrapper {
+          padding-bottom: 3rem !important;
+        }
+      }
+    }
+    
   }
   // ========================== Index Page Enquiry Section SCSS CODE===============END=============================

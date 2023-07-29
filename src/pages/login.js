@@ -2,18 +2,20 @@ const logIn = () => {
   return (
     <>
       <section className="entry d-flex  ">
-        <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
+        <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">  
           <img
             src="/img/giddh-logo.svg"
             className="entry__left_section__brand_logo"
           />
+          <div className="container">
           <img
             src="/img/login-page-left-section-banner.svg"
             className="entry__left_section__banner pe-4 img-fluid"
           />
+          </div>
         </div>
         <div className="entry__right_section col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12">
-          <div className="entry__right_section__container">
+          <div className="container entry__right_section__container">
             <div className="d-none mb-5 entry__right_section__container--logo-visible-in-small">
               <img
                 src="/img/giddh-logo.svg"
