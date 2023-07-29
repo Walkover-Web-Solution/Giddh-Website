@@ -14,7 +14,7 @@ const multiCurrencyAccountingSoftware =()=>{
                 Multi-currency accounting enables you to serve overseas clients & turn your business into an International brand.
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="btn download_free_btn me-4">
+                  <a href="#" className="download_free_btn me-4">
                     Download Free
                   </a>
                   <a href="#" className="col-blue">
