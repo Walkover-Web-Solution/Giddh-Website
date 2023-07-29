@@ -210,6 +210,9 @@
         background-color: rgba(123, 127, 130, 0.1);
         font-weight: var(--c-fw-500);
         border: 0 !important;
+        padding-left: 8px;
+        padding-right: 15px;
+        height: 40px;
         &:hover,
         &:active,
         &:focus,
@@ -220,6 +223,10 @@
       .next_btn {
         background-color: var(--col-primary);
         font-weight: var(--c-fw-500);
+        border: 0 !important;
+        padding-left: 15px;
+        padding-right: 8px;
+        height: 40px;
         &:hover,
         &:active,
         &:focus,
