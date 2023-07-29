@@ -74,7 +74,7 @@ const about = () => {
 
       <section className="container p-5 about-walkover d-grid px-3">
         <div className="container about-walkover gap-3 mt-4"></div>
-        <h4 className=" heading col-primary fw-bold ms-0 py-4">
+        <h4 className=" heading col-primary c-fw-600 ms-0 py-4">
           <span className="border-bottom-hadding">
             A product from Walkover
           </span>
@@ -151,7 +151,7 @@ const about = () => {
       <section className="see-more-conatiner">
         <div className="see-company d-flex py-4">
           <div className="container d-flex gap-4 flex-column text-center">
-            <h1 className=" heading fw-bold border-bottom col-primary">
+            <h1 className=" heading c-fw-600 border-bottom col-primary">
               See More
             </h1>
             <h3 className="c-fs-3">See more about the Company</h3>
@@ -160,13 +160,13 @@ const about = () => {
             </span>
             <br></br>
             <div className="col-12 d-flex justify-content-center flex-wrap gap-3">
-              <a className="col-primary d-inline-block see-more-button fw-bold  border col-primary border-3">
+              <a className="col-primary d-inline-block see-more-button c-fw-600  border col-primary border-3">
                 Our Values
               </a>
-              <a className="see-more-button col-primary fw-bold  border bo  rder-3">
+              <a className="see-more-button col-primary c-fw-600  border bo  rder-3">
                 Leadership Principles
               </a>
-              <a className="see-more-button col-primary fw-bold border border-3">
+              <a className="see-more-button col-primary c-fw-600 border border-3">
                 The Team
               </a>
             </div>

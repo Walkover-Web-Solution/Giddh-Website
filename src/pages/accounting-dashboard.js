@@ -7,7 +7,7 @@ const accountingDashboard = () => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary fw-bold mb-4">
+                <h2 className="heading col-primary c-fw-600 mb-4">
                   Know your business' worth with simple online dashboard
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
@@ -44,7 +44,7 @@ const accountingDashboard = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary fw-bold mb-3 ">
+                <h3 className="sub-heading col-primary c-fw-600 mb-3 ">
                   Assess your numbers in one glance
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -67,7 +67,7 @@ const accountingDashboard = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Know the true worth of your business
                   </h4>
                   <p className="">
@@ -93,7 +93,7 @@ const accountingDashboard = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Track your monthly overdues
                   </h4>
                   <p className="">
@@ -118,7 +118,7 @@ const accountingDashboard = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Keep an eye on where your money goes
                   </h4>
                   <p className="">
@@ -142,7 +142,7 @@ const accountingDashboard = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Predict with more precision
                   </h4>
                   <p className="">
@@ -167,7 +167,7 @@ const accountingDashboard = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Financial ratio analysis
                   </h4>
                   <p className="">
