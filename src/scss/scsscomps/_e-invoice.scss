@@ -1,0 +1,82 @@
+.e-invoice {
+  &__first_section {
+    background-color: #f9f9f9;
+    padding: 4rem 0;
+
+    &__card {
+      border: 1px solid #f1f1f1;
+      background: var(--col-white);
+      margin: 30px auto 0 auto;
+      padding: 20px 40px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      min-height: 350px;
+      max-width: 350px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      transition: 400ms all ease;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
+      }
+
+      figure {
+        margin-bottom: 16px;
+        img {
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+  }
+  &__second_section {
+    padding: 4rem 0;
+    &__benefits_custom_view {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 3rem;
+      &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        &__item {
+          border: 1px solid var(--col-primary);
+          color: var(--col-primary);
+          padding: 15px;
+          border-radius: 4px;
+          min-width: 350px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  &__third_section {
+    background-color: #f9f9f9;
+    padding: 5rem 0;
+
+    ul {
+      list-style-type: disc;
+      color: var(--col-grey-deep);
+      li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  &__fourth_section {
+    padding: 3rem 0;
+    max-width: 1000px;
+  }
+}
+@media (max-width: 575px) {
+  .e-invoice {
+    .e-invoice__second_section__benefits_custom_view__row__item {
+      min-width: 340px;
+    }
+  }
+}
