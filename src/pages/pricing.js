@@ -2,7 +2,12 @@ import { useState } from "react";
 import { MdDone, MdClose } from "react-icons/md";
 const pricing = () => {
   const [readMoreStatus, readmoreAction] = useState(false);
-  const [readMoreParagraphStatus, showMoreParagraph] = useState(false);
+  const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
+  const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
+  const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
+  const [readMoreParagraphStatus4, showMoreParagraph4] = useState(false);
+  const [readMoreParagraphStatus5, showMoreParagraph5] = useState(false);
+
   return (
     <>
       <section className="container-fluid pricing_top_section">
@@ -342,7 +347,12 @@ const pricing = () => {
 
       <section className="container-fluid features__description_container mt-5">
         <div className="container">
-          <div className={ "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" + (readMoreParagraphStatus ? " --read-more" : "") } >
+          <div
+            className={
+              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
+              (readMoreParagraphStatus1 ? " --read-more" : "")
+            }
+          >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -356,6 +366,17 @@ const pricing = () => {
                   imperative for you to compare different accounting software
                   prices and then make your choice.
                 </p>
+                <span
+                  className="pt-3 text-decoration-underline c-fw-500"
+                  style={{
+                    display: readMoreParagraphStatus1 ? "none" : "block",
+                  }}
+                  onClick={() =>
+                    showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
+                  }
+                >
+                  Read More...
+                </span>
               </div>
             </div>
             <div className="col-md-12 col-lg-6 __image-alignment">
@@ -372,7 +393,7 @@ const pricing = () => {
               <div className="features__description_container__content">
                 <p
                   style={{
-                    display: readMoreParagraphStatus ? "block" : "none",
+                    display: readMoreParagraphStatus1 ? "block" : "none",
                   }}
                 >
                   That being said, GIDDH is a perfect web-based solution for
@@ -384,7 +405,7 @@ const pricing = () => {
                 </p>
                 <p
                   style={{
-                    display: readMoreParagraphStatus ? "block" : "none",
+                    display: readMoreParagraphStatus1 ? "block" : "none",
                   }}
                 >
                   The time has gone by when accounting was considered “an
@@ -395,17 +416,26 @@ const pricing = () => {
                   understand how they are making optimal use of accounting
                   software.
                 </p>
-                <span className="pt-3 text-decoration-underline c-fw-500"
+                <span
+                  className="pt-3 text-decoration-underline c-fw-500"
+                  style={{
+                    display: readMoreParagraphStatus1 ? "block" : "none",
+                  }}
                   onClick={() =>
-                    showMoreParagraph((readmoreDisplay) => !readmoreDisplay)
+                    showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
                   }
                 >
-                  { readMoreParagraphStatus ? "Read Less" : "Read More..."}
+                  Read Less
                 </span>
               </div>
             </div>
           </div>
-          <div className={ "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" + (readMoreParagraphStatus ? " --read-more" : "") } >
+          <div
+            className={
+              "row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal" +
+              (readMoreParagraphStatus2 ? " --read-more" : "")
+            }
+          >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -420,6 +450,18 @@ const pricing = () => {
                   experiencing different forms of shortcomings w.r.t handling
                   the business operations, managing accounts, etc.
                 </p>
+
+                <span
+                  className="pt-3 text-decoration-underline c-fw-500"
+                  style={{
+                    display: readMoreParagraphStatus2 ? "none" : "block",
+                  }}
+                  onClick={() =>
+                    showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
+                  }
+                >
+                  Read More
+                </span>
               </div>
             </div>
             <div className="col-md-12 col-lg-6 __image-alignment">
@@ -431,9 +473,50 @@ const pricing = () => {
                 />
               </figure>
             </div>
+
+            <div className="col-12">
+              <div className="features__description_container__content">
+                <p
+                  style={{
+                    display: readMoreParagraphStatus2 ? "block" : "none",
+                  }}
+                >
+                  Being a part of a growing business, it’s evident to understand
+                  that you’re already running on a shoestring budget, and thus
+                  paying a professional accountant to manage your books isn’t a
+                  wise choice.
+                </p>
+                <p
+                  style={{
+                    display: readMoreParagraphStatus2 ? "block" : "none",
+                  }}
+                >
+                  In such circumstances, having proper accounting software like
+                  GIDDH by your side can be a boon for your business. It allows
+                  you to utilize all available firm’s resources optimally
+                  reducing the hassles of your bookkeeping and accounting tasks.
+                </p>
+                <span
+                  className="pt-3 text-decoration-underline c-fw-500"
+                  style={{
+                    display: readMoreParagraphStatus2 ? "block" : "none",
+                  }}
+                  onClick={() =>
+                    showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
+                  }
+                >
+                  Read Less
+                </span>
+              </div>
+            </div>
           </div>
 
-          <div className={ "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" + (readMoreParagraphStatus ? " --read-more" : "") } >
+          <div
+            className={
+              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
+              (readMoreParagraphStatus3 ? " --read-more" : "")
+            }
+          >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -447,6 +530,17 @@ const pricing = () => {
                   every little task gets done by you solely. Automating your
                   financial operation gets easier with the integration of
                 </p>
+                <span
+                  className="pt-3 text-decoration-underline c-fw-500"
+                  style={{
+                    display: readMoreParagraphStatus3 ? "none" : "block",
+                  }}
+                  onClick={() =>
+                    showMoreParagraph3((readmoreDisplay) => !readmoreDisplay)
+                  }
+                >
+                  Read More
+                </span>
               </div>
             </div>
             <div className="col-md-12 col-lg-6 __image-alignment">
@@ -458,8 +552,42 @@ const pricing = () => {
                 />
               </figure>
             </div>
+            <div className="col-12">
+              <div className="features__description_container__content">
+                <p
+                  style={{
+                    display: readMoreParagraphStatus3 ? "block" : "none",
+                  }}
+                >
+                  cloud-based accounting software. It acts as a company’s
+                  valuable asset that improves the efficiency of your finance
+                  department. Since, financial data security is a major concern
+                  for most startups, having a reliable cloud-based accounting
+                  software like GIDDH within your business operations cycle can
+                  help. It keeps your financial information secured on an AWS
+                  cloud (a Linux server) strengthening its layers of protection
+                  and discarding any chances of an unethical data breach.
+                </p>
+                <span
+                  className="pt-3 text-decoration-underline c-fw-500"
+                  style={{
+                    display: readMoreParagraphStatus3 ? "block" : "none",
+                  }}
+                  onClick={() =>
+                    showMoreParagraph3((readmoreDisplay) => !readmoreDisplay)
+                  }
+                >
+                  Read Less
+                </span>
+              </div>
+            </div>
           </div>
-          <div className={ "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" + (readMoreParagraphStatus ? " --read-more" : "") } >
+          <div
+            className={
+              "row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal" +
+              (readMoreParagraphStatus4 ? " --read-more" : "")
+            }
+          >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -474,6 +602,18 @@ const pricing = () => {
                   manage daily workload and cater to the specific needs of your
                   clients regularly.
                 </p>
+
+                <span
+                  className="pt-3 text-decoration-underline c-fw-500"
+                  style={{
+                    display: readMoreParagraphStatus4 ? "none" : "block",
+                  }}
+                  onClick={() =>
+                    showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
+                  }
+                >
+                  Read More
+                </span>
               </div>
             </div>
             <div className="col-md-12 col-lg-6 __image-alignment">
@@ -485,8 +625,43 @@ const pricing = () => {
                 />
               </figure>
             </div>
+            <div className="col-12">
+              <div className="features__description_container__content">
+                <p
+                  style={{
+                    display: readMoreParagraphStatus4 ? "block" : "none",
+                  }}
+                >
+                  The accounting software pricing stands at just INR 800/- per
+                  organization/year with a capacity to handle 10,000
+                  transactions and unlimited users. GIDDH prepares your GST
+                  return filing automatically, identifies potential errors,
+                  never lets you miss out deadlines, and streamlines the entire
+                  process. Another significant benefit of trusting GIDDH is that
+                  it allows you to grant your CA view access to the relevant GST
+                  tax return data and create GST invoices ensuring that
+                  compliance is no more a challenge.
+                </p>
+                <span
+                  className="pt-3 text-decoration-underline c-fw-500"
+                  style={{
+                    display: readMoreParagraphStatus4 ? "block" : "none",
+                  }}
+                  onClick={() =>
+                    showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
+                  }
+                >
+                  Read Less
+                </span>
+              </div>
+            </div>
           </div>
-          <div className={ "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" + (readMoreParagraphStatus ? " --read-more" : "") } >
+          <div
+            className={
+              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
+              (readMoreParagraphStatus5 ? " --read-more" : "")
+            }
+          >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -499,6 +674,17 @@ const pricing = () => {
                   and teachers to help them get acquainted with our powerful
                   features and practice using our various options.
                 </p>
+                <span
+                  className="pt-3 text-decoration-underline c-fw-500"
+                  style={{
+                    display: readMoreParagraphStatus5 ? "none" : "block",
+                  }}
+                  onClick={() =>
+                    showMoreParagraph5((readmoreDisplay) => !readmoreDisplay)
+                  }
+                >
+                  Read More
+                </span>
               </div>
             </div>
             <div className="col-md-12 col-lg-6 __image-alignment">
@@ -509,6 +695,35 @@ const pricing = () => {
                   alt="education-economy-image"
                 />
               </figure>
+            </div>
+            <div className="col-12">
+              <div className="features__description_container__content">
+                <p
+                  style={{
+                    display: readMoreParagraphStatus5 ? "block" : "none",
+                  }}
+                >
+                  With this free alternative, teachers and students will be able
+                  to get hands-on experience about accounting terms and
+                  practices using Giddh. This free option also extends to
+                  institutes and coaching centers in order to enable instructors
+                  to explain commerce and accounting concepts using a real-world
+                  tool.We hope that this will better equip the younger
+                  generation to take a confident step into the world of
+                  accounting.
+                </p>
+                <span
+                  className="pt-3 text-decoration-underline c-fw-500"
+                  style={{
+                    display: readMoreParagraphStatus5 ? "block" : "none",
+                  }}
+                  onClick={() =>
+                    showMoreParagraph5((readmoreDisplay) => !readmoreDisplay)
+                  }
+                >
+                  Read Less
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -565,7 +780,7 @@ const pricing = () => {
             </div>
 
             <span
-             className="text-decoration-underline c-fw-500"
+              className="text-decoration-underline c-fw-500"
               onClick={() =>
                 readmoreAction((readmoreDisplay) => !readmoreDisplay)
               }

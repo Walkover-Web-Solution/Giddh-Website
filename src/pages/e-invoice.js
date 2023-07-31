@@ -45,7 +45,7 @@ const eInvoie = () => {
             <div className="col-12">
               <div className="accordion" id="accordionAllFeatures">
                 {/*============ Accordion #1 ===============*/}
-                <h2 className="fw-bold col-primary ps-3">FAQs</h2> 
+                <h2 className="fw-bold col-primary ps-3">FAQs</h2>
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingOne">
                     <button
@@ -207,7 +207,7 @@ const eInvoie = () => {
                       <span className="me-2 collapse_icon collapse_icon--close">
                         <MdRemove />
                       </span>
-                      How does integrating a bank account with Giddh benefit me?
+                      What is an Invoice Reference Number (IRN)?
                     </button>
                   </h2>
                   <div
@@ -217,33 +217,14 @@ const eInvoie = () => {
                     data-bs-parent="#accordionAllFeatures"
                   >
                     <div className="accordion-body">
-                      <ul>
-                        <li>
-                          Easily send and receive vendor payments from a single
-                          window in a convenient manner.
-                        </li>
-                        <li>
-                          Have a clearer view of the company’s cash status in no
-                          time
-                        </li>
-                        <li>
-                          Easy and automated import of bank statement
-                          transactions
-                        </li>
-                        <li>
-                          Automated reconciliation of transactions by value and
-                          reconciliation code
-                        </li>
-                        <li>
-                          Detailed reporting of bank activities and daily
-                          payments
-                        </li>
-                      </ul>
+                      An Invoice Reference Number (IRN) is a unique code issued
+                      for every e-invoice. It is a combination of the supplier
+                      GSTIN, invoice number and financial year.
                     </div>
                   </div>
                 </div>
-                 {/*============ Accordion #6 ===============*/}
-                 <div className="accordion-item">
+                {/*============ Accordion #6 ===============*/}
+                <div className="accordion-item">
                   <h2 className="accordion-header" id="headingSix">
                     <button
                       className="accordion-button collapsed"
@@ -259,7 +240,7 @@ const eInvoie = () => {
                       <span className="me-2 collapse_icon collapse_icon--close">
                         <MdRemove />
                       </span>
-                      Is e-invoicing available in all Giddh plans?
+                      What is the end-to-end workflow of an e-invoice like?
                     </button>
                   </h2>
                   <div
@@ -269,10 +250,59 @@ const eInvoie = () => {
                     data-bs-parent="#accordionAllFeatures"
                   >
                     <div className="accordion-body">
-                      The e-invoices generated need to be reported to the
-                      Invoice Registration Portal (IRP), which validates the
-                      invoice and returns it along with an Invoice Reference
-                      Number (IRN) and QR Code that is digitally signed.
+                      <ul>
+                        <li>
+                          Generation of the invoice on the taxpayer’s respective
+                          ERP system
+                        </li>
+                        <li>Generation of IRN</li>
+                        <li>
+                          Upload the JSON file of the e-invoice to the IRP for
+                          validation
+                        </li>
+                        <li>
+                          The IRP will generate/validate the hash/IRN and will
+                          add a digital signature and QR code, and return the
+                          JSON to the taxpayer
+                        </li>
+                        <li>
+                          The IRP will share this invoice data with the e-way
+                          bill system and the GSTN
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                {/*============ Accordion #7 ===============*/}
+
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingSeven">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSeven"
+                      aria-expanded="false"
+                      aria-controls="collapseSeven"
+                    >
+                      <span className="me-2 collapse_icon collapse_icon--open">
+                        <MdAdd />
+                      </span>
+                      <span className="me-2 collapse_icon collapse_icon--close">
+                        <MdRemove />
+                      </span>
+                      Is e-invoicing available in all Giddh plans?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseSeven"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingSeven"
+                    data-bs-parent="#accordionAllFeatures"
+                  >
+                    <div className="accordion-body">
+                      E-invoicing is available in all the paid plans of Giddh
+                      Accounting Software.
                     </div>
                   </div>
                 </div>

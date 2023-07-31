@@ -14,43 +14,43 @@
   font-size: var(--small-heading);
 }
 .c-fs-1 {
-  font-size: var(--c-fs-1); // 32px
+  font-size: var(--c-fs-1) !important; // 32px
 }
 .c-fs-2 {
-  font-size: var(--c-fs-2); // 28px
+  font-size: var(--c-fs-2) !important; // 28px
 }
 .c-fs-3 {
-  font-size: var(--c-fs-3); // 24px
+  font-size: var(--c-fs-3) !important; // 24px
 }
 .c-fs-4 {
-  font-size: var(--c-fs-4); // 20px
+  font-size: var(--c-fs-4) !important; // 20px
 }
 .c-fs-5 {
-  font-size: var(--c-fs-5); // 16px
+  font-size: var(--c-fs-5) !important; // 16px
 }
 .c-fs-6 {
-  font-size: var(--c-fs-6); // 14px
+  font-size: var(--c-fs-6) !important; // 14px
 }
 
 //font weight
 
 .c-fw-100 {
-  font-weight: var(--c-fw-100);
+  font-weight: var(--c-fw-100) !important;
 }
 .c-fw-300 {
-  font-weight: var(--c-fw-300);
+  font-weight: var(--c-fw-300) !important;
 }
 .c-fw-400 {
-  font-weight: var(--c-fw-400);
+  font-weight: var(--c-fw-400) !important;
 }
 .c-fw-500 {
-  font-weight: var(--c-fw-500);
+  font-weight: var(--c-fw-500) !important;
 }
 .c-fw-600 {
-  font-weight: var(--c-fw-600);
+  font-weight: var(--c-fw-600) !important;
 }
 .c-fw-800 {
-  font-weight: var(--c-fw-800);
+  font-weight: var(--c-fw-800) !important;
 }
 
 //font color
