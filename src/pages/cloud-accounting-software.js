@@ -273,13 +273,12 @@ const anywhereAnytime = () => {
               </ul>              
             </div>
               <a
-              href="javascript:;"
-              className="text-center col-dark c-fs-4 read-more-text"
+              className="text-decoration-underline text-center col-dark c-fs-4 read-more-text"
               onClick={() =>
                 readmoreAction((readmoreDisplay) => !readmoreDisplay)
               }
             >
-              {readMoreStatus ? "Read Less..." : "Read More..."}
+              {readMoreStatus ? "Read Less" : "Read More..."}
             </a>
           </div>
         </section>

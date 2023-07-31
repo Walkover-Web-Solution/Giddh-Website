@@ -58,6 +58,20 @@
         text-align: start;
       }
     }
+    .row{
+      &.--read-more {
+        .col-md-12 {
+          &.col-lg-6 {
+            &:first-child{
+              width: 80% !important;
+            }
+            &:nth-child(2){
+              width: 20% !important;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__suggestion_container {

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MdDone, MdClose } from "react-icons/md";
 const pricing = () => {
   const [readMoreStatus, readmoreAction] = useState(false);
+  const [readMoreParagraphStatus, showMoreParagraph] = useState(false);
   return (
     <>
       <section className="container-fluid pricing_top_section">
@@ -341,7 +342,7 @@ const pricing = () => {
 
       <section className="container-fluid features__description_container mt-5">
         <div className="container">
-          <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+          <div className={ "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" + (readMoreParagraphStatus ? " --read-more" : "") } >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -366,8 +367,45 @@ const pricing = () => {
                 />
               </figure>
             </div>
+
+            <div className="col-12">
+              <div className="features__description_container__content">
+                <p
+                  style={{
+                    display: readMoreParagraphStatus ? "block" : "none",
+                  }}
+                >
+                  That being said, GIDDH is a perfect web-based solution for
+                  SMEs that caters to all your accounting needs at affordable
+                  prices. Incorporating multiple modules within itself, GIDDH
+                  allows you to update your books of account effortlessly making
+                  it easier for you to track your cash flow and the overall
+                  financial health of the business.
+                </p>
+                <p
+                  style={{
+                    display: readMoreParagraphStatus ? "block" : "none",
+                  }}
+                >
+                  The time has gone by when accounting was considered “an
+                  activity only for the accountants”. Today, all professions,
+                  business owners, etc. rely on the different accounting
+                  software to make better business decisions. The following
+                  segment bifurcates different professions and helps you
+                  understand how they are making optimal use of accounting
+                  software.
+                </p>
+                <span className="pt-3 text-decoration-underline c-fw-500"
+                  onClick={() =>
+                    showMoreParagraph((readmoreDisplay) => !readmoreDisplay)
+                  }
+                >
+                  { readMoreParagraphStatus ? "Read Less" : "Read More..."}
+                </span>
+              </div>
+            </div>
           </div>
-          <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+          <div className={ "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" + (readMoreParagraphStatus ? " --read-more" : "") } >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -395,7 +433,7 @@ const pricing = () => {
             </div>
           </div>
 
-          <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+          <div className={ "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" + (readMoreParagraphStatus ? " --read-more" : "") } >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -421,7 +459,7 @@ const pricing = () => {
               </figure>
             </div>
           </div>
-          <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+          <div className={ "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" + (readMoreParagraphStatus ? " --read-more" : "") } >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -448,7 +486,7 @@ const pricing = () => {
               </figure>
             </div>
           </div>
-          <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+          <div className={ "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" + (readMoreParagraphStatus ? " --read-more" : "") } >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -526,14 +564,14 @@ const pricing = () => {
               </ul>
             </div>
 
-            <a
-              href="javascript:;"
+            <span
+             className="text-decoration-underline c-fw-500"
               onClick={() =>
                 readmoreAction((readmoreDisplay) => !readmoreDisplay)
               }
             >
-              {readMoreStatus ? "Read Less..." : "Read More..."}
-            </a>
+              {readMoreStatus ? "Read Less" : "Read More..."}
+            </span>
           </div>
         </div>
       </section>
