@@ -3,12 +3,16 @@
   &__navbar {
     border-bottom: 4px solid transparent;
     color: var(--col-dark);
-    padding: 15px 10px;
+    padding: 15px 0;
+    cursor: pointer;
 
     &:hover,
     &.active {
       border-color: var(--col-primary);
       color: var(--col-primary);
+    }
+    &.active{
+      font-weight: var(--c-fw-500);
     }
   }
   &__container {

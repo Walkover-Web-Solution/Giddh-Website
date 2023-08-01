@@ -1,4 +1,9 @@
+import React, { useState } from "react";
 const about = () => {
+  const [currentMenu, setCurrentMenu] = useState(0);
+  const setCurrent = index => {
+    setCurrentMenu(index);
+  };
   return (
     <>
       <div className="about">
@@ -6,74 +11,77 @@ const about = () => {
           <div className="row">
             <ul className="col-12 mb-4 d-flex flex-wrap justify-content-center align-items-center column-gap-4 row-gap-5 c-fs-4">
               <li>
-                <a className="about__navbar" href="about">
+                <span className={"about__navbar " + (currentMenu === 0 ? "active" : "")} href=":" onClick={() => setCurrent(0)}>
                   About Us
-                </a>
+                </span>
               </li>
               <li>
-                <a className="about__navbar active" href="#">
+                <span className={"about__navbar " + (currentMenu === 1 ? "active" : "")} href=":" onClick={() => setCurrent(1)}>
                   Our Values
-                </a>
+                </span>
               </li>
               <li>
-                <a className=" about__navbar" href="#">
+                <span className={"about__navbar " + (currentMenu === 2 ? "active" : "")} href=":" onClick={() => setCurrent(2)}>
                   Leadership Principles
-                </a>
+                </span>
               </li>
               <li>
-                <a className="about__navbar" href="#">
+                <span className={"about__navbar " + (currentMenu === 3 ? "active" : "")} href=":" onClick={() => setCurrent(3)}>
                   The Team
-                </a>
+                </span>
               </li>
             </ul>
           </div>
         </section>
-        {/* <section className="about__container">
-            <div className="container p-3">
-              <div className="row flex-lg-nowrap flex-md-wrap align-items-center justify-content-between my-5">
-                <div className="col-lg-6 col-md-12">
-                  <h3 className="heading col-white text-center border-end">
-                    About Us
-                  </h3>
-                </div>
-                <div className=" col-lg-6 col-md-12 ms-4 about__container__title">
-                  <span className="c-fs-5 col-white">
-                    Pioneering the Automation Revolution in Accounting!
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section> */}
-        {/* <section className="about__container">
-          <div className="container p-3">
-            <div className="row flex-lg-nowrap flex-md-wrap align-items-center justify-content-between my-5">
-              <div className="col-lg-6 col-md-12">
-                <h3 className="heading col-white text-center border-end">
-                  Our Values
-                </h3>
-              </div>
-              <div className=" col-lg-6 col-md-12 ms-4 about__container__title">
-                <span className="c-fs-5 col-white">
-                  Our values are the essence of our identity and summarises the
-                  purpose of our existence
-                </span>
-              </div>
-            </div>
-          </div>
-        </section> */}
         <section className="about__container">
           <div className="container p-3">
             <div className="row flex-lg-nowrap flex-md-wrap align-items-center justify-content-between my-5">
               <div className="col-lg-6 col-md-12">
                 <h3 className="heading col-white text-center border-end">
-                  Leadership Principles
+                  <span style={{
+                    display: currentMenu === 0 ? "inline" : "none"
+                  }}>
+                    About Us
+                  </span>
+                  <span style={{
+                    display: currentMenu === 1 ? "inline" : "none"
+                  }}>
+                    Our Values
+                  </span>
+                  <span style={{
+                    display: currentMenu === 2 ? "inline" : "none"
+                  }}>
+                    Leadership Principles
+                  </span>
+                  <span style={{
+                    display: currentMenu === 3 ? "inline" : "none"
+                  }}>
+                    The Team
+                  </span>
                 </h3>
               </div>
               <div className=" col-lg-6 col-md-12 ms-4 about__container__title">
-                <span className="c-fs-5 col-white">
-                  The difference between success and failure is not the amount
-                  of money or resources you have, but how a leader leads his
-                  team. A GOOD LEADER ALWAYS:
+                <span className="c-fs-5 col-white" style={{
+                  display: currentMenu === 0 ? "inline" : "none"
+                }}>
+                  Pioneering the Automation Revolution in Accounting!
+                </span>
+                <span className="c-fs-5 col-white" style={{
+                  display: currentMenu === 1 ? "inline" : "none"
+                }}>
+                  Our values are the essence of our identity and summarises the
+                  purpose of our existence
+                </span>
+                <span className="c-fs-5 col-white" style={{
+                  display: currentMenu === 2 ? "inline" : "none"
+                }}>
+                  The difference between success and failure is not the amount of money or resources you have, but how a leader leads his team.
+                  A GOOD LEADER ALWAYS:
+                </span>
+                <span className="c-fs-5 col-white" style={{
+                  display: currentMenu === 3 ? "inline" : "none"
+                }}>
+                  Our VISION is to provide technologies to organizations that enables them to take data driven financial decisions in the quickest way possible.
                 </span>
               </div>
             </div>
@@ -83,24 +91,9 @@ const about = () => {
         {/* ============================================================================================================================ */}
 
         {/* Main About Page */}
-        <div className="d-none">
-          <section className="about__container">
-            <div className="container p-3">
-              <div className="row flex-lg-nowrap flex-md-wrap align-items-center justify-content-between my-5">
-                <div className="col-lg-6 col-md-12">
-                  <h3 className="heading col-white text-center border-end">
-                    About Us
-                  </h3>
-                </div>
-                <div className=" col-lg-6 col-md-12 ms-4 about__container__title">
-                  <span className="c-fs-5 col-white">
-                    Pioneering the Automation Revolution in Accounting!
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
-
+        <div style={{
+          display: currentMenu === 0 ? "block" : "none"
+        }}>
           <section className="about__content p-8 my-5 gap-5">
             <div className="container gap-4">
               <p className="c-fs-5 mb-5">
@@ -215,7 +208,9 @@ const about = () => {
         </div>
 
         {/* Our Values Page */}
-        <div className="d-none">
+        <div style={{
+          display: currentMenu === 1 ? "block" : "none"
+        }}>
           <div className="our_values">
             <section className="container-fluid our_values__illustration">
               <div className="container">
@@ -224,7 +219,7 @@ const about = () => {
                     <figure>
                       <img
                         src="/img/our-values/customers-come-first.svg"
-                        alt="customer-come-first icon"
+                        alt="Customers Come First Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
                         {" "}
@@ -236,7 +231,7 @@ const about = () => {
                     <figure>
                       <img
                         src="/img/our-values/embracing-setbacks-to-break-boundaries.svg"
-                        alt="Setbacks to Break Boundaries icon"
+                        alt="Setbacks to Break Boundaries Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
                         {" "}
@@ -248,7 +243,7 @@ const about = () => {
                     <figure>
                       <img
                         src="/img/our-values/we-set-impossible-goals.svg"
-                        alt="We Set Impossible Goals icon"
+                        alt="We Set Impossible Goals Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
                         {" "}
@@ -261,7 +256,7 @@ const about = () => {
                     <figure>
                       <img
                         src="/img/our-values/people-are-our-power.svg"
-                        alt="People are our Power icon"
+                        alt="People are our Power Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
                         {" "}
@@ -273,11 +268,11 @@ const about = () => {
                     <figure>
                       <img
                         src="/img/our-values/we-focus-on-why-and-how.svg"
-                        alt="customer-come-first icon"
+                        alt="We Focus on Why & How? Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
                         {" "}
-                        Customers Come First
+                        We Focus on Why & How?
                       </figcaption>
                     </figure>
                   </a>
@@ -285,11 +280,11 @@ const about = () => {
                     <figure>
                       <img
                         src="/img/our-values/always-we-before-me.svg"
-                        alt="customer-come-first icon"
+                        alt="Always We Before Me Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
                         {" "}
-                        Customers Come First
+                        Always We Before Me
                       </figcaption>
                     </figure>
                   </a>
@@ -298,11 +293,11 @@ const about = () => {
                     <figure>
                       <img
                         src="/img/our-values/we-do-not-settle.svg"
-                        alt="customer-come-first icon"
+                        alt="We Don’t Settle Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
                         {" "}
-                        Customers Come First
+                        We Don’t Settle
                       </figcaption>
                     </figure>
                   </a>
@@ -310,11 +305,11 @@ const about = () => {
                     <figure>
                       <img
                         src="/img/our-values/we-empower-the-future.svg"
-                        alt="customer-come-first icon"
+                        alt="We Empower The Future Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
                         {" "}
-                        Customers Come First
+                        We Empower The Future
                       </figcaption>
                     </figure>
                   </a>
@@ -322,11 +317,11 @@ const about = () => {
                     <figure>
                       <img
                         src="/img/our-values/transparency-and-honesty.svg"
-                        alt="customer-come-first icon"
+                        alt="Transparency and Honesty Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
                         {" "}
-                        Customers Come First
+                        Transparency and Honesty
                       </figcaption>
                     </figure>
                   </a>
@@ -601,7 +596,9 @@ const about = () => {
         </div>
 
         {/* Leadership Principles Page */}
-        <div className="">
+        <div style={{
+          display: currentMenu === 2 ? "block" : "none"
+        }}>
           <div className="leadership_principles">
             <div className="our_values">
               <section className="container-fluid our_values__illustration">
@@ -611,11 +608,11 @@ const about = () => {
                       <figure>
                         <img
                           src="/img/our-values/customers-come-first.svg"
-                          alt="customer-come-first icon"
+                          alt="Nurtures Collaboration Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
                           {" "}
-                          Customers Come First
+                          Nurtures Collaboration
                         </figcaption>
                       </figure>
                     </a>
@@ -623,11 +620,11 @@ const about = () => {
                       <figure>
                         <img
                           src="/img/our-values/embracing-setbacks-to-break-boundaries.svg"
-                          alt="Setbacks to Break Boundaries icon"
+                          alt="Leads through Communication Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
                           {" "}
-                          Setbacks to Break Boundaries
+                          Leads through Communication
                         </figcaption>
                       </figure>
                     </a>
@@ -635,11 +632,11 @@ const about = () => {
                       <figure>
                         <img
                           src="/img/our-values/we-set-impossible-goals.svg"
-                          alt="We Set Impossible Goals icon"
+                          alt="Leads By Example Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
                           {" "}
-                          We Set Impossible Goals
+                          Leads By Example
                         </figcaption>
                       </figure>
                     </a>
@@ -648,11 +645,11 @@ const about = () => {
                       <figure>
                         <img
                           src="/img/our-values/people-are-our-power.svg"
-                          alt="People are our Power icon"
+                          alt="Consults and Delegates Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
                           {" "}
-                          People are our Power
+                          Consults and Delegates
                         </figcaption>
                       </figure>
                     </a>
@@ -660,11 +657,12 @@ const about = () => {
                       <figure>
                         <img
                           src="/img/our-values/we-focus-on-why-and-how.svg"
-                          alt="customer-come-first icon"
+                          alt="Is Courageous Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
                           {" "}
-                          Customers Come First
+
+                          Is Courageous
                         </figcaption>
                       </figure>
                     </a>
@@ -672,11 +670,11 @@ const about = () => {
                       <figure>
                         <img
                           src="/img/our-values/always-we-before-me.svg"
-                          alt="customer-come-first icon"
+                          alt="Adds Integrity Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
                           {" "}
-                          Customers Come First
+                          Adds Integrity
                         </figcaption>
                       </figure>
                     </a>
@@ -685,11 +683,11 @@ const about = () => {
                       <figure>
                         <img
                           src="/img/our-values/we-do-not-settle.svg"
-                          alt="customer-come-first icon"
+                          alt="Serves for the Greater Good Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
                           {" "}
-                          Customers Come First
+                          Serves for the Greater Good
                         </figcaption>
                       </figure>
                     </a>
@@ -697,11 +695,11 @@ const about = () => {
                       <figure>
                         <img
                           src="/img/our-values/we-empower-the-future.svg"
-                          alt="customer-come-first icon"
+                          alt="Defines & Creates Processes Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
                           {" "}
-                          Customers Come First
+                          Defines & Creates Processes
                         </figcaption>
                       </figure>
                     </a>
@@ -709,11 +707,11 @@ const about = () => {
                       <figure>
                         <img
                           src="/img/our-values/transparency-and-honesty.svg"
-                          alt="customer-come-first icon"
+                          alt="Adapts to Evolve Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
                           {" "}
-                          Customers Come First
+                          Adapts to Evolve
                         </figcaption>
                       </figure>
                     </a>
@@ -725,7 +723,9 @@ const about = () => {
         </div>
 
         {/* The Team Page */}
-        <div className="d-none  ">
+        <div style={{
+          display: currentMenu === 3 ? "block" : "none"
+        }}>
           <div className="team"></div>
         </div>
 
