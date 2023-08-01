@@ -220,7 +220,7 @@ const anywhereAnytime = () => {
                   style={{
                     display: readMoreParagraphStatus1 ? "block" : "none",
                   }}
-                  className="table table-bordered"
+                  className="table table-bordered table-responsive"
                 >
                   <thead>
                     <tr>

@@ -146,7 +146,7 @@ const eInvoie = () => {
               Benefits of e-invoicing with Giddh
             </h2>
             <div className="e-invoice__second_section__benefits_custom_view mt-5">
-              <div class="e-invoice__second_section__benefits_custom_view__row">
+              <div className="e-invoice__second_section__benefits_custom_view__row">
                 <div className="e-invoice__second_section__benefits_custom_view__row__item">
                   Increased Accuracy
                 </div>
@@ -157,12 +157,12 @@ const eInvoie = () => {
                   Reduced Risk of Tax Evasion
                 </div>
               </div>
-              <div class="e-invoice__second_section__benefits_custom_view__row">
+              <div className="e-invoice__second_section__benefits_custom_view__row">
                 <div className="e-invoice__second_section__benefits_custom_view__row__item">
                   Uniqueness with IRN and QR Code for B2B
                 </div>
               </div>
-              <div class=" e-invoice__second_section__benefits_custom_view__row">
+              <div className=" e-invoice__second_section__benefits_custom_view__row">
                 <div className="e-invoice__second_section__benefits_custom_view__row__item">
                   Better Visibility and Transparency
                 </div>
@@ -201,6 +201,7 @@ const eInvoie = () => {
                   <img
                     src="/img/gst-e-invoice-graphic.svg"
                     alt="gst e-invoice image"
+                    className="img-fluid"
                   />
                 </figure>
               </div>

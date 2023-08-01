@@ -466,15 +466,15 @@ const signUp = () => {
                   </div>
                 <div className="row">
                   <div className="col-12">
-                    <div class="form-check my-4 pb-2">
+                    <div className="form-check my-4 pb-2">
                       <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="checkbox"
                         value="true"
                         id="termsCheckBox"
                       />
                       <label
-                        class="form-check-label c-fs-6 c-fw-500 ps-0"
+                        className="form-check-label c-fs-6 c-fw-500 ps-0"
                         htmlFor="termsCheckBox"
                       >
                         I agree to the{" "}
