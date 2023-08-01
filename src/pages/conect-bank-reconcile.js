@@ -15,7 +15,7 @@ const conectBankReconcile = () => {
                   of the most important asset of your business – cash.
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="btn download_free_btn me-4">
+                  <a href="#" className="download_free_btn me-4">
                     Download Free
                   </a>
                   <a href="#" className="col-blue">

@@ -496,14 +496,14 @@
       &__birch,
       &__oak,
       &__vine,
-      &__sequoia {
-        background-color: inherit;
-      }
+      &__sequoia,
       &__b1,
       &__b2,
       &__b3,
       &__b4,
-      &__b5,
+      &__b5 {
+        background-color: inherit;
+      }      
       &__t1,
       &__t2,
       &__t3,
