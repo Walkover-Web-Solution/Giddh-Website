@@ -101,7 +101,7 @@ const terms = () => {
               <p className="mb-4 c-fs-5">Your has a corresponding meaning.</p>
               <h3 className="mb-3 c-fs-4  sub-heading">2. USE OF SOFTWARE</h3>
 
-              <p className=" margi mb-4 c-fs-5">
+              <p className="mb-4 c-fs-5">
                 Giddh grants You the right to access and use the Service via the
                 Website with the particular user roles available to You
                 according to Your subscription type. This right is

@@ -1,7 +1,7 @@
 const navbar = () => {
   return (
     <>
-      <nav className="navbar navbar--box-shadow navbar--theme-white navbar-expand-lg position-fixed w-100">
+      <nav className="navbar navbar--box-shadow navbar--theme-white navbar-expand-lg position-fixed w-100 py-0">
         <div className="container-fluid">
           <a className="navbar--navbar_brand" href="/">
             <svg
@@ -93,7 +93,7 @@ const navbar = () => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link active" href="make-the-switch">
                   Make the Switch
                 </a>
               </li>
@@ -119,14 +119,14 @@ const navbar = () => {
                             <a href="icici-integration">ICICI Integration</a>
                           </li>
                           <li>
-                            <a href="#">E-Invoice</a>
+                            <a href="e-invoice">E-Invoice</a>
                           </li>
                         </ul>
                       </li>
                       <li className="col-lg-3 col-md-4 col-sm-6">
                         <ul className="ps-0">
                           <li>
-                            <a href="#">Invoicing</a>
+                            <a href="invoice-software">Invoicing</a>
                           </li>
                           <li>
                             <a href="multi-user-accounting-software">Share Data</a>

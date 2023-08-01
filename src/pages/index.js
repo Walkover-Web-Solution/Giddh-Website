@@ -1,5 +1,5 @@
 import FEATUREGALLERY from "@/components/featureGallery";
-import MAKETHESWITCH from "@/components/makeTheSwitch";
+import MAKETHESWITCHINDEXPAGE from "@/components/makeTheSwitch";
 import ENQUIRYFORM from "@/components/enquiryForm";
 import GSTINDEXPAGE from "@/components/gstIndexPage";
 
@@ -9,7 +9,7 @@ const index = () => {
       <ENQUIRYFORM />
       <GSTINDEXPAGE />    
       <FEATUREGALLERY />
-      <MAKETHESWITCH />
+      <MAKETHESWITCHINDEXPAGE />
     </>
   );
 };
