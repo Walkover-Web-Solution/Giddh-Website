@@ -72,17 +72,6 @@
   margin-right: 60px;
 }
 
-.gst-features {
-  .gst-feature-container {
-    &__img {
-      width: clamp(300px, 45vh, 500px);
-      @media only screen and (max-width: 768px) {
-        width: clamp(200px, 40vh, 300px);
-      }
-    }
-  }
-}
-
 .gst-return {
   background-color: #d2d3d5;
   &__wrapper {

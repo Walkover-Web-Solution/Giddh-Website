@@ -5,7 +5,7 @@ const privacyPolicy = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="sub-heading c-fw-600 mb-4 text-center col-primary">
+              <h2 className="sub-heading c-fw-600 mb-4 text-center col-dark">
                 Your privacy is respected.
               </h2>
               <p className="mb-4 c-fs-5">
@@ -413,7 +413,7 @@ const privacyPolicy = () => {
                   information, data or other materials. Further, You agree not
                   to reverse engineer or reverse compile any of the Yodlee
                   Service technology, including but not limited to, any Java
-                  applets associated with the Yodlee Service .
+                  applets associated with the Yodlee Service.
                 </li>
                 <br />
                 <li>
@@ -455,7 +455,7 @@ const privacyPolicy = () => {
                   agency and power of attorney granted by You. You understand
                   and agree that the Yodlee Service is not endorsed or sponsored
                   by any third party account providers accessible through the
-                  Yodlee Service .
+                  Yodlee Service.
                 </li>
                 <br />
                 <li>
@@ -519,7 +519,7 @@ const privacyPolicy = () => {
                   non-performance of any third party account provider site, even
                   if the provider has been advised previously of the possibility
                   of such damages; or (vii) any other matter relating to the
-                  Yodlee Service .
+                  Yodlee Service.
                 </li>
                 <br />
                 <li>

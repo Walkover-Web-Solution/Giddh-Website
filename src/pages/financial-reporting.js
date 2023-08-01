@@ -167,6 +167,39 @@ const financialReporting = () => {
             </div>
           </div>
         </section>
+        <section className="container-fluid my-5 py-5">
+          <div className="container">
+            <div className="text-center">
+              <h2 className="col-primary sub-heading c-fw-600 mb-4">
+                Your all round reporting solution
+              </h2>
+              <p className="col-dark-light c-fs-3">
+                Giddh online accounting software produces all of the standard
+                financial reports required by a forward- thinking business to
+                make smarter and faster business decisions.
+              </p>
+            </div>
+            <div className="d-flex my-5">
+              <div className="mx-auto">
+              <ul className="custom-ul-with-right-tick c-fs-4 col-dark-light">
+                <li className="mb-5">
+                  Profit/Loss Statement, Balance Sheet, General Ledger and Trial
+                  Balance.
+                </li>
+                <li className="mb-5">
+                  Drill down the reports by date, financial year, or even
+                  project type.
+                </li>
+                <li className="mb-5">
+                  Export reports in any of the two supported formats: PDF or
+                  Excel.
+                </li>
+                <li className="mb-5">Invite your accountant, partners or investors.</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <section className="container-fluid features__suggestion_container">
           <div className="container">
@@ -207,14 +240,12 @@ const financialReporting = () => {
         <section className="container-fluid features__accordion_container">
           <div className="container">
             <div className="row">
-            
               <div className="col-12">
-              
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>  
-                  <div className="accordion-item">   
-                    <h2 className="accordion-header" id="headingOne"> 
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
                       <button
                         className="accordion-button collapsed"
                         type="button"
@@ -435,7 +466,8 @@ const financialReporting = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        Does Giddh provide a Balance sheet, P&amp;L and Balance sheet reports?
+                        Does Giddh provide a Balance sheet, P&amp;L and Balance
+                        sheet reports?
                       </button>
                     </h2>
                     <div
@@ -445,7 +477,11 @@ const financialReporting = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Giddh’s financial reporting and analysis software offers all the essential financial reports that an organisation or enterprise needs to make critical business decisions. They include a balance sheet, P&L statements, general ledger, trial balance, etc.
+                        Giddh’s financial reporting and analysis software offers
+                        all the essential financial reports that an organisation
+                        or enterprise needs to make critical business decisions.
+                        They include a balance sheet, P&L statements, general
+                        ledger, trial balance, etc.
                       </div>
                     </div>
                   </div>
@@ -466,7 +502,8 @@ const financialReporting = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        Can I download or directly share the report to the CA or accountant or anyone from Giddh?
+                        Can I download or directly share the report to the CA or
+                        accountant or anyone from Giddh?
                       </button>
                     </h2>
                     <div
@@ -476,7 +513,11 @@ const financialReporting = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Giddh’s finance reporting software offers the financial reports in formats like PDF and Excel, which make it easier to download or directly share the report to the CA or accountant, stakeholders of your business as well as other departments of your organisation.
+                        Giddh’s finance reporting software offers the financial
+                        reports in formats like PDF and Excel, which make it
+                        easier to download or directly share the report to the
+                        CA or accountant, stakeholders of your business as well
+                        as other departments of your organisation.
                       </div>
                     </div>
                   </div>

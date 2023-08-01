@@ -28,7 +28,7 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="#">Affiliate With Us</a>
+                        <a href="affiliate">Affiliate With Us</a>
                       </li>
                       <li>
                         <a href="terms">Terms of Use</a>
@@ -76,27 +76,34 @@ const Footer = () => {
                 </h5>
                 <div>
                   <div className=" footer-dpn mb-3">
-                    <div className=" btn-group dropup ">
+                    <div className="dropdown btn-group">
                       <button
                         type="button"
                         className="btn btn-down dropdown-toggle contry-icon"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
+                        id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false"
                       >
                         <img src="img/earth.svg" alt="" /> IN - India
                       </button>
-                      <div className="dropdown-menu">
-                        <a href="#" className="dropdown-item">
-                          IN - India
-                        </a>
-                        <a href="#" className="dropdown-item">
-                          UAE - United Arab Emirates
-                        </a>
-                        <a href="#" className="dropdown-item">
-                          UK - United Kingdom
-                        </a>
-                      </div>
+                      <ul
+                        className="dropdown-menu country_dropdown__menu"
+                        aria-labelledby="countryDropdown"
+                      >
+                        <li>
+                          <a className="dropdown-item" href="#">
+                            IN - India
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item" href="#">
+                            UAE - United Arab Emirates
+                          </a>
+                        </li>
+                        <li>
+                          <a className="dropdown-item" href="#">
+                            UK - United Kingdom
+                          </a>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                   <ul className="footer-list list-unstyled class">
@@ -105,22 +112,14 @@ const Footer = () => {
                         <ul className="footer-list list-unstyled class">
                           <li>
                             Sales :{" "}
-                            <a
-                              href="/cdn-cgi/l/email-protection"
-                              className="cf_email"
-                              data-cfemail="4e3d2f222b3d0e29272a2a26602d2123"
-                            >
-                              [email&#160;protected]
+                            <a href="#" className="cf_email">
+                              sales@giddh.com
                             </a>
                           </li>
                           <li>
                             Support:{" "}
-                            <a
-                              href="/cdn-cgi/l/email-protection"
-                              className="cf_email"
-                              data-cfemail="fd8e888d8d928f89bd9a94999995d39e9290"
-                            >
-                              [email&#160;protected]
+                            <a href="#" className="cf_email">
+                              support@giddh.com
                             </a>
                           </li>
                         </ul>
