@@ -16,19 +16,19 @@ body{
 }
 
 ::-webkit-scrollbar{
-    width: 10px;
+    width: 8px;
 }
 ::-webkit-scrollbar-thumb{
-    width: 10px;
-    border-radius: 10px;
-    background-color: var(--secondary);
+    width: 8px;
+    border-radius: 2px;
+    background-color: var(--col-primary);
 }
 ::-webkit-scrollbar-track{
     background: rgba(0,0,0,0.1);
-    width: 10px;
+    width: 8px;   
 }
 @media (max-width: 991px) {
     ::-webkit-scrollbar{
-        display: none;
+        display: none;  
     }
 }

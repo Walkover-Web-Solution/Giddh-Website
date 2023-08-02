@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 const about = () => {
   const [currentMenu, setCurrentMenu] = useState(0);
-  const setCurrent = index => {
+  const setCurrent = (index) => {
     setCurrentMenu(index);
   };
   return (
@@ -11,22 +11,46 @@ const about = () => {
           <div className="row">
             <ul className="col-12 mb-4 d-flex flex-wrap justify-content-center align-items-center column-gap-4 row-gap-5 c-fs-4">
               <li>
-                <span className={"about__navbar " + (currentMenu === 0 ? "active" : "")} href=":" onClick={() => setCurrent(0)}>
+                <span
+                  className={
+                    "about__navbar " + (currentMenu === 0 ? "active" : "")
+                  }
+                  href=":"
+                  onClick={() => setCurrent(0)}
+                >
                   About Us
                 </span>
               </li>
               <li>
-                <span className={"about__navbar " + (currentMenu === 1 ? "active" : "")} href=":" onClick={() => setCurrent(1)}>
+                <span
+                  className={
+                    "about__navbar " + (currentMenu === 1 ? "active" : "")
+                  }
+                  href=":"
+                  onClick={() => setCurrent(1)}
+                >
                   Our Values
                 </span>
               </li>
               <li>
-                <span className={"about__navbar " + (currentMenu === 2 ? "active" : "")} href=":" onClick={() => setCurrent(2)}>
+                <span
+                  className={
+                    "about__navbar " + (currentMenu === 2 ? "active" : "")
+                  }
+                  href=":"
+                  onClick={() => setCurrent(2)}
+                >
                   Leadership Principles
                 </span>
               </li>
               <li>
-                <span className={"about__navbar " + (currentMenu === 3 ? "active" : "")} href=":" onClick={() => setCurrent(3)}>
+                <span
+                  className={
+                    "about__navbar " + (currentMenu === 3 ? "active" : "")
+                  }
+                  href=":"
+                  onClick={() => setCurrent(3)}
+                >
                   The Team
                 </span>
               </li>
@@ -38,50 +62,73 @@ const about = () => {
             <div className="row flex-lg-nowrap flex-md-wrap align-items-center justify-content-between my-5">
               <div className="col-lg-6 col-md-12">
                 <h3 className="heading col-white text-center border-end">
-                  <span style={{
-                    display: currentMenu === 0 ? "inline" : "none"
-                  }}>
+                  <span
+                    style={{
+                      display: currentMenu === 0 ? "inline" : "none",
+                    }}
+                  >
                     About Us
                   </span>
-                  <span style={{
-                    display: currentMenu === 1 ? "inline" : "none"
-                  }}>
+                  <span
+                    style={{
+                      display: currentMenu === 1 ? "inline" : "none",
+                    }}
+                  >
                     Our Values
                   </span>
-                  <span style={{
-                    display: currentMenu === 2 ? "inline" : "none"
-                  }}>
+                  <span
+                    style={{
+                      display: currentMenu === 2 ? "inline" : "none",
+                    }}
+                  >
                     Leadership Principles
                   </span>
-                  <span style={{
-                    display: currentMenu === 3 ? "inline" : "none"
-                  }}>
+                  <span
+                    style={{
+                      display: currentMenu === 3 ? "inline" : "none",
+                    }}
+                  >
                     The Team
                   </span>
                 </h3>
               </div>
               <div className=" col-lg-6 col-md-12 ms-4 about__container__title">
-                <span className="c-fs-5 col-white" style={{
-                  display: currentMenu === 0 ? "inline" : "none"
-                }}>
+                <span
+                  className="c-fs-5 col-white"
+                  style={{
+                    display: currentMenu === 0 ? "inline" : "none",
+                  }}
+                >
                   Pioneering the Automation Revolution in Accounting!
                 </span>
-                <span className="c-fs-5 col-white" style={{
-                  display: currentMenu === 1 ? "inline" : "none"
-                }}>
+                <span
+                  className="c-fs-5 col-white"
+                  style={{
+                    display: currentMenu === 1 ? "inline" : "none",
+                  }}
+                >
                   Our values are the essence of our identity and summarises the
                   purpose of our existence
                 </span>
-                <span className="c-fs-5 col-white" style={{
-                  display: currentMenu === 2 ? "inline" : "none"
-                }}>
-                  The difference between success and failure is not the amount of money or resources you have, but how a leader leads his team.
-                  A GOOD LEADER ALWAYS:
+                <span
+                  className="c-fs-5 col-white"
+                  style={{
+                    display: currentMenu === 2 ? "inline" : "none",
+                  }}
+                >
+                  The difference between success and failure is not the amount
+                  of money or resources you have, but how a leader leads his
+                  team. A GOOD LEADER ALWAYS:
                 </span>
-                <span className="c-fs-5 col-white" style={{
-                  display: currentMenu === 3 ? "inline" : "none"
-                }}>
-                  Our VISION is to provide technologies to organizations that enables them to take data driven financial decisions in the quickest way possible.
+                <span
+                  className="c-fs-5 col-white"
+                  style={{
+                    display: currentMenu === 3 ? "inline" : "none",
+                  }}
+                >
+                  Our VISION is to provide technologies to organizations that
+                  enables them to take data driven financial decisions in the
+                  quickest way possible.
                 </span>
               </div>
             </div>
@@ -91,9 +138,11 @@ const about = () => {
         {/* ============================================================================================================================ */}
 
         {/* Main About Page */}
-        <div style={{
-          display: currentMenu === 0 ? "block" : "none"
-        }}>
+        <div
+          style={{
+            display: currentMenu === 0 ? "block" : "none",
+          }}
+        >
           <section className="about__content p-8 my-5 gap-5">
             <div className="container gap-4">
               <p className="c-fs-5 mb-5">
@@ -208,9 +257,11 @@ const about = () => {
         </div>
 
         {/* Our Values Page */}
-        <div style={{
-          display: currentMenu === 1 ? "block" : "none"
-        }}>
+        <div
+          style={{
+            display: currentMenu === 1 ? "block" : "none",
+          }}
+        >
           <div className="our_values">
             <section className="container-fluid our_values__illustration">
               <div className="container">
@@ -218,7 +269,7 @@ const about = () => {
                   <a href="#" className="our_values__illustration__content">
                     <figure>
                       <img
-                        src="/img/our-values/customers-come-first.svg"
+                        src="/img/about/our-values/customers-come-first.svg"
                         alt="Customers Come First Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
@@ -230,7 +281,7 @@ const about = () => {
                   <a href="#" className="our_values__illustration__content">
                     <figure>
                       <img
-                        src="/img/our-values/embracing-setbacks-to-break-boundaries.svg"
+                        src="/img/about/our-values/embracing-setbacks-to-break-boundaries.svg"
                         alt="Setbacks to Break Boundaries Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
@@ -242,7 +293,7 @@ const about = () => {
                   <a href="#" className="our_values__illustration__content">
                     <figure>
                       <img
-                        src="/img/our-values/we-set-impossible-goals.svg"
+                        src="/img/about/our-values/we-set-impossible-goals.svg"
                         alt="We Set Impossible Goals Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
@@ -255,7 +306,7 @@ const about = () => {
                   <a href="#" className="our_values__illustration__content">
                     <figure>
                       <img
-                        src="/img/our-values/people-are-our-power.svg"
+                        src="/img/about/our-values/people-are-our-power.svg"
                         alt="People are our Power Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
@@ -267,7 +318,7 @@ const about = () => {
                   <a href="#" className="our_values__illustration__content">
                     <figure>
                       <img
-                        src="/img/our-values/we-focus-on-why-and-how.svg"
+                        src="/img/about/our-values/we-focus-on-why-and-how.svg"
                         alt="We Focus on Why & How? Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
@@ -279,7 +330,7 @@ const about = () => {
                   <a href="#" className="our_values__illustration__content">
                     <figure>
                       <img
-                        src="/img/our-values/always-we-before-me.svg"
+                        src="/img/about/our-values/always-we-before-me.svg"
                         alt="Always We Before Me Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
@@ -292,7 +343,7 @@ const about = () => {
                   <a href="#" className="our_values__illustration__content">
                     <figure>
                       <img
-                        src="/img/our-values/we-do-not-settle.svg"
+                        src="/img/about/our-values/we-do-not-settle.svg"
                         alt="We Don’t Settle Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
@@ -304,7 +355,7 @@ const about = () => {
                   <a href="#" className="our_values__illustration__content">
                     <figure>
                       <img
-                        src="/img/our-values/we-empower-the-future.svg"
+                        src="/img/about/our-values/we-empower-the-future.svg"
                         alt="We Empower The Future Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
@@ -316,7 +367,7 @@ const about = () => {
                   <a href="#" className="our_values__illustration__content">
                     <figure>
                       <img
-                        src="/img/our-values/transparency-and-honesty.svg"
+                        src="/img/about/our-values/transparency-and-honesty.svg"
                         alt="Transparency and Honesty Icon"
                       />
                       <figcaption className="col-primary c-fs-6">
@@ -350,7 +401,7 @@ const about = () => {
                       <div className="col-lg-4">
                         <figure>
                           <img
-                            src="/img/our-values/customers-come-first-grey.svg"
+                            src="/img/about/our-values/customers-come-first-grey.svg"
                             className="img-fluid"
                             alt="logo"
                           />
@@ -379,7 +430,7 @@ const about = () => {
                       <div className="col-lg-4">
                         <figure>
                           <img
-                            src="/img/our-values/embracing-setbacks-to-break-boundaries-grey.svg"
+                            src="/img/about/our-values/embracing-setbacks-to-break-boundaries-grey.svg"
                             className="img-fluid"
                             alt="logo"
                           />
@@ -407,7 +458,7 @@ const about = () => {
                       <div className="col-lg-4">
                         <figure>
                           <img
-                            src="/img/our-values/we-set-impossible-goals-grey.svg"
+                            src="/img/about/our-values/we-set-impossible-goals-grey.svg"
                             className="img-fluid"
                             alt="logo"
                           />
@@ -437,7 +488,7 @@ const about = () => {
                       <div className="col-lg-4">
                         <figure>
                           <img
-                            src="/img/our-values/people-are-our-power-grey.svg"
+                            src="/img/about/our-values/people-are-our-power-grey.svg"
                             className="img-fluid"
                             alt="logo"
                           />
@@ -465,7 +516,7 @@ const about = () => {
                       <div className="col-lg-4">
                         <figure>
                           <img
-                            src="/img/our-values/we-focus-on-why-and-how-grey.svg.svg"
+                            src="/img/about/our-values/we-focus-on-why-and-how-grey.svg.svg"
                             className="img-fluid"
                             alt="logo"
                           />
@@ -494,7 +545,7 @@ const about = () => {
                       <div className="col-lg-4">
                         <figure>
                           <img
-                            src="/img/our-values/always-we-before-me-grey.svg"
+                            src="/img/about/our-values/always-we-before-me-grey.svg"
                             className="img-fluid"
                             alt="logo"
                           />
@@ -524,7 +575,7 @@ const about = () => {
                       <div className="col-lg-4">
                         <figure>
                           <img
-                            src="/img/our-values/we-do-not-settle-grey.svg"
+                            src="/img/about/our-values/we-do-not-settle-grey.svg"
                             className="img-fluid"
                             alt="logo"
                           />
@@ -552,7 +603,7 @@ const about = () => {
                       <div className="col-lg-4">
                         <figure>
                           <img
-                            src="/img/our-values/we-empower-the-future-grey.svg"
+                            src="/img/about/our-values/we-empower-the-future-grey.svg"
                             className="img-fluid"
                             alt="logo"
                           />
@@ -581,7 +632,7 @@ const about = () => {
                       <div className="col-lg-4">
                         <figure>
                           <img
-                            src="/img/our-values/transparency-and-honesty-grey.svg"
+                            src="/img/about/our-values/transparency-and-honesty-grey.svg"
                             className="img-fluid"
                             alt="logo"
                           />
@@ -596,9 +647,11 @@ const about = () => {
         </div>
 
         {/* Leadership Principles Page */}
-        <div style={{
-          display: currentMenu === 2 ? "block" : "none"
-        }}>
+        <div
+          style={{
+            display: currentMenu === 2 ? "block" : "none",
+          }}
+        >
           <div className="leadership_principles">
             <div className="our_values">
               <section className="container-fluid our_values__illustration">
@@ -607,7 +660,7 @@ const about = () => {
                     <a href="#" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/our-values/customers-come-first.svg"
+                          src="/img/about/our-values/customers-come-first.svg"
                           alt="Nurtures Collaboration Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -619,7 +672,7 @@ const about = () => {
                     <a href="#" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/our-values/embracing-setbacks-to-break-boundaries.svg"
+                          src="/img/about/our-values/embracing-setbacks-to-break-boundaries.svg"
                           alt="Leads through Communication Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -631,7 +684,7 @@ const about = () => {
                     <a href="#" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/our-values/we-set-impossible-goals.svg"
+                          src="/img/about/our-values/we-set-impossible-goals.svg"
                           alt="Leads By Example Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -644,7 +697,7 @@ const about = () => {
                     <a href="#" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/our-values/people-are-our-power.svg"
+                          src="/img/about/our-values/people-are-our-power.svg"
                           alt="Consults and Delegates Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -656,12 +709,11 @@ const about = () => {
                     <a href="#" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/our-values/we-focus-on-why-and-how.svg"
+                          src="/img/about/our-values/we-focus-on-why-and-how.svg"
                           alt="Is Courageous Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
                           {" "}
-
                           Is Courageous
                         </figcaption>
                       </figure>
@@ -669,7 +721,7 @@ const about = () => {
                     <a href="#" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/our-values/always-we-before-me.svg"
+                          src="/img/about/our-values/always-we-before-me.svg"
                           alt="Adds Integrity Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -682,7 +734,7 @@ const about = () => {
                     <a href="#" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/our-values/we-do-not-settle.svg"
+                          src="/img/about/our-values/we-do-not-settle.svg"
                           alt="Serves for the Greater Good Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -694,7 +746,7 @@ const about = () => {
                     <a href="#" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/our-values/we-empower-the-future.svg"
+                          src="/img/about/our-values/we-empower-the-future.svg"
                           alt="Defines & Creates Processes Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -706,7 +758,7 @@ const about = () => {
                     <a href="#" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/our-values/transparency-and-honesty.svg"
+                          src="/img/about/our-values/transparency-and-honesty.svg"
                           alt="Adapts to Evolve Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -718,15 +770,541 @@ const about = () => {
                   </div>
                 </div>
               </section>
+              <section className="leadership_principles__banner_wrapper">
+                <div className="container-fluid leadership_principles__banner_image_background">
+                  <div className="container">
+                    <div className="row leadership_principles__content_wrapper align-items-center">
+                      <div className="col-lg-3 col-md-12">
+                        <div className="row align-items-center">
+                          <div className="col-md-4 col-sm-12">
+                            <figure>
+                              <img
+                                src="/img/about/our-values/we-empower-the-future.svg"
+                                width="auto"
+                                height="80px"
+                                alt="Icon"
+                              />
+                            </figure>
+                          </div>
+                          <div className="col-md-8 col-sm-12">
+                            <h3 className="col-white c-fs-3">
+                              Nurtures Collaboration
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-9 col-md-12  border-start ps-4">
+                        <p className="col-white c-fs-4">
+                          A good leader always nurtures collaboration and acts
+                          as an active part in the process of co-creation with
+                          his team and the entire ecosystem. A bad leader fails
+                          to grasp the importance of collaboration and thus
+                          fails himself and his team.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="container-fluid leadership_principles__banner_image_background">
+                  <div className="container">
+                    <div className="row leadership_principles__content_wrapper align-items-center">
+                      <div className="col-lg-3 col-md-12">
+                        <div className="row align-items-center">
+                          <div className="col-md-4 col-sm-12">
+                            <figure>
+                              <img
+                                src="/img/about/our-values/we-empower-the-future.svg"
+                                width="auto"
+                                height="80px"
+                                alt="Icon"
+                              />
+                            </figure>
+                          </div>
+                          <div className="col-md-8 col-sm-12">
+                            <h3 className="col-white c-fs-3">
+                              Leads through Communication
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-9 col-md-12  border-start ps-4">
+                        <p className="col-white c-fs-4">
+                          A Good leader creates an environment that promotes
+                          honest and open communications without the fear of
+                          judgement. A bad leaders creates an hostile
+                          environment that restricts open lines of
+                          communication.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="container-fluid leadership_principles__banner_image_background">
+                  <div className="container">
+                    <div className="row leadership_principles__content_wrapper align-items-center">
+                      <div className="col-lg-3 col-md-12">
+                        <div className="row align-items-center">
+                          <div className="col-md-4 col-sm-12">
+                            <figure>
+                              <img
+                                src="/img/about/our-values/we-empower-the-future.svg"
+                                width="auto"
+                                height="80px"
+                                alt="Icon"
+                              />
+                            </figure>
+                          </div>
+                          <div className="col-md-8 col-sm-12">
+                            <h3 className="col-white c-fs-3">
+                              Leads By Example
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-9 col-md-12  border-start ps-4">
+                        <p className="col-white c-fs-4">
+                          A good leader always leads by example. He is the first
+                          to take actions, sets milestones and then encourages
+                          his team follow. A bad leader is passive and fails to
+                          take initiative.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="container-fluid leadership_principles__banner_image_background">
+                  <div className="container">
+                    <div className="row leadership_principles__content_wrapper align-items-center">
+                      <div className="col-lg-3 col-md-12">
+                        <div className="row align-items-center">
+                          <div className="col-md-4 col-sm-12">
+                            <figure>
+                              <img
+                                src="/img/about/our-values/we-empower-the-future.svg"
+                                width="auto"
+                                height="80px"
+                                alt="Icon"
+                              />
+                            </figure>
+                          </div>
+                          <div className="col-md-8 col-sm-12">
+                            <h3 className="col-white c-fs-3">
+                              {" "}
+                              Consults and Delegates
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-9 col-md-12  border-start ps-4">
+                        <p className="col-white c-fs-4">
+                          A good leader has the ability to seek consultation
+                          from subordinates and also has the ability to assign
+                          tasks to the right employees taking their skills into
+                          account. A bad leader is a bad judge of skill set and
+                          delegates poorly.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="container-fluid leadership_principles__banner_image_background">
+                  <div className="container">
+                    <div className="row leadership_principles__content_wrapper align-items-center">
+                      <div className="col-lg-3 col-md-12">
+                        <div className="row align-items-center">
+                          <div className="col-md-4 col-sm-12">
+                            <figure>
+                              <img
+                                src="/img/about/our-values/we-empower-the-future.svg"
+                                width="auto"
+                                height="80px"
+                                alt="Icon"
+                              />
+                            </figure>
+                          </div>
+                          <div className="col-md-8 col-sm-12">
+                            <h3 className="col-white c-fs-3">Is Courageous</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-9 col-md-12  border-start ps-4">
+                        <p className="col-white c-fs-4">
+                          A good leader has the strength of self to act with
+                          intention on behalf of the common good. A bad leader
+                          does not possess the courage to take a stand during
+                          adversity.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="container-fluid leadership_principles__banner_image_background">
+                  <div className="container">
+                    <div className="row leadership_principles__content_wrapper align-items-center">
+                      <div className="col-lg-3 col-md-12">
+                        <div className="row align-items-center">
+                          <div className="col-md-4 col-sm-12">
+                            <figure>
+                              <img
+                                src="/img/about/our-values/we-empower-the-future.svg"
+                                width="auto"
+                                height="80px"
+                                alt="Icon"
+                              />
+                            </figure>
+                          </div>
+                          <div className="col-md-8 col-sm-12">
+                            <h3 className="col-white c-fs-3">Adds Integrity</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-9 col-md-12  border-start ps-4">
+                        <p className="col-white c-fs-4">
+                          A good leader has moral courage, ethical strength, and
+                          trustworthiness. He is able to keep promises and
+                          fulfill expectations. A bad leader lacks integrity
+                          that inspires his team to take ethical measures in all
+                          their actions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="container-fluid leadership_principles__banner_image_background">
+                  <div className="container">
+                    <div className="row leadership_principles__content_wrapper align-items-center">
+                      <div className="col-lg-3 col-md-12">
+                        <div className="row align-items-center">
+                          <div className="col-md-4 col-sm-12">
+                            <figure>
+                              <img
+                                src="/img/about/our-values/we-empower-the-future.svg"
+                                width="auto"
+                                height="80px"
+                                alt="Icon"
+                              />
+                            </figure>
+                          </div>
+                          <div className="col-md-8 col-sm-12">
+                            <h3 className="col-white c-fs-3">
+                              Serves for the Greater Good
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-9 col-md-12  border-start ps-4">
+                        <p className="col-white c-fs-4">
+                          A good leader shows commitment that extends beyond
+                          one’s own self interest; personal humility for the
+                          sake of a greater cause. A bad leader is self serving
+                          and does not believe in serving for a greater good.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="container-fluid leadership_principles__banner_image_background">
+                  <div className="container">
+                    <div className="row leadership_principles__content_wrapper align-items-center">
+                      <div className="col-lg-3 col-md-12">
+                        <div className="row align-items-center">
+                          <div className="col-md-4 col-sm-12">
+                            <figure>
+                              <img
+                                src="/img/about/our-values/we-empower-the-future.svg"
+                                width="auto"
+                                height="80px"
+                                alt="Icon"
+                              />
+                            </figure>
+                          </div>
+                          <div className="col-md-8 col-sm-12">
+                            <h3 className="col-white c-fs-3">
+                              {" "}
+                              Defines and Creates Processes
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-9 col-md-12  border-start ps-4">
+                        <p className="col-white c-fs-4">
+                          A good leader creates new processes before indulging
+                          into a new project and makes sure to change that
+                          process if it is rectifiable. A bad leader takes the
+                          shortest path to complete a project without rectifying
+                          the process.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="container-fluid leadership_principles__banner_image_background">
+                  <div className="container">
+                    <div className="row leadership_principles__content_wrapper align-items-center">
+                      <div className="col-lg-3 col-md-12">
+                        <div className="row align-items-center">
+                          <div className="col-md-4 col-sm-12">
+                            <figure>
+                              <img
+                                src="/img/about/our-values/we-empower-the-future.svg"
+                                width="auto"
+                                height="80px"
+                                alt="Icon"
+                              />
+                            </figure>
+                          </div>
+                          <div className="col-md-8 col-sm-12">
+                            <h3 className="col-white c-fs-3">
+                              Adapts to Evolve
+                            </h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-9 col-md-12  border-start ps-4">
+                        <p className="col-white c-fs-4">
+                          A good leader uses his experience to recognize
+                          different situations and take actions according to the
+                          context. A bad leader make the mistake of taking the
+                          same actions regardless of the facts.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
 
         {/* The Team Page */}
-        <div style={{
-          display: currentMenu === 3 ? "block" : "none"
-        }}>
-          <div className="team"></div>
+        <div
+          style={{
+            display: currentMenu === 3 ? "block" : "none",
+          }}
+        >
+          <div className="team">
+            <section className="container-fluid">
+              <div className="container">
+                <h2 class="col-dark heading c-fw-600 about--heading-underline mb-5">
+                  The Team
+                </h2>
+                <div className="d-flex flex-wrap justify-content-center column-gap-3 row-gap-3 pt-5 team__member_profile_pic_wapper">
+                  <figure>
+                    <img
+                      src="/img/about/team/gaurav.png"
+                      width="100%"
+                      height="100%"
+                      alt="Mr. Gaurav"
+                    />
+                    <div>
+                      <figcaption>Gaurav</figcaption>
+                      <figcaption>Engineering Lead</figcaption>
+                    </div>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/img/about/team/sheba.png"
+                      width="100%"
+                      height="100%"
+                      alt="Sheba"
+                    />
+                    <div>
+                      <figcaption>Sheba</figcaption>
+                      <figcaption>Product Consultant</figcaption>
+                    </div>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/img/about/team/Ravinder.png"
+                      width="100%"
+                      height="100%"
+                      alt="Mr. Ravinder"
+                    />
+                    <div>
+                      <figcaption>Ravinder</figcaption>
+                      <figcaption>Sr. Software Developer</figcaption>
+                    </div>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/img/about/team/dilpreet.jpg"
+                      width="100%"
+                      height="100%"
+                      alt="Mr. Dilpreet"
+                    />
+                    <div>
+                      <figcaption>Dilpreet</figcaption>
+                      <figcaption>Jr. Software Developer</figcaption>
+                    </div>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/img/about/team/leena.png"
+                      width="100%"
+                      height="100%"
+                      alt="Mrs. Leena"
+                    />
+                    <div>
+                      <figcaption>Leena</figcaption>
+                      <figcaption>Java Developer</figcaption>
+                    </div>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/img/about/team/Kriti.png"
+                      width="100%"
+                      height="100%"
+                      alt="Miss Kriti"
+                    />
+                    <div>
+                      <figcaption>Kriti</figcaption>
+                      <figcaption>QA Lead</figcaption>
+                    </div>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/img/about/team/rishi.png"
+                      width="100%"
+                      height="100%"
+                      alt="Mr. Rishi"
+                    />
+                    <div>
+                      <figcaption>Rishi</figcaption>
+                      <figcaption>Finance Expert</figcaption>
+                    </div>
+                  </figure>
+                  <div className="team__member_profile_pic_wapper__msg_join_us ">
+                    <p className="c-fs-4">
+                      Interested to <br /> join out
+                      <br /> team.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className="container-fluid team__founder">
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-6 col-11">
+                    <h2 class="col-dark heading c-fw-600 about--heading-underline mb-5">
+                      Founder
+                    </h2>
+
+                    <h3 className="col-white c-fs-1 fw-bold">
+                      Shubhendra Agrawal,
+                    </h3>
+                    <h4 className="col-white c-fs-4">
+                      Founder, Tech Visionary
+                    </h4>
+                    <p className="col-white c-fs-4 my-4">
+                      Shubhendra Agrawal is the founder of Giddh. An
+                      entrepreneur at heart and an engineer by choice, he
+                      founded Giddh in 2016 with the idea of unifying accounting
+                      with automation. Prior to Giddh, Shubhendra was the
+                      co-founder and CFO of MSG91, one of India’s top 5
+                      messaging solutions firm.
+                    </p>
+                    <p className="col-white c-fs-4">
+                      With experience lasting over a decade in engineering, he
+                      has been a keen analyser of consumer behavior helping him
+                      cultivate a team that creates simple yet highly functional
+                      IT products.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className="container-fluid team__mentors">
+              <div className="container">
+                <h2 class="col-dark heading c-fw-600 about--heading-underline">
+                  Mentors
+                </h2>
+                <div className="row border align-items-center">
+                  <div className="col-xl-6 col-lg-5 col-md-12 ps-lg-0 pt-lg-0 pt-2">
+                    <figure className="mb-0">
+                      <img
+                        src="/img/about/team/pushpendra.png"
+                        width="100%"
+                        height="100%"
+                        alt="Mr. Pushpendra"
+                      />
+                    </figure>
+                  </div>
+                  <div className="col-xl-6 col-lg-7 col-md-12">
+                    <div className="p-5">
+                      <h3 className="c-fs-3 fw-bold">Pushpendra Agrawal,</h3>
+                      <h4 className="c-fs-4 c-fw-400 mb-4">
+                        Idea Guy, Technology Geek
+                      </h4>
+
+                      <p className="c-fs-4">
+                        A calculated risk-taker with passion for everything
+                        numbers, Pushpendra is an IMT pass out, and the founder
+                        of Walkover. Over the years Pushpendra has perfected the
+                        art of crafting the most efficient code and believes
+                        apathy to be a man’s biggest foe and time to be his
+                        biggest ally.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row flex-row-reverse border align-items-center my-5">
+                  <div className="col-xl-6 col-lg-5 col-md-12 ps-lg-0 pt-lg-0 pt-2">
+                    <figure className="mb-0">
+                      <img
+                        src="/img/about/team/aashish-big.png"
+                        width="100%"
+                        height="100%"
+                        alt="Mr. Ashish Yadav"
+                      />
+                    </figure>
+                  </div>
+                  <div className="col-xl-6 col-lg-7 col-md-12">
+                    <div className="p-5">
+                      <h3 className="c-fs-3 fw-bold">Ashish Yadav,</h3>
+                      <h4 className="c-fs-4 c-fw-400 mb-4">Concept Creator</h4>
+
+                      <p className="c-fs-4">
+                        Ashish brings 10+ years of experience with himself in
+                        designing highly functional and intuitive applications.
+                        He believes Design to be the biggest ‘Weapon of Mass
+                        Inspiration’. As a Head of Design at Walkover, his work
+                        is grounded in his deep interest in how people connect
+                        through visual communication.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row border align-items-center">
+                  <div className="col-xl-6 col-lg-5 col-md-12 ps-lg-0 pt-lg-0 pt-2">
+                    <figure className="mb-0">
+                      <img
+                        src="/img/about/team/ankita-big.png"
+                        width="100%"
+                        height="100%"
+                        alt="Ankita Chadha"
+                      />
+                    </figure>
+                  </div>
+                  <div className="col-xl-6 col-lg-7 col-md-12">
+                    <div className="p-5">
+                      <h3 className="c-fs-3 fw-bold">Ankita Chadha,</h3>
+                      <h4 className="c-fs-4 c-fw-400 mb-4">Idea Brewer</h4>
+
+                      <p className="c-fs-4">
+                        With a knack for creating beautiful spaces and bringing
+                        together the brightest of minds,Ankita is the perfect
+                        blend of a novelist, having written a novel, and an
+                        entrepreneur, having founded Mitti-Brewing Ideas, a cafe
+                        where the thinkers and doers collaborate and let their
+                        creative juices flow.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
 
         {/* ============================================================================================================================ */}
