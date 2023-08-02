@@ -7,7 +7,7 @@ const financialReporting = () => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary fw-bold mb-4">
+                <h2 className="heading col-primary c-fw-600 mb-4">
                   Make sense of your numbers by automatic Financial Reports
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
@@ -16,7 +16,7 @@ const financialReporting = () => {
                   growing e-commerce one.
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="btn download_free_btn me-4">
+                  <a href="#" className="download_free_btn me-4">
                     Download Free
                   </a>
                   <a href="#" className="col-blue">
@@ -45,7 +45,7 @@ const financialReporting = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary fw-bold mb-3">
+                <h3 className="sub-heading col-primary c-fw-600 mb-3">
                   Smart accounting reports for business of any size
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -68,7 +68,7 @@ const financialReporting = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Big picture analysis made easy
                   </h4>
                   <p className="">
@@ -93,7 +93,7 @@ const financialReporting = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Ready-made reports when you need them
                   </h4>
                   <p className="">
@@ -118,7 +118,7 @@ const financialReporting = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Keep an eye on the money owed to you
                   </h4>
                   <p className="">
@@ -143,7 +143,7 @@ const financialReporting = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Collaborate & grow
                   </h4>
                   <p className="">
@@ -163,6 +163,39 @@ const financialReporting = () => {
                     alt="bank overview image"
                   />
                 </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="container-fluid my-5 py-5">
+          <div className="container">
+            <div className="text-center">
+              <h2 className="col-primary sub-heading c-fw-600 mb-4">
+                Your all round reporting solution
+              </h2>
+              <p className="col-dark-light c-fs-3">
+                Giddh online accounting software produces all of the standard
+                financial reports required by a forward- thinking business to
+                make smarter and faster business decisions.
+              </p>
+            </div>
+            <div className="d-flex my-5">
+              <div className="mx-auto">
+              <ul className="custom-ul-with-right-tick c-fs-4 col-dark-light">
+                <li className="mb-5">
+                  Profit/Loss Statement, Balance Sheet, General Ledger and Trial
+                  Balance.
+                </li>
+                <li className="mb-5">
+                  Drill down the reports by date, financial year, or even
+                  project type.
+                </li>
+                <li className="mb-5">
+                  Export reports in any of the two supported formats: PDF or
+                  Excel.
+                </li>
+                <li className="mb-5">Invite your accountant, partners or investors.</li>
+              </ul>
               </div>
             </div>
           </div>
@@ -207,14 +240,12 @@ const financialReporting = () => {
         <section className="container-fluid features__accordion_container">
           <div className="container">
             <div className="row">
-            
               <div className="col-12">
-              
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>  
-                  <div className="accordion-item">   
-                    <h2 className="accordion-header" id="headingOne"> 
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
                       <button
                         className="accordion-button collapsed"
                         type="button"
@@ -435,7 +466,8 @@ const financialReporting = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        Does Giddh provide a Balance sheet, P&amp;L and Balance sheet reports?
+                        Does Giddh provide a Balance sheet, P&amp;L and Balance
+                        sheet reports?
                       </button>
                     </h2>
                     <div
@@ -445,7 +477,11 @@ const financialReporting = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Giddh’s financial reporting and analysis software offers all the essential financial reports that an organisation or enterprise needs to make critical business decisions. They include a balance sheet, P&L statements, general ledger, trial balance, etc.
+                        Giddh’s financial reporting and analysis software offers
+                        all the essential financial reports that an organisation
+                        or enterprise needs to make critical business decisions.
+                        They include a balance sheet, P&L statements, general
+                        ledger, trial balance, etc.
                       </div>
                     </div>
                   </div>
@@ -466,7 +502,8 @@ const financialReporting = () => {
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        Can I download or directly share the report to the CA or accountant or anyone from Giddh?
+                        Can I download or directly share the report to the CA or
+                        accountant or anyone from Giddh?
                       </button>
                     </h2>
                     <div
@@ -476,7 +513,11 @@ const financialReporting = () => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Giddh’s finance reporting software offers the financial reports in formats like PDF and Excel, which make it easier to download or directly share the report to the CA or accountant, stakeholders of your business as well as other departments of your organisation.
+                        Giddh’s finance reporting software offers the financial
+                        reports in formats like PDF and Excel, which make it
+                        easier to download or directly share the report to the
+                        CA or accountant, stakeholders of your business as well
+                        as other departments of your organisation.
                       </div>
                     </div>
                   </div>

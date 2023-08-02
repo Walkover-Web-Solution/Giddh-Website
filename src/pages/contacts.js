@@ -1,5 +1,3 @@
-import { MdRemove, MdAdd } from "react-icons/md";
-import { GiCheckMark } from "react-icons/gi";
 const contacts = () => {
   return (
     <>
@@ -8,7 +6,7 @@ const contacts = () => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary fw-bold mb-4">
+                <h2 className="heading col-primary c-fw-600 mb-4">
                   Elevate productivity by accessing your business contacts.
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
@@ -17,7 +15,7 @@ const contacts = () => {
                   personal info and so on.
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="btn download_free_btn me-4">
+                  <a href="#" className="download_free_btn me-4">
                     Download Free
                   </a>
                   <a href="#" className="col-blue">
@@ -46,7 +44,7 @@ const contacts = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary fw-bold mb-3">
+                <h3 className="sub-heading col-primary c-fw-600 mb-3">
                   Track and manage your contacts in one glance
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -68,7 +66,7 @@ const contacts = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Valuable business intelligence you can act on
                   </h4>
                   <p className="">
@@ -98,7 +96,7 @@ const contacts = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Easily know who owes how much
                   </h4>
                   <p className="">
@@ -123,29 +121,20 @@ const contacts = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading fw-bold mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
                     What could you do with giddh smart list?
                   </h4>
 
-                  <ul className="ps-0">
-                    <li className="mb-3">
-                      <span className="col-primary c-fs-2 me-3">
-                        <GiCheckMark />
-                      </span>{" "}
+                  <ul className="custom-ul-with-right-tick">
+                    <li>
                       Add new customers or vendors directly to your Giddh books.
                     </li>
-                    <li className="mb-3">
-                      <span className="col-primary c-fs-2 me-3">
-                        <GiCheckMark />
-                      </span>
+                    <li>
                       Find all those customers who haven’t paid you back in the
                       past few weeks or months listed in one place, so you can
                       follow-up with them and improve your cash flow
                     </li>
                     <li>
-                      <span className="col-primary c-fs-2 me-3">
-                        <GiCheckMark />
-                      </span>
                       See how many customers you have in a particular city or
                       region, helping you assess your customer base and create a
                       more targeted sales or marketing effort.

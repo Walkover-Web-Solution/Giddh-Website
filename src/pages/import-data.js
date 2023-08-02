@@ -14,7 +14,7 @@ const importExeclFiles = () => {
                 data import.
               </p>
               <div className="features__heading_container__links">
-                <a href="#" className="btn download_free_btn me-4">
+                <a href="#" className="download_free_btn me-4">
                   Download Free
                 </a>
                 <a href="#" className="col-blue">
@@ -163,7 +163,7 @@ const importExeclFiles = () => {
             </div>
           </div>
 
-          <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+          <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">

@@ -5,7 +5,8 @@ ul {
 a {
   text-decoration: none !important;
   &:focus-visible{
-    outline: none;
+    outline: none !important;
+    box-shadow: none !important;
   }
 }
 ul {

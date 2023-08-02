@@ -1,0 +1,72 @@
+.icici_integration {
+  margin-bottom: 100px;
+  &__head_content {
+    padding-top: 140px;
+    background: url("/img/icici-integration-background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    &__add_icon {
+      svg {
+        font-size: 32px;
+        color: var(--col-primary);
+      }
+    }
+  }
+  &__get_started_btn {
+    background-color: var(--col-primary);
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: var(--c-fw-600);
+    font-size: var(--c-fs-4);
+    padding: 10px 20px;
+    line-height: 22px;
+  }
+  &__benifits_section {
+    max-width: 1200px;
+    &__down_arrow_icon {
+      svg {
+        font-size: 26px;
+        color: var(--col-grey-deep);
+      }
+    }
+    &__step_guide {     
+      margin: 0 1rem;
+      background: var(--col-light);
+      border-radius: 5px;
+      line-height: 25px;
+      padding: 18px 0;
+
+      p {
+        a {
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .icici_integration {
+    margin-bottom: 60px;
+    &__head_content {
+      padding-top: 100px;
+      .d-flex {
+        &.align-items-end {
+          flex-direction: column;
+          align-items: center !important;
+        }
+      }
+      .px-small {
+        &.px-5 {
+          padding: 0 1rem 1 !important;
+        }
+      }
+      &__add_icon {
+        margin-top: 1.5rem;
+      }
+    }
+    &__get_started_btn {
+      margin-top: 2rem;
+    }
+  }
+}
