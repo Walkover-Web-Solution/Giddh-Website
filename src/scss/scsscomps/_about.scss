@@ -1,0 +1,250 @@
+.about {
+    padding-top: 120px;
+    &__navbar {
+      border-bottom: 4px solid transparent;
+      color: var(--col-dark);
+      padding: 15px 0;
+      cursor: pointer;
+  
+      &:hover,
+      &.active {
+        border-color: var(--col-primary);
+        color: var(--col-primary);
+      }
+      &.active {
+        font-weight: var(--c-fw-500);
+      }
+    }
+    &__container {
+      background-color: var(--col-primary);
+    }
+    &__walkover {
+      &__container {
+        &__img {
+          width: clamp(300px, 35vw, 500px);
+          @media screen and (max-width: 768px) {
+            width: clamp(100px, 40vh, 300px);
+          }
+        }
+      }
+    }
+    &__content {
+      background-color: var(--col-light-gray);
+    }
+    &__see_more {
+      padding: 80px 0;
+      background: #e7e8ea url(/img/about/banner-grid-design-1.png) 0 0 repeat;
+      &__btn {
+        background-color: white;
+        min-width: 240px;
+        padding: 10px 16px;
+        font-size: 20px;
+      }
+    }
+    &--heading-underline {
+      position: relative;
+  
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        width: 80px;
+        height: 4px;
+        background-color: #6d71cd;
+      }
+    }
+  }
+  
+  .our_values {
+    &__illustration {
+      background-color: #e7e8ea;
+      padding: 50px 15px;
+      &__content {
+        max-width: 120px;
+        figure {
+          text-align: center;
+          img {
+            width: auto;
+            height: 38px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    &__content {
+      &__wapper {
+        padding: 100px 0;
+        max-width: 1140px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+  
+        figure {
+          img {
+            max-width: 210px;
+          }
+        }
+      }
+    }
+  }
+  
+  .leadership_principles {
+    &__banner_wrapper {
+      .container-fluid {
+        &:nth-child(1) {
+          background: url("/img/about/nature.jpg");
+        }
+        &:nth-child(2) {
+          background: url("/img/about/leadsthrough.jpg");
+        }
+        &:nth-child(3) {
+          background: url("/img/about/leads.jpg");
+        }
+        &:nth-child(4) {
+          background: url("/img/about/consult.png");
+        }
+        &:nth-child(5) {
+          background: url("/img/about/courageous.jpg");
+        }
+        &:nth-child(6) {
+          background: url("/img/about/addintegrity.jpg");
+        }
+        &:nth-child(7) {
+          background: url("/img/about/servegood-1.jpg");
+        }
+        &:nth-child(8) {
+          background: url("/img/about/createprocess.png");
+        }
+        &:nth-child(9) {
+          background: url("/img/about/adapts.jpg");
+        }
+      }
+    }
+    &__banner_image_background {
+      padding-top: 60px;
+      height: 627px;
+      background-size: 100% 100%;
+    }
+    &__content_wrapper {
+      max-width: 1140px;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      padding: 2.5rem 1rem;
+      background: rgba(17, 17, 17, 0.5);
+    }
+  }
+  
+  .team {
+    padding: 90px 0;
+    &__member_profile_pic_wapper {
+      &__msg_join_us,
+      figure {
+        width: 200px;
+        height: 200px;
+        border: 1px solid rgba(38, 38, 58, 0.2);
+      }
+      figure {
+        position: relative;
+        div {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 50px;
+          background: rgba(4, 4, 4, 0.6);
+          padding: 6px;
+          width: 100%;
+          text-align: center;
+          figcaption {
+            color: var(--col-white);
+            line-height: 20px;
+            &:first-child {
+              font-size: var(--c-fs-5);
+              font-weight: var(--c-fw-500);
+            }
+            &:last-child {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      &__msg_join_us {
+        p {
+          text-align: center;
+          margin-top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    &__founder {
+      background: url("/img/about/team/shubendra-big-new.jpg");
+      background-size: cover;
+      min-height: 660px;
+      margin-top: 60px;
+      padding: 80px 0;
+      @media (max-width: 1199px) {
+        background-position-x: -300px;
+      }
+      @media (max-width: 991px) {
+        background-position-x: -480px;
+      }
+      @media (max-width: 767px) {
+        background-position-x: -540px;
+      }
+      @media (max-width: 575px) {
+        background-position-x: -600px;
+        padding: 40px 0;
+      }
+      @media (max-width: 440px) {
+        background-position-x: -830px;
+      }
+  
+      h3 {
+        margin-top: 60px;
+        margin-bottom: 10px;
+      }
+    }
+    &__mentors {
+      padding-top: 80px;
+      h2 {
+        margin-bottom: 64px;
+      }
+      h3 {
+        color: #6c757d;
+        margin-top: 60px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .about {
+      &__container {
+        .border-end {
+          border: 0 !important;
+          text-align: start !important;
+        }
+  
+        &__title {
+          &.ms-4 {
+            margin-left: 0 !important;
+          }
+        }
+      }
+      &__walkover {
+        &__container {
+          flex-direction: column-reverse;
+        }
+      }
+    }
+    .leadership_principles {
+      &__content_wrapper {
+        .border-start {
+          &.ps-4 {
+            border-left: 0 !important;
+            padding-left: 12px !important;
+          }
+        }
+      }
+    }
+  }
+  

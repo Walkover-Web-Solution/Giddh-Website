@@ -11,7 +11,7 @@ const Footer = () => {
                     <h5>Quick Links</h5>
                     <ul className="footer-list list-unstyled mb-3">
                       <li>
-                        <a href="pricing">Pricing</a>
+                        <a href="/pricing">Pricing</a>
                       </li>
                       <li>
                         <a href="#">About</a>
@@ -28,10 +28,10 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="affiliate">Affiliate With Us</a>
+                        <a href="/affiliate">Affiliate With Us</a>
                       </li>
                       <li>
-                        <a href="terms">Terms of Use</a>
+                        <a href="/terms">Terms of Use</a>
                       </li>
                     </ul>
                   </div>
