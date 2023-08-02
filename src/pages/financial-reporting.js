@@ -16,7 +16,12 @@ const financialReporting = () => {
                   growing e-commerce one.
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="download_free_btn me-4">
+                  <a
+                    href="#"
+                    className="download_free_btn me-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#downloadFree"
+                  >
                     Download Free
                   </a>
                   <a href="#" className="col-blue">
@@ -181,21 +186,23 @@ const financialReporting = () => {
             </div>
             <div className="d-flex my-5">
               <div className="mx-auto">
-              <ul className="custom-ul-with-right-tick c-fs-4 col-dark-light">
-                <li className="mb-5">
-                  Profit/Loss Statement, Balance Sheet, General Ledger and Trial
-                  Balance.
-                </li>
-                <li className="mb-5">
-                  Drill down the reports by date, financial year, or even
-                  project type.
-                </li>
-                <li className="mb-5">
-                  Export reports in any of the two supported formats: PDF or
-                  Excel.
-                </li>
-                <li className="mb-5">Invite your accountant, partners or investors.</li>
-              </ul>
+                <ul className="custom-ul-with-right-tick c-fs-4 col-dark-light">
+                  <li className="mb-5">
+                    Profit/Loss Statement, Balance Sheet, General Ledger and
+                    Trial Balance.
+                  </li>
+                  <li className="mb-5">
+                    Drill down the reports by date, financial year, or even
+                    project type.
+                  </li>
+                  <li className="mb-5">
+                    Export reports in any of the two supported formats: PDF or
+                    Excel.
+                  </li>
+                  <li className="mb-5">
+                    Invite your accountant, partners or investors.
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

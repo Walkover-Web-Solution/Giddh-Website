@@ -16,7 +16,12 @@ const eInvoie = () => {
                   1st April 2021
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="download_free_btn me-4">
+                  <a
+                    href="#"
+                    className="download_free_btn me-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#downloadFree"
+                  >
                     Download Free
                   </a>
                   <a href="#" className="col-blue">
@@ -214,14 +219,15 @@ const eInvoie = () => {
 
         <section className="container-fluid  e-invoice__fourth_section">
           <div className="container px-0">
-          <h2 className="col-primary sub-heading c-fw-600 pb-4">
-            Make your business ready for the e-invoicing system
-          </h2>
+            <h2 className="col-primary sub-heading c-fw-600 pb-4">
+              Make your business ready for the e-invoicing system
+            </h2>
             <div className="row">
-              <div className="col-12">                    
+              <div className="col-12">
                 <div className="features__heading_container__links">
-                  <a href="#" className="download_free_btn me-4">
-                    Download Free
+                  <a href="/signup" className="download_free_btn me-4" data-bs-toggle="modal"
+                    data-bs-target="#downloadFree">
+                    Sign up for free
                   </a>
                   <a href="#" className="col-blue">
                     Schedule Demo

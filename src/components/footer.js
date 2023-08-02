@@ -123,8 +123,8 @@ const Footer = () => {
                             </a>
                           </li>
                         </ul>
-                        <p className="contact-link col-primary text-decoration-underline mt-3">
-                          <a href="contact-us">Contact Us</a>
+                        <p className="contact-link mt-3">
+                          <a href="contact-us" className="col-primary text-decoration-underline c-fw-500">Contact Us</a>
                         </p>
                       </div>
                     </li>
