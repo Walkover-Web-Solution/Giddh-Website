@@ -75,14 +75,14 @@ const Footer = () => {
                   Contact Us
                 </h5>
                 <div>
-                  <div className=" footer-dpn mb-3">
+                  <div className="footer-dpn mb-3">
                     <div className="dropdown btn-group">
                       <button
                         type="button"
-                        className="btn btn-down dropdown-toggle contry-icon"
+                        className="btn btn-down dropdown-toggle country-icon"
                         id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false"
                       >
-                        <img src="img/earth.svg" alt="" /> IN - India
+                        <img src="img/earth.svg" alt="earth-icon" /> IN - India
                       </button>
                       <ul
                         className="dropdown-menu country_dropdown__menu"
@@ -116,15 +116,15 @@ const Footer = () => {
                               sales@giddh.com
                             </a>
                           </li>
-                          <li>
+                          <li className="mt-3">
                             Support:{" "}
                             <a href="#" className="cf_email">
                               support@giddh.com
                             </a>
                           </li>
                         </ul>
-                        <p className="contact-link">
-                          <a href="#">Contact Us</a>
+                        <p className="contact-link col-primary text-decoration-underline mt-3">
+                          <a href="contact-us">Contact Us</a>
                         </p>
                       </div>
                     </li>
