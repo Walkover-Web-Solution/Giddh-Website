@@ -20,16 +20,16 @@ export default function MyApp({ Component, pageProps }) {
 
       {/*======================== Download Free Modal======================  */}
       <div
-        class="modal fade"
+        className="modal fade"
         id="downloadFree"
         tabindex="-1"
         aria-labelledby="downloadFreeLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered download-free-modal">
-          <div class="modal-content bg-transparent">
-            <div class="modal-header">
-              <h4 class="modal-title c-fs-5 col-white" id="downloadFreeLabel">
+        <div className="modal-dialog modal-dialog-centered download-free-modal">
+          <div className="modal-content bg-transparent">
+            <div className="modal-header">
+              <h4 className="modal-title c-fs-5 col-white" id="downloadFreeLabel">
                 Download App
               </h4>
               <span
@@ -40,7 +40,7 @@ export default function MyApp({ Component, pageProps }) {
                 <MdClose />
               </span>
             </div>
-            <div class="modal-body bg-light text-center">
+            <div className="modal-body bg-light text-center">
               <h2 className="c-fs-4 c-fw-600">
                 Thanks for downloading Giddh for Windows
               </h2>

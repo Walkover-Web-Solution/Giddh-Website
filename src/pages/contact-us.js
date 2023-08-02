@@ -51,7 +51,7 @@ const contactUs = () => {
                   <div className="container">
                     <div className="row">
                       <div className="col-12">
-                        <label for="name" class="pb-3">Name <span class="col-danger">*</span></label>
+                        <label for="name" className="pb-3">Name <span className="col-danger">*</span></label>
                         <div className="mb-3">
                           <input
                             autoComplete="name"
@@ -63,7 +63,7 @@ const contactUs = () => {
                         </div>
                       </div>
                       <div className="col-12">
-                        <label for="email" class="pb-3">Email <span class="col-danger">*</span></label>
+                        <label for="email" className="pb-3">Email <span className="col-danger">*</span></label>
                         <div className="mb-3">
                           <input
                             autoComplete="email"
@@ -76,7 +76,7 @@ const contactUs = () => {
                       </div>
                       <div className="col-12 ">
                         <div className="row">
-                        <label for="mobileNo" class="pb-3">Mobile Number <span class="col-danger">*</span></label>
+                        <label for="mobileNo" className="pb-3">Mobile Number <span className="col-danger">*</span></label>
                           <div className="col-4 pe-0">
                             <div className="mb-3">
                               <select
@@ -107,7 +107,7 @@ const contactUs = () => {
                         </div>
                       </div>
                       <div className="col-12">
-                        <label for="description" class="pb-3">Description</label>
+                        <label for="description" className="pb-3">Description</label>
                         <div className="mt-2">
                           <textarea
                             className="form-control"

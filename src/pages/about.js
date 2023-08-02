@@ -382,12 +382,12 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 class="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
                           Customers Come First
                         </h2>
                       </div>
                       <div className="col-lg-8">
-                        <p class="col-dark-light c-fs-4">
+                        <p className="col-dark-light c-fs-4">
                           We are the leaders that solve problems from the
                           perspective of the customer's experiences. Before
                           wearing our corporate jacket, we wear our customer’s
@@ -410,12 +410,12 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 class="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
                           Embracing Setbacks to Break Boundaries
                         </h2>
                       </div>
                       <div className="col-lg-8">
-                        <p class="col-dark-light c-fs-4">
+                        <p className="col-dark-light c-fs-4">
                           Everytime we hit a wall of setback, we push ourselves
                           harder to create new milestones and leave a legacy
                           behind. Once a setback is experienced, we strive on
@@ -439,12 +439,12 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 class="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
                           We Set Impossible Goals
                         </h2>
                       </div>
                       <div className="col-lg-8">
-                        <p class="col-dark-light c-fs-4">
+                        <p className="col-dark-light c-fs-4">
                           We are fueled with a healthy disrespect for the
                           impossible. We make sure to never get distracted with
                           trying to improve things by 10% when we have the
@@ -468,12 +468,12 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 class="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
                           People are our Power
                         </h2>
                       </div>
                       <div className="col-lg-8">
-                        <p class="col-dark-light c-fs-4">
+                        <p className="col-dark-light c-fs-4">
                           We know that technology is merely an enabler to
                           challenge boundaries and true success is achieved by a
                           honest, efficient and fearless individuals. We make
@@ -497,12 +497,12 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 class="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
                           We Focus on ‘Why?’ & ‘How?’
                         </h2>
                       </div>
                       <div className="col-lg-8">
-                        <p class="col-dark-light c-fs-4">
+                        <p className="col-dark-light c-fs-4">
                           Our philosophy revolves around two important questions
                           -’Why’ and ‘How’. Asking ‘Why’ to ourselves and those
                           around us gives the purpose for our actions and
@@ -525,12 +525,12 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 class="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
                           Always We Before Me
                         </h2>
                       </div>
                       <div className="col-lg-8">
-                        <p class="col-dark-light c-fs-4">
+                        <p className="col-dark-light c-fs-4">
                           We believe in collaborating both inside and outside
                           the organization to maximize our shared knowledge and
                           bring great value to our customers. We are
@@ -555,12 +555,12 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 class="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
                           We Don’t Settle
                         </h2>
                       </div>
                       <div className="col-lg-8">
-                        <p class="col-dark-light c-fs-4">
+                        <p className="col-dark-light c-fs-4">
                           We don’t settle for anything less than excellent and
                           extraordinary in every group of our organization and
                           possess the honesty to admit when we’re wrong and the
@@ -584,12 +584,12 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 class="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
                           We Empower The Future
                         </h2>
                       </div>
                       <div className="col-lg-8">
-                        <p class="col-dark-light c-fs-4">
+                        <p className="col-dark-light c-fs-4">
                           We focus on ways by which our organization can harness
                           the power of technology to transform today which can
                           create a better & brighter tomorrow in the most
@@ -612,12 +612,12 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 class="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
                           Transparency and Honesty
                         </h2>
                       </div>
                       <div className="col-lg-8">
-                        <p class="col-dark-light c-fs-4">
+                        <p className="col-dark-light c-fs-4">
                           We apply due care in maintaining transparency in our
                           work by providing honest, accurate and impartial
                           services to our clients. We avoid tricks, hidden
@@ -1081,7 +1081,7 @@ const about = () => {
           <div className="team">
             <section className="container-fluid">
               <div className="container">
-                <h2 class="col-dark heading c-fw-600 about--heading-underline mb-5">
+                <h2 className="col-dark heading c-fw-600 about--heading-underline mb-5">
                   The Team
                 </h2>
                 <div className="d-flex flex-wrap justify-content-center column-gap-3 row-gap-3 pt-5 team__member_profile_pic_wapper">
@@ -1182,7 +1182,7 @@ const about = () => {
               <div className="container">
                 <div className="row">
                   <div className="col-md-6 col-11">
-                    <h2 class="col-dark heading c-fw-600 about--heading-underline mb-5">
+                    <h2 className="col-dark heading c-fw-600 about--heading-underline mb-5">
                       Founder
                     </h2>
 
@@ -1212,7 +1212,7 @@ const about = () => {
             </section>
             <section className="container-fluid team__mentors">
               <div className="container">
-                <h2 class="col-dark heading c-fw-600 about--heading-underline">
+                <h2 className="col-dark heading c-fw-600 about--heading-underline">
                   Mentors
                 </h2>
                 <div className="row border align-items-center">
