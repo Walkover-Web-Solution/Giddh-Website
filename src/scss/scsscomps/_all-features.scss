@@ -83,7 +83,7 @@
       max-width: 1000px;
       margin: 0 auto;
       .accordion-item {
-        border: 0 !important;
+        border: none !important;
       }
       .accordion-button {
         color: var(--col-deep) !important;
@@ -200,7 +200,7 @@
 
     &__description_container {
       .border-horizontal {
-        border: 0 !important;
+        border: none !important;
       }
       .__image-alignment {
         text-align: center;
