@@ -11,7 +11,7 @@ const Footer = () => {
                     <h5>Quick Links</h5>
                     <ul className="footer-list list-unstyled mb-3">
                       <li>
-                        <a href="pricing">Pricing</a>
+                        <a href="/pricing">Pricing</a>
                       </li>
                       <li>
                         <a href="#">About</a>
@@ -28,10 +28,10 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="affiliate">Affiliate With Us</a>
+                        <a href="/affiliate">Affiliate With Us</a>
                       </li>
                       <li>
-                        <a href="terms">Terms of Use</a>
+                        <a href="/terms">Terms of Use</a>
                       </li>
                     </ul>
                   </div>
@@ -75,14 +75,14 @@ const Footer = () => {
                   Contact Us
                 </h5>
                 <div>
-                  <div className=" footer-dpn mb-3">
+                  <div className="footer-dpn mb-3">
                     <div className="dropdown btn-group">
                       <button
                         type="button"
-                        className="btn btn-down dropdown-toggle contry-icon"
+                        className="btn btn-down dropdown-toggle country-icon"
                         id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false"
                       >
-                        <img src="img/earth.svg" alt="" /> IN - India
+                        <img src="img/earth.svg" alt="earth-icon" /> IN - India
                       </button>
                       <ul
                         className="dropdown-menu country_dropdown__menu"
@@ -116,15 +116,15 @@ const Footer = () => {
                               sales@giddh.com
                             </a>
                           </li>
-                          <li>
+                          <li className="mt-3">
                             Support:{" "}
                             <a href="#" className="cf_email">
                               support@giddh.com
                             </a>
                           </li>
                         </ul>
-                        <p className="contact-link">
-                          <a href="#">Contact Us</a>
+                        <p className="contact-link mt-3">
+                          <a href="contact-us" className="col-primary text-decoration-underline c-fw-500">Contact Us</a>
                         </p>
                       </div>
                     </li>

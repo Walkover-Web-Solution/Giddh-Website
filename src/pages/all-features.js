@@ -15,7 +15,12 @@ const allFeatures = () => {
                   internet-connected device – phone, laptop or computer.
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="download_free_btn me-4">
+                  <a
+                    href="#"
+                    className="download_free_btn me-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#downloadFree"
+                  >
                     Download Free
                   </a>
                   <a href="#" className="col-blue">

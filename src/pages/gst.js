@@ -18,7 +18,7 @@ const gst = () => {
                 File your GSTR Automatically
               </h1>
             </div>
-            <div class="gst-image mt-auto">
+            <div className="gst-image mt-auto">
               <img
                 className="col-12"
                 alt="gst"
@@ -106,8 +106,7 @@ const gst = () => {
             <div className="col">
               {" "}
               <div
-                c
-                lassName="filing-gstr d-flex flex-column align-items-center gap-4 p-3"
+                className="filing-gstr d-flex flex-column align-items-center gap-4 p-3"
               >
                 <img src="/img/gst-images/secure-reliable.svg" />
                 <div className="caption text-center">

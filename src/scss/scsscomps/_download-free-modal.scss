@@ -1,0 +1,28 @@
+.download-free-modal{
+    .modal-header{
+        background-color: var(--col-primary);
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        padding: 0.5rem 1rem !important;
+    }
+    .modal-body{
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+ 
+    &__btn_link{
+        background-color:#E2E2F8;
+        color: var(--col-primary);
+        font-size: 14px;
+        padding: 6px 10px;
+        margin: 0 10px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        img{
+            width: 18px;
+            margin-right: 6px;
+        }
+
+    }
+}

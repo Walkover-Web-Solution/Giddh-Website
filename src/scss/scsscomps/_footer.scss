@@ -38,13 +38,23 @@ footer .footer-list li a {
     height: 30px;
   }
 }
-.contry-icon {
-    
-  border: none !important;
+.country-icon {
+  background-color: #e2e2f8 !important;
+  width: clamp(150px, 16vw,230px) !important;
+  padding: 6px 15px !important;
+  border-radius: 30px !important;
+  text-align: start !important;
   outline: none !important;
   img {
     width: 15px;
     height: 15px;
+    margin-top: -3px;
+    margin-right: 6px;
+  }
+  &::after{
+    position: absolute;
+    right: 16px;
+    top: 16px;
   }
 }
 .location-detail h4 {

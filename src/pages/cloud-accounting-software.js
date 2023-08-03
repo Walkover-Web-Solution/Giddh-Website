@@ -18,7 +18,12 @@ const anywhereAnytime = () => {
                 are.
               </p>
               <div className="features__heading_container__links">
-                <a href="#" className="download_free_btn me-4">
+                <a
+                  href="#"
+                  className="download_free_btn me-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#downloadFree"
+                >
                   Download Free
                 </a>
                 <a href="#" className="col-blue">
@@ -220,7 +225,7 @@ const anywhereAnytime = () => {
                   style={{
                     display: readMoreParagraphStatus1 ? "block" : "none",
                   }}
-                  className="table table-bordered"
+                  className="table table-bordered table-responsive"
                 >
                   <thead>
                     <tr>

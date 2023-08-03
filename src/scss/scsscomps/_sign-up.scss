@@ -222,7 +222,7 @@ $font-weight-500: var(--c-fw-500);
       .back_btn {
         background-color: rgba(123, 127, 130, 0.1);
         font-weight: $font-weight-500;
-        border: 0 !important;
+        border: none !important;
         padding-left: 8px;
         padding-right: 15px;
         height: 40px;
@@ -236,7 +236,7 @@ $font-weight-500: var(--c-fw-500);
       .next_btn {
         background-color: $color-primary;
         font-weight: $font-weight-500;
-        border: 0 !important;
+        border: none !important;
         padding-left: 15px;
         padding-right: 8px;
         height: 40px;

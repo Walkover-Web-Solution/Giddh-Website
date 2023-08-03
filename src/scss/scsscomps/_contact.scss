@@ -1,0 +1,103 @@
+.contact_us {
+  &__banner {
+    background: url("/img/contactus-banner.png");
+    &__content {
+      padding-top: 300px;
+      padding-bottom: 20px;
+      text-align: center;
+
+      h1 {
+        font-size: 60px;
+      }
+    }
+  }
+  &__form {
+    padding: 40px 0;
+    &__left {
+      padding-right: 65px !important;
+    }
+    &__right {
+      padding-left: 53px !important;
+      form {
+        font-size: var(--c-fs-6);
+        .form-control,
+        .form-select {
+          font-size: var(--c-fs-5);
+          min-height: 46px;
+          border-radius: 0;
+        }
+        input {
+          &::placeholder {
+            font-size: var(--c-fs-6);
+          }
+        }
+        textarea {
+          resize: none;
+        }
+
+        button {
+          &.submit__button {
+            font-weight: var(--c-fw-600);
+            padding: 0px 36px;
+            height: 50px;
+            width: 180px;
+            color: var(--col-primary);
+            background-color: var(--col-white);
+            border: 1px solid var(--col-primary);
+            border-radius: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .contact_us {
+    &__banner {
+      &__content {
+        h1 {
+          font-size: 36px;
+        }
+        p {
+          font-size: var(--c-fs-3) !important;
+        }
+      }
+    }
+    &__form {
+      &__right {
+        form {
+          button {
+            &.submit__button {
+              margin-left: 50% !important;
+              transform: translateX(-50%);
+              height: 40px;
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .contact_us {
+    &__form {
+      &__left {
+        &.text-end {
+          text-align: center !important;
+          margin-bottom: 2rem;
+        }
+        padding-right: 12px !important;
+      }
+      &__right {
+        &.border-start {
+            padding-top: 2rem;
+          border-left: none !important;
+          border-top: 1px solid var(--bs-border-color);
+        }
+        padding-left: 12px !important;
+      }
+    }
+  }
+}
