@@ -22,7 +22,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/inventory.png"
                     alt="Inventory Icon"
                   />
-                  <figcaption>Inventory</figcaption>
+                  <figcaption className="c-fw-400">Inventory</figcaption>
                 </figure>
               </div>
             </div>
@@ -33,7 +33,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/invoice.png"
                     alt="Invoices Icon"
                   />
-                  <figcaption>Invoices</figcaption>
+                  <figcaption className="c-fw-400">Invoices</figcaption>
                 </figure>
               </div>
             </div>
@@ -44,7 +44,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/anywhere-anytime.png"
                     alt="Anywhere Anytime Icon"
                   />
-                  <figcaption>Anywhere Anytime</figcaption>
+                  <figcaption className="c-fw-400">Anywhere Anytime</figcaption>
                 </figure>
               </div>
             </div>
@@ -55,7 +55,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/bank-reconciliation.png"
                     alt="Bank Reconciliation Icon"
                   />
-                  <figcaption>Bank Reconciliation</figcaption>
+                  <figcaption className="c-fw-400">Bank Reconciliation</figcaption>
                 </figure>
               </div>
             </div>
@@ -67,7 +67,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/multicurrency.png"
                     alt="Multi Currency Icon"
                   />
-                  <figcaption>Multi Currency</figcaption>
+                  <figcaption className="c-fw-400">Multi Currency</figcaption>
                 </figure>
               </div>
             </div>
@@ -78,7 +78,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/import-data.png"
                     alt="Import Data Icon"
                   />
-                  <figcaption>Import Data</figcaption>
+                  <figcaption className="c-fw-400">Import Data</figcaption>
                 </figure>
               </div>
             </div>
@@ -89,7 +89,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/gst-compiance.png"
                     alt="GST Compliances Icon"
                   />
-                  <figcaption>GST Compliances</figcaption>
+                  <figcaption className="c-fw-400">GST Compliances</figcaption>
                 </figure>
               </div>
             </div>
@@ -100,7 +100,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/report-analysis.png"
                     alt="Reports & Analysis Icon"
                   />
-                  <figcaption>Reports & Analysis</figcaption>
+                  <figcaption className="c-fw-400">Reports & Analysis</figcaption>
                 </figure>
               </div>
             </div>
@@ -112,7 +112,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/share-data.png"
                     alt="Share Data Icon"
                   />
-                  <figcaption>Share Data</figcaption>
+                  <figcaption className="c-fw-400">Share Data</figcaption>
                 </figure>
               </div>
             </div>
@@ -123,7 +123,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/dashboard-icon.png"
                     alt="Dashboard Icon"
                   />
-                  <figcaption>Dashboard</figcaption>
+                  <figcaption className="c-fw-400">Dashboard</figcaption>
                 </figure>
               </div>
             </div>
@@ -134,7 +134,7 @@ const featureGallery = () => {
                     src="/img/feature-gallery-icons/support.png"
                     alt="Audit Trail Icon"
                   />
-                  <figcaption>Audit Trail</figcaption>
+                  <figcaption className="c-fw-400">Audit Trail</figcaption>
                 </figure>
               </div>
             </div>
