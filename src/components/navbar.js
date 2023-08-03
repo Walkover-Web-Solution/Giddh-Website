@@ -1,4 +1,11 @@
+import { usePathname } from 'next/navigation'
 const navbar = () => {
+    // To get active route
+    const pathname = usePathname();
+    const startPath = pathname.split('/');
+    let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
+    let isAE = startPath[1] === 'ae';
+    let isUK = startPath[1] === 'uk';
   return (
     <>
       <nav className="navbar navbar--box-shadow navbar--theme-white navbar-expand-lg position-fixed w-100 py-0">
@@ -176,13 +183,13 @@ const navbar = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/pricing">
+                <a className="nav-link" href={isIndia ? '/pricing' : (isAE  ? '/ae/pricing' : '/uk/pricing')}>
                   Pricing
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/gst">
-                  GST
+                <a className="nav-link" href={isIndia ? '/' : (isAE  ? '/ae/vat' : '/uk/vat')}>
+                  {isIndia ? 'GST' : (isAE || isUK ? 'VAT' : '')}
                 </a>
               </li>
               <li className="nav-item">
@@ -196,13 +203,13 @@ const navbar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a href="#">Blog</a>
+                    <a href="https://giddh.com/blog/">Blog</a>
                   </li>
                   <li>
-                    <a href="#">Guide</a>
+                    <a href="https://giddh.com/guide/">Guide</a>
                   </li>
                   <li>
-                    <a href="#">Help</a>
+                    <a href="https://giddh.com/help/">Help</a>
                   </li>
                 </ul>
               </li>
@@ -231,9 +238,9 @@ const navbar = () => {
                   </svg>
                 </a>
                 <ul className="dropdown-menu country_dropdown__menu" aria-labelledby="countryDropdown">
-                  <li><a className="dropdown-item" href="#">IN - India</a></li>
-                  <li><a className="dropdown-item" href="#">UAE - United Arab Emirates</a></li>
-                  <li><a className="dropdown-item" href="#">UK - United Kingdom</a></li>
+                  <li><a className={'dropdown-item' + ( isIndia ? ' active' : '' )} href="/">IN - India</a></li>
+                  <li><a className={'dropdown-item' + ( isAE ? ' active' : '' )} href="/ae">UAE - United Arab Emirates</a></li>
+                  <li><a className={'dropdown-item' + ( isUK ? ' active' : '' )} href="/uk">UK - United Kingdom</a></li>
                 </ul>
               </div>
               <div>

@@ -1,14 +1,28 @@
+import { usePathname } from 'next/navigation'
 const enquiryForm = () => {
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split('/');
+  let isIndia = startPath[1] === '';
+  let isAE = startPath[1] === 'ae';
+  let isUK = startPath[1] === 'uk';
   return (
     <>
       <section className="container-fluid enquiry_form">
         <div className="container enquiry_form--max-width-unset mt-auto">
           <div className="enquiry_form__wrapper d-flex align-items-center flex-column">
             <div className="enquiry_form__wrapper__title text-center">
-              <h1>Upgrade your Books to Giddh.</h1>
-              <p className="c-fs-3 mb-5">
-                Giddh fits the needs of every business.
-              </p>
+              <h1>
+                { isIndia ? 'Upgrade your Books to Giddh.' : ''}
+                { isAE ? 'Dubai is all set to do VAT friendly accounting!' : ''}
+                { isUK ? 'UK is all set to do VAT friendly accounting!' : ''}
+                </h1>
+              <p className="c-fs-3 mb-5">                
+                { isIndia ? 'Giddh fits the needs of every business.' : ''}
+                { isAE || isUK ? 'Light on pocket, easy to use, VAT compliant,' : ''}
+                <br/>
+                { isAE || isUK ? 'With Giddh, you can now connect to banks & departments seamlessly' : ''}
+              </p>           
             </div>
             <div className="enquiry_form__wrapper__form_wrapper">
               <form>

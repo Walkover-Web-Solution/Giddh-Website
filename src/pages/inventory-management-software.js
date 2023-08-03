@@ -35,7 +35,7 @@ const inventoryManagementSoftware = () => {
                     width="90%"
                   />
                   <img
-                    src="img/all-features-cloud_icon.svg"
+                    src="/img/all-features-cloud_icon.svg"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />

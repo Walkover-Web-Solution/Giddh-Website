@@ -797,7 +797,7 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img src="/img/feature-invoice.svg" alt="Invoicing-logo" />
+                  <img className="img-fluid" src="/img/feature-invoice.svg" alt="Invoicing-logo" />
                   <figcaption>Invoicing</figcaption>
                 </figure>
               </div>
@@ -805,7 +805,7 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img
+                  <img className="img-fluid"
                     src="/img/feature-inventory.svg"
                     alt="Inventory-Management-logo"
                   />
@@ -816,7 +816,7 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img
+                  <img className="img-fluid"
                     src="/img/feature-reconcile.svg"
                     alt="Bank-Reconciliation-logo"
                   />
@@ -827,7 +827,7 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img
+                  <img className="img-fluid"
                     src="/img/multi-currency-banner.svg"
                     alt="Multi-Currency-logo"
                   />
@@ -838,7 +838,7 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img src="/img/feature-gst.svg" alt="Tax-Compliant-logo" />
+                  <img className="img-fluid" src="/img/feature-gst.svg" alt="Tax-Compliant-logo" />
                   <figcaption>Tax Compliant</figcaption>
                 </figure>
               </div>
@@ -846,7 +846,7 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img
+                  <img className="img-fluid"
                     src="/img/feature-report.svg"
                     alt="Expense-Management-logo"
                   />

@@ -31,11 +31,11 @@ const multiUserAccountingSoftware = () => {
             <div className="col-lg-5 order-lg-1 order-0 position-relative">
               <figure className="text-end">
                 <img
-                  src="img/feature-gallery-icons/share-banner.svg"
+                  src="/img/feature-gallery-icons/share-banner.svg"
                   width="90%"
                 />
                 <img
-                  src="img/all-features-cloud_icon.svg"
+                  src="/img/all-features-cloud_icon.svg"
                   className="features__heading_container__right_banner_img"
                   width="90%"
                 />

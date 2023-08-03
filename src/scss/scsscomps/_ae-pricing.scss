@@ -1,0 +1,48 @@
+.ae_pricing_top_section{
+    background-color: #e6e7e9 !important;
+}
+.ae_pricing{
+    &__main{
+        padding: 60px 0;
+       &__container{
+        padding: 16px 24px 24px;
+        height: 440px;
+    
+        &--skyblue{
+            background-color: #9cb4dc;
+        }
+        &--yellow{
+            background-color: #f5d68a;
+        }
+        &--pink{
+            background-color: #e88f97;
+        }
+       }
+    }
+    &__start_free_btn{
+        border-radius: 50px;
+        width: max-content;
+        background: var(--col-primary);
+        padding: 4px 16px;
+        color: var(--col-white);
+        transition: all 200ms ease-out;
+        font-size: var(--c-fs-3);
+        font-weight: var(--c-fw-800);
+        text-transform: capitalize;
+
+        &:hover{
+            color: var(--col-primary);
+            background: var(--col-white);
+        }
+    }
+    &__enterprises{
+        background-color: #86d1d7;
+        padding: 48px 0;
+    }
+}
+
+.ae_pricing_feature{
+    background: #e6e7e9;
+    margin-bottom: 2rem;
+    padding: 5rem 0 4rem;
+}
