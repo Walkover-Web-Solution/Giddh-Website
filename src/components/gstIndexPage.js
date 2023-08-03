@@ -1,20 +1,30 @@
+import { usePathname } from 'next/navigation'
 const gstIndexPage = () => {
+     // To get active route
+     const pathname = usePathname();
+     const startPath = pathname.split('/');
+     let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
+     let isAE = startPath[1] === 'ae';
     return (
       <>
       <section className="container-fluid gst text-center">
         <div className="gst__content_wapper">
           <figure>
-            <img className="img-fluid" src="/img/dashboard.png" alt="Laptop image with giddh.com dashboard screen"/>
+            <img className="img-fluid" src={ isIndia || isAE ? '/img/dashboard.png' : '/img/uk-dashboard-laptop-img.svg'} alt="Laptop image with giddh.com dashboard screen"/>
           </figure>
           <div className="container">
             <div className="gst__content_wapper__content">
-              <h2>File your GST directly with Giddh</h2>
+              <h2>
+                { isIndia ? 'File your GST directly with Giddh' : 'VAT Compliant Forever!'}
+                </h2>
               <p>
-                We prepare your GST return file automatically and the heavy
-                lifting for you. Now file your Goods and Services Tax (GST)
-                directly on portal.
+                { isIndia 
+                  ? 'We prepare your GST return file automatically and the heavy lifting for you. Now file your Goods and Services Tax (GST) directly on portal.' 
+                  : 'Once you have enabled VAT option in Giddh, you will be able to see your VAT reports at one place. With Giddh’s smart multi-currency feature, the exchange rates will be automatically displayed on Invoices' 
+                }
+                
               </p>
-              <a href="#">Start Free</a>
+              <a href={ isIndia ? 'https://giddh.com/signup' : (isAE ? 'https://giddh.com/ae/signup"': 'https://giddh.com/uk/signup"')}>Start Free</a>
             </div>
           </div>
         </div>

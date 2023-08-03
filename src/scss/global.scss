@@ -61,3 +61,18 @@ a{
 .cursor-pointer{
     cursor: pointer !important;
 }
+// Country Dropdown
+.country_dropdown {
+    &__menu {
+      li {
+        a {
+          color: var(--col-dark);
+          transition: all 200ms;
+          &:hover, &.active {
+            background-color: var(--col-blue);
+            color: var(--col-white);
+          }
+        }
+      }
+    }
+  }

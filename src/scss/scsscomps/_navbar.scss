@@ -128,20 +128,7 @@
     border-radius: 20px;
     display: inline-block;
   }
-  .country_dropdown {
-    &__menu {
-      li {
-        a {
-          color: var(--col-dark);
-          transition: all 200ms;
-          &:hover {
-            background-color: var(--col-blue);
-            color: var(--col-white);
-          }
-        }
-      }
-    }
-  }
+  
 
   &--navbar_brand {
     svg {

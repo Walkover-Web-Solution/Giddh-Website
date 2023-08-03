@@ -22,7 +22,7 @@ export default function MyApp({ Component, pageProps }) {
       <div
         className="modal fade"
         id="downloadFree"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="downloadFreeLabel"
         aria-hidden="true"
       >
