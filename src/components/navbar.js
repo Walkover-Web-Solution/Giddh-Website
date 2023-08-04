@@ -9,6 +9,25 @@ const navbar = () => {
 
   let link = isIndia ? '' : (isAE ? '/ae' : '/uk');
 
+  function getCountryWiseData(data){
+      if(isIndia){
+         if(data.in === true){
+          return data
+         }
+      }
+      if(isAE){
+        if(data.ae === true){
+          return data
+         }
+      }
+      if(isUK){
+        if(data.uk === true){
+          return data
+         }
+      }
+      return null;
+  }
+
   // JSON data for Feature Menu
   let features = [
     {
@@ -93,56 +112,56 @@ const navbar = () => {
       uk: true,
       ae: true,
       menuItem: "Dashboard",
-      url: "/accounting-dashboard/",
+      url: "/accounting-dashboard",
     },
     {
       in: true,
       uk: true,
       ae: true,
       menuItem: "Inventory",
-      url: "/inventory-management-software/",
+      url: "/inventory-management-software",
     },
     {
       in: true,
       uk: true,
       ae: true,
       menuItem: "Security",
-      url: "/security/",
+      url: "/security",
     },
     {
       in: true,
       uk: true,
       ae: true,
       menuItem: "All Features",
-      url: "/all-features/",
+      url: "/all-features",
     },
     {
       in: true,
       uk: true,
       ae: true,
       menuItem: "Anywhere-Anytime",
-      url: "/cloud-accounting-software/",
+      url: "/cloud-accounting-software",
     },
     {
       in: true,
       uk: false,
       ae: false,
       menuItem: "Linked Bank Account",
-      url: "/conect-bank-reconcile/",
+      url: "/conect-bank-reconcile",
     },
     {
       in: true,
       uk: true,
       ae: true,
       menuItem: "Import Excel Files",
-      url: "/import-data/",
+      url: "/import-data",
     },
     {
       in: true,
       uk: true,
       ae: true,
       menuItem: "Reports & Analysis",
-      url: "/financial-reporting/",
+      url: "/financial-reporting",
     },
   ];
   
@@ -254,64 +273,13 @@ const navbar = () => {
                 <ul className="dropdown-menu dropdown-menu--position-left">
                   <li>
                     <ul className="dropdown-menu__wapper d-grid ps-0">
-                      <li>
-                        <a href={ link + "/gst" }>GST Compliances</a>
-                      </li>
-                      <li>
-                        <a href={ link + "/conect-bank-reconcile" }>Bank Reconcile</a>
-                      </li>
-                      <li>
-                        <a href={ link + "/multi-currency-accounting-software" }>
-                          Multi Currency
-                        </a>
-                      </li>
-                      <li>
-                        <a href={ link + "/icici-integration" }>ICICI Integration</a>
-                      </li>
-                      <li>
-                        <a href={ link + "/e-invoice" }>E-Invoice</a>
-                      </li>
-
-                      <li>
-                        <a href={ link + "/invoice-software" }>Invoicing</a>
-                      </li>
-                      <li>
-                        <a href={ link +  "/multi-user-accounting-software" }>Share Data</a>
-                      </li>
-                      <li>
-                        <a href={ link +  "/contacts" }>Contacts</a>
-                      </li>
-                      <li>
-                        <a href={ link +  "https://apidoc.giddh.com" }>API Integration</a>
-                      </li>
-
-                      <li>
-                        <a href={ link +  "/accounting-dashboard" }>Dashboard</a>
-                      </li>
-                      <li>
-                        <a href={ link +  "/inventory-management-software" }>Inventory</a>
-                      </li>
-                      <li>
-                        <a href={ link +  "/security" }>Security</a>
-                      </li>
-                      <li>
-                        <a href={ link +  "/all-features" }>All Features</a>
-                      </li>
-
-                      <li>
-                        <a href={ link +  "/cloud-accounting-software" }>
-                          Anywhere-Anytime
-                        </a>
-                      </li>
-                      <li>
-                        <a href={ link +  "/conect-bank-reconcile" }>Linked Bank Account</a>
-                      </li>
-                      <li>
-                        <a href={ link +  "/import-data" }>Import Excel Files</a>
-                      </li>
-                      <li>
-                        <a href={ link +  "/financial-reporting" }>Reports & Analysis</a>
-                      </li>
+                      { 
+                       features.filter(getCountryWiseData).map((data) => (
+                         <li key={data.toString()}>
+                         <a href={ link + data.url }>{ data.menuItem }</a>
+                       </li>
+                      ))
+                      }
                     </ul>
                   </li>
                 </ul>
