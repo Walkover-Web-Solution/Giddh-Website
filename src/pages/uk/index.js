@@ -1,16 +1,9 @@
-import FEATUREGALLERY from "@/components/featureGallery";
-import MAKETHESWITCHINDEXPAGE from "@/components/makeTheSwitch";
-import ENQUIRYFORM from "@/components/enquiryForm";
-import GSTINDEXPAGE from "@/components/gstIndexPage";
-
-const index = () => {
+import Index from '@/pages/index';
+const ukIndex = () => {
   return (
     <>
-      <ENQUIRYFORM  />
-      <GSTINDEXPAGE />    
-      <FEATUREGALLERY />
-      <MAKETHESWITCHINDEXPAGE />
+      <Index  />
     </>
   );
 };
-export default index;
+export default ukIndex;

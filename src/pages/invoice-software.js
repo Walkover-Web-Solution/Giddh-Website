@@ -1,6 +1,12 @@
+import { usePathname } from 'next/navigation'
 import { useState } from "react";
 import { MdRemove, MdAdd } from "react-icons/md";
 const invoiceSoftware = () => {
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split('/');
+  let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
+  let isAE = startPath[1] === 'ae';
   const [readMoreStatus, readmoreAction] = useState(false);
   return (
     <>
@@ -299,7 +305,7 @@ const invoiceSoftware = () => {
                 </p>
 
                 <div className="my-5 text-center">
-                  <a href="/signup" className="btn-link-purple">
+                  <a href={ isIndia ? '/signup' : ( isAE ? '/ae/signup' : '/uk/signup')} className="btn-link-purple">
                     Try Now
                   </a>
                 </div>

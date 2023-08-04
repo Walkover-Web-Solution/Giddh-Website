@@ -1,5 +1,12 @@
-import { MdRemove, MdAdd } from "react-icons/md";
+import { usePathname } from "next/navigation";
 const makeTheSwitch = () => {
+    // To get active route
+    const pathname = usePathname();
+    const startPath = pathname.split("/");
+    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+    let isAE = startPath[1] === "ae";
+  
+    let link = isIndia ? '' : (isAE ? '/ae' : '/uk');
   return (
     <>
       <div className="make_the_switch">
@@ -25,7 +32,7 @@ const makeTheSwitch = () => {
           <div className="row ">
             <div className="col-md-6 col-sm-12">
               <figure>
-                <img src="/img/switch-laptop-image.png" className="img-fluid" />
+                <img src={ isIndia || isAE ? "/img/switch-laptop-image.png" : "/img/uk-dashboard-laptop-and-pc-img.svg"} className="img-fluid" />
               </figure>
             </div>
             <div className="col-md-6 col-sm-12">

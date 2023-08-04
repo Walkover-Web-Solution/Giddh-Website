@@ -1,9 +1,18 @@
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MdRemove, MdAdd } from "react-icons/md";
 const anywhereAnytime = () => {
   const [readMoreStatus, readmoreAction] = useState(false);
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
+
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+  let isUK = startPath[1] === "uk";
+
   return (
     <>
       <section className="container-fluid">

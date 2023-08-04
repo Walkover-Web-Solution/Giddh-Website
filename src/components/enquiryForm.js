@@ -60,9 +60,8 @@ const enquiryForm = () => {
                               <option value="+91" defaultValue>
                                 +91
                               </option>
-                              <option value="+652">+652</option>
-                              <option value="+98">+98</option>
-                              <option value="+30">+30</option>
+                              <option value="+971">+971</option>
+                              <option value="+44">+44</option>
                             </select>
                           </div>
                         </div>

@@ -1,5 +1,12 @@
-import { MdRemove, MdAdd, MdClose } from "react-icons/md";
+import { usePathname } from "next/navigation";
+import { MdRemove, MdAdd } from "react-icons/md";
+
 const conectBankReconcile = () => {
+    // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
   return (
     <>
       <div className="features">
@@ -205,7 +212,7 @@ const conectBankReconcile = () => {
           </div>
         </section>
 
-        <section className="container-fluid features__accordion_container">
+        <section className="container-fluid features__accordion_container" >
           <div className="container">
             <div className="row">
               <div className="col-12">

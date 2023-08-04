@@ -1,5 +1,11 @@
+import { usePathname } from 'next/navigation'
 import { MdRemove, MdAdd } from "react-icons/md";
 const eInvoie = () => {
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split('/');
+  let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
+  let isAE = startPath[1] === 'ae';
   return (
     <>
       <div className="e-invoice">
@@ -225,7 +231,7 @@ const eInvoie = () => {
             <div className="row">
               <div className="col-12">
                 <div className="features__heading_container__links">
-                  <a href="/signup" className="download_free_btn me-4" data-bs-toggle="modal"
+                  <a href={ isIndia ? '/signup' : ( isAE ? '/ae/signup' : '/uk/signup')} className="download_free_btn me-4" data-bs-toggle="modal"
                     data-bs-target="#downloadFree">
                     Sign up for free
                   </a>

@@ -6,6 +6,9 @@ const Footer = () => {
   let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
   let isAE = startPath[1] === 'ae';
   let isUK = startPath[1] === 'uk';
+
+  let link = isIndia ? '' : (isAE ? '/ae' : '/uk');
+
   return (
     <div className="footer-container py-5">
       <footer>
@@ -18,16 +21,16 @@ const Footer = () => {
                     <h5>Quick Links</h5>
                     <ul className="footer-list list-unstyled mb-3">
                       <li>
-                        <a href="/pricing">Pricing</a>
+                        <a href={ link + "/pricing"}>Pricing</a>
                       </li>
                       <li>
-                        <a href="/about">About</a>
+                        <a href={ link + "/about" }>About</a>
                       </li>
                       <li>
                         <a href="https://giddh.com/blog/">Blog</a>
                       </li>
                       <li>
-                        <a href="privacy-policy">Privacy Policy</a>
+                        <a href={ link + "privacy-policy" }>Privacy Policy</a>
                       </li>
                       <li>
                         <a target="_blank" href="https://apply.workable.com/walkover/">
@@ -35,10 +38,10 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="/affiliate">Affiliate With Us</a>
+                        <a href={ link + "/affiliate" }>Affiliate With Us</a>
                       </li>
                       <li>
-                        <a href="/terms">Terms of Use</a>
+                        <a href={ link +  "/terms"}>Terms of Use</a>
                       </li>
                     </ul>
                   </div>

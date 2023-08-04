@@ -1,9 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+
 const about = () => {
   const [currentMenu, setCurrentMenu] = useState(0);
   const setCurrent = (index) => {
     setCurrentMenu(index);
   };
+
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
   return (
     <>
       <div className="about">
@@ -220,7 +227,7 @@ const about = () => {
                     its clients with messaging & mobile solutions whenever they
                     want, where ever they are.
                   </p>
-                  <a href="#" className="text-center">
+                  <a href="https://msg91.com/" className="text-center">
                     Know More
                   </a>
                 </div>
@@ -243,7 +250,7 @@ const about = () => {
                     marketplace that makes developers’ lives easier and adds
                     more power to your business.
                   </p>
-                  <a href="#" className="text-center">
+                  <a href="https://viasocket.com/" className="text-center">
                     Know More
                   </a>
                 </div>
@@ -1123,14 +1130,14 @@ const about = () => {
                   </figure>
                   <figure>
                     <img
-                      src="/img/about/team/dilpreet.jpg"
+                      src={ isIndia ? "/img/about/team/dilpreet.jpg" : "/img/about/team/prateek.png"}
                       width="100%"
                       height="100%"
-                      alt="Mr. Dilpreet"
+                      alt={  isIndia ? "Mr. Dilpreet" : "Mr. Prateek"}
                     />
                     <div>
-                      <figcaption>Dilpreet</figcaption>
-                      <figcaption>Jr. Software Developer</figcaption>
+                      <figcaption>{ isIndia ? "Dilpreet" : "Prateek"}</figcaption>
+                      <figcaption>{ isIndia ? "Jr." : "Sr."} Software Developer</figcaption>
                     </div>
                   </figure>
                   <figure>

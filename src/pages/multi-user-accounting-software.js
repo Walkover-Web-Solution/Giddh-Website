@@ -1,6 +1,14 @@
 import { MdRemove, MdAdd } from "react-icons/md";
 import { GiCheckMark } from "react-icons/gi";
+import { usePathname } from "next/navigation";
+
 const multiUserAccountingSoftware = () => {
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+  let isUK = startPath[1] === "uk";
   return (
     <>
       <section className="container-fluid">
