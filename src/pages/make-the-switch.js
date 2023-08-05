@@ -5,7 +5,8 @@ const makeTheSwitch = () => {
     const startPath = pathname.split("/");
     let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
     let isAE = startPath[1] === "ae";
-  
+
+    // Holds Url Prefix country wise
     let link = isIndia ? '' : (isAE ? '/ae' : '/uk');
   return (
     <>

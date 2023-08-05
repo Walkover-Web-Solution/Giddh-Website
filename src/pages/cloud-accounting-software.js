@@ -111,10 +111,8 @@ const anywhereAnytime = () => {
                   Stay ahead with automatic updates
                 </h4>
                 <p className="">
-                  With Giddh’s
-                  <a href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/">
-                    <u>cloud based accounting software </u>
-                  </a>
+                  With Giddh’s <a href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/" className="text-decoration-underline">
+                     cloud based accounting software</a>
                   , you will automatically receive OTA (on the air) updates of
                   the greatest and newest features that are added to Giddh. That
                   means less effort on your part—which we all love. Now isn’t
@@ -166,9 +164,8 @@ const anywhereAnytime = () => {
                 </h4>
                 <p className="">
                   With{" "}
-                  <a href="https://giddh.com/blog/10-new-awesome-features-on-the-giddh-software-2020/">
-                    <u>cloud based accounting software</u>
-                  </a>{" "}
+                  <a href="https://giddh.com/blog/10-new-awesome-features-on-the-giddh-software-2020/" className="text-decoration-underline">
+                    cloud based accounting software </a>{" "}
                   , your team-members don’t need to be all at the same time to
                   collaborate or make major decisions. Thanks to easily
                   shareable online reports, decision makers and accountants can
@@ -198,8 +195,8 @@ const anywhereAnytime = () => {
                   Online Vs. Offline Accounting Software
                 </h4>
                 <p className="">
-                  <a href="https://giddh.com/blog/desktop-accounting-software-and-its-limitations/">
-                    <u>Online cloud accounting software</u>
+                  <a href="https://giddh.com/blog/desktop-accounting-software-and-its-limitations/" className="text-decoration-underline">
+                    Online cloud accounting software
                   </a>{" "}
                   has become the new norm for carrying out finance operations in
                   the present day. In view of its rising popularity, let’s look

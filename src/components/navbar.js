@@ -7,70 +7,36 @@ const navbar = () => {
   let isAE = startPath[1] === "ae";
   let isUK = startPath[1] === "uk";
 
-  let link = isIndia ? '' : (isAE ? '/ae' : '/uk');
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
 
-  function getCountryWiseData(data){
-      if(isIndia){
-         if(data.in === true){
-          return data
-         }
+  function getCountryWiseData(data) {
+    if (isIndia) {
+      if (data.in === true) {
+        return data;
       }
-      if(isAE){
-        if(data.ae === true){
-          return data
-         }
+    }
+    if (isAE) {
+      if (data.ae === true) {
+        return data;
       }
-      if(isUK){
-        if(data.uk === true){
-          return data
-         }
+    }
+    if (isUK) {
+      if (data.uk === true) {
+        return data;
       }
-      return null;
+    }
+    return null;
   }
 
   // JSON data for Feature Menu
   let features = [
-    {
-      in: true,
-      uk: false,
-      ae: false,
-      menuItem: "GST Compliances",
-      url: "/gst",
-    },
     {
       in: false,
       uk: true,
       ae: true,
       menuItem: "VAT",
       url: "/vat",
-    },
-    {
-      in: false,
-      uk: true,
-      ae: true,
-      menuItem: "Bank Reconciliation",
-      url: "/conect-bank-reconcile",
-    },
-    {
-      in: true,
-      uk: false,
-      ae: false,
-      menuItem: "Bank Reconcile",
-      url: "/conect-bank-reconcile",
-    },
-    {
-      in: true,
-      uk: true,
-      ae: true,
-      menuItem: "Multi Currency",
-      url: "/multi-currency-accounting-software",
-    },
-    {
-      in: true,
-      uk: false,
-      ae: false,
-      menuItem: "ICICI Integration",
-      url: "/icici-integration",
     },
     {
       in: true,
@@ -104,13 +70,6 @@ const navbar = () => {
       in: true,
       uk: true,
       ae: true,
-      menuItem: "API Integration",
-      url: "https://apidoc.giddh.com/",
-    },
-    {
-      in: true,
-      uk: true,
-      ae: true,
       menuItem: "Dashboard",
       url: "/accounting-dashboard",
     },
@@ -134,6 +93,48 @@ const navbar = () => {
       ae: true,
       menuItem: "All Features",
       url: "/all-features",
+    },
+    {
+      in: true,
+      uk: false,
+      ae: false,
+      menuItem: "GST Compliances",
+      url: "/gst",
+    },
+    {
+      in: false,
+      uk: true,
+      ae: true,
+      menuItem: "Bank Reconciliation",
+      url: "/conect-bank-reconcile",
+    },
+    {
+      in: true,
+      uk: false,
+      ae: false,
+      menuItem: "Bank Reconcile",
+      url: "/conect-bank-reconcile",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Multi Currency",
+      url: "/multi-currency-accounting-software",
+    },
+    {
+      in: true,
+      uk: false,
+      ae: false,
+      menuItem: "ICICI Integration",
+      url: "/icici-integration",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "API Integration",
+      url: "https://apidoc.giddh.com/",
     },
     {
       in: true,
@@ -164,12 +165,12 @@ const navbar = () => {
       url: "/financial-reporting",
     },
   ];
-  
+
   return (
     <>
       <nav className="navbar navbar--box-shadow navbar--theme-white navbar-expand-lg position-fixed w-100 py-0">
         <div className="container-fluid">
-          <a className="navbar--navbar_brand" href={link + '/'}>
+          <a className="navbar--navbar_brand" href={link + "/"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="126.833"
@@ -264,31 +265,42 @@ const navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link chevron_down nav-link--feature-menu"
-                  href={ link + "/all-features" }
-                >
-                  Features
-                </a>
-                <ul className="dropdown-menu dropdown-menu--position-left">
-                  <li>
-                    <ul className="dropdown-menu__wapper d-grid ps-0">
-                      { 
-                       features.filter(getCountryWiseData).map((data) => (
-                         <li key={data.toString()}>
-                         <a href={ link + data.url }>{ data.menuItem }</a>
-                       </li>
-                      ))
-                      }
-                    </ul>
-                  </li>
-                </ul>
+                <div className="dropdown">
+                  <a
+                    className="nav-link chevron_down nav-link--feature-menu"
+                    href="#"
+                    id="allFeaturesDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Features
+                  </a>
+                  <ul
+                    className="dropdown-menu dropdown-menu--position-left"
+                    aria-labelledby="allFeaturesDropdown"
+                  >
+                    <li>
+                      <ul className="dropdown-menu__wapper d-grid ps-0">
+                        {features.filter(getCountryWiseData).map((data, index) => (
+                          <li key={index}>
+                            <a
+                              href={
+                                data.menuItem === "API Integration"
+                                  ? data.url
+                                  : link + data.url
+                              }
+                            >
+                              {data.menuItem}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href={ link +  "/pricing" }
-                >
+                <a className="nav-link" href={link + "/pricing"}>
                   Pricing
                 </a>
               </li>
@@ -301,28 +313,33 @@ const navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={ link +  "/about" }>
+                <a className="nav-link" href={link + "/about"}>
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  className="nav-link chevron_down nav-link--resource-menu"
-                  href="#"
-                >
-                  Resources
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a href="https://giddh.com/blog/">Blog</a>
-                  </li>
-                  <li>
-                    <a href="https://giddh.com/guide/">Guide</a>
-                  </li>
-                  <li>
-                    <a href="https://giddh.com/help/">Help</a>
-                  </li>
-                </ul>
+                <div className="dropdown">
+                  <a
+                    className="nav-link chevron_down nav-link--resource-menu"
+                    href="#"
+                    id="resouceDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Resources
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="resouceDropdown">
+                    <li>
+                      <a href="https://giddh.com/blog/">Blog</a>
+                    </li>
+                    <li>
+                      <a href="https://giddh.com/guide/">Guide</a>
+                    </li>
+                    <li>
+                      <a href="https://giddh.com/help/">Help</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
             <div className="nav_right d-flex align-items-center">
@@ -384,18 +401,12 @@ const navbar = () => {
                 </ul>
               </div>
               <div>
-                <a
-                  href={ link +  "/login"}
-                  className="login_page_link"
-                >
+                <a href={link + "/login"} className="login_page_link">
                   Login
                 </a>
               </div>
               <div>
-                <a
-                  href={ link +  "/signup" }
-                  className="signup_page_link"
-                >
+                <a href={link + "/signup"} className="signup_page_link">
                   Sign Up
                 </a>
               </div>
