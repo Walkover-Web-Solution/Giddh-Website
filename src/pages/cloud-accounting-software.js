@@ -111,12 +111,8 @@ const anywhereAnytime = () => {
                   Stay ahead with automatic updates
                 </h4>
                 <p className="">
-                  With Giddh’s <a href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/" className="text-decoration-underline">
-                     cloud based accounting software</a>
-                  , you will automatically receive OTA (on the air) updates of
-                  the greatest and newest features that are added to Giddh. That
-                  means less effort on your part—which we all love. Now isn’t
-                  that awesome?
+                  {isIndia ? "With Giddh’s  cloud based accounting software, you will automatically receive OTA (on the air) updates of the greatest and newest features that are added to Giddh. That means less effort on your part—which we all love. Now isn’t that awesome?" : ""}
+                {isAE || isUK ? "With cloud based accounting platform you will automatically receive OTA(on the air) updates of the greatest and newest features that are added to Giddh. That means less effort on your part—which we all love. Now isn’t that awesome!" : ""}
                 </p>
               </div>
             </div>
@@ -193,6 +189,7 @@ const anywhereAnytime = () => {
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
                   Online Vs. Offline Accounting Software
+
                 </h4>
                 <p className="">
                   <a href="https://giddh.com/blog/desktop-accounting-software-and-its-limitations/" className="text-decoration-underline">

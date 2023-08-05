@@ -7,6 +7,7 @@ const invoiceSoftware = () => {
   const startPath = pathname.split('/');
   let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
   let isAE = startPath[1] === 'ae';
+  let isUK = startPath[1] === 'uk';
   const [readMoreStatus, readmoreAction] = useState(false);
   return (
     <>
@@ -104,14 +105,19 @@ const invoiceSoftware = () => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Stay GST Compliant
+                  {isIndia ? "Stay GST Compliant" : ""}
+                {isAE || isUK
+                  ? "Stay VAT Compliant"
+                  : ""}
                   </h4>
                   <p className="">
-                    Stay Goods and Services Tax(GST) compliant by creating
-                    online invoices that are GST compliant. Giddh’s invoice
-                    templates have fields for HSN or SAC code, GSTIN number,
-                    state of business operation which are mandatory for business
-                    owners in order to stay compliant.
+                    
+                    {isIndia ? "Stay Goods and Services Tax(GST) compliant by creatingonline invoices that are GST compliant. Giddh’s invoicetemplates have fields for HSN or SAC code, GSTIN number,state of business operation which are mandatory for businessowners in order to stay compliant." : ""}
+                {isAE || isUK
+                  ? "Value Added Tax (VAT) compliant by creatingonline invoices that are GST compliant. Giddh’s invoicetemplates have fields for HSN or SAC code, GSTIN number,state of business operation which are mandatory for businessowners in order to stay compliant."
+                  : ""}
+              
+                
                   </p>
                 </div>
               </div>
@@ -133,10 +139,12 @@ const invoiceSoftware = () => {
                     Lock your invoices and move on!
                   </h4>
                   <p className="">
-                    Tired of unwanted tampering to your finalized invoices?
-                    Giddh’s invoicing software has an invoice locking feature
-                    with which you can lock your invoices from being edited or
-                    deleted once they are finalized.
+                    
+                    {isIndia ? "Tired of unwanted tampering to your finalized invoices? Giddh’s invoicing software has an invoice locking feature with which you can lock your invoices from being edited or deleted once they are finalized." : ""}
+                {isAE || isUK
+                  ? "Tired of unwanted tampering to your finalized invoices? With Giddh's invoice locking feature, lock your invoices from being edited or deleted once they are finalized."
+                  
+                  : ""}
                   </p>
                 </div>
               </div>
@@ -157,10 +165,11 @@ const invoiceSoftware = () => {
                     Run your business with automation!
                   </h4>
                   <p className="">
-                    From setting payment reminders to sending online invoices to
-                    clients on a recurring basis, you can utilize the complete
-                    potential of automation with Giddh! So let Giddh follow-up
-                    with customers and focus on your core business activities.
+                    
+                    {isIndia ? "From setting payment reminders to sending online invoices to clients on a recurring basis, you can utilize the complete potential of automation with Giddh! So let Giddh follow-up with customers and focus on your core business activities." : ""}
+                {isAE || isUK
+                  ? "From setting payment reminders to sending invoices to clients on a recurring basis, you can utilize the complete potential of automation with Giddh! So let Giddh follow-up with customer and focus on your core business activities." 
+                  : ""}
                   </p>
                 </div>
               </div>

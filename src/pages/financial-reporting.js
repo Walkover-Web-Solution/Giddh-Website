@@ -5,7 +5,7 @@ const financialReporting = () => {
   // To get active route
   const pathname = usePathname();
   const startPath = pathname.split("/");
-  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== 'uk';
   let isAE = startPath[1] === "ae";
   let isUK = startPath[1] === "uk";
   return (

@@ -182,14 +182,15 @@ const inventoryManagementSoftware = () => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Giddh inventory software is GST ready!
+                    
+                    {isIndia ? "Giddh inventory software is GST ready!" : ""}
+                {isAE || isUK ? "Giddh inventory software is VAT ready!" : ""}
+                
                   </h4>
                   <p className="">
-                    Giddh inventory management software is fully compliant with
-                    the GST system. Track inventory, manage orders, assign HSN &
-                    SAC codes to items and send GST compliant invoices. Your
-                    search for a GST compliant inventory management software
-                    ends with Giddh.
+                    
+                    {isIndia ? "Giddh inventory management software is fully compliant with the GST system. Track inventory, manage orders, assign HSN & SAC codes to items and send GST compliant invoices. Your search for a GST compliant inventory management software ends with Giddh." : ""}
+                {isAE || isUK ? "Giddh inventory management software is fully compliant with the VAT system. Track inventory, manage orders, assign HSN & SAC codes to items and send VAT compliant invoices. Your search for a VAT compliant inventory management software ends with Giddh." : ""}
                   </p>
                 </div>
               </div>
