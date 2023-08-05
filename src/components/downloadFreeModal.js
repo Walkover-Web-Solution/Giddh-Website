@@ -1,37 +1,38 @@
 import { MdClose } from "react-icons/md";
 import { useEffect, useState } from "react";
+
 const downloadFreeModal = () => {
   const [windowsApp, setWindowsApp] = useState("");
   const [macApp, setMacApp] = useState("");
 
   useEffect(() => {
-    let win = getAppVersion("win");
-    setWindowsApp(win);
-    let mac = getAppVersion("");
-    setMacApp(mac);
+    getAppVersion("win");
+    getAppVersion("mac");
 
-    // console.log("Win: ", windowsApp);
-    // console.log("Mac: ", macApp);
+    //To get latest version of giddh app
+    async function getAppVersion(os) {
+      let forWhichOS = os === "win" ? "" : "-mac";
+
+      const res = await fetch(
+        `https://s3-ap-south-1.amazonaws.com/giddh-app-builds/latest${forWhichOS}.yml`,
+        { cache: "no-store" }
+      )
+        .then((res) => res.blob())
+        .then((blob) => blob.text())
+        .then((res) => {
+          if (res && typeof res === "string") {
+            let version = res.split("files")[0];
+            let versNum = version.split(" ")[1].trim();
+            if (os === "win") {
+              setWindowsApp(versNum);
+            } else {
+              setMacApp(versNum);
+            }
+          }
+        })
+        .catch((err) => console.log("yaml err:", err));
+    }
   }, []);
-
-  //To get latest version of giddh app
-  async function getAppVersion(os) {
-    let forWhichOS = os === "win" ? "" : "-mac";
-
-    const dynamicData = await fetch(
-      `https://s3-ap-south-1.amazonaws.com/giddh-app-builds/latest${forWhichOS}.yml`,
-      { cache: "no-store" }
-    )
-      .then((res) => res.blob())
-      .then((blob) => blob.text())
-      .then((yamlAsString) => {
-        console.log("yml Data: ", yamlAsString);
-      })
-      // .catch((err) => console.log("yaml err:", err));
-
-      return '10'
-  }
-
   return (
     <>
       <div
@@ -80,7 +81,6 @@ const downloadFreeModal = () => {
               </figure>
               <div className="d-flex justify-content-center align-items-center flex-column flex-md-row column-gap-2 row-gap-3 mt-4 mb-2">
                 <a
-                  on
                   href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20${windowsApp}.exe`}
                   className="download-free-modal__btn_link"
                 >

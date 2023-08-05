@@ -247,7 +247,6 @@ const enquiryForm = () => {
   function handleCountryCodeChange(e){
     let selectedCode = e.target.value;
     setCurrentCountryCode(selectedCode);
-        console.log("selected  code :", selectedCode);
   }
   return (
     <>
