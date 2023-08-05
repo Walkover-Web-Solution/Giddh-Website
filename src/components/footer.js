@@ -7,7 +7,12 @@ const Footer = () => {
   let isAE = startPath[1] === 'ae';
   let isUK = startPath[1] === 'uk';
 
+  // Holds Url Prefix country wise
   let link = isIndia ? '' : (isAE ? '/ae' : '/uk');
+
+  // Get Current Year
+  const date = new Date();
+  const year = date.getFullYear();
 
   return (
     <div className="footer-container py-5">
@@ -171,7 +176,7 @@ const Footer = () => {
             <div className="d-flex mt-4 copyright-text">
               <li className="widget_text widget widget_custom_html list-unstyled class">
                 <div className="textwidget custom-html-widget ">
-                  All rights are reserved 2020 Walkover
+                  All rights are reserved {year} Walkover
                 </div>
               </li>
             </div>

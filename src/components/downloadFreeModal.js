@@ -1,18 +1,40 @@
 import { MdClose } from "react-icons/md";
+import { useEffect, useState } from "react";
 const downloadFreeModal = () => {
-  async function getWindowsAppVersion() {
-    const res = await fetch('https://s3-ap-south-1.amazonaws.com/giddh-app-builds/latest.yml')
-   
-    if (!res.ok) {
-      throw new Error('Failed to fetch data')
-    }
-   
-    return res.json()
+  const [windowsApp, setWindowsApp] = useState("");
+  const [macApp, setMacApp] = useState("");
+
+  useEffect(() => {
+    let win = getAppVersion("win");
+    setWindowsApp(win);
+    let mac = getAppVersion("");
+    setMacApp(mac);
+
+    // console.log("Win: ", windowsApp);
+    // console.log("Mac: ", macApp);
+  }, []);
+
+  //To get latest version of giddh app
+  async function getAppVersion(os) {
+    let forWhichOS = os === "win" ? "" : "-mac";
+
+    const dynamicData = await fetch(
+      `https://s3-ap-south-1.amazonaws.com/giddh-app-builds/latest${forWhichOS}.yml`,
+      { cache: "no-store" }
+    )
+      .then((res) => res.blob())
+      .then((blob) => blob.text())
+      .then((yamlAsString) => {
+        console.log("yml Data: ", yamlAsString);
+      })
+      // .catch((err) => console.log("yaml err:", err));
+
+      return '10'
   }
 
   return (
     <>
-    <div
+      <div
         className="modal fade"
         id="downloadFree"
         tabIndex="-1"
@@ -22,7 +44,10 @@ const downloadFreeModal = () => {
         <div className="modal-dialog modal-dialog-centered download-free-modal">
           <div className="modal-content bg-transparent">
             <div className="modal-header">
-              <h4 className="modal-title c-fs-5 col-white" id="downloadFreeLabel">
+              <h4
+                className="modal-title c-fs-5 col-white"
+                id="downloadFreeLabel"
+              >
                 Download App
               </h4>
               <span
@@ -39,7 +64,10 @@ const downloadFreeModal = () => {
               </h2>
               <p className="c-fs-6">
                 Download not starting? Try{" "}
-                <a href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%208.2.1.exe" className="text-primary">
+                <a
+                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20${windowsApp}.exe`}
+                  className="text-primary"
+                >
                   Direct download link
                 </a>
               </p>
@@ -51,12 +79,22 @@ const downloadFreeModal = () => {
                 />
               </figure>
               <div className="d-flex justify-content-center align-items-center flex-column flex-md-row column-gap-2 row-gap-3 mt-4 mb-2">
-                <a href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-8.2.1.dmg" className="download-free-modal__btn_link">
+                <a
+                  on
+                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20${windowsApp}.exe`}
+                  className="download-free-modal__btn_link"
+                >
                   <img src="/img/mac_icon.svg" alt="Mac-Apple-Icon" />
                   Download for mac
                 </a>
-                <a href="https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%208.2.1.exe" className="download-free-modal__btn_link">
-                <img src="/img/window-icon.svg"  alt="Windows-Microsoft-Icon"  />
+                <a
+                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20${macApp}.exe`}
+                  className="download-free-modal__btn_link"
+                >
+                  <img
+                    src="/img/window-icon.svg"
+                    alt="Windows-Microsoft-Icon"
+                  />
                   Download for windows
                 </a>
               </div>
