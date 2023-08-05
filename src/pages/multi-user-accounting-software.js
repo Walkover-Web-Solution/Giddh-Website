@@ -140,7 +140,7 @@ const multiUserAccountingSoftware = () => {
             <div className="col-md-12 col-lg-6 __image-alignment">
               <figure>
                 <img
-                  src="/img/feature-gallery-icons/share-collaborate.svg"
+                  src={isIndia || isAE ? '/img/feature-gallery-icons/share-collaborate.svg' : '/img/feature-gallery-icons/layer-uk.svg'}
                   className="img-fluid"
                   alt="bank reconcile image"
                 />

@@ -146,7 +146,7 @@ const financialReporting = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/report-aging.svg"
+                    src={isIndia || isAE ? '/img/feature-gallery-icons/report-aging.svg' : '/img/feature-gallery-icons/aging.svg'}
                     className="img-fluid"
                     alt="bank account image"
                   />
@@ -171,7 +171,7 @@ const financialReporting = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/report-collaborate.svg"
+                    src={isIndia || isAE ? '/img/feature-gallery-icons/report-collaborate.svg' : '/img/feature-gallery-icons/collab.svg'}
                     className="img-fluid"
                     alt="bank overview image"
                   />

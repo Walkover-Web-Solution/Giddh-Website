@@ -96,7 +96,7 @@ const inventoryManagementSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-invoice.svg"
+                    src={isIndia || isAE ? '/img/feature-gallery-icons/inventory-invoice.svg' : '/img/feature-gallery-icons/inventory-uk.svg'}
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -196,7 +196,7 @@ const inventoryManagementSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/GST-ready.svg"
+                    src={isIndia ? '/img/feature-gallery-icons/gst-ready.svg' : '/img/feature-gallery-icons/vat-invoice.svg'}
                     className="img-fluid"
                     alt="bank account image"
                   />

@@ -97,7 +97,7 @@ const anywhereAnytime = () => {
             <div className="col-md-12 col-lg-6 __image-alignment">
               <figure>
                 <img
-                  src="/img/feature-gallery-icons/Group-5628-1.svg"
+                  src={isAE || isUK ? '/img/feature-gallery-icons/cloud-welcome.svg' : '/img/feature-gallery-icons/Group-5628-1.svg'}
                   className="img-fluid"
                   alt="connect bank image"
                 />
@@ -125,7 +125,7 @@ const anywhereAnytime = () => {
             <div className="col-md-12 col-lg-6 __image-alignment">
               <figure>
                 <img
-                  src="/img/feature-gallery-icons/Group-5650.svg"
+                  src={isAE || isUK ? '/img/feature-gallery-icons/cloud-update.svg' : '/img/feature-gallery-icons/Group-5650.svg'}
                   className="img-fluid"
                   alt="bank reconcile image"
                 />
@@ -151,7 +151,7 @@ const anywhereAnytime = () => {
             <div className="col-md-12 col-lg-6 __image-alignment">
               <figure>
                 <img
-                  src="/img/feature-gallery-icons/Group-5641.svg"
+                  src={isAE || isUK ? '/img/feature-gallery-icons/save-more.svg' : '/img/feature-gallery-icons/Group-5641.svg'}
                   className="img-fluid"
                   alt="bank account image"
                 />

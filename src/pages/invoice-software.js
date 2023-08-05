@@ -118,7 +118,7 @@ const invoiceSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/gst-ready.svg"
+                    src={isIndia ? '/img/feature-gallery-icons/gst-ready.svg' : (isAE ? '/img/feature-gallery-icons/Invoicing.png' :'/img/feature-gallery-icons/Group-5618.svg')}
                     className="img-fluid"
                     alt="bank reconcile image"
                   />

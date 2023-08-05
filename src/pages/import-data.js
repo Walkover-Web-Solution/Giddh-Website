@@ -194,7 +194,7 @@ const importExeclFiles = () => {
             <div className="col-md-12 col-lg-6 __image-alignment">
               <figure>
                 <img
-                  src="/img/feature-gallery-icons/import-support.svg"
+                  src={isIndia || isAE ? '/img/feature-gallery-icons/import-support.svg' : '/img/feature-gallery-icons/support-uk.svg'}
                   className="img-fluid"
                   alt="bank account image"
                 />

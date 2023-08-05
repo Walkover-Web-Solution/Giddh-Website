@@ -95,7 +95,7 @@ const multiCurrencyAccountingSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-create.svg"
+                     src={isIndia || isAE ?  '/img/feature-gallery-icons/multi-currency-create.svg' : '/img/feature-gallery-icons/multi-currency-create-uk.svg'}
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -120,7 +120,7 @@ const multiCurrencyAccountingSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-invoice-3.svg"
+                    src={isIndia ? '/img/feature-gallery-icons/multi-currency-invoice.svg' : (isAE ? '/img/feature-gallery-icons/multi-currency-invoice-ae.svg' : '/img/feature-gallery-icons/multi-currency-invoice-uk.svg')}
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
@@ -145,7 +145,7 @@ const multiCurrencyAccountingSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-setting.svg"
+                    src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-setting.svg' : '/img/feature-gallery-icons/multi-currency-setting-uk.svg'}
                     className="img-fluid"
                     alt="bank account image"
                   />
@@ -169,7 +169,7 @@ const multiCurrencyAccountingSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-reports.svg"
+                    src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-reports.svg' : '/img/feature-gallery-icons/multi-currency-reports-uk.svg'}
                     className="img-fluid"
                     alt="bank overview image"
                   />
