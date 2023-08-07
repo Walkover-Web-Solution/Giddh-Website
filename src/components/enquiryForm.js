@@ -2,8 +2,8 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const enquiryForm = () => {
-  const [currentCountryCode, setCurrentCountryCode] = useState('91');
-  
+  const [currentCountryCode, setCurrentCountryCode] = useState("91");
+
   // To get active route
   const pathname = usePathname();
   const startPath = pathname.split("/");
@@ -13,7 +13,7 @@ const enquiryForm = () => {
 
   // Update Country Code countrywise
   useEffect(() => {
-    let currentCode = isIndia ? '91' : (isAE ? '971' : '44');
+    let currentCode = isIndia ? "91" : isAE ? "971" : "44";
     setCurrentCountryCode(currentCode);
   }, []);
 
@@ -244,7 +244,7 @@ const enquiryForm = () => {
     "228",
     "229",
   ];
-  function handleCountryCodeChange(e){
+  function handleCountryCodeChange(e) {
     let selectedCode = e.target.value;
     setCurrentCountryCode(selectedCode);
   }
@@ -301,21 +301,16 @@ const enquiryForm = () => {
                             <select
                               autoComplete="on"
                               className="form-select"
-                              value={ currentCountryCode }
-                              onChange={ handleCountryCodeChange}
+                              value={currentCountryCode}
+                              onChange={handleCountryCodeChange}
                             >
-                              { allCallingCode.map((e, key) => {
+                              {allCallingCode.map((e, key) => {
                                 return (
                                   <option key={key} value={e}>
-                                    {'+' + e}
+                                    {"+" + e}
                                   </option>
                                 );
                               })}
-                              {/* <option value="+91" defaultValue>
-                                +91
-                              </option>
-                              <option value="+971">+971</option>
-                              <option value="+44">+44</option> */}
                             </select>
                           </div>
                         </div>

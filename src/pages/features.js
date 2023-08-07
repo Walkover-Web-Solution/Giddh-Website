@@ -64,7 +64,7 @@ const features = () => {
                   reconcile your books. Bank link helps you keep track of your
                   cash flow in the most secure, fast and reliable way.
                 </p>
-                <a href="#" className="btn bg_color_blue col-white">
+                <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>

@@ -68,7 +68,7 @@ const financialReporting = () => {
                   decision maker of your business. Giddh gives you all reports
                   you may need to run your business better.
                 </p>
-                <a href="#" className="btn bg_color_blue col-white">
+                <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>

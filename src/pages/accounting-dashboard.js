@@ -67,7 +67,7 @@ const accountingDashboard = () => {
                   Actively keep an eye on the net worth, revenue, profit/loss
                   and other key information of your business.
                 </p>
-                <a href="#" className="btn bg_color_blue col-white">
+                <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
