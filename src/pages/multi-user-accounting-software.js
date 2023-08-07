@@ -7,7 +7,7 @@ const multiUserAccountingSoftware = () => {
         <div className="container features__heading_container">
           <div className="row">
             <div className="col-lg-7 order-lg-0 order-1">
-              <h2 className="heading col-primary c-fw-600 mb-4">
+              <h2 className="heading col-primary fw-bold mb-4">
                 Work better together by sharing business insights
               </h2>
               <p className="col-grey c-fs-3 mb-5">
@@ -48,7 +48,7 @@ const multiUserAccountingSoftware = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 text-center features__sub_heading_container--pull-top">
-              <h3 className="sub-heading col-primary c-fw-600 mb-3">
+              <h3 className="sub-heading col-primary fw-bold mb-3">
                 Smart collaboration across all departments
               </h3>
               <p className="c-fs-4 mb-5">
@@ -69,33 +69,41 @@ const multiUserAccountingSoftware = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h4 className="col-primary small-heading fw-bold mb-3">
                   Always be on the driver’s seat.
                 </h4>
-                <ul>
+                <p>
+                  Giddh multi-user online accounting software gives you the
+                  power to provide specified controlled access to different
+                  stakeholders who want access to a specific part of your
+                  financial data. With our unique role-based model sharing
+                  becomes easy, fast and super secure. You can
+                </p>
+
+                <ul className="p-0 m-0">
                   <li>
-                    <span className="col-primary ">
+                    <span className="col-primary c-fs-2 me-3">
                       <GiCheckMark />
-                    </span>{" "}
+                    </span>
                     Profit/Loss Statement, Balance Sheet, General Ledger and
                     Trial Balance.
                   </li>
                   <li>
-                    <span className="col-primary ">
+                    <span className="col-primary c-fs-2 me-3">
                       <GiCheckMark />
                     </span>
                     Drill down the reports by date, financial year, or even
                     project type.
                   </li>
                   <li>
-                    <span className="col-primary ">
+                    <span className="col-primary c-fs-2 me-3">
                       <GiCheckMark />
                     </span>
                     Export reports in any of the two supported formats: PDF or
                     Excel.
                   </li>
                   <li>
-                    <span className="col-primary ">
+                    <span className="col-primary c-fs-2 me-3">
                       <GiCheckMark />
                     </span>
                     Invite your accountant, partners or investors.
@@ -116,7 +124,7 @@ const multiUserAccountingSoftware = () => {
           <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h4 className="col-primary small-heading fw-bold mb-3">
                   Collaborate across multiple departments
                 </h4>
                 <p className="">
@@ -139,10 +147,10 @@ const multiUserAccountingSoftware = () => {
               </figure>
             </div>
           </div>
-          <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+          <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd   ">
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h4 className="col-primary small-heading fw-bold mb-3">
                   Avoid unnecessary confusion with ledger sharing
                 </h4>
                 <p className="">
@@ -279,8 +287,137 @@ const multiUserAccountingSoftware = () => {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
                 {/*============ Accordion #3 ===============*/}
-
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingThree">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <span className="me-2 collapse_icon collapse_icon--open">
+                        <MdAdd />
+                      </span>
+                      <span className="me-2 collapse_icon collapse_icon--close">
+                        <MdRemove />
+                      </span>
+                      Do I need to have bookkeeping or accounting experience to
+                      use the Giddh software?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionAllFeatures"
+                  >
+                    <div className="accordion-body">
+                      The Giddh software has a really simple interface that can
+                      be used by a layman The Giddh software is designed in such
+                      a way that any person without an accounting experience can
+                      operate all the features of the software.
+=======
+            </section>
+            <section className="container-fluid features__description_container mt-5">
+                <div className="container">
+                    <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                        <div className="col-md-12 col-lg-6">
+                            <div className="features__description_container__content">
+                                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                                    Always be on the driver’s seat.
+                                </h4>
+                    <ul>
+                      <li>
+                        <span className="col-primary ">
+                          <GiCheckMark />
+                        </span>{" "}
+                        Profit/Loss Statement, Balance Sheet, General Ledger and Trial Balance.
+                      </li>
+                      <li>
+                        <span className="col-primary ">
+                          <GiCheckMark />
+                        </span>
+                        Drill down the reports by date, financial year, or even project type.
+                      </li>
+                      <li>
+                        <span className="col-primary ">
+                          <GiCheckMark />
+                        </span>
+                        Export reports in any of the two supported formats: PDF or Excel.
+                      </li>
+                      <li>
+                        <span className="col-primary ">
+                          <GiCheckMark />
+                        </span>
+                        Invite your accountant, partners or investors.
+                      </li>
+                    </ul>
+                            </div>
+                        </div>
+                        <div className="col-md-12 col-lg-6 __image-alignment">
+                            <figure>
+                                <img
+                                    src="/img/feature-gallery-icons/share-admin.svg"
+                                    className="img-fluid"
+                                    alt="connect bank image"
+                                />
+                            </figure>
+                        </div>
+                    </div>
+                    <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                        <div className="col-md-12 col-lg-6">
+                            <div className="features__description_container__content">
+                                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                                    Collaborate across multiple departments
+                                </h4>
+                                <p className="">
+                                    Give your staff specific access to the different accounting modules they need to do their job.
+                                    With multi-user accounting, your sales manager will be happy with real time invoice sharing and
+                                    your accounting staff will always be on top of the tax filing.And when it matters the most, you can get
+                                    your advisor on board to speed up the process of decision making.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="col-md-12 col-lg-6 __image-alignment">
+                            <figure>
+                                <img
+                                    src="/img/feature-gallery-icons/share-collaborate.svg"
+                                    className="img-fluid"
+                                    alt="bank reconcile image"
+                                />
+                            </figure>
+                        </div>
+                    </div>
+                    <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
+                        <div className="col-md-12 col-lg-6">
+                            <div className="features__description_container__content">
+                                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                                    Avoid unnecessary confusion with ledger sharing
+                                </h4>
+                                <p className="">
+                                    Giddh multi-user accounting software lets you share your ledger with view access to external
+                                    accounting team or client so that all the discrepancies can be avoided. Additionally, witness
+                                    the magic of magic link in ledger sharing. Magic link comes with the validity of 24 hours, after
+                                    which your shared ledger will not be accessible.</p>
+                            </div>
+                        </div>
+                        <div className="col-md-12 col-lg-6 __image-alignment">
+                            <figure>
+                                <img
+                                    src="/img/feature-gallery-icons/share-cash.svg"
+                                    className="img-fluid"
+                                    alt="bank account image"
+                                />
+                            </figure>
+                        </div>
+>>>>>>> d1cee0ace03d0e09f46e59a6e41f80c1ff55f648
+                    </div>
+                  </div>
+                </div>
                 {/*============ Accordion #4 ===============*/}
                 <div className="accordion-item">
                   <h2 className="accordion-header" id="headingFour">
@@ -318,6 +455,7 @@ const multiUserAccountingSoftware = () => {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
                 {/*============ Accordion #5 ===============*/}
 
                 <div className="accordion-item">
@@ -350,6 +488,216 @@ const multiUserAccountingSoftware = () => {
                       (SMEs) thanks to its affordable pricing and easy to use
                       interface that quickly helps owners get familiarised with
                       the user interface.
+=======
+            </section>
+            <section className="container-fluid features__accordion_container">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="accordion" id="accordionAllFeatures">
+                                {/*============ Accordion #1 ===============*/}
+                                <h2 className="fw-bold col-primary ps-3 ">FAQs</h2>
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingOne">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne"
+                                            aria-expanded="false"
+                                            aria-controls="collapseOne"
+                                        >
+                                            <span className="me-2 collapse_icon collapse_icon--open">
+                                                <MdAdd />
+                                            </span>
+                                            <span className="me-2 collapse_icon collapse_icon--close">
+                                                <MdRemove />
+                                            </span>
+                                            What are the benefits of using a multi-accounting software?
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseOne"
+                                        className="accordion-collapse collapse"
+                                        aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionAllFeatures"
+                                    >
+                                        <div className="accordion-body">
+                                            With Giddh’s multi-accounting software, you can easily add, remove and manage access to multiple users
+                                            within an organization. Multi-accounting software also makes it easy to create groups and share
+                                            only a portion of data to various departments. Its monitoring capabilities helps keep track of what
+                                            data is accessible to whom.
+                                        </div>
+                                    </div>
+                                </div>
+                                {/*============ Accordion #2 ===============*/}
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingTwo">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo"
+                                            aria-expanded="false"
+                                            aria-controls="collapseTwo"
+                                        >
+                                            <span className="me-2 collapse_icon collapse_icon--open">
+                                                <MdAdd />
+                                            </span>
+                                            <span className="me-2 collapse_icon collapse_icon--close">
+                                                <MdRemove />
+                                            </span>
+                                            Do I need to be a techie to handle the Giddh software?
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseTwo"
+                                        className="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionAllFeatures"
+                                    >
+                                        <div className="accordion-body">
+                                            The Giddh software has a really simple interface that can be used by a layman without a technical background.
+                                            The cloud-based system also means that you can access the software from anywhere and on any device.
+                                        </div>
+                                    </div>
+                                </div>
+                                {/*============ Accordion #3 ===============*/}
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingThree">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree"
+                                            aria-expanded="false"
+                                            aria-controls="collapseThree"
+                                        >
+                                            <span className="me-2 collapse_icon collapse_icon--open">
+                                                <MdAdd />
+                                            </span>
+                                            <span className="me-2 collapse_icon collapse_icon--close">
+                                                <MdRemove />
+                                            </span>
+                                            Do I need to have bookkeeping or accounting experience to use the Giddh software?
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseThree"
+                                        className="accordion-collapse collapse"
+                                        aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionAllFeatures"
+                                    >
+                                        <div className="accordion-body">
+                                        The Giddh software is designed in such a way that any person without an accounting
+                                         experience can operate all the features of the software.
+                                        </div>
+                                    </div>
+                                </div>
+                                {/*============ Accordion #4 ===============*/}
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingFour">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFour"
+                                            aria-expanded="false"
+                                            aria-controls="collapseFour"
+                                        >
+                                            <span className="me-2 collapse_icon collapse_icon--open">
+                                                <MdAdd />
+                                            </span>
+                                            <span className="me-2 collapse_icon collapse_icon--close">
+                                                <MdRemove />
+                                            </span>
+                                            Can I provide access to the Giddh software to other team members?
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseFour"
+                                        className="accordion-collapse collapse"
+                                        aria-labelledby="headingFour"
+                                        data-bs-parent="#accordionAllFeatures"
+                                    >
+                                        <div className="accordion-body">
+                                            The Giddh software offers collaboration options so that you can work along with your team members on the
+                                            software. Moreover, it also gives you the power to provide time-restricted access to external members
+                                            such as CAs and share the data with them only for a limited period of time after which permissions are
+                                            revoked.
+                                        </div>
+                                    </div>
+                                </div>
+                                {/*============ Accordion #5 ===============*/}
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingFive">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseFive"
+                                            aria-expanded="false"
+                                            aria-controls="collapseFive"
+                                        >
+                                            <span className="me-2 collapse_icon collapse_icon--open">
+                                                <MdAdd />
+                                            </span>
+                                            <span className="me-2 collapse_icon collapse_icon--close">
+                                                <MdRemove />
+                                            </span>
+                                            Is the Giddh software ideal for all types of businesses?
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseFive"
+                                        className="accordion-collapse collapse"
+                                        aria-labelledby="headingFive"
+                                        data-bs-parent="#accordionAllFeatures"
+                                    >
+                                        <div className="accordion-body">
+                                            Giddh is especially ideal for small and medium enterprises (SMEs) thanks to its affordable pricing and
+                                            easy to use interface that quickly helps owners get familiarised with the user interface.
+
+                                        </div>
+                                    </div>
+                                </div>
+                                {/*============ Accordion #6 ===============*/}
+                                <div className="accordion-item">
+                                    <h2 className="accordion-header" id="headingSix">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseSix"
+                                            aria-expanded="false"
+                                            aria-controls="collapseSix"
+                                        >
+                                            <span className="me-2 collapse_icon collapse_icon--open">
+                                                <MdAdd />
+                                            </span>
+                                            <span className="me-2 collapse_icon collapse_icon--close">
+                                                <MdRemove />
+                                            </span>
+                                            How does a multi-accounting software work?
+                                        </button>
+                                    </h2>
+                                    <div
+                                        id="collapseSix"
+                                        className="accordion-collapse collapse"
+                                        aria-labelledby="headingSix"
+                                        data-bs-parent="#accordionAllFeatures"
+                                    >
+                                        <div className="accordion-body">
+                                            With Giddh’s multi-accounting software, you can easily add, remove and manage
+                                            access to multiple users within an organization. Multi-accounting software also makes it easy to create
+                                            groups and share only a portion of data to various departments. Its monitoring capabilities helps keep
+                                            track of what data is accessible to whom.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+>>>>>>> d1cee0ace03d0e09f46e59a6e41f80c1ff55f648
                     </div>
                   </div>
                 </div>
