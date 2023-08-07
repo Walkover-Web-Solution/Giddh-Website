@@ -4,17 +4,24 @@ import Header from "@/components/header";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 import { MdClose } from "react-icons/md";
 
 
 export default function MyApp({ Component, pageProps }) {
+
+  const router = useRouter()
+  var brawserPath = router.pathname;
+
+
+
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
   return (
     <>
     <Navbar/>
-      <Header />
+      <Header brawserPath={brawserPath}/>
       <Component {...pageProps} />
       <Footer/>
 
