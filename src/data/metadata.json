@@ -106,6 +106,19 @@
   "/contact-us":{
     "title":"Contact us - Best Online Accounting Software | Online Bookkeeping Software",
     "description":""
-  }
- 
+  },
+
+    
+// for ae "country"
+
+
+  "/ae/":{
+        "title":"Online Accounting Software for Businesses in Dubai | Giddh",
+        "description":"Best Online Accounting Software in Dubai where you can get VAT software for accounting, file VAT, Business Reports and much more. Visit now to know more."
+    },
+  "/ae/make-the-switch/":{
+        "title":"Switch to Simpler Online Accounting Solutions in Dubai | Giddh",
+        "description":"Switch to Online Accounting Software for a Simple Accounting Solution for your businesses with Giddh- Accounting Software."
+    }
+
 }
