@@ -79,7 +79,7 @@ const conectBankReconcile = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -105,7 +105,7 @@ const conectBankReconcile = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Reconcile with a snap of fingers
                   </h4>
-                  <p className="">
+                  <p >
                     With one-click reconciliation feature, we have made the
                     process of reconciliation so easy, it is no more a
                     complicated chore you would want to avoid. With just one
@@ -131,7 +131,7 @@ const conectBankReconcile = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Got Multiple Bank Accounts? We got you Covered
                   </h4>
-                  <p className="">
+                  <p >
                     With Giddh bank account linking, you can monitor the
                     deposit, transfer, and withdrawals of cash whether you hold
                     a single bank account or several accounts from multiple
@@ -155,7 +155,7 @@ const conectBankReconcile = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Giddh will connect to your favorite bank
                   </h4>
-                  <p className="">
+                  <p >
                     Major national banks like SBI, ICICI and many more can be
                     linked with Giddh to let your transactions to flow
                     automatically. Can’t find your bank? Just let us know and

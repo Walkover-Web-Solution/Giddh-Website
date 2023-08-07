@@ -82,7 +82,7 @@ const importExeclFiles = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Excel isn’t a long term solution
                   </h4>
-                  <p className="">
+                  <p >
                     Excel is simply not built to be your accounting mate. Not
                     only is it prone to errors, but it’s also complicated and
                     doesn’t offer a higher level of accessibility. Giddh Online
@@ -108,7 +108,7 @@ const importExeclFiles = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Simple transition to powerful alternative.
                   </h4>
-                  <p className="">
+                  <p >
                     Giddh is a powerful alternative to your old accounting
                     software, offline or online. Just export all the data of
                     your company from your previous accounting software in
@@ -134,7 +134,7 @@ const importExeclFiles = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     No data category left behind
                   </h4>
-                  <p className="">
+                  <p >
                     With Data Import facility, you can import streams of data of
                     every single accounting category such as accounts, groups,
                     trial balance, entries and even inventory within minutes
@@ -158,7 +158,7 @@ const importExeclFiles = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Prepare your data with a little help
                   </h4>
-                  <p className="">
+                  <p >
                     To ensure that your data is imported to Giddh without
                     hassles, we’ve created XLSX(Microsoft Excel) template files
                     for trial balance, entries, inventory and more. Just
@@ -184,7 +184,7 @@ const importExeclFiles = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Stuck somewhere? Help us help you!
                   </h4>
-                  <p className="">
+                  <p >
                     We know transitioning can often be confusing. To make the
                     process of transition simple, we have some incredibly easy
                     to implement support articles just for you. Still need some

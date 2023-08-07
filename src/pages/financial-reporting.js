@@ -84,7 +84,7 @@ const financialReporting = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Big picture analysis made easy
                   </h4>
-                  <p className="">
+                  <p >
                     You don’t need to be an accounting professional to know how
                     your business is doing. Giddh financial reports are
                     color-coded so that the process of analysis is simple like
@@ -109,7 +109,7 @@ const financialReporting = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Ready-made reports when you need them
                   </h4>
-                  <p className="">
+                  <p >
                     With cloud-based business reporting, you don’t need to wait
                     for the month’s end to know where your business stands as
                     the reports can be viewed whenever you want and wherever you
@@ -134,7 +134,7 @@ const financialReporting = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Keep an eye on the money owed to you
                   </h4>
-                  <p className="">
+                  <p >
                     Keep tabs on your unpaid invoices and customers who owe
                     money to your business with Aging report. Aging report
                     provides clear answers to questions like - “how much do my
@@ -159,7 +159,7 @@ const financialReporting = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Collaborate & grow
                   </h4>
-                  <p className="">
+                  <p >
                     Bring your accountant in so they can identify trends and
                     actions. Download your automatically generated financial
                     reports and share them with the stakeholders of your

@@ -65,13 +65,23 @@ const anywhereAnytime = () => {
                   Run your business from any corner of the world!
                 </h3>
                 <p className="c-fs-4 mb-5">
-                  All you ever need to be on top of your accounting is just an
+                  {isIndia
+                    ? `All you ever need to be on top of your accounting is just an
                   active internet connection. Conduct your business from
                   anywhere with our online cloud accounting software. Manage
                   inventory, file GST returns, or reconcile your books; the
                   possibilities are truly limitless with Giddh’s cloud
-                  accounting software.
+                  accounting software.`
+                    : null}
+                  {isAE || isUK
+                    ? `All you ever need to be on top of your accounting is just an 
+                    active internet connection. Conduct your business from
+                     anywhere with our online cloud accounting software. Manage 
+                     inventory, file Tax returns, or reconcile your books; the possibilities 
+                     are truly limitless with Giddh’s cloud accounting software.`
+                    : null}
                 </p>
+
                 <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
@@ -87,12 +97,20 @@ const anywhereAnytime = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Turn your browser into your office
                   </h4>
-                  <p className="">
-                    Crunch numbers, reconcile books or send an urgent invoice to
+                  <p>
+                    {isIndia
+                      ? `Crunch numbers, reconcile books or send an urgent invoice to
                     customers. With Giddh’s accounting software on cloud, turn
                     your browser into your office and access all your financial
                     data sitting at your local coffee shop or while you’re on a
-                    commute.
+                    commute.`
+                      : null}
+
+                    {isAE || isUK
+                      ? `Crunch numbers, reconcile books or send an urgent invoice to customers. 
+                    With Giddh, turn your browser into your office and access all your financial data 
+                    sitting at your local coffee shop or while you’re on a commute.`
+                      : null}
                   </p>
                 </div>
               </div>
@@ -116,14 +134,31 @@ const anywhereAnytime = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Stay ahead with automatic updates
                   </h4>
-                  <p className="">
-                    {isIndia
-                      ? "With Giddh’s  cloud based accounting software, you will automatically receive OTA (on the air) updates of the greatest and newest features that are added to Giddh. That means less effort on your part—which we all love. Now isn’t that awesome?"
-                      : ""}
-                    {isAE || isUK
-                      ? "With cloud based accounting platform you will automatically receive OTA(on the air) updates of the greatest and newest features that are added to Giddh. That means less effort on your part—which we all love. Now isn’t that awesome!"
-                      : ""}
-                  </p>
+                  {isIndia ? (
+                    <p>
+                      With Giddh’s{" "}
+                      <a href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/">
+                        cloud based accounting software
+                      </a>
+                      , you will automatically receive OTA (on the air) updates
+                      of the greatest and newest features that are added to
+                      Giddh. That means less effort on your part—which we all
+                      love. Now isn’t that awesome?
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                  {isAE || isUK ? (
+                    <p>
+                      With cloud based accounting platform you will
+                      automatically receive OTA(on the air) updates of the
+                      greatest and newest features that are added to Giddh. That
+                      means less effort on your part—which we all love. Now
+                      isn’t that awesome!
+                    </p>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
@@ -146,14 +181,31 @@ const anywhereAnytime = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Save more on all fronts
                   </h4>
-                  <p className="">
-                    No matter what your business is all about, making money must
-                    be your number one priority. By using our online cloud
-                    accounting software, you can save money as you would no
-                    longer need to worry about expensive version upgrades,
-                    maintenance costs & even the cost of hiring an entire
-                    accounting department
-                  </p>
+                  {isIndia ? (
+                    <p>
+                      No matter what your business is all about, making money
+                      must be your number one priority. By using our online
+                      cloud accounting software, you can save money as you would
+                      no longer need to worry about expensive version upgrades,
+                      maintenance costs & even the cost of hiring an entire
+                      accounting department
+                    </p>
+                  ) : (
+                    ""
+                  )}
+
+                  {isAE || isUK ? (
+                    <p>
+                      No matter what your business is all about, making money
+                      must be your number one priority. By using cloud
+                      accounting software, you can save money as you would no
+                      longer need to worry about expensive version upgrades,
+                      maintenance costs & even the cost of hiring an entire
+                      accounting department.
+                    </p>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
@@ -176,14 +228,14 @@ const anywhereAnytime = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Work smarter, grow faster!
                   </h4>
-                  <p className="">
+                  <p>
                     With{" "}
                     <a
                       href="https://giddh.com/blog/10-new-awesome-features-on-the-giddh-software-2020/"
                       className="text-decoration-underline"
                     >
-                      cloud based accounting software{" "}
-                    </a>{" "}
+                      cloud based accounting software
+                    </a>
                     , your team-members don’t need to be all at the same time to
                     collaborate or make major decisions. Thanks to easily
                     shareable online reports, decision makers and accountants
@@ -202,303 +254,328 @@ const anywhereAnytime = () => {
                 </figure>
               </div>
             </div>
-            <div
-              className={
-                "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
-                (readMoreParagraphStatus1 ? " --read-more" : "")
-              }
-            >
-              <div className="col-md-12 col-lg-6">
-                <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Online Vs. Offline Accounting Software
-                  </h4>
-                  <p className="">
-                    <a
-                      href="https://giddh.com/blog/desktop-accounting-software-and-its-limitations/"
-                      className="text-decoration-underline"
-                    >
-                      Online cloud accounting software
-                    </a>{" "}
-                    has become the new norm for carrying out finance operations
-                    in the present day. In view of its rising popularity, let’s
-                    look at the major differences between a traditional desktop
-                    accounting software and a cloud accounting software:
-                  </p>
-                  <span
-                    className="pt-3 text-decoration-underline c-fw-500"
-                    style={{
-                      display: readMoreParagraphStatus1 ? "none" : "block",
-                    }}
-                    onClick={() =>
-                      showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
-                    }
-                  >
-                    Read More...
-                  </span>
-                </div>
-              </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
-                <figure>
-                  <img
-                    src="/img/feature-gallery-icons/Group-5651.svg"
-                    className="img-fluid"
-                    alt="bank account image"
-                  />
-                </figure>
-              </div>
-              <div className="col-12">
-                <div className="features__description_container__content">
-                  <table
-                    style={{
-                      display: readMoreParagraphStatus1 ? "block" : "none",
-                    }}
-                    className="table table-bordered table-responsive"
-                  >
-                    <thead>
-                      <tr>
-                        <th>Parameters</th>
-                        <th>Cloud Accounting Software </th>
-                        <th>Offline Accounting Software</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Access to Data</td>
-                        <td>Can be accessed from any device anywhere</td>
-                        <td>Can be only accessed via a specific PC</td>
-                      </tr>
-                      <tr>
-                        <td>Software Updates</td>
-                        <td>Automatic updates available</td>
-                        <td>Manual updates required</td>
-                      </tr>
-                      <tr>
-                        <td>Data Loss</td>
-                        <td>
-                          Data stored securely on servers with regular data
-                          backing
-                        </td>
-                        <td>
-                          Data stored on PC with risk of data loss from disk
-                          crash or hardware problems
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Security Risks</td>
-                        <td>
-                          Servers and OSs maintained by experts, protected from
-                          virus risks
-                        </td>
-                        <td>
-                          High risk of data loss and corruption. Anti-virus
-                          software acts only after virus has affected data
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Configurations</td>
-                        <td>Email and SMS can be configured seamlessly</td>
-                        <td>
-                          Email and SMS may not be integrated with PC software
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>OS Upgrades</td>
-                        <td>
-                          Doesn’t impact OS software since it’s not installed
-                        </td>
-                        <td>
-                          Software may be required to be reinstalled and license
-                          key retrieved
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Pricing</td>
-                        <td>Monthly or yearly subscription charges</td>
-                        <td>One-time cost plus annual maintenance charges</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <span
-                    className="pt-3 text-decoration-underline c-fw-500"
-                    style={{
-                      display: readMoreParagraphStatus1 ? "block" : "none",
-                    }}
-                    onClick={() =>
-                      showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
-                    }
-                  >
-                    Read Less
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div
-              className={
-                "row mb-5 pb-5 align-items-center features__description_container--row-even" +
-                (readMoreParagraphStatus2 ? " --read-more" : "")
-              }
-            >
-              <div className="col-md-12 col-lg-6">
-                <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Advantages of Cloud Accounting Software
-                  </h4>
-                  <p className="">
-                    Most businesses are switching over to online cloud
-                    accounting software since they make business operations and
-                    financial information management easier. If you haven’t yet
-                    switched over to accounting software on cloud, then you
-                    might want to look at the benefits you may be missing out
-                    on:
-                  </p>
-                  <span
-                    className="pt-3 text-decoration-underline c-fw-500"
-                    style={{
-                      display: readMoreParagraphStatus2 ? "none" : "block",
-                    }}
-                    onClick={() =>
-                      showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
-                    }
-                  >
-                    Read More...
-                  </span>
-                </div>
-              </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
-                <figure>
-                  <img
-                    src="/img/feature-gallery-icons/Group-5649.svg"
-                    className="img-fluid"
-                    alt="bank overview image"
-                  />
-                </figure>
-              </div>
-              <div className="col-12">
-                <div className="features__description_container__content">
-                  <ul
-                    className="custom-ul-with-right-tick text-start"
-                    style={{
-                      display: readMoreParagraphStatus2 ? "block" : "none",
-                    }}
-                  >
-                    <li>
-                      <span className="c-fw-600">Speed -</span> All your normal
-                      daily operations can be completed at lightning speed. The
-                      automation can bring in a welcome change in your
-                      functioning and help your employees get more work done and
-                      process more data. No more wasting time posting or chasing
-                      invoices. With the{" "}
-                      <span className="c-fw-600">
-                        accounting cloud based software
+            {isIndia ? (
+              <>
+                <div
+                  className={
+                    "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
+                    (readMoreParagraphStatus1 ? " --read-more" : null)
+                  }
+                >
+                  <div className="col-md-12 col-lg-6">
+                    <div className="features__description_container__content">
+                      <h4 className="col-primary small-heading c-fw-600 mb-3">
+                        Online Vs. Offline Accounting Software
+                      </h4>
+                      <p>
+                        <a
+                          href="https://giddh.com/blog/desktop-accounting-software-and-its-limitations/"
+                          className="text-decoration-underline"
+                        >
+                          Online cloud accounting software
+                        </a>{" "}
+                        has become the new norm for carrying out finance
+                        operations in the present day. In view of its rising
+                        popularity, let’s look at the major differences between
+                        a traditional desktop accounting software and a cloud
+                        accounting software:
+                      </p>
+                      <span
+                        className="pt-3 text-decoration-underline c-fw-500"
+                        style={{
+                          display: readMoreParagraphStatus1 ? "none" : "block",
+                        }}
+                        onClick={() =>
+                          showMoreParagraph1(
+                            (readmoreDisplay) => !readmoreDisplay
+                          )
+                        }
+                      >
+                        Read More...
                       </span>
-                      , you can generate automatic invoices. It can also help
-                      you to keep track of all your debtors and provide timely
-                      reminders to make payments. The software can also help
-                      avoid any unnecessary duplications as well as other human
-                      errors. Since they are regularly updated automatically,
-                      you can expect fast and accurate financial operations
-                      without any intervention.
-                    </li>
-                    <li>
-                      <span className="c-fw-600">Security -</span> One of the
-                      common concerns for CFOs and other financial personnel can
-                      be the security of software. Vulnerable software can not
-                      only result in loss of data but also lead to leak of
-                      confidential information. Using backup systems doesn’t
-                      help much since they end up creating duplicate versions of
-                      files, plus storage costs can be quite cumbersome. With{" "}
-                      <span className="c-fw-600">
-                        cloud accounting software
+                    </div>
+                  </div>
+                  <div className="col-md-12 col-lg-6 __image-alignment">
+                    <figure>
+                      <img
+                        src="/img/feature-gallery-icons/Group-5651.svg"
+                        className="img-fluid"
+                        alt="bank account image"
+                      />
+                    </figure>
+                  </div>
+                  <div className="col-12">
+                    <div className="features__description_container__content">
+                      <table
+                        style={{
+                          display: readMoreParagraphStatus1 ? "block" : "none",
+                        }}
+                        className="table table-bordered table-responsive"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Parameters</th>
+                            <th>Cloud Accounting Software </th>
+                            <th>Offline Accounting Software</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Access to Data</td>
+                            <td>Can be accessed from any device anywhere</td>
+                            <td>Can be only accessed via a specific PC</td>
+                          </tr>
+                          <tr>
+                            <td>Software Updates</td>
+                            <td>Automatic updates available</td>
+                            <td>Manual updates required</td>
+                          </tr>
+                          <tr>
+                            <td>Data Loss</td>
+                            <td>
+                              Data stored securely on servers with regular data
+                              backing
+                            </td>
+                            <td>
+                              Data stored on PC with risk of data loss from disk
+                              crash or hardware problems
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Security Risks</td>
+                            <td>
+                              Servers and OSs maintained by experts, protected
+                              from virus risks
+                            </td>
+                            <td>
+                              High risk of data loss and corruption. Anti-virus
+                              software acts only after virus has affected data
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Configurations</td>
+                            <td>Email and SMS can be configured seamlessly</td>
+                            <td>
+                              Email and SMS may not be integrated with PC
+                              software
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>OS Upgrades</td>
+                            <td>
+                              Doesn’t impact OS software since it’s not
+                              installed
+                            </td>
+                            <td>
+                              Software may be required to be reinstalled and
+                              license key retrieved
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Pricing</td>
+                            <td>Monthly or yearly subscription charges</td>
+                            <td>
+                              One-time cost plus annual maintenance charges
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <span
+                        className="pt-3 text-decoration-underline c-fw-500"
+                        style={{
+                          display: readMoreParagraphStatus1 ? "block" : "none",
+                        }}
+                        onClick={() =>
+                          showMoreParagraph1(
+                            (readmoreDisplay) => !readmoreDisplay
+                          )
+                        }
+                      >
+                        Read Less
                       </span>
-                      , the data can be backed up and stored on an offline
-                      server. This can immune businesses to losses from virus,
-                      theft, or accidents and still help you retain your data.
-                    </li>
-                    <li>
-                      <span className="c-fw-600">Centralised access -</span>{" "}
-                      Cloud-based accounting helps in centralised access to all
-                      data as well as offers collaborative opportunities. This
-                      reduces clutter since different departments and employees
-                      can work on a single file without creating multiple
-                      versions of it. It also makes user access and login
-                      permissions easy so that everyone can access the file
-                      without difficulties. It’s also possible to access the
-                      data from anywhere and on any device.
-                    </li>
-                    <li>
-                      <span className="c-fw-600">Scalability -</span> One of the
-                      best advantages of cloud-based accounting software is that
-                      they can be customised to meet the needs of small as well
-                      as large businesses. Because of this scalability, you can
-                      easily expand the functions of the software to meet the
-                      needs of your growing business. It can be adapted to
-                      include all the necessary integrations and features you
-                      may need along the way.
-                    </li>
-                    <li>
-                      <span className="c-fw-600">Simple to use -</span> Maybe
-                      one of the best catches for the software is that it can be
-                      easily used by people who are not from accounting
-                      backgrounds. So those who may not have experience of
-                      handling financial accounts have a lot of guides and
-                      resources and an intuitive system to help them.
-                    </li>
-                    <li>
-                      <span className="c-fw-600">Updated data -</span> One of
-                      the benefits that must be highlighted are automatically
-                      updated data that can reflect in the business balance
-                      sheets in real time. There are also several regularly
-                      updated reports that can give you an overview of your
-                      finances. It also helps you make better financial
-                      decisions.
-                    </li>
-                    <li>
-                      <span className="c-fw-600">Accuracy -</span> Since most of
-                      the functions are automated, human errors are reduced to a
-                      great extent. This increases the efficiency and accuracy
-                      of your business operations. For example, working
-                      repeatedly on the same invoices can create human errors
-                      sometimes which automated accounting can omit.
-                    </li>
-                    <li>
-                      <span className="c-fw-600">Efficiency -</span> Online
-                      cloud accounting software can also help you streamline
-                      your finance processes and boost the overall efficiency of
-                      your employees. It can also help increase productivity and
-                      help employees make the best use of their time and
-                      schedules.
-                    </li>
-                    <li>
-                      <span className="c-fw-600">Integrations -</span> Cloud
-                      accounting software can also be integrated with other apps
-                      and tools such as CRMs and payroll software. This can help
-                      you expand your operations and cover all aspects with just
-                      one software.
-                    </li>
-                    <li>
-                      <span className="c-fw-600">Pricing -</span> You can also
-                      save a fortune by doing away with the hefty one time fee
-                      for accounting software along with the yearly maintenance
-                      costs. Paying the monthly subscription fees may be better
-                      suits for your pocket. There are also several discounts
-                      that come with the subscription.
-                    </li>
-                  </ul>
-                  <span
-                    className="pt-3 text-decoration-underline c-fw-500"
-                    style={{
-                      display: readMoreParagraphStatus2 ? "block" : "none",
-                    }}
-                    onClick={() =>
-                      showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
-                    }
-                  >
-                    Read Less
-                  </span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+                <div
+                  className={
+                    "row mb-5 pb-5 align-items-center features__description_container--row-even" +
+                    (readMoreParagraphStatus2 ? " --read-more" : null)
+                  }
+                >
+                  <div className="col-md-12 col-lg-6">
+                    <div className="features__description_container__content">
+                      <h4 className="col-primary small-heading c-fw-600 mb-3">
+                        Advantages of Cloud Accounting Software
+                      </h4>
+                      <p>
+                        Most businesses are switching over to online cloud
+                        accounting software since they make business operations
+                        and financial information management easier. If you
+                        haven’t yet switched over to accounting software on
+                        cloud, then you might want to look at the benefits you
+                        may be missing out on:
+                      </p>
+                      <span
+                        className="pt-3 text-decoration-underline c-fw-500"
+                        style={{
+                          display: readMoreParagraphStatus2 ? "none" : "block",
+                        }}
+                        onClick={() =>
+                          showMoreParagraph2(
+                            (readmoreDisplay) => !readmoreDisplay
+                          )
+                        }
+                      >
+                        Read More...
+                      </span>
+                    </div>
+                  </div>
+                  <div className="col-md-12 col-lg-6 __image-alignment">
+                    <figure>
+                      <img
+                        src="/img/feature-gallery-icons/Group-5649.svg"
+                        className="img-fluid"
+                        alt="bank overview image"
+                      />
+                    </figure>
+                  </div>
+                  <div className="col-12">
+                    <div className="features__description_container__content">
+                      <ul
+                        className="custom-ul-with-right-tick text-start"
+                        style={{
+                          display: readMoreParagraphStatus2 ? "block" : "none",
+                        }}
+                      >
+                        <li>
+                          <span className="c-fw-600">Speed -</span> All your
+                          normal daily operations can be completed at lightning
+                          speed. The automation can bring in a welcome change in
+                          your functioning and help your employees get more work
+                          done and process more data. No more wasting time
+                          posting or chasing invoices. With the{" "}
+                          <span className="c-fw-600">
+                            accounting cloud based software
+                          </span>
+                          , you can generate automatic invoices. It can also
+                          help you to keep track of all your debtors and provide
+                          timely reminders to make payments. The software can
+                          also help avoid any unnecessary duplications as well
+                          as other human errors. Since they are regularly
+                          updated automatically, you can expect fast and
+                          accurate financial operations without any
+                          intervention.
+                        </li>
+                        <li>
+                          <span className="c-fw-600">Security -</span> One of
+                          the common concerns for CFOs and other financial
+                          personnel can be the security of software. Vulnerable
+                          software can not only result in loss of data but also
+                          lead to leak of confidential information. Using backup
+                          systems doesn’t help much since they end up creating
+                          duplicate versions of files, plus storage costs can be
+                          quite cumbersome. With{" "}
+                          <span className="c-fw-600">
+                            cloud accounting software
+                          </span>
+                          , the data can be backed up and stored on an offline
+                          server. This can immune businesses to losses from
+                          virus, theft, or accidents and still help you retain
+                          your data.
+                        </li>
+                        <li>
+                          <span className="c-fw-600">Centralised access -</span>{" "}
+                          Cloud-based accounting helps in centralised access to
+                          all data as well as offers collaborative
+                          opportunities. This reduces clutter since different
+                          departments and employees can work on a single file
+                          without creating multiple versions of it. It also
+                          makes user access and login permissions easy so that
+                          everyone can access the file without difficulties.
+                          It’s also possible to access the data from anywhere
+                          and on any device.
+                        </li>
+                        <li>
+                          <span className="c-fw-600">Scalability -</span> One of
+                          the best advantages of cloud-based accounting software
+                          is that they can be customised to meet the needs of
+                          small as well as large businesses. Because of this
+                          scalability, you can easily expand the functions of
+                          the software to meet the needs of your growing
+                          business. It can be adapted to include all the
+                          necessary integrations and features you may need along
+                          the way.
+                        </li>
+                        <li>
+                          <span className="c-fw-600">Simple to use -</span>{" "}
+                          Maybe one of the best catches for the software is that
+                          it can be easily used by people who are not from
+                          accounting backgrounds. So those who may not have
+                          experience of handling financial accounts have a lot
+                          of guides and resources and an intuitive system to
+                          help them.
+                        </li>
+                        <li>
+                          <span className="c-fw-600">Updated data -</span> One
+                          of the benefits that must be highlighted are
+                          automatically updated data that can reflect in the
+                          business balance sheets in real time. There are also
+                          several regularly updated reports that can give you an
+                          overview of your finances. It also helps you make
+                          better financial decisions.
+                        </li>
+                        <li>
+                          <span className="c-fw-600">Accuracy -</span> Since
+                          most of the functions are automated, human errors are
+                          reduced to a great extent. This increases the
+                          efficiency and accuracy of your business operations.
+                          For example, working repeatedly on the same invoices
+                          can create human errors sometimes which automated
+                          accounting can omit.
+                        </li>
+                        <li>
+                          <span className="c-fw-600">Efficiency -</span> Online
+                          cloud accounting software can also help you streamline
+                          your finance processes and boost the overall
+                          efficiency of your employees. It can also help
+                          increase productivity and help employees make the best
+                          use of their time and schedules.
+                        </li>
+                        <li>
+                          <span className="c-fw-600">Integrations -</span> Cloud
+                          accounting software can also be integrated with other
+                          apps and tools such as CRMs and payroll software. This
+                          can help you expand your operations and cover all
+                          aspects with just one software.
+                        </li>
+                        <li>
+                          <span className="c-fw-600">Pricing -</span> You can
+                          also save a fortune by doing away with the hefty one
+                          time fee for accounting software along with the yearly
+                          maintenance costs. Paying the monthly subscription
+                          fees may be better suits for your pocket. There are
+                          also several discounts that come with the
+                          subscription.
+                        </li>
+                      </ul>
+                      <span
+                        className="pt-3 text-decoration-underline c-fw-500"
+                        style={{
+                          display: readMoreParagraphStatus2 ? "block" : "none",
+                        }}
+                        onClick={() =>
+                          showMoreParagraph2(
+                            (readmoreDisplay) => !readmoreDisplay
+                          )
+                        }
+                      >
+                        Read Less
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : null}
           </div>
 
           <section className="container-fluid">
@@ -539,12 +616,22 @@ const anywhereAnytime = () => {
                     and on any device.
                   </li>
                   <li>
-                    <span className="c-fw-600">Invoices–</span>Since invoicing
-                    is a core part of accounting processes, so a software such
-                    as Giddh which helps you customise invoices is better than
-                    one which just creates the same ones repetitively. You can
-                    also stop worrying about GSTs in your invoices since they’ll
-                    be calculated automatically.
+                    <span className="c-fw-600">Invoices–</span>
+                    {isIndia
+                      ? `Since invoicing
+                      is a core part of accounting processes, so a software such
+                      as Giddh which helps you customise invoices is better than
+                      one which just creates the same ones repetitively. You can
+                      also stop worrying about GSTs in your invoices since they’ll
+                      be calculated automatically.`
+                      : null}
+                    {isAE || isUK
+                      ? `Since invoicing is a core part of accounting processes,
+                       so a software such as Giddh which helps you customise
+                        invoices is better than one which just creates the same 
+                        ones repetitively. You can also stop worrying about VATs 
+                        in your invoices since they’ll be calculated automatically.`
+                      : null}
                   </li>
                   <li>
                     <span className="c-fw-600">Customer support</span>You also

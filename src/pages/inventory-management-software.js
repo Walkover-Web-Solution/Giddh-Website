@@ -84,7 +84,7 @@ const inventoryManagementSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Maintain stock visibility with inventory reports
                   </h4>
-                  <p className="">
+                  <p >
                     Inventory management software will let you keep track of
                     your stock When you buy and sell products, your inventory
                     quantities will be automatically updated, making it easy to
@@ -109,7 +109,7 @@ const inventoryManagementSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Complete support for measurement units
                   </h4>
-                  <p className="">
+                  <p >
                     Where units of measurement are concerned, Giddh has got you
                     covered. Our software allows you to create custom units of
                     measurements for effective inventory management. With custom
@@ -135,7 +135,7 @@ const inventoryManagementSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Inter-branch stock transfer
                   </h4>
-                  <p className="">
+                  <p >
                     Are you a growing business with multiple inventory branches
                     to manage? Do you often struggle to keep up with stock
                     requirements from multiple branches? With the Giddh
@@ -160,7 +160,7 @@ const inventoryManagementSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Save more time with bulk inventory import
                   </h4>
-                  <p className="">
+                  <p >
                     Take the pain out of manually adding your entire inventory
                     on Giddh by bulk inventory import. Just use our simple Excel
                     template and have your inventory uploaded and ready in no
@@ -187,7 +187,7 @@ const inventoryManagementSoftware = () => {
                 {isAE || isUK ? "Giddh inventory software is VAT ready!" : ""}
                 
                   </h4>
-                  <p className="">
+                  <p >
                     
                     {isIndia ? "Giddh inventory management software is fully compliant with the GST system. Track inventory, manage orders, assign HSN & SAC codes to items and send GST compliant invoices. Your search for a GST compliant inventory management software ends with Giddh." : ""}
                 {isAE || isUK ? "Giddh inventory management software is fully compliant with the VAT system. Track inventory, manage orders, assign HSN & SAC codes to items and send VAT compliant invoices. Your search for a VAT compliant inventory management software ends with Giddh." : ""}

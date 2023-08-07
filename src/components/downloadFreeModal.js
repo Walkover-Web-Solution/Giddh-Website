@@ -66,7 +66,7 @@ const downloadFreeModal = () => {
               <p className="c-fs-6">
                 Download not starting? Try{" "}
                 <a
-                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20${windowsApp}.exe`}
+                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh Setup ${macApp}.exe`}
                   className="text-primary"
                 >
                   Direct download link
@@ -81,14 +81,14 @@ const downloadFreeModal = () => {
               </figure>
               <div className="d-flex justify-content-center align-items-center flex-column flex-md-row column-gap-2 row-gap-3 mt-4 mb-2">
                 <a
-                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20${windowsApp}.exe`}
+                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-${windowsApp}.dmg`}
                   className="download-free-modal__btn_link"
                 >
                   <img src="/img/mac_icon.svg" alt="Mac-Apple-Icon" />
                   Download for mac
                 </a>
                 <a
-                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh%20Setup%20${macApp}.exe`}
+                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh Setup ${macApp}.exe`}
                   className="download-free-modal__btn_link"
                 >
                   <img

@@ -83,7 +83,7 @@ const invoiceSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Create professional-looking invoices within minutes!
                   </h4>
-                  <p className="">
+                  <p >
                     You are the real deal, so why not create invoices online
                     that say the same? With a variety of templates and
                     customizations at your disposal, create the best looking
@@ -110,7 +110,7 @@ const invoiceSoftware = () => {
                   ? "Stay VAT Compliant"
                   : ""}
                   </h4>
-                  <p className="">
+                  <p >
                     
                     {isIndia ? "Stay Goods and Services Tax(GST) compliant by creatingonline invoices that are GST compliant. Giddh’s invoicetemplates have fields for HSN or SAC code, GSTIN number,state of business operation which are mandatory for businessowners in order to stay compliant." : ""}
                 {isAE || isUK
@@ -138,7 +138,7 @@ const invoiceSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Lock your invoices and move on!
                   </h4>
-                  <p className="">
+                  <p >
                     
                     {isIndia ? "Tired of unwanted tampering to your finalized invoices? Giddh’s invoicing software has an invoice locking feature with which you can lock your invoices from being edited or deleted once they are finalized." : ""}
                 {isAE || isUK
@@ -164,7 +164,7 @@ const invoiceSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Run your business with automation!
                   </h4>
-                  <p className="">
+                  <p >
                     
                     {isIndia ? "From setting payment reminders to sending online invoices to clients on a recurring basis, you can utilize the complete potential of automation with Giddh! So let Giddh follow-up with customers and focus on your core business activities." : ""}
                 {isAE || isUK

@@ -66,7 +66,7 @@ const makeTheSwitch = () => {
           <div className="container">
             <div className="row align-items-center mb-5">
               <div className="col-md-6 col-sm-12 order-1">
-                <div className="">
+                <div >
                   <h2 className="col-primary sub-heading c-fw-600 pb-3">
                     A Simple Accounting Solution for all your Business needs.
                   </h2>
@@ -94,7 +94,7 @@ const makeTheSwitch = () => {
             </div>
             <div className="row align-items-center flex-row-reverse">
               <div className="col-md-6 col-sm-12 order-1">
-                <div className="">
+                <div >
                   <p className="col-primary c-fs-4 c-fw-600">
                     Direct Bank integration
                   </p>

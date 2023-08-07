@@ -128,7 +128,7 @@ const multiUserAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Collaborate across multiple departments
                   </h4>
-                  <p className="">
+                  <p >
                     Give your staff specific access to the different accounting
                     modules they need to do their job. With multi-user
                     accounting, your sales manager will be happy with real time
@@ -159,7 +159,7 @@ const multiUserAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Avoid unnecessary confusion with ledger sharing
                   </h4>
-                  <p className="">
+                  <p >
                     Giddh multi-user accounting software lets you share your
                     ledger with view access to external accounting team or
                     client so that all the discrepancies can be avoided.

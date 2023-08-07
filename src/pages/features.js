@@ -80,7 +80,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -106,7 +106,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -133,7 +133,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -159,7 +159,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -186,7 +186,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -212,7 +212,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or

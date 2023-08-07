@@ -82,7 +82,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Eliminate Confusion with Automatic Currency Conversion
                   </h4>
-                  <p className="">
+                  <p >
                     Say goodbye to unnecessary exchange rate confusions and
                     accounting mismatch with multi-currency accounting. Giddh
                     does all the heavy lifting & automatically converts the
@@ -108,7 +108,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Keep Your International Customers Smilin
                   </h4>
-                  <p className="">
+                  <p >
                     Easily accept payments from your International customers &
                     invoice them with easy to use multi currency accounting
                     software. Send invoices in your customer’s currency, and
@@ -134,7 +134,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Set Preferred Currency to Business Accounts
                   </h4>
-                  <p className="">
+                  <p >
                     With Giddh you are always in control! You can set a default
                     foreign currency to all the business accounts of your
                     foreign customers. After which, all the invoices and reports
@@ -158,7 +158,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Benefit from Dynamic Business Reporting
                   </h4>
-                  <p className="">
+                  <p >
                     All your financial reports; trial balance, profit & loss,
                     balance sheet, will be automatically created in your company
                     base currency so you have an accurate view of your financial

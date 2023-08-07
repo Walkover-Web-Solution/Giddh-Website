@@ -83,7 +83,7 @@ const accountingDashboard = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Know the true worth of your business
                   </h4>
-                  <p className="">
+                  <p >
                     There’s no way to know exactly where your business stands
                     without knowing what your net worth is, whether your revenue
                     is grow financial-servicesing and where your expenses lie.
@@ -109,7 +109,7 @@ const accountingDashboard = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Track your monthly overdues
                   </h4>
-                  <p className="">
+                  <p >
                     Pay and get paid quicker by easily following up on your
                     monthly overdues. Dashboard gives a summary of what you owe
                     to your clients and what’s owed to you in the form of
@@ -134,7 +134,7 @@ const accountingDashboard = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Keep an eye on where your money goes
                   </h4>
-                  <p className="">
+                  <p >
                     Keep track of your expenses & discounts you give. Giddh
                     accounting dashboard provides you with easy to understand
                     expense graph so that you can create better strategies to
@@ -158,7 +158,7 @@ const accountingDashboard = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Predict with more precision
                   </h4>
-                  <p className="">
+                  <p >
                     Giddh takes the pain out from your prediction process. With
                     one-click yearly comparison of revenues, profit/loss &
                     expenses, you can make better assumptions of how the
@@ -183,7 +183,7 @@ const accountingDashboard = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Financial ratio analysis
                   </h4>
-                  <p className="">
+                  <p >
                     Will your business be able to pay short-term and long-term
                     obligations? What is its liquidity and profitability? The
                     ratio analysis calculated automatically from the standard

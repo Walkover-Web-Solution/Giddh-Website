@@ -57,7 +57,7 @@ const Footer = () => {
                 <div className="d-flex flex-column gap-3">
                   <h5>Download</h5>
                   <div>
-                    <p className="">Mobile Apps</p>
+                    <p >Mobile Apps</p>
                     <ul className="list-unstyled">
                       <li>
                         <a className="download-icon" href="#">
@@ -70,9 +70,9 @@ const Footer = () => {
                   <div>
                     <p className="d-flex flex-column gap-3">Desktop Apps</p>
                     <ul className="list-unstyled d-flex gap-3">
-                      <li className="">
+                      <li >
                         <a className="download-icon " href="#">
-                          <img className="" src="/img/window-icon.svg" />
+                          <img  src="/img/window-icon.svg" />
                         </a>
                       </li>
                       <li>

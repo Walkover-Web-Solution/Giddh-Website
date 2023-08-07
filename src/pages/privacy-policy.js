@@ -156,7 +156,7 @@ const privacyPolicy = () => {
                 your email & manage your inbox. The Giddh will never send emails
                 on your behalf and will never share the content of your emails.
               </p>
-              <ul className="">
+              <ul >
                 <li>No one at Giddh reads your emails</li>
                 <li>Giddh will never send emails on your behalf</li>
                 <li>
