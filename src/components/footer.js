@@ -161,7 +161,7 @@ const Footer = () => {
                       <br /> Indore, Madhya Pradesh, India-452018
                     </p>
                   </div>
-                  <div className="location__detail">
+                  <div className="location__detail mt-5">
                     <h4>USA</h4>
                     <p>
                       USA Superheroes, Inc
