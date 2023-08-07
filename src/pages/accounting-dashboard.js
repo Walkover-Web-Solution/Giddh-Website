@@ -15,7 +15,12 @@ const accountingDashboard = () => {
                   Giddh Dashboard.
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="download_free_btn me-4">
+                  <a
+                    href="#"
+                    className="download_free_btn me-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#downloadFree"
+                  >
                     Download Free
                   </a>
                   <a href="#" className="col-blue">
@@ -30,7 +35,7 @@ const accountingDashboard = () => {
                     width="90%"
                   />
                   <img
-                    src="img/all-features-cloud_icon.svg"
+                    src="/img/all-features-cloud_icon.svg"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />

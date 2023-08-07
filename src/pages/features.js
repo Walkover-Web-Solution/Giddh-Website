@@ -15,7 +15,12 @@ const features = () => {
                   of the most important asset of your business – cash.
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="download_free_btn me-4">
+                  <a
+                    href="#"
+                    className="download_free_btn me-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#downloadFree"
+                  >
                     Download Free
                   </a>
                   <a href="#" className="col-blue">
@@ -25,9 +30,9 @@ const features = () => {
               </div>
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
-                  <img src="img/bank-banner.svg" width="90%" />
+                  <img src="/img/bank-banner.svg" width="90%" />
                   <img
-                    src="img/all-features-cloud_icon.svg"
+                    src="/img/all-features-cloud_icon.svg"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -264,7 +269,7 @@ const features = () => {
               <div className="col-12">
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2> 
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
                   <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                       <button

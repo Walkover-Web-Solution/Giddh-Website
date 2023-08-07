@@ -128,20 +128,7 @@
     border-radius: 20px;
     display: inline-block;
   }
-  .country_dropdown {
-    &__menu {
-      li {
-        a {
-          color: var(--col-dark);
-          transition: all 200ms;
-          &:hover {
-            background-color: var(--col-blue);
-            color: var(--col-white);
-          }
-        }
-      }
-    }
-  }
+  
 
   &--navbar_brand {
     svg {
@@ -275,7 +262,7 @@
         }
         .dropdown-menu {
           background-color: transparent !important;
-          border: 0 !important;
+          border: none !important;
           box-shadow: none !important;
           padding: 10px 15px;
 
@@ -324,7 +311,7 @@
       .country_dropdown {
         &__menu {
           background: transparent;
-          border: 0;
+          border: none;
           color: var(--col-white);
           border-left: 1px solid;
           border-radius: 0;

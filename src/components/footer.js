@@ -1,29 +1,36 @@
+import { usePathname } from 'next/navigation'
 const Footer = () => {
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split('/');
+  let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
+  let isAE = startPath[1] === 'ae';
+  let isUK = startPath[1] === 'uk';
   return (
     <div className="footer-container py-5">
       <footer>
         <div className="top_footer">
           <div className="container">
-            <div className="row">
-              <div className="col-sm-12 col-md-3">
+            <div className="row row-gap-4">
+              <div className="col-xl-3 col-lg-6 col-md-12">
                 <div className="d-flex">
-                  <div className="d-flex flex-column gap-3 .text-dark">
+                  <div className="d-flex flex-column gap-3 text-dark">
                     <h5>Quick Links</h5>
                     <ul className="footer-list list-unstyled mb-3">
                       <li>
                         <a href="/pricing">Pricing</a>
                       </li>
                       <li>
-                        <a href="#">About</a>
+                        <a href="/about">About</a>
                       </li>
                       <li>
-                        <a href="#">Blog</a>
+                        <a href="https://giddh.com/blog/">Blog</a>
                       </li>
                       <li>
                         <a href="privacy-policy">Privacy Policy</a>
                       </li>
                       <li>
-                        <a target="_blank" rel="noopener" href="#">
+                        <a target="_blank" href="https://apply.workable.com/walkover/">
                           Work With Us
                         </a>
                       </li>
@@ -38,7 +45,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-sm-12 col-md-3">
+              <div className="col-xl-3 col-lg-6 col-md-12">
                 <div className="d-flex flex-column gap-3">
                   <h5>Download</h5>
                   <div>
@@ -70,36 +77,38 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className=" -sm-12 col-md-3 ">
+              <div className="col-xl-3 col-lg-6 col-md-12">
                 <h5 className="list-unstyled d-flex flex-column gap-2">
                   Contact Us
                 </h5>
                 <div>
-                  <div className=" footer-dpn mb-3">
-                    <div className="dropdown btn-group">
+                  <div className="footer-dpn mb-3">
+                    <div className="dropdown btn-group w-100">
                       <button
                         type="button"
-                        className="btn btn-down dropdown-toggle contry-icon"
+                        className="btn btn-down dropdown-toggle country-icon"
                         id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false"
                       >
-                        <img src="img/earth.svg" alt="" /> IN - India
+                        <img src="/img/earth.svg" alt="earth-icon" /> 
+
+                        { isIndia ? 'IN - India' : ( isAE ? 'UAE - United Arab Emirates' : 'UK - United Kingdom' )}
                       </button>
                       <ul
                         className="dropdown-menu country_dropdown__menu"
                         aria-labelledby="countryDropdown"
                       >
                         <li>
-                          <a className="dropdown-item" href="#">
+                          <a className={'dropdown-item' + ( isIndia ? ' active' : '' )} href="/">
                             IN - India
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                          <a className={'dropdown-item' + ( isAE ? ' active' : '' )} href="/ae">
                             UAE - United Arab Emirates
                           </a>
                         </li>
                         <li>
-                          <a className="dropdown-item" href="#">
+                          <a className={'dropdown-item' + ( isUK ? ' active' : '' )} href="/uk">
                             UK - United Kingdom
                           </a>
                         </li>
@@ -116,15 +125,15 @@ const Footer = () => {
                               sales@giddh.com
                             </a>
                           </li>
-                          <li>
+                          <li className="mt-3">
                             Support:{" "}
                             <a href="#" className="cf_email">
                               support@giddh.com
                             </a>
                           </li>
                         </ul>
-                        <p className="contact-link">
-                          <a href="#">Contact Us</a>
+                        <p className="contact-link mt-3">
+                          <a href="contact-us" className="col-primary text-decoration-underline c-fw-500">Contact Us</a>
                         </p>
                       </div>
                     </li>
@@ -132,10 +141,10 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="col-sm-12 col-md-3">
+              <div className="col-xl-3 col-lg-6 col-md-12">
                 <div className="location">
                   <h5>Locate Us</h5>
-                  <div className="location-detail">
+                  <div className="location__detail">
                     <h4>Indore</h4>
                     <p>
                       Walkover Web Solutions Pvt Ltd.
@@ -144,7 +153,7 @@ const Footer = () => {
                       <br /> Indore, Madhya Pradesh, India-452018
                     </p>
                   </div>
-                  <div className="location-detail">
+                  <div className="location__detail">
                     <h4>USA</h4>
                     <p>
                       USA Superheroes, Inc

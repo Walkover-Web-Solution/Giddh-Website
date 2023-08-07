@@ -15,7 +15,12 @@ const multiUserAccountingSoftware = () => {
                 different departments to work together seamlessly.
               </p>
               <div className="features__heading_container__links">
-                <a href="#" className="download_free_btn me-4">
+                <a
+                  href="#"
+                  className="download_free_btn me-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#downloadFree"
+                >
                   Download Free
                 </a>
                 <a href="#" className="col-blue">
@@ -26,11 +31,11 @@ const multiUserAccountingSoftware = () => {
             <div className="col-lg-5 order-lg-1 order-0 position-relative">
               <figure className="text-end">
                 <img
-                  src="img/feature-gallery-icons/share-banner.svg"
+                  src="/img/feature-gallery-icons/share-banner.svg"
                   width="90%"
                 />
                 <img
-                  src="img/all-features-cloud_icon.svg"
+                  src="/img/all-features-cloud_icon.svg"
                   className="features__heading_container__right_banner_img"
                   width="90%"
                 />

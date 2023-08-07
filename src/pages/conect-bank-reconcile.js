@@ -1,4 +1,4 @@
-import { MdRemove, MdAdd } from "react-icons/md";
+import { MdRemove, MdAdd, MdClose } from "react-icons/md";
 const conectBankReconcile = () => {
   return (
     <>
@@ -15,7 +15,12 @@ const conectBankReconcile = () => {
                   of the most important asset of your business – cash.
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="download_free_btn me-4">
+                  <a
+                    href="#"
+                    className="download_free_btn me-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#downloadFree"
+                  >
                     Download Free
                   </a>
                   <a href="#" className="col-blue">
@@ -25,9 +30,9 @@ const conectBankReconcile = () => {
               </div>
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
-                  <img src="img/bank-banner.svg" width="90%" />
+                  <img src="/img/bank-banner.svg" width="90%" />
                   <img
-                    src="img/all-features-cloud_icon.svg"
+                    src="/img/all-features-cloud_icon.svg"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />

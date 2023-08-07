@@ -14,7 +14,12 @@ const importExeclFiles = () => {
                 data import.
               </p>
               <div className="features__heading_container__links">
-                <a href="#" className="download_free_btn me-4">
+                <a
+                  href="#"
+                  className="download_free_btn me-4"
+                  data-bs-toggle="modal"
+                  data-bs-target="#downloadFree"
+                >
                   Download Free
                 </a>
                 <a href="#" className="col-blue">
@@ -25,11 +30,11 @@ const importExeclFiles = () => {
             <div className="col-lg-5 order-lg-1 order-0 position-relative">
               <figure className="text-end">
                 <img
-                  src="img/feature-gallery-icons/import-banner.svg"
+                  src="/img/feature-gallery-icons/import-banner.svg"
                   width="90%"
                 />
                 <img
-                  src="img/all-features-cloud_icon.svg"
+                  src="/img/all-features-cloud_icon.svg"
                   className="features__heading_container__right_banner_img"
                   width="90%"
                 />
@@ -204,10 +209,7 @@ const importExeclFiles = () => {
               </figure>
               <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                 People interested in{" "}
-                <span className="col-blue">
-                Import Data
-                </span>{" "}
-                also looked at
+                <span className="col-blue">Import Data</span> also looked at
               </h2>
 
               <div className="features__suggestion_container__links">
@@ -379,7 +381,9 @@ const importExeclFiles = () => {
                       </p>
                       <ul>
                         <li>
-                        Excel is good only for basic tasks like managing pricing strategies not for advanced factors like value-based pricing or customers’ willingness to pay.
+                          Excel is good only for basic tasks like managing
+                          pricing strategies not for advanced factors like
+                          value-based pricing or customers’ willingness to pay.
                         </li>
                         <li>
                           Excel accounting software can’t handle large data
@@ -400,57 +404,64 @@ const importExeclFiles = () => {
                   </div>
                 </div>
 
-                                {/*============ Accordion #5 ===============*/}
+                {/*============ Accordion #5 ===============*/}
 
-                                <div className="accordion-item">
-                                    <h2 className="accordion-header" id="headingFive">
-                                        <button
-                                            className="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#collapseFive"
-                                            aria-expanded="false"
-                                            aria-controls="collapseFive"
-                                        >
-                                            <span className="me-2 collapse_icon collapse_icon--open">
-                                                <MdAdd />
-                                            </span>
-                                            <span className="me-2 collapse_icon collapse_icon--close">
-                                                <MdRemove />
-                                            </span>
-                                            How does integrating a bank account with Giddh benefit me?
-                                        </button>
-                                    </h2>
-                                    <div
-                                        id="collapseFive"
-                                        className="accordion-collapse collapse"
-                                        aria-labelledby="headingFive"
-                                        data-bs-parent="#accordionAllFeatures"
-                                    >
-                                        <div className="accordion-body">
-                                            <p> Here are some advantages of using cloud accounting software over Excel</p>
-                                            <ul>
-                                                <li>
-                                                    Unlike Excel, accounting software is well-designed to handle simple and complex accounting tasks.
-                                                </li>
-                                                <li>
-                                                    It can generate better and high-level reports than Excel to indicate different aspects of your accounting functions.
-                                                </li>
-                                                <li>
-                                                    The mathematical operations are handled by the backend processes of accounting
-                                                    software that reduces the chances of manual errors.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            
-                            </div>
-                        </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingFive">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      <span className="me-2 collapse_icon collapse_icon--open">
+                        <MdAdd />
+                      </span>
+                      <span className="me-2 collapse_icon collapse_icon--close">
+                        <MdRemove />
+                      </span>
+                      How does integrating a bank account with Giddh benefit me?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFive"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#accordionAllFeatures"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        {" "}
+                        Here are some advantages of using cloud accounting
+                        software over Excel
+                      </p>
+                      <ul>
+                        <li>
+                          Unlike Excel, accounting software is well-designed to
+                          handle simple and complex accounting tasks.
+                        </li>
+                        <li>
+                          It can generate better and high-level reports than
+                          Excel to indicate different aspects of your accounting
+                          functions.
+                        </li>
+                        <li>
+                          The mathematical operations are handled by the backend
+                          processes of accounting software that reduces the
+                          chances of manual errors.
+                        </li>
+                      </ul>
                     </div>
+                  </div>
                 </div>
-            </section>
-        </>
-    );
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 };
 export default importExeclFiles;

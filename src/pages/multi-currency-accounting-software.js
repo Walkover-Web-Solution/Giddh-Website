@@ -1,20 +1,26 @@
 import { MdRemove, MdAdd } from "react-icons/md";
-const multiCurrencyAccountingSoftware =()=>{
-    return(
-        <>
-        <div className="features">
+const multiCurrencyAccountingSoftware = () => {
+  return (
+    <>
+      <div className="features">
         <section className="container-fluid">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
                 <h2 className="heading col-primary c-fw-600 mb-4">
-                Serve International Customers with Multi-Currency Accounting
+                  Serve International Customers with Multi-Currency Accounting
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
-                Multi-currency accounting enables you to serve overseas clients & turn your business into an International brand.
+                  Multi-currency accounting enables you to serve overseas
+                  clients & turn your business into an International brand.
                 </p>
                 <div className="features__heading_container__links">
-                  <a href="#" className="download_free_btn me-4">
+                  <a
+                    href="#"
+                    className="download_free_btn me-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#downloadFree"
+                  >
                     Download Free
                   </a>
                   <a href="#" className="col-blue">
@@ -24,9 +30,12 @@ const multiCurrencyAccountingSoftware =()=>{
               </div>
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
-                  <img src="/img/feature-gallery-icons/multi-currency-banner.svg" width="90%" />
                   <img
-                    src="img/all-features-cloud_icon.svg"
+                    src="/img/feature-gallery-icons/multi-currency-banner.svg"
+                    width="90%"
+                  />
+                  <img
+                    src="/img/all-features-cloud_icon.svg"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -41,10 +50,13 @@ const multiCurrencyAccountingSoftware =()=>{
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <h3 className="sub-heading col-primary c-fw-600 mb-3">
-                Profits should know no borders
+                  Profits should know no borders
                 </h3>
                 <p className="c-fs-4 mb-5">
-                Multi currency accounting software makes it easy to manage your accounting in more than 100 currencies for your fast & growing business. Giddh makes managing multi-currency payments, invoicing and accounts easy.
+                  Multi currency accounting software makes it easy to manage
+                  your accounting in more than 100 currencies for your fast &
+                  growing business. Giddh makes managing multi-currency
+                  payments, invoicing and accounts easy.
                 </p>
                 <a href="#" className="btn bg_color_blue col-white">
                   Start Your Trial
@@ -60,10 +72,15 @@ const multiCurrencyAccountingSoftware =()=>{
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                  Eliminate Confusion with Automatic Currency Conversion
+                    Eliminate Confusion with Automatic Currency Conversion
                   </h4>
                   <p className="">
-                  Say goodbye to unnecessary exchange rate confusions and accounting mismatch with multi-currency accounting. Giddh does all the heavy lifting & automatically converts the International currencies into your base currency. The best part? You have the option to modify and enter your own rate manually.
+                    Say goodbye to unnecessary exchange rate confusions and
+                    accounting mismatch with multi-currency accounting. Giddh
+                    does all the heavy lifting & automatically converts the
+                    International currencies into your base currency. The best
+                    part? You have the option to modify and enter your own rate
+                    manually.
                   </p>
                 </div>
               </div>
@@ -81,10 +98,14 @@ const multiCurrencyAccountingSoftware =()=>{
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                  Keep Your International Customers Smilin
+                    Keep Your International Customers Smilin
                   </h4>
                   <p className="">
-                  Easily accept payments from your International customers & invoice them with easy to use multi currency accounting software. Send invoices in your customer’s currency, and keep your books updated in the currency you manage your business in.
+                    Easily accept payments from your International customers &
+                    invoice them with easy to use multi currency accounting
+                    software. Send invoices in your customer’s currency, and
+                    keep your books updated in the currency you manage your
+                    business in.
                   </p>
                 </div>
               </div>
@@ -103,10 +124,13 @@ const multiCurrencyAccountingSoftware =()=>{
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                  Set Preferred Currency to Business Accounts
+                    Set Preferred Currency to Business Accounts
                   </h4>
                   <p className="">
-                  With Giddh you are always in control! You can set a default foreign currency to all the business accounts of your foreign customers. After which, all the invoices and reports of that account will be generated in the set currency.
+                    With Giddh you are always in control! You can set a default
+                    foreign currency to all the business accounts of your
+                    foreign customers. After which, all the invoices and reports
+                    of that account will be generated in the set currency.
                   </p>
                 </div>
               </div>
@@ -124,10 +148,13 @@ const multiCurrencyAccountingSoftware =()=>{
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                  Benefit from Dynamic Business Reporting
+                    Benefit from Dynamic Business Reporting
                   </h4>
                   <p className="">
-                  All your financial reports; trial balance, profit & loss, balance sheet, will be automatically created in your company base currency so you have an accurate view of your financial position and be well aware of your cash flow.
+                    All your financial reports; trial balance, profit & loss,
+                    balance sheet, will be automatically created in your company
+                    base currency so you have an accurate view of your financial
+                    position and be well aware of your cash flow.
                   </p>
                 </div>
               </div>
@@ -141,9 +168,6 @@ const multiCurrencyAccountingSoftware =()=>{
                 </figure>
               </div>
             </div>
-
-            
-        
           </div>
         </section>
 
@@ -160,8 +184,10 @@ const multiCurrencyAccountingSoftware =()=>{
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
-                  <span className="col-blue">Multi Currency Accounting Software</span> also
-                  looked at
+                  <span className="col-blue">
+                    Multi Currency Accounting Software
+                  </span>{" "}
+                  also looked at
                 </h2>
 
                 <div className="features__suggestion_container__links">
@@ -189,7 +215,7 @@ const multiCurrencyAccountingSoftware =()=>{
               <div className="col-12">
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2> 
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
                   <div className="accordion-item">
                     <h2 className="accordion-header" id="headingOne">
                       <button
@@ -206,7 +232,8 @@ const multiCurrencyAccountingSoftware =()=>{
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        What type of businesses can use the Giddh multi-currency accounting software?
+                        What type of businesses can use the Giddh multi-currency
+                        accounting software?
                       </button>
                     </h2>
                     <div
@@ -216,7 +243,12 @@ const multiCurrencyAccountingSoftware =()=>{
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Giddh’s innovative multi-currency accounting software is designed to cater to all the accounting, invoicing and related activities of businesses at a budget-friendly price. Hence, it is widely used by start-ups, agencies, enterprises and SMEs that require managing accounts that deal with multiple currencies.
+                        Giddh’s innovative multi-currency accounting software is
+                        designed to cater to all the accounting, invoicing and
+                        related activities of businesses at a budget-friendly
+                        price. Hence, it is widely used by start-ups, agencies,
+                        enterprises and SMEs that require managing accounts that
+                        deal with multiple currencies.
                       </div>
                     </div>
                   </div>
@@ -237,10 +269,9 @@ const multiCurrencyAccountingSoftware =()=>{
                         <span className="me-2 collapse_icon collapse_icon--close">
                           <MdRemove />
                         </span>
-                        What are the advantages of using the Giddh multi-currency accounting software?                       
-                       
+                        What are the advantages of using the Giddh
+                        multi-currency accounting software?
                       </button>
-                     
                     </h2>
                     <div
                       id="collapseTwo"
@@ -249,22 +280,35 @@ const multiCurrencyAccountingSoftware =()=>{
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      <p>The following are the advantages of using the Giddh multi-currency accounting software that make it worth the try.</p>
+                        <p>
+                          The following are the advantages of using the Giddh
+                          multi-currency accounting software that make it worth
+                          the try.
+                        </p>
                         <ul>
                           <li>
-                          Flexibility: Giddh offers you flexibility in payment options. It helps you handle transactions involving different currencies.
+                            Flexibility: Giddh offers you flexibility in payment
+                            options. It helps you handle transactions involving
+                            different currencies.
                           </li>
                           <li>
-                          Money-saving: With Giddh, you get the increased convenience of dealing with multiple accounts without investing in an expert or a manual system.
+                            Money-saving: With Giddh, you get the increased
+                            convenience of dealing with multiple accounts
+                            without investing in an expert or a manual system.
                           </li>
                           <li>
-                          Better security: Your financial reports are safe from any security breaches with Giddh.
+                            Better security: Your financial reports are safe
+                            from any security breaches with Giddh.
                           </li>
                           <li>
-                          Linked bank accounts: Giddh allows you to link multiple bank accounts so that you can check your transaction history anywhere and anytime you want.
+                            Linked bank accounts: Giddh allows you to link
+                            multiple bank accounts so that you can check your
+                            transaction history anywhere and anytime you want.
                           </li>
                           <li>
-                          Diligent support team: Giddh’s support team is just a call or email away to help you with any issue that arises.
+                            Diligent support team: Giddh’s support team is just
+                            a call or email away to help you with any issue that
+                            arises.
                           </li>
                         </ul>
                       </div>
@@ -297,10 +341,14 @@ const multiCurrencyAccountingSoftware =()=>{
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Yes, the mentioned currency rates are updated and accurate. Giddh periodically pulls in the exchange rates online to ensure that businesses and financial advisors have the accurate data needed to make effective decisions. 
-                      Giddh also allows you to set a default currency so that you can receive your invoices according to the set currency.
+                        Yes, the mentioned currency rates are updated and
+                        accurate. Giddh periodically pulls in the exchange rates
+                        online to ensure that businesses and financial advisors
+                        have the accurate data needed to make effective
+                        decisions. Giddh also allows you to set a default
+                        currency so that you can receive your invoices according
+                        to the set currency.
                       </div>
-                  
                     </div>
                   </div>
                   {/*============ Accordion #4 ===============*/}
@@ -330,13 +378,15 @@ const multiCurrencyAccountingSoftware =()=>{
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      We save the latest data of currency conversion in our system. So, when the user creates an invoice or uses a related functionality for bookkeeping, the conversion amount is shown in the respective entry form/field.
+                        We save the latest data of currency conversion in our
+                        system. So, when the user creates an invoice or uses a
+                        related functionality for bookkeeping, the conversion
+                        amount is shown in the respective entry form/field.
                       </div>
-                  
                     </div>
                   </div>
-                    {/*============ Accordion #5 ===============*/}
-                    <div className="accordion-item">
+                  {/*============ Accordion #5 ===============*/}
+                  <div className="accordion-item">
                     <h2 className="accordion-header" id="headingFive">
                       <button
                         className="accordion-button collapsed"
@@ -362,9 +412,10 @@ const multiCurrencyAccountingSoftware =()=>{
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                      Yes, you can customize the currency exchange rate and enter the desired amount as per the situation or requirement.
+                        Yes, you can customize the currency exchange rate and
+                        enter the desired amount as per the situation or
+                        requirement.
                       </div>
-                  
                     </div>
                   </div>
                 </div>
@@ -373,8 +424,7 @@ const multiCurrencyAccountingSoftware =()=>{
           </div>
         </section>
       </div>
-        </>
-    );
+    </>
+  );
 };
 export default multiCurrencyAccountingSoftware;
-
