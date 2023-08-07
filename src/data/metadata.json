@@ -1,11 +1,111 @@
 {
-    "/":{
-        "title":"Best Online Accounting Software | Online Bookkeeping Software",
-        "description":"Best Online Accounting Software in India where you can get GST software for accounting, file GSTR, Business Reports and much more. Visit now to know more."
-
-    },
-    "/pricing":{
-        "title":"Pricing for cloud based Online Accounting Software | Start Free",
-        "description":"Start using easiest and well featured Giddh accounting software. Giddh is an ultimate accounting solution for small businesses at the best price"
-    }
+  "/": {
+    "title": "Best Online Accounting Software | Online Bookkeeping Software",
+    "description": "Best Online Accounting Software in India where you can get GST software for accounting, file GSTR, Business Reports and much more. Visit now to know more."
+  },
+  "/pricing": {
+    "title": "Pricing for cloud based Online Accounting Software | Start Free",
+    "description": "Start using easiest and well featured Giddh accounting software. Giddh is an ultimate accounting solution for small businesses at the best price"
+  },
+  "/make-the-switch": {
+    "title": "Make The Switch to Online Accounting Software | Giddh",
+    "description": "Switch to Online Accounting Software for hassle free management of all your Accounts with Giddh Accounting Software."
+  },
+  "/all-features": {
+    "title": "Features of Online Accounting Software | Giddh",
+    "description": "Giddh provides you with their best features of Online Accounting Software at your own comfort which you can access anywhere and at anytime."
+  },
+  "/gst": {
+    "title": "Goods & Service Tax India | File GST Return with Giddh",
+    "description": "File your GST Returns with one of the easy to use Online Accounting Software in India."
+  },
+  "/conect-bank-reconcile": {
+    "title": "Online Bank Reconciliation Software by Giddh",
+    "description": "Bank Reconciliation Softwares, when connected to connect your bank, allows you to monitor your daily transactions seamlessly."
+  },
+  "/multi-currency-accounting-software": {
+    "title": "Multi Currency Accounting Software by Giddh",
+    "description": "Multi-currency Accounting Software allows you to get paid in over 160 currencies which is easy to use with Giddh."
+  },
+  "/icici-integration": {
+    "title": "ICICI Integration - Best Online Accounting Software | Online Bookkeeping Software",
+    "description": ""
+  },
+  "/e-invoice": {
+    "title": "E-Invoice - Best Online Accounting Software | Online Bookkeeping Software",
+    "description": "-2819"
+  },
+  "/invoice-software": {
+    "title": "Online Invoice Software | Generate Invoice Online | Giddh",
+    "description": "Now you can generate Invoice Online by using the Online Accounting Software provided by Giddh. Select your invoice template and change the format as well."
+  },
+  "/financial-reporting": {
+    "title": "Financial Reporting and Analysis by Giddh Accounting Software",
+    "description": "Giddh helps you to keep track of your finances & share the financial reporting and analysis with your advisor."
+  },
+  "/multi-user-accounting-software": {
+    "title": "Multi User Accounting Software",
+    "description": "&quot;Giddh Accounting Software provides you with a Multi User Accounting Software for your business and other departments to work together. Know more here&quot;"
+  },
+  "/contacts": {
+    "title": "Manage your Business Contacts with Giddh Accounting Software",
+    "description": "Online Accounting Software which provides you to keep all the contacts of your customers and vendors on Cloud"
+  },
+  "/accounting-dashboard": {
+    "title": "Online Accounting Dashboard by Giddh Accounting Software",
+    "description": "Giddh Online Accounting Software provides a special Online Accounting Dashboard which gives you insights into your business."
+  },
+  "/import-data": {
+    "title": "Import Your Data Online via Giddh Online Accounting Software",
+    "description": "Giddh allows you to import all your important data from offline sources to online with the help of Cloud Accounting Software."
+  },
+  "/inventory-management-software": {
+    "title": "Best Inventory Management Software in India by Giddh",
+    "description": "Manage your business, small or big, inventory, and warehouse with the help of Inventory Management Software by Giddh."
+  },
+  "/security": {
+    "title": "Most Secured Online Accounting Software by Giddh",
+    "description": "Now all your business data is safe and secured with Giddh Online Accounting & Bookkeeping Software."
+  },
+  "/cloud-accounting-software": {
+    "title": "Cloud Accounting Software | Online Accounting Software by Giddh",
+    "description": "Giddh is one of the finest Online Accounting Software which provides the customers and businesses to store, manage, analyze the data on Cloud via Cloud Accounting Software."
+  },
+  "/about": {
+    "title": "Know More About Giddh Online Accounting Software",
+    "description": "Know more about Online Accounting Software makers- Giddh. Your one place for all your acccounts"
+  },
+  "/blog": {
+    "title": "All You Need to Know About Online Accounting Software by Giddh",
+    "description": "Get all the information about the online accounting, bookkeeping, GST, etc., under one roof"
+  },
+  "/guide":{
+    "title": "Guide",
+    "description":""
+  },
+  "/help":{
+    "title":"Giddh Support",
+    "description":"Giddh Support Center helps you to find FAQ, how-to guides and step-by-step tutorials."
+  },
+  "/privacy-policy":{
+    "title":"Giddh Online Accounting Software | Privacy Policy",
+    "description":"Check out the Privacy Policy of Giddh Online Accounting Software and Start your Free Trial."
+  },
+  "/walkover":{
+    "title":"Walkover - Current Openings",
+    "description" : "People and passion are at the heart of everything we do! We look for individuals who are team players and believe they can change the world. People who are outrageous and excellent creators, coz we Walkers are such people. Be the change-maker, an emp..."
+  },
+  "/affiliate":{
+    "title":"Accounting Software Affiliate | Giddh",
+    "description":"Start selling easiest gst ready cloud based accounting software. Giddh is an ultimate accounting solution for small businesses at the best price"
+  },
+  "/terms":{
+    "title":"Terms of Service",
+    "description":""
+  },
+  "/contact-us":{
+    "title":"Contact us - Best Online Accounting Software | Online Bookkeeping Software",
+    "description":""
+  }
+ 
 }
