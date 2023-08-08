@@ -79,21 +79,21 @@
     "title": "All You Need to Know About Online Accounting Software by Giddh",
     "description": "Get all the information about the online accounting, bookkeeping, GST, etc., under one roof"
   },
-  "/guide":{
+  "/guide": {
     "title": "Guide",
-    "description":""
+    "description": ""
   },
-  "/help":{
-    "title":"Giddh Support",
-    "description":"Giddh Support Center helps you to find FAQ, how-to guides and step-by-step tutorials."
+  "/help": {
+    "title": "Giddh Support",
+    "description": "Giddh Support Center helps you to find FAQ, how-to guides and step-by-step tutorials."
   },
-  "/privacy-policy":{
-    "title":"Giddh Online Accounting Software | Privacy Policy",
-    "description":"Check out the Privacy Policy of Giddh Online Accounting Software and Start your Free Trial."
+  "/privacy-policy": {
+    "title": "Giddh Online Accounting Software | Privacy Policy",
+    "description": "Check out the Privacy Policy of Giddh Online Accounting Software and Start your Free Trial."
   },
-  "/walkover":{
-    "title":"Walkover - Current Openings",
-    "description" : "People and passion are at the heart of everything we do! We look for individuals who are team players and believe they can change the world. People who are outrageous and excellent creators, coz we Walkers are such people. Be the change-maker, an emp..."
+  "/walkover": {
+    "title": "Walkover - Current Openings",
+    "description": "People and passion are at the heart of everything we do! We look for individuals who are team players and believe they can change the world. People who are outrageous and excellent creators, coz we Walkers are such people. Be the change-maker, an emp..."
   },
   "/affiliate":{
     "title":"Accounting Software Affiliate | Giddh",
@@ -103,22 +103,113 @@
     "title":"Terms of Service",
     "description":""
   },
-  "/contact-us":{
+  
+  "/login":{
+    "title":"Login ~ Giddh",
+    "description":""
+  },
+  "/signup":{
+    "title":"Signup ~ Giddh",
+    "description":""
+  },
+  
+
+  "comment":{
+     "comment":"// ae country"
+  },
+
+  "/ae":{
+    "title":"Online Accounting Software for Businesses in Dubai | Giddh",
+    "description":"Best Online Accounting Software in Dubai where you can get VAT software for accounting, file VAT, Business Reports and much more. Visit now to know more."
+  },
+  "/ae/make-the-switch":{
+    "title":"Switch to Simpler Online Accounting Solutions in Dubai | Giddh",
+    "description":"Switch to Online Accounting Software for a Simple Accounting Solution for your businesses with Giddh- Accounting Software."
+  },
+
+  "/ae/conect-bank-reconcile":{
+    "title":"Connect Your Bank with Giddh Online Accounting Software",
+    "description":"Giddh Online Accounting Software provides one of the finest Bank Reconciliation Software to monitor your transactions from multiple bank accounts."
+  },
+
+  "/ae/multi-currency-accounting-software":{
+    "title":"Multi Currency Accounting Software",
+    "description":"Multi-currency accounting system enables businesses to send multi-currency invoices in customer’s foreign currency & get paid easily in over 160 currency.&quot;"
+  },
+
+  "/ae/invoice-software":{
+    "title":"Invoicing & Accounting Software Online Dubai | Giddh",
+    "description":"Now you can Create Invoice Online by using the Online Invoicing Software by Giddh with beautiful templates and customization options."
+  },
+
+  "/ae/financial-reporting":{
+    "title":"Financial Accounting Software Dubai| Giddh",
+    "description":"With Giddh Financial Reporting Software analyze and share financial reports - balance sheet, trial balance, with your accountant, partners or investors."
+  },
+  "/ae/multi-user-accounting-software":{
+    "title":"Multi-User Business Accounting Software in Dubai | Giddh",
+    "description":"Start your Free Trial of Giddh's Multi-User Accounting Software to share your business insights with different accountants."
+  },
+  "/ae/contacts":{
+    "title":"Manage your customers & vendors on Cloud",
+    "description":""
+  },
+  "/ae/accounting-dashboard":{
+    "title":"Online Accounting Dasboard for Businesses in Dubai | Giddh",
+    "description": "Turn your accounting data into business intelligence with Giddh Online Accounting Dashboard. Download it for free or start your Free Trial."
+  },
+  "/ae/import-data":{
+    "title":"Import accounting data to cloud",
+    "description":"Import your offline accounting data & start managing it on the cloud or switch to Giddh from your old accounting software by importing your financial data."
+  },
+  "/ae/inventory-management-software":{
+    "title":"Managing Your Inventory is now Easy in Dubai | Giddh",
+    "description":"Giddh Inventory Management System Software helps you to manage your Inventory or Warehouse. Start your Free Trial now!"
+  },
+  "/ae/security":{
+    "title":"Giddh Online Accounting Software Security",
+    "description":"We provide you with one of the finest Online Account Security for your Accounts. We offer unmatched data encryption algorithm to keep your data safe."
+  },
+  "/ae/cloud-accounting-software":{
+    "title":"Cloud Accounting Software for SME's in Dubai | Giddh",
+    "description":"Work smarter, grow faster with Giddh Cloud Accounting Software to generate Invoices Online, Manage Financial Reports, share your business insights and much more."
+  },
+  "/ae/all-features":{
+    "title":"Features of Giddh Accounting Software",
+    "description":"Giddh offers the best features of Online Accounting Software, like generating invoices, expense management, VAT filing and much more."
+  },
+  "/ae/pricing":{
+    "title":"Accounting Software Prices in Dubai - Start Free| Giddh",
+    "description":"Start using easiest and well-featured Giddh accounting software at Free of Cost. Start your Free Trial and know the benefits."
+  },
+  "/ae/about":{
+    "title":"Know About Giddh (Online Accounting Software) | Giddh",
+    "description":"Know more about Online Accounting Software makers- Giddh. Your one place for all your acccounts"
+  },
+  "/ae/privacy-policy":{
+    "title":"Giddh Online Accounting Software | Privacy Policy",
+    "description":"Check out the Privacy Policy of Giddh Online Accounting Software and Start your Free Trial."
+  },
+  "/ae/affiliate":{
+    "title":"Giddh Online Accounting Software | Privacy Policy",
+    "description":"Start selling easiest gst ready cloud based accounting software. Giddh is an ultimate accounting solution for small businesses at the best price"
+  },
+  "/ae/terms":{
+    "title":"Terms of Service",
+    "description":""
+  },
+  "/ae/contact-us":{
     "title":"Contact us - Best Online Accounting Software | Online Bookkeeping Software",
     "description":""
   },
+  "/ae/login":{
+    "title":"Login ~ Giddh",
+    "description":""
+  },
+  "/ae/signup":{
+    "title":"Signup ~ Giddh",
+    "description":""
+  }
 
-    
-// for ae "country"
 
-
-  "/ae/":{
-        "title":"Online Accounting Software for Businesses in Dubai | Giddh",
-        "description":"Best Online Accounting Software in Dubai where you can get VAT software for accounting, file VAT, Business Reports and much more. Visit now to know more."
-    },
-  "/ae/make-the-switch/":{
-        "title":"Switch to Simpler Online Accounting Solutions in Dubai | Giddh",
-        "description":"Switch to Online Accounting Software for a Simple Accounting Solution for your businesses with Giddh- Accounting Software."
-    }
-
-}
+} 
