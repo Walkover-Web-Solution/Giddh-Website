@@ -65,6 +65,20 @@
         }
       }
     }
-    
   }
+  @media (max-width: 575px){
+    .enquiry_form {  
+      &--max-width-unset{
+        &.container{
+          padding: 0 !important;
+        }
+      }       
+      &__wrapper {        
+        &__form_wrapper {
+          padding: 20px 8px 3rem 8px !important;
+        }
+      }
+    }
+  }
+
   // ========================== Index Page Enquiry Section SCSS CODE===============END=============================
