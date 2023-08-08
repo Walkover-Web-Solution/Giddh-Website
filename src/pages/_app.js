@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 export default function MyApp({ Component, pageProps }) {
 
   const router = useRouter()
-  var brawserPath = router.pathname;
+  var browserPath = router.pathname;
 
 
 
@@ -21,7 +21,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
     <Navbar/>
-      <Header brawserPath={brawserPath}/>
+      <Header browserPath={browserPath}/>
       <Component {...pageProps} />
       <Footer/>
 
