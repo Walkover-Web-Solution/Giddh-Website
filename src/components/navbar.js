@@ -1,27 +1,187 @@
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 const navbar = () => {
-    // To get active route
-    const pathname = usePathname();
-    const startPath = pathname.split('/');
-    let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
-    let isAE = startPath[1] === 'ae';
-    let isUK = startPath[1] === 'uk';
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+  let isUK = startPath[1] === "uk";
+
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
+
+  function getCountryWiseData(data) {
+    if (isIndia) {
+      if (data.in === true) {
+        return data;
+      }
+    }
+    if (isAE) {
+      if (data.ae === true) {
+        return data;
+      }
+    }
+    if (isUK) {
+      if (data.uk === true) {
+        return data;
+      }
+    }
+    return null;
+  }
+
+  // JSON data for Feature Menu
+  let features = [
+    {
+      in: false,
+      uk: true,
+      ae: true,
+      menuItem: "VAT",
+      url: "/vat",
+    },
+    {
+      in: true,
+      uk: false,
+      ae: false,
+      menuItem: "E-Invoice",
+      url: "/e-invoice",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Invoicing",
+      url: "/invoice-software",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Share Data",
+      url: "/multi-user-accounting-software",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Contacts",
+      url: "/contacts",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Dashboard",
+      url: "/accounting-dashboard",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Inventory",
+      url: "/inventory-management-software",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Security",
+      url: "/security",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "All Features",
+      url: "/all-features",
+    },
+    {
+      in: true,
+      uk: false,
+      ae: false,
+      menuItem: "GST Compliances",
+      url: "/gst",
+    },
+    {
+      in: false,
+      uk: true,
+      ae: true,
+      menuItem: "Bank Reconciliation",
+      url: "/conect-bank-reconcile",
+    },
+    {
+      in: true,
+      uk: false,
+      ae: false,
+      menuItem: "Bank Reconcile",
+      url: "/conect-bank-reconcile",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Multi Currency",
+      url: "/multi-currency-accounting-software",
+    },
+    {
+      in: true,
+      uk: false,
+      ae: false,
+      menuItem: "ICICI Integration",
+      url: "/icici-integration",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "API Integration",
+      url: "https://apidoc.giddh.com/",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Anywhere-Anytime",
+      url: "/cloud-accounting-software",
+    },
+    {
+      in: true,
+      uk: false,
+      ae: false,
+      menuItem: "Linked Bank Account",
+      url: "/conect-bank-reconcile",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Import Excel Files",
+      url: "/import-data",
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "Reports & Analysis",
+      url: "/financial-reporting",
+    },
+  ];
+
   return (
     <>
       <nav className="navbar navbar--box-shadow navbar--theme-white navbar-expand-lg position-fixed w-100 py-0">
         <div className="container-fluid">
-          <a className="navbar--navbar_brand" href="/">
+          <a className="navbar--navbar_brand" href={link + "/"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="126.833"
               height="25"
               viewBox="0 0 126.833 25"
             >
-              <g                
-                className="logo-white"                
+              <g
+                className="logo-white"
                 transform="translate(-319.076 -1919.767)"
               >
-                <rect                 
+                <rect
                   className="giddh-logo-svg"
                   width="5.491"
                   height="24.999"
@@ -100,123 +260,96 @@ const navbar = () => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" href="/make-the-switch">
+                <a className="nav-link active" href={link + "/make-the-switch"}>
                   Make the Switch
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link chevron_down nav-link--feature-menu" href="/all-features">
-                  Features
-                </a>
-                <ul className="dropdown-menu dropdown-menu--position-left">
-                  <li>
-                    <ul className="dropdown-menu__wapper d-flex flex-wrap ps-0">
-                      <li className="col-lg-3 col-md-4 col-sm-6">
-                        <ul className="ps-0">
-                          <li>
-                            <a href="/gst">GST Compliances</a>
+                <div className="dropdown">
+                  <a
+                    className="nav-link chevron_down nav-link--feature-menu"
+                    href="#"
+                    id="allFeaturesDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Features
+                  </a>
+                  <ul
+                    className="dropdown-menu dropdown-menu--position-left"
+                    aria-labelledby="allFeaturesDropdown"
+                  >
+                    <li>
+                      <ul className="dropdown-menu__wapper d-grid ps-0">
+                        {features.filter(getCountryWiseData).map((data, index) => (
+                          <li key={index}>
+                            <a
+                              href={
+                                data.menuItem === "API Integration"
+                                  ? data.url
+                                  : link + data.url
+                              }
+                            >
+                              {data.menuItem}
+                            </a>
                           </li>
-                          <li>
-                            <a href="/conect-bank-reconcile">Bank Reconcile</a>
-                          </li>
-                          <li>
-                            <a href="/multi-currency-accounting-software">Multi Currency</a>
-                          </li>
-                          <li>
-                            <a href="/icici-integration">ICICI Integration</a>
-                          </li>
-                          <li>
-                            <a href="/e-invoice">E-Invoice</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="col-lg-3 col-md-4 col-sm-6">
-                        <ul className="ps-0">
-                          <li>
-                            <a href="/invoice-software">Invoicing</a>
-                          </li>
-                          <li>
-                            <a href="/multi-user-accounting-software">Share Data</a>
-                          </li>
-                          <li>
-                            <a href="/contacts">Contacts</a>
-                          </li>
-                          <li>
-                            <a href="https://apidoc.giddh.com">API Integration</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="col-lg-3 col-md-4 col-sm-6">
-                        <ul className="ps-0">
-                          <li>
-                            <a href="/accounting-dashboard">Dashboard</a>
-                          </li>
-                          <li>
-                            <a href="/inventory-management-software">Inventory</a>
-                          </li>
-                          <li>
-                            <a href="/security">Security</a>
-                          </li>
-                          <li>
-                            <a href="/all-features">All Features</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="col-lg-3 col-md-4 col-sm-6">
-                        <ul className="ps-0">
-                          <li>
-                            <a href="/cloud-accounting-software">Anywhere-Anytime</a>
-                          </li>
-                          <li>
-                            <a href="/conect-bank-reconcile">Linked Bank Account</a>
-                          </li>
-                          <li>
-                            <a href="/import-data">Import Excel Files</a>
-                          </li>
-                          <li>
-                            <a href="/financial-reporting">Reports & Analysis</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+                        ))}
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={isIndia ? '/pricing' : (isAE  ? '/ae/pricing' : '/uk/pricing')}>
+                <a className="nav-link" href={link + "/pricing"}>
                   Pricing
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={isIndia ? '/' : (isAE  ? '/ae/vat' : '/uk/vat')}>
-                  {isIndia ? 'GST' : (isAE || isUK ? 'VAT' : '')}
+                <a
+                  className="nav-link"
+                  href={isIndia ? "/" : isAE ? "/ae/vat" : "/uk/vat"}
+                >
+                  {isIndia ? "GST" : isAE || isUK ? "VAT" : ""}
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <a className="nav-link" href={link + "/about"}>
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link chevron_down nav-link--resource-menu" href="#">
-                  Resources
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a href="https://giddh.com/blog/">Blog</a>
-                  </li>
-                  <li>
-                    <a href="https://giddh.com/guide/">Guide</a>
-                  </li>
-                  <li>
-                    <a href="https://giddh.com/help/">Help</a>
-                  </li>
-                </ul>
+                <div className="dropdown">
+                  <a
+                    className="nav-link chevron_down nav-link--resource-menu"
+                    href="#"
+                    id="resouceDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Resources
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="resouceDropdown">
+                    <li>
+                      <a href="https://giddh.com/blog/">Blog</a>
+                    </li>
+                    <li>
+                      <a href="https://giddh.com/guide/">Guide</a>
+                    </li>
+                    <li>
+                      <a href="https://giddh.com/help/">Help</a>
+                    </li>
+                  </ul>
+                </div>
               </li>
             </ul>
             <div className="nav_right d-flex align-items-center">
               <div className="dropdown country_dropdown">
-                <a href="#" id="countryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <a
+                  href="#"
+                  id="countryDropdown"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="34"
@@ -237,19 +370,43 @@ const navbar = () => {
                     </g>
                   </svg>
                 </a>
-                <ul className="dropdown-menu country_dropdown__menu" aria-labelledby="countryDropdown">
-                  <li><a className={'dropdown-item' + ( isIndia ? ' active' : '' )} href="/">IN - India</a></li>
-                  <li><a className={'dropdown-item' + ( isAE ? ' active' : '' )} href="/ae">UAE - United Arab Emirates</a></li>
-                  <li><a className={'dropdown-item' + ( isUK ? ' active' : '' )} href="/uk">UK - United Kingdom</a></li>
+                <ul
+                  className="dropdown-menu country_dropdown__menu"
+                  aria-labelledby="countryDropdown"
+                >
+                  <li>
+                    <a
+                      className={"dropdown-item" + (isIndia ? " active" : "")}
+                      href="/"
+                    >
+                      IN - India
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={"dropdown-item" + (isAE ? " active" : "")}
+                      href="/ae"
+                    >
+                      UAE - United Arab Emirates
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={"dropdown-item" + (isUK ? " active" : "")}
+                      href="/uk"
+                    >
+                      UK - United Kingdom
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div>
-                <a href="/login" className="login_page_link">
+                <a href={link + "/login"} className="login_page_link">
                   Login
                 </a>
               </div>
               <div>
-                <a href="/signup" className="signup_page_link">
+                <a href={link + "/signup"} className="signup_page_link">
                   Sign Up
                 </a>
               </div>

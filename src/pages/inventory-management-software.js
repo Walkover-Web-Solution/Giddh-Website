@@ -1,5 +1,13 @@
 import { MdRemove, MdAdd } from "react-icons/md";
+import { usePathname } from "next/navigation";
+
 const inventoryManagementSoftware = () => {
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+  let isUK = startPath[1] === "uk";
   return (
     <>
       <div className="features">
@@ -60,7 +68,7 @@ const inventoryManagementSoftware = () => {
                   accurately so you can get back to doing the thing you are best
                   at: Grow and Earn!
                 </p>
-                <a href="#" className="btn bg_color_blue col-white">
+                <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -76,7 +84,7 @@ const inventoryManagementSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Maintain stock visibility with inventory reports
                   </h4>
-                  <p className="">
+                  <p >
                     Inventory management software will let you keep track of
                     your stock When you buy and sell products, your inventory
                     quantities will be automatically updated, making it easy to
@@ -88,7 +96,7 @@ const inventoryManagementSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-invoice.svg"
+                    src={isIndia || isAE ? '/img/feature-gallery-icons/inventory-invoice.svg' : '/img/feature-gallery-icons/inventory-uk.svg'}
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -101,7 +109,7 @@ const inventoryManagementSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Complete support for measurement units
                   </h4>
-                  <p className="">
+                  <p >
                     Where units of measurement are concerned, Giddh has got you
                     covered. Our software allows you to create custom units of
                     measurements for effective inventory management. With custom
@@ -127,7 +135,7 @@ const inventoryManagementSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Inter-branch stock transfer
                   </h4>
-                  <p className="">
+                  <p >
                     Are you a growing business with multiple inventory branches
                     to manage? Do you often struggle to keep up with stock
                     requirements from multiple branches? With the Giddh
@@ -152,7 +160,7 @@ const inventoryManagementSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Save more time with bulk inventory import
                   </h4>
-                  <p className="">
+                  <p >
                     Take the pain out of manually adding your entire inventory
                     on Giddh by bulk inventory import. Just use our simple Excel
                     template and have your inventory uploaded and ready in no
@@ -174,21 +182,22 @@ const inventoryManagementSoftware = () => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Giddh inventory software is GST ready!
+                    
+                    {isIndia ? "Giddh inventory software is GST ready!" : ""}
+                {isAE || isUK ? "Giddh inventory software is VAT ready!" : ""}
+                
                   </h4>
-                  <p className="">
-                    Giddh inventory management software is fully compliant with
-                    the GST system. Track inventory, manage orders, assign HSN &
-                    SAC codes to items and send GST compliant invoices. Your
-                    search for a GST compliant inventory management software
-                    ends with Giddh.
+                  <p >
+                    
+                    {isIndia ? "Giddh inventory management software is fully compliant with the GST system. Track inventory, manage orders, assign HSN & SAC codes to items and send GST compliant invoices. Your search for a GST compliant inventory management software ends with Giddh." : ""}
+                {isAE || isUK ? "Giddh inventory management software is fully compliant with the VAT system. Track inventory, manage orders, assign HSN & SAC codes to items and send VAT compliant invoices. Your search for a VAT compliant inventory management software ends with Giddh." : ""}
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/GST-ready.svg"
+                    src={isIndia ? '/img/feature-gallery-icons/gst-ready.svg' : '/img/feature-gallery-icons/vat-invoice.svg'}
                     className="img-fluid"
                     alt="bank account image"
                   />

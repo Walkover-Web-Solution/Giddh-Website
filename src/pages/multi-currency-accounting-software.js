@@ -1,5 +1,13 @@
+import { usePathname } from "next/navigation";
 import { MdRemove, MdAdd } from "react-icons/md";
+
 const multiCurrencyAccountingSoftware = () => {
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+  let isUK = startPath[1] === "uk";
   return (
     <>
       <div className="features">
@@ -58,7 +66,7 @@ const multiCurrencyAccountingSoftware = () => {
                   growing business. Giddh makes managing multi-currency
                   payments, invoicing and accounts easy.
                 </p>
-                <a href="#" className="btn bg_color_blue col-white">
+                <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -74,7 +82,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Eliminate Confusion with Automatic Currency Conversion
                   </h4>
-                  <p className="">
+                  <p >
                     Say goodbye to unnecessary exchange rate confusions and
                     accounting mismatch with multi-currency accounting. Giddh
                     does all the heavy lifting & automatically converts the
@@ -87,7 +95,7 @@ const multiCurrencyAccountingSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-create.svg"
+                     src={isIndia || isAE ?  '/img/feature-gallery-icons/multi-currency-create.svg' : '/img/feature-gallery-icons/multi-currency-create-uk.svg'}
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -100,7 +108,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Keep Your International Customers Smilin
                   </h4>
-                  <p className="">
+                  <p >
                     Easily accept payments from your International customers &
                     invoice them with easy to use multi currency accounting
                     software. Send invoices in your customer’s currency, and
@@ -112,7 +120,7 @@ const multiCurrencyAccountingSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-invoice-3.svg"
+                    src={isIndia ? '/img/feature-gallery-icons/multi-currency-invoice.svg' : (isAE ? '/img/feature-gallery-icons/multi-currency-invoice-ae.svg' : '/img/feature-gallery-icons/multi-currency-invoice-uk.svg')}
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
@@ -126,7 +134,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Set Preferred Currency to Business Accounts
                   </h4>
-                  <p className="">
+                  <p >
                     With Giddh you are always in control! You can set a default
                     foreign currency to all the business accounts of your
                     foreign customers. After which, all the invoices and reports
@@ -137,7 +145,7 @@ const multiCurrencyAccountingSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-setting.svg"
+                    src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-setting.svg' : '/img/feature-gallery-icons/multi-currency-setting-uk.svg'}
                     className="img-fluid"
                     alt="bank account image"
                   />
@@ -150,7 +158,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Benefit from Dynamic Business Reporting
                   </h4>
-                  <p className="">
+                  <p >
                     All your financial reports; trial balance, profit & loss,
                     balance sheet, will be automatically created in your company
                     base currency so you have an accurate view of your financial
@@ -161,7 +169,7 @@ const multiCurrencyAccountingSoftware = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/multi-currency-reports.svg"
+                    src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-reports.svg' : '/img/feature-gallery-icons/multi-currency-reports-uk.svg'}
                     className="img-fluid"
                     alt="bank overview image"
                   />

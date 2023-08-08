@@ -1,5 +1,13 @@
-import { MdRemove, MdAdd } from "react-icons/md";
+import { usePathname } from "next/navigation";
 const makeTheSwitch = () => {
+    // To get active route
+    const pathname = usePathname();
+    const startPath = pathname.split("/");
+    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+    let isAE = startPath[1] === "ae";
+
+    // Holds Url Prefix country wise
+    let link = isIndia ? '' : (isAE ? '/ae' : '/uk');
   return (
     <>
       <div className="make_the_switch">
@@ -8,7 +16,7 @@ const makeTheSwitch = () => {
             <div className="row">
               <div className="col-md-6 col-sm-12">
                 <div className="switch-section__content">
-                  <h1 className="heading col-primary c-fw-800">
+                  <h1 className="heading col-primary c-fw-600">
                     Make the switch
                   </h1>
                   <p className="col-dark-light c-fs-2">
@@ -25,7 +33,7 @@ const makeTheSwitch = () => {
           <div className="row ">
             <div className="col-md-6 col-sm-12">
               <figure>
-                <img src="/img/switch-laptop-image.png" className="img-fluid" />
+                <img src={ isIndia || isAE ? "/img/switch-laptop-image.png" : "/img/uk-dashboard-laptop-and-pc-img.svg"} className="img-fluid" />
               </figure>
             </div>
             <div className="col-md-6 col-sm-12">
@@ -58,7 +66,7 @@ const makeTheSwitch = () => {
           <div className="container">
             <div className="row align-items-center mb-5">
               <div className="col-md-6 col-sm-12 order-1">
-                <div className="">
+                <div >
                   <h2 className="col-primary sub-heading c-fw-600 pb-3">
                     A Simple Accounting Solution for all your Business needs.
                   </h2>
@@ -86,7 +94,7 @@ const makeTheSwitch = () => {
             </div>
             <div className="row align-items-center flex-row-reverse">
               <div className="col-md-6 col-sm-12 order-1">
-                <div className="">
+                <div >
                   <p className="col-primary c-fs-4 c-fw-600">
                     Direct Bank integration
                   </p>

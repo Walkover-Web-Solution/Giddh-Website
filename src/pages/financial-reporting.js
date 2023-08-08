@@ -1,5 +1,13 @@
 import { MdRemove, MdAdd } from "react-icons/md";
+import { usePathname } from "next/navigation";
+
 const financialReporting = () => {
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== 'uk';
+  let isAE = startPath[1] === "ae";
+  let isUK = startPath[1] === "uk";
   return (
     <>
       <div className="features">
@@ -60,7 +68,7 @@ const financialReporting = () => {
                   decision maker of your business. Giddh gives you all reports
                   you may need to run your business better.
                 </p>
-                <a href="#" className="btn bg_color_blue col-white">
+                <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -76,7 +84,7 @@ const financialReporting = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Big picture analysis made easy
                   </h4>
-                  <p className="">
+                  <p >
                     You don’t need to be an accounting professional to know how
                     your business is doing. Giddh financial reports are
                     color-coded so that the process of analysis is simple like
@@ -101,7 +109,7 @@ const financialReporting = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Ready-made reports when you need them
                   </h4>
-                  <p className="">
+                  <p >
                     With cloud-based business reporting, you don’t need to wait
                     for the month’s end to know where your business stands as
                     the reports can be viewed whenever you want and wherever you
@@ -126,7 +134,7 @@ const financialReporting = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Keep an eye on the money owed to you
                   </h4>
-                  <p className="">
+                  <p >
                     Keep tabs on your unpaid invoices and customers who owe
                     money to your business with Aging report. Aging report
                     provides clear answers to questions like - “how much do my
@@ -138,7 +146,7 @@ const financialReporting = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/report-aging.svg"
+                    src={isIndia || isAE ? '/img/feature-gallery-icons/report-aging.svg' : '/img/feature-gallery-icons/aging.svg'}
                     className="img-fluid"
                     alt="bank account image"
                   />
@@ -151,7 +159,7 @@ const financialReporting = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Collaborate & grow
                   </h4>
-                  <p className="">
+                  <p >
                     Bring your accountant in so they can identify trends and
                     actions. Download your automatically generated financial
                     reports and share them with the stakeholders of your
@@ -163,7 +171,7 @@ const financialReporting = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/report-collaborate.svg"
+                    src={isIndia || isAE ? '/img/feature-gallery-icons/report-collaborate.svg' : '/img/feature-gallery-icons/collab.svg'}
                     className="img-fluid"
                     alt="bank overview image"
                   />

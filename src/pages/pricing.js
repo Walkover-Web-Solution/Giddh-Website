@@ -13,7 +13,7 @@ const pricing = () => {
       <section className="container-fluid pricing_top_section">
         <div className="row align-items-center mt-auto pricing_top_section__column-reverse">
           <div className="col-lg-6 col-md-12">
-            <h3 className=" heading col-primary c-fw-800 ms-4">
+            <h3 className=" heading col-primary c-fw-600 ms-4">
               Powerful solution. Affordable pricing.
             </h3>
           </div>
@@ -306,10 +306,10 @@ const pricing = () => {
                 <a href="#">Check all features</a>
               </div>
               <div className="pricing_main_section__grid__extra_charges">
-                <p className="c-fs-6 c-fw-300">
-                  Extra Add ons: <span className="c-fw-800">₹0.10</span> per
-                  transaction | <span className="c-fw-800">₹2000</span> per
-                  branch/year |<span className="c-fw-800">₹1000</span> per
+                <p className="c-fs-6 c-fw-400">
+                  Extra Add ons: <span className="c-fw-600">₹0.10</span> per
+                  transaction | <span className="c-fw-600">₹2000</span> per
+                  branch/year |<span className="c-fw-600">₹1000</span> per
                   warehouse/year
                 </p>
               </div>
@@ -318,7 +318,7 @@ const pricing = () => {
         </div>
         <div className="row mt-5">
           <div className="col-12 text-center">
-            <h3 className="c-fs-3 c-fw-800">Big Enterprises?</h3>
+            <h3 className="c-fs-3 c-fw-600">Big Enterprises?</h3>
 
             <a href="#" className="benefits-link">
               TALK TO US
@@ -333,7 +333,7 @@ const pricing = () => {
             <h2 className="sub-heading col-primary c-fw-600">
               GIDDH – The AIO Answer to Your Accounting Needs
             </h2>
-            <p className="c-fs-4 c-fw-500">
+            <p className="c-fs-4 c-fw-600">
               Are you still entering your financial data manually into
               spreadsheets to manage your finances?
               <br />
@@ -367,7 +367,7 @@ const pricing = () => {
                   prices and then make your choice.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-500"
+                  className="pt-3 text-decoration-underline c-fw-600"
                   style={{
                     display: readMoreParagraphStatus1 ? "none" : "block",
                   }}
@@ -417,7 +417,7 @@ const pricing = () => {
                   software.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-500"
+                  className="pt-3 text-decoration-underline c-fw-600"
                   style={{
                     display: readMoreParagraphStatus1 ? "block" : "none",
                   }}
@@ -452,7 +452,7 @@ const pricing = () => {
                 </p>
 
                 <span
-                  className="pt-3 text-decoration-underline c-fw-500"
+                  className="pt-3 text-decoration-underline c-fw-600"
                   style={{
                     display: readMoreParagraphStatus2 ? "none" : "block",
                   }}
@@ -497,7 +497,7 @@ const pricing = () => {
                   reducing the hassles of your bookkeeping and accounting tasks.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-500"
+                  className="pt-3 text-decoration-underline c-fw-600"
                   style={{
                     display: readMoreParagraphStatus2 ? "block" : "none",
                   }}
@@ -531,7 +531,7 @@ const pricing = () => {
                   financial operation gets easier with the integration of
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-500"
+                  className="pt-3 text-decoration-underline c-fw-600"
                   style={{
                     display: readMoreParagraphStatus3 ? "none" : "block",
                   }}
@@ -569,7 +569,7 @@ const pricing = () => {
                   and discarding any chances of an unethical data breach.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-500"
+                  className="pt-3 text-decoration-underline c-fw-600"
                   style={{
                     display: readMoreParagraphStatus3 ? "block" : "none",
                   }}
@@ -604,7 +604,7 @@ const pricing = () => {
                 </p>
 
                 <span
-                  className="pt-3 text-decoration-underline c-fw-500"
+                  className="pt-3 text-decoration-underline c-fw-600"
                   style={{
                     display: readMoreParagraphStatus4 ? "none" : "block",
                   }}
@@ -643,7 +643,7 @@ const pricing = () => {
                   compliance is no more a challenge.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-500"
+                  className="pt-3 text-decoration-underline c-fw-600"
                   style={{
                     display: readMoreParagraphStatus4 ? "block" : "none",
                   }}
@@ -675,7 +675,7 @@ const pricing = () => {
                   features and practice using our various options.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-500"
+                  className="pt-3 text-decoration-underline c-fw-600"
                   style={{
                     display: readMoreParagraphStatus5 ? "none" : "block",
                   }}
@@ -713,7 +713,7 @@ const pricing = () => {
                   accounting.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-500"
+                  className="pt-3 text-decoration-underline c-fw-600"
                   style={{
                     display: readMoreParagraphStatus5 ? "block" : "none",
                   }}
@@ -780,7 +780,7 @@ const pricing = () => {
             </div>
 
             <span
-              className="text-decoration-underline c-fw-500"
+              className="text-decoration-underline c-fw-600"
               onClick={() =>
                 readmoreAction((readmoreDisplay) => !readmoreDisplay)
               }

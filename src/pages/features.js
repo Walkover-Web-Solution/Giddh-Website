@@ -1,5 +1,13 @@
 import { MdRemove, MdAdd } from "react-icons/md";
+import { usePathname } from "next/navigation";
+
 const features = () => {
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+  let isUK = startPath[1] === "uk";
   return (
     <>
       <div className="features">
@@ -56,7 +64,7 @@ const features = () => {
                   reconcile your books. Bank link helps you keep track of your
                   cash flow in the most secure, fast and reliable way.
                 </p>
-                <a href="#" className="btn bg_color_blue col-white">
+                <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -72,7 +80,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -98,7 +106,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -125,7 +133,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -151,7 +159,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -178,7 +186,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -204,7 +212,7 @@ const features = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or

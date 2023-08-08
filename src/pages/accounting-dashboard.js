@@ -1,5 +1,13 @@
+import { usePathname } from "next/navigation";
 import { MdRemove, MdAdd } from "react-icons/md";
+
 const accountingDashboard = () => {
+    // To get active route
+    const pathname = usePathname();
+    const startPath = pathname.split("/");
+    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+    let isAE = startPath[1] === "ae";
+    let isUK = startPath[1] === "uk";
   return (
     <>
       <div className="features">
@@ -59,7 +67,7 @@ const accountingDashboard = () => {
                   Actively keep an eye on the net worth, revenue, profit/loss
                   and other key information of your business.
                 </p>
-                <a href="#" className="btn bg_color_blue col-white">
+                <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -75,7 +83,7 @@ const accountingDashboard = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Know the true worth of your business
                   </h4>
-                  <p className="">
+                  <p >
                     There’s no way to know exactly where your business stands
                     without knowing what your net worth is, whether your revenue
                     is grow financial-servicesing and where your expenses lie.
@@ -88,7 +96,7 @@ const accountingDashboard = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/networth.svg"
+                    src={isIndia ? '/img/feature-gallery-icons/networth.svg' : (isAE ? '/img/feature-gallery-icons/networth-ae.png' : '/img/feature-gallery-icons/networth-uk.svg')}
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -101,7 +109,7 @@ const accountingDashboard = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Track your monthly overdues
                   </h4>
-                  <p className="">
+                  <p >
                     Pay and get paid quicker by easily following up on your
                     monthly overdues. Dashboard gives a summary of what you owe
                     to your clients and what’s owed to you in the form of
@@ -126,7 +134,7 @@ const accountingDashboard = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Keep an eye on where your money goes
                   </h4>
-                  <p className="">
+                  <p >
                     Keep track of your expenses & discounts you give. Giddh
                     accounting dashboard provides you with easy to understand
                     expense graph so that you can create better strategies to
@@ -150,7 +158,7 @@ const accountingDashboard = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Predict with more precision
                   </h4>
-                  <p className="">
+                  <p >
                     Giddh takes the pain out from your prediction process. With
                     one-click yearly comparison of revenues, profit/loss &
                     expenses, you can make better assumptions of how the
@@ -161,7 +169,7 @@ const accountingDashboard = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/precision.svg"
+                    src={isIndia ? '/img/feature-gallery-icons/revenue.svg' : (isAE ? '/img/feature-gallery-icons/revenue-ae.png' : '/img/feature-gallery-icons/revenue-uk.svg')}
                     className="img-fluid"
                     alt="bank overview image"
                   />
@@ -175,7 +183,7 @@ const accountingDashboard = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Financial ratio analysis
                   </h4>
-                  <p className="">
+                  <p >
                     Will your business be able to pay short-term and long-term
                     obligations? What is its liquidity and profitability? The
                     ratio analysis calculated automatically from the standard
