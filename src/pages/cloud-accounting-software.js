@@ -281,7 +281,7 @@ const anywhereAnytime = () => {
                         accounting software:
                       </p>
                       <span
-                        className="pt-3 text-decoration-underline c-fw-500"
+                        className="pt-3 text-decoration-underline c-fw-600"
                         style={{
                           display: readMoreParagraphStatus1 ? "none" : "block",
                         }}
@@ -381,7 +381,7 @@ const anywhereAnytime = () => {
                         </tbody>
                       </table>
                       <span
-                        className="pt-3 text-decoration-underline c-fw-500"
+                        className="pt-3 text-decoration-underline c-fw-600"
                         style={{
                           display: readMoreParagraphStatus1 ? "block" : "none",
                         }}
@@ -416,7 +416,7 @@ const anywhereAnytime = () => {
                         may be missing out on:
                       </p>
                       <span
-                        className="pt-3 text-decoration-underline c-fw-500"
+                        className="pt-3 text-decoration-underline c-fw-600"
                         style={{
                           display: readMoreParagraphStatus2 ? "none" : "block",
                         }}
@@ -559,7 +559,7 @@ const anywhereAnytime = () => {
                         </li>
                       </ul>
                       <span
-                        className="pt-3 text-decoration-underline c-fw-500"
+                        className="pt-3 text-decoration-underline c-fw-600"
                         style={{
                           display: readMoreParagraphStatus2 ? "block" : "none",
                         }}
@@ -650,7 +650,7 @@ const anywhereAnytime = () => {
                 </ul>
               </div>
               <a
-                className="text-decoration-underline c-fw-500 text-center col-dark read-more-text"
+                className="text-decoration-underline c-fw-600 text-center col-dark read-more-text"
                 onClick={() =>
                   readmoreAction((readmoreDisplay) => !readmoreDisplay)
                 }

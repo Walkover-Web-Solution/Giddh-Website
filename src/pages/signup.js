@@ -292,7 +292,7 @@ const signUp = () => {
                   </div>
                 </div>
                 <div className="row">
-                  <p className="col-success c-fs-6 c-fw-500 my-4">
+                  <p className="col-success c-fs-6 c-fw-600 my-4">
                     The OTP has been successfully sent to dvndr@gmail.com.
                   </p>
                   <div>
@@ -474,7 +474,7 @@ const signUp = () => {
                         id="termsCheckBox"
                       />
                       <label
-                        className="form-check-label c-fs-6 c-fw-500 ps-0"
+                        className="form-check-label c-fs-6 c-fw-600 ps-0"
                         htmlFor="termsCheckBox"
                       >
                         I agree to the{" "}

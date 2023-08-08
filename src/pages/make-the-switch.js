@@ -16,7 +16,7 @@ const makeTheSwitch = () => {
             <div className="row">
               <div className="col-md-6 col-sm-12">
                 <div className="switch-section__content">
-                  <h1 className="heading col-primary c-fw-800">
+                  <h1 className="heading col-primary c-fw-600">
                     Make the switch
                   </h1>
                   <p className="col-dark-light c-fs-2">
