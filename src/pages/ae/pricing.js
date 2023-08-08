@@ -1,4 +1,4 @@
-const aePricing = () => {
+const aePricing = () => {  
   return (
     <>
       <section className="container-fluid pricing_top_section ae_pricing_top_section">
@@ -185,7 +185,7 @@ const aePricing = () => {
               <h2 className="sub-heading col-white">18X6 Instant Support</h2>
             </div>
             <div className="col-md-6 col-sm-12">
-              <a href="contact-us">CONTACT US</a>
+              <a href="/ae/contact-us">CONTACT US</a>
             </div>
           </div>
         </div>

@@ -1,4 +1,6 @@
 import { usePathname } from 'next/navigation'
+import { useEffect, useState } from "react";
+
 const Footer = () => {
   // To get active route
   const pathname = usePathname();
@@ -13,6 +15,38 @@ const Footer = () => {
   // Get Current Year
   const date = new Date();
   const year = date.getFullYear();
+
+  const [windowsApp, setWindowsApp] = useState("");
+  const [macApp, setMacApp] = useState("");
+
+  useEffect(() => {
+    getAppVersion("win");
+    getAppVersion("mac");
+
+    //To get latest version of giddh app
+    async function getAppVersion(os) {
+      let forWhichOS = os === "win" ? "" : "-mac";
+
+      const res = await fetch(
+        `https://s3-ap-south-1.amazonaws.com/giddh-app-builds/latest${forWhichOS}.yml`,
+        { cache: "no-store" }
+      )
+        .then((res) => res.blob())
+        .then((blob) => blob.text())
+        .then((res) => {
+          if (res && typeof res === "string") {
+            let version = res.split("files")[0];
+            let versNum = version.split(" ")[1].trim();
+            if (os === "win") {
+              setWindowsApp(versNum);
+            } else {
+              setMacApp(versNum);
+            }
+          }
+        })
+        .catch((err) => console.log("yaml err:", err));
+    }
+  }, []);
 
   return (
     <div className="footer-container py-5">
@@ -60,7 +94,7 @@ const Footer = () => {
                     <p >Mobile Apps</p>
                     <ul className="list-unstyled">
                       <li>
-                        <a className="download-icon" href="#">
+                        <a className="download-icon" href="https://play.google.com/store/apps/details?id=com.app.Giddh" target='_blank'>
                           <img alt="" src="/img/androide_icon.svg" />
                         </a>
                       </li>
@@ -71,12 +105,12 @@ const Footer = () => {
                     <p className="d-flex flex-column gap-3">Desktop Apps</p>
                     <ul className="list-unstyled d-flex gap-3">
                       <li >
-                        <a className="download-icon " href="#">
+                        <a className="download-icon " href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh Setup ${windowsApp}.exe`}>
                           <img  src="/img/window-icon.svg" />
                         </a>
                       </li>
                       <li>
-                        <a className="download-icon rounded-circle" href="#">
+                        <a className="download-icon rounded-circle" href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-${macApp}.dmg`}>
                           <img src="/img/mac_icon.svg" />
                         </a>
                       </li>
@@ -141,7 +175,7 @@ const Footer = () => {
                           </li>
                         </ul>
                         <p className="contact-link mt-3">
-                          <a href="contact-us" className="col-primary text-decoration-underline c-fw-600">Contact Us</a>
+                          <a href={ link + '/contact-us' } className="col-primary text-decoration-underline">Contact Us</a>
                         </p>
                       </div>
                     </li>

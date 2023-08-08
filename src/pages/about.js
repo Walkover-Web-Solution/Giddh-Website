@@ -269,7 +269,7 @@ const about = () => {
             <section className="container-fluid our_values__illustration">
               <div className="container">
                 <div className="d-flex flex-wrap align-items-center justify-content-center column-gap-3 row-gap-3">
-                  <a href="#" className="our_values__illustration__content">
+                  <a href="#customersComeFirst" className="our_values__illustration__content">
                     <figure>
                       <img
                         src="/img/about/our-values/customers-come-first.svg"
@@ -281,7 +281,7 @@ const about = () => {
                       </figcaption>
                     </figure>
                   </a>
-                  <a href="#" className="our_values__illustration__content">
+                  <a href="#setbacksToBreakBoundaries" className="our_values__illustration__content">
                     <figure>
                       <img
                         src="/img/about/our-values/embracing-setbacks-to-break-boundaries.svg"
@@ -293,7 +293,7 @@ const about = () => {
                       </figcaption>
                     </figure>
                   </a>
-                  <a href="#" className="our_values__illustration__content">
+                  <a href="#weSetImpossibleGoals" className="our_values__illustration__content">
                     <figure>
                       <img
                         src="/img/about/our-values/we-set-impossible-goals.svg"
@@ -306,7 +306,7 @@ const about = () => {
                     </figure>
                   </a>
 
-                  <a href="#" className="our_values__illustration__content">
+                  <a href="#peopleAreOurPower" className="our_values__illustration__content">
                     <figure>
                       <img
                         src="/img/about/our-values/people-are-our-power.svg"
@@ -318,7 +318,7 @@ const about = () => {
                       </figcaption>
                     </figure>
                   </a>
-                  <a href="#" className="our_values__illustration__content">
+                  <a href="#weFocusOnWhyHow" className="our_values__illustration__content">
                     <figure>
                       <img
                         src="/img/about/our-values/we-focus-on-why-and-how.svg"
@@ -330,7 +330,7 @@ const about = () => {
                       </figcaption>
                     </figure>
                   </a>
-                  <a href="#" className="our_values__illustration__content">
+                  <a href="#alwaysWeBeforeMe" className="our_values__illustration__content">
                     <figure>
                       <img
                         src="/img/about/our-values/always-we-before-me.svg"
@@ -343,7 +343,7 @@ const about = () => {
                     </figure>
                   </a>
 
-                  <a href="#" className="our_values__illustration__content">
+                  <a href="#weDoNotSettle" className="our_values__illustration__content">
                     <figure>
                       <img
                         src="/img/about/our-values/we-do-not-settle.svg"
@@ -355,7 +355,7 @@ const about = () => {
                       </figcaption>
                     </figure>
                   </a>
-                  <a href="#" className="our_values__illustration__content">
+                  <a href="#weEmpowerTheFuture" className="our_values__illustration__content">
                     <figure>
                       <img
                         src="/img/about/our-values/we-empower-the-future.svg"
@@ -367,7 +367,7 @@ const about = () => {
                       </figcaption>
                     </figure>
                   </a>
-                  <a href="#" className="our_values__illustration__content">
+                  <a href="#transparencyAndHonesty" className="our_values__illustration__content">
                     <figure>
                       <img
                         src="/img/about/our-values/transparency-and-honesty.svg"
@@ -385,7 +385,7 @@ const about = () => {
 
             <section className="container-fluid our_values__content">
               <div className="container">
-                <div className="row our_values__content__wapper">
+                <div className="row our_values__content__wapper" id="customersComeFirst">
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
@@ -413,7 +413,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row our_values__content__wapper">
+                <div className="row our_values__content__wapper" id="setbacksToBreakBoundaries">
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
@@ -442,7 +442,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row our_values__content__wapper">
+                <div className="row our_values__content__wapper" id="weSetImpossibleGoals">
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
@@ -471,7 +471,7 @@ const about = () => {
                   </div>
                 </div>
 
-                <div className="row our_values__content__wapper">
+                <div className="row our_values__content__wapper" id="peopleAreOurPower">
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
@@ -500,7 +500,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row our_values__content__wapper">
+                <div className="row our_values__content__wapper" id="weFocusOnWhyHow">
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
@@ -528,7 +528,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row our_values__content__wapper">
+                <div className="row our_values__content__wapper" id="alwaysWeBeforeMe">
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
@@ -558,7 +558,7 @@ const about = () => {
                   </div>
                 </div>
 
-                <div className="row our_values__content__wapper">
+                <div className="row our_values__content__wapper" id="weDoNotSettle">
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
@@ -587,7 +587,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row our_values__content__wapper">
+                <div className="row our_values__content__wapper" id="weEmpowerTheFuture">
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
@@ -615,7 +615,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="row our_values__content__wapper">
+                <div className="row our_values__content__wapper" id="transparencyAndHonesty">
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
@@ -660,7 +660,7 @@ const about = () => {
               <section className="container-fluid our_values__illustration">
                 <div className="container">
                   <div className="d-flex flex-wrap align-items-center justify-content-center column-gap-3 row-gap-3">
-                    <a href="#" className="our_values__illustration__content">
+                    <a href="#nurturesCollaboration" className="our_values__illustration__content">
                       <figure>
                         <img
                           src="/img/about/our-values/customers-come-first.svg"
@@ -672,7 +672,7 @@ const about = () => {
                         </figcaption>
                       </figure>
                     </a>
-                    <a href="#" className="our_values__illustration__content">
+                    <a href="#leadsThroughCommunication" className="our_values__illustration__content">
                       <figure>
                         <img
                           src="/img/about/our-values/embracing-setbacks-to-break-boundaries.svg"
@@ -684,7 +684,7 @@ const about = () => {
                         </figcaption>
                       </figure>
                     </a>
-                    <a href="#" className="our_values__illustration__content">
+                    <a href="#leadsByExample" className="our_values__illustration__content">
                       <figure>
                         <img
                           src="/img/about/our-values/we-set-impossible-goals.svg"
@@ -697,7 +697,7 @@ const about = () => {
                       </figure>
                     </a>
 
-                    <a href="#" className="our_values__illustration__content">
+                    <a href="#consultsAndDelegates" className="our_values__illustration__content">
                       <figure>
                         <img
                           src="/img/about/our-values/people-are-our-power.svg"
@@ -709,7 +709,7 @@ const about = () => {
                         </figcaption>
                       </figure>
                     </a>
-                    <a href="#" className="our_values__illustration__content">
+                    <a href="#isCourageous" className="our_values__illustration__content">
                       <figure>
                         <img
                           src="/img/about/our-values/we-focus-on-why-and-how.svg"
@@ -721,7 +721,7 @@ const about = () => {
                         </figcaption>
                       </figure>
                     </a>
-                    <a href="#" className="our_values__illustration__content">
+                    <a href="#addsIntegrity" className="our_values__illustration__content">
                       <figure>
                         <img
                           src="/img/about/our-values/always-we-before-me.svg"
@@ -734,7 +734,7 @@ const about = () => {
                       </figure>
                     </a>
 
-                    <a href="#" className="our_values__illustration__content">
+                    <a href="#servesForTheGreaterGood" className="our_values__illustration__content">
                       <figure>
                         <img
                           src="/img/about/our-values/we-do-not-settle.svg"
@@ -746,7 +746,7 @@ const about = () => {
                         </figcaption>
                       </figure>
                     </a>
-                    <a href="#" className="our_values__illustration__content">
+                    <a href="#definesCreatesProcesses" className="our_values__illustration__content">
                       <figure>
                         <img
                           src="/img/about/our-values/we-empower-the-future.svg"
@@ -758,7 +758,7 @@ const about = () => {
                         </figcaption>
                       </figure>
                     </a>
-                    <a href="#" className="our_values__illustration__content">
+                    <a href="#adaptsToEvolve" className="our_values__illustration__content">
                       <figure>
                         <img
                           src="/img/about/our-values/transparency-and-honesty.svg"
@@ -774,7 +774,7 @@ const about = () => {
                 </div>
               </section>
               <section className="leadership_principles__banner_wrapper">
-                <div className="container-fluid leadership_principles__banner_image_background">
+                <div className="container-fluid leadership_principles__banner_image_background"  id="nurturesCollaboration">
                   <div className="container">
                     <div className="row leadership_principles__content_wrapper align-items-center">
                       <div className="col-lg-3 col-md-12">
@@ -808,7 +808,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="container-fluid leadership_principles__banner_image_background">
+                <div className="container-fluid leadership_principles__banner_image_background" id="leadsThroughCommunication">
                   <div className="container">
                     <div className="row leadership_principles__content_wrapper align-items-center">
                       <div className="col-lg-3 col-md-12">
@@ -842,7 +842,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="container-fluid leadership_principles__banner_image_background">
+                <div className="container-fluid leadership_principles__banner_image_background" id="leadsByExample">
                   <div className="container">
                     <div className="row leadership_principles__content_wrapper align-items-center">
                       <div className="col-lg-3 col-md-12">
@@ -875,7 +875,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="container-fluid leadership_principles__banner_image_background">
+                <div className="container-fluid leadership_principles__banner_image_background" id="consultsAndDelegates">
                   <div className="container">
                     <div className="row leadership_principles__content_wrapper align-items-center">
                       <div className="col-lg-3 col-md-12">
@@ -910,7 +910,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="container-fluid leadership_principles__banner_image_background">
+                <div className="container-fluid leadership_principles__banner_image_background" id="isCourageous">
                   <div className="container">
                     <div className="row leadership_principles__content_wrapper align-items-center">
                       <div className="col-lg-3 col-md-12">
@@ -941,7 +941,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="container-fluid leadership_principles__banner_image_background">
+                <div className="container-fluid leadership_principles__banner_image_background" id="addsIntegrity">
                   <div className="container">
                     <div className="row leadership_principles__content_wrapper align-items-center">
                       <div className="col-lg-3 col-md-12">
@@ -973,7 +973,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="container-fluid leadership_principles__banner_image_background">
+                <div className="container-fluid leadership_principles__banner_image_background" id="servesForTheGreaterGood">
                   <div className="container">
                     <div className="row leadership_principles__content_wrapper align-items-center">
                       <div className="col-lg-3 col-md-12">
@@ -1006,7 +1006,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="container-fluid leadership_principles__banner_image_background">
+                <div className="container-fluid leadership_principles__banner_image_background" id="definesCreatesProcesses">
                   <div className="container">
                     <div className="row leadership_principles__content_wrapper align-items-center">
                       <div className="col-lg-3 col-md-12">
@@ -1041,7 +1041,7 @@ const about = () => {
                     </div>
                   </div>
                 </div>
-                <div className="container-fluid leadership_principles__banner_image_background">
+                <div className="container-fluid leadership_principles__banner_image_background" id="adaptsToEvolve">
                   <div className="container">
                     <div className="row leadership_principles__content_wrapper align-items-center">
                       <div className="col-lg-3 col-md-12">

@@ -13,6 +13,9 @@ const anywhereAnytime = () => {
   let isAE = startPath[1] === "ae";
   let isUK = startPath[1] === "uk";
 
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
+
   return (
     <>
       <div className="features">
@@ -82,7 +85,7 @@ const anywhereAnytime = () => {
                     : null}
                 </p>
 
-                <a href="#" className="btn-link-purple">
+                  <a href={ link + '/signup' } className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -583,7 +586,7 @@ const anywhereAnytime = () => {
               className="container text-center "
               style={{ maxHeight: readMoreStatus ? "100%" : "max-content" }}
             >
-              <h1 className="col-primary c-fs-3">
+              <h1 className="col-primary c-fs-3 c-fw-600">
                 Why Giddh is Better Than Conventional Accounting Software
               </h1>
               <p className="my-3">
@@ -600,7 +603,7 @@ const anywhereAnytime = () => {
               >
                 <ul className="custom-ul-with-right-tick text-start">
                   <li>
-                    <span className="c-fw-600">Setup–</span>Firstly, the entire
+                    <span className="c-fw-600">Setup – </span>Firstly, the entire
                     ergonomics is designed to make any layman use it
                     efficiently. The dashboard is customised so that people from
                     a non-accounting background can also use it effectively.
@@ -609,14 +612,14 @@ const anywhereAnytime = () => {
                     every computer.
                   </li>
                   <li>
-                    <span className="c-fw-600">Accessibility–</span>As mentioned
+                    <span className="c-fw-600">Accessibility – </span>As mentioned
                     above, Non-cloud based software can only be accessed from
                     the computer or desktop it’s installed in. Giddh’s cloud
                     software, on the other hand, can be accessed from anywhere
                     and on any device.
                   </li>
                   <li>
-                    <span className="c-fw-600">Invoices–</span>
+                    <span className="c-fw-600">Invoices – </span>
                     {isIndia
                       ? `Since invoicing
                       is a core part of accounting processes, so a software such
@@ -634,18 +637,28 @@ const anywhereAnytime = () => {
                       : null}
                   </li>
                   <li>
-                    <span className="c-fw-600">Customer support</span>You also
+                    <span className="c-fw-600">Customer support - </span>You also
                     get the benefit of 24*7 customer support through chat or
                     phone calls for resolving any of your problems. All your
                     doubts are easily solved by experts.
                   </li>
                   <li>
-                    <span className=" c-fw-600">Cost-expensive–</span>Instead of
+                    <span className=" c-fw-600">Cost-expensive – </span>
+                    { isIndia ? (
+                    `Instead of
                     the hefty one-one time fee, you can choose the smart-priced
                     plans of Giddh designed for your convenience. You can choose
                     from the basic free plan, the moderate Rs. 800 per
                     organisation per year plan or the premium Rs. 4000 per
-                    organisation per year plan. Here are the details:
+                    organisation per year plan. Here are the details: `
+                    ) : null }
+                    { isAE || isUK ? (
+                    `Instead of the hefty one-one time fee, you can choose the 
+                    smart-priced plans of Giddh designed for your convenience. 
+                    You can choose the basic free plan for checking the trial and after that `
+                    ) : null }
+
+                    <a href={ link + '/pricing' }> click here</a>
                   </li>
                 </ul>
               </div>
@@ -677,16 +690,16 @@ const anywhereAnytime = () => {
                   also looked at
                 </h2>
                 <div className="features__suggestion_container__links">
-                  <a href="#" className="col-blue">
+                   <a href={ link + "/all-features" } className="col-blue">
                     All features
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
                     Share Data
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
                     Multi-Currency
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
                     Invoicing
                   </a>
                 </div>

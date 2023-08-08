@@ -8,6 +8,9 @@ const inventoryManagementSoftware = () => {
   let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
   let isAE = startPath[1] === "ae";
   let isUK = startPath[1] === "uk";
+
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
   return (
     <>
       <div className="features">
@@ -68,7 +71,7 @@ const inventoryManagementSoftware = () => {
                   accurately so you can get back to doing the thing you are best
                   at: Grow and Earn!
                 </p>
-                <a href="#" className="btn-link-purple">
+                <a href={ link + '/signup' } className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -181,16 +184,15 @@ const inventoryManagementSoftware = () => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    
-                    {isIndia ? "Giddh inventory software is GST ready!" : ""}
-                {isAE || isUK ? "Giddh inventory software is VAT ready!" : ""}
-                
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">                    
+                    { 
+                      isIndia ? "Giddh inventory software is GST ready!" : "Giddh inventory software is VAT ready!"
+                    }         
                   </h4>
                   <p >
                     
-                    {isIndia ? "Giddh inventory management software is fully compliant with the GST system. Track inventory, manage orders, assign HSN & SAC codes to items and send GST compliant invoices. Your search for a GST compliant inventory management software ends with Giddh." : ""}
-                {isAE || isUK ? "Giddh inventory management software is fully compliant with the VAT system. Track inventory, manage orders, assign HSN & SAC codes to items and send VAT compliant invoices. Your search for a VAT compliant inventory management software ends with Giddh." : ""}
+                    { isIndia ? "Giddh inventory management software is fully compliant with the GST system. Track inventory, manage orders, assign HSN & SAC codes to items and send GST compliant invoices. Your search for a GST compliant inventory management software ends with Giddh." : ""}
+                    { isAE || isUK ? "Giddh inventory management software is fully compliant with the VAT system. Track inventory, manage orders, assign HSN & SAC codes to items and send VAT compliant invoices. Your search for a VAT compliant inventory management software ends with Giddh." : ""}
                   </p>
                 </div>
               </div>
@@ -227,16 +229,16 @@ const inventoryManagementSoftware = () => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                  <a href="#" className="col-blue">
+                   <a href={ link + "/all-features" } className="col-blue">
                     All features
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
                     Share Data
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
                     Multi-Currency
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
                     Invoicing
                   </a>
                 </div>

@@ -1,9 +1,13 @@
 import Head from "next/head";
-const header = () => {
+import Data from "@/data/metadata.json";
+const header = (browserPath) => {
+  const metaPath = browserPath.browserPath
+  const metaData = Data[metaPath]
   return (
     <>
       <Head>
-        <title>Hello User ! Giddh.com</title>
+        <title>{metaData?.title}</title>
+        <meta name="description" content={metaData?.description}></meta>
         <link rel="icon" type="image/x-icon" href="/favico.svg"></link>
       </Head>
     </>
