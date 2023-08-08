@@ -72,23 +72,8 @@
       height: 300px !important;
       background-size: cover !important;
       background-position: top;
-      &::after {
-        display: none;
-      }
       &__content {
         text-align: center;
-        position: relative;
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          filter: blur(41px);
-          background: rgba(0, 0, 0, 0.2);
-          z-index: -1;
-        }
         h1,
         p {
           color: var(--col-white) !important;

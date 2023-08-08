@@ -48,9 +48,9 @@ const logIn = () => {
               Login with OTP
             </button>
 
-            <p className="c-fs-6 mb-4">
+            {/* <p className="c-fs-6 mb-4">
               Trouble logging in ? <a href="#" className="text_blue">Click here</a>
-            </p>
+            </p> */}
             <a href="#" className="c-fs-6 text_blue">Create new account</a>
           </div>
         </div>

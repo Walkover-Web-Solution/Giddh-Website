@@ -180,7 +180,7 @@ const ukPricing = () => {
               <h2 className="sub-heading col-white">18X6 Instant Support</h2>
             </div>
             <div className="col-md-6 col-sm-12">
-              <a href="contact-us">CONTACT US</a>
+              <a href="/uk/contact-us">CONTACT US</a>
             </div>
           </div>
         </div>

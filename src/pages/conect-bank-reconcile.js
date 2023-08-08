@@ -7,6 +7,9 @@ const conectBankReconcile = () => {
   const startPath = pathname.split("/");
   let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
   let isAE = startPath[1] === "ae";
+
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
   return (
     <>
       <div className="features">
@@ -63,7 +66,7 @@ const conectBankReconcile = () => {
                   reconcile your books. Bank link helps you keep track of your
                   cash flow in the most secure, fast and reliable way.
                 </p>
-                <a href="#" className="btn-link-purple">
+                <a href={ link + '/signup' } className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -194,16 +197,16 @@ const conectBankReconcile = () => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                  <a href="#" className="col-blue">
+                   <a href={ link + "/all-features" } className="col-blue">
                     All features
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
                     Share Data
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
                     Multi-Currency
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
                     Invoicing
                   </a>
                 </div>

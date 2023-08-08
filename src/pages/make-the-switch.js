@@ -114,7 +114,7 @@ const makeTheSwitch = () => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img src="/img/Accounting-sol-2.png" className="img-fluid" />
+                  <img src="/img/Accounting-sol-1.png" className="img-fluid" />
                 </figure>
               </div>
             </div>
