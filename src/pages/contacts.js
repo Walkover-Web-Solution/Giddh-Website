@@ -58,7 +58,7 @@ const contacts = () => {
                   growing business. Giddh makes managing multi-currency
                   payments, invoicing and accounts easy.
                 </p>
-                <a href="#" className="btn bg_color_blue col-white">
+                <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -74,7 +74,7 @@ const contacts = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Valuable business intelligence you can act on
                   </h4>
-                  <p className="">
+                  <p >
                     Along with detailed information about your customers &
                     vendors, smart list also enables you to add a comment next
                     to the contacts. It can be a payment follow-up response or
@@ -104,7 +104,7 @@ const contacts = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Easily know who owes how much
                   </h4>
-                  <p className="">
+                  <p >
                     The Aging Report integrated with the Contacts will show you
                     which customers are taking a long time to pay their dues. It
                     also shows you the total amount owed to you by those

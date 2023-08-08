@@ -6,6 +6,14 @@ const Footer = () => {
   let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
   let isAE = startPath[1] === 'ae';
   let isUK = startPath[1] === 'uk';
+
+  // Holds Url Prefix country wise
+  let link = isIndia ? '' : (isAE ? '/ae' : '/uk');
+
+  // Get Current Year
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <div className="footer-container py-5">
       <footer>
@@ -18,16 +26,16 @@ const Footer = () => {
                     <h5>Quick Links</h5>
                     <ul className="footer-list list-unstyled mb-3">
                       <li>
-                        <a href="/pricing">Pricing</a>
+                        <a href={ link + "/pricing"}>Pricing</a>
                       </li>
                       <li>
-                        <a href="/about">About</a>
+                        <a href={ link + "/about" }>About</a>
                       </li>
                       <li>
                         <a href="https://giddh.com/blog/">Blog</a>
                       </li>
                       <li>
-                        <a href="privacy-policy">Privacy Policy</a>
+                        <a href={ link + "privacy-policy" }>Privacy Policy</a>
                       </li>
                       <li>
                         <a target="_blank" href="https://apply.workable.com/walkover/">
@@ -35,10 +43,10 @@ const Footer = () => {
                         </a>
                       </li>
                       <li>
-                        <a href="/affiliate">Affiliate With Us</a>
+                        <a href={ link + "/affiliate" }>Affiliate With Us</a>
                       </li>
                       <li>
-                        <a href="/terms">Terms of Use</a>
+                        <a href={ link +  "/terms"}>Terms of Use</a>
                       </li>
                     </ul>
                   </div>
@@ -49,7 +57,7 @@ const Footer = () => {
                 <div className="d-flex flex-column gap-3">
                   <h5>Download</h5>
                   <div>
-                    <p className="">Mobile Apps</p>
+                    <p >Mobile Apps</p>
                     <ul className="list-unstyled">
                       <li>
                         <a className="download-icon" href="#">
@@ -62,9 +70,9 @@ const Footer = () => {
                   <div>
                     <p className="d-flex flex-column gap-3">Desktop Apps</p>
                     <ul className="list-unstyled d-flex gap-3">
-                      <li className="">
+                      <li >
                         <a className="download-icon " href="#">
-                          <img className="" src="/img/window-icon.svg" />
+                          <img  src="/img/window-icon.svg" />
                         </a>
                       </li>
                       <li>
@@ -153,7 +161,7 @@ const Footer = () => {
                       <br /> Indore, Madhya Pradesh, India-452018
                     </p>
                   </div>
-                  <div className="location__detail">
+                  <div className="location__detail mt-5">
                     <h4>USA</h4>
                     <p>
                       USA Superheroes, Inc
@@ -168,7 +176,7 @@ const Footer = () => {
             <div className="d-flex mt-4 copyright-text">
               <li className="widget_text widget widget_custom_html list-unstyled class">
                 <div className="textwidget custom-html-widget ">
-                  All rights are reserved 2020 Walkover
+                  All rights are reserved {year} Walkover
                 </div>
               </li>
             </div>

@@ -56,7 +56,7 @@ const signUp = () => {
                   width="auto"
                   height="40px"
                   alt="Giddh Icon"
-                  className=""
+                  
                 />
               </div>
               <h1>Create an account</h1>
@@ -150,7 +150,7 @@ const signUp = () => {
                   width="auto"
                   height="40px"
                   alt="Giddh Icon"
-                  className=""
+                  
                 />
               </div>
               <h1>Create an account</h1>
@@ -318,7 +318,7 @@ const signUp = () => {
                   width="auto"
                   height="40px"
                   alt="Giddh Icon"
-                  className=""
+                  
                 />
               </div>
               <h1>Create an account</h1>

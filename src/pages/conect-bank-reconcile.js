@@ -1,5 +1,12 @@
-import { MdRemove, MdAdd, MdClose } from "react-icons/md";
+import { usePathname } from "next/navigation";
+import { MdRemove, MdAdd } from "react-icons/md";
+
 const conectBankReconcile = () => {
+    // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
   return (
     <>
       <div className="features">
@@ -56,7 +63,7 @@ const conectBankReconcile = () => {
                   reconcile your books. Bank link helps you keep track of your
                   cash flow in the most secure, fast and reliable way.
                 </p>
-                <a href="#" className="btn bg_color_blue col-white">
+                <a href="#" className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -72,7 +79,7 @@ const conectBankReconcile = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Connect bank and get automatic updates
                   </h4>
-                  <p className="">
+                  <p >
                     As a growing business, your volume of bank transactions must
                     be growing. With bank account linking, you no longer have to
                     upload those transactions one after the other at week’s or
@@ -98,7 +105,7 @@ const conectBankReconcile = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Reconcile with a snap of fingers
                   </h4>
-                  <p className="">
+                  <p >
                     With one-click reconciliation feature, we have made the
                     process of reconciliation so easy, it is no more a
                     complicated chore you would want to avoid. With just one
@@ -124,7 +131,7 @@ const conectBankReconcile = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Got Multiple Bank Accounts? We got you Covered
                   </h4>
-                  <p className="">
+                  <p >
                     With Giddh bank account linking, you can monitor the
                     deposit, transfer, and withdrawals of cash whether you hold
                     a single bank account or several accounts from multiple
@@ -148,7 +155,7 @@ const conectBankReconcile = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Giddh will connect to your favorite bank
                   </h4>
-                  <p className="">
+                  <p >
                     Major national banks like SBI, ICICI and many more can be
                     linked with Giddh to let your transactions to flow
                     automatically. Can’t find your bank? Just let us know and
@@ -205,7 +212,7 @@ const conectBankReconcile = () => {
           </div>
         </section>
 
-        <section className="container-fluid features__accordion_container">
+        <section className="container-fluid features__accordion_container" >
           <div className="container">
             <div className="row">
               <div className="col-12">

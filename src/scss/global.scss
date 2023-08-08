@@ -1,10 +1,10 @@
 @import 'import';
+*{
+    scroll-behavior: smooth;
+}
 body{
     background: rgb(102, 102, 102);
     font-family: 'Manrope', sans-serif!important;
-}
-*{
-    scroll-behavior: smooth;
 }
 
 .border-horizontal{
@@ -13,28 +13,6 @@ body{
 .border-vertical{
     border-left: 1px solid currentColor;
 
-}
-
-::-webkit-scrollbar{
-    width: 8px;
-}
-::-webkit-scrollbar-thumb{
-    width: 8px;
-    background-color: var(--col-primary);
-}
-::-webkit-scrollbar-track{
-    background: rgba(0,0,0,0.1);
-    width: 8px;
-}
-
-::selection{
-    background-color: var(--col-primary);
-    color: var(--col-white);
-}
-@media (max-width: 991px) {
-    ::-webkit-scrollbar{
-        display: none;
-    }
 }
 
 // For Ul list with right tick in each li (list element)

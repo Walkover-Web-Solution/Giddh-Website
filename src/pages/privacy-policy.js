@@ -156,7 +156,7 @@ const privacyPolicy = () => {
                 your email & manage your inbox. The Giddh will never send emails
                 on your behalf and will never share the content of your emails.
               </p>
-              <ul className="">
+              <ul >
                 <li>No one at Giddh reads your emails</li>
                 <li>Giddh will never send emails on your behalf</li>
                 <li>
@@ -164,8 +164,8 @@ const privacyPolicy = () => {
                   parties
                 </li>
               </ul>
-              <h3 className="mb-4 c-fs-3 c-fw-400">
-                <u>Information that you provide us</u>
+              <h3 className="mb-4 c-fs-3 c-fw-400 text-decoration-underline">
+                Information that you provide us
               </h3>
               <p className="mb-4 c-fs-5">
                 <b>Account signup :</b> When you sign up for an account to
@@ -198,8 +198,8 @@ const privacyPolicy = () => {
                 conversations with our sales and customer support professionals,
                 for improving our interactions with you and other customers.
               </p>
-              <h3 className="mb-4 c-fs-3 c-fw-400">
-                <u>Information that we collect from third parties</u>
+              <h3 className="mb-4 c-fs-3 c-fw-400 text-decoration-underline">
+                Information that we collect from third parties
               </h3>
               <p className="mb-4 c-fs-5">
                 <b>

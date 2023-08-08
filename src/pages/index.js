@@ -1,15 +1,15 @@
-import FEATUREGALLERY from "@/components/featureGallery";
-import MAKETHESWITCHINDEXPAGE from "@/components/makeTheSwitch";
-import ENQUIRYFORM from "@/components/enquiryForm";
-import GSTINDEXPAGE from "@/components/gstIndexPage";
+import FeatureGallery from "@/components/featureGallery";
+import MakeTheSwitchIndexPage from "@/components/makeTheSwitch";
+import EnquiryForm from "@/components/enquiryForm";
+import GstIndexPage from "@/components/gstIndexPage";
 
 const index = () => {
   return (
     <>
-      <ENQUIRYFORM />
-      <GSTINDEXPAGE />    
-      <FEATUREGALLERY />
-      <MAKETHESWITCHINDEXPAGE />
+      <EnquiryForm />
+      <GstIndexPage />    
+      <FeatureGallery />
+      <MakeTheSwitchIndexPage />
     </>
   );
 };

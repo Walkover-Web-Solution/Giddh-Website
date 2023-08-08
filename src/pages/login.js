@@ -22,7 +22,7 @@ const logIn = () => {
                 width="auto"
                 height="40px"
                 alt="Giddh Icon"
-                className=""
+                
               />
             </div>
             <h1>Welcome back!</h1>
