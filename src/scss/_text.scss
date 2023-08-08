@@ -1,8 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+//============================== ====FONT FAMILY=======================================
 
-//font-family
+@font-face {
+  font-family: "Opel Sans";
+  font-display: swap;
+  src: url("../../public/fonts/OpelSans-Regular.ttf");
+  src: url("../../public/fonts/OpelSans-Regular.ttf") format("truetype"),
+    url("../../public/fonts/OpelSans-Regular.woff") format("woff");
+  font-style: 400;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+@font-face {
+  font-family: "Opel Sans";
+  font-display: swap;
+  src: url("../../public/fonts/OpelSans-Bold.ttf");
+  src: url("../../public/fonts/OpelSans-Bold.ttf") format("truetype"),
+       url("../../public/fonts/OpelSans-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
 
-// font size
+//====================================FONT SIZE========================================
 
 .heading {
   font-size: var(--heading);
@@ -34,23 +53,11 @@
 
 //font weight
 
-.c-fw-100 {
-  font-weight: var(--c-fw-100) !important;
-}
-.c-fw-300 {
-  font-weight: var(--c-fw-300) !important;
-}
 .c-fw-400 {
   font-weight: var(--c-fw-400) !important;
 }
-.c-fw-500 {
-  font-weight: var(--c-fw-500) !important;
-}
 .c-fw-600 {
   font-weight: var(--c-fw-600) !important;
-}
-.c-fw-800 {
-  font-weight: var(--c-fw-800) !important;
 }
 
 //font color
@@ -94,5 +101,3 @@
 .col-light-gray {
   color: var(--col-light-gray) !important;
 }
-
-

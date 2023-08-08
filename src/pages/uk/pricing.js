@@ -4,7 +4,7 @@ const ukPricing = () => {
       <section className="container-fluid pricing_top_section ae_pricing_top_section">
         <div className="row align-items-center mt-auto pricing_top_section__column-reverse">
           <div className="col-lg-6 col-md-12">
-            <h3 className=" heading col-primary c-fw-800 ms-4">
+            <h3 className=" heading col-primary c-fw-600 ms-4">
               Powerful solution. Affordable pricing.
             </h3>
           </div>

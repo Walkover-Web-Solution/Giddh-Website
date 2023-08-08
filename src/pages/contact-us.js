@@ -28,7 +28,7 @@ const contactUs = () => {
                     request a demo:
                     <br />{" "}
                     <a
-                      className="text-decoration-underline c-fw-500 col-primary c-fs-3"
+                      className="text-decoration-underline c-fw-600 col-primary c-fs-3"
                       href="#"
                     >
                       Schedule Now
@@ -38,7 +38,7 @@ const contactUs = () => {
                     or visit:
                     <br />{" "}
                     <a
-                      className="text-decoration-underline c-fw-500 col-primary c-fs-3"
+                      className="text-decoration-underline c-fw-600 col-primary c-fs-3"
                       href="https://giddh.com/help"
                     >
                       giddh.com/help
