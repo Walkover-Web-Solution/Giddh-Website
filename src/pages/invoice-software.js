@@ -1,13 +1,17 @@
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MdRemove, MdAdd } from "react-icons/md";
 const invoiceSoftware = () => {
   // To get active route
   const pathname = usePathname();
-  const startPath = pathname.split('/');
-  let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
-  let isAE = startPath[1] === 'ae';
-  let isUK = startPath[1] === 'uk';
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+  let isUK = startPath[1] === "uk";
+
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
+
   const [readMoreStatus, readmoreAction] = useState(false);
   return (
     <>
@@ -67,7 +71,7 @@ const invoiceSoftware = () => {
                   customization options, Giddh is the best online invoice
                   software for all kinds of business owners.
                 </p>
-                <a href="#" className="btn-link-purple">
+                <a href={link + "/signup"} className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -83,7 +87,7 @@ const invoiceSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Create professional-looking invoices within minutes!
                   </h4>
-                  <p >
+                  <p>
                     You are the real deal, so why not create invoices online
                     that say the same? With a variety of templates and
                     customizations at your disposal, create the best looking
@@ -105,26 +109,28 @@ const invoiceSoftware = () => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                  {isIndia ? "Stay GST Compliant" : ""}
-                {isAE || isUK
-                  ? "Stay VAT Compliant"
-                  : ""}
+                    {isIndia ? "Stay GST Compliant" : "Stay VAT Compliant"}
                   </h4>
-                  <p >
-                    
-                    {isIndia ? "Stay Goods and Services Tax(GST) compliant by creatingonline invoices that are GST compliant. Giddh’s invoicetemplates have fields for HSN or SAC code, GSTIN number,state of business operation which are mandatory for businessowners in order to stay compliant." : ""}
-                {isAE || isUK
-                  ? "Stay Goods and Service Tax(VAT) compliant by creating invoices that are VAT compliant. Giddh invoice templates have fields for HSN or SAC code, TRN number, state of business operation which are mandatory for business owners in order to stay compliant."
-                  : ""}
-              
-                
+                  <p>
+                    {isIndia
+                      ? "Stay Goods and Services Tax(GST) compliant by creatingonline invoices that are GST compliant. Giddh’s invoicetemplates have fields for HSN or SAC code, GSTIN number,state of business operation which are mandatory for businessowners in order to stay compliant."
+                      : ""}
+                    {isAE || isUK
+                      ? "Stay Goods and Service Tax(VAT) compliant by creating invoices that are VAT compliant. Giddh invoice templates have fields for HSN or SAC code, TRN number, state of business operation which are mandatory for business owners in order to stay compliant."
+                      : ""}
                   </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src={isIndia ? '/img/feature-gallery-icons/gst-ready.svg' : (isAE ? '/img/feature-gallery-icons/Invoicing.png' :'/img/feature-gallery-icons/Group-5618.svg')}
+                    src={
+                      isIndia
+                        ? "/img/feature-gallery-icons/gst-ready.svg"
+                        : isAE
+                        ? "/img/feature-gallery-icons/Invoicing.png"
+                        : "/img/feature-gallery-icons/Group-5618.svg"
+                    }
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
@@ -138,13 +144,13 @@ const invoiceSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Lock your invoices and move on!
                   </h4>
-                  <p >
-                    
-                    {isIndia ? "Tired of unwanted tampering to your finalized invoices? Giddh’s invoicing software has an invoice locking feature with which you can lock your invoices from being edited or deleted once they are finalized." : ""}
-                {isAE || isUK
-                  ? "Tired of unwanted tampering to your finalized invoices? With Giddh's invoice locking feature, lock your invoices from being edited or deleted once they are finalized."
-                  
-                  : ""}
+                  <p>
+                    {isIndia
+                      ? "Tired of unwanted tampering to your finalized invoices? Giddh’s invoicing software has an invoice locking feature with which you can lock your invoices from being edited or deleted once they are finalized."
+                      : ""}
+                    {isAE || isUK
+                      ? "Tired of unwanted tampering to your finalized invoices? With Giddh's invoice locking feature, lock your invoices from being edited or deleted once they are finalized."
+                      : ""}
                   </p>
                 </div>
               </div>
@@ -164,12 +170,15 @@ const invoiceSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Run your business with automation!
                   </h4>
-                  <p >
-                    
-                    {isIndia ? "From setting payment reminders to sending online invoices to clients on a recurring basis, you can utilize the complete potential of automation with Giddh! So let Giddh follow-up with customers and focus on your core business activities." : ""}
-                {isAE || isUK
-                  ? "From setting payment reminders to sending invoices to clients on a recurring basis, you can utilize the complete potential of automation with Giddh! So let Giddh follow-up with customer and focus on your core business activities." 
-                  : ""}
+                  <p>
+                    From setting payment reminders to sending{" "}
+                    <a href="https://giddh.com/blog/benefits-of-online-invoicing-for-small-business/" className="text-decoration-underline">
+                      online invoices
+                    </a>{" "}
+                    to clients on a recurring basis, you can utilize the
+                    complete potential of automation with Giddh! So let Giddh
+                    follow-up with customers and focus on your core business
+                    activities.
                   </p>
                 </div>
               </div>
@@ -192,7 +201,7 @@ const invoiceSoftware = () => {
               Other equally important invoicing feature
             </h2>
             <div className="row flex-wrap row-gap-5 mb-5 pb-5">
-              <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div className="pricing_grid_section__card">
                   <figure>
                     <img
@@ -205,7 +214,7 @@ const invoiceSoftware = () => {
                   </figure>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div className="pricing_grid_section__card">
                   <figure>
                     <img
@@ -218,7 +227,7 @@ const invoiceSoftware = () => {
                   </figure>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div className="pricing_grid_section__card">
                   <figure>
                     <img
@@ -231,7 +240,7 @@ const invoiceSoftware = () => {
                   </figure>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div className="pricing_grid_section__card">
                   <figure>
                     <img
@@ -244,7 +253,7 @@ const invoiceSoftware = () => {
                   </figure>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div className="pricing_grid_section__card">
                   <figure>
                     <img
@@ -257,7 +266,7 @@ const invoiceSoftware = () => {
                   </figure>
                 </div>
               </div>
-              <div className="col-lg-4 col-md-6 col-sm-12">
+              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div className="pricing_grid_section__card">
                   <figure>
                     <img
@@ -314,7 +323,10 @@ const invoiceSoftware = () => {
                 </p>
 
                 <div className="my-5 text-center">
-                  <a href={ isIndia ? '/signup' : ( isAE ? '/ae/signup' : '/uk/signup')} className="btn-link-purple">
+                  <a
+                    href={ link + "/signup" }
+                    className="btn-link-purple"
+                  >
                     Try Now
                   </a>
                 </div>
@@ -481,16 +493,16 @@ const invoiceSoftware = () => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                  <a href="#" className="col-blue">
+                  <a href={ link + "/all-features" } className="col-blue">
                     All features
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
                     Share Data
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
                     Multi-Currency
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
                     Invoicing
                   </a>
                 </div>

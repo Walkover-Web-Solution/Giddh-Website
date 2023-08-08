@@ -1,4 +1,14 @@
+import { usePathname } from "next/navigation";
+
 const affiliate = () => {
+    // To get active route
+    const pathname = usePathname();
+    const startPath = pathname.split("/");
+    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+    let isAE = startPath[1] === "ae";
+      
+    // Holds Url Prefix country wise
+    let link = isIndia ? "" : isAE ? "/ae" : "/uk";
     return (
       <>
         <div className="affiliate">
@@ -109,7 +119,7 @@ const affiliate = () => {
                   </div>
                 </section>
                 <div className="text-center">
-                  <a href="https://giddh.com/signup/" className="btn btn-start btn-lg">
+                  <a href={ link + "/signup" } className="btn btn-start btn-lg">
                     <span className="col-white c-fw-600">Let's Get Started</span>
                   </a>
                 </div>
@@ -135,7 +145,7 @@ const affiliate = () => {
                     <p className="c-fs-4">
                       Metrics are vital. As an{" "}
                       <a
-                        href="https://giddh.com/"
+                        href={ isIndia ? "/" : link }
                         title="Accounting Software"
                         className="col-primary "
                       >
@@ -180,7 +190,7 @@ const affiliate = () => {
                       questions and work with you on strategies to sell this{" "}
                       <a
                         className="col-primary"
-                        href="https://giddh.com/gst.php"
+                        href={ link + "/gst" }
                         title="GST Accounting Software"
                       >
                         GST ready Accounting Software

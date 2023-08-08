@@ -48,7 +48,7 @@ a{
           color: var(--col-dark);
           transition: all 200ms;
           &:hover, &.active {
-            background-color: var(--col-blue);
+            background-color: var(--col-primary);
             color: var(--col-white);
           }
         }

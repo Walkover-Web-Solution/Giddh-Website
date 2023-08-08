@@ -1,5 +1,4 @@
 import { MdRemove, MdAdd } from "react-icons/md";
-import { GiCheckMark } from "react-icons/gi";
 import { usePathname } from "next/navigation";
 
 const multiUserAccountingSoftware = () => {
@@ -9,6 +8,9 @@ const multiUserAccountingSoftware = () => {
   let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
   let isAE = startPath[1] === "ae";
   let isUK = startPath[1] === "uk";
+
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
   return (
     <>
       <div className="features">
@@ -66,7 +68,7 @@ const multiUserAccountingSoftware = () => {
                   With real time sharing of financial data, you can derive
                   meaningful insight and run your business with efficiency.
                 </p>
-                <a href="#" className="btn-link-purple">
+                <a href={ link + '/signup' } className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -81,32 +83,20 @@ const multiUserAccountingSoftware = () => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Always be on the driver’s seat.
                   </h4>
-                  <ul>
+                  <ul className="custom-ul-with-right-tick">
                     <li>
-                      <span className="col-primary ">
-                        <GiCheckMark />
-                      </span>{" "}
                       Profit/Loss Statement, Balance Sheet, General Ledger and
                       Trial Balance.
                     </li>
                     <li>
-                      <span className="col-primary ">
-                        <GiCheckMark />
-                      </span>
                       Drill down the reports by date, financial year, or even
                       project type.
                     </li>
                     <li>
-                      <span className="col-primary ">
-                        <GiCheckMark />
-                      </span>
                       Export reports in any of the two supported formats: PDF or
                       Excel.
                     </li>
                     <li>
-                      <span className="col-primary ">
-                        <GiCheckMark />
-                      </span>
                       Invite your accountant, partners or investors.
                     </li>
                   </ul>
@@ -201,16 +191,16 @@ const multiUserAccountingSoftware = () => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                  <a href="#" className="col-blue">
+                   <a href={ link + "/all-features" } className="col-blue">
                     All features
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
                     Share Data
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
                     Multi-Currency
                   </a>
-                  <a href="#" className="border-vertical col-blue">
+                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
                     Invoicing
                   </a>
                 </div>

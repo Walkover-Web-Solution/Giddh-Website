@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Data from "@/data/metadata.json";
-const header = (brawserPath) => {
-  const metaPath = brawserPath.brawserPath
+const header = (browserPath) => {
+  const metaPath = browserPath.browserPath
   const metaData = Data[metaPath]
   return (
     <>

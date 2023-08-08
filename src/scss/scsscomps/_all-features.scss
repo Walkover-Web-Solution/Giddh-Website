@@ -154,7 +154,6 @@
     display: inline-block;
     min-width: 156px;
     border-radius: 6px;
-    font-weight: var(--c-fw-600);
     background-color: var(--col-blue);
     color: var(--col-white);
     padding: 10px 18px;
@@ -171,6 +170,17 @@
       height: auto !important;
       padding-top: 90px;
       padding-bottom: 40px;
+
+      h2{
+        &.heading{
+          font-size: var(--c-fs-1);
+        }
+      }
+      p{
+        &.c-fs-3{
+          font-size: var(--c-fs-5) !important;
+        }
+      }
       &__links {
         .download_free_btn {
         }
@@ -180,7 +190,7 @@
           text-align: center !important;
           img {
             &:first-child {
-              width: 60%;
+              width: 40%;
               transform: translateX(60px);
             }
           }
