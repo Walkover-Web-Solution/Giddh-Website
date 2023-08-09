@@ -1,5 +1,8 @@
+import { useEffect, useCallback, useState} from "react";
 import { usePathname } from "next/navigation";
 const navbar = () => {
+  const [scrollStatus, setscrollStatus] = useState(false);
+
   // To get active route
   const pathname = usePathname();
   const startPath = pathname.split("/");
@@ -165,10 +168,37 @@ const navbar = () => {
       url: "/financial-reporting",
     },
   ];
+  // List of path where navbar Background will be transparent and turn Background white on scroll
+  let specificPath = pathname === "/" || pathname === "/ae" || pathname === "/uk" || pathname === "/contact-us" || pathname === "/ae/contact-us" || pathname === "/uk/contact-us";
+  
+  const onScroll = useCallback((event) => {
+    const { scrollY } = window;
+    if(scrollY >= 120 ){
+      if(specificPath){
+        setscrollStatus(true);
+      }
+    }else{
+      if(specificPath){
+        setscrollStatus(false);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if(specificPath){
+      setscrollStatus(false);   
+    }else{
+      setscrollStatus(true);   
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll, { passive: true });
+    };
+  }, []);
 
   return (
     <>
-      <nav className="navbar navbar--box-shadow navbar--theme-white navbar-expand-lg position-fixed w-100 py-0">
+      <nav className={"navbar navbar-expand-lg position-fixed w-100 py-0 " + ( scrollStatus ? " navbar--theme-white navbar--box-shadow" : "")}>
         <div className="container-fluid">
           <a className="navbar--navbar_brand" href={link + "/"}>
             <svg
