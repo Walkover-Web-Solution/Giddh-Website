@@ -1,4 +1,14 @@
+import { usePathname } from "next/navigation";
+
 const terms = () => {
+   // To get active route
+   const pathname = usePathname();
+   const startPath = pathname.split("/");
+   let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+   let isAE = startPath[1] === "ae";
+ 
+   // Holds Url Prefix country wise
+   let link = isIndia ? "" : isAE ? "/ae" : "/uk";
   return (
     <>
       <section className="container-fluid privacy">
@@ -10,7 +20,7 @@ const terms = () => {
               </h2>
               <p className="mb-4 c-fs-5">
                 Giddh is an{" "}
-                <a href="https://giddh.com/" title="online accounting service" className="col-primary">online accounting service</a>{" "}
+                <a href={ "https://giddh.com" + link } title="online accounting service" className="col-primary">online accounting service</a>{" "}
                 designed especially for small businesses and consumers. These
                 Terms of Use are intended to explain our obligations as a
                 service provider and Your obligations as a customer. Please read
@@ -82,7 +92,7 @@ const terms = () => {
               </p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">Website</h3>
               <p className="mb-4 c-fs-5">
-                means the Internet site at the domain <a href="https://giddh.com" className="col-primary" title="www.Giddh.com">www.Giddh.com</a> or any other
+                means the Internet site at the domain <a href={ "https://giddh.com" + link } className="col-primary" title="www.Giddh.com">www.Giddh.com</a> or any other
                 site operated by Giddh.
               </p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">Invited User</h3>

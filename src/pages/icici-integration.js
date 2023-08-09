@@ -85,7 +85,7 @@ const iciciIntegration = () => {
               <div className="col-md-6 col-lg-4">
                 <div className="px-3">
                   <figure>
-                    <img src="/img/hand-shake.svg" alt="" />
+                    <img src="/img/hand-shake.svg" alt="hand-shake icon" />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
                   Easy<br/>Reconciliation

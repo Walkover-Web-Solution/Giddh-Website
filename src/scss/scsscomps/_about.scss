@@ -11,9 +11,6 @@
         border-color: var(--col-primary);
         color: var(--col-primary);
       }
-      &.active {
-        font-weight: var(--c-fw-600);
-      }
     }
     &__container {
       background-color: var(--col-primary);
@@ -35,10 +32,14 @@
       padding: 80px 0;
       background: #e7e8ea url(/img/about/banner-grid-design-1.png) 0 0 repeat;
       &__btn {
-        background-color: white;
+        background-color: var(--col-white);
         min-width: 240px;
         padding: 10px 16px;
         font-size: 20px;
+        &:hover{
+          background-color: #f8f9fa;
+          cursor: pointer;
+        }
       }
     }
     &--heading-underline {
@@ -70,6 +71,9 @@
             margin-bottom: 20px;
           }
         }
+      }
+      .container{
+        max-width: 1220px !important;
       }
     }
     &__content {
