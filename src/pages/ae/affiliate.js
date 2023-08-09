@@ -1,4 +1,4 @@
-import { Affiliate } from "@/pages/affiliate";
+import Affiliate from "@/pages/affiliate";
 
 const aeAffiliate = () => {
   return (
@@ -7,5 +7,4 @@ const aeAffiliate = () => {
     </>
   );
 };
-
 export default aeAffiliate;

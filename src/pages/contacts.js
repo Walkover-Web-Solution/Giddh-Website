@@ -6,7 +6,6 @@ const contacts = () => {
   const startPath = pathname.split("/");
   let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
   let isAE = startPath[1] === "ae";
-  let isUK = startPath[1] === "uk";
 
   // Holds Url Prefix country wise
   let link = isIndia ? "" : isAE ? "/ae" : "/uk";
@@ -126,7 +125,7 @@ const contacts = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/reporting-feature-3.png"
+                    src={ isIndia ? "/img/feature-gallery-icons/reporting-feature-3.png" : ( isAE ? "" : "/img/feature-gallery-icons/uk-aging-report.svg") }
                     className="img-fluid"
                     alt="bank reconcile image"
                   />

@@ -1,4 +1,14 @@
+import { usePathname } from "next/navigation";
+
 const privacyPolicy = () => {
+    // To get active route
+    const pathname = usePathname();
+    const startPath = pathname.split("/");
+    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+    let isAE = startPath[1] === "ae";
+  
+    // Holds Url Prefix country wise
+    let link = isIndia ? "" : isAE ? "/ae" : "/uk";
   return (
     <>
       <section className="container-fluid privacy">
@@ -29,7 +39,7 @@ const privacyPolicy = () => {
               </h3>
               <p className="mb-4 c-fs-5">
                 Giddh is an{" "}
-                <a href="https://giddh.com/">online Accounting Software</a>{" "}
+                <a href={ "https://giddh.com" + link } title="Accounting Software">online Accounting Software</a>{" "}
                 which stores financial information about a company or individual
                 (Organization) as provided or entered by that company or
                 individual. Giddh will store information that is entered by You,
@@ -305,8 +315,8 @@ const privacyPolicy = () => {
               </p>
               <ul>
                 <li>
-                  Facebook &nbsp; &nbsp;{" "}
-                  <a href="https://policies.google.com/privacy?hl=en">
+                  Facebook &nbsp;{" "}
+                  <a href="https://www.facebook.com/policy.php">
                     {" "}
                     (Privacy Policy)
                   </a>
@@ -320,7 +330,7 @@ const privacyPolicy = () => {
               </p>
               <ul>
                 <li>
-                  Google &nbsp; &nbsp;{" "}
+                  Google &nbsp;{" "}
                   <a href="https://policies.google.com/privacy?hl=en">
                     (Privacy Policy)
                   </a>
@@ -339,8 +349,8 @@ const privacyPolicy = () => {
               </p>
               <ul>
                 <li>
-                  FullStory &nbsp; &nbsp;
-                  <a href="https://policies.google.com/privacy?hl=en">
+                  FullStory &nbsp;
+                  <a href="https://www.fullstory.com/legal/privacy/">
                     (Privacy Policy)
                   </a>
                 </li>
@@ -354,8 +364,8 @@ const privacyPolicy = () => {
               </p>
               <ul>
                 <li>
-                  Intercom &nbsp; &nbsp;
-                  <a href="https://policies.google.com/privacy?hl=en">
+                  Intercom &nbsp;
+                  <a href="https://www.intercom.com/terms-and-policies">
                     (Privacy Policy)
                   </a>
                 </li>
@@ -370,8 +380,8 @@ const privacyPolicy = () => {
               </p>
               <ul>
                 <li>
-                  Leadersquared &nbsp; &nbsp;{" "}
-                  <a href="https://policies.google.com/privacy?hl=en">
+                  Leadersquared &nbsp;
+                  <a href="https://www.leadsquared.com/privacy-policy/">
                     (Privacy Policy)
                   </a>
                 </li>

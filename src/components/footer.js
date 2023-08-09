@@ -120,7 +120,7 @@ const Footer = () => {
               </div>
 
               <div className="col-xl-3 col-lg-6 col-md-12">
-                <h5 className="list-unstyled d-flex flex-column gap-2">
+                <h5 className="list-unstyled d-flex flex-column gap-2" id="footer-contact">
                   Contact Us
                 </h5>
                 <div>

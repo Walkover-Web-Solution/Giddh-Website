@@ -314,7 +314,7 @@
           li {
             a {
               color: var(--col-white);
-              &:hover {
+              &:hover, &.active {
                 background-color: rgba(0, 0, 0, 0.1);
               }
             }
