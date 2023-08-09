@@ -1,5 +1,16 @@
+import { usePathname } from "next/navigation";
 import { MdClose } from "react-icons/md";
+
 const allFeatures = () => {
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+  let isUK = startPath[1] === "uk";
+
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
   return (
     <>
       <div className="features">
@@ -46,10 +57,9 @@ const allFeatures = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href={link + "/inventory-management-software"}
               >
                 <figure>
                   <img
@@ -64,13 +74,12 @@ const allFeatures = () => {
                     Managing inventory is no more a hassle!
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href={link + "/invoice-software"}
               >
                 <figure>
                   <img
@@ -85,13 +94,12 @@ const allFeatures = () => {
                     and send them automatically.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href={link + "/cloud-accounting-software"}
               >
                 <figure>
                   <img
@@ -106,35 +114,39 @@ const allFeatures = () => {
                     wherever you want.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href={link + "/conect-bank-reconcile"}
               >
                 <figure>
                   <img
-                    src="/img/feature-reconcile.svg"
-                    alt="Bank Reconciliation Icon"
+                    src={
+                      isIndia
+                        ? "/img/feature-reconcile.svg"
+                        : "/img/allfeatures_expmanagement-ae.png"
+                    }
+                    alt="Bank Icon"
                     height="90px"
                     widht="auto"
                   />
-                  <figcaption>Bank Reconciliation</figcaption>
+                  <figcaption>
+                    {isIndia ? "Bank Reconciliation" : "Expense Management"}{" "}
+                  </figcaption>
                   <p>
                     Giddh makes the confusing work of bank reconciliation easy &
                     simple. Know your cash position anytime.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
 
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href={link + "/multi-currency-accounting-software"}
               >
                 <figure>
                   <img
@@ -149,14 +161,10 @@ const allFeatures = () => {
                     currency solution.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
-                className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
-              >
+              <a className="feature-gallery__card" href={link + "/import-data"}>
                 <figure>
                   <img
                     src="/img/feature-excel.svg"
@@ -170,56 +178,92 @@ const allFeatures = () => {
                     files easily in Giddh.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
-            <div className="col">
-              <div
-                className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
-              >
-                <figure>
-                  <img
-                    src="/img/feature-gst.svg"
-                    alt="GST Compliances Icon"
-                    height="90px"
-                    widht="auto"
-                  />
-                  <figcaption>GST Compliances</figcaption>
-                  <p>
-                    Compliance is no more a challenge! Create GST compliant
-                    invoices & file GST returns.
-                  </p>
-                </figure>
+            {isIndia ? (
+              <div className="col">
+                <a className="feature-gallery__card" href={link + "/gst"}>
+                  <figure>
+                    <img
+                      src="/img/feature-gst.svg"
+                      alt="GST Compliances Icon"
+                      height="90px"
+                      widht="auto"
+                    />
+                    <figcaption>GST Compliances</figcaption>
+                    <p>
+                      Compliance is no more a challenge! Create GST compliant
+                      invoices & file GST returns.
+                    </p>
+                  </figure>
+                </a>
               </div>
-            </div>
-            <div className="col">
-              <div
-                className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
-              >
-                <figure>
-                  <img
-                    src="/img/feature-report.svg"
-                    alt="Reports & Analysis Icon"
-                    height="90px"
-                    widht="auto"
-                  />
-                  <figcaption>Reports & Analysis</figcaption>
-                  <p>
-                    Analyse your business's health using Giddh's finance
-                    reporting tools such as daybook and audit log.
-                  </p>
-                </figure>
+            ) : null}
+
+            {isAE || isUK ? (
+              <div className="col">
+                <a className="feature-gallery__card" href={link + "/vat"}>
+                  <figure>
+                    <img
+                      src="/img/vat-filling.svg"
+                      alt="Tax Icon"
+                      height="90px"
+                      widht="auto"
+                    />
+                    <figcaption>VAT Filing</figcaption>
+                    <p>Invoices according to VAT registration status</p>
+                  </figure>
+                </a>
               </div>
-            </div>
+            ) : null}
+
+            {isAE || isUK ? (
+              <div className="col">
+                <a
+                  className="feature-gallery__card"
+                  href={link + "/financial-reporting"}
+                >
+                  <figure>
+                    <img
+                      src="/img/feature-report.svg"
+                      alt="Tax Icon"
+                      height="90px"
+                      widht="auto"
+                    />
+                    <figcaption>Activity Logs</figcaption>
+                    <p>Quick Error Identifier</p>
+                  </figure>
+                </a>
+              </div>
+            ) : null}
+
+            {isIndia ? (
+              <div className="col">
+                <a
+                  className="feature-gallery__card"
+                  href={link + "/financial-reporting"}
+                >
+                  <figure>
+                    <img
+                      src="/img/feature-report.svg"
+                      alt="Reports & Analysis Icon"
+                      height="90px"
+                      widht="auto"
+                    />
+                    <figcaption>Reports & Analysis</figcaption>
+                    <p>
+                      Analyse your business's health using Giddh's finance
+                      reporting tools such as daybook and audit log.
+                    </p>
+                  </figure>
+                </a>
+              </div>
+            ) : null}
 
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href={link + "/multi-user-accounting-software"}
               >
                 <figure>
                   <img
@@ -234,13 +278,12 @@ const allFeatures = () => {
                     financial data.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href={link + "/accounting-dashboard"}
               >
                 <figure>
                   <img
@@ -249,19 +292,19 @@ const allFeatures = () => {
                     height="90px"
                     widht="auto"
                   />
-                  <figcaption>Dashboard</figcaption>
+                  <figcaption>{isIndia ? "Dashboard" : "Simple UI"}</figcaption>
                   <p>
-                    Get a bird’s eye view of revenue, net-worth of your
-                    business, all on one screen.
+                    {isIndia
+                      ? "Get a bird’s eye view of revenue, net-worth of your business, all on one screen."
+                      : "Insightful Dashboard"}
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href={link + "/financial-reporting"}
               >
                 <figure>
                   <img
@@ -276,13 +319,12 @@ const allFeatures = () => {
                     accurate records for reference.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href={link + "/conect-bank-reconcile"}
               >
                 <figure>
                   <img
@@ -297,13 +339,12 @@ const allFeatures = () => {
                     whenever and wherever you want.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href={link + "/all-features"}
               >
                 <figure>
                   <img
@@ -318,13 +359,13 @@ const allFeatures = () => {
                     in Giddh.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
+              <a
                 className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
+                href="https://apidoc.giddh.com/"
+                target="_blank"
               >
                 <figure>
                   <img
@@ -339,14 +380,10 @@ const allFeatures = () => {
                     automates complex accounting tasks.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
-                className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
-              >
+              <a className="feature-gallery__card" href={link + "/contacts"}>
                 <figure>
                   <img
                     src="/img/feature-contact.svg"
@@ -360,14 +397,10 @@ const allFeatures = () => {
                     business information at one place.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
-                className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
-              >
+              <a className="feature-gallery__card" href={link + "/security"}>
                 <figure>
                   <img
                     src="/img/feature-security.svg"
@@ -381,14 +414,10 @@ const allFeatures = () => {
                     from any unethical breaches.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
             <div className="col">
-              <div
-                className="feature-gallery__card"
-                data-bs-target="#featureModal"
-                data-bs-toggle="modal"
-              >
+              <a className="feature-gallery__card" href="#footer-contact">
                 <figure>
                   <img
                     src="/img/feature-support.svg"
@@ -402,7 +431,7 @@ const allFeatures = () => {
                     email away from resolution.
                   </p>
                 </figure>
-              </div>
+              </a>
             </div>
           </div>
         </div>

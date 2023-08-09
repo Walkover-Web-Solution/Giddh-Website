@@ -1,8 +1,8 @@
-import InvoiceSoftware from '@/pages/invoice-software'
+import InvoiceSoftware from "@/pages/invoice-software";
 const aeInvoiceSoftware = () => {
   return (
     <>
-        <InvoiceSoftware />
+      <InvoiceSoftware />
     </>
   );
 };
