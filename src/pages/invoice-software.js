@@ -463,7 +463,7 @@ const invoiceSoftware = () => {
                 </div>
 
                 <span
-                  className="text-decoration-underline c-fw-600"
+                  className="text-decoration-underline c-fw-600 cursor-pointer"
                   onClick={() =>
                     readmoreAction((readmoreDisplay) => !readmoreDisplay)
                   }

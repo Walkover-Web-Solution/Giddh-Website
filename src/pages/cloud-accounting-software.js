@@ -284,7 +284,7 @@ const anywhereAnytime = () => {
                         accounting software:
                       </p>
                       <span
-                        className="pt-3 text-decoration-underline c-fw-600"
+                        className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                         style={{
                           display: readMoreParagraphStatus1 ? "none" : "block",
                         }}
@@ -419,7 +419,7 @@ const anywhereAnytime = () => {
                         may be missing out on:
                       </p>
                       <span
-                        className="pt-3 text-decoration-underline c-fw-600"
+                        className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                         style={{
                           display: readMoreParagraphStatus2 ? "none" : "block",
                         }}
@@ -662,14 +662,14 @@ const anywhereAnytime = () => {
                   </li>
                 </ul>
               </div>
-              <a
-                className="text-decoration-underline c-fw-600 text-center col-dark read-more-text"
+              <span
+                className="text-decoration-underline c-fw-600 text-center col-dark read-more-text cursor-pointer"
                 onClick={() =>
                   readmoreAction((readmoreDisplay) => !readmoreDisplay)
                 }
               >
                 {readMoreStatus ? "Read Less" : "Read More..."}
-              </a>
+              </span>
             </div>
           </section>
         </section>

@@ -436,46 +436,6 @@ const allFeatures = () => {
           </div>
         </div>
       </section>
-      <div
-        className="modal fade"
-        id="featureModal"
-        aria-hidden="true"
-        aria-labelledby="exampleModalToggleLabel"
-        tabIndex="-1"
-      >
-        <div className="modal-dialog modal-dialog-centered feature_gallery_modal">
-          <div className="modal-content">
-            <div className="modal-header position-relative">
-              <button
-                type="button"
-                className="btn col-blue ms-auto p-0"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <MdClose />
-              </button>
-            </div>
-            <div className="modal-body">
-              <h4 className="c-fs-1 c-fw-600 col-blue">INVOICES</h4>
-              <h5 className="c-fs-2 c-fw-600 col-primary mb-4">
-                Get paid faster by creating professional looking invoices and
-                send them automatically.
-              </h5>
-              <p className="col-grey-deep mb-1">
-                Create VAT compliant invoices and documents whether you are
-                buying stocks for your inventory or selling your product or
-                services to customers. Now create custom invoices and transact
-                in multiple currencies. You don’t have to bother about the
-                nuances of taxation as once set, the numbers are taken care of
-                by Giddh.
-              </p>
-              <a href="#" className="col-blue">
-                More details
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
   );
 };

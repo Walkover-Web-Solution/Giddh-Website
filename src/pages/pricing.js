@@ -1,3 +1,4 @@
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MdDone, MdClose } from "react-icons/md";
 const pricing = () => {
@@ -7,6 +8,14 @@ const pricing = () => {
   const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
   const [readMoreParagraphStatus4, showMoreParagraph4] = useState(false);
   const [readMoreParagraphStatus5, showMoreParagraph5] = useState(false);
+
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
 
   return (
     <>
@@ -303,7 +312,7 @@ const pricing = () => {
               </div>
 
               <div className="pricing_main_section__grid__link_all_feature">
-                <a href="#">Check all features</a>
+                <a href={ link + "/all-features" }>Check all features</a>
               </div>
               <div className="pricing_main_section__grid__extra_charges">
                 <p className="c-fs-6 c-fw-400">
@@ -340,7 +349,7 @@ const pricing = () => {
               If yes, it’s time to Make the Switch and purchase a dedicated
               online accounting software like GIDDH.
             </p>
-            <a href="#">Start your trial</a>
+            <a href={ link + "/signup" }>Start your trial</a>
           </div>
         </div>
       </section>
@@ -367,7 +376,7 @@ const pricing = () => {
                   prices and then make your choice.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus1 ? "none" : "block",
                   }}
@@ -452,7 +461,7 @@ const pricing = () => {
                 </p>
 
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus2 ? "none" : "block",
                   }}
@@ -531,7 +540,7 @@ const pricing = () => {
                   financial operation gets easier with the integration of
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus3 ? "none" : "block",
                   }}
@@ -604,7 +613,7 @@ const pricing = () => {
                 </p>
 
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus4 ? "none" : "block",
                   }}
@@ -675,7 +684,7 @@ const pricing = () => {
                   features and practice using our various options.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus5 ? "none" : "block",
                   }}
@@ -780,7 +789,7 @@ const pricing = () => {
             </div>
 
             <span
-              className="text-decoration-underline c-fw-600"
+              className="text-decoration-underline c-fw-600 cursor-pointer"
               onClick={() =>
                 readmoreAction((readmoreDisplay) => !readmoreDisplay)
               }

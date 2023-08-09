@@ -195,13 +195,13 @@ const Footer = () => {
                       <ul className="footer-list list-unstyled class">
                         <li>
                           Sales :{" "}
-                          <a href="#" className="cf_email">
+                          <a href="mailto:sales@giddh.com" className="cf_email">
                             sales@giddh.com
                           </a>
                         </li>
                         <li className="mt-3">
                           Support:{" "}
-                          <a href="#" className="cf_email">
+                          <a href="mailto:support@giddh.com" className="cf_email">
                             support@giddh.com
                           </a>
                         </li>
