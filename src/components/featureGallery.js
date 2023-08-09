@@ -441,7 +441,7 @@ const featureGallery = () => {
           <div className="row">
             { countryWiseCardData.map((data, index) => (
               <div
-                className="col-xxl-3 col-lg-4 col-md-6 col-sm-12"
+                className="col-lg-4 col-md-6 col-sm-12"
                 key={index}
               >
                 <div
@@ -457,7 +457,7 @@ const featureGallery = () => {
                 </div>
               </div>
             ))}           
-            <div className="col-xxl-3 col-lg-4 col-md-6 col-sm-12">
+            <div className="col-lg-4 col-md-6 col-sm-12">
               <a className="feature-gallery__card" href={ link + "/all-features" }>
                 <span className="c-fs-3 col-primary">See More</span>
               </a>

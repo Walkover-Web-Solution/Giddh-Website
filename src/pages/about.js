@@ -13,7 +13,7 @@ const about = () => {
   let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
   return (
     <>
-      <div className="about">
+      <div className="about" id="top">
         <section className="container pb-3">
           <div className="row">
             <ul className="col-12 mb-4 d-flex flex-wrap justify-content-center align-items-center column-gap-4 row-gap-5 c-fs-4">
@@ -1311,6 +1311,7 @@ const about = () => {
         </div>
 
         {/* ============================================================================================================================ */}
+
         <section className="about__see_more">
           <div className="d-flex py-4">
             <div className="container d-flex gap-4 flex-column text-center">
@@ -1323,13 +1324,13 @@ const about = () => {
               </span>
               <br></br>
               <div className="col-12 d-flex justify-content-center flex-wrap gap-3">
-                <a className="col-primary d-inline-block about__see_more__btn border col-primary border-3">
+                <a className="col-primary d-inline-block about__see_more__btn border col-primary border-3" href="#top" onClick={() => setCurrent(1)}>
                   Our Values
                 </a>
-                <a className="about__see_more__btn col-primary  border border-3">
+                <a className="about__see_more__btn col-primary  border border-3" href="#top" onClick={() => setCurrent(2)}>
                   Leadership Principles
                 </a>
-                <a className="about__see_more__btn col-primary border border-3">
+                <a className="about__see_more__btn col-primary border border-3" href="#top" onClick={() => setCurrent(3)}>
                   The Team
                 </a>
               </div>

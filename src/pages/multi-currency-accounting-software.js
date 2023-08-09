@@ -223,7 +223,7 @@ const multiCurrencyAccountingSoftware = () => {
         <section className="container-fluid features__accordion_container">
           <div className="container">
             <div className="row">
-              <div className="col-12">
+              <div className="col-12 px-0">
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
                   <h2 className="fw-bold col-primary ps-3">FAQs</h2>

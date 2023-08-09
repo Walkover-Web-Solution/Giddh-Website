@@ -307,7 +307,7 @@ const navbar = () => {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href={isIndia ? "/" : isAE ? "/ae/vat" : "/uk/vat"}
+                  href={isIndia ? "/gst" : isAE ? "/ae/vat" : "/uk/vat"}
                 >
                   {isIndia ? "GST" : isAE || isUK ? "VAT" : ""}
                 </a>

@@ -3,6 +3,7 @@
         max-width: 1160px !important;
     }
     .feature-gallery__card{
+        color: var(--col-dark);
         width: clamp(300px,20vw,350px);
         min-height: 350px;
         figure{
@@ -13,7 +14,6 @@
                 }
                 p{
                     margin-top: 10px;
-                    font-weight: var(--c-fw-600);
                 }
         }
     }
