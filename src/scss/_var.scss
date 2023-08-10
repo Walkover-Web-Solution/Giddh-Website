@@ -25,3 +25,10 @@
   --col-grey-deep: #6c757d;
   --col-light-gray: #e7e8ea 
 }
+
+@media (max-width: 575px){
+  :root {
+    --heading: 40px;
+    --sub-heading: 28px;
+  }
+}

@@ -389,7 +389,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           Customers Come First
                         </h2>
                       </div>
@@ -417,7 +417,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           Embracing Setbacks to Break Boundaries
                         </h2>
                       </div>
@@ -446,7 +446,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           We Set Impossible Goals
                         </h2>
                       </div>
@@ -475,7 +475,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           People are our Power
                         </h2>
                       </div>
@@ -504,7 +504,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           We Focus on ‘Why?’ & ‘How?’
                         </h2>
                       </div>
@@ -532,7 +532,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           Always We Before Me
                         </h2>
                       </div>
@@ -562,7 +562,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           We Don’t Settle
                         </h2>
                       </div>
@@ -591,7 +591,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           We Empower The Future
                         </h2>
                       </div>
@@ -619,7 +619,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           Transparency and Honesty
                         </h2>
                       </div>
