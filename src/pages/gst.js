@@ -146,7 +146,7 @@ const gst = () => {
             Make GST Return Process Automatic.
           </div>
           <div>
-            <a className="c-fs-4 tax-hero-container__try_now_btn">Try Now</a>
+            <a href="/signup" className="c-fs-4 tax-hero-container__try_now_btn">Try Now</a>
           </div>
           <span className="c-fs-4 m-3">
             Cloud Based Accounting Software to File GST Return Online
@@ -156,7 +156,7 @@ const gst = () => {
       <section className="container-fluid tax-return">
         <div className="container">
           <div className="row">
-            <div className="gst-return__wrapper d-flex  flex-wrap align-items-center">
+            <div className="tax-return__wrapper d-flex  flex-wrap align-items-center">
               <div className="col">
                 <h3>GST Return Collaborators</h3>
               </div>
@@ -211,7 +211,7 @@ const gst = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\gst-images\understanding-gst.svg"
+                  src="\img\tax-images\understanding-gst.svg"
                   className="img-fluid"
                   alt="gst logo"
                 />
@@ -281,7 +281,7 @@ const gst = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\gst-images\group-5654.svg"
+                  src="\img\tax-images\group-5654.svg"
                   className="img-fluid"
                   alt="mobile image with giddh-app"
                 />
@@ -351,7 +351,7 @@ const gst = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\gst-images\betnifits.svg"
+                  src="\img\tax-images\betnifits.svg"
                   className="img-fluid"
                   alt="gst benifits image"
                 />

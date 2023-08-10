@@ -42,4 +42,24 @@
       }
     }
   }
+
+  @media (max-width: 575px){
+    .gst{
+      margin-top: 0;
+      padding-top: 60px;
+      &__content_wapper {
+        figure {
+          img {
+              position: static;
+              transform: unset;
+          }
+        }
+        &__content {          
+          a {
+            padding: 12px 48px;         
+          }
+        }
+      }
+    }
+  }
   // ================================ Index Page GST-SECTION SCSS CODE===============END===============================

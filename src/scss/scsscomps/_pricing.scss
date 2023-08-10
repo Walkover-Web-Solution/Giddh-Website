@@ -27,7 +27,7 @@
     padding-right: 0;
     max-width: 1100px;
     font-weight: var(--c-fw-600);
-    grid-template-rows: 60px 100px 60px 50px 50px 50px 50px 50px 50px 46px;
+    grid-template-rows: 60px 100px 60px 50px 50px 50px 50px 75px 50px 46px;
     grid-template-columns: auto 180px 180px 180px 180px 180px;
     grid-template-areas:
       "title title title title title title"
@@ -103,21 +103,26 @@
 
     &__transactions {
       grid-area: transactions;
+      justify-content: start !important;
     }
     &__transactions_2 {
       grid-area: transactions_2;
+      justify-content: start !important;
       display: none;
     }
     &__transactions_3 {
       grid-area: transactions_3;
+      justify-content: start !important;
       display: none;
     }
     &__transactions_4 {
       grid-area: transactions_4;
+      justify-content: start !important;
       display: none;
     }
     &__transactions_5 {
       grid-area: transactions_5;
+      justify-content: start !important;
       display: none;
     }
     &__t1 {
@@ -141,21 +146,26 @@
 
     &__companies {
       grid-area: companies;
+      justify-content: start !important;
     }
     &__companies_2 {
       grid-area: companies_2;
+      justify-content: start !important;
       display: none;
     }
     &__companies_3 {
       grid-area: companies_3;
+      justify-content: start !important;
       display: none;
     }
     &__companies_4 {
       grid-area: companies_4;
+      justify-content: start !important;
       display: none;
     }
     &__companies_5 {
       grid-area: companies_5;
+      justify-content: start !important;
       display: none;
     }
     &__c1 {
@@ -179,21 +189,26 @@
 
     &__accountant_consultant {
       grid-area: accountant_consultant;
+      justify-content: start !important;
     }
     &__accountant_consultant_2 {
       grid-area: accountant_consultant_2;
+      justify-content: start !important;
       display: none;
     }
     &__accountant_consultant_3 {
       grid-area: accountant_consultant_3;
+      justify-content: start !important;
       display: none;
     }
     &__accountant_consultant_4 {
       grid-area: accountant_consultant_4;
+      justify-content: start !important;
       display: none;
     }
     &__accountant_consultant_5 {
       grid-area: accountant_consultant_5;
+      justify-content: start !important;
       display: none;
     }
     &__ac1 {
@@ -217,21 +232,26 @@
 
     &__unlimited_users {
       grid-area: unlimited_users;
+      justify-content: start !important;
     }
     &__unlimited_users_2 {
       grid-area: unlimited_users_2;
+      justify-content: start !important;
       display: none;
     }
     &__unlimited_users_3 {
       grid-area: unlimited_users_3;
+      justify-content: start !important;
       display: none;
     }
     &__unlimited_users_4 {
       grid-area: unlimited_users_4;
+      justify-content: start !important;
       display: none;
     }
     &__unlimited_users_5 {
       grid-area: unlimited_users_5;
+      justify-content: start !important;
       display: none;
     }
     &__u1 {
@@ -255,21 +275,26 @@
 
     &__customers_vendors {
       grid-area: customers_vendors;
+      justify-content: start !important;
     }
     &__customers_vendors_2 {
       grid-area: customers_vendors_2;
+      justify-content: start !important;
       display: none;
     }
     &__customers_vendors_3 {
       grid-area: customers_vendors_3;
+      justify-content: start !important;
       display: none;
     }
     &__customers_vendors_4 {
       grid-area: customers_vendors_4;
+      justify-content: start !important;
       display: none;
     }
     &__customers_vendors_5 {
       grid-area: customers_vendors_5;
+      justify-content: start !important;
       display: none;
     }
     &__cv1 {
@@ -293,21 +318,26 @@
 
     &__desktop_mobile_app {
       grid-area: desktop_mobile_app;
+      justify-content: start !important;
     }
     &__desktop_mobile_app_2 {
       grid-area: desktop_mobile_app_2;
+      justify-content: start !important;
       display: none;
     }
     &__desktop_mobile_app_3 {
       grid-area: desktop_mobile_app_3;
+      justify-content: start !important;
       display: none;
     }
     &__desktop_mobile_app_4 {
       grid-area: desktop_mobile_app_4;
+      justify-content: start !important;
       display: none;
     }
     &__desktop_mobile_app_5 {
       grid-area: desktop_mobile_app_5;
+      justify-content: start !important;
       display: none;
     }
 
@@ -367,6 +397,13 @@
     svg {
       font-size: 24px;
     }
+  }
+  .pricing-border-top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #dee2e6;
+    height: 100%;
   }
 }
 
@@ -469,7 +506,11 @@
       &__transactions_2,
       &__transactions_3,
       &__transactions_4,
-      &__transactions_5,
+      &__transactions_5{
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
       &__companies_2,
       &__companies_3,
       &__companies_4,
@@ -490,7 +531,10 @@
       &__desktop_mobile_app_3,
       &__desktop_mobile_app_4,
       &__desktop_mobile_app_5 {
-        display: block;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-top: 1px solid #dee2e6;
       }
       &__trial,
       &__birch,
