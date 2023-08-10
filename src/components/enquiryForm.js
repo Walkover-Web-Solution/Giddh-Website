@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 
 const enquiryForm = () => {
   const [currentCountryCode, setCurrentCountryCode] = useState("91");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [contactNo, setContactNo] = useState("");
+  const [description, setDescription] = useState("");
 
   // To get active route
   const pathname = usePathname();
@@ -275,13 +279,17 @@ const enquiryForm = () => {
                 <div className="container">
                   <div className="row">
                     <div className="col-lg-4 col-md-12 ">
-                      <div className="mb-3">
+                      <div className="mb-2">
                         <input
                           autoComplete="name"
-                          type="email"
+                          type="text"
                           className="form-control"
                           placeholder="Name"
+                          required
+                          pattern="[A-Za-z\s]{3,50}"
+                          title="Name between 3 - 50 letters"
                         />
+                        <span className="error-msg col-white c-fs-6">Name between 3 - 50 letters</span>
                       </div>
                     </div>
                     <div className="col-lg-4 col-md-12 ">
@@ -291,6 +299,8 @@ const enquiryForm = () => {
                           type="email"
                           className="form-control"
                           placeholder="example@gmail.com"
+                          pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
+                          required
                         />
                       </div>
                     </div>
@@ -302,6 +312,7 @@ const enquiryForm = () => {
                               autoComplete="on"
                               className="form-select"
                               value={currentCountryCode}
+                              required
                               onChange={handleCountryCodeChange}
                             >
                               {allCallingCode.map((e, key) => {
@@ -318,9 +329,11 @@ const enquiryForm = () => {
                           <div className="mb-3">
                             <input
                               autoComplete="tel-national"
-                              type="email"
+                              type="tel"
                               className="form-control"
                               placeholder="Mobile Number"
+                              pattern="([0]{1})?[0-9]{10}"
+                              required
                             />
                           </div>
                         </div>

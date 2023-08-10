@@ -1,3 +1,4 @@
+// Change the Scrollbar Width and Color
 ::-webkit-scrollbar{
   width: 8px;
 }
@@ -10,15 +11,18 @@
   width: 8px;
 }
 
+@media (max-width: 991px) {
+  ::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+// Change The Selection Background & Text Color in Whole Website
 ::selection{
   background-color: var(--col-primary);
   color: var(--col-white);
 }
-@media (max-width: 991px) {
-  ::-webkit-scrollbar{
-      display: none;
-  }
-}
+
 
 h1,
 h2,
