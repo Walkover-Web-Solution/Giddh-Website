@@ -9,6 +9,8 @@ const header = (browserPath) => {
         <title>{metaData?.title}</title>
         <meta name="description" content={metaData?.description}></meta>
         <link rel="icon" type="image/x-icon" href="/favico.svg"></link>
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
       </Head>
     </>
   );
