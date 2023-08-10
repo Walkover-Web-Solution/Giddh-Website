@@ -111,17 +111,13 @@
     border: 1px solid;
     border-radius: 20px;
     display: inline-block;
-    &:hover {
-      background-color: var(--col-white);
-      color: var(--col-primary);
-    }
   }
   .signup_page_link {
     padding: 3px 20px;
     margin-left: 15px;
-    background-color: var(--col-primary);
-    color: var(--col-white);
-    border: 1px solid var(--col-primary);
+    background-color: var(--col-white);
+    color: var(--col-primary);
+    border: 1px solid var(--col-white);
     border-radius: 20px;
     display: inline-block;
   }
@@ -170,6 +166,11 @@
     .login_page_link {
       background-color: var(--col-white);
       color: var(--col-primary);
+    }
+    .signup_page_link {
+      background-color: var(--col-primary);
+      color: var(--col-white);
+      border: 1px solid var(--col-primary);
     }
   }
   &--box-shadow {

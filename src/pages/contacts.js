@@ -33,7 +33,7 @@ const contacts = () => {
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue">
+                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
                     Schedule Demo
                   </a>
                 </div>

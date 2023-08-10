@@ -13,7 +13,6 @@ const contactUs = () => {
   // Update Country Code countrywise
   useEffect(() => {
     let currentCode = isIndia ? "91" : isAE ? "971" : "44";
-    console.log("currentCode", currentCode);
     setCurrentCountryCode(currentCode);
   }, []);
 
@@ -280,8 +279,9 @@ const contactUs = () => {
                     <br />{" "}
                     <a
                       className="text-decoration-underline col-primary c-fs-3"
-                      href="#"
-                    >
+                      href="#" 
+                      onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                      >
                       Schedule Now
                     </a>
                   </p>
