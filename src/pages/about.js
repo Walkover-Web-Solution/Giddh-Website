@@ -1223,7 +1223,7 @@ const about = () => {
                   Mentors
                 </h2>
                 <div className="row border align-items-center">
-                  <div className="col-xl-6 col-lg-5 col-md-12 ps-lg-0 pt-lg-0 pt-2">
+                  <div className="col-xl-6 col-lg-12 ps-lg-0 pt-lg-0 pt-2">
                     <figure className="mb-0">
                       <img
                         src="/img/about/team/pushpendra.png"
@@ -1233,8 +1233,8 @@ const about = () => {
                       />
                     </figure>
                   </div>
-                  <div className="col-xl-6 col-lg-7 col-md-12">
-                    <div className="p-5">
+                  <div className="col-xl-6 col-lg-12">
+                    <div className="px-4">
                       <h3 className="c-fs-3 fw-bold">Pushpendra Agrawal,</h3>
                       <h4 className="c-fs-4 c-fw-400 mb-4">
                         Idea Guy, Technology Geek
@@ -1252,7 +1252,7 @@ const about = () => {
                   </div>
                 </div>
                 <div className="row flex-row-reverse border align-items-center my-5">
-                  <div className="col-xl-6 col-lg-5 col-md-12 ps-lg-0 pt-lg-0 pt-2">
+                  <div className="col-xl-6 col-lg-12 px-lg-0 pt-lg-0 pt-2">
                     <figure className="mb-0">
                       <img
                         src="/img/about/team/aashish-big.png"
@@ -1262,8 +1262,8 @@ const about = () => {
                       />
                     </figure>
                   </div>
-                  <div className="col-xl-6 col-lg-7 col-md-12">
-                    <div className="p-5">
+                  <div className="col-xl-6 col-lg-12">
+                    <div className="px-4">
                       <h3 className="c-fs-3 fw-bold">Ashish Yadav,</h3>
                       <h4 className="c-fs-4 c-fw-400 mb-4">Concept Creator</h4>
 
@@ -1279,7 +1279,7 @@ const about = () => {
                   </div>
                 </div>
                 <div className="row border align-items-center">
-                  <div className="col-xl-6 col-lg-5 col-md-12 ps-lg-0 pt-lg-0 pt-2">
+                  <div className="col-xl-6 col-lg-12 ps-lg-0 pt-lg-0 pt-2">
                     <figure className="mb-0">
                       <img
                         src="/img/about/team/ankita-big.png"
@@ -1289,8 +1289,8 @@ const about = () => {
                       />
                     </figure>
                   </div>
-                  <div className="col-xl-6 col-lg-7 col-md-12">
-                    <div className="p-5">
+                  <div className="col-xl-6 col-lg-12">
+                    <div className="px-4">
                       <h3 className="c-fs-3 fw-bold">Ankita Chadha,</h3>
                       <h4 className="c-fs-4 c-fw-400 mb-4">Idea Brewer</h4>
 
@@ -1315,8 +1315,8 @@ const about = () => {
         <section className="about__see_more">
           <div className="d-flex py-4">
             <div className="container d-flex gap-4 flex-column text-center">
-              <h1 className=" heading fw-bold border-bottom col-primary">
-                See More
+              <h1 className="heading fw-bold col-primary">
+                <span className="about--heading-underline about__see_more--pull-near-text">See More</span>
               </h1>
               <h3 className="c-fs-3">See more about the Company</h3>
               <span className="c-fs-5">
