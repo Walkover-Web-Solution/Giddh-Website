@@ -1,7 +1,7 @@
-.gst-image {
+.tax-image {
   width: 50vh;
 }
-.gst-hero-container {
+.tax-hero-container {
   &__try_now_btn {
     cursor: pointer;
     background-color: var(--col-blue);
@@ -30,21 +30,22 @@
   }
 }
 
-.filing-gstr-card {
+.filing-tax-card {
   img {
     height: 90px;
     width: 151px;
   }
 }
 
-.filing-gstr {
+.filing-tax {
   background-color: #f7f7f7;
 }
-.gst-hero-container {
-  height: 100vh;
+.tax-hero-container {
+  height: auto;
+  padding-top: 150px;
 }
 
-.gst-image {
+.tax-image {
   width: 50vh;
 }
 
@@ -59,20 +60,20 @@
   }
 }
 
-.filing-gstr {
+.filing-tax {
   img {
     height: 90px;
     width: 151px;
   }
 }
 
-.gst-image {
+.tax-image {
   margin-top: 46px;
   margin-bottom: 46px;
   margin-right: 60px;
 }
 
-.gst-return {
+.tax-return {
   background-color: #d2d3d5;
   &__wrapper {
     min-height: 160px;
@@ -85,11 +86,11 @@
   }
 }
 @media (max-width: 991px) {
-.gst-hero-container{
+.tax-hero-container{
   height: 56vh;
 }
 
-  .gst-return {
+  .tax-return {
     background-color: #d2d3d5;
     &__wrapper {
        padding: 2rem;

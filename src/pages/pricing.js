@@ -104,7 +104,7 @@ const pricing = () => {
                 </a>
               </div>
               <div className="pricing_main_section__grid__b2 text-center">
-                <a href="#" className="benefits-link">
+                <a href="#" className="benefits-link" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
                   Talk to Us
                 </a>
               </div>
@@ -329,7 +329,7 @@ const pricing = () => {
           <div className="col-12 text-center">
             <h3 className="c-fs-3 c-fw-600">Big Enterprises?</h3>
 
-            <a href="#" className="benefits-link">
+            <a href="#" className="benefits-link" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
               TALK TO US
             </a>
           </div>
