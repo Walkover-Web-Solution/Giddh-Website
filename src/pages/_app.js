@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps }) {
   let currentPathArray = browserPath.split("/");
   let loginSignupPath = currentPathArray[currentPathArray.length - 1];
   let loginSignupPathStatus =
-    loginSignupPath === "login" || loginSignupPath === "signup" ? false : true;
+    loginSignupPath === "login" || loginSignupPath === "signup" || loginSignupPath === "googleauth" ? false : true;
 
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
