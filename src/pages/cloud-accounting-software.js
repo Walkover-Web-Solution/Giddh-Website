@@ -262,7 +262,7 @@ const anywhereAnytime = () => {
                 <div
                   className={
                     "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
-                    (readMoreParagraphStatus1 ? " --read-more" : null)
+                    (readMoreParagraphStatus1 ? " --read-more" : "")
                   }
                 >
                   <div className="col-md-12 col-lg-6">
@@ -402,7 +402,7 @@ const anywhereAnytime = () => {
                 <div
                   className={
                     "row mb-5 pb-5 align-items-center features__description_container--row-even" +
-                    (readMoreParagraphStatus2 ? " --read-more" : null)
+                    (readMoreParagraphStatus2 ? " --read-more" : "")
                   }
                 >
                   <div className="col-md-12 col-lg-6">

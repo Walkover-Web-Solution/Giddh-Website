@@ -29,7 +29,8 @@
       background-color: var(--col-light-gray);
     }
     &__see_more {
-      padding: 80px 0;
+      padding: 60px 0;
+      margin-bottom: 80px;
       background: #e7e8ea url(/img/about/banner-grid-design-1.png) 0 0 repeat;
       &__btn {
         background-color: var(--col-white);
@@ -39,6 +40,12 @@
         &:hover{
           background-color: #f8f9fa;
           cursor: pointer;
+        }
+      }
+      &--pull-near-text{
+        &::after{
+          bottom: -6px !important;
+          left: 55px !important;
         }
       }
     }

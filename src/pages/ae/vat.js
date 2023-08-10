@@ -29,7 +29,7 @@ const aeVAT = () => {
               <img
                 className="col-12"
                 alt="vat"
-                src="/img/tax-images/tax-image.png"
+                src="/img/tax-images/UAE-VAT-Background-image.png"
               ></img>
             </div>
           </div>
@@ -151,7 +151,7 @@ const aeVAT = () => {
             Make VAT Return Process Automatic.
           </div>
           <div>
-            <a className="c-fs-4 tax-hero-container__try_now_btn">Try Now</a>
+            <a href="/ae/signup" className="c-fs-4 tax-hero-container__try_now_btn">Try Now</a>
           </div>
           <span className="c-fs-4 m-3">
             Cloud Based Accounting Software to File VAT Return Online
@@ -196,7 +196,7 @@ const aeVAT = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\tax-images\understanding-gst.svg"
+                  src="\img\tax-images\understanding-vat.svg"
                   className="img-fluid"
                   alt="vat logo"
                 />

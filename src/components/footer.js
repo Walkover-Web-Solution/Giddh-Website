@@ -94,7 +94,7 @@ const Footer = () => {
                 <h5 className="c-fw-600">Download</h5>
                 <div>
                   <p>Mobile Apps</p>
-                  <ul className="list-unstyled">
+                  <ul className="list-unstyled d-flex gap-3">
                     <li>
                       <a
                         className="download-icon"
@@ -102,6 +102,15 @@ const Footer = () => {
                         target="_blank"
                       >
                         <img alt="android icon" src="/img/androide_icon.svg" />
+                      </a>
+                    </li>
+                    <li>
+                    <a
+                        className="download-icon"
+                        href="https://apps.apple.com/in/app/giddh-books-that-make-sense/id1491003438"
+                        target="_blank"
+                      >
+                        <img alt="ios icon" src="/img//mac_icon.svg" />
                       </a>
                     </li>
                   </ul>
