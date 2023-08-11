@@ -18,7 +18,7 @@ const bannerSection = () => {
                 {isAE ? "Dubai is all set to do VAT friendly accounting!" : ""}
                 {isUK ? "UK is all set to do VAT friendly accounting!" : ""}
               </h1>
-              <p className="c-fs-1 mb-5">
+              <p className="mb-5">
                 {isIndia ? "Giddh fits the needs of every business." : ""}
                 {isAE || isUK
                   ? "Light on pocket, easy to use, VAT compliant,"
@@ -39,7 +39,7 @@ const bannerSection = () => {
                   data-tf-transitive-search-params
                   data-tf-medium="snippet"
                 >
-                  Contact Us
+                  Contact Sales
                 </button>
               </div>
             </div>

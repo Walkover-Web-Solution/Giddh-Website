@@ -2,7 +2,7 @@
   &__banner {
     background: url("/img/contactus-banner.png");
     &__content {
-      padding-top: 300px;
+      padding-top: 280px;
       padding-bottom: 20px;
       text-align: center;
 
@@ -12,45 +12,41 @@
     }
   }
   &__content {
-    padding: 60px 0;
-    &__left {
-      padding-right: 65px !important;
-    }
-    &__right {
-      padding-left: 53px !important;
-    }
-    .contact-details{
-        &__wapper{
-          address{
-            width: auto;
-            margin: 0 auto;
-            font-size: var(--c-fs-4);
-            a,svg{
-              color: var(--col-dark);
-            }
-          }
-          button{
-            display: inline-block;
-            max-width: 100%;
-            font-size: var(--c-fs-5);
-            color: var(--col-white);
-            background-color:var(--col-primary);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            border-radius: 3px;
-            padding: 0 12px;
-            cursor: pointer;
-            line-height: 40px;
-            text-align: center;
-            margin: 2rem  auto;
-            outline: none;
-            border: none;
-          }
-          &--email{
-            font-size: 18px;
+    padding: 50px 0;
+    .contact-details {
+      &__wapper {
+        address {
+          width: auto;
+          margin: 0 auto;
+          font-size: var(--c-fs-4);
+          a,
+          svg {
+            color: var(--col-dark);
           }
         }
+        button {
+          display: inline-block;
+          max-width: 100%;
+          font-size: var(--c-fs-5);
+          color: var(--col-white);
+          background-color: var(--col-primary);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          border-radius: 3px;
+          padding: 0 12px;
+          cursor: pointer;
+          line-height: 40px;
+          text-align: center;
+          margin: 2rem auto;
+          outline: none;
+          border: none;
+          min-width: 165px;
+        }
+        &--email {
+          font-size: 18px;
+        }
+      }
     }
   }
 }
@@ -65,18 +61,6 @@
         p {
           font-size: var(--c-fs-3) !important;
         }
-      }
-    }
-  }
-}
-@media (max-width: 991px) {
-  .contact_us {
-    &__content {
-      &__left {
-        padding-right: 12px !important;
-      }
-      &__right {
-        padding-left: 12px !important;
       }
     }
   }

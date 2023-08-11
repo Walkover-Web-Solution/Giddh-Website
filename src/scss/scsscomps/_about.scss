@@ -5,11 +5,16 @@
       color: var(--col-dark);
       padding: 15px 0;
       cursor: pointer;
+      display: inline-block;
+      transition: all 300ms ease;
   
       &:hover,
       &.active {
         border-color: var(--col-primary);
-        color: var(--col-primary);
+        color: var(--col-primary);        
+      }
+      &:hover{
+        transform: translateY(-10px);
       }
     }
     &__container {
