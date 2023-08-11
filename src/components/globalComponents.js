@@ -24,7 +24,6 @@ const globalComponents = () => {
     <>
       {/*Download Free Modal Used In All Feature Pages*/}
       <DownloadFreeModal />
-
       <div 
       className="back-to-top" 
       style={{ display : scrollStatus ? "block" : "none", animation : scrollStatus ? "fade-in 200ms ease-in" : null }}
