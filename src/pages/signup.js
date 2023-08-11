@@ -17,6 +17,10 @@ const signUp = () => {
     const [showMobileOtp, setShowMobileOtp] = useState(false);
     const [emailDetails, setEmailDetails] = useState(null);
     const [mobileDetails, setMobileDetails] = useState(null);
+    const [emailGetOtpInProgress, setEmailGetOtpInProgress] = useState(false);
+    const [emailVerifyOtpInProgress, setEmailVerifyOtpInProgress] = useState(false);
+    const [mobileGetOtpInProgress, setMobileGetOtpInProgress] = useState(false);
+    const [mobileVerifyOtpInProgress, setMobileVerifyOtpInProgress] = useState(false);
 
     useEffect(() => {
         var configuration = {
@@ -113,6 +117,8 @@ const signUp = () => {
             return;
         }
 
+        setEmailGetOtpInProgress(true);
+
         window.sendOtp(document.getElementById("email").value, (data) => { emailOtpSentCallback(data); }, (error) => { emailOtpFailedCallback(error) });
     }
 
@@ -124,22 +130,27 @@ const signUp = () => {
             return;
         }
 
+        setMobileGetOtpInProgress(true);
+
         window.sendOtp(document.getElementById("mobileNo").value, (data) => { mobileOtpSentCallback(data); }, (error) => { mobileOtpFailedCallback(error) });
     }
 
     function emailOtpSentCallback(data) {
+        setEmailGetOtpInProgress(false);
         setSuccessMessage('OTP sent successfully.');
         setEmailDetails({ email: document.getElementById("email").value, accessToken: "", isVerified: false, signupVia: 'giddh', requestId: data.message });
         setShowEmailOtpSection(true);
     }
 
     function mobileOtpSentCallback(data) {
+        setMobileGetOtpInProgress(false);
         setSuccessMessage('OTP sent successfully.');
         setMobileDetails({ mobileNo: document.getElementById("mobileNo").value, accessToken: "", isVerified: false, signupVia: 'giddh', requestId: data.message });
         setShowMobileOtpSection(true);
     }
 
     function emailOtpFailedCallback(error) {
+        setEmailGetOtpInProgress(false);
         setErrorMessage(error.message);
         setShowEmailOtpSection(false);
         emailDetails.requestId = '';
@@ -147,6 +158,7 @@ const signUp = () => {
     }
 
     function mobileOtpFailedCallback(error) {
+        setMobileGetOtpInProgress(false);
         setErrorMessage(error.message);
         setShowMobileOtpSection(false);
         mobileDetails.requestId = '';
@@ -177,10 +189,32 @@ const signUp = () => {
         resetMessages();
         if (channel == 3) {
             resetEmailOtp();
+            setEmailGetOtpInProgress(true);
         } else {
             resetMobileOtp();
+            setMobileGetOtpInProgress(true);
         }
-        window.retryOtp(channel, (data) => { setSuccessMessage('OTP resent successfully.'); }, (error) => { setErrorMessage(error.message); })
+        window.retryOtp(channel, (data) => { retrySendOtpSuccessCallback(channel); }, (error) => { retrySendOtpErrorCallback(channel, error); })
+    }
+
+    function retrySendOtpSuccessCallback(channel) {
+        setSuccessMessage('OTP resent successfully.');
+
+        if(channel == 3) {
+            setEmailGetOtpInProgress(false);
+        } else {
+            setMobileGetOtpInProgress(false);
+        }
+    }
+
+    function retrySendOtpErrorCallback(channel, error) {
+        setErrorMessage(error.message);
+
+        if(channel == 3) {
+            setEmailGetOtpInProgress(false);
+        } else {
+            setMobileGetOtpInProgress(false);
+        }
     }
 
     function verifyOtp(type) {
@@ -192,10 +226,24 @@ const signUp = () => {
             document.querySelectorAll('.email-otp-field').forEach(function (field) {
                 otp += field.value;
             });
+
+            if (!otp) {
+                setErrorMessage("Please enter OTP!");
+                return;
+            }
+
+            setEmailVerifyOtpInProgress(true);
         } else {
             document.querySelectorAll('.mobile-otp-field').forEach(function (field) {
                 otp += field.value;
             });
+
+            if (!otp) {
+                setErrorMessage("Please enter OTP!");
+                return;
+            }
+
+            setMobileVerifyOtpInProgress(true);
         }
 
         window.verifyOtp(otp, (data) => { verifyOtpSuccessCallback(type, data); }, (error) => { verifyOtpErrorCallback(type, error); })
@@ -205,10 +253,12 @@ const signUp = () => {
         setSuccessMessage('OTP verified successfully.');
 
         if (type == "email") {
+            setEmailVerifyOtpInProgress(false);
             emailDetails.isVerified = true;
             emailDetails.accessToken = data.message;
             setEmailDetails(emailDetails);
         } else {
+            setMobileVerifyOtpInProgress(false);
             mobileDetails.isVerified = true;
             mobileDetails.accessToken = data.message;
             setMobileDetails(mobileDetails);
@@ -219,10 +269,12 @@ const signUp = () => {
         setErrorMessage(error.message);
 
         if (type == "email") {
+            setEmailVerifyOtpInProgress(false);
             emailDetails.isVerified = false;
             emailDetails.accessToken = "";
             setEmailDetails(emailDetails);
         } else {
+            setMobileVerifyOtpInProgress(false);
             mobileDetails.isVerified = false;
             mobileDetails.accessToken = "";
             setMobileDetails(mobileDetails);
@@ -394,12 +446,24 @@ const signUp = () => {
                                                     )}
                                                     {!showEmailOtp && (!emailDetails || !emailDetails.isVerified) && (
                                                         <button className="btn custom-signup-btn" onClick={sendEmailOtp}>
-                                                            Get OTP
+                                                            {emailGetOtpInProgress && (
+                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                                            )}
+
+                                                            {!emailGetOtpInProgress && (
+                                                                <span>Get OTP</span>
+                                                            )}
                                                         </button>
                                                     )}
                                                     {showEmailOtp && (
                                                         <button className="btn custom-signup-btn" onClick={() => setShowEmailOtpSection(false)}>
-                                                            Change Email
+                                                            {emailGetOtpInProgress && (
+                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                                            )}
+
+                                                            {!emailGetOtpInProgress && (
+                                                                <span>Change Email</span>
+                                                            )}
                                                         </button>
                                                     )}
                                                 </div>
@@ -442,7 +506,13 @@ const signUp = () => {
                                                                 onKeyDown={setFocusOnEmailVerifyButton}
                                                             />
                                                             <button id="verify-email-button" className="btn custom-signup-btn" onClick={() => verifyOtp('email')}>
-                                                                Verify
+                                                            {emailVerifyOtpInProgress && (
+                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                                            )}
+
+                                                            {!emailVerifyOtpInProgress && (
+                                                                <span>Verify</span>
+                                                            )}
                                                             </button>
                                                         </div>
                                                         <a href="#" className="col-dark mt-3 c-fs-6">
@@ -476,12 +546,24 @@ const signUp = () => {
                                                     )}
                                                     {!showMobileOtp && (!mobileDetails || !mobileDetails.isVerified) && (
                                                         <button className="btn custom-signup-btn" onClick={sendMobileOtp}>
-                                                            Get OTP
+                                                            {mobileGetOtpInProgress && (
+                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                                            )}
+
+                                                            {!mobileGetOtpInProgress && (
+                                                                <span>Get OTP</span>
+                                                            )}
                                                         </button>
                                                     )}
                                                     {showMobileOtp && (
                                                         <button className="btn custom-signup-btn" onClick={() => setShowMobileOtpSection(false)}>
-                                                            Change Mobile
+                                                            {mobileGetOtpInProgress && (
+                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                                            )}
+
+                                                            {!mobileGetOtpInProgress && (
+                                                                <span>Change Mobile</span>
+                                                            )}
                                                         </button>
                                                     )}
                                                 </div>
@@ -520,7 +602,13 @@ const signUp = () => {
                                                                 id="mobileOtpField4"
                                                             />
                                                             <button id="verify-mobile-button" className="btn custom-signup-btn" onClick={() => verifyOtp('mobile')}>
-                                                                Verify
+                                                            {mobileVerifyOtpInProgress && (
+                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                                            )}
+
+                                                            {!mobileVerifyOtpInProgress && (
+                                                                <span>Verify</span>
+                                                            )}
                                                             </button>
                                                         </div>
                                                         <a href="#" className="col-dark mt-3 c-fs-6">
@@ -547,7 +635,7 @@ const signUp = () => {
                                                 <MdKeyboardArrowLeft />
                                                 Back
                                             </button>
-                                            <button className="btn next_btn col-white" onClick={() => updateCurrentStep(3)}>
+                                            <button className="btn next_btn col-white" onClick={() => initiateSignup()}>
                                                 {" "}
                                                 Submit <MdKeyboardArrowRight />
                                             </button>
