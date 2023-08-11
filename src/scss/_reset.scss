@@ -1,23 +1,24 @@
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 8px;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   width: 8px;
   background-color: var(--col-primary);
 }
-::-webkit-scrollbar-track{
-  background: rgba(0,0,0,0.1);
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
   width: 8px;
 }
 
-::selection{
+@media (max-width: 991px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+::selection {
   background-color: var(--col-primary);
   color: var(--col-white);
-}
-@media (max-width: 991px) {
-  ::-webkit-scrollbar{
-      display: none;
-  }
 }
 
 h1,
@@ -37,7 +38,7 @@ ul {
 }
 a {
   text-decoration: none !important;
-  &:focus-visible{
+  &:focus-visible {
     outline: none !important;
     box-shadow: none !important;
   }
@@ -52,6 +53,13 @@ a {
   }
 }
 // Reset Max Width  of Bootrap Container
-.container{
+.container {
   max-width: 1140px !important;
+}
+
+// Calendly width Reset
+.calendly-overlay {
+  .calendly-popup {
+    width: 100% !important;
+  }
 }

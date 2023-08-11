@@ -87,9 +87,17 @@ const pricing = () => {
               </div>
               <div className="pricing_main_section__grid__vine pricing__heading text-center">
                 <span className="pricing__heading__name"> Vine</span>
+                <br />
+                <span className="pricing__heading__cost">
+                  ₹10,000<span>/year</span>
+                </span>
               </div>
               <div className="pricing_main_section__grid__sequoia pricing__heading text-center">
                 <span className="pricing__heading__name"> Sequoia</span>
+                <br />
+                <span className="pricing__heading__cost">
+                  ₹15,000<span>/year</span>
+                </span>
               </div>
 
               <div className="pricing_main_section__grid__benefits">
@@ -97,7 +105,7 @@ const pricing = () => {
               </div>
               <div className="pricing_main_section__grid__b1 text-center">
                 <a
-                  href="https://giddh.com/signup/"
+                  href="/signup"
                   className="benefits-link bg-grey"
                 >
                   Get Started
@@ -109,17 +117,17 @@ const pricing = () => {
                 </a>
               </div>
               <div className="pricing_main_section__grid__b3 text-center">
-                <a href="https://giddh.com/signup/" className="benefits-link">
+                <a href="/signup" className="benefits-link">
                   Join Us
                 </a>
               </div>
               <div className="pricing_main_section__grid__b4 text-center">
-                <a href="https://giddh.com/signup/" className="benefits-link">
+                <a href="/signup" className="benefits-link">
                   Join Us
                 </a>
               </div>
               <div className="pricing_main_section__grid__b5 text-center">
-                <a href="https://giddh.com/signup/" className="benefits-link">
+                <a href="/signup" className="benefits-link">
                   Join Us
                 </a>
               </div>
@@ -603,9 +611,7 @@ const pricing = () => {
                   Accounting Software for CAs and CS
                 </h4>
                 <p>
-                  If you’re lo
-                  <MdDone />
-                  ing for a perfect software system to help you with business
+                  If you’re looking for a perfect software system to help you with business
                   operations, you’re at the right place. GIDDH – is one of the
                   best accounting software for CA and CS both as it can help you
                   manage daily workload and cater to the specific needs of your
