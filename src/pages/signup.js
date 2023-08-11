@@ -5,10 +5,8 @@ import {
     MdCheckCircle
 } from "react-icons/md";
 import { useState, useEffect } from "react";
-import dynamic from 'next/dynamic';
-const GoogleLogin = dynamic(() => import('@/components/googleLogin'), {
-    ssr: false
-})
+import GoogleLogin from "@/components/googleLogin";
+import Script from "next/script";
 
 const signUp = () => {
 
@@ -16,13 +14,13 @@ const signUp = () => {
     const [errorMessage, setErrorMessage] = useState("");
     const [currentStep, setCurrentStep] = useState(1);
     const [showEmailOtp, setShowEmailOtp] = useState(false);
-    const [emailRequestId, setEmailRequestId] = useState("");
     const [showMobileOtp, setShowMobileOtp] = useState(false);
-    const [mobileRequestId, setMobileRequestId] = useState("");
+    const [emailDetails, setEmailDetails] = useState(null);
+    const [mobileDetails, setMobileDetails] = useState(null);
 
     useEffect(() => {
         var configuration = {
-            widgetId: "326a63733354393830313330",
+            widgetId: "33686b716134333831313239",
             tokenAuth: "205968TmXguUAwoD633af103P1",
             exposeMethods: true,
             success: function (data) {
@@ -40,9 +38,49 @@ const signUp = () => {
         document.body.appendChild(scriptTag);
 
         window.addEventListener("message", function (event) {
-            console.log(event.data);
+            if (event.data && event.data.origin === "giddh" && event.data.accessToken) {
+                getGoogleUserDetails(event.data.accessToken);
+            }
         });
     }, []);
+
+    async function getGoogleUserDetails(accessToken) {
+        await fetch(
+            `https://www.googleapis.com/oauth2/v1/userinfo?alt=json`,
+            {
+                method: "GET",
+                mode: "cors",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "authorization": "Bearer " + accessToken
+                }
+            }
+        )
+            .then((res) => res.json())
+            .then((res) => {
+                setEmailDetails({ email: res.email, accessToken: accessToken, isVerified: true, signupVia: 'google' });
+                updateCurrentStep(2);
+                setTimeout(() => {
+                    document.getElementById("email").value = res.email;
+                    setShowEmailOtp(false);
+                });
+            })
+            .catch((err) => console.log("Something went wrong!", err));
+    }
+
+    function resetEverything() {
+        setEmailDetails({ email: "", accessToken: "", isVerified: false, signupVia: '', requestId: '' });
+        setShowEmailOtp(false);
+        setShowMobileOtp(false);
+        resetMessages();
+        updateCurrentStep(2);
+
+        setTimeout(() => {
+            document.getElementById("email").value = "";
+            document.getElementById("mobileNo").value = "";
+        });
+    }
 
     function resetMessages() {
         setSuccessMessage("");
@@ -52,37 +90,96 @@ const signUp = () => {
     function setShowEmailOtpSection(showOtp) {
         setShowEmailOtp(showOtp);
 
-        if (showOtp) {
-            document.getElementById("email").setAttribute("disabled", "disabled")
-        } else {
-            document.getElementById("email").removeAttribute("disabled")
-            setEmailRequestId("");
+        if (!showOtp) {
+            emailDetails.requestId = '';
+            setEmailDetails(emailDetails);
         }
-    }
-
-    function sendEmailOtp() {
-        resetMessages();
-        window.sendOtp(document.getElementById("email").value, (data) => { setEmailRequestId(data.message); setShowEmailOtpSection(true); setSuccessMessage('OTP sent successfully.'); }, (error) => { setEmailRequestId(""); setShowEmailOtpSection(false); setErrorMessage(error.message); });
     }
 
     function setShowMobileOtpSection(showOtp) {
         setShowMobileOtp(showOtp);
 
-        if (showOtp) {
-            document.getElementById("mobileNo").setAttribute("disabled", "disabled")
-        } else {
-            document.getElementById("mobileNo").removeAttribute("disabled")
-            setMobileRequestId("");
+        if (!showOtp) {
+            mobileDetails.requestId = '';
+            setMobileDetails(mobileDetails);
         }
+    }
+
+    function sendEmailOtp() {
+        resetMessages();
+
+        if (!document.getElementById("email").value || !document.getElementById("email").value.trim() || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(document.getElementById("email").value)) {
+            setErrorMessage("Please enter valid email!");
+            return;
+        }
+
+        window.sendOtp(document.getElementById("email").value, (data) => { emailOtpSentCallback(data); }, (error) => { emailOtpFailedCallback(error) });
     }
 
     function sendMobileOtp() {
         resetMessages();
-        window.sendOtp(document.getElementById("mobileNo").value, (data) => { setMobileRequestId(data.message); setShowMobileOtpSection(true); setSuccessMessage('OTP sent successfully.'); }, (error) => { setMobileRequestId(""); setShowMobileOtpSection(false); setErrorMessage(error.message); });
+
+        if (!document.getElementById("mobileNo").value || !document.getElementById("mobileNo").value.trim()) {
+            setErrorMessage("Please enter valid mobile number!");
+            return;
+        }
+
+        window.sendOtp(document.getElementById("mobileNo").value, (data) => { mobileOtpSentCallback(data); }, (error) => { mobileOtpFailedCallback(error) });
+    }
+
+    function emailOtpSentCallback(data) {
+        setSuccessMessage('OTP sent successfully.');
+        setEmailDetails({ email: document.getElementById("email").value, accessToken: "", isVerified: false, signupVia: 'giddh', requestId: data.message });
+        setShowEmailOtpSection(true);
+    }
+
+    function mobileOtpSentCallback(data) {
+        setSuccessMessage('OTP sent successfully.');
+        setMobileDetails({ mobileNo: document.getElementById("mobileNo").value, accessToken: "", isVerified: false, signupVia: 'giddh', requestId: data.message });
+        setShowMobileOtpSection(true);
+    }
+
+    function emailOtpFailedCallback(error) {
+        setErrorMessage(error.message);
+        setShowEmailOtpSection(false);
+        emailDetails.requestId = '';
+        setEmailDetails(emailDetails);
+    }
+
+    function mobileOtpFailedCallback(error) {
+        setErrorMessage(error.message);
+        setShowMobileOtpSection(false);
+        mobileDetails.requestId = '';
+        setMobileDetails(mobileDetails);
+    }
+
+    function resetEmailOtp() {
+        emailDetails.isVerified = false;
+        emailDetails.accessToken = "";
+        setEmailDetails(emailDetails);
+
+        document.querySelectorAll('.email-otp-field').forEach(function (field) {
+            field.value = '';
+        });
+    }
+
+    function resetMobileOtp() {
+        mobileDetails.isVerified = false;
+        mobileDetails.accessToken = "";
+        setMobileDetails(mobileDetails);
+
+        document.querySelectorAll('.mobile-otp-field').forEach(function (field) {
+            field.value = '';
+        });
     }
 
     function retrySendOtp(channel) {
         resetMessages();
+        if (channel == 3) {
+            resetEmailOtp();
+        } else {
+            resetMobileOtp();
+        }
         window.retryOtp(channel, (data) => { setSuccessMessage('OTP resent successfully.'); }, (error) => { setErrorMessage(error.message); })
     }
 
@@ -92,25 +189,82 @@ const signUp = () => {
         var otp = "";
 
         if (type == "email") {
-            otp += document.getElementById("emailOtpField1").value;
-            otp += document.getElementById("emailOtpField2").value;
-            otp += document.getElementById("emailOtpField3").value;
-            otp += document.getElementById("emailOtpField4").value;
+            document.querySelectorAll('.email-otp-field').forEach(function (field) {
+                otp += field.value;
+            });
         } else {
-            otp += document.getElementById("mobileOtpField1").value;
-            otp += document.getElementById("mobileOtpField2").value;
-            otp += document.getElementById("mobileOtpField3").value;
-            otp += document.getElementById("mobileOtpField4").value;
+            document.querySelectorAll('.mobile-otp-field').forEach(function (field) {
+                otp += field.value;
+            });
         }
 
-        window.verifyOtp(otp, (data) => { setSuccessMessage('OTP verified successfully.'); }, (error) => { setErrorMessage(error.message); })
+        window.verifyOtp(otp, (data) => { verifyOtpSuccessCallback(type, data); }, (error) => { verifyOtpErrorCallback(type, error); })
+    }
+
+    function verifyOtpSuccessCallback(type, data) {
+        setSuccessMessage('OTP verified successfully.');
+
+        if (type == "email") {
+            emailDetails.isVerified = true;
+            emailDetails.accessToken = data.message;
+            setEmailDetails(emailDetails);
+        } else {
+            mobileDetails.isVerified = true;
+            mobileDetails.accessToken = data.message;
+            setMobileDetails(mobileDetails);
+        }
+    }
+
+    function verifyOtpErrorCallback(type, error) {
+        setErrorMessage(error.message);
+
+        if (type == "email") {
+            emailDetails.isVerified = false;
+            emailDetails.accessToken = "";
+            setEmailDetails(emailDetails);
+        } else {
+            mobileDetails.isVerified = false;
+            mobileDetails.accessToken = "";
+            setMobileDetails(mobileDetails);
+        }
     }
 
     function updateCurrentStep(step) {
         setCurrentStep(step);
     }
+
+    function onKeyDownEmail(event) {
+        if (event.keyCode === 13) {
+            sendEmailOtp();
+        }
+    }
+
+    function onKeyDownMobile(event) {
+        if (event.keyCode === 13) {
+            sendMobileOtp();
+        }
+    }
+
+    function setFocusOnField(event) {
+        // console.log(event);
+        // setTimeout(() => {
+        //     if(event && event.keyCode != 8 && event.target && event.target.nextElementSibling) {
+        //         event.target.nextElementSibling.focus();
+        //     }
+        // });
+    }
+
+    function setFocusOnEmailVerifyButton(event) {
+        // setTimeout(() => {
+        //     if(event && event.keyCode != 8) {
+        //         document.getElementById("verify-email-button").focus();
+        //     }
+        // });
+    }
+
     return (
         <>
+            <Script src="/js/helper.js"></Script>
             <section className="entry signup d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
                     <img
@@ -175,7 +329,7 @@ const signUp = () => {
 
                                 <span className="d-block line_on_right c-fs-6 mb-4">or</span>
 
-                                <button className="entry__right_section__container__entry_button mb-4" onClick={() => updateCurrentStep(2)}>
+                                <button className="entry__right_section__container__entry_button mb-4" onClick={() => resetEverything()}>
                                     Sign up with Email
                                     <MdKeyboardArrowRight />
                                 </button>
@@ -221,15 +375,18 @@ const signUp = () => {
                                                         className="form-control"
                                                         id="email"
                                                         name="email"
-                                                        placeholder="dvndr@walkover.in"
+                                                        placeholder="email@walkover.in"
                                                         autoComplete="off"
+                                                        onKeyDown={onKeyDownEmail}
+                                                        disabled={(showEmailOtp || (emailDetails && emailDetails.isVerified))}
+                                                        autoFocus={!showEmailOtp && (!emailDetails || !emailDetails.isVerified)}
                                                     />
-                                                    {showEmailOtp && (
+                                                    {emailDetails && emailDetails.isVerified && (
                                                         <span className="position-relative">
                                                             <MdCheckCircle className="icon-success otp_verified_icon" />
                                                         </span>
                                                     )}
-                                                    {!showEmailOtp && (
+                                                    {!showEmailOtp && (!emailDetails || !emailDetails.isVerified) && (
                                                         <button className="btn custom-signup-btn" onClick={sendEmailOtp}>
                                                             Get OTP
                                                         </button>
@@ -241,45 +398,49 @@ const signUp = () => {
                                                     )}
                                                 </div>
                                             </div>
-                                            {showEmailOtp && (
+                                            {showEmailOtp && (!emailDetails || !emailDetails.isVerified) && (
                                                 <div className="step_input_wrapper__right col-xl-6 col-lg-12">
                                                     <div className="d-flex flex-column">
                                                         <div className="d-flex">
                                                             <input
                                                                 type="text"
-                                                                className="form-control otp_input"
+                                                                className="form-control otp_input email-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="emailOtpField1"
+                                                                onKeyDown={setFocusOnField}
+                                                                autoFocus={true}
                                                             />
                                                             <input
                                                                 type="text"
-                                                                className="form-control otp_input"
+                                                                className="form-control otp_input email-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="emailOtpField2"
+                                                                onKeyDown={setFocusOnField}
                                                             />
                                                             <input
                                                                 type="text"
-                                                                className="form-control otp_input"
+                                                                className="form-control otp_input email-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="emailOtpField3"
+                                                                onKeyDown={setFocusOnField}
                                                             />
                                                             <input
                                                                 type="text"
-                                                                className="form-control otp_input"
+                                                                className="form-control otp_input email-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="emailOtpField4"
+                                                                onKeyDown={setFocusOnEmailVerifyButton}
                                                             />
-                                                            <button className="btn custom-signup-btn" onClick={() => verifyOtp('email')}>
+                                                            <button id="verify-email-button" className="btn custom-signup-btn" onClick={() => verifyOtp('email')}>
                                                                 Verify
                                                             </button>
                                                         </div>
                                                         <a href="#" className="col-dark mt-3 c-fs-6">
-                                                            Resend on{" "}
-                                                            <span className="col-primary c-fw-600" onClick={() => retrySendOtp(3)}>Email</span>
+                                                            <span className="col-primary c-fw-600" onClick={() => retrySendOtp(3)}>Resend</span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -297,7 +458,10 @@ const signUp = () => {
                                                         type="tel"
                                                         className="form-control"
                                                         id="mobileNo"
-                                                        placeholder="Mobile number"
+                                                        placeholder="919876543210"
+                                                        autoComplete="off"
+                                                        onKeyDown={onKeyDownMobile}
+                                                        disabled={(showMobileOtp || (mobileDetails && emailDetails.isVerified))}
                                                     />
                                                     {showMobileOtp && (
                                                         <span className="position-relative">
@@ -322,33 +486,34 @@ const signUp = () => {
                                                         <div className="d-flex">
                                                             <input
                                                                 type="text"
-                                                                className="form-control otp_input"
+                                                                className="form-control otp_input mobile-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="mobileOtpField1"
+                                                                autoFocus={true}
                                                             />
                                                             <input
                                                                 type="text"
-                                                                className="form-control otp_input"
+                                                                className="form-control otp_input mobile-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="mobileOtpField2"
                                                             />
                                                             <input
                                                                 type="text"
-                                                                className="form-control otp_input"
+                                                                className="form-control otp_input mobile-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="mobileOtpField3"
                                                             />
                                                             <input
                                                                 type="text"
-                                                                className="form-control otp_input"
+                                                                className="form-control otp_input mobile-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="mobileOtpField4"
                                                             />
-                                                            <button className="btn custom-signup-btn" onClick={() => verifyOtp('mobile')}>
+                                                            <button id="verify-mobile-button" className="btn custom-signup-btn" onClick={() => verifyOtp('mobile')}>
                                                                 Verify
                                                             </button>
                                                         </div>

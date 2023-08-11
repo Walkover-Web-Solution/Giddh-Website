@@ -1,25 +1,71 @@
+import { useEffect } from "react";
+import GoogleLogin from "@/components/googleLogin";
+import dynamic from 'next/dynamic';
+import Script from "next/script";
+const OtpLogin = dynamic(() => import('@/components/otpLogin'), {
+    ssr: false
+})
+
 const logIn = () => {
-    async function doLogin() {
+    useEffect(() => {
+        window.addEventListener("message", function (event) {
+            if (event.data && event.data.origin === "giddh" && event.data.accessToken) {
+                getGoogleUserDetails(event.data.accessToken);
+            }
+        });
+    }, []);
+
+    var adwordsParams = "";
+
+    async function getGoogleUserDetails(accessToken) {
         await fetch(
-            `https://apitest.giddh.com/v2/login-with-password`,
-            { 
-                method: "POST",
+            `https://www.googleapis.com/oauth2/v1/userinfo?alt=json`,
+            {
+                method: "GET",
                 mode: "cors",
-                cache: "no-store",
                 headers: {
                     "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ uniqueKey: '', password: '' }),
+                    "Accept": "application/json",
+                    "authorization": "Bearer " + accessToken
+                }
             }
         )
+            .then((res) => res.json())
             .then((res) => {
-                console.log(res);
+                initiateLogin(accessToken);
+            })
+            .catch((err) => console.log("Something went wrong!", err));
+    }
+
+    async function initiateLogin(accessToken) {
+        await fetch(
+            `https://apitest.giddh.com/v2/signup-with-google`,
+            {
+                method: "GET",
+                mode: "cors",
+                cache: "no-store",
+                headers: { 'access-token': accessToken },
+            }
+        )
+            .then((res) => res.json())
+            .then((response) => {
+                if (response.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
+                    // open verification modal
+                } else {
+                    deleteUtmCookies();
+                    if (response.body.isNewUser === true) {
+                        window.location = "https://giddh.com/thankyou?token=" + accessToken + adwordsParams;
+                    } else {
+                        window.location = "https://test.giddh.com/token-verify?token=" + accessToken + adwordsParams;
+                    }
+                }
             })
             .catch((err) => console.log("Something went wrong!", err));
     }
 
     return (
         <>
+            <Script src="/js/helper.js"></Script>
             <section className="entry d-flex  ">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
                     <img
@@ -49,23 +95,13 @@ const logIn = () => {
                             <span className="d-inline-block mb-4">Login with</span>
 
                             <div className="d-flex align-items-center">
-                                <button className="entry__right_section__container__entry_with--btn-with-text">
-                                    <img
-                                        src="/img/google-logo.svg"
-                                        width="24px"
-                                        height="24px"
-                                        alt="Google Icon"
-                                    />
-                                    <span>Google</span>
-                                </button>
+                                <GoogleLogin />
                             </div>
                         </div>
 
                         <span className="d-block line_on_right c-fs-6 mb-4">or</span>
 
-                        <button className="entry__right_section__container__entry_button mb-4" onClick={doLogin}>
-                            Login with OTP
-                        </button>
+                        <OtpLogin />
 
                         {/* <p className="c-fs-6 mb-4">
               Trouble logging in ? <a href="#" className="text_blue">Click here</a>

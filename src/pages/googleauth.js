@@ -6,7 +6,7 @@ const googleAuth = () => {
         const hash = window.location.hash.split("#")[1];
         const parsedHash = new URLSearchParams(hash);
         const accessToken = parsedHash.get("access_token");
-        window.parent.postMessage({ origin: 'giddh', accessToken: accessToken }, "*");
+        window.opener.postMessage({ origin: 'giddh', accessToken: accessToken }, "*");
         window.close();
     })
 
