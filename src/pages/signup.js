@@ -229,6 +229,12 @@ const signUp = () => {
         }
     }
 
+    function initiateSignup() {
+        if (emailDetails.isVerified && mobileDetails.isVerified) {
+
+        }
+    }
+
     function updateCurrentStep(step) {
         setCurrentStep(step);
     }
@@ -461,14 +467,14 @@ const signUp = () => {
                                                         placeholder="919876543210"
                                                         autoComplete="off"
                                                         onKeyDown={onKeyDownMobile}
-                                                        disabled={(showMobileOtp || (mobileDetails && emailDetails.isVerified))}
+                                                        disabled={(showMobileOtp || (mobileDetails && mobileDetails.isVerified))}
                                                     />
-                                                    {showMobileOtp && (
+                                                    {mobileDetails && mobileDetails.isVerified && (
                                                         <span className="position-relative">
                                                             <MdCheckCircle className="icon-success otp_verified_icon" />
                                                         </span>
                                                     )}
-                                                    {!showMobileOtp && (
+                                                    {!showMobileOtp && (!mobileDetails || !mobileDetails.isVerified) && (
                                                         <button className="btn custom-signup-btn" onClick={sendMobileOtp}>
                                                             Get OTP
                                                         </button>
@@ -480,7 +486,7 @@ const signUp = () => {
                                                     )}
                                                 </div>
                                             </div>
-                                            {showMobileOtp && (
+                                            {showMobileOtp && (!mobileDetails || !mobileDetails.isVerified) && (
                                                 <div className="step_input_wrapper__right col-xl-6 col-lg-12">
                                                     <div className="d-flex flex-column">
                                                         <div className="d-flex">
