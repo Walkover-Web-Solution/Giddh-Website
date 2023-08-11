@@ -1,0 +1,46 @@
+$size : 52px;
+
+.back-to-top{
+    position: fixed;
+    z-index: 99;
+    right: 2rem;
+    bottom: 2rem;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: var(--col-primary);
+    color: var(--col-white);
+    text-align: center;
+    line-height: $size;
+    box-shadow: 0px 0px 15px 8px rgba(255,255,255,0.4);
+    cursor: pointer;
+
+    svg{
+        font-size: 42px;
+        margin-top: -2px;
+    }
+    &:hover{
+        svg{
+            animation: up-down 800ms ease-out  infinite;
+        }
+    }
+}
+
+@keyframes up-down {
+    from{
+        transform: translateY(7px);
+        opacity: 0.2;
+    }
+    to{
+        transform: translateY(-7px);
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    from{        
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
