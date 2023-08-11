@@ -1,12 +1,12 @@
 import FeatureGallery from "@/components/featureGallery";
 import MakeTheSwitchIndexPage from "@/components/makeTheSwitch";
-import EnquiryForm from "@/components/enquiryForm";
+import BannerSection from "@/components/bannerSection";
 import GstIndexPage from "@/components/gstIndexPage";
 
 const index = () => {
   return (
     <>
-      <EnquiryForm />
+      <BannerSection />
       <GstIndexPage />    
       <FeatureGallery />
       <MakeTheSwitchIndexPage />

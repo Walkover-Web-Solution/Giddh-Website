@@ -203,7 +203,7 @@ const Footer = () => {
                     <div className="textwidget custom-html-widget">
                       <ul className="footer-list list-unstyled class">
                         <li>
-                          Sales :{" "}
+                          Sales:{" "}
                           <a href="mailto:sales@giddh.com" className="cf_email">
                             sales@giddh.com
                           </a>
