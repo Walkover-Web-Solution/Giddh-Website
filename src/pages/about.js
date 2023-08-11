@@ -13,7 +13,7 @@ const about = () => {
   let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
   return (
     <>
-      <div className="about">
+      <div className="about" id="top">
         <section className="container pb-3">
           <div className="row">
             <ul className="col-12 mb-4 d-flex flex-wrap justify-content-center align-items-center column-gap-4 row-gap-5 c-fs-4">
@@ -389,7 +389,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           Customers Come First
                         </h2>
                       </div>
@@ -417,7 +417,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           Embracing Setbacks to Break Boundaries
                         </h2>
                       </div>
@@ -446,7 +446,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           We Set Impossible Goals
                         </h2>
                       </div>
@@ -475,7 +475,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           People are our Power
                         </h2>
                       </div>
@@ -504,7 +504,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           We Focus on ‘Why?’ & ‘How?’
                         </h2>
                       </div>
@@ -532,7 +532,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           Always We Before Me
                         </h2>
                       </div>
@@ -562,7 +562,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           We Don’t Settle
                         </h2>
                       </div>
@@ -591,7 +591,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           We Empower The Future
                         </h2>
                       </div>
@@ -619,7 +619,7 @@ const about = () => {
                   <div className="col-12">
                     <div className="row align-items-center">
                       <div className="col-12">
-                        <h2 className="col-primary heading c-fw-600 about--heading-underline">
+                        <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
                           Transparency and Honesty
                         </h2>
                       </div>
@@ -1223,7 +1223,7 @@ const about = () => {
                   Mentors
                 </h2>
                 <div className="row border align-items-center">
-                  <div className="col-xl-6 col-lg-5 col-md-12 ps-lg-0 pt-lg-0 pt-2">
+                  <div className="col-xl-6 col-lg-12 ps-lg-0 pt-lg-0 pt-2">
                     <figure className="mb-0">
                       <img
                         src="/img/about/team/pushpendra.png"
@@ -1233,8 +1233,8 @@ const about = () => {
                       />
                     </figure>
                   </div>
-                  <div className="col-xl-6 col-lg-7 col-md-12">
-                    <div className="p-5">
+                  <div className="col-xl-6 col-lg-12">
+                    <div className="px-4">
                       <h3 className="c-fs-3 fw-bold">Pushpendra Agrawal,</h3>
                       <h4 className="c-fs-4 c-fw-400 mb-4">
                         Idea Guy, Technology Geek
@@ -1252,7 +1252,7 @@ const about = () => {
                   </div>
                 </div>
                 <div className="row flex-row-reverse border align-items-center my-5">
-                  <div className="col-xl-6 col-lg-5 col-md-12 ps-lg-0 pt-lg-0 pt-2">
+                  <div className="col-xl-6 col-lg-12 px-lg-0 pt-lg-0 pt-2">
                     <figure className="mb-0">
                       <img
                         src="/img/about/team/aashish-big.png"
@@ -1262,8 +1262,8 @@ const about = () => {
                       />
                     </figure>
                   </div>
-                  <div className="col-xl-6 col-lg-7 col-md-12">
-                    <div className="p-5">
+                  <div className="col-xl-6 col-lg-12">
+                    <div className="px-4">
                       <h3 className="c-fs-3 fw-bold">Ashish Yadav,</h3>
                       <h4 className="c-fs-4 c-fw-400 mb-4">Concept Creator</h4>
 
@@ -1279,7 +1279,7 @@ const about = () => {
                   </div>
                 </div>
                 <div className="row border align-items-center">
-                  <div className="col-xl-6 col-lg-5 col-md-12 ps-lg-0 pt-lg-0 pt-2">
+                  <div className="col-xl-6 col-lg-12 ps-lg-0 pt-lg-0 pt-2">
                     <figure className="mb-0">
                       <img
                         src="/img/about/team/ankita-big.png"
@@ -1289,8 +1289,8 @@ const about = () => {
                       />
                     </figure>
                   </div>
-                  <div className="col-xl-6 col-lg-7 col-md-12">
-                    <div className="p-5">
+                  <div className="col-xl-6 col-lg-12">
+                    <div className="px-4">
                       <h3 className="c-fs-3 fw-bold">Ankita Chadha,</h3>
                       <h4 className="c-fs-4 c-fw-400 mb-4">Idea Brewer</h4>
 
@@ -1311,11 +1311,12 @@ const about = () => {
         </div>
 
         {/* ============================================================================================================================ */}
+
         <section className="about__see_more">
           <div className="d-flex py-4">
             <div className="container d-flex gap-4 flex-column text-center">
-              <h1 className=" heading fw-bold border-bottom col-primary">
-                See More
+              <h1 className="heading fw-bold col-primary">
+                <span className="about--heading-underline about__see_more--pull-near-text">See More</span>
               </h1>
               <h3 className="c-fs-3">See more about the Company</h3>
               <span className="c-fs-5">
@@ -1323,13 +1324,13 @@ const about = () => {
               </span>
               <br></br>
               <div className="col-12 d-flex justify-content-center flex-wrap gap-3">
-                <a className="col-primary d-inline-block about__see_more__btn border col-primary border-3">
+                <a className="col-primary d-inline-block about__see_more__btn border col-primary border-3" href="#top" onClick={() => setCurrent(1)}>
                   Our Values
                 </a>
-                <a className="about__see_more__btn col-primary  border border-3">
+                <a className="about__see_more__btn col-primary  border border-3" href="#top" onClick={() => setCurrent(2)}>
                   Leadership Principles
                 </a>
-                <a className="about__see_more__btn col-primary border border-3">
+                <a className="about__see_more__btn col-primary border border-3" href="#top" onClick={() => setCurrent(3)}>
                   The Team
                 </a>
               </div>

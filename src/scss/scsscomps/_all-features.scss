@@ -80,7 +80,6 @@
   &__accordion_container {
     padding-bottom: 3rem;
     .accordion {
-      max-width: 1000px;
       margin: 0 auto;
       .accordion-item {
         border: none !important;
@@ -179,10 +178,6 @@
       p{
         &.c-fs-3{
           font-size: var(--c-fs-5) !important;
-        }
-      }
-      &__links {
-        .download_free_btn {
         }
       }
       figure {

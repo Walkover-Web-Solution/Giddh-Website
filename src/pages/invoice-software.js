@@ -35,7 +35,7 @@ const invoiceSoftware = () => {
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue">
+                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
                     Schedule Demo
                   </a>
                 </div>
@@ -463,7 +463,7 @@ const invoiceSoftware = () => {
                 </div>
 
                 <span
-                  className="text-decoration-underline c-fw-600"
+                  className="text-decoration-underline c-fw-600 cursor-pointer"
                   onClick={() =>
                     readmoreAction((readmoreDisplay) => !readmoreDisplay)
                   }
@@ -514,7 +514,7 @@ const invoiceSoftware = () => {
         <section className="container-fluid features__accordion_container">
           <div className="container">
             <div className="row">
-              <div className="col-12">
+              <div className="col-12 px-0">
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
                   <h2 className="fw-bold col-primary ps-3">FAQs</h2>

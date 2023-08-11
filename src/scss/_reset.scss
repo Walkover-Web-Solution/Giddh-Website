@@ -51,3 +51,7 @@ a {
     box-shadow: unset !important;
   }
 }
+// Reset Max Width  of Bootrap Container
+.container{
+  max-width: 1140px !important;
+}

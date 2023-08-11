@@ -1,3 +1,4 @@
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MdDone, MdClose } from "react-icons/md";
 const pricing = () => {
@@ -7,6 +8,14 @@ const pricing = () => {
   const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
   const [readMoreParagraphStatus4, showMoreParagraph4] = useState(false);
   const [readMoreParagraphStatus5, showMoreParagraph5] = useState(false);
+
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
 
   return (
     <>
@@ -95,7 +104,7 @@ const pricing = () => {
                 </a>
               </div>
               <div className="pricing_main_section__grid__b2 text-center">
-                <a href="#" className="benefits-link">
+                <a href="#" className="benefits-link" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
                   Talk to Us
                 </a>
               </div>
@@ -146,7 +155,7 @@ const pricing = () => {
                 100,000
               </div>
 
-              <div className="pricing_main_section__grid__companies">
+              <div className="pricing_main_section__grid__companies pricing-border-top">
                 Companies
               </div>
               <div className="pricing_main_section__grid__companies_2">
@@ -161,23 +170,23 @@ const pricing = () => {
               <div className="pricing_main_section__grid__companies_5">
                 Companies
               </div>
-              <div className="pricing_main_section__grid__c1 text-center">
+              <div className="pricing_main_section__grid__c1 text-center pricing-border-top">
                 1
               </div>
-              <div className="pricing_main_section__grid__c2 text-center">
+              <div className="pricing_main_section__grid__c2 text-center pricing-border-top">
                 1
               </div>
-              <div className="pricing_main_section__grid__c3 text-center">
+              <div className="pricing_main_section__grid__c3 text-center pricing-border-top">
                 1
               </div>
-              <div className="pricing_main_section__grid__c4 text-center">
+              <div className="pricing_main_section__grid__c4 text-center pricing-border-top">
                 10
               </div>
-              <div className="pricing_main_section__grid__c5 text-center">
+              <div className="pricing_main_section__grid__c5 text-center pricing-border-top">
                 100
               </div>
 
-              <div className="pricing_main_section__grid__accountant_consultant">
+              <div className="pricing_main_section__grid__accountant_consultant pricing-border-top">
                 Accountant Consultant
               </div>
               <div className="pricing_main_section__grid__accountant_consultant_2">
@@ -193,23 +202,23 @@ const pricing = () => {
                 Accountant Consultant
               </div>
 
-              <div className="pricing_main_section__grid__ac1 text-center">
+              <div className="pricing_main_section__grid__ac1 text-center pricing-border-top">
                 <MdClose />
               </div>
-              <div className="pricing_main_section__grid__ac2 text-center">
+              <div className="pricing_main_section__grid__ac2 text-center pricing-border-top">
                 <MdClose />
               </div>
-              <div className="pricing_main_section__grid__ac3 text-center">
+              <div className="pricing_main_section__grid__ac3 text-center pricing-border-top">
                 2 hrs
               </div>
-              <div className="pricing_main_section__grid__ac4 text-center">
+              <div className="pricing_main_section__grid__ac4 text-center pricing-border-top">
                 4 hrs
               </div>
-              <div className="pricing_main_section__grid__ac5 text-center">
+              <div className="pricing_main_section__grid__ac5 text-center pricing-border-top">
                 10 hrs
               </div>
 
-              <div className="pricing_main_section__grid__unlimited_users">
+              <div className="pricing_main_section__grid__unlimited_users pricing-border-top">
                 Unlimited Users
               </div>
               <div className="pricing_main_section__grid__unlimited_users_2">
@@ -224,23 +233,23 @@ const pricing = () => {
               <div className="pricing_main_section__grid__unlimited_users_5">
                 Unlimited Users
               </div>
-              <div className="pricing_main_section__grid__u1 text-center">
+              <div className="pricing_main_section__grid__u1 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__u2 text-center">
+              <div className="pricing_main_section__grid__u2 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__u3 text-center">
+              <div className="pricing_main_section__grid__u3 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__u4 text-center">
+              <div className="pricing_main_section__grid__u4 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__u5 text-center">
+              <div className="pricing_main_section__grid__u5 text-center pricing-border-top">
                 <MdDone />
               </div>
 
-              <div className="pricing_main_section__grid__customers_vendors">
+              <div className="pricing_main_section__grid__customers_vendors pricing-border-top">
                 Unlimited Customers/Vendors
               </div>
               <div className="pricing_main_section__grid__customers_vendors_2">
@@ -255,23 +264,23 @@ const pricing = () => {
               <div className="pricing_main_section__grid__customers_vendors_5">
                 Unlimited Customers/Vendors
               </div>
-              <div className="pricing_main_section__grid__cv1 text-center">
+              <div className="pricing_main_section__grid__cv1 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__cv2 text-center">
+              <div className="pricing_main_section__grid__cv2 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__cv3 text-center">
+              <div className="pricing_main_section__grid__cv3 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__cv4 text-center">
+              <div className="pricing_main_section__grid__cv4 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__cv5 text-center">
+              <div className="pricing_main_section__grid__cv5 text-center pricing-border-top">
                 <MdDone />
               </div>
 
-              <div className="pricing_main_section__grid__desktop_mobile_app">
+              <div className="pricing_main_section__grid__desktop_mobile_app pricing-border-top">
                 Desktop/Mobile App
               </div>
               <div className="pricing_main_section__grid__desktop_mobile_app_2">
@@ -286,24 +295,24 @@ const pricing = () => {
               <div className="pricing_main_section__grid__desktop_mobile_app_5">
                 Desktop/Mobile App
               </div>
-              <div className="pricing_main_section__grid__d1 text-center">
+              <div className="pricing_main_section__grid__d1 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__d2 text-center">
+              <div className="pricing_main_section__grid__d2 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__d3 text-center">
+              <div className="pricing_main_section__grid__d3 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__d4 text-center">
+              <div className="pricing_main_section__grid__d4 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__d5 text-center">
+              <div className="pricing_main_section__grid__d5 text-center pricing-border-top">
                 <MdDone />
               </div>
 
               <div className="pricing_main_section__grid__link_all_feature">
-                <a href="#">Check all features</a>
+                <a href={ link + "/all-features" }>Check all features</a>
               </div>
               <div className="pricing_main_section__grid__extra_charges">
                 <p className="c-fs-6 c-fw-400">
@@ -320,7 +329,7 @@ const pricing = () => {
           <div className="col-12 text-center">
             <h3 className="c-fs-3 c-fw-600">Big Enterprises?</h3>
 
-            <a href="#" className="benefits-link">
+            <a href="#" className="benefits-link" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
               TALK TO US
             </a>
           </div>
@@ -340,7 +349,7 @@ const pricing = () => {
               If yes, it’s time to Make the Switch and purchase a dedicated
               online accounting software like GIDDH.
             </p>
-            <a href="#">Start your trial</a>
+            <a href={ link + "/signup" }>Start your trial</a>
           </div>
         </div>
       </section>
@@ -367,7 +376,7 @@ const pricing = () => {
                   prices and then make your choice.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus1 ? "none" : "block",
                   }}
@@ -452,7 +461,7 @@ const pricing = () => {
                 </p>
 
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus2 ? "none" : "block",
                   }}
@@ -531,7 +540,7 @@ const pricing = () => {
                   financial operation gets easier with the integration of
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus3 ? "none" : "block",
                   }}
@@ -604,7 +613,7 @@ const pricing = () => {
                 </p>
 
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus4 ? "none" : "block",
                   }}
@@ -675,7 +684,7 @@ const pricing = () => {
                   features and practice using our various options.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus5 ? "none" : "block",
                   }}
@@ -780,7 +789,7 @@ const pricing = () => {
             </div>
 
             <span
-              className="text-decoration-underline c-fw-600"
+              className="text-decoration-underline c-fw-600 cursor-pointer"
               onClick={() =>
                 readmoreAction((readmoreDisplay) => !readmoreDisplay)
               }

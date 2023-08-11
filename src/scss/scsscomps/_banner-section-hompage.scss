@@ -1,0 +1,75 @@
+// ========================== Index Page Banner Section SCSS CODE==============START============================
+.banner {
+  padding-top: 110px;
+  min-height: 70vh;
+  max-height: 50px;
+  display: flex;
+  padding-bottom: 65px;
+  background-image: url(/img/home-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__wrapper {
+    color: var(--col-white);
+    h1 {
+      font-size: 68px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: var(--c-fs-1);
+    }
+    &__contact_btn {
+      button {
+        display: inline-block;
+        max-width: 100%;
+        font-size: var(--c-fs-3);
+        color: var(--col-white);
+        background-color: var(--col-primary);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-radius: 3px;
+        padding: 0 33px;
+        height: 50px;
+        cursor: pointer;
+        line-height: 50px;
+        text-align: center;
+        margin: 0;
+        outline: none;
+        border: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .banner {
+    &__wrapper {
+      h1 {
+        font-size: 48px;
+      }
+      p {
+        font-size: var(--c-fs-3);
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .banner {
+    &__wrapper {
+      h1 {
+        font-size: 42px;
+      }
+      p {
+        font-size: var(--c-fs-4);
+      }
+      &__contact_btn {
+        button {
+          font-size: var(--c-fs-4);
+          padding: 0 27px;
+        }
+      }
+    }
+  }
+}
+// ========================== Index Page Banner Section SCSS CODE===============END=============================

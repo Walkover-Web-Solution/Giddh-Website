@@ -1,5 +1,14 @@
+import { usePathname } from "next/navigation";
 import { MdAdd, MdKeyboardArrowDown } from "react-icons/md";
+
 const iciciIntegration = () => {
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+
+  // Holds Url Prefix country wise
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
   return (
     <>
       <div className="icici_integration">
@@ -40,7 +49,7 @@ const iciciIntegration = () => {
                 </div>
                 <div className="mb-5">
                   <a
-                    href="https://giddh.com/signup/"
+                    href={ "https://giddh.com/signup" + link }
                     target="_blank"
                     className="icici_integration__get_started_btn col-white"
                   >
@@ -85,7 +94,7 @@ const iciciIntegration = () => {
               <div className="col-md-6 col-lg-4">
                 <div className="px-3">
                   <figure>
-                    <img src="/img/hand-shake.svg" alt="" />
+                    <img src="/img/hand-shake.svg" alt="hand-shake icon" />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
                   Easy<br/>Reconciliation
@@ -163,13 +172,13 @@ const iciciIntegration = () => {
             </div>
             <div className="row icici_integration__benifits_section__step_guide text-center">
               <p className="c-fs-4 mb-0">
-                See step-by-step <a href="#">Guide</a> on how to connect ICICI
+                See step-by-step <a href="https://giddh.com/help/how-to-integrate-icici-bank-account-with-giddh">Guide</a> on how to connect ICICI
                 account with Giddh
               </p>
             </div>
             <div className="text-center my-4">
                 <a
-                href="https://giddh.com/signup/"
+                href={ "https://giddh.com/signup" + link }
                 target="_blank"
                 className="icici_integration__get_started_btn col-white"
                 >

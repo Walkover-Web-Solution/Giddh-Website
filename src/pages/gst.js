@@ -8,7 +8,7 @@ const gst = () => {
   return (
     <>
       <section className="container mb-5 ">
-        <div className="gst-hero-container  text-center">
+        <div className="tax-hero-container  text-center">
           <div className="row d-flex h-100 align-content-end">
             <div className=" d-flex flex-column  ">
               <span className="c-fs-3  col-dark-light fw-light m-3">
@@ -18,17 +18,17 @@ const gst = () => {
                 File your GSTR Automatically
               </h1>
             </div>
-            <div className="gst-image mt-auto">
+            <div className="tax-image mt-auto">
               <img
                 className="col-12"
                 alt="gst"
-                src="/img/gst-images/gstimage1.png"
+                src="/img/tax-images/tax-image.png"
               ></img>
             </div>
           </div>
         </div>
       </section>
-      <section className=" filing-gstr py-5">
+      <section className=" filing-tax py-5">
         <div className="container mt-5">
           <div className="text-center">
             <p className="sub-heading c-fs-1 col-primary fw-bold mb-5">
@@ -38,8 +38,8 @@ const gst = () => {
 
           <div className="row">
             <div className="col">
-              <div className="filing-gstr-card d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/gst-images/Direct-Filing.svg" />
+              <div className="filing-tax-card d-flex flex-column align-items-center gap-4 p-3">
+                <img src="/img/tax-images/Direct-Filing.svg" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Direct Filing
@@ -54,8 +54,8 @@ const gst = () => {
             </div>
             <div className="col">
               {" "}
-              <div className="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/gst-images/accurate.svg" />
+              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
+                <img src="/img/tax-images/accurate.svg" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     100% Accurate
@@ -70,8 +70,8 @@ const gst = () => {
             </div>
             <div className="col">
               {" "}
-              <div className="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/gst-images/get-notified.svg" />
+              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
+                <img src="/img/tax-images/get-notified.svg" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Timely Notifications
@@ -89,8 +89,8 @@ const gst = () => {
           <div className="row">
             <div className="col">
               {" "}
-              <div className="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/gst-images/easy-fast.svg" />
+              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
+                <img src="/img/tax-images/easy-fast.svg" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Highly Collaborative
@@ -106,9 +106,9 @@ const gst = () => {
             <div className="col">
               {" "}
               <div
-                className="filing-gstr d-flex flex-column align-items-center gap-4 p-3"
+                className="filing-tax d-flex flex-column align-items-center gap-4 p-3"
               >
-                <img src="/img/gst-images/secure-reliable.svg" />
+                <img src="/img/tax-images/secure-reliable.svg" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Secure & Reliable
@@ -123,8 +123,8 @@ const gst = () => {
             </div>
             <div className="col">
               {" "}
-              <div className="filing-gstr d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/gst-images/best-support.svg" />
+              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
+                <img src="/img/tax-images/best-support.svg" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Best in Class Support
@@ -146,17 +146,17 @@ const gst = () => {
             Make GST Return Process Automatic.
           </div>
           <div>
-            <a className="c-fs-4 gst-hero-container__try_now_btn">Try Now</a>
+            <a href="/signup" className="c-fs-4 tax-hero-container__try_now_btn">Try Now</a>
           </div>
           <span className="c-fs-4 m-3">
             Cloud Based Accounting Software to File GST Return Online
           </span>
         </div>
       </section>
-      <section className="container-fluid gst-return">
+      <section className="container-fluid tax-return">
         <div className="container">
           <div className="row">
-            <div className="gst-return__wrapper d-flex  flex-wrap align-items-center">
+            <div className="tax-return__wrapper d-flex  flex-wrap align-items-center">
               <div className="col">
                 <h3>GST Return Collaborators</h3>
               </div>
@@ -196,7 +196,7 @@ const gst = () => {
                   means that the money is generated by the consumers
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus1 ? "none" : "block",
                   }}
@@ -211,7 +211,7 @@ const gst = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\gst-images\understanding-gst.svg"
+                  src="\img\tax-images\understanding-gst.svg"
                   className="img-fluid"
                   alt="gst logo"
                 />
@@ -266,7 +266,7 @@ const gst = () => {
                   your accounts, file GST returns online, help with
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus2 ? "none" : "block",
                   }}
@@ -281,7 +281,7 @@ const gst = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\gst-images\group-5654.svg"
+                  src="\img\tax-images\group-5654.svg"
                   className="img-fluid"
                   alt="mobile image with giddh-app"
                 />
@@ -336,7 +336,7 @@ const gst = () => {
                   techniques, as well as providing up-to-date information.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                   style={{
                     display: readMoreParagraphStatus3 ? "none" : "block",
                   }}
@@ -351,7 +351,7 @@ const gst = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\gst-images\betnifits.svg"
+                  src="\img\tax-images\betnifits.svg"
                   className="img-fluid"
                   alt="gst benifits image"
                 />

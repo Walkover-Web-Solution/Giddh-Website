@@ -39,7 +39,7 @@ const anywhereAnytime = () => {
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue">
+                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
                     Schedule Demo
                   </a>
                 </div>
@@ -262,7 +262,7 @@ const anywhereAnytime = () => {
                 <div
                   className={
                     "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
-                    (readMoreParagraphStatus1 ? " --read-more" : null)
+                    (readMoreParagraphStatus1 ? " --read-more" : "")
                   }
                 >
                   <div className="col-md-12 col-lg-6">
@@ -284,7 +284,7 @@ const anywhereAnytime = () => {
                         accounting software:
                       </p>
                       <span
-                        className="pt-3 text-decoration-underline c-fw-600"
+                        className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                         style={{
                           display: readMoreParagraphStatus1 ? "none" : "block",
                         }}
@@ -402,7 +402,7 @@ const anywhereAnytime = () => {
                 <div
                   className={
                     "row mb-5 pb-5 align-items-center features__description_container--row-even" +
-                    (readMoreParagraphStatus2 ? " --read-more" : null)
+                    (readMoreParagraphStatus2 ? " --read-more" : "")
                   }
                 >
                   <div className="col-md-12 col-lg-6">
@@ -419,7 +419,7 @@ const anywhereAnytime = () => {
                         may be missing out on:
                       </p>
                       <span
-                        className="pt-3 text-decoration-underline c-fw-600"
+                        className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
                         style={{
                           display: readMoreParagraphStatus2 ? "none" : "block",
                         }}
@@ -662,14 +662,14 @@ const anywhereAnytime = () => {
                   </li>
                 </ul>
               </div>
-              <a
-                className="text-decoration-underline c-fw-600 text-center col-dark read-more-text"
+              <span
+                className="text-decoration-underline c-fw-600 text-center col-dark read-more-text cursor-pointer"
                 onClick={() =>
                   readmoreAction((readmoreDisplay) => !readmoreDisplay)
                 }
               >
                 {readMoreStatus ? "Read Less" : "Read More..."}
-              </a>
+              </span>
             </div>
           </section>
         </section>
@@ -710,7 +710,7 @@ const anywhereAnytime = () => {
         <section className="container-fluid features__accordion_container">
           <div className="container">
             <div className="row">
-              <div className="col-12">
+              <div className="col-12 px-0">
                 <div className="accordion" id="accordionAllFeatures">
                   {/*============ Accordion #1 ===============*/}
                   <h2 className="fw-bold col-primary ps-3 ">FAQs</h2>

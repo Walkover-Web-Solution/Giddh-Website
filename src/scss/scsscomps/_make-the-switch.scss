@@ -91,14 +91,25 @@
 @media (max-width: 767px) {
   .switch-section {
     height: 300px;
-    background-position: center;
     background-size: contain;
     justify-content: end;
     padding-bottom: 1.5rem;
+    &__content {
+      a {
+        padding: 12px 32px;
+      }
+    }
+  }
+}
+@media (max-width: 575px){
+  .switch-section {  
+    background-position: center;
+    background-size: cover;
   }
 }
 // ========================== Index Page MAKE THE SWITCH SCSS CODE===============END=============================
-// ==============================================================================================================
+
+// ===================================MAKE THE SWITCH MAIN PAGE=================START============================
 .make_the_switch {
   .switch-section {
     height: 100vh;
@@ -161,3 +172,4 @@
     }
   }
 }
+// ===================================MAKE THE SWITCH MAIN PAGE==================End=============================
