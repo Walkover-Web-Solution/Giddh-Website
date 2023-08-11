@@ -11,6 +11,7 @@ const header = (browserPath) => {
         <link rel="icon" type="image/x-icon" href="/favico.svg"></link>
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <script src="//embed.typeform.com/next/embed.js"></script>
       </Head>
     </>
   );

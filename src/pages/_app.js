@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Header from "@/components/header";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import DownloadFreeModal from "@/components/downloadFreeModal";
+import GlobalComponents from "@/components/globalComponents";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
@@ -25,9 +25,7 @@ export default function MyApp({ Component, pageProps }) {
       <Header browserPath={browserPath} />
       <Component {...pageProps} />
       {loginSignupPathStatus ? <Footer /> : null}
-
-      {/*Download Free Modal Used In All Feature Pages*/}
-      <DownloadFreeModal />
+      <GlobalComponents />
     </>
   );
 }
