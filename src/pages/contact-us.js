@@ -22,7 +22,7 @@ const contactUs = () => {
               Contact Us
             </h2>
 
-            <div className="row mt-5 align-items-center">
+            <div className="row mt-5 align-items-start row-gap-4">
               <div className="col-lg-6 contact_us__form__left contact-details text-center">
                 <div className="contact-details__wapper d-flex flex-column justify-content-center">
                   <h3 className="mb-4 col-primary">Sales</h3>
@@ -39,7 +39,7 @@ const contactUs = () => {
                     </div>
                     <div className="d-flex align-items-center column-gap-3 mb-3">
                       <MdWhatsapp />
-                      <a href="http://wa.me/+918889500411?text=Hello+Giddh">
+                      <a href="http://wa.me/+918889500411?text=Hello,+I+need+help">
                         {" "}
                         +91 88895 00411
                       </a>
@@ -52,6 +52,11 @@ const contactUs = () => {
                   </address>
 
                   <button
+                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                  >
+                    Schedule a meeting
+                  </button>
+                  <button
                     data-tf-slider="uOtrQ4tb"
                     data-tf-position="right"
                     data-tf-opacity="83"
@@ -59,8 +64,9 @@ const contactUs = () => {
                     data-tf-iframe-props="title=Accounting Software Company Contact Form"
                     data-tf-transitive-search-params
                     data-tf-medium="snippet"
+                    className="mt-0 mt-lg-2"
                   >
-                    Schedule a meeting
+                    Contact Sales
                   </button>
                 </div>
               </div>
@@ -71,11 +77,11 @@ const contactUs = () => {
                   <address>
                     <div className="d-flex align-items-center column-gap-3 mb-3">
                       <MdEmail />
-                      <a href="mailto:support@giddh.com">support@giddh.com</a>
+                      <a href="mailto:support@giddh.com"  className="contact-details__wapper--email">support@giddh.com</a>
                     </div>
                     <div className="d-flex align-items-center column-gap-3 mb-3">
                       <MdWhatsapp />
-                      <a href="http://wa.me/+918889500411?text=Hello+Giddh">
+                      <a href="http://wa.me/+918889500411?text=Hello,+I+need+help">
                         {" "}
                         +91 88895 00411
                       </a>
@@ -87,13 +93,7 @@ const contactUs = () => {
                     </div>
                   </address>
                   <button
-                    data-tf-slider="uOtrQ4tb"
-                    data-tf-position="right"
-                    data-tf-opacity="83"
-                    data-tf-hide-headers
-                    data-tf-iframe-props="title=Accounting Software Company Contact Form"
-                    data-tf-transitive-search-params
-                    data-tf-medium="snippet"
+                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
                   >
                     Schedule a meeting
                   </button>
