@@ -13,7 +13,7 @@ const googleLogin = () => {
 
     return (
         <>
-            <button className="entry__right_section__container__entry_with--btn-with-text me-3" onClick={initGoogleSignup}>
+            <button className="me-3" onClick={initGoogleSignup}>
                 <img
                     src="/img/google-logo.svg"
                     width="24px"

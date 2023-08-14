@@ -34,6 +34,7 @@ $light-skyblue: #e0f0fe;
         padding-top: 70px;
         padding-bottom: 40px;
         padding-left: 80px !important;
+        max-width: 100% !important;
       }
 
       h1 {
@@ -53,8 +54,6 @@ $light-skyblue: #e0f0fe;
           font-weight: 500;
           color: $color-primary;
           background-color: $color-white;
-        }
-        &--btn-with-text {
           padding: 0px 16px;
         }
       }

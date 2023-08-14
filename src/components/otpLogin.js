@@ -60,7 +60,7 @@ const otpLogin = () => {
 
     return (
         <>
-            <button className="entry__right_section__container__entry_button mb-4" onClick={initOtpLogin}>
+            <button className="entry__right_section__container__entry_button mb-4 me-0 me-md-3" onClick={initOtpLogin}>
                 Login with OTP
             </button>
         </>

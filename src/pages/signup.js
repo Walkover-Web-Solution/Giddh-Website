@@ -325,10 +325,12 @@ const signUp = () => {
             <Script src="/js/helper.js"></Script>
             <section className="entry signup d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
+                    <a href="/">
                     <img
                         src="/img/giddh-logo.svg"
                         className="entry__left_section__brand_logo"
                     />
+                    </a>
                     <div className="entry__left_section__details pe-5">
                         <div className="container">
                             <h1 className="c-fs-3 mb-4">
@@ -376,7 +378,7 @@ const signUp = () => {
                                 </div>
                                 <h1>Create an account</h1>
                                 <div className="entry__right_section__container__entry_with d-flex mb-4 me-4">
-                                    <div className="signup_with__left pe-4">
+                                    <div>
                                         <span className="d-inline-block mb-4">Sign up with</span>
 
                                         <div className="d-flex align-items-center">
@@ -426,7 +428,7 @@ const signUp = () => {
                                             Verify email
                                         </label>
                                         <div className="d-flex flex-wrap p-0">
-                                            <div className="step_input_wrapper__left col-xl-6 col-lg-12">
+                                            <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12" style={{paddingRight: showEmailOtp || (emailDetails && emailDetails.isVerified) ? "0" : null }}>
                                                 <div className="d-flex step_input_wrapper__mobile_veiw">
                                                     <input
                                                         type="email"
@@ -445,7 +447,7 @@ const signUp = () => {
                                                         </span>
                                                     )}
                                                     {!showEmailOtp && (!emailDetails || !emailDetails.isVerified) && (
-                                                        <button className="btn custom-signup-btn" onClick={sendEmailOtp}>
+                                                        <button className="btn custom-signup-btn opacity-100" onClick={sendEmailOtp} disabled={emailGetOtpInProgress}>
                                                             {emailGetOtpInProgress && (
                                                                 <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
                                                             )}
@@ -456,7 +458,7 @@ const signUp = () => {
                                                         </button>
                                                     )}
                                                     {showEmailOtp && (
-                                                        <button className="btn custom-signup-btn" onClick={() => setShowEmailOtpSection(false)}>
+                                                        <button className="btn custom-signup-btn opacity-100 wide-btn" onClick={() => setShowEmailOtpSection(false)} disabled={emailGetOtpInProgress}>
                                                             {emailGetOtpInProgress && (
                                                                 <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
                                                             )}
@@ -469,7 +471,7 @@ const signUp = () => {
                                                 </div>
                                             </div>
                                             {showEmailOtp && (!emailDetails || !emailDetails.isVerified) && (
-                                                <div className="step_input_wrapper__right col-xl-6 col-lg-12">
+                                                <div className="step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12">
                                                     <div className="d-flex flex-column">
                                                         <div className="d-flex">
                                                             <input
@@ -505,7 +507,7 @@ const signUp = () => {
                                                                 id="emailOtpField4"
                                                                 onKeyDown={setFocusOnEmailVerifyButton}
                                                             />
-                                                            <button id="verify-email-button" className="btn custom-signup-btn" onClick={() => verifyOtp('email')}>
+                                                            <button id="verify-email-button" className="btn custom-signup-btn opacity-100" onClick={() => verifyOtp('email')} disabled={emailVerifyOtpInProgress}>
                                                             {emailVerifyOtpInProgress && (
                                                                 <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
                                                             )}
@@ -528,7 +530,7 @@ const signUp = () => {
                                             Verify Mobile number
                                         </label>
                                         <div className="d-flex flex-wrap p-0">
-                                            <div className="step_input_wrapper__left col-xl-6 col-lg-12">
+                                            <div className="step_input_wrapper__left col-xl-6 col-lg-12" style={{paddingRight: showMobileOtp || (mobileDetails && mobileDetails.isVerified) ? "0" : null }}>
                                                 <div className="d-flex step_input_wrapper__mobile_veiw">
                                                     <input
                                                         type="tel"
@@ -545,7 +547,7 @@ const signUp = () => {
                                                         </span>
                                                     )}
                                                     {!showMobileOtp && (!mobileDetails || !mobileDetails.isVerified) && (
-                                                        <button className="btn custom-signup-btn" onClick={sendMobileOtp}>
+                                                        <button className="btn custom-signup-btn opacity-100" onClick={sendMobileOtp} disabled={mobileGetOtpInProgress}>
                                                             {mobileGetOtpInProgress && (
                                                                 <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
                                                             )}
@@ -556,7 +558,7 @@ const signUp = () => {
                                                         </button>
                                                     )}
                                                     {showMobileOtp && (
-                                                        <button className="btn custom-signup-btn" onClick={() => setShowMobileOtpSection(false)}>
+                                                        <button className="btn custom-signup-btn opacity-100 wide-btn" onClick={() => setShowMobileOtpSection(false)} disabled={mobileGetOtpInProgress}>
                                                             {mobileGetOtpInProgress && (
                                                                 <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
                                                             )}
@@ -601,7 +603,7 @@ const signUp = () => {
                                                                 maxLength="1"
                                                                 id="mobileOtpField4"
                                                             />
-                                                            <button id="verify-mobile-button" className="btn custom-signup-btn" onClick={() => verifyOtp('mobile')}>
+                                                            <button id="verify-mobile-button" className="btn custom-signup-btn opacity-100" onClick={() => verifyOtp('mobile')} disabled={mobileVerifyOtpInProgress}>
                                                             {mobileVerifyOtpInProgress && (
                                                                 <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
                                                             )}
