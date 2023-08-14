@@ -146,7 +146,7 @@ const about = () => {
             display: currentMenu === 0 ? "block" : "none",
           }}
         >
-          <section className="about__content p-8 my-5 gap-5">
+          <section className="about__content mb-5">
             <div className="container gap-4">
               <p className="c-fs-5 mb-5">
                 Giddh is a team with members who have accounting running in

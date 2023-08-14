@@ -165,7 +165,7 @@ const gst = () => {
               </div>
               <div className="col">
                 <img
-                  className=" gst-return__wrapper__large_img"
+                  className="tax-return__wrapper__large_img"
                   src="/img/GST.png"
                 />
               </div>
