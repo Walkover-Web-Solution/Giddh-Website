@@ -1,6 +1,6 @@
 function setCookie(cname, cvalue, exdays) {
     var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + ";domain=giddh.com;" + expires + ";path=/";
 }
@@ -10,7 +10,7 @@ function getCookie(cname) {
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
     var value = "";
-    for(var i = 0; i < ca.length; i++) {
+    for (var i = 0; i < ca.length; i++) {
         var c = ca[i];
         while (c.charAt(0) == ' ') {
             c = c.substring(1);
@@ -36,4 +36,32 @@ function removeGiddhSession() {
 
 function setGiddhSession(sessionId) {
     setCookie("giddh_session_id", sessionId, 30);
+}
+
+function getOtpwidgetConfiguration(exposeMethods, callbackFunction) {
+    var configuration = {
+        widgetId: "33686b716134333831313239",
+        tokenAuth: "205968TmXguUAwoD633af103P1",
+        exposeMethods: exposeMethods,
+        success: function (data) {
+            if (callbackFunction) {
+                callbackFunction(data);
+            }
+        }
+    };
+
+    return configuration;
+}
+
+function addOtpWidgetScript(exposeMethods, callbackFunction) {
+    var configuration = getOtpwidgetConfiguration(exposeMethods, callbackFunction);
+
+    let scriptTag = document.createElement('script');
+    scriptTag.src = "https://control.msg91.com/app/assets/otp-provider/otp-provider.js";
+    scriptTag.type = 'text/javascript';
+    scriptTag.defer = true;
+    scriptTag.onload = () => {
+        initSendOTP(configuration);
+    };
+    document.body.appendChild(scriptTag);
 }

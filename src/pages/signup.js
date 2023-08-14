@@ -23,24 +23,6 @@ const signUp = () => {
     const [mobileVerifyOtpInProgress, setMobileVerifyOtpInProgress] = useState(false);
 
     useEffect(() => {
-        var configuration = {
-            widgetId: "33686b716134333831313239",
-            tokenAuth: "205968TmXguUAwoD633af103P1",
-            exposeMethods: true,
-            success: function (data) {
-                console.log(data);
-            }
-        };
-
-        let scriptTag = document.createElement('script');
-        scriptTag.src = "https://control.msg91.com/app/assets/otp-provider/otp-provider.js";
-        scriptTag.type = 'text/javascript';
-        scriptTag.defer = true;
-        scriptTag.onload = () => {
-            initSendOTP(configuration);
-        };
-        document.body.appendChild(scriptTag);
-
         window.addEventListener("message", function (event) {
             if (event.data && event.data.origin === "giddh" && event.data.accessToken) {
                 getGoogleUserDetails(event.data.accessToken);
@@ -71,6 +53,10 @@ const signUp = () => {
                 });
             })
             .catch((err) => console.log("Something went wrong!", err));
+    }
+
+    function initOtpSignup() {
+        addOtpWidgetScript(true, false);
     }
 
     function resetEverything() {
@@ -322,7 +308,7 @@ const signUp = () => {
 
     return (
         <>
-            <Script src="/js/helper.js"></Script>
+            <Script src="/js/helper.js" onLoad={initOtpSignup}></Script>
             <section className="entry signup d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
                     <a href="/">
@@ -396,7 +382,7 @@ const signUp = () => {
 
                                 <p className="c-fs-6 mb-4">
                                     If you already have an account,{" "}
-                                    <a href="login" className="text_blue">
+                                    <a href={process.env.NEXT_PUBLIC_SITE_URL + '/login'}  className="text_blue">
                                         Login
                                     </a>
                                 </p>

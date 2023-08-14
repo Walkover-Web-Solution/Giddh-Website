@@ -2,7 +2,7 @@ const otpLogin = () => {
 
     async function initiateLogin(data) {
         await fetch(
-            `https://apitest.giddh.com/v2/login`,
+            process.env.NEXT_PUBLIC_API_URL + '/v2/login',
             {
                 method: "POST",
                 mode: "cors",
@@ -21,7 +21,7 @@ const otpLogin = () => {
                     } else {
                         if (response.body.user.isVerified) {
                             setGiddhSession(response.body.session.id);
-                            window.location = "https://test.giddh.com/token-verify?request=" + response.body.session.id;
+                            window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
                         } else {
                             console.log("Your account is not verified! Please verify your account to continue.");
                             // show verification section
@@ -35,25 +35,11 @@ const otpLogin = () => {
     }
 
     function initOtpLogin() {
-        var configuration = {
-            widgetId: "33686b716134333831313239",
-            tokenAuth: "205968TmXguUAwoD633af103P1",
-            success: function (data) {
-                initiateLogin(data);
-            }
-        };
-
         /* OTP LOGIN */
         if (window['initSendOTP'] === undefined) {
-            let scriptTag = document.createElement('script');
-            scriptTag.src = "https://control.msg91.com/app/assets/otp-provider/otp-provider.js";
-            scriptTag.type = 'text/javascript';
-            scriptTag.defer = true;
-            scriptTag.onload = () => {
-                initSendOTP(configuration);
-            };
-            document.body.appendChild(scriptTag);
+            addOtpWidgetScript(false, initiateLogin);
         } else {
+            var configuration = getOtpwidgetConfiguration(false, initiateLogin);
             initSendOTP(configuration);
         }
     }
