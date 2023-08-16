@@ -185,7 +185,7 @@ const allFeatures = () => {
                 <a className="feature-gallery__card" href={link + "/gst"}>
                   <figure>
                     <img
-                      src="/img/feature-gst.svg"
+                      src="/img/feature-tax.svg"
                       alt="GST Compliances Icon"
                       height="90px"
                       widht="auto"

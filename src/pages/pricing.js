@@ -853,7 +853,7 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img className="img-fluid" src="/img/feature-gst.svg" alt="Tax-Compliant-logo" />
+                  <img className="img-fluid" src="/img/feature-tax.svg" alt="Tax-Compliant-logo" />
                   <figcaption>Tax Compliant</figcaption>
                 </figure>
               </div>
