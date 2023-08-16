@@ -663,7 +663,7 @@ const about = () => {
                     <a href="#nurturesCollaboration" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/customers-come-first.svg"
+                          src="/img/about/leadership/nurtures-collaboration.svg"
                           alt="Nurtures Collaboration Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -675,7 +675,7 @@ const about = () => {
                     <a href="#leadsThroughCommunication" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/embracing-setbacks-to-break-boundaries.svg"
+                          src="/img/about/leadership/leads-through-communication.svg"
                           alt="Leads through Communication Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -687,7 +687,7 @@ const about = () => {
                     <a href="#leadsByExample" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/we-set-impossible-goals.svg"
+                          src="/img/about/leadership/leads-by-example.svg"
                           alt="Leads By Example Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -700,7 +700,7 @@ const about = () => {
                     <a href="#consultsAndDelegates" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/people-are-our-power.svg"
+                          src="/img/about/leadership/consults-and-delegates.svg"
                           alt="Consults and Delegates Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -712,7 +712,7 @@ const about = () => {
                     <a href="#isCourageous" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/we-focus-on-why-and-how.svg"
+                          src="/img/about/leadership/is-courageous.svg"
                           alt="Is Courageous Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -724,7 +724,7 @@ const about = () => {
                     <a href="#addsIntegrity" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/always-we-before-me.svg"
+                          src="/img/about/leadership/adds-integrity.svg"
                           alt="Adds Integrity Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -737,7 +737,7 @@ const about = () => {
                     <a href="#servesForTheGreaterGood" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/we-do-not-settle.svg"
+                          src="/img/about/leadership/serves-for-the-greater-good.svg"
                           alt="Serves for the Greater Good Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -749,7 +749,7 @@ const about = () => {
                     <a href="#definesCreatesProcesses" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/we-empower-the-future.svg"
+                          src="/img/about/leadership/defines-and-creates-processes.svg"
                           alt="Defines & Creates Processes Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -761,7 +761,7 @@ const about = () => {
                     <a href="#adaptsToEvolve" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/transparency-and-honesty.svg"
+                          src="/img/about/leadership/adapts-to-evolve.svg"
                           alt="Adapts to Evolve Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -782,7 +782,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/nurtures-collaboration-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -816,7 +816,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/leads-through-communication-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -850,7 +850,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/leads-by-example-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -883,7 +883,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/consults-and-delegates-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -918,7 +918,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/is-courageous-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -949,7 +949,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/adds-integrity-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -981,7 +981,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/serves-for-the-greater-good-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -1014,7 +1014,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/defines-and-creates-processes-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -1049,7 +1049,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/adapts-to-evolve-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
