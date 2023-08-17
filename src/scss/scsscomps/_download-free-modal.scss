@@ -46,3 +46,15 @@
         }
     }
 }
+
+@media (max-width: 356px) {
+    .download-free-modal{
+        &__btn_link{
+            padding: 6px 10px;
+            margin: 0 4px;
+             span{
+                display: none;
+             }
+          }
+      }
+}

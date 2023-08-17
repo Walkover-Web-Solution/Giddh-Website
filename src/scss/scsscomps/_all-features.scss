@@ -258,6 +258,20 @@
     }
   }
 }
-
-
-
+@media (max-width: 575px) {
+  .features {
+    &__heading_container {
+      &__links {
+        a{
+          font-size: var(--c-fs-6);
+        }
+        .download_free_btn {
+          padding: 8px 14px;
+          &.me-4{
+            margin-right: 15px !important;
+          }
+        }
+      }
+    }
+  }
+}

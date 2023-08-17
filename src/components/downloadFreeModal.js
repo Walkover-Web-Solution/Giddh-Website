@@ -85,7 +85,7 @@ const downloadFreeModal = () => {
                   className="download-free-modal__btn_link"
                 >
                   <img src="/img/mac_icon.svg" alt="Mac-Apple-Icon" />
-                  Download for mac
+                  Download <span> for mac</span> 
                 </a>
                 <a
                   href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh Setup ${windowsApp}.exe`}
@@ -95,7 +95,7 @@ const downloadFreeModal = () => {
                     src="/img/window-icon.svg"
                     alt="Windows-Microsoft-Icon"
                   />
-                  Download for windows
+                  Download <span> for windows</span> 
                 </a>
               </div>
             </div>

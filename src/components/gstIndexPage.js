@@ -5,6 +5,9 @@ const gstIndexPage = () => {
      const startPath = pathname.split('/');
      let isIndia = startPath[1] !== 'ae' && startPath[1] !== 'uk';
      let isAE = startPath[1] === 'ae';
+
+    // Holds Url Prefix country wise
+    let link = isIndia ? "" : isAE ? "/ae" : "/uk";
     return (
       <>
       <section className="container-fluid gst text-center">
@@ -24,7 +27,7 @@ const gstIndexPage = () => {
                 }
                 
               </p>
-              <a href={ isIndia ? 'https://giddh.com/signup' : (isAE ? 'https://giddh.com/ae/signup"': 'https://giddh.com/uk/signup"')}>Start Free</a>
+              <a href={ link + "/signup" }>Start Free</a>
             </div>
           </div>
         </div>
