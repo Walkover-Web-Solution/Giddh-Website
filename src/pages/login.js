@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Script from "next/script";
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from 'react-toastify';
 import GoogleLogin from "@/components/googleLogin";
 const OtpLogin = dynamic(() => import("@/components/otpLogin"), {
     ssr: false
@@ -10,8 +12,9 @@ const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
 });
 
 const logIn = () => {
-    var adwordsParams = "";
+    var adwordsParams = ""; // is remaining
     const [showVerificationModal, setShowVerificationModal] = useState(false);
+    const [userResponse, setUserResponse] = useState(null);
 
     useEffect(() => {
         window.addEventListener("message", function (event) {
@@ -39,7 +42,7 @@ const logIn = () => {
             .then((res) => {
                 initiateLogin(accessToken);
             })
-            .catch((err) => console.log("Something went wrong!", err));
+            .catch((err) => toast(err, {type: "error"}));
     }
 
     async function initiateLogin(accessToken) {
@@ -52,6 +55,7 @@ const logIn = () => {
             .then((res) => res.json())
             .then((response) => {
                 if (response.body.statusCode === "AUTHENTICATE_TWO_WAY") {
+                    setUserResponse(response.body);
                     setShowVerificationModal(true);
                 } else {
                     deleteUtmCookies();
@@ -69,14 +73,50 @@ const logIn = () => {
             .catch((err) => console.log("Something went wrong!", err));
     }
 
-    function otpVerifyCallback(data) {
-        console.log(data);
+    function otpVerifyCallback(response) {
+        setGiddhSession(response.session.id);
+        deleteUtmCookies();
+        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.session.id;
+    }
+
+    async function sendOtpLoginCallbackToParent(data) {
+        if (data.type == "success") {
+            await fetch(
+                process.env.NEXT_PUBLIC_API_URL + '/v2/login',
+                {
+                    method: "POST",
+                    mode: "cors",
+                    cache: "no-store",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ accessToken: data.message }),
+                }
+            )
+                .then((res) => res.json())
+                .then((response) => {
+                    if (response && response.status == "success") {
+                        if (response.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
+                            setUserResponse(response.body);
+                            setShowVerificationModal(true);
+                        } else {
+                            setGiddhSession(response.body.session.id);
+                            //window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
+                        }
+                    } else {
+                        console.log(response?.message);
+                    }
+                })
+                .catch((err) => console.log("Something went wrong!", err));
+        } else {
+            toast(data.message, {type: "error"});
+        }
     }
 
     return (
         <>
             <Script src="/js/helper.js"></Script>
-            <section className="entry d-flex  ">
+            <section className="entry d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
                     <a href="/">
                         <img
@@ -112,9 +152,9 @@ const logIn = () => {
 
                         <span className="d-block line_on_right c-fs-6 mb-4">or</span>
 
-                        <OtpLogin />
+                        <OtpLogin sendOtpLoginCallbackToParent={sendOtpLoginCallbackToParent} />
                         {showVerificationModal && (
-                            <OtpVerifyModal sendDataToParent={otpVerifyCallback} />
+                            <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} />
                         )}
 
                         {/* <p className="c-fs-6 mb-4">
@@ -126,6 +166,7 @@ const logIn = () => {
                     </div>
                 </div>
             </section>
+            <ToastContainer />
         </>
     );
 };

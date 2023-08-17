@@ -61,6 +61,7 @@ const signUp = () => {
 
     function resetEverything() {
         setEmailDetails({ email: "", accessToken: "", isVerified: false, signupVia: '', requestId: '' });
+        setMobileDetails({ mobileNo: "", accessToken: "", isVerified: false, signupVia: '', requestId: '' });
         setShowEmailOtp(false);
         setShowMobileOtp(false);
         resetMessages();
