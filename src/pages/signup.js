@@ -11,7 +11,6 @@ import GoogleLogin from "@/components/googleLogin";
 import Script from "next/script";
 
 const signUp = () => {
-    var fieldDefaultValue = "";
     const [currentStep, setCurrentStep] = useState(1);
     const [showEmailOtp, setShowEmailOtp] = useState(false);
     const [showMobileOtp, setShowMobileOtp] = useState(false);
@@ -78,6 +77,7 @@ const signUp = () => {
     }
 
     function resetEverything() {
+        removeLocalStorage("userData");
         setEmailDetails({ email: "", accessToken: "", isVerified: false, signupVia: '', requestId: '' });
         setMobileDetails({ mobileNo: "", accessToken: "", isVerified: false, signupVia: '', requestId: '' });
         setShowEmailOtp(false);
@@ -94,7 +94,9 @@ const signUp = () => {
         setShowEmailOtp(showOtp);
 
         if (!showOtp) {
-            emailDetails.requestId = '';
+            emailDetails.email = "";
+            emailDetails.isVerified = false;
+            emailDetails.requestId = "";
             setEmailDetails(emailDetails);
         }
     }
@@ -103,6 +105,8 @@ const signUp = () => {
         setShowMobileOtp(showOtp);
 
         if (!showOtp) {
+            mobileDetails.mobileNo = "";
+            mobileDetails.isVerified = false;
             mobileDetails.requestId = '';
             setMobileDetails(mobileDetails);
         }
