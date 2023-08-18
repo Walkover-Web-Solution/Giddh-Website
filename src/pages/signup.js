@@ -5,13 +5,13 @@ import {
     MdCheckCircle
 } from "react-icons/md";
 import { useState, useEffect } from "react";
+import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from 'react-toastify';
 import GoogleLogin from "@/components/googleLogin";
 import Script from "next/script";
 
 const signUp = () => {
-
-    const [successMessage, setSuccessMessage] = useState("");
-    const [errorMessage, setErrorMessage] = useState("");
+    var fieldDefaultValue = "";
     const [currentStep, setCurrentStep] = useState(1);
     const [showEmailOtp, setShowEmailOtp] = useState(false);
     const [showMobileOtp, setShowMobileOtp] = useState(false);
@@ -52,10 +52,28 @@ const signUp = () => {
                     setShowEmailOtp(false);
                 });
             })
-            .catch((err) => console.log("Something went wrong!", err));
+            .catch((err) => toast(err, { type: "error" }));
     }
 
     function initOtpSignup() {
+        var userData = getLocalStorage("userData");
+        if (userData) {
+            if (userData.user.email) {
+                setEmailDetails({ email: userData.user.email, accessToken: userData.accessToken, isVerified: true, signupVia: userData.signupVia });
+                updateCurrentStep(2);
+                setTimeout(() => {
+                    document.getElementById("email").value = userData.user.email;
+                    setShowEmailOtp(false);
+                });
+            } else if (userData.user.mobileNo) {
+                setMobileDetails({ mobileNo: userData.user.mobileNo, accessToken: userData.accessToken, isVerified: true, signupVia: userData.signupVia });
+                updateCurrentStep(2);
+                setTimeout(() => {
+                    document.getElementById("mobileNo").value = userData.user.mobileNo;
+                    setShowMobileOtp(false);
+                });
+            }
+        }
         addOtpWidgetScript(true, false);
     }
 
@@ -64,18 +82,12 @@ const signUp = () => {
         setMobileDetails({ mobileNo: "", accessToken: "", isVerified: false, signupVia: '', requestId: '' });
         setShowEmailOtp(false);
         setShowMobileOtp(false);
-        resetMessages();
         updateCurrentStep(2);
 
         setTimeout(() => {
             document.getElementById("email").value = "";
             document.getElementById("mobileNo").value = "";
         });
-    }
-
-    function resetMessages() {
-        setSuccessMessage("");
-        setErrorMessage("");
     }
 
     function setShowEmailOtpSection(showOtp) {
@@ -97,8 +109,6 @@ const signUp = () => {
     }
 
     function sendEmailOtp() {
-        resetMessages();
-
         if (!document.getElementById("email").value || !document.getElementById("email").value.trim() || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(document.getElementById("email").value)) {
             setErrorMessage("Please enter valid email!");
             return;
@@ -110,8 +120,6 @@ const signUp = () => {
     }
 
     function sendMobileOtp() {
-        resetMessages();
-
         if (!document.getElementById("mobileNo").value || !document.getElementById("mobileNo").value.trim()) {
             setErrorMessage("Please enter valid mobile number!");
             return;
@@ -127,6 +135,7 @@ const signUp = () => {
         setSuccessMessage('OTP sent successfully.');
         setEmailDetails({ email: document.getElementById("email").value, accessToken: "", isVerified: false, signupVia: 'giddh', requestId: data.message });
         setShowEmailOtpSection(true);
+        initiateOtpFieldsAutoMove('.email-otp-field');
     }
 
     function mobileOtpSentCallback(data) {
@@ -134,6 +143,7 @@ const signUp = () => {
         setSuccessMessage('OTP sent successfully.');
         setMobileDetails({ mobileNo: document.getElementById("mobileNo").value, accessToken: "", isVerified: false, signupVia: 'giddh', requestId: data.message });
         setShowMobileOtpSection(true);
+        initiateOtpFieldsAutoMove('.mobile-otp-field');
     }
 
     function emailOtpFailedCallback(error) {
@@ -173,7 +183,6 @@ const signUp = () => {
     }
 
     function retrySendOtp(channel) {
-        resetMessages();
         if (channel == 3) {
             resetEmailOtp();
             setEmailGetOtpInProgress(true);
@@ -187,7 +196,7 @@ const signUp = () => {
     function retrySendOtpSuccessCallback(channel) {
         setSuccessMessage('OTP resent successfully.');
 
-        if(channel == 3) {
+        if (channel == 3) {
             setEmailGetOtpInProgress(false);
         } else {
             setMobileGetOtpInProgress(false);
@@ -197,7 +206,7 @@ const signUp = () => {
     function retrySendOtpErrorCallback(channel, error) {
         setErrorMessage(error.message);
 
-        if(channel == 3) {
+        if (channel == 3) {
             setEmailGetOtpInProgress(false);
         } else {
             setMobileGetOtpInProgress(false);
@@ -205,8 +214,6 @@ const signUp = () => {
     }
 
     function verifyOtp(type) {
-        resetMessages();
-
         var otp = "";
 
         if (type == "email") {
@@ -268,9 +275,44 @@ const signUp = () => {
         }
     }
 
-    function initiateSignup() {
+    async function initiateSignup() {
         if (emailDetails.isVerified && mobileDetails.isVerified) {
-
+            await fetch(
+                process.env.NEXT_PUBLIC_API_URL + '/v2/login',
+                {
+                    method: "POST",
+                    mode: "cors",
+                    cache: "no-store",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({  }),
+                }
+            )
+                .then((res) => res.json())
+                .then((response) => {
+                    if (response.status == "success") {
+                        if (response.body.isNewUser === true) {
+                            let body = response.body;
+                            body.accessToken = data.message;
+                            body.signupVia = "giddh";
+                            setLocalStorage("userData", JSON.stringify(body));
+                            window.location = process.env.NEXT_PUBLIC_SITE_URL + "/signup";
+                        } else {
+                            deleteUtmCookies();
+                            if (response.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
+                                setUserResponse(response.body);
+                                setShowVerificationModal(true);
+                            } else {
+                                setGiddhSession(response.body.session.id);
+                                window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + data.message;
+                            }
+                        }
+                    } else {
+                        toast(response.message, { type: "error" });
+                    }
+                })
+                .catch((err) => toast(err, { type: "error" }));
         }
     }
 
@@ -290,21 +332,37 @@ const signUp = () => {
         }
     }
 
-    function setFocusOnField(event) {
-        // console.log(event);
-        // setTimeout(() => {
-        //     if(event && event.keyCode != 8 && event.target && event.target.nextElementSibling) {
-        //         event.target.nextElementSibling.focus();
-        //     }
-        // });
+    function setErrorMessage(message) {
+        toast(message, { type: "error" });
     }
 
-    function setFocusOnEmailVerifyButton(event) {
-        // setTimeout(() => {
-        //     if(event && event.keyCode != 8) {
-        //         document.getElementById("verify-email-button").focus();
-        //     }
-        // });
+    function setSuccessMessage(message) {
+        toast(message, { type: "success" });
+    }
+
+    function initiateOtpFieldsAutoMove(selector) {
+        setTimeout(function () {
+            const charInputs = document.querySelectorAll(selector);
+
+            charInputs.forEach((input, index) => {
+                input.addEventListener('input', (e) => {
+                    const value = e.target.value;
+
+                    if (value.length > 0) {
+                        if (index < charInputs.length - 1) {
+                            charInputs[index + 1].focus();
+                        }
+                    }
+                });
+
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Backspace' && input.value.length === 0 && index > 0) {
+                        e.preventDefault(); // Prevent the browser's default backspace behavior
+                        charInputs[index - 1].focus();
+                    }
+                });
+            });
+        });
     }
 
     return (
@@ -313,10 +371,10 @@ const signUp = () => {
             <section className="entry signup d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
                     <a href="/">
-                    <img
-                        src="/img/giddh-logo.svg"
-                        className="entry__left_section__brand_logo"
-                    />
+                        <img
+                            src="/img/giddh-logo.svg"
+                            className="entry__left_section__brand_logo"
+                        />
                     </a>
                     <div className="entry__left_section__details pe-5">
                         <div className="container">
@@ -383,7 +441,7 @@ const signUp = () => {
 
                                 <p className="c-fs-6 mb-4">
                                     If you already have an account,{" "}
-                                    <a href={process.env.NEXT_PUBLIC_SITE_URL + '/login'}  className="text_blue">
+                                    <a href={process.env.NEXT_PUBLIC_SITE_URL + '/login'} className="text_blue">
                                         Login
                                     </a>
                                 </p>
@@ -415,7 +473,7 @@ const signUp = () => {
                                             Verify email
                                         </label>
                                         <div className="d-flex flex-wrap p-0">
-                                            <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12" style={{paddingRight: showEmailOtp || (emailDetails && emailDetails.isVerified) ? "0" : null }}>
+                                            <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12" style={{ paddingRight: showEmailOtp || (emailDetails && emailDetails.isVerified) ? "0" : null }}>
                                                 <div className="d-flex step_input_wrapper__mobile_veiw">
                                                     <input
                                                         type="email"
@@ -467,7 +525,6 @@ const signUp = () => {
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="emailOtpField1"
-                                                                onKeyDown={setFocusOnField}
                                                                 autoFocus={true}
                                                             />
                                                             <input
@@ -476,7 +533,6 @@ const signUp = () => {
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="emailOtpField2"
-                                                                onKeyDown={setFocusOnField}
                                                             />
                                                             <input
                                                                 type="text"
@@ -484,7 +540,6 @@ const signUp = () => {
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="emailOtpField3"
-                                                                onKeyDown={setFocusOnField}
                                                             />
                                                             <input
                                                                 type="text"
@@ -492,16 +547,15 @@ const signUp = () => {
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="emailOtpField4"
-                                                                onKeyDown={setFocusOnEmailVerifyButton}
                                                             />
                                                             <button id="verify-email-button" className="btn custom-signup-btn opacity-100" onClick={() => verifyOtp('email')} disabled={emailVerifyOtpInProgress}>
-                                                            {emailVerifyOtpInProgress && (
-                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
-                                                            )}
+                                                                {emailVerifyOtpInProgress && (
+                                                                    <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                                                )}
 
-                                                            {!emailVerifyOtpInProgress && (
-                                                                <span>Verify</span>
-                                                            )}
+                                                                {!emailVerifyOtpInProgress && (
+                                                                    <span>Verify</span>
+                                                                )}
                                                             </button>
                                                         </div>
                                                         <a href="#" className="col-dark mt-3 c-fs-6">
@@ -517,7 +571,7 @@ const signUp = () => {
                                             Verify Mobile number
                                         </label>
                                         <div className="d-flex flex-wrap p-0">
-                                            <div className="step_input_wrapper__left col-xl-6 col-lg-12" style={{paddingRight: showMobileOtp || (mobileDetails && mobileDetails.isVerified) ? "0" : null }}>
+                                            <div className="step_input_wrapper__left col-xl-6 col-lg-12" style={{ paddingRight: showMobileOtp || (mobileDetails && mobileDetails.isVerified) ? "0" : null }}>
                                                 <div className="d-flex step_input_wrapper__mobile_veiw">
                                                     <input
                                                         type="tel"
@@ -591,13 +645,13 @@ const signUp = () => {
                                                                 id="mobileOtpField4"
                                                             />
                                                             <button id="verify-mobile-button" className="btn custom-signup-btn opacity-100" onClick={() => verifyOtp('mobile')} disabled={mobileVerifyOtpInProgress}>
-                                                            {mobileVerifyOtpInProgress && (
-                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
-                                                            )}
+                                                                {mobileVerifyOtpInProgress && (
+                                                                    <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                                                )}
 
-                                                            {!mobileVerifyOtpInProgress && (
-                                                                <span>Verify</span>
-                                                            )}
+                                                                {!mobileVerifyOtpInProgress && (
+                                                                    <span>Verify</span>
+                                                                )}
                                                             </button>
                                                         </div>
                                                         <a href="#" className="col-dark mt-3 c-fs-6">
@@ -612,12 +666,6 @@ const signUp = () => {
                                         </div>
                                     </div>
                                     <div className="row">
-                                        <p className="col-success c-fs-6 c-fw-600 my-4">
-                                            {successMessage}
-                                        </p>
-                                        <p className="col-error c-fs-6 c-fw-600 my-4">
-                                            {errorMessage}
-                                        </p>
                                         <div>
                                             <button className="me-3 btn back_btn" onClick={() => updateCurrentStep(1)}>
                                                 {" "}
@@ -626,7 +674,7 @@ const signUp = () => {
                                             </button>
                                             <button className="btn next_btn col-white" onClick={() => initiateSignup()}>
                                                 {" "}
-                                                Submit <MdKeyboardArrowRight />
+                                                Submit
                                             </button>
                                         </div>
                                     </div>
@@ -636,6 +684,7 @@ const signUp = () => {
                     </div>
                 </div>
             </section>
+            <ToastContainer />
         </>
     );
 };

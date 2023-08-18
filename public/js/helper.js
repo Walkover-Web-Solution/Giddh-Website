@@ -65,3 +65,15 @@ function addOtpWidgetScript(exposeMethods, callbackFunction) {
     };
     document.body.appendChild(scriptTag);
 }
+
+function getLocalStorage(key) {
+    return JSON.parse(window.localStorage.getItem(key));
+}
+
+function setLocalStorage(key, value) {
+    window.localStorage.setItem(key, value);
+}
+
+function removeLocalStorage(key) {
+    window.localStorage.removeItem(key);
+}

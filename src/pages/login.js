@@ -42,7 +42,7 @@ const logIn = () => {
             .then((res) => {
                 initiateLogin(accessToken);
             })
-            .catch((err) => toast(err, {type: "error"}));
+            .catch((err) => toast(err, { type: "error" }));
     }
 
     async function initiateLogin(accessToken) {
@@ -54,28 +54,31 @@ const logIn = () => {
         })
             .then((res) => res.json())
             .then((response) => {
-                if (response.body.statusCode === "AUTHENTICATE_TWO_WAY") {
-                    setUserResponse(response.body);
-                    setShowVerificationModal(true);
-                } else {
-                    deleteUtmCookies();
+                if (response.status === "success") {
                     if (response.body.isNewUser === true) {
-                        window.location =
-                            process.env.NEXT_PUBLIC_APP_URL + "/thankyou?token=" + accessToken + adwordsParams;
+                        let body = response.body;
+                        body.accessToken = accessToken;
+                        body.signupVia = "google";
+                        setLocalStorage("userData", JSON.stringify(body));
+                        window.location = process.env.NEXT_PUBLIC_SITE_URL + "/signup";
                     } else {
-                        window.location =
-                            process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" +
-                            accessToken +
-                            adwordsParams;
+                        deleteUtmCookies();
+                        if (response.body.statusCode === "AUTHENTICATE_TWO_WAY") {
+                            setUserResponse(response.body);
+                            setShowVerificationModal(true);
+                        } else {
+                            window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + accessToken + adwordsParams;
+                        }
                     }
+                } else {
+                    toast(response.message, { type: "error" });
                 }
             })
-            .catch((err) => console.log("Something went wrong!", err));
+            .catch((err) => toast(err, { type: "error" }));
     }
 
     function otpVerifyCallback(response) {
         setGiddhSession(response.session.id);
-        deleteUtmCookies();
         window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.session.id;
     }
 
@@ -95,21 +98,30 @@ const logIn = () => {
             )
                 .then((res) => res.json())
                 .then((response) => {
-                    if (response && response.status == "success") {
-                        if (response.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
-                            setUserResponse(response.body);
-                            setShowVerificationModal(true);
+                    if (response.status == "success") {
+                        if (response.body.isNewUser === true) {
+                            let body = response.body;
+                            body.accessToken = data.message;
+                            body.signupVia = "giddh";
+                            setLocalStorage("userData", JSON.stringify(body));
+                            window.location = process.env.NEXT_PUBLIC_SITE_URL + "/signup";
                         } else {
-                            setGiddhSession(response.body.session.id);
-                            //window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
+                            deleteUtmCookies();
+                            if (response.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
+                                setUserResponse(response.body);
+                                setShowVerificationModal(true);
+                            } else {
+                                setGiddhSession(response.body.session.id);
+                                window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + data.message;
+                            }
                         }
                     } else {
-                        console.log(response?.message);
+                        toast(response.message, { type: "error" });
                     }
                 })
-                .catch((err) => console.log("Something went wrong!", err));
+                .catch((err) => toast(err, { type: "error" }));
         } else {
-            toast(data.message, {type: "error"});
+            toast(data.message, { type: "error" });
         }
     }
 
