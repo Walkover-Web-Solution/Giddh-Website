@@ -44,9 +44,11 @@ const inventoryManagementSoftware = () => {
                   <img
                     src="/img/feature-gallery-icons/inventory-banner.svg"
                     width="90%"
+                    alt="inventory-banner-image"
                   />
-                  <img
+                 <img
                     src="/img/all-features-cloud_icon.svg"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />

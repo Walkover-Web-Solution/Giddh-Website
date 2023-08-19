@@ -204,7 +204,9 @@ const about = () => {
               <div className="col-lg-6 col-md-12 g-4">
                 <img
                   className="about__walkover__container__img"
-                  src="\companylogo.svg"
+                  src="/walkover-web-solution-pvt-ltd-company-logo.svg"
+                  alt="Walkover Web Solutions Pvt Ltd, Indore, Madhya Pradesh, India logo"
+
                 />
               </div>
             </div>
@@ -216,7 +218,8 @@ const about = () => {
                     <img
                       width="183px"
                       height="60px"
-                      src="/img/about/giddh-logo-message.svg"
+                      src="/img/about/msg91-company-logo.svg"
+                      alt="msg91-company-logo"
                     />
                   </div>
                   <p className="c-fs-5 p-4 m-0 m-md-2 m-sm-5 gap-5">
@@ -240,6 +243,7 @@ const about = () => {
                       width="238px"
                       height="68px"
                       src="\img\about\socket-logo-big.svg"
+                      alt="via-socket-logo"
                     />
                   </div>
                   <p className="c-fs-5 p-4 m-0 m-md-2 m-sm-5 gap-5">
@@ -406,7 +410,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/customers-come-first-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="Customers Come First logo"
                           />
                         </figure>
                       </div>
@@ -435,7 +439,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/embracing-setbacks-to-break-boundaries-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="Embracing Setbacks to Break Boundaries logo"
                           />
                         </figure>
                       </div>
@@ -463,7 +467,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/we-set-impossible-goals-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="We Set Impossible Goals logo"
                           />
                         </figure>
                       </div>
@@ -493,7 +497,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/people-are-our-power-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="People are our Power logo"
                           />
                         </figure>
                       </div>
@@ -521,7 +525,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/we-focus-on-why-and-how-grey.svg.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="We Focus on ‘Why?’ & ‘How?’ logo"
                           />
                         </figure>
                       </div>
@@ -550,7 +554,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/always-we-before-me-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="Always We Before Me logo"
                           />
                         </figure>
                       </div>
@@ -580,7 +584,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/we-do-not-settle-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="We Don’t Settle logo"
                           />
                         </figure>
                       </div>
@@ -608,7 +612,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/we-empower-the-future-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="We Empower The Future logo"
                           />
                         </figure>
                       </div>
@@ -637,7 +641,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/transparency-and-honesty-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="Transparency and Honesty logo"
                           />
                         </figure>
                       </div>
