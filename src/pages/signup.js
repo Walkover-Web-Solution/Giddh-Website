@@ -73,6 +73,7 @@ const signUp = () => {
                 });
             }
         }
+
         addOtpWidgetScript(true, false);
     }
 
@@ -290,7 +291,7 @@ const signUp = () => {
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({ emailIdAccessToken: emailDetails.accessToken, mobileNoAccessToken: mobileDetails.accessToken }),
+                    body: JSON.stringify({ emailId: emailDetails.email, emailIdAccessToken: emailDetails.accessToken, mobileNo: mobileDetails.mobileNo, mobileNoAccessToken: mobileDetails.accessToken }),
                 }
             )
                 .then((res) => res.json())

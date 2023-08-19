@@ -46,7 +46,7 @@ const logIn = () => {
     }
 
     async function initiateLogin(accessToken) {
-        await fetch(process.env.NEXT_PUBLIC_API_URL + '/v2/signup-with-google', {
+        await fetch(process.env.NEXT_PUBLIC_API_URL + '/v2/google-login', {
             method: "GET",
             mode: "cors",
             cache: "no-store",
@@ -55,19 +55,11 @@ const logIn = () => {
             .then((res) => res.json())
             .then((response) => {
                 if (response.status === "success") {
-                    if (response.body.isNewUser === true) {
-                        let body = response.body;
-                        body.accessToken = accessToken;
-                        body.signupVia = "google";
-                        setLocalStorage("userData", JSON.stringify(body));
-                        window.location = process.env.NEXT_PUBLIC_SITE_URL + "/signup";
+                    if (response.body.statusCode === "AUTHENTICATE_TWO_WAY") {
+                        setUserResponse(response.body);
+                        setShowVerificationModal(true);
                     } else {
-                        if (response.body.statusCode === "AUTHENTICATE_TWO_WAY") {
-                            setUserResponse(response.body);
-                            setShowVerificationModal(true);
-                        } else {
-                            window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + accessToken + adwordsParams;
-                        }
+                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + accessToken + adwordsParams;
                     }
                 } else {
                     toast(response.message, { type: "error" });
