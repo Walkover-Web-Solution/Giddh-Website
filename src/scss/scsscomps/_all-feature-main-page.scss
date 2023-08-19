@@ -18,3 +18,11 @@
         }
     }
 }
+@media (max-width: 575px) {
+    .all_features{
+        .feature-gallery__card{
+            width: clamp(270px,20vw,350px);
+            min-height: 200px;
+        }      
+    }
+}

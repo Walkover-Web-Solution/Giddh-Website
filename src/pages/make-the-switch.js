@@ -129,7 +129,7 @@ const makeTheSwitch = () => {
               Hello Giddh.
             </h2>
             <div className="row row-gap-4">
-              <div className="col-md-3 col-sm-12">
+              <div className="col-lg-3 col-md-6 col-sm-12">
                 <div className="make_the_switch__sub_section__card">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
@@ -141,7 +141,7 @@ const makeTheSwitch = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 col-sm-12">
+              <div className="col-lg-3 col-md-6 col-sm-12">
                 <div className="make_the_switch__sub_section__card">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
@@ -153,7 +153,7 @@ const makeTheSwitch = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 col-sm-12">
+              <div className="col-lg-3 col-md-6 col-sm-12">
                 <div className="make_the_switch__sub_section__card">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
@@ -165,7 +165,7 @@ const makeTheSwitch = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 col-sm-12">
+              <div className="col-lg-3 col-md-6 col-sm-12">
                 <div className="make_the_switch__sub_section__card">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>

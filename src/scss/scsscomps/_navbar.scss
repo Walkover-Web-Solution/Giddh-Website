@@ -210,11 +210,12 @@
 
 @media (max-width: 991px) {
   .navbar {
-    background-color: var(--col-primary) !important;
-    padding: 8px 0 !important;
+    background-color: var(--col-primary) !important;    
     box-shadow: none !important;
     min-height: 44px;
-    padding: 0 3px;
+    &.py-0{
+      padding: 8px 0 !important;
+    }
 
     &--navbar_brand {
       svg {
@@ -372,4 +373,71 @@
     }
   }
 }
+.navbar {
+
+  .navbar-toggler{
+
+    svg{
+      border: 1px solid #fff;
+      .hamberger_icon{
+        transform: translate(3.5px,10px);
+      }
+    }
+
+    // Opened
+    &:not(.collapsed){
+      svg{
+        .bar-top{
+          stroke: red;
+          animation: toggle-animation-line-1 600ms ease forwards;
+        }
+        .bar-middle{
+          display: none;
+        }
+        .bar-bottom{
+          stroke: green;
+          animation: toggle-animation-line-2 600ms ease forwards;
+        }
+      }
+    }
+    // Closed
+    &.collapsed{
+      svg{
+        .bar-top{
+          stroke: yellow;
+        }
+        .bar-middle{
+          stroke: whitesmoke;
+          display: block;
+        }
+        .bar-bottom{
+          stroke: orange;
+        }
+      }
+    }
+  }
+}
+@keyframes toggle-animation-line-1 {
+  0%{
+    transform: rotate(0) translate(0px,8.5px);
+  }
+  1%{
+    transform: rotate(0) translate(0,-18px);
+  }
+  100%{
+    transform: rotate(45deg) translate(12px,-18px);
+  }
+}
+@keyframes toggle-animation-line-2 {
+  0%{
+    transform: translateY(8.5px);
+  }
+  1%{
+    transform: rotate(0) translate(-0,27px);
+  }
+  100%{
+    transform: rotate(-45deg) translate(-17px,27px);
+  }
+}
+
 // ======================================== NAVBAR SCSS CODE===============END=======================================
