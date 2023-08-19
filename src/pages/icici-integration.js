@@ -18,7 +18,7 @@ const iciciIntegration = () => {
               <div className="text-center">
                 <div className="d-flex align-items-end justify-content-center mb-5">
                   <span>
-                    <img src="/img/giddh-logo.svg" height="33px" />
+                    <img src="/img/giddh-logo.svg" alt="Giddh Accounting Software Logo" height="33px" />
                   </span>
                   <span className="icici_integration__head_content__add_icon mx-3">
                     <MdAdd />

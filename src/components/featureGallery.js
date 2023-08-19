@@ -451,7 +451,7 @@ const featureGallery = () => {
                   onClick={() => setCurrent(data.name)}
                 >
                   <figure>
-                    <img src={"/img" + data.image} alt={ data.image + " Icon"} height="50px" width="auto" />
+                    <img src={"/img" + data.image} alt="Giddh features Icon" height="50px" width="auto" />
                     <figcaption className="c-fw-400">{data.name}</figcaption>
                   </figure>
                 </div>

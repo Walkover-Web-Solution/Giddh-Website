@@ -44,9 +44,11 @@ const multiUserAccountingSoftware = () => {
                   <img
                     src="/img/feature-gallery-icons/share-banner.svg"
                     width="90%"
+                    alt="share-banner-image"
                   />
-                  <img
+                 <img
                     src="/img/all-features-cloud_icon.svg"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -107,7 +109,7 @@ const multiUserAccountingSoftware = () => {
                   <img
                     src="/img/feature-gallery-icons/share-admin.svg"
                     className="img-fluid"
-                    alt="connect bank image"
+                    alt="share to admin image"
                   />
                 </figure>
               </div>
@@ -138,7 +140,7 @@ const multiUserAccountingSoftware = () => {
                         : "/img/feature-gallery-icons/layer-uk.svg"
                     }
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="share-collaborate-image"
                   />
                 </figure>
               </div>
@@ -164,7 +166,7 @@ const multiUserAccountingSoftware = () => {
                   <img
                     src="/img/feature-gallery-icons/share-cash.svg"
                     className="img-fluid"
-                    alt="bank account image"
+                    alt="share-cash-image"
                   />
                 </figure>
               </div>

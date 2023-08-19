@@ -43,10 +43,12 @@ const accountingDashboard = () => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/dashboard-banner.svg"
+                    alt="Giddh Dashboard Banner Image"
                     width="90%"
                   />
-                  <img
+                 <img
                     src="/img/all-features-cloud_icon.svg"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -101,7 +103,7 @@ const accountingDashboard = () => {
                   <img
                     src={isIndia ? '/img/feature-gallery-icons/networth.svg' : (isAE ? '/img/feature-gallery-icons/networth-ae.png' : '/img/feature-gallery-icons/networth-uk.svg')}
                     className="img-fluid"
-                    alt="connect bank image"
+                    alt="Accounting Dashboard Image"
                   />
                 </figure>
               </div>
@@ -125,7 +127,7 @@ const accountingDashboard = () => {
                   <img
                     src="/img/feature-gallery-icons/totaloverdue.svg"
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="Accounting Dashboard Image"
                   />
                 </figure>
               </div>
@@ -150,7 +152,7 @@ const accountingDashboard = () => {
                   <img
                     src="/img/feature-gallery-icons/expense-report.svg"
                     className="img-fluid"
-                    alt="bank account image"
+                    alt="Accounting Dashboard Image"
                   />
                 </figure>
               </div>
@@ -174,7 +176,7 @@ const accountingDashboard = () => {
                   <img
                     src={isIndia ? '/img/feature-gallery-icons/revenue.svg' : (isAE ? '/img/feature-gallery-icons/revenue-ae.png' : '/img/feature-gallery-icons/revenue-uk.svg')}
                     className="img-fluid"
-                    alt="bank overview image"
+                    alt="Accounting Dashboard Image"
                   />
                 </figure>
               </div>
@@ -201,7 +203,7 @@ const accountingDashboard = () => {
                   <img
                     src="/img/feature-gallery-icons/financial-ratio.svg"
                     className="img-fluid"
-                    alt="bank account image"
+                    alt="Accounting Dashboard Image"
                   />
                 </figure>
               </div>

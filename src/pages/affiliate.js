@@ -24,6 +24,7 @@ const affiliate = () => {
                       <img
                         className="mx-auto affiliate__img"
                         src="/img/affilate/earn.png"
+                        alt="earn money icon"
                       />
                     </div>
                     <div className="col-9 col-md-8">
@@ -44,6 +45,7 @@ const affiliate = () => {
                       <img
                         className="mx-auto affiliate__img"
                         src="/img/affilate/target.png"
+                        alt="Achive taget icon"
                       />
                     </div>
                     <div className="col-9 col-md-8">
@@ -64,6 +66,7 @@ const affiliate = () => {
                       <img
                         className="mx-auto affiliate__img"
                         src="/img/affilate/analytics.png"
+                        alt="Giddh Analytics Reliable Tracking icons"
                       />
                     </div>
                     <div className="col-9 col-md-8">
@@ -84,6 +87,7 @@ const affiliate = () => {
                       <img
                         className="mx-auto affiliate__img"
                         src="/img/affilate/meter.png"
+                        alt="Proven Results Measure Icon"
                       />
                     </div>
                     <div className="col-9 col-md-8">
@@ -105,6 +109,7 @@ const affiliate = () => {
                       <img
                         className="mx-auto affiliate__img"
                         src="/img/affilate/free.png"
+                        alt="Free to Join Icon"
                       />
                     </div>
                     <div className="col-9 col-md-8">
@@ -137,6 +142,7 @@ const affiliate = () => {
                   <img
                     className="mx-auto resources-img"
                     src="/img/affilate/graph.png"
+                    alt="Reliable Tracking Icon"
                   />
                   <div className="col-12 col-md-6">
                     <h4 className="c-fs-2 col-primary c-fw-600">
@@ -164,6 +170,7 @@ const affiliate = () => {
                   <img
                     className="mx-auto resources-img"
                     src="/img/affilate/content_creative.png"
+                    alt="Creatives and Content Banner Image"
                   />
                   <div className="col-12 col-md-6">
                     <h4 className="c-fs-2 col-primary c-fw-600">
@@ -178,6 +185,7 @@ const affiliate = () => {
                   <img
                     className="mx-auto resources-img"
                     src="/img/affilate/affiliate_manager.png"
+                    alt="Dedicated Affiliate Manager Banner Image"
                   />
                   <div className="col-12 col-md-6">
                     <h4 className="c-fs-2 col-primary c-fw-600">
@@ -204,6 +212,7 @@ const affiliate = () => {
                   <img
                     className="mx-auto resources-img"
                     src="/img/affilate/newsletter.png"
+                    alt="Affiliate Newsletter Banner Image"
                   />
                   <div className="col-12 col-md-6">
                     <h4 className="c-fs-2 col-primary c-fw-600">

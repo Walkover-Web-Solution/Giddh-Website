@@ -110,7 +110,7 @@ const Footer = () => {
                         href="https://apps.apple.com/in/app/giddh-books-that-make-sense/id1491003438"
                         target="_blank"
                       >
-                        <img alt="ios icon" src="/img//mac_icon.svg" />
+                        <img alt="ios icon" src="/img/mac_icon.svg" />
                       </a>
                     </li>
                   </ul>
@@ -124,7 +124,7 @@ const Footer = () => {
                         className="download-icon "
                         href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh Setup ${windowsApp}.exe`}
                       >
-                        <img src="/img/window-icon.svg" />
+                        <img src="/img/window-icon.svg" alt="Download Windows Giddh App icon" />
                       </a>
                     </li>
                     <li>
@@ -132,7 +132,7 @@ const Footer = () => {
                         className="download-icon rounded-circle"
                         href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-${macApp}.dmg`}
                       >
-                        <img src="/img/mac_icon.svg" />
+                        <img src="/img/mac_icon.svg" alt="Download Mac Giddh App icon" />
                       </a>
                     </li>
                   </ul>
@@ -157,7 +157,7 @@ const Footer = () => {
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      <img src="/img/earth.svg" alt="earth-icon" />
+                      <img src="/img/earth.svg" alt="Blue-Globe-icon" />
 
                       {isIndia
                         ? "IN - India"
