@@ -40,9 +40,11 @@ const eInvoie = () => {
                   <img
                     src="/img/feature-gallery-icons/e-invoice-banner.svg"
                     width="90%"
+                    alt="invoice-banner-image"
                   />
-                  <img
+                 <img
                     src="/img/all-features-cloud_icon.svg"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />

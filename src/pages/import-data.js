@@ -44,9 +44,11 @@ const importExeclFiles = () => {
                   <img
                     src="/img/feature-gallery-icons/import-banner.svg"
                     width="90%"
+                    alt="import-banner-icon"
                   />
-                  <img
+                 <img
                     src="/img/all-features-cloud_icon.svg"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />

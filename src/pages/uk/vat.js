@@ -46,7 +46,7 @@ const ukVAT = () => {
           <div className="row">
             <div className="col">
               <div className="filing-tax-card d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/Direct-Filing.svg" />
+                <img src="/img/tax-images/Direct-Filing.svg" alt="Direct-Tax-Filing-Icon" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Direct Filing
@@ -62,7 +62,7 @@ const ukVAT = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/accurate.svg" />
+                <img src="/img/tax-images/accurate.svg"  alt="accurate-icon" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     100% Accurate
@@ -78,7 +78,7 @@ const ukVAT = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/get-notified.svg" />
+                <img src="/img/tax-images/get-notified.svg" alt="get-notified-icon" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Timely Notifications
@@ -97,7 +97,7 @@ const ukVAT = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/easy-fast.svg" />
+                <img src="/img/tax-images/easy-fast.svg" alt="easy and fast icon" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Highly Collaborative
@@ -113,7 +113,7 @@ const ukVAT = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/secure-reliable.svg" />
+                <img src="/img/tax-images/secure-reliable.svg" alt="secure-reliable-icon" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Secure & Reliable
@@ -129,7 +129,7 @@ const ukVAT = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/best-support.svg" />
+                <img src="/img/tax-images/best-support.svg" alt="support icon"  />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Best in Class Support
