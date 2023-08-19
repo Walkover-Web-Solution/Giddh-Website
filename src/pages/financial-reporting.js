@@ -46,8 +46,9 @@ const financialReporting = () => {
                     src="/img/feature-gallery-icons/report-banner.svg"
                     width="90%"
                   />
-                  <img
+                 <img
                     src="/img/all-features-cloud_icon.svg"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />

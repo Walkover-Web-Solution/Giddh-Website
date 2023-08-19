@@ -45,9 +45,11 @@ const invoiceSoftware = () => {
                   <img
                     src="/img/feature-gallery-icons/invoice-banner.svg"
                     width="90%"
+                    alt="invoice-banner-image"
                   />
-                  <img
+                 <img
                     src="/img/all-features-cloud_icon.svg"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -100,7 +102,7 @@ const invoiceSoftware = () => {
                   <img
                     src="/img/feature-gallery-icons/Professional-looking-inv.svg"
                     className="img-fluid"
-                    alt="connect bank image"
+                    alt="invoicing banner image"
                   />
                 </figure>
               </div>
@@ -132,7 +134,7 @@ const invoiceSoftware = () => {
                         : "/img/feature-gallery-icons/Group-5618.svg"
                     }
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="invoicing banner image"
                   />
                 </figure>
               </div>
@@ -159,7 +161,7 @@ const invoiceSoftware = () => {
                   <img
                     src="/img/feature-gallery-icons/lockinv.svg"
                     className="img-fluid"
-                    alt="bank account image"
+                    alt="invoicing banner image"
                   />
                 </figure>
               </div>
@@ -187,7 +189,7 @@ const invoiceSoftware = () => {
                   <img
                     src="/img/feature-gallery-icons/automation.svg"
                     className="img-fluid"
-                    alt="bank overview image"
+                    alt="invoicing banner image"
                   />
                 </figure>
               </div>

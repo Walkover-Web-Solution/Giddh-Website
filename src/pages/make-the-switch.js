@@ -33,7 +33,7 @@ const makeTheSwitch = () => {
           <div className="row ">
             <div className="col-md-6 col-sm-12">
               <figure>
-                <img src={ isIndia || isAE ? "/img/switch-laptop-image.png" : "/img/uk-dashboard-laptop-and-pc-img.svg"} className="img-fluid" />
+                <img src={ isIndia || isAE ? "/img/switch-laptop-image.png" : "/img/uk-dashboard-laptop-and-pc-img.svg"} alt="Giddh Accounting Software Dashboard Image" className="img-fluid" />
               </figure>
             </div>
             <div className="col-md-6 col-sm-12">
@@ -88,7 +88,7 @@ const makeTheSwitch = () => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img src="/img/Accounting-sol-2.png" className="img-fluid" />
+                  <img src="/img/Accounting-sol-2.png" alt="make the switch to giddh banner image" className="img-fluid" />
                 </figure>
               </div>
             </div>
@@ -114,7 +114,7 @@ const makeTheSwitch = () => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img src="/img/Accounting-sol-1.png" className="img-fluid" />
+                  <img src="/img/Accounting-sol-1.png" alt="make the switch to giddh banner image" className="img-fluid" />
                 </figure>
               </div>
             </div>
@@ -133,7 +133,7 @@ const makeTheSwitch = () => {
                 <div className="make_the_switch__sub_section__card">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
-                      <img src="/img/superfast.svg" />
+                      <img src="/img/superfast.svg" alt="superfast giddh icon" />
                     </figure>
                   </div>
                   <div className="make_the_switch__sub_section__card__content_wrapper make_the_switch__sub_section__card__content_wrapper--blue">
@@ -145,7 +145,7 @@ const makeTheSwitch = () => {
                 <div className="make_the_switch__sub_section__card">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
-                      <img src="/img/ledger.svg" />
+                      <img src="/img/ledger.svg" alt="giddh ledger icon" />
                     </figure>
                   </div>
                   <div className="make_the_switch__sub_section__card__content_wrapper make_the_switch__sub_section__card__content_wrapper--golden">
@@ -157,7 +157,7 @@ const makeTheSwitch = () => {
                 <div className="make_the_switch__sub_section__card">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
-                      <img src="/img/multi-user.svg" />
+                      <img src="/img/multi-user.svg" alt="multiuser giddh app icons " />
                     </figure>
                   </div>
                   <div className="make_the_switch__sub_section__card__content_wrapper make_the_switch__sub_section__card__content_wrapper--pink">
@@ -169,7 +169,7 @@ const makeTheSwitch = () => {
                 <div className="make_the_switch__sub_section__card">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
-                      <img src="/img/autoupdate.svg" />
+                      <img src="/img/autoupdate.svg" alt="autoupdate icon" />
                     </figure>
                   </div>
                   <div className="make_the_switch__sub_section__card__content_wrapper make_the_switch__sub_section__card__content_wrapper--dark-green">
