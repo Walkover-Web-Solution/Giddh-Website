@@ -62,7 +62,6 @@ const logIn = () => {
                         setLocalStorage("userData", JSON.stringify(body));
                         window.location = process.env.NEXT_PUBLIC_SITE_URL + "/signup";
                     } else {
-                        deleteUtmCookies();
                         if (response.body.statusCode === "AUTHENTICATE_TWO_WAY") {
                             setUserResponse(response.body);
                             setShowVerificationModal(true);
@@ -85,7 +84,7 @@ const logIn = () => {
     async function sendOtpLoginCallbackToParent(data) {
         if (data.type == "success") {
             await fetch(
-                process.env.NEXT_PUBLIC_API_URL + '/v2/login',
+                process.env.NEXT_PUBLIC_API_URL + '/v2/auth-login',
                 {
                     method: "POST",
                     mode: "cors",
@@ -99,21 +98,12 @@ const logIn = () => {
                 .then((res) => res.json())
                 .then((response) => {
                     if (response.status == "success") {
-                        if (response.body.isNewUser === true) {
-                            let body = response.body;
-                            body.accessToken = data.message;
-                            body.signupVia = "giddh";
-                            setLocalStorage("userData", JSON.stringify(body));
-                            window.location = process.env.NEXT_PUBLIC_SITE_URL + "/signup";
+                        if (response.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
+                            setUserResponse(response.body);
+                            setShowVerificationModal(true);
                         } else {
-                            deleteUtmCookies();
-                            if (response.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
-                                setUserResponse(response.body);
-                                setShowVerificationModal(true);
-                            } else {
-                                setGiddhSession(response.body.session.id);
-                                window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + data.message;
-                            }
+                            setGiddhSession(response.body.session.id);
+                            window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + data.message;
                         }
                     } else {
                         toast(response.message, { type: "error" });
