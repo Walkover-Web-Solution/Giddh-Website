@@ -751,18 +751,20 @@ const signUp = () => {
                                                                 )}
                                                             </button>
                                                         </div>
-                                                        <a href="#" className="col-dark mt-3 c-fs-6">
-                                                            Resend on{" "}
-                                                            <ul>
-                                                                {connectedChannels.map((item, index) => (
-                                                                    <li key={item.value}><span className="col-primary c-fw-600" onClick={() => retrySendOtp(item.value)}>{item.name}</span>
-                                                                        {connectedChannels.length > (index + 1) && (
-                                                                            <span>or</span>
-                                                                        )}
-                                                                    </li>
-                                                                ))}
-                                                            </ul>
-                                                        </a>
+                                                        {connectedChannels && (
+                                                            <a href="#" className="col-dark mt-3 c-fs-6">
+                                                                Resend on{" "}
+                                                                <ul>
+                                                                    {connectedChannels.map((item, index) => (
+                                                                        <li key={item.value}><span className="col-primary c-fw-600" onClick={() => retrySendOtp(item.value)}>{item.name}</span>
+                                                                            {connectedChannels.length > (index + 1) && (
+                                                                                <span>or</span>
+                                                                            )}
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            </a>
+                                                        )}
                                                     </div>
                                                 </div>
                                             )}

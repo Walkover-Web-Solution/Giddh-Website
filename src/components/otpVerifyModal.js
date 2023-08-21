@@ -114,7 +114,7 @@ const otpVerifyModal = (props) => {
                                 className="modal-title c-fs-5 col-white"
                                 id="signWithOTPLabel"
                             >
-                                Sign Up with Giddh
+                                Sign In with Giddh
                             </h4>
                             <span
                                 className="col-white c-fs-3 cursor-pointer"

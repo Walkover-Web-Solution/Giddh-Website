@@ -11,7 +11,6 @@ const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
 });
 
 const logIn = () => {
-    var adwordsParams = ""; // is remaining
     const [showVerificationModal, setShowVerificationModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
 
@@ -58,7 +57,7 @@ const logIn = () => {
                         setUserResponse(response.body);
                         setShowVerificationModal(true);
                     } else {
-                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + accessToken + adwordsParams;
+                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + accessToken;
                     }
                 } else {
                     showToaster(response.message, "error");
