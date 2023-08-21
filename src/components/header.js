@@ -1,8 +1,9 @@
 import Head from "next/head";
 import Data from "@/data/metadata.json";
+
 const header = (browserPath) => {
-  const metaPath = browserPath.browserPath
-  const metaData = Data[metaPath]
+  const metaPath = browserPath.browserPath;
+  const metaData = Data[metaPath];
   return (
     <>
       <Head>
@@ -12,6 +13,7 @@ const header = (browserPath) => {
         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet"/>
         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
         <script src="//embed.typeform.com/next/embed.js"></script>
+        <script src="/js/helper.js"></script>
       </Head>
     </>
   );

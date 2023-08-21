@@ -70,13 +70,34 @@ function addOtpWidgetScript(exposeMethods, callbackFunction, widgetLoadCallbackF
 }
 
 function getLocalStorage(key) {
-    return JSON.parse(window.localStorage.getItem(key));
+    return (window.localStorage.getItem(key)) ? JSON.parse(window.localStorage.getItem(key)) : "";
 }
 
 function setLocalStorage(key, value) {
-    window.localStorage.setItem(key, value);
+    window.localStorage.setItem(key, JSON.stringify(value));
 }
 
 function removeLocalStorage(key) {
     window.localStorage.removeItem(key);
+}
+
+function setUtmParamInLocalStorage() {
+    var self = window.location.toString();
+    var querystring = self.split("?");
+    if (querystring.length > 1) {
+        var pairs = querystring[1].split("&");
+        for (i in pairs) {
+            var keyval = pairs[i].split("=");
+            if (getLocalStorage(keyval[0]) === null) {
+                setLocalStorage(keyval[0], decodeURIComponent(keyval[1]));
+            }
+        }
+    }
+}
+
+setUtmParamInLocalStorage();
+
+function formatMobileNumber(number) {
+    number = String(number).replace("+", "");
+    return number.trim();
 }

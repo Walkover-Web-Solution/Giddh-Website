@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import Script from "next/script";
-import 'react-toastify/dist/ReactToastify.css';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import Toastify from "@/components/toastify";
 import GoogleLogin from "@/components/googleLogin";
 const OtpLogin = dynamic(() => import("@/components/otpLogin"), {
     ssr: false
@@ -42,7 +41,7 @@ const logIn = () => {
             .then((res) => {
                 initiateLogin(accessToken);
             })
-            .catch((err) => toast(err, { type: "error" }));
+            .catch((err) => showToaster(err, "error"));
     }
 
     async function initiateLogin(accessToken) {
@@ -62,15 +61,10 @@ const logIn = () => {
                         window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + accessToken + adwordsParams;
                     }
                 } else {
-                    toast(response.message, { type: "error" });
+                    showToaster(response.message, "error");
                 }
             })
-            .catch((err) => toast(err, { type: "error" }));
-    }
-
-    function otpVerifyCallback(response) {
-        setGiddhSession(response.session.id);
-        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.session.id;
+            .catch((err) => showToaster(err, "error"));
     }
 
     async function sendOtpLoginCallbackToParent(data) {
@@ -98,18 +92,27 @@ const logIn = () => {
                             window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + data.message;
                         }
                     } else {
-                        toast(response.message, { type: "error" });
+                        showToaster(response.message, "error");
                     }
                 })
-                .catch((err) => toast(err, { type: "error" }));
+                .catch((err) => showToaster(err, "error"));
         } else {
-            toast(data.message, { type: "error" });
+            showToaster(data.message, "error");
         }
+    }
+
+    function otpVerifyCallback(response) {
+        setGiddhSession(response.session.id);
+        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.session.id;
+    }
+
+    function showToaster(message, type) {
+        toast.dismiss();
+        toast(message, { type: type });
     }
 
     return (
         <>
-            <Script src="/js/helper.js"></Script>
             <section className="entry d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
                     <a href="/">
@@ -160,7 +163,7 @@ const logIn = () => {
                     </div>
                 </div>
             </section>
-            <ToastContainer />
+            <Toastify />
         </>
     );
 };

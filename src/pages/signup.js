@@ -1,8 +1,7 @@
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft, MdDone, MdCheckCircle } from "react-icons/md";
 import { useState, useEffect } from "react";
-import Script from "next/script";
-import 'react-toastify/dist/ReactToastify.css';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import Toastify from "@/components/toastify";
 import GoogleLogin from "@/components/googleLogin";
 
 const signUp = () => {
@@ -12,6 +11,7 @@ const signUp = () => {
     const [emailDetails, setEmailDetails] = useState(null);
     const [mobileDetails, setMobileDetails] = useState(null);
     const [connectedChannels, setConnectedChannels] = useState(null);
+    const [intl, setIntl] = useState(null);
     const [emailGetOtpInProgress, setEmailGetOtpInProgress] = useState(false);
     const [emailVerifyOtpInProgress, setEmailVerifyOtpInProgress] = useState(false);
     const [mobileGetOtpInProgress, setMobileGetOtpInProgress] = useState(false);
@@ -24,6 +24,8 @@ const signUp = () => {
                 getGoogleUserDetails(event.data.accessToken);
             }
         });
+
+        initOtpSignup();
     }, []);
 
     async function getGoogleUserDetails(accessToken) {
@@ -48,7 +50,46 @@ const signUp = () => {
                     setShowEmailOtp(false);
                 });
             })
-            .catch((err) => toast(err, { type: "error" }));
+            .catch((err) => showToaster(err, "error"));
+    }
+
+    async function initiateSignup() {
+        if (emailDetails.isVerified && mobileDetails.isVerified) {
+            setSignupInProgress(true);
+            await fetch(
+                process.env.NEXT_PUBLIC_API_URL + '/v2/register',
+                {
+                    method: "POST",
+                    mode: "cors",
+                    cache: "no-store",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ emailId: emailDetails.email, emailIdAccessToken: emailDetails.accessToken, mobileNo: mobileDetails.mobileNo, mobileNoAccessToken: mobileDetails.accessToken }),
+                }
+            )
+                .then((res) => res.json())
+                .then((response) => {
+                    if (response.status == "success") {
+                        showToaster("Your account has been created successfully.", "success");
+                        setGiddhSession(response.body.session.id);
+
+                        var utmParams = "&utm_source=" + getLocalStorage("utm_source") + "&utm_medium=" + getLocalStorage("utm_medium") + "&utm_campaign=" + getLocalStorage("utm_campaign") + "&utm_term=" + getLocalStorage("utm_term") + "&utm_content=" + getLocalStorage("utm_content") + "";
+
+                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id + utmParams;
+                    } else {
+                        setSignupInProgress(false);
+                        showToaster(response.message, "error");
+                    }
+                })
+                .catch((err) => signupErrorCallback(err));
+        } else if (!emailDetails.isVerified && !mobileDetails.isVerified) {
+            showToaster("Please verify email and mobile", "error");
+        } else if (!emailDetails.isVerified && mobileDetails.isVerified) {
+            showToaster("Please verify email", "error");
+        } else if (emailDetails.isVerified && !mobileDetails.isVerified) {
+            showToaster("Please verify mobile", "error");
+        }
     }
 
     function initOtpSignup() {
@@ -66,6 +107,7 @@ const signUp = () => {
                 updateCurrentStep(2);
                 setTimeout(() => {
                     document.getElementById("mobileNo").value = userData.user.mobileNo;
+                    this.intl.setNumber(userData.user.mobileNo);
                     setShowMobileOtp(false);
                 });
             }
@@ -89,6 +131,7 @@ const signUp = () => {
         setTimeout(() => {
             document.getElementById("email").value = "";
             document.getElementById("mobileNo").value = "";
+            intl.setNumber("");
         });
     }
 
@@ -132,7 +175,7 @@ const signUp = () => {
 
     function sendEmailOtp() {
         if (!document.getElementById("email").value || !document.getElementById("email").value.trim() || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(document.getElementById("email").value)) {
-            setErrorMessage("Please enter valid email!");
+            showToaster("Please enter valid email!", "error");
             return;
         }
 
@@ -142,19 +185,20 @@ const signUp = () => {
     }
 
     function sendMobileOtp() {
-        if (!document.getElementById("mobileNo").value || !document.getElementById("mobileNo").value.trim()) {
-            setErrorMessage("Please enter valid mobile number!");
+        var mobileNo = formatMobileNumber(intl.getNumber());
+        if (!mobileNo || !mobileNo) {
+            showToaster("Please enter valid mobile number!", "error");
             return;
         }
 
         setMobileGetOtpInProgress(true);
 
-        window.sendOtp(document.getElementById("mobileNo").value, (data) => { mobileOtpSentCallback(data); }, (error) => { mobileOtpFailedCallback(error) });
+        window.sendOtp(mobileNo, (data) => { mobileOtpSentCallback(data); }, (error) => { mobileOtpFailedCallback(error) });
     }
 
     function emailOtpSentCallback(data) {
         setEmailGetOtpInProgress(false);
-        setSuccessMessage('OTP sent successfully.');
+        showToaster('OTP sent successfully.', "success");
         setEmailDetails({ email: document.getElementById("email").value, accessToken: "", isVerified: false, signupVia: 'giddh', requestId: data.message });
         setShowEmailOtpSection(true);
         initiateOtpFieldsAutoMove('.email-otp-field');
@@ -162,15 +206,16 @@ const signUp = () => {
 
     function mobileOtpSentCallback(data) {
         setMobileGetOtpInProgress(false);
-        setSuccessMessage('OTP sent successfully.');
-        setMobileDetails({ mobileNo: document.getElementById("mobileNo").value, accessToken: "", isVerified: false, signupVia: 'giddh', requestId: data.message });
+        showToaster('OTP sent successfully.', "success");
+        var mobileNo = formatMobileNumber(intl.getNumber());
+        setMobileDetails({ mobileNo: mobileNo, accessToken: "", isVerified: false, signupVia: 'giddh', requestId: data.message });
         setShowMobileOtpSection(true);
         initiateOtpFieldsAutoMove('.mobile-otp-field');
     }
 
     function emailOtpFailedCallback(error) {
         setEmailGetOtpInProgress(false);
-        setErrorMessage(error.message);
+        showToaster(error.message, "error");
         setShowEmailOtpSection(false);
         emailDetails.requestId = '';
         setEmailDetails(emailDetails);
@@ -178,7 +223,7 @@ const signUp = () => {
 
     function mobileOtpFailedCallback(error) {
         setMobileGetOtpInProgress(false);
-        setErrorMessage(error.message);
+        showToaster(error.message, "error");
         setShowMobileOtpSection(false);
         mobileDetails.requestId = '';
         setMobileDetails(mobileDetails);
@@ -219,7 +264,7 @@ const signUp = () => {
     }
 
     function retrySendOtpSuccessCallback(channel) {
-        setSuccessMessage('OTP resent successfully.');
+        showToaster('OTP resent successfully.', "success");
 
         if (channel == 3) {
             setEmailGetOtpInProgress(false);
@@ -229,7 +274,7 @@ const signUp = () => {
     }
 
     function retrySendOtpErrorCallback(channel, error) {
-        setErrorMessage(error.message);
+        showToaster(error.message, "error");
 
         if (channel == 3) {
             setEmailGetOtpInProgress(false);
@@ -248,7 +293,7 @@ const signUp = () => {
             });
 
             if (!otp) {
-                setErrorMessage("Please enter OTP!");
+                showToaster("Please enter OTP!", "error");
                 return;
             }
 
@@ -260,7 +305,7 @@ const signUp = () => {
             });
 
             if (!otp) {
-                setErrorMessage("Please enter OTP!");
+                showToaster("Please enter OTP!", "error");
                 return;
             }
 
@@ -272,7 +317,7 @@ const signUp = () => {
     }
 
     function verifyOtpSuccessCallback(type, data) {
-        setSuccessMessage('OTP verified successfully.');
+        showToaster('OTP verified successfully.', "success");
 
         if (type == "email") {
             setEmailVerifyOtpInProgress(false);
@@ -288,7 +333,7 @@ const signUp = () => {
     }
 
     function verifyOtpErrorCallback(type, error) {
-        setErrorMessage(error.message);
+        showToaster(error.message, "error");
 
         if (type == "email") {
             setEmailVerifyOtpInProgress(false);
@@ -303,43 +348,16 @@ const signUp = () => {
         }
     }
 
-    async function initiateSignup() {
-        if (emailDetails.isVerified && mobileDetails.isVerified) {
-            setSignupInProgress(true);
-            await fetch(
-                process.env.NEXT_PUBLIC_API_URL + '/v2/register',
-                {
-                    method: "POST",
-                    mode: "cors",
-                    cache: "no-store",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({ emailId: emailDetails.email, emailIdAccessToken: emailDetails.accessToken, mobileNo: mobileDetails.mobileNo, mobileNoAccessToken: mobileDetails.accessToken }),
-                }
-            )
-                .then((res) => res.json())
-                .then((response) => {
-                    if (response.status == "success") {
-                        toast("Your account has been created successfully.", { type: "success" });
-                        setGiddhSession(response.body.session.id);
-                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
-                    } else {
-                        setSignupInProgress(false);
-                        toast(response.message, { type: "error" });
-                    }
-                })
-                .catch((err) => signupErrorCallback(err));
-        }
-    }
-
     function signupErrorCallback(error) {
         setSignupInProgress(false);
-        toast(error, { type: "error" });
+        showToaster(error, "error");
     }
 
     function updateCurrentStep(step) {
         setCurrentStep(step);
+        setTimeout(() => {
+            loadTelLibrary();
+        });
     }
 
     function onKeyDownEmail(event) {
@@ -354,12 +372,9 @@ const signUp = () => {
         }
     }
 
-    function setErrorMessage(message) {
-        toast(message, { type: "error" });
-    }
-
-    function setSuccessMessage(message) {
-        toast(message, { type: "success" });
+    function showToaster(message, type) {
+        toast.dismiss();
+        toast(message, { type: type });
     }
 
     function initiateOtpFieldsAutoMove(selector) {
@@ -393,9 +408,65 @@ const signUp = () => {
         });
     }
 
+    function loadTelLibrary() {
+        const input = document.querySelector("#mobileNo");
+        if (input) {
+            var intl = window.intlTelInput(input, {
+                nationalMode: true,
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+                autoHideDialCode: false,
+                separateDialCode: false,
+                initialCountry: 'auto',
+                geoIpLookup: (success, failure) => {
+                    let countryCode = 'in';
+                    const fetchIPApi = fetch('https://api.db-ip.com/v2/free/self');
+                    fetchIPApi.then(
+                        (res) => {
+                            if (res?.ipAddress) {
+                                const fetchCountryByIpApi = fetch('http://ip-api.com/json/' + `${res.ipAddress}`);
+                                fetchCountryByIpApi.then(
+                                    (fetchCountryByIpApiRes) => {
+                                        if (fetchCountryByIpApiRes?.countryCode) {
+                                            return success(fetchCountryByIpApiRes.countryCode);
+                                        } else {
+                                            return success(countryCode);
+                                        }
+                                    },
+                                    (fetchCountryByIpApiErr) => {
+                                        const fetchCountryByIpInfoApi = fetch('https://ipinfo.io/' + `${res?.ipAddress}`);
+
+                                        fetchCountryByIpInfoApi.then(
+                                            (fetchCountryByIpInfoApiRes) => {
+                                                if (fetchCountryByIpInfoApiRes?.country) {
+                                                    return success(fetchCountryByIpInfoApiRes.country);
+                                                } else {
+                                                    return success(countryCode);
+                                                }
+                                            },
+                                            (fetchCountryByIpInfoApiErr) => {
+                                                return success(countryCode);
+                                            }
+                                        );
+                                    }
+                                );
+                            } else {
+                                return success(countryCode);
+                            }
+                        },
+                        (err) => {
+                            return success(countryCode);
+                        }
+                    );
+                }
+            });
+            setIntl(intl);
+        }
+    }
+
     return (
         <>
-            <Script src="/js/helper.js" onLoad={initOtpSignup}></Script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"></link>
+            <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
             <section className="entry signup d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
                     <a href="/">
@@ -605,7 +676,7 @@ const signUp = () => {
                                                         type="tel"
                                                         className="form-control"
                                                         id="mobileNo"
-                                                        placeholder="919876543210"
+                                                        placeholder="98********"
                                                         autoComplete="off"
                                                         onKeyDown={onKeyDownMobile}
                                                         disabled={(showMobileOtp || (mobileDetails && mobileDetails.isVerified))}
@@ -723,7 +794,7 @@ const signUp = () => {
                     </div>
                 </div>
             </section>
-            <ToastContainer />
+            <Toastify />
         </>
     );
 };
