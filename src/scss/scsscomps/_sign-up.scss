@@ -71,7 +71,8 @@ $font-weight-500: var(--c-fw-600);
         }
         .step_input_wrapper {
           max-width: 1000px;
-          .form-control {
+          .form-control,.iti { 
+            width: 100%;
             max-width: 300px;
             height: 40px;
           }
@@ -92,8 +93,15 @@ $font-weight-500: var(--c-fw-600);
           &__right {
             padding-left: 3rem;
             border-left: 1px solid $light-silver;
-            a {
-              word-spacing: 12px;
+            a {              
+              &.resend-text{
+                word-spacing: 12px;
+                ul{
+                  display: flex;
+                  column-gap: 20px;
+                  padding-left: 20px;
+                }
+              }
             }
           }
           &__left,
@@ -213,11 +221,8 @@ $font-weight-500: var(--c-fw-600);
       }
       .back_btn {
         background-color: rgba(123, 127, 130, 0.1);
-        font-weight: $font-weight-500;
-        border: none !important;
         padding-left: 8px;
         padding-right: 15px;
-        height: 40px;
         &:hover,
         &:active,
         &:focus,
@@ -226,12 +231,9 @@ $font-weight-500: var(--c-fw-600);
         }
       }
       .next_btn {
-        background-color: $color-primary;
-        font-weight: $font-weight-500;
-        border: none !important;
+        background-color: $color-primary !important;
         padding-left: 15px;
         padding-right: 8px;
-        height: 40px;
         &:hover,
         &:active,
         &:focus,
@@ -241,13 +243,17 @@ $font-weight-500: var(--c-fw-600);
       }
       .back_btn,
       .next_btn {
+        font-weight: $font-weight-500;
+        border: none !important;
+        height: 40px;
+        min-width: 82px;
         svg {
           font-size: 23px;
           padding-bottom: 1px;
         }
       }
       .icon-success {
-        fill: $color-success;
+        fill: $color-success !important;
       }
       &--logo-visible-in-small{
         margin-bottom: 3rem;

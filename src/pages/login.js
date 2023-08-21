@@ -3,6 +3,8 @@ import dynamic from "next/dynamic";
 import { toast } from 'react-toastify';
 import Toastify from "@/components/toastify";
 import GoogleLogin from "@/components/googleLogin";
+import { usePathname } from "next/navigation";
+
 const OtpLogin = dynamic(() => import("@/components/otpLogin"), {
     ssr: false
 });
@@ -25,6 +27,15 @@ const logIn = () => {
             }
         });
     }, []);
+
+        // To get active route
+        const pathname = usePathname();
+        const startPath = pathname.split("/");
+        let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+        let isAE = startPath[1] === "ae";
+
+        // Holds Url Prefix country wise
+        let link = isIndia ? "/" : isAE ? "/ae" : "/uk";
 
     async function getGoogleUserDetails(accessToken) {
         await fetch(`https://www.googleapis.com/oauth2/v1/userinfo?alt=json`, {
@@ -114,7 +125,7 @@ const logIn = () => {
         <>
             <section className="entry d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
-                    <a href="/">
+                    <a href={link}>
                         <img
                             src="/img/giddh-logo.svg"
                             className="entry__left_section__brand_logo"
@@ -129,14 +140,14 @@ const logIn = () => {
                 </div>
                 <div className="entry__right_section col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12">
                     <div className="container entry__right_section__container">
-                        <div className="d-none mb-5 entry__right_section__container--logo-visible-in-small">
+                        <a href={link} className="d-none mb-5 entry__right_section__container--logo-visible-in-small">
                             <img
                                 src="/img/giddh-logo.svg"
                                 width="auto"
                                 height="40px"
                                 alt="Giddh Icon"
                             />
-                        </div>
+                        </a>
                         <h1>Welcome back!</h1>
                         <div className="entry__right_section__container__entry_with mb-4">
                             <span className="d-inline-block mb-4">Login with</span>

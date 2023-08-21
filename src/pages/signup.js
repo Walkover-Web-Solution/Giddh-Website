@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { toast } from 'react-toastify';
 import Toastify from "@/components/toastify";
 import GoogleLogin from "@/components/googleLogin";
+import { usePathname } from "next/navigation";
 
 const signUp = () => {
     const [currentStep, setCurrentStep] = useState(1);
@@ -27,6 +28,15 @@ const signUp = () => {
 
         initOtpSignup();
     }, []);
+
+    // To get active route
+    const pathname = usePathname();
+    const startPath = pathname.split("/");
+    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+    let isAE = startPath[1] === "ae";
+
+    // Holds Url Prefix country wise
+    let link = isIndia ? "/" : isAE ? "/ae" : "/uk";
 
     async function getGoogleUserDetails(accessToken) {
         await fetch(
@@ -467,7 +477,7 @@ const signUp = () => {
             <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
             <section className="entry signup d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
-                    <a href="/">
+                    <a href={link}>
                         <img
                             src="/img/giddh-logo.svg"
                             className="entry__left_section__brand_logo"
@@ -510,14 +520,14 @@ const signUp = () => {
                         {/* STEP #1 */}
                         {currentStep == 1 && (
                             <div className="entry__right_section__container--step entry__right_section__container--active">
-                                <div className="d-none entry__right_section__container--logo-visible-in-small">
+                                <a href={link} className="d-none entry__right_section__container--logo-visible-in-small">
                                     <img
                                         src="/img/giddh-logo.svg"
                                         width="auto"
                                         height="40px"
                                         alt="Giddh Icon"
                                     />
-                                </div>
+                                </a>
                                 <h1>Create an account</h1>
                                 <div className="entry__right_section__container__entry_with d-flex mb-4 me-4">
                                     <div>
@@ -548,7 +558,7 @@ const signUp = () => {
                         {/* STEP #2 */}
                         {currentStep == 2 && (
                             <div className="entry__right_section__container--step entry__right_section__container--active">
-                                <div className="d-none entry__right_section__container--logo-visible-in-small">
+                                <a href={link} className="d-none entry__right_section__container--logo-visible-in-small">
                                     <img
                                         src="/img/giddh-logo.svg"
                                         width="auto"
@@ -556,12 +566,12 @@ const signUp = () => {
                                         alt="Giddh Icon"
 
                                     />
-                                </div>
+                                </a>
                                 <h1>Create an account</h1>
                                 <div className="entry__right_section__container__step_one mt-5">
                                     <div className="step_status_bar d-flex justify-content-between align-items-center ps-0">
                                         <div>
-                                            <MdCheckCircle className="step_status_bar--invisible-on-md" />{" "}
+                                            <MdCheckCircle className={"step_status_bar--invisible-on-md " + ( emailDetails.isVerified  && mobileDetails.isVerified ? " icon-success" : "" )} />{" "}
                                             Verify email & mobile number
                                         </div>
                                     </div>
@@ -752,13 +762,13 @@ const signUp = () => {
                                                             </button>
                                                         </div>
                                                         {connectedChannels && (
-                                                            <a href="#" className="col-dark mt-3 c-fs-6">
+                                                            <a href="#" className="col-dark mt-3 c-fs-6 d-flex resend-text">
                                                                 Resend on{" "}
                                                                 <ul>
                                                                     {connectedChannels.map((item, index) => (
-                                                                        <li key={item.value}><span className="col-primary c-fw-600" onClick={() => retrySendOtp(item.value)}>{item.name}</span>
+                                                                        <li key={item.value}><span className="col-primary c-fw-600" onClick={() => retrySendOtp(item.value)}> {item.name} </span>
                                                                             {connectedChannels.length > (index + 1) && (
-                                                                                <span>or</span>
+                                                                                <span> or </span>
                                                                             )}
                                                                         </li>
                                                                     ))}
@@ -777,9 +787,9 @@ const signUp = () => {
                                                 <MdKeyboardArrowLeft />
                                                 Back
                                             </button>
-                                            <button className="btn next_btn col-white" onClick={() => initiateSignup()} disabled={signupInProgress}>
+                                            <button className="btn next_btn col-white opacity-100" onClick={() => initiateSignup()} disabled={signupInProgress}>
                                                 {signupInProgress && (
-                                                    <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                                    <div className="spinner-border spinner-border-sm col-white" role="status"></div>
                                                 )}
 
                                                 {!signupInProgress && (
