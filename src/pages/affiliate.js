@@ -134,11 +134,11 @@ const affiliate = () => {
 
         <section className="affiliate__resources">
           <div className="container pb-5">
-            <div className="text-center col-primary pt-5">
+            <div className="text-center col-primary pt-5 pb-4">
               <h1>We Help you With Resources</h1>
             </div>
             <section className="container my-5">
-              <div className="row mb-5 align-items-center">
+              <div className="row mb-5 pb-5 align-items-center">
                 <div className="col-lg-6 col-md-12 order-0 text-center">
                   <img
                     className="img-fluid mb-4 mb-lg-0"
@@ -148,10 +148,10 @@ const affiliate = () => {
                 </div>
                 <div className="col-lg-6 col-md-12 order-1">
                   <div>
-                    <h4 className="c-fs-2 col-primary c-fw-600">
+                    <h4 className="c-fs-1 mb-4 col-primary">
                       Dashboard To Track Your Success
                     </h4>
-                    <p className="c-fs-4">
+                    <p className="c-fs-4 col-grey-deep">
                       Metrics are vital. As an{" "}
                       <a
                         href={isIndia ? "/" : link}
@@ -169,72 +169,54 @@ const affiliate = () => {
                 </div>
               </div>
 
-              <div className="row mb-5 align-items-center">
+              <div className="row mb-5 pb-5 align-items-center">
                 <div className="col-lg-6 col-md-12 order-lg-1 order-0 text-center">
-                  <img
-                    className="img-fluid mb-4 mb-lg-0"
-                    src="/img/affilate/content_creative.png"
-                    alt="Creatives and Content Banner Image"
-                  />
-                </div>
-                <div className="col-lg-6 col-md-12 order-lg-0 order-1">
-                  <div>
-                    <h4 className="c-fs-2 col-primary c-fw-600">
-                      Creatives and Content
-                    </h4>
-                    <p className="c-fs-4">Creatives and Content</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="row mb-5 align-items-center">
-                <div className="col-lg-6 col-md-12 order-0 text-center">
                   <img
                     className="img-fluid mb-4 mb-lg-0"
                     src="/img/affilate/affiliate_manager.png"
                     alt="Dedicated Affiliate Manager Banner Image"
                   />
                 </div>
-                <div className="col-lg-6 col-md-12 order-1">
+                <div className="col-lg-6 col-md-12 order-lg-0 order-1">
                   <div>
-                    <h4 className="c-fs-2 col-primary c-fw-600">
+                    <h4 className="c-fs-1 mb-4 col-primary">s
                       Dedicated Affiliate Manager
                     </h4>
-                    <p className="c-fs-4 ">
+                    <p className="c-fs-4 col-grey-deep">
                       At your service. We have an Affiliate Manager dedicated to
                       helping you promote Giddh and increase your conversions
                       for Accounting or Bookkeeping Software. He can answer your
                       questions and work with you on strategies to sell this{" "}
                       <a
                         className="col-primary"
-                        href={link + "/gst"}
-                        title="GST Accounting Software"
+                        href={ isIndia ? "/gst" : ( isAE ? "/ae/vat" : "/uk/vat")}
+                        title={ (isIndia ? "GST " : ( isAE ? "VAT " : "VAT ")) + " Accounting Software"}
                       >
-                        GST ready Accounting Software
+                        { (isIndia ? " GST " : ( isAE ? " VAT " : " VAT ")) } ready Accounting Software
                       </a>
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="row align-items-center">
-                <div className="col-lg-6 col-md-12 order-lg-1 order-0 text-center">
+              <div className="row align-items-center mt-4">
+                <div className="col-lg-6 col-md-12 order-0 text-center">
                   <img
                     className="img-fluid mb-4 mb-lg-0"
                     src="/img/affilate/newsletter.png"
                     alt="Affiliate Newsletter Banner Image"
                   />
                 </div>
-                <div className="col-lg-6 col-md-12 order-lg-0 order-1">
+                <div className="col-lg-6 col-md-12 order-1">
                   <div>
-                    <h4 className="c-fs-2 col-primary c-fw-600">
+                    <h4 className="c-fs-1 mb-4 col-primary">
                       Exclusive Affiliate Newsletter
                     </h4>
-                    <p className="c-fs-5 ">
+                    <p className="c-fs-4 col-grey-deep">
                       News you can use. As an Accounting Software reseller,
                       you’ll receive access to a special newsletter with
                       important product updates, news on promotions. Also you
-                      will get all details on Cloud based GST software.
+                      will get all details on Cloud based { (isIndia ? " GST " : ( isAE ? " VAT " : " VAT ")) } software.
                     </p>
                   </div>
                 </div>

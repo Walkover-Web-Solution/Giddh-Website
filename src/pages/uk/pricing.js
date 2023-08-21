@@ -134,7 +134,7 @@ const ukPricing = () => {
             <div className="col-lg-6 col-md-12 text-lg-start text-center">
               <div className="d-inline-block text-center">
                 <h3 className="sub-heading col-primary pb-5">Big Enterprises?</h3>
-                <a href="#" className="ae_pricing__start_free_btn" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>TALK TO US</a>
+                <a href="javascript:;" className="ae_pricing__start_free_btn" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>TALK TO US</a>
               </div>
             </div>
           </div>

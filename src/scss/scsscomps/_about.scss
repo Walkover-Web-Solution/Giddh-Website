@@ -91,7 +91,7 @@
     }
     &__content {
       &__wapper {
-        padding: 100px 0;
+        padding: 80px 0 65px 0;
         max-width: 1140px;
         margin-left: auto !important;
         margin-right: auto !important;
@@ -250,6 +250,23 @@
       &__walkover {
         &__container {
           flex-direction: column-reverse;
+        }
+      }
+    }
+    .our_values {
+      &__content {
+        &__wapper {
+          padding: 40px 0 35px 0;
+          h2{
+            &.heading{
+              font-size: var(--c-fs-1) !important;
+            }
+          }
+          figure {
+            img {
+              max-width: 160px;
+            }
+          }
         }
       }
     }

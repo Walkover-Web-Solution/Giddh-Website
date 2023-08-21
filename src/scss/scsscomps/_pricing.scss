@@ -420,14 +420,17 @@
 }
 @media (max-width: 991px) {
   .pricing_top_section {
+    min-height: auto;
+    padding-top: 250px;
+
     &__column-reverse {
       flex-direction: column-reverse;
 
       img {
         &.img-fluid {
-          max-width: 50%;
+          max-width: 65%;
           float: right;
-          margin-bottom: 25%;
+          margin-bottom: 50px;
         }
       }
     }
@@ -620,6 +623,11 @@
   }
 }
 
+@media (max-width: 575px) {
+  .pricing_top_section {
+    padding-top: 120px;
+  }  
+}
 .pricing_grid_section {
   background-color: #e6e7e9;
   margin: 2rem 0;
