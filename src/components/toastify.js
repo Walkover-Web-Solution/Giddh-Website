@@ -1,9 +1,17 @@
 "use client"
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer, Slide } from 'react-toastify';
 
-export default function Toastify() {
+const Toastify = () => {
     return (
-        <ToastContainer />
+        <ToastContainer
+        position="top-right"
+        newestOnTop
+        transition={Slide}
+        pauseOnFocusLoss={false}
+        autoClose={3000}
+        />
     )
 }
+
+export default Toastify;

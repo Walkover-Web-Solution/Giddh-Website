@@ -27,6 +27,7 @@ const otpVerifyModal = (props) => {
         if (resendInProgress) {
             return;
         }
+        twoWayAuthOtpField.value = "";
         setResendInProgress(true);
         await fetch(process.env.NEXT_PUBLIC_API_URL + '/generate-otp', {
             method: "POST",
@@ -39,7 +40,7 @@ const otpVerifyModal = (props) => {
             .then((response) => {
                 setResendInProgress(false);
                 if (response.status === "success") {
-                    toast("Otp resent successfully.", { type: "success" });
+                    showToaster("Otp resent successfully.", "success");
                 } else {
                     resendOtpErrorCallback(response.message);
                 }
@@ -49,7 +50,7 @@ const otpVerifyModal = (props) => {
 
     function resendOtpErrorCallback(error) {
         setResendInProgress(false);
-        toast(error, { type: "error" });
+        showToaster(error, "error");
     }
 
     function verifyTwoWayAuthOtp(event) {
@@ -60,7 +61,7 @@ const otpVerifyModal = (props) => {
         if (twoWayAuthOtp) {
             verifyNumber(twoWayAuthOtp);
         } else {
-            toast("Please enter otp", { type: "error" });
+            showToaster("Please enter otp", "error");
         }
     }
 
@@ -89,7 +90,12 @@ const otpVerifyModal = (props) => {
 
     function verifyNumberErrorCallback(error) {
         setVerifyNumberInProgress(false);
-        toast(error, { type: "error" });
+        showToaster(error, "error");
+    }
+
+    function showToaster(message, type) {
+        toast.dismiss();
+        toast(message, { type: type });
     }
 
     return (
@@ -133,7 +139,7 @@ const otpVerifyModal = (props) => {
                                         autoFocus
                                         autoComplete="off"
                                     />
-                                    <button type="button" className="btn col-white" onClick={resendOtp} disabled={resendInProgress}>
+                                    <button type="button" className="btn col-white" onClick={resendOtp} disabled={resendInProgress || verifyNumberInProgress}>
                                         {resendInProgress && (
                                             <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
                                         )}
@@ -146,7 +152,7 @@ const otpVerifyModal = (props) => {
                                         We have sent an OTP to your registered mobile number.
                                     </p>
 
-                                    <button type="submit" className="btn col-white" onClick={verifyTwoWayAuthOtp} disabled={verifyNumberInProgress}>
+                                    <button type="submit" className="btn col-white" onClick={verifyTwoWayAuthOtp} disabled={verifyNumberInProgress || resendInProgress}>
                                         {verifyNumberInProgress && (
                                             <div className="spinner-border spinner-border-sm" role="status"></div>
                                         )}

@@ -107,7 +107,6 @@ const signUp = () => {
                 updateCurrentStep(2);
                 setTimeout(() => {
                     document.getElementById("mobileNo").value = userData.user.mobileNo;
-                    this.intl.setNumber(userData.user.mobileNo);
                     setShowMobileOtp(false);
                 });
             }
@@ -131,7 +130,6 @@ const signUp = () => {
         setTimeout(() => {
             document.getElementById("email").value = "";
             document.getElementById("mobileNo").value = "";
-            intl.setNumber("");
         });
     }
 
