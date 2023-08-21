@@ -290,14 +290,14 @@ const navbar = () => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" href={link + "/make-the-switch"}>
+                <a className={ "nav-link " + ( startPath[startPath.length - 1] === "make-the-switch" ? " active" : "" )} href={link + "/make-the-switch"}>
                   Make the Switch
                 </a>
               </li>
               <li className="nav-item">
                 <div className="dropdown">
                   <a
-                    className="nav-link chevron_down nav-link--feature-menu"
+                    className={ "nav-link chevron_down nav-link--feature-menu " + ( startPath[startPath.length - 1] === "all-features" ? " active" : "" )}
                     href="#"
                     id="allFeaturesDropdown"
                     data-bs-toggle="dropdown"
@@ -330,20 +330,20 @@ const navbar = () => {
                 </div>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={link + "/pricing"}>
+                <a className={ "nav-link " + ( startPath[startPath.length - 1] === "pricing" ? " active" : "" )} href={link + "/pricing"}>
                   Pricing
                 </a>
               </li>
               <li className="nav-item">
                 <a
-                  className="nav-link"
+                  className={ "nav-link " + ( (startPath[startPath.length - 1] === "gst") || (startPath[startPath.length - 1] === "vat") ? " active" : "" )}
                   href={isIndia ? "/gst" : isAE ? "/ae/vat" : "/uk/vat"}
                 >
                   {isIndia ? "GST" : isAE || isUK ? "VAT" : ""}
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href={link + "/about"}>
+                <a className={ "nav-link " + ( startPath[startPath.length - 1] === "about" ? " active" : "" )} href={link + "/about"}>
                   About
                 </a>
               </li>

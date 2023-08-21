@@ -46,8 +46,9 @@ const financialReporting = () => {
                     src="/img/feature-gallery-icons/report-banner.svg"
                     width="90%"
                   />
-                  <img
+                 <img
                     src="/img/all-features-cloud_icon.svg"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -141,7 +142,7 @@ const financialReporting = () => {
                     Keep tabs on your unpaid invoices and customers who owe
                     money to your business with Aging report. Aging report
                     provides clear answers to questions like - “how much do my
-                    customers customers owe me” & “how long have they owed that
+                    customers owe me” & “how long have they owed that
                     money”, enabling you to prepare better collection strategy.
                   </p>
                 </div>

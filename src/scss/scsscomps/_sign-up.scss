@@ -38,7 +38,6 @@ $font-weight-500: var(--c-fw-600);
   &__right_section {
     &__container {
         max-height: 100vh;
-        overflow-x: auto;
       &__entry_button {
         svg {
           font-size: 22px;
@@ -230,9 +229,9 @@ $font-weight-500: var(--c-fw-600);
           background-color: rgba(123, 127, 130, 0.1) !important;
         }
       }
-      .next_btn {
+      .submit_btn {
         background-color: $color-primary !important;
-        padding-left: 15px;
+        padding-left: 8px;
         padding-right: 8px;
         &:hover,
         &:active,
@@ -242,7 +241,7 @@ $font-weight-500: var(--c-fw-600);
         }
       }
       .back_btn,
-      .next_btn {
+      .submit_btn {
         font-weight: $font-weight-500;
         border: none !important;
         height: 40px;
@@ -330,7 +329,7 @@ $font-weight-500: var(--c-fw-600);
             max-width: 100%;
             padding: 0 10px;
 
-            .form-control {
+            .form-control,.iti {
               max-width: 100% !important;
             }
 

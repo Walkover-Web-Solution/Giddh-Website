@@ -678,7 +678,7 @@ const signUp = () => {
                                             Verify Mobile number
                                         </label>
                                         <div className="d-flex flex-wrap p-0">
-                                            <div className="step_input_wrapper__left col-xl-6 col-lg-12" style={{ paddingRight: showMobileOtp || (mobileDetails && mobileDetails.isVerified) ? "0" : null }}>
+                                            <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12" style={{ paddingRight: showMobileOtp || (mobileDetails && mobileDetails.isVerified) ? "0" : null }}>
                                                 <div className="d-flex step_input_wrapper__mobile_veiw">
                                                     <input
                                                         type="tel"
@@ -787,7 +787,7 @@ const signUp = () => {
                                                 <MdKeyboardArrowLeft />
                                                 Back
                                             </button>
-                                            <button className="btn next_btn col-white opacity-100" onClick={() => initiateSignup()} disabled={signupInProgress}>
+                                            <button className="btn submit_btn col-white opacity-100" onClick={() => initiateSignup()} disabled={signupInProgress}>
                                                 {signupInProgress && (
                                                     <div className="spinner-border spinner-border-sm col-white" role="status"></div>
                                                 )}

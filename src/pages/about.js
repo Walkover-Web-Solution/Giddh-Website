@@ -146,7 +146,7 @@ const about = () => {
             display: currentMenu === 0 ? "block" : "none",
           }}
         >
-          <section className="about__content p-8 my-5 gap-5">
+          <section className="about__content mb-5">
             <div className="container gap-4">
               <p className="c-fs-5 mb-5">
                 Giddh is a team with members who have accounting running in
@@ -204,7 +204,9 @@ const about = () => {
               <div className="col-lg-6 col-md-12 g-4">
                 <img
                   className="about__walkover__container__img"
-                  src="\companylogo.svg"
+                  src="/walkover-web-solution-pvt-ltd-company-logo.svg"
+                  alt="Walkover Web Solutions Pvt Ltd, Indore, Madhya Pradesh, India logo"
+
                 />
               </div>
             </div>
@@ -216,7 +218,8 @@ const about = () => {
                     <img
                       width="183px"
                       height="60px"
-                      src="/img/about/giddh-logo-message.svg"
+                      src="/img/about/msg91-company-logo.svg"
+                      alt="msg91-company-logo"
                     />
                   </div>
                   <p className="c-fs-5 p-4 m-0 m-md-2 m-sm-5 gap-5">
@@ -240,6 +243,7 @@ const about = () => {
                       width="238px"
                       height="68px"
                       src="\img\about\socket-logo-big.svg"
+                      alt="via-socket-logo"
                     />
                   </div>
                   <p className="c-fs-5 p-4 m-0 m-md-2 m-sm-5 gap-5">
@@ -406,7 +410,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/customers-come-first-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="Customers Come First logo"
                           />
                         </figure>
                       </div>
@@ -435,7 +439,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/embracing-setbacks-to-break-boundaries-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="Embracing Setbacks to Break Boundaries logo"
                           />
                         </figure>
                       </div>
@@ -463,7 +467,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/we-set-impossible-goals-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="We Set Impossible Goals logo"
                           />
                         </figure>
                       </div>
@@ -493,7 +497,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/people-are-our-power-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="People are our Power logo"
                           />
                         </figure>
                       </div>
@@ -521,7 +525,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/we-focus-on-why-and-how-grey.svg.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="We Focus on ‘Why?’ & ‘How?’ logo"
                           />
                         </figure>
                       </div>
@@ -550,7 +554,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/always-we-before-me-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="Always We Before Me logo"
                           />
                         </figure>
                       </div>
@@ -580,7 +584,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/we-do-not-settle-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="We Don’t Settle logo"
                           />
                         </figure>
                       </div>
@@ -608,7 +612,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/we-empower-the-future-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="We Empower The Future logo"
                           />
                         </figure>
                       </div>
@@ -637,7 +641,7 @@ const about = () => {
                           <img
                             src="/img/about/our-values/transparency-and-honesty-grey.svg"
                             className="img-fluid"
-                            alt="logo"
+                            alt="Transparency and Honesty logo"
                           />
                         </figure>
                       </div>
@@ -663,7 +667,7 @@ const about = () => {
                     <a href="#nurturesCollaboration" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/customers-come-first.svg"
+                          src="/img/about/leadership/nurtures-collaboration.svg"
                           alt="Nurtures Collaboration Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -675,7 +679,7 @@ const about = () => {
                     <a href="#leadsThroughCommunication" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/embracing-setbacks-to-break-boundaries.svg"
+                          src="/img/about/leadership/leads-through-communication.svg"
                           alt="Leads through Communication Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -687,7 +691,7 @@ const about = () => {
                     <a href="#leadsByExample" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/we-set-impossible-goals.svg"
+                          src="/img/about/leadership/leads-by-example.svg"
                           alt="Leads By Example Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -700,7 +704,7 @@ const about = () => {
                     <a href="#consultsAndDelegates" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/people-are-our-power.svg"
+                          src="/img/about/leadership/consults-and-delegates.svg"
                           alt="Consults and Delegates Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -712,7 +716,7 @@ const about = () => {
                     <a href="#isCourageous" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/we-focus-on-why-and-how.svg"
+                          src="/img/about/leadership/is-courageous.svg"
                           alt="Is Courageous Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -724,7 +728,7 @@ const about = () => {
                     <a href="#addsIntegrity" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/always-we-before-me.svg"
+                          src="/img/about/leadership/adds-integrity.svg"
                           alt="Adds Integrity Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -737,7 +741,7 @@ const about = () => {
                     <a href="#servesForTheGreaterGood" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/we-do-not-settle.svg"
+                          src="/img/about/leadership/serves-for-the-greater-good.svg"
                           alt="Serves for the Greater Good Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -749,7 +753,7 @@ const about = () => {
                     <a href="#definesCreatesProcesses" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/we-empower-the-future.svg"
+                          src="/img/about/leadership/defines-and-creates-processes.svg"
                           alt="Defines & Creates Processes Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -761,7 +765,7 @@ const about = () => {
                     <a href="#adaptsToEvolve" className="our_values__illustration__content">
                       <figure>
                         <img
-                          src="/img/about/our-values/transparency-and-honesty.svg"
+                          src="/img/about/leadership/adapts-to-evolve.svg"
                           alt="Adapts to Evolve Icon"
                         />
                         <figcaption className="col-primary c-fs-6">
@@ -782,7 +786,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/nurtures-collaboration-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -816,7 +820,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/leads-through-communication-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -850,7 +854,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/leads-by-example-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -883,7 +887,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/consults-and-delegates-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -918,7 +922,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/is-courageous-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -949,7 +953,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/adds-integrity-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -981,7 +985,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/serves-for-the-greater-good-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -1014,7 +1018,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/defines-and-creates-processes-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"
@@ -1049,7 +1053,7 @@ const about = () => {
                           <div className="col-md-4 col-sm-12">
                             <figure>
                               <img
-                                src="/img/about/our-values/we-empower-the-future.svg"
+                                src="/img/about/leadership/adapts-to-evolve-white.svg"
                                 width="auto"
                                 height="80px"
                                 alt="Icon"

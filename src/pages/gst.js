@@ -21,7 +21,7 @@ const gst = () => {
             <div className="tax-image mt-auto">
               <img
                 className="col-12"
-                alt="gst"
+                alt="gst banner image"
                 src="/img/tax-images/tax-image.png"
               ></img>
             </div>
@@ -39,7 +39,7 @@ const gst = () => {
           <div className="row">
             <div className="col">
               <div className="filing-tax-card d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/Direct-Filing.svg" />
+                <img src="/img/tax-images/Direct-Filing.svg" alt="Tax Filling in Giddh Accounting Software Icon" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Direct Filing
@@ -55,7 +55,7 @@ const gst = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/accurate.svg" />
+                <img src="/img/tax-images/accurate.svg" alt="accurate results icon" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     100% Accurate
@@ -71,7 +71,7 @@ const gst = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/get-notified.svg" />
+                <img src="/img/tax-images/get-notified.svg" alt="Striking Gavel Hammer logo" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Timely Notifications
@@ -90,7 +90,7 @@ const gst = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/easy-fast.svg" />
+                <img src="/img/tax-images/easy-fast.svg" alt="Easy and fast icon" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Highly Collaborative
@@ -108,7 +108,7 @@ const gst = () => {
               <div
                 className="filing-tax d-flex flex-column align-items-center gap-4 p-3"
               >
-                <img src="/img/tax-images/secure-reliable.svg" />
+                <img src="/img/tax-images/secure-reliable.svg" alt="secure-reliable-icon" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Secure & Reliable
@@ -124,7 +124,7 @@ const gst = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/best-support.svg" />
+                <img src="/img/tax-images/best-support.svg" alt="best-giddh-accounting-support-icon" />
                 <div className="caption text-center">
                   <h3 className="small-heading col-primary c-fw-600">
                     Best in Class Support
@@ -161,12 +161,12 @@ const gst = () => {
                 <h3>GST Return Collaborators</h3>
               </div>
               <div className="col text-center">
-                <img src="/img/Jio-GST.png" />
+                <img src="/img/Jio-GST.png" alt="JIO GST Icon" />
               </div>
               <div className="col">
                 <img
-                  className=" gst-return__wrapper__large_img"
-                  src="/img/GST.png"
+                  className="tax-return__wrapper__large_img"
+                  src="/img/GST.png" alt="GST Icon"
                 />
               </div>
             </div>

@@ -269,145 +269,145 @@ const featureGallery = () => {
   let indiaCardData = [
     {
       name: "Inventory",
-      image: "/feature-gallery-icons/inventory.png",
+      image: "/feature-inventory.svg",
     },
     {
       name: "Invoices",
-      image: "/feature-gallery-icons/invoice.png",
+      image: "/feature-invoice.svg",
     },
     {
       name: "Anywhere Anytime",
-      image: "/feature-gallery-icons/anywhere-anytime.png",
+      image: "/feature-anywhere.svg",
     },
     {
       name: "Bank Reconciliation",
-      image: "/feature-gallery-icons/bank-reconciliation.png",
+      image: "/feature-reconcile.svg",
     },
     {
       name: "Multi Currency",
-      image: "/feature-gallery-icons/multicurrency.png",
+      image: "/multi-currency-banner.svg",
     },
     {
       name: "Import Data",
-      image: "/feature-gallery-icons/import-data.png",
+      image: "/feature-excel.svg",
     },
     {
       name: "GST Compliances",
-      image: "/feature-gallery-icons/gst-compiance.png",
+      image: "/feature-tax.svg",
     },
     {
       name: "Reports & Analysis",
-      image: "/feature-gallery-icons/report-analysis.png",
+      image: "/feature-report.svg",
     },
     {
       name: "Share Data",
-      image: "/feature-gallery-icons/share-data.png",
+      image: "/feature-share-data.svg",
     },
     {
       name: "Dashboard",
-      image: "/feature-gallery-icons/dashboard-icon.png",
+      image: "/feature-dashboard.svg",
     },
     {
       name: "Audit Trail",
-      image: "/feature-gallery-icons/support.png",
+      image: "/feature-app.svg",
     },
   ];
 
   let aeCardData = [
     {
       name: "Inventory",
-      image: "/feature-gallery-icons/inventory.png",
+      image: "/feature-inventory.svg",
     },
     {
       name: "Invoices",
-      image: "/feature-gallery-icons/invoice.png",
+      image: "/feature-invoice.svg",
     },
     {
       name: "Anywhere Anytime",
-      image: "/feature-gallery-icons/anywhere-anytime.png",
+      image: "/feature-anywhere.svg",
     },
     {
       name: "Expense Management",
-      image: "/feature-gallery-icons/bank-reconciliation.png",
+      image: "/feature-reconcile.svg",
     },
     {
       name: "Multi Currency",
-      image: "/feature-gallery-icons/multicurrency.png",
+      image: "/multi-currency-banner.svg",
     },
 
     {
       name: "Import Data",
-      image: "/feature-gallery-icons/import-data.png",
+      image: "/feature-excel.svg",
     },
     {
       name: "VAT Filing",
-      image: "/feature-gallery-icons/gst-compiance.png",
+      image: "/feature-tax.svg",
     },
     {
       name: "Audit Trail",
-      image: "/feature-gallery-icons/report-analysis.png",
+      image: "/feature-app.svg",
     },
     {
       name: "Share Data",
-      image: "/feature-gallery-icons/share-data.png",
+      image: "/feature-share-data.svg",
     },
 
     {
       name: "Simple UI",
-      image: "/feature-gallery-icons/dashboard-icon.png",
+      image: "/feature-dashboard.svg",
     },
     {
       name: "Support",
-      image: "/feature-gallery-icons/support.png",
+      image: "/feature-support.svg",
     },
   ];
 
   let ukCardData = [
     {
       name: "Inventory",
-      image: "/feature-gallery-icons/inventory.png",
+      image: "/feature-inventory.svg",
     },
     {
       name: "Invoices",
-      image: "/feature-gallery-icons/invoice.png",
+      image: "/feature-invoice.svg",
     },
     {
       name: "Anywhere Anytime",
-      image: "/feature-gallery-icons/anywhere-anytime.png",
+      image: "/feature-anywhere.svg",
     },
     {
       name: "Expense Management",
-      image: "/feature-gallery-icons/bank-reconciliation.png",
+      image: "/feature-reconcile.svg",
     },
     {
       name: "Multi Currency",
-      image: "/feature-gallery-icons/multicurrency.png",
+      image: "/multi-currency-banner.svg",
     },
 
     {
       name: "Import Data",
-      image: "/feature-gallery-icons/import-data.png",
+      image: "/feature-excel.svg",
     },
     {
       name: "VAT Filing",
-      image: "/feature-gallery-icons/gst-compiance.png",
+      image: "/feature-tax.svg",
     },
     {
       name: "Activity Logs",
-      image: "/feature-gallery-icons/report-analysis.png",
+      image: "/feature-report.svg",
     },
     {
       name: "Share Data",
-      image: "/feature-gallery-icons/share-data.png",
+      image: "/feature-share-data.svg",
     },
 
     {
       name: "Simple UI",
-      image: "/feature-gallery-icons/dashboard-icon.png",
+      image: "/feature-dashboard.svg",
     },
     {
       name: "Audit Trail",
-      image: "/feature-gallery-icons/support.png",
+      image: "/feature-app.svg",
     },
   ];
 
@@ -451,7 +451,7 @@ const featureGallery = () => {
                   onClick={() => setCurrent(data.name)}
                 >
                   <figure>
-                    <img src={"/img" + data.image} alt={ data.image + " Icon"} />
+                    <img src={"/img" + data.image} alt="Giddh features Icon" height="50px" width="auto" />
                     <figcaption className="c-fw-400">{data.name}</figcaption>
                   </figure>
                 </div>

@@ -44,9 +44,11 @@ const multiCurrencyAccountingSoftware = () => {
                   <img
                     src="/img/feature-gallery-icons/multi-currency-banner.svg"
                     width="90%"
+                    alt="multi-currency-banner-image"
                   />
-                  <img
+                 <img
                     src="/img/all-features-cloud_icon.svg"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -100,7 +102,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <img
                      src={isIndia || isAE ?  '/img/feature-gallery-icons/multi-currency-create.svg' : '/img/feature-gallery-icons/multi-currency-create-uk.svg'}
                     className="img-fluid"
-                    alt="connect bank image"
+                    alt="multi-currency-create-image"
                   />
                 </figure>
               </div>
@@ -125,7 +127,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <img
                     src={isIndia ? '/img/feature-gallery-icons/multi-currency-invoice.svg' : (isAE ? '/img/feature-gallery-icons/multi-currency-invoice-ae.svg' : '/img/feature-gallery-icons/multi-currency-invoice-uk.svg')}
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="multi-currency-invoice-image"
                   />
                 </figure>
               </div>
@@ -150,7 +152,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <img
                     src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-setting.svg' : '/img/feature-gallery-icons/multi-currency-setting-uk.svg'}
                     className="img-fluid"
-                    alt="bank account image"
+                    alt="multi-currency-setting-image"
                   />
                 </figure>
               </div>
@@ -174,7 +176,7 @@ const multiCurrencyAccountingSoftware = () => {
                   <img
                     src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-reports.svg' : '/img/feature-gallery-icons/multi-currency-reports-uk.svg'}
                     className="img-fluid"
-                    alt="bank overview image"
+                    alt="multi-currency-reports-image"
                   />
                 </figure>
               </div>
