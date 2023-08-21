@@ -7,7 +7,7 @@ const otpLogin = ({ sendOtpLoginCallbackToParent }) => {
     function initOtpLogin() {
         /* OTP LOGIN */
         if (window['initSendOTP'] === undefined) {
-            addOtpWidgetScript(false, initiateLogin);
+            addOtpWidgetScript(false, initiateLogin, false);
         } else {
             var configuration = getOtpwidgetConfiguration(false, initiateLogin);
             initSendOTP(configuration);

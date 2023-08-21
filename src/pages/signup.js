@@ -1,14 +1,9 @@
-import {
-    MdKeyboardArrowRight,
-    MdKeyboardArrowLeft,
-    MdDone,
-    MdCheckCircle
-} from "react-icons/md";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft, MdDone, MdCheckCircle } from "react-icons/md";
 import { useState, useEffect } from "react";
+import Script from "next/script";
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from 'react-toastify';
 import GoogleLogin from "@/components/googleLogin";
-import Script from "next/script";
 
 const signUp = () => {
     const [currentStep, setCurrentStep] = useState(1);
@@ -16,10 +11,12 @@ const signUp = () => {
     const [showMobileOtp, setShowMobileOtp] = useState(false);
     const [emailDetails, setEmailDetails] = useState(null);
     const [mobileDetails, setMobileDetails] = useState(null);
+    const [connectedChannels, setConnectedChannels] = useState(null);
     const [emailGetOtpInProgress, setEmailGetOtpInProgress] = useState(false);
     const [emailVerifyOtpInProgress, setEmailVerifyOtpInProgress] = useState(false);
     const [mobileGetOtpInProgress, setMobileGetOtpInProgress] = useState(false);
     const [mobileVerifyOtpInProgress, setMobileVerifyOtpInProgress] = useState(false);
+    const [signupInProgress, setSignupInProgress] = useState(false);
 
     useEffect(() => {
         window.addEventListener("message", function (event) {
@@ -74,7 +71,11 @@ const signUp = () => {
             }
         }
 
-        addOtpWidgetScript(true, false);
+        addOtpWidgetScript(true, false, () => {
+            setTimeout(() => {
+                getWidgetData();
+            }, 2000);
+        });
     }
 
     function resetEverything() {
@@ -110,6 +111,22 @@ const signUp = () => {
             mobileDetails.isVerified = false;
             mobileDetails.requestId = '';
             setMobileDetails(mobileDetails);
+        }
+    }
+
+    function getWidgetData() {
+        var widgetData = window.getWidgetData();
+        if (widgetData && widgetData.processes) {
+            var channels = [];
+            widgetData.processes.forEach(process => {
+                if (process.channel.value != '3') {
+                    if (!channels[process.channel.value]) {
+                        channels[process.channel.value] = [];
+                    }
+                    channels[process.channel.value] = process.channel;
+                }
+            });
+            setConnectedChannels(channels);
         }
     }
 
@@ -172,7 +189,7 @@ const signUp = () => {
         emailDetails.accessToken = "";
         setEmailDetails(emailDetails);
 
-        document.querySelectorAll('.email-otp-field').forEach(function (field) {
+        document.querySelectorAll('.email-otp-field').forEach(field => {
             field.value = '';
         });
     }
@@ -182,20 +199,23 @@ const signUp = () => {
         mobileDetails.accessToken = "";
         setMobileDetails(mobileDetails);
 
-        document.querySelectorAll('.mobile-otp-field').forEach(function (field) {
+        document.querySelectorAll('.mobile-otp-field').forEach(field => {
             field.value = '';
         });
     }
 
     function retrySendOtp(channel) {
+        var requestId = "";
         if (channel == 3) {
             resetEmailOtp();
             setEmailGetOtpInProgress(true);
+            requestId = emailDetails.requestId;
         } else {
             resetMobileOtp();
             setMobileGetOtpInProgress(true);
+            requestId = mobileDetails.requestId;
         }
-        window.retryOtp(channel, (data) => { retrySendOtpSuccessCallback(channel); }, (error) => { retrySendOtpErrorCallback(channel, error); })
+        window.retryOtp(channel, (data) => { retrySendOtpSuccessCallback(channel); }, (error) => { retrySendOtpErrorCallback(channel, error); }, requestId)
     }
 
     function retrySendOtpSuccessCallback(channel) {
@@ -220,6 +240,7 @@ const signUp = () => {
 
     function verifyOtp(type) {
         var otp = "";
+        var requestId = "";
 
         if (type == "email") {
             document.querySelectorAll('.email-otp-field').forEach(function (field) {
@@ -232,6 +253,7 @@ const signUp = () => {
             }
 
             setEmailVerifyOtpInProgress(true);
+            requestId = emailDetails.requestId;
         } else {
             document.querySelectorAll('.mobile-otp-field').forEach(function (field) {
                 otp += field.value;
@@ -243,9 +265,10 @@ const signUp = () => {
             }
 
             setMobileVerifyOtpInProgress(true);
+            requestId = mobileDetails.requestId;
         }
 
-        window.verifyOtp(otp, (data) => { verifyOtpSuccessCallback(type, data); }, (error) => { verifyOtpErrorCallback(type, error); })
+        window.verifyOtp(otp, (data) => { verifyOtpSuccessCallback(type, data); }, (error) => { verifyOtpErrorCallback(type, error); }, requestId)
     }
 
     function verifyOtpSuccessCallback(type, data) {
@@ -282,6 +305,7 @@ const signUp = () => {
 
     async function initiateSignup() {
         if (emailDetails.isVerified && mobileDetails.isVerified) {
+            setSignupInProgress(true);
             await fetch(
                 process.env.NEXT_PUBLIC_API_URL + '/v2/register',
                 {
@@ -297,14 +321,21 @@ const signUp = () => {
                 .then((res) => res.json())
                 .then((response) => {
                     if (response.status == "success") {
+                        toast("Your account has been created successfully.", { type: "success" });
                         setGiddhSession(response.body.session.id);
                         window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
                     } else {
+                        setSignupInProgress(false);
                         toast(response.message, { type: "error" });
                     }
                 })
-                .catch((err) => toast(err, { type: "error" }));
+                .catch((err) => signupErrorCallback(err));
         }
+    }
+
+    function signupErrorCallback(error) {
+        setSignupInProgress(false);
+        toast(error, { type: "error" });
     }
 
     function updateCurrentStep(step) {
@@ -342,6 +373,12 @@ const signUp = () => {
                     if (value.length > 0) {
                         if (index < charInputs.length - 1) {
                             charInputs[index + 1].focus();
+                        } else {
+                            if (selector == ".email-otp-field") {
+                                document.getElementById("verify-email-button").focus();
+                            } else if (selector == ".mobile-otp-field") {
+                                document.getElementById("verify-mobile-button").focus();
+                            }
                         }
                     }
                 });
@@ -647,9 +684,15 @@ const signUp = () => {
                                                         </div>
                                                         <a href="#" className="col-dark mt-3 c-fs-6">
                                                             Resend on{" "}
-                                                            <span className="col-primary c-fw-600" onClick={() => retrySendOtp(11)}>Text</span> or{" "}
-                                                            <span className="col-primary c-fw-600" onClick={() => retrySendOtp(12)}>WhatsApp</span>{" "}
-                                                            or <span className="col-primary c-fw-600" onClick={() => retrySendOtp(4)}>Call</span>
+                                                            <ul>
+                                                                {connectedChannels.map((item, index) => (
+                                                                    <li key={item.value}><span className="col-primary c-fw-600" onClick={() => retrySendOtp(item.value)}>{item.name}</span>
+                                                                        {connectedChannels.length > (index + 1) && (
+                                                                            <span>or</span>
+                                                                        )}
+                                                                    </li>
+                                                                ))}
+                                                            </ul>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -663,9 +706,14 @@ const signUp = () => {
                                                 <MdKeyboardArrowLeft />
                                                 Back
                                             </button>
-                                            <button className="btn next_btn col-white" onClick={() => initiateSignup()}>
-                                                {" "}
-                                                Submit
+                                            <button className="btn next_btn col-white" onClick={() => initiateSignup()} disabled={signupInProgress}>
+                                                {signupInProgress && (
+                                                    <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                                )}
+
+                                                {!signupInProgress && (
+                                                    <span>Submit</span>
+                                                )}
                                             </button>
                                         </div>
                                     </div>

@@ -53,7 +53,7 @@ function getOtpwidgetConfiguration(exposeMethods, callbackFunction) {
     return configuration;
 }
 
-function addOtpWidgetScript(exposeMethods, callbackFunction) {
+function addOtpWidgetScript(exposeMethods, callbackFunction, widgetLoadCallbackFunction) {
     var configuration = getOtpwidgetConfiguration(exposeMethods, callbackFunction);
 
     let scriptTag = document.createElement('script');
@@ -62,6 +62,9 @@ function addOtpWidgetScript(exposeMethods, callbackFunction) {
     scriptTag.defer = true;
     scriptTag.onload = () => {
         initSendOTP(configuration);
+        if (widgetLoadCallbackFunction) {
+            widgetLoadCallbackFunction();
+        }
     };
     document.body.appendChild(scriptTag);
 }

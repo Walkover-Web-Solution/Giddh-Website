@@ -78,7 +78,6 @@ const otpVerifyModal = (props) => {
         })
             .then((res) => res.json())
             .then((response) => {
-                setVerifyNumberInProgress(false);
                 if (response.status === "success") {
                     props.otpVerifyCallback(response.body);
                 } else {
@@ -134,7 +133,7 @@ const otpVerifyModal = (props) => {
                                         autoFocus
                                         autoComplete="off"
                                     />
-                                    <button type="button" className="btn col-white" onClick={resendOtp}>
+                                    <button type="button" className="btn col-white" onClick={resendOtp} disabled={resendInProgress}>
                                         {resendInProgress && (
                                             <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
                                         )}
@@ -147,9 +146,9 @@ const otpVerifyModal = (props) => {
                                         We have sent an OTP to your registered mobile number.
                                     </p>
 
-                                    <button type="submit" className="btn col-white" onClick={verifyTwoWayAuthOtp}>
+                                    <button type="submit" className="btn col-white" onClick={verifyTwoWayAuthOtp} disabled={verifyNumberInProgress}>
                                         {verifyNumberInProgress && (
-                                            <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                            <div className="spinner-border spinner-border-sm" role="status"></div>
                                         )}
 
                                         {!verifyNumberInProgress && (
