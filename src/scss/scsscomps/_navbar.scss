@@ -24,9 +24,36 @@
   }
   .navbar-toggler {
     box-shadow: none !important;
-    border: none !important;
-    .hamberger_icon {
-      stroke: var(--col-white);
+    border: none !important;    
+    svg {
+      .hamberger_icon {
+        stroke: var(--col-white);
+        transform: translate(3.5px, 10px);
+      }
+    }
+
+    // Opened
+    &:not(.collapsed) {
+      svg {
+        .bar-top {
+          animation: toggle-animation-line-1 500ms ease forwards;
+        }
+        .bar-middle {
+          display: none;
+        }
+        .bar-bottom {
+          animation: toggle-animation-line-2 500ms ease forwards;
+        }
+      }
+    }
+    // Closed
+    &.collapsed {
+      svg {
+        .bar-middle {
+          display: block;
+          animation: scale-bar 400ms ease 100ms;
+        }
+      }
     }
   }
   .navbar-nav {
@@ -210,10 +237,10 @@
 
 @media (max-width: 991px) {
   .navbar {
-    background-color: var(--col-primary) !important;    
+    background-color: var(--col-primary) !important;
     box-shadow: none !important;
     min-height: 44px;
-    &.py-0{
+    &.py-0 {
       padding: 8px 0 !important;
     }
 
@@ -316,7 +343,8 @@
           li {
             a {
               color: var(--col-white);
-              &:hover, &.active {
+              &:hover,
+              &.active {
                 background-color: rgba(0, 0, 0, 0.1);
               }
             }
@@ -373,71 +401,31 @@
     }
   }
 }
-.navbar {
 
-  .navbar-toggler{
+// ==================== Keyframe Animation ================ //
 
-    svg{
-      border: 1px solid #fff;
-      .hamberger_icon{
-        transform: translate(3.5px,10px);
-      }
-    }
-
-    // Opened
-    &:not(.collapsed){
-      svg{
-        .bar-top{
-          stroke: red;
-          animation: toggle-animation-line-1 600ms ease forwards;
-        }
-        .bar-middle{
-          display: none;
-        }
-        .bar-bottom{
-          stroke: green;
-          animation: toggle-animation-line-2 600ms ease forwards;
-        }
-      }
-    }
-    // Closed
-    &.collapsed{
-      svg{
-        .bar-top{
-          stroke: yellow;
-        }
-        .bar-middle{
-          stroke: whitesmoke;
-          display: block;
-        }
-        .bar-bottom{
-          stroke: orange;
-        }
-      }
-    }
-  }
-}
+// Animation for hamberger line 1
 @keyframes toggle-animation-line-1 {
-  0%{
-    transform: rotate(0) translate(0px,8.5px);
+  0% {
+    transform: rotate(0) translate(0px, 8.5px);
   }
-  1%{
-    transform: rotate(0) translate(0,-18px);
+  1% {
+    transform: rotate(0) translate(0, -18px);
   }
-  100%{
-    transform: rotate(45deg) translate(12px,-18px);
+  100% {
+    transform: rotate(45deg) translate(12px, -18px);
   }
 }
+// Animation for hamberger line 2
 @keyframes toggle-animation-line-2 {
-  0%{
+  0% {
     transform: translateY(8.5px);
   }
-  1%{
-    transform: rotate(0) translate(-0,27px);
+  1% {
+    transform: rotate(0) translate(-0, 27px);
   }
-  100%{
-    transform: rotate(-45deg) translate(-17px,27px);
+  100% {
+    transform: rotate(-45deg) translate(-17px, 27px);
   }
 }
-
 // ======================================== NAVBAR SCSS CODE===============END=======================================
