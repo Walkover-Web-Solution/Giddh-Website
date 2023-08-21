@@ -356,7 +356,7 @@ const financialReporting = () => {
                           <li>
                             Quarterly and annual reports to stockholders as well
                             as government agencies and SEC (Securities and
-                            Exchange Commission
+                            Exchange Commission)
                           </li>
                         </ul>
                       </div>

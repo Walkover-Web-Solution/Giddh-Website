@@ -105,7 +105,7 @@ const aeVAT = () => {
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     Be on the same page with your team. With our role based
                     model, you can grant your CA the access to view the relevant
-                    VAT tax return data.
+                    VAT return data.
                   </p>
                 </div>
               </div>
@@ -217,7 +217,7 @@ const aeVAT = () => {
                   needs.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
                   style={{
                     display: readMoreParagraphStatus1 ? "block" : "none",
                   }}
@@ -288,7 +288,7 @@ const aeVAT = () => {
                   months. VAT software can make life easier in such cases.
                 </p>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
                   style={{
                     display: readMoreParagraphStatus2 ? "block" : "none",
                   }}
@@ -402,7 +402,7 @@ const aeVAT = () => {
                   </p>
                 </div>
                 <span
-                  className="pt-3 text-decoration-underline c-fw-600"
+                  className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
                   style={{
                     display: readMoreParagraphStatus3 ? "block" : "none",
                   }}
@@ -533,7 +533,7 @@ const aeVAT = () => {
                       </p>
                       <ul>
                         <li>Total sales</li>
-                        Total purchases
+                        <li>Total purchases</li>
                         <li>Output VAT (paid by customers)</li>
                         <li>Input Tax Credit (ITC paid by businesses)</li>
                       </ul>

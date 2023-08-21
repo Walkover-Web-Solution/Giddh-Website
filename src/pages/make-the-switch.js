@@ -124,9 +124,9 @@ const makeTheSwitch = () => {
         <section className="container-fluid make_the_switch__sub_section container-fluid make_the_switch__sub_section--bg-white">
           <div className="container">
             <h2 className="col-primary sub-heading c-fw-600 text-center pb-4">
-              Goodbye complicated software's.
+              Goodbye, complicated softwares.
               <br />
-              Hello Giddh.
+              Hello Giddh
             </h2>
             <div className="row row-gap-4">
               <div className="col-lg-3 col-md-6 col-sm-12">

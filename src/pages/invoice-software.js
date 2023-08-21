@@ -118,7 +118,7 @@ const invoiceSoftware = () => {
                       ? "Stay Goods and Services Tax(GST) compliant by creating online invoices that are GST compliant. Giddh’s invoice templates have fields for HSN or SAC code, GSTIN number,state of business operation which are mandatory for businessowners in order to stay compliant."
                       : ""}
                     {isAE || isUK
-                      ? "Stay Goods and Service Tax(VAT) compliant by creating invoices that are VAT compliant. Giddh invoice templates have fields for HSN or SAC code, TRN number, state of business operation which are mandatory for business owners in order to stay compliant."
+                      ? "Stay Value Added Tax(VAT) compliant by creating invoices that are VAT compliant. Giddh invoice templates have fields for HSN or SAC code, TRN number, state of business operation which are mandatory for business owners in order to stay compliant."
                       : ""}
                   </p>
                 </div>
