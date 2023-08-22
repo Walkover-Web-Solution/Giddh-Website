@@ -604,7 +604,7 @@ const signUp = () => {
                                                     <div className="d-flex flex-column">
                                                         <div className="d-flex">
                                                             <input
-                                                                type="text"
+                                                                type="tel"
                                                                 className="form-control otp_input email-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
@@ -612,21 +612,21 @@ const signUp = () => {
                                                                 autoFocus={true}
                                                             />
                                                             <input
-                                                                type="text"
+                                                                type="tel"
                                                                 className="form-control otp_input email-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="emailOtpField2"
                                                             />
                                                             <input
-                                                                type="text"
+                                                                type="tel"
                                                                 className="form-control otp_input email-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="emailOtpField3"
                                                             />
                                                             <input
-                                                                type="text"
+                                                                type="tel"
                                                                 className="form-control otp_input email-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
@@ -700,7 +700,7 @@ const signUp = () => {
                                                     <div className="d-flex flex-column">
                                                         <div className="d-flex">
                                                             <input
-                                                                type="text"
+                                                                type="tel"
                                                                 className="form-control otp_input mobile-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
@@ -708,21 +708,21 @@ const signUp = () => {
                                                                 autoFocus={true}
                                                             />
                                                             <input
-                                                                type="text"
+                                                                type="tel"
                                                                 className="form-control otp_input mobile-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="mobileOtpField2"
                                                             />
                                                             <input
-                                                                type="text"
+                                                                type="tel"
                                                                 className="form-control otp_input mobile-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
                                                                 id="mobileOtpField3"
                                                             />
                                                             <input
-                                                                type="text"
+                                                                type="tel"
                                                                 className="form-control otp_input mobile-otp-field"
                                                                 placeholder="*"
                                                                 maxLength="1"
