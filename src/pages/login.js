@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import dynamic from "next/dynamic";
 import { toast } from 'react-toastify';
 import Toastify from "@/components/toastify";
 import GoogleLogin from "@/components/googleLogin";
 import { usePathname } from "next/navigation";
-
 const OtpLogin = dynamic(() => import("@/components/otpLogin"), {
     ssr: false
 });
@@ -15,56 +14,27 @@ const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
 const logIn = () => {
     const [showVerificationModal, setShowVerificationModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
+    // To get active route
+    const pathname = usePathname();
+    const startPath = pathname.split("/");
+    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+    let isAE = startPath[1] === "ae";
 
-    useEffect(() => {
-        window.addEventListener("message", function (event) {
-            if (
-                event.data &&
-                event.data.origin === "giddh" &&
-                event.data.accessToken
-            ) {
-                getGoogleUserDetails(event.data.accessToken);
-            }
-        });
-    }, []);
+    // Holds Url Prefix country wise
+    let link = isIndia ? "/" : isAE ? "/ae" : "/uk";
 
-        // To get active route
-        const pathname = usePathname();
-        const startPath = pathname.split("/");
-        let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-        let isAE = startPath[1] === "ae";
-
-        // Holds Url Prefix country wise
-        let link = isIndia ? "/" : isAE ? "/ae" : "/uk";
-
-    async function getGoogleUserDetails(accessToken) {
-        await fetch(`https://www.googleapis.com/oauth2/v1/userinfo?alt=json`, {
-            method: "GET",
-            mode: "cors",
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-                authorization: "Bearer " + accessToken,
-            },
-        })
-            .then((res) => res.json())
-            .then((res) => {
-                initiateLogin(accessToken);
-            })
-            .catch((err) => showToaster(err, "error"));
-    }
-
-    async function initiateLogin(accessToken) {
+    async function initiateLogin(response) {
         await fetch(process.env.NEXT_PUBLIC_API_URL + '/v2/google-login', {
             method: "GET",
             mode: "cors",
             cache: "no-store",
-            headers: { "access-token": accessToken },
+            headers: { "access-token": response.accessToken },
         })
             .then((res) => res.json())
             .then((response) => {
                 if (response.status === "success") {
                     if (response.body.statusCode === "AUTHENTICATE_TWO_WAY") {
+                        showToaster(response.body.text, "success");
                         setUserResponse(response.body);
                         setShowVerificationModal(true);
                     } else {
@@ -153,7 +123,7 @@ const logIn = () => {
                             <span className="d-inline-block mb-4">Login with</span>
 
                             <div className="d-flex align-items-center">
-                                <GoogleLogin />
+                                <GoogleLogin googleApiSuccessCallback={initiateLogin} />
                             </div>
                         </div>
 
@@ -161,7 +131,7 @@ const logIn = () => {
 
                         <OtpLogin sendOtpLoginCallbackToParent={sendOtpLoginCallbackToParent} />
                         {showVerificationModal && (
-                            <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} />
+                            <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => setShowVerificationModal(false)} />
                         )}
 
                         {/* <p className="c-fs-6 mb-4">
