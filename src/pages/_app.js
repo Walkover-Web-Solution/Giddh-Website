@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import GlobalComponents from "@/components/globalComponents";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Toastify from "@/components/toastify";
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -26,6 +27,7 @@ export default function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
             {loginSignupPathStatus ? <Footer /> : null}
             <GlobalComponents />
+            <Toastify />
         </>
     );
 }
