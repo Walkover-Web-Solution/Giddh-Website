@@ -170,13 +170,13 @@
       padding-top: 90px;
       padding-bottom: 40px;
 
-      h2{
-        &.heading{
+      h2 {
+        &.heading {
           font-size: var(--c-fs-1);
         }
       }
-      p{
-        &.c-fs-3{
+      p {
+        &.c-fs-3 {
           font-size: var(--c-fs-5) !important;
         }
       }
@@ -258,6 +258,25 @@
     }
   }
 }
-
-
-
+@media (max-width: 575px) {
+  .features {
+    &__heading_container {
+      &__links {
+        a {
+          font-size: var(--c-fs-6);
+        }
+        .download_free_btn {
+          padding: 8px 14px;
+          &.me-4 {
+            margin-right: 15px !important;
+          }
+        }
+      }
+    }
+    &__accordion_container {
+      .accordion-button {
+        align-items: start !important;
+      }
+    }
+  }
+}

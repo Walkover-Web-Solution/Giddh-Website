@@ -1180,12 +1180,12 @@ const about = () => {
                       <figcaption>Finance Expert</figcaption>
                     </div>
                   </figure>
-                  <div className="team__member_profile_pic_wapper__msg_join_us ">
+                  <a href="https://walkover.in/" target="_blank" className="team__member_profile_pic_wapper__msg_join_us d-block col-dark">
                     <p className="c-fs-4">
                       Interested to <br /> join out
                       <br /> team.
                     </p>
-                  </div>
+                  </a>
                 </div>
               </div>
             </section>

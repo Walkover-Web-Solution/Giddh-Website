@@ -183,18 +183,24 @@ const navbar = () => {
       }
     }
   }, []);
+  
 
   useEffect(() => {
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("load", onScroll, { passive: true });
+
     if(specificPath){
       setscrollStatus(false);   
     }else{
       setscrollStatus(true);   
     }
-    window.addEventListener("scroll", onScroll, { passive: true });
+
     return () => {
       window.removeEventListener("scroll", onScroll, { passive: true });
     };
   }, []);
+
+  
 
   return (
     <>
@@ -246,7 +252,7 @@ const navbar = () => {
             </svg>
           </a>
           <button
-            className="navbar-toggler ms-auto"
+            className="navbar-toggler ms-auto collapsed"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarTogglerDemo01"
@@ -255,14 +261,14 @@ const navbar = () => {
             aria-label="Toggle navigation"
           >
             <svg
-              width="33"
-              height="20"
-              viewBox="0 0 33 20"
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <line
-                className="hamberger_icon"
+                className="hamberger_icon bar-top"
                 y1="18.5"
                 x2="33"
                 y2="18.5"
@@ -270,7 +276,7 @@ const navbar = () => {
                 strokeWidth="3"
               />
               <line
-                className="hamberger_icon"
+                className="hamberger_icon bar-middle"
                 y1="9.5"
                 x2="33"
                 y2="9.5"
@@ -278,7 +284,7 @@ const navbar = () => {
                 strokeWidth="3"
               />
               <line
-                className="hamberger_icon"
+                className="hamberger_icon bar-bottom"
                 y1="1.5"
                 x2="33"
                 y2="1.5"

@@ -1,4 +1,13 @@
+import { usePathname } from "next/navigation";
+
 const makeTheSwitch = () => {
+    // To get active route
+    const pathname = usePathname();
+    const startPath = pathname.split("/");
+    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+    let isAE = startPath[1] === "ae";
+    // Holds Url Prefix country wise
+    let link = isIndia ? "" : isAE ? "/ae" : "/uk";
   return (
     <>
       <section className="container-fluid switch-section">
@@ -10,7 +19,7 @@ const makeTheSwitch = () => {
                   The Right Accounting Software can change the shape of your
                   Business.
                 </p>
-                <a href="/make-the-switch">Make The Switch</a>
+                <a href={ link + "/make-the-switch" }>Make The Switch</a>
               </div>
             </div>
           </div>

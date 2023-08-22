@@ -127,7 +127,7 @@ const contacts = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src={ isIndia ? "/img/feature-gallery-icons/reporting-feature-3.png" : ( isAE ? "" : "/img/feature-gallery-icons/uk-aging-report.svg") }
+                    src={ isIndia ? "/img/feature-gallery-icons/reporting-feature-3.png" : ( isAE ? "/img/feature-gallery-icons/uk-aging-report.svg" : "/img/feature-gallery-icons/uk-aging-report.svg") }
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
