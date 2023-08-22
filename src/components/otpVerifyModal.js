@@ -1,8 +1,7 @@
 import { MdClose } from "react-icons/md";
 import { Modal } from "bootstrap";
 import { useEffect, useState } from "react";
-import "react-toastify/dist/ReactToastify.css";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 const otpVerifyModal = (props) => {
     var verifyOtpModal;
@@ -185,7 +184,6 @@ const otpVerifyModal = (props) => {
                     </div>
                 </div>
             </div>
-            <ToastContainer />
         </>
     );
 };

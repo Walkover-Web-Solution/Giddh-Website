@@ -1,7 +1,6 @@
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft, MdDone, MdCheckCircle } from "react-icons/md";
 import { useState, useEffect } from "react";
 import { toast } from 'react-toastify';
-import Toastify from "@/components/toastify";
 import GoogleLogin from "@/components/googleLogin";
 import { usePathname } from "next/navigation";
 
@@ -782,7 +781,6 @@ const signUp = () => {
                     </div>
                 </div>
             </section>
-            <Toastify />
         </>
     );
 };

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 
 const googleLogin = (props) => {
     const [googleApiInProgress, setGoogleApiInProgress] = useState(false);
@@ -68,7 +68,6 @@ const googleLogin = (props) => {
                     <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
                 </button>
             )}
-            <ToastContainer />
         </>
     )
 }
