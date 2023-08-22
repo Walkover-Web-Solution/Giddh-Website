@@ -547,8 +547,8 @@ const signUp = () => {
                                 <h1>Create an account</h1>
                                 <div className="entry__right_section__container__step_one mt-5">
                                     <div className="step_status_bar d-flex justify-content-between align-items-center ps-0">
-                                        <div>
-                                            <MdCheckCircle className={"step_status_bar--invisible-on-md " + ( emailDetails && emailDetails.isVerified && mobileDetails && mobileDetails.isVerified ? " icon-success" : "" )} />{" "}
+                                        <div className="d-flex align-items-center">
+                                            <MdCheckCircle className={"me-1 " + ( emailDetails && emailDetails.isVerified && mobileDetails && mobileDetails.isVerified ? " icon-success" : "" )} />{" "}
                                             Verify email & mobile number
                                         </div>
                                     </div>
