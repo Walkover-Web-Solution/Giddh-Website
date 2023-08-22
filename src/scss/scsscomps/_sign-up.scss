@@ -321,9 +321,6 @@ $font-weight-500: var(--c-fw-600);
         &__step_one {
           .step_status_bar{
             padding-left: 10px;
-            &--invisible-on-md{
-             display: none;
-            }
            }
           .step_input_wrapper {                       
             max-width: 100%;
