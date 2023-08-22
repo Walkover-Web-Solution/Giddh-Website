@@ -64,7 +64,7 @@ const pricing = () => {
                 <span className="pricing__heading__name">Birch</span>
                 <br />
                 <span className="pricing__heading__cost">
-                  ₹800<span>/year</span>
+                  { isIndia ? (<>&#x20b9;800</>) : (isAE ? ( <> &#x62f;&#x2e;&#x625;500 </>) : ( <>&#xa3;500 </>)) }<span>/year</span>
                 </span>
                 <br />
                 <span className="pricing__heading__period">
