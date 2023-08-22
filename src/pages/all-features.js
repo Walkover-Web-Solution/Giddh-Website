@@ -175,7 +175,7 @@ const allFeatures = () => {
                   />
                   <figcaption>Import Data</figcaption>
                   <p>
-                    Bring in and add your financial dota from different excel
+                    Bring in and add your financial data from different excel
                     files easily in Giddh.
                   </p>
                 </figure>

@@ -37,7 +37,7 @@ $font-weight-500: var(--c-fw-600);
   }
   &__right_section {
     &__container {
-        max-height: 100vh;
+        max-height: 100dvh;
       &__entry_button {
         svg {
           font-size: 22px;

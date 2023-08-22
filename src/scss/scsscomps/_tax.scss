@@ -1,5 +1,5 @@
 .tax-image {
-  width: 50vh;
+  width: 50dvh;
 }
 .tax-hero-container {
   &__try_now_btn {
@@ -46,7 +46,7 @@
 }
 
 .tax-image {
-  width: 50vh;
+  width: 50dvh;
 }
 
 @media screen and (min-width: 480px) {
@@ -87,7 +87,7 @@
 }
 @media (max-width: 991px) {
 .tax-hero-container{
-  min-height: 56vh;
+  min-height: 56dvh;
 }
 
   .tax-return {

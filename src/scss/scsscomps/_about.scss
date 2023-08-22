@@ -25,7 +25,7 @@
         &__img {
           width: clamp(300px, 35vw, 500px);
           @media screen and (max-width: 768px) {
-            width: clamp(100px, 40vh, 300px);
+            width: clamp(100px, 40dvh, 300px);
           }
         }
       }
@@ -91,7 +91,7 @@
     }
     &__content {
       &__wapper {
-        padding: 100px 0;
+        padding: 80px 0 65px 0;
         max-width: 1140px;
         margin-left: auto !important;
         margin-right: auto !important;
@@ -253,6 +253,23 @@
         }
       }
     }
+    .our_values {
+      &__content {
+        &__wapper {
+          padding: 40px 0 35px 0;
+          h2{
+            &.heading{
+              font-size: var(--c-fs-1) !important;
+            }
+          }
+          figure {
+            img {
+              max-width: 160px;
+            }
+          }
+        }
+      }
+    }
     .leadership_principles {
       &__content_wrapper {
         .border-start {
@@ -264,4 +281,3 @@
       }
     }
   }
-  
