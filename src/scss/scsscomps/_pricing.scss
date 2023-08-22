@@ -27,19 +27,44 @@
     padding-right: 0;
     max-width: 1100px;
     font-weight: var(--c-fw-600);
-    grid-template-rows: 60px 100px 60px 50px 50px 50px 50px 75px 50px 46px;
-    grid-template-columns: auto 180px 180px 180px 180px 180px;
-    grid-template-areas:
-      "title title title title title title"
-      "logo trial birch oak vine sequoia"
-      "benefits b1 b2 b3 b4 b5"
-      "transactions t1 t2 t3 t4 t5"
-      "companies c1 c2 c3 c4 c5"
-      "accountant_consultant ac1 ac2 ac3 ac4 ac5"
-      "unlimited_users u1 u2 u3 u4 u5"
-      "customers_vendors cv1 cv2 cv3 cv4 cv5"
-      "desktop_mobile_app d1 d2 d3 d4 d5"
-      "link_all_feature extra_charges extra_charges extra_charges extra_charges extra_charges";
+
+    &.display-four{
+      grid-template-rows: 60px 140px 60px 50px 50px 50px 50px 75px 50px 46px;
+      grid-template-columns: auto 180px 180px 180px 180px;
+      grid-template-areas:
+        "title title title title title"
+        "logo trial birch oak vine"
+        "benefits b1 b2 b3 b4"
+        "transactions t1 t2 t3 t4"
+        "companies c1 c2 c3 c4"
+        "accountant_consultant ac1 ac2 ac3 ac4"
+        "unlimited_users u1 u2 u3 u4"
+        "customers_vendors cv1 cv2 cv3 cv4"
+        "desktop_mobile_app d1 d2 d3 d4"
+        "link_all_feature extra_charges extra_charges extra_charges extra_charges";
+
+        .display-all{
+          &__child{
+            display: none !important;
+          }
+        } 
+    }
+    
+    &.display-all{
+      grid-template-rows: 60px 100px 60px 50px 50px 50px 50px 75px 50px 46px;
+      grid-template-columns: auto 180px 180px 180px 180px 180px;
+      grid-template-areas:
+        "title title title title title title"
+        "logo trial birch oak vine sequoia"
+        "benefits b1 b2 b3 b4 b5"
+        "transactions t1 t2 t3 t4 t5"
+        "companies c1 c2 c3 c4 c5"
+        "accountant_consultant ac1 ac2 ac3 ac4 ac5"
+        "unlimited_users u1 u2 u3 u4 u5"
+        "customers_vendors cv1 cv2 cv3 cv4 cv5"
+        "desktop_mobile_app d1 d2 d3 d4 d5"
+        "link_all_feature extra_charges extra_charges extra_charges extra_charges extra_charges";
+    }
 
     &__title {
       grid-area: title;
@@ -358,6 +383,7 @@
     &__d5 {
       grid-area: d5;
       background-color: #ffe5e8;
+      display: none;
     }
     &__link_all_feature {
       grid-area: link_all_feature;
@@ -389,8 +415,13 @@
           font-size: 12px;
           font-weight: 400;
         }
+        s {
+          font-size: 14px;
+          color: var(--col-grey);
+        }
       }
       &__period {
+        position: relative;
         font-size: 12px;
         font-weight: var(--c-fw-400);
       }
@@ -414,7 +445,12 @@
       padding-left: 15px;
       padding-right: 15px;
       max-width: 1000px;
-      grid-template-columns: auto 160px 160px 160px 160px 160px;
+      &.display-four{
+        grid-template-columns: auto 160px 160px 160px 160px;
+      }
+      &.display-all{
+        grid-template-columns: auto 160px 160px 160px 160px 160px;
+      }
     }
   }
 }
@@ -445,60 +481,111 @@
     &__grid {
       max-width: 720px;
       align-items: center;
-      grid-template-rows:
-        70px 60px
-        auto 60px 50px 50px 50px 50px 50px 50px
-        auto 60px 50px 50px 50px 50px 50px 50px
-        auto 60px 50px 50px 50px 50px 50px 50px
-        auto 60px 50px 50px 50px 50px 50px 50px
-        auto 60px 50px 50px 50px 50px 50px 50px
-        40px;
-      grid-template-columns: 50% 50%;
-      grid-template-areas:
-        "logo logo"
-        "title title"
-        "trial trial"
-        "b1 b1"
-        "transactions t1"
-        "companies c1"
-        "accountant_consultant ac1"
-        "unlimited_users u1"
-        "customers_vendors cv1"
-        "desktop_mobile_app d1"
-        "birch birch"
-        "b2 b2"
-        "transactions_2 t2"
-        "companies_2 c2"
-        "accountant_consultant_2 ac2"
-        "unlimited_users_2 u2"
-        "customers_vendors_2 cv2"
-        "desktop_mobile_app_2 d2"
-        "oak oak"
-        "b3 b3"
-        "transactions_3 t3"
-        "companies_3 c3"
-        "accountant_consultant_3 ac3"
-        "unlimited_users_3 u3"
-        "customers_vendors_3 cv3"
-        "desktop_mobile_app_3 d3"
-        "vine vine"
-        "b4 b4"
-        "transactions_4 t4"
-        "companies_4 c4"
-        "accountant_consultant_4 ac4"
-        "unlimited_users_4 u4"
-        "customers_vendors_4 cv4"
-        "desktop_mobile_app_4 d4"
-        "sequoia sequoia"
-        "b5 b5"
-        "transactions_5 t5"
-        "companies_5 c5"
-        "accountant_consultant_5 ac5"
-        "unlimited_users_5 u5"
-        "customers_vendors_5 cv5"
-        "desktop_mobile_app_5 d5"
-        "link_all_feature link_all_feature"
-        "extra_charges extra_charges";
+      &.display-four{
+        grid-template-rows:
+          70px 60px
+          auto 60px 50px 50px 50px 50px 50px 50px
+          auto 60px 50px 50px 50px 50px 50px 50px
+          auto 60px 50px 50px 50px 50px 50px 50px
+          auto 60px 50px 50px 50px 50px 50px 50px
+          auto 60px 50px 50px 50px 50px 50px 50px
+          40px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+          "logo logo"
+          "title title"
+          "trial trial"
+          "b1 b1"
+          "transactions t1"
+          "companies c1"
+          "accountant_consultant ac1"
+          "unlimited_users u1"
+          "customers_vendors cv1"
+          "desktop_mobile_app d1"
+          "birch birch"
+          "b2 b2"
+          "transactions_2 t2"
+          "companies_2 c2"
+          "accountant_consultant_2 ac2"
+          "unlimited_users_2 u2"
+          "customers_vendors_2 cv2"
+          "desktop_mobile_app_2 d2"
+          "oak oak"
+          "b3 b3"
+          "transactions_3 t3"
+          "companies_3 c3"
+          "accountant_consultant_3 ac3"
+          "unlimited_users_3 u3"
+          "customers_vendors_3 cv3"
+          "desktop_mobile_app_3 d3"
+          "vine vine"
+          "b4 b4"
+          "transactions_4 t4"
+          "companies_4 c4"
+          "accountant_consultant_4 ac4"
+          "unlimited_users_4 u4"
+          "customers_vendors_4 cv4"
+          "desktop_mobile_app_4 d4"
+          "link_all_feature link_all_feature"
+          "extra_charges extra_charges";
+      }
+      &.display-all{
+        
+        grid-template-rows:
+          70px 60px
+          auto 60px 50px 50px 50px 50px 50px 50px
+          auto 60px 50px 50px 50px 50px 50px 50px
+          auto 60px 50px 50px 50px 50px 50px 50px
+          auto 60px 50px 50px 50px 50px 50px 50px
+          auto 60px 50px 50px 50px 50px 50px 50px
+          40px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+          "logo logo"
+          "title title"
+          "trial trial"
+          "b1 b1"
+          "transactions t1"
+          "companies c1"
+          "accountant_consultant ac1"
+          "unlimited_users u1"
+          "customers_vendors cv1"
+          "desktop_mobile_app d1"
+          "birch birch"
+          "b2 b2"
+          "transactions_2 t2"
+          "companies_2 c2"
+          "accountant_consultant_2 ac2"
+          "unlimited_users_2 u2"
+          "customers_vendors_2 cv2"
+          "desktop_mobile_app_2 d2"
+          "oak oak"
+          "b3 b3"
+          "transactions_3 t3"
+          "companies_3 c3"
+          "accountant_consultant_3 ac3"
+          "unlimited_users_3 u3"
+          "customers_vendors_3 cv3"
+          "desktop_mobile_app_3 d3"
+          "vine vine"
+          "b4 b4"
+          "transactions_4 t4"
+          "companies_4 c4"
+          "accountant_consultant_4 ac4"
+          "unlimited_users_4 u4"
+          "customers_vendors_4 cv4"
+          "desktop_mobile_app_4 d4"
+          "sequoia sequoia"
+          "b5 b5"
+          "transactions_5 t5"
+          "companies_5 c5"
+          "accountant_consultant_5 ac5"
+          "unlimited_users_5 u5"
+          "customers_vendors_5 cv5"
+          "desktop_mobile_app_5 d5"
+          "link_all_feature link_all_feature"
+          "extra_charges extra_charges";
+      }
 
       &__benefits {
         display: none;
@@ -605,6 +692,12 @@
         text-align: center;
         margin-bottom: 1rem;
       }
+      &__extra_charges {
+        p {        
+          width: auto;
+          margin:  0 auto;
+        }
+      }
     }
   }
 
@@ -688,7 +781,6 @@
 
 .readmore_section {
   padding: 1.5rem 15px !important;
-  // transition: height 400ms ease-in-out;
   .pricing_description {
     max-width: 1000px;
     margin: 0 auto;

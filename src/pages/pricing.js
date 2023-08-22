@@ -41,7 +41,7 @@ const pricing = () => {
       <section className="container-fluid pricing_main_section">
         <div className="row justify-content-center">
           <div className="col-12">
-            <div className="pricing_main_section__grid">
+            <div className={"pricing_main_section__grid " + (isIndia ? " display-all" : " display-four")}>
               <div className="pricing_main_section__grid__title">
                 <h3>Powerful solution. Affordable pricing.</h3>
               </div>
@@ -54,22 +54,35 @@ const pricing = () => {
                 </figure>
               </div>
               <div className="pricing_main_section__grid__trial pricing__heading text-center">
-                <span className="pricing__heading__name">Trial</span>
+                <span className="pricing__heading__name" >Trial</span>
                 <br />
-                <span className="pricing__heading__cost">Free</span>
+                <span className="pricing__heading__cost d-inline-block pt-4 mt-2">Free</span>
                 <br />
                 <span className="pricing__heading__period">15 days</span>
               </div>
               <div className="pricing_main_section__grid__birch pricing__heading text-center">
                 <span className="pricing__heading__name">Birch</span>
+                {isIndia ? null : (
+                  <>
+                    <br />
+                    <span className="pricing__heading__cost">
+                      <s>&nbsp;{isAE ? "AED 500" : "GBP 100"}&nbsp;</s>
+                    </span>
+                  </>
+                )}
                 <br />
                 <span className="pricing__heading__cost">
-                  { isIndia ? (<>&#x20b9;800</>) : (isAE ? ( <> &#x62f;&#x2e;&#x625;500 </>) : ( <>&#xa3;500 </>)) }<span>/year</span>
+                  {isIndia ? "INR 1,500" : isAE ? "AED 350" : "GBP 70"}
+                  <span>/year</span>
                 </span>
-                <br />
-                <span className="pricing__heading__period">
-                  (Only for CA, CS & NGO)
-                </span>
+                {isIndia ? null : (
+                  <>
+                    <br />
+                    <span className="pricing__heading__period">
+                      Save 30% for 12 months
+                    </span>
+                  </>
+                )}
               </div>
               <div className="pricing_main_section__grid__oak pricing__heading text-center position-relative">
                 <span className="plan_tag">
@@ -80,23 +93,57 @@ const pricing = () => {
                   />
                 </span>
                 <span className="pricing__heading__name"> Oak</span>
+                {isIndia ? null : (
+                  <>
+                    <br />
+                    <span className="pricing__heading__cost">
+                      <s>&nbsp;{isAE ? "AED 1,500" : "GBP 300"}&nbsp;</s>
+                    </span>
+                  </>
+                )}
                 <br />
                 <span className="pricing__heading__cost">
-                  ₹4,000<span>/year</span>
+                  {isIndia ? "INR 4,000" : isAE ? "AED 1,050" : "GBP 210"}
+                  <span>/year</span>
                 </span>
+                {isIndia ? null : (
+                  <>
+                    <br />
+                    <span className="pricing__heading__period">
+                      Save 30% for 12 months
+                    </span>
+                  </>
+                )}
               </div>
               <div className="pricing_main_section__grid__vine pricing__heading text-center">
                 <span className="pricing__heading__name"> Vine</span>
+                {isIndia ? null : (
+                  <>
+                    <br />
+                    <span className="pricing__heading__cost">
+                      <s>&nbsp;{isAE ? "AED 3,000" : "GBP 500"}&nbsp;</s>
+                    </span>
+                  </>
+                )}
                 <br />
                 <span className="pricing__heading__cost">
-                  ₹10,000<span>/year</span>
+                  {isIndia ? "INR 10,000" : isAE ? " AED 2,100" : "GBP 350"}
+                  <span>/year</span>
                 </span>
+                {isIndia ? null : (
+                  <>
+                    <br />
+                    <span className="pricing__heading__period">
+                      Save 30% for 12 months
+                    </span>
+                  </>
+                )}
               </div>
-              <div className="pricing_main_section__grid__sequoia pricing__heading text-center">
+              <div className="pricing_main_section__grid__sequoia pricing__heading text-center display-all__child">
                 <span className="pricing__heading__name"> Sequoia</span>
                 <br />
                 <span className="pricing__heading__cost">
-                  ₹15,000<span>/year</span>
+                  INR 15,000<span>/year</span>
                 </span>
               </div>
 
@@ -104,30 +151,35 @@ const pricing = () => {
                 <p className="c-fw-600">Benefits</p>
               </div>
               <div className="pricing_main_section__grid__b1 text-center">
-                <a
-                  href="/signup"
-                  className="benefits-link bg-grey"
-                >
+                <a href={ link + "/signup" } className="benefits-link bg-grey">
                   Get Started
                 </a>
               </div>
               <div className="pricing_main_section__grid__b2 text-center">
-                <a href="javascript:;" className="benefits-link" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                <a
+                  href="javascript:;"
+                  className="benefits-link"
+                  onClick={() =>
+                    Calendly.initPopupWidget({
+                      url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                    })
+                  }
+                >
                   Talk to Us
                 </a>
               </div>
               <div className="pricing_main_section__grid__b3 text-center">
-                <a href="/signup" className="benefits-link">
+                <a href={ link + "/signup" } className="benefits-link">
                   Join Us
                 </a>
               </div>
               <div className="pricing_main_section__grid__b4 text-center">
-                <a href="/signup" className="benefits-link">
+                <a href={ link + "/signup" } className="benefits-link">
                   Join Us
                 </a>
               </div>
-              <div className="pricing_main_section__grid__b5 text-center">
-                <a href="/signup" className="benefits-link">
+              <div className="pricing_main_section__grid__b5 text-center display-all__child">
+                <a href={ link + "/signup" } className="benefits-link">
                   Join Us
                 </a>
               </div>
@@ -144,22 +196,22 @@ const pricing = () => {
               <div className="pricing_main_section__grid__transactions_4">
                 Transactions
               </div>
-              <div className="pricing_main_section__grid__transactions_5">
+              <div className="pricing_main_section__grid__transactions_5 display-all__child">
                 Transactions
               </div>
               <div className="pricing_main_section__grid__t1 text-center">
                 40,000
               </div>
               <div className="pricing_main_section__grid__t2 text-center">
-                10,000
+                {isIndia ? "10,000" : isAE ? "40,000" : "40,000"}
               </div>
               <div className="pricing_main_section__grid__t3 text-center">
-                40,000
+                {isIndia ? "40,000" : isAE ? "40,000" : "40,000"}
               </div>
               <div className="pricing_main_section__grid__t4 text-center">
-                40,000
+                {isIndia ? "40,000" : isAE ? "100,000" : "100,000"}
               </div>
-              <div className="pricing_main_section__grid__t5 text-center">
+              <div className="pricing_main_section__grid__t5 text-center display-all__child">
                 100,000
               </div>
 
@@ -175,7 +227,7 @@ const pricing = () => {
               <div className="pricing_main_section__grid__companies_4">
                 Companies
               </div>
-              <div className="pricing_main_section__grid__companies_5">
+              <div className="pricing_main_section__grid__companies_5 display-all__child">
                 Companies
               </div>
               <div className="pricing_main_section__grid__c1 text-center pricing-border-top">
@@ -185,12 +237,12 @@ const pricing = () => {
                 1
               </div>
               <div className="pricing_main_section__grid__c3 text-center pricing-border-top">
-                1
+                {isIndia ? "1" : isAE ? "10" : "10"}
               </div>
               <div className="pricing_main_section__grid__c4 text-center pricing-border-top">
-                10
+                {isIndia ? "10" : isAE ? "100" : "100"}
               </div>
-              <div className="pricing_main_section__grid__c5 text-center pricing-border-top">
+              <div className="pricing_main_section__grid__c5 text-center pricing-border-top display-all__child">
                 100
               </div>
 
@@ -206,7 +258,7 @@ const pricing = () => {
               <div className="pricing_main_section__grid__accountant_consultant_4">
                 Accountant Consultant
               </div>
-              <div className="pricing_main_section__grid__accountant_consultant_5">
+              <div className="pricing_main_section__grid__accountant_consultant_5 display-all__child">
                 Accountant Consultant
               </div>
 
@@ -222,7 +274,7 @@ const pricing = () => {
               <div className="pricing_main_section__grid__ac4 text-center pricing-border-top">
                 4 hrs
               </div>
-              <div className="pricing_main_section__grid__ac5 text-center pricing-border-top">
+              <div className="pricing_main_section__grid__ac5 text-center pricing-border-top display-all__child">
                 10 hrs
               </div>
 
@@ -238,7 +290,7 @@ const pricing = () => {
               <div className="pricing_main_section__grid__unlimited_users_4">
                 Unlimited Users
               </div>
-              <div className="pricing_main_section__grid__unlimited_users_5">
+              <div className="pricing_main_section__grid__unlimited_users_5 display-all__child">
                 Unlimited Users
               </div>
               <div className="pricing_main_section__grid__u1 text-center pricing-border-top">
@@ -253,7 +305,7 @@ const pricing = () => {
               <div className="pricing_main_section__grid__u4 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__u5 text-center pricing-border-top">
+              <div className="pricing_main_section__grid__u5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
 
@@ -269,7 +321,7 @@ const pricing = () => {
               <div className="pricing_main_section__grid__customers_vendors_4">
                 Unlimited Customers/Vendors
               </div>
-              <div className="pricing_main_section__grid__customers_vendors_5">
+              <div className="pricing_main_section__grid__customers_vendors_5 display-all__child">
                 Unlimited Customers/Vendors
               </div>
               <div className="pricing_main_section__grid__cv1 text-center pricing-border-top">
@@ -284,7 +336,7 @@ const pricing = () => {
               <div className="pricing_main_section__grid__cv4 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__cv5 text-center pricing-border-top">
+              <div className="pricing_main_section__grid__cv5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
 
@@ -300,7 +352,7 @@ const pricing = () => {
               <div className="pricing_main_section__grid__desktop_mobile_app_4">
                 Desktop/Mobile App
               </div>
-              <div className="pricing_main_section__grid__desktop_mobile_app_5">
+              <div className="pricing_main_section__grid__desktop_mobile_app_5 display-all__child">
                 Desktop/Mobile App
               </div>
               <div className="pricing_main_section__grid__d1 text-center pricing-border-top">
@@ -315,12 +367,12 @@ const pricing = () => {
               <div className="pricing_main_section__grid__d4 text-center pricing-border-top">
                 <MdDone />
               </div>
-              <div className="pricing_main_section__grid__d5 text-center pricing-border-top">
+              <div className="pricing_main_section__grid__d5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
 
               <div className="pricing_main_section__grid__link_all_feature">
-                <a href={ link + "/all-features" }>Check all features</a>
+                <a href={link + "/all-features"}>Check all features</a>
               </div>
               <div className="pricing_main_section__grid__extra_charges">
                 <p className="c-fs-6 c-fw-400">
@@ -337,7 +389,15 @@ const pricing = () => {
           <div className="col-12 text-center">
             <h3 className="c-fs-3 c-fw-600">Big Enterprises?</h3>
 
-            <a href="javascript:;" className="benefits-link" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+            <a
+              href="javascript:;"
+              className="benefits-link"
+              onClick={() =>
+                Calendly.initPopupWidget({
+                  url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                })
+              }
+            >
               TALK TO US
             </a>
           </div>
@@ -357,7 +417,7 @@ const pricing = () => {
               If yes, it’s time to Make the Switch and purchase a dedicated
               online accounting software like GIDDH.
             </p>
-            <a href={ link + "/signup" }>Start your trial</a>
+            <a href={ link + "/signup"}>Start your trial</a>
           </div>
         </div>
       </section>
@@ -611,11 +671,11 @@ const pricing = () => {
                   Accounting Software for CAs and CS
                 </h4>
                 <p>
-                  If you’re looking for a perfect software system to help you with business
-                  operations, you’re at the right place. GIDDH – is one of the
-                  best accounting software for CA and CS both as it can help you
-                  manage daily workload and cater to the specific needs of your
-                  clients regularly.
+                  If you’re looking for a perfect software system to help you
+                  with business operations, you’re at the right place. GIDDH –
+                  is one of the best accounting software for CA and CS both as
+                  it can help you manage daily workload and cater to the
+                  specific needs of your clients regularly.
                 </p>
 
                 <span
@@ -812,7 +872,11 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img className="img-fluid" src="/img/feature-invoice.svg" alt="Invoicing-logo" />
+                  <img
+                    className="img-fluid"
+                    src="/img/feature-invoice.svg"
+                    alt="Invoicing-logo"
+                  />
                   <figcaption>Invoicing</figcaption>
                 </figure>
               </div>
@@ -820,7 +884,8 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img className="img-fluid"
+                  <img
+                    className="img-fluid"
                     src="/img/feature-inventory.svg"
                     alt="Inventory-Management-logo"
                   />
@@ -831,7 +896,8 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img className="img-fluid"
+                  <img
+                    className="img-fluid"
                     src="/img/feature-reconcile.svg"
                     alt="Bank-Reconciliation-logo"
                   />
@@ -842,7 +908,8 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img className="img-fluid"
+                  <img
+                    className="img-fluid"
                     src="/img/multi-currency-banner.svg"
                     alt="Multi-Currency-logo"
                   />
@@ -853,7 +920,11 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img className="img-fluid" src="/img/feature-tax.svg" alt="Tax-Compliant-logo" />
+                  <img
+                    className="img-fluid"
+                    src="/img/feature-tax.svg"
+                    alt="Tax-Compliant-logo"
+                  />
                   <figcaption>Tax Compliant</figcaption>
                 </figure>
               </div>
@@ -861,7 +932,8 @@ const pricing = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <div className="pricing_grid_section__card">
                 <figure>
-                  <img className="img-fluid"
+                  <img
+                    className="img-fluid"
                     src="/img/feature-report.svg"
                     alt="Expense-Management-logo"
                   />
