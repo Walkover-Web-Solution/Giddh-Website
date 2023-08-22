@@ -202,7 +202,7 @@ $font-weight-500: var(--c-fw-600);
       .custom-signup-btn {
         color: $color-primary;
         background-color: $color-white;
-        border: 1px solid $color-primary;
+        border: 1px solid $color-primary !important;
         padding: 0 16px;
         border-radius: 4px;
         font-weight: 500;
@@ -369,6 +369,16 @@ $font-weight-500: var(--c-fw-600);
       }
       &--step{
         width: 100%;
+      }
+      .custom-signup-btn {  
+        &:active,&:hover{
+          color: $color-primary;
+          background-color: $color-white;
+        }         
+        &:focus-visible {
+          color: $color-white;
+          background-color: $color-primary;
+        }
       }
     }
   }
