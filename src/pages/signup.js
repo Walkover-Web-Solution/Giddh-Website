@@ -20,12 +20,6 @@ const signUp = () => {
     const [signupInProgress, setSignupInProgress] = useState(false);
 
     useEffect(() => {
-        window.addEventListener("message", function (event) {
-            if (event.data && event.data.origin === "giddh" && event.data.accessToken) {
-                getGoogleUserDetails(event.data.accessToken);
-            }
-        });
-
         initOtpSignup();
     }, []);
 
@@ -38,29 +32,13 @@ const signUp = () => {
     // Holds Url Prefix country wise
     let link = isIndia ? "/" : isAE ? "/ae" : "/uk";
 
-    async function getGoogleUserDetails(accessToken) {
-        await fetch(
-            `https://www.googleapis.com/oauth2/v1/userinfo?alt=json`,
-            {
-                method: "GET",
-                mode: "cors",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json",
-                    "authorization": "Bearer " + accessToken
-                }
-            }
-        )
-            .then((res) => res.json())
-            .then((res) => {
-                setEmailDetails({ email: res.email, accessToken: accessToken, isVerified: true, signupVia: 'google' });
-                updateCurrentStep(2);
-                setTimeout(() => {
-                    document.getElementById("email").value = res.email;
-                    setShowEmailOtp(false);
-                });
-            })
-            .catch((err) => showToaster(err, "error"));
+    function googleApiSuccessCallback(response) {
+        setEmailDetails({ email: response.email, accessToken: response.accessToken, isVerified: true, signupVia: 'google' });
+        updateCurrentStep(2);
+        setTimeout(() => {
+            document.getElementById("email").value = response.email;
+            setShowEmailOtp(false);
+        });
     }
 
     async function initiateSignup() {
@@ -534,7 +512,7 @@ const signUp = () => {
                                         <span className="d-inline-block mb-4">Sign up with</span>
 
                                         <div className="d-flex align-items-center">
-                                            <GoogleLogin />
+                                            <GoogleLogin googleApiSuccessCallback={googleApiSuccessCallback} />
                                         </div>
                                     </div>
                                 </div>
