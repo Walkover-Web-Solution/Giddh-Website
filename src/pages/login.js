@@ -1,7 +1,6 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import { toast } from 'react-toastify';
-import Toastify from "@/components/toastify";
 import GoogleLogin from "@/components/googleLogin";
 import { usePathname } from "next/navigation";
 const OtpLogin = dynamic(() => import("@/components/otpLogin"), {
@@ -143,7 +142,6 @@ const logIn = () => {
                     </div>
                 </div>
             </section>
-            <Toastify />
         </>
     );
 };
