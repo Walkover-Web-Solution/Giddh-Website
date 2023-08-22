@@ -25,7 +25,7 @@
         &__img {
           width: clamp(300px, 35vw, 500px);
           @media screen and (max-width: 768px) {
-            width: clamp(100px, 40vh, 300px);
+            width: clamp(100px, 40dvh, 300px);
           }
         }
       }
