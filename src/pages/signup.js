@@ -719,7 +719,7 @@ const signUp = () => {
                                                 </div>
                                             </div>
                                             {showMobileOtp && (!mobileDetails || !mobileDetails.isVerified) && (
-                                                <div className="step_input_wrapper__right col-xl-6 col-lg-12">
+                                                <div className="step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12">
                                                     <div className="d-flex flex-column">
                                                         <div className="d-flex">
                                                             <input
