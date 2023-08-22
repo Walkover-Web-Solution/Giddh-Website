@@ -25,5 +25,13 @@
             background-color: var(--col-primary);
             width: 50%;
         }
+        .resend-btn-link{
+            background-color: transparent !important;
+            border: none;
+            outline: none;
+            width: 82px;
+            display: block;
+            margin: 0 auto;
+        }
     }
 }

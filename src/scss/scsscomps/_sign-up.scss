@@ -37,13 +37,7 @@ $font-weight-500: var(--c-fw-600);
   }
   &__right_section {
     &__container {
-        max-height: 100vh;
-        overflow-x: auto;
-      &__entry_with {
-        .signup_with__left {
-          border-right: 1px solid $light-silver;
-        }
-      }
+        max-height: 100dvh;
       &__entry_button {
         svg {
           font-size: 22px;
@@ -52,11 +46,6 @@ $font-weight-500: var(--c-fw-600);
       }
       .text_blue {
         color: $color-primary;
-      }
-      .line_on_right {
-        &::after {
-          width: 500px;
-        }
       }
       &--step {
         display: none;
@@ -80,9 +69,9 @@ $font-weight-500: var(--c-fw-600);
           }
         }
         .step_input_wrapper {
-          max-width: 964px;
-
-          .form-control {
+          max-width: 1000px;
+          .form-control,.iti { 
+            width: 100%;
             max-width: 300px;
             height: 40px;
           }
@@ -96,12 +85,22 @@ $font-weight-500: var(--c-fw-600);
           }
           &__left {
             padding-right: 3rem;
+            .wide-btn{
+              min-width: 143px;
+            }
           }
           &__right {
             padding-left: 3rem;
             border-left: 1px solid $light-silver;
-            a {
-              word-spacing: 12px;
+            a {              
+              &.resend-text{
+                word-spacing: 12px;
+                ul{
+                  display: flex;
+                  column-gap: 20px;
+                  padding-left: 20px;
+                }
+              }
             }
           }
           &__left,
@@ -203,7 +202,7 @@ $font-weight-500: var(--c-fw-600);
       .custom-signup-btn {
         color: $color-primary;
         background-color: $color-white;
-        border: 1px solid $color-primary;
+        border: 1px solid $color-primary !important;
         padding: 0 16px;
         border-radius: 4px;
         font-weight: 500;
@@ -221,11 +220,8 @@ $font-weight-500: var(--c-fw-600);
       }
       .back_btn {
         background-color: rgba(123, 127, 130, 0.1);
-        font-weight: $font-weight-500;
-        border: none !important;
         padding-left: 8px;
         padding-right: 15px;
-        height: 40px;
         &:hover,
         &:active,
         &:focus,
@@ -233,13 +229,10 @@ $font-weight-500: var(--c-fw-600);
           background-color: rgba(123, 127, 130, 0.1) !important;
         }
       }
-      .next_btn {
-        background-color: $color-primary;
-        font-weight: $font-weight-500;
-        border: none !important;
-        padding-left: 15px;
+      .submit_btn {
+        background-color: $color-primary !important;
+        padding-left: 8px;
         padding-right: 8px;
-        height: 40px;
         &:hover,
         &:active,
         &:focus,
@@ -248,17 +241,32 @@ $font-weight-500: var(--c-fw-600);
         }
       }
       .back_btn,
-      .next_btn {
+      .submit_btn {
+        font-weight: $font-weight-500;
+        border: none !important;
+        height: 40px;
+        min-width: 82px;
         svg {
           font-size: 23px;
           padding-bottom: 1px;
         }
       }
       .icon-success {
-        fill: $color-success;
+        fill: $color-success !important;
       }
       &--logo-visible-in-small{
         margin-bottom: 3rem;
+      }
+    }
+  }
+}
+@media (max-width: 1399px) {
+  .entry {
+    &__right_section {
+      &__container {
+        &.container {
+          padding-left: 20px !important;
+        }
       }
     }
   }
@@ -307,38 +315,18 @@ $font-weight-500: var(--c-fw-600);
           padding-left: 40px !important;
           padding-right: 40px !important;
         }
-        &__entry_with {
-          flex-direction: column;
-          .signup_with__left {
-            border-right: none !important;
-            padding-bottom: 14px;
-            padding-right: 0 !important;
-          }
-          .signup_with__right {
-            padding-top: 14px;
-            padding-left: 0 !important;
-          }
-        }
-        .line_on_right {
-          &::after {
-            width: 210px;
-          }
-        }
         .step_status_bar__line{
           width: 40px;
         }
         &__step_one {
           .step_status_bar{
             padding-left: 10px;
-            &--invisible-on-md{
-             display: none;
-            }
            }
           .step_input_wrapper {                       
             max-width: 100%;
             padding: 0 10px;
 
-            .form-control {
+            .form-control,.iti {
               max-width: 100% !important;
             }
 
@@ -378,6 +366,16 @@ $font-weight-500: var(--c-fw-600);
       }
       &--step{
         width: 100%;
+      }
+      .custom-signup-btn {  
+        &:active,&:hover{
+          color: $color-primary;
+          background-color: $color-white;
+        }         
+        &:focus-visible {
+          color: $color-white;
+          background-color: $color-primary;
+        }
       }
     }
   }
