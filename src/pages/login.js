@@ -11,6 +11,7 @@ const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
 });
 
 const logIn = () => {
+    const [authLoginInProgress, setAuthLoginInProgress] = useState(false);
     const [showVerificationModal, setShowVerificationModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
     // To get active route
@@ -48,6 +49,7 @@ const logIn = () => {
 
     async function sendOtpLoginCallbackToParent(data) {
         if (data.type == "success") {
+            setAuthLoginInProgress(true);
             await fetch(
                 process.env.NEXT_PUBLIC_API_URL + '/v2/auth-login',
                 {
@@ -64,6 +66,7 @@ const logIn = () => {
                 .then((response) => {
                     if (response.status == "success") {
                         if (response.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
+                            setAuthLoginInProgress(false);
                             setUserResponse(response.body);
                             setShowVerificationModal(true);
                         } else {
@@ -71,6 +74,7 @@ const logIn = () => {
                             window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + data.message;
                         }
                     } else {
+                        setAuthLoginInProgress(false);
                         showToaster(response.message, "error");
                     }
                 })
@@ -128,14 +132,11 @@ const logIn = () => {
 
                         <span className="d-block line_on_right c-fs-6 mb-4">or</span>
 
-                        <OtpLogin sendOtpLoginCallbackToParent={sendOtpLoginCallbackToParent} />
+                        <OtpLogin authLoginInProgress={authLoginInProgress} sendOtpLoginCallbackToParent={sendOtpLoginCallbackToParent} />
                         {showVerificationModal && (
                             <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => setShowVerificationModal(false)} />
                         )}
 
-                        {/* <p className="c-fs-6 mb-4">
-              Trouble logging in ? <a href="#" className="text_blue">Click here</a>
-            </p> */}
                         <a href={process.env.NEXT_PUBLIC_SITE_URL + '/signup'} className="c-fs-6 text_blue">
                             Create new account
                         </a>

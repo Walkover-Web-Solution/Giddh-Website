@@ -1,7 +1,7 @@
-const otpLogin = ({ sendOtpLoginCallbackToParent }) => {
+const otpLogin = (props) => {
 
     function initiateLogin(data) {
-        sendOtpLoginCallbackToParent(data);
+        props.sendOtpLoginCallbackToParent(data);
     }
 
     function initOtpLogin() {
@@ -16,9 +16,16 @@ const otpLogin = ({ sendOtpLoginCallbackToParent }) => {
 
     return (
         <>
-            <button className="entry__right_section__container__entry_button mb-4 me-0 me-md-3" onClick={initOtpLogin}>
-                Login with OTP
-            </button>
+            {!props.authLoginInProgress && (
+                <button className="entry__right_section__container__entry_button mb-4 me-0 me-md-3" onClick={initOtpLogin}>
+                    Login with OTP
+                </button>
+            )}
+            {props.authLoginInProgress && (
+                <button className="btn custom-signup-btn otp-login-btn opacity-100 entry__right_section__container__entry_button me-0 me-md-3">
+                    <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                </button>
+            )}
         </>
     )
 }
