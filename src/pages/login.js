@@ -38,7 +38,7 @@ const logIn = () => {
                         setUserResponse(response.body);
                         setShowVerificationModal(true);
                     } else {
-                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + accessToken;
+                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + response.accessToken;
                     }
                 } else {
                     showToaster(response.message, "error");
