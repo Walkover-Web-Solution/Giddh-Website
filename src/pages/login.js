@@ -23,12 +23,12 @@ const logIn = () => {
     // Holds Url Prefix country wise
     let link = isIndia ? "/" : isAE ? "/ae" : "/uk";
 
-    async function initiateLogin(response) {
+    async function initiateLogin(result) {
         await fetch(process.env.NEXT_PUBLIC_API_URL + '/v2/google-login', {
             method: "GET",
             mode: "cors",
             cache: "no-store",
-            headers: { "access-token": response.accessToken },
+            headers: { "access-token": result.accessToken },
         })
             .then((res) => res.json())
             .then((response) => {
@@ -38,7 +38,7 @@ const logIn = () => {
                         setUserResponse(response.body);
                         setShowVerificationModal(true);
                     } else {
-                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + response.accessToken;
+                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + result.accessToken;
                     }
                 } else {
                     showToaster(response.message, "error");
