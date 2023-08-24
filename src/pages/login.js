@@ -71,7 +71,7 @@ const logIn = () => {
                             setShowVerificationModal(true);
                         } else {
                             setGiddhSession(response.body.session.id);
-                            window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + data.message;
+                            window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
                         }
                     } else {
                         setAuthLoginInProgress(false);
