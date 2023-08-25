@@ -64,6 +64,8 @@ const loginWithPassword = (props) => {
                         </div>
                         <div className="modal-body bg-light text-center">
                             <form id="loginForm">
+                                <div className="position-relative input-wrapper mb-3">
+                                <label htmlFor="email">Email<span className="col-danger">*</span></label>
                                 <input
                                     type="email"
                                     placeholder="Enter email"
@@ -75,7 +77,10 @@ const loginWithPassword = (props) => {
                                     autoFocus
                                     autoComplete="off"
                                 />
-                                <input
+                                </div>
+                                <div className="position-relative input-wrapper">
+                                  <label htmlFor="password">Password<span className="col-danger">*</span></label>
+                                  <input
                                     type="password"
                                     placeholder="******"
                                     name="password"
@@ -83,6 +88,7 @@ const loginWithPassword = (props) => {
                                     required
                                     autoComplete="off"
                                 />
+                                </div>
 
                                 <button
                                     type="submit"
