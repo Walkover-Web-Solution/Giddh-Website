@@ -211,6 +211,11 @@ $font-weight-500: var(--c-fw-600);
         margin-left: 1rem;
         transition: all 200ms ease;
 
+        &.otp-login-btn {
+            margin-left: 0px;
+            width: 118px;
+        }
+
         &:hover,
         &:active,
         &:focus-visible {
