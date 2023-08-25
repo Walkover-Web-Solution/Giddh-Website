@@ -58,6 +58,7 @@ const loginWithPassword = (props) => {
                                 className="col-white c-fs-3 cursor-pointer"
                                 data-bs-dismiss="modal"
                                 aria-label="Close"
+                                onClick={() => props.hideLoginWithPasswordModal()}
                             >
                                 <MdClose />
                             </span>

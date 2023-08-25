@@ -175,7 +175,7 @@ const logIn = () => {
                         </button>
 
                         {showLoginWithPasswordModal && (
-                            <LoginWithPassword emailLoginInProgress={emailLoginInProgress} emailPasswordLoginCallback={initiateEmailPasswordLogin} />
+                            <LoginWithPassword emailLoginInProgress={emailLoginInProgress} emailPasswordLoginCallback={initiateEmailPasswordLogin} hideLoginWithPasswordModal={() => setShowLoginWithPasswordModal(false)} />
                         )}
 
                         <a href={link + '/signup'} className="c-fs-6 text_blue">
