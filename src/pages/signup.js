@@ -2,7 +2,6 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft, MdDone, MdCheckCircle } from
 import { useState, useEffect } from "react";
 import { toast } from 'react-toastify';
 import GoogleLogin from "@/components/googleLogin";
-import { usePathname } from "next/navigation";
 
 const signUp = () => {
     const [currentStep, setCurrentStep] = useState(1);
@@ -17,19 +16,12 @@ const signUp = () => {
     const [mobileGetOtpInProgress, setMobileGetOtpInProgress] = useState(false);
     const [mobileVerifyOtpInProgress, setMobileVerifyOtpInProgress] = useState(false);
     const [signupInProgress, setSignupInProgress] = useState(false);
+    const [link, setLink] = useState(null);
 
     useEffect(() => {
         initOtpSignup();
+        setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
     }, []);
-
-    // To get active route
-    const pathname = usePathname();
-    const startPath = pathname.split("/");
-    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-    let isAE = startPath[1] === "ae";
-
-    // Holds Url Prefix country wise
-    let link = isIndia ? "/" : isAE ? "/ae" : "/uk";
 
     function googleApiSuccessCallback(response) {
         setEmailDetails({ email: response.email, accessToken: response.accessToken, isVerified: true, signupVia: 'google' });
