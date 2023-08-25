@@ -56,7 +56,7 @@ const pricing = () => {
               <div className="pricing_main_section__grid__trial pricing__heading text-center">
                 <span className="pricing__heading__name" >Trial</span>
                 <br />
-                <span className="pricing__heading__cost d-inline-block pt-4 mt-2">Free</span>
+                <span className={"pricing__heading__cost d-inline-block " + ( isIndia ? "" : " pt-4 mt-2") }>Free</span>
                 <br />
                 <span className="pricing__heading__period">15 days</span>
               </div>

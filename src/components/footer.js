@@ -56,7 +56,7 @@ const Footer = () => {
             <div className="col-xl-3 col-lg-6 col-md-12">
               <div className="d-flex">
                 <div className="d-flex flex-column gap-3 text-dark">
-                  <h5 className="c-fw-600">Quick Links</h5>
+                  <h3 className="c-fs-4 c-fw-600">Quick Links</h3>
                   <ul className="footer-list list-unstyled mb-3">
                     <li>
                       <a href={link + "/pricing"}>Pricing</a>
@@ -91,7 +91,7 @@ const Footer = () => {
 
             <div className="col-xl-3 col-lg-6 col-md-12">
               <div className="d-flex flex-column gap-3">
-                <h5 className="c-fw-600">Download</h5>
+                <h3 className="c-fs-4 c-fw-600">Download</h3>
                 <div>
                   <p>Mobile Apps</p>
                   <ul className="list-unstyled d-flex gap-3">
@@ -141,19 +141,19 @@ const Footer = () => {
             </div>
 
             <div className="col-xl-3 col-lg-6 col-md-12">
-              <h5
-                className="list-unstyled d-flex flex-column gap-2 c-fw-600"
+              <h3
+                className="list-unstyled d-flex flex-column gap-2 c-fs-4 c-fw-600"
                 id="footer-contact"
               >
                 Contact Us
-              </h5>
+              </h3>
               <div>
                 <div className="footer-dpn mb-3">
                   <div className="dropdown btn-group w-100">
                     <button
                       type="button"
                       className="btn btn-down dropdown-toggle country-icon"
-                      id="countryDropdown"
+                      id="countryDropdownHeader"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
@@ -167,7 +167,7 @@ const Footer = () => {
                     </button>
                     <ul
                       className="dropdown-menu country_dropdown__menu"
-                      aria-labelledby="countryDropdown"
+                      aria-labelledby="countryDropdownHeader"
                     >
                       <li>
                         <a
@@ -231,7 +231,7 @@ const Footer = () => {
 
             <div className="col-xl-3 col-lg-6 col-md-12">
               <div className="location">
-                <h5 className="c-fw-600">Locate Us</h5>
+                <h3 className="c-fs-4 c-fw-600">Locate Us</h3>
                 <div className="location__detail">
                   <h4>Indore</h4>
                   <p>
