@@ -112,6 +112,9 @@ $font-weight-500: var(--c-fw-600);
               right: 8px;
             }
           }
+          &--fixed-height{
+            height: 94px;
+          }
         }
       }
       &__step_two {
@@ -302,9 +305,13 @@ $font-weight-500: var(--c-fw-600);
                 }
               }
             }
+            &--fixed-height{
+                  height: auto;
+                  margin-bottom: 20px;
+            }
           }
           .custom-signup-btn {
-            min-width: 140px;
+            min-width: 143px;
           }
         }
       }

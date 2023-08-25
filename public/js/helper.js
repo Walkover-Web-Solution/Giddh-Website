@@ -104,15 +104,15 @@ function formatMobileNumber(number) {
 
 function getCurrentSiteCountry() {
     const startPath = window.location.href.split("/");
-    var isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-    var isAE = startPath[1] === "ae";
-    var isUK = startPath[1] === "uk";
+    var isIndia = startPath[startPath.indexOf('ae')] !== "ae" && startPath[startPath.indexOf('uk')] !== "uk";
+    var isAE = startPath[startPath.indexOf('ae')] === "ae";
+    var isUK = startPath[startPath.indexOf('uk')] === "uk";
     return { isIndia: isIndia, isAE: isAE, isUK: isUK };
 }
 
 function getCurrentSiteCountryUrl(siteUrl) {
     const startPath = window.location.href.split("/");
-    var isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-    var isAE = startPath[1] === "ae";
+    var isIndia = startPath[startPath.indexOf('ae')] !== "ae" && startPath[startPath.indexOf('uk')] !== "uk";
+    var isAE = startPath[startPath.indexOf('ae')] === "ae";
     return siteUrl + (isIndia ? "" : isAE ? "/ae" : "/uk");
 }

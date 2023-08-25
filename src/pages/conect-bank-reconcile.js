@@ -128,7 +128,7 @@ const conectBankReconcile = () => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/bank-reconcile.svg"
+                    src="/img/suggestion.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
                   />

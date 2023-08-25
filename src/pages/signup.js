@@ -18,6 +18,8 @@ const signUp = () => {
     const [signupInProgress, setSignupInProgress] = useState(false);
     const [link, setLink] = useState(null);
 
+ var x;
+
     useEffect(() => {
         initOtpSignup();
         setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
@@ -54,7 +56,7 @@ const signUp = () => {
                         setGiddhSession(response.body.session.id);
 
                         var utmParams = "&utm_source=" + getLocalStorage("utm_source") + "&utm_medium=" + getLocalStorage("utm_medium") + "&utm_campaign=" + getLocalStorage("utm_campaign") + "&utm_term=" + getLocalStorage("utm_term") + "&utm_content=" + getLocalStorage("utm_content") + "";
-
+                        x = utmParams;
                         window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id + utmParams;
                     } else {
                         setSignupInProgress(false);
@@ -439,7 +441,6 @@ const signUp = () => {
             setIntl(intl);
         }
     }
-
     return (
         <>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"></link>
@@ -544,7 +545,7 @@ const signUp = () => {
                                         <label htmlFor="email" className="mb-3 ps-0">
                                             Verify email
                                         </label>
-                                        <div className="d-flex flex-wrap p-0">
+                                        <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                                             <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12" style={{ paddingRight: showEmailOtp || (emailDetails && emailDetails.isVerified) ? "0" : null }}>
                                                 <div className="d-flex step_input_wrapper__mobile_veiw">
                                                     <input
@@ -638,11 +639,11 @@ const signUp = () => {
                                             )}
                                         </div>
                                     </div>
-                                    <div className="row mx-0 px-0 step_input_wrapper mt-4 mb-5">
+                                    <div className="row mx-0 px-0 step_input_wrapper mb-3">
                                         <label htmlFor="contact" className="mb-3 ps-0">
                                             Verify Mobile number
                                         </label>
-                                        <div className="d-flex flex-wrap p-0">
+                                        <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                                             <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12" style={{ paddingRight: showMobileOtp || (mobileDetails && mobileDetails.isVerified) ? "0" : null }}>
                                                 <div className="d-flex step_input_wrapper__mobile_veiw">
                                                     <input
