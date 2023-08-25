@@ -101,3 +101,18 @@ function formatMobileNumber(number) {
     number = String(number).replace("+", "");
     return number.trim();
 }
+
+function getCurrentSiteCountry() {
+    const startPath = window.location.href.split("/");
+    var isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+    var isAE = startPath[1] === "ae";
+    var isUK = startPath[1] === "uk";
+    return { isIndia: isIndia, isAE: isAE, isUK: isUK };
+}
+
+function getCurrentSiteCountryUrl(siteUrl) {
+    const startPath = window.location.href.split("/");
+    var isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+    var isAE = startPath[1] === "ae";
+    return siteUrl + (isIndia ? "" : isAE ? "/ae" : "/uk");
+}
