@@ -22,12 +22,12 @@ const loginWithPassword = (props) => {
         event.preventDefault();
         event.stopPropagation();
 
-        if (!document.getElementById("email").value) {
-            showToaster("Please enter email", "error");
+        if (!document.getElementById("email").value || !document.getElementById("email").value.trim() || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(document.getElementById("email").value)) {
+            showToaster("Please enter valid email!", "error");
         } else if (!document.getElementById("password").value) {
             showToaster("Please enter password", "error");
         } else {
-            
+            props.emailPasswordLoginCallback({ uniqueKey: document.getElementById("email").value, password: document.getElementById("password").value });
         }
     }
 
@@ -75,10 +75,9 @@ const loginWithPassword = (props) => {
                                     autoFocus
                                     autoComplete="off"
                                 />
-                                  <input
+                                <input
                                     type="password"
                                     placeholder="******"
-                                    minLength="4"
                                     name="password"
                                     id="password"
                                     required
@@ -89,8 +88,16 @@ const loginWithPassword = (props) => {
                                     type="submit"
                                     className="btn col-white opacity-100"
                                     onClick={initiateLogin}
+                                    disabled={props.emailLoginInProgress}
                                 >
-                                    Login
+                                    {props.emailLoginInProgress && (
+                                        <div
+                                            className="spinner-border spinner-border-sm"
+                                            role="status"
+                                        ></div>
+                                    )}
+
+                                    {!props.emailLoginInProgress && <span>Login</span>}
                                 </button>
                             </form>
                         </div>

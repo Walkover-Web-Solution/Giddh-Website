@@ -14,6 +14,7 @@ const LoginWithPassword = dynamic(() => import("@/components/loginWithPassword")
 
 const logIn = () => {
     const [authLoginInProgress, setAuthLoginInProgress] = useState(false);
+    const [emailLoginInProgress, setEmailLoginInProgress] = useState(false);
     const [showVerificationModal, setShowVerificationModal] = useState(false);
     const [showLoginWithPasswordModal, setShowLoginWithPasswordModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
@@ -84,6 +85,39 @@ const logIn = () => {
         }
     }
 
+    async function initiateEmailPasswordLogin(data) {
+        setEmailLoginInProgress(true);
+        await fetch(
+            process.env.NEXT_PUBLIC_API_URL + '/v2/login-with-password',
+            {
+                method: "POST",
+                mode: "cors",
+                cache: "no-store",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            }
+        )
+            .then((res) => res.json())
+            .then((response) => {
+                if (response.status == "success") {
+                    if (response.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
+                        setEmailLoginInProgress(false);
+                        setUserResponse(response.body);
+                        setShowVerificationModal(true);
+                    } else {
+                        setGiddhSession(response.body.session.id);
+                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
+                    }
+                } else {
+                    setEmailLoginInProgress(false);
+                    showToaster(response.message, "error");
+                }
+            })
+            .catch((err) => showToaster(err, "error"));
+    }
+
     function otpVerifyCallback(response) {
         setGiddhSession(response.session.id);
         window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.session.id;
@@ -141,10 +175,10 @@ const logIn = () => {
                         </button>
 
                         {showLoginWithPasswordModal && (
-                            <LoginWithPassword />
+                            <LoginWithPassword emailLoginInProgress={emailLoginInProgress} emailPasswordLoginCallback={initiateEmailPasswordLogin} />
                         )}
 
-                        <a href={ link + '/signup'} className="c-fs-6 text_blue">
+                        <a href={link + '/signup'} className="c-fs-6 text_blue">
                             Create new account
                         </a>
                     </div>
