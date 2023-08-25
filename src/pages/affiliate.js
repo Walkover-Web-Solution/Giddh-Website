@@ -179,7 +179,7 @@ const affiliate = () => {
                 </div>
                 <div className="col-lg-6 col-md-12 order-lg-0 order-1">
                   <div>
-                    <h4 className="c-fs-1 mb-4 col-primary">s
+                    <h4 className="c-fs-1 mb-4 col-primary">
                       Dedicated Affiliate Manager
                     </h4>
                     <p className="c-fs-4 col-grey-deep">

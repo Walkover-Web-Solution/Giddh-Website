@@ -411,15 +411,25 @@ const featureGallery = () => {
     },
   ];
 
-  const countryWiseModalData = isIndia ? indiaModalData : ( isAE ? aeModalData : ukModalData );
-  const countryWiseCardData = isIndia ? indiaCardData : ( isAE ? aeCardData : ukCardData );
+  const countryWiseModalData = isIndia
+    ? indiaModalData
+    : isAE
+    ? aeModalData
+    : ukModalData;
+  const countryWiseCardData = isIndia
+    ? indiaCardData
+    : isAE
+    ? aeCardData
+    : ukCardData;
 
   // Function to get modal data
   const setCurrent = (value) => {
     setCurrentData([]);
     let matchedObject;
     for (let i = 0; i < countryWiseModalData.length; i++) {
-      if (countryWiseModalData[i]["heading"].toUpperCase() === value.toUpperCase()) {
+      if (
+        countryWiseModalData[i]["heading"].toUpperCase() === value.toUpperCase()
+      ) {
         matchedObject = countryWiseModalData[i];
       }
     }
@@ -439,11 +449,8 @@ const featureGallery = () => {
             </div>
           </div>
           <div className="row">
-            { countryWiseCardData.map((data, index) => (
-              <div
-                className="col-lg-4 col-md-6 col-sm-12"
-                key={index}
-              >
+            {countryWiseCardData.map((data, index) => (
+              <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                 <div
                   className="feature-gallery__card"
                   data-bs-target="#featureModal"
@@ -451,14 +458,22 @@ const featureGallery = () => {
                   onClick={() => setCurrent(data.name)}
                 >
                   <figure>
-                    <img src={"/img" + data.image} alt="Giddh features Icon" height="50px" width="auto" />
+                    <img
+                      src={"/img" + data.image}
+                      alt="Giddh features Icon"
+                      height="50px"
+                      width="auto"
+                    />
                     <figcaption className="c-fw-400">{data.name}</figcaption>
                   </figure>
                 </div>
               </div>
-            ))}           
+            ))}
             <div className="col-lg-4 col-md-6 col-sm-12">
-              <a className="feature-gallery__card" href={ link + "/all-features" }>
+              <a
+                className="feature-gallery__card"
+                href={link + "/all-features"}
+              >
                 <span className="c-fs-3 col-primary">See More</span>
               </a>
             </div>
@@ -488,13 +503,24 @@ const featureGallery = () => {
               <h4 className="c-fs-1 c-fw-600 col-blue mb-4">
                 {currentData?.heading}
               </h4>
-              <h5 className="c-fs-2 c-fw-600 col-primary mb-4">
+              <h5 className="c-fs-3 c-fw-600 col-primary">
                 {currentData?.subHeading}
               </h5>
-              <p className="col-grey-deep mb-1">{currentData?.paragraph}</p>
-              <a href={link + "/" + currentData?.link} className="col-blue">
-                More details
-              </a>
+              {currentData?.paragraph !== "" ? (
+                <>
+                  <p className="col-grey-deep mt-4">{currentData?.paragraph}</p>
+                </>
+              ) : null}
+              {currentData?.link !== "" ? (
+                <>
+                  <a
+                    href={link + "/" + currentData?.link}
+                    className="col-blue d-inline-block mt-1"
+                  >
+                    More details
+                  </a>
+                </>
+              ) : null}
             </div>
           </div>
         </div>

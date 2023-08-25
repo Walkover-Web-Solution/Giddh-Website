@@ -86,16 +86,16 @@
   }
 }
 @media (max-width: 991px) {
-.tax-hero-container{
-  min-height: 56dvh;
-}
+  .tax-hero-container {
+    min-height: 56dvh;
+  }
 
   .tax-return {
     background-color: #d2d3d5;
     &__wrapper {
-       padding: 2rem;
+      padding: 2rem;
 
-      &__large_img{
+      &__large_img {
         width: 320px;
       }
       .col {
@@ -109,5 +109,11 @@
         }
       }
     }
+  }
+}
+@media (max-width: 390px) {
+  .tax-return__wrapper__large_img {
+    width: 252px;
+    margin-top: 8px;
   }
 }

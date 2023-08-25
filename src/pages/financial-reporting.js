@@ -228,7 +228,7 @@ const financialReporting = () => {
                   <img
                     src="/img/suggestion.svg"
                     alt="people interested in Connect Bank Reconcile also looked at image"
-                    width="300px"
+                    className="features__sub_heading_container--banner_img"
                   />
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
