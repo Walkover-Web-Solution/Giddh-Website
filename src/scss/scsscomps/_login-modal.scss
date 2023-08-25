@@ -3,21 +3,44 @@
         background-color: var(--col-primary);
     }
     .modal-body{
-        padding: 30px 20px;
+        padding: 60px 20px 40px 20px;
 
-        input{
-            margin-bottom: 1rem;
-            text-align: center;
-            letter-spacing: 18px;
-            width: 260px;
-            height: 50px;
-            border: 1px solid var(--col-primary);
-            outline: none;
-            font-size: var(--c-fs-4);
+        #loginForm{
+
+            .input-wrapper{
+                max-width: 380px;
+                min-width: 270px;
+                width: 100%;
+                margin: 0 auto;
+
+                label{
+                    background: var(--col-white);
+                    position: absolute;
+                    top: -10px;
+                    left: 12px;
+                    font-size: var(--c-fs-6);
+                    color: var(--col-primary);
+                }
+    
+                input{
+                    margin-bottom: 1rem;
+                    width: 100%;                    
+                    height: 50px;
+                    border: 1px solid var(--col-primary);
+                    border-radius: 6px;
+                    outline: none;
+                    font-size: var(--c-fs-5);
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+
+            button{
+                background-color: var(--col-primary);
+                margin-top: 2rem;
+                padding: 10px 67px;
+            }
         }
-        button{
-            background-color: var(--col-primary);
-            width: 50%;
-        }
+
     }
 }
