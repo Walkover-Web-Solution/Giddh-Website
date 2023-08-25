@@ -26,9 +26,6 @@ const otpLogin = (props) => {
                     <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
                 </button>
             )}
-            <button className="entry__right_section__container__entry_button mb-4 me-0 me-md-3" >
-                    Login with Username
-            </button>
         </>
     )
 }

@@ -8,10 +8,14 @@ const OtpLogin = dynamic(() => import("@/components/otpLogin"), {
 const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
     ssr: false
 });
+const LoginWithPassword = dynamic(() => import("@/components/loginWithPassword"), {
+    ssr: false
+});
 
 const logIn = () => {
     const [authLoginInProgress, setAuthLoginInProgress] = useState(false);
     const [showVerificationModal, setShowVerificationModal] = useState(false);
+    const [showLoginWithPasswordModal, setShowLoginWithPasswordModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
     const [link, setLink] = useState(null);
 
@@ -131,6 +135,13 @@ const logIn = () => {
                         <OtpLogin authLoginInProgress={authLoginInProgress} sendOtpLoginCallbackToParent={sendOtpLoginCallbackToParent} />
                         {showVerificationModal && (
                             <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => setShowVerificationModal(false)} />
+                        )}
+                        <button className="entry__right_section__container__entry_button mb-4 me-0 me-md-3" onClick={() => setShowLoginWithPasswordModal(true)}>
+                            Login with password
+                        </button>
+
+                        {showLoginWithPasswordModal && (
+                            <LoginWithPassword />
                         )}
 
                         <a href={ link + '/signup'} className="c-fs-6 text_blue">

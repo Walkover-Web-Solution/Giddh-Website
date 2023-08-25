@@ -3,20 +3,33 @@ import { Modal } from "bootstrap";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
-const loginWithUserName = (props) => {
+const loginWithPassword = (props) => {
+    var loginWithPasswordModal;
     const [isModalOpen, setIsModalOpen] = useState(false);
-
 
     useEffect(() => {
         if (!isModalOpen) {
             setIsModalOpen(true);
-            loginWithUsernameModal = new Modal(document.getElementById("loginWithUsername"), {
+            loginWithPasswordModal = new Modal(document.getElementById("loginWithPassword"), {
                 backdrop: "static",
                 keyboard: false,
             });
-            loginWithUsernameModal.toggle();
+            loginWithPasswordModal.toggle();
         }
     });
+
+    function initiateLogin(event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        if (!document.getElementById("email").value) {
+            showToaster("Please enter email", "error");
+        } else if (!document.getElementById("password").value) {
+            showToaster("Please enter password", "error");
+        } else {
+            
+        }
+    }
 
     function showToaster(message, type) {
         toast.dismiss();
@@ -27,9 +40,9 @@ const loginWithUserName = (props) => {
         <>
             <div
                 className="modal fade"
-                id="loginWithUsername"
+                id="loginWithPassword"
                 tabIndex="-1"
-                aria-labelledby="loginWithUsernameLabel"
+                aria-labelledby="loginWithPasswordLabel"
                 aria-hidden="true"
             >
                 <div className="modal-dialog modal-dialog-centered login-with-username-modal">
@@ -37,9 +50,9 @@ const loginWithUserName = (props) => {
                         <div className="modal-header">
                             <h4
                                 className="modal-title c-fs-5 col-white"
-                                id="loginWithUsernameLabel"
+                                id="loginWithPasswordLabel"
                             >
-                                Sign In with Username
+                                Sign In with Email and Password
                             </h4>
                             <span
                                 className="col-white c-fs-3 cursor-pointer"
@@ -52,11 +65,12 @@ const loginWithUserName = (props) => {
                         <div className="modal-body bg-light text-center">
                             <form id="loginForm">
                                 <input
-                                    type="text"
-                                    placeholder="Enter Username / Email"
+                                    type="email"
+                                    placeholder="Enter email"
                                     minLength="4"
                                     pattern="[a-z]{50}"
-                                    name="username"
+                                    name="email"
+                                    id="email"
                                     required
                                     autoFocus
                                     autoComplete="off"
@@ -66,6 +80,7 @@ const loginWithUserName = (props) => {
                                     placeholder="******"
                                     minLength="4"
                                     name="password"
+                                    id="password"
                                     required
                                     autoComplete="off"
                                 />
@@ -73,16 +88,9 @@ const loginWithUserName = (props) => {
                                 <button
                                     type="submit"
                                     className="btn col-white opacity-100"
-                                    disabled={loginInProgress}
+                                    onClick={initiateLogin}
                                 >
-                                    {loginInProgress && (
-                                        <div
-                                            className="spinner-border spinner-border-sm"
-                                            role="status"
-                                        ></div>
-                                    )}
-
-                                    {!loginInProgress && <span>Login</span>}
+                                    Login
                                 </button>
                             </form>
                         </div>
@@ -93,4 +101,4 @@ const loginWithUserName = (props) => {
     );
 };
 
-export default loginWithUserName;
+export default loginWithPassword;
