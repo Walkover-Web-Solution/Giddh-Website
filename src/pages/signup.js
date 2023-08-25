@@ -556,7 +556,7 @@ const signUp = () => {
                                         <label htmlFor="email" className="mb-3 ps-0">
                                             Verify email
                                         </label>
-                                        <div className="d-flex flex-wrap p-0">
+                                        <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                                             <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12" style={{ paddingRight: showEmailOtp || (emailDetails && emailDetails.isVerified) ? "0" : null }}>
                                                 <div className="d-flex step_input_wrapper__mobile_veiw">
                                                     <input
@@ -650,11 +650,11 @@ const signUp = () => {
                                             )}
                                         </div>
                                     </div>
-                                    <div className="row mx-0 px-0 step_input_wrapper mt-4 mb-5">
+                                    <div className="row mx-0 px-0 step_input_wrapper mb-3">
                                         <label htmlFor="contact" className="mb-3 ps-0">
                                             Verify Mobile number
                                         </label>
-                                        <div className="d-flex flex-wrap p-0">
+                                        <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                                             <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12" style={{ paddingRight: showMobileOtp || (mobileDetails && mobileDetails.isVerified) ? "0" : null }}>
                                                 <div className="d-flex step_input_wrapper__mobile_veiw">
                                                     <input

@@ -377,8 +377,8 @@ const pricing = () => {
               <div className="pricing_main_section__grid__extra_charges">
                 <p className="c-fs-6 c-fw-400">
                   Extra Add ons: <span className="c-fw-600"> {isIndia ? "₹0.10" : (isAE ? "د.إ0.10" : "£0.005") }</span> per
-                  transaction | <span className="c-fw-600">{isIndia ? "₹2000" : (isAE ? " ? " : " ? ") }</span> per
-                  branch/year |<span className="c-fw-600">{isIndia ? "₹1000" : (isAE ? " ? " : " ? ") }</span> per
+                  transaction | <span className="c-fw-600">{isIndia ? "₹2000" : (isAE ? "د.إ80" : "£20") }</span> per
+                  branch/year |<span className="c-fw-600">{isIndia ? "₹1000" : (isAE ? "د.إ40" : "£10") }</span> per
                   warehouse/year
                 </p>
               </div>
