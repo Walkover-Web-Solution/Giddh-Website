@@ -2,7 +2,6 @@ import { MdKeyboardArrowRight, MdKeyboardArrowLeft, MdDone, MdCheckCircle } from
 import { useState, useEffect } from "react";
 import { toast } from 'react-toastify';
 import GoogleLogin from "@/components/googleLogin";
-import { usePathname } from "next/navigation";
 
 const signUp = () => {
     const [currentStep, setCurrentStep] = useState(1);
@@ -17,19 +16,12 @@ const signUp = () => {
     const [mobileGetOtpInProgress, setMobileGetOtpInProgress] = useState(false);
     const [mobileVerifyOtpInProgress, setMobileVerifyOtpInProgress] = useState(false);
     const [signupInProgress, setSignupInProgress] = useState(false);
+    const [link, setLink] = useState(null);
 
     useEffect(() => {
         initOtpSignup();
+        setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
     }, []);
-
-    // To get active route
-    const pathname = usePathname();
-    const startPath = pathname.split("/");
-    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-    let isAE = startPath[1] === "ae";
-
-    // Holds Url Prefix country wise
-    let link = isIndia ? "/" : isAE ? "/ae" : "/uk";
 
     function googleApiSuccessCallback(response) {
         setEmailDetails({ email: response.email, accessToken: response.accessToken, isVerified: true, signupVia: 'google' });
@@ -463,32 +455,28 @@ const signUp = () => {
                     <div className="entry__left_section__details pe-5">
                         <div className="container">
                             <h1 className="c-fs-3 mb-4">
-                                Signup to avail a complete suite of MSG91 products
+                            Join GIDDH for Easy Bookkeeping
                             </h1>
-                            <p>What can you build with MSG91?</p>
+                            <p>Features:</p>
                             <ul className="ps-0 my-4">
                                 <li className="d-flex align-items-center">
                                     <MdDone />
-                                    Programmable SMS
+                                    Basic ledger accounting
                                 </li>
                                 <li className="d-flex align-items-center">
                                     <MdDone />
-                                    Customer Contact Center
+                                    Manage branches & warehouses
                                 </li>
                                 <li className="d-flex align-items-center">
                                     <MdDone />
-                                    Virtual Number
+                                    ICICI Bank connectivity
                                 </li>
                                 <li className="d-flex align-items-center">
                                     <MdDone />
-                                    Automated user segmentation
-                                </li>
-                                <li className="d-flex align-items-center">
-                                    <MdDone />
-                                    OTP invisible verification
+                                    Streamlined inventory management
                                 </li>
                             </ul>
-                            <p>Trusted by 30000+ startups and enterprises</p>
+                            <p>Trusted by over 5,000 businesses</p>
                         </div>
                     </div>
                 </div>
@@ -525,7 +513,7 @@ const signUp = () => {
 
                                 <p className="c-fs-6 mb-4">
                                     If you already have an account,{" "}
-                                    <a href={process.env.NEXT_PUBLIC_SITE_URL + '/login'} className="text_blue">
+                                    <a href={ link + '/login'} className="text_blue">
                                         Login
                                     </a>
                                 </p>

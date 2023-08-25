@@ -214,6 +214,9 @@
       @media (max-width: 440px) {
         background-position-x: -830px;
       }
+      @media (max-width: 320px) {
+        background-position-x: -1020px;
+      }
   
       h3 {
         margin-top: 60px;
@@ -277,6 +280,16 @@
             border-left: 0 !important;
             padding-left: 12px !important;
           }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    .about{
+      ul{
+        &.row-gap-5{
+          row-gap: 0 !important;
         }
       }
     }

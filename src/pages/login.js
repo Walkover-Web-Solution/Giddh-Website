@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { toast } from 'react-toastify';
 import GoogleLogin from "@/components/googleLogin";
-import { usePathname } from "next/navigation";
 const OtpLogin = dynamic(() => import("@/components/otpLogin"), {
     ssr: false
 });
@@ -14,14 +13,11 @@ const logIn = () => {
     const [authLoginInProgress, setAuthLoginInProgress] = useState(false);
     const [showVerificationModal, setShowVerificationModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
-    // To get active route
-    const pathname = usePathname();
-    const startPath = pathname.split("/");
-    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-    let isAE = startPath[1] === "ae";
+    const [link, setLink] = useState(null);
 
-    // Holds Url Prefix country wise
-    let link = isIndia ? "/" : isAE ? "/ae" : "/uk";
+    useEffect(() => {
+        setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
+    }, []);
 
     async function initiateLogin(result) {
         await fetch(process.env.NEXT_PUBLIC_API_URL + '/v2/google-login', {
@@ -137,7 +133,7 @@ const logIn = () => {
                             <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => setShowVerificationModal(false)} />
                         )}
 
-                        <a href={process.env.NEXT_PUBLIC_SITE_URL + '/signup'} className="c-fs-6 text_blue">
+                        <a href={ link + '/signup'} className="c-fs-6 text_blue">
                             Create new account
                         </a>
                     </div>
