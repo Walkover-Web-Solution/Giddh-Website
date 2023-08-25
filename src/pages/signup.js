@@ -18,6 +18,8 @@ const signUp = () => {
     const [signupInProgress, setSignupInProgress] = useState(false);
     const [link, setLink] = useState(null);
 
+ var x;
+
     useEffect(() => {
         initOtpSignup();
         setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
@@ -54,7 +56,7 @@ const signUp = () => {
                         setGiddhSession(response.body.session.id);
 
                         var utmParams = "&utm_source=" + getLocalStorage("utm_source") + "&utm_medium=" + getLocalStorage("utm_medium") + "&utm_campaign=" + getLocalStorage("utm_campaign") + "&utm_term=" + getLocalStorage("utm_term") + "&utm_content=" + getLocalStorage("utm_content") + "";
-
+                        x = utmParams;
                         window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id + utmParams;
                     } else {
                         setSignupInProgress(false);
@@ -439,7 +441,6 @@ const signUp = () => {
             setIntl(intl);
         }
     }
-
     return (
         <>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"></link>

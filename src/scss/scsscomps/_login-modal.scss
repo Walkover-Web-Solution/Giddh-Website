@@ -1,0 +1,23 @@
+.login-with-username-modal{
+    .modal-header{
+        background-color: var(--col-primary);
+    }
+    .modal-body{
+        padding: 30px 20px;
+
+        input{
+            margin-bottom: 1rem;
+            text-align: center;
+            letter-spacing: 18px;
+            width: 260px;
+            height: 50px;
+            border: 1px solid var(--col-primary);
+            outline: none;
+            font-size: var(--c-fs-4);
+        }
+        button{
+            background-color: var(--col-primary);
+            width: 50%;
+        }
+    }
+}
