@@ -173,7 +173,7 @@ const navbar = () => {
   
   const onScroll = useCallback((event) => {
     const { scrollY } = window;
-    if(scrollY >= 120 ){
+    if(scrollY >= 75 ){
       if(specificPath){
         setscrollStatus(true);
       }

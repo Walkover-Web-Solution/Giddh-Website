@@ -80,3 +80,10 @@
     }
   }
 }
+@media (max-width: 350px) {
+  .e-invoice {
+    .e-invoice__second_section__benefits_custom_view__row__item {
+      min-width: 270px;
+    }
+  }
+}
