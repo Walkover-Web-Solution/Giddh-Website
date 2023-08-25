@@ -7,6 +7,7 @@ import GlobalComponents from "@/components/globalComponents";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Toastify from "@/components/toastify";
+import { Html } from 'next/document'
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();

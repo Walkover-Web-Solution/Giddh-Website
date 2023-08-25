@@ -461,8 +461,8 @@ const featureGallery = () => {
                     <img
                       src={"/img" + data.image}
                       alt="Giddh features Icon"
-                      height="50px"
-                      width="auto"
+                      height="50"
+                      width="100"
                     />
                     <figcaption className="c-fw-400">{data.name}</figcaption>
                   </figure>
