@@ -206,7 +206,7 @@ const navbar = () => {
     <>
       <nav className={"navbar navbar-expand-lg position-fixed w-100 py-0 " + ( scrollStatus ? " navbar--theme-white navbar--box-shadow" : "")}>
         <div className="container-fluid">
-          <a className="navbar--navbar_brand" href={link + "/"}>
+          <a className="navbar--navbar_brand" aria-label="Giddh Brand logo" href={link + "/"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="126.833"
@@ -382,7 +382,8 @@ const navbar = () => {
               <div className="dropdown country_dropdown">
                 <a
                   href="#"
-                  id="countryDropdown"
+                  aria-label="Switch Country Menu"
+                  id="countryDropdownFooter"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
@@ -408,7 +409,7 @@ const navbar = () => {
                 </a>
                 <ul
                   className="dropdown-menu country_dropdown__menu"
-                  aria-labelledby="countryDropdown"
+                  aria-labelledby="countryDropdownFooter"
                 >
                   <li>
                     <a
