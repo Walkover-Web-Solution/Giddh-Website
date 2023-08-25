@@ -137,7 +137,7 @@ const logIn = () => {
                             <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => setShowVerificationModal(false)} />
                         )}
 
-                        <a href={process.env.NEXT_PUBLIC_SITE_URL + '/signup'} className="c-fs-6 text_blue">
+                        <a href={ link + '/signup'} className="c-fs-6 text_blue">
                             Create new account
                         </a>
                     </div>
