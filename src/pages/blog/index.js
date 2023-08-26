@@ -9,7 +9,7 @@ import config from "../../components/lib/config";
 // const tags = listTags;
 // console.log(tags, "67");
 export default function Index({ posts,tags, pagination }) {
-console.log(" in index");
+
   const url = "/blog";
   const title = "All posts";
   return (
@@ -20,9 +20,9 @@ console.log(" in index");
 }
 
 export async function getStaticProps() {
-    console.log("inside static props");
+
   const posts = listPostContent(1,15);
-  console.log(posts, "67");
+
 //   const tags = listTags();  
   // const tagsObject = getTag();
   // console.log(tagsObject, "inside tags object")
@@ -30,7 +30,7 @@ export async function getStaticProps() {
     current: 1,
     pages: Math.ceil(countPosts() / 15),
   };
-  console.log(pagination, "pagination");
+  
   return {
     props: {
       posts,

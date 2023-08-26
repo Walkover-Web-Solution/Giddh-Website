@@ -11,20 +11,20 @@ import { useRouter } from 'next/router';
 // const components = { Test }
 
 const slugToPostContent = (postContents => {
- console.log(postContents, "post contents")
+
     let hash = {}
     let fullPath = {}
     postContents.map((data)=>{
       fullPath = data.fullPath
     })
     postContents?.forEach(it => hash[it.slug] = it)
-    console.log(hash, "hash");
+  
     return hash;
   })(fetchPostContent());
 
 
 export default function TestPage({ source , title}) {
-    console.log("inside test page", source);
+
 
   const router  = useRouter();
 
@@ -59,21 +59,21 @@ export default function TestPage({ source , title}) {
 
 export async function getStaticPaths() {
   // const paths = [];
-  console.log("get static paths inside");
+
   const paths = fetchPostContent().map(it => "/blog/" + it.staticPath);
       // paths.push({
       //   params: {
       //     slug: "mastering-the-art-of-effective-communication-unveiling-the-secrets-to-successful-sms-campaigns-for-engaging-audiences"          
       //   },
       // });    
-      console.log(paths, "static paths in get static paths");
+ 
   return {
     paths,
     fallback: false,
   };
 }
 export async function getStaticProps(slug) {
-    console.log(slug, "slug in get static props");
+    
   const slugData = slug.params.slug;
     const source = fs.readFileSync(slugToPostContent[slugData]?.fullPath, "utf8");
     const matterResult = matter(source, {
@@ -88,7 +88,7 @@ export async function getStaticProps(slug) {
     // const title = matterResult?.data?.title;
     // const author = matterResult?.data?.author;
     const content = matterResult?.content;
-    console.log(content, "Content");
+   
     var date = new Date(matterResult?.data?.date);
     date = format(date, "LLLL d, yyyy")
     // const tags = matterResult?.data?.tags;
@@ -96,7 +96,7 @@ export async function getStaticProps(slug) {
     // console.log(content,"content00");
   // MDX text - can be from a local file, database, anywhere
   const mdxSource = await serialize(content)
-  console.log(mdxSource, "mdxSource");
+  
   // const mdxSource = await renderToString(content, { scope: matterResult });
   // console.log(mdxSource,"generated");
   return { props: { source: mdxSource} }
