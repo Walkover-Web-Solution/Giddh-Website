@@ -5,9 +5,7 @@ import { listPostContent, countPosts } from '../../components/lib/posts'
 import Layout from "../../components/blogs/layout";
 import PostList from "../../components/blogs/postList";
 import config from "../../components/lib/config";
-// import Head from "next/head";
-// const tags = listTags;
-// console.log(tags, "67");
+
 export default function Index({ posts,tags, pagination }) {
 
   const url = "/blog";
