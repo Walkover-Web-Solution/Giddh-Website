@@ -21,14 +21,14 @@ export default function Index({ posts,tags, pagination }) {
 
 export async function getStaticProps() {
 
-  const posts = listPostContent(1,15);
+  const posts = listPostContent(1,config.posts_per_page);
 
 //   const tags = listTags();  
   // const tagsObject = getTag();
   // console.log(tagsObject, "inside tags object")
   const pagination = {
     current: 1,
-    pages: Math.ceil(countPosts() / 15),
+    pages: Math.ceil(countPosts() / config.posts_per_page),
   };
   
   return {
