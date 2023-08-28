@@ -21,6 +21,7 @@ export default function PostItem({ post }) {
     <a className="blog-card" href={"/blog/" + post.slug}>  
     <p>{newdate}</p>    
         {/* <Date date={post.date} /> */}
+        {/* {post.thumbnail !== "" && <img src={post.thumbnail} />} */}
         <div className="title">{post.title}</div>
     </a>
   );
