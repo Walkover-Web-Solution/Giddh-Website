@@ -5,10 +5,11 @@ import { fetchPostContent } from '../../components/lib/posts';
 import yaml  from "js-yaml";
 import matter from 'gray-matter';
 import Head from 'next/head';
-import { format } from "date-fns";
+// import { format } from "date-fns";
 import { useRouter } from 'next/router';
 // import { SocialList } from '@/components/socialList';
 // const components = { Test }
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const slugToPostContent = (postContents => {
 
@@ -38,7 +39,11 @@ export default function TestPage({ source , title}) {
       <title>{title}</title>
     </Head>
     <div className="wrapper container blog-container">      
-      <a href='javascript:void(0)' onClick={handleClick} >Back</a>
+      <a className="mb-3 d-inline-block btn blog-container__back-btn" href='javascript:void(0)' onClick={handleClick} >
+        
+        
+        
+        <MdKeyboardArrowLeft /> Back</a>
       {/* <div className='blog-header mt-4'>
         <div>{author}, {date}</div>        
         <h1>{title}</h1>
@@ -48,7 +53,7 @@ export default function TestPage({ source , title}) {
         <MDXRemote {...source} />
       </div>
 
-      <button className="btn btn-dark mt-3" onClick={handleClick} >Back</button>
+      <button className="btn blog-container__back-btn mt-3" onClick={handleClick} ><MdKeyboardArrowLeft /> Back</button>
       <footer>
       
       </footer>
@@ -89,8 +94,8 @@ export async function getStaticProps(slug) {
     // const author = matterResult?.data?.author;
     const content = matterResult?.content;
    
-    var date = new Date(matterResult?.data?.date);
-    date = format(date, "LLLL d, yyyy")
+    // var date = new Date(matterResult?.data?.date);
+    // date = format(date, "LLLL d, yyyy")
     // const tags = matterResult?.data?.tags;
     // console.log(matterResult?.content,"matterResult?.data?");
     // console.log(content,"content00");
