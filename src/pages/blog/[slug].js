@@ -5,7 +5,7 @@ import { fetchPostContent } from '../../components/lib/posts';
 import yaml  from "js-yaml";
 import matter from 'gray-matter';
 import Head from 'next/head';
-// import { format } from "date-fns";
+import { format } from "date-fns";
 import { useRouter } from 'next/router';
 // import { SocialList } from '@/components/socialList';
 // const components = { Test }
@@ -90,9 +90,9 @@ export async function getStaticProps(slug) {
     const author = matterResult?.data?.author;
     const content = matterResult?.content;
    
-    // var date = new Date(matterResult?.data?.date);
-    // date = format(date, "LLLL d, yyyy")
-    // const tags = matterResult?.data?.tags;
+    var date = new Date(matterResult?.data?.date);
+    date = format(date, "LLLL d, yyyy")
+    const tags = matterResult?.data?.tags;
   const mdxSource = await serialize(content)
 
   return { props: { source: mdxSource, date: date ,title: title, author: author} }

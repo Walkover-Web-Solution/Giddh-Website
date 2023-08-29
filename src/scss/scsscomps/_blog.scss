@@ -8,27 +8,30 @@ $pink: #cc3300;
 .bg-accounting {
   background-color: $skyblue;
 }
+
 .bg-business {
   background-color: $yellow;
 }
+
 .bg-invoicing {
   background-color: $light-green;
 }
+
 .bg-inventory {
   background-color: $pink;
 }
+
 .bg-cloud {
   background-color: $cyan;
 }
-.bg-general{
-    background-color: $green;
+
+.bg-general {
+  background-color: $green;
 }
-.bg-gst{
+
+.bg-gst {
   background-color: $pink;
 }
-// .bg-gst{
-//   background-color: grey;
-// }
 
 .blog-home-container {
   .post-list {
@@ -41,39 +44,62 @@ $pink: #cc3300;
     grid-column-gap: 24px;
     grid-row-gap: 24px;
     justify-items: stretch;
+
     .blog-card {
+
       border-radius: 26px;
       -webkit-box-shadow: 0 3px 5px 0 rgba(0, 1, 1, 0.1);
       min-height: 320px;
       box-shadow: 0 3px 5px 0 rgba(0, 1, 1, 0.1);
-     list-style: none;
+      list-style: none;
       overflow: hidden;
       position: relative;
+      a{
+        .blog-bg-Img {
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+
       &.bg-light {
-        color: #333;
-        background: var(--col-white);
-        
-        .blog-card-footer {
-            margin-top: auto;
-            span{
-                color:#818181;
-            }
-          }
-          .blog-bg-Img{
+        a{
+          color: #333;
+        }
+        .blog-card__content{
+          background: var(--col-white);
+
+          &::before{
             display: none;
           }
-      }
-      &.bg-dark {
-        color: var(--col-white);
+        }
         .blog-card-footer {
-            margin-top: auto;
-            span{
-              color: var(--col-white);
-            }
+          margin-top: auto;
+          span {
+            color: #818181;
           }
-          .blog-bg-Img{
-            display: inline;
+        }
+
+        .blog-bg-Img {
+          display: none;
+        }
+      }
+
+      &.bg-dark {
+        a{
+          color: var(--col-white);
+        }
+
+        .blog-card-footer {
+          margin-top: auto;
+
+          span {
+            color: var(--col-white);
           }
+        }
+
+        .blog-bg-Img {
+          display: inline;
+        }
       }
 
       &__content {
@@ -81,17 +107,16 @@ $pink: #cc3300;
         z-index: 3;
         left: 0;
         top: 0;
-        width: inherit;
-        height: inherit;
+        width: 100%;
+        height: 100%;
         padding: 30px;
         display: flex;
         flex-direction: column;
-        height: 100%;
 
-        &::before{
+        &::before {
           content: "";
           position: absolute;
-          background: rgba(0,0,0,.4);
+          background: rgba(0, 0, 0, .4);
           height: 100%;
           width: 100%;
           z-index: -1;
@@ -99,15 +124,9 @@ $pink: #cc3300;
           left: 0;
         }
 
-        .blog-bg-Img {
-          object-fit: cover;
-          height: 320px;
-          width: auto;
-          position: relative;
-          z-index: 1;
-        }
         .blog-card-header {
           min-height: 50px;
+
           a {
             display: inline-block;
             height: auto;
@@ -122,29 +141,45 @@ $pink: #cc3300;
             text-transform: uppercase;
           }
         }
+
         .blog-card-body {
           .title {
-            font-size: var(--c-fs-4);
-            font-weight: var(--c-fw-600);
+            margin-top: 6px;
+            a{
+              font-size: var(--c-fs-4);
+              font-weight: var(--c-fw-600);
+            }
+          }
+          .content{
+            color: #5E5E5E;
+            font-size: var(--c-fs-5);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
           }
         }
+
         .blog-card-footer {
           margin-top: auto;
         }
       }
     }
   }
+
   .pagination-padding {
     padding: 0 24px !important;
   }
 }
+
 .blog-container {
   // max-width: 800px !important;
   margin: 80px 0;
+
   h1 {
     font-weight: 700;
     margin-bottom: 16px !important;
   }
+
   h2,
   h3,
   h4,
@@ -153,26 +188,33 @@ $pink: #cc3300;
     margin-top: 40px !important;
     margin-bottom: 16px !important;
   }
+
   p {
     margin-bottom: 1rem !important;
   }
+
   .blog-header {
     margin-bottom: 40px;
   }
+
   &__back-btn {
     background-color: var(--col-primary) !important;
     color: var(--col-white) !important;
   }
+
   .body {
     ul {
       list-style: initial !important;
     }
+
     p {
       font-size: var(--c-fs-5);
     }
+
     h2 {
       font-size: var(--c-fs-3);
     }
+
     img {
       max-width: 100%;
     }
