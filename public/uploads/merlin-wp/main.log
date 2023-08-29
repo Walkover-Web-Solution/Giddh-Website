@@ -1,0 +1,5 @@
+[2019-11-25 13:23:50] merlin-logger.DEBUG: The welcome step has been displayed [] []
+[2019-11-25 13:23:57] merlin-logger.DEBUG: The plugin installation step has been displayed [] []
+[2019-11-25 13:23:58] merlin-logger.DEBUG: A plugin with the following data will be processed {"plugin_slug":"redux-framework","message":"Installing"} []
+[2019-11-25 13:24:02] merlin-logger.DEBUG: The content import step has been displayed [] []
+[2019-11-25 13:24:05] merlin-logger.DEBUG: The final step has been displayed [] []

@@ -2,10 +2,12 @@
 import Link from "next/link";
 // import { parseISO } from "date-fns";
 import { MdDateRange } from "react-icons/md";
-
-
+import Date from "./date";
+import { parseISO } from "date-fns";
 
 export default function PostItem({ post }) { 
+  // let date = new Date(post.date);
+  //   const newdate = format(date, "LLLL d, yyyy")
   /* function calculateReadTime(articleText, wordsPerMinute = 200) {
     // Count the number of words in the article
     const words = articleText.match(/\w+/g);
@@ -52,9 +54,11 @@ export default function PostItem({ post }) {
     }
   }
   return (      
-    <a className="blog-card bg-dark" href={"/blog/" + post.slug}>      
+    <a className="blog-card bg-dark" href={"/blog/" + post.slug}>     
+     <Date date={parseISO(post.date)} />
+        {post.thumbnail !== "" && <img className="blog-bg-Img" src={post.thumbnail} style={{width: "100%"}} />} 
         {/* <Date date={parseISO(post.date)} /> */}
-        <img className="blog-bg-Img" src="https://blog.giddh.com/wp-content/uploads/2019/11/giddh-feature-images-370x300.png" height="320" width="auto" />
+        {/* <img className="blog-bg-Img" src="https://blog.giddh.com/wp-content/uploads/2019/11/giddh-feature-images-370x300.png" height="320" width="auto" /> */}
         <div className="blog-card__content">
           <div className="blog-card-header">
           {post.category?.map((category, idx) => (
