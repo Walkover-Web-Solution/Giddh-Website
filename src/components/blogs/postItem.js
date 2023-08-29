@@ -18,7 +18,7 @@ export default function PostItem({ post }) {
   return (      
     <a className="blog-card" href={"/blog/" + post.slug}>  
         <Date date={parseISO(post.date)} />
-        {/* {post.thumbnail !== "" && <img src={post.thumbnail} />} */}
+        {post.thumbnail !== "" && <img src={post.thumbnail} style={{width: "100%"}} />}
         <div className="title">{post.title}</div>
     </a>
   );
