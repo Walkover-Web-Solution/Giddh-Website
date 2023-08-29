@@ -30,7 +30,8 @@ export default function TestPage({ source , title, date, author}) {
 
 
   const handleClick = () =>{
-    router.push('/blog');
+    router.back();
+    // router.push('/blog');
   }
   return (
     <>
