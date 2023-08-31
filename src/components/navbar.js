@@ -369,9 +369,6 @@ const navbar = () => {
                       <a href="https://giddh.com/blog/">Blog</a>
                     </li>
                     <li>
-                      <a href="https://giddh.com/guide/">Guide</a>
-                    </li>
-                    <li>
                       <a href="https://giddh.com/help/">Help</a>
                     </li>
                   </ul>
