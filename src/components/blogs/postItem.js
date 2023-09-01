@@ -44,11 +44,11 @@ export default function PostItem({ post }) {
             <h2 className="title c-fs-4">
               {post.title}              
               </h2>
-              { !post.thumbnail && (
+             
               <p className="content">
                {post?.description}
               </p>  
-              )}
+           
           </div>
           <div className="blog-card-footer" >
             <span><MdDateRange /> <Date date={parseISO(post.date)} /></span>
