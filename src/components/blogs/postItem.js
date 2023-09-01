@@ -46,9 +46,7 @@ export default function PostItem({ post }) {
               </h2>
               { !post.thumbnail && (
               <p className="content">
-                
-                  {/* Need Content here  */}
-                  Blog content must be show here sdsdjdnsd sdsk ds dshdskhds dkddsd 
+               {post?.description}
               </p>  
               )}
           </div>

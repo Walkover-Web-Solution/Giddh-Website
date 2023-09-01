@@ -114,6 +114,9 @@ $pink: #cc3300;
 
         .blog-card-header {
           min-height: 50px;
+          span{
+            margin-right: 10px;
+          }
 
           a {
             display: inline-block;
