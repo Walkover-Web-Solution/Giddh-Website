@@ -22,5 +22,27 @@
     }
   </script>
 
+<script>
+  CMS.registerEditorComponent({
+    id: "youtube",
+    label: "Youtube",
+    fields: [{name: 'id', label: 'Youtube Video URL'}],
+   
+    fromBlock: function(match) {
+      return {
+        id: match[1]
+      }
+    },  
+    toBlock: function(obj) {    
+      return '<ReactPlayer url="' + obj.id + '" controls={true} />';
+    },
+    toPreview: function(obj) {
+      return (
+        '<video width="320" height="240" controls> <source src= "http://img.youtube.com/vi/' + obj.id + '/maxresdefault.jpg" "> </video>'
+      );
+    }
+  });
+</script>
+
 </body>
 </html>
