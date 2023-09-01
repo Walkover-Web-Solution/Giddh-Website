@@ -32,11 +32,12 @@ $pink: #cc3300;
 .bg-gst {
   background-color: $pink;
 }
-
-.blog-home-container {
-  .post-list {
-    margin-top: 80px;
-    padding: 10px 24px;
+.blog-root{
+  background-color: #e2e2f8 !important;
+}
+.blog-home-container {  
+  .post-list {    
+    padding: 100px 24px;
     display: grid;
     height: auto !important;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -54,20 +55,16 @@ $pink: #cc3300;
       list-style: none;
       overflow: hidden;
       position: relative;
-      a{
-        .blog-bg-Img {
-          object-fit: cover;
-          width: 100%;
-        }
+      color: var(--col-white);
+      background-size: cover;
+      background-position: center center;
+      .blog-bg-Img{
+        height: inherit;
       }
-
       &.bg-light {
-        a{
-          color: #333;
-        }
+        color: #333;
         .blog-card__content{
           background: var(--col-white);
-
           &::before{
             display: none;
           }
@@ -77,29 +74,18 @@ $pink: #cc3300;
           span {
             color: #818181;
           }
-        }
-
-        .blog-bg-Img {
-          display: none;
-        }
+        }        
       }
 
       &.bg-dark {
-        a{
-          color: var(--col-white);
-        }
-
+          color: var(--col-white) !important;
         .blog-card-footer {
           margin-top: auto;
 
           span {
             color: var(--col-white);
           }
-        }
-
-        .blog-bg-Img {
-          display: inline;
-        }
+        }        
       }
 
       &__content {
@@ -116,7 +102,9 @@ $pink: #cc3300;
         &::before {
           content: "";
           position: absolute;
-          background: rgba(0, 0, 0, .4);
+          background: var(--col-primary);
+          opacity: .5;
+          filter: blur(.1);
           height: 100%;
           width: 100%;
           z-index: -1;
