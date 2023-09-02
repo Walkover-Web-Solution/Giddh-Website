@@ -168,7 +168,7 @@ const logIn = () => {
 
                         <OtpLogin authLoginInProgress={authLoginInProgress} sendOtpLoginCallbackToParent={sendOtpLoginCallbackToParent} />
                         {showVerificationModal && (
-                            <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => setShowVerificationModal(false)} />
+                            <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => { setShowVerificationModal(false);document.body.classList.remove('otp-verification'); }} />
                         )}
                         <button className="entry__right_section__container__entry_button mb-4 me-0 me-md-3" onClick={() => setShowLoginWithPasswordModal(true)}>
                             Login with password
