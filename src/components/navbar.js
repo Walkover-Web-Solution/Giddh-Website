@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useState} from "react";
+import { useEffect, useCallback, useState } from "react";
 import { usePathname } from "next/navigation";
 const navbar = () => {
   const [scrollStatus, setscrollStatus] = useState(false);
@@ -169,30 +169,35 @@ const navbar = () => {
     },
   ];
   // List of path where navbar Background will be transparent and turn Background white on scroll
-  let specificPath = pathname === "/" || pathname === "/ae" || pathname === "/uk" || pathname === "/contact-us" || pathname === "/ae/contact-us" || pathname === "/uk/contact-us";
-  
+  let specificPath =
+    pathname === "/" ||
+    pathname === "/ae" ||
+    pathname === "/uk" ||
+    pathname === "/contact-us" ||
+    pathname === "/ae/contact-us" ||
+    pathname === "/uk/contact-us";
+
   const onScroll = useCallback((event) => {
     const { scrollY } = window;
-    if(scrollY >= 75 ){
-      if(specificPath){
+    if (scrollY >= 75) {
+      if (specificPath) {
         setscrollStatus(true);
       }
-    }else{
-      if(specificPath){
+    } else {
+      if (specificPath) {
         setscrollStatus(false);
       }
     }
   }, []);
-  
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("load", onScroll, { passive: true });
 
-    if(specificPath){
-      setscrollStatus(false);   
-    }else{
-      setscrollStatus(true);   
+    if (specificPath) {
+      setscrollStatus(false);
+    } else {
+      setscrollStatus(true);
     }
 
     return () => {
@@ -200,13 +205,20 @@ const navbar = () => {
     };
   }, []);
 
-  
-
   return (
     <>
-      <nav className={"navbar navbar-expand-lg position-fixed w-100 py-0 " + ( scrollStatus ? " navbar--theme-white navbar--box-shadow" : "")}>
+      <nav
+        className={
+          "navbar navbar-expand-lg position-fixed w-100 py-0 " +
+          (scrollStatus ? " navbar--theme-white navbar--box-shadow" : "")
+        }
+      >
         <div className="container-fluid">
-          <a className="navbar--navbar_brand" aria-label="Giddh Brand logo" href={link + "/"}>
+          <a
+            className="navbar--navbar_brand"
+            aria-label="Giddh Brand logo"
+            href={link + "/"}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="126.833"
@@ -296,14 +308,27 @@ const navbar = () => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className={ "nav-link " + ( startPath[startPath.length - 1] === "make-the-switch" ? " active" : "" )} href={link + "/make-the-switch"}>
+                <a
+                  className={
+                    "nav-link " +
+                    (startPath[startPath.length - 1] === "make-the-switch"
+                      ? " active"
+                      : "")
+                  }
+                  href={link + "/make-the-switch"}
+                >
                   Make the Switch
                 </a>
               </li>
               <li className="nav-item">
                 <div className="dropdown">
                   <a
-                    className={ "nav-link chevron_down nav-link--feature-menu " + ( startPath[startPath.length - 1] === "all-features" ? " active" : "" )}
+                    className={
+                      "nav-link chevron_down nav-link--feature-menu " +
+                      (startPath[startPath.length - 1] === "all-features"
+                        ? " active"
+                        : "")
+                    }
                     href="#"
                     id="allFeaturesDropdown"
                     data-bs-toggle="dropdown"
@@ -317,39 +342,67 @@ const navbar = () => {
                   >
                     <li>
                       <ul className="dropdown-menu__wapper d-grid ps-0">
-                        {features.filter(getCountryWiseData).map((data, index) => (
-                          <li key={index}>
-                            <a
-                              href={
-                                data.menuItem === "API Integration"
-                                  ? data.url
-                                  : link + data.url
-                              }
-                            >
-                              {data.menuItem}
-                            </a>
-                          </li>
-                        ))}
+                        {features
+                          .filter(getCountryWiseData)
+                          .map((data, index) => (
+                            <li key={index}>
+                              {data.menuItem !== "API Integration" && (
+                                <>
+                                  <a href={link + data.url}>{data.menuItem}</a>
+                                </>
+                              )}
+                              {data.menuItem === "API Integration" && (
+                                <>
+                                  <a
+                                    href={ data.url } target="_blank" >
+                                    {data.menuItem}
+                                  </a>
+                                </>
+                              )}
+                            </li>
+                          ))}
                       </ul>
                     </li>
                   </ul>
                 </div>
               </li>
               <li className="nav-item">
-                <a className={ "nav-link " + ( startPath[startPath.length - 1] === "pricing" ? " active" : "" )} href={link + "/pricing"}>
+                <a
+                  className={
+                    "nav-link " +
+                    (startPath[startPath.length - 1] === "pricing"
+                      ? " active"
+                      : "")
+                  }
+                  href={link + "/pricing"}
+                >
                   Pricing
                 </a>
               </li>
               <li className="nav-item">
                 <a
-                  className={ "nav-link " + ( (startPath[startPath.length - 1] === "gst") || (startPath[startPath.length - 1] === "vat") ? " active" : "" )}
+                  className={
+                    "nav-link " +
+                    (startPath[startPath.length - 1] === "gst" ||
+                    startPath[startPath.length - 1] === "vat"
+                      ? " active"
+                      : "")
+                  }
                   href={isIndia ? "/gst" : isAE ? "/ae/vat" : "/uk/vat"}
                 >
                   {isIndia ? "GST" : isAE || isUK ? "VAT" : ""}
                 </a>
               </li>
               <li className="nav-item">
-                <a className={ "nav-link " + ( startPath[startPath.length - 1] === "about" ? " active" : "" )} href={link + "/about"}>
+                <a
+                  className={
+                    "nav-link " +
+                    (startPath[startPath.length - 1] === "about"
+                      ? " active"
+                      : "")
+                  }
+                  href={link + "/about"}
+                >
                   About
                 </a>
               </li>
@@ -364,12 +417,12 @@ const navbar = () => {
                   >
                     Resources
                   </a>
-                  <ul className="dropdown-menu" aria-labelledby="resouceDropdown">
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="resouceDropdown"
+                  >
                     <li>
                       <a href="https://giddh.com/blog/">Blog</a>
-                    </li>
-                    <li>
-                      <a href="https://giddh.com/guide/">Guide</a>
                     </li>
                     <li>
                       <a href="https://giddh.com/help/">Help</a>

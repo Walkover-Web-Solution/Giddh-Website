@@ -11,6 +11,7 @@ const otpVerifyModal = (props) => {
     const [verifyNumberInProgress, setVerifyNumberInProgress] = useState(false);
 
     useEffect(() => {
+        document.body.classList.add('otp-verification');
         if (!isModalOpen) {
             setIsModalOpen(true);
             verifyOtpModal = new Modal(document.getElementById("signWithOTP"), {
@@ -20,6 +21,9 @@ const otpVerifyModal = (props) => {
             verifyOtpModal.toggle();
         }
         twoWayAuthOtpField = document.getElementById("twoWayAuthOtp");
+        setTimeout( ()=> {
+            twoWayAuthOtpField.focus();
+        },600);
     });
 
     async function resendOtp() {
@@ -43,6 +47,7 @@ const otpVerifyModal = (props) => {
                 setResendInProgress(false);
                 if (response.status === "success") {
                     showToaster("Otp resent successfully.", "success");
+                    document.body.classList.remove('otp-verification');
                 } else {
                     resendOtpErrorCallback(response.message);
                 }

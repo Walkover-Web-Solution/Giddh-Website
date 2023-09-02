@@ -68,7 +68,7 @@ const Footer = () => {
                       <a href="https://giddh.com/blog/">Blog</a>
                     </li>
                     <li>
-                      <a href={link + "privacy-policy"}>Privacy Policy</a>
+                      <a href={link + "/privacy-policy"}>Privacy Policy</a>
                     </li>
                     <li>
                       <a
