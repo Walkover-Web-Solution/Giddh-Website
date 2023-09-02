@@ -18,42 +18,50 @@ export default function PostItem({ post }) {
   const readTime = calculateReadTime(article); */
   //  articleText end code
 
-  // function to get className for respective category
-  function getCategoryStyle(category) {
-    switch (category) {
-      case "business accounting": return " bg-business"
-      case "accounting software": return " bg-accounting"
-      case "invoicing software": return " bg-invoicing"
-      case "cloud accounting": return " bg-cloud"
-      case "gst software": return " bg-gst"
-      case "inventory software": return " bg-inventory"
-      case "General": return "bg-general  "
-      default: return "bg-general"
+  function getBlogStyle(titleText){
+    let textLength = titleText.split(" ").length;
+
+    if(textLength >10){
+      return " blog-card--large";
+    }else if(textLength > 6){
+      return " blog-card--medium";
+    }else{
+      return " blog-card--small";
     }
   }
   return (
-    
-     <a href={"/blog/" + post.slug} className={"blog-card " + (post.thumbnail ? " bg-dark" : " bg-light")} style={{backgroundImage: post.thumbnail ? 'url("'+post.thumbnail+'")' : "none"}}>
-        <div className="blog-card__content">
-          <div className="blog-card-header">
-            {post.category?.map((category, idx) => (
-              <span className={getCategoryStyle(category)} key={idx}>{category}</span>))
-            }
-          </div>
-          <div className="blog-card-body" >
-            <h2 className="title c-fs-4">
-              {post.title}              
-              </h2>
-             
-              <p className="content">
-               {post?.description}
-              </p>  
-           
-          </div>
-          <div className="blog-card-footer" >
-            <span><MdDateRange /> <Date date={parseISO(post.date)} /></span>
-          </div>
+    <a
+      href={"/blog/" + post.slug}
+      className={
+        "blog-card " +
+        (post.thumbnail ? " bg-dark " : " bg-light ") +
+        getBlogStyle(post.title)
+      }
+      style={{
+        backgroundImage: post.thumbnail
+          ? 'url("' + post.thumbnail + '")'
+          : "none",
+      }}
+    >
+      <div className="blog-card__content">
+        <div className="blog-card-body">
+          <h2 className="title">{post.title}</h2>
+
+          <p className="content">{post?.description}</p>
         </div>
-     </a>
+        <div className="blog-card-footer">
+          <div className="blog-card-tags">
+            {post.category?.map((category, idx) => (
+              <span className="bg-tags" key={idx}>
+                {category}
+              </span>
+            ))}
+          </div>
+          <span>
+            <MdDateRange /> <Date date={parseISO(post.date)} />
+          </span>
+        </div>
+      </div>
+    </a>
   );
 }
