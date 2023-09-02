@@ -142,11 +142,13 @@ $pink: #cc3300;
             }
           }
           .content{
-            // color: #5E5E5E;
-            font-size: var(--c-fs-5);
-            white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient:block-axis;
+            -webkit-line-clamp: 2; /* number of lines to show */
+            line-height: 1.5;        /* fallback */
+            max-height: 4;       /* fallback */
           }
         }
 
