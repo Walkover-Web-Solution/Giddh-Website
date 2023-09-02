@@ -7,6 +7,12 @@ import matter from 'gray-matter';
 import Head from 'next/head';
 import { format } from "date-fns";
 import { useRouter } from 'next/router';
+
+import dynamic from 'next/dynamic'
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+// const components = { Test }
+const component = { ReactPlayer };
+
 // import { SocialList } from '@/components/socialList';
 // const components = { Test }
 import { MdKeyboardArrowLeft } from "react-icons/md";
@@ -47,7 +53,7 @@ export default function TestPage({ source , title, date, author}) {
         {/* {thumbnailImage !=="" && <img className="" src={thumbnailImage} alt={author} />} */}
       </div>
       <div className="body">
-        <MDXRemote {...source} />
+        <MDXRemote {...source} components={component} />
       </div>
 
       <button className="btn blog-container__back-btn mt-3" onClick={handleClick} ><MdKeyboardArrowLeft /> Back</button>
