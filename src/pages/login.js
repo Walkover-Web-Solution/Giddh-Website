@@ -22,7 +22,28 @@ const logIn = () => {
 
     useEffect(() => {
         setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
+
+        if (getCookie("giddh_session_id")) {
+            validateUserSession(getCookie("giddh_session_id"));
+        }
     }, []);
+
+    async function validateUserSession(sessionId) {
+        await fetch(process.env.NEXT_PUBLIC_API_URL + '/v2/user', {
+            method: "GET",
+            mode: "cors",
+            cache: "no-store",
+            headers: { "session-id": sessionId },
+        })
+            .then((res) => res.json())
+            .then((response) => {
+                if (response.status === "success") {
+                    window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
+                } else {
+                    showToaster(response.message, "error");
+                }
+            })
+    }
 
     async function initiateLogin(result) {
         await fetch(process.env.NEXT_PUBLIC_API_URL + '/v2/google-login', {
@@ -39,6 +60,7 @@ const logIn = () => {
                         setUserResponse(response.body);
                         setShowVerificationModal(true);
                     } else {
+                        setGiddhSession(response.body.session.id);
                         window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + result.accessToken;
                     }
                 } else {
@@ -168,7 +190,7 @@ const logIn = () => {
 
                         <OtpLogin authLoginInProgress={authLoginInProgress} sendOtpLoginCallbackToParent={sendOtpLoginCallbackToParent} />
                         {showVerificationModal && (
-                            <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => { setShowVerificationModal(false);document.body.classList.remove('otp-verification'); }} />
+                            <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => { setShowVerificationModal(false); document.body.classList.remove('otp-verification'); }} />
                         )}
                         <button className="entry__right_section__container__entry_button mb-4 me-0 me-md-3" onClick={() => setShowLoginWithPasswordModal(true)}>
                             Login with password
