@@ -23,7 +23,7 @@ export default function PostList({ posts, tags, pagination }) {
           }}
         />
       </div>
-      <ul className={"categories"}>
+      <ul className={"categories mb-0"}>
       </ul>      
     </div>
     </div>
