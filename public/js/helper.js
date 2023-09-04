@@ -116,3 +116,12 @@ function getCurrentSiteCountryUrl(siteUrl) {
     var isAE = startPath[startPath.indexOf('ae')] === "ae";
     return siteUrl + (isIndia ? "" : isAE ? "/ae" : "/uk");
 }
+
+function redirectPhpLink() {
+    let filterLink =  window.location.href.split('.php');
+    if(filterLink[1] === ""){
+      window.location.href = filterLink[0];
+    }
+  }
+ redirectPhpLink()  
+
