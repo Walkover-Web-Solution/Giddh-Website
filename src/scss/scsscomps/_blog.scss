@@ -185,9 +185,36 @@
       }
     }
 
-    .pagination-padding {
-      padding: 0 24px !important;
-      user-select: none;
+    ul {
+      &.pagination-padding {
+        padding: 0 24px !important;
+        user-select: none;
+
+        transform: translateY(-20px);
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(5px);
+        border-radius: 4px;
+        padding: 12px 16px !important;
+        width: 60%;
+        min-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+        border: 3px solid rgba(255,255,255,0.1);
+
+        li{
+          a{
+            color: var(--col-primary);
+            font-size: 18px;
+
+            &.active{
+              color: var(--col-white);
+              background-color: var(--col-primary);
+              padding: 0px 7px;
+              border-radius: 3px;
+            }
+          }
+        }
+      }
     }
   }
 }
