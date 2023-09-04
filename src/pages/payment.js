@@ -167,14 +167,14 @@ const payment = () => {
                 (params.voucherVersion == "2" &&
                   apiResponse.body.canPay == true)) && (
                 <button
-                  className="btn btn-primary pull-left"
+                  className="btn"
                   onClick={payInvoice}
                 >
                   Pay Now
                 </button>
               )}
             <button
-              className="btn btn-primary pull-right"
+              className="btn"
               onClick={downloadInvoice}
             >
               Download
