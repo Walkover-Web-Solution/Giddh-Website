@@ -40,7 +40,7 @@ const logIn = () => {
                 if (response.status === "success") {
                     window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
                 } else {
-                    showToaster(response.message, "error");
+                    removeGiddhSession();
                 }
             })
     }
