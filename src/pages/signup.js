@@ -46,7 +46,7 @@ const signUp = () => {
                     headers: {
                         "Content-Type": "application/json",
                     },
-                    body: JSON.stringify({ emailId: emailDetails.email, emailIdAccessToken: emailDetails.accessToken, mobileNo: mobileDetails.mobileNo, mobileNoAccessToken: mobileDetails.accessToken }),
+                    body: JSON.stringify({ emailId: emailDetails.email, emailIdAccessToken: emailDetails.accessToken, emailIdAuthType: emailDetails.signupVia, mobileNo: mobileDetails.mobileNo, mobileNoAccessToken: mobileDetails.accessToken }),
                 }
             )
                 .then((res) => res.json())
