@@ -18,7 +18,7 @@ const signUp = () => {
     const [signupInProgress, setSignupInProgress] = useState(false);
     const [link, setLink] = useState(null);
 
- var x;
+    var x;
 
     useEffect(() => {
         initOtpSignup();
@@ -456,7 +456,7 @@ const signUp = () => {
                     <div className="entry__left_section__details pe-5">
                         <div className="container">
                             <h1 className="c-fs-3 mb-4">
-                            Join GIDDH for Easy Bookkeeping
+                                Join GIDDH for Easy Bookkeeping
                             </h1>
                             <p>Features:</p>
                             <ul className="ps-0 my-4">
@@ -514,7 +514,7 @@ const signUp = () => {
 
                                 <p className="c-fs-6 mb-4">
                                     If you already have an account,{" "}
-                                    <a href={ link + '/login'} className="text_blue">
+                                    <a href={link + '/login'} className="text_blue">
                                         Login
                                     </a>
                                 </p>
@@ -537,7 +537,7 @@ const signUp = () => {
                                 <div className="entry__right_section__container__step_one mt-5">
                                     <div className="step_status_bar d-flex justify-content-between align-items-center ps-0">
                                         <div className="d-flex align-items-center">
-                                            <MdCheckCircle className={"me-1 " + ( emailDetails && emailDetails.isVerified && mobileDetails && mobileDetails.isVerified ? " icon-success" : "" )} />{" "}
+                                            <MdCheckCircle className={"me-1 " + (emailDetails && emailDetails.isVerified && mobileDetails && mobileDetails.isVerified ? " icon-success" : "")} />{" "}
                                             Verify email & mobile number
                                         </div>
                                     </div>
