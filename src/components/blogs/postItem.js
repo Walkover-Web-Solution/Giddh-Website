@@ -1,9 +1,8 @@
-// import Date from "./date";
-import Link from "next/link";
+import { MdDateRange } from "react-icons/md";
+import Date from "./date";
 import { parseISO } from "date-fns";
 
-
-export default function PostItem({ post }) { 
+export default function PostItem({ post }) {
   /* function calculateReadTime(articleText, wordsPerMinute = 200) {
     // Count the number of words in the article
     const words = articleText.match(/\w+/g);
@@ -14,11 +13,54 @@ export default function PostItem({ post }) {
     
     return readTimeMinutes;
   }    
+  
+  
   const readTime = calculateReadTime(article); */
-  return (      
-    <a className="blog-card" href={"/blog/" + post.slug}>      
-        {/* <Date date={parseISO(post.date)} /> */}
-        <div className="title">{post.title}</div>
+  //  articleText end code
+
+  function getBlogStyle(titleText){
+    let textLength = titleText.length;
+    let wordLength = titleText.split(" ").length;
+
+    if(wordLength > 8 || textLength > 48){
+      return " blog-card--large";
+    }else{
+      return " blog-card--small";
+    }
+  }
+  return (
+    <a
+      href={"/blog/" + post.slug}
+      className={
+        "blog-card" +
+        (post.thumbnail ? " bg-dark" : " bg-light") +
+        getBlogStyle(post.title)
+      }
+      style={{
+        backgroundImage: post.thumbnail
+          ? 'url("' + post.thumbnail + '")'
+          : "none",
+      }}
+    >
+      <div className="blog-card__content">
+        <div className="blog-card-body">
+          <h2 className="title">{post.title}</h2>
+
+          <p className="content">{post?.description}</p>
+        </div>
+        <div className="blog-card-footer">
+          <div className="blog-card-tags">
+            {post.category?.map((category, idx) => (
+              <span className="bg-tags" key={idx}>
+                {category}
+              </span>
+            ))}
+          </div>
+          <span>
+            <MdDateRange /> <Date date={parseISO(post.date)} />
+          </span>
+        </div>
+      </div>
     </a>
   );
 }

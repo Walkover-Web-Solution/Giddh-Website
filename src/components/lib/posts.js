@@ -9,17 +9,12 @@ const { readdirSync, readFileSync } = require("fs");
 
 const postsDirectory = path.join(process.cwd(), "_posts/blog");
 let postCache;
-// console.log(postCache, "Cache");
 export function fetchPostContent() {
     
   if (postCache) {    
 
     return postCache;
   }
-//   else{
-  //     console.log("hello post cache in else");
-  //   }
-  
   const fileNames = readdirSync(postsDirectory, { withFileTypes: false });
   
 
@@ -45,13 +40,8 @@ export function fetchPostContent() {
       matterData.fullPath = fullPath;
       matterData.staticPath = fileName.split('.')[0];
       
-      // console.log(JSON.stringify(fullPath), "full path");
 
       const slug = fileName.replace(/\.mdx$/, "");
-      // fileName.replace(/\.mdx$/, "");
-      // if (matterData.slug !== slug) {
-      //   throw new Error("slug field not match with the path of its content source");
-      // }
 
       return matterData;
     });
