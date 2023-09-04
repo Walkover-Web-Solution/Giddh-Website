@@ -25,13 +25,11 @@
         -webkit-box-shadow: 0 3px 5px 0 rgba(0, 1, 1, 0.1);
         min-height: 300px;
         box-shadow: 0 3px 5px 0 rgba(0, 1, 1, 0.1);
-        list-style: none;
         overflow: hidden;
         position: relative;
         color: var(--col-white);
         background-size: cover;
         background-position: center center;
-        grid-row-end: span 2;
 
         &:first-child {
           // grid-row-end: span 4 !important;
@@ -75,17 +73,8 @@
           // }
         }
         &--large {
-          grid-row-end: span 6;
-          .blog-card__content {
-            .blog-card-body {
-              .content {
-                -webkit-line-clamp: 3;
-              }
-            }
-          }
-        }
-        &--medium {
-          grid-row-end: span 4;
+          grid-row-end: span 3;
+          min-height: 350px !important;
           .blog-card__content {
             .blog-card-body {
               .content {
@@ -99,7 +88,7 @@
           .blog-card__content {
             .blog-card-body {
               .content {
-                -webkit-line-clamp: 1;
+                -webkit-line-clamp: 2;
               }
             }
           }
@@ -198,55 +187,56 @@
 
     .pagination-padding {
       padding: 0 24px !important;
+      user-select: none;
     }
   }
-  .blog-container {
-    // max-width: 800px !important;
-    margin: 80px 0;
+}
+.blog-container {
+  // max-width: 800px !important;
+  margin: 80px 0;
 
-    h1 {
-      font-weight: 700;
-      margin-bottom: 16px !important;
-    }
+  h1 {
+    font-weight: 700;
+    margin-bottom: 16px !important;
+  }
 
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin-top: 40px !important;
-      margin-bottom: 16px !important;
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 40px !important;
+    margin-bottom: 16px !important;
+  }
+
+  p {
+    margin-bottom: 1rem !important;
+  }
+
+  .blog-header {
+    margin-bottom: 40px;
+  }
+
+  &__back-btn {
+    background-color: var(--col-primary) !important;
+    color: var(--col-white) !important;
+  }
+
+  .body {
+    ul {
+      list-style: initial !important;
     }
 
     p {
-      margin-bottom: 1rem !important;
+      font-size: var(--c-fs-5);
     }
 
-    .blog-header {
-      margin-bottom: 40px;
+    h2 {
+      font-size: var(--c-fs-3);
     }
 
-    &__back-btn {
-      background-color: var(--col-primary) !important;
-      color: var(--col-white) !important;
-    }
-
-    .body {
-      ul {
-        list-style: initial !important;
-      }
-
-      p {
-        font-size: var(--c-fs-5);
-      }
-
-      h2 {
-        font-size: var(--c-fs-3);
-      }
-
-      img {
-        max-width: 100%;
-      }
+    img {
+      max-width: 100%;
     }
   }
 }

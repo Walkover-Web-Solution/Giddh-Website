@@ -19,12 +19,11 @@ export default function PostItem({ post }) {
   //  articleText end code
 
   function getBlogStyle(titleText){
-    let textLength = titleText.split(" ").length;
+    let textLength = titleText.length;
+    let wordLength = titleText.split(" ").length;
 
-    if(textLength >10){
+    if(wordLength > 8 || textLength > 48){
       return " blog-card--large";
-    }else if(textLength > 6){
-      return " blog-card--medium";
     }else{
       return " blog-card--small";
     }
@@ -33,8 +32,8 @@ export default function PostItem({ post }) {
     <a
       href={"/blog/" + post.slug}
       className={
-        "blog-card " +
-        (post.thumbnail ? " bg-dark " : " bg-light ") +
+        "blog-card" +
+        (post.thumbnail ? " bg-dark" : " bg-light") +
         getBlogStyle(post.title)
       }
       style={{
