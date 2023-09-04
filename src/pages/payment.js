@@ -178,7 +178,7 @@ const payment = () => {
                                     onClick={payInvoice}
                                 >
                                     {paymentInProgress && (
-                                        <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
+                                        <div className="spinner-border spinner-border-sm col-white" role="status"></div>
                                     )}
                                     {!paymentInProgress && (
                                         <span>Pay Now</span>
