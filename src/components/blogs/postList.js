@@ -6,6 +6,7 @@ import Pagination from "./pagination";
 
 export default function PostList({ posts, tags, pagination }) {
   return (
+    <div className="blog">
     <div className={"container blog-home-container"}>
       <div className={"posts"}>
         <div className={"post-list"}>
@@ -24,6 +25,7 @@ export default function PostList({ posts, tags, pagination }) {
       </div>
       <ul className={"categories"}>
       </ul>      
+    </div>
     </div>
   );
 }

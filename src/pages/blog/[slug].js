@@ -7,8 +7,15 @@ import matter from 'gray-matter';
 import Head from 'next/head';
 import { format } from "date-fns";
 import { useRouter } from 'next/router';
+
+import dynamic from 'next/dynamic'
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
+// const components = { Test }
+const component = { ReactPlayer };
+
 // import { SocialList } from '@/components/socialList';
 // const components = { Test }
+import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const slugToPostContent = (postContents => {
 
@@ -23,14 +30,15 @@ const slugToPostContent = (postContents => {
   })(fetchPostContent());
 
 
-export default function TestPage({ source , title}) {
+export default function TestPage({ source , title, date, author}) {
 
 
   const router  = useRouter();
 
 
   const handleClick = () =>{
-    router.push('/blog');
+    router.back();
+    // router.push('/blog');
   }
   return (
     <>
@@ -38,17 +46,17 @@ export default function TestPage({ source , title}) {
       <title>{title}</title>
     </Head>
     <div className="wrapper container blog-container">      
-      <a href='javascript:void(0)' onClick={handleClick} >Back</a>
-      {/* <div className='blog-header mt-4'>
+      <a className="mb-3 d-inline-block btn blog-container__back-btn" href='javascript:void(0)' onClick={handleClick} ><MdKeyboardArrowLeft /> Back</a>
+      <div className='blog-header mt-4'>
         <div>{author}, {date}</div>        
         <h1>{title}</h1>
-        {thumbnailImage !=="" && <img className="" src={thumbnailImage} alt={author} />}
-      </div> */}
+        {/* {thumbnailImage !=="" && <img className="" src={thumbnailImage} alt={author} />} */}
+      </div>
       <div className="body">
-        <MDXRemote {...source} />
+        <MDXRemote {...source} components={component} />
       </div>
 
-      <button className="btn btn-dark mt-3" onClick={handleClick} >Back</button>
+      <button className="btn blog-container__back-btn mt-3" onClick={handleClick} ><MdKeyboardArrowLeft /> Back</button>
       <footer>
       
       </footer>
@@ -82,23 +90,17 @@ export async function getStaticProps(slug) {
         // engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object }
       },
     });
-    // console.log(matterResult, "Matter Result");
     // const thumbnailImage = matterResult?.data?.thumbnail;
     // // const youtube = matterResult?.data?.youtube;
-    // const title = matterResult?.data?.title;
-    // const author = matterResult?.data?.author;
+    const title = matterResult?.data?.title;
+    const author = matterResult?.data?.author;
     const content = matterResult?.content;
    
     var date = new Date(matterResult?.data?.date);
     date = format(date, "LLLL d, yyyy")
-    // const tags = matterResult?.data?.tags;
-    // console.log(matterResult?.content,"matterResult?.data?");
-    // console.log(content,"content00");
-  // MDX text - can be from a local file, database, anywhere
+    const tags = matterResult?.data?.tags;
   const mdxSource = await serialize(content)
-  
-  // const mdxSource = await renderToString(content, { scope: matterResult });
-  // console.log(mdxSource,"generated");
-  return { props: { source: mdxSource} }
+
+  return { props: { source: mdxSource, date: date ,title: title, author: author} }
 // return {props :{source: "hello"}}
 }
