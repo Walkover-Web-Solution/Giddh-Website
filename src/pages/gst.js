@@ -211,7 +211,7 @@ const gst = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\tax-images\understanding-gst.svg"
+                  src="/img/tax-images/understanding-gst.svg"
                   className="img-fluid"
                   alt="gst logo"
                 />
@@ -281,7 +281,7 @@ const gst = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\tax-images\group-5654.svg"
+                  src="/img/tax-images/group-5654.svg"
                   className="img-fluid"
                   alt="mobile image with giddh-app"
                 />
@@ -351,7 +351,7 @@ const gst = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\tax-images\betnifits.svg"
+                  src="/img/tax-images/betnifits.svg"
                   className="img-fluid"
                   alt="gst benifits image"
                 />

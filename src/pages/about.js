@@ -242,7 +242,7 @@ const about = () => {
                     <img
                       width="238px"
                       height="68px"
-                      src="\img\about\socket-logo-big.svg"
+                      src="/img/about/socket-logo-big.svg"
                       alt="via-socket-logo"
                     />
                   </div>
@@ -517,7 +517,7 @@ const about = () => {
                           Our philosophy revolves around two important questions
                           -’Why’ and ‘How’. Asking ‘Why’ to ourselves and those
                           around us gives the purpose for our actions and
-                          \‘How\’ gives us the shortest path to execute them.
+                          /‘How/’ gives us the shortest path to execute them.
                         </p>
                       </div>
                       <div className="col-lg-4">

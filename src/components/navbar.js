@@ -425,7 +425,7 @@ const navbar = () => {
                       <a href="https://giddh.com/blog/">Blog</a>
                     </li>
                     <li>
-                      <a href="https://giddh.com/help/">Help</a>
+                      <a href="https://giddh.com/help/" target="_blank">Help</a>
                     </li>
                   </ul>
                 </div>

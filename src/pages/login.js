@@ -18,7 +18,7 @@ const logIn = () => {
     const [showVerificationModal, setShowVerificationModal] = useState(false);
     const [showLoginWithPasswordModal, setShowLoginWithPasswordModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
-    const [link, setLink] = useState(null);
+    const [link, setLink] = useState(process.env.NEXT_PUBLIC_SITE_URL);
 
     useEffect(() => {
         setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));

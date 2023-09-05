@@ -494,7 +494,6 @@ const featureGallery = () => {
           <div className="modal-content">
             <div className="modal-header position-relative">
               <button
-                onClick={ setModalStatus(false) }
                 type="button"
                 className="btn col-blue ms-auto p-0"
                 data-bs-dismiss="modal"
