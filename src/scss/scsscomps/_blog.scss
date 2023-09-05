@@ -6,8 +6,9 @@
   background-attachment: fixed;
 
   .blog-home-container {
+    padding-bottom: 46px;
     .post-list {
-      padding: 100px 24px;
+      padding: 100px 24px 46px 24px;
       display: grid;
       height: auto !important;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -145,26 +146,22 @@
       &.pagination-padding {
         padding: 0 24px !important;
         user-select: none;
-
-        transform: translateY(-20px);
         background: rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(5px);
-        border-radius: 4px;
+        border-radius: 8px;
         padding: 12px 16px !important;
-        width: 60%;
         min-width: 300px;
         margin: 0 auto;
         text-align: center;
-        border: 3px solid rgba(255, 255, 255, 0.1);
 
         li {
           a {
-            color: var(--col-primary);
+            color: #000;
             font-size: 18px;
 
             &.active {
               color: var(--col-white);
-              background-color: var(--col-primary);
+              background-color: #000;
               padding: 0px 7px;
               border-radius: 3px;
             }
