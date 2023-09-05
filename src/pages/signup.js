@@ -16,7 +16,7 @@ const signUp = () => {
     const [mobileGetOtpInProgress, setMobileGetOtpInProgress] = useState(false);
     const [mobileVerifyOtpInProgress, setMobileVerifyOtpInProgress] = useState(false);
     const [signupInProgress, setSignupInProgress] = useState(false);
-    const [link, setLink] = useState(null);
+    const [link, setLink] = useState(process.env.NEXT_PUBLIC_SITE_URL);
 
     var x;
 

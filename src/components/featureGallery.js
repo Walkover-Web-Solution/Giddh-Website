@@ -11,6 +11,8 @@ const featureGallery = () => {
   let link = isIndia ? "" : isAE ? "/ae" : "/uk";
 
   const [currentData, setCurrentData] = useState(null);
+  const [modalStatus, setModalStatus] = useState(false);
+
   // JSON for Modal
   let indiaModalData = [
     {
@@ -455,7 +457,7 @@ const featureGallery = () => {
                   className="feature-gallery__card"
                   data-bs-target="#featureModal"
                   data-bs-toggle="modal"
-                  onClick={() => setCurrent(data.name)}
+                  onClick={() => { setCurrent(data.name); setModalStatus(true); }}
                 >
                   <figure>
                     <img
@@ -480,6 +482,7 @@ const featureGallery = () => {
           </div>
         </div>
       </section>
+     
       <div
         className="modal fade"
         id="featureModal"
@@ -491,6 +494,7 @@ const featureGallery = () => {
           <div className="modal-content">
             <div className="modal-header position-relative">
               <button
+                onClick={ setModalStatus(false) }
                 type="button"
                 className="btn col-blue ms-auto p-0"
                 data-bs-dismiss="modal"
@@ -514,7 +518,7 @@ const featureGallery = () => {
               {currentData?.link !== "" ? (
                 <>
                   <a
-                    href={link + "/" + currentData?.link}
+                    href={ link + "/" + currentData?.link}
                     className="col-blue d-inline-block mt-1"
                   >
                     More details
