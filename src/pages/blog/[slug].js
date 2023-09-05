@@ -101,6 +101,6 @@ export async function getStaticProps(slug) {
     const tags = matterResult?.data?.tags;
   const mdxSource = await serialize(content)
 
-  return { props: { source: mdxSource, date: date ,title: title, author: author} }
+  return { props: { source: mdxSource, date: date || "" ,title: title || "", author: author || ""} }
 // return {props :{source: "hello"}}
 }
