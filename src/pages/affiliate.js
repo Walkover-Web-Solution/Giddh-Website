@@ -135,7 +135,7 @@ const affiliate = () => {
         <section className="affiliate__resources">
           <div className="container pb-5">
             <div className="text-center col-primary pt-5 pb-4">
-              <h1>We Help you With Resources</h1>
+              <h2 className="heading">We Help you With Resources</h2>
             </div>
             <section className="container my-5">
               <div className="row mb-5 pb-5 align-items-center">

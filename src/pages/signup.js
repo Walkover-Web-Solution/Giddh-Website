@@ -455,9 +455,9 @@ const signUp = () => {
                     </a>
                     <div className="entry__left_section__details pe-5">
                         <div className="container">
-                            <h1 className="c-fs-3 mb-4">
+                            <h2 className="c-fs-3 line-height-36 mb-4">
                                 Join GIDDH for Easy Bookkeeping
-                            </h1>
+                            </h2>
                             <p>Features:</p>
                             <ul className="ps-0 my-4">
                                 <li className="d-flex align-items-center">
