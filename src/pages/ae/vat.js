@@ -196,7 +196,7 @@ const aeVAT = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\tax-images\understanding-vat.svg"
+                  src="/img/tax-images/understanding-vat.svg"
                   className="img-fluid"
                   alt="vat logo"
                 />
@@ -266,7 +266,7 @@ const aeVAT = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\tax-images\group-5654.svg"
+                  src="/img/tax-images/group-5654.svg"
                   className="img-fluid"
                   alt="mobile image with giddh-app"
                 />
@@ -336,7 +336,7 @@ const aeVAT = () => {
             <div className="col-md-12 col-lg-6 __image-alignment text-center">
               <figure>
                 <img
-                  src="\img\tax-images\betnifits.svg"
+                  src="/img/tax-images/betnifits.svg"
                   className="img-fluid"
                   alt="vat benifits image"
                 />
