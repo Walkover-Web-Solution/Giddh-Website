@@ -1,6 +1,10 @@
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { MdClose } from "react-icons/md";
+import dynamic from "next/dynamic";
+
+const FeatureGalleryModal = dynamic(() => import("@/components/featureGalleryModal"), {
+  ssr: false
+});
 
 const featureGallery = () => {
   // To get active route
@@ -11,6 +15,8 @@ const featureGallery = () => {
   let link = isIndia ? "" : isAE ? "/ae" : "/uk";
 
   const [currentData, setCurrentData] = useState(null);
+  const [modalStatus, setModalStatus] = useState(false);
+
   // JSON for Modal
   let indiaModalData = [
     {
@@ -453,9 +459,10 @@ const featureGallery = () => {
               <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                 <div
                   className="feature-gallery__card"
-                  data-bs-target="#featureModal"
-                  data-bs-toggle="modal"
-                  onClick={() => setCurrent(data.name)}
+                  onClick={() => {
+                    setCurrent(data.name);
+                    setModalStatus(true);
+                  }}
                 >
                   <figure>
                     <img
@@ -480,51 +487,13 @@ const featureGallery = () => {
           </div>
         </div>
       </section>
-      <div
-        className="modal fade"
-        id="featureModal"
-        aria-hidden="true"
-        aria-labelledby="exampleModalToggleLabel"
-        tabIndex="-1"
-      >
-        <div className="modal-dialog modal-dialog-centered feature_gallery_modal">
-          <div className="modal-content">
-            <div className="modal-header position-relative">
-              <button
-                type="button"
-                className="btn col-blue ms-auto p-0"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <MdClose />
-              </button>
-            </div>
-            <div className="modal-body">
-              <h4 className="c-fs-1 c-fw-600 col-blue mb-4">
-                {currentData?.heading}
-              </h4>
-              <h5 className="c-fs-3 c-fw-600 col-primary">
-                {currentData?.subHeading}
-              </h5>
-              {currentData?.paragraph !== "" ? (
-                <>
-                  <p className="col-grey-deep mt-4">{currentData?.paragraph}</p>
-                </>
-              ) : null}
-              {currentData?.link !== "" ? (
-                <>
-                  <a
-                    href={link + "/" + currentData?.link}
-                    className="col-blue d-inline-block mt-1"
-                  >
-                    More details
-                  </a>
-                </>
-              ) : null}
-            </div>
-          </div>
-        </div>
-      </div>
+
+      {modalStatus && (
+        <FeatureGalleryModal
+          modalData={currentData}
+          hideFeatureGalleryModal={() => setModalStatus(false)}
+        />
+      )}
     </>
   );
 };

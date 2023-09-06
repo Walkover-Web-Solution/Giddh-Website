@@ -1,6 +1,6 @@
 {
   "comment in": {
-    "comment": "// in country"
+    "comment": "//========================== Country India ======================================//"
   },
   "/": {
     "title": "Best Online Accounting Software | Online Bookkeeping Software",
@@ -106,6 +106,10 @@
     "title": "Terms of Service",
     "description": ""
   },
+  "/contact-us": {
+    "title": "Contact us - Giddh - India",
+    "description": ""
+  },
   "/login": {
     "title": "Login ~ Giddh",
     "description": ""
@@ -115,7 +119,7 @@
     "description": ""
   },
   "comment ae": {
-    "comment": "// ae country"
+    "comment": "//========================== Country AE ======================================//"
   },
   "/ae": {
     "title": "Online Accounting Software for Businesses in Dubai | Giddh",
@@ -173,6 +177,10 @@
     "title": "Features of Giddh Accounting Software",
     "description": "Giddh offers the best features of Online Accounting Software, like generating invoices, expense management, VAT filing and much more."
   },
+  "/ae/vat": {
+    "title": "Value Added Tax UAE | File VAT Return with Giddh",
+    "description": "File your VAT Returns with one of the easy to use Online Accounting Software in UAE."
+  },
   "/ae/pricing": {
     "title": "Accounting Software Prices in Dubai - Start Free| Giddh",
     "description": "Start using easiest and well-featured Giddh accounting software at Free of Cost. Start your Free Trial and know the benefits."
@@ -206,14 +214,14 @@
     "description": ""
   },
   "commentuk": {
-    "comment": "// uk country"
+    "comment": "//========================== Country UK ======================================//"
   },
   "/uk": {
     "title": "Accounting Software for Businesses in the UK | GIDDH",
     "description": "Best Online Accounting Software in the UK where you can get VAT software for accounting, file VAT, Business Reports, unlimited users and much more."
   },
   "/uk/make-the-switch": {
-    "title": "Switch to Simpler Online Accounting Solutions in Dubai | Giddh",
+    "title": "Switch to Simpler Online Accounting Solutions in UK | Giddh",
     "description": "Switch to Online Accounting Software for a Simple Accounting Solution for your businesses with Giddh- Accounting Software."
   },
   "/uk/conect-bank-reconcile": {
@@ -224,20 +232,24 @@
     "title": "Features of Giddh Accounting Software",
     "description": "Giddh offers the best features of Online Accounting Software, like generating invoices, expense management, VAT filing and much more."
   },
+  "/uk/vat": {
+    "title": "Value Added Tax UK | File VAT Return with Giddh",
+    "description": "File your VAT Returns with one of the easy to use Online Accounting Software in UK."
+  },
   "/uk/multi-currency-accounting-software": {
     "title": "Multi Currency Accounting Software",
     "description": "Multi-currency accounting system enables businesses to send multi-currency invoices in customer’s foreign currency & get paid easily in over 160 currency.&quot;"
   },
   "/uk/invoice-software": {
-    "title": " Invoicing &amp; Accounting Software Online Dubai | Giddh",
+    "title": " Invoicing & Accounting Software Online UK | Giddh",
     "description": "Now you can Create Invoice Online by using the Online Invoicing Software by Giddh with beautiful templates and customization options.;"
   },
   "/uk/financial-reporting": {
-    "title": "Financial Accounting Software Dubai| Giddh",
+    "title": "Financial Accounting Software UK| Giddh",
     "description": "With Giddh Financial Reporting Software analyze and share financial reports - balance sheet, trial balance, with your accountant, partners or investors."
   },
   "/uk/multi-user-accounting-software": {
-    "title": "Multi-User Business Accounting Software in Dubai | Giddh",
+    "title": "Multi-User Business Accounting Software in UK | Giddh",
     "description": "Start your Free Trial of Giddh's Multi-User Accounting Software to share your business insights with different accountants."
   },
   "/uk/contacts": {
@@ -245,7 +257,7 @@
     "description": ""
   },
   "/uk/accounting-dashboard": {
-    "title": "Online Accounting Dasboard for Businesses in Dubai | Giddh",
+    "title": "Online Accounting Dasboard for Businesses in UK | Giddh",
     "description": "Turn your accounting data into business intelligence with Giddh Online Accounting Dashboard. Download it for free or start your Free Trial."
   },
   "/uk/import-data": {
@@ -256,12 +268,16 @@
     "title": "Giddh Online Accounting Software Security",
     "description": "We provide you with one of the finest Online Account Security for your Accounts. We offer unmatched data encryption algorithm to keep your data safe."
   },
+  "/uk/security": {
+    "title": "Giddh Online Accounting Software Security",
+    "description": "We provide you with one of the finest Online Account Security for your Accounts. We offer unmatched data encryption algorithm to keep your data safe."
+  },
   "/uk/cloud-accounting-software": {
-    "title": "Cloud Accounting Software for SME's in Dubai | Giddh",
+    "title": "Cloud Accounting Software for SME's in UK | Giddh",
     "description": "Work smarter, grow faster with Giddh Cloud Accounting Software to generate Invoices Online, Manage Financial Reports, share your business insights and much more."
   },
   "/uk/pricing": {
-    "title": "Accounting Software Prices in Dubai - Start Free| Giddh",
+    "title": "Accounting Software Prices in UK - Start Free| Giddh",
     "description": "Start using easiest and well-featured Giddh accounting software at Free of Cost. Start your Free Trial and know the benefits."
   },
   "/uk/about": {
@@ -282,6 +298,14 @@
   },
   "/uk/contact-us": {
     "title": "Contact us - Giddh - UK",
+    "description": ""
+  },
+  "/uk/login": {
+    "title": "Login ~ Giddh",
+    "description": ""
+  },
+  "/uk/signup": {
+    "title": "Signup ~ Giddh",
     "description": ""
   }
 }

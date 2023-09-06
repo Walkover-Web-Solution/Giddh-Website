@@ -1,5 +1,4 @@
 import { usePathname } from "next/navigation";
-import { MdClose } from "react-icons/md";
 
 const allFeatures = () => {
   // To get active route
