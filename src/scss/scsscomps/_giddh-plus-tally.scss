@@ -1,11 +1,17 @@
 .giddh-plus-tally{
     margin-top: 54px;
 
+    min-height: calc(100dvh - 54px);
+
     &__left-wrapper{
-        background-color: var(--col-dark-light);
+        background-color: var(--col-grey);
+        height: 600px;
     }
 
     &__right-wrapper{
+        background-color: var(--col-primary);
+        height: 600px;
+
 
     }
 }
