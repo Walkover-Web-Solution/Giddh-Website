@@ -164,7 +164,7 @@ const navbar = () => {
       in: true,
       uk: false,
       ae: false,
-      menuItem: "Sync Tally with Giddh",
+      menuItem: "Sync Tally to Giddh",
       url: "/tallyplusgiddh"
     },
     {
