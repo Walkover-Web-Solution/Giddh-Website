@@ -231,25 +231,12 @@ const Footer = () => {
 
             <div className="col-xl-3 col-lg-6 col-md-12">
               <div className="location">
-                <h3 className="c-fs-4 c-fw-600">Locate Us</h3>
-                <div className="location__detail">
-                  <h4>Indore</h4>
-                  <p>
-                    Walkover Web Solutions Pvt Ltd.
-                    <br /> 405-406, Capt. C.S. Naidu Arcade,
-                    <br /> Near Greater Kailash Hospital, 10/2 Old Palasia,
-                    <br /> Indore, Madhya Pradesh, India-452018
-                  </p>
-                </div>
-                <div className="location__detail mt-5">
-                  <h4>USA</h4>
-                  <p>
-                    USA Superheroes, Inc
-                    <br /> Sunset Lake Road, Suite B-2
-                    <br /> DE - Delaware
-                    <br /> United States of America
-                  </p>
-                </div>
+                <h3 className="c-fs-4 c-fw-600">Compare</h3>
+                <ul className="footer-list list-unstyled mb-3">
+                    <li>
+                      <a href={link + "/giddh-vs-zoho"}>Giddh vs Zoho</a>
+                    </li>
+                  </ul>
               </div>
             </div>
           </div>
