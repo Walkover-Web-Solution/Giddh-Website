@@ -92,13 +92,6 @@ const navbar = () => {
     },
     {
       in: true,
-      uk: true,
-      ae: true,
-      menuItem: "All Features",
-      url: "/all-features",
-    },
-    {
-      in: true,
       uk: false,
       ae: false,
       menuItem: "GST Compliances",
@@ -173,6 +166,13 @@ const navbar = () => {
       ae: false,
       menuItem: "Sync Tally with Giddh",
       url: "/tallyplusgiddh"
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "All Features",
+      url: "/all-features",
     }
   ];
   // List of path where navbar Background will be transparent and turn Background white on scroll
