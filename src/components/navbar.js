@@ -167,6 +167,13 @@ const navbar = () => {
       menuItem: "Reports & Analysis",
       url: "/financial-reporting",
     },
+    {
+      in: true,
+      uk: false,
+      ae: false,
+      menuItem: "Sync Tally with Giddh",
+      url: "/tallyplusgiddh"
+    }
   ];
   // List of path where navbar Background will be transparent and turn Background white on scroll
   let specificPath =
