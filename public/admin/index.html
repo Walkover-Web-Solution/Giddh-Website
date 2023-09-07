@@ -28,7 +28,7 @@
     handler: ({ entry }) => {
       var slugData = entry.get('data')._root.entries[2][1];
       slugData = slugData.replace(/[^\w\s]/gi, '')
-      slugData = slugData.trim().toLowerCase().replace(/ /g, '-');
+      slugData = slugData.trim().toLowerCase().replace(/\s+/g,"-");
       return entry.get('data').set('slug', slugData);
     },
   });
