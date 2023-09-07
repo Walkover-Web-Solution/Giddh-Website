@@ -23,6 +23,18 @@
   </script>
 
 <script>
+  CMS.registerEventListener({
+    name: 'preSave',
+    handler: ({ entry }) => {
+      var slugData = entry.get('data')._root.entries[2][1];
+      slugData = slugData.trim()
+      slugData = slugData.replace(/ /g, '-');
+      return entry.get('data').set('slug', slugData);
+    },
+  });
+  </script>
+
+<script>
   CMS.registerEditorComponent({
     id: "youtube",
     label: "Youtube",

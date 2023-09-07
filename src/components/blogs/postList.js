@@ -22,9 +22,7 @@ export default function PostList({ posts, tags, pagination }) {
             as: (page) => (page === 1 ? null : "/blog/page/" + page),
           }}
         />
-      </div>
-      <ul className={"categories mb-0"}>
-      </ul>      
+      </div>  
     </div>
     </div>
   );
