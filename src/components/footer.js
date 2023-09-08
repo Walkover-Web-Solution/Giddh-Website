@@ -234,7 +234,7 @@ const Footer = () => {
                 <h3 className="c-fs-4 c-fw-600">Compare</h3>
                 <ul className="footer-list list-unstyled mb-3">
                     <li>
-                      <a href={link + "/giddh-vs-zoho"}>Giddh vs Zoho</a>
+                      <a href={link + "/zoho-vs-giddh"}>Giddh vs Zoho</a>
                     </li>
                   </ul>
               </div>
