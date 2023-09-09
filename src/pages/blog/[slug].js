@@ -7,7 +7,8 @@ import matter from 'gray-matter';
 import Head from 'next/head';
 import { format } from "date-fns";
 import { useRouter } from 'next/router';
-
+import  {getTag} from '@/components/lib/tags'
+import TagButton from '@/components/blogs/tags/tagButton';
 import dynamic from 'next/dynamic'
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 // const components = { Test }
@@ -30,9 +31,9 @@ const slugToPostContent = (postContents => {
   })(fetchPostContent());
 
 
-export default function TestPage({ source , title, date, author}) {
+export default function TestPage({ source , title, date, author, tags}) {
 
-
+console.log(tags, "tags in index page");
   const router  = useRouter();
 
 
@@ -58,7 +59,15 @@ export default function TestPage({ source , title, date, author}) {
 
       <button className="btn blog-container__back-btn mt-3" onClick={handleClick} ><MdKeyboardArrowLeft /> Back</button>
       <footer>
-      
+       <div>
+      <ul className={"tag-list"}>
+            {tags !=="" && tags?.map((it, i) => (
+              <li key={i}>
+                <TagButton tag={getTag(it)} />
+              </li>
+            ))}
+          </ul>
+      </div>
       </footer>
     </div>
     </>
@@ -81,7 +90,7 @@ export async function getStaticPaths() {
   };
 }
 export async function getStaticProps(slug) {
-    
+    console.log(slug,"inside get static props");
   const slugData = slug.params.slug;
     const source = fs.readFileSync(slugToPostContent[slugData]?.fullPath, "utf8");
     const matterResult = matter(source, {
@@ -90,6 +99,7 @@ export async function getStaticProps(slug) {
         // engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object }
       },
     });
+    console.log(matterResult, "matter result");
     // const thumbnailImage = matterResult?.data?.thumbnail;
     // // const youtube = matterResult?.data?.youtube;
     const title = matterResult?.data?.title;
@@ -98,9 +108,10 @@ export async function getStaticProps(slug) {
    
     var date = new Date(matterResult?.data?.date);
     date = format(date, "LLLL d, yyyy")
-    const tags = matterResult?.data?.tags;
+    const tags = matterResult?.data?.tag;
+    console.log(tags, "tags: ");
   const mdxSource = await serialize(content)
 
-  return { props: { source: mdxSource, date: date || "" ,title: title || "", author: author || ""} }
+  return { props: { source: mdxSource, date: date || "" ,title: title || "", author: author || "", tags: tags || ""} }
 // return {props :{source: "hello"}}
 }

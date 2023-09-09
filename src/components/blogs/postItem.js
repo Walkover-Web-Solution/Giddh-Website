@@ -50,7 +50,7 @@ export default function PostItem({ post }) {
         </div>
         <div className="blog-card-footer">
           <div className="blog-card-tags">
-            {post.category?.map((category, idx) => (
+            {post?.tag?.map((category, idx) => (
               <span className="bg-tags" key={idx}>
                 {category}
               </span>
