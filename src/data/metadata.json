@@ -114,6 +114,14 @@
     "title": "Signup ~ Giddh",
     "description": ""
   },
+  "/zoho-vs-giddh": {
+    "title": "Zoho vs Giddh",
+    "description": "Zoho Books and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses."
+  },
+  "/tally-vs-giddh": {
+    "title": "Tally vs Giddh",
+    "description": "Tally and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses."
+  },
   "comment ae": {
     "comment": "//========================== Country AE ======================================//"
   },
@@ -208,6 +216,14 @@
   "/ae/signup": {
     "title": "Signup ~ Giddh",
     "description": ""
+  },  
+  "/ae/zoho-vs-giddh": {
+    "title": "Zoho vs Giddh",
+    "description": "Zoho Books and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses."
+  },
+  "/ae/tally-vs-giddh": {
+    "title": "Tally vs Giddh",
+    "description": "Tally and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses."
   },
   "commentuk": {
     "comment": "//========================== Country UK ======================================//"
@@ -303,5 +319,13 @@
   "/uk/signup": {
     "title": "Signup ~ Giddh",
     "description": ""
+  },
+  "/uk/zoho-vs-giddh": {
+    "title": "Zoho vs Giddh",
+    "description": "Zoho Books and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses."
+  },
+  "/uk/tally-vs-giddh": {
+    "title": "Tally vs Giddh",
+    "description": "Tally and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses."
   }
 }
