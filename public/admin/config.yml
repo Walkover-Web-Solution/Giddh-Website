@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: blog   # Branch to update (optional; defaults to master)
+  branch: main   # Branch to update (optional; defaults to master)
 
 # This line should *not* be indented
 publish_mode: editorial_workflow
@@ -23,7 +23,7 @@ collections:
       - {label: "Slug", name: "slug", widget: "hidden", default: "slug"}
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
       - {label: "author", name: "author", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "select", multiple: true, options: ["Invoicing-Software", "Business-Accounting","Accounting","Accounting-Software", "Analysis","Accounting-Automation","Gst-Compliance", "Diwali","Accounting-Services","Business", "Cloud-Accounting","Revenue","Indian-Accounting", "Invoicing-Software","Cloud-Computing","Gst", "Automation","Invoice","Bookkeeping", "Online-Accounting","Taxes","Finance", "Cloud-Computing","Gst-Tax","Business-Accounting", "Sme","Profit","Guidelines", "Income-Tax","GST","Tally", "Financial-Planing","Gold","Investing", "Investment","Small-Business","Entrepreneurship", "Management","Newyear","Good-And-Service-Tax", "Inventory-Management","Inventory-Software","Ecommerce", "India","News","Growth", "Blogging","BloggingTips","BusinessBlogging", "Technology","Myths","Covid-19-Financial-Impact", "Expence-Management","Best-Accounting-Software","Finance", "Financial-Management","investors","Startup"], required: false}
+      - {label: "Tags", name: "tag", widget: "select", multiple: true, options: ["Invoicing-Software", "Business-Accounting","Accounting","Accounting-Software", "Analysis","Accounting-Automation","Gst-Compliance", "Diwali","Accounting-Services","Business", "Cloud-Accounting","Revenue","Indian-Accounting", "Invoicing-Software","Cloud-Computing","Gst", "Automation","Invoice","Bookkeeping", "Online-Accounting","Taxes","Finance", "Cloud-Computing","Gst-Tax","Business-Accounting", "Sme","Profit","Guidelines", "Income-Tax","GST","Tally", "Financial-Planing","Gold","Investing", "Investment","Small-Business","Entrepreneurship", "Management","Newyear","Good-And-Service-Tax", "Inventory-Management","Inventory-Software","Ecommerce", "India","News","Growth", "Blogging","BloggingTips","BusinessBlogging", "Technology","Myths","Covid-19-Financial-Impact", "Expence-Management","Best-Accounting-Software","Finance", "Financial-Management","investors","Startup"], required: false}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}   
       - {label: "Short Description", name: "description", widget: "string", required: true}   
       - {label: "Body", name: "body", widget: "markdown"}
