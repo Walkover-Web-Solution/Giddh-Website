@@ -33,7 +33,6 @@ const slugToPostContent = (postContents => {
 
 export default function TestPage({ source , title, date, author, tags}) {
 
-console.log(tags, "tags in index page");
   const router  = useRouter();
 
 
@@ -90,7 +89,6 @@ export async function getStaticPaths() {
   };
 }
 export async function getStaticProps(slug) {
-    console.log(slug,"inside get static props");
   const slugData = slug.params.slug;
     const source = fs.readFileSync(slugToPostContent[slugData]?.fullPath, "utf8");
     const matterResult = matter(source, {
@@ -99,7 +97,6 @@ export async function getStaticProps(slug) {
         // engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object }
       },
     });
-    console.log(matterResult, "matter result");
     // const thumbnailImage = matterResult?.data?.thumbnail;
     // // const youtube = matterResult?.data?.youtube;
     const title = matterResult?.data?.title;
@@ -109,7 +106,6 @@ export async function getStaticProps(slug) {
     var date = new Date(matterResult?.data?.date);
     date = format(date, "LLLL d, yyyy")
     const tags = matterResult?.data?.tag;
-    console.log(tags, "tags: ");
   const mdxSource = await serialize(content)
 
   return { props: { source: mdxSource, date: date || "" ,title: title || "", author: author || "", tags: tags || ""} }

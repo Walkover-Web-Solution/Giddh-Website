@@ -1,56 +1,44 @@
-const Layout = require("../../../components/layout");
-const TagPostList = require("../../../components/tagPostList");
 const config = require('../../../components/lib/config');
 const { countPosts, listPostContent } = require("../../../components/lib/posts");
 const { getTag, listTags } = require("../../../components/lib/tags");
-import Pagination from "@/components/pagination";
-import Link from "next/link";
+import Pagination from "../../../components/blogs/pagination";
 import { useRouter } from "next/router";
-
+import PostItem from "../../../components/blogs/postItem";
+import { MdKeyboardArrowLeft } from "react-icons/md";
 export default function Index({ posts, tag, pagination, page }) {
-    console.log("inside index");
  const router  = useRouter();
 
 
  const handleClick = () =>{
    router.back();
  }
-
-  // const relatedPost = posts.map((data)=>{
-//     <a className="blog-card" href={"/guide/" + post.slug}>      
-//     <Date date={parseISO(post.date)} />
-//    {post?.thumbnail !== "" && <img src = {post?.thumbnail} />}
-//     <div className="title">{post?.title}</div>
-// </a>
-  // })
-  const url = `/guide/tags/${tag}` + (page ? `/${page}` : "");
+  const url = `/blog/tags/${tag}` + (page ? `/${page}` : "");
 //   const title = tag.name; 
   return (
-  
-    <div className={"container blog-home-container"}>
-      <div className={"posts"}>
-      <div className={"post-list"}>
-      {posts.map((data)=>{
-        return(<div className="blog-card"><a href={`/guide/${data.slug}`}>{data.title}{data?.thumbnail !== "" && <img src = {data?.thumbnail} />}</a></div>)
-      })}
-     {/* <TagPostList posts={posts} tag={tag} pagination={pagination} /> */}
+
+      <div className="blog">
+<div className={"container blog-home-container"}>
+  <div className={"posts"}>
+    <div className={"post-list"}>
+    <button className="btn btn-dark" onClick={handleClick} ><MdKeyboardArrowLeft />Back</button>
+      {posts?.map((it, i) => (                        
+          <PostItem key={i} post={it} />            
+      ))}
+    </div>
      <Pagination
         current={pagination.current}
         pages={pagination.pages}
         link={{
-          href: () => "/guide/tags/[[...slug]]",
+          href: () => "/blog/tags/[[...slug]]",
           as: (page) =>
             page === 1
-              ? "/guide/tags/" + tag
-              : `/guide/tags/${tag}/${page}`,
+              ? "/blog/tags/" + tag
+              : `/blog/tags/${tag}/${page}`,
         }}
       />
-     </div>
-      </div>
-     <div>
-      <button onClick={handleClick}>Back</button>
-     </div>
-      </div>
+  </div>
+</div>
+</div>
   );
 }
 

@@ -19,8 +19,8 @@ export default function PostItem({ post }) {
   //  articleText end code
 
   function getBlogStyle(titleText){
-    let textLength = titleText.length;
-    let wordLength = titleText.split(" ").length;
+    let textLength = titleText?.length;
+    let wordLength = titleText?.split(" ").length;
 
     if(wordLength > 8 || textLength > 48){
       return " blog-card--large";
@@ -57,7 +57,7 @@ export default function PostItem({ post }) {
             ))}
           </div>
           <span>
-            <MdDateRange /> <Date date={parseISO(post.date)} />
+            <MdDateRange /> <Date date={parseISO(post.date)}/>
           </span>
         </div>
       </div>
