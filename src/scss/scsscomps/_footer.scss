@@ -1,9 +1,5 @@
 .footer {
   background-color: #f7f7fd;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 450px;
-  border-bottom-left-radius: 0px;
 
   .download-icon {
     margin-bottom: 1.5rem;
@@ -65,16 +61,6 @@
       }
     }
     
-  }
-  .location{
-    &__detail {
-      h4 {
-        font-size: 16px;
-        color: var(--col-primary);
-        font-weight: bold;
-        margin-bottom: 0;
-      }
-    }
   }
 }
 
