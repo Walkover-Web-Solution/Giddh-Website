@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const zohoVsGiddh = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);  
+  const [link, setLink] = useState(false);  
 
   useEffect(() => {    
     setCountry();
@@ -15,6 +16,12 @@ const zohoVsGiddh = () => {
       setIsSmallScreen(true);
     } else if (screenWidth.matches) {
       setIsSmallScreen(false);
+    }
+  }
+  function setCountry(){
+    let currentLink = getCurrentSiteCountry();
+    if(currentLink){
+      setLink(currentLink);
     }
   }
 
@@ -157,10 +164,10 @@ const zohoVsGiddh = () => {
                       <td>Unlimited branch creation</td>
                     </tr> 
                     <tr>
-                      <th>{ true ? "GSTIN" : "VAT" } Support</th>
+                      <th>{ link.isIndia ? "GSTIN" : "VAT" } Support</th>
                       <td>Limited as per the plan</td>
                       <td>
-                        Multiple GSTIN support in single branch in all plan
+                        Multiple { link.isIndia ? "GSTIN" : "VAT" } support in single branch in all plan
                       </td>
                     </tr>
                     <tr>
@@ -289,13 +296,13 @@ const zohoVsGiddh = () => {
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
-                        GSTIN Support
+                      { link.isIndia ? "GSTIN" : "VAT" } Support
                       </th>
                     </tr>
                     <tr>
                       <td>Limited as per the plan</td>
                       <td>
-                        Multiple GSTIN support in single branch in all plan
+                        Multiple { link.isIndia ? "GSTIN" : "VAT" } support in single branch in all plan
                       </td>
                     </tr>
                     <tr>
