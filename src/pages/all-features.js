@@ -364,7 +364,7 @@ const allFeatures = () => {
             <div className="col">
               <a
                 className="feature-gallery__card"
-                href="https://apidoc.giddh.com/"
+                href="https://apidoc.giddh.com"
                 target="_blank"
               >
                 <figure>

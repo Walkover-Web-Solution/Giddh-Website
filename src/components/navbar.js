@@ -130,7 +130,7 @@ const navbar = () => {
       uk: true,
       ae: true,
       menuItem: "API Integration",
-      url: "https://apidoc.giddh.com/",
+      url: "https://apidoc.giddh.com",
     },
     {
       in: true,
@@ -224,7 +224,7 @@ const navbar = () => {
           <a
             className="navbar--navbar_brand"
             aria-label="Giddh Brand logo"
-            href={link + "/"}
+            href={ isIndia ? "/" : link}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -432,7 +432,7 @@ const navbar = () => {
                       <a href="https://giddh.com/blog/">Blog</a>
                     </li>
                     <li>
-                      <a href="https://giddh.com/help/" target="_blank">Help</a>
+                      <a href="https://giddh.com/help" target="_blank">Help</a>
                     </li>
                   </ul>
                 </div>
