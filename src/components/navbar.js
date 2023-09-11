@@ -130,7 +130,7 @@ const navbar = () => {
       uk: true,
       ae: true,
       menuItem: "API Integration",
-      url: "https://apidoc.giddh.com/",
+      url: "https://apidoc.giddh.com",
     },
     {
       in: true,
@@ -432,7 +432,7 @@ const navbar = () => {
                       <a href="https://giddh.com/blog/">Blog</a>
                     </li>
                     <li>
-                      <a href="https://giddh.com/help/" target="_blank">Help</a>
+                      <a href="https://giddh.com/help" target="_blank">Help</a>
                     </li>
                   </ul>
                 </div>
