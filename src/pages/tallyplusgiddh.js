@@ -22,7 +22,8 @@ const tallyPlusGiddh = () => {
                       className="img-fluid"
                       src="/img/tally-plus-giddh/tally-accounting-software-dashboard.png"
                       width={450}
-                      height={250}
+                      height="auto"
+                      alt="tally-accounting-software-dashboard"
                     />
                   </figure>
                 </div>
@@ -40,7 +41,8 @@ const tallyPlusGiddh = () => {
                       className="img-fluid"
                       src="/img/tally-plus-giddh/giddh-accounting-software-dashboard-2023.png"
                       width={450}
-                      height={250}
+                      height="auto"
+                      alt="giddh-accounting-software-dashboard"
                     />
                   </figure>
                 </div>
