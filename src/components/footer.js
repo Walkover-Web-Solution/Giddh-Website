@@ -91,6 +91,20 @@ const Footer = () => {
 
             <div className="col-xl-3 col-lg-6 col-md-12">
               <div className="d-flex flex-column gap-3">
+                <h3 className="c-fs-4 c-fw-600">Compare</h3>
+                <ul className="footer-list list-unstyled mb-3">
+                    <li>
+                      <a href={link + "/zoho-vs-giddh"}>Giddh vs Zoho</a>
+                    </li>
+                    <li>
+                      <a href={link + "/tally-vs-giddh"}>Giddh vs Tally</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+
+            <div className="col-xl-3 col-lg-6 col-md-12">
+              <div className="d-flex flex-column gap-3">
                 <h3 className="c-fs-4 c-fw-600">Download</h3>
                 <div>
                   <p>Mobile Apps</p>
@@ -226,17 +240,6 @@ const Footer = () => {
                     </div>
                   </li>
                 </ul>
-              </div>
-            </div>
-
-            <div className="col-xl-3 col-lg-6 col-md-12">
-              <div className="location">
-                <h3 className="c-fs-4 c-fw-600">Compare</h3>
-                <ul className="footer-list list-unstyled mb-3">
-                    <li>
-                      <a href={link + "/zoho-vs-giddh"}>Giddh vs Zoho</a>
-                    </li>
-                  </ul>
               </div>
             </div>
           </div>

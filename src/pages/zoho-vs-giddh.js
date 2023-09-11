@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 const zohoVsGiddh = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);  
-  const [link, setLink] = useState(false);  
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [link, setLink] = useState(false);
 
-  useEffect(() => {    
+  useEffect(() => {
     setCountry();
-   let screenWidth = window.matchMedia("(max-width: 767px)");
+    let screenWidth = window.matchMedia("(max-width: 767px)");
     showTable(screenWidth);
     screenWidth.addListener(showTable);
   }, []);
@@ -18,9 +18,9 @@ const zohoVsGiddh = () => {
       setIsSmallScreen(false);
     }
   }
-  function setCountry(){
+  function setCountry() {
     let currentLink = getCurrentSiteCountry();
-    if(currentLink){
+    if (currentLink) {
       setLink(currentLink);
     }
   }
@@ -33,7 +33,9 @@ const zohoVsGiddh = () => {
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12 order-0 justify-content-center">
                 <div className="banner-content">
-                  <h1 className="banner-content__title">Zoho Books <span className="col-dark">vs</span> GIDDH</h1>
+                  <h1 className="banner-content__title">
+                    Zoho Books <span className="col-dark">vs</span> GIDDH
+                  </h1>
                 </div>
                 <p className="col-light banner-content__description">
                   Zoho Books and Giddh are two accounting software options with
@@ -46,7 +48,7 @@ const zohoVsGiddh = () => {
               <div className="col-lg-6 col-md-12 order-1 text-center">
                 <figure>
                   <img
-                    src="/img/zoho-vs-giddh-compare-image.png"
+                    src="/img/compare-with-giddh/zoho-vs-giddh-compare-image.png"
                     className="img-fluid banner-content__img"
                     width={540}
                     height={332}
@@ -86,7 +88,7 @@ const zohoVsGiddh = () => {
                       <td width="30%"></td>
                       <td width="35%" className="position-relative">
                         <img
-                          src="/img/zoho-book-logo.svg"
+                          src="/img/compare-with-giddh/zoho-book-logo.svg"
                           className="product-logo"
                           alt="zoho-books-logo"
                           width={50}
@@ -95,7 +97,7 @@ const zohoVsGiddh = () => {
                       </td>
                       <td width="35%" className="position-relative">
                         <img
-                          src="/img/giddh-short-logo.svg"
+                          src="/img/compare-with-giddh/giddh-short-logo.svg"
                           className="product-logo"
                           alt="zoho-books-logo"
                           width={50}
@@ -108,7 +110,9 @@ const zohoVsGiddh = () => {
                 <table className="table table-bordered table-custom-border">
                   <thead>
                     <tr>
-                      <th width="30%"> </th>
+                      <th className="text-start" width="30%">
+                        Aspects
+                      </th>
                       <th width="35%" className="position-relative">
                         Zoho Books
                       </th>
@@ -121,12 +125,14 @@ const zohoVsGiddh = () => {
                     <tr>
                       <th>Pricing</th>
                       <td>
-                        Offers free plan, and paid plans are 749/mo, 1499/mo,
-                        2999/mo, 4999/mo, 7999/mo
+                        Offers free plan, and paid plans are
+                        <br /> INR 749/mo, INR 1499/mo, INR 2999/mo, INR
+                        4999/mo, INR 7999/mo
                       </td>
                       <td>
-                        Offers free plan, and paid plans are Rs 1500/year,
-                        4000/year, 10000/year, and 15000/year
+                        Offers free plan, and paid plans are <br /> INR
+                        1500/year, INR 4000/year, INR 10000/year, and INR
+                        15000/year
                       </td>
                     </tr>
                     <tr>
@@ -138,8 +144,14 @@ const zohoVsGiddh = () => {
                     </tr>
                     <tr>
                       <th>Easy search</th>
-                      <td>Not available</td>
-                      <td>Provides Universal Search feature (Ctrl G/Cmmd G)</td>
+                      <td className="col-dark-light">Not available</td>
+                      <td>
+                        Provides Universal Search feature (
+                        <code className="text-nowrap col-dark">
+                          Ctrl+G / Cmd+G
+                        </code>
+                        )
+                      </td>
                     </tr>
                     <tr>
                       <th>Multiple companies support</th>
@@ -162,12 +174,13 @@ const zohoVsGiddh = () => {
                       <th>Branch Support</th>
                       <td>Limited branch creation</td>
                       <td>Unlimited branch creation</td>
-                    </tr> 
+                    </tr>
                     <tr>
-                      <th>{ link.isIndia ? "GSTIN" : "VAT" } Support</th>
+                      <th>{link.isIndia ? "GSTIN" : "VAT"} Support</th>
                       <td>Limited as per the plan</td>
                       <td>
-                        Multiple { link.isIndia ? "GSTIN" : "VAT" } support in single branch in all plan
+                        Multiple {link.isIndia ? "GSTIN" : "VAT"} number support
+                        in single branch in all plan
                       </td>
                     </tr>
                     <tr>
@@ -190,7 +203,7 @@ const zohoVsGiddh = () => {
                     </tr>
                     <tr>
                       <th>Year Locking </th>
-                      <td>Doesn't provides year locking</td>
+                      <td className="col-dark-light">Not available</td>
                       <td>
                         Provides year locking feature, user can lock previous
                         financial year
@@ -214,7 +227,7 @@ const zohoVsGiddh = () => {
                     </tr>
                     <tr>
                       <th>Auto Paid feature</th>
-                      <td>Not available</td>
+                      <td className="col-dark-light">Not available</td>
                       <td>Auto adjustment of voucher with only one setting.</td>
                     </tr>
                   </tbody>
@@ -232,12 +245,14 @@ const zohoVsGiddh = () => {
                     </tr>
                     <tr>
                       <td>
-                        Offers free plan, and paid plans are 749/mo, 1499/mo,
-                        2999/mo, 4999/mo, 7999/mo
+                        Offers free plan, and paid plans are
+                        <br /> INR 749/mo, INR 1499/mo, INR 2999/mo, INR
+                        4999/mo, INR 7999/mo
                       </td>
                       <td>
-                        Offers free plan, and paid plans are Rs 1500/year,
-                        4000/year, 10000/year, and 15000/year
+                        Offers free plan, and paid plans are <br /> INR
+                        1500/year, INR 4000/year, INR 10000/year, and INR
+                        15000/year
                       </td>
                     </tr>
                     <tr>
@@ -257,8 +272,14 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>Not available</td>
-                      <td>Provides Universal Search feature (Ctrl G/Cmmd G)</td>
+                      <td className="col-dark-light">Not available</td>
+                      <td>
+                        Provides Universal Search feature (
+                        <code className="text-nowrap col-dark">
+                          Ctrl+G / Cmd+G
+                        </code>
+                        )
+                      </td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
@@ -296,13 +317,14 @@ const zohoVsGiddh = () => {
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
-                      { link.isIndia ? "GSTIN" : "VAT" } Support
+                        {link.isIndia ? "GSTIN" : "VAT"} Support
                       </th>
                     </tr>
                     <tr>
                       <td>Limited as per the plan</td>
                       <td>
-                        Multiple { link.isIndia ? "GSTIN" : "VAT" } support in single branch in all plan
+                        Multiple {link.isIndia ? "GSTIN" : "VAT"} number support
+                        in single branch in all plan
                       </td>
                     </tr>
                     <tr>
@@ -341,7 +363,7 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>Doesn't provides year locking</td>
+                      <td className="col-dark-light">Not available</td>
                       <td>
                         Provides year locking feature, user can lock previous
                         financial year
@@ -377,7 +399,7 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>Not available</td>
+                      <td className="col-dark-light">Not available</td>
                       <td>Auto adjustment of voucher with only one setting.</td>
                     </tr>
                   </tbody>
