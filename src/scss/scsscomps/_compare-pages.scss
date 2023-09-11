@@ -1,0 +1,171 @@
+.products {
+    padding-top: 54px;
+    &__banner {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
+      border-top-left-radius: 300px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 100px;
+      border-bottom-left-radius: 0;
+      
+        .row{  height: 70vh !important;}
+      .banner-content {
+        &__title {
+          font-size: 56px;
+          color: var(--col-white);
+          letter-spacing: 4px;
+          span{
+            font-size: 42;
+          }
+        }
+        &__description{
+          font-size: var(--c-fs-4);
+        }
+        &__img{
+          border-radius: 32px;
+          width: 450px;
+        }
+      }
+    }
+    &__compare-wrapper{
+      padding: 3rem 0;
+      color: var(--col-dark);
+
+      .comparing-table-container{
+        margin-top: 7rem;
+        table{
+          td{
+            .product-logo{
+              background: var(--col-white);
+              position: absolute;
+              z-index: 1;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 90px;
+              height: 90px;
+              padding: 12px;
+              border: 4px solid #f4f5f7;;
+              border-radius: 50%;
+            }
+            .sign-btn{
+              background-color: var(--col-primary);
+              border: 1px solid var(--col-primary);
+              color: var(--col-white);             
+              border-radius: 20px;
+              padding: 6px 20px;
+              font-size: var(--c-fs-5);
+              transition: all 150ms ease-out;
+              &:hover{
+                transform: translateY(-6px);
+                font-weight: var(--c-fw-600) ;
+                color:  var(--col-primary);
+                background-color: transparent;
+              }
+            }
+          }
+
+        }
+
+        .table-custom-border{
+          border: 3px solid #f4f5f7;
+          border-radius: 50px;         
+          border-spacing: 0;
+          border-collapse: separate;
+          overflow: hidden ;
+          thead{            
+              height: 96px;            
+            th{
+              background-color: #f4f5f7;
+              text-align: center;
+              font-size: var(--c-fs-4);
+            }
+          }     
+          th,td{
+            padding: 18px;            
+          }  
+          tr{
+            &:not(:last-child){
+              th,td{
+                padding: 18px;            
+                border-bottom: 1px solid #f4f5f7;
+              } 
+             }
+          }     
+        }
+
+      }
+
+    }
+  }
+  @media (max-width: 1399px){
+    .products {
+      &__banner {
+        border-top-left-radius: 100px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .products {
+      padding-top: 64px;
+      &__banner {
+        padding: 2rem 1rem;
+        border-top-left-radius: 0;
+        border-top-right-radius: 60px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 60px;
+
+        .row{
+          height: unset !important;
+          min-height: 70vh !important;
+        }
+
+        .banner-content {
+          &__img{
+            width: 60%;
+            min-width: 300px;
+          }
+        }
+      }
+      &__compare-wrapper{
+        padding: 3rem 0;
+        color: var(--col-dark);
+  
+        .comparing-table-container{
+          margin-top: 3rem;
+          table{
+            td{
+              .product-logo{
+                width: 75px;
+                height: 75px;                
+              }
+              .sign-btn{
+                &:hover{
+                  transform: scale(1);
+                  font-weight: var(--c-fw-400);
+                  color:  var(--col-white);
+                  background-color: var(--col-primary);
+                }
+              }
+            }
+          }
+        }
+      }            
+    }
+  }
+
+  /* Banner section background gradient */
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
