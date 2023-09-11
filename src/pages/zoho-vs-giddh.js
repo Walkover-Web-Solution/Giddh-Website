@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 const zohoVsGiddh = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [link, setLink] = useState(false);
+  const [linkUrl, setLinkUrl] = useState(false);
 
   useEffect(() => {
     setCountry();
+    setCountryUrl();
     let screenWidth = window.matchMedia("(max-width: 767px)");
     showTable(screenWidth);
     screenWidth.addListener(showTable);
@@ -22,6 +24,14 @@ const zohoVsGiddh = () => {
     let currentLink = getCurrentSiteCountry();
     if (currentLink) {
       setLink(currentLink);
+    }
+  }
+  function setCountryUrl() {
+    let currentCountryPrefixUrl = getCurrentSiteCountryUrl(
+      process.env.NEXT_PUBLIC_SITE_URL
+    );
+    if (currentCountryPrefixUrl) {
+      setLinkUrl(currentCountryPrefixUrl);
     }
   }
 
@@ -110,8 +120,7 @@ const zohoVsGiddh = () => {
                 <table className="table table-bordered table-custom-border">
                   <thead>
                     <tr>
-                      <th className="text-start" width="30%">
-                        Aspects
+                      <th width="30%">                        
                       </th>
                       <th width="35%" className="position-relative">
                         Zoho Books
@@ -126,13 +135,21 @@ const zohoVsGiddh = () => {
                       <th>Pricing</th>
                       <td>
                         Offers free plan, and paid plans are
-                        <br /> INR 749/mo, INR 1499/mo, INR 2999/mo, INR
-                        4999/mo, INR 7999/mo
+                        <br />
+                        {link.isIndia &&
+                          "₹749/mo, ₹1499/mo, ₹2999/mo, ₹4999/mo, and ₹7999/mo"}
+                        {link.isAE &&
+                          "AED 60/mo, AED 90/mo, AED 120/mo, AED 280/mo, and AED 660/mo"}
+                        {link.isUK &&
+                          "£10/mo, £20/mo, £25/mo, £85/mo, and £165/mo"}
                       </td>
                       <td>
-                        Offers free plan, and paid plans are <br /> INR
-                        1500/year, INR 4000/year, INR 10000/year, and INR
-                        15000/year
+                        Offers free plan, and paid plans are <br />
+                        {link.isIndia &&
+                          "₹1500/year, ₹4000/year, ₹10000/year, and ₹15000/year"}
+                        {link.isAE &&
+                          "AED 350/year, AED 1050/year, and AED 2100/ year"}
+                        {link.isUK && "£70/year, £210/year, and £350/year"}
                       </td>
                     </tr>
                     <tr>
@@ -230,6 +247,18 @@ const zohoVsGiddh = () => {
                       <td className="col-dark-light">Not available</td>
                       <td>Auto adjustment of voucher with only one setting.</td>
                     </tr>
+                    <tr>
+                      <th></th>
+                      <td></td>
+                      <td className="text-center">
+                        <a
+                          href={linkUrl + "/signup"}
+                          className="d-inline-block sign-btn"
+                        >
+                          Sign up free
+                        </a>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </>
@@ -244,15 +273,23 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>
+                    <td width="50%">
                         Offers free plan, and paid plans are
-                        <br /> INR 749/mo, INR 1499/mo, INR 2999/mo, INR
-                        4999/mo, INR 7999/mo
+                        <br />
+                        {link.isIndia &&
+                          "₹749/mo, ₹1499/mo, ₹2999/mo, ₹4999/mo, and ₹7999/mo"}
+                        {link.isAE &&
+                          "AED 60/mo, AED 90/mo, AED 120/mo, AED 280/mo, and AED 660/mo"}
+                        {link.isUK &&
+                          "£10/mo, £20/mo, £25/mo, £85/mo, and £165/mo"}
                       </td>
-                      <td>
-                        Offers free plan, and paid plans are <br /> INR
-                        1500/year, INR 4000/year, INR 10000/year, and INR
-                        15000/year
+                      <td width="50%">
+                        Offers free plan, and paid plans are <br />
+                        {link.isIndia &&
+                          "₹1500/year, ₹4000/year, ₹10000/year, and ₹15000/year"}
+                        {link.isAE &&
+                          "AED 350/year, AED 1050/year, and AED 2100/ year"}
+                        {link.isUK && "£70/year, £210/year, and £350/year"}
                       </td>
                     </tr>
                     <tr>
@@ -261,10 +298,10 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>
+                      <td width="50%">
                         Upgrading to a higher plan unlocks additional features.
                       </td>
-                      <td>Every paid plan unlocks all available features.</td>
+                      <td width="50%">Every paid plan unlocks all available features.</td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
@@ -272,8 +309,8 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td className="col-dark-light">Not available</td>
-                      <td>
+                      <td width="50%" className="col-dark-light">Not available</td>
+                      <td width="50%">
                         Provides Universal Search feature (
                         <code className="text-nowrap col-dark">
                           Ctrl+G / Cmd+G
@@ -287,8 +324,8 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>Need to purchase plan separately for each company</td>
-                      <td>
+                      <td width="50%">Need to purchase plan separately for each company</td>
+                      <td width="50%">
                         Provides multiple companies support in one subscription
                       </td>
                     </tr>
@@ -298,10 +335,10 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>
+                      <td width="50%">
                         Company sharing is limited based on the plan you choose.
                       </td>
-                      <td>
+                      <td width="50%">
                         Unlimited company sharing feature is available in all
                         plan
                       </td>
@@ -312,8 +349,8 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>Limited branch creation</td>
-                      <td>Unlimited branch creation</td>
+                      <td width="50%">Limited branch creation</td>
+                      <td width="50%">Unlimited branch creation</td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
@@ -321,8 +358,8 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>Limited as per the plan</td>
-                      <td>
+                      <td width="50%">Limited as per the plan</td>
+                      <td width="50%">
                         Multiple {link.isIndia ? "GSTIN" : "VAT"} number support
                         in single branch in all plan
                       </td>
@@ -333,8 +370,8 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>Limited warehouse creation</td>
-                      <td>Unlimited warehouse creation</td>
+                      <td width="50%">Limited warehouse creation</td>
+                      <td width="50%">Unlimited warehouse creation</td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
@@ -342,11 +379,11 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>
+                      <td width="50%">
                         Need to purchase Zoho books and Zoho inventory
                         separately to manage the inventory
                       </td>
-                      <td>Easy to manage inventory in single software</td>
+                      <td width="50%">Easy to manage inventory in single software</td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
@@ -354,8 +391,8 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>Limited</td>
-                      <td>Unlimited</td>
+                      <td width="50%">Limited</td>
+                      <td width="50%">Unlimited</td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
@@ -363,8 +400,8 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td className="col-dark-light">Not available</td>
-                      <td>
+                      <td width="50%" className="col-dark-light">Not available</td>
+                      <td width="50%">
                         Provides year locking feature, user can lock previous
                         financial year
                       </td>
@@ -375,11 +412,11 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>
+                      <td width="50%">
                         Provides an adjustment feature, but it is limited to
                         certain vouchers.
                       </td>
-                      <td>
+                      <td width="50%">
                         Provides an adjustment feature that can be used with all
                         types of vouchers.
                       </td>
@@ -390,8 +427,8 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td>Only Voucher based entry system</td>
-                      <td>Ledger & Voucher based entry system</td>
+                      <td width="50%">Only Voucher based entry system</td>
+                      <td width="50%">Ledger & Voucher based entry system</td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
@@ -399,8 +436,18 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td className="col-dark-light">Not available</td>
-                      <td>Auto adjustment of voucher with only one setting.</td>
+                      <td width="50%" className="col-dark-light">Not available</td>
+                      <td width="50%">Auto adjustment of voucher with only one setting.</td>
+                    </tr>
+                    <tr>
+                      <td colSpan="2" className="text-center">
+                        <a
+                          href={linkUrl + "/signup"}
+                          className="d-inline-block sign-btn"
+                        >
+                          Sign up free
+                        </a>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
