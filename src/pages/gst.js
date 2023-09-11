@@ -1,10 +1,18 @@
 import { useState } from "react";
 import { MdRemove, MdAdd } from "react-icons/md";
+import { usePathname } from "next/navigation";
 
 const gst = () => {
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
   const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
+
+  // To get active route
+  const pathname = usePathname();
+  const startPath = pathname.split("/");
+  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
+  let isAE = startPath[1] === "ae";
+  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
   return (
     <>
       <section className="container mb-5 ">
@@ -146,7 +154,7 @@ const gst = () => {
             Make GST Return Process Automatic.
           </div>
           <div>
-            <a href="/signup" className="c-fs-4 tax-hero-container__try_now_btn">Try Now</a>
+            <a href={ link + "/signup"} className="c-fs-4 tax-hero-container__try_now_btn">Try Now</a>
           </div>
           <span className="c-fs-4 m-3">
             Cloud Based Accounting Software to File GST Return Online

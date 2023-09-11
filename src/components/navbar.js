@@ -224,7 +224,7 @@ const navbar = () => {
           <a
             className="navbar--navbar_brand"
             aria-label="Giddh Brand logo"
-            href={link + "/"}
+            href={ isIndia ? "/" : link}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
