@@ -19,8 +19,8 @@ export default function PostItem({ post }) {
   //  articleText end code
 
   function getBlogStyle(titleText){
-    let textLength = titleText.length;
-    let wordLength = titleText.split(" ").length;
+    let textLength = titleText?.length;
+    let wordLength = titleText?.split(" ").length;
 
     if(wordLength > 8 || textLength > 48){
       return " blog-card--large";
@@ -50,14 +50,14 @@ export default function PostItem({ post }) {
         </div>
         <div className="blog-card-footer">
           <div className="blog-card-tags">
-            {post.category?.map((category, idx) => (
+            {post?.tag?.map((category, idx) => (
               <span className="bg-tags" key={idx}>
                 {category}
               </span>
             ))}
           </div>
           <span>
-            <MdDateRange /> <Date date={parseISO(post.date)} />
+            <MdDateRange /> <Date date={parseISO(post.date)}/>
           </span>
         </div>
       </div>

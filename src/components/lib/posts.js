@@ -59,13 +59,13 @@ export function fetchPostContent() {
 export function countPosts(tag) {
 
   return fetchPostContent().filter(
-    (it) => !tag || (it.tags && it.tags.includes(tag))
+    (it) => !tag || (it.tag && it.tag.includes(tag))
   ).length;
 }
 
 export function listPostContent(page, limit, tag) {
   return fetchPostContent()
-      .filter((it) => !tag || (it.tags && it.tags.includes(tag)))
+      .filter((it) => !tag || (it.tag && it.tag.includes(tag)))
       .slice((page - 1) * limit, page * limit);
 }
 
