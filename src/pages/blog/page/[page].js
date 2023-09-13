@@ -1,26 +1,29 @@
-
-
-import { listPostContent, countPosts } from '../../../components/lib/posts'
+import { listPostContent, countPosts } from "../../../components/lib/posts";
 // import { listTags } from "../../../components/lib/tags";
 import Layout from "../../../components/blogs/layout";
 import PostList from "../../../components/blogs/postList";
 import config from "../../../components/lib/config";
 // import TagPostList from '@/components/tagPostList';
-// import Head from "next/head";
+import Head from "next/head";
 export default function Index({ posts, tags, pagination }) {
   const url = "/blog";
-  const title = "All posts";
+  const title = "All You Need to Know About Online Accounting Software by Giddh";
   return (
-    <Layout>
-      <PostList posts={posts} tags={tags} pagination={pagination} />
-      {/* <TagPostList post ={posts} tags={tags} pagination={pagination} /> */}
-    </Layout>
+    <>
+      <Layout>
+      <Head>
+        <title>{title}</title>
+      </Head>
+        <PostList posts={posts} tags={tags} pagination={pagination} />
+        {/* <TagPostList post ={posts} tags={tags} pagination={pagination} /> */}
+      </Layout>
+    </>
   );
-} 
+}
 
-export async function getStaticProps({params}) {
-    const page = parseInt(params.page);
-    const posts = listPostContent(page, config.posts_per_page);
+export async function getStaticProps({ params }) {
+  const page = parseInt(params.page);
+  const posts = listPostContent(page, config.posts_per_page);
   const pagination = {
     current: page,
     pages: Math.ceil(countPosts() / config.posts_per_page),
@@ -35,12 +38,12 @@ export async function getStaticProps({params}) {
   };
 }
 export const getStaticPaths = async () => {
-    const pages = Math.ceil(countPosts() / config.posts_per_page);
-    const paths = Array.from(Array(pages - 1).keys()).map((it) => ({
-      params: { page: (it + 2).toString() },
-    }));
-    return {
-      paths: paths,
-      fallback: false,
-    };
+  const pages = Math.ceil(countPosts() / config.posts_per_page);
+  const paths = Array.from(Array(pages - 1).keys()).map((it) => ({
+    params: { page: (it + 2).toString() },
+  }));
+  return {
+    paths: paths,
+    fallback: false,
   };
+};

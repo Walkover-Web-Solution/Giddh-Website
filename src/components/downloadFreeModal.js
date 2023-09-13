@@ -77,6 +77,7 @@ const downloadFreeModal = () => {
                   src="/img/laptop.png"
                   alt="laptop-with-giddh-dashboard-image"
                   width="200px"
+                  height="auto"
                 />
               </figure>
               <div className="d-flex justify-content-center align-items-center column-gap-2 mt-4 mb-2">

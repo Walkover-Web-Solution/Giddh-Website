@@ -92,13 +92,6 @@ const navbar = () => {
     },
     {
       in: true,
-      uk: true,
-      ae: true,
-      menuItem: "All Features",
-      url: "/all-features",
-    },
-    {
-      in: true,
       uk: false,
       ae: false,
       menuItem: "GST Compliances",
@@ -137,7 +130,7 @@ const navbar = () => {
       uk: true,
       ae: true,
       menuItem: "API Integration",
-      url: "https://apidoc.giddh.com/",
+      url: "https://apidoc.giddh.com",
     },
     {
       in: true,
@@ -167,6 +160,20 @@ const navbar = () => {
       menuItem: "Reports & Analysis",
       url: "/financial-reporting",
     },
+    {
+      in: true,
+      uk: false,
+      ae: false,
+      menuItem: "Sync Tally to Giddh",
+      url: "/tallyplusgiddh"
+    },
+    {
+      in: true,
+      uk: true,
+      ae: true,
+      menuItem: "All Features",
+      url: "/all-features",
+    }
   ];
   // List of path where navbar Background will be transparent and turn Background white on scroll
   let specificPath =
@@ -217,7 +224,7 @@ const navbar = () => {
           <a
             className="navbar--navbar_brand"
             aria-label="Giddh Brand logo"
-            href={link + "/"}
+            href={ isIndia ? "/" : link}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -425,7 +432,7 @@ const navbar = () => {
                       <a href="https://giddh.com/blog/">Blog</a>
                     </li>
                     <li>
-                      <a href="https://giddh.com/help/" target="_blank">Help</a>
+                      <a href="https://giddh.com/help" target="_blank">Help</a>
                     </li>
                   </ul>
                 </div>
