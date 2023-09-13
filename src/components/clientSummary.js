@@ -27,7 +27,7 @@ const clientSummary = () => {
       <section className="container-fluid client-summary">
         <div className="container">
           <h2 className="client-summary__title text-center col-primary">
-            Our top clients
+            Our few clients
           </h2>
           <div className="client-summary__content-wrapper">
             <div className="row row-gap-5 ">
