@@ -19,8 +19,8 @@ export default function Index({ posts, tag, pagination, page }) {
       <div className="blog">
 <div className={"container blog-home-container"}>
   <div className={"posts"}>
+    <button className="d-inline-block btn blog-container__back-btn mb-4" onClick={handleClick} ><MdKeyboardArrowLeft />Back</button>
     <div className={"post-list"}>
-    <button className="btn btn-dark" onClick={handleClick} ><MdKeyboardArrowLeft />Back</button>
       {posts?.map((it, i) => (                        
           <PostItem key={i} post={it} />            
       ))}
