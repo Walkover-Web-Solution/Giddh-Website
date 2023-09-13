@@ -1,10 +1,10 @@
 .client-summary{
-   padding: 4rem 0 8rem 0;
+   padding: 5rem 0 7rem 0;
     &__title{
        font-size: var(--heading); 
     }
     &__content-wrapper{
-        margin-top: 150px;
+        margin-top: 80px;
         .column-wrapper{
             .client{
                figure{
@@ -15,8 +15,6 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                // transform: translateY(-60px);
-            
 
                 img{
                     object-fit: contain;
@@ -30,14 +28,33 @@
             }
             &:nth-child(even){
                 .client{
-                    transform: translateY(60px);
+                    // transform: translateY(20px);
+                    // animation: jhoombarabar-bottom-elements 2.8s ease-in alternate infinite;
                 }
                }
                &:nth-child(odd){
                 .client{
-                    transform: translateY(-60px);
+                    // transform: translateY(-20px);
+                    // animation: jhoombarabar-top-elements 2.8s ease-in alternate infinite;
                 }
                }
         }
     }
 }
+// @keyframes jhoombarabar-top-elements {
+//     from{
+//         transform: translateY(-20px);
+//     }
+//     to{
+//         transform: translateY(20px);
+//     }
+// }
+
+// @keyframes jhoombarabar-bottom-elements {
+//     from{
+//         transform: translateY(20px);
+//     }
+//     to{
+//         transform: translateY(-20px);
+//     }
+// }
