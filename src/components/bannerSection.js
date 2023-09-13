@@ -55,6 +55,7 @@ const bannerSection = () => {
                   data-tf-transitive-search-params
                   data-tf-medium="snippet"
                   data-tf-hidden={ utm }
+                  data-tf-loaded="true"
                 >
                   Contact Sales
                 </button>
