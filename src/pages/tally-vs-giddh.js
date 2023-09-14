@@ -132,8 +132,8 @@ const tallyVsGiddh = () => {
                   <tbody>
                     <tr>
                       <th>Entry System</th>
-                      <td>Voucher based with entries</td>
-                      <td>Ledger/Voucher based entry system</td>
+                      <td>Only Voucher based</td>
+                      <td>Both Ledger and Voucher based</td>
                     </tr>
                     <tr>
                       <th>Easy search</th>
@@ -254,8 +254,8 @@ const tallyVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%">Voucher based with entries</td>
-                      <td width="50%">Ledger/Voucher based entry system</td>
+                      <td width="50%">Only Voucher based</td>
+                      <td width="50%">Both Ledger and Voucher based</td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center">

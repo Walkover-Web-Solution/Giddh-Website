@@ -179,7 +179,7 @@ const zohoVsGiddh = () => {
                     <tr>
                       <th>Company sharing</th>
                       <td>
-                        Company sharing is limited based on the plan you choose.
+                        Company sharing is limited based on the plan you choose
                       </td>
                       <td>
                         Unlimited company sharing feature is available in all
@@ -210,7 +210,7 @@ const zohoVsGiddh = () => {
                         Need to purchase Zoho books and Zoho inventory
                         separately to manage the inventory
                       </td>
-                      <td>Easy to manage inventory in single software</td>
+                      <td>Easy to manage inventory in a single software</td>
                     </tr>
                     <tr>
                       <th>Year Locking </th>
@@ -224,11 +224,11 @@ const zohoVsGiddh = () => {
                       <th>Adjustment feature</th>
                       <td>
                         Provides an adjustment feature, but it is limited to
-                        certain vouchers.
+                        certain vouchers
                       </td>
                       <td>
                         Provides an adjustment feature that can be used with all
-                        types of vouchers.
+                        types of vouchers
                       </td>
                     </tr>
                     <tr>
@@ -239,7 +239,7 @@ const zohoVsGiddh = () => {
                     <tr>
                       <th>Auto Paid feature</th>
                       <td className="col-dark-light">Not available</td>
-                      <td>Auto adjustment of voucher with only one setting.</td>
+                      <td>Auto adjustment of voucher with only one setting</td>
                     </tr>
                     <tr>
                       <th>Custom Permission</th>
@@ -351,7 +351,7 @@ const zohoVsGiddh = () => {
                     </tr>
                     <tr>
                       <td width="50%">
-                        Company sharing is limited based on the plan you choose.
+                        Company sharing is limited based on the plan you choose
                       </td>
                       <td width="50%">
                         Unlimited company sharing feature is available in all
@@ -399,7 +399,7 @@ const zohoVsGiddh = () => {
                         separately to manage the inventory
                       </td>
                       <td width="50%">
-                        Easy to manage inventory in single software
+                        Easy to manage inventory in a single software
                       </td>
                     </tr>
                     <tr>
@@ -424,11 +424,11 @@ const zohoVsGiddh = () => {
                     <tr>
                       <td width="50%">
                         Provides an adjustment feature, but it is limited to
-                        certain vouchers.
+                        certain vouchers
                       </td>
                       <td width="50%">
                         Provides an adjustment feature that can be used with all
-                        types of vouchers.
+                        types of vouchers
                       </td>
                     </tr>
                     <tr>
@@ -450,7 +450,7 @@ const zohoVsGiddh = () => {
                         Not available
                       </td>
                       <td width="50%">
-                        Auto adjustment of voucher with only one setting.
+                        Auto adjustment of voucher with only one setting
                       </td>
                     </tr>
 
