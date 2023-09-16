@@ -34,12 +34,12 @@ export default function TestPage({ source, title, date, author, tags }) {
 
   const handleClick = () => {
     router.back();
-    // router.push('/blog');
   };
   return (
     <>
       <Head>
         <title>{title}</title>
+        <meta property="og:title" content={`Explore the world of ${title} Through our blog and stay informed about the latest developments, expert insights, and valuable tips that matter most. visit at GIDHH -The Best Accounting Software`} key="title" />
       </Head>
       <div className="wrapper container blog-container">
         <a
@@ -84,14 +84,8 @@ export default function TestPage({ source, title, date, author, tags }) {
 }
 
 export async function getStaticPaths() {
-  // const paths = [];
 
   const paths = fetchPostContent().map((it) => "/blog/" + it.staticPath);
-  // paths.push({
-  //   params: {
-  //     slug: "mastering-the-art-of-effective-communication-unveiling-the-secrets-to-successful-sms-campaigns-for-engaging-audiences"
-  //   },
-  // });
 
   return {
     paths,
@@ -104,15 +98,12 @@ export async function getStaticProps(slug) {
   const matterResult = matter(source, {
     engines: {
       yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }),
-      // engines: { yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object }
     },
   });
-  // const thumbnailImage = matterResult?.data?.thumbnail;
-  // // const youtube = matterResult?.data?.youtube;
+
   const title = matterResult?.data?.title;
   const author = matterResult?.data?.author;
   const content = matterResult?.content;
-
   var date = new Date(matterResult?.data?.date);
   date = format(date, "LLLL d, yyyy");
   const tags = matterResult?.data?.tag;
@@ -127,5 +118,4 @@ export async function getStaticProps(slug) {
       tags: tags || "",
     },
   };
-  // return {props :{source: "hello"}}
 }

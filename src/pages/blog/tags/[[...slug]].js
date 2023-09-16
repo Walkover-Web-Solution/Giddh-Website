@@ -5,6 +5,7 @@ import Pagination from "../../../components/blogs/pagination";
 import { useRouter } from "next/router";
 import PostItem from "../../../components/blogs/postItem";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import Head from "next/head";
 export default function Index({ posts, tag, pagination, page }) {
  const router  = useRouter();
 
@@ -15,7 +16,11 @@ export default function Index({ posts, tag, pagination, page }) {
   const url = `/blog/tags/${tag}` + (page ? `/${page}` : "");
 //   const title = tag.name; 
   return (
-
+      <>
+       <Head>
+        <title>{tag}</title>
+        <meta property="og:title" content={`Explore our collection of articles tagged under ${tag} at GIDHH -The Best Accounting Software. Discover insightful content, tips, and resources related to ${tag}.`} key="title" />
+      </Head>
       <div className="blog">
 <div className={"container blog-home-container"}>
   <div className={"posts"}>
@@ -39,6 +44,7 @@ export default function Index({ posts, tag, pagination, page }) {
   </div>
 </div>
 </div>
+</>
   );
 }
 
