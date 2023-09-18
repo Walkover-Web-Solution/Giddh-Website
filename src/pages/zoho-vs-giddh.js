@@ -120,8 +120,7 @@ const zohoVsGiddh = () => {
                 <table className="table table-bordered table-custom-border">
                   <thead>
                     <tr>
-                      <th width="30%">                        
-                      </th>
+                      <th width="30%"></th>
                       <th width="35%" className="position-relative">
                         Zoho Books
                       </th>
@@ -137,11 +136,11 @@ const zohoVsGiddh = () => {
                         Offers free plan, and paid plans are
                         <br />
                         {link.isIndia &&
-                          "₹749/mo, ₹1499/mo, ₹2999/mo, ₹4999/mo, and ₹7999/mo"}
+                          "₹8988/year, ₹17988/year, ₹35988/year, ₹59988/year, and ₹95988/year"}
                         {link.isAE &&
-                          "AED 60/mo, AED 90/mo, AED 120/mo, AED 280/mo, and AED 660/mo"}
+                          "AED 720/year, AED 1080/year, AED 1440/year, AED 3360/year, and AED 7920/year"}
                         {link.isUK &&
-                          "£10/mo, £20/mo, £25/mo, £85/mo, and £165/mo"}
+                          "£120/year, £240/year, £300/year, £1020/year, and £1980/year"}
                       </td>
                       <td>
                         Offers free plan, and paid plans are <br />
@@ -180,7 +179,7 @@ const zohoVsGiddh = () => {
                     <tr>
                       <th>Company sharing</th>
                       <td>
-                        Company sharing is limited based on the plan you choose.
+                        Company sharing is limited based on the plan you choose
                       </td>
                       <td>
                         Unlimited company sharing feature is available in all
@@ -211,12 +210,7 @@ const zohoVsGiddh = () => {
                         Need to purchase Zoho books and Zoho inventory
                         separately to manage the inventory
                       </td>
-                      <td>Easy to manage inventory in single software</td>
-                    </tr>
-                    <tr>
-                      <th>Customer & Vendor creation</th>
-                      <td>Limited</td>
-                      <td>Unlimited</td>
+                      <td>Easy to manage inventory in a single software</td>
                     </tr>
                     <tr>
                       <th>Year Locking </th>
@@ -230,11 +224,11 @@ const zohoVsGiddh = () => {
                       <th>Adjustment feature</th>
                       <td>
                         Provides an adjustment feature, but it is limited to
-                        certain vouchers.
+                        certain vouchers
                       </td>
                       <td>
                         Provides an adjustment feature that can be used with all
-                        types of vouchers.
+                        types of vouchers
                       </td>
                     </tr>
                     <tr>
@@ -245,7 +239,22 @@ const zohoVsGiddh = () => {
                     <tr>
                       <th>Auto Paid feature</th>
                       <td className="col-dark-light">Not available</td>
-                      <td>Auto adjustment of voucher with only one setting.</td>
+                      <td>Auto adjustment of voucher with only one setting</td>
+                    </tr>
+                    <tr>
+                      <th>Custom Permission</th>
+                      <td>Limited</td>
+                      <td>Highly customizable</td>
+                    </tr>
+                    <tr>
+                      <th>Universal Date</th>
+                      <td className="col-dark-light">Not available</td>
+                      <td>Available</td>
+                    </tr>
+                    <tr>
+                      <th>Chat support</th>
+                      <td>Only available in higher plan</td>
+                      <td>Available in all plan</td>
                     </tr>
                     <tr>
                       <th></th>
@@ -273,15 +282,15 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                    <td width="50%">
+                      <td width="50%">
                         Offers free plan, and paid plans are
                         <br />
                         {link.isIndia &&
-                          "₹749/mo, ₹1499/mo, ₹2999/mo, ₹4999/mo, and ₹7999/mo"}
+                          "₹8988/year, ₹17988/year, ₹35988/year, ₹59988/year, and ₹95988/year"}
                         {link.isAE &&
-                          "AED 60/mo, AED 90/mo, AED 120/mo, AED 280/mo, and AED 660/mo"}
+                          "AED 720/year, AED 1080/year, AED 1440/year, AED 3360/year, and AED 7920/year"}
                         {link.isUK &&
-                          "£10/mo, £20/mo, £25/mo, £85/mo, and £165/mo"}
+                          "£120/year, £240/year, £300/year, £1020/year, and £1980/year"}
                       </td>
                       <td width="50%">
                         Offers free plan, and paid plans are <br />
@@ -301,7 +310,9 @@ const zohoVsGiddh = () => {
                       <td width="50%">
                         Upgrading to a higher plan unlocks additional features.
                       </td>
-                      <td width="50%">Every paid plan unlocks all available features.</td>
+                      <td width="50%">
+                        Every paid plan unlocks all available features.
+                      </td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
@@ -309,7 +320,9 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">Not available</td>
+                      <td width="50%" className="col-dark-light">
+                        Not available
+                      </td>
                       <td width="50%">
                         Provides Universal Search feature (
                         <code className="text-nowrap col-dark">
@@ -324,7 +337,9 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%">Need to purchase plan separately for each company</td>
+                      <td width="50%">
+                        Need to purchase plan separately for each company
+                      </td>
                       <td width="50%">
                         Provides multiple companies support in one subscription
                       </td>
@@ -336,7 +351,7 @@ const zohoVsGiddh = () => {
                     </tr>
                     <tr>
                       <td width="50%">
-                        Company sharing is limited based on the plan you choose.
+                        Company sharing is limited based on the plan you choose
                       </td>
                       <td width="50%">
                         Unlimited company sharing feature is available in all
@@ -383,16 +398,9 @@ const zohoVsGiddh = () => {
                         Need to purchase Zoho books and Zoho inventory
                         separately to manage the inventory
                       </td>
-                      <td width="50%">Easy to manage inventory in single software</td>
-                    </tr>
-                    <tr>
-                      <th colspan="2" className="text-center bg-light c-fs-4">
-                        Customer & Vendor creation
-                      </th>
-                    </tr>
-                    <tr>
-                      <td width="50%">Limited</td>
-                      <td width="50%">Unlimited</td>
+                      <td width="50%">
+                        Easy to manage inventory in a single software
+                      </td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center bg-light c-fs-4">
@@ -400,7 +408,9 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">Not available</td>
+                      <td width="50%" className="col-dark-light">
+                        Not available
+                      </td>
                       <td width="50%">
                         Provides year locking feature, user can lock previous
                         financial year
@@ -414,11 +424,11 @@ const zohoVsGiddh = () => {
                     <tr>
                       <td width="50%">
                         Provides an adjustment feature, but it is limited to
-                        certain vouchers.
+                        certain vouchers
                       </td>
                       <td width="50%">
                         Provides an adjustment feature that can be used with all
-                        types of vouchers.
+                        types of vouchers
                       </td>
                     </tr>
                     <tr>
@@ -436,9 +446,44 @@ const zohoVsGiddh = () => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">Not available</td>
-                      <td width="50%">Auto adjustment of voucher with only one setting.</td>
+                      <td width="50%" className="col-dark-light">
+                        Not available
+                      </td>
+                      <td width="50%">
+                        Auto adjustment of voucher with only one setting
+                      </td>
                     </tr>
+
+                    <tr>
+                      <th colspan="2" className="text-center bg-light c-fs-4">
+                        Custom Permission
+                      </th>
+                    </tr>
+                    <tr>
+                      <td width="50%">Limited</td>
+                      <td width="50%">Highly customizable</td>
+                    </tr>
+                    <tr>
+                      <th colspan="2" className="text-center bg-light c-fs-4">
+                        Universal Date
+                      </th>
+                    </tr>
+                    <tr>
+                      <td width="50%" className="col-dark-light">
+                        Not available
+                      </td>
+                      <td width="50%">Available</td>
+                    </tr>
+                    <tr>
+                      <th colspan="2" className="text-center bg-light c-fs-4">
+                        Chat support
+                      </th>
+                    </tr>
+                    <tr>
+                      <td width="50%">Only available in higher plan</td>
+                      <td width="50%">Available in all plan</td>
+                    </tr>
+
                     <tr>
                       <td colSpan="2" className="text-center">
                         <a

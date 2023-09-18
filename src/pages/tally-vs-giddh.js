@@ -27,7 +27,9 @@ const tallyVsGiddh = () => {
     }
   }
   function setCountryUrl() {
-    let currentCountryPrefixUrl = getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL);
+    let currentCountryPrefixUrl = getCurrentSiteCountryUrl(
+      process.env.NEXT_PUBLIC_SITE_URL
+    );
     if (currentCountryPrefixUrl) {
       setLinkUrl(currentCountryPrefixUrl);
     }
@@ -118,8 +120,7 @@ const tallyVsGiddh = () => {
                 <table className="table table-bordered table-custom-border">
                   <thead>
                     <tr>
-                      <th width="30%">                        
-                      </th>
+                      <th width="30%"></th>
                       <th width="35%" className="position-relative">
                         Tally
                       </th>
@@ -131,13 +132,19 @@ const tallyVsGiddh = () => {
                   <tbody>
                     <tr>
                       <th>Entry System</th>
-                      <td>Voucher based with entries</td>
-                      <td>Ledger/Voucher based entry system</td>
+                      <td>Only Voucher based</td>
+                      <td>Both Ledger and Voucher based</td>
                     </tr>
                     <tr>
                       <th>Easy search</th>
                       <td className="col-dark-light">Not Available</td>
-                      <td>Provides Universal Search feature (<code className="text-nowrap col-dark">Ctrl+G / Cmd+G</code>)</td>
+                      <td>
+                        Provides Universal Search feature (
+                        <code className="text-nowrap col-dark">
+                          Ctrl+G / Cmd+G
+                        </code>
+                        )
+                      </td>
                     </tr>
                     <tr>
                       <th>User friendly</th>
@@ -151,16 +158,21 @@ const tallyVsGiddh = () => {
                     </tr>
                     <tr>
                       <th>Mobile App</th>
-                       <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light">Not Available</td>
                       <td>For both Android and iOS</td>
                     </tr>
                     <tr>
                       <th>Company sharing</th>
-                       <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light">Not Available</td>
                       <td>
                         Unlimited company sharing feature is available in all
                         plan
                       </td>
+                    </tr>
+                    <tr>
+                      <th>Customizable Permission</th>
+                      <td className="col-dark-light">Not Available</td>
+                      <td>Available</td>
                     </tr>
                     <tr>
                       <th>Multi-user and multiple PCs edition</th>
@@ -179,13 +191,13 @@ const tallyVsGiddh = () => {
                         single branch
                       </td>
                       <td>
-                        Multiple {link.isIndia ? "GSTIN" : "VAT"} number support in
-                        single branch in all plan
+                        Multiple {link.isIndia ? "GSTIN" : "VAT"} number support
+                        in single branch in all plan
                       </td>
                     </tr>
                     <tr>
                       <th>Auto fetching of transactions</th>
-                       <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light">Not Available</td>
                       <td>Available for ICICI Bank</td>
                     </tr>
                     <tr>
@@ -195,26 +207,38 @@ const tallyVsGiddh = () => {
                     </tr>
                     <tr>
                       <th>Real Time dashboard</th>
-                       <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light">Not Available</td>
                       <td>Available</td>
                     </tr>
                     <tr>
                       <th>Single ledger sharing</th>
-                       <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light">Not Available</td>
                       <td>
                         User can share single ledger from Email and by creating
                         magic link
                       </td>
                     </tr>
                     <tr>
-                      <th>Attachment with invoice</th>
-                       <td className="col-dark-light">Not Available</td>
+                      <th>Attachment with Bills</th>
+                      <td className="col-dark-light">Not Available</td>
                       <td>User can add attachment with the invoice</td>
+                    </tr>
+                    <tr>
+                      <th>Shopify integration</th>
+                      <td>Third party provides the integration</td>
+                      <td>Available</td>
                     </tr>
                     <tr>
                       <th></th>
                       <td></td>
-                      <td className="text-center"><a href={ linkUrl + "/signup"} className="d-inline-block sign-btn">Sign up free</a></td>
+                      <td className="text-center">
+                        <a
+                          href={linkUrl + "/signup"}
+                          className="d-inline-block sign-btn"
+                        >
+                          Sign up free
+                        </a>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -225,59 +249,98 @@ const tallyVsGiddh = () => {
                 <table className="table table-bordered table-custom-border">
                   <tbody>
                     <tr>
-                      <th colspan="2" className="text-center">Entry System</th>
+                      <th colspan="2" className="text-center">
+                        Entry System
+                      </th>
                     </tr>
                     <tr>
-                      <td width="50%">Voucher based with entries</td>
-                      <td width="50%">Ledger/Voucher based entry system</td>
+                      <td width="50%">Only Voucher based</td>
+                      <td width="50%">Both Ledger and Voucher based</td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Easy search</th>
+                      <th colspan="2" className="text-center">
+                        Easy search
+                      </th>
                     </tr>
                     <tr>
-                       <td width="50%" className="col-dark-light">Not Available</td>
-                      <td width="50%">Provides Universal Search feature (<code className="text-nowrap col-dark">Ctrl+G / Cmd+G</code>)</td>
+                      <td width="50%" className="col-dark-light">
+                        Not Available
+                      </td>
+                      <td width="50%">
+                        Provides Universal Search feature (
+                        <code className="text-nowrap col-dark">
+                          Ctrl+G / Cmd+G
+                        </code>
+                        )
+                      </td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">User friendly</th>
+                      <th colspan="2" className="text-center">
+                        User friendly
+                      </th>
                     </tr>
                     <tr>
-                      <td width="50%">Required accounting knowledge and expertise</td>
+                      <td width="50%">
+                        Required accounting knowledge and expertise
+                      </td>
                       <td width="50%">Anyone can use it easily</td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Accessibility</th>
+                      <th colspan="2" className="text-center">
+                        Accessibility
+                      </th>
                     </tr>
                     <tr>
                       <td width="50%">Only from desktop</td>
-                      <td width="50%">From any device with internet connection</td>
+                      <td width="50%">
+                        From any device with internet connection
+                      </td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Mobile App</th>
+                      <th colspan="2" className="text-center">
+                        Mobile App
+                      </th>
                     </tr>
                     <tr>
-                       <td width="50%" className="col-dark-light">Not Available</td>
+                      <td width="50%" className="col-dark-light">
+                        Not Available
+                      </td>
                       <td width="50%">For both Android and iOS</td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Company sharing</th>
+                      <th colspan="2" className="text-center">
+                        Company sharing
+                      </th>
                     </tr>
                     <tr>
-                       <td width="50%" className="col-dark-light">Not Available</td>
+                      <td width="50%" className="col-dark-light">
+                        Not Available
+                      </td>
                       <td width="50%">
                         Unlimited company sharing feature is available in all
                         plan
                       </td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Multi-user and multiple PCs edition</th>
+                      <th colspan="2" className="text-center">Customizable Permission</th>
+                    </tr>
+                    <tr>
+                      <td width="50%" className="col-dark-light">Not Available</td>
+                      <td width="50%">Available</td>
+                    </tr>
+                    <tr>
+                      <th colspan="2" className="text-center">
+                        Multi-user and multiple PCs edition
+                      </th>
                     </tr>
                     <tr>
                       <td width="50%">Only available in Gold plan</td>
                       <td width="50%">Available in all plan</td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Branch Support</th>
+                      <th colspan="2" className="text-center">
+                        Branch Support
+                      </th>
                     </tr>
                     <tr>
                       <td width="50%">Limited as per the version</td>
@@ -294,50 +357,84 @@ const tallyVsGiddh = () => {
                         single branch
                       </td>
                       <td width="50%">
-                        Multiple {link.isIndia ? "GSTIN" : "VAT"} number support in
-                        single branch in all plan
+                        Multiple {link.isIndia ? "GSTIN" : "VAT"} number support
+                        in single branch in all plan
                       </td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Auto fetching of transactions</th>
+                      <th colspan="2" className="text-center">
+                        Auto fetching of transactions
+                      </th>
                     </tr>
                     <tr>
-                       <td width="50%" className="col-dark-light">Not Available</td>
+                      <td width="50%" className="col-dark-light">
+                        Not Available
+                      </td>
                       <td width="50%">Available for ICICI Bank</td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Inventory with variant</th>
+                      <th colspan="2" className="text-center">
+                        Inventory with variant
+                      </th>
                     </tr>
                     <tr>
                       <td width="50%">Need to purchase add-on</td>
                       <td width="50%">Available in all plan</td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Real Time dashboard</th>
+                      <th colspan="2" className="text-center">
+                        Real Time dashboard
+                      </th>
                     </tr>
                     <tr>
-                       <td width="50%" className="col-dark-light">Not Available</td>
+                      <td width="50%" className="col-dark-light">
+                        Not Available
+                      </td>
                       <td width="50%">Available</td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Single ledger sharing</th>
+                      <th colspan="2" className="text-center">
+                        Single ledger sharing
+                      </th>
                     </tr>
                     <tr>
-                       <td width="50%" className="col-dark-light">Not Available</td>
+                      <td width="50%" className="col-dark-light">
+                        Not Available
+                      </td>
                       <td width="50%">
                         User can share single ledger from Email and by creating
                         magic link
                       </td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Attachment with invoice</th>
+                      <th colspan="2" className="text-center">
+                      Attachment with Bills
+                      </th>
                     </tr>
                     <tr>
-                       <td width="50%" className="col-dark-light">Not Available</td>
-                      <td width="50%">User can add attachment with the invoice</td>
+                      <td width="50%" className="col-dark-light">
+                        Not Available
+                      </td>
+                      <td width="50%">
+                      User can add attachment with the invoice
+                      </td>
                     </tr>
                     <tr>
-                      <td colSpan="2" className="text-center"><a href={ linkUrl + "/signup"} className="d-inline-block sign-btn">Sign up free</a></td>
+                      <th colspan="2" className="text-center">Shopify integration</th>
+                    </tr>
+                    <tr>
+                      <td width="50%">Third party provides the integration</td>
+                      <td width="50%">Available</td>
+                    </tr>
+                    <tr>
+                      <td colSpan="2" className="text-center">
+                        <a
+                          href={linkUrl + "/signup"}
+                          className="d-inline-block sign-btn"
+                        >
+                          Sign up free
+                        </a>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
