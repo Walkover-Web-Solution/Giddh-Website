@@ -88,9 +88,7 @@ function setUtmParamInLocalStorage() {
         var pairs = querystring[1].split("&");
         for (i in pairs) {
             var keyval = pairs[i].split("=");
-            if (getLocalStorage(keyval[0]) === null) {
-                setLocalStorage(keyval[0], decodeURIComponent(keyval[1]));
-            }
+            setLocalStorage(keyval[0], decodeURIComponent(keyval[1]));
         }
     }
 }
