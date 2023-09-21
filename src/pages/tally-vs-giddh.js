@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const tallyVsGiddh = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [link, setLink] = useState(false);
-  const [linkUrl, setLinkUrl] = useState(false);
+  const [linkUrl, setLinkUrl] = useState(process.env.NEXT_PUBLIC_SITE_URL);
 
   useEffect(() => {
     setCountry();
