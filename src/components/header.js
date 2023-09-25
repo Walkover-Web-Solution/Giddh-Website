@@ -3,16 +3,11 @@ import Data from "@/data/metadata.json";
 import { useEffect, useState } from "react";
 
 const header = (browserPath) => {
-  const metaPath = browserPath.browserPath;
-  const metaData = Data[metaPath];
+  const currentPath = browserPath.browserPath;
+  const metaData = Data[currentPath];
   const [link, setLink] = useState(false);
-  const [canonicalLink, setCanonicalLink] = useState(
-    process.env.NEXT_PUBLIC_SITE_URL
-  );
-
-  useEffect(() => {
+  const value = useEffect(() => {
     setCountry();
-    generateCanonicalLink();
   }, []);
 
   function setCountry() {
@@ -22,13 +17,6 @@ const header = (browserPath) => {
     }
   }
 
-  function generateCanonicalLink() {
-    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
-    const router = window.location.pathname;
-    const cleanPath = router.split("#")[0].split("?")[0];
-    const finalLink = `${siteUrl}` + (router.asPath === "/" ? "" : cleanPath);
-    setCanonicalLink(finalLink);
-  }
   return (
     <>
       <Head>
@@ -74,7 +62,7 @@ const header = (browserPath) => {
             />
           </>
         )}
-        <link rel="canonical" href={canonicalLink} />
+        <link rel="canonical" href={"https://giddh.com" + currentPath} />
 
         <link
           href="https://assets.calendly.com/assets/external/widget.css"
