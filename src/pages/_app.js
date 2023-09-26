@@ -10,7 +10,7 @@ import Toastify from "@/components/toastify";
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
-    var browserPath = router.pathname;
+    var browserPath = router.asPath;
 
     let currentPathArray = browserPath.split("/");
     let loginSignupPath = currentPathArray[currentPathArray.length - 1];
