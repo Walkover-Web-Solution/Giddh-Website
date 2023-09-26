@@ -30,7 +30,7 @@ const bannerSection = () => {
           <div className="banner__wrapper d-flex align-items-center flex-column">
             <div className="text-center">
               <h1>
-                {isIndia ? "Upgrade your Books to Giddh." : ""}
+                {isIndia ? "Upgrade your Accounting Software to Giddh." : ""}
                 {isAE ? "Dubai is all set to do VAT friendly accounting!" : ""}
                 {isUK ? "UK is all set to do VAT friendly accounting!" : ""}
               </h1>
