@@ -333,7 +333,7 @@ const navbar = (props) => {
                         ? " active"
                         : "")
                     }
-                    href="javascript:;"
+                    href="#"
                     id="allFeaturesDropdown"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -414,7 +414,7 @@ const navbar = (props) => {
                 <div className="dropdown">
                   <a
                     className="nav-link chevron_down nav-link--resource-menu"
-                    href="javascript:;"
+                    href="#"
                     id="resouceDropdown"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -438,7 +438,7 @@ const navbar = (props) => {
             <div className="nav_right d-flex align-items-center">
               <div className="dropdown country_dropdown">
                 <a
-                  href="javascript:;"
+                  href="#"
                   aria-label="Switch Country Menu"
                   id="countryDropdownFooter"
                   data-bs-toggle="dropdown"
