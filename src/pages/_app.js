@@ -10,9 +10,9 @@ import Toastify from "@/components/toastify";
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
-    var browserPath = router.asPath;
-    var path = browserPath.split("/")[1];
-    var path = path!== "ae" && path!== "uk" ? '' : '/' + path; 
+    var browserPath = router.asPath;   
+    var path = browserPath.split("/")[1];      
+    var path = path!== "ae" && path!== "uk" ? '' : '/' + path;     
 
     path = {
         linkPrefix: path,

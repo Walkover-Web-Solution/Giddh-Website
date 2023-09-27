@@ -185,7 +185,7 @@ const Footer = (path) => {
                           className={
                             "dropdown-item" + (link.isIndia ? " active" : "")
                           }
-                          href="/"
+                          href={link.baseURL}
                         >
                           IN - India
                         </a>
@@ -195,7 +195,7 @@ const Footer = (path) => {
                           className={
                             "dropdown-item" + (link.isAE ? " active" : "")
                           }
-                          href="/ae"
+                          href={link.baseURL+'/ae'}
                         >
                           UAE - United Arab Emirates
                         </a>
@@ -205,7 +205,7 @@ const Footer = (path) => {
                           className={
                             "dropdown-item" + (link.isUK ? " active" : "")
                           }
-                          href="/uk"
+                          href={link.baseURL+'/uk'}
                         >
                           UK - United Kingdom
                         </a>
