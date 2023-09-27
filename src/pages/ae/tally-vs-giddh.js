@@ -1,9 +1,9 @@
 import TallyVsGiddh from "@/pages/tally-vs-giddh";
 
-const aeTallyVsGiddh = () => {
+const aeTallyVsGiddh = (path) => {
   return (
     <>
-      <TallyVsGiddh />
+      <TallyVsGiddh  path={path.path} />
     </>
   );
 };

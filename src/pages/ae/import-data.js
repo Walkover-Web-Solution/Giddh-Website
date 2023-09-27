@@ -1,8 +1,8 @@
 import ImportData from '@/pages/import-data'
-const aeImportData = () => {
+const aeImportData = (path) => {
   return (
     <>
-        <ImportData/>
+        <ImportData path={path.path} />
     </>
   );
 };

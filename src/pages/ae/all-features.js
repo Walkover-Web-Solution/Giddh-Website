@@ -1,9 +1,9 @@
 import AllFeatures from "@/pages/all-features";
 
-const aeAllFeatures = () => {
+const aeAllFeatures = (path) => {
   return (
     <>
-      <AllFeatures />
+      <AllFeatures path={path.path} />
     </>
   );
 };

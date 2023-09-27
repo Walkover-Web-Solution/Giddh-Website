@@ -1,14 +1,5 @@
-import { usePathname } from "next/navigation";
-
-const privacyPolicy = () => {
-    // To get active route
-    const pathname = usePathname();
-    const startPath = pathname.split("/");
-    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-    let isAE = startPath[1] === "ae";
-  
-    // Holds Url Prefix country wise
-    let link = isIndia ? "" : isAE ? "/ae" : "/uk";
+const privacyPolicy = (path) => {
+  const link = path.path.linkPrefix;
   return (
     <>
       <section className="container-fluid privacy">

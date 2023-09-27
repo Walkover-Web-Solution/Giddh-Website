@@ -1,9 +1,9 @@
 import Terms from "@/pages/terms";
 
-const ukTerms = () => {
+const ukTerms = (path) => {
   return (
     <>
-      <Terms />
+      <Terms path={path.path} />
     </>
   );
 };

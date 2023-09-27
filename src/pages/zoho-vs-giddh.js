@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 
-const zohoVsGiddh = () => {
+const zohoVsGiddh = (path) => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-  const [link, setLink] = useState(false);
-  const [linkUrl, setLinkUrl] = useState(process.env.NEXT_PUBLIC_SITE_URL);
+  const link = path.path
+  const linkUrl = link.linkPrefix;
 
   useEffect(() => {
-    setCountry();
-    setCountryUrl();
     let screenWidth = window.matchMedia("(max-width: 767px)");
     showTable(screenWidth);
     screenWidth.addListener(showTable);
@@ -20,21 +18,6 @@ const zohoVsGiddh = () => {
       setIsSmallScreen(false);
     }
   }
-  function setCountry() {
-    let currentLink = getCurrentSiteCountry();
-    if (currentLink) {
-      setLink(currentLink);
-    }
-  }
-  function setCountryUrl() {
-    let currentCountryPrefixUrl = getCurrentSiteCountryUrl(
-      process.env.NEXT_PUBLIC_SITE_URL
-    );
-    if (currentCountryPrefixUrl) {
-      setLinkUrl(currentCountryPrefixUrl);
-    }
-  }
-
   return (
     <>
       <div className="products">

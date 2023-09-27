@@ -1,8 +1,8 @@
 import Login from '@/pages/login';
-const aeLogin = () => {
+const aeLogin = (path) => {
   return (
     <>
-      <Login  />
+      <Login path={path.path} />
     </>
   );
 };

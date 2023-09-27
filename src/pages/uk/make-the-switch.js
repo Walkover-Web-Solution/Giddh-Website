@@ -1,8 +1,8 @@
 import MakeTheSwitch from '@/pages/make-the-switch'
-const ukMakeTheSwitch = () => {
+const ukMakeTheSwitch = (path) => {
   return (
     <>
-        <MakeTheSwitch />
+        <MakeTheSwitch path={path.path} />
     </>
   );
 };

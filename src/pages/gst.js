@@ -1,18 +1,12 @@
 import { useState } from "react";
 import { MdRemove, MdAdd } from "react-icons/md";
-import { usePathname } from "next/navigation";
 
-const gst = () => {
+const gst = (path) => {
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
   const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
-
-  // To get active route
-  const pathname = usePathname();
-  const startPath = pathname.split("/");
-  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-  let isAE = startPath[1] === "ae";
-  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
+  
+  const link = path.path.linkPrefix;
   return (
     <>
       <section className="container mb-5 ">

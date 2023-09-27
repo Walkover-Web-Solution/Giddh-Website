@@ -1,8 +1,8 @@
 import About from '@/pages/about';
-const aeAbout = () => {
+const aeAbout = (path) => {
   return (
     <>
-      <About  />
+      <About path={path.path} />
     </>
   );
 };

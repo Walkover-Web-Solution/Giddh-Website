@@ -1,9 +1,9 @@
 import Security from "@/pages/security";
 
-const aeSecurity = () => {
+const aeSecurity = (path) => {
     return(
         <>
-        <Security />
+        <Security path={path.path} />
         </>
     );
 };

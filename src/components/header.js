@@ -2,14 +2,15 @@ import Head from "next/head";
 import Data from "@/data/metadata.json";
 import { useEffect, useState } from "react";
 
-const header = (browserPath) => {
-  const currentPath = browserPath.browserPath;
+const header = (props) => {
+  const link = props.path;
+  const currentPath = props.browserPath;
   const metaData = Data[currentPath];
 
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
 
   const countryList = ['','ae','uk'];
-  const country = currentPath.split('/')[1];
+  const country = link.linkPrefix.replace('/','');
   if(countryList.includes(country)){
     var hreflang = country===''? "en-IN" : `en-${country.toUpperCase()}`;
   }

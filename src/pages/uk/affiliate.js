@@ -1,9 +1,9 @@
 import Affiliate from "@/pages/affiliate";
 
-const ukAffiliate = () => {
+const ukAffiliate = (path) => {
   return (
     <>
-      <Affiliate />
+      <Affiliate path={path.path} />
     </>
   );
 };

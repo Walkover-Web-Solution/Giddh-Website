@@ -1,8 +1,8 @@
 import AccountingDashboard from '@/pages/accounting-dashboard'
-const aeAccountingDashboard = () => {
+const aeAccountingDashboard = (path) => {
   return (
     <>
-        <AccountingDashboard />
+        <AccountingDashboard path={path.path}/>
     </>
   );
 };

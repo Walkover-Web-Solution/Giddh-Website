@@ -1,8 +1,8 @@
 import InvoiceSoftware from "@/pages/invoice-software";
-const aeInvoiceSoftware = () => {
+const aeInvoiceSoftware = (path) => {
   return (
     <>
-      <InvoiceSoftware />
+      <InvoiceSoftware path={path.path} />
     </>
   );
 };

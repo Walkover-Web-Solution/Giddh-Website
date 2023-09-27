@@ -1,9 +1,9 @@
 import AllFeatures from "@/pages/all-features";
 
-const ukAllFeatures = () => {
+const ukAllFeatures = (path) => {
   return (
     <>
-      <AllFeatures />
+      <AllFeatures path={path.path} />
     </>
   );
 };

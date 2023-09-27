@@ -1,16 +1,7 @@
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const Footer = () => {
-  // To get active route
-  const pathname = usePathname();
-  const startPath = pathname.split("/");
-  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-  let isAE = startPath[1] === "ae";
-  let isUK = startPath[1] === "uk";
-
-  // Holds Url Prefix country wise
-  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
+const Footer = (path) => {
+  const link = path.path;
 
   // Get Current Year
   const date = new Date();
@@ -59,16 +50,16 @@ const Footer = () => {
                   <h3 className="c-fs-4 c-fw-600">Quick Links</h3>
                   <ul className="footer-list list-unstyled mb-3">
                     <li>
-                      <a href={link + "/pricing"}>Pricing</a>
+                      <a href={link.linkPrefix + "/pricing"}>Pricing</a>
                     </li>
                     <li>
-                      <a href={link + "/about"}>About</a>
+                      <a href={link.linkPrefix + "/about"}>About</a>
                     </li>
                     <li>
-                      <a href="https://giddh.com/blog/">Blog</a>
+                      <a href="https://giddh.com/blog">Blog</a>
                     </li>
                     <li>
-                      <a href={link + "/privacy-policy"}>Privacy Policy</a>
+                      <a href={link.linkPrefix + "/privacy-policy"}>Privacy Policy</a>
                     </li>
                     <li>
                       <a
@@ -79,10 +70,10 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                      <a href={link + "/affiliate"}>Affiliate With Us</a>
+                      <a href={link.linkPrefix + "/affiliate"}>Affiliate With Us</a>
                     </li>
                     <li>
-                      <a href={link + "/terms"}>Terms of Use</a>
+                      <a href={link.linkPrefix + "/terms"}>Terms of Use</a>
                     </li>
                   </ul>
                 </div>
@@ -93,13 +84,13 @@ const Footer = () => {
               <div className="d-flex flex-column gap-3">
                 <h3 className="c-fs-4 c-fw-600">Compare</h3>
                 <ul className="footer-list list-unstyled mb-3">
-                    <li>
-                      <a href={link + "/zoho-vs-giddh"}>Giddh vs Zoho</a>
-                    </li>
-                    <li>
-                      <a href={link + "/tally-vs-giddh"}>Giddh vs Tally</a>
-                    </li>
-                  </ul>
+                  <li>
+                    <a href={link.linkPrefix + "/zoho-vs-giddh"}>Giddh vs Zoho</a>
+                  </li>
+                  <li>
+                    <a href={link.linkPrefix + "/tally-vs-giddh"}>Giddh vs Tally</a>
+                  </li>
+                </ul>
               </div>
             </div>
 
@@ -119,7 +110,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li>
-                    <a
+                      <a
                         className="download-icon"
                         href="https://apps.apple.com/in/app/giddh-books-that-make-sense/id1491003438"
                         target="_blank"
@@ -138,7 +129,10 @@ const Footer = () => {
                         className="download-icon "
                         href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh Setup ${windowsApp}.exe`}
                       >
-                        <img src="/img/window-icon.svg" alt="Download Windows Giddh App icon" />
+                        <img
+                          src="/img/window-icon.svg"
+                          alt="Download Windows Giddh App icon"
+                        />
                       </a>
                     </li>
                     <li>
@@ -146,7 +140,10 @@ const Footer = () => {
                         className="download-icon rounded-circle"
                         href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-${macApp}.dmg`}
                       >
-                        <img src="/img/mac_icon.svg" alt="Download Mac Giddh App icon" />
+                        <img
+                          src="/img/mac_icon.svg"
+                          alt="Download Mac Giddh App icon"
+                        />
                       </a>
                     </li>
                   </ul>
@@ -173,9 +170,9 @@ const Footer = () => {
                     >
                       <img src="/img/earth.svg" alt="Blue-Globe-icon" />
 
-                      {isIndia
+                      {link.isIndia
                         ? "IN - India"
-                        : isAE
+                        : link.isAE
                         ? "UAE - United Arab Emirates"
                         : "UK - United Kingdom"}
                     </button>
@@ -186,7 +183,7 @@ const Footer = () => {
                       <li>
                         <a
                           className={
-                            "dropdown-item" + (isIndia ? " active" : "")
+                            "dropdown-item" + (link.isIndia ? " active" : "")
                           }
                           href="/"
                         >
@@ -195,7 +192,9 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          className={"dropdown-item" + (isAE ? " active" : "")}
+                          className={
+                            "dropdown-item" + (link.isAE ? " active" : "")
+                          }
                           href="/ae"
                         >
                           UAE - United Arab Emirates
@@ -203,7 +202,9 @@ const Footer = () => {
                       </li>
                       <li>
                         <a
-                          className={"dropdown-item" + (isUK ? " active" : "")}
+                          className={
+                            "dropdown-item" + (link.isUK ? " active" : "")
+                          }
                           href="/uk"
                         >
                           UK - United Kingdom
@@ -224,14 +225,17 @@ const Footer = () => {
                         </li>
                         <li className="mt-3">
                           Support:{" "}
-                          <a href="mailto:support@giddh.com" className="cf_email">
+                          <a
+                            href="mailto:support@giddh.com"
+                            className="cf_email"
+                          >
                             support@giddh.com
                           </a>
                         </li>
                       </ul>
                       <p className="contact-link mt-3">
                         <a
-                          href={link + "/contact-us"}
+                          href={link.linkPrefix + "/contact-us"}
                           className="col-primary text-decoration-underline"
                         >
                           Contact Us

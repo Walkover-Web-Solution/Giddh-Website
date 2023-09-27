@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { toast } from 'react-toastify';
 import GoogleLogin from "@/components/googleLogin";
 
-const signUp = () => {
+const signUp = (path) => {
     const [currentStep, setCurrentStep] = useState(1);
     const [showEmailOtp, setShowEmailOtp] = useState(false);
     const [showMobileOtp, setShowMobileOtp] = useState(false);
@@ -16,13 +16,10 @@ const signUp = () => {
     const [mobileGetOtpInProgress, setMobileGetOtpInProgress] = useState(false);
     const [mobileVerifyOtpInProgress, setMobileVerifyOtpInProgress] = useState(false);
     const [signupInProgress, setSignupInProgress] = useState(false);
-    const [link, setLink] = useState(process.env.NEXT_PUBLIC_SITE_URL);
-
-    var x;
+    const link = path.path.linkPrefix;
 
     useEffect(() => {
         initOtpSignup();
-        setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
     }, []);
 
     function googleApiSuccessCallback(response) {
@@ -447,7 +444,7 @@ const signUp = () => {
             <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
             <section className="entry signup d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
-                    <a href={link}>
+                    <a href={link == '' ? '/' : link}>
                         <img
                             src="/img/giddh-logo.svg"
                             className="entry__left_section__brand_logo"
@@ -486,7 +483,7 @@ const signUp = () => {
                         {/* STEP #1 */}
                         {currentStep == 1 && (
                             <div className="entry__right_section__container--step entry__right_section__container--active">
-                                <a href={link} className="d-none entry__right_section__container--logo-visible-in-small">
+                                <a href={link == '' ? '/' : link} className="d-none entry__right_section__container--logo-visible-in-small">
                                     <img
                                         src="/img/giddh-logo.svg"
                                         width="auto"
@@ -524,7 +521,7 @@ const signUp = () => {
                         {/* STEP #2 */}
                         {currentStep == 2 && (
                             <div className="entry__right_section__container--step entry__right_section__container--active">
-                                <a href={link} className="d-none entry__right_section__container--logo-visible-in-small">
+                                <a href={link == '' ? '/' : link} className="d-none entry__right_section__container--logo-visible-in-small">
                                     <img
                                         src="/img/giddh-logo.svg"
                                         width="auto"
