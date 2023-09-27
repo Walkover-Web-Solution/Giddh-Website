@@ -127,7 +127,7 @@ const navbar = (props) => {
       uk: true,
       ae: true,
       menuItem: "API Integration",
-      url: "/https://apidoc.giddh.com",
+      url: "https://apidoc.giddh.com",
     },
     {
       in: true,
@@ -316,7 +316,7 @@ const navbar = (props) => {
                   className={
                     "nav-link " +
                     (activePath === "make-the-switch"
-                      ? " active"
+                      ? "active"
                       : "")
                   }
                   href={ urlPrefix + "/make-the-switch" } 
@@ -330,7 +330,7 @@ const navbar = (props) => {
                     className={
                       "nav-link chevron_down nav-link--feature-menu " +
                       (activePath === "all-features"
-                        ? " active"
+                        ? "active"
                         : "")
                     }
                     href="#"
@@ -375,7 +375,7 @@ const navbar = (props) => {
                   className={
                     "nav-link " +
                     (activePath === "pricing"
-                      ? " active"
+                      ? "active"
                       : "")
                   }
                   href={ urlPrefix + "/pricing"}
@@ -389,7 +389,7 @@ const navbar = (props) => {
                     "nav-link " +
                     (activePath === "gst" ||
                     activePath === "vat"
-                      ? " active"
+                      ? "active"
                       : "")
                   }
                   href={link.isIndia ? urlPrefix+"/gst" : link.isAE ? urlPrefix + "/vat" : urlPrefix + "/vat"}
@@ -402,7 +402,7 @@ const navbar = (props) => {
                   className={
                     "nav-link " +
                     (activePath === "about"
-                      ? " active"
+                      ? "active"
                       : "")
                   }
                   href={urlPrefix + "/about"}

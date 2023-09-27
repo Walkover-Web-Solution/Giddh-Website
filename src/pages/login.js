@@ -13,9 +13,7 @@ const logIn = (path) => {
     const [authLoginInProgress, setAuthLoginInProgress] = useState(false);
     const [showVerificationModal, setShowVerificationModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
-    const link = path.path.linkPrefix;
-    console.log('link: ', link);
-    
+    const link = path.path.linkPrefix;    
 
     useEffect(() => {
         if (getCookie("giddh_session_id")) {
