@@ -1,16 +1,12 @@
 import { MdRemove, MdAdd } from "react-icons/md";
-import { usePathname } from "next/navigation";
 
-const inventoryManagementSoftware = () => {
-  // To get active route
-  const pathname = usePathname();
-  const startPath = pathname.split("/");
-  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-  let isAE = startPath[1] === "ae";
-  let isUK = startPath[1] === "uk";
-
-  // Holds Url Prefix country wise
-  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
+const inventoryManagementSoftware = (path) => {
+  const linkPath = path.path;
+    
+  const isIndia = linkPath.isIndia
+  const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
+  const link = linkPath.linkPrefix;
   return (
     <>
       <div className="features">

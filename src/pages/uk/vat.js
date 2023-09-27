@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { usePathname } from "next/navigation";
 import { MdRemove, MdAdd } from "react-icons/md";
 
 const ukVAT = () => {
@@ -7,11 +6,6 @@ const ukVAT = () => {
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
   const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
 
-    // To get active route
-    const pathname = usePathname();
-    const startPath = pathname.split("/");
-    let isAE = startPath[1] === "ae";
-    let isUK = startPath[1] === "uk";
   return (
     <>
       <section className="container mb-5 ">
@@ -240,7 +234,7 @@ const ukVAT = () => {
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
                 <h4 className="col-primary small-heading c-fw-600 mb-3">
-                  { isAE ? "UAE" : ( isUK ? "UK" : "") }  VAT Software for business owners
+                  UK VAT Software for business owners
                 </h4>
                 <p>
                   Presently, many businesses (small, medium, and large scale)

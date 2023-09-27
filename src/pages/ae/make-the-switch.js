@@ -1,8 +1,8 @@
 import MakeTheSwitch from '@/pages/make-the-switch'
-const aeMakeTheSwitch = () => {
+const aeMakeTheSwitch = (path) => {
   return (
     <>
-        <MakeTheSwitch />
+        <MakeTheSwitch path={path.path} />
     </>
   );
 };

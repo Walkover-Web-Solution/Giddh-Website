@@ -1,9 +1,9 @@
 import ConectBankReconcile from "@/pages/conect-bank-reconcile";
 
-const aeConectBankReconcile = () => {
+const aeConectBankReconcile = (path) => {
   return (
     <>
-      <ConectBankReconcile />
+      <ConectBankReconcile path={path.path} />
     </>
   );
 };

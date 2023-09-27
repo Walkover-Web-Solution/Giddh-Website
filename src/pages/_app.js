@@ -12,12 +12,14 @@ export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
     var browserPath = router.asPath;
     var path = browserPath.split("/")[1];
+    var path = path!== "ae" && path!== "uk" ? '' : '/' + path; 
 
     path = {
         linkPrefix: path,
-        isIndia: path!== "ae" && path!== "uk",
-        isAE: path  === "ae",
-        isUK: path === "uk"
+        baseURL: "https://giddh.com",
+        isIndia: path === "",
+        isAE: path  === "/ae",
+        isUK: path === "/uk"
     }
 
     let currentPathArray = browserPath.split("/");
@@ -30,10 +32,10 @@ export default function MyApp({ Component, pageProps }) {
     }, []);
     return (
         <>
-            {loginSignupPathStatus ? <Navbar /> : null}
-            <Header browserPath={browserPath} />
+            {loginSignupPathStatus ? <Navbar browserPath={browserPath} path={path} /> : null}
+            <Header browserPath={browserPath} path={path} />
             <Component path={path} {...pageProps} />
-            {loginSignupPathStatus ? <Footer /> : null}
+            {loginSignupPathStatus ? <Footer path={path}/> : null}
             <GlobalComponents />
             <Toastify />
         </>

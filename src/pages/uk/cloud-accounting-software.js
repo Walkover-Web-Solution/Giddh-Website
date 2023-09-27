@@ -1,8 +1,8 @@
 import CloudAccountingSoftware from '@/pages/cloud-accounting-software'
-const ukCloudAccountingSoftware = () => {
+const ukCloudAccountingSoftware = (path) => {
   return (
     <>
-        <CloudAccountingSoftware />
+        <CloudAccountingSoftware path={path.path} />
     </>
   );
 };

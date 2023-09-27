@@ -1,9 +1,9 @@
 import ZohoVsGiddh from "@/pages/zoho-vs-giddh";
 
-const ukZohoVsGiddh = () => {
+const ukZohoVsGiddh = (path) => {
   return (
     <>
-      <ZohoVsGiddh />
+      <ZohoVsGiddh path={path.path} />
     </>
   );
 };

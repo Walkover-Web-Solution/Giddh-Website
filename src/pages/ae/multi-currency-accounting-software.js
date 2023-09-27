@@ -1,8 +1,8 @@
 import MultiCurrencyAccountingSoftware from '@/pages/multi-currency-accounting-software'
-const aeMultiCurrencyAccountingSoftware = () => {
+const aeMultiCurrencyAccountingSoftware = (path) => {
   return (
     <>
-        <MultiCurrencyAccountingSoftware />
+        <MultiCurrencyAccountingSoftware path={path.path} />
     </>
   );
 };

@@ -1,8 +1,8 @@
 import Pricing from "@/pages/pricing"
-const aePricing = () => {
+const aePricing = (path) => {
   return (
     <>
-     <Pricing />
+     <Pricing path={path.path} />
     </>
   );
 };

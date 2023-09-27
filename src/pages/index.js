@@ -4,13 +4,14 @@ import BannerSection from "@/components/bannerSection";
 import GstIndexPage from "@/components/gstIndexPage";
 import ClientSummary from "@/components/clientSummary";
 
-const index = () => {
+const index = (path) => {
+  const link = path.path;
   return (
     <>
-      <BannerSection />
-      <GstIndexPage />    
-      <FeatureGallery />
-      <MakeTheSwitchIndexPage />
+      <BannerSection path={link}/>
+      <GstIndexPage path={link}/>    
+      <FeatureGallery path={link}/>
+      <MakeTheSwitchIndexPage path={link}/>
       <ClientSummary />
     </>
   );

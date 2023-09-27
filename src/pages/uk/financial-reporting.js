@@ -1,8 +1,8 @@
 import FinancialReporting from '@/pages/financial-reporting'
-const ukFinancialReporting= () => {
+const ukFinancialReporting = (path) => {
   return (
     <>
-        <FinancialReporting />
+        <FinancialReporting path={path.path} />
     </>
   );
 };

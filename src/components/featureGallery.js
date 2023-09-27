@@ -1,4 +1,3 @@
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 
@@ -6,14 +5,9 @@ const FeatureGalleryModal = dynamic(() => import("@/components/featureGalleryMod
   ssr: false
 });
 
-const featureGallery = () => {
-  // To get active route
-  const pathname = usePathname();
-  const startPath = pathname.split("/");
-  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-  let isAE = startPath[1] === "ae";
-  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
+const featureGallery = (path) => {
 
+  const link = path.path;
   const [currentData, setCurrentData] = useState(null);
   const [modalStatus, setModalStatus] = useState(false);
 
@@ -417,14 +411,14 @@ const featureGallery = () => {
     },
   ];
 
-  const countryWiseModalData = isIndia
+  const countryWiseModalData = link.isIndia
     ? indiaModalData
-    : isAE
+    : link.isAE
     ? aeModalData
     : ukModalData;
-  const countryWiseCardData = isIndia
+  const countryWiseCardData = link.isIndia
     ? indiaCardData
-    : isAE
+    : link.isAE
     ? aeCardData
     : ukCardData;
 
@@ -479,7 +473,7 @@ const featureGallery = () => {
             <div className="col-lg-4 col-md-6 col-sm-12">
               <a
                 className="feature-gallery__card"
-                href={link + "/all-features"}
+                href={link.linkPrefix + "/all-features"}
               >
                 <span className="c-fs-3 col-primary">See More</span>
               </a>
@@ -490,6 +484,7 @@ const featureGallery = () => {
 
       {modalStatus && (
         <FeatureGalleryModal
+          path={link}
           modalData={currentData}
           hideFeatureGalleryModal={() => setModalStatus(false)}
         />

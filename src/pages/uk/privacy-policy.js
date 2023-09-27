@@ -1,9 +1,9 @@
 import PrivacyPolicy from "@/pages/privacy-policy"
 
-const ukPrivacyPolicy = () => {
+const ukPrivacyPolicy = (path) => {
     return(
         <>
-         <PrivacyPolicy />
+         <PrivacyPolicy path={path.path} />
         </>
     );
 };
