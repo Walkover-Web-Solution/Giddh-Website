@@ -1,15 +1,10 @@
-import { usePathname } from "next/navigation";
 import { MdRemove, MdAdd } from "react-icons/md";
 
-const conectBankReconcile = () => {
-  // To get active route
-  const pathname = usePathname();
-  const startPath = pathname.split("/");
-  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-  let isAE = startPath[1] === "ae";
-
-  // Holds Url Prefix country wise
-  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
+const conectBankReconcile = (path) => {
+  const linkPath = path.path;
+    
+  const isIndia = linkPath.isIndia
+  const link = linkPath.linkPrefix;
   return (
     <>
       <div className="features">

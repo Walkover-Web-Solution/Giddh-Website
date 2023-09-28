@@ -1,8 +1,8 @@
 import Login from '@/pages/login';
-const ukLogin = () => {
+const ukLogin = (path) => {
   return (
     <>
-      <Login  />
+      <Login path={path.path} />
     </>
   );
 };

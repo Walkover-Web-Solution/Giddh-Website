@@ -1,9 +1,9 @@
 import Pricing from "@/pages/pricing"
 
-const ukPricing = () => {
+const ukPricing = (path) => {
   return (
     <>
-      <Pricing />
+      <Pricing path={path.path} />
     </>
   );
 };

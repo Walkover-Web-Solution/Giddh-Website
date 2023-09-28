@@ -1,8 +1,8 @@
 import Signup from '@/pages/signup';
-const aeSignup = () => {
+const aeSignup = (path) => {
   return (
     <>
-      <Signup  />
+      <Signup path={path.path} />
     </>
   );
 };

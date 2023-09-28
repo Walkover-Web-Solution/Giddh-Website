@@ -1,8 +1,8 @@
 import ImportData from '@/pages/import-data'
-const ukImportData = () => {
+const ukImportData = (path) => {
   return (
     <>
-        <ImportData/>
+        <ImportData path={path.path}/>
     </>
   );
 };

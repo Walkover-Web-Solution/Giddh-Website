@@ -154,7 +154,7 @@ const v2Login = () => {
         <>
             <section className="entry d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
-                    <a href={link}>
+                    <a href={link == '' ? '/' : link}>
                         <img
                             src="/img/giddh-logo.svg"
                             className="entry__left_section__brand_logo"
@@ -169,7 +169,7 @@ const v2Login = () => {
                 </div>
                 <div className="entry__right_section col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12">
                     <div className="container entry__right_section__container">
-                        <a href={link} className="d-none mb-5 entry__right_section__container--logo-visible-in-small">
+                        <a href={link == '' ? '/' : link} className="d-none mb-5 entry__right_section__container--logo-visible-in-small">
                             <img
                                 src="/img/giddh-logo.svg"
                                 width="auto"

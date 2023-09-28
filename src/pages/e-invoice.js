@@ -1,11 +1,5 @@
-import { usePathname } from "next/navigation";
 import { MdRemove, MdAdd } from "react-icons/md";
-const eInvoie = () => {
-  // To get active route
-  const pathname = usePathname();
-  const startPath = pathname.split("/");
-  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-  let isAE = startPath[1] === "ae";
+const eInvoice = () => {
   return (
     <>
       <div className="e-invoice">
@@ -525,4 +519,4 @@ const eInvoie = () => {
     </>
   );
 };
-export default eInvoie;
+export default eInvoice;

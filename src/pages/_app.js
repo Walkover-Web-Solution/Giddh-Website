@@ -10,7 +10,17 @@ import Toastify from "@/components/toastify";
 
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
-    var browserPath = router.asPath;
+    var browserPath = router.asPath;   
+    var path = browserPath.split("/")[1];      
+    var path = path!== "ae" && path!== "uk" ? '' : '/' + path;     
+
+    path = {
+        linkPrefix: path,
+        baseURL: "https://giddh.com",
+        isIndia: path === "",
+        isAE: path  === "/ae",
+        isUK: path === "/uk"
+    }
 
     let currentPathArray = browserPath.split("/");
     let loginSignupPath = currentPathArray[currentPathArray.length - 1];
@@ -22,10 +32,10 @@ export default function MyApp({ Component, pageProps }) {
     }, []);
     return (
         <>
-            {loginSignupPathStatus ? <Navbar /> : null}
-            <Header browserPath={browserPath} />
-            <Component {...pageProps} />
-            {loginSignupPathStatus ? <Footer /> : null}
+            {loginSignupPathStatus ? <Navbar browserPath={browserPath} path={path} /> : null}
+            <Header browserPath={browserPath} path={path} />
+            <Component path={path} {...pageProps} />
+            {loginSignupPathStatus ? <Footer path={path}/> : null}
             <GlobalComponents />
             <Toastify />
         </>

@@ -9,15 +9,13 @@ const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
     ssr: false
 });
 
-const logIn = () => {
+const logIn = (path) => {
     const [authLoginInProgress, setAuthLoginInProgress] = useState(false);
     const [showVerificationModal, setShowVerificationModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
-    const [link, setLink] = useState(process.env.NEXT_PUBLIC_SITE_URL);
+    const link = path.path.linkPrefix;    
 
     useEffect(() => {
-        setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
-
         if (getCookie("giddh_session_id")) {
             validateUserSession(getCookie("giddh_session_id"));
         }
@@ -116,7 +114,7 @@ const logIn = () => {
         <>
             <section className="entry d-flex">
                 <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
-                    <a href={link}>
+                    <a href={link == '' ? '/' : link}>
                         <img
                             src="/img/giddh-logo.svg"
                             className="entry__left_section__brand_logo"
@@ -131,7 +129,7 @@ const logIn = () => {
                 </div>
                 <div className="entry__right_section col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12">
                     <div className="container entry__right_section__container">
-                        <a href={link} className="d-none mb-5 entry__right_section__container--logo-visible-in-small">
+                        <a href={link == '' ? '/' : link} className="d-none mb-5 entry__right_section__container--logo-visible-in-small">
                             <img
                                 src="/img/giddh-logo.svg"
                                 width="auto"

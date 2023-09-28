@@ -1,8 +1,8 @@
 import Signup from '@/pages/signup';
-const ukSignup = () => {
+const ukSignup = (path) => {
   return (
     <>
-      <Signup  />
+      <Signup path={path.path} />
     </>
   );
 };

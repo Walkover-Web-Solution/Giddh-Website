@@ -1,13 +1,7 @@
-import { usePathname } from "next/navigation";
-const makeTheSwitch = () => {
-    // To get active route
-    const pathname = usePathname();
-    const startPath = pathname.split("/");
-    let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-    let isAE = startPath[1] === "ae";
-
-    // Holds Url Prefix country wise
-    let link = isIndia ? '' : (isAE ? '/ae' : '/uk');
+const makeTheSwitch = (path) => {
+  const linkPath = path.path;    
+  const isIndia = linkPath.isIndia
+  const isAE = linkPath.isAE;
   return (
     <>
       <div className="make_the_switch">

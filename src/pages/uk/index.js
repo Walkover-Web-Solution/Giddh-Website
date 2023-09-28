@@ -1,8 +1,8 @@
 import Index from '@/pages/index';
-const ukIndex = () => {
+const ukIndex = (path) => {
   return (
     <>
-      <Index  />
+      <Index path={path.path}/>
     </>
   );
 };

@@ -1,34 +1,26 @@
 import { MdClose } from "react-icons/md";
 import { Modal } from "bootstrap";
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 
+const featureGalleryModal = (props) => {  
+  const link = props.path;
+  var featureGalleryModal;
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-const featureGalleryModal = (props) => {
-    var featureGalleryModal;
-    const [isModalOpen, setIsModalOpen] = useState(false);
+  useEffect(() => {
+    if (!isModalOpen) {
+      setIsModalOpen(true);
+      featureGalleryModal = new Modal(document.getElementById("featureModal"), {
+        backdrop: "static",
+        keyboard: false,
+      });
+      featureGalleryModal.toggle();
+    }
+  });
 
-      // To get active route
-  const pathname = usePathname();
-  const startPath = pathname.split("/");
-  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-  let isAE = startPath[1] === "ae";
-  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
-
-    useEffect(() => {
-        if (!isModalOpen) {
-            setIsModalOpen(true);
-            featureGalleryModal = new Modal(document.getElementById("featureModal"), {
-                backdrop: "static",
-                keyboard: false,
-            });
-            featureGalleryModal.toggle();
-        }
-    });
-
-    return (
-        <>
-          <div
+  return (
+    <>
+      <div
         className="modal fade"
         id="featureModal"
         aria-hidden="true"
@@ -57,13 +49,15 @@ const featureGalleryModal = (props) => {
               </h5>
               {props.modalData?.paragraph !== "" ? (
                 <>
-                  <p className="col-grey-deep mt-4">{props.modalData?.paragraph}</p>
+                  <p className="col-grey-deep mt-4">
+                    {props.modalData?.paragraph}
+                  </p>
                 </>
               ) : null}
               {props.modalData?.link !== "" ? (
                 <>
                   <a
-                    href={ link + "/" + props.modalData?.link}
+                    href={link.linkPrefix + "/" + props.modalData?.link}
                     className="col-blue d-inline-block mt-1"
                   >
                     More details
@@ -73,9 +67,9 @@ const featureGalleryModal = (props) => {
             </div>
           </div>
         </div>
-      </div>  
-        </>
-    );
+      </div>
+    </>
+  );
 };
 
 export default featureGalleryModal;

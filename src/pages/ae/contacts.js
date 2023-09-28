@@ -1,9 +1,9 @@
 import Contacts from "@/pages/contacts";
 
-const aeContacts = () => {
+const aeContacts = (path) => {
   return (
     <>
-      <Contacts />
+      <Contacts path={path.path} />
     </>
   );
 };

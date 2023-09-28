@@ -1,7 +1,6 @@
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { MdDone, MdClose } from "react-icons/md";
-const pricing = () => {
+const pricing = (path) => {
   const [readMoreStatus, readmoreAction] = useState(false);
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
@@ -9,13 +8,10 @@ const pricing = () => {
   const [readMoreParagraphStatus4, showMoreParagraph4] = useState(false);
   const [readMoreParagraphStatus5, showMoreParagraph5] = useState(false);
 
-  const pathname = usePathname();
-  const startPath = pathname.split("/");
-  let isIndia = startPath[1] !== "ae" && startPath[1] !== "uk";
-  let isAE = startPath[1] === "ae";
-
-  // Holds Url Prefix country wise
-  let link = isIndia ? "" : isAE ? "/ae" : "/uk";
+  const linkPath = path.path;
+  const isIndia = linkPath.isIndia
+  const isAE = linkPath.isAE;
+  const link = linkPath.linkPrefix;
 
   return (
     <>

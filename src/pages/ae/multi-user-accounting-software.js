@@ -1,8 +1,8 @@
 import MultiUserAccountingSoftware from '@/pages/multi-user-accounting-software'
-const aeMultiUserAccountingSoftware = () => {
+const aeMultiUserAccountingSoftware = (path) => {
   return (
     <>
-        <MultiUserAccountingSoftware/>
+        <MultiUserAccountingSoftware path={path.path} />
     </>
   );
 };
