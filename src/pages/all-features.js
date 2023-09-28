@@ -339,26 +339,6 @@ const allFeatures = (path) => {
             <div className="col">
               <a
                 className="feature-gallery__card"
-                href={link + "/all-features"}
-              >
-                <figure>
-                  <img
-                    src="/img/feature-api.svg"
-                    alt="Search Icon"
-                    height="90px"
-                    widht="auto"
-                  />
-                  <figcaption>Search</figcaption>
-                  <p>
-                    Search and find whatever you required from wherever you are
-                    in Giddh.
-                  </p>
-                </figure>
-              </a>
-            </div>
-            <div className="col">
-              <a
-                className="feature-gallery__card"
                 href="https://apidoc.giddh.com"
                 target="_blank"
               >
