@@ -1,6 +1,7 @@
 {
     "tags":[
       {"slug": "Invoicing-Software","name": "Invoicing-Software"},
+      {"slug": "Software","name": "Software"},
       {"slug": "Business-Accounting","name": "Business-Accounting"},
       {"slug": "Accounting","name": "Accounting"},
       {"slug": "Accounting-Software","name": "Accounting-Software"},
@@ -13,8 +14,8 @@
       {"slug": "Cloud-Accounting","name": "Cloud-Accounting"},
       {"slug": "Revenue","name": "Revenue"},
       {"slug": "Indian-Accounting","name": "Indian-Accounting"},
-      {"slug": "Invoicing-Software","name": "Invoicing-Software"},
       {"slug": "Cloud-Computing","name": "Cloud-Computing"},
+      {"slug": "AI","name": "AI"},
       {"slug": "Gst","name": "Gst"},
       {"slug": "Automation","name": "Automation"},
       {"slug": "Invoice","name": "Invoice"},
@@ -30,6 +31,7 @@
       {"slug": "Guidelines", "name": "Guidelines"},
       {"slug": "Income-Tax", "name": "Income-Tax"},
       {"slug": "GST", "name": "GST"},
+      {"slug": "GSTR", "name": "GSTR"},
       {"slug": "Tally", "name": "Tally"},
       {"slug": "Financial-Planing", "name": "Financial-Planing"},
       {"slug": "Gold", "name": "Gold"},
@@ -56,8 +58,12 @@
       {"slug": "Best-Accounting-Software", "name": "Best-Accounting-Software"},
       {"slug": "Finance", "name": "Finance"},
       {"slug": "Financial-Management", "name": "Financial-Management"},
+      {"slug": "Financial-Accounting", "name": "Financial-Accounting"},
       {"slug": "investors", "name": "investors"},
-      {"slug": "Startup", "name": "Startup"}
+      {"slug": "Startup", "name": "Startup"},
+      {"slug": "Excel", "name": "Excel"},
+      {"slug": "Spreadsheets", "name": "Spreadsheets"},
+      {"slug": "Banking", "name": "Banking"}
     ]
    
   }
