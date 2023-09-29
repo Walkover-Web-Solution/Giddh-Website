@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const header = (props) => {
   const link = props.path;
-  const currentPath = props.browserPath;
+  const currentPath = props.browserPath.toLowerCase();
   const metaData = Data[currentPath];
 
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
