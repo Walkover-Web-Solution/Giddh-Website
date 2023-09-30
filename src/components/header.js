@@ -12,7 +12,7 @@ const header = (props) => {
   const countryList = ['','ae','uk'];
   const country = link.linkPrefix.replace('/','');
   if(countryList.includes(country)){
-    var hreflang = country===''? "en-IN" : `en-${country.toUpperCase()}`;
+    var hreflang = country===''? "en-IN" : (country==='uk' ? "en-GB" : "en-AE")  ;
   }
 
   useEffect(() => {
@@ -28,11 +28,10 @@ const header = (props) => {
         <meta name="description" content={metaData?.description}></meta>
         <link rel="icon" type="image/x-icon" href="/favico.svg"></link>
         <link rel="canonical" href={`https://giddh.com${currentPath}`} />
-        <link rel="alternate" hrefLang="x-default" href="https://giddh.com" />
-        <link rel="alternate" hrefLang={hreflang} href={`https://giddh.com/${country}`} />
-        {/* <link rel="alternate" hrefLang="en-IN" href={`https://giddh.com`} />
-        <link rel="alternate" hrefLang="en-UK" href={`https://giddh.com/uk`} />
-        <link rel="alternate" hrefLang="en-AE" href={`https://giddh.com/ae`} /> */}
+        {/* <link rel="alternate" hrefLang="x-default" href="https://giddh.com" />
+        <link rel="alternate" hrefLang={hreflang} href={`https://giddh.com/${country}`} /> */}
+        <link rel="alternate" hrefLang="x-default" href={`https://giddh.com${currentPath}`} />
+        <link rel="alternate" hrefLang={hreflang} href={`https://giddh.com${currentPath}`} />
 
         {restrictFromSeo && <meta name="robots" content="noindex, nofollow" />}
       </Head>
