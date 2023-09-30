@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const header = (props) => {
   const link = props.path;
-  const currentPath = props.browserPath.toLowerCase();
+  const currentPath = props.browserPath
   const metaData = Data[currentPath];
 
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
@@ -30,7 +30,10 @@ const header = (props) => {
         <link rel="canonical" href={`https://giddh.com${currentPath}`} />
         <link rel="alternate" hrefLang="x-default" href="https://giddh.com" />
         <link rel="alternate" hrefLang={hreflang} href={`https://giddh.com/${country}`} />
-        
+        {/* <link rel="alternate" hrefLang="en-IN" href={`https://giddh.com`} />
+        <link rel="alternate" hrefLang="en-UK" href={`https://giddh.com/uk`} />
+        <link rel="alternate" hrefLang="en-AE" href={`https://giddh.com/ae`} /> */}
+
         {restrictFromSeo && <meta name="robots" content="noindex, nofollow" />}
       </Head>
     </>
