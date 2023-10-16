@@ -53,7 +53,6 @@ const signUp = (path) => {
                         setGiddhSession(response.body.session.id);
 
                         var utmParams = "&utm_source=" + getLocalStorage("utm_source") + "&utm_medium=" + getLocalStorage("utm_medium") + "&utm_campaign=" + getLocalStorage("utm_campaign") + "&utm_term=" + getLocalStorage("utm_term") + "&utm_content=" + getLocalStorage("utm_content") + "";
-                        x = utmParams;
                         window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id + utmParams;
                     } else {
                         setSignupInProgress(false);
