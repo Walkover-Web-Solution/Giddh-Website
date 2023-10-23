@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { MdDone, MdClose } from "react-icons/md";
+import {
+  MdDone,
+  MdClose,
+  MdKeyboardArrowDown,
+  MdKeyboardArrowUp,
+} from "react-icons/md";
 const pricing = (path) => {
   const [readMoreStatus, readmoreAction] = useState(false);
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
@@ -7,20 +12,43 @@ const pricing = (path) => {
   const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
   const [readMoreParagraphStatus4, showMoreParagraph4] = useState(false);
   const [readMoreParagraphStatus5, showMoreParagraph5] = useState(false);
+  const [invoice, setInvoice] = useState(false);
+  const [recordBill, setRecordBill] = useState(false);
+  const [managingInventory, setManagingInventory] = useState(false);
+  const [multiCurrency, setMultiCurrency] = useState(false);
+  const [gst, setGst] = useState(false);
+  const [report, setReport] = useState(false);
+  const [dashoard, setDashboard] = useState(false);
+  const [userAccess, setUserAccess] = useState(false);
+  const [bankRec, setBankReconciliation] = useState(false);
+  const [manufacturing, setManufacturing] = useState(false);
 
   const linkPath = path.path;
-  const isIndia = linkPath.isIndia
+  const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
+
+  function showText(key) {
+    if (key === "invoicing") {
+      if (invoice) {
+        setInvoice(false);
+      } else {
+        setInvoice(true);
+      }
+    }
+  }
 
   return (
     <>
       <section className="container-fluid pricing_top_section">
         <div className="row align-items-center mt-auto pricing_top_section__column-reverse">
           <div className="col-lg-6 col-md-12">
-            <h3 className=" heading col-primary c-fw-600 ms-4">
-              Powerful solution. Affordable pricing.
-            </h3>
+            <h1 className="heading col-primary c-fw-600 ms-4">
+              Powerful Accounting Software. Affordable Pricing.
+            </h1>
+            <h2 className="sub-heading col-primary c-fw-600 ms-4 mt-5">
+              No features sacrifices
+            </h2>
           </div>
           <div className="col-lg-6 col-md-12">
             <figure>
@@ -37,9 +65,14 @@ const pricing = (path) => {
       <section className="container-fluid pricing_main_section">
         <div className="row justify-content-center">
           <div className="col-12">
-            <div className={"pricing_main_section__grid " + (isIndia ? " display-all" : " display-four")}>
+            <div
+              className={
+                "pricing_main_section__grid " +
+                (isIndia ? " display-all" : " display-four")
+              }
+            >
               <div className="pricing_main_section__grid__title">
-                <h3>Powerful solution. Affordable pricing.</h3>
+                <h3>Powerful Accounting Software. Affordable Pricing.</h3>
               </div>
               <div className="pricing_main_section__grid__guarantee_logo">
                 <figure>
@@ -50,9 +83,16 @@ const pricing = (path) => {
                 </figure>
               </div>
               <div className="pricing_main_section__grid__trial pricing__heading text-center">
-                <span className="pricing__heading__name" >Trial</span>
+                <span className="pricing__heading__name">Trial</span>
                 <br />
-                <span className={"pricing__heading__cost d-inline-block " + ( isIndia ? "" : " pt-4 mt-2") }>Free</span>
+                <span
+                  className={
+                    "pricing__heading__cost d-inline-block " +
+                    (isIndia ? "" : " pt-4 mt-2")
+                  }
+                >
+                  Free
+                </span>
                 <br />
                 <span className="pricing__heading__period">15 days</span>
               </div>
@@ -147,7 +187,7 @@ const pricing = (path) => {
                 <p className="c-fw-600">Benefits</p>
               </div>
               <div className="pricing_main_section__grid__b1 text-center">
-                <a href={ link + "/signup" } className="benefits-link bg-grey">
+                <a href={link + "/signup"} className="benefits-link bg-grey">
                   Get Started
                 </a>
               </div>
@@ -165,17 +205,17 @@ const pricing = (path) => {
                 </a>
               </div>
               <div className="pricing_main_section__grid__b3 text-center">
-                <a href={ link + "/signup" } className="benefits-link">
+                <a href={link + "/signup"} className="benefits-link">
                   Join Us
                 </a>
               </div>
               <div className="pricing_main_section__grid__b4 text-center">
-                <a href={ link + "/signup" } className="benefits-link">
+                <a href={link + "/signup"} className="benefits-link">
                   Join Us
                 </a>
               </div>
               <div className="pricing_main_section__grid__b5 text-center display-all__child">
-                <a href={ link + "/signup" } className="benefits-link">
+                <a href={link + "/signup"} className="benefits-link">
                   Join Us
                 </a>
               </div>
@@ -208,7 +248,7 @@ const pricing = (path) => {
                 {isIndia ? "40,000" : isAE ? "100,000" : "100,000"}
               </div>
               <div className="pricing_main_section__grid__t5 text-center display-all__child">
-                100,000
+                1,00,000
               </div>
 
               <div className="pricing_main_section__grid__companies pricing-border-top">
@@ -367,15 +407,1445 @@ const pricing = (path) => {
                 <MdDone />
               </div>
 
+              <div className="pricing_main_section__grid__invoicing pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (invoice ? "pt-2" : "")}
+                  onClick={() => setInvoice((invoice) => !invoice)}
+                  title="View More"
+                >
+                  <span>
+                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
+                    {invoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {invoice && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a
+                        href="https://giddh.com/invoice-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__invoicing_2">
+                <div
+                  className={"cursor-pointer " + (invoice ? "pt-2" : "")}
+                  onClick={() => setInvoice((invoice) => !invoice)}
+                  title="View More"
+                >
+                  <span>
+                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
+                    {invoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {invoice && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a
+                        href="https://giddh.com/invoice-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__invoicing_3">
+                <div
+                  className={"cursor-pointer " + (invoice ? "pt-2" : "")}
+                  onClick={() => setInvoice((invoice) => !invoice)}
+                  title="View More"
+                >
+                  <span>
+                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
+                    {invoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {invoice && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a
+                        href="https://giddh.com/invoice-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__invoicing_4">
+                <div
+                  className={"cursor-pointer " + (invoice ? "pt-2" : "")}
+                  onClick={() => setInvoice((invoice) => !invoice)}
+                  title="View More"
+                >
+                  <span>
+                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
+                    {invoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {invoice && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a
+                        href="https://giddh.com/invoice-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__invoicing_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (invoice ? "pt-2" : "")}
+                  onClick={() => setInvoice((invoice) => !invoice)}
+                  title="View More"
+                >
+                  <span>
+                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
+                    {invoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {invoice && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a
+                        href="https://giddh.com/invoice-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__in1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__in2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__in3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__in4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__in5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__record-bills pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
+                  onClick={() => setRecordBill((recordBill) => !recordBill)}
+                  title="View More"
+                >
+                  <span>
+                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
+                    {recordBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {recordBill && (
+                    <p className="c-fw-400">
+                      Create purchase order, and purchase bill, attach files in
+                      the bill, pay directly to the vendor, and
+                      <a href="#" target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__record-bills_2">
+                <div
+                  className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
+                  onClick={() => setRecordBill((recordBill) => !recordBill)}
+                  title="View More"
+                >
+                  <span>
+                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
+                    {recordBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {recordBill && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a href="#" target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__record-bills_3">
+                <div
+                  className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
+                  onClick={() => setRecordBill((recordBill) => !recordBill)}
+                  title="View More"
+                >
+                  <span>
+                    Record Bills {!recordBill && <MdKeyboardArrowDown />}
+                    {recordBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {recordBill && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a href="#" target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__record-bills_4">
+                <div
+                  className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
+                  onClick={() => setRecordBill((recordBill) => !recordBill)}
+                  title="View More"
+                >
+                  <span>
+                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
+                    {recordBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {recordBill && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a href="#" target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__record-bills_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
+                  onClick={() => setRecordBill((recordBill) => !recordBill)}
+                  title="View More"
+                >
+                  <span>
+                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
+                    {recordBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {recordBill && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a href="#" target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__rb1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rb2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rb3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rb4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rb5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__managing-inventory pricing-border-top">
+                <div
+                  className={
+                    "cursor-pointer " + (managingInventory ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setManagingInventory(
+                      (managingInventory) => !managingInventory
+                    )
+                  }
+                  title="View More"
+                >
+                  <span>
+                    Managing Inventory{" "}
+                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
+                    {managingInventory && <MdKeyboardArrowUp />}
+                  </span>
+                  {managingInventory && (
+                    <p className="c-fw-400">
+                      Maintain inventory of product, services, and fixed asset
+                      in group, items and variant too, easy search with barcode,
+                      and
+                      <a
+                        href="https://giddh.com/inventory-management-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__managing-inventory_2">
+                <div
+                  className={
+                    "cursor-pointer " + (managingInventory ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setManagingInventory(
+                      (managingInventory) => !managingInventory
+                    )
+                  }
+                  title="View More"
+                >
+                  <span>
+                    Managing Inventory{" "}
+                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
+                    {managingInventory && <MdKeyboardArrowUp />}
+                  </span>
+                  {managingInventory && (
+                    <p className="c-fw-400">
+                      Maintain inventory of product, services, and fixed asset
+                      in group, items and variant too, easy search with barcode,
+                      and
+                      <a
+                        href="https://giddh.com/inventory-management-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__managing-inventory_3">
+                <div
+                  className={
+                    "cursor-pointer " + (managingInventory ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setManagingInventory(
+                      (managingInventory) => !managingInventory
+                    )
+                  }
+                  title="View More"
+                >
+                  <span>
+                    Managing Inventory{" "}
+                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
+                    {managingInventory && <MdKeyboardArrowUp />}
+                  </span>
+                  {managingInventory && (
+                    <p className="c-fw-400">
+                      Maintain inventory of product, services, and fixed asset
+                      in group, items and variant too, easy search with barcode,
+                      and
+                      <a
+                        href="https://giddh.com/inventory-management-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__managing-inventory_4">
+                <div
+                  className={
+                    "cursor-pointer " + (managingInventory ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setManagingInventory(
+                      (managingInventory) => !managingInventory
+                    )
+                  }
+                  title="View More"
+                >
+                  <span>
+                    Managing Inventory{" "}
+                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
+                    {managingInventory && <MdKeyboardArrowUp />}
+                  </span>
+                  {managingInventory && (
+                    <p className="c-fw-400">
+                      Maintain inventory of product, services, and fixed asset
+                      in group, items and variant too, easy search with barcode,
+                      and
+                      <a
+                        href="https://giddh.com/inventory-management-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__managing-inventory_5 display-all__child">
+                <div
+                  className={
+                    "cursor-pointer " + (managingInventory ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setManagingInventory(
+                      (managingInventory) => !managingInventory
+                    )
+                  }
+                  title="View More"
+                >
+                  <span>
+                    Managing Inventory{" "}
+                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
+                    {managingInventory && <MdKeyboardArrowUp />}
+                  </span>
+                  {managingInventory && (
+                    <p className="c-fw-400">
+                      Maintain inventory of product, services, and fixed asset
+                      in group, items and variant too, easy search with barcode,
+                      and
+                      <a
+                        href="https://giddh.com/inventory-management-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__mi1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mi2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mi3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mi4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mi5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__multi-currency pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
+                  onClick={() =>
+                    setMultiCurrency((multiCurrency) => !multiCurrency)
+                  }
+                  title="View More"
+                >
+                  <span>
+                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
+                    {multiCurrency && <MdKeyboardArrowUp />}
+                  </span>
+                  {multiCurrency && (
+                    <p className="c-fw-400">
+                      Manage invoicing and payments seamlessly across 100+
+                      currencies, with automatic currency conversion based on
+                      real-time exchange rates and
+                      <a
+                        href="https://giddh.com/multi-currency-accounting-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__multi-currency_2">
+                <div
+                  className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
+                  onClick={() =>
+                    setMultiCurrency((multiCurrency) => !multiCurrency)
+                  }
+                  title="View More"
+                >
+                  <span>
+                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
+                    {multiCurrency && <MdKeyboardArrowUp />}
+                  </span>
+                  {multiCurrency && (
+                    <p className="c-fw-400">
+                      Manage invoicing and payments seamlessly across 100+
+                      currencies, with automatic currency conversion based on
+                      real-time exchange rates and
+                      <a
+                        href="https://giddh.com/multi-currency-accounting-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__multi-currency_3">
+                <div
+                  className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
+                  onClick={() =>
+                    setMultiCurrency((multiCurrency) => !multiCurrency)
+                  }
+                  title="View More"
+                >
+                  <span>
+                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
+                    {multiCurrency && <MdKeyboardArrowUp />}
+                  </span>
+                  {multiCurrency && (
+                    <p className="c-fw-400">
+                      Manage invoicing and payments seamlessly across 100+
+                      currencies, with automatic currency conversion based on
+                      real-time exchange rates and
+                      <a
+                        href="https://giddh.com/multi-currency-accounting-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__multi-currency_4">
+                <div
+                  className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
+                  onClick={() =>
+                    setMultiCurrency((multiCurrency) => !multiCurrency)
+                  }
+                  title="View More"
+                >
+                  <span>
+                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
+                    {multiCurrency && <MdKeyboardArrowUp />}
+                  </span>
+                  {multiCurrency && (
+                    <p className="c-fw-400">
+                      Manage invoicing and payments seamlessly across 100+
+                      currencies, with automatic currency conversion based on
+                      real-time exchange rates and
+                      <a
+                        href="https://giddh.com/multi-currency-accounting-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__multi-currency_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
+                  onClick={() =>
+                    setMultiCurrency((multiCurrency) => !multiCurrency)
+                  }
+                  title="View More"
+                >
+                  <span>
+                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
+                    {multiCurrency && <MdKeyboardArrowUp />}
+                  </span>
+                  {multiCurrency && (
+                    <p className="c-fw-400">
+                      Manage invoicing and payments seamlessly across 100+
+                      currencies, with automatic currency conversion based on
+                      real-time exchange rates and
+                      <a
+                        href="https://giddh.com/multi-currency-accounting-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__mc1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mc2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mc3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mc4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mc5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__gst pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                  onClick={() => setGst((gst) => !gst)}
+                  title="View More"
+                >
+                  <span>
+                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {gst && <MdKeyboardArrowUp />}
+                  </span>
+                  {gst && (
+                    <p className="c-fw-400">
+                      Create GST invoice, view GST reports, direct filing, and
+                      reconcile transaction with the GST portal and
+                      <a href="https://giddh.com/gst" target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__gst_2">
+                <div
+                  className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                  onClick={() => setGst((gst) => !gst)}
+                  title="View More"
+                >
+                  <span>
+                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {gst && <MdKeyboardArrowUp />}
+                  </span>
+                  {gst && (
+                    <p className="c-fw-400">
+                      Create GST invoice, view GST reports, direct filing, and
+                      reconcile transaction with the GST portal and
+                      <a href="https://giddh.com/gst" target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__gst_3">
+                <div
+                  className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                  onClick={() => setGst((gst) => !gst)}
+                  title="View More"
+                >
+                  <span>
+                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {gst && <MdKeyboardArrowUp />}
+                  </span>
+                  {gst && (
+                    <p className="c-fw-400">
+                      Create GST invoice, view GST reports, direct filing, and
+                      reconcile transaction with the GST portal and
+                      <a href="https://giddh.com/gst" target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__gst_4">
+                <div
+                  className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                  onClick={() => setGst((gst) => !gst)}
+                  title="View More"
+                >
+                  <span>
+                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {gst && <MdKeyboardArrowUp />}
+                  </span>
+                  {gst && (
+                    <p className="c-fw-400">
+                      Create GST invoice, view GST reports, direct filing, and
+                      reconcile transaction with the GST portal and
+                      <a href="https://giddh.com/gst" target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__gst_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                  onClick={() => setGst((gst) => !gst)}
+                  title="View More"
+                >
+                  <span>
+                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {gst && <MdKeyboardArrowUp />}
+                  </span>
+                  {gst && (
+                    <p className="c-fw-400">
+                      Create GST invoice, view GST reports, direct filing, and
+                      reconcile transaction with the GST portal and
+                      <a href="https://giddh.com/gst" target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__g1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__g2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__g3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__g4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__g5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__reports pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (report ? "pt-2" : "")}
+                  onClick={() => setReport((report) => !report)}
+                  title="View More"
+                >
+                  <span>
+                    Reports {!report && <MdKeyboardArrowDown />}{" "}
+                    {report && <MdKeyboardArrowUp />}
+                  </span>
+                  {report && (
+                    <p className="c-fw-400">
+                      Access various reports like Trial balance, Profit & loss,
+                      Balance sheet, Daybook, Cash flow statement, Ledger, Sales
+                      bifurcation, Columnar report, Purchase register, Sales
+                      register, Inventory reports, Reverse charge report, and
+                      <a
+                        href="https://giddh.com/financial-reporting"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__reports_2">
+                <div
+                  className={"cursor-pointer " + (report ? "pt-2" : "")}
+                  onClick={() => setReport((report) => !report)}
+                  title="View More"
+                >
+                  <span>
+                    Reports {!report && <MdKeyboardArrowDown />}{" "}
+                    {report && <MdKeyboardArrowUp />}
+                  </span>
+                  {report && (
+                    <p className="c-fw-400">
+                      Access various reports like Trial balance, Profit & loss,
+                      Balance sheet, Daybook, Cash flow statement, Ledger, Sales
+                      bifurcation, Columnar report, Purchase register, Sales
+                      register, Inventory reports, Reverse charge report, and
+                      <a
+                        href="https://giddh.com/financial-reporting"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__reports_3">
+                <div
+                  className={"cursor-pointer " + (report ? "pt-2" : "")}
+                  onClick={() => setReport((report) => !report)}
+                  title="View More"
+                >
+                  <span>
+                    Reports {!report && <MdKeyboardArrowDown />}{" "}
+                    {report && <MdKeyboardArrowUp />}
+                  </span>
+                  {report && (
+                    <p className="c-fw-400">
+                      Access various reports like Trial balance, Profit & loss,
+                      Balance sheet, Daybook, Cash flow statement, Ledger, Sales
+                      bifurcation, Columnar report, Purchase register, Sales
+                      register, Inventory reports, Reverse charge report, and
+                      <a
+                        href="https://giddh.com/financial-reporting"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__reports_4">
+                <div
+                  className={"cursor-pointer " + (report ? "pt-2" : "")}
+                  onClick={() => setReport((report) => !report)}
+                  title="View More"
+                >
+                  <span>
+                    Reports {!report && <MdKeyboardArrowDown />}{" "}
+                    {report && <MdKeyboardArrowUp />}
+                  </span>
+                  {report && (
+                    <p className="c-fw-400">
+                      Access various reports like Trial balance, Profit & loss,
+                      Balance sheet, Daybook, Cash flow statement, Ledger, Sales
+                      bifurcation, Columnar report, Purchase register, Sales
+                      register, Inventory reports, Reverse charge report, and
+                      <a
+                        href="https://giddh.com/financial-reporting"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__reports_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (report ? "pt-2" : "")}
+                  onClick={() => setReport((report) => !report)}
+                  title="View More"
+                >
+                  <span>
+                    Reports {!report && <MdKeyboardArrowDown />}{" "}
+                    {report && <MdKeyboardArrowUp />}
+                  </span>
+                  {report && (
+                    <p className="c-fw-400">
+                      Access various reports like Trial balance, Profit & loss,
+                      Balance sheet, Daybook, Cash flow statement, Ledger, Sales
+                      bifurcation, Columnar report, Purchase register, Sales
+                      register, Inventory reports, Reverse charge report, and
+                      <a
+                        href="https://giddh.com/financial-reporting"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__r1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__r2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__r3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__r4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__r5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__dashboard pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
+                  onClick={() => setDashboard((dashoard) => !dashoard)}
+                  title="View More"
+                >
+                  <span>
+                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
+                    {dashoard && <MdKeyboardArrowUp />}
+                  </span>
+                  {dashoard && (
+                    <p className="c-fw-400">
+                      View visual representation of the company data like Total
+                      overdues, Profit & loss, Bank Account balances, and
+                      <a
+                        href="https://giddh.com/accounting-dashboard"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__dashboard_2">
+                <div
+                  className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
+                  onClick={() => setDashboard((dashoard) => !dashoard)}
+                  title="View More"
+                >
+                  <span>
+                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
+                    {dashoard && <MdKeyboardArrowUp />}
+                  </span>
+                  {dashoard && (
+                    <p className="c-fw-400">
+                      View visual representation of the company data like Total
+                      overdues, Profit & loss, Bank Account balances, and
+                      <a
+                        href="https://giddh.com/accounting-dashboard"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__dashboard_3">
+                <div
+                  className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
+                  onClick={() => setDashboard((dashoard) => !dashoard)}
+                  title="View More"
+                >
+                  <span>
+                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
+                    {dashoard && <MdKeyboardArrowUp />}
+                  </span>
+                  {dashoard && (
+                    <p className="c-fw-400">
+                      View visual representation of the company data like Total
+                      overdues, Profit & loss, Bank Account balances, and
+                      <a
+                        href="https://giddh.com/accounting-dashboard"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__dashboard_4">
+                <div
+                  className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
+                  onClick={() => setDashboard((dashoard) => !dashoard)}
+                  title="View More"
+                >
+                  <span>
+                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
+                    {dashoard && <MdKeyboardArrowUp />}
+                  </span>
+                  {dashoard && (
+                    <p className="c-fw-400">
+                      View visual representation of the company data like Total
+                      overdues, Profit & loss, Bank Account balances, and
+                      <a
+                        href="https://giddh.com/accounting-dashboard"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__dashboard_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
+                  onClick={() => setDashboard((dashoard) => !dashoard)}
+                  title="View More"
+                >
+                  <span>
+                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
+                    {dashoard && <MdKeyboardArrowUp />}
+                  </span>
+                  {dashoard && (
+                    <p className="c-fw-400">
+                      View visual representation of the company data like Total
+                      overdues, Profit & loss, Bank Account balances, and
+                      <a
+                        href="https://giddh.com/accounting-dashboard"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__rd1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rd2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rd3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rd4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rd5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__user-access pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                  onClick={() => setUserAccess((userAccess) => !userAccess)}
+                  title="View More"
+                >
+                  <span>
+                    Unlimited users access{" "}
+                    {!userAccess && <MdKeyboardArrowDown />}{" "}
+                    {userAccess && <MdKeyboardArrowUp />}
+                  </span>
+                  {userAccess && (
+                    <p className="c-fw-400">
+                      Grant unlimited user access with customizable roles, to
+                      enhanced security and also allowing you to set
+                      restrictions such as Date ranges, CIDR ranges, and
+                      <a
+                        href="https://giddh.com/multi-user-accounting-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__user-access_2">
+                <div
+                  className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                  onClick={() => setUserAccess((userAccess) => !userAccess)}
+                  title="View More"
+                >
+                  <span>
+                    Unlimited users access{" "}
+                    {!userAccess && <MdKeyboardArrowDown />}{" "}
+                    {userAccess && <MdKeyboardArrowUp />}
+                  </span>
+                  {userAccess && (
+                    <p className="c-fw-400">
+                      Grant unlimited user access with customizable roles, to
+                      enhanced security and also allowing you to set
+                      restrictions such as Date ranges, CIDR ranges, and
+                      <a
+                        href="https://giddh.com/multi-user-accounting-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__user-access_3">
+                <div
+                  className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                  onClick={() => setUserAccess((userAccess) => !userAccess)}
+                  title="View More"
+                >
+                  <span>
+                    Unlimited users access{" "}
+                    {!userAccess && <MdKeyboardArrowDown />}{" "}
+                    {userAccess && <MdKeyboardArrowUp />}
+                  </span>
+                  {userAccess && (
+                    <p className="c-fw-400">
+                      Grant unlimited user access with customizable roles, to
+                      enhanced security and also allowing you to set
+                      restrictions such as Date ranges, CIDR ranges, and
+                      <a
+                        href="https://giddh.com/multi-user-accounting-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__user-access_4">
+                <div
+                  className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                  onClick={() => setUserAccess((userAccess) => !userAccess)}
+                  title="View More"
+                >
+                  <span>
+                    Unlimited users access{" "}
+                    {!userAccess && <MdKeyboardArrowDown />}{" "}
+                    {userAccess && <MdKeyboardArrowUp />}
+                  </span>
+                  {userAccess && (
+                    <p className="c-fw-400">
+                      Grant unlimited user access with customizable roles, to
+                      enhanced security and also allowing you to set
+                      restrictions such as Date ranges, CIDR ranges, and
+                      <a
+                        href="https://giddh.com/multi-user-accounting-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__user-access_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                  onClick={() => setUserAccess((userAccess) => !userAccess)}
+                  title="View More"
+                >
+                  <span>
+                    Unlimited users access{" "}
+                    {!userAccess && <MdKeyboardArrowDown />}{" "}
+                    {userAccess && <MdKeyboardArrowUp />}
+                  </span>
+                  {userAccess && (
+                    <p className="c-fw-400">
+                      Grant unlimited user access with customizable roles, to
+                      enhanced security and also allowing you to set
+                      restrictions such as Date ranges, CIDR ranges, and
+                      <a
+                        href="https://giddh.com/multi-user-accounting-software"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__ua1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ua2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ua3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ua4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ua5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__bank pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
+                  onClick={() => setBankReconciliation((bankRec) => !bankRec)}
+                  title="View More"
+                >
+                  <span>
+                    Bank Reconciliation
+                    {!bankRec && <MdKeyboardArrowDown />}{" "}
+                    {bankRec && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankRec && (
+                    <p className="c-fw-400">
+                      Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and
+                      <a
+                        href="https://giddh.com/conect-bank-reconcile"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__bank_2">
+                <div
+                  className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
+                  onClick={() => setBankReconciliation((bankRec) => !bankRec)}
+                  title="View More"
+                >
+                  <span>
+                    Bank Reconciliation
+                    {!bankRec && <MdKeyboardArrowDown />}{" "}
+                    {bankRec && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankRec && (
+                    <p className="c-fw-400">
+                      Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and
+                      <a
+                        href="https://giddh.com/conect-bank-reconcile"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__bank_3">
+                <div
+                  className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
+                  onClick={() => setBankReconciliation((bankRec) => !bankRec)}
+                  title="View More"
+                >
+                  <span>
+                    Bank Reconciliation
+                    {!bankRec && <MdKeyboardArrowDown />}{" "}
+                    {bankRec && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankRec && (
+                    <p className="c-fw-400">
+                      Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and
+                      <a
+                        href="https://giddh.com/conect-bank-reconcile"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__bank_4">
+                <div
+                  className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
+                  onClick={() => setBankReconciliation((bankRec) => !bankRec)}
+                  title="View More"
+                >
+                  <span>
+                    Bank Reconciliation
+                    {!bankRec && <MdKeyboardArrowDown />}{" "}
+                    {bankRec && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankRec && (
+                    <p className="c-fw-400">
+                      Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and
+                      <a
+                        href="https://giddh.com/conect-bank-reconcile"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__bank_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
+                  onClick={() => setBankReconciliation((bankRec) => !bankRec)}
+                  title="View More"
+                >
+                  <span>
+                    Bank Reconciliation
+                    {!bankRec && <MdKeyboardArrowDown />}{" "}
+                    {bankRec && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankRec && (
+                    <p className="c-fw-400">
+                      Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and
+                      <a
+                        href="https://giddh.com/conect-bank-reconcile"
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__br1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__br2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__br3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__br4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__br5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__manufacturing pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
+                  onClick={() => setManufacturing((manufacturing) => !manufacturing)}
+                  title="View More"
+                >
+                  <span>
+                    Manufacturing
+                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
+                    {manufacturing && <MdKeyboardArrowUp />}
+                  </span>
+                  {manufacturing && (
+                    <p className="c-fw-400">
+                      Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__manufacturing_2">
+                <div
+                  className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
+                  onClick={() => setManufacturing((manufacturing) => !manufacturing)}
+                  title="View More"
+                >
+                  <span>
+                    Manufacturing
+                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
+                    {manufacturing && <MdKeyboardArrowUp />}
+                  </span>
+                  {manufacturing && (
+                    <p className="c-fw-400">
+                      Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__manufacturing_3">
+                <div
+                  className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
+                  onClick={() => setManufacturing((manufacturing) => !manufacturing)}
+                  title="View More"
+                >
+                  <span>
+                    Manufacturing
+                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
+                    {manufacturing && <MdKeyboardArrowUp />}
+                  </span>
+                  {manufacturing && (
+                    <p className="c-fw-400">
+                      Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__manufacturing_4">
+                <div
+                  className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
+                  onClick={() => setManufacturing((manufacturing) => !manufacturing)}
+                  title="View More"
+                >
+                  <span>
+                    Manufacturing
+                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
+                    {manufacturing && <MdKeyboardArrowUp />}
+                  </span>
+                  {manufacturing && (
+                    <p className="c-fw-400">
+                      Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__manufacturing_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
+                  onClick={() => setManufacturing((manufacturing) => !manufacturing)}
+                  title="View More"
+                >
+                  <span>
+                    Manufacturing
+                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
+                    {manufacturing && <MdKeyboardArrowUp />}
+                  </span>
+                  {manufacturing && (
+                    <p className="c-fw-400">
+                      Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__m1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__m2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__m3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__m4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__m5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
               <div className="pricing_main_section__grid__link_all_feature">
                 <a href={link + "/all-features"}>Check all features</a>
               </div>
               <div className="pricing_main_section__grid__extra_charges">
                 <p className="c-fs-6 c-fw-400">
-                  Extra Add ons: <span className="c-fw-600"> {isIndia ? "₹0.10" : (isAE ? "د.إ0.03" : "£0.005") }</span> per
-                  transaction | <span className="c-fw-600">{isIndia ? "₹2000" : (isAE ? "د.إ250" : "£60") }</span> per
-                  branch/year |<span className="c-fw-600">{isIndia ? "₹1000" : (isAE ? "د.إ120" : "£30") }</span> per
-                  warehouse/year
+                  Extra Add ons:{" "}
+                  <span className="c-fw-600">
+                    {" "}
+                    {isIndia ? "₹0.10" : isAE ? "د.إ0.03" : "£0.005"}
+                  </span>{" "}
+                  per transaction |{" "}
+                  <span className="c-fw-600">
+                    {isIndia ? "₹2000" : isAE ? "د.إ250" : "£60"}
+                  </span>{" "}
+                  per branch/year |
+                  <span className="c-fw-600">
+                    {isIndia ? "₹1000" : isAE ? "د.إ120" : "£30"}
+                  </span>{" "}
+                  per warehouse/year
                 </p>
               </div>
             </div>
@@ -413,7 +1883,7 @@ const pricing = (path) => {
               If yes, it’s time to Make the Switch and purchase a dedicated
               online accounting software like GIDDH.
             </p>
-            <a href={ link + "/signup"}>Start your trial</a>
+            <a href={link + "/signup"}>Start your trial</a>
           </div>
         </div>
       </section>
