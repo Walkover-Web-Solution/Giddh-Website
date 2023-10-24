@@ -29,7 +29,7 @@
     font-weight: var(--c-fw-600);
 
     &.display-four{
-      grid-template-rows: 60px 140px 60px 50px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-rows: 60px 140px 60px 50px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
       grid-template-columns: auto 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title"
@@ -51,6 +51,15 @@
         "user-access ua1 ua2 ua3 ua4"
         "bank br1 br2 br3 br4"
         "manufacturing m1 m2 m3 m4"
+        "e-invoice ei1 ei2 ei3 ei4"
+        "eway-bill ewb1 ewb2 ewb3 ewb4"
+        "icici ic1 ic2 ic3 ic4"
+        "warehouse w1 w2 w3 w4"
+        "easy-import imex1 imex2 imex3 imex4"
+        "financial fy1 fy2 fy3 fy4"
+        "banking-support bs1 bs2 bs3 bs4"
+        "security s1 s2 s3 s4"
+        "support sp1 sp2 sp3 sp4"
 
         "link_all_feature extra_charges extra_charges extra_charges extra_charges";
 
@@ -62,7 +71,7 @@
     }
     
     &.display-all{
-      grid-template-rows: 60px 100px 60px 50px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px, auto) minmax(50px, auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-rows: 60px 100px 60px 50px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px, auto) minmax(50px, auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
       grid-template-columns: auto 180px 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title title"
@@ -84,6 +93,15 @@
         "user-access ua1 ua2 ua3 ua4 ua5"
         "bank br1 br2 br3 br4 br5"
         "manufacturing m1 m2 m3 m4 m5"
+        "e-invoice ei1 ei2 ei3 ei4 ei5"
+        "eway-bill ewb1 ewb2 ewb3 ewb4 ewb5"
+        "icici ic1 ic2 ic3 ic4 ic5"
+        "warehouse w1 w2 w3 w4 w5"
+        "easy-import imex1 imex2 imex3 imex4 imex5"
+        "financial fy1 fy2 fy3 fy4 fy5"
+        "banking-support bs1 bs2 bs3 bs4 bs5"
+        "security s1 s2 s3 s4 s5"
+        "support sp1 sp2 sp3 sp4 sp5"
 
         "link_all_feature extra_charges extra_charges extra_charges extra_charges extra_charges";
     }
@@ -858,6 +876,411 @@
       display: none;
     }
 
+    &__e-invoice {
+      grid-area: e-invoice;
+      justify-content: start !important;
+    }
+    &__e-invoice_2 {
+      grid-area: e-invoice_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__e-invoice_3 {
+      grid-area: e-invoice_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__e-invoice_4 {
+      grid-area: e-invoice_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__e-invoice_5 {
+      grid-area: e-invoice_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__ei1 {
+      grid-area: ei1;
+    }
+    &__ei2 {
+      grid-area: ei2;
+    }
+    &__ei3 {
+      grid-area: ei3;
+      background-color: var(--col-white);
+    }
+    &__ei4 {
+      grid-area: ei4;
+      background-color: #e6fff5;
+    }
+    &__ei5 {
+      grid-area: ei5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
+    &__eway-bill {
+      grid-area: eway-bill;
+      justify-content: start !important;
+    }
+    &__eway-bill_2 {
+      grid-area: eway-bill_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__eway-bill_3 {
+      grid-area: eway-bill_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__eway-bill_4 {
+      grid-area: eway-bill_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__eway-bill_5 {
+      grid-area: eway-bill_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__ewb1 {
+      grid-area: ewb1;
+    }
+    &__ewb2 {
+      grid-area: ewb2;
+    }
+    &__ewb3 {
+      grid-area: ewb3;
+      background-color: var(--col-white);
+    }
+    &__ewb4 {
+      grid-area: ewb4;
+      background-color: #e6fff5;
+    }
+    &__ewb5 {
+      grid-area: ewb5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
+    &__icici {
+      grid-area: icici;
+      justify-content: start !important;
+    }
+    &__icici_2 {
+      grid-area: icici_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__icici_3 {
+      grid-area: icici_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__icici_4 {
+      grid-area: icici_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__icici_5 {
+      grid-area: icici_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__ic1 {
+      grid-area: ic1;
+    }
+    &__ic2 {
+      grid-area: ic2;
+    }
+    &__ic3 {
+      grid-area: ic3;
+      background-color: var(--col-white);
+    }
+    &__ic4 {
+      grid-area: ic4;
+      background-color: #e6fff5;
+    }
+    &__ic5 {
+      grid-area: ic5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
+    &__warehouse {
+      grid-area: warehouse;
+      justify-content: start !important;
+    }
+    &__warehouse_2 {
+      grid-area: warehouse_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__warehouse_3 {
+      grid-area: warehouse_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__warehouse_4 {
+      grid-area: warehouse_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__warehouse_5 {
+      grid-area: warehouse_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__w1 {
+      grid-area: w1;
+    }
+    &__w2 {
+      grid-area: w2;
+    }
+    &__w3 {
+      grid-area: w3;
+      background-color: var(--col-white);
+    }
+    &__w4 {
+      grid-area: w4;
+      background-color: #e6fff5;
+    }
+    &__w5 {
+      grid-area: w5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
+    &__easy-import {
+      grid-area: easy-import;
+      justify-content: start !important;
+    }
+    &__easy-import_2 {
+      grid-area: easy-import_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__easy-import_3 {
+      grid-area: easy-import_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__easy-import_4 {
+      grid-area: easy-import_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__easy-import_5 {
+      grid-area: easy-import_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__imex1 {
+      grid-area: imex1;
+    }
+    &__imex2 {
+      grid-area: imex2;
+    }
+    &__imex3 {
+      grid-area: imex3;
+      background-color: var(--col-white);
+    }
+    &__imex4 {
+      grid-area: imex4;
+      background-color: #e6fff5;
+    }
+    &__imex5 {
+      grid-area: imex5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
+    &__financial {
+      grid-area: financial;
+      justify-content: start !important;
+    }
+    &__financial_2 {
+      grid-area: financial_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__financial_3 {
+      grid-area: financial_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__financial_4 {
+      grid-area: financial_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__ financial_5 {
+      grid-area:  financial_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__fy1 {
+      grid-area: fy1;
+    }
+    &__fy2 {
+      grid-area: fy2;
+    }
+    &__fy3 {
+      grid-area: fy3;
+      background-color: var(--col-white);
+    }
+    &__fy4 {
+      grid-area: fy4;
+      background-color: #e6fff5;
+    }
+    &__fy5 {
+      grid-area: fy5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
+    &__banking-support {
+      grid-area: banking-support;
+      justify-content: start !important;
+    }
+    &__banking-support_2 {
+      grid-area: banking-support_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__banking-support_3 {
+      grid-area: banking-support_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__banking-support_4 {
+      grid-area: banking-support_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__ banking-support_5 {
+      grid-area:  banking-support_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__bs1 {
+      grid-area: bs1;
+    }
+    &__bs2 {
+      grid-area: bs2;
+    }
+    &__bs3 {
+      grid-area: bs3;
+      background-color: var(--col-white);
+    }
+    &__bs4 {
+      grid-area: bs4;
+      background-color: #e6fff5;
+    }
+    &__bs5 {
+      grid-area: bs5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
+    &__security {
+      grid-area: security;
+      justify-content: start !important;
+    }
+    &__security_2 {
+      grid-area: security_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__security_3 {
+      grid-area: security_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__security_4 {
+      grid-area: security_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__ security_5 {
+      grid-area:  security_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__s1 {
+      grid-area: s1;
+    }
+    &__s2 {
+      grid-area: s2;
+    }
+    &__s3 {
+      grid-area: s3;
+      background-color: var(--col-white);
+    }
+    &__s4 {
+      grid-area: s4;
+      background-color: #e6fff5;
+    }
+    &__s5 {
+      grid-area: s5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
+    &__support {
+      grid-area: support;
+      justify-content: start !important;
+    }
+    &__support_2 {
+      grid-area: support_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__support_3 {
+      grid-area: support_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__support_4 {
+      grid-area: support_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__ support_5 {
+      grid-area:  support_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__sp1 {
+      grid-area: sp1;
+    }
+    &__sp2 {
+      grid-area: sp2;
+    }
+    &__sp3 {
+      grid-area: sp3;
+      background-color: var(--col-white);
+    }
+    &__sp4 {
+      grid-area: sp4;
+      background-color: #e6fff5;
+    }
+    &__sp5 {
+      grid-area: sp5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
     &__link_all_feature {
       grid-area: link_all_feature;
       margin-top: auto;
@@ -958,10 +1381,10 @@
       &.display-four{
         grid-template-rows:
           70px 60px
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
@@ -986,6 +1409,15 @@
           "user-access ua1"
           "bank br1"
           "manufacturing m1"
+          "e-invoice ei1"
+          "eway-bill ewb1"
+          "icici ic1"
+          "warehouse w1"
+          "easy-import imex1"
+          "financial fy1"
+          "banking-support bs1"
+          "security s1"
+          "support sp1"
           
           "birch birch"
           "b2 b2"
@@ -1005,6 +1437,15 @@
           "user-access_2 ua2"
           "bank_2 br2"
           "manufacturing_2 m2"
+          "e-invoice_2 ei2"
+          "eway-bill_2 ewb2"
+          "icici_2 ic2"
+          "warehouse_2 w2"
+          "easy-import_2 imex2"
+          "financial_2 fy2"
+          "banking-support_2 bs2"
+          "security_2 s2"
+          "support_2 sp2"
 
           "oak oak"
           "b3 b3"
@@ -1024,6 +1465,15 @@
           "user-access_3 ua3"
           "bank_3 br3"
           "manufacturing_3 m3"
+          "e-invoice_3 ei3"
+          "eway-bill_3 ewb3"
+          "icici_3 ic3"
+          "warehouse_3 w3"
+          "easy-import_3 imex3"
+          "financial_3 fy3"
+          "banking-support_3 bs3"
+          "security_3 s3"
+          "support_3 sp3"
 
           "vine vine"
           "b4 b4"
@@ -1043,6 +1493,15 @@
           "user-access_4 ua4"
           "bank_4 br4"
           "manufacturing_4 m4"
+          "e-invoice_4 ei4"
+          "eway-bill_4 ewb4"
+          "icici_4 ic4"
+          "warehouse_4 w4"
+          "easy-import_4 imex4"
+          "financial_4 fy4"
+          "banking-support_4 bs4"
+          "security_4 s4"
+          "support_4 sp4"
           
           "link_all_feature link_all_feature"
           "extra_charges extra_charges";
@@ -1051,11 +1510,11 @@
         
         grid-template-rows:
           70px 60px
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
@@ -1080,6 +1539,16 @@
           "user-access ua1"
           "bank br1"
           "manufacturing m1"
+          "e-invoice ei1"
+          "eway-bill ewb1"
+          "icici ic1"
+          "warehouse w1"
+          "easy-import imex1"
+          "financial fy1"
+          "banking-support bs1"
+          "security s1"
+          "support sp1"
+
 
           "birch birch"
           "b2 b2"
@@ -1099,6 +1568,16 @@
           "user-access_2 ua2"
           "bank_2 br2"
           "manufacturing_2 m2"
+          "e-invoice_2 ei2"
+          "e-invoice_2 ei2"
+          "eway-bill_2 ewb2"
+          "icici_2 ic2"
+          "warehouse_2 w2"
+          "easy-import_2 imex2"
+          "financial_2 fy2"
+          "banking-support_2 bs2"
+          "security_2 s2"
+          "support_2 sp2"
 
           "oak oak"
           "b3 b3"
@@ -1118,6 +1597,15 @@
           "user-access_3 ua3"
           "bank_3 br3"
           "manufacturing_3 m3"
+          "e-invoice_3 ei3"
+          "eway-bill_3 ewb3"
+          "icici_3 ic3"
+          "warehouse_3 w3"
+          "easy-import_3 imex3"
+          "financial_3 fy3"
+          "banking-support_3 bs3"
+          "security_3 s3"
+          "support_3 sp3"
 
           "vine vine"
           "b4 b4"
@@ -1137,6 +1625,15 @@
           "user-access_4 ua4"
           "bank_4 br4"
           "manufacturing_4 m4"
+          "e-invoice_4 ei4"
+          "eway-bill_4 ewb4"
+          "icici_4 ic4"
+          "warehouse_4 w4"
+          "easy-import_4 imex4"
+          "financial_4 fy4"
+          "banking-support_4 bs4"
+          "security_4 s4"
+          "support_4 sp4"
 
           "sequoia sequoia"
           "b5 b5"
@@ -1156,6 +1653,15 @@
           "user-access_5 ua5"
           "bank_5 br5"
           "manufacturing_5 m5"
+          "e-invoice_5 ei5"
+          "eway-bill_5 ewb5"
+          "icici_5 ic5"
+          "warehouse_5 w5"
+          "easy-import_5 imex5"
+          "financial_5 fy5"
+          "banking-support_5 bs5"
+          "security_5 s5"
+          "support_5 sp5"
 
           "link_all_feature link_all_feature"
           "extra_charges extra_charges";
@@ -1235,7 +1741,43 @@
       &__manufacturing_2,
       &__manufacturing_3,
       &__manufacturing_4,
-      &__manufacturing_5  {
+      &__manufacturing_5,
+      &__e-invoice_2,
+      &__e-invoice_3,
+      &__e-invoice_4,
+      &__e-invoice_5,
+      &__eway-bill_2,
+      &__eway-bill_3,
+      &__eway-bill_4,
+      &__eway-bill_5,
+      &__icici_2,
+      &__icici_3,
+      &__icici_4,
+      &__icici_5,
+      &__warehouse_2,
+      &__warehouse_3,
+      &__warehouse_4,
+      &__warehouse_5,
+      &__easy-import_2,
+      &__easy-import_3,
+      &__easy-import_4,
+      &__easy-import_5,
+      &__financial_2,
+      &__financial_3,
+      &__financial_4,
+      &__financial_5,
+      &__banking-support_2,
+      &__banking-support_3,
+      &__banking-support_4,
+      &__banking-support_5,
+      &__security_2,
+      &__security_3,
+      &__security_4,
+      &__security_5,
+      &__support_2,
+      &__support_3,
+      &__support_4,
+      &__support_5  {
         display: flex;
         align-items: center;
         height: 100%;
@@ -1332,7 +1874,52 @@
       &__m2,
       &__m3,
       &__m4,
-      &__m5  {
+      &__m5,
+      &__ei1,
+      &__ei2,
+      &__ei3,
+      &__ei4,
+      &__ei5,
+      &__ewb1,
+      &__ewb2,
+      &__ewb3,
+      &__ewb4,
+      &__ewb5,
+      &__ic1,
+      &__ic2,
+      &__ic3,
+      &__ic4,
+      &__ic5,
+      &__w1,
+      &__w2,
+      &__w3,
+      &__w4,
+      &__w5,
+      &__imex1,
+      &__imex2,
+      &__imex3,
+      &__imex4,
+      &__imex5,
+      &__fy1,
+      &__fy2,
+      &__fy3,
+      &__fy4,
+      &__fy5,
+      &__bs1,
+      &__bs2,
+      &__bs3,
+      &__bs4,
+      &__bs5,
+      &__s1,
+      &__s2,
+      &__s3,
+      &__s4,
+      &__s5,
+      &__sp1,
+      &__sp2,
+      &__sp3,
+      &__sp4,
+      &__sp5 {
         background-color: var(--col-white);
         height: 100%;
         display: flex;
