@@ -1,9 +1,3 @@
-.pricing_top_section {
-  min-height: 100dvh;
-  display: flex;
-  padding-bottom: 3rem;
-}
-
 .pricing_main_section {
   background-color: #fafafa;
   padding-top: 60px;
@@ -29,7 +23,7 @@
     font-weight: var(--c-fw-600);
 
     &.display-four{
-      grid-template-rows: 60px 140px 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-rows: minmax(240px,auto) 140px 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
       grid-template-columns: auto 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title"
@@ -70,7 +64,7 @@
     }
     
     &.display-all{
-      grid-template-rows: 60px 100px 60px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-rows: minmax(240px,auto) 100px 60px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
       grid-template-columns: auto 180px 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title title"
@@ -1289,6 +1283,9 @@
     border-top: 1px solid #dee2e6;
     height: 100%;
   }
+  .font-46{
+    font-size: 46px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -1307,24 +1304,7 @@
   }
 }
 @media (max-width: 991px) {
-  .pricing_top_section {
-    min-height: auto;
-    padding-top: 250px;
-
-    &__column-reverse {
-      flex-direction: column-reverse;
-
-      img {
-        &.img-fluid {
-          max-width: 65%;
-          float: right;
-          margin-bottom: 50px;
-        }
-      }
-    }
-  }
-
-  .pricing_main_section {
+   .pricing_main_section {
     .benefits-link {
       width: 100%;
       background-color: #494d50;
@@ -1336,7 +1316,7 @@
       align-items: center;
       &.display-four{
         grid-template-rows:
-          70px 60px
+          minmax(350px, auto) 60px
           auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
@@ -1344,8 +1324,8 @@
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
-          "logo logo"
           "title title"
+          "logo logo"
 
           "trial trial"
           "b1 b1"
@@ -1461,7 +1441,7 @@
       &.display-all{
         
         grid-template-rows:
-          70px 60px
+          minmax(350px, auto) 60px
           auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
@@ -1470,8 +1450,8 @@
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
-          "logo logo"
           "title title"
+          "logo logo"
 
           "trial trial"
           "b1 b1"
@@ -1904,11 +1884,6 @@
   }
 }
 
-@media (max-width: 575px) {
-  .pricing_top_section {
-    padding-top: 120px;
-  }  
-}
 .pricing_grid_section {
   background-color: #e6e7e9;
   margin: 2rem 0;

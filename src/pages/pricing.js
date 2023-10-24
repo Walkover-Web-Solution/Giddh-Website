@@ -49,29 +49,7 @@ const pricing = (path) => {
 
   return (
     <>
-      <section className="container-fluid pricing_top_section">
-        <div className="row align-items-center mt-auto pricing_top_section__column-reverse">
-          <div className="col-lg-6 col-md-12">
-            <h1 className="heading col-primary c-fw-600 ms-4">
-              Powerful Accounting Software. Affordable Pricing.
-            </h1>
-            <h2 className="sub-heading col-primary c-fw-600 ms-4 mt-5">
-              No features sacrifices
-            </h2>
-          </div>
-          <div className="col-lg-6 col-md-12">
-            <figure>
-              <img
-                className="img-fluid"
-                src="/img/pricing-laptop-image-with-giddh-dashoard-screen.png"
-                alt="Laptop Image"
-              />
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section className="container-fluid pricing_main_section">
+     <section className="container-fluid pricing_main_section">
         <div className="row justify-content-center">
           <div className="col-12">
             <div
@@ -81,7 +59,12 @@ const pricing = (path) => {
               }
             >
               <div className="pricing_main_section__grid__title">
-                <h3>Powerful Accounting Software. Affordable Pricing.</h3>
+              <h1 className="font-46 col-primary c-fw-600 ms-4 mt-5">
+              Powerful Accounting Software. Affordable Pricing.
+            </h1>
+            <h2 className="sub-heading c-fw-600 ms-4 mt-4 mb-5">
+              No features sacrifices
+            </h2>
               </div>
               <div className="pricing_main_section__grid__guarantee_logo">
                 <figure>
