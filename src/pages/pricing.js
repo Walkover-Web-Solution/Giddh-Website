@@ -37,16 +37,6 @@ const pricing = (path) => {
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
 
-  function showText(key) {
-    if (key === "invoicing") {
-      if (invoice) {
-        setInvoice(false);
-      } else {
-        setInvoice(true);
-      }
-    }
-  }
-
   return (
     <>
      <section className="container-fluid pricing_main_section">
