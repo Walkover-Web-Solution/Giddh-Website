@@ -29,7 +29,7 @@
     font-weight: var(--c-fw-600);
 
     &.display-four{
-      grid-template-rows: 60px 140px 60px 50px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-rows: 60px 140px 60px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
       grid-template-columns: auto 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title"
@@ -38,7 +38,6 @@
         "transactions t1 t2 t3 t4"
         "companies c1 c2 c3 c4"
         "accountant_consultant ac1 ac2 ac3 ac4"
-        "unlimited_users u1 u2 u3 u4"
         "customers_vendors cv1 cv2 cv3 cv4"
         "desktop_mobile_app d1 d2 d3 d4"
         "invoicing in1 in2 in3 in4"
@@ -71,7 +70,7 @@
     }
     
     &.display-all{
-      grid-template-rows: 60px 100px 60px 50px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px, auto) minmax(50px, auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-rows: 60px 100px 60px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
       grid-template-columns: auto 180px 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title title"
@@ -80,7 +79,6 @@
         "transactions t1 t2 t3 t4 t5"
         "companies c1 c2 c3 c4 c5"
         "accountant_consultant ac1 ac2 ac3 ac4 ac5"
-        "unlimited_users u1 u2 u3 u4 u5"
         "customers_vendors cv1 cv2 cv3 cv4 cv5"
         "desktop_mobile_app d1 d2 d3 d4 d5"
         "invoicing in1 in2 in3 in4 in5"
@@ -292,49 +290,6 @@
     }
     &__ac5 {
       grid-area: ac5;
-      background-color: #ffe5e8;
-    }
-
-    &__unlimited_users {
-      grid-area: unlimited_users;
-      justify-content: start !important;
-    }
-    &__unlimited_users_2 {
-      grid-area: unlimited_users_2;
-      justify-content: start !important;
-      display: none;
-    }
-    &__unlimited_users_3 {
-      grid-area: unlimited_users_3;
-      justify-content: start !important;
-      display: none;
-    }
-    &__unlimited_users_4 {
-      grid-area: unlimited_users_4;
-      justify-content: start !important;
-      display: none;
-    }
-    &__unlimited_users_5 {
-      grid-area: unlimited_users_5;
-      justify-content: start !important;
-      display: none;
-    }
-    &__u1 {
-      grid-area: u1;
-    }
-    &__u2 {
-      grid-area: u2;
-    }
-    &__u3 {
-      grid-area: u3;
-      background-color: var(--col-white);
-    }
-    &__u4 {
-      grid-area: u4;
-      background-color: #e6fff5;
-    }
-    &__u5 {
-      grid-area: u5;
       background-color: #ffe5e8;
     }
 
@@ -1120,8 +1075,8 @@
       justify-content: start !important;
       display: none;
     }
-    &__ financial_5 {
-      grid-area:  financial_5;
+    &__financial_5 {
+      grid-area: financial_5;
       justify-content: start !important;
       display: none;
     }
@@ -1165,8 +1120,8 @@
       justify-content: start !important;
       display: none;
     }
-    &__ banking-support_5 {
-      grid-area:  banking-support_5;
+    &__banking-support_5 {
+      grid-area: banking-support_5;
       justify-content: start !important;
       display: none;
     }
@@ -1210,8 +1165,8 @@
       justify-content: start !important;
       display: none;
     }
-    &__ security_5 {
-      grid-area:  security_5;
+    &__security_5 {
+      grid-area: security_5;
       justify-content: start !important;
       display: none;
     }
@@ -1255,8 +1210,8 @@
       justify-content: start !important;
       display: none;
     }
-    &__ support_5 {
-      grid-area:  support_5;
+    &__support_5 {
+      grid-area: support_5;
       justify-content: start !important;
       display: none;
     }
@@ -1373,6 +1328,7 @@
     .benefits-link {
       width: 100%;
       background-color: #494d50;
+      max-width: 160px;
     }
 
     &__grid {
@@ -1381,10 +1337,10 @@
       &.display-four{
         grid-template-rows:
           70px 60px
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
@@ -1396,7 +1352,6 @@
           "transactions t1"
           "companies c1"
           "accountant_consultant ac1"
-          "unlimited_users u1"
           "customers_vendors cv1"
           "desktop_mobile_app d1"
           "invoicing in1"
@@ -1424,7 +1379,6 @@
           "transactions_2 t2"
           "companies_2 c2"
           "accountant_consultant_2 ac2"
-          "unlimited_users_2 u2"
           "customers_vendors_2 cv2"
           "desktop_mobile_app_2 d2"
           "invoicing_2 in2"
@@ -1452,7 +1406,6 @@
           "transactions_3 t3"
           "companies_3 c3"
           "accountant_consultant_3 ac3"
-          "unlimited_users_3 u3"
           "customers_vendors_3 cv3"
           "desktop_mobile_app_3 d3"
           "invoicing_3 in3"
@@ -1480,7 +1433,6 @@
           "transactions_4 t4"
           "companies_4 c4"
           "accountant_consultant_4 ac4"
-          "unlimited_users_4 u4"
           "customers_vendors_4 cv4"
           "desktop_mobile_app_4 d4"
           "invoicing_4 in4"
@@ -1510,11 +1462,11 @@
         
         grid-template-rows:
           70px 60px
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
@@ -1526,7 +1478,6 @@
           "transactions t1"
           "companies c1"
           "accountant_consultant ac1"
-          "unlimited_users u1"
           "customers_vendors cv1"
           "desktop_mobile_app d1"
           "invoicing in1"
@@ -1555,7 +1506,6 @@
           "transactions_2 t2"
           "companies_2 c2"
           "accountant_consultant_2 ac2"
-          "unlimited_users_2 u2"
           "customers_vendors_2 cv2"
           "desktop_mobile_app_2 d2"
           "invoicing_2 in2"
@@ -1568,7 +1518,6 @@
           "user-access_2 ua2"
           "bank_2 br2"
           "manufacturing_2 m2"
-          "e-invoice_2 ei2"
           "e-invoice_2 ei2"
           "eway-bill_2 ewb2"
           "icici_2 ic2"
@@ -1584,7 +1533,6 @@
           "transactions_3 t3"
           "companies_3 c3"
           "accountant_consultant_3 ac3"
-          "unlimited_users_3 u3"
           "customers_vendors_3 cv3"
           "desktop_mobile_app_3 d3"
           "invoicing_3 in3"
@@ -1612,7 +1560,6 @@
           "transactions_4 t4"
           "companies_4 c4"
           "accountant_consultant_4 ac4"
-          "unlimited_users_4 u4"
           "customers_vendors_4 cv4"
           "desktop_mobile_app_4 d4"
           "invoicing_4 in4"
@@ -1640,7 +1587,6 @@
           "transactions_5 t5"
           "companies_5 c5"
           "accountant_consultant_5 ac5"
-          "unlimited_users_5 u5"
           "customers_vendors_5 cv5"
           "desktop_mobile_app_5 d5"
           "invoicing_5 in5"
@@ -1690,10 +1636,6 @@
       &__accountant_consultant_3,
       &__accountant_consultant_4,
       &__accountant_consultant_5,
-      &__unlimited_users_2,
-      &__unlimited_users_3,
-      &__unlimited_users_4,
-      &__unlimited_users_5,
       &__customers_vendors_2,
       &__customers_vendors_3,
       &__customers_vendors_4,
@@ -1810,11 +1752,6 @@
       &__ac3,
       &__ac4,
       &__ac5,
-      &__u1,
-      &__u2,
-      &__u3,
-      &__u4,
-      &__u5,
       &__cv1,
       &__cv2,
       &__cv3,

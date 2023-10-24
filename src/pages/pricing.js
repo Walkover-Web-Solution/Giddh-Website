@@ -30,7 +30,7 @@ const pricing = (path) => {
   const [financialYear, setFinancialYear] = useState(false);
   const [bankingSupport, setBankingSupport] = useState(false);
   const [security, setSecurity] = useState(false);
-  const [support, setSupport] = useState(false);  
+  const [support, setSupport] = useState(false);
 
   const linkPath = path.path;
   const isIndia = linkPath.isIndia;
@@ -323,37 +323,6 @@ const pricing = (path) => {
                 10 hrs
               </div>
 
-              <div className="pricing_main_section__grid__unlimited_users pricing-border-top">
-                Unlimited Users
-              </div>
-              <div className="pricing_main_section__grid__unlimited_users_2">
-                Unlimited Users
-              </div>
-              <div className="pricing_main_section__grid__unlimited_users_3">
-                Unlimited Users
-              </div>
-              <div className="pricing_main_section__grid__unlimited_users_4">
-                Unlimited Users
-              </div>
-              <div className="pricing_main_section__grid__unlimited_users_5 display-all__child">
-                Unlimited Users
-              </div>
-              <div className="pricing_main_section__grid__u1 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__u2 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__u3 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__u4 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__u5 text-center pricing-border-top display-all__child">
-                <MdDone />
-              </div>
-
               <div className="pricing_main_section__grid__customers_vendors pricing-border-top">
                 Unlimited Customers/Vendors
               </div>
@@ -420,7 +389,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (invoice ? "pt-2" : "")}
                   onClick={() => setInvoice((invoice) => !invoice)}
-                  title="View More"
                 >
                   <span>
                     Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
@@ -445,7 +413,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (invoice ? "pt-2" : "")}
                   onClick={() => setInvoice((invoice) => !invoice)}
-                  title="View More"
                 >
                   <span>
                     Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
@@ -470,7 +437,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (invoice ? "pt-2" : "")}
                   onClick={() => setInvoice((invoice) => !invoice)}
-                  title="View More"
                 >
                   <span>
                     Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
@@ -495,7 +461,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (invoice ? "pt-2" : "")}
                   onClick={() => setInvoice((invoice) => !invoice)}
-                  title="View More"
                 >
                   <span>
                     Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
@@ -520,7 +485,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (invoice ? "pt-2" : "")}
                   onClick={() => setInvoice((invoice) => !invoice)}
-                  title="View More"
                 >
                   <span>
                     Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
@@ -561,7 +525,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
-                  title="View More"
                 >
                   <span>
                     Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
@@ -570,11 +533,7 @@ const pricing = (path) => {
                   {recordBill && (
                     <p className="c-fw-400">
                       Create purchase order, and purchase bill, attach files in
-                      the bill, pay directly to the vendor, and
-                      <a href="#" target="_blank">
-                        {" "}
-                        more
-                      </a>
+                      the bill, pay directly to the vendor, and more
                     </p>
                   )}
                 </div>
@@ -583,7 +542,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
-                  title="View More"
                 >
                   <span>
                     Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
@@ -593,10 +551,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
-                      <a href="#" target="_blank">
-                        {" "}
-                        more
-                      </a>
+                      more
                     </p>
                   )}
                 </div>
@@ -605,7 +560,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
-                  title="View More"
                 >
                   <span>
                     Record Bills {!recordBill && <MdKeyboardArrowDown />}
@@ -615,10 +569,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
-                      <a href="#" target="_blank">
-                        {" "}
-                        more
-                      </a>
+                      more
                     </p>
                   )}
                 </div>
@@ -627,7 +578,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
-                  title="View More"
                 >
                   <span>
                     Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
@@ -637,10 +587,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
-                      <a href="#" target="_blank">
-                        {" "}
-                        more
-                      </a>
+                      more
                     </p>
                   )}
                 </div>
@@ -649,7 +596,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
-                  title="View More"
                 >
                   <span>
                     Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
@@ -659,10 +605,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
-                      <a href="#" target="_blank">
-                        {" "}
-                        more
-                      </a>
+                      more
                     </p>
                   )}
                 </div>
@@ -693,7 +636,6 @@ const pricing = (path) => {
                       (managingInventory) => !managingInventory
                     )
                   }
-                  title="View More"
                 >
                   <span>
                     Managing Inventory{" "}
@@ -726,7 +668,6 @@ const pricing = (path) => {
                       (managingInventory) => !managingInventory
                     )
                   }
-                  title="View More"
                 >
                   <span>
                     Managing Inventory{" "}
@@ -759,7 +700,6 @@ const pricing = (path) => {
                       (managingInventory) => !managingInventory
                     )
                   }
-                  title="View More"
                 >
                   <span>
                     Managing Inventory{" "}
@@ -792,7 +732,6 @@ const pricing = (path) => {
                       (managingInventory) => !managingInventory
                     )
                   }
-                  title="View More"
                 >
                   <span>
                     Managing Inventory{" "}
@@ -825,7 +764,6 @@ const pricing = (path) => {
                       (managingInventory) => !managingInventory
                     )
                   }
-                  title="View More"
                 >
                   <span>
                     Managing Inventory{" "}
@@ -870,7 +808,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setMultiCurrency((multiCurrency) => !multiCurrency)
                   }
-                  title="View More"
                 >
                   <span>
                     Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
@@ -898,7 +835,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setMultiCurrency((multiCurrency) => !multiCurrency)
                   }
-                  title="View More"
                 >
                   <span>
                     Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
@@ -926,7 +862,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setMultiCurrency((multiCurrency) => !multiCurrency)
                   }
-                  title="View More"
                 >
                   <span>
                     Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
@@ -954,7 +889,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setMultiCurrency((multiCurrency) => !multiCurrency)
                   }
-                  title="View More"
                 >
                   <span>
                     Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
@@ -982,7 +916,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setMultiCurrency((multiCurrency) => !multiCurrency)
                   }
-                  title="View More"
                 >
                   <span>
                     Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
@@ -1024,7 +957,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (gst ? "pt-2" : "")}
                   onClick={() => setGst((gst) => !gst)}
-                  title="View More"
                 >
                   <span>
                     GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
@@ -1046,7 +978,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (gst ? "pt-2" : "")}
                   onClick={() => setGst((gst) => !gst)}
-                  title="View More"
                 >
                   <span>
                     GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
@@ -1068,7 +999,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (gst ? "pt-2" : "")}
                   onClick={() => setGst((gst) => !gst)}
-                  title="View More"
                 >
                   <span>
                     GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
@@ -1090,7 +1020,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (gst ? "pt-2" : "")}
                   onClick={() => setGst((gst) => !gst)}
-                  title="View More"
                 >
                   <span>
                     GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
@@ -1112,7 +1041,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (gst ? "pt-2" : "")}
                   onClick={() => setGst((gst) => !gst)}
-                  title="View More"
                 >
                   <span>
                     GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
@@ -1150,7 +1078,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (report ? "pt-2" : "")}
                   onClick={() => setReport((report) => !report)}
-                  title="View More"
                 >
                   <span>
                     Reports {!report && <MdKeyboardArrowDown />}{" "}
@@ -1177,7 +1104,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (report ? "pt-2" : "")}
                   onClick={() => setReport((report) => !report)}
-                  title="View More"
                 >
                   <span>
                     Reports {!report && <MdKeyboardArrowDown />}{" "}
@@ -1204,7 +1130,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (report ? "pt-2" : "")}
                   onClick={() => setReport((report) => !report)}
-                  title="View More"
                 >
                   <span>
                     Reports {!report && <MdKeyboardArrowDown />}{" "}
@@ -1231,7 +1156,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (report ? "pt-2" : "")}
                   onClick={() => setReport((report) => !report)}
-                  title="View More"
                 >
                   <span>
                     Reports {!report && <MdKeyboardArrowDown />}{" "}
@@ -1258,7 +1182,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (report ? "pt-2" : "")}
                   onClick={() => setReport((report) => !report)}
-                  title="View More"
                 >
                   <span>
                     Reports {!report && <MdKeyboardArrowDown />}{" "}
@@ -1301,7 +1224,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
                   onClick={() => setDashboard((dashoard) => !dashoard)}
-                  title="View More"
                 >
                   <span>
                     Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
@@ -1326,7 +1248,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
                   onClick={() => setDashboard((dashoard) => !dashoard)}
-                  title="View More"
                 >
                   <span>
                     Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
@@ -1351,7 +1272,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
                   onClick={() => setDashboard((dashoard) => !dashoard)}
-                  title="View More"
                 >
                   <span>
                     Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
@@ -1376,7 +1296,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
                   onClick={() => setDashboard((dashoard) => !dashoard)}
-                  title="View More"
                 >
                   <span>
                     Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
@@ -1401,7 +1320,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
                   onClick={() => setDashboard((dashoard) => !dashoard)}
-                  title="View More"
                 >
                   <span>
                     Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
@@ -1442,7 +1360,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
                   onClick={() => setUserAccess((userAccess) => !userAccess)}
-                  title="View More"
                 >
                   <span>
                     Unlimited users access{" "}
@@ -1469,7 +1386,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
                   onClick={() => setUserAccess((userAccess) => !userAccess)}
-                  title="View More"
                 >
                   <span>
                     Unlimited users access{" "}
@@ -1496,7 +1412,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
                   onClick={() => setUserAccess((userAccess) => !userAccess)}
-                  title="View More"
                 >
                   <span>
                     Unlimited users access{" "}
@@ -1523,7 +1438,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
                   onClick={() => setUserAccess((userAccess) => !userAccess)}
-                  title="View More"
                 >
                   <span>
                     Unlimited users access{" "}
@@ -1550,7 +1464,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
                   onClick={() => setUserAccess((userAccess) => !userAccess)}
-                  title="View More"
                 >
                   <span>
                     Unlimited users access{" "}
@@ -1593,7 +1506,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
                   onClick={() => setBankReconciliation((bankRec) => !bankRec)}
-                  title="View More"
                 >
                   <span>
                     Bank Reconciliation
@@ -1620,7 +1532,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
                   onClick={() => setBankReconciliation((bankRec) => !bankRec)}
-                  title="View More"
                 >
                   <span>
                     Bank Reconciliation
@@ -1647,7 +1558,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
                   onClick={() => setBankReconciliation((bankRec) => !bankRec)}
-                  title="View More"
                 >
                   <span>
                     Bank Reconciliation
@@ -1674,7 +1584,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
                   onClick={() => setBankReconciliation((bankRec) => !bankRec)}
-                  title="View More"
                 >
                   <span>
                     Bank Reconciliation
@@ -1701,7 +1610,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
                   onClick={() => setBankReconciliation((bankRec) => !bankRec)}
-                  title="View More"
                 >
                   <span>
                     Bank Reconciliation
@@ -1746,7 +1654,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setManufacturing((manufacturing) => !manufacturing)
                   }
-                  title="View More"
                 >
                   <span>
                     Manufacturing
@@ -1767,7 +1674,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setManufacturing((manufacturing) => !manufacturing)
                   }
-                  title="View More"
                 >
                   <span>
                     Manufacturing
@@ -1788,7 +1694,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setManufacturing((manufacturing) => !manufacturing)
                   }
-                  title="View More"
                 >
                   <span>
                     Manufacturing
@@ -1809,7 +1714,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setManufacturing((manufacturing) => !manufacturing)
                   }
-                  title="View More"
                 >
                   <span>
                     Manufacturing
@@ -1830,7 +1734,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setManufacturing((manufacturing) => !manufacturing)
                   }
-                  title="View More"
                 >
                   <span>
                     Manufacturing
@@ -1865,7 +1768,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
                   onClick={() => setEInvoice((eInvoice) => !eInvoice)}
-                  title="View More"
                 >
                   <span>
                     E-invoice
@@ -1888,7 +1790,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
                   onClick={() => setEInvoice((eInvoice) => !eInvoice)}
-                  title="View More"
                 >
                   <span>
                     E-invoice
@@ -1911,7 +1812,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
                   onClick={() => setEInvoice((eInvoice) => !eInvoice)}
-                  title="View More"
                 >
                   <span>
                     E-invoice
@@ -1934,7 +1834,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
                   onClick={() => setEInvoice((eInvoice) => !eInvoice)}
-                  title="View More"
                 >
                   <span>
                     E-invoice
@@ -1957,7 +1856,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
                   onClick={() => setEInvoice((eInvoice) => !eInvoice)}
-                  title="View More"
                 >
                   <span>
                     E-invoice
@@ -1996,19 +1894,17 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
                   onClick={() => setEwayBill((ewayBill) => !ewayBill)}
-                  title="View More"
                 >
                   <span>
-                    Branch and warehouse management
+                    E-way bill
                     {!ewayBill && <MdKeyboardArrowDown />}{" "}
                     {ewayBill && <MdKeyboardArrowUp />}
                   </span>
                   {ewayBill && (
                     <p className="c-fw-400">
-                      Efficiently manage the company's numerous branches and
-                      warehouses, access branch- and warehouse-specific reports,
-                      facilitate branch transfers, archive the branch and
-                      warehouse and perform various related tasks.
+                      Generate E-way bills, and streamline the process of
+                      tracking the movements of goods in compliance with the tax
+                      regulations.
                     </p>
                   )}
                 </div>
@@ -2017,19 +1913,17 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
                   onClick={() => setEwayBill((ewayBill) => !ewayBill)}
-                  title="View More"
                 >
                   <span>
-                    Branch and warehouse management
+                    E-way bill
                     {!ewayBill && <MdKeyboardArrowDown />}{" "}
                     {ewayBill && <MdKeyboardArrowUp />}
                   </span>
                   {ewayBill && (
                     <p className="c-fw-400">
-                      Efficiently manage the company's numerous branches and
-                      warehouses, access branch- and warehouse-specific reports,
-                      facilitate branch transfers, archive the branch and
-                      warehouse and perform various related tasks.
+                      Generate E-way bills, and streamline the process of
+                      tracking the movements of goods in compliance with the tax
+                      regulations.
                     </p>
                   )}
                 </div>
@@ -2038,19 +1932,17 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
                   onClick={() => setEwayBill((ewayBill) => !ewayBill)}
-                  title="View More"
                 >
                   <span>
-                    Branch and warehouse management
+                    E-way bill
                     {!ewayBill && <MdKeyboardArrowDown />}{" "}
                     {ewayBill && <MdKeyboardArrowUp />}
                   </span>
                   {ewayBill && (
                     <p className="c-fw-400">
-                      Efficiently manage the company's numerous branches and
-                      warehouses, access branch- and warehouse-specific reports,
-                      facilitate branch transfers, archive the branch and
-                      warehouse and perform various related tasks.
+                      Generate E-way bills, and streamline the process of
+                      tracking the movements of goods in compliance with the tax
+                      regulations.
                     </p>
                   )}
                 </div>
@@ -2059,19 +1951,17 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
                   onClick={() => setEwayBill((ewayBill) => !ewayBill)}
-                  title="View More"
                 >
                   <span>
-                    Branch and warehouse management
+                    E-way bill
                     {!ewayBill && <MdKeyboardArrowDown />}{" "}
                     {ewayBill && <MdKeyboardArrowUp />}
                   </span>
                   {ewayBill && (
                     <p className="c-fw-400">
-                      Efficiently manage the company's numerous branches and
-                      warehouses, access branch- and warehouse-specific reports,
-                      facilitate branch transfers, archive the branch and
-                      warehouse and perform various related tasks.
+                      Generate E-way bills, and streamline the process of
+                      tracking the movements of goods in compliance with the tax
+                      regulations.
                     </p>
                   )}
                 </div>
@@ -2080,19 +1970,17 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
                   onClick={() => setEwayBill((ewayBill) => !ewayBill)}
-                  title="View More"
                 >
                   <span>
-                    Branch and warehouse management
+                    E-way bill
                     {!ewayBill && <MdKeyboardArrowDown />}{" "}
                     {ewayBill && <MdKeyboardArrowUp />}
                   </span>
                   {ewayBill && (
                     <p className="c-fw-400">
-                      Efficiently manage the company's numerous branches and
-                      warehouses, access branch- and warehouse-specific reports,
-                      facilitate branch transfers, archive the branch and
-                      warehouse and perform various related tasks.
+                      Generate E-way bills, and streamline the process of
+                      tracking the movements of goods in compliance with the tax
+                      regulations.
                     </p>
                   )}
                 </div>
@@ -2117,7 +2005,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (icici ? "pt-2" : "")}
                   onClick={() => setIcici((icici) => !icici)}
-                  title="View More"
                 >
                   <span>
                     Integrations ICICI bank integration
@@ -2127,14 +2014,17 @@ const pricing = (path) => {
                   {icici && (
                     <p className="c-fw-400">
                       to simply the bank reconciliation, payment process and{" "}
-                      <a target="_blank" href="https://giddh.com/icici-integration">
+                      <a
+                        target="_blank"
+                        href="https://giddh.com/icici-integration"
+                      >
                         much more
                       </a>{" "}
-                      , <em>Shopify integration</em> to enhance the efficiency
-                      and growth of Ecommerce business, and{" "}
-                      <em>MSG91 integration</em> to automate the business
-                      communication like sending invoices, payment reminder and
-                      more via Mail, SMS, Whatsapp message
+                      , <strong>Shopify integration</strong> to enhance the
+                      efficiency and growth of Ecommerce business, and{" "}
+                      <strong>MSG91 integration</strong> to automate the
+                      business communication like sending invoices, payment
+                      reminder and more via Mail, SMS, Whatsapp message
                     </p>
                   )}
                 </div>
@@ -2143,7 +2033,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (icici ? "pt-2" : "")}
                   onClick={() => setIcici((icici) => !icici)}
-                  title="View More"
                 >
                   <span>
                     Integrations ICICI bank integration
@@ -2153,14 +2042,17 @@ const pricing = (path) => {
                   {icici && (
                     <p className="c-fw-400">
                       to simply the bank reconciliation, payment process and{" "}
-                      <a target="_blank" href="https://giddh.com/icici-integration">
+                      <a
+                        target="_blank"
+                        href="https://giddh.com/icici-integration"
+                      >
                         much more
                       </a>{" "}
-                      , <em>Shopify integration</em> to enhance the efficiency
-                      and growth of Ecommerce business, and{" "}
-                      <em>MSG91 integration</em> to automate the business
-                      communication like sending invoices, payment reminder and
-                      more via Mail, SMS, Whatsapp message
+                      , <strong>Shopify integration</strong> to enhance the
+                      efficiency and growth of Ecommerce business, and{" "}
+                      <strong>MSG91 integration</strong> to automate the
+                      business communication like sending invoices, payment
+                      reminder and more via Mail, SMS, Whatsapp message
                     </p>
                   )}
                 </div>
@@ -2169,7 +2061,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (icici ? "pt-2" : "")}
                   onClick={() => setIcici((icici) => !icici)}
-                  title="View More"
                 >
                   <span>
                     Integrations ICICI bank integration
@@ -2179,14 +2070,17 @@ const pricing = (path) => {
                   {icici && (
                     <p className="c-fw-400">
                       to simply the bank reconciliation, payment process and{" "}
-                      <a target="_blank" href="https://giddh.com/icici-integration">
+                      <a
+                        target="_blank"
+                        href="https://giddh.com/icici-integration"
+                      >
                         much more
                       </a>{" "}
-                      , <em>Shopify integration</em> to enhance the efficiency
-                      and growth of Ecommerce business, and{" "}
-                      <em>MSG91 integration</em> to automate the business
-                      communication like sending invoices, payment reminder and
-                      more via Mail, SMS, Whatsapp message
+                      , <strong>Shopify integration</strong> to enhance the
+                      efficiency and growth of Ecommerce business, and{" "}
+                      <strong>MSG91 integration</strong> to automate the
+                      business communication like sending invoices, payment
+                      reminder and more via Mail, SMS, Whatsapp message
                     </p>
                   )}
                 </div>
@@ -2195,7 +2089,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (icici ? "pt-2" : "")}
                   onClick={() => setIcici((icici) => !icici)}
-                  title="View More"
                 >
                   <span>
                     Integrations ICICI bank integration
@@ -2205,14 +2098,17 @@ const pricing = (path) => {
                   {icici && (
                     <p className="c-fw-400">
                       to simply the bank reconciliation, payment process and{" "}
-                      <a target="_blank" href="https://giddh.com/icici-integration">
+                      <a
+                        target="_blank"
+                        href="https://giddh.com/icici-integration"
+                      >
                         much more
                       </a>{" "}
-                      , <em>Shopify integration</em> to enhance the efficiency
-                      and growth of Ecommerce business, and{" "}
-                      <em>MSG91 integration</em> to automate the business
-                      communication like sending invoices, payment reminder and
-                      more via Mail, SMS, Whatsapp message
+                      , <strong>Shopify integration</strong> to enhance the
+                      efficiency and growth of Ecommerce business, and{" "}
+                      <strong>MSG91 integration</strong> to automate the
+                      business communication like sending invoices, payment
+                      reminder and more via Mail, SMS, Whatsapp message
                     </p>
                   )}
                 </div>
@@ -2221,7 +2117,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (icici ? "pt-2" : "")}
                   onClick={() => setIcici((icici) => !icici)}
-                  title="View More"
                 >
                   <span>
                     Integrations ICICI bank integration
@@ -2231,14 +2126,17 @@ const pricing = (path) => {
                   {icici && (
                     <p className="c-fw-400">
                       to simply the bank reconciliation, payment process and{" "}
-                      <a target="_blank" href="https://giddh.com/icici-integration">
+                      <a
+                        target="_blank"
+                        href="https://giddh.com/icici-integration"
+                      >
                         much more
                       </a>{" "}
-                      , <em>Shopify integration</em> to enhance the efficiency
-                      and growth of Ecommerce business, and{" "}
-                      <em>MSG91 integration</em> to automate the business
-                      communication like sending invoices, payment reminder and
-                      more via Mail, SMS, Whatsapp message
+                      , <strong>Shopify integration</strong> to enhance the
+                      efficiency and growth of Ecommerce business, and{" "}
+                      <strong>MSG91 integration</strong> to automate the
+                      business communication like sending invoices, payment
+                      reminder and more via Mail, SMS, Whatsapp message
                     </p>
                   )}
                 </div>
@@ -2263,7 +2161,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
                   onClick={() => setWarehouse((warehouse) => !warehouse)}
-                  title="View More"
                 >
                   <span>
                     Branch and warehouse management
@@ -2284,7 +2181,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
                   onClick={() => setWarehouse((warehouse) => !warehouse)}
-                  title="View More"
                 >
                   <span>
                     Branch and warehouse management
@@ -2305,7 +2201,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
                   onClick={() => setWarehouse((warehouse) => !warehouse)}
-                  title="View More"
                 >
                   <span>
                     Branch and warehouse management
@@ -2326,7 +2221,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
                   onClick={() => setWarehouse((warehouse) => !warehouse)}
-                  title="View More"
                 >
                   <span>
                     Branch and warehouse management
@@ -2347,7 +2241,6 @@ const pricing = (path) => {
                 <div
                   className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
                   onClick={() => setWarehouse((warehouse) => !warehouse)}
-                  title="View More"
                 >
                   <span>
                     Branch and warehouse management
@@ -2380,159 +2273,12 @@ const pricing = (path) => {
                 <MdDone />
               </div>
 
-              {/* <div className="pricing_main_section__grid__icici pricing-border-top">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                  title="View More"
-                >
-                  <span>
-                    Integrations ICICI bank integration
-                    {!icici && <MdKeyboardArrowDown />}{" "}
-                    {icici && <MdKeyboardArrowUp />}
-                  </span>
-                  {icici && (
-                    <p className="c-fw-400">
-                      to simply the bank reconciliation, payment process and{" "}
-                      <a target="_blank" href="https://giddh.com/icici-integration">
-                        much more
-                      </a>{" "}
-                      , <em>Shopify integration</em> to enhance the efficiency
-                      and growth of Ecommerce business, and{" "}
-                      <em>MSG91 integration</em> to automate the business
-                      communication like sending invoices, payment reminder and
-                      more via Mail, SMS, Whatsapp message
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__icici_2">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                  title="View More"
-                >
-                  <span>
-                    Integrations ICICI bank integration
-                    {!icici && <MdKeyboardArrowDown />}{" "}
-                    {icici && <MdKeyboardArrowUp />}
-                  </span>
-                  {icici && (
-                    <p className="c-fw-400">
-                      to simply the bank reconciliation, payment process and{" "}
-                      <a target="_blank" href="https://giddh.com/icici-integration">
-                        much more
-                      </a>{" "}
-                      , <em>Shopify integration</em> to enhance the efficiency
-                      and growth of Ecommerce business, and{" "}
-                      <em>MSG91 integration</em> to automate the business
-                      communication like sending invoices, payment reminder and
-                      more via Mail, SMS, Whatsapp message
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__icici_3">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                  title="View More"
-                >
-                  <span>
-                    Integrations ICICI bank integration
-                    {!icici && <MdKeyboardArrowDown />}{" "}
-                    {icici && <MdKeyboardArrowUp />}
-                  </span>
-                  {icici && (
-                    <p className="c-fw-400">
-                      to simply the bank reconciliation, payment process and{" "}
-                      <a target="_blank" href="https://giddh.com/icici-integration">
-                        much more
-                      </a>{" "}
-                      , <em>Shopify integration</em> to enhance the efficiency
-                      and growth of Ecommerce business, and{" "}
-                      <em>MSG91 integration</em> to automate the business
-                      communication like sending invoices, payment reminder and
-                      more via Mail, SMS, Whatsapp message
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__icici_4">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                  title="View More"
-                >
-                  <span>
-                    Integrations ICICI bank integration
-                    {!icici && <MdKeyboardArrowDown />}{" "}
-                    {icici && <MdKeyboardArrowUp />}
-                  </span>
-                  {icici && (
-                    <p className="c-fw-400">
-                      to simply the bank reconciliation, payment process and{" "}
-                      <a target="_blank" href="https://giddh.com/icici-integration">
-                        much more
-                      </a>{" "}
-                      , <em>Shopify integration</em> to enhance the efficiency
-                      and growth of Ecommerce business, and{" "}
-                      <em>MSG91 integration</em> to automate the business
-                      communication like sending invoices, payment reminder and
-                      more via Mail, SMS, Whatsapp message
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__icici_5 display-all__child">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                  title="View More"
-                >
-                  <span>
-                    Integrations ICICI bank integration
-                    {!icici && <MdKeyboardArrowDown />}{" "}
-                    {icici && <MdKeyboardArrowUp />}
-                  </span>
-                  {icici && (
-                    <p className="c-fw-400">
-                      to simply the bank reconciliation, payment process and{" "}
-                      <a target="_blank" href="https://giddh.com/icici-integration">
-                        much more
-                      </a>{" "}
-                      , <em>Shopify integration</em> to enhance the efficiency
-                      and growth of Ecommerce business, and{" "}
-                      <em>MSG91 integration</em> to automate the business
-                      communication like sending invoices, payment reminder and
-                      more via Mail, SMS, Whatsapp message
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__ic1 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ic2 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ic3 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ic4 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ic5 text-center pricing-border-top display-all__child">
-                <MdDone />
-              </div> */}
-
               <div className="pricing_main_section__grid__easy-import pricing-border-top">
                 <div
                   className={"cursor-pointer " + (importExport ? "pt-2" : "")}
                   onClick={() =>
                     setImportExport((importExport) => !importExport)
                   }
-                  title="View More"
                 >
                   <span>
                     Easy Import/Export of the data
@@ -2559,7 +2305,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setImportExport((importExport) => !importExport)
                   }
-                  title="View More"
                 >
                   <span>
                     Easy Import/Export of the data
@@ -2586,7 +2331,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setImportExport((importExport) => !importExport)
                   }
-                  title="View More"
                 >
                   <span>
                     Easy Import/Export of the data
@@ -2613,7 +2357,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setImportExport((importExport) => !importExport)
                   }
-                  title="View More"
                 >
                   <span>
                     Easy Import/Export of the data
@@ -2640,7 +2383,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setImportExport((importExport) => !importExport)
                   }
-                  title="View More"
                 >
                   <span>
                     Easy Import/Export of the data
@@ -2683,16 +2425,17 @@ const pricing = (path) => {
                   onClick={() =>
                     setFinancialYear((financialYear) => !financialYear)
                   }
-                  title="View More"
                 >
                   <span>
-                    Connected banking support
+                    Financial Year Locking
                     {!financialYear && <MdKeyboardArrowDown />}{" "}
                     {financialYear && <MdKeyboardArrowUp />}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                      You have the ability to lock a specific financial year
+                      within your company, preventing any further entries or
+                      modifications during that period
                     </p>
                   )}
                 </div>
@@ -2703,16 +2446,17 @@ const pricing = (path) => {
                   onClick={() =>
                     setFinancialYear((financialYear) => !financialYear)
                   }
-                  title="View More"
                 >
                   <span>
-                    Connected banking support
+                    Financial Year Locking
                     {!financialYear && <MdKeyboardArrowDown />}{" "}
                     {financialYear && <MdKeyboardArrowUp />}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                      You have the ability to lock a specific financial year
+                      within your company, preventing any further entries or
+                      modifications during that period
                     </p>
                   )}
                 </div>
@@ -2723,16 +2467,17 @@ const pricing = (path) => {
                   onClick={() =>
                     setFinancialYear((financialYear) => !financialYear)
                   }
-                  title="View More"
                 >
                   <span>
-                    Connected banking support
+                    Financial Year Locking
                     {!financialYear && <MdKeyboardArrowDown />}{" "}
                     {financialYear && <MdKeyboardArrowUp />}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                      You have the ability to lock a specific financial year
+                      within your company, preventing any further entries or
+                      modifications during that period
                     </p>
                   )}
                 </div>
@@ -2743,16 +2488,17 @@ const pricing = (path) => {
                   onClick={() =>
                     setFinancialYear((financialYear) => !financialYear)
                   }
-                  title="View More"
                 >
                   <span>
-                    Connected banking support
+                    Financial Year Locking
                     {!financialYear && <MdKeyboardArrowDown />}{" "}
                     {financialYear && <MdKeyboardArrowUp />}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                      You have the ability to lock a specific financial year
+                      within your company, preventing any further entries or
+                      modifications during that period
                     </p>
                   )}
                 </div>
@@ -2763,16 +2509,17 @@ const pricing = (path) => {
                   onClick={() =>
                     setFinancialYear((financialYear) => !financialYear)
                   }
-                  title="View More"
                 >
                   <span>
-                    Connected banking support
+                    Financial Year Locking
                     {!financialYear && <MdKeyboardArrowDown />}{" "}
                     {financialYear && <MdKeyboardArrowUp />}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                      You have the ability to lock a specific financial year
+                      within your company, preventing any further entries or
+                      modifications during that period
                     </p>
                   )}
                 </div>
@@ -2791,15 +2538,14 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__fy5 text-center pricing-border-top display-all__child">
                 <MdDone />
-              </div> 
-{/* ========================================================================================================================= */}
+              </div>
+
               <div className="pricing_main_section__grid__banking-support pricing-border-top">
                 <div
                   className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
                   onClick={() =>
                     setBankingSupport((bankingSupport) => !bankingSupport)
                   }
-                  title="View More"
                 >
                   <span>
                     Connected banking support
@@ -2808,7 +2554,9 @@ const pricing = (path) => {
                   </span>
                   {bankingSupport && (
                     <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                      Provides support in 12+ countries including USA, Canada,
+                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
+                      Denmark, Poland, Portugal
                     </p>
                   )}
                 </div>
@@ -2819,7 +2567,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setBankingSupport((bankingSupport) => !bankingSupport)
                   }
-                  title="View More"
                 >
                   <span>
                     Connected banking support
@@ -2828,7 +2575,9 @@ const pricing = (path) => {
                   </span>
                   {bankingSupport && (
                     <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                      Provides support in 12+ countries including USA, Canada,
+                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
+                      Denmark, Poland, Portugal
                     </p>
                   )}
                 </div>
@@ -2839,7 +2588,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setBankingSupport((bankingSupport) => !bankingSupport)
                   }
-                  title="View More"
                 >
                   <span>
                     Connected banking support
@@ -2848,7 +2596,9 @@ const pricing = (path) => {
                   </span>
                   {bankingSupport && (
                     <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                      Provides support in 12+ countries including USA, Canada,
+                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
+                      Denmark, Poland, Portugal
                     </p>
                   )}
                 </div>
@@ -2859,7 +2609,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setBankingSupport((bankingSupport) => !bankingSupport)
                   }
-                  title="View More"
                 >
                   <span>
                     Connected banking support
@@ -2868,7 +2617,9 @@ const pricing = (path) => {
                   </span>
                   {bankingSupport && (
                     <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                      Provides support in 12+ countries including USA, Canada,
+                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
+                      Denmark, Poland, Portugal
                     </p>
                   )}
                 </div>
@@ -2879,7 +2630,6 @@ const pricing = (path) => {
                   onClick={() =>
                     setBankingSupport((bankingSupport) => !bankingSupport)
                   }
-                  title="View More"
                 >
                   <span>
                     Connected banking support
@@ -2888,7 +2638,9 @@ const pricing = (path) => {
                   </span>
                   {bankingSupport && (
                     <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                      Provides support in 12+ countries including USA, Canada,
+                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
+                      Denmark, Poland, Portugal
                     </p>
                   )}
                 </div>
@@ -2907,15 +2659,12 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__bs5 text-center pricing-border-top display-all__child">
                 <MdDone />
-              </div> 
+              </div>
 
               <div className="pricing_main_section__grid__security pricing-border-top">
                 <div
                   className={"cursor-pointer " + (security ? "pt-2" : "")}
-                  onClick={() =>
-                    setSecurity((security) => !security)
-                  }
-                  title="View More"
+                  onClick={() => setSecurity((security) => !security)}
                 >
                   <span>
                     Security
@@ -2924,7 +2673,12 @@ const pricing = (path) => {
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data secured on AWS cloud, and for more security we provide the Two-way authentication, Auth key, Sessions, Audit logs and {" "}<a href="https://giddh.com/security" target="_blank" >more</a>
+                      Your data secured on AWS cloud, and for more security we
+                      provide the Two-way authentication, Auth key, Sessions,
+                      Audit logs and{" "}
+                      <a href="https://giddh.com/security" target="_blank">
+                        more
+                      </a>
                     </p>
                   )}
                 </div>
@@ -2932,10 +2686,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__security_2">
                 <div
                   className={"cursor-pointer " + (security ? "pt-2" : "")}
-                  onClick={() =>
-                    setSecurity((security) => !security)
-                  }
-                  title="View More"
+                  onClick={() => setSecurity((security) => !security)}
                 >
                   <span>
                     Security
@@ -2944,7 +2695,12 @@ const pricing = (path) => {
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data secured on AWS cloud, and for more security we provide the Two-way authentication, Auth key, Sessions, Audit logs and {" "}<a href="https://giddh.com/security" target="_blank" >more</a>
+                      Your data secured on AWS cloud, and for more security we
+                      provide the Two-way authentication, Auth key, Sessions,
+                      Audit logs and{" "}
+                      <a href="https://giddh.com/security" target="_blank">
+                        more
+                      </a>
                     </p>
                   )}
                 </div>
@@ -2952,10 +2708,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__security_3">
                 <div
                   className={"cursor-pointer " + (security ? "pt-2" : "")}
-                  onClick={() =>
-                    setSecurity((security) => !security)
-                  }
-                  title="View More"
+                  onClick={() => setSecurity((security) => !security)}
                 >
                   <span>
                     Security
@@ -2964,7 +2717,12 @@ const pricing = (path) => {
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data secured on AWS cloud, and for more security we provide the Two-way authentication, Auth key, Sessions, Audit logs and {" "}<a href="https://giddh.com/security" target="_blank" >more</a>
+                      Your data secured on AWS cloud, and for more security we
+                      provide the Two-way authentication, Auth key, Sessions,
+                      Audit logs and{" "}
+                      <a href="https://giddh.com/security" target="_blank">
+                        more
+                      </a>
                     </p>
                   )}
                 </div>
@@ -2972,10 +2730,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__security_4">
                 <div
                   className={"cursor-pointer " + (security ? "pt-2" : "")}
-                  onClick={() =>
-                    setSecurity((security) => !security)
-                  }
-                  title="View More"
+                  onClick={() => setSecurity((security) => !security)}
                 >
                   <span>
                     Security
@@ -2984,7 +2739,12 @@ const pricing = (path) => {
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data secured on AWS cloud, and for more security we provide the Two-way authentication, Auth key, Sessions, Audit logs and {" "}<a href="https://giddh.com/security" target="_blank" >more</a>
+                      Your data secured on AWS cloud, and for more security we
+                      provide the Two-way authentication, Auth key, Sessions,
+                      Audit logs and{" "}
+                      <a href="https://giddh.com/security" target="_blank">
+                        more
+                      </a>
                     </p>
                   )}
                 </div>
@@ -2992,10 +2752,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__security_5 display-all__child">
                 <div
                   className={"cursor-pointer " + (security ? "pt-2" : "")}
-                  onClick={() =>
-                    setSecurity((security) => !security)
-                  }
-                  title="View More"
+                  onClick={() => setSecurity((security) => !security)}
                 >
                   <span>
                     Security
@@ -3004,7 +2761,12 @@ const pricing = (path) => {
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data secured on AWS cloud, and for more security we provide the Two-way authentication, Auth key, Sessions, Audit logs and {" "}<a href="https://giddh.com/security" target="_blank" >more</a>
+                      Your data secured on AWS cloud, and for more security we
+                      provide the Two-way authentication, Auth key, Sessions,
+                      Audit logs and{" "}
+                      <a href="https://giddh.com/security" target="_blank">
+                        more
+                      </a>
                     </p>
                   )}
                 </div>
@@ -3023,15 +2785,12 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__s5 text-center pricing-border-top display-all__child">
                 <MdDone />
-              </div>  
+              </div>
 
               <div className="pricing_main_section__grid__support pricing-border-top">
                 <div
                   className={"cursor-pointer " + (support ? "pt-2" : "")}
-                  onClick={() =>
-                    setSupport((support) => !support)
-                  }
-                  title="View More"
+                  onClick={() => setSupport((support) => !support)}
                 >
                   <span>
                     Support
@@ -3040,7 +2799,10 @@ const pricing = (path) => {
                   </span>
                   {support && (
                     <p className="c-fw-400">
-                      You are just one call or email away from us, {" "}<a href="https://giddh.com/contact-us" target="_blank">Connect with us</a>
+                      You are just one call or email away from us,{" "}
+                      <a href="https://giddh.com/contact-us" target="_blank">
+                        Connect with us
+                      </a>
                     </p>
                   )}
                 </div>
@@ -3048,10 +2810,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__support_2">
                 <div
                   className={"cursor-pointer " + (support ? "pt-2" : "")}
-                  onClick={() =>
-                    setSupport((support) => !support)
-                  }
-                  title="View More"
+                  onClick={() => setSupport((support) => !support)}
                 >
                   <span>
                     Support
@@ -3060,7 +2819,10 @@ const pricing = (path) => {
                   </span>
                   {support && (
                     <p className="c-fw-400">
-                      You are just one call or email away from us, {" "}<a href="https://giddh.com/contact-us" target="_blank">Connect with us</a>
+                      You are just one call or email away from us,{" "}
+                      <a href="https://giddh.com/contact-us" target="_blank">
+                        Connect with us
+                      </a>
                     </p>
                   )}
                 </div>
@@ -3068,10 +2830,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__support_3">
                 <div
                   className={"cursor-pointer " + (support ? "pt-2" : "")}
-                  onClick={() =>
-                    setSupport((support) => !support)
-                  }
-                  title="View More"
+                  onClick={() => setSupport((support) => !support)}
                 >
                   <span>
                     Support
@@ -3080,7 +2839,10 @@ const pricing = (path) => {
                   </span>
                   {support && (
                     <p className="c-fw-400">
-                      You are just one call or email away from us, {" "}<a href="https://giddh.com/contact-us" target="_blank">Connect with us</a>
+                      You are just one call or email away from us,{" "}
+                      <a href="https://giddh.com/contact-us" target="_blank">
+                        Connect with us
+                      </a>
                     </p>
                   )}
                 </div>
@@ -3088,10 +2850,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__support_4">
                 <div
                   className={"cursor-pointer " + (support ? "pt-2" : "")}
-                  onClick={() =>
-                    setSupport((support) => !support)
-                  }
-                  title="View More"
+                  onClick={() => setSupport((support) => !support)}
                 >
                   <span>
                     Support
@@ -3100,7 +2859,10 @@ const pricing = (path) => {
                   </span>
                   {support && (
                     <p className="c-fw-400">
-                      You are just one call or email away from us, {" "}<a href="https://giddh.com/contact-us" target="_blank">Connect with us</a>
+                      You are just one call or email away from us,{" "}
+                      <a href="https://giddh.com/contact-us" target="_blank">
+                        Connect with us
+                      </a>
                     </p>
                   )}
                 </div>
@@ -3108,10 +2870,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__support_5 display-all__child">
                 <div
                   className={"cursor-pointer " + (support ? "pt-2" : "")}
-                  onClick={() =>
-                    setSupport((support) => !support)
-                  }
-                  title="View More"
+                  onClick={() => setSupport((support) => !support)}
                 >
                   <span>
                     Support
@@ -3120,7 +2879,10 @@ const pricing = (path) => {
                   </span>
                   {support && (
                     <p className="c-fw-400">
-                      You are just one call or email away from us, {" "}<a href="https://giddh.com/contact-us" target="_blank">Connect with us</a>
+                      You are just one call or email away from us,{" "}
+                      <a href="https://giddh.com/contact-us" target="_blank">
+                        Connect with us
+                      </a>
                     </p>
                   )}
                 </div>
@@ -3139,7 +2901,7 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__sp5 text-center pricing-border-top display-all__child">
                 <MdDone />
-              </div>  
+              </div>
 
               <div className="pricing_main_section__grid__link_all_feature">
                 <a href={link + "/all-features"}>Check all features</a>
@@ -3155,7 +2917,7 @@ const pricing = (path) => {
                   <span className="c-fw-600">
                     {isIndia ? "₹2000" : isAE ? "د.إ250" : "£60"}
                   </span>{" "}
-                  per branch/year |
+                  per branch/year |{" "}
                   <span className="c-fw-600">
                     {isIndia ? "₹1000" : isAE ? "د.إ120" : "£30"}
                   </span>{" "}
