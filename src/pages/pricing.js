@@ -25,6 +25,8 @@ const pricing = (path) => {
   const [eInvoice, setEInvoice] = useState(false);
   const [ewayBill, setEwayBill] = useState(false);
   const [icici, setIcici] = useState(false);
+  const [ecom, setEcommerce] = useState(false);
+  const [telecom, setTelecom] = useState(false);
   const [warehouse, setWarehouse] = useState(false);
   const [importExport, setImportExport] = useState(false);
   const [financialYear, setFinancialYear] = useState(false);
@@ -35,11 +37,12 @@ const pricing = (path) => {
   const linkPath = path.path;
   const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
- 
+
   return (
     <>
-     <section className="container-fluid pricing_main_section">
+      <section className="container-fluid pricing_main_section">
         <div className="row justify-content-center">
           <div className="col-12">
             <div
@@ -49,12 +52,12 @@ const pricing = (path) => {
               }
             >
               <div className="pricing_main_section__grid__title">
-              <h1 className="font-46 col-primary c-fw-600 ms-4 mt-5">
-              Powerful Accounting Software. Affordable Pricing.
-            </h1>
-            <h2 className="sub-heading c-fw-600 ms-4 mt-4 mb-5">
-              No features sacrifices
-            </h2>
+                <h1 className="font-46 col-primary c-fw-600 ms-4 mt-5">
+                  Powerful Accounting Software. Affordable Pricing.
+                </h1>
+                <h2 className="sub-heading c-fw-600 ms-4 mt-4 mb-5">
+                  No features sacrifices
+                </h2>
               </div>
               <div className="pricing_main_section__grid__guarantee_logo">
                 <figure>
@@ -371,10 +374,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
-                      <a
-                        href={ link + "/invoice-software"}
-                        target="_blank"
-                      >
+                      <a href={link + "/invoice-software"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -395,10 +395,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
-                      <a
-                        href={ link + "/invoice-software"}
-                        target="_blank"
-                      >
+                      <a href={link + "/invoice-software"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -419,10 +416,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
-                      <a
-                        href={ link + "/invoice-software"}
-                        target="_blank"
-                      >
+                      <a href={link + "/invoice-software"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -443,10 +437,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
-                      <a
-                        href={ link + "/invoice-software"}
-                        target="_blank"
-                      >
+                      <a href={link + "/invoice-software"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -467,10 +458,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
-                      <a
-                        href={ link + "/invoice-software"}
-                        target="_blank"
-                      >
+                      <a href={link + "/invoice-software"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -621,7 +609,7 @@ const pricing = (path) => {
                       in group, items and variant too, easy search with barcode,
                       and
                       <a
-                        href={ link + "/inventory-management-software"}
+                        href={link + "/inventory-management-software"}
                         target="_blank"
                       >
                         {" "}
@@ -653,7 +641,7 @@ const pricing = (path) => {
                       in group, items and variant too, easy search with barcode,
                       and
                       <a
-                        href={ link + "/inventory-management-software"}
+                        href={link + "/inventory-management-software"}
                         target="_blank"
                       >
                         {" "}
@@ -685,7 +673,7 @@ const pricing = (path) => {
                       in group, items and variant too, easy search with barcode,
                       and
                       <a
-                        href={ link + "/inventory-management-software"}
+                        href={link + "/inventory-management-software"}
                         target="_blank"
                       >
                         {" "}
@@ -717,7 +705,7 @@ const pricing = (path) => {
                       in group, items and variant too, easy search with barcode,
                       and
                       <a
-                        href={ link + "/inventory-management-software"}
+                        href={link + "/inventory-management-software"}
                         target="_blank"
                       >
                         {" "}
@@ -749,7 +737,7 @@ const pricing = (path) => {
                       in group, items and variant too, easy search with barcode,
                       and
                       <a
-                        href={ link + "/inventory-management-software"}
+                        href={link + "/inventory-management-software"}
                         target="_blank"
                       >
                         {" "}
@@ -792,7 +780,7 @@ const pricing = (path) => {
                       currencies, with automatic currency conversion based on
                       real-time exchange rates and
                       <a
-                        href={ link + "/multi-currency-accounting-software"}
+                        href={link + "/multi-currency-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -819,7 +807,7 @@ const pricing = (path) => {
                       currencies, with automatic currency conversion based on
                       real-time exchange rates and
                       <a
-                        href={ link + "/multi-currency-accounting-software"}
+                        href={link + "/multi-currency-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -846,7 +834,7 @@ const pricing = (path) => {
                       currencies, with automatic currency conversion based on
                       real-time exchange rates and
                       <a
-                        href={ link + "/multi-currency-accounting-software"}
+                        href={link + "/multi-currency-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -873,7 +861,7 @@ const pricing = (path) => {
                       currencies, with automatic currency conversion based on
                       real-time exchange rates and
                       <a
-                        href={ link + "/multi-currency-accounting-software"}
+                        href={link + "/multi-currency-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -900,7 +888,7 @@ const pricing = (path) => {
                       currencies, with automatic currency conversion based on
                       real-time exchange rates and
                       <a
-                        href={ link + "/multi-currency-accounting-software"}
+                        href={link + "/multi-currency-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -932,14 +920,20 @@ const pricing = (path) => {
                   onClick={() => setGst((gst) => !gst)}
                 >
                   <span>
-                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {isIndia ? "GST" : "VAT"} Compliance{" "}
+                    {!gst && <MdKeyboardArrowDown />}{" "}
                     {gst && <MdKeyboardArrowUp />}
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      Create GST invoice, view GST reports, direct filing, and
-                      reconcile transaction with the GST portal and
-                      <a href={ link + "/gst"} target="_blank">
+                      Create {isIndia ? "GST" : "VAT"} invoice, view{" "}
+                      {isIndia ? "GST" : "VAT"} reports, direct filing, and
+                      reconcile transaction with the {isIndia ? "GST" : "VAT"}{" "}
+                      portal and
+                      <a
+                        href={link + (isIndia ? "/gst" : "/vat")}
+                        target="_blank"
+                      >
                         {" "}
                         more
                       </a>
@@ -953,14 +947,20 @@ const pricing = (path) => {
                   onClick={() => setGst((gst) => !gst)}
                 >
                   <span>
-                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {isIndia ? "GST" : "VAT"} Compliance{" "}
+                    {!gst && <MdKeyboardArrowDown />}{" "}
                     {gst && <MdKeyboardArrowUp />}
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      Create GST invoice, view GST reports, direct filing, and
-                      reconcile transaction with the GST portal and
-                      <a href={ link + "/gst"} target="_blank">
+                      Create {isIndia ? "GST" : "VAT"} invoice, view{" "}
+                      {isIndia ? "GST" : "VAT"} reports, direct filing, and
+                      reconcile transaction with the {isIndia ? "GST" : "VAT"}{" "}
+                      portal and
+                      <a
+                        href={link + (isIndia ? "/gst" : "/vat")}
+                        target="_blank"
+                      >
                         {" "}
                         more
                       </a>
@@ -974,14 +974,20 @@ const pricing = (path) => {
                   onClick={() => setGst((gst) => !gst)}
                 >
                   <span>
-                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {isIndia ? "GST" : "VAT"} Compliance{" "}
+                    {!gst && <MdKeyboardArrowDown />}{" "}
                     {gst && <MdKeyboardArrowUp />}
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      Create GST invoice, view GST reports, direct filing, and
-                      reconcile transaction with the GST portal and
-                      <a href={ link + "/gst"} target="_blank">
+                      Create {isIndia ? "GST" : "VAT"} invoice, view{" "}
+                      {isIndia ? "GST" : "VAT"} reports, direct filing, and
+                      reconcile transaction with the {isIndia ? "GST" : "VAT"}{" "}
+                      portal and
+                      <a
+                        href={link + (isIndia ? "/gst" : "/vat")}
+                        target="_blank"
+                      >
                         {" "}
                         more
                       </a>
@@ -995,14 +1001,20 @@ const pricing = (path) => {
                   onClick={() => setGst((gst) => !gst)}
                 >
                   <span>
-                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {isIndia ? "GST" : "VAT"} Compliance{" "}
+                    {!gst && <MdKeyboardArrowDown />}{" "}
                     {gst && <MdKeyboardArrowUp />}
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      Create GST invoice, view GST reports, direct filing, and
-                      reconcile transaction with the GST portal and
-                      <a href={ link + "/gst"} target="_blank">
+                      Create {isIndia ? "GST" : "VAT"} invoice, view{" "}
+                      {isIndia ? "GST" : "VAT"} reports, direct filing, and
+                      reconcile transaction with the {isIndia ? "GST" : "VAT"}{" "}
+                      portal and
+                      <a
+                        href={link + (isIndia ? "/gst" : "/vat")}
+                        target="_blank"
+                      >
                         {" "}
                         more
                       </a>
@@ -1016,14 +1028,20 @@ const pricing = (path) => {
                   onClick={() => setGst((gst) => !gst)}
                 >
                   <span>
-                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {isIndia ? "GST" : "VAT"} Compliance{" "}
+                    {!gst && <MdKeyboardArrowDown />}{" "}
                     {gst && <MdKeyboardArrowUp />}
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      Create GST invoice, view GST reports, direct filing, and
-                      reconcile transaction with the GST portal and
-                      <a href={ link + "/gst"} target="_blank">
+                      Create {isIndia ? "GST" : "VAT"} invoice, view{" "}
+                      {isIndia ? "GST" : "VAT"} reports, direct filing, and
+                      reconcile transaction with the {isIndia ? "GST" : "VAT"}{" "}
+                      portal and
+                      <a
+                        href={link + (isIndia ? "/gst" : "/vat")}
+                        target="_blank"
+                      >
                         {" "}
                         more
                       </a>
@@ -1061,11 +1079,8 @@ const pricing = (path) => {
                       Access various reports like Trial balance, Profit & loss,
                       Balance sheet, Daybook, Cash flow statement, Ledger, Sales
                       bifurcation, Columnar report, Purchase register, Sales
-                      register, Inventory reports, Reverse charge report, and
-                      <a
-                        href={ link + "/financial-reporting"}
-                        target="_blank"
-                      >
+                      register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and
+                      <a href={link + "/financial-reporting"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1087,11 +1102,8 @@ const pricing = (path) => {
                       Access various reports like Trial balance, Profit & loss,
                       Balance sheet, Daybook, Cash flow statement, Ledger, Sales
                       bifurcation, Columnar report, Purchase register, Sales
-                      register, Inventory reports, Reverse charge report, and
-                      <a
-                        href={ link + "/financial-reporting"}
-                        target="_blank"
-                      >
+                      register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and
+                      <a href={link + "/financial-reporting"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1113,11 +1125,8 @@ const pricing = (path) => {
                       Access various reports like Trial balance, Profit & loss,
                       Balance sheet, Daybook, Cash flow statement, Ledger, Sales
                       bifurcation, Columnar report, Purchase register, Sales
-                      register, Inventory reports, Reverse charge report, and
-                      <a
-                        href={ link + "/financial-reporting"}
-                        target="_blank"
-                      >
+                      register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and
+                      <a href={link + "/financial-reporting"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1139,11 +1148,8 @@ const pricing = (path) => {
                       Access various reports like Trial balance, Profit & loss,
                       Balance sheet, Daybook, Cash flow statement, Ledger, Sales
                       bifurcation, Columnar report, Purchase register, Sales
-                      register, Inventory reports, Reverse charge report, and
-                      <a
-                        href={ link + "/financial-reporting"}
-                        target="_blank"
-                      >
+                      register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and
+                      <a href={link + "/financial-reporting"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1165,11 +1171,8 @@ const pricing = (path) => {
                       Access various reports like Trial balance, Profit & loss,
                       Balance sheet, Daybook, Cash flow statement, Ledger, Sales
                       bifurcation, Columnar report, Purchase register, Sales
-                      register, Inventory reports, Reverse charge report, and
-                      <a
-                        href={ link + "/financial-reporting"}
-                        target="_blank"
-                      >
+                      register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and
+                      <a href={link + "/financial-reporting"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1206,10 +1209,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
-                      <a
-                        href={ link + "/accounting-dashboard"}
-                        target="_blank"
-                      >
+                      <a href={link + "/accounting-dashboard"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1230,10 +1230,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
-                      <a
-                        href={ link + "/accounting-dashboard"}
-                        target="_blank"
-                      >
+                      <a href={link + "/accounting-dashboard"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1254,10 +1251,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
-                      <a
-                        href={ link + "/accounting-dashboard"}
-                        target="_blank"
-                      >
+                      <a href={link + "/accounting-dashboard"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1278,10 +1272,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
-                      <a
-                        href={ link + "/accounting-dashboard"}
-                        target="_blank"
-                      >
+                      <a href={link + "/accounting-dashboard"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1302,10 +1293,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
-                      <a
-                        href={ link + "/accounting-dashboard"}
-                        target="_blank"
-                      >
+                      <a href={link + "/accounting-dashboard"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1345,7 +1333,7 @@ const pricing = (path) => {
                       enhanced security and also allowing you to set
                       restrictions such as Date ranges, CIDR ranges, and
                       <a
-                        href={ link + "/multi-user-accounting-software"}
+                        href={link + "/multi-user-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -1371,7 +1359,7 @@ const pricing = (path) => {
                       enhanced security and also allowing you to set
                       restrictions such as Date ranges, CIDR ranges, and
                       <a
-                        href={ link + "/multi-user-accounting-software"}
+                        href={link + "/multi-user-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -1397,7 +1385,7 @@ const pricing = (path) => {
                       enhanced security and also allowing you to set
                       restrictions such as Date ranges, CIDR ranges, and
                       <a
-                        href={ link + "/multi-user-accounting-software"}
+                        href={link + "/multi-user-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -1423,7 +1411,7 @@ const pricing = (path) => {
                       enhanced security and also allowing you to set
                       restrictions such as Date ranges, CIDR ranges, and
                       <a
-                        href={ link + "/multi-user-accounting-software"}
+                        href={link + "/multi-user-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -1449,7 +1437,7 @@ const pricing = (path) => {
                       enhanced security and also allowing you to set
                       restrictions such as Date ranges, CIDR ranges, and
                       <a
-                        href={ link + "/multi-user-accounting-software"}
+                        href={link + "/multi-user-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -1490,10 +1478,7 @@ const pricing = (path) => {
                       Connect your bank account in Giddh, and with just one
                       click, we will compare and match the transactions of your
                       books with your bank account and
-                      <a
-                        href={ link + "/conect-bank-reconcile"}
-                        target="_blank"
-                      >
+                      <a href={link + "/conect-bank-reconcile"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1516,10 +1501,7 @@ const pricing = (path) => {
                       Connect your bank account in Giddh, and with just one
                       click, we will compare and match the transactions of your
                       books with your bank account and
-                      <a
-                        href={ link + "/conect-bank-reconcile"}
-                        target="_blank"
-                      >
+                      <a href={link + "/conect-bank-reconcile"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1542,10 +1524,7 @@ const pricing = (path) => {
                       Connect your bank account in Giddh, and with just one
                       click, we will compare and match the transactions of your
                       books with your bank account and
-                      <a
-                        href={ link + "/conect-bank-reconcile"}
-                        target="_blank"
-                      >
+                      <a href={link + "/conect-bank-reconcile"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1568,10 +1547,7 @@ const pricing = (path) => {
                       Connect your bank account in Giddh, and with just one
                       click, we will compare and match the transactions of your
                       books with your bank account and
-                      <a
-                        href={ link + "/conect-bank-reconcile"}
-                        target="_blank"
-                      >
+                      <a href={link + "/conect-bank-reconcile"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1594,10 +1570,7 @@ const pricing = (path) => {
                       Connect your bank account in Giddh, and with just one
                       click, we will compare and match the transactions of your
                       books with your bank account and
-                      <a
-                        href={ link + "/conect-bank-reconcile"}
-                        target="_blank"
-                      >
+                      <a href={link + "/conect-bank-reconcile"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1736,268 +1709,273 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__m5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
+              {isIndia && (
+                <>
+                  <div className="pricing_main_section__grid__e-invoice pricing-border-top">
+                    <div
+                      className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
+                      onClick={() => setEInvoice((eInvoice) => !eInvoice)}
+                    >
+                      <span>
+                        E-invoice
+                        {!eInvoice && <MdKeyboardArrowDown />}{" "}
+                        {eInvoice && <MdKeyboardArrowUp />}
+                      </span>
+                      {eInvoice && (
+                        <p className="c-fw-400">
+                          Easily create E-invoice, auto-push E-invoice to its
+                          portal, monitor its status, and
+                          <a href="/e-invoice" target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__e-invoice_2">
+                    <div
+                      className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
+                      onClick={() => setEInvoice((eInvoice) => !eInvoice)}
+                    >
+                      <span>
+                        E-invoice
+                        {!eInvoice && <MdKeyboardArrowDown />}{" "}
+                        {eInvoice && <MdKeyboardArrowUp />}
+                      </span>
+                      {eInvoice && (
+                        <p className="c-fw-400">
+                          Easily create E-invoice, auto-push E-invoice to its
+                          portal, monitor its status, and
+                          <a href="/e-invoice" target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__e-invoice_3">
+                    <div
+                      className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
+                      onClick={() => setEInvoice((eInvoice) => !eInvoice)}
+                    >
+                      <span>
+                        E-invoice
+                        {!eInvoice && <MdKeyboardArrowDown />}{" "}
+                        {eInvoice && <MdKeyboardArrowUp />}
+                      </span>
+                      {eInvoice && (
+                        <p className="c-fw-400">
+                          Easily create E-invoice, auto-push E-invoice to its
+                          portal, monitor its status, and
+                          <a href="/e-invoice" target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__e-invoice_4">
+                    <div
+                      className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
+                      onClick={() => setEInvoice((eInvoice) => !eInvoice)}
+                    >
+                      <span>
+                        E-invoice
+                        {!eInvoice && <MdKeyboardArrowDown />}{" "}
+                        {eInvoice && <MdKeyboardArrowUp />}
+                      </span>
+                      {eInvoice && (
+                        <p className="c-fw-400">
+                          Easily create E-invoice, auto-push E-invoice to its
+                          portal, monitor its status, and
+                          <a href="/e-invoice" target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__e-invoice_5 display-all__child">
+                    <div
+                      className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
+                      onClick={() => setEInvoice((eInvoice) => !eInvoice)}
+                    >
+                      <span>
+                        E-invoice
+                        {!eInvoice && <MdKeyboardArrowDown />}{" "}
+                        {eInvoice && <MdKeyboardArrowUp />}
+                      </span>
+                      {eInvoice && (
+                        <p className="c-fw-400">
+                          Easily create E-invoice, auto-push E-invoice to its
+                          portal, monitor its status, and
+                          <a href="/e-invoice" target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__ei1 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__ei2 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__ei3 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__ei4 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__ei5 text-center pricing-border-top display-all__child">
+                    <MdDone />
+                  </div>
+                </>
+              )}
 
-              <div className="pricing_main_section__grid__e-invoice pricing-border-top">
-                <div
-                  className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
-                  onClick={() => setEInvoice((eInvoice) => !eInvoice)}
-                >
-                  <span>
-                    E-invoice
-                    {!eInvoice && <MdKeyboardArrowDown />}{" "}
-                    {eInvoice && <MdKeyboardArrowUp />}
-                  </span>
-                  {eInvoice && (
-                    <p className="c-fw-400">
-                      Easily create E-invoice, auto-push E-invoice to its
-                      portal, monitor its status, and
-                      <a href={ link + "/e-invoice"} target="_blank">
-                        {" "}
-                        more
-                      </a>
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__e-invoice_2">
-                <div
-                  className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
-                  onClick={() => setEInvoice((eInvoice) => !eInvoice)}
-                >
-                  <span>
-                    E-invoice
-                    {!eInvoice && <MdKeyboardArrowDown />}{" "}
-                    {eInvoice && <MdKeyboardArrowUp />}
-                  </span>
-                  {eInvoice && (
-                    <p className="c-fw-400">
-                      Easily create E-invoice, auto-push E-invoice to its
-                      portal, monitor its status, and
-                      <a href={ link + "/e-invoice"} target="_blank">
-                        {" "}
-                        more
-                      </a>
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__e-invoice_3">
-                <div
-                  className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
-                  onClick={() => setEInvoice((eInvoice) => !eInvoice)}
-                >
-                  <span>
-                    E-invoice
-                    {!eInvoice && <MdKeyboardArrowDown />}{" "}
-                    {eInvoice && <MdKeyboardArrowUp />}
-                  </span>
-                  {eInvoice && (
-                    <p className="c-fw-400">
-                      Easily create E-invoice, auto-push E-invoice to its
-                      portal, monitor its status, and
-                      <a href={ link + "/e-invoice"} target="_blank">
-                        {" "}
-                        more
-                      </a>
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__e-invoice_4">
-                <div
-                  className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
-                  onClick={() => setEInvoice((eInvoice) => !eInvoice)}
-                >
-                  <span>
-                    E-invoice
-                    {!eInvoice && <MdKeyboardArrowDown />}{" "}
-                    {eInvoice && <MdKeyboardArrowUp />}
-                  </span>
-                  {eInvoice && (
-                    <p className="c-fw-400">
-                      Easily create E-invoice, auto-push E-invoice to its
-                      portal, monitor its status, and
-                      <a href={ link + "/e-invoice"} target="_blank">
-                        {" "}
-                        more
-                      </a>
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__e-invoice_5 display-all__child">
-                <div
-                  className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
-                  onClick={() => setEInvoice((eInvoice) => !eInvoice)}
-                >
-                  <span>
-                    E-invoice
-                    {!eInvoice && <MdKeyboardArrowDown />}{" "}
-                    {eInvoice && <MdKeyboardArrowUp />}
-                  </span>
-                  {eInvoice && (
-                    <p className="c-fw-400">
-                      Easily create E-invoice, auto-push E-invoice to its
-                      portal, monitor its status, and
-                      <a href={ link + "/e-invoice"} target="_blank">
-                        {" "}
-                        more
-                      </a>
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__ei1 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ei2 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ei3 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ei4 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ei5 text-center pricing-border-top display-all__child">
-                <MdDone />
-              </div>
-
-              <div className="pricing_main_section__grid__eway-bill pricing-border-top">
-                <div
-                  className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
-                  onClick={() => setEwayBill((ewayBill) => !ewayBill)}
-                >
-                  <span>
-                    E-way bill
-                    {!ewayBill && <MdKeyboardArrowDown />}{" "}
-                    {ewayBill && <MdKeyboardArrowUp />}
-                  </span>
-                  {ewayBill && (
-                    <p className="c-fw-400">
-                      Generate E-way bills, and streamline the process of
-                      tracking the movements of goods in compliance with the tax
-                      regulations.
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__eway-bill_2">
-                <div
-                  className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
-                  onClick={() => setEwayBill((ewayBill) => !ewayBill)}
-                >
-                  <span>
-                    E-way bill
-                    {!ewayBill && <MdKeyboardArrowDown />}{" "}
-                    {ewayBill && <MdKeyboardArrowUp />}
-                  </span>
-                  {ewayBill && (
-                    <p className="c-fw-400">
-                      Generate E-way bills, and streamline the process of
-                      tracking the movements of goods in compliance with the tax
-                      regulations.
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__eway-bill_3">
-                <div
-                  className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
-                  onClick={() => setEwayBill((ewayBill) => !ewayBill)}
-                >
-                  <span>
-                    E-way bill
-                    {!ewayBill && <MdKeyboardArrowDown />}{" "}
-                    {ewayBill && <MdKeyboardArrowUp />}
-                  </span>
-                  {ewayBill && (
-                    <p className="c-fw-400">
-                      Generate E-way bills, and streamline the process of
-                      tracking the movements of goods in compliance with the tax
-                      regulations.
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__eway-bill_4">
-                <div
-                  className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
-                  onClick={() => setEwayBill((ewayBill) => !ewayBill)}
-                >
-                  <span>
-                    E-way bill
-                    {!ewayBill && <MdKeyboardArrowDown />}{" "}
-                    {ewayBill && <MdKeyboardArrowUp />}
-                  </span>
-                  {ewayBill && (
-                    <p className="c-fw-400">
-                      Generate E-way bills, and streamline the process of
-                      tracking the movements of goods in compliance with the tax
-                      regulations.
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__eway-bill_5 display-all__child">
-                <div
-                  className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
-                  onClick={() => setEwayBill((ewayBill) => !ewayBill)}
-                >
-                  <span>
-                    E-way bill
-                    {!ewayBill && <MdKeyboardArrowDown />}{" "}
-                    {ewayBill && <MdKeyboardArrowUp />}
-                  </span>
-                  {ewayBill && (
-                    <p className="c-fw-400">
-                      Generate E-way bills, and streamline the process of
-                      tracking the movements of goods in compliance with the tax
-                      regulations.
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__ewb1 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ewb2 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ewb3 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ewb4 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ewb5 text-center pricing-border-top display-all__child">
-                <MdDone />
-              </div>
-
+              {isIndia && (
+                <>
+                  <div className="pricing_main_section__grid__eway-bill pricing-border-top">
+                    <div
+                      className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
+                      onClick={() => setEwayBill((ewayBill) => !ewayBill)}
+                    >
+                      <span>
+                        E-way bill
+                        {!ewayBill && <MdKeyboardArrowDown />}{" "}
+                        {ewayBill && <MdKeyboardArrowUp />}
+                      </span>
+                      {ewayBill && (
+                        <p className="c-fw-400">
+                          Generate E-way bills, and streamline the process of
+                          tracking the movements of goods in compliance with the
+                          tax regulations.
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__eway-bill_2">
+                    <div
+                      className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
+                      onClick={() => setEwayBill((ewayBill) => !ewayBill)}
+                    >
+                      <span>
+                        E-way bill
+                        {!ewayBill && <MdKeyboardArrowDown />}{" "}
+                        {ewayBill && <MdKeyboardArrowUp />}
+                      </span>
+                      {ewayBill && (
+                        <p className="c-fw-400">
+                          Generate E-way bills, and streamline the process of
+                          tracking the movements of goods in compliance with the
+                          tax regulations.
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__eway-bill_3">
+                    <div
+                      className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
+                      onClick={() => setEwayBill((ewayBill) => !ewayBill)}
+                    >
+                      <span>
+                        E-way bill
+                        {!ewayBill && <MdKeyboardArrowDown />}{" "}
+                        {ewayBill && <MdKeyboardArrowUp />}
+                      </span>
+                      {ewayBill && (
+                        <p className="c-fw-400">
+                          Generate E-way bills, and streamline the process of
+                          tracking the movements of goods in compliance with the
+                          tax regulations.
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__eway-bill_4">
+                    <div
+                      className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
+                      onClick={() => setEwayBill((ewayBill) => !ewayBill)}
+                    >
+                      <span>
+                        E-way bill
+                        {!ewayBill && <MdKeyboardArrowDown />}{" "}
+                        {ewayBill && <MdKeyboardArrowUp />}
+                      </span>
+                      {ewayBill && (
+                        <p className="c-fw-400">
+                          Generate E-way bills, and streamline the process of
+                          tracking the movements of goods in compliance with the
+                          tax regulations.
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__eway-bill_5 display-all__child">
+                    <div
+                      className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
+                      onClick={() => setEwayBill((ewayBill) => !ewayBill)}
+                    >
+                      <span>
+                        E-way bill
+                        {!ewayBill && <MdKeyboardArrowDown />}{" "}
+                        {ewayBill && <MdKeyboardArrowUp />}
+                      </span>
+                      {ewayBill && (
+                        <p className="c-fw-400">
+                          Generate E-way bills, and streamline the process of
+                          tracking the movements of goods in compliance with the
+                          tax regulations.
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__ewb1 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__ewb2 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__ewb3 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__ewb4 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__ewb5 text-center pricing-border-top display-all__child">
+                    <MdDone />
+                  </div>
+                </>
+              )}
               <div className="pricing_main_section__grid__icici pricing-border-top">
                 <div
                   className={"cursor-pointer " + (icici ? "pt-2" : "")}
                   onClick={() => setIcici((icici) => !icici)}
                 >
                   <span>
-                    Integrations ICICI bank integration
+                    Bank Integrations
                     {!icici && <MdKeyboardArrowDown />}{" "}
                     {icici && <MdKeyboardArrowUp />}
                   </span>
                   {icici && (
                     <p className="c-fw-400">
-                      to simply the bank reconciliation, payment process and{" "}
-                      <a
-                        target="_blank"
-                        href={ link + "/icici-integration"}
-                      >
-                        much more
-                      </a>{" "}
-                      , <strong>Shopify integration</strong> to enhance the
-                      efficiency and growth of Ecommerce business, and{" "}
-                      <strong>MSG91 integration</strong> to automate the
-                      business communication like sending invoices, payment
-                      reminder and more via Mail, SMS, Whatsapp message
+                      {isIndia && "ICICI bank integration"} to simply the bank
+                      reconciliation, payment process and{" "}
+                      {isIndia ? (
+                        <>
+                          <a target="_blank" href={link + "/icici-integration"}>
+                            much more
+                          </a>{" "}
+                        </>
+                      ) : (
+                        " much more"
+                      )}
                     </p>
                   )}
                 </div>
@@ -2008,24 +1986,23 @@ const pricing = (path) => {
                   onClick={() => setIcici((icici) => !icici)}
                 >
                   <span>
-                    Integrations ICICI bank integration
+                    Bank Integrations
                     {!icici && <MdKeyboardArrowDown />}{" "}
                     {icici && <MdKeyboardArrowUp />}
                   </span>
                   {icici && (
                     <p className="c-fw-400">
-                      to simply the bank reconciliation, payment process and{" "}
-                      <a
-                        target="_blank"
-                        href={ link + "/icici-integration"}
-                      >
-                        much more
-                      </a>{" "}
-                      , <strong>Shopify integration</strong> to enhance the
-                      efficiency and growth of Ecommerce business, and{" "}
-                      <strong>MSG91 integration</strong> to automate the
-                      business communication like sending invoices, payment
-                      reminder and more via Mail, SMS, Whatsapp message
+                      {isIndia && "ICICI bank integration"} to simply the bank
+                      reconciliation, payment process and{" "}
+                      {isIndia ? (
+                        <>
+                          <a target="_blank" href={link + "/icici-integration"}>
+                            much more
+                          </a>{" "}
+                        </>
+                      ) : (
+                        " much more"
+                      )}
                     </p>
                   )}
                 </div>
@@ -2036,24 +2013,23 @@ const pricing = (path) => {
                   onClick={() => setIcici((icici) => !icici)}
                 >
                   <span>
-                    Integrations ICICI bank integration
+                    Bank Integrations
                     {!icici && <MdKeyboardArrowDown />}{" "}
                     {icici && <MdKeyboardArrowUp />}
                   </span>
                   {icici && (
                     <p className="c-fw-400">
-                      to simply the bank reconciliation, payment process and{" "}
-                      <a
-                        target="_blank"
-                        href={ link + "/icici-integration"}
-                      >
-                        much more
-                      </a>{" "}
-                      , <strong>Shopify integration</strong> to enhance the
-                      efficiency and growth of Ecommerce business, and{" "}
-                      <strong>MSG91 integration</strong> to automate the
-                      business communication like sending invoices, payment
-                      reminder and more via Mail, SMS, Whatsapp message
+                      {isIndia && "ICICI bank integration"} to simply the bank
+                      reconciliation, payment process and{" "}
+                      {isIndia ? (
+                        <>
+                          <a target="_blank" href={link + "/icici-integration"}>
+                            much more
+                          </a>{" "}
+                        </>
+                      ) : (
+                        " much more"
+                      )}
                     </p>
                   )}
                 </div>
@@ -2064,24 +2040,23 @@ const pricing = (path) => {
                   onClick={() => setIcici((icici) => !icici)}
                 >
                   <span>
-                    Integrations ICICI bank integration
+                    Bank Integrations
                     {!icici && <MdKeyboardArrowDown />}{" "}
                     {icici && <MdKeyboardArrowUp />}
                   </span>
                   {icici && (
                     <p className="c-fw-400">
-                      to simply the bank reconciliation, payment process and{" "}
-                      <a
-                        target="_blank"
-                        href={ link + "/icici-integration"}
-                      >
-                        much more
-                      </a>{" "}
-                      , <strong>Shopify integration</strong> to enhance the
-                      efficiency and growth of Ecommerce business, and{" "}
-                      <strong>MSG91 integration</strong> to automate the
-                      business communication like sending invoices, payment
-                      reminder and more via Mail, SMS, Whatsapp message
+                      {isIndia && "ICICI bank integration"} to simply the bank
+                      reconciliation, payment process and{" "}
+                      {isIndia ? (
+                        <>
+                          <a target="_blank" href={link + "/icici-integration"}>
+                            much more
+                          </a>{" "}
+                        </>
+                      ) : (
+                        " much more"
+                      )}
                     </p>
                   )}
                 </div>
@@ -2092,24 +2067,23 @@ const pricing = (path) => {
                   onClick={() => setIcici((icici) => !icici)}
                 >
                   <span>
-                    Integrations ICICI bank integration
+                    Bank Integrations
                     {!icici && <MdKeyboardArrowDown />}{" "}
                     {icici && <MdKeyboardArrowUp />}
                   </span>
                   {icici && (
                     <p className="c-fw-400">
-                      to simply the bank reconciliation, payment process and{" "}
-                      <a
-                        target="_blank"
-                        href={ link + "/icici-integration"}
-                      >
-                        much more
-                      </a>{" "}
-                      , <strong>Shopify integration</strong> to enhance the
-                      efficiency and growth of Ecommerce business, and{" "}
-                      <strong>MSG91 integration</strong> to automate the
-                      business communication like sending invoices, payment
-                      reminder and more via Mail, SMS, Whatsapp message
+                      {isIndia && "ICICI bank integration"} to simply the bank
+                      reconciliation, payment process and{" "}
+                      {isIndia ? (
+                        <>
+                          <a target="_blank" href={link + "/icici-integration"}>
+                            much more
+                          </a>{" "}
+                        </>
+                      ) : (
+                        " much more"
+                      )}
                     </p>
                   )}
                 </div>
@@ -2127,6 +2101,213 @@ const pricing = (path) => {
                 <MdDone />
               </div>
               <div className="pricing_main_section__grid__ic5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__e-commerce pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (ecom ? "pt-2" : "")}
+                  onClick={() => setEcommerce((ecom) => !ecom)}
+                >
+                  <span>
+                    E-commerce Integration
+                    {!ecom && <MdKeyboardArrowDown />}{" "}
+                    {ecom && <MdKeyboardArrowUp />}
+                  </span>
+                  {ecom && (
+                    <p className="c-fw-400">
+                      Shopify integration to enhance the efficiency and growth
+                      of Ecommerce business.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__e-commerce_2">
+                <div
+                  className={"cursor-pointer " + (ecom ? "pt-2" : "")}
+                  onClick={() => setEcommerce((ecom) => !ecom)}
+                >
+                  <span>
+                    E-commerce Integration
+                    {!ecom && <MdKeyboardArrowDown />}{" "}
+                    {ecom && <MdKeyboardArrowUp />}
+                  </span>
+                  {ecom && (
+                    <p className="c-fw-400">
+                      Shopify integration to enhance the efficiency and growth
+                      of Ecommerce business.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__e-commerce_3">
+                <div
+                  className={"cursor-pointer " + (ecom ? "pt-2" : "")}
+                  onClick={() => setEcommerce((ecom) => !ecom)}
+                >
+                  <span>
+                    E-commerce Integration
+                    {!ecom && <MdKeyboardArrowDown />}{" "}
+                    {ecom && <MdKeyboardArrowUp />}
+                  </span>
+                  {ecom && (
+                    <p className="c-fw-400">
+                      Shopify integration to enhance the efficiency and growth
+                      of Ecommerce business.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__e-commerce_4">
+                <div
+                  className={"cursor-pointer " + (ecom ? "pt-2" : "")}
+                  onClick={() => setEcommerce((ecom) => !ecom)}
+                >
+                  <span>
+                    E-commerce Integration
+                    {!ecom && <MdKeyboardArrowDown />}{" "}
+                    {ecom && <MdKeyboardArrowUp />}
+                  </span>
+                  {ecom && (
+                    <p className="c-fw-400">
+                      Shopify integration to enhance the efficiency and growth
+                      of Ecommerce business.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__e-commerce_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (ecom ? "pt-2" : "")}
+                  onClick={() => setEcommerce((ecom) => !ecom)}
+                >
+                  <span>
+                    E-commerce Integration
+                    {!ecom && <MdKeyboardArrowDown />}{" "}
+                    {ecom && <MdKeyboardArrowUp />}
+                  </span>
+                  {ecom && (
+                    <p className="c-fw-400">
+                      Shopify integration to enhance the efficiency and growth
+                      of Ecommerce business.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__ecom1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ecom2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ecom3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ecom4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ecom5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__telecom pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (telecom ? "pt-2" : "")}
+                  onClick={() => setTelecom((telecom) => !telecom)}
+                >
+                  <span>
+                    Telecom Integration
+                    {!telecom && <MdKeyboardArrowDown />}{" "}
+                    {telecom && <MdKeyboardArrowUp />}
+                  </span>
+                  {telecom && (
+                    <p className="c-fw-400">
+                      MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__telecom_2">
+                 <div
+                  className={"cursor-pointer " + (telecom ? "pt-2" : "")}
+                  onClick={() => setTelecom((telecom) => !telecom)}
+                >
+                  <span>
+                    Telecom Integration
+                    {!telecom && <MdKeyboardArrowDown />}{" "}
+                    {telecom && <MdKeyboardArrowUp />}
+                  </span>
+                  {telecom && (
+                    <p className="c-fw-400">
+                      MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__telecom_3">
+                 <div
+                  className={"cursor-pointer " + (telecom ? "pt-2" : "")}
+                  onClick={() => setTelecom((telecom) => !telecom)}
+                >
+                  <span>
+                    Telecom Integration
+                    {!telecom && <MdKeyboardArrowDown />}{" "}
+                    {telecom && <MdKeyboardArrowUp />}
+                  </span>
+                  {telecom && (
+                    <p className="c-fw-400">
+                      MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__telecom_4">
+                 <div
+                  className={"cursor-pointer " + (telecom ? "pt-2" : "")}
+                  onClick={() => setTelecom((telecom) => !telecom)}
+                >
+                  <span>
+                    Telecom Integration
+                    {!telecom && <MdKeyboardArrowDown />}{" "}
+                    {telecom && <MdKeyboardArrowUp />}
+                  </span>
+                  {telecom && (
+                    <p className="c-fw-400">
+                      MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__telecom_5 display-all__child">
+                 <div
+                  className={"cursor-pointer " + (telecom ? "pt-2" : "")}
+                  onClick={() => setTelecom((telecom) => !telecom)}
+                >
+                  <span>
+                    Telecom Integration
+                    {!telecom && <MdKeyboardArrowDown />}{" "}
+                    {telecom && <MdKeyboardArrowUp />}
+                  </span>
+                  {telecom && (
+                    <p className="c-fw-400">
+                      MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__tc1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__tc2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__tc3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__tc4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__tc5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
 
@@ -2263,7 +2444,7 @@ const pricing = (path) => {
                       Accelerate the accounting process by importing data such
                       as company master information, inventory details,
                       financial entries, bank statements, and{" "}
-                      <a target="_blank" href={ link + "/import-data"}>
+                      <a target="_blank" href={link + "/import-data"}>
                         other relevant data
                       </a>
                       . Effortlessly export and share data, including ledgers,
@@ -2289,7 +2470,7 @@ const pricing = (path) => {
                       Accelerate the accounting process by importing data such
                       as company master information, inventory details,
                       financial entries, bank statements, and{" "}
-                      <a target="_blank" href={ link + "/import-data"}>
+                      <a target="_blank" href={link + "/import-data"}>
                         other relevant data
                       </a>
                       . Effortlessly export and share data, including ledgers,
@@ -2315,7 +2496,7 @@ const pricing = (path) => {
                       Accelerate the accounting process by importing data such
                       as company master information, inventory details,
                       financial entries, bank statements, and{" "}
-                      <a target="_blank" href={ link + "/import-data"}>
+                      <a target="_blank" href={link + "/import-data"}>
                         other relevant data
                       </a>
                       . Effortlessly export and share data, including ledgers,
@@ -2341,7 +2522,7 @@ const pricing = (path) => {
                       Accelerate the accounting process by importing data such
                       as company master information, inventory details,
                       financial entries, bank statements, and{" "}
-                      <a target="_blank" href={ link + "/import-data"}>
+                      <a target="_blank" href={link + "/import-data"}>
                         other relevant data
                       </a>
                       . Effortlessly export and share data, including ledgers,
@@ -2367,7 +2548,7 @@ const pricing = (path) => {
                       Accelerate the accounting process by importing data such
                       as company master information, inventory details,
                       financial entries, bank statements, and{" "}
-                      <a target="_blank" href={ link + "/import-data"}>
+                      <a target="_blank" href={link + "/import-data"}>
                         other relevant data
                       </a>
                       . Effortlessly export and share data, including ledgers,
@@ -2649,7 +2830,7 @@ const pricing = (path) => {
                       Your data secured on AWS cloud, and for more security we
                       provide the Two-way authentication, Auth key, Sessions,
                       Audit logs and{" "}
-                      <a href={ link + "/security"} target="_blank">
+                      <a href={link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
@@ -2671,7 +2852,7 @@ const pricing = (path) => {
                       Your data secured on AWS cloud, and for more security we
                       provide the Two-way authentication, Auth key, Sessions,
                       Audit logs and{" "}
-                      <a href={ link + "/security"} target="_blank">
+                      <a href={link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
@@ -2693,7 +2874,7 @@ const pricing = (path) => {
                       Your data secured on AWS cloud, and for more security we
                       provide the Two-way authentication, Auth key, Sessions,
                       Audit logs and{" "}
-                      <a href={ link + "/security"} target="_blank">
+                      <a href={link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
@@ -2715,7 +2896,7 @@ const pricing = (path) => {
                       Your data secured on AWS cloud, and for more security we
                       provide the Two-way authentication, Auth key, Sessions,
                       Audit logs and{" "}
-                      <a href={ link + "/security"} target="_blank">
+                      <a href={link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
@@ -2737,7 +2918,7 @@ const pricing = (path) => {
                       Your data secured on AWS cloud, and for more security we
                       provide the Two-way authentication, Auth key, Sessions,
                       Audit logs and{" "}
-                      <a href={ link + "/security"} target="_blank">
+                      <a href={link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
@@ -2773,7 +2954,7 @@ const pricing = (path) => {
                   {support && (
                     <p className="c-fw-400">
                       You are just one call or email away from us,{" "}
-                      <a href={ link + "/contact-us"} target="_blank">
+                      <a href={link + "/contact-us"} target="_blank">
                         Connect with us
                       </a>
                     </p>
@@ -2793,7 +2974,7 @@ const pricing = (path) => {
                   {support && (
                     <p className="c-fw-400">
                       You are just one call or email away from us,{" "}
-                      <a href={ link + "/contact-us"} target="_blank">
+                      <a href={link + "/contact-us"} target="_blank">
                         Connect with us
                       </a>
                     </p>
@@ -2813,7 +2994,7 @@ const pricing = (path) => {
                   {support && (
                     <p className="c-fw-400">
                       You are just one call or email away from us,{" "}
-                      <a href={ link + "/contact-us"} target="_blank">
+                      <a href={link + "/contact-us"} target="_blank">
                         Connect with us
                       </a>
                     </p>
@@ -2833,7 +3014,7 @@ const pricing = (path) => {
                   {support && (
                     <p className="c-fw-400">
                       You are just one call or email away from us,{" "}
-                      <a href={ link + "/contact-us"} target="_blank">
+                      <a href={link + "/contact-us"} target="_blank">
                         Connect with us
                       </a>
                     </p>
@@ -2853,7 +3034,7 @@ const pricing = (path) => {
                   {support && (
                     <p className="c-fw-400">
                       You are just one call or email away from us,{" "}
-                      <a href={ link + "/contact-us"} target="_blank">
+                      <a href={link + "/contact-us"} target="_blank">
                         Connect with us
                       </a>
                     </p>
@@ -3222,14 +3403,14 @@ const pricing = (path) => {
                     display: readMoreParagraphStatus4 ? "block" : "none",
                   }}
                 >
-                  The accounting software pricing stands at just INR 800/- per
-                  organization/year with a capacity to handle 10,000
-                  transactions and unlimited users. GIDDH prepares your GST
+                  The accounting software pricing stands at just { isIndia && "INR 800/-"} { isAE && "AED 350/-"} { isUK && "GBP 70/-"} per
+                  organization/year with a capacity to handle { isIndia && " 10,000"} { (isAE || isUK) && " 40,000"} {" "}
+                  transactions and unlimited users. GIDDH prepares your {isIndia ? "GST" : "VAT"} {" "}
                   return filing automatically, identifies potential errors,
                   never lets you miss out deadlines, and streamlines the entire
                   process. Another significant benefit of trusting GIDDH is that
-                  it allows you to grant your CA view access to the relevant GST
-                  tax return data and create GST invoices ensuring that
+                  it allows you to grant your CA view access to the relevant {isIndia ? "GST" : "VAT"} {" "}
+                  tax return data and create {isIndia ? "GST" : "VAT"} invoices ensuring that
                   compliance is no more a challenge.
                 </p>
                 <span
