@@ -36,7 +36,7 @@ const pricing = (path) => {
   const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
-
+ 
   return (
     <>
      <section className="container-fluid pricing_main_section">
@@ -372,7 +372,7 @@ const pricing = (path) => {
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
                       <a
-                        href="https://giddh.com/invoice-software"
+                        href={ link + "/invoice-software"}
                         target="_blank"
                       >
                         {" "}
@@ -396,7 +396,7 @@ const pricing = (path) => {
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
                       <a
-                        href="https://giddh.com/invoice-software"
+                        href={ link + "/invoice-software"}
                         target="_blank"
                       >
                         {" "}
@@ -420,7 +420,7 @@ const pricing = (path) => {
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
                       <a
-                        href="https://giddh.com/invoice-software"
+                        href={ link + "/invoice-software"}
                         target="_blank"
                       >
                         {" "}
@@ -444,7 +444,7 @@ const pricing = (path) => {
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
                       <a
-                        href="https://giddh.com/invoice-software"
+                        href={ link + "/invoice-software"}
                         target="_blank"
                       >
                         {" "}
@@ -468,7 +468,7 @@ const pricing = (path) => {
                       Create, and send the cash and sales invoices, check
                       payment status, set due dates, apply reverse charge and{" "}
                       <a
-                        href="https://giddh.com/invoice-software"
+                        href={ link + "/invoice-software"}
                         target="_blank"
                       >
                         {" "}
@@ -621,7 +621,7 @@ const pricing = (path) => {
                       in group, items and variant too, easy search with barcode,
                       and
                       <a
-                        href="https://giddh.com/inventory-management-software"
+                        href={ link + "/inventory-management-software"}
                         target="_blank"
                       >
                         {" "}
@@ -653,7 +653,7 @@ const pricing = (path) => {
                       in group, items and variant too, easy search with barcode,
                       and
                       <a
-                        href="https://giddh.com/inventory-management-software"
+                        href={ link + "/inventory-management-software"}
                         target="_blank"
                       >
                         {" "}
@@ -685,7 +685,7 @@ const pricing = (path) => {
                       in group, items and variant too, easy search with barcode,
                       and
                       <a
-                        href="https://giddh.com/inventory-management-software"
+                        href={ link + "/inventory-management-software"}
                         target="_blank"
                       >
                         {" "}
@@ -717,7 +717,7 @@ const pricing = (path) => {
                       in group, items and variant too, easy search with barcode,
                       and
                       <a
-                        href="https://giddh.com/inventory-management-software"
+                        href={ link + "/inventory-management-software"}
                         target="_blank"
                       >
                         {" "}
@@ -749,7 +749,7 @@ const pricing = (path) => {
                       in group, items and variant too, easy search with barcode,
                       and
                       <a
-                        href="https://giddh.com/inventory-management-software"
+                        href={ link + "/inventory-management-software"}
                         target="_blank"
                       >
                         {" "}
@@ -792,7 +792,7 @@ const pricing = (path) => {
                       currencies, with automatic currency conversion based on
                       real-time exchange rates and
                       <a
-                        href="https://giddh.com/multi-currency-accounting-software"
+                        href={ link + "/multi-currency-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -819,7 +819,7 @@ const pricing = (path) => {
                       currencies, with automatic currency conversion based on
                       real-time exchange rates and
                       <a
-                        href="https://giddh.com/multi-currency-accounting-software"
+                        href={ link + "/multi-currency-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -846,7 +846,7 @@ const pricing = (path) => {
                       currencies, with automatic currency conversion based on
                       real-time exchange rates and
                       <a
-                        href="https://giddh.com/multi-currency-accounting-software"
+                        href={ link + "/multi-currency-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -873,7 +873,7 @@ const pricing = (path) => {
                       currencies, with automatic currency conversion based on
                       real-time exchange rates and
                       <a
-                        href="https://giddh.com/multi-currency-accounting-software"
+                        href={ link + "/multi-currency-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -900,7 +900,7 @@ const pricing = (path) => {
                       currencies, with automatic currency conversion based on
                       real-time exchange rates and
                       <a
-                        href="https://giddh.com/multi-currency-accounting-software"
+                        href={ link + "/multi-currency-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -939,7 +939,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create GST invoice, view GST reports, direct filing, and
                       reconcile transaction with the GST portal and
-                      <a href="https://giddh.com/gst" target="_blank">
+                      <a href={ link + "/gst"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -960,7 +960,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create GST invoice, view GST reports, direct filing, and
                       reconcile transaction with the GST portal and
-                      <a href="https://giddh.com/gst" target="_blank">
+                      <a href={ link + "/gst"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -981,7 +981,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create GST invoice, view GST reports, direct filing, and
                       reconcile transaction with the GST portal and
-                      <a href="https://giddh.com/gst" target="_blank">
+                      <a href={ link + "/gst"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1002,7 +1002,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create GST invoice, view GST reports, direct filing, and
                       reconcile transaction with the GST portal and
-                      <a href="https://giddh.com/gst" target="_blank">
+                      <a href={ link + "/gst"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1023,7 +1023,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Create GST invoice, view GST reports, direct filing, and
                       reconcile transaction with the GST portal and
-                      <a href="https://giddh.com/gst" target="_blank">
+                      <a href={ link + "/gst"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1063,7 +1063,7 @@ const pricing = (path) => {
                       bifurcation, Columnar report, Purchase register, Sales
                       register, Inventory reports, Reverse charge report, and
                       <a
-                        href="https://giddh.com/financial-reporting"
+                        href={ link + "/financial-reporting"}
                         target="_blank"
                       >
                         {" "}
@@ -1089,7 +1089,7 @@ const pricing = (path) => {
                       bifurcation, Columnar report, Purchase register, Sales
                       register, Inventory reports, Reverse charge report, and
                       <a
-                        href="https://giddh.com/financial-reporting"
+                        href={ link + "/financial-reporting"}
                         target="_blank"
                       >
                         {" "}
@@ -1115,7 +1115,7 @@ const pricing = (path) => {
                       bifurcation, Columnar report, Purchase register, Sales
                       register, Inventory reports, Reverse charge report, and
                       <a
-                        href="https://giddh.com/financial-reporting"
+                        href={ link + "/financial-reporting"}
                         target="_blank"
                       >
                         {" "}
@@ -1141,7 +1141,7 @@ const pricing = (path) => {
                       bifurcation, Columnar report, Purchase register, Sales
                       register, Inventory reports, Reverse charge report, and
                       <a
-                        href="https://giddh.com/financial-reporting"
+                        href={ link + "/financial-reporting"}
                         target="_blank"
                       >
                         {" "}
@@ -1167,7 +1167,7 @@ const pricing = (path) => {
                       bifurcation, Columnar report, Purchase register, Sales
                       register, Inventory reports, Reverse charge report, and
                       <a
-                        href="https://giddh.com/financial-reporting"
+                        href={ link + "/financial-reporting"}
                         target="_blank"
                       >
                         {" "}
@@ -1207,7 +1207,7 @@ const pricing = (path) => {
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
                       <a
-                        href="https://giddh.com/accounting-dashboard"
+                        href={ link + "/accounting-dashboard"}
                         target="_blank"
                       >
                         {" "}
@@ -1231,7 +1231,7 @@ const pricing = (path) => {
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
                       <a
-                        href="https://giddh.com/accounting-dashboard"
+                        href={ link + "/accounting-dashboard"}
                         target="_blank"
                       >
                         {" "}
@@ -1255,7 +1255,7 @@ const pricing = (path) => {
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
                       <a
-                        href="https://giddh.com/accounting-dashboard"
+                        href={ link + "/accounting-dashboard"}
                         target="_blank"
                       >
                         {" "}
@@ -1279,7 +1279,7 @@ const pricing = (path) => {
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
                       <a
-                        href="https://giddh.com/accounting-dashboard"
+                        href={ link + "/accounting-dashboard"}
                         target="_blank"
                       >
                         {" "}
@@ -1303,7 +1303,7 @@ const pricing = (path) => {
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
                       <a
-                        href="https://giddh.com/accounting-dashboard"
+                        href={ link + "/accounting-dashboard"}
                         target="_blank"
                       >
                         {" "}
@@ -1345,7 +1345,7 @@ const pricing = (path) => {
                       enhanced security and also allowing you to set
                       restrictions such as Date ranges, CIDR ranges, and
                       <a
-                        href="https://giddh.com/multi-user-accounting-software"
+                        href={ link + "/multi-user-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -1371,7 +1371,7 @@ const pricing = (path) => {
                       enhanced security and also allowing you to set
                       restrictions such as Date ranges, CIDR ranges, and
                       <a
-                        href="https://giddh.com/multi-user-accounting-software"
+                        href={ link + "/multi-user-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -1397,7 +1397,7 @@ const pricing = (path) => {
                       enhanced security and also allowing you to set
                       restrictions such as Date ranges, CIDR ranges, and
                       <a
-                        href="https://giddh.com/multi-user-accounting-software"
+                        href={ link + "/multi-user-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -1423,7 +1423,7 @@ const pricing = (path) => {
                       enhanced security and also allowing you to set
                       restrictions such as Date ranges, CIDR ranges, and
                       <a
-                        href="https://giddh.com/multi-user-accounting-software"
+                        href={ link + "/multi-user-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -1449,7 +1449,7 @@ const pricing = (path) => {
                       enhanced security and also allowing you to set
                       restrictions such as Date ranges, CIDR ranges, and
                       <a
-                        href="https://giddh.com/multi-user-accounting-software"
+                        href={ link + "/multi-user-accounting-software"}
                         target="_blank"
                       >
                         {" "}
@@ -1491,7 +1491,7 @@ const pricing = (path) => {
                       click, we will compare and match the transactions of your
                       books with your bank account and
                       <a
-                        href="https://giddh.com/conect-bank-reconcile"
+                        href={ link + "/conect-bank-reconcile"}
                         target="_blank"
                       >
                         {" "}
@@ -1517,7 +1517,7 @@ const pricing = (path) => {
                       click, we will compare and match the transactions of your
                       books with your bank account and
                       <a
-                        href="https://giddh.com/conect-bank-reconcile"
+                        href={ link + "/conect-bank-reconcile"}
                         target="_blank"
                       >
                         {" "}
@@ -1543,7 +1543,7 @@ const pricing = (path) => {
                       click, we will compare and match the transactions of your
                       books with your bank account and
                       <a
-                        href="https://giddh.com/conect-bank-reconcile"
+                        href={ link + "/conect-bank-reconcile"}
                         target="_blank"
                       >
                         {" "}
@@ -1569,7 +1569,7 @@ const pricing = (path) => {
                       click, we will compare and match the transactions of your
                       books with your bank account and
                       <a
-                        href="https://giddh.com/conect-bank-reconcile"
+                        href={ link + "/conect-bank-reconcile"}
                         target="_blank"
                       >
                         {" "}
@@ -1595,7 +1595,7 @@ const pricing = (path) => {
                       click, we will compare and match the transactions of your
                       books with your bank account and
                       <a
-                        href="https://giddh.com/conect-bank-reconcile"
+                        href={ link + "/conect-bank-reconcile"}
                         target="_blank"
                       >
                         {" "}
@@ -1751,7 +1751,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Easily create E-invoice, auto-push E-invoice to its
                       portal, monitor its status, and
-                      <a href="https://giddh.com/e-invoice" target="_blank">
+                      <a href={ link + "/e-invoice"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1773,7 +1773,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Easily create E-invoice, auto-push E-invoice to its
                       portal, monitor its status, and
-                      <a href="https://giddh.com/e-invoice" target="_blank">
+                      <a href={ link + "/e-invoice"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1795,7 +1795,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Easily create E-invoice, auto-push E-invoice to its
                       portal, monitor its status, and
-                      <a href="https://giddh.com/e-invoice" target="_blank">
+                      <a href={ link + "/e-invoice"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1817,7 +1817,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Easily create E-invoice, auto-push E-invoice to its
                       portal, monitor its status, and
-                      <a href="https://giddh.com/e-invoice" target="_blank">
+                      <a href={ link + "/e-invoice"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1839,7 +1839,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       Easily create E-invoice, auto-push E-invoice to its
                       portal, monitor its status, and
-                      <a href="https://giddh.com/e-invoice" target="_blank">
+                      <a href={ link + "/e-invoice"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1989,7 +1989,7 @@ const pricing = (path) => {
                       to simply the bank reconciliation, payment process and{" "}
                       <a
                         target="_blank"
-                        href="https://giddh.com/icici-integration"
+                        href={ link + "/icici-integration"}
                       >
                         much more
                       </a>{" "}
@@ -2017,7 +2017,7 @@ const pricing = (path) => {
                       to simply the bank reconciliation, payment process and{" "}
                       <a
                         target="_blank"
-                        href="https://giddh.com/icici-integration"
+                        href={ link + "/icici-integration"}
                       >
                         much more
                       </a>{" "}
@@ -2045,7 +2045,7 @@ const pricing = (path) => {
                       to simply the bank reconciliation, payment process and{" "}
                       <a
                         target="_blank"
-                        href="https://giddh.com/icici-integration"
+                        href={ link + "/icici-integration"}
                       >
                         much more
                       </a>{" "}
@@ -2073,7 +2073,7 @@ const pricing = (path) => {
                       to simply the bank reconciliation, payment process and{" "}
                       <a
                         target="_blank"
-                        href="https://giddh.com/icici-integration"
+                        href={ link + "/icici-integration"}
                       >
                         much more
                       </a>{" "}
@@ -2101,7 +2101,7 @@ const pricing = (path) => {
                       to simply the bank reconciliation, payment process and{" "}
                       <a
                         target="_blank"
-                        href="https://giddh.com/icici-integration"
+                        href={ link + "/icici-integration"}
                       >
                         much more
                       </a>{" "}
@@ -2263,7 +2263,7 @@ const pricing = (path) => {
                       Accelerate the accounting process by importing data such
                       as company master information, inventory details,
                       financial entries, bank statements, and{" "}
-                      <a target="_blank" href="https://giddh.com/import-data">
+                      <a target="_blank" href={ link + "/import-data"}>
                         other relevant data
                       </a>
                       . Effortlessly export and share data, including ledgers,
@@ -2289,7 +2289,7 @@ const pricing = (path) => {
                       Accelerate the accounting process by importing data such
                       as company master information, inventory details,
                       financial entries, bank statements, and{" "}
-                      <a target="_blank" href="https://giddh.com/import-data">
+                      <a target="_blank" href={ link + "/import-data"}>
                         other relevant data
                       </a>
                       . Effortlessly export and share data, including ledgers,
@@ -2315,7 +2315,7 @@ const pricing = (path) => {
                       Accelerate the accounting process by importing data such
                       as company master information, inventory details,
                       financial entries, bank statements, and{" "}
-                      <a target="_blank" href="https://giddh.com/import-data">
+                      <a target="_blank" href={ link + "/import-data"}>
                         other relevant data
                       </a>
                       . Effortlessly export and share data, including ledgers,
@@ -2341,7 +2341,7 @@ const pricing = (path) => {
                       Accelerate the accounting process by importing data such
                       as company master information, inventory details,
                       financial entries, bank statements, and{" "}
-                      <a target="_blank" href="https://giddh.com/import-data">
+                      <a target="_blank" href={ link + "/import-data"}>
                         other relevant data
                       </a>
                       . Effortlessly export and share data, including ledgers,
@@ -2367,7 +2367,7 @@ const pricing = (path) => {
                       Accelerate the accounting process by importing data such
                       as company master information, inventory details,
                       financial entries, bank statements, and{" "}
-                      <a target="_blank" href="https://giddh.com/import-data">
+                      <a target="_blank" href={ link + "/import-data"}>
                         other relevant data
                       </a>
                       . Effortlessly export and share data, including ledgers,
@@ -2649,7 +2649,7 @@ const pricing = (path) => {
                       Your data secured on AWS cloud, and for more security we
                       provide the Two-way authentication, Auth key, Sessions,
                       Audit logs and{" "}
-                      <a href="https://giddh.com/security" target="_blank">
+                      <a href={ link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
@@ -2671,7 +2671,7 @@ const pricing = (path) => {
                       Your data secured on AWS cloud, and for more security we
                       provide the Two-way authentication, Auth key, Sessions,
                       Audit logs and{" "}
-                      <a href="https://giddh.com/security" target="_blank">
+                      <a href={ link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
@@ -2693,7 +2693,7 @@ const pricing = (path) => {
                       Your data secured on AWS cloud, and for more security we
                       provide the Two-way authentication, Auth key, Sessions,
                       Audit logs and{" "}
-                      <a href="https://giddh.com/security" target="_blank">
+                      <a href={ link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
@@ -2715,7 +2715,7 @@ const pricing = (path) => {
                       Your data secured on AWS cloud, and for more security we
                       provide the Two-way authentication, Auth key, Sessions,
                       Audit logs and{" "}
-                      <a href="https://giddh.com/security" target="_blank">
+                      <a href={ link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
@@ -2737,7 +2737,7 @@ const pricing = (path) => {
                       Your data secured on AWS cloud, and for more security we
                       provide the Two-way authentication, Auth key, Sessions,
                       Audit logs and{" "}
-                      <a href="https://giddh.com/security" target="_blank">
+                      <a href={ link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
@@ -2773,7 +2773,7 @@ const pricing = (path) => {
                   {support && (
                     <p className="c-fw-400">
                       You are just one call or email away from us,{" "}
-                      <a href="https://giddh.com/contact-us" target="_blank">
+                      <a href={ link + "/contact-us"} target="_blank">
                         Connect with us
                       </a>
                     </p>
@@ -2793,7 +2793,7 @@ const pricing = (path) => {
                   {support && (
                     <p className="c-fw-400">
                       You are just one call or email away from us,{" "}
-                      <a href="https://giddh.com/contact-us" target="_blank">
+                      <a href={ link + "/contact-us"} target="_blank">
                         Connect with us
                       </a>
                     </p>
@@ -2813,7 +2813,7 @@ const pricing = (path) => {
                   {support && (
                     <p className="c-fw-400">
                       You are just one call or email away from us,{" "}
-                      <a href="https://giddh.com/contact-us" target="_blank">
+                      <a href={ link + "/contact-us"} target="_blank">
                         Connect with us
                       </a>
                     </p>
@@ -2833,7 +2833,7 @@ const pricing = (path) => {
                   {support && (
                     <p className="c-fw-400">
                       You are just one call or email away from us,{" "}
-                      <a href="https://giddh.com/contact-us" target="_blank">
+                      <a href={ link + "/contact-us"} target="_blank">
                         Connect with us
                       </a>
                     </p>
@@ -2853,7 +2853,7 @@ const pricing = (path) => {
                   {support && (
                     <p className="c-fw-400">
                       You are just one call or email away from us,{" "}
-                      <a href="https://giddh.com/contact-us" target="_blank">
+                      <a href={ link + "/contact-us"} target="_blank">
                         Connect with us
                       </a>
                     </p>
