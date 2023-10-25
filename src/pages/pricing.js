@@ -1,5 +1,10 @@
 import { useState } from "react";
-import { MdDone, MdClose } from "react-icons/md";
+import {
+  MdDone,
+  MdClose,
+  MdKeyboardArrowDown,
+  MdKeyboardArrowUp,
+} from "react-icons/md";
 const pricing = (path) => {
   const [readMoreStatus, readmoreAction] = useState(false);
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
@@ -7,39 +12,49 @@ const pricing = (path) => {
   const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
   const [readMoreParagraphStatus4, showMoreParagraph4] = useState(false);
   const [readMoreParagraphStatus5, showMoreParagraph5] = useState(false);
+  const [invoice, setInvoice] = useState(false);
+  const [recordBill, setRecordBill] = useState(false);
+  const [managingInventory, setManagingInventory] = useState(false);
+  const [multiCurrency, setMultiCurrency] = useState(false);
+  const [gst, setGst] = useState(false);
+  const [report, setReport] = useState(false);
+  const [dashoard, setDashboard] = useState(false);
+  const [userAccess, setUserAccess] = useState(false);
+  const [bankRec, setBankReconciliation] = useState(false);
+  const [manufacturing, setManufacturing] = useState(false);
+  const [eInvoice, setEInvoice] = useState(false);
+  const [ewayBill, setEwayBill] = useState(false);
+  const [icici, setIcici] = useState(false);
+  const [warehouse, setWarehouse] = useState(false);
+  const [importExport, setImportExport] = useState(false);
+  const [financialYear, setFinancialYear] = useState(false);
+  const [bankingSupport, setBankingSupport] = useState(false);
+  const [security, setSecurity] = useState(false);
+  const [support, setSupport] = useState(false);
 
   const linkPath = path.path;
-  const isIndia = linkPath.isIndia
+  const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
-
+ 
   return (
     <>
-      <section className="container-fluid pricing_top_section">
-        <div className="row align-items-center mt-auto pricing_top_section__column-reverse">
-          <div className="col-lg-6 col-md-12">
-            <h3 className=" heading col-primary c-fw-600 ms-4">
-              Powerful solution. Affordable pricing.
-            </h3>
-          </div>
-          <div className="col-lg-6 col-md-12">
-            <figure>
-              <img
-                className="img-fluid"
-                src="/img/pricing-laptop-image-with-giddh-dashoard-screen.png"
-                alt="Laptop Image"
-              />
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section className="container-fluid pricing_main_section">
+     <section className="container-fluid pricing_main_section">
         <div className="row justify-content-center">
           <div className="col-12">
-            <div className={"pricing_main_section__grid " + (isIndia ? " display-all" : " display-four")}>
+            <div
+              className={
+                "pricing_main_section__grid " +
+                (isIndia ? " display-all" : " display-four")
+              }
+            >
               <div className="pricing_main_section__grid__title">
-                <h3>Powerful solution. Affordable pricing.</h3>
+              <h1 className="font-46 col-primary c-fw-600 ms-4 mt-5">
+              Powerful Accounting Software. Affordable Pricing.
+            </h1>
+            <h2 className="sub-heading c-fw-600 ms-4 mt-4 mb-5">
+              No features sacrifices
+            </h2>
               </div>
               <div className="pricing_main_section__grid__guarantee_logo">
                 <figure>
@@ -50,9 +65,16 @@ const pricing = (path) => {
                 </figure>
               </div>
               <div className="pricing_main_section__grid__trial pricing__heading text-center">
-                <span className="pricing__heading__name" >Trial</span>
+                <span className="pricing__heading__name">Trial</span>
                 <br />
-                <span className={"pricing__heading__cost d-inline-block " + ( isIndia ? "" : " pt-4 mt-2") }>Free</span>
+                <span
+                  className={
+                    "pricing__heading__cost d-inline-block " +
+                    (isIndia ? "" : " pt-4 mt-2")
+                  }
+                >
+                  Free
+                </span>
                 <br />
                 <span className="pricing__heading__period">15 days</span>
               </div>
@@ -147,7 +169,7 @@ const pricing = (path) => {
                 <p className="c-fw-600">Benefits</p>
               </div>
               <div className="pricing_main_section__grid__b1 text-center">
-                <a href={ link + "/signup" } className="benefits-link bg-grey">
+                <a href={link + "/signup"} className="benefits-link bg-grey">
                   Get Started
                 </a>
               </div>
@@ -165,17 +187,17 @@ const pricing = (path) => {
                 </a>
               </div>
               <div className="pricing_main_section__grid__b3 text-center">
-                <a href={ link + "/signup" } className="benefits-link">
+                <a href={link + "/signup"} className="benefits-link">
                   Join Us
                 </a>
               </div>
               <div className="pricing_main_section__grid__b4 text-center">
-                <a href={ link + "/signup" } className="benefits-link">
+                <a href={link + "/signup"} className="benefits-link">
                   Join Us
                 </a>
               </div>
               <div className="pricing_main_section__grid__b5 text-center display-all__child">
-                <a href={ link + "/signup" } className="benefits-link">
+                <a href={link + "/signup"} className="benefits-link">
                   Join Us
                 </a>
               </div>
@@ -208,7 +230,7 @@ const pricing = (path) => {
                 {isIndia ? "40,000" : isAE ? "100,000" : "100,000"}
               </div>
               <div className="pricing_main_section__grid__t5 text-center display-all__child">
-                100,000
+                1,00,000
               </div>
 
               <div className="pricing_main_section__grid__companies pricing-border-top">
@@ -274,37 +296,6 @@ const pricing = (path) => {
                 10 hrs
               </div>
 
-              <div className="pricing_main_section__grid__unlimited_users pricing-border-top">
-                Unlimited Users
-              </div>
-              <div className="pricing_main_section__grid__unlimited_users_2">
-                Unlimited Users
-              </div>
-              <div className="pricing_main_section__grid__unlimited_users_3">
-                Unlimited Users
-              </div>
-              <div className="pricing_main_section__grid__unlimited_users_4">
-                Unlimited Users
-              </div>
-              <div className="pricing_main_section__grid__unlimited_users_5 display-all__child">
-                Unlimited Users
-              </div>
-              <div className="pricing_main_section__grid__u1 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__u2 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__u3 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__u4 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__u5 text-center pricing-border-top display-all__child">
-                <MdDone />
-              </div>
-
               <div className="pricing_main_section__grid__customers_vendors pricing-border-top">
                 Unlimited Customers/Vendors
               </div>
@@ -367,15 +358,2543 @@ const pricing = (path) => {
                 <MdDone />
               </div>
 
+              <div className="pricing_main_section__grid__invoicing pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (invoice ? "pt-2" : "")}
+                  onClick={() => setInvoice((invoice) => !invoice)}
+                >
+                  <span>
+                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
+                    {invoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {invoice && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a
+                        href={ link + "/invoice-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__invoicing_2">
+                <div
+                  className={"cursor-pointer " + (invoice ? "pt-2" : "")}
+                  onClick={() => setInvoice((invoice) => !invoice)}
+                >
+                  <span>
+                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
+                    {invoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {invoice && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a
+                        href={ link + "/invoice-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__invoicing_3">
+                <div
+                  className={"cursor-pointer " + (invoice ? "pt-2" : "")}
+                  onClick={() => setInvoice((invoice) => !invoice)}
+                >
+                  <span>
+                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
+                    {invoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {invoice && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a
+                        href={ link + "/invoice-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__invoicing_4">
+                <div
+                  className={"cursor-pointer " + (invoice ? "pt-2" : "")}
+                  onClick={() => setInvoice((invoice) => !invoice)}
+                >
+                  <span>
+                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
+                    {invoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {invoice && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a
+                        href={ link + "/invoice-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__invoicing_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (invoice ? "pt-2" : "")}
+                  onClick={() => setInvoice((invoice) => !invoice)}
+                >
+                  <span>
+                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
+                    {invoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {invoice && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      <a
+                        href={ link + "/invoice-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__in1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__in2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__in3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__in4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__in5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__record-bills pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
+                  onClick={() => setRecordBill((recordBill) => !recordBill)}
+                >
+                  <span>
+                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
+                    {recordBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {recordBill && (
+                    <p className="c-fw-400">
+                      Create purchase order, and purchase bill, attach files in
+                      the bill, pay directly to the vendor, and more
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__record-bills_2">
+                <div
+                  className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
+                  onClick={() => setRecordBill((recordBill) => !recordBill)}
+                >
+                  <span>
+                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
+                    {recordBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {recordBill && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      more
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__record-bills_3">
+                <div
+                  className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
+                  onClick={() => setRecordBill((recordBill) => !recordBill)}
+                >
+                  <span>
+                    Record Bills {!recordBill && <MdKeyboardArrowDown />}
+                    {recordBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {recordBill && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      more
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__record-bills_4">
+                <div
+                  className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
+                  onClick={() => setRecordBill((recordBill) => !recordBill)}
+                >
+                  <span>
+                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
+                    {recordBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {recordBill && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      more
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__record-bills_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
+                  onClick={() => setRecordBill((recordBill) => !recordBill)}
+                >
+                  <span>
+                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
+                    {recordBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {recordBill && (
+                    <p className="c-fw-400">
+                      Create, and send the cash and sales invoices, check
+                      payment status, set due dates, apply reverse charge and{" "}
+                      more
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__rb1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rb2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rb3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rb4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rb5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__managing-inventory pricing-border-top">
+                <div
+                  className={
+                    "cursor-pointer " + (managingInventory ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setManagingInventory(
+                      (managingInventory) => !managingInventory
+                    )
+                  }
+                >
+                  <span>
+                    Managing Inventory{" "}
+                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
+                    {managingInventory && <MdKeyboardArrowUp />}
+                  </span>
+                  {managingInventory && (
+                    <p className="c-fw-400">
+                      Maintain inventory of product, services, and fixed asset
+                      in group, items and variant too, easy search with barcode,
+                      and
+                      <a
+                        href={ link + "/inventory-management-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__managing-inventory_2">
+                <div
+                  className={
+                    "cursor-pointer " + (managingInventory ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setManagingInventory(
+                      (managingInventory) => !managingInventory
+                    )
+                  }
+                >
+                  <span>
+                    Managing Inventory{" "}
+                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
+                    {managingInventory && <MdKeyboardArrowUp />}
+                  </span>
+                  {managingInventory && (
+                    <p className="c-fw-400">
+                      Maintain inventory of product, services, and fixed asset
+                      in group, items and variant too, easy search with barcode,
+                      and
+                      <a
+                        href={ link + "/inventory-management-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__managing-inventory_3">
+                <div
+                  className={
+                    "cursor-pointer " + (managingInventory ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setManagingInventory(
+                      (managingInventory) => !managingInventory
+                    )
+                  }
+                >
+                  <span>
+                    Managing Inventory{" "}
+                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
+                    {managingInventory && <MdKeyboardArrowUp />}
+                  </span>
+                  {managingInventory && (
+                    <p className="c-fw-400">
+                      Maintain inventory of product, services, and fixed asset
+                      in group, items and variant too, easy search with barcode,
+                      and
+                      <a
+                        href={ link + "/inventory-management-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__managing-inventory_4">
+                <div
+                  className={
+                    "cursor-pointer " + (managingInventory ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setManagingInventory(
+                      (managingInventory) => !managingInventory
+                    )
+                  }
+                >
+                  <span>
+                    Managing Inventory{" "}
+                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
+                    {managingInventory && <MdKeyboardArrowUp />}
+                  </span>
+                  {managingInventory && (
+                    <p className="c-fw-400">
+                      Maintain inventory of product, services, and fixed asset
+                      in group, items and variant too, easy search with barcode,
+                      and
+                      <a
+                        href={ link + "/inventory-management-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__managing-inventory_5 display-all__child">
+                <div
+                  className={
+                    "cursor-pointer " + (managingInventory ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setManagingInventory(
+                      (managingInventory) => !managingInventory
+                    )
+                  }
+                >
+                  <span>
+                    Managing Inventory{" "}
+                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
+                    {managingInventory && <MdKeyboardArrowUp />}
+                  </span>
+                  {managingInventory && (
+                    <p className="c-fw-400">
+                      Maintain inventory of product, services, and fixed asset
+                      in group, items and variant too, easy search with barcode,
+                      and
+                      <a
+                        href={ link + "/inventory-management-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__mi1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mi2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mi3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mi4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mi5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__multi-currency pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
+                  onClick={() =>
+                    setMultiCurrency((multiCurrency) => !multiCurrency)
+                  }
+                >
+                  <span>
+                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
+                    {multiCurrency && <MdKeyboardArrowUp />}
+                  </span>
+                  {multiCurrency && (
+                    <p className="c-fw-400">
+                      Manage invoicing and payments seamlessly across 100+
+                      currencies, with automatic currency conversion based on
+                      real-time exchange rates and
+                      <a
+                        href={ link + "/multi-currency-accounting-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__multi-currency_2">
+                <div
+                  className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
+                  onClick={() =>
+                    setMultiCurrency((multiCurrency) => !multiCurrency)
+                  }
+                >
+                  <span>
+                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
+                    {multiCurrency && <MdKeyboardArrowUp />}
+                  </span>
+                  {multiCurrency && (
+                    <p className="c-fw-400">
+                      Manage invoicing and payments seamlessly across 100+
+                      currencies, with automatic currency conversion based on
+                      real-time exchange rates and
+                      <a
+                        href={ link + "/multi-currency-accounting-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__multi-currency_3">
+                <div
+                  className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
+                  onClick={() =>
+                    setMultiCurrency((multiCurrency) => !multiCurrency)
+                  }
+                >
+                  <span>
+                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
+                    {multiCurrency && <MdKeyboardArrowUp />}
+                  </span>
+                  {multiCurrency && (
+                    <p className="c-fw-400">
+                      Manage invoicing and payments seamlessly across 100+
+                      currencies, with automatic currency conversion based on
+                      real-time exchange rates and
+                      <a
+                        href={ link + "/multi-currency-accounting-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__multi-currency_4">
+                <div
+                  className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
+                  onClick={() =>
+                    setMultiCurrency((multiCurrency) => !multiCurrency)
+                  }
+                >
+                  <span>
+                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
+                    {multiCurrency && <MdKeyboardArrowUp />}
+                  </span>
+                  {multiCurrency && (
+                    <p className="c-fw-400">
+                      Manage invoicing and payments seamlessly across 100+
+                      currencies, with automatic currency conversion based on
+                      real-time exchange rates and
+                      <a
+                        href={ link + "/multi-currency-accounting-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__multi-currency_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
+                  onClick={() =>
+                    setMultiCurrency((multiCurrency) => !multiCurrency)
+                  }
+                >
+                  <span>
+                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
+                    {multiCurrency && <MdKeyboardArrowUp />}
+                  </span>
+                  {multiCurrency && (
+                    <p className="c-fw-400">
+                      Manage invoicing and payments seamlessly across 100+
+                      currencies, with automatic currency conversion based on
+                      real-time exchange rates and
+                      <a
+                        href={ link + "/multi-currency-accounting-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__mc1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mc2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mc3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mc4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__mc5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__gst pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                  onClick={() => setGst((gst) => !gst)}
+                >
+                  <span>
+                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {gst && <MdKeyboardArrowUp />}
+                  </span>
+                  {gst && (
+                    <p className="c-fw-400">
+                      Create GST invoice, view GST reports, direct filing, and
+                      reconcile transaction with the GST portal and
+                      <a href={ link + "/gst"} target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__gst_2">
+                <div
+                  className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                  onClick={() => setGst((gst) => !gst)}
+                >
+                  <span>
+                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {gst && <MdKeyboardArrowUp />}
+                  </span>
+                  {gst && (
+                    <p className="c-fw-400">
+                      Create GST invoice, view GST reports, direct filing, and
+                      reconcile transaction with the GST portal and
+                      <a href={ link + "/gst"} target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__gst_3">
+                <div
+                  className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                  onClick={() => setGst((gst) => !gst)}
+                >
+                  <span>
+                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {gst && <MdKeyboardArrowUp />}
+                  </span>
+                  {gst && (
+                    <p className="c-fw-400">
+                      Create GST invoice, view GST reports, direct filing, and
+                      reconcile transaction with the GST portal and
+                      <a href={ link + "/gst"} target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__gst_4">
+                <div
+                  className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                  onClick={() => setGst((gst) => !gst)}
+                >
+                  <span>
+                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {gst && <MdKeyboardArrowUp />}
+                  </span>
+                  {gst && (
+                    <p className="c-fw-400">
+                      Create GST invoice, view GST reports, direct filing, and
+                      reconcile transaction with the GST portal and
+                      <a href={ link + "/gst"} target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__gst_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                  onClick={() => setGst((gst) => !gst)}
+                >
+                  <span>
+                    GST Compliance {!gst && <MdKeyboardArrowDown />}{" "}
+                    {gst && <MdKeyboardArrowUp />}
+                  </span>
+                  {gst && (
+                    <p className="c-fw-400">
+                      Create GST invoice, view GST reports, direct filing, and
+                      reconcile transaction with the GST portal and
+                      <a href={ link + "/gst"} target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__g1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__g2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__g3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__g4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__g5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__reports pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (report ? "pt-2" : "")}
+                  onClick={() => setReport((report) => !report)}
+                >
+                  <span>
+                    Reports {!report && <MdKeyboardArrowDown />}{" "}
+                    {report && <MdKeyboardArrowUp />}
+                  </span>
+                  {report && (
+                    <p className="c-fw-400">
+                      Access various reports like Trial balance, Profit & loss,
+                      Balance sheet, Daybook, Cash flow statement, Ledger, Sales
+                      bifurcation, Columnar report, Purchase register, Sales
+                      register, Inventory reports, Reverse charge report, and
+                      <a
+                        href={ link + "/financial-reporting"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__reports_2">
+                <div
+                  className={"cursor-pointer " + (report ? "pt-2" : "")}
+                  onClick={() => setReport((report) => !report)}
+                >
+                  <span>
+                    Reports {!report && <MdKeyboardArrowDown />}{" "}
+                    {report && <MdKeyboardArrowUp />}
+                  </span>
+                  {report && (
+                    <p className="c-fw-400">
+                      Access various reports like Trial balance, Profit & loss,
+                      Balance sheet, Daybook, Cash flow statement, Ledger, Sales
+                      bifurcation, Columnar report, Purchase register, Sales
+                      register, Inventory reports, Reverse charge report, and
+                      <a
+                        href={ link + "/financial-reporting"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__reports_3">
+                <div
+                  className={"cursor-pointer " + (report ? "pt-2" : "")}
+                  onClick={() => setReport((report) => !report)}
+                >
+                  <span>
+                    Reports {!report && <MdKeyboardArrowDown />}{" "}
+                    {report && <MdKeyboardArrowUp />}
+                  </span>
+                  {report && (
+                    <p className="c-fw-400">
+                      Access various reports like Trial balance, Profit & loss,
+                      Balance sheet, Daybook, Cash flow statement, Ledger, Sales
+                      bifurcation, Columnar report, Purchase register, Sales
+                      register, Inventory reports, Reverse charge report, and
+                      <a
+                        href={ link + "/financial-reporting"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__reports_4">
+                <div
+                  className={"cursor-pointer " + (report ? "pt-2" : "")}
+                  onClick={() => setReport((report) => !report)}
+                >
+                  <span>
+                    Reports {!report && <MdKeyboardArrowDown />}{" "}
+                    {report && <MdKeyboardArrowUp />}
+                  </span>
+                  {report && (
+                    <p className="c-fw-400">
+                      Access various reports like Trial balance, Profit & loss,
+                      Balance sheet, Daybook, Cash flow statement, Ledger, Sales
+                      bifurcation, Columnar report, Purchase register, Sales
+                      register, Inventory reports, Reverse charge report, and
+                      <a
+                        href={ link + "/financial-reporting"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__reports_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (report ? "pt-2" : "")}
+                  onClick={() => setReport((report) => !report)}
+                >
+                  <span>
+                    Reports {!report && <MdKeyboardArrowDown />}{" "}
+                    {report && <MdKeyboardArrowUp />}
+                  </span>
+                  {report && (
+                    <p className="c-fw-400">
+                      Access various reports like Trial balance, Profit & loss,
+                      Balance sheet, Daybook, Cash flow statement, Ledger, Sales
+                      bifurcation, Columnar report, Purchase register, Sales
+                      register, Inventory reports, Reverse charge report, and
+                      <a
+                        href={ link + "/financial-reporting"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__r1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__r2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__r3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__r4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__r5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__dashboard pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
+                  onClick={() => setDashboard((dashoard) => !dashoard)}
+                >
+                  <span>
+                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
+                    {dashoard && <MdKeyboardArrowUp />}
+                  </span>
+                  {dashoard && (
+                    <p className="c-fw-400">
+                      View visual representation of the company data like Total
+                      overdues, Profit & loss, Bank Account balances, and
+                      <a
+                        href={ link + "/accounting-dashboard"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__dashboard_2">
+                <div
+                  className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
+                  onClick={() => setDashboard((dashoard) => !dashoard)}
+                >
+                  <span>
+                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
+                    {dashoard && <MdKeyboardArrowUp />}
+                  </span>
+                  {dashoard && (
+                    <p className="c-fw-400">
+                      View visual representation of the company data like Total
+                      overdues, Profit & loss, Bank Account balances, and
+                      <a
+                        href={ link + "/accounting-dashboard"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__dashboard_3">
+                <div
+                  className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
+                  onClick={() => setDashboard((dashoard) => !dashoard)}
+                >
+                  <span>
+                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
+                    {dashoard && <MdKeyboardArrowUp />}
+                  </span>
+                  {dashoard && (
+                    <p className="c-fw-400">
+                      View visual representation of the company data like Total
+                      overdues, Profit & loss, Bank Account balances, and
+                      <a
+                        href={ link + "/accounting-dashboard"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__dashboard_4">
+                <div
+                  className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
+                  onClick={() => setDashboard((dashoard) => !dashoard)}
+                >
+                  <span>
+                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
+                    {dashoard && <MdKeyboardArrowUp />}
+                  </span>
+                  {dashoard && (
+                    <p className="c-fw-400">
+                      View visual representation of the company data like Total
+                      overdues, Profit & loss, Bank Account balances, and
+                      <a
+                        href={ link + "/accounting-dashboard"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__dashboard_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
+                  onClick={() => setDashboard((dashoard) => !dashoard)}
+                >
+                  <span>
+                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
+                    {dashoard && <MdKeyboardArrowUp />}
+                  </span>
+                  {dashoard && (
+                    <p className="c-fw-400">
+                      View visual representation of the company data like Total
+                      overdues, Profit & loss, Bank Account balances, and
+                      <a
+                        href={ link + "/accounting-dashboard"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__rd1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rd2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rd3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rd4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__rd5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__user-access pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                  onClick={() => setUserAccess((userAccess) => !userAccess)}
+                >
+                  <span>
+                    Unlimited users access{" "}
+                    {!userAccess && <MdKeyboardArrowDown />}{" "}
+                    {userAccess && <MdKeyboardArrowUp />}
+                  </span>
+                  {userAccess && (
+                    <p className="c-fw-400">
+                      Grant unlimited user access with customizable roles, to
+                      enhanced security and also allowing you to set
+                      restrictions such as Date ranges, CIDR ranges, and
+                      <a
+                        href={ link + "/multi-user-accounting-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__user-access_2">
+                <div
+                  className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                  onClick={() => setUserAccess((userAccess) => !userAccess)}
+                >
+                  <span>
+                    Unlimited users access{" "}
+                    {!userAccess && <MdKeyboardArrowDown />}{" "}
+                    {userAccess && <MdKeyboardArrowUp />}
+                  </span>
+                  {userAccess && (
+                    <p className="c-fw-400">
+                      Grant unlimited user access with customizable roles, to
+                      enhanced security and also allowing you to set
+                      restrictions such as Date ranges, CIDR ranges, and
+                      <a
+                        href={ link + "/multi-user-accounting-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__user-access_3">
+                <div
+                  className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                  onClick={() => setUserAccess((userAccess) => !userAccess)}
+                >
+                  <span>
+                    Unlimited users access{" "}
+                    {!userAccess && <MdKeyboardArrowDown />}{" "}
+                    {userAccess && <MdKeyboardArrowUp />}
+                  </span>
+                  {userAccess && (
+                    <p className="c-fw-400">
+                      Grant unlimited user access with customizable roles, to
+                      enhanced security and also allowing you to set
+                      restrictions such as Date ranges, CIDR ranges, and
+                      <a
+                        href={ link + "/multi-user-accounting-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__user-access_4">
+                <div
+                  className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                  onClick={() => setUserAccess((userAccess) => !userAccess)}
+                >
+                  <span>
+                    Unlimited users access{" "}
+                    {!userAccess && <MdKeyboardArrowDown />}{" "}
+                    {userAccess && <MdKeyboardArrowUp />}
+                  </span>
+                  {userAccess && (
+                    <p className="c-fw-400">
+                      Grant unlimited user access with customizable roles, to
+                      enhanced security and also allowing you to set
+                      restrictions such as Date ranges, CIDR ranges, and
+                      <a
+                        href={ link + "/multi-user-accounting-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__user-access_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                  onClick={() => setUserAccess((userAccess) => !userAccess)}
+                >
+                  <span>
+                    Unlimited users access{" "}
+                    {!userAccess && <MdKeyboardArrowDown />}{" "}
+                    {userAccess && <MdKeyboardArrowUp />}
+                  </span>
+                  {userAccess && (
+                    <p className="c-fw-400">
+                      Grant unlimited user access with customizable roles, to
+                      enhanced security and also allowing you to set
+                      restrictions such as Date ranges, CIDR ranges, and
+                      <a
+                        href={ link + "/multi-user-accounting-software"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__ua1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ua2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ua3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ua4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ua5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__bank pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
+                  onClick={() => setBankReconciliation((bankRec) => !bankRec)}
+                >
+                  <span>
+                    Bank Reconciliation
+                    {!bankRec && <MdKeyboardArrowDown />}{" "}
+                    {bankRec && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankRec && (
+                    <p className="c-fw-400">
+                      Connect your bank account in Giddh, and with just one
+                      click, we will compare and match the transactions of your
+                      books with your bank account and
+                      <a
+                        href={ link + "/conect-bank-reconcile"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__bank_2">
+                <div
+                  className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
+                  onClick={() => setBankReconciliation((bankRec) => !bankRec)}
+                >
+                  <span>
+                    Bank Reconciliation
+                    {!bankRec && <MdKeyboardArrowDown />}{" "}
+                    {bankRec && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankRec && (
+                    <p className="c-fw-400">
+                      Connect your bank account in Giddh, and with just one
+                      click, we will compare and match the transactions of your
+                      books with your bank account and
+                      <a
+                        href={ link + "/conect-bank-reconcile"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__bank_3">
+                <div
+                  className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
+                  onClick={() => setBankReconciliation((bankRec) => !bankRec)}
+                >
+                  <span>
+                    Bank Reconciliation
+                    {!bankRec && <MdKeyboardArrowDown />}{" "}
+                    {bankRec && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankRec && (
+                    <p className="c-fw-400">
+                      Connect your bank account in Giddh, and with just one
+                      click, we will compare and match the transactions of your
+                      books with your bank account and
+                      <a
+                        href={ link + "/conect-bank-reconcile"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__bank_4">
+                <div
+                  className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
+                  onClick={() => setBankReconciliation((bankRec) => !bankRec)}
+                >
+                  <span>
+                    Bank Reconciliation
+                    {!bankRec && <MdKeyboardArrowDown />}{" "}
+                    {bankRec && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankRec && (
+                    <p className="c-fw-400">
+                      Connect your bank account in Giddh, and with just one
+                      click, we will compare and match the transactions of your
+                      books with your bank account and
+                      <a
+                        href={ link + "/conect-bank-reconcile"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__bank_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
+                  onClick={() => setBankReconciliation((bankRec) => !bankRec)}
+                >
+                  <span>
+                    Bank Reconciliation
+                    {!bankRec && <MdKeyboardArrowDown />}{" "}
+                    {bankRec && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankRec && (
+                    <p className="c-fw-400">
+                      Connect your bank account in Giddh, and with just one
+                      click, we will compare and match the transactions of your
+                      books with your bank account and
+                      <a
+                        href={ link + "/conect-bank-reconcile"}
+                        target="_blank"
+                      >
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__br1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__br2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__br3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__br4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__br5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__manufacturing pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
+                  onClick={() =>
+                    setManufacturing((manufacturing) => !manufacturing)
+                  }
+                >
+                  <span>
+                    Manufacturing
+                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
+                    {manufacturing && <MdKeyboardArrowUp />}
+                  </span>
+                  {manufacturing && (
+                    <p className="c-fw-400">
+                      Create manufacturing recipe, do manufacturing, add
+                      manufacturing expenses, and view its reports.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__manufacturing_2">
+                <div
+                  className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
+                  onClick={() =>
+                    setManufacturing((manufacturing) => !manufacturing)
+                  }
+                >
+                  <span>
+                    Manufacturing
+                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
+                    {manufacturing && <MdKeyboardArrowUp />}
+                  </span>
+                  {manufacturing && (
+                    <p className="c-fw-400">
+                      Create manufacturing recipe, do manufacturing, add
+                      manufacturing expenses, and view its reports.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__manufacturing_3">
+                <div
+                  className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
+                  onClick={() =>
+                    setManufacturing((manufacturing) => !manufacturing)
+                  }
+                >
+                  <span>
+                    Manufacturing
+                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
+                    {manufacturing && <MdKeyboardArrowUp />}
+                  </span>
+                  {manufacturing && (
+                    <p className="c-fw-400">
+                      Create manufacturing recipe, do manufacturing, add
+                      manufacturing expenses, and view its reports.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__manufacturing_4">
+                <div
+                  className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
+                  onClick={() =>
+                    setManufacturing((manufacturing) => !manufacturing)
+                  }
+                >
+                  <span>
+                    Manufacturing
+                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
+                    {manufacturing && <MdKeyboardArrowUp />}
+                  </span>
+                  {manufacturing && (
+                    <p className="c-fw-400">
+                      Create manufacturing recipe, do manufacturing, add
+                      manufacturing expenses, and view its reports.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__manufacturing_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
+                  onClick={() =>
+                    setManufacturing((manufacturing) => !manufacturing)
+                  }
+                >
+                  <span>
+                    Manufacturing
+                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
+                    {manufacturing && <MdKeyboardArrowUp />}
+                  </span>
+                  {manufacturing && (
+                    <p className="c-fw-400">
+                      Create manufacturing recipe, do manufacturing, add
+                      manufacturing expenses, and view its reports.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__m1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__m2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__m3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__m4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__m5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__e-invoice pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
+                  onClick={() => setEInvoice((eInvoice) => !eInvoice)}
+                >
+                  <span>
+                    E-invoice
+                    {!eInvoice && <MdKeyboardArrowDown />}{" "}
+                    {eInvoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {eInvoice && (
+                    <p className="c-fw-400">
+                      Easily create E-invoice, auto-push E-invoice to its
+                      portal, monitor its status, and
+                      <a href={ link + "/e-invoice"} target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__e-invoice_2">
+                <div
+                  className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
+                  onClick={() => setEInvoice((eInvoice) => !eInvoice)}
+                >
+                  <span>
+                    E-invoice
+                    {!eInvoice && <MdKeyboardArrowDown />}{" "}
+                    {eInvoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {eInvoice && (
+                    <p className="c-fw-400">
+                      Easily create E-invoice, auto-push E-invoice to its
+                      portal, monitor its status, and
+                      <a href={ link + "/e-invoice"} target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__e-invoice_3">
+                <div
+                  className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
+                  onClick={() => setEInvoice((eInvoice) => !eInvoice)}
+                >
+                  <span>
+                    E-invoice
+                    {!eInvoice && <MdKeyboardArrowDown />}{" "}
+                    {eInvoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {eInvoice && (
+                    <p className="c-fw-400">
+                      Easily create E-invoice, auto-push E-invoice to its
+                      portal, monitor its status, and
+                      <a href={ link + "/e-invoice"} target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__e-invoice_4">
+                <div
+                  className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
+                  onClick={() => setEInvoice((eInvoice) => !eInvoice)}
+                >
+                  <span>
+                    E-invoice
+                    {!eInvoice && <MdKeyboardArrowDown />}{" "}
+                    {eInvoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {eInvoice && (
+                    <p className="c-fw-400">
+                      Easily create E-invoice, auto-push E-invoice to its
+                      portal, monitor its status, and
+                      <a href={ link + "/e-invoice"} target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__e-invoice_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (eInvoice ? "pt-2" : "")}
+                  onClick={() => setEInvoice((eInvoice) => !eInvoice)}
+                >
+                  <span>
+                    E-invoice
+                    {!eInvoice && <MdKeyboardArrowDown />}{" "}
+                    {eInvoice && <MdKeyboardArrowUp />}
+                  </span>
+                  {eInvoice && (
+                    <p className="c-fw-400">
+                      Easily create E-invoice, auto-push E-invoice to its
+                      portal, monitor its status, and
+                      <a href={ link + "/e-invoice"} target="_blank">
+                        {" "}
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__ei1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ei2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ei3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ei4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ei5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__eway-bill pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
+                  onClick={() => setEwayBill((ewayBill) => !ewayBill)}
+                >
+                  <span>
+                    E-way bill
+                    {!ewayBill && <MdKeyboardArrowDown />}{" "}
+                    {ewayBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {ewayBill && (
+                    <p className="c-fw-400">
+                      Generate E-way bills, and streamline the process of
+                      tracking the movements of goods in compliance with the tax
+                      regulations.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__eway-bill_2">
+                <div
+                  className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
+                  onClick={() => setEwayBill((ewayBill) => !ewayBill)}
+                >
+                  <span>
+                    E-way bill
+                    {!ewayBill && <MdKeyboardArrowDown />}{" "}
+                    {ewayBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {ewayBill && (
+                    <p className="c-fw-400">
+                      Generate E-way bills, and streamline the process of
+                      tracking the movements of goods in compliance with the tax
+                      regulations.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__eway-bill_3">
+                <div
+                  className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
+                  onClick={() => setEwayBill((ewayBill) => !ewayBill)}
+                >
+                  <span>
+                    E-way bill
+                    {!ewayBill && <MdKeyboardArrowDown />}{" "}
+                    {ewayBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {ewayBill && (
+                    <p className="c-fw-400">
+                      Generate E-way bills, and streamline the process of
+                      tracking the movements of goods in compliance with the tax
+                      regulations.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__eway-bill_4">
+                <div
+                  className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
+                  onClick={() => setEwayBill((ewayBill) => !ewayBill)}
+                >
+                  <span>
+                    E-way bill
+                    {!ewayBill && <MdKeyboardArrowDown />}{" "}
+                    {ewayBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {ewayBill && (
+                    <p className="c-fw-400">
+                      Generate E-way bills, and streamline the process of
+                      tracking the movements of goods in compliance with the tax
+                      regulations.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__eway-bill_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (ewayBill ? "pt-2" : "")}
+                  onClick={() => setEwayBill((ewayBill) => !ewayBill)}
+                >
+                  <span>
+                    E-way bill
+                    {!ewayBill && <MdKeyboardArrowDown />}{" "}
+                    {ewayBill && <MdKeyboardArrowUp />}
+                  </span>
+                  {ewayBill && (
+                    <p className="c-fw-400">
+                      Generate E-way bills, and streamline the process of
+                      tracking the movements of goods in compliance with the tax
+                      regulations.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__ewb1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ewb2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ewb3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ewb4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ewb5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__icici pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                  onClick={() => setIcici((icici) => !icici)}
+                >
+                  <span>
+                    Integrations ICICI bank integration
+                    {!icici && <MdKeyboardArrowDown />}{" "}
+                    {icici && <MdKeyboardArrowUp />}
+                  </span>
+                  {icici && (
+                    <p className="c-fw-400">
+                      to simply the bank reconciliation, payment process and{" "}
+                      <a
+                        target="_blank"
+                        href={ link + "/icici-integration"}
+                      >
+                        much more
+                      </a>{" "}
+                      , <strong>Shopify integration</strong> to enhance the
+                      efficiency and growth of Ecommerce business, and{" "}
+                      <strong>MSG91 integration</strong> to automate the
+                      business communication like sending invoices, payment
+                      reminder and more via Mail, SMS, Whatsapp message
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__icici_2">
+                <div
+                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                  onClick={() => setIcici((icici) => !icici)}
+                >
+                  <span>
+                    Integrations ICICI bank integration
+                    {!icici && <MdKeyboardArrowDown />}{" "}
+                    {icici && <MdKeyboardArrowUp />}
+                  </span>
+                  {icici && (
+                    <p className="c-fw-400">
+                      to simply the bank reconciliation, payment process and{" "}
+                      <a
+                        target="_blank"
+                        href={ link + "/icici-integration"}
+                      >
+                        much more
+                      </a>{" "}
+                      , <strong>Shopify integration</strong> to enhance the
+                      efficiency and growth of Ecommerce business, and{" "}
+                      <strong>MSG91 integration</strong> to automate the
+                      business communication like sending invoices, payment
+                      reminder and more via Mail, SMS, Whatsapp message
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__icici_3">
+                <div
+                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                  onClick={() => setIcici((icici) => !icici)}
+                >
+                  <span>
+                    Integrations ICICI bank integration
+                    {!icici && <MdKeyboardArrowDown />}{" "}
+                    {icici && <MdKeyboardArrowUp />}
+                  </span>
+                  {icici && (
+                    <p className="c-fw-400">
+                      to simply the bank reconciliation, payment process and{" "}
+                      <a
+                        target="_blank"
+                        href={ link + "/icici-integration"}
+                      >
+                        much more
+                      </a>{" "}
+                      , <strong>Shopify integration</strong> to enhance the
+                      efficiency and growth of Ecommerce business, and{" "}
+                      <strong>MSG91 integration</strong> to automate the
+                      business communication like sending invoices, payment
+                      reminder and more via Mail, SMS, Whatsapp message
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__icici_4">
+                <div
+                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                  onClick={() => setIcici((icici) => !icici)}
+                >
+                  <span>
+                    Integrations ICICI bank integration
+                    {!icici && <MdKeyboardArrowDown />}{" "}
+                    {icici && <MdKeyboardArrowUp />}
+                  </span>
+                  {icici && (
+                    <p className="c-fw-400">
+                      to simply the bank reconciliation, payment process and{" "}
+                      <a
+                        target="_blank"
+                        href={ link + "/icici-integration"}
+                      >
+                        much more
+                      </a>{" "}
+                      , <strong>Shopify integration</strong> to enhance the
+                      efficiency and growth of Ecommerce business, and{" "}
+                      <strong>MSG91 integration</strong> to automate the
+                      business communication like sending invoices, payment
+                      reminder and more via Mail, SMS, Whatsapp message
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__icici_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                  onClick={() => setIcici((icici) => !icici)}
+                >
+                  <span>
+                    Integrations ICICI bank integration
+                    {!icici && <MdKeyboardArrowDown />}{" "}
+                    {icici && <MdKeyboardArrowUp />}
+                  </span>
+                  {icici && (
+                    <p className="c-fw-400">
+                      to simply the bank reconciliation, payment process and{" "}
+                      <a
+                        target="_blank"
+                        href={ link + "/icici-integration"}
+                      >
+                        much more
+                      </a>{" "}
+                      , <strong>Shopify integration</strong> to enhance the
+                      efficiency and growth of Ecommerce business, and{" "}
+                      <strong>MSG91 integration</strong> to automate the
+                      business communication like sending invoices, payment
+                      reminder and more via Mail, SMS, Whatsapp message
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__ic1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ic2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ic3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ic4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__ic5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__warehouse pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
+                  onClick={() => setWarehouse((warehouse) => !warehouse)}
+                >
+                  <span>
+                    Branch and warehouse management
+                    {!warehouse && <MdKeyboardArrowDown />}{" "}
+                    {warehouse && <MdKeyboardArrowUp />}
+                  </span>
+                  {warehouse && (
+                    <p className="c-fw-400">
+                      Efficiently manage the company's numerous branches and
+                      warehouses, access branch- and warehouse-specific reports,
+                      facilitate branch transfers, archive the branch and
+                      warehouse and perform various related tasks.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__warehouse_2">
+                <div
+                  className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
+                  onClick={() => setWarehouse((warehouse) => !warehouse)}
+                >
+                  <span>
+                    Branch and warehouse management
+                    {!warehouse && <MdKeyboardArrowDown />}{" "}
+                    {warehouse && <MdKeyboardArrowUp />}
+                  </span>
+                  {warehouse && (
+                    <p className="c-fw-400">
+                      Efficiently manage the company's numerous branches and
+                      warehouses, access branch- and warehouse-specific reports,
+                      facilitate branch transfers, archive the branch and
+                      warehouse and perform various related tasks.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__warehouse_3">
+                <div
+                  className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
+                  onClick={() => setWarehouse((warehouse) => !warehouse)}
+                >
+                  <span>
+                    Branch and warehouse management
+                    {!warehouse && <MdKeyboardArrowDown />}{" "}
+                    {warehouse && <MdKeyboardArrowUp />}
+                  </span>
+                  {warehouse && (
+                    <p className="c-fw-400">
+                      Efficiently manage the company's numerous branches and
+                      warehouses, access branch- and warehouse-specific reports,
+                      facilitate branch transfers, archive the branch and
+                      warehouse and perform various related tasks.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__warehouse_4">
+                <div
+                  className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
+                  onClick={() => setWarehouse((warehouse) => !warehouse)}
+                >
+                  <span>
+                    Branch and warehouse management
+                    {!warehouse && <MdKeyboardArrowDown />}{" "}
+                    {warehouse && <MdKeyboardArrowUp />}
+                  </span>
+                  {warehouse && (
+                    <p className="c-fw-400">
+                      Efficiently manage the company's numerous branches and
+                      warehouses, access branch- and warehouse-specific reports,
+                      facilitate branch transfers, archive the branch and
+                      warehouse and perform various related tasks.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__warehouse_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
+                  onClick={() => setWarehouse((warehouse) => !warehouse)}
+                >
+                  <span>
+                    Branch and warehouse management
+                    {!warehouse && <MdKeyboardArrowDown />}{" "}
+                    {warehouse && <MdKeyboardArrowUp />}
+                  </span>
+                  {warehouse && (
+                    <p className="c-fw-400">
+                      Efficiently manage the company's numerous branches and
+                      warehouses, access branch- and warehouse-specific reports,
+                      facilitate branch transfers, archive the branch and
+                      warehouse and perform various related tasks.
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__w1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__w2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__w3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__w4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__w5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__easy-import pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (importExport ? "pt-2" : "")}
+                  onClick={() =>
+                    setImportExport((importExport) => !importExport)
+                  }
+                >
+                  <span>
+                    Easy Import/Export of the data
+                    {!importExport && <MdKeyboardArrowDown />}{" "}
+                    {importExport && <MdKeyboardArrowUp />}
+                  </span>
+                  {importExport && (
+                    <p className="c-fw-400">
+                      Accelerate the accounting process by importing data such
+                      as company master information, inventory details,
+                      financial entries, bank statements, and{" "}
+                      <a target="_blank" href={ link + "/import-data"}>
+                        other relevant data
+                      </a>
+                      . Effortlessly export and share data, including ledgers,
+                      invoices, reports, and many more
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__easy-import_2">
+                <div
+                  className={"cursor-pointer " + (importExport ? "pt-2" : "")}
+                  onClick={() =>
+                    setImportExport((importExport) => !importExport)
+                  }
+                >
+                  <span>
+                    Easy Import/Export of the data
+                    {!importExport && <MdKeyboardArrowDown />}{" "}
+                    {importExport && <MdKeyboardArrowUp />}
+                  </span>
+                  {importExport && (
+                    <p className="c-fw-400">
+                      Accelerate the accounting process by importing data such
+                      as company master information, inventory details,
+                      financial entries, bank statements, and{" "}
+                      <a target="_blank" href={ link + "/import-data"}>
+                        other relevant data
+                      </a>
+                      . Effortlessly export and share data, including ledgers,
+                      invoices, reports, and many more
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__easy-import_3">
+                <div
+                  className={"cursor-pointer " + (importExport ? "pt-2" : "")}
+                  onClick={() =>
+                    setImportExport((importExport) => !importExport)
+                  }
+                >
+                  <span>
+                    Easy Import/Export of the data
+                    {!importExport && <MdKeyboardArrowDown />}{" "}
+                    {importExport && <MdKeyboardArrowUp />}
+                  </span>
+                  {importExport && (
+                    <p className="c-fw-400">
+                      Accelerate the accounting process by importing data such
+                      as company master information, inventory details,
+                      financial entries, bank statements, and{" "}
+                      <a target="_blank" href={ link + "/import-data"}>
+                        other relevant data
+                      </a>
+                      . Effortlessly export and share data, including ledgers,
+                      invoices, reports, and many more
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__easy-import_4">
+                <div
+                  className={"cursor-pointer " + (importExport ? "pt-2" : "")}
+                  onClick={() =>
+                    setImportExport((importExport) => !importExport)
+                  }
+                >
+                  <span>
+                    Easy Import/Export of the data
+                    {!importExport && <MdKeyboardArrowDown />}{" "}
+                    {importExport && <MdKeyboardArrowUp />}
+                  </span>
+                  {importExport && (
+                    <p className="c-fw-400">
+                      Accelerate the accounting process by importing data such
+                      as company master information, inventory details,
+                      financial entries, bank statements, and{" "}
+                      <a target="_blank" href={ link + "/import-data"}>
+                        other relevant data
+                      </a>
+                      . Effortlessly export and share data, including ledgers,
+                      invoices, reports, and many more
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__easy-import_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (importExport ? "pt-2" : "")}
+                  onClick={() =>
+                    setImportExport((importExport) => !importExport)
+                  }
+                >
+                  <span>
+                    Easy Import/Export of the data
+                    {!importExport && <MdKeyboardArrowDown />}{" "}
+                    {importExport && <MdKeyboardArrowUp />}
+                  </span>
+                  {importExport && (
+                    <p className="c-fw-400">
+                      Accelerate the accounting process by importing data such
+                      as company master information, inventory details,
+                      financial entries, bank statements, and{" "}
+                      <a target="_blank" href={ link + "/import-data"}>
+                        other relevant data
+                      </a>
+                      . Effortlessly export and share data, including ledgers,
+                      invoices, reports, and many more
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__imex1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__imex2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__imex3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__imex4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__imex5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__financial pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (financialYear ? "pt-2" : "")}
+                  onClick={() =>
+                    setFinancialYear((financialYear) => !financialYear)
+                  }
+                >
+                  <span>
+                    Financial Year Locking
+                    {!financialYear && <MdKeyboardArrowDown />}{" "}
+                    {financialYear && <MdKeyboardArrowUp />}
+                  </span>
+                  {financialYear && (
+                    <p className="c-fw-400">
+                      You have the ability to lock a specific financial year
+                      within your company, preventing any further entries or
+                      modifications during that period
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__financial_2">
+                <div
+                  className={"cursor-pointer " + (financialYear ? "pt-2" : "")}
+                  onClick={() =>
+                    setFinancialYear((financialYear) => !financialYear)
+                  }
+                >
+                  <span>
+                    Financial Year Locking
+                    {!financialYear && <MdKeyboardArrowDown />}{" "}
+                    {financialYear && <MdKeyboardArrowUp />}
+                  </span>
+                  {financialYear && (
+                    <p className="c-fw-400">
+                      You have the ability to lock a specific financial year
+                      within your company, preventing any further entries or
+                      modifications during that period
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__financial_3">
+                <div
+                  className={"cursor-pointer " + (financialYear ? "pt-2" : "")}
+                  onClick={() =>
+                    setFinancialYear((financialYear) => !financialYear)
+                  }
+                >
+                  <span>
+                    Financial Year Locking
+                    {!financialYear && <MdKeyboardArrowDown />}{" "}
+                    {financialYear && <MdKeyboardArrowUp />}
+                  </span>
+                  {financialYear && (
+                    <p className="c-fw-400">
+                      You have the ability to lock a specific financial year
+                      within your company, preventing any further entries or
+                      modifications during that period
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__financial_4">
+                <div
+                  className={"cursor-pointer " + (financialYear ? "pt-2" : "")}
+                  onClick={() =>
+                    setFinancialYear((financialYear) => !financialYear)
+                  }
+                >
+                  <span>
+                    Financial Year Locking
+                    {!financialYear && <MdKeyboardArrowDown />}{" "}
+                    {financialYear && <MdKeyboardArrowUp />}
+                  </span>
+                  {financialYear && (
+                    <p className="c-fw-400">
+                      You have the ability to lock a specific financial year
+                      within your company, preventing any further entries or
+                      modifications during that period
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__financial_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (financialYear ? "pt-2" : "")}
+                  onClick={() =>
+                    setFinancialYear((financialYear) => !financialYear)
+                  }
+                >
+                  <span>
+                    Financial Year Locking
+                    {!financialYear && <MdKeyboardArrowDown />}{" "}
+                    {financialYear && <MdKeyboardArrowUp />}
+                  </span>
+                  {financialYear && (
+                    <p className="c-fw-400">
+                      You have the ability to lock a specific financial year
+                      within your company, preventing any further entries or
+                      modifications during that period
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__fy1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__fy2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__fy3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__fy4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__fy5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__banking-support pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
+                  onClick={() =>
+                    setBankingSupport((bankingSupport) => !bankingSupport)
+                  }
+                >
+                  <span>
+                    Connected banking support
+                    {!bankingSupport && <MdKeyboardArrowDown />}{" "}
+                    {bankingSupport && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankingSupport && (
+                    <p className="c-fw-400">
+                      Provides support in 12+ countries including USA, Canada,
+                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
+                      Denmark, Poland, Portugal
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__banking-support_2">
+                <div
+                  className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
+                  onClick={() =>
+                    setBankingSupport((bankingSupport) => !bankingSupport)
+                  }
+                >
+                  <span>
+                    Connected banking support
+                    {!bankingSupport && <MdKeyboardArrowDown />}{" "}
+                    {bankingSupport && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankingSupport && (
+                    <p className="c-fw-400">
+                      Provides support in 12+ countries including USA, Canada,
+                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
+                      Denmark, Poland, Portugal
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__banking-support_3">
+                <div
+                  className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
+                  onClick={() =>
+                    setBankingSupport((bankingSupport) => !bankingSupport)
+                  }
+                >
+                  <span>
+                    Connected banking support
+                    {!bankingSupport && <MdKeyboardArrowDown />}{" "}
+                    {bankingSupport && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankingSupport && (
+                    <p className="c-fw-400">
+                      Provides support in 12+ countries including USA, Canada,
+                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
+                      Denmark, Poland, Portugal
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__banking-support_4">
+                <div
+                  className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
+                  onClick={() =>
+                    setBankingSupport((bankingSupport) => !bankingSupport)
+                  }
+                >
+                  <span>
+                    Connected banking support
+                    {!bankingSupport && <MdKeyboardArrowDown />}{" "}
+                    {bankingSupport && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankingSupport && (
+                    <p className="c-fw-400">
+                      Provides support in 12+ countries including USA, Canada,
+                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
+                      Denmark, Poland, Portugal
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__banking-support_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
+                  onClick={() =>
+                    setBankingSupport((bankingSupport) => !bankingSupport)
+                  }
+                >
+                  <span>
+                    Connected banking support
+                    {!bankingSupport && <MdKeyboardArrowDown />}{" "}
+                    {bankingSupport && <MdKeyboardArrowUp />}
+                  </span>
+                  {bankingSupport && (
+                    <p className="c-fw-400">
+                      Provides support in 12+ countries including USA, Canada,
+                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
+                      Denmark, Poland, Portugal
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__bs1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__bs2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__bs3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__bs4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__bs5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__security pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (security ? "pt-2" : "")}
+                  onClick={() => setSecurity((security) => !security)}
+                >
+                  <span>
+                    Security
+                    {!security && <MdKeyboardArrowDown />}{" "}
+                    {security && <MdKeyboardArrowUp />}
+                  </span>
+                  {security && (
+                    <p className="c-fw-400">
+                      Your data secured on AWS cloud, and for more security we
+                      provide the Two-way authentication, Auth key, Sessions,
+                      Audit logs and{" "}
+                      <a href={ link + "/security"} target="_blank">
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__security_2">
+                <div
+                  className={"cursor-pointer " + (security ? "pt-2" : "")}
+                  onClick={() => setSecurity((security) => !security)}
+                >
+                  <span>
+                    Security
+                    {!security && <MdKeyboardArrowDown />}{" "}
+                    {security && <MdKeyboardArrowUp />}
+                  </span>
+                  {security && (
+                    <p className="c-fw-400">
+                      Your data secured on AWS cloud, and for more security we
+                      provide the Two-way authentication, Auth key, Sessions,
+                      Audit logs and{" "}
+                      <a href={ link + "/security"} target="_blank">
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__security_3">
+                <div
+                  className={"cursor-pointer " + (security ? "pt-2" : "")}
+                  onClick={() => setSecurity((security) => !security)}
+                >
+                  <span>
+                    Security
+                    {!security && <MdKeyboardArrowDown />}{" "}
+                    {security && <MdKeyboardArrowUp />}
+                  </span>
+                  {security && (
+                    <p className="c-fw-400">
+                      Your data secured on AWS cloud, and for more security we
+                      provide the Two-way authentication, Auth key, Sessions,
+                      Audit logs and{" "}
+                      <a href={ link + "/security"} target="_blank">
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__security_4">
+                <div
+                  className={"cursor-pointer " + (security ? "pt-2" : "")}
+                  onClick={() => setSecurity((security) => !security)}
+                >
+                  <span>
+                    Security
+                    {!security && <MdKeyboardArrowDown />}{" "}
+                    {security && <MdKeyboardArrowUp />}
+                  </span>
+                  {security && (
+                    <p className="c-fw-400">
+                      Your data secured on AWS cloud, and for more security we
+                      provide the Two-way authentication, Auth key, Sessions,
+                      Audit logs and{" "}
+                      <a href={ link + "/security"} target="_blank">
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__security_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (security ? "pt-2" : "")}
+                  onClick={() => setSecurity((security) => !security)}
+                >
+                  <span>
+                    Security
+                    {!security && <MdKeyboardArrowDown />}{" "}
+                    {security && <MdKeyboardArrowUp />}
+                  </span>
+                  {security && (
+                    <p className="c-fw-400">
+                      Your data secured on AWS cloud, and for more security we
+                      provide the Two-way authentication, Auth key, Sessions,
+                      Audit logs and{" "}
+                      <a href={ link + "/security"} target="_blank">
+                        more
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__s1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__s2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__s3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__s4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__s5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+              <div className="pricing_main_section__grid__support pricing-border-top">
+                <div
+                  className={"cursor-pointer " + (support ? "pt-2" : "")}
+                  onClick={() => setSupport((support) => !support)}
+                >
+                  <span>
+                    Support
+                    {!support && <MdKeyboardArrowDown />}{" "}
+                    {support && <MdKeyboardArrowUp />}
+                  </span>
+                  {support && (
+                    <p className="c-fw-400">
+                      You are just one call or email away from us,{" "}
+                      <a href={ link + "/contact-us"} target="_blank">
+                        Connect with us
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__support_2">
+                <div
+                  className={"cursor-pointer " + (support ? "pt-2" : "")}
+                  onClick={() => setSupport((support) => !support)}
+                >
+                  <span>
+                    Support
+                    {!support && <MdKeyboardArrowDown />}{" "}
+                    {support && <MdKeyboardArrowUp />}
+                  </span>
+                  {support && (
+                    <p className="c-fw-400">
+                      You are just one call or email away from us,{" "}
+                      <a href={ link + "/contact-us"} target="_blank">
+                        Connect with us
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__support_3">
+                <div
+                  className={"cursor-pointer " + (support ? "pt-2" : "")}
+                  onClick={() => setSupport((support) => !support)}
+                >
+                  <span>
+                    Support
+                    {!support && <MdKeyboardArrowDown />}{" "}
+                    {support && <MdKeyboardArrowUp />}
+                  </span>
+                  {support && (
+                    <p className="c-fw-400">
+                      You are just one call or email away from us,{" "}
+                      <a href={ link + "/contact-us"} target="_blank">
+                        Connect with us
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__support_4">
+                <div
+                  className={"cursor-pointer " + (support ? "pt-2" : "")}
+                  onClick={() => setSupport((support) => !support)}
+                >
+                  <span>
+                    Support
+                    {!support && <MdKeyboardArrowDown />}{" "}
+                    {support && <MdKeyboardArrowUp />}
+                  </span>
+                  {support && (
+                    <p className="c-fw-400">
+                      You are just one call or email away from us,{" "}
+                      <a href={ link + "/contact-us"} target="_blank">
+                        Connect with us
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__support_5 display-all__child">
+                <div
+                  className={"cursor-pointer " + (support ? "pt-2" : "")}
+                  onClick={() => setSupport((support) => !support)}
+                >
+                  <span>
+                    Support
+                    {!support && <MdKeyboardArrowDown />}{" "}
+                    {support && <MdKeyboardArrowUp />}
+                  </span>
+                  {support && (
+                    <p className="c-fw-400">
+                      You are just one call or email away from us,{" "}
+                      <a href={ link + "/contact-us"} target="_blank">
+                        Connect with us
+                      </a>
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__sp1 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__sp2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__sp3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__sp4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__sp5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
               <div className="pricing_main_section__grid__link_all_feature">
                 <a href={link + "/all-features"}>Check all features</a>
               </div>
               <div className="pricing_main_section__grid__extra_charges">
                 <p className="c-fs-6 c-fw-400">
-                  Extra Add ons: <span className="c-fw-600"> {isIndia ? "₹0.10" : (isAE ? "د.إ0.03" : "£0.005") }</span> per
-                  transaction | <span className="c-fw-600">{isIndia ? "₹2000" : (isAE ? "د.إ250" : "£60") }</span> per
-                  branch/year |<span className="c-fw-600">{isIndia ? "₹1000" : (isAE ? "د.إ120" : "£30") }</span> per
-                  warehouse/year
+                  Extra Add ons:{" "}
+                  <span className="c-fw-600">
+                    {" "}
+                    {isIndia ? "₹0.10" : isAE ? "د.إ0.03" : "£0.005"}
+                  </span>{" "}
+                  per transaction |{" "}
+                  <span className="c-fw-600">
+                    {isIndia ? "₹2000" : isAE ? "د.إ250" : "£60"}
+                  </span>{" "}
+                  per branch/year |{" "}
+                  <span className="c-fw-600">
+                    {isIndia ? "₹1000" : isAE ? "د.إ120" : "£30"}
+                  </span>{" "}
+                  per warehouse/year
                 </p>
               </div>
             </div>
@@ -413,7 +2932,7 @@ const pricing = (path) => {
               If yes, it’s time to Make the Switch and purchase a dedicated
               online accounting software like GIDDH.
             </p>
-            <a href={ link + "/signup"}>Start your trial</a>
+            <a href={link + "/signup"}>Start your trial</a>
           </div>
         </div>
       </section>
