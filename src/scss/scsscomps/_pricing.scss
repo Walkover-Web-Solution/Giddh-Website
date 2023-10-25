@@ -44,9 +44,9 @@
         "user-access ua1 ua2 ua3 ua4"
         "bank br1 br2 br3 br4"
         "manufacturing m1 m2 m3 m4"
-        "e-invoice ei1 ei2 ei3 ei4"
-        "eway-bill ewb1 ewb2 ewb3 ewb4"
         "icici ic1 ic2 ic3 ic4"
+        "e-commerce ecom1 ecom2 ecom3 ecom4"
+        "telecom tc1 tc2 tc3 tc4"
         "warehouse w1 w2 w3 w4"
         "easy-import imex1 imex2 imex3 imex4"
         "financial fy1 fy2 fy3 fy4"
@@ -64,7 +64,7 @@
     }
     
     &.display-all{
-      grid-template-rows: minmax(240px,auto) 100px 60px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-rows: minmax(240px,auto) 100px 60px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
       grid-template-columns: auto 180px 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title title"
@@ -88,6 +88,8 @@
         "e-invoice ei1 ei2 ei3 ei4 ei5"
         "eway-bill ewb1 ewb2 ewb3 ewb4 ewb5"
         "icici ic1 ic2 ic3 ic4 ic5"
+        "e-commerce ecom1 ecom2 ecom3 ecom4 ecom5"
+        "telecom tc1 tc2 tc3 tc4 tc5"
         "warehouse w1 w2 w3 w4 w5"
         "easy-import imex1 imex2 imex3 imex4 imex5"
         "financial fy1 fy2 fy3 fy4 fy5"
@@ -960,6 +962,96 @@
       display: none;
     }
 
+    &__e-commerce {
+      grid-area: e-commerce;
+      justify-content: start !important;
+    }
+    &__e-commerce_2 {
+      grid-area: e-commerce_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__e-commerce_3 {
+      grid-area: e-commerce_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__e-commerce_4 {
+      grid-area: e-commerce_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__e-commerce_5 {
+      grid-area: e-commerce_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__ecom1 {
+      grid-area: ecom1;
+    }
+    &__ecom2 {
+      grid-area: ecom2;
+    }
+    &__ecom3 {
+      grid-area: ecom3;
+      background-color: var(--col-white);
+    }
+    &__ecom4 {
+      grid-area: ecom4;
+      background-color: #e6fff5;
+    }
+    &__ecom5 {
+      grid-area: ecom5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
+    &__telecom {
+      grid-area: telecom;
+      justify-content: start !important;
+    }
+    &__telecom_2 {
+      grid-area: telecom_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__telecom_3 {
+      grid-area: telecom_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__telecom_4 {
+      grid-area: telecom_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__telecom_5 {
+      grid-area: telecom_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__tc1 {
+      grid-area: tc1;
+    }
+    &__tc2 {
+      grid-area: tc2;
+    }
+    &__tc3 {
+      grid-area: tc3;
+      background-color: var(--col-white);
+    }
+    &__tc4 {
+      grid-area: tc4;
+      background-color: #e6fff5;
+    }
+    &__tc5 {
+      grid-area: tc5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
     &__warehouse {
       grid-area: warehouse;
       justify-content: start !important;
@@ -1344,9 +1436,9 @@
           "user-access ua1"
           "bank br1"
           "manufacturing m1"
-          "e-invoice ei1"
-          "eway-bill ewb1"
           "icici ic1"
+          "e-commerce ecom1"
+          "telecom tc1"
           "warehouse w1"
           "easy-import imex1"
           "financial fy1"
@@ -1371,9 +1463,9 @@
           "user-access_2 ua2"
           "bank_2 br2"
           "manufacturing_2 m2"
-          "e-invoice_2 ei2"
-          "eway-bill_2 ewb2"
           "icici_2 ic2"
+          "e-commerce_2 ecom2"
+          "telecom_2 tc2"
           "warehouse_2 w2"
           "easy-import_2 imex2"
           "financial_2 fy2"
@@ -1398,9 +1490,9 @@
           "user-access_3 ua3"
           "bank_3 br3"
           "manufacturing_3 m3"
-          "e-invoice_3 ei3"
-          "eway-bill_3 ewb3"
           "icici_3 ic3"
+          "e-commerce_3 ecom3"
+          "telecom_3 tc3"
           "warehouse_3 w3"
           "easy-import_3 imex3"
           "financial_3 fy3"
@@ -1425,9 +1517,9 @@
           "user-access_4 ua4"
           "bank_4 br4"
           "manufacturing_4 m4"
-          "e-invoice_4 ei4"
-          "eway-bill_4 ewb4"
           "icici_4 ic4"
+          "e-commerce_4 ecom4"
+          "telecom_4 tc4"
           "warehouse_4 w4"
           "easy-import_4 imex4"
           "financial_4 fy4"
@@ -1442,11 +1534,11 @@
         
         grid-template-rows:
           minmax(350px, auto) 60px
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
@@ -1473,6 +1565,8 @@
           "e-invoice ei1"
           "eway-bill ewb1"
           "icici ic1"
+          "e-commerce ecom1"
+          "telecom tc1"
           "warehouse w1"
           "easy-import imex1"
           "financial fy1"
@@ -1501,6 +1595,8 @@
           "e-invoice_2 ei2"
           "eway-bill_2 ewb2"
           "icici_2 ic2"
+          "e-commerce_2 ecom2"
+          "telecom_2 tc2"
           "warehouse_2 w2"
           "easy-import_2 imex2"
           "financial_2 fy2"
@@ -1528,6 +1624,8 @@
           "e-invoice_3 ei3"
           "eway-bill_3 ewb3"
           "icici_3 ic3"
+          "e-commerce_3 ecom3"
+          "telecom_3 tc3"
           "warehouse_3 w3"
           "easy-import_3 imex3"
           "financial_3 fy3"
@@ -1555,6 +1653,8 @@
           "e-invoice_4 ei4"
           "eway-bill_4 ewb4"
           "icici_4 ic4"
+          "e-commerce_4 ecom4"
+          "telecom_4 tc4"
           "warehouse_4 w4"
           "easy-import_4 imex4"
           "financial_4 fy4"
@@ -1582,6 +1682,8 @@
           "e-invoice_5 ei5"
           "eway-bill_5 ewb5"
           "icici_5 ic5"
+          "e-commerce_5 ecom5"
+          "telecom_5 tc5"
           "warehouse_5 w5"
           "easy-import_5 imex5"
           "financial_5 fy5"
@@ -1676,6 +1778,14 @@
       &__icici_3,
       &__icici_4,
       &__icici_5,
+      &__e-commerce_2,
+      &__e-commerce_3,
+      &__e-commerce_4,
+      &__e-commerce_5,
+      &__telecom_2,
+      &__telecom_3,
+      &__telecom_4,
+      &__telecom_5,
       &__warehouse_2,
       &__warehouse_3,
       &__warehouse_4,
@@ -1807,6 +1917,16 @@
       &__ic3,
       &__ic4,
       &__ic5,
+      &__ecom1,
+      &__ecom2,
+      &__ecom3,
+      &__ecom4,
+      &__ecom5,
+      &__tc1,
+      &__tc2,
+      &__tc3,
+      &__tc4,
+      &__tc5,
       &__w1,
       &__w2,
       &__w3,
@@ -1852,7 +1972,7 @@
       &__oak {
         .plan_tag {
           top: unset;
-          bottom: -82px;
+          bottom: -125px;
         }
       }
       &__guarantee_logo {
