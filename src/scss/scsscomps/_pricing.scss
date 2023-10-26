@@ -23,7 +23,7 @@
     font-weight: var(--c-fw-600);
 
     &.display-four{
-      grid-template-rows: minmax(240px,auto) 140px 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-rows: minmax(240px,auto) 140px 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
       grid-template-columns: auto 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title"
@@ -50,7 +50,6 @@
         "warehouse w1 w2 w3 w4"
         "easy-import imex1 imex2 imex3 imex4"
         "financial fy1 fy2 fy3 fy4"
-        "banking-support bs1 bs2 bs3 bs4"
         "security s1 s2 s3 s4"
         "support sp1 sp2 sp3 sp4"
 
@@ -64,7 +63,7 @@
     }
     
     &.display-all{
-      grid-template-rows: minmax(240px,auto) 100px 60px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-rows: minmax(240px,auto) 100px 60px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
       grid-template-columns: auto 180px 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title title"
@@ -93,7 +92,6 @@
         "warehouse w1 w2 w3 w4 w5"
         "easy-import imex1 imex2 imex3 imex4 imex5"
         "financial fy1 fy2 fy3 fy4 fy5"
-        "banking-support bs1 bs2 bs3 bs4 bs5"
         "security s1 s2 s3 s4 s5"
         "support sp1 sp2 sp3 sp4 sp5"
 
@@ -1187,51 +1185,6 @@
       display: none;
     }
 
-    &__banking-support {
-      grid-area: banking-support;
-      justify-content: start !important;
-    }
-    &__banking-support_2 {
-      grid-area: banking-support_2;
-      justify-content: start !important;
-      display: none;
-    }
-    &__banking-support_3 {
-      grid-area: banking-support_3;
-      justify-content: start !important;
-      display: none;
-    }
-    &__banking-support_4 {
-      grid-area: banking-support_4;
-      justify-content: start !important;
-      display: none;
-    }
-    &__banking-support_5 {
-      grid-area: banking-support_5;
-      justify-content: start !important;
-      display: none;
-    }
-
-    &__bs1 {
-      grid-area: bs1;
-    }
-    &__bs2 {
-      grid-area: bs2;
-    }
-    &__bs3 {
-      grid-area: bs3;
-      background-color: var(--col-white);
-    }
-    &__bs4 {
-      grid-area: bs4;
-      background-color: #e6fff5;
-    }
-    &__bs5 {
-      grid-area: bs5;
-      background-color: #ffe5e8;
-      display: none;
-    }
-
     &__security {
       grid-area: security;
       justify-content: start !important;
@@ -1409,10 +1362,10 @@
       &.display-four{
         grid-template-rows:
           minmax(350px, auto) 60px
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
@@ -1442,7 +1395,6 @@
           "warehouse w1"
           "easy-import imex1"
           "financial fy1"
-          "banking-support bs1"
           "security s1"
           "support sp1"
           
@@ -1469,7 +1421,6 @@
           "warehouse_2 w2"
           "easy-import_2 imex2"
           "financial_2 fy2"
-          "banking-support_2 bs2"
           "security_2 s2"
           "support_2 sp2"
 
@@ -1496,7 +1447,6 @@
           "warehouse_3 w3"
           "easy-import_3 imex3"
           "financial_3 fy3"
-          "banking-support_3 bs3"
           "security_3 s3"
           "support_3 sp3"
 
@@ -1523,7 +1473,6 @@
           "warehouse_4 w4"
           "easy-import_4 imex4"
           "financial_4 fy4"
-          "banking-support_4 bs4"
           "security_4 s4"
           "support_4 sp4"
           
@@ -1534,11 +1483,11 @@
         
         grid-template-rows:
           minmax(350px, auto) 60px
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
@@ -1570,7 +1519,6 @@
           "warehouse w1"
           "easy-import imex1"
           "financial fy1"
-          "banking-support bs1"
           "security s1"
           "support sp1"
 
@@ -1600,7 +1548,6 @@
           "warehouse_2 w2"
           "easy-import_2 imex2"
           "financial_2 fy2"
-          "banking-support_2 bs2"
           "security_2 s2"
           "support_2 sp2"
 
@@ -1629,7 +1576,6 @@
           "warehouse_3 w3"
           "easy-import_3 imex3"
           "financial_3 fy3"
-          "banking-support_3 bs3"
           "security_3 s3"
           "support_3 sp3"
 
@@ -1658,7 +1604,6 @@
           "warehouse_4 w4"
           "easy-import_4 imex4"
           "financial_4 fy4"
-          "banking-support_4 bs4"
           "security_4 s4"
           "support_4 sp4"
 
@@ -1687,7 +1632,6 @@
           "warehouse_5 w5"
           "easy-import_5 imex5"
           "financial_5 fy5"
-          "banking-support_5 bs5"
           "security_5 s5"
           "support_5 sp5"
 
@@ -1798,10 +1742,6 @@
       &__financial_3,
       &__financial_4,
       &__financial_5,
-      &__banking-support_2,
-      &__banking-support_3,
-      &__banking-support_4,
-      &__banking-support_5,
       &__security_2,
       &__security_3,
       &__security_4,
@@ -1942,11 +1882,6 @@
       &__fy3,
       &__fy4,
       &__fy5,
-      &__bs1,
-      &__bs2,
-      &__bs3,
-      &__bs4,
-      &__bs5,
       &__s1,
       &__s2,
       &__s3,
