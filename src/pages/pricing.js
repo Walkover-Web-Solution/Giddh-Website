@@ -30,7 +30,6 @@ const pricing = (path) => {
   const [warehouse, setWarehouse] = useState(false);
   const [importExport, setImportExport] = useState(false);
   const [financialYear, setFinancialYear] = useState(false);
-  const [bankingSupport, setBankingSupport] = useState(false);
   const [security, setSecurity] = useState(false);
   const [support, setSupport] = useState(false);
 
@@ -1965,17 +1964,18 @@ const pricing = (path) => {
                   </span>
                   {icici && (
                     <p className="c-fw-400">
-                      {isIndia && "ICICI bank integration"} to simply the bank
-                      reconciliation, payment process and{" "}
                       {isIndia ? (
                         <>
+                          ICICI bank integration to simply the bank reconciliation, payment process and{" "}
                           <a target="_blank" href={link + "/icici-integration"}>
                             much more
                           </a>{" "}
                         </>
                       ) : (
-                        " much more"
-                      )}
+                        <>
+                          Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                        </>
+                      )} 
                     </p>
                   )}
                 </div>
@@ -1991,18 +1991,19 @@ const pricing = (path) => {
                     {icici && <MdKeyboardArrowUp />}
                   </span>
                   {icici && (
-                    <p className="c-fw-400">
-                      {isIndia && "ICICI bank integration"} to simply the bank
-                      reconciliation, payment process and{" "}
+                 <p className="c-fw-400">
                       {isIndia ? (
                         <>
+                          ICICI bank integration to simply the bank reconciliation, payment process and{" "}
                           <a target="_blank" href={link + "/icici-integration"}>
                             much more
                           </a>{" "}
                         </>
                       ) : (
-                        " much more"
-                      )}
+                        <>
+                          Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                        </>
+                      )} 
                     </p>
                   )}
                 </div>
@@ -2018,18 +2019,19 @@ const pricing = (path) => {
                     {icici && <MdKeyboardArrowUp />}
                   </span>
                   {icici && (
-                    <p className="c-fw-400">
-                      {isIndia && "ICICI bank integration"} to simply the bank
-                      reconciliation, payment process and{" "}
+                 <p className="c-fw-400">
                       {isIndia ? (
                         <>
+                          ICICI bank integration to simply the bank reconciliation, payment process and{" "}
                           <a target="_blank" href={link + "/icici-integration"}>
                             much more
                           </a>{" "}
                         </>
                       ) : (
-                        " much more"
-                      )}
+                        <>
+                          Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                        </>
+                      )} 
                     </p>
                   )}
                 </div>
@@ -2045,18 +2047,19 @@ const pricing = (path) => {
                     {icici && <MdKeyboardArrowUp />}
                   </span>
                   {icici && (
-                    <p className="c-fw-400">
-                      {isIndia && "ICICI bank integration"} to simply the bank
-                      reconciliation, payment process and{" "}
+                 <p className="c-fw-400">
                       {isIndia ? (
                         <>
+                          ICICI bank integration to simply the bank reconciliation, payment process and{" "}
                           <a target="_blank" href={link + "/icici-integration"}>
                             much more
                           </a>{" "}
                         </>
                       ) : (
-                        " much more"
-                      )}
+                        <>
+                          Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                        </>
+                      )} 
                     </p>
                   )}
                 </div>
@@ -2072,18 +2075,19 @@ const pricing = (path) => {
                     {icici && <MdKeyboardArrowUp />}
                   </span>
                   {icici && (
-                    <p className="c-fw-400">
-                      {isIndia && "ICICI bank integration"} to simply the bank
-                      reconciliation, payment process and{" "}
+                 <p className="c-fw-400">
                       {isIndia ? (
                         <>
+                          ICICI bank integration to simply the bank reconciliation, payment process and{" "}
                           <a target="_blank" href={link + "/icici-integration"}>
                             much more
                           </a>{" "}
                         </>
                       ) : (
-                        " much more"
-                      )}
+                        <>
+                          Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
+                        </>
+                      )} 
                     </p>
                   )}
                 </div>
@@ -2691,127 +2695,6 @@ const pricing = (path) => {
                 <MdDone />
               </div>
               <div className="pricing_main_section__grid__fy5 text-center pricing-border-top display-all__child">
-                <MdDone />
-              </div>
-
-              <div className="pricing_main_section__grid__banking-support pricing-border-top">
-                <div
-                  className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
-                  onClick={() =>
-                    setBankingSupport((bankingSupport) => !bankingSupport)
-                  }
-                >
-                  <span>
-                    Connected banking support
-                    {!bankingSupport && <MdKeyboardArrowDown />}{" "}
-                    {bankingSupport && <MdKeyboardArrowUp />}
-                  </span>
-                  {bankingSupport && (
-                    <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada,
-                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
-                      Denmark, Poland, Portugal
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__banking-support_2">
-                <div
-                  className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
-                  onClick={() =>
-                    setBankingSupport((bankingSupport) => !bankingSupport)
-                  }
-                >
-                  <span>
-                    Connected banking support
-                    {!bankingSupport && <MdKeyboardArrowDown />}{" "}
-                    {bankingSupport && <MdKeyboardArrowUp />}
-                  </span>
-                  {bankingSupport && (
-                    <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada,
-                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
-                      Denmark, Poland, Portugal
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__banking-support_3">
-                <div
-                  className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
-                  onClick={() =>
-                    setBankingSupport((bankingSupport) => !bankingSupport)
-                  }
-                >
-                  <span>
-                    Connected banking support
-                    {!bankingSupport && <MdKeyboardArrowDown />}{" "}
-                    {bankingSupport && <MdKeyboardArrowUp />}
-                  </span>
-                  {bankingSupport && (
-                    <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada,
-                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
-                      Denmark, Poland, Portugal
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__banking-support_4">
-                <div
-                  className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
-                  onClick={() =>
-                    setBankingSupport((bankingSupport) => !bankingSupport)
-                  }
-                >
-                  <span>
-                    Connected banking support
-                    {!bankingSupport && <MdKeyboardArrowDown />}{" "}
-                    {bankingSupport && <MdKeyboardArrowUp />}
-                  </span>
-                  {bankingSupport && (
-                    <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada,
-                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
-                      Denmark, Poland, Portugal
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__banking-support_5 display-all__child">
-                <div
-                  className={"cursor-pointer " + (bankingSupport ? "pt-2" : "")}
-                  onClick={() =>
-                    setBankingSupport((bankingSupport) => !bankingSupport)
-                  }
-                >
-                  <span>
-                    Connected banking support
-                    {!bankingSupport && <MdKeyboardArrowDown />}{" "}
-                    {bankingSupport && <MdKeyboardArrowUp />}
-                  </span>
-                  {bankingSupport && (
-                    <p className="c-fw-400">
-                      Provides support in 12+ countries including USA, Canada,
-                      UK, Germany, France, Netherlands, Ireland, Spain, Sweden,
-                      Denmark, Poland, Portugal
-                    </p>
-                  )}
-                </div>
-              </div>
-              <div className="pricing_main_section__grid__bs1 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__bs2 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__bs3 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__bs4 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__bs5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
 
