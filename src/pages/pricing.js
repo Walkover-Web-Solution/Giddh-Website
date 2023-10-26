@@ -30,7 +30,6 @@ const pricing = (path) => {
   const [warehouse, setWarehouse] = useState(false);
   const [importExport, setImportExport] = useState(false);
   const [financialYear, setFinancialYear] = useState(false);
-  const [bankingSupport, setBankingSupport] = useState(false);
   const [security, setSecurity] = useState(false);
   const [support, setSupport] = useState(false);
 
