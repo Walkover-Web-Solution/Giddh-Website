@@ -1,7 +1,11 @@
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft, MdDone, MdCheckCircle } from "react-icons/md";
 import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import { toast } from 'react-toastify';
 import GoogleLogin from "@/components/googleLogin";
+const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
+    ssr: false
+});
 
 const signUp = (path) => {
     const [currentStep, setCurrentStep] = useState(1);
@@ -16,6 +20,8 @@ const signUp = (path) => {
     const [mobileGetOtpInProgress, setMobileGetOtpInProgress] = useState(false);
     const [mobileVerifyOtpInProgress, setMobileVerifyOtpInProgress] = useState(false);
     const [signupInProgress, setSignupInProgress] = useState(false);
+    const [showVerificationModal, setShowVerificationModal] = useState(false);
+    const [userResponse, setUserResponse] = useState(null);
     const link = path.path.linkPrefix;
 
     useEffect(() => {
@@ -49,11 +55,17 @@ const signUp = (path) => {
                 .then((res) => res.json())
                 .then((response) => {
                     if (response.status == "success") {
-                        showToaster("Your account has been created successfully.", "success");
-                        setGiddhSession(response.body.session.id);
+                        if (response.body.statusCode === 'AUTHENTICATE_TWO_WAY') {
+                            setUserResponse(response.body);
+                            setSignupInProgress(false);
+                            setShowVerificationModal(true);
+                        } else {
+                            showToaster("Your account has been created successfully.", "success");
+                            setGiddhSession(response.body.session.id);
 
-                        var utmParams = "&utm_source=" + getLocalStorage("utm_source") + "&utm_medium=" + getLocalStorage("utm_medium") + "&utm_campaign=" + getLocalStorage("utm_campaign") + "&utm_term=" + getLocalStorage("utm_term") + "&utm_content=" + getLocalStorage("utm_content") + "";
-                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id + utmParams;
+                            var utmParams = "&utm_source=" + getLocalStorage("utm_source") + "&utm_medium=" + getLocalStorage("utm_medium") + "&utm_campaign=" + getLocalStorage("utm_campaign") + "&utm_term=" + getLocalStorage("utm_term") + "&utm_content=" + getLocalStorage("utm_content") + "";
+                            window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id + utmParams;
+                        }
                     } else {
                         setSignupInProgress(false);
                         showToaster(response.message, "error");
@@ -437,6 +449,12 @@ const signUp = (path) => {
             setIntl(intl);
         }
     }
+
+    function otpVerifyCallback(response) {
+        setGiddhSession(response.session.id);
+        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.session.id;
+    }
+
     return (
         <>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"></link>
@@ -762,6 +780,9 @@ const signUp = (path) => {
                                     </div>
                                 </div>
                             </div>
+                        )}
+                        {showVerificationModal && (
+                            <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => { setShowVerificationModal(false); document.body.classList.remove('otp-verification'); }} />
                         )}
                     </div>
                 </div>
