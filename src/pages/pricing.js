@@ -66,22 +66,10 @@ const pricing = (path) => {
                   />
                 </figure>
               </div>
-              <div className="pricing_main_section__grid__trial pricing__heading text-center">
-                <span className="pricing__heading__name">Trial</span>
-                <br />
-                <span
-                  className={
-                    "pricing__heading__cost d-inline-block " +
-                    (isIndia ? "" : " pt-4 mt-2")
-                  }
-                >
-                  Free
-                </span>
-                <br />
-                <span className="pricing__heading__period">15 days</span>
-              </div>
               <div className="pricing_main_section__grid__birch pricing__heading text-center">
                 <span className="pricing__heading__name">Birch</span>
+                <br />
+                <span className="pricing__heading__period">15 days trial</span>
                 {isIndia ? null : (
                   <>
                     <br />
@@ -113,6 +101,8 @@ const pricing = (path) => {
                   />
                 </span>
                 <span className="pricing__heading__name"> Oak</span>
+                <br />
+                <span className="pricing__heading__period">15 days trial</span>
                 {isIndia ? null : (
                   <>
                     <br />
@@ -137,6 +127,8 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__vine pricing__heading text-center">
                 <span className="pricing__heading__name"> Vine</span>
+                <br />
+                <span className="pricing__heading__period">15 days trial</span>
                 {isIndia ? null : (
                   <>
                     <br />
@@ -162,6 +154,8 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__sequoia pricing__heading text-center display-all__child">
                 <span className="pricing__heading__name"> Sequoia</span>
                 <br />
+                <span className="pricing__heading__period">15 days trial</span>
+                <br />
                 <span className="pricing__heading__cost">
                   INR 15,000<span>/year</span>
                 </span>
@@ -170,22 +164,9 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__benefits">
                 <p className="c-fw-600">Benefits</p>
               </div>
-              <div className="pricing_main_section__grid__b1 text-center">
-                <a href={link + "/signup"} className="benefits-link bg-grey">
-                  Get Started
-                </a>
-              </div>
               <div className="pricing_main_section__grid__b2 text-center">
-                <a
-                  href="javascript:;"
-                  className="benefits-link"
-                  onClick={() =>
-                    Calendly.initPopupWidget({
-                      url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                    })
-                  }
-                >
-                  Talk to Us
+                <a href={link + "/signup"} className="benefits-link">
+                  Join Us
                 </a>
               </div>
               <div className="pricing_main_section__grid__b3 text-center">
@@ -219,9 +200,6 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__transactions_5 display-all__child">
                 Transactions
               </div>
-              <div className="pricing_main_section__grid__t1 text-center">
-                40,000
-              </div>
               <div className="pricing_main_section__grid__t2 text-center">
                 {isIndia ? "10,000" : isAE ? "40,000" : "40,000"}
               </div>
@@ -234,7 +212,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__t5 text-center display-all__child">
                 1,00,000
               </div>
-
+          
               <div className="pricing_main_section__grid__companies pricing-border-top">
                 Companies
               </div>
@@ -249,9 +227,6 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__companies_5 display-all__child">
                 Companies
-              </div>
-              <div className="pricing_main_section__grid__c1 text-center pricing-border-top">
-                1
               </div>
               <div className="pricing_main_section__grid__c2 text-center pricing-border-top">
                 1
@@ -282,10 +257,7 @@ const pricing = (path) => {
                 Accountant Consultant
               </div>
 
-              <div className="pricing_main_section__grid__ac1 text-center pricing-border-top">
-                <MdClose />
-              </div>
-              <div className="pricing_main_section__grid__ac2 text-center pricing-border-top">
+             <div className="pricing_main_section__grid__ac2 text-center pricing-border-top">
                 <MdClose />
               </div>
               <div className="pricing_main_section__grid__ac3 text-center pricing-border-top">
@@ -297,7 +269,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__ac5 text-center pricing-border-top display-all__child">
                 10 hrs
               </div>
-
+              
               <div className="pricing_main_section__grid__customers_vendors pricing-border-top">
                 Unlimited Customers/Vendors
               </div>
@@ -312,9 +284,6 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__customers_vendors_5 display-all__child">
                 Unlimited Customers/Vendors
-              </div>
-              <div className="pricing_main_section__grid__cv1 text-center pricing-border-top">
-                <MdDone />
               </div>
               <div className="pricing_main_section__grid__cv2 text-center pricing-border-top">
                 <MdDone />
@@ -343,9 +312,6 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__desktop_mobile_app_5 display-all__child">
                 Desktop/Mobile App
-              </div>
-              <div className="pricing_main_section__grid__d1 text-center pricing-border-top">
-                <MdDone />
               </div>
               <div className="pricing_main_section__grid__d2 text-center pricing-border-top">
                 <MdDone />
@@ -465,9 +431,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__in1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__in2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -480,7 +443,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__in5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-
+              
               <div className="pricing_main_section__grid__record-bills pricing-border-top">
                 <div
                   className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
@@ -570,9 +533,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__rb1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__rb2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -585,7 +545,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__rb5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-
+              
               <div className="pricing_main_section__grid__managing-inventory pricing-border-top">
                 <div
                   className={
@@ -746,9 +706,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__mi1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__mi2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -896,9 +853,6 @@ const pricing = (path) => {
                     </p>
                   )}
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__mc1 text-center pricing-border-top">
-                <MdDone />
               </div>
               <div className="pricing_main_section__grid__mc2 text-center pricing-border-top">
                 <MdDone />
@@ -1048,9 +1002,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__g1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__g2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -1179,9 +1130,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__r1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__r2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -1299,9 +1247,6 @@ const pricing = (path) => {
                     </p>
                   )}
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__rd1 text-center pricing-border-top">
-                <MdDone />
               </div>
               <div className="pricing_main_section__grid__rd2 text-center pricing-border-top">
                 <MdDone />
@@ -1446,20 +1391,17 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__ua1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__ua2 text-center pricing-border-top">
-                <MdDone />
+                Unlimited
               </div>
               <div className="pricing_main_section__grid__ua3 text-center pricing-border-top">
-                <MdDone />
+                Unlimited
               </div>
               <div className="pricing_main_section__grid__ua4 text-center pricing-border-top">
-                <MdDone />
+                Unlimited
               </div>
               <div className="pricing_main_section__grid__ua5 text-center pricing-border-top display-all__child">
-                <MdDone />
+                Unlimited
               </div>
 
               <div className="pricing_main_section__grid__bank pricing-border-top">
@@ -1577,9 +1519,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__br1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__br2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -1613,7 +1552,7 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__manufacturing_2">
+               <div className="pricing_main_section__grid__manufacturing_2">
                 <div
                   className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
                   onClick={() =>
@@ -1692,9 +1631,6 @@ const pricing = (path) => {
                     </p>
                   )}
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__m1 text-center pricing-border-top">
-                <MdDone />
               </div>
               <div className="pricing_main_section__grid__m2 text-center pricing-border-top">
                 <MdDone />
@@ -1820,9 +1756,6 @@ const pricing = (path) => {
                       )}
                     </div>
                   </div>
-                  <div className="pricing_main_section__grid__ei1 text-center pricing-border-top">
-                    <MdDone />
-                  </div>
                   <div className="pricing_main_section__grid__ei2 text-center pricing-border-top">
                     <MdDone />
                   </div>
@@ -1934,9 +1867,6 @@ const pricing = (path) => {
                         </p>
                       )}
                     </div>
-                  </div>
-                  <div className="pricing_main_section__grid__ewb1 text-center pricing-border-top">
-                    <MdDone />
                   </div>
                   <div className="pricing_main_section__grid__ewb2 text-center pricing-border-top">
                     <MdDone />
@@ -2092,9 +2022,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__ic1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__ic2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -2198,9 +2125,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__ecom1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__ecom2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -2298,9 +2222,6 @@ const pricing = (path) => {
                     </p>
                   )}
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__tc1 text-center pricing-border-top">
-                <MdDone />
               </div>
               <div className="pricing_main_section__grid__tc2 text-center pricing-border-top">
                 <MdDone />
@@ -2414,9 +2335,6 @@ const pricing = (path) => {
                     </p>
                   )}
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__w1 text-center pricing-border-top">
-                <MdDone />
               </div>
               <div className="pricing_main_section__grid__w2 text-center pricing-border-top">
                 <MdDone />
@@ -2561,9 +2479,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__imex1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__imex2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -2682,9 +2597,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__fy1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__fy2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -2732,9 +2644,7 @@ const pricing = (path) => {
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data secured on AWS cloud, and for more security we
-                      provide the Two-way authentication, Auth key, Sessions,
-                      Audit logs and{" "}
+                      Your data is secured with IP security and Two-way verification, and{" "}
                       <a href={link + "/security"} target="_blank">
                         more
                       </a>
@@ -2754,9 +2664,7 @@ const pricing = (path) => {
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data secured on AWS cloud, and for more security we
-                      provide the Two-way authentication, Auth key, Sessions,
-                      Audit logs and{" "}
+                      Your data is secured with IP security and Two-way verification, and{" "}
                       <a href={link + "/security"} target="_blank">
                         more
                       </a>
@@ -2776,9 +2684,7 @@ const pricing = (path) => {
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data secured on AWS cloud, and for more security we
-                      provide the Two-way authentication, Auth key, Sessions,
-                      Audit logs and{" "}
+                      Your data is secured with IP security and Two-way verification, and{" "}
                       <a href={link + "/security"} target="_blank">
                         more
                       </a>
@@ -2798,18 +2704,13 @@ const pricing = (path) => {
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data secured on AWS cloud, and for more security we
-                      provide the Two-way authentication, Auth key, Sessions,
-                      Audit logs and{" "}
+                      Your data is secured with IP security and Two-way verification, and{" "}
                       <a href={link + "/security"} target="_blank">
                         more
                       </a>
                     </p>
                   )}
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__s1 text-center pricing-border-top">
-                <MdDone />
               </div>
               <div className="pricing_main_section__grid__s2 text-center pricing-border-top">
                 <MdDone />
@@ -2823,7 +2724,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__s5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-
+              
               <div className="pricing_main_section__grid__support pricing-border-top">
                 <div
                   className={"cursor-pointer " + (support ? "pt-2" : "")}
@@ -2924,9 +2825,6 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-              <div className="pricing_main_section__grid__sp1 text-center pricing-border-top">
-                <MdDone />
-              </div>
               <div className="pricing_main_section__grid__sp2 text-center pricing-border-top">
                 <MdDone />
               </div>
@@ -2987,14 +2885,10 @@ const pricing = (path) => {
         <div className="container">
           <div className="text-center">
             <h2 className="sub-heading col-primary c-fw-600">
-              GIDDH – The AIO Answer to Your Accounting Needs
+              Introducing GIDDH – Your All-in-One Solution for Accounting
             </h2>
             <p className="c-fs-4 c-fw-600">
-              Are you still entering your financial data manually into
-              spreadsheets to manage your finances?
-              <br />
-              If yes, it’s time to Make the Switch and purchase a dedicated
-              online accounting software like GIDDH.
+            Are you tired of the hassle of manually inputting your financial data into spreadsheets or relying on offline software to handle your financial tasks? If so, it's high time to upgrade your approach by investing in a specialized cloud-based accounting solution such as GIDDH. 
             </p>
             <a href={link + "/signup"}>Start your trial</a>
           </div>
@@ -3015,12 +2909,7 @@ const pricing = (path) => {
                   WHY GIDDH?
                 </h4>
                 <p>
-                  Managing your business without understanding its financial
-                  status can jeopardize your growth prospects. If you’re a small
-                  business organization, the price of accounting software can
-                  often put an extra burden on your expenses. So, it’s
-                  imperative for you to compare different accounting software
-                  prices and then make your choice.
+                In today's business landscape, understanding and managing the financial status of your organization are crucial for making informed business decisions and sustainable growth. This necessity applies not only to professional accountants but also to all professionals working in various industries.
                 </p>
                 <span
                   className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
@@ -3052,25 +2941,14 @@ const pricing = (path) => {
                     display: readMoreParagraphStatus1 ? "block" : "none",
                   }}
                 >
-                  That being said, GIDDH is a perfect web-based solution for
-                  SMEs that caters to all your accounting needs at affordable
-                  prices. Incorporating multiple modules within itself, GIDDH
-                  allows you to update your books of account effortlessly making
-                  it easier for you to track your cash flow and the overall
-                  financial health of the business.
+                 GIDDH is a comprehensive accounting solution expertly crafted to cater to the specific demands of small and medium-sized enterprises (SMEs), all the while being budget-friendly.
                 </p>
                 <p
                   style={{
                     display: readMoreParagraphStatus1 ? "block" : "none",
                   }}
                 >
-                  The time has gone by when accounting was considered “an
-                  activity only for the accountants”. Today, all professions,
-                  business owners, etc. rely on the different accounting
-                  software to make better business decisions. The following
-                  segment bifurcates different professions and helps you
-                  understand how they are making optimal use of accounting
-                  software.
+                  GIDDH incorporates multiple modules within its platform, making it effortless to maintain your financial records. This simplifies the process of tracking your cash flow and assessing the overall financial health of your business. 
                 </p>
                 <span
                   className="pt-3 text-decoration-underline c-fw-600"
