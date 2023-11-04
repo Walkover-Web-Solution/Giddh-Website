@@ -33,7 +33,7 @@
         "companies companies c2 c3 c4"
         "accountant_consultant accountant_consultant ac2 ac3 ac4"
         "desktop_mobile_app desktop_mobile_app d2 d3 d4"
-        "user-access access ua2 ua3 ua4"
+        "user-access user-access ua2 ua3 ua4"
         "customers_vendors customers_vendors cv2 cv3 cv4"
         "invoicing invoicing in2 in3 in4"
         "record-bills record-bills rb2 rb3 rb4"
@@ -1514,6 +1514,33 @@
       &__link_all_feature,
       &__extra_charges {
         text-align: center;
+      }
+      &__transactions,
+      &__companies,
+      &__accountant_consultant,
+      &__customers_vendors,
+      &__desktop_mobile_app,
+      &__invoicing,
+      &__record-bills,
+      &__managing-inventory,
+      &__multi-currency,
+      &__gst,
+      &__reports,
+      &__dashboard,
+      &__user-access,
+      &__bank,
+      &__manufacturing,
+      &__e-invoice,
+      &__eway-bill,
+      &__icici,
+      &__e-commerce,
+      &__telecom,
+      &__warehouse,
+      &__easy-import,
+      &__financial,
+      &__security,
+      &__support{
+        display: none !important;
       }
       &__transactions_2,
       &__transactions_3,

@@ -2842,7 +2842,7 @@ const pricing = (path) => {
                 <a href={link + "/all-features"}>Check all features</a>
               </div>
               <div className="pricing_main_section__grid__extra_charges">
-                <p className="c-fs-6 c-fw-400">
+                <p className={"c-fs-6 c-fw-400" + (isIndia ? ' w-100' : '')}>
                   Extra Add ons:{" "}
                   <span className="c-fw-600">
                     {" "}
