@@ -35,6 +35,7 @@ function removeGiddhSession() {
 }
 
 function setGiddhSession(sessionId) {
+    removeLocalStorage("session");
     setCookie("giddh_session_id", sessionId, 30);
 }
 
