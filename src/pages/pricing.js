@@ -15,6 +15,7 @@ const pricing = (path) => {
   const [invoice, setInvoice] = useState(false);
   const [recordBill, setRecordBill] = useState(false);
   const [managingInventory, setManagingInventory] = useState(false);
+  const [journalEntry, setJournalEntry] = useState(false);
   const [multiCurrency, setMultiCurrency] = useState(false);
   const [gst, setGst] = useState(false);
   const [report, setReport] = useState(false);
@@ -68,8 +69,6 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__birch pricing__heading text-center">
                 <span className="pricing__heading__name">Birch</span>
-                <br />
-                <span className="pricing__heading__period">15 days trial</span>
                 {isIndia ? null : (
                   <>
                     <br />
@@ -83,14 +82,6 @@ const pricing = (path) => {
                   {isIndia ? "INR 1,500" : isAE ? "AED 350" : "GBP 70"}
                   <span>/year</span>
                 </span>
-                {isIndia ? null : (
-                  <>
-                    <br />
-                    <span className="pricing__heading__period">
-                      Save 30% for 12 months
-                    </span>
-                  </>
-                )}
               </div>
               <div className="pricing_main_section__grid__oak pricing__heading text-center position-relative">
                 <span className="plan_tag">
@@ -101,8 +92,6 @@ const pricing = (path) => {
                   />
                 </span>
                 <span className="pricing__heading__name"> Oak</span>
-                <br />
-                <span className="pricing__heading__period">15 days trial</span>
                 {isIndia ? null : (
                   <>
                     <br />
@@ -116,19 +105,9 @@ const pricing = (path) => {
                   {isIndia ? "INR 4,000" : isAE ? "AED 1,050" : "GBP 210"}
                   <span>/year</span>
                 </span>
-                {isIndia ? null : (
-                  <>
-                    <br />
-                    <span className="pricing__heading__period">
-                      Save 30% for 12 months
-                    </span>
-                  </>
-                )}
               </div>
               <div className="pricing_main_section__grid__vine pricing__heading text-center">
                 <span className="pricing__heading__name"> Vine</span>
-                <br />
-                <span className="pricing__heading__period">15 days trial</span>
                 {isIndia ? null : (
                   <>
                     <br />
@@ -142,19 +121,9 @@ const pricing = (path) => {
                   {isIndia ? "INR 10,000" : isAE ? " AED 2,100" : "GBP 350"}
                   <span>/year</span>
                 </span>
-                {isIndia ? null : (
-                  <>
-                    <br />
-                    <span className="pricing__heading__period">
-                      Save 30% for 12 months
-                    </span>
-                  </>
-                )}
               </div>
               <div className="pricing_main_section__grid__sequoia pricing__heading text-center display-all__child">
                 <span className="pricing__heading__name"> Sequoia</span>
-                <br />
-                <span className="pricing__heading__period">15 days trial</span>
                 <br />
                 <span className="pricing__heading__cost">
                   INR 15,000<span>/year</span>
@@ -166,50 +135,50 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__b2 text-center">
                 <a href={link + "/signup"} className="benefits-link">
-                  Join Us
+                  Try Now
                 </a>
               </div>
               <div className="pricing_main_section__grid__b3 text-center">
                 <a href={link + "/signup"} className="benefits-link">
-                  Join Us
+                  Try Now
                 </a>
               </div>
               <div className="pricing_main_section__grid__b4 text-center">
                 <a href={link + "/signup"} className="benefits-link">
-                  Join Us
+                  Try Now
                 </a>
               </div>
               <div className="pricing_main_section__grid__b5 text-center display-all__child">
                 <a href={link + "/signup"} className="benefits-link">
-                  Join Us
+                  Try Now
                 </a>
               </div>
 
-              <div className="pricing_main_section__grid__transactions">
+              <div className="pricing_main_section__grid__transactions pricing-border-top">
                 Transactions
               </div>
-              <div className="pricing_main_section__grid__transactions_2">
+              <div className="pricing_main_section__grid__transactions_2 pricing-border-top d-lg-none">
                 Transactions
               </div>
-              <div className="pricing_main_section__grid__transactions_3">
+              <div className="pricing_main_section__grid__transactions_3 pricing-border-top d-lg-none">
                 Transactions
               </div>
-              <div className="pricing_main_section__grid__transactions_4">
+              <div className="pricing_main_section__grid__transactions_4 pricing-border-top d-lg-none">
                 Transactions
               </div>
-              <div className="pricing_main_section__grid__transactions_5 display-all__child">
+              <div className="pricing_main_section__grid__transactions_5 display-all__child pricing-border-top d-lg-none">
                 Transactions
               </div>
-              <div className="pricing_main_section__grid__t2 text-center">
+              <div className="pricing_main_section__grid__t2 text-center pricing-border-top">
                 {isIndia ? "10,000" : isAE ? "40,000" : "40,000"}
               </div>
-              <div className="pricing_main_section__grid__t3 text-center">
+              <div className="pricing_main_section__grid__t3 text-center pricing-border-top">
                 {isIndia ? "40,000" : isAE ? "40,000" : "40,000"}
               </div>
-              <div className="pricing_main_section__grid__t4 text-center">
+              <div className="pricing_main_section__grid__t4 text-center pricing-border-top">
                 {isIndia ? "40,000" : isAE ? "100,000" : "100,000"}
               </div>
-              <div className="pricing_main_section__grid__t5 text-center display-all__child">
+              <div className="pricing_main_section__grid__t5 text-center pricing-border-top display-all__child">
                 1,00,000
               </div>
           
@@ -719,6 +688,135 @@ const pricing = (path) => {
                 <MdDone />
               </div>
 
+              <div className="pricing_main_section__grid__journal-entry pricing-border-top">
+                <div
+                  className={
+                    "cursor-pointer " + (journalEntry ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setJournalEntry(
+                      (journalEntry) => !journalEntry
+                    )
+                  }
+                >
+                  <span>
+                    Journal Entries{" "}
+                    {!journalEntry && <MdKeyboardArrowDown />}{" "}
+                    {journalEntry && <MdKeyboardArrowUp />}
+                  </span>
+                  {journalEntry && (
+                    <p className="c-fw-400">
+                     We support ledger-based journal entries for all vouchers like Sales, Purchase, Payment, Receipt (Including Advance receipt), Debit Note, Credit Note, and Journal
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__journal-entry_2">
+                <div
+                  className={
+                    "cursor-pointer " + (journalEntry ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setJournalEntry(
+                      (journalEntry) => !journalEntry
+                    )
+                  }
+                >
+                  <span>
+                    Journal Entries{" "}
+                    {!journalEntry && <MdKeyboardArrowDown />}{" "}
+                    {journalEntry && <MdKeyboardArrowUp />}
+                  </span>
+                  {journalEntry && (
+                    <p className="c-fw-400">
+                     We support ledger-based journal entries for all vouchers like Sales, Purchase, Payment, Receipt (Including Advance receipt), Debit Note, Credit Note, and Journal
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__journal-entry_3">
+                <div
+                  className={
+                    "cursor-pointer " + (journalEntry ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setJournalEntry(
+                      (journalEntry) => !journalEntry
+                    )
+                  }
+                >
+                  <span>
+                    Journal Entries{" "}
+                    {!journalEntry && <MdKeyboardArrowDown />}{" "}
+                    {journalEntry && <MdKeyboardArrowUp />}
+                  </span>
+                  {journalEntry && (
+                    <p className="c-fw-400">
+                     We support ledger-based journal entries for all vouchers like Sales, Purchase, Payment, Receipt (Including Advance receipt), Debit Note, Credit Note, and Journal
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__journal-entry_4">
+                <div
+                  className={
+                    "cursor-pointer " + (journalEntry ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setJournalEntry(
+                      (journalEntry) => !journalEntry
+                    )
+                  }
+                >
+                  <span>
+                    Journal Entries{" "}
+                    {!journalEntry && <MdKeyboardArrowDown />}{" "}
+                    {journalEntry && <MdKeyboardArrowUp />}
+                  </span>
+                  {journalEntry && (
+                    <p className="c-fw-400">
+                     We support ledger-based journal entries for all vouchers like Sales, Purchase, Payment, Receipt (Including Advance receipt), Debit Note, Credit Note, and Journal
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__journal-entry_5 display-all__child">
+                <div
+                  className={
+                    "cursor-pointer " + (journalEntry ? "pt-2" : "")
+                  }
+                  onClick={() =>
+                    setJournalEntry(
+                      (journalEntry) => !journalEntry
+                    )
+                  }
+                >
+                  <span>
+                    Journal Entries{" "}
+                    {!journalEntry && <MdKeyboardArrowDown />}{" "}
+                    {journalEntry && <MdKeyboardArrowUp />}
+                  </span>
+                  {journalEntry && (
+                    <p className="c-fw-400">
+                     We support ledger-based journal entries for all vouchers like Sales, Purchase, Payment, Receipt (Including Advance receipt), Debit Note, Credit Note, and Journal
+                    </p>
+                  )}
+                </div>
+              </div>
+              <div className="pricing_main_section__grid__je2 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__je3 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__je4 text-center pricing-border-top">
+                <MdDone />
+              </div>
+              <div className="pricing_main_section__grid__je5 text-center pricing-border-top display-all__child">
+                <MdDone />
+              </div>
+
+
               <div className="pricing_main_section__grid__multi-currency pricing-border-top">
                 <div
                   className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
@@ -879,17 +977,24 @@ const pricing = (path) => {
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      Create {isIndia ? "GST" : "VAT"} invoice, view{" "}
-                      {isIndia ? "GST" : "VAT"} reports, direct filing, and
-                      reconcile transaction with the {isIndia ? "GST" : "VAT"}{" "}
-                      portal and
-                      <a
-                        href={link + (isIndia ? "/gst" : "/vat")}
-                        target="_blank"
-                      >
-                        {" "}
-                        more
-                      </a>
+                      { isIndia && (
+                    <>
+                      Create GST invoice, view GST reports, direct filing, and reconcile transaction with the GST portal and 
+                      <a href="/gst" target="_blank">{" "}more</a>
+                    </>
+                  )}
+                  { isAE && (
+                    <>
+                      Create VAT invoice, view VAT reports and 
+                      <a href={link + "/vat"} target="_blank">{" "}more</a>
+                    </>
+                  )}
+                  { isUK && (
+                    <>
+                    Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and
+                      <a href={link + "/vat"} target="_blank">{" "}more</a>
+                    </>
+                  )}
                     </p>
                   )}
                 </div>
@@ -906,17 +1011,24 @@ const pricing = (path) => {
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      Create {isIndia ? "GST" : "VAT"} invoice, view{" "}
-                      {isIndia ? "GST" : "VAT"} reports, direct filing, and
-                      reconcile transaction with the {isIndia ? "GST" : "VAT"}{" "}
-                      portal and
-                      <a
-                        href={link + (isIndia ? "/gst" : "/vat")}
-                        target="_blank"
-                      >
-                        {" "}
-                        more
-                      </a>
+                      { isIndia && (
+                    <>
+                      Create GST invoice, view GST reports, direct filing, and reconcile transaction with the GST portal and 
+                      <a href="/gst" target="_blank">{" "}more</a>
+                    </>
+                  )}
+                  { isAE && (
+                    <>
+                      Create VAT invoice, view VAT reports and 
+                      <a href={link + "/vat"} target="_blank">{" "}more</a>
+                    </>
+                  )}
+                  { isUK && (
+                    <>
+                    Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and
+                      <a href={link + "/vat"} target="_blank">{" "}more</a>
+                    </>
+                  )}
                     </p>
                   )}
                 </div>
@@ -933,17 +1045,24 @@ const pricing = (path) => {
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      Create {isIndia ? "GST" : "VAT"} invoice, view{" "}
-                      {isIndia ? "GST" : "VAT"} reports, direct filing, and
-                      reconcile transaction with the {isIndia ? "GST" : "VAT"}{" "}
-                      portal and
-                      <a
-                        href={link + (isIndia ? "/gst" : "/vat")}
-                        target="_blank"
-                      >
-                        {" "}
-                        more
-                      </a>
+                      { isIndia && (
+                    <>
+                      Create GST invoice, view GST reports, direct filing, and reconcile transaction with the GST portal and 
+                      <a href="/gst" target="_blank">{" "}more</a>
+                    </>
+                  )}
+                  { isAE && (
+                    <>
+                      Create VAT invoice, view VAT reports and 
+                      <a href={link + "/vat"} target="_blank">{" "}more</a>
+                    </>
+                  )}
+                  { isUK && (
+                    <>
+                    Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and
+                      <a href={link + "/vat"} target="_blank">{" "}more</a>
+                    </>
+                  )}
                     </p>
                   )}
                 </div>
@@ -960,17 +1079,24 @@ const pricing = (path) => {
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      Create {isIndia ? "GST" : "VAT"} invoice, view{" "}
-                      {isIndia ? "GST" : "VAT"} reports, direct filing, and
-                      reconcile transaction with the {isIndia ? "GST" : "VAT"}{" "}
-                      portal and
-                      <a
-                        href={link + (isIndia ? "/gst" : "/vat")}
-                        target="_blank"
-                      >
-                        {" "}
-                        more
-                      </a>
+                      { isIndia && (
+                    <>
+                      Create GST invoice, view GST reports, direct filing, and reconcile transaction with the GST portal and 
+                      <a href="/gst" target="_blank">{" "}more</a>
+                    </>
+                  )}
+                  { isAE && (
+                    <>
+                      Create VAT invoice, view VAT reports and 
+                      <a href={link + "/vat"} target="_blank">{" "}more</a>
+                    </>
+                  )}
+                  { isUK && (
+                    <>
+                    Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and
+                      <a href={link + "/vat"} target="_blank">{" "}more</a>
+                    </>
+                  )}
                     </p>
                   )}
                 </div>
@@ -987,17 +1113,24 @@ const pricing = (path) => {
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      Create {isIndia ? "GST" : "VAT"} invoice, view{" "}
-                      {isIndia ? "GST" : "VAT"} reports, direct filing, and
-                      reconcile transaction with the {isIndia ? "GST" : "VAT"}{" "}
-                      portal and
-                      <a
-                        href={link + (isIndia ? "/gst" : "/vat")}
-                        target="_blank"
-                      >
-                        {" "}
-                        more
-                      </a>
+                      { isIndia && (
+                    <>
+                      Create GST invoice, view GST reports, direct filing, and reconcile transaction with the GST portal and 
+                      <a href="/gst" target="_blank">{" "}more</a>
+                    </>
+                  )}
+                  { isAE && (
+                    <>
+                      Create VAT invoice, view VAT reports and 
+                      <a href={link + "/vat"} target="_blank">{" "}more</a>
+                    </>
+                  )}
+                  { isUK && (
+                    <>
+                    Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and
+                      <a href={link + "/vat"} target="_blank">{" "}more</a>
+                    </>
+                  )}
                     </p>
                   )}
                 </div>
@@ -2622,9 +2755,7 @@ const pricing = (path) => {
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data secured on AWS cloud, and for more security we
-                      provide the Two-way authentication, Auth key, Sessions,
-                      Audit logs and{" "}
+                     Your data is secured with IP security and Two-way verification, and{" "}
                       <a href={link + "/security"} target="_blank">
                         more
                       </a>
