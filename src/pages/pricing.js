@@ -301,8 +301,7 @@ const pricing = (path) => {
                   onClick={() => setInvoice((invoice) => !invoice)}
                 >
                   <span>
-                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
-                    {invoice && <MdKeyboardArrowUp />}
+                   Invoicing {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}               
                   </span>
                   {invoice && (
                     <p className="c-fw-400">
@@ -322,8 +321,7 @@ const pricing = (path) => {
                   onClick={() => setInvoice((invoice) => !invoice)}
                 >
                   <span>
-                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
-                    {invoice && <MdKeyboardArrowUp />}
+                   Invoicing {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {invoice && (
                     <p className="c-fw-400">
@@ -343,8 +341,7 @@ const pricing = (path) => {
                   onClick={() => setInvoice((invoice) => !invoice)}
                 >
                   <span>
-                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
-                    {invoice && <MdKeyboardArrowUp />}
+                   Invoicing {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {invoice && (
                     <p className="c-fw-400">
@@ -364,8 +361,7 @@ const pricing = (path) => {
                   onClick={() => setInvoice((invoice) => !invoice)}
                 >
                   <span>
-                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
-                    {invoice && <MdKeyboardArrowUp />}
+                   Invoicing {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {invoice && (
                     <p className="c-fw-400">
@@ -385,8 +381,7 @@ const pricing = (path) => {
                   onClick={() => setInvoice((invoice) => !invoice)}
                 >
                   <span>
-                    Invoicing {!invoice && <MdKeyboardArrowDown />}{" "}
-                    {invoice && <MdKeyboardArrowUp />}
+                   Invoicing {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {invoice && (
                     <p className="c-fw-400">
@@ -419,8 +414,7 @@ const pricing = (path) => {
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
                 >
                   <span>
-                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
-                    {recordBill && <MdKeyboardArrowUp />}
+                    Record Bills {recordBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {recordBill && (
                     <p className="c-fw-400">
@@ -436,8 +430,7 @@ const pricing = (path) => {
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
                 >
                   <span>
-                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
-                    {recordBill && <MdKeyboardArrowUp />}
+                    Record Bills {recordBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {recordBill && (
                     <p className="c-fw-400">
@@ -454,8 +447,7 @@ const pricing = (path) => {
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
                 >
                   <span>
-                    Record Bills {!recordBill && <MdKeyboardArrowDown />}
-                    {recordBill && <MdKeyboardArrowUp />}
+                    Record Bills {recordBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {recordBill && (
                     <p className="c-fw-400">
@@ -472,8 +464,7 @@ const pricing = (path) => {
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
                 >
                   <span>
-                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
-                    {recordBill && <MdKeyboardArrowUp />}
+                    Record Bills {recordBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {recordBill && (
                     <p className="c-fw-400">
@@ -490,8 +481,7 @@ const pricing = (path) => {
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
                 >
                   <span>
-                    Record Bills {!recordBill && <MdKeyboardArrowDown />}{" "}
-                    {recordBill && <MdKeyboardArrowUp />}
+                    Record Bills {recordBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {recordBill && (
                     <p className="c-fw-400">
@@ -528,8 +518,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Managing Inventory{" "}
-                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
-                    {managingInventory && <MdKeyboardArrowUp />}
+                   {managingInventory ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {managingInventory && (
                     <p className="c-fw-400">
@@ -560,8 +549,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Managing Inventory{" "}
-                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
-                    {managingInventory && <MdKeyboardArrowUp />}
+                   {managingInventory ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {managingInventory && (
                     <p className="c-fw-400">
@@ -592,8 +580,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Managing Inventory{" "}
-                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
-                    {managingInventory && <MdKeyboardArrowUp />}
+                   {managingInventory ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {managingInventory && (
                     <p className="c-fw-400">
@@ -624,8 +611,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Managing Inventory{" "}
-                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
-                    {managingInventory && <MdKeyboardArrowUp />}
+                   {managingInventory ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {managingInventory && (
                     <p className="c-fw-400">
@@ -656,8 +642,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Managing Inventory{" "}
-                    {!managingInventory && <MdKeyboardArrowDown />}{" "}
-                    {managingInventory && <MdKeyboardArrowUp />}
+                   {managingInventory ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {managingInventory && (
                     <p className="c-fw-400">
@@ -701,8 +686,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Journal Entries{" "}
-                    {!journalEntry && <MdKeyboardArrowDown />}{" "}
-                    {journalEntry && <MdKeyboardArrowUp />}
+                    {journalEntry ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {journalEntry && (
                     <p className="c-fw-400">
@@ -724,8 +708,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Journal Entries{" "}
-                    {!journalEntry && <MdKeyboardArrowDown />}{" "}
-                    {journalEntry && <MdKeyboardArrowUp />}
+                    {journalEntry ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                    
                   </span>
                   {journalEntry && (
                     <p className="c-fw-400">
@@ -747,8 +730,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Journal Entries{" "}
-                    {!journalEntry && <MdKeyboardArrowDown />}{" "}
-                    {journalEntry && <MdKeyboardArrowUp />}
+                    {journalEntry ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {journalEntry && (
                     <p className="c-fw-400">
@@ -770,8 +752,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Journal Entries{" "}
-                    {!journalEntry && <MdKeyboardArrowDown />}{" "}
-                    {journalEntry && <MdKeyboardArrowUp />}
+                    {journalEntry ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {journalEntry && (
                     <p className="c-fw-400">
@@ -793,8 +774,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Journal Entries{" "}
-                    {!journalEntry && <MdKeyboardArrowDown />}{" "}
-                    {journalEntry && <MdKeyboardArrowUp />}
+                    {journalEntry ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {journalEntry && (
                     <p className="c-fw-400">
@@ -825,8 +805,7 @@ const pricing = (path) => {
                   }
                 >
                   <span>
-                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
-                    {multiCurrency && <MdKeyboardArrowUp />}
+                    Multi-currency {multiCurrency ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {multiCurrency && (
                     <p className="c-fw-400">
@@ -852,8 +831,7 @@ const pricing = (path) => {
                   }
                 >
                   <span>
-                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
-                    {multiCurrency && <MdKeyboardArrowUp />}
+                    Multi-currency {multiCurrency ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                      
                   </span>
                   {multiCurrency && (
                     <p className="c-fw-400">
@@ -879,8 +857,7 @@ const pricing = (path) => {
                   }
                 >
                   <span>
-                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
-                    {multiCurrency && <MdKeyboardArrowUp />}
+                    Multi-currency {multiCurrency ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {multiCurrency && (
                     <p className="c-fw-400">
@@ -906,8 +883,7 @@ const pricing = (path) => {
                   }
                 >
                   <span>
-                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
-                    {multiCurrency && <MdKeyboardArrowUp />}
+                    Multi-currency {multiCurrency ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {multiCurrency && (
                     <p className="c-fw-400">
@@ -933,8 +909,7 @@ const pricing = (path) => {
                   }
                 >
                   <span>
-                    Multi-currency {!multiCurrency && <MdKeyboardArrowDown />}{" "}
-                    {multiCurrency && <MdKeyboardArrowUp />}
+                    Multi-currency {multiCurrency ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {multiCurrency && (
                     <p className="c-fw-400">
@@ -972,8 +947,7 @@ const pricing = (path) => {
                 >
                   <span>
                     {isIndia ? "GST" : "VAT"} Compliance{" "}
-                    {!gst && <MdKeyboardArrowDown />}{" "}
-                    {gst && <MdKeyboardArrowUp />}
+                    {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {gst && (
                     <p className="c-fw-400">
@@ -1006,8 +980,7 @@ const pricing = (path) => {
                 >
                   <span>
                     {isIndia ? "GST" : "VAT"} Compliance{" "}
-                    {!gst && <MdKeyboardArrowDown />}{" "}
-                    {gst && <MdKeyboardArrowUp />}
+                    {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                    
                   </span>
                   {gst && (
                     <p className="c-fw-400">
@@ -1040,8 +1013,7 @@ const pricing = (path) => {
                 >
                   <span>
                     {isIndia ? "GST" : "VAT"} Compliance{" "}
-                    {!gst && <MdKeyboardArrowDown />}{" "}
-                    {gst && <MdKeyboardArrowUp />}
+                    {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {gst && (
                     <p className="c-fw-400">
@@ -1074,8 +1046,7 @@ const pricing = (path) => {
                 >
                   <span>
                     {isIndia ? "GST" : "VAT"} Compliance{" "}
-                    {!gst && <MdKeyboardArrowDown />}{" "}
-                    {gst && <MdKeyboardArrowUp />}
+                    {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {gst && (
                     <p className="c-fw-400">
@@ -1108,8 +1079,7 @@ const pricing = (path) => {
                 >
                   <span>
                     {isIndia ? "GST" : "VAT"} Compliance{" "}
-                    {!gst && <MdKeyboardArrowDown />}{" "}
-                    {gst && <MdKeyboardArrowUp />}
+                    {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {gst && (
                     <p className="c-fw-400">
@@ -1154,8 +1124,7 @@ const pricing = (path) => {
                   onClick={() => setReport((report) => !report)}
                 >
                   <span>
-                    Reports {!report && <MdKeyboardArrowDown />}{" "}
-                    {report && <MdKeyboardArrowUp />}
+                    Reports {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {report && (
                     <p className="c-fw-400">
@@ -1177,8 +1146,7 @@ const pricing = (path) => {
                   onClick={() => setReport((report) => !report)}
                 >
                   <span>
-                    Reports {!report && <MdKeyboardArrowDown />}{" "}
-                    {report && <MdKeyboardArrowUp />}
+                    Reports {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                    
                   </span>
                   {report && (
                     <p className="c-fw-400">
@@ -1200,8 +1168,7 @@ const pricing = (path) => {
                   onClick={() => setReport((report) => !report)}
                 >
                   <span>
-                    Reports {!report && <MdKeyboardArrowDown />}{" "}
-                    {report && <MdKeyboardArrowUp />}
+                    Reports {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {report && (
                     <p className="c-fw-400">
@@ -1223,8 +1190,7 @@ const pricing = (path) => {
                   onClick={() => setReport((report) => !report)}
                 >
                   <span>
-                    Reports {!report && <MdKeyboardArrowDown />}{" "}
-                    {report && <MdKeyboardArrowUp />}
+                    Reports {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {report && (
                     <p className="c-fw-400">
@@ -1246,8 +1212,7 @@ const pricing = (path) => {
                   onClick={() => setReport((report) => !report)}
                 >
                   <span>
-                    Reports {!report && <MdKeyboardArrowDown />}{" "}
-                    {report && <MdKeyboardArrowUp />}
+                    Reports {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {report && (
                     <p className="c-fw-400">
@@ -1282,8 +1247,7 @@ const pricing = (path) => {
                   onClick={() => setDashboard((dashoard) => !dashoard)}
                 >
                   <span>
-                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
-                    {dashoard && <MdKeyboardArrowUp />}
+                    Real-time Dashboard {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {dashoard && (
                     <p className="c-fw-400">
@@ -1303,8 +1267,7 @@ const pricing = (path) => {
                   onClick={() => setDashboard((dashoard) => !dashoard)}
                 >
                   <span>
-                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
-                    {dashoard && <MdKeyboardArrowUp />}
+                    Real-time Dashboard {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {dashoard && (
                     <p className="c-fw-400">
@@ -1324,8 +1287,7 @@ const pricing = (path) => {
                   onClick={() => setDashboard((dashoard) => !dashoard)}
                 >
                   <span>
-                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
-                    {dashoard && <MdKeyboardArrowUp />}
+                    Real-time Dashboard {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {dashoard && (
                     <p className="c-fw-400">
@@ -1345,8 +1307,7 @@ const pricing = (path) => {
                   onClick={() => setDashboard((dashoard) => !dashoard)}
                 >
                   <span>
-                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
-                    {dashoard && <MdKeyboardArrowUp />}
+                    Real-time Dashboard {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {dashoard && (
                     <p className="c-fw-400">
@@ -1366,8 +1327,7 @@ const pricing = (path) => {
                   onClick={() => setDashboard((dashoard) => !dashoard)}
                 >
                   <span>
-                    Real-time Dashboard {!dashoard && <MdKeyboardArrowDown />}{" "}
-                    {dashoard && <MdKeyboardArrowUp />}
+                    Real-time Dashboard {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {dashoard && (
                     <p className="c-fw-400">
@@ -1401,8 +1361,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Unlimited users access{" "}
-                    {!userAccess && <MdKeyboardArrowDown />}{" "}
-                    {userAccess && <MdKeyboardArrowUp />}
+                   {userAccess ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {userAccess && (
                     <p className="c-fw-400">
@@ -1427,8 +1386,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Unlimited users access{" "}
-                    {!userAccess && <MdKeyboardArrowDown />}{" "}
-                    {userAccess && <MdKeyboardArrowUp />}
+                   {userAccess ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                    
                   </span>
                   {userAccess && (
                     <p className="c-fw-400">
@@ -1453,8 +1411,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Unlimited users access{" "}
-                    {!userAccess && <MdKeyboardArrowDown />}{" "}
-                    {userAccess && <MdKeyboardArrowUp />}
+                   {userAccess ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {userAccess && (
                     <p className="c-fw-400">
@@ -1479,8 +1436,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Unlimited users access{" "}
-                    {!userAccess && <MdKeyboardArrowDown />}{" "}
-                    {userAccess && <MdKeyboardArrowUp />}
+                   {userAccess ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {userAccess && (
                     <p className="c-fw-400">
@@ -1505,8 +1461,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Unlimited users access{" "}
-                    {!userAccess && <MdKeyboardArrowDown />}{" "}
-                    {userAccess && <MdKeyboardArrowUp />}
+                   {userAccess ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {userAccess && (
                     <p className="c-fw-400">
@@ -1544,8 +1499,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Reconciliation
-                    {!bankRec && <MdKeyboardArrowDown />}{" "}
-                    {bankRec && <MdKeyboardArrowUp />}
+                    {bankRec ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                    
                   </span>
                   {bankRec && (
                     <p className="c-fw-400">
@@ -1567,8 +1521,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Reconciliation
-                    {!bankRec && <MdKeyboardArrowDown />}{" "}
-                    {bankRec && <MdKeyboardArrowUp />}
+                    {bankRec ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {bankRec && (
                     <p className="c-fw-400">
@@ -1590,8 +1543,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Reconciliation
-                    {!bankRec && <MdKeyboardArrowDown />}{" "}
-                    {bankRec && <MdKeyboardArrowUp />}
+                    {bankRec ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {bankRec && (
                     <p className="c-fw-400">
@@ -1613,8 +1565,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Reconciliation
-                    {!bankRec && <MdKeyboardArrowDown />}{" "}
-                    {bankRec && <MdKeyboardArrowUp />}
+                    {bankRec ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {bankRec && (
                     <p className="c-fw-400">
@@ -1636,8 +1587,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Reconciliation
-                    {!bankRec && <MdKeyboardArrowDown />}{" "}
-                    {bankRec && <MdKeyboardArrowUp />}
+                    {bankRec ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {bankRec && (
                     <p className="c-fw-400">
@@ -1674,8 +1624,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Manufacturing
-                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
-                    {manufacturing && <MdKeyboardArrowUp />}
+                    {manufacturing ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {manufacturing && (
                     <p className="c-fw-400">
@@ -1694,8 +1643,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Manufacturing
-                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
-                    {manufacturing && <MdKeyboardArrowUp />}
+                    {manufacturing ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {manufacturing && (
                     <p className="c-fw-400">
@@ -1714,8 +1662,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Manufacturing
-                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
-                    {manufacturing && <MdKeyboardArrowUp />}
+                    {manufacturing ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {manufacturing && (
                     <p className="c-fw-400">
@@ -1734,8 +1681,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Manufacturing
-                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
-                    {manufacturing && <MdKeyboardArrowUp />}
+                    {manufacturing ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {manufacturing && (
                     <p className="c-fw-400">
@@ -1754,8 +1700,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Manufacturing
-                    {!manufacturing && <MdKeyboardArrowDown />}{" "}
-                    {manufacturing && <MdKeyboardArrowUp />}
+                    {manufacturing ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {manufacturing && (
                     <p className="c-fw-400">
@@ -1786,8 +1731,7 @@ const pricing = (path) => {
                     >
                       <span>
                         E-invoice
-                        {!eInvoice && <MdKeyboardArrowDown />}{" "}
-                        {eInvoice && <MdKeyboardArrowUp />}
+                        {eInvoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                       </span>
                       {eInvoice && (
                         <p className="c-fw-400">
@@ -1808,8 +1752,7 @@ const pricing = (path) => {
                     >
                       <span>
                         E-invoice
-                        {!eInvoice && <MdKeyboardArrowDown />}{" "}
-                        {eInvoice && <MdKeyboardArrowUp />}
+                        {eInvoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                       </span>
                       {eInvoice && (
                         <p className="c-fw-400">
@@ -1830,8 +1773,7 @@ const pricing = (path) => {
                     >
                       <span>
                         E-invoice
-                        {!eInvoice && <MdKeyboardArrowDown />}{" "}
-                        {eInvoice && <MdKeyboardArrowUp />}
+                        {eInvoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                       </span>
                       {eInvoice && (
                         <p className="c-fw-400">
@@ -1852,8 +1794,7 @@ const pricing = (path) => {
                     >
                       <span>
                         E-invoice
-                        {!eInvoice && <MdKeyboardArrowDown />}{" "}
-                        {eInvoice && <MdKeyboardArrowUp />}
+                        {eInvoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                       </span>
                       {eInvoice && (
                         <p className="c-fw-400">
@@ -1874,8 +1815,7 @@ const pricing = (path) => {
                     >
                       <span>
                         E-invoice
-                        {!eInvoice && <MdKeyboardArrowDown />}{" "}
-                        {eInvoice && <MdKeyboardArrowUp />}
+                        {eInvoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                       </span>
                       {eInvoice && (
                         <p className="c-fw-400">
@@ -1913,8 +1853,7 @@ const pricing = (path) => {
                     >
                       <span>
                         E-way bill
-                        {!ewayBill && <MdKeyboardArrowDown />}{" "}
-                        {ewayBill && <MdKeyboardArrowUp />}
+                        {ewayBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                       </span>
                       {ewayBill && (
                         <p className="c-fw-400">
@@ -1932,8 +1871,7 @@ const pricing = (path) => {
                     >
                       <span>
                         E-way bill
-                        {!ewayBill && <MdKeyboardArrowDown />}{" "}
-                        {ewayBill && <MdKeyboardArrowUp />}
+                        {ewayBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                       </span>
                       {ewayBill && (
                         <p className="c-fw-400">
@@ -1951,8 +1889,7 @@ const pricing = (path) => {
                     >
                       <span>
                         E-way bill
-                        {!ewayBill && <MdKeyboardArrowDown />}{" "}
-                        {ewayBill && <MdKeyboardArrowUp />}
+                        {ewayBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                       </span>
                       {ewayBill && (
                         <p className="c-fw-400">
@@ -1970,8 +1907,7 @@ const pricing = (path) => {
                     >
                       <span>
                         E-way bill
-                        {!ewayBill && <MdKeyboardArrowDown />}{" "}
-                        {ewayBill && <MdKeyboardArrowUp />}
+                        {ewayBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                       </span>
                       {ewayBill && (
                         <p className="c-fw-400">
@@ -1989,8 +1925,7 @@ const pricing = (path) => {
                     >
                       <span>
                         E-way bill
-                        {!ewayBill && <MdKeyboardArrowDown />}{" "}
-                        {ewayBill && <MdKeyboardArrowUp />}
+                        {ewayBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                       </span>
                       {ewayBill && (
                         <p className="c-fw-400">
@@ -2022,8 +1957,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Integrations
-                    {!icici && <MdKeyboardArrowDown />}{" "}
-                    {icici && <MdKeyboardArrowUp />}
+                    {icici ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {icici && (
                     <p className="c-fw-400">
@@ -2050,8 +1984,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Integrations
-                    {!icici && <MdKeyboardArrowDown />}{" "}
-                    {icici && <MdKeyboardArrowUp />}
+                    {icici ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {icici && (
                  <p className="c-fw-400">
@@ -2078,8 +2011,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Integrations
-                    {!icici && <MdKeyboardArrowDown />}{" "}
-                    {icici && <MdKeyboardArrowUp />}
+                    {icici ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {icici && (
                  <p className="c-fw-400">
@@ -2106,8 +2038,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Integrations
-                    {!icici && <MdKeyboardArrowDown />}{" "}
-                    {icici && <MdKeyboardArrowUp />}
+                    {icici ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {icici && (
                  <p className="c-fw-400">
@@ -2134,8 +2065,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Integrations
-                    {!icici && <MdKeyboardArrowDown />}{" "}
-                    {icici && <MdKeyboardArrowUp />}
+                    {icici ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {icici && (
                  <p className="c-fw-400">
@@ -2175,8 +2105,7 @@ const pricing = (path) => {
                 >
                   <span>
                     E-commerce Integration
-                    {!ecom && <MdKeyboardArrowDown />}{" "}
-                    {ecom && <MdKeyboardArrowUp />}
+                    {ecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {ecom && (
                     <p className="c-fw-400">
@@ -2193,8 +2122,7 @@ const pricing = (path) => {
                 >
                   <span>
                     E-commerce Integration
-                    {!ecom && <MdKeyboardArrowDown />}{" "}
-                    {ecom && <MdKeyboardArrowUp />}
+                    {ecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {ecom && (
                     <p className="c-fw-400">
@@ -2211,8 +2139,7 @@ const pricing = (path) => {
                 >
                   <span>
                     E-commerce Integration
-                    {!ecom && <MdKeyboardArrowDown />}{" "}
-                    {ecom && <MdKeyboardArrowUp />}
+                    {ecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {ecom && (
                     <p className="c-fw-400">
@@ -2229,8 +2156,7 @@ const pricing = (path) => {
                 >
                   <span>
                     E-commerce Integration
-                    {!ecom && <MdKeyboardArrowDown />}{" "}
-                    {ecom && <MdKeyboardArrowUp />}
+                    {ecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {ecom && (
                     <p className="c-fw-400">
@@ -2247,8 +2173,7 @@ const pricing = (path) => {
                 >
                   <span>
                     E-commerce Integration
-                    {!ecom && <MdKeyboardArrowDown />}{" "}
-                    {ecom && <MdKeyboardArrowUp />}
+                    {ecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {ecom && (
                     <p className="c-fw-400">
@@ -2278,8 +2203,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Telecom Integration
-                    {!telecom && <MdKeyboardArrowDown />}{" "}
-                    {telecom && <MdKeyboardArrowUp />}
+                    {telecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {telecom && (
                     <p className="c-fw-400">
@@ -2295,8 +2219,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Telecom Integration
-                    {!telecom && <MdKeyboardArrowDown />}{" "}
-                    {telecom && <MdKeyboardArrowUp />}
+                    {telecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {telecom && (
                     <p className="c-fw-400">
@@ -2312,8 +2235,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Telecom Integration
-                    {!telecom && <MdKeyboardArrowDown />}{" "}
-                    {telecom && <MdKeyboardArrowUp />}
+                    {telecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {telecom && (
                     <p className="c-fw-400">
@@ -2329,8 +2251,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Telecom Integration
-                    {!telecom && <MdKeyboardArrowDown />}{" "}
-                    {telecom && <MdKeyboardArrowUp />}
+                    {telecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {telecom && (
                     <p className="c-fw-400">
@@ -2346,8 +2267,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Telecom Integration
-                    {!telecom && <MdKeyboardArrowDown />}{" "}
-                    {telecom && <MdKeyboardArrowUp />}
+                    {telecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {telecom && (
                     <p className="c-fw-400">
@@ -2376,8 +2296,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Branch and warehouse management
-                    {!warehouse && <MdKeyboardArrowDown />}{" "}
-                    {warehouse && <MdKeyboardArrowUp />}
+                    {warehouse ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {warehouse && (
                     <p className="c-fw-400">
@@ -2396,8 +2315,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Branch and warehouse management
-                    {!warehouse && <MdKeyboardArrowDown />}{" "}
-                    {warehouse && <MdKeyboardArrowUp />}
+                    {warehouse ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {warehouse && (
                     <p className="c-fw-400">
@@ -2416,8 +2334,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Branch and warehouse management
-                    {!warehouse && <MdKeyboardArrowDown />}{" "}
-                    {warehouse && <MdKeyboardArrowUp />}
+                    {warehouse ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {warehouse && (
                     <p className="c-fw-400">
@@ -2436,8 +2353,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Branch and warehouse management
-                    {!warehouse && <MdKeyboardArrowDown />}{" "}
-                    {warehouse && <MdKeyboardArrowUp />}
+                    {warehouse ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {warehouse && (
                     <p className="c-fw-400">
@@ -2456,8 +2372,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Branch and warehouse management
-                    {!warehouse && <MdKeyboardArrowDown />}{" "}
-                    {warehouse && <MdKeyboardArrowUp />}
+                    {warehouse ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {warehouse && (
                     <p className="c-fw-400">
@@ -2491,8 +2406,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Easy Import/Export of the data
-                    {!importExport && <MdKeyboardArrowDown />}{" "}
-                    {importExport && <MdKeyboardArrowUp />}
+                    {importExport ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {importExport && (
                     <p className="c-fw-400">
@@ -2517,8 +2431,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Easy Import/Export of the data
-                    {!importExport && <MdKeyboardArrowDown />}{" "}
-                    {importExport && <MdKeyboardArrowUp />}
+                    {importExport ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {importExport && (
                     <p className="c-fw-400">
@@ -2543,8 +2456,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Easy Import/Export of the data
-                    {!importExport && <MdKeyboardArrowDown />}{" "}
-                    {importExport && <MdKeyboardArrowUp />}
+                    {importExport ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {importExport && (
                     <p className="c-fw-400">
@@ -2569,8 +2481,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Easy Import/Export of the data
-                    {!importExport && <MdKeyboardArrowDown />}{" "}
-                    {importExport && <MdKeyboardArrowUp />}
+                    {importExport ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {importExport && (
                     <p className="c-fw-400">
@@ -2595,8 +2506,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Easy Import/Export of the data
-                    {!importExport && <MdKeyboardArrowDown />}{" "}
-                    {importExport && <MdKeyboardArrowUp />}
+                    {importExport ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {importExport && (
                     <p className="c-fw-400">
@@ -2634,8 +2544,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Financial Year Locking
-                    {!financialYear && <MdKeyboardArrowDown />}{" "}
-                    {financialYear && <MdKeyboardArrowUp />}
+                    {financialYear ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
@@ -2655,8 +2564,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Financial Year Locking
-                    {!financialYear && <MdKeyboardArrowDown />}{" "}
-                    {financialYear && <MdKeyboardArrowUp />}
+                    {financialYear ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
@@ -2676,8 +2584,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Financial Year Locking
-                    {!financialYear && <MdKeyboardArrowDown />}{" "}
-                    {financialYear && <MdKeyboardArrowUp />}
+                    {financialYear ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
@@ -2697,8 +2604,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Financial Year Locking
-                    {!financialYear && <MdKeyboardArrowDown />}{" "}
-                    {financialYear && <MdKeyboardArrowUp />}
+                    {financialYear ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
@@ -2718,8 +2624,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Financial Year Locking
-                    {!financialYear && <MdKeyboardArrowDown />}{" "}
-                    {financialYear && <MdKeyboardArrowUp />}
+                    {financialYear ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
@@ -2750,8 +2655,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Security
-                    {!security && <MdKeyboardArrowDown />}{" "}
-                    {security && <MdKeyboardArrowUp />}
+                    {security ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {security && (
                     <p className="c-fw-400">
@@ -2770,8 +2674,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Security
-                    {!security && <MdKeyboardArrowDown />}{" "}
-                    {security && <MdKeyboardArrowUp />}
+                    {security ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {security && (
                     <p className="c-fw-400">
@@ -2790,8 +2693,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Security
-                    {!security && <MdKeyboardArrowDown />}{" "}
-                    {security && <MdKeyboardArrowUp />}
+                    {security ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {security && (
                     <p className="c-fw-400">
@@ -2810,8 +2712,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Security
-                    {!security && <MdKeyboardArrowDown />}{" "}
-                    {security && <MdKeyboardArrowUp />}
+                    {security ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {security && (
                     <p className="c-fw-400">
@@ -2830,8 +2731,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Security
-                    {!security && <MdKeyboardArrowDown />}{" "}
-                    {security && <MdKeyboardArrowUp />}
+                    {security ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {security && (
                     <p className="c-fw-400">
@@ -2863,8 +2763,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Support
-                    {!support && <MdKeyboardArrowDown />}{" "}
-                    {support && <MdKeyboardArrowUp />}
+                    {support ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {support && (
                     <p className="c-fw-400">
@@ -2883,8 +2782,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Support
-                    {!support && <MdKeyboardArrowDown />}{" "}
-                    {support && <MdKeyboardArrowUp />}
+                    {support ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {support && (
                     <p className="c-fw-400">
@@ -2903,8 +2801,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Support
-                    {!support && <MdKeyboardArrowDown />}{" "}
-                    {support && <MdKeyboardArrowUp />}
+                    {support ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {support && (
                     <p className="c-fw-400">
@@ -2923,8 +2820,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Support
-                    {!support && <MdKeyboardArrowDown />}{" "}
-                    {support && <MdKeyboardArrowUp />}
+                    {support ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {support && (
                     <p className="c-fw-400">
@@ -2943,8 +2839,7 @@ const pricing = (path) => {
                 >
                   <span>
                     Support
-                    {!support && <MdKeyboardArrowDown />}{" "}
-                    {support && <MdKeyboardArrowUp />}
+                    {support ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {support && (
                     <p className="c-fw-400">
