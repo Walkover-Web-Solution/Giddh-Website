@@ -23,35 +23,36 @@
     font-weight: var(--c-fw-600);
 
     &.display-four{
-      grid-template-rows: minmax(240px,auto) 140px 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-rows: minmax(240px,auto) minmax(110px,auto) minmax(60px,auto) minmax(50px,auto)minmax(50px,auto)minmax(50px,auto)minmax(50px,auto)minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
       grid-template-columns: auto 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title"
-        "logo trial birch oak vine"
-        "benefits b1 b2 b3 b4"
-        "transactions t1 t2 t3 t4"
-        "companies c1 c2 c3 c4"
-        "accountant_consultant ac1 ac2 ac3 ac4"
-        "customers_vendors cv1 cv2 cv3 cv4"
-        "desktop_mobile_app d1 d2 d3 d4"
-        "invoicing in1 in2 in3 in4"
-        "record-bills rb1 rb2 rb3 rb4"
-        "managing-inventory mi1 mi2 mi3 mi4"
-        "multi-currency mc1 mc2 mc3 mc4"
-        "gst g1 g2 g3 g4"
-        "reports r1 r2 r3 r4"
-        "dashboard rd1 rd2 rd3 rd4"
-        "user-access ua1 ua2 ua3 ua4"
-        "bank br1 br2 br3 br4"
-        "manufacturing m1 m2 m3 m4"
-        "icici ic1 ic2 ic3 ic4"
-        "e-commerce ecom1 ecom2 ecom3 ecom4"
-        "telecom tc1 tc2 tc3 tc4"
-        "warehouse w1 w2 w3 w4"
-        "easy-import imex1 imex2 imex3 imex4"
-        "financial fy1 fy2 fy3 fy4"
-        "security s1 s2 s3 s4"
-        "support sp1 sp2 sp3 sp4"
+        "logo logo birch oak vine"
+        "benefits benefits b2 b3 b4"
+        "transactions transactions t2 t3 t4"
+        "companies companies c2 c3 c4"
+        "accountant_consultant accountant_consultant ac2 ac3 ac4"
+        "desktop_mobile_app desktop_mobile_app d2 d3 d4"
+        "user-access user-access ua2 ua3 ua4"
+        "security security s2 s3 s4"
+        "customers_vendors customers_vendors cv2 cv3 cv4"
+        "invoicing invoicing in2 in3 in4"
+        "record-bills record-bills rb2 rb3 rb4"
+        "managing-inventory managing-inventory mi2 mi3 mi4"
+        "journal-entry journal-entry je2 je3 je4"
+        "multi-currency multi-currency mc2 mc3 mc4"
+        "gst gst g2 g3 g4"
+        "reports reports r2 r3 r4"
+        "dashboard dashboard rd2 rd3 rd4"
+        "bank bank br2 br3 br4"
+        "manufacturing manufacturing m2 m3 m4"
+        "icici icici ic2 ic3 ic4"
+        "e-commerce e-commerce ecom2 ecom3 ecom4"
+        "telecom telecom tc2 tc3 tc4"
+        "warehouse warehouse w2 w3 w4"
+        "easy-import easy-import imex2 imex3 imex4"
+        "financial financial fy2 fy3 fy4"
+        "support support sp2 sp3 sp4"
 
         "link_all_feature extra_charges extra_charges extra_charges extra_charges";
 
@@ -63,39 +64,40 @@
     }
     
     &.display-all{
-      grid-template-rows: minmax(240px,auto) 100px 60px 50px 50px 50px 75px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
-      grid-template-columns: auto 180px 180px 180px 180px 180px;
+      grid-template-rows: minmax(240px,auto) minmax(90px,auto) minmax(60px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) 46px;
+      grid-template-columns: auto 180px 180px 180px 180px;
       grid-template-areas:
-        "title title title title title title"
-        "logo trial birch oak vine sequoia"
-        "benefits b1 b2 b3 b4 b5"
-        "transactions t1 t2 t3 t4 t5"
-        "companies c1 c2 c3 c4 c5"
-        "accountant_consultant ac1 ac2 ac3 ac4 ac5"
-        "customers_vendors cv1 cv2 cv3 cv4 cv5"
-        "desktop_mobile_app d1 d2 d3 d4 d5"
-        "invoicing in1 in2 in3 in4 in5"
-        "record-bills rb1 rb2 rb3 rb4 rb5"
-        "managing-inventory mi1 mi2 mi3 mi4 mi5"
-        "multi-currency mc1 mc2 mc3 mc4 mc5"
-        "gst g1 g2 g3 g4 g5"
-        "reports r1 r2 r3 r4 r5"
-        "dashboard rd1 rd2 rd3 rd4 rd5"
-        "user-access ua1 ua2 ua3 ua4 ua5"
-        "bank br1 br2 br3 br4 br5"
-        "manufacturing m1 m2 m3 m4 m5"
-        "e-invoice ei1 ei2 ei3 ei4 ei5"
-        "eway-bill ewb1 ewb2 ewb3 ewb4 ewb5"
-        "icici ic1 ic2 ic3 ic4 ic5"
-        "e-commerce ecom1 ecom2 ecom3 ecom4 ecom5"
-        "telecom tc1 tc2 tc3 tc4 tc5"
-        "warehouse w1 w2 w3 w4 w5"
-        "easy-import imex1 imex2 imex3 imex4 imex5"
-        "financial fy1 fy2 fy3 fy4 fy5"
-        "security s1 s2 s3 s4 s5"
-        "support sp1 sp2 sp3 sp4 sp5"
+        "title title title title title"
+        "logo birch oak vine sequoia"
+        "benefits b2 b3 b4 b5"
+        "transactions t2 t3 t4 t5"
+        "companies c2 c3 c4 c5"
+        "accountant_consultant ac2 ac3 ac4 ac5"
+        "desktop_mobile_app d2 d3 d4 d5"
+        "user-access ua2 ua3 ua4 ua5"
+        "security s2 s3 s4 s5"
+        "customers_vendors cv2 cv3 cv4 cv5"
+        "invoicing in2 in3 in4 in5"
+        "record-bills rb2 rb3 rb4 rb5"
+        "managing-inventory mi2 mi3 mi4 mi5"
+        "journal-entry je2 je3 je4 je5"
+        "multi-currency mc2 mc3 mc4 mc5"
+        "gst g2 g3 g4 g5"
+        "reports r2 r3 r4 r5"
+        "dashboard rd2 rd3 rd4 rd5"
+        "bank br2 br3 br4 br5"
+        "manufacturing m2 m3 m4 m5"
+        "e-invoice ei2 ei3 ei4 ei5"
+        "eway-bill ewb2 ewb3 ewb4 ewb5"
+        "icici ic2 ic3 ic4 ic5"
+        "e-commerce ecom2 ecom3 ecom4 ecom5"
+        "telecom tc2 tc3 tc4 tc5"
+        "warehouse w2 w3 w4 w5"
+        "easy-import imex2 imex3 imex4 imex5"
+        "financial fy2 fy3 fy4 fy5"
+        "support sp2 sp3 sp4 sp5"
 
-        "link_all_feature extra_charges extra_charges extra_charges extra_charges extra_charges";
+        "link_all_feature extra_charges extra_charges extra_charges extra_charges";
     }
 
     &__title {
@@ -111,9 +113,6 @@
           width: 100%;
         }
       }
-    }
-    &__trial {
-      grid-area: trial;
     }
     &__birch {
       grid-area: birch;
@@ -138,10 +137,7 @@
 
     &__benefits {
       grid-area: benefits;
-    }
-    &__b1 {
-      grid-area: b1;
-    }
+    }   
     &__b2 {
       grid-area: b2;
     }
@@ -165,26 +161,32 @@
     &__transactions_2 {
       grid-area: transactions_2;
       justify-content: start !important;
-      display: none;
+      &.pricing-border-top{
+        display: none;
+      }
     }
     &__transactions_3 {
       grid-area: transactions_3;
       justify-content: start !important;
-      display: none;
+      &.pricing-border-top{
+        display: none;
+      }
     }
     &__transactions_4 {
       grid-area: transactions_4;
       justify-content: start !important;
-      display: none;
+      &.pricing-border-top{
+        display: none;
+      }
     }
     &__transactions_5 {
       grid-area: transactions_5;
       justify-content: start !important;
-      display: none;
+      &.pricing-border-top{
+        display: none;
+      }
     }
-    &__t1 {
-      grid-area: t1;
-    }
+   
     &__t2 {
       grid-area: t2;
     }
@@ -225,9 +227,7 @@
       justify-content: start !important;
       display: none;
     }
-    &__c1 {
-      grid-area: c1;
-    }
+    
     &__c2 {
       grid-area: c2;
     }
@@ -268,9 +268,7 @@
       justify-content: start !important;
       display: none;
     }
-    &__ac1 {
-      grid-area: ac1;
-    }
+    
     &__ac2 {
       grid-area: ac2;
     }
@@ -311,9 +309,7 @@
       justify-content: start !important;
       display: none;
     }
-    &__cv1 {
-      grid-area: cv1;
-    }
+    
     &__cv2 {
       grid-area: cv2;
     }
@@ -355,9 +351,7 @@
       display: none;
     }
 
-    &__d1 {
-      grid-area: d1;
-    }
+    
     &__d2 {
       grid-area: d2;
     }
@@ -400,9 +394,7 @@
       display: none;
     }
 
-    &__in1 {
-      grid-area: in1;
-    }
+    
     &__in2 {
       grid-area: in2;
     }
@@ -445,9 +437,7 @@
       display: none;
     }
 
-    &__rb1 {
-      grid-area: rb1;
-    }
+    
     &__rb2 {
       grid-area: rb2;
     }
@@ -489,10 +479,7 @@
       justify-content: start !important;
       display: none;
     }
-
-    &__mi1 {
-      grid-area: mi1;
-    }
+   
     &__mi2 {
       grid-area: mi2;
     }
@@ -535,9 +522,6 @@
       display: none;
     }
 
-    &__mc1 {
-      grid-area: mc1;
-    }
     &__mc2 {
       grid-area: mc2;
     }
@@ -579,10 +563,7 @@
       justify-content: start !important;
       display: none;
     }
-
-    &__g1 {
-      grid-area: g1;
-    }
+ 
     &__g2 {
       grid-area: g2;
     }
@@ -625,9 +606,6 @@
       display: none;
     }
 
-    &__r1 {
-      grid-area: r1;
-    }
     &__r2 {
       grid-area: r2;
     }
@@ -670,9 +648,6 @@
       display: none;
     }
 
-    &__rd1 {
-      grid-area: rd1;
-    }
     &__rd2 {
       grid-area: rd2;
     }
@@ -715,9 +690,6 @@
       display: none;
     }
 
-    &__ua1 {
-      grid-area: ua1;
-    }
     &__ua2 {
       grid-area: ua2;
     }
@@ -760,9 +732,6 @@
       display: none;
     }
 
-    &__br1 {
-      grid-area: br1;
-    }
     &__br2 {
       grid-area: br2;
     }
@@ -805,9 +774,6 @@
       display: none;
     }
 
-    &__m1 {
-      grid-area: m1;
-    }
     &__m2 {
       grid-area: m2;
     }
@@ -850,9 +816,6 @@
       display: none;
     }
 
-    &__ei1 {
-      grid-area: ei1;
-    }
     &__ei2 {
       grid-area: ei2;
     }
@@ -895,9 +858,6 @@
       display: none;
     }
 
-    &__ewb1 {
-      grid-area: ewb1;
-    }
     &__ewb2 {
       grid-area: ewb2;
     }
@@ -940,9 +900,6 @@
       display: none;
     }
 
-    &__ic1 {
-      grid-area: ic1;
-    }
     &__ic2 {
       grid-area: ic2;
     }
@@ -985,9 +942,6 @@
       display: none;
     }
 
-    &__ecom1 {
-      grid-area: ecom1;
-    }
     &__ecom2 {
       grid-area: ecom2;
     }
@@ -1030,9 +984,6 @@
       display: none;
     }
 
-    &__tc1 {
-      grid-area: tc1;
-    }
     &__tc2 {
       grid-area: tc2;
     }
@@ -1075,9 +1026,6 @@
       display: none;
     }
 
-    &__w1 {
-      grid-area: w1;
-    }
     &__w2 {
       grid-area: w2;
     }
@@ -1120,9 +1068,6 @@
       display: none;
     }
 
-    &__imex1 {
-      grid-area: imex1;
-    }
     &__imex2 {
       grid-area: imex2;
     }
@@ -1165,9 +1110,6 @@
       display: none;
     }
 
-    &__fy1 {
-      grid-area: fy1;
-    }
     &__fy2 {
       grid-area: fy2;
     }
@@ -1210,9 +1152,6 @@
       display: none;
     }
 
-    &__s1 {
-      grid-area: s1;
-    }
     &__s2 {
       grid-area: s2;
     }
@@ -1255,9 +1194,6 @@
       display: none;
     }
 
-    &__sp1 {
-      grid-area: sp1;
-    }
     &__sp2 {
       grid-area: sp2;
     }
@@ -1271,6 +1207,48 @@
     }
     &__sp5 {
       grid-area: sp5;
+      background-color: #ffe5e8;
+      display: none;
+    }
+
+    &__journal-entry {
+      grid-area: journal-entry;
+      justify-content: start !important;
+    }
+    &__journal-entry_2 {
+      grid-area: journal-entry_2;
+      justify-content: start !important;
+      display: none;
+    }
+    &__journal-entry_3 {
+      grid-area: journal-entry_3;
+      justify-content: start !important;
+      display: none;
+    }
+    &__journal-entry_4 {
+      grid-area: journal-entry_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__journal-entry_5 {
+      grid-area: journal-entry_5;
+      justify-content: start !important;
+      display: none;
+    }
+
+    &__je2 {
+      grid-area: je2;
+    }
+    &__je3 {
+      grid-area: je3;
+      background-color: var(--col-white);
+    }
+    &__je4 {
+      grid-area: je4;
+      background-color: #e6fff5;
+    }
+    &__je5 {
+      grid-area: je5;
       background-color: #ffe5e8;
       display: none;
     }
@@ -1340,10 +1318,10 @@
       padding-right: 15px;
       max-width: 1000px;
       &.display-four{
-        grid-template-columns: auto 160px 160px 160px 160px;
+        grid-template-columns: auto 160px 160px 160px;
       }
       &.display-all{
-        grid-template-columns: auto 160px 160px 160px 160px 160px;
+        grid-template-columns: auto 160px 160px 160px 160px;
       }
     }
   }
@@ -1362,57 +1340,32 @@
       &.display-four{
         grid-template-rows:
           minmax(350px, auto) 60px
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto minmax(60px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto minmax(60px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto minmax(60px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
           "title title"
           "logo logo"
-
-          "trial trial"
-          "b1 b1"
-          "transactions t1"
-          "companies c1"
-          "accountant_consultant ac1"
-          "customers_vendors cv1"
-          "desktop_mobile_app d1"
-          "invoicing in1"
-          "record-bills rb1"
-          "managing-inventory mi1"
-          "multi-currency mc1"
-          "gst g1"
-          "reports r1"
-          "dashboard rd1"
-          "user-access ua1"
-          "bank br1"
-          "manufacturing m1"
-          "icici ic1"
-          "e-commerce ecom1"
-          "telecom tc1"
-          "warehouse w1"
-          "easy-import imex1"
-          "financial fy1"
-          "security s1"
-          "support sp1"
           
           "birch birch"
           "b2 b2"
           "transactions_2 t2"
           "companies_2 c2"
           "accountant_consultant_2 ac2"
-          "customers_vendors_2 cv2"
           "desktop_mobile_app_2 d2"
+          "user-access_2 ua2"
+          "security_2 s2"
+          "customers_vendors_2 cv2"
           "invoicing_2 in2"
           "record-bills_2 rb2"
           "managing-inventory_2 mi2"
+          "journal-entry_2 je2"
           "multi-currency_2 mc2"
           "gst_2 g2"
           "reports_2 r2"
           "dashboard_2 rd2"
-          "user-access_2 ua2"
           "bank_2 br2"
           "manufacturing_2 m2"
           "icici_2 ic2"
@@ -1421,7 +1374,6 @@
           "warehouse_2 w2"
           "easy-import_2 imex2"
           "financial_2 fy2"
-          "security_2 s2"
           "support_2 sp2"
 
           "oak oak"
@@ -1429,16 +1381,18 @@
           "transactions_3 t3"
           "companies_3 c3"
           "accountant_consultant_3 ac3"
-          "customers_vendors_3 cv3"
           "desktop_mobile_app_3 d3"
+          "user-access_3 ua3"
+          "security_3 s3"
+          "customers_vendors_3 cv3"
           "invoicing_3 in3"
           "record-bills_3 rb3"
           "managing-inventory_3 mi3"
+          "journal-entry_3 je3"
           "multi-currency_3 mc3"
           "gst_3 g3"
           "reports_3 r3"
           "dashboard_3 rd3"
-          "user-access_3 ua3"
           "bank_3 br3"
           "manufacturing_3 m3"
           "icici_3 ic3"
@@ -1447,7 +1401,6 @@
           "warehouse_3 w3"
           "easy-import_3 imex3"
           "financial_3 fy3"
-          "security_3 s3"
           "support_3 sp3"
 
           "vine vine"
@@ -1455,16 +1408,18 @@
           "transactions_4 t4"
           "companies_4 c4"
           "accountant_consultant_4 ac4"
-          "customers_vendors_4 cv4"
           "desktop_mobile_app_4 d4"
+          "user-access_4 ua4"
+          "security_4 s4"
+          "customers_vendors_4 cv4"
           "invoicing_4 in4"
           "record-bills_4 rb4"
           "managing-inventory_4 mi4"
+          "journal-entry_4 je4"
           "multi-currency_4 mc4"
           "gst_4 g4"
           "reports_4 r4"
           "dashboard_4 rd4"
-          "user-access_4 ua4"
           "bank_4 br4"
           "manufacturing_4 m4"
           "icici_4 ic4"
@@ -1473,7 +1428,6 @@
           "warehouse_4 w4"
           "easy-import_4 imex4"
           "financial_4 fy4"
-          "security_4 s4"
           "support_4 sp4"
           
           "link_all_feature link_all_feature"
@@ -1483,61 +1437,33 @@
         
         grid-template-rows:
           minmax(350px, auto) 60px
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
-          auto 60px 50px 50px 50px 50px 50px minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto minmax(60px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto minmax(60px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto minmax(60px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
+          auto minmax(60px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto) minmax(50px,auto)
           50px;
         grid-template-columns: 50% 50%;
         grid-template-areas:
           "title title"
           "logo logo"
 
-          "trial trial"
-          "b1 b1"
-          "transactions t1"
-          "companies c1"
-          "accountant_consultant ac1"
-          "customers_vendors cv1"
-          "desktop_mobile_app d1"
-          "invoicing in1"
-          "record-bills rb1"
-          "managing-inventory mi1"
-          "multi-currency mc1"
-          "gst g1"
-          "reports r1"
-          "dashboard rd1"
-          "user-access ua1"
-          "bank br1"
-          "manufacturing m1"
-          "e-invoice ei1"
-          "eway-bill ewb1"
-          "icici ic1"
-          "e-commerce ecom1"
-          "telecom tc1"
-          "warehouse w1"
-          "easy-import imex1"
-          "financial fy1"
-          "security s1"
-          "support sp1"
-
-
           "birch birch"
           "b2 b2"
           "transactions_2 t2"
           "companies_2 c2"
           "accountant_consultant_2 ac2"
-          "customers_vendors_2 cv2"
           "desktop_mobile_app_2 d2"
+          "user-access_2 ua2"
+          "security_2 s2"
+          "customers_vendors_2 cv2"
           "invoicing_2 in2"
           "record-bills_2 rb2"
           "managing-inventory_2 mi2"
+          "journal-entry_2 je2"
           "multi-currency_2 mc2"
           "gst_2 g2"
           "reports_2 r2"
           "dashboard_2 rd2"
-          "user-access_2 ua2"
           "bank_2 br2"
           "manufacturing_2 m2"
           "e-invoice_2 ei2"
@@ -1548,7 +1474,6 @@
           "warehouse_2 w2"
           "easy-import_2 imex2"
           "financial_2 fy2"
-          "security_2 s2"
           "support_2 sp2"
 
           "oak oak"
@@ -1556,16 +1481,18 @@
           "transactions_3 t3"
           "companies_3 c3"
           "accountant_consultant_3 ac3"
-          "customers_vendors_3 cv3"
           "desktop_mobile_app_3 d3"
+          "user-access_3 ua3"
+          "security_3 s3"
+          "customers_vendors_3 cv3"
           "invoicing_3 in3"
           "record-bills_3 rb3"
           "managing-inventory_3 mi3"
+          "journal-entry_3 je3"
           "multi-currency_3 mc3"
           "gst_3 g3"
           "reports_3 r3"
           "dashboard_3 rd3"
-          "user-access_3 ua3"
           "bank_3 br3"
           "manufacturing_3 m3"
           "e-invoice_3 ei3"
@@ -1576,7 +1503,6 @@
           "warehouse_3 w3"
           "easy-import_3 imex3"
           "financial_3 fy3"
-          "security_3 s3"
           "support_3 sp3"
 
           "vine vine"
@@ -1584,16 +1510,18 @@
           "transactions_4 t4"
           "companies_4 c4"
           "accountant_consultant_4 ac4"
-          "customers_vendors_4 cv4"
           "desktop_mobile_app_4 d4"
+          "user-access_4 ua4"
+          "security_4 s4"
+          "customers_vendors_4 cv4"
           "invoicing_4 in4"
           "record-bills_4 rb4"
           "managing-inventory_4 mi4"
+          "journal-entry_4 je4"
           "multi-currency_4 mc4"
           "gst_4 g4"
           "reports_4 r4"
           "dashboard_4 rd4"
-          "user-access_4 ua4"
           "bank_4 br4"
           "manufacturing_4 m4"
           "e-invoice_4 ei4"
@@ -1604,7 +1532,6 @@
           "warehouse_4 w4"
           "easy-import_4 imex4"
           "financial_4 fy4"
-          "security_4 s4"
           "support_4 sp4"
 
           "sequoia sequoia"
@@ -1612,16 +1539,18 @@
           "transactions_5 t5"
           "companies_5 c5"
           "accountant_consultant_5 ac5"
-          "customers_vendors_5 cv5"
           "desktop_mobile_app_5 d5"
+          "user-access_5 ua5"
+          "security_5 s5"
+          "customers_vendors_5 cv5"
           "invoicing_5 in5"
           "record-bills_5 rb5"
           "managing-inventory_5 mi5"
+          "journal-entry_5 je5"
           "multi-currency_5 mc5"
           "gst_5 g5"
           "reports_5 r5"
           "dashboard_5 rd5"
-          "user-access_5 ua5"
           "bank_5 br5"
           "manufacturing_5 m5"
           "e-invoice_5 ei5"
@@ -1632,7 +1561,6 @@
           "warehouse_5 w5"
           "easy-import_5 imex5"
           "financial_5 fy5"
-          "security_5 s5"
           "support_5 sp5"
 
           "link_all_feature link_all_feature"
@@ -1645,6 +1573,34 @@
       &__link_all_feature,
       &__extra_charges {
         text-align: center;
+      }
+      &__transactions,
+      &__companies,
+      &__accountant_consultant,
+      &__customers_vendors,
+      &__desktop_mobile_app,
+      &__invoicing,
+      &__record-bills,
+      &__managing-inventory,
+      &__multi-currency,
+      &__gst,
+      &__reports,
+      &__dashboard,
+      &__user-access,
+      &__bank,
+      &__manufacturing,
+      &__e-invoice,
+      &__eway-bill,
+      &__icici,
+      &__e-commerce,
+      &__telecom,
+      &__warehouse,
+      &__easy-import,
+      &__financial,
+      &__security,
+      &__support,
+      &__journal-entry{
+        display: none !important;
       }
       &__transactions_2,
       &__transactions_3,
@@ -1749,149 +1705,130 @@
       &__support_2,
       &__support_3,
       &__support_4,
-      &__support_5  {
+      &__support_5,
+      &__journal-entry_2,
+      &__journal-entry_3,
+      &__journal-entry_4,
+      &__journal-entry_5  {
         display: flex;
         align-items: center;
         height: 100%;
         border-top: 1px solid #dee2e6;
       }
-      &__trial,
       &__birch,
       &__oak,
       &__vine,
       &__sequoia,
-      &__b1,
       &__b2,
       &__b3,
       &__b4,
       &__b5 {
         background-color: inherit;
       }      
-      &__t1,
       &__t2,
       &__t3,
       &__t4,
       &__t5,
-      &__c1,
       &__c2,
       &__c3,
       &__c4,
       &__c5,
-      &__ac1,
       &__ac2,
       &__ac3,
       &__ac4,
       &__ac5,
-      &__cv1,
       &__cv2,
       &__cv3,
       &__cv4,
       &__cv5,
-      &__d1,
       &__d2,
       &__d3,
       &__d4,
       &__d5,
-      &__in1,
       &__in2,
       &__in3,
       &__in4,
       &__in5,
-      &__rb1,
       &__rb2,
       &__rb3,
       &__rb4,
       &__rb5,
-      &__mi1,
       &__mi2,
       &__mi3,
       &__mi4,
       &__mi5,
-      &__mc1,
       &__mc2,
       &__mc3,
       &__mc4,
       &__mc5,
-      &__g1,
       &__g2,
       &__g3,
       &__g4,
       &__g5,
-      &__r1,
       &__r2,
       &__r3,
       &__r4,
       &__r5,
-      &__rd1,
       &__rd2,
       &__rd3,
       &__rd4,
       &__rd5,
-      &__ua1,
       &__ua2,
       &__ua3,
       &__ua4,
       &__ua5,
-      &__br1,
       &__br2,
       &__br3,
       &__br4,
       &__br5,
-      &__m1,
       &__m2,
       &__m3,
       &__m4,
       &__m5,
-      &__ei1,
       &__ei2,
       &__ei3,
       &__ei4,
       &__ei5,
-      &__ewb1,
       &__ewb2,
       &__ewb3,
       &__ewb4,
       &__ewb5,
-      &__ic1,
       &__ic2,
       &__ic3,
       &__ic4,
       &__ic5,
-      &__ecom1,
       &__ecom2,
       &__ecom3,
       &__ecom4,
       &__ecom5,
-      &__tc1,
       &__tc2,
       &__tc3,
       &__tc4,
       &__tc5,
-      &__w1,
       &__w2,
       &__w3,
       &__w4,
       &__w5,
-      &__imex1,
       &__imex2,
       &__imex3,
       &__imex4,
       &__imex5,
-      &__fy1,
       &__fy2,
       &__fy3,
       &__fy4,
       &__fy5,
-      &__s1,
       &__s2,
       &__s3,
       &__s4,
       &__s5,
-      &__sp1,
       &__sp2,
       &__sp3,
       &__sp4,
-      &__sp5 {
+      &__sp5,
+      &__je2,
+      &__je3,
+      &__je4,
+      &__je5  {
         background-color: var(--col-white);
         height: 100%;
         display: flex;
