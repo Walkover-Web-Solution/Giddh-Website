@@ -1,6 +1,6 @@
-const config = require('../../../components/lib/config');
-const { countPosts, listPostContent } = require("../../../components/lib/posts");
-const { getTag, listTags } = require("../../../components/lib/tags");
+const config = require('../../../components/blogs/lib/config');
+const { countPosts, listPostContent } = require("../../../components/blogs/lib/posts");
+const { getTag, listTags } = require("../../../components/blogs/lib/tags");
 import Pagination from "../../../components/blogs/pagination";
 import { useRouter } from "next/router";
 import PostItem from "../../../components/blogs/postItem";
@@ -13,7 +13,6 @@ export default function Index({ posts, tag, pagination, page }) {
  const handleClick = () =>{
    router.back();
  }
-  const url = `/blog/tags/${tag}` + (page ? `/${page}` : "");
 //   const title = tag.name; 
   return (
       <>

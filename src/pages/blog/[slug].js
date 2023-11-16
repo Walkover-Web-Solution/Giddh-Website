@@ -1,21 +1,18 @@
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import * as fs from "fs";
-import { fetchPostContent } from "../../components/lib/posts";
+import { fetchPostContent } from "../../components/blogs/lib/posts";
 import yaml from "js-yaml";
 import matter from "gray-matter";
 import Head from "next/head";
 import { format } from "date-fns";
 import { useRouter } from "next/router";
-import { getTag } from "@/components/lib/tags";
+import { getTag } from "@/components/blogs/lib/tags";
 import TagButton from "@/components/blogs/tags/tagButton";
 import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
-// const components = { Test }
 const component = { ReactPlayer };
 
-// import { SocialList } from '@/components/socialList';
-// const components = { Test }
 import { MdKeyboardArrowLeft } from "react-icons/md";
 
 const slugToPostContent = ((postContents) => {
@@ -32,7 +29,8 @@ const slugToPostContent = ((postContents) => {
 export default function TestPage({ source, title, date, author, tags }) {
   const router = useRouter();
 
-  const handleClick = () => {
+  const handleClick = (event) => {
+    event.preventDefault();
     router.back();
   };
   return (
@@ -42,19 +40,18 @@ export default function TestPage({ source, title, date, author, tags }) {
         <meta property="og:title" content={`Explore the world of ${title} Through our blog and stay informed about the latest developments, expert insights, and valuable tips that matter most. visit at GIDHH -The Best Accounting Software`} key="title" />
       </Head>
       <div className="wrapper container blog-container">
-        <a
-          className="mb-3 d-inline-block btn blog-container__back-btn"
-          href="javascript:void(0)"
-          onClick={handleClick}
-        >
-          <MdKeyboardArrowLeft /> Back
-        </a>
+       <a
+        className="mb-3 d-inline-block btn blog-container__back-btn"
+        href="#"
+        onClick={(event) => handleClick(event)}
+       >
+        <MdKeyboardArrowLeft /> Back
+       </a>
         <div className="blog-header mt-4">
           <div>
             {author}, {date}
           </div>
           <h1>{title}</h1>
-          {/* {thumbnailImage !=="" && <img className="" src={thumbnailImage} alt={author} />} */}
         </div>
         <div className="body">
           <MDXRemote {...source} components={component} />

@@ -1,12 +1,9 @@
-import { listPostContent, countPosts } from "../../../components/lib/posts";
-// import { listTags } from "../../../components/lib/tags";
+import { listPostContent, countPosts } from "../../../components/blogs/lib/posts";
 import Layout from "../../../components/blogs/layout";
 import PostList from "../../../components/blogs/postList";
-import config from "../../../components/lib/config";
-// import TagPostList from '@/components/tagPostList';
+import config from "../../../components/blogs/lib/config";
 import Head from "next/head";
-export default function Index({ posts, tags, pagination }) {
-  const url = "/blog";
+export default function Index({ posts, pagination }) {
   const title = "All You Need to Know About Online Accounting Software by Giddh";
   return (
     <>
@@ -14,8 +11,7 @@ export default function Index({ posts, tags, pagination }) {
       <Head>
         <title>{title}</title>
       </Head>
-        <PostList posts={posts} tags={tags} pagination={pagination} />
-        {/* <TagPostList post ={posts} tags={tags} pagination={pagination} /> */}
+        <PostList posts={posts} pagination={pagination} />
       </Layout>
     </>
   );
@@ -32,7 +28,6 @@ export async function getStaticProps({ params }) {
     props: {
       page,
       posts,
-      // tags,
       pagination,
     },
   };
