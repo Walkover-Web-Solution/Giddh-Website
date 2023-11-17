@@ -1,22 +1,6 @@
 import { MdClose } from "react-icons/md";
-import { Modal } from "bootstrap";
-import { useEffect, useState } from "react";
-
 const featureGalleryModal = (props) => {  
   const link = props.path;
-  var featureGalleryModal;
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    if (!isModalOpen) {
-      setIsModalOpen(true);
-      featureGalleryModal = new Modal(document.getElementById("featureModal"), {
-        backdrop: "static",
-        keyboard: false,
-      });
-      featureGalleryModal.toggle();
-    }
-  });
 
   return (
     <>
@@ -35,7 +19,6 @@ const featureGalleryModal = (props) => {
                 className="btn col-blue ms-auto p-0"
                 data-bs-dismiss="modal"
                 aria-label="Close"
-                onClick={() => props.hideFeatureGalleryModal()}
               >
                 <MdClose />
               </button>
