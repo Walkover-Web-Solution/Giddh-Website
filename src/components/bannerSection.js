@@ -46,7 +46,7 @@ const bannerSection = () => {
                 <img
                   width="700"
                   height="auto"
-                  src="/img/giddh-dashboard-within-chrome-browser-2.png"
+                  src="/img/giddh-dashboard-within-chrome-browser.png"
                   alt="Laptop image with giddh.com dashboard screen"
                 />
               </figure>
