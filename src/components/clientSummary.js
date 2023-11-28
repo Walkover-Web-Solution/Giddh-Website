@@ -14,12 +14,7 @@ const clientSummary = () => {
       clientName: "Mitti",
       clientLogo: "/mitti-logo.png",
       websiteLink: "https://mitti.cafe/",
-    },
-    {
-      clientName: "Half Kg",
-      clientLogo: "/halfkg-logo.svg",
-      websiteLink: "https://halfkg.store/",
-    },
+    }
   ];
 
   return (
@@ -30,7 +25,7 @@ const clientSummary = () => {
             Our few clients
           </h2>
           <div className="client-summary__content-wrapper">
-            <div className="row row-gap-5 ">
+            <div className="row row-gap-3 justify-content-center">
               {ourClient.map((res) => {
                 return (
                   <div

@@ -259,10 +259,10 @@ const eInvoice = () => {
                         aria-expanded="false"
                         aria-controls="collapseOne"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What is e-invoicing?
@@ -294,10 +294,10 @@ const eInvoice = () => {
                         aria-expanded="false"
                         aria-controls="collapseTwo"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What is the applicability of e-invoicing?
@@ -334,10 +334,10 @@ const eInvoice = () => {
                         aria-expanded="false"
                         aria-controls="collapseThree"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What does an e-invoice look like?
@@ -370,10 +370,10 @@ const eInvoice = () => {
                         aria-expanded="false"
                         aria-controls="collapseFour"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What is the e-invoice Registration Portal (IRP)?
@@ -405,10 +405,10 @@ const eInvoice = () => {
                         aria-expanded="false"
                         aria-controls="collapseFive"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What is an Invoice Reference Number (IRN)?
@@ -438,10 +438,10 @@ const eInvoice = () => {
                         aria-expanded="false"
                         aria-controls="collapseSix"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What is the end-to-end workflow of an e-invoice like?
@@ -489,10 +489,10 @@ const eInvoice = () => {
                         aria-expanded="false"
                         aria-controls="collapseSeven"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         Is e-invoicing available in all Giddh plans?

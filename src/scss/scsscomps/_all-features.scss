@@ -71,7 +71,7 @@
   }
 
   &__suggestion_container {
-    padding: 64px 0;
+    padding: 64px 0 16px 0;
 
     &__links {
       a {
@@ -83,7 +83,7 @@
     }
   }
   &__accordion_container {
-    padding-bottom: 3rem;
+    padding: 3rem 0;
     .accordion {
       margin: 0 auto;
       .accordion-item {
@@ -103,22 +103,22 @@
         }
 
         &.collapsed {
-          .collapse_icon--open {
+          .collapse-icon--open {
             display: inline-block;
           }
-          .collapse_icon--close {
+          .collapse-icon--close {
             display: none !important;
           }
         }
         &:not(.collapsed) {
-          .collapse_icon--open {
+          .collapse-icon--open {
             display: none !important;
           }
-          .collapse_icon--close {
+          .collapse-icon--close {
             display: inline-block !important;
           }
         }
-        .collapse_icon {
+        .collapse-icon {
           width: 30px;
           height: 30px;
           min-width: 30px;

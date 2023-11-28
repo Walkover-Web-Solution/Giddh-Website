@@ -261,10 +261,10 @@ const importExeclFiles = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseOne"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What are the three golden rules of accounting?
@@ -299,10 +299,10 @@ const importExeclFiles = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseTwo"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         How do I import Excel data into accounting software?
@@ -335,10 +335,10 @@ const importExeclFiles = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseThree"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         Is Excel an accounting system?
@@ -373,10 +373,10 @@ const importExeclFiles = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseFour"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What are the disadvantages of using Excel for
@@ -434,10 +434,10 @@ const importExeclFiles = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseFive"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         How does integrating a bank account with Giddh benefit

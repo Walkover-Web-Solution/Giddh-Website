@@ -53,7 +53,7 @@ const allFeatures = (path) => {
           <div className="row">
             <div className="col">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card text-center"
                 href={link + "/inventory-management-software"}
               >
                 <figure>
@@ -73,7 +73,7 @@ const allFeatures = (path) => {
             </div>
             <div className="col">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card text-center"
                 href={link + "/invoice-software"}
               >
                 <figure>
@@ -93,7 +93,7 @@ const allFeatures = (path) => {
             </div>
             <div className="col">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card text-center"
                 href={link + "/cloud-accounting-software"}
               >
                 <figure>
@@ -113,7 +113,7 @@ const allFeatures = (path) => {
             </div>
             <div className="col">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card text-center"
                 href={link + "/conect-bank-reconcile"}
               >
                 <figure>
@@ -140,7 +140,7 @@ const allFeatures = (path) => {
 
             <div className="col">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card text-center"
                 href={link + "/multi-currency-accounting-software"}
               >
                 <figure>
@@ -159,7 +159,7 @@ const allFeatures = (path) => {
               </a>
             </div>
             <div className="col">
-              <a className="feature-gallery__card" href={link + "/import-data"}>
+              <a className="feature-gallery__card text-center" href={link + "/import-data"}>
                 <figure>
                   <img
                     src="/img/feature-excel.svg"
@@ -177,7 +177,7 @@ const allFeatures = (path) => {
             </div>
             {isIndia ? (
               <div className="col">
-                <a className="feature-gallery__card" href={link + "/gst"}>
+                <a className="feature-gallery__card text-center" href={link + "/gst"}>
                   <figure>
                     <img
                       src="/img/feature-tax.svg"
@@ -197,7 +197,7 @@ const allFeatures = (path) => {
 
             {isAE || isUK ? (
               <div className="col">
-                <a className="feature-gallery__card" href={link + "/vat"}>
+                <a className="feature-gallery__card text-center" href={link + "/vat"}>
                   <figure>
                     <img
                       src="/img/vat-filling.svg"
@@ -215,7 +215,7 @@ const allFeatures = (path) => {
             {isAE || isUK ? (
               <div className="col">
                 <a
-                  className="feature-gallery__card"
+                  className="feature-gallery__card text-center"
                   href={link + "/financial-reporting"}
                 >
                   <figure>
@@ -235,7 +235,7 @@ const allFeatures = (path) => {
             {isIndia ? (
               <div className="col">
                 <a
-                  className="feature-gallery__card"
+                  className="feature-gallery__card text-center"
                   href={link + "/financial-reporting"}
                 >
                   <figure>
@@ -257,7 +257,7 @@ const allFeatures = (path) => {
 
             <div className="col">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card text-center"
                 href={link + "/multi-user-accounting-software"}
               >
                 <figure>
@@ -277,7 +277,7 @@ const allFeatures = (path) => {
             </div>
             <div className="col">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card text-center"
                 href={link + "/accounting-dashboard"}
               >
                 <figure>
@@ -298,7 +298,7 @@ const allFeatures = (path) => {
             </div>
             <div className="col">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card text-center"
                 href={link + "/financial-reporting"}
               >
                 <figure>
@@ -318,7 +318,7 @@ const allFeatures = (path) => {
             </div>
             <div className="col">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card text-center"
                 href={link + "/conect-bank-reconcile"}
               >
                 <figure>
@@ -338,7 +338,7 @@ const allFeatures = (path) => {
             </div>
             <div className="col">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card text-center"
                 href="https://apidoc.giddh.com"
                 target="_blank"
               >
@@ -358,7 +358,7 @@ const allFeatures = (path) => {
               </a>
             </div>
             <div className="col">
-              <a className="feature-gallery__card" href={link + "/contacts"}>
+              <a className="feature-gallery__card text-center" href={link + "/contacts"}>
                 <figure>
                   <img
                     src="/img/feature-contact.svg"
@@ -375,7 +375,7 @@ const allFeatures = (path) => {
               </a>
             </div>
             <div className="col">
-              <a className="feature-gallery__card" href={link + "/security"}>
+              <a className="feature-gallery__card text-center" href={link + "/security"}>
                 <figure>
                   <img
                     src="/img/feature-security.svg"
@@ -392,7 +392,7 @@ const allFeatures = (path) => {
               </a>
             </div>
             <div className="col">
-              <a className="feature-gallery__card" href="#footer-contact">
+              <a className="feature-gallery__card text-center" href="#footer-contact">
                 <figure>
                   <img
                     src="/img/feature-support.svg"

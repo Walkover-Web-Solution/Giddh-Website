@@ -246,10 +246,10 @@ const conectBankReconcile = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseOne"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What is bank reconciliation? Why is it done?
@@ -283,10 +283,10 @@ const conectBankReconcile = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseTwo"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What is reconciliation software?
@@ -321,10 +321,10 @@ const conectBankReconcile = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseThree"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         How can Giddh help streamline bank transactions?
@@ -360,10 +360,10 @@ const conectBankReconcile = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseFour"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         How does integrating a bank account with Giddh benefit

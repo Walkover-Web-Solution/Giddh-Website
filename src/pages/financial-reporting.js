@@ -269,10 +269,10 @@ const financialReporting = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseOne"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What is financial reporting software?
@@ -312,10 +312,10 @@ const financialReporting = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseTwo"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What does financial reporting include?
@@ -369,10 +369,10 @@ const financialReporting = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseThree"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What types of reports are available in Giddh?
@@ -427,10 +427,10 @@ const financialReporting = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseFour"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         What are the three objectives of financial reporting?
@@ -475,10 +475,10 @@ const financialReporting = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseFive"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         Does Giddh provide a Balance sheet, P&amp;L and Balance
@@ -511,10 +511,10 @@ const financialReporting = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseSix"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         Can I download or directly share the report to the CA or

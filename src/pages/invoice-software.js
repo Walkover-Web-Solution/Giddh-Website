@@ -526,10 +526,10 @@ const invoiceSoftware = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseOne"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         Does Giddh software support recurring invoicing?
@@ -558,10 +558,10 @@ const invoiceSoftware = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseTwo"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         Are my invoices secure in the Giddh Cloud Invoicing
@@ -595,10 +595,10 @@ const invoiceSoftware = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseThree"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         Are there different template options for the invoices?
@@ -630,10 +630,10 @@ const invoiceSoftware = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseFour"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         Will my invoices look professional?
@@ -665,10 +665,10 @@ const invoiceSoftware = (path) => {
                         aria-expanded="false"
                         aria-controls="collapseFive"
                       >
-                        <span className="me-2 collapse_icon collapse_icon--open">
+                        <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
                         </span>
-                        <span className="me-2 collapse_icon collapse_icon--close">
+                        <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
                         How can I create estimates / proformas and convert them
