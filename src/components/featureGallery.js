@@ -9,7 +9,6 @@ const featureGallery = (path) => {
 
   const link = path.path;
   const [currentData, setCurrentData] = useState(null);
-  const [modalStatus, setModalStatus] = useState(false);
 
   // JSON for Modal
   const indiaModalData = Jsondata.indiaModalData;
@@ -65,9 +64,9 @@ const featureGallery = (path) => {
               <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                 <div
                   className="feature-gallery__card"
+                  data-bs-toggle="modal" data-bs-target="#featureModal"
                   onClick={() => {
-                    setCurrent(data.name);
-                    setModalStatus(true);
+                    setCurrent(data.name);                    
                   }}
                 >
                   <figure>
@@ -93,14 +92,10 @@ const featureGallery = (path) => {
           </div>
         </div>
       </section>
-
-      {modalStatus && (
-        <FeatureGalleryModal
-          path={link}
-          modalData={currentData}
-          hideFeatureGalleryModal={() => setModalStatus(false)}
-        />
-      )}
+      <FeatureGalleryModal
+        path={link}
+        modalData={currentData}
+      />
     </>
   );
 };
