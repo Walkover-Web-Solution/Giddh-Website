@@ -1,6 +1,6 @@
 // const tags = require("../../tags.json");
 // import tags from "../../meta/tags.yml"
-const tags = require("../../meta/tags.json");
+const tags = require("../../../tags-meta/tags.json");
 // import tags from '../../meta/tags.yml';
 
 

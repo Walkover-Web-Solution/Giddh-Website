@@ -28,8 +28,6 @@ const header = (props) => {
         <meta name="description" content={metaData?.description}></meta>
         <link rel="icon" type="image/x-icon" href="/favico.svg"></link>
         <link rel="canonical" href={`https://giddh.com${currentPath}`} />
-        {/* <link rel="alternate" hrefLang="x-default" href="https://giddh.com" />
-        <link rel="alternate" hrefLang={hreflang} href={`https://giddh.com/${country}`} /> */}
         <link rel="alternate" hrefLang="x-default" href={`https://giddh.com${currentPath}`} />
         <link rel="alternate" hrefLang={hreflang} href={`https://giddh.com${currentPath}`} />
 
