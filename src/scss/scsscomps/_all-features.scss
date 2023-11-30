@@ -1,7 +1,7 @@
 .features {
   &__heading_container {
     position: relative;
-    height: 100dvh;
+    height: 70dvh;
     min-height: 500px;
     display: flex;
     flex-direction: column;
@@ -164,6 +164,51 @@
     transition: all 400ms ease;
     &:hover {
       background-color: var(--col-primary);
+    }
+  }
+}
+
+.view-more-btn{
+  padding: 3px 7px;
+  display: inline-block;
+  border: 1px solid var(--col-primary);
+  border-radius: 6px;
+  margin-top: 12px;
+}
+
+#viewMorePopup{
+  .modal-dialog{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    margin: 0;
+    max-width: 100%;
+
+    .modal-content{
+      height: 80vh; 
+
+      .modal-body{    
+        .custom-container{
+          width: 90%;
+          margin: 0 auto;
+        }   
+        .video-wrapper{
+          box-shadow: -3px 4px 13px 3px;
+          overflow: hidden;
+          min-width: 500px;
+          aspect-ratio: 16 / 9;
+          iframe{
+            height: 100%;
+            width: 100%;
+          }
+      }
+      .custom-ul-with-right-tick{
+        li{
+          line-height: 32px;
+        }
+      }
+      }      
     }
   }
 }

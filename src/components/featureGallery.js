@@ -135,13 +135,7 @@ const featureGallery = (path) => {
           <div className="row">
             {countryWiseCardData.map((data, index) => (
               <div className="col-lg-6 col-md-12 col-sm-12" key={index}>
-                <div
-                  className="feature-gallery__card container"
-                  onClick={() => {
-                    setCurrent(data.name);
-                    setModalStatus(true);
-                  }}
-                >
+                <div className="feature-gallery__card container">
                   <div className="row h-100 align-items-start row-gap-3  text-md-start text-sm-center text-center">
                     <div className="col-md-5 col-sm-12 text-center">
                       <figure className="pt-2">

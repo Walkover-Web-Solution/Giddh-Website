@@ -2,27 +2,4 @@
     .container{
         max-width: 1160px !important;
     }
-    .feature-gallery__card{
-        color: var(--col-dark);
-        width: clamp(300px,20vw,350px);
-        min-height: 350px;
-        figure{
-                max-width: 72%;
-                figcaption{
-                    font-size: var(--c-fs-4) !important;
-                    margin-top: 2rem;
-                }
-                p{
-                    margin-top: 10px;
-                }
-        }
-    }
-}
-@media (max-width: 575px) {
-    .all_features{
-        .feature-gallery__card{
-            width: clamp(270px,20vw,350px);
-            min-height: 200px;
-        }      
-    }
 }
