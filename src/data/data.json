@@ -1,0 +1,255 @@
+{
+  "indiaCardData": [
+    {
+      "name": "Invoices",
+      "image": "/feature-invoicing-software.svg",
+      "description":
+        "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
+      "link": "https://giddh.com/invoice-software"
+    },
+    {
+      "name": "Unlimited user access",
+      "image": "/feature-unlimited-user-access.svg",
+      "description":
+        "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
+      "link": "https://giddh.com/multi-user-accounting-software"
+    },
+    {
+      "name": "GST Compliances",
+      "image": "/feature-gst-compliance.svg",
+      "description":
+        "Create GST invoice, view GST reports, direct filing, check filing status and reconcile transactions with the GST portal.",
+      "link": "https://giddh.com/gst"
+    },
+    {
+      "name": "Inventory Management",
+      "image": "/feature-inventory-management.svg",
+      "description":
+        "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, and real-time inventory reports.",
+      "link": "https://giddh.com/inventory-management-software"
+    },
+    {
+      "name": "IP Security",
+      "image": "/feature-ip-security.svg",
+      "description":
+        "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
+      "link": "https://giddh.com/security"
+    }
+  ],
+  "aeCardData": [
+    {
+      "name": "Invoices",
+      "image": "/feature-invoicing-software-with-vat.svg",
+      "description":
+        "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, and access a range of additional functionalities to streamline financial management and enhance business operations.",
+      "link": "https://giddh.com/ae/invoice-software"
+    },
+    {
+      "name": "Unlimited user access",
+      "image": "/feature-unlimited-user-access.svg",
+      "description":
+        "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
+      "link": "https://giddh.com/ae/multi-user-accounting-software"
+    },
+    {
+      "name": "VAT Compliance",
+      "image": "/feature-uae-vat-compliance.svg",
+      "description":
+        "Effortlessly Generate VAT-Compliant Invoices and Access Comprehensive VAT Reports.",
+      "link": "https://giddh.com/ae/vat"
+    },
+    {
+      "name": "Inventory Management",
+      "image": "/feature-inventory-management.svg",
+      "description":
+        "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, and real-time inventory reports.",
+      "link": "https://giddh.com/ae/inventory-management-software"
+    },
+    {
+      "name": "IP Security",
+      "image": "/feature-ip-security.svg",
+      "description":
+        "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
+      "link": "https://giddh.com/ae/security"
+    }
+  ],
+  "ukCardData": [
+    {
+      "name": "Invoices",
+      "image": "/feature-invoicing-software-with-vat.svg",
+      "description":
+        "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
+      "link": "https://giddh.com/uk/invoice-software"
+    },
+    {
+      "name": "Unlimited user access",
+      "image": "/feature-unlimited-user-access.svg",
+      "description":
+        "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
+      "link": "https://giddh.com/uk/multi-user-accounting-software"
+    },
+    {
+      "name": " VAT Compliance",
+      "image": "/feature-uk-vat-compliance.svg",
+      "description":
+        "Generate VAT-Compliant Invoices, Access VAT Reports, Streamline Direct Filing, and Simplify Transaction Reconciliation via VAT Portal.",
+      "link": "https://giddh.com/uk/vat"
+    },
+    {
+      "name": "Inventory Management",
+      "image": "/feature-inventory-management.svg",
+      "description":
+        "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, and real-time inventory reports.",
+      "link": "https://giddh.com/uk/inventory-management-software"
+    },
+    {
+      "name": "IP Security",
+      "image": "/feature-ip-security.svg",
+      "description":
+        "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
+      "link": "https://giddh.com/uk/security"
+    }
+  ],
+  "features": [
+    {
+      "in": false,
+      "uk": true,
+      "ae": true,
+      "menuItem": "VAT",
+      "url": "/vat"
+    },
+    {
+      "in": true,
+      "uk": false,
+      "ae": false,
+      "menuItem": "E-Invoice",
+      "url": "/e-invoice"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Invoicing",
+      "url": "/invoice-software"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Share Data",
+      "url": "/multi-user-accounting-software"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Contacts",
+      "url": "/contacts"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Dashboard",
+      "url": "/accounting-dashboard"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Inventory",
+      "url": "/inventory-management-software"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Security",
+      "url": "/security"
+    },
+    {
+      "in": true,
+      "uk": false,
+      "ae": false,
+      "menuItem": "GST Compliances",
+      "url": "/gst"
+    },
+    {
+      "in": false,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Bank Reconciliation",
+      "url": "/conect-bank-reconcile"
+    },
+    {
+      "in": true,
+      "uk": false,
+      "ae": false,
+      "menuItem": "Bank Reconcile",
+      "url": "/conect-bank-reconcile"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Multi Currency",
+      "url": "/multi-currency-accounting-software"
+    },
+    {
+      "in": true,
+      "uk": false,
+      "ae": false,
+      "menuItem": "ICICI Integration",
+      "url": "/icici-integration"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "API Integration",
+      "url": "https://apidoc.giddh.com"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Anywhere-Anytime",
+      "url": "/cloud-accounting-software"
+    },
+    {
+      "in": true,
+      "uk": false,
+      "ae": false,
+      "menuItem": "Linked Bank Account",
+      "url": "/conect-bank-reconcile"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Import Excel Files",
+      "url": "/import-data"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "Reports & Analysis",
+      "url": "/financial-reporting"
+    },
+    {
+      "in": true,
+      "uk": false,
+      "ae": false,
+      "menuItem": "Sync Tally to Giddh",
+      "url": "/tallyplusgiddh"
+    },
+    {
+      "in": true,
+      "uk": true,
+      "ae": true,
+      "menuItem": "All Features",
+      "url": "/all-features"
+    }
+  ]
+}

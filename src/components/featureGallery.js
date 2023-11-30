@@ -1,121 +1,11 @@
+import Jsondata from '../data/data.json'
+
 const featureGallery = (path) => {
   const link = path.path;
-
-  // JSON for Cards
   //  India
-  let indiaCardData = [
-    {
-      name: "Invoices",
-      image: "/feature-invoicing-software.svg",
-      description:
-        "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
-      link: "invoice-software",
-    },
-    {
-      name: "Unlimited user access",
-      image: "/feature-unlimited-user-access.svg",
-      description:
-        "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
-      link: "multi-user-accounting-software",
-    },
-    {
-      name: "GST Compliances",
-      image: "/feature-gst-compliance.svg",
-      description:
-        "Create GST invoice, view GST reports, direct filing, check filing status and reconcile transactions with the GST portal.",
-      link: "gst",
-    },
-    {
-      name: "Inventory Management",
-      image: "/feature-inventory-management.svg",
-      description:
-        "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, and real-time inventory reports.",
-      link: "inventory-management-software",
-    },
-    {
-      name: "IP Security",
-      image: "/feature-ip-security.svg",
-      description:
-        "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
-      link: "security",
-    },
-  ];
-
-  let aeCardData = [
-    {
-      name: "Invoices",
-      image: "/feature-invoicing-software-with-vat.svg",
-      description:
-        "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, and access a range of additional functionalities to streamline financial management and enhance business operations.",
-      link: "invoice-software",
-    },
-    {
-      name: "Unlimited user access",
-      image: "/feature-unlimited-user-access.svg",
-      description:
-        "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
-      link: "multi-user-accounting-software",
-    },
-    {
-      name: "VAT Compliance",
-      image: "/feature-uae-vat-compliance.svg",
-      description:
-        "Effortlessly Generate VAT-Compliant Invoices and Access Comprehensive VAT Reports.",
-      link: "vat",
-    },
-    {
-      name: "Inventory Management",
-      image: "/feature-inventory-management.svg",
-      description:
-        "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, and real-time inventory reports.",
-      link: "inventory-management-software",
-    },
-    {
-      name: "IP Security",
-      image: "/feature-ip-security.svg",
-      description:
-        "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
-      link: "security",
-    },
-  ];
-
-  let ukCardData = [
-    {
-      name: "Invoices",
-      image: "/feature-invoicing-software-with-vat.svg",
-      description:
-        "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
-      link: "invoice-software",
-    },
-    {
-      name: "Unlimited user access",
-      image: "/feature-unlimited-user-access.svg",
-      description:
-        "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
-      link: "multi-user-accounting-software",
-    },
-    {
-      name: " VAT Compliance",
-      image: "/feature-uk-vat-compliance.svg",
-      description:
-        "Generate VAT-Compliant Invoices, Access VAT Reports, Streamline Direct Filing, and Simplify Transaction Reconciliation via VAT Portal.",
-      link: "vat",
-    },
-    {
-      name: "Inventory Management",
-      image: "/feature-inventory-management.svg",
-      description:
-        "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, and real-time inventory reports.",
-      link: "inventory-management-software",
-    },
-    {
-      name: "IP Security",
-      image: "/feature-ip-security.svg",
-      description:
-        "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
-      link: "security",
-    },
-  ];
+  const indiaCardData = Jsondata.indiaCardData;
+  const aeCardData = Jsondata.aeCardData;
+  const ukCardData = Jsondata.ukCardData;
 
   const countryWiseCardData = link.isIndia
     ? indiaCardData
@@ -152,7 +42,7 @@ const featureGallery = (path) => {
                         <h3 className="c-fw-600 c-fs-4">{data?.name}</h3>
                         <p>{data.description}</p>
                         <a
-                          href={link.linkPrefix + "/" + data?.link}
+                          href={data?.link}
                         >
                           View More
                         </a>

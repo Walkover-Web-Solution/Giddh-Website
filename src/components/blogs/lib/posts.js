@@ -68,9 +68,3 @@ export function listPostContent(page, limit, tag) {
       .filter((it) => !tag || (it.tag && it.tag.includes(tag)))
       .slice((page - 1) * limit, page * limit);
 }
-
-// module.exports = {
-//   fetchPostContent,
-//   countPosts,
-//   listPostContent,
-// };
