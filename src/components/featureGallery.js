@@ -2,10 +2,11 @@ import Jsondata from '../data/data.json'
 
 const featureGallery = (path) => {
   const link = path.path;
-  //  India
+
   const indiaCardData = Jsondata.indiaCardData;
   const aeCardData = Jsondata.aeCardData;
   const ukCardData = Jsondata.ukCardData;
+  const directoryPath = "/img/feature-gallery-icons";
 
   const countryWiseCardData = link.isIndia
     ? indiaCardData
@@ -30,7 +31,7 @@ const featureGallery = (path) => {
                     <div className="col-md-5 col-sm-12 text-center">
                       <figure className="pt-2">
                         <img
-                          src={"/img" + data.image}
+                          src={ directoryPath + data.image}
                           alt="Giddh features Icon"
                           height="auto"
                           width="160"

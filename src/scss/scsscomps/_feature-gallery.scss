@@ -10,7 +10,7 @@
     }
   }
   &--see-more {
-    background: #fff url("/img/explore-all-features-background-image.png") !important;
+    background: #fff url("/img/feature-gallery-icons/explore-all-features-background-image.png") !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     border: none !important;
@@ -64,6 +64,14 @@
   .feature-gallery {
     &__card {
       padding-bottom: 20px;
+      figure{
+        img{
+          height: 120px;
+        }
+      }
+      .view-more-btn                                                                                                                                                                                                            {
+        margin-top: 1.5rem;
+      }
     }
   }
 }

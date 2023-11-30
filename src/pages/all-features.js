@@ -7,6 +7,8 @@ const allFeatures = (path) => {
   const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
 
+  const directoryPath = "/img/feature-gallery-icons";
+
   // All Feature Country Wise Data
   let indiaFeatures = [
     {
@@ -158,7 +160,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       isMoreContent: false,
     },
@@ -281,7 +283,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       isMoreContent: false,
     },
@@ -404,7 +406,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       isMoreContent: false,
     },
@@ -471,7 +473,7 @@ const allFeatures = (path) => {
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
                   <img
-                    src="/img/all-features-banner-image.svg"
+                    src="/img/feature-gallery-icons/all-features-banner-image.svg"
                     alt="giddh features banner image"
                     width="90%"
                   />
@@ -491,7 +493,7 @@ const allFeatures = (path) => {
                     <div className="col-md-5 col-sm-12 text-center">
                       <figure className="pt-2">
                         <img
-                          src={"/img" + item.image}
+                          src={ directoryPath + item.image}
                           alt="Giddh features Icon"
                           height="auto"
                           width="160"
