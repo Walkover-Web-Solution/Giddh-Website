@@ -168,13 +168,6 @@
   }
 }
 
-.view-more-btn {
-  padding: 3px 7px;
-  display: inline-block;
-  border: 1px solid var(--col-primary);
-  border-radius: 6px;
-  margin-top: 12px;
-}
 
 #viewMorePopup {
   .modal-dialog {
@@ -203,7 +196,7 @@
         .video-wrapper {
           box-shadow: 0px 0px 9px 0px;
           overflow: hidden;
-          min-width: 500px;
+          min-width: 240px;
           aspect-ratio: 16 / 9;
           iframe {
             height: 100%;

@@ -11,12 +11,23 @@
   }
   &--see-more {
     background: #fff url("/img/feature-gallery-icons/explore-all-features-background-image.png") !important;
-    background-size: cover !important;
+    background-size: 240px!important;
     background-repeat: no-repeat !important;
+    background-position: 10% 50% !important;
     border: none !important;
     cursor: pointer;
+    &::after{
+      content: 'Explore \A all Features';
+      font-size: var(--c-fs-2);
+      white-space: pre;
+      color: var(--col-dark);
+      width: 130px;
+      margin-left: auto;
+      margin-right: 10%;
+    }
+
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.01);
     }
   }
   &__card {
@@ -48,17 +59,17 @@
     figcaption {
       color: var(--col-primary);
     }
-  }
-}
 
-@media (max-width: 1199px) {
-  .feature-gallery {
-    &--see-more {
-      background-size: contain !important;
-      background-position: center !important;
+    .view-more-btn {
+      padding: 3px 7px;
+      display: inline-block;
+      border: 1px solid var(--col-primary);
+      border-radius: 6px;
+      margin-top: 12px;
     }
   }
 }
+
 
 @media (max-width: 767px) {
   .feature-gallery {

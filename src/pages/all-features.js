@@ -540,6 +540,8 @@ const allFeatures = (path) => {
       <div
         className="modal fade"
         id="viewMorePopup"
+        data-bs-backdrop="static" 
+        data-bs-keyboard="false"
         tabIndex="-1"
         aria-labelledby="viewMorePopupLabel"
         aria-hidden="true"
@@ -553,6 +555,7 @@ const allFeatures = (path) => {
                   className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
+                  onClick={ ()=> { setPopupData({})}}
                 ></button>
               </div>
               <div className="modal-body overflow-auto">
