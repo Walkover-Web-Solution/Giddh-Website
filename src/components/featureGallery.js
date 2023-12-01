@@ -1,101 +1,67 @@
-import { useState } from "react";
-import dynamic from "next/dynamic";
 import Jsondata from '../data/data.json'
-const FeatureGalleryModal = dynamic(() => import("@/components/featureGalleryModal"), {
-  ssr: false
-});
 
 const featureGallery = (path) => {
-
   const link = path.path;
-  const [currentData, setCurrentData] = useState(null);
 
-  // JSON for Modal
-  const indiaModalData = Jsondata.indiaModalData;
-  const ukModalData = Jsondata.ukModalData;
-  const aeModalData = Jsondata.aeModalData;
-
-  // JSON for Cards
-
-  //  India
   const indiaCardData = Jsondata.indiaCardData;
   const aeCardData = Jsondata.aeCardData;
   const ukCardData = Jsondata.ukCardData;
+  const directoryPath = "/img/feature-gallery-icons";
 
-  const countryWiseModalData = link.isIndia
-    ? indiaModalData
-    : link.isAE
-    ? aeModalData
-    : ukModalData;
   const countryWiseCardData = link.isIndia
     ? indiaCardData
     : link.isAE
     ? aeCardData
     : ukCardData;
 
-  // Function to get modal data
-  const setCurrent = (value) => {
-    setCurrentData([]);
-    let matchedObject;
-    for (let i = 0; i < countryWiseModalData.length; i++) {
-      if (
-        countryWiseModalData[i]["heading"].toUpperCase() === value.toUpperCase()
-      ) {
-        matchedObject = countryWiseModalData[i];
-      }
-    }
-    setCurrentData(matchedObject);
-  };
   return (
     <>
       <section className="container-fluid feature-gallery">
         <div className="container">
           <div className="row">
             <div className="feature-gallery__title text-center mb-3">
-              <h2>Features that empower your business</h2>
-              <p className="c-fs-4">
-                Friendly with all other departments Sales, Support, Management
-                etc…
-              </p>
+              <h2>Features that empower your business accounting</h2>
             </div>
           </div>
           <div className="row">
             {countryWiseCardData.map((data, index) => (
-              <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
-                <div
-                  className="feature-gallery__card"
-                  data-bs-toggle="modal" data-bs-target="#featureModal"
-                  onClick={() => {
-                    setCurrent(data.name);                    
-                  }}
-                >
-                  <figure>
-                    <img
-                      src={"/img" + data.image}
-                      alt="Giddh features Icon"
-                      height="50"
-                      width="100"
-                    />
-                    <figcaption className="c-fw-400">{data.name}</figcaption>
-                  </figure>
+              <div className="col-lg-6 col-md-12 col-sm-12" key={index}>
+                <div className="feature-gallery__card container">
+                  <div className="row h-100 align-items-start row-gap-3  text-md-start text-sm-center text-center">
+                    <div className="col-md-5 col-sm-12 text-center">
+                      <figure className="pt-2">
+                        <img
+                          src={ directoryPath + data.image}
+                          alt="Giddh features Icon"
+                          height="auto"
+                          width="160"
+                        />
+                      </figure>
+                    </div>
+                    <div className="col-md-7 col-sm-12">
+                      <div className="pe-4">
+                        <h3 className="c-fw-600 c-fs-4">{data?.name}</h3>
+                        <p>{data.description}</p>
+                        <a
+                          href={data?.link}
+                        >
+                          View More
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="col-lg-6 col-md-12 col-sm-12">
               <a
-                className="feature-gallery__card"
+                className="feature-gallery__card feature-gallery--see-more"
                 href={link.linkPrefix + "/all-features"}
-              >
-                <span className="c-fs-3 col-primary">See More</span>
-              </a>
+              ></a>
             </div>
           </div>
         </div>
       </section>
-      <FeatureGalleryModal
-        path={link}
-        modalData={currentData}
-      />
     </>
   );
 };

@@ -321,7 +321,7 @@ const gst = (path) => {
 
           <div
             className={
-              "row mb-5 pb-5 align-items-center features__description_container--row-odd" +
+              "row pb-5 align-items-center features__description_container--row-odd" +
               (readMoreParagraphStatus3 ? " --read-more" : "")
             }
           >
@@ -455,10 +455,10 @@ const gst = (path) => {
                       aria-expanded="false"
                       aria-controls="collapseOne"
                     >
-                      <span className="me-2 collapse_icon collapse_icon--open">
+                      <span className="me-2 collapse-icon collapse-icon--open">
                         <MdAdd />
                       </span>
-                      <span className="me-2 collapse_icon collapse_icon--close">
+                      <span className="me-2 collapse-icon collapse-icon--close">
                         <MdRemove />
                       </span>
                       What is GST?
@@ -493,10 +493,10 @@ const gst = (path) => {
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                      <span className="me-2 collapse_icon collapse_icon--open">
+                      <span className="me-2 collapse-icon collapse-icon--open">
                         <MdAdd />
                       </span>
-                      <span className="me-2 collapse_icon collapse_icon--close">
+                      <span className="me-2 collapse-icon collapse-icon--close">
                         <MdRemove />
                       </span>
                       what is the GST Number?
@@ -527,10 +527,10 @@ const gst = (path) => {
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      <span className="me-2 collapse_icon collapse_icon--open">
+                      <span className="me-2 collapse-icon collapse-icon--open">
                         <MdAdd />
                       </span>
-                      <span className="me-2 collapse_icon collapse_icon--close">
+                      <span className="me-2 collapse-icon collapse-icon--close">
                         <MdRemove />
                       </span>
                       How to Register for GST?
@@ -613,10 +613,10 @@ const gst = (path) => {
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                      <span className="me-2 collapse_icon collapse_icon--open">
+                      <span className="me-2 collapse-icon collapse-icon--open">
                         <MdAdd />
                       </span>
-                      <span className="me-2 collapse_icon collapse_icon--close">
+                      <span className="me-2 collapse-icon collapse-icon--close">
                         <MdRemove />
                       </span>
                       What is GST Return Filing?
@@ -657,10 +657,10 @@ const gst = (path) => {
                       aria-expanded="false"
                       aria-controls="collapseFive"
                     >
-                      <span className="me-2 collapse_icon collapse_icon--open">
+                      <span className="me-2 collapse-icon collapse-icon--open">
                         <MdAdd />
                       </span>
-                      <span className="me-2 collapse_icon collapse_icon--close">
+                      <span className="me-2 collapse-icon collapse-icon--close">
                         <MdRemove />
                       </span>
                       What are the benefits of using Giddh software for GST

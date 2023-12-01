@@ -1,22 +1,20 @@
-// ======================================== NAVBAR SCSS CODE===============START=====================================
 .navbar {
   z-index: 100;
   top: 0;
   padding-left: 15px !important;
   padding-right: 15px !important;
-  .giddh-logo-svg {
-    fill: var(--col-white);
-  }
+  backdrop-filter: blur(10px);
+
   .website-globe-icon {
     .a {
-      fill: var(--col-white);
+      fill: var(--col-primary);
     }
     .b,
     .d {
       fill: none;
     }
     .b {
-      stroke: var(--col-white);
+      stroke: var(--col-primary);
     }
     .c {
       stroke: none;
@@ -24,7 +22,7 @@
   }
   .navbar-toggler {
     box-shadow: none !important;
-    border: none !important;    
+    border: none !important;
     svg {
       .hamberger_icon {
         stroke: var(--col-white);
@@ -60,7 +58,6 @@
     margin-right: 5%;
     .nav-item {
       .nav-link {
-        color: var(--col-white);
         padding: 15px 14px;
 
         &.chevron_down {
@@ -134,7 +131,7 @@
     padding: 3px 20px;
     margin-left: 30px;
     background-color: transparent;
-    color: var(--col-white);
+    color: var(--col-primary);
     border: 1px solid;
     border-radius: 20px;
     display: inline-block;
@@ -142,9 +139,9 @@
   .signup_page_link {
     padding: 3px 20px;
     margin-left: 15px;
-    background-color: var(--col-white);
-    color: var(--col-primary);
-    border: 1px solid var(--col-white);
+    background-color: var(--col-primary);
+    color: var(--col-white);
+    border: 1px solid var(--col-primary);
     border-radius: 20px;
     display: inline-block;
   }
@@ -237,6 +234,9 @@
 
 @media (max-width: 991px) {
   .navbar {
+    .giddh-logo-svg {
+      fill: var(--col-white);
+    }
     background-color: var(--col-primary) !important;
     box-shadow: none !important;
     min-height: 44px;
@@ -260,10 +260,8 @@
           padding: 8px 10px !important;
           padding-left: 0 !important;
           font-size: 14px !important;
-          &:hover,
-          &.active {
-            color: var(--col-white);
-          }
+          color: var(--col-white);
+        
 
           &--feature-menu {
             &::after {
@@ -379,13 +377,19 @@
         }
       }
       .login_page_link {
+        background-color: transparent;
+        color: var(--col-white) !important;
+        border: 1px solid var(--col-white) ;
+      }
+      .signup_page_link {
         background-color: var(--col-white);
         color: var(--col-primary);
-        border: 1px solid;
+        border: 1px solid var(--col-white);
       }
     }
   }
 }
+
 // Media Query
 @media (max-width: 767px) {
   .navbar {
@@ -416,6 +420,7 @@
     transform: rotate(45deg) translate(12px, -18px);
   }
 }
+
 // Animation for hamberger line 2
 @keyframes toggle-animation-line-2 {
   0% {
@@ -428,4 +433,3 @@
     transform: rotate(-45deg) translate(-17px, 27px);
   }
 }
-// ======================================== NAVBAR SCSS CODE===============END=======================================

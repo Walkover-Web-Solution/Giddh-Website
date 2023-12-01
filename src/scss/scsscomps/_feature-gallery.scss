@@ -1,76 +1,77 @@
-// ========================== Index Page LINK FEATURE GALLERY SCSS CODE==============START===========================
-
 .feature-gallery {
-    background-color: #f9f9f9;
-    padding: 4rem 0 5rem 0;
-    &__title {
-      h2 {
-        color: var(--col-primary);
-      }
-      p {
-        color: #707070;
-      }
+  background-color: #f9f9f9;
+  padding: 4rem 0 5rem 0;
+  &__title {
+    h2 {
+      color: var(--col-primary);
     }
-    &__card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 250px;
-  
-      border: 1px solid #f1f1f1;
-      background: #fff;
-      text-align: center;
-      margin: 30px auto 0 auto !important;
-      padding-top: 20px;
-      padding-bottom: 10px;
-      cursor: pointer;
-      transition: 200ms all cubic-bezier(0.4, 0, 1, 1);
-  
-      &:hover {
-        transform: scale(1.1);
-        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.08);
-      }
-  
-      figure {
-        figcaption {
-          margin-top: 15px;
-          font-size: var(--c-fs-3);
-          font-weight: var(--c-fw-600);
-        }
-      }
-      a,
-      figcaption {
-        color: var(--col-primary);
-      }
+    p {
+      color: #707070;
     }
   }
+  &--see-more {
+    background: #fff url("/img/feature-gallery-icons/explore-all-features-background-image.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    border: none !important;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &__card {
+    min-height: 250px;
+    height: 92%;
+    border: 1px solid #f1f1f1;
+    border-radius: 16px;
+    background: #fff;
+    margin: 30px auto 0 auto !important;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    transition: 200ms all cubic-bezier(0.4, 0, 1, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  // Modal SCSS Code
-  .feature_gallery_modal{
-    .modal-content{
-      padding: 25px;
-      border-radius: 20px;
-      .modal-header{
-        border-bottom: 0;
-        padding: 0;
-        button{
-          position: absolute;
-          right: 0;
-          top: -10px;
-          z-index: 2;
-          border: none !important;
-          svg{
-            font-size: 32px;
-          }
-        }
+    &:hover {
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    figure {
+      figcaption {
+        margin-top: 15px;
+        font-size: var(--c-fs-4);
+        font-weight: var(--c-fw-600);
       }
-      .modal-body{
-        h5{
-          line-height: 35px;
-        }
-      }
-      
+    }
+    a,
+    figcaption {
+      color: var(--col-primary);
     }
   }
-  
-  // ========================== Index Page LINK FEATURE GALLERY SCSS CODE===============END============================
+}
+
+@media (max-width: 1199px) {
+  .feature-gallery {
+    &--see-more {
+      background-size: contain !important;
+      background-position: center !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-gallery {
+    &__card {
+      padding-bottom: 20px;
+      figure{
+        img{
+          height: 120px;
+        }
+      }
+      .view-more-btn                                                                                                                                                                                                            {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
