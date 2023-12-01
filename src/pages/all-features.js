@@ -435,7 +435,7 @@ const allFeatures = (path) => {
     : ukFeatures;
 
   const setCurrentFeatureData = (item) => {
-    setPopupData(item.popupContent);
+    setPopupData(item);
   };
 
   return (
@@ -545,7 +545,7 @@ const allFeatures = (path) => {
         aria-hidden="true"
       >
         <div className="modal-dialog">
-          {popupData?.heading && (
+          {popupData?.popupContent?.heading && (
             <div className="modal-content rounded-0">
               <div className="modal-header py-4 border-0 rounded-0">
                 <button
@@ -555,27 +555,29 @@ const allFeatures = (path) => {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">
+              <div className="modal-body overflow-auto">
                 <div className="custom-container">
                   <div className="row h-100">
                     <div className="col-xl-5 col-lg-12">
                       <div className="mt-2">
                         <h2 className="c-fs-1 col-primary">
-                          {popupData?.heading}
+                          {popupData?.popupContent?.heading}
                         </h2>
                         <span
                           dangerouslySetInnerHTML={{
-                            __html: popupData?.contentText,
+                            __html: popupData?.popupContent?.contentText,
                           }}
                         />
                       </div>
+                      
+                      <a href={popupData?.link} className="learn-more d-inline-block mt-4 mb-5">Learn more about {popupData?.name}</a>
                     </div>
                     <div className="col-xl-7 col-lg-12">
-                      <div className="video-wrapper mt-2 mx-auto">
+                      <div className="video-wrapper mt-2 mx-auto mb-4">
                         <iframe
                           width="100%"
                           height="100%"
-                          src={`${popupData?.videoLink}&rel=0&autoplay=0`}
+                          src={`${popupData?.popupContent?.videoLink}&rel=0&autoplay=1`}
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowFullScreen
