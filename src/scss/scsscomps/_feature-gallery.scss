@@ -86,3 +86,20 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .feature-gallery{
+    &--see-more {
+      background-size: 140px !important;
+      background-position: 50% 25% !important;
+      &::after{
+        content: "Explore all Features";
+        font-size: var(--c-fs-3);
+        width: 100%;
+        margin-right: 50%;
+        margin-left: 50%;
+        margin-top: auto;
+      }
+    }
+  }
+}

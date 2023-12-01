@@ -576,7 +576,7 @@ const allFeatures = (path) => {
                       <a href={popupData?.link} className="learn-more d-inline-block mt-4 mb-5">Learn more about {popupData?.name}</a>
                     </div>
                     <div className="col-xl-7 col-lg-12">
-                      <div className="video-wrapper mt-2 mx-auto mb-4">
+                      <div className="video-wrapper mt-2 mx-auto">
                         <iframe
                           width="100%"
                           height="100%"

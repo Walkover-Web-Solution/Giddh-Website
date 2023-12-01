@@ -340,4 +340,16 @@
       }
     }
   }
+
+  #viewMorePopup {
+    .modal-dialog { 
+      .modal-content { 
+        .modal-body {       
+          .video-wrapper {
+            margin-bottom: 80px;
+          }       
+        }
+      }
+    }
+  }
 }
