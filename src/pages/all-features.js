@@ -17,7 +17,7 @@ const allFeatures = (path) => {
       description:
         "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
       link: "https://giddh.com/invoice-software",
-      isMoreContent: true,
+      hasMoreContent: true,
       popupContent: {
         heading: "Effortless Invoicing Solutions",
         contentText: `
@@ -37,7 +37,7 @@ const allFeatures = (path) => {
       description:
         "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
       link: "https://giddh.com/multi-user-accounting-software",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "IP Security",
@@ -45,7 +45,7 @@ const allFeatures = (path) => {
       description:
         "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
       link: "https://giddh.com/security",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "GST compliance",
@@ -53,7 +53,7 @@ const allFeatures = (path) => {
       description:
         "Create GST invoice, view GST reports, direct filing, check filing status and reconcile transaction with the GST portal.",
       link: "https://giddh.com/gst",
-      isMoreContent: true,
+      hasMoreContent: true,
       popupContent: {
         heading: "Simplify Your GST Compliance",
         contentText: `
@@ -73,7 +73,7 @@ const allFeatures = (path) => {
       description:
         "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, real-time inventory reports.",
       link: "https://giddh.com/inventory-management-software",
-      isMoreContent: true,
+      hasMoreContent: true,
       popupContent: {
         heading: "Efficiently manage your entire business inventory",
         contentText: `
@@ -93,7 +93,7 @@ const allFeatures = (path) => {
       description:
         "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates.",
       link: "https://giddh.com/multi-currency-accounting-software",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Invoice on whatsapp, Email, and SMS",
@@ -101,7 +101,7 @@ const allFeatures = (path) => {
       description:
         "You can efficiently send invoices through various channels like WhatsApp, email, and SMS directly from your accounting software.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Journal Entries",
@@ -109,7 +109,7 @@ const allFeatures = (path) => {
       description:
         "GIDDH offers a Ledger-Based Journal Entry feature, allowing users to directly input entries into the company's ledger (Accounts). This feature provides real-time updates on account balances, eliminating the need to navigate to separate pages for checking balances after posting entries.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Bank reconciliation",
@@ -117,7 +117,7 @@ const allFeatures = (path) => {
       description:
         "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
       link: "https://giddh.com/conect-bank-reconcile",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Shopify Integration",
@@ -125,7 +125,7 @@ const allFeatures = (path) => {
       description:
         "Provides Shopify Integration with Giddh that streamlines sales data, automates order and payment sync for accurate financial records. It offers real-time insights into revenue, inventory, and customer data, enhancing efficiency and enabling informed decision-making for business growth.",
       link: null,
-      isMoreContent: true,
+      hasMoreContent: true,
       popupContent: {
         heading: "Integrate with Shopify: Simplifying Connectivity",
         contentText: `
@@ -146,7 +146,7 @@ const allFeatures = (path) => {
       description:
         "An audit trail in Giddh, logs all transactions, enabling a detailed record of changes, enhancing accountability, and facilitating error detection for regulatory compliance and transparency.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Date range security",
@@ -154,7 +154,7 @@ const allFeatures = (path) => {
       description:
         "Giddh's date range security feature enables setting user-specific date restrictions, ensuring confidential data access only within defined periods. This controls financial data access, maintaining privacy and limiting unauthorized entry to sensitive information.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Multiple Reports",
@@ -162,7 +162,7 @@ const allFeatures = (path) => {
       description:
         "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Fixed Asset Management",
@@ -170,7 +170,7 @@ const allFeatures = (path) => {
       description:
         "Giddh's Fixed Asset Management streamlines the oversight and control of fixed assets, allowing for categorization into Groups, Stock, and variants. This feature offers real-time reports, enabling efficient monitoring and strategic asset management for your business.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Branch and warehouse management",
@@ -178,7 +178,7 @@ const allFeatures = (path) => {
       description:
         "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
   ];
 
@@ -189,7 +189,7 @@ const allFeatures = (path) => {
       description:
         "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, and access a range of additional functionalities to streamline financial management and enhance business operations.",
       link: "https://giddh.com/ae/invoice-software",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Unlimited user access",
@@ -197,7 +197,7 @@ const allFeatures = (path) => {
       description:
         "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
       link: "https://giddh.com/ae/multi-user-accounting-software",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "IP Security",
@@ -205,7 +205,7 @@ const allFeatures = (path) => {
       description:
         "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
       link: "https://giddh.com/ae/security",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "VAT compliance",
@@ -213,7 +213,7 @@ const allFeatures = (path) => {
       description:
         " Effortlessly Generate VAT-Compliant Invoices and Access Comprehensive VAT Reports.",
       link: "https://giddh.com/ae/vat",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Inventory Management",
@@ -221,7 +221,7 @@ const allFeatures = (path) => {
       description:
         "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, real-time inventory reports.",
       link: "https://giddh.com/ae/inventory-management-software",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Multi-currency",
@@ -229,7 +229,7 @@ const allFeatures = (path) => {
       description:
         "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates.",
       link: "https://giddh.com/ae/multi-currency-accounting-software",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Invoice on whatsapp, Email, and SMS",
@@ -237,7 +237,7 @@ const allFeatures = (path) => {
       description:
         "You can efficiently send invoices through various channels like WhatsApp, email, and SMS directly from your accounting software.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Journal Entries",
@@ -245,7 +245,7 @@ const allFeatures = (path) => {
       description:
         "GIDDH offers a Ledger-Based Journal Entry feature, allowing users to directly input entries into the company's ledger (Accounts). This feature provides real-time updates on account balances, eliminating the need to navigate to separate pages for checking balances after posting entries.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Bank reconciliation",
@@ -253,7 +253,7 @@ const allFeatures = (path) => {
       description:
         "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
       link: "https://giddh.com/ae/conect-bank-reconcile",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Shopify Integration",
@@ -261,7 +261,7 @@ const allFeatures = (path) => {
       description:
         "Provides Shopify Integration with Giddh that streamlines sales data, automates order and payment sync for accurate financial records. It offers real-time insights into revenue, inventory, and customer data, enhancing efficiency and enabling informed decision-making for business growth.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Audit Trail",
@@ -269,7 +269,7 @@ const allFeatures = (path) => {
       description:
         "An audit trail in Giddh, logs all transactions, enabling a detailed record of changes, enhancing accountability, and facilitating error detection for regulatory compliance and transparency.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Date range security",
@@ -277,7 +277,7 @@ const allFeatures = (path) => {
       description:
         "Giddh's date range security feature enables setting user-specific date restrictions, ensuring confidential data access only within defined periods. This controls financial data access, maintaining privacy and limiting unauthorized entry to sensitive information.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Multiple Reports",
@@ -285,7 +285,7 @@ const allFeatures = (path) => {
       description:
         "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Fixed Asset Management",
@@ -293,7 +293,7 @@ const allFeatures = (path) => {
       description:
         "Giddh's Fixed Asset Management streamlines the oversight and control of fixed assets, allowing for categorization into Groups, Stock, and variants. This feature offers real-time reports, enabling efficient monitoring and strategic asset management for your business.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Branch and warehouse management",
@@ -301,7 +301,7 @@ const allFeatures = (path) => {
       description:
         "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
   ];
 
@@ -312,7 +312,7 @@ const allFeatures = (path) => {
       description:
         "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
       link: "https://giddh.com/uk/invoice-software",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Unlimited user access",
@@ -320,7 +320,7 @@ const allFeatures = (path) => {
       description:
         "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
       link: "https://giddh.com/uk/multi-user-accounting-software",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "IP Security",
@@ -328,7 +328,7 @@ const allFeatures = (path) => {
       description:
         "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
       link: "https://giddh.com/uk/security",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "VAT compliance",
@@ -336,7 +336,7 @@ const allFeatures = (path) => {
       description:
         "Generate VAT-Compliant Invoices, Access VAT Reports, Streamline Direct Filing, and Simplify Transaction Reconciliation via VAT Portal.",
       link: "https://giddh.com/uk/vat",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Inventory Management",
@@ -344,7 +344,7 @@ const allFeatures = (path) => {
       description:
         "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, real-time inventory reports.",
       link: "https://giddh.com/uk/inventory-management-software",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Multi-currency",
@@ -352,7 +352,7 @@ const allFeatures = (path) => {
       description:
         "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates.",
       link: "https://giddh.com/uk/multi-currency-accounting-software",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Invoice on whatsapp, Email, and SMS",
@@ -360,7 +360,7 @@ const allFeatures = (path) => {
       description:
         "You can efficiently send invoices through various channels like WhatsApp, email, and SMS directly from your accounting software.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Journal Entries",
@@ -368,7 +368,7 @@ const allFeatures = (path) => {
       description:
         "GIDDH offers a Ledger-Based Journal Entry feature, allowing users to directly input entries into the company's ledger (Accounts). This feature provides real-time updates on account balances, eliminating the need to navigate to separate pages for checking balances after posting entries.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Bank reconciliation",
@@ -376,7 +376,7 @@ const allFeatures = (path) => {
       description:
         "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
       link: "https://giddh.com/uk/conect-bank-reconcile",
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Shopify Integration",
@@ -384,7 +384,7 @@ const allFeatures = (path) => {
       description:
         "Provides Shopify Integration with Giddh that streamlines sales data, automates order and payment sync for accurate financial records. It offers real-time insights into revenue, inventory, and customer data, enhancing efficiency and enabling informed decision-making for business growth.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Audit Trail",
@@ -392,7 +392,7 @@ const allFeatures = (path) => {
       description:
         "An audit trail in Giddh, logs all transactions, enabling a detailed record of changes, enhancing accountability, and facilitating error detection for regulatory compliance and transparency.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Date range security",
@@ -400,7 +400,7 @@ const allFeatures = (path) => {
       description:
         "Giddh's date range security feature enables setting user-specific date restrictions, ensuring confidential data access only within defined periods. This controls financial data access, maintaining privacy and limiting unauthorized entry to sensitive information.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Multiple Reports",
@@ -408,7 +408,7 @@ const allFeatures = (path) => {
       description:
         "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Fixed Asset Management",
@@ -416,7 +416,7 @@ const allFeatures = (path) => {
       description:
         "Giddh's Fixed Asset Management streamlines the oversight and control of fixed assets, allowing for categorization into Groups, Stock, and variants. This feature offers real-time reports, enabling efficient monitoring and strategic asset management for your business.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
     {
       name: "Branch and warehouse management",
@@ -424,7 +424,7 @@ const allFeatures = (path) => {
       description:
         "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
       link: null,
-      isMoreContent: false,
+      hasMoreContent: false,
     },
   ];
 
@@ -473,7 +473,7 @@ const allFeatures = (path) => {
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
                   <img
-                    src="/img/feature-gallery-icons/all-features-banner-image.svg"
+                    src={ directoryPath + "/all-features-banner-image.svg"}
                     alt="giddh features banner image"
                     width="90%"
                   />
@@ -509,7 +509,7 @@ const allFeatures = (path) => {
                           dangerouslySetInnerHTML={{ __html: item.description }}
                         />
                         <br />
-                        {item.isMoreContent ? (
+                        {item.hasMoreContent ? (
                           <a
                             className="view-more-btn cursor-pointer"
                             data-bs-toggle="modal"
