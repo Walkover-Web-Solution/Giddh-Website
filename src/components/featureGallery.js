@@ -41,8 +41,9 @@ const featureGallery = (path) => {
                     <div className="col-md-7 col-sm-12">
                       <div className="pe-4">
                         <h3 className="c-fw-600 c-fs-4">{data?.name}</h3>
-                        <p>{data.description}</p>
+                        <p className="mb-0">{data.description}</p>
                         <a
+                          className="view-more-btn"
                           href={data?.link}
                         >
                           View More
