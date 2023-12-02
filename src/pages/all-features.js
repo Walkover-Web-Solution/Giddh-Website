@@ -505,7 +505,7 @@ const allFeatures = (path) => {
                         <h3 className="c-fw-600 c-fs-4">{item.name}</h3>
 
                         <span
-                          className="c-fs-6"
+                          className="c-fs-5"
                           dangerouslySetInnerHTML={{ __html: item.description }}
                         />
                         <br />
