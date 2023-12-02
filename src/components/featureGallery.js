@@ -20,7 +20,7 @@ const featureGallery = (path) => {
         <div className="container">
           <div className="row">
             <div className="feature-gallery__title text-center mb-3">
-              <h2>Features that empower your business accounting</h2>
+              <h2 className="c-fw-600">Features that empower your business accounting</h2>
             </div>
           </div>
           <div className="row">

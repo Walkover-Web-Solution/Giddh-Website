@@ -1,25 +1,6 @@
 //============================== ====FONT FAMILY=======================================
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-@font-face {
-  font-family: "Opel Sans";
-  font-display: swap;
-  src: url("../../public/fonts/OpelSans-Regular.ttf");
-  src: url("../../public/fonts/OpelSans-Regular.ttf") format("truetype"),
-    url("../../public/fonts/OpelSans-Regular.woff") format("woff");
-  font-style: 400;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
-@font-face {
-  font-family: "Opel Sans";
-  font-display: swap;
-  src: url("../../public/fonts/OpelSans-Bold.ttf");
-  src: url("../../public/fonts/OpelSans-Bold.ttf") format("truetype"),
-       url("../../public/fonts/OpelSans-Bold.woff") format("woff");
-  font-style: normal;
-  font-weight: 600;
-  text-rendering: optimizeLegibility;
-}
 
 //====================================FONT SIZE========================================
 
