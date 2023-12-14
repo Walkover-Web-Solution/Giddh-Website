@@ -2,8 +2,8 @@ import { useState } from "react";
 import { MdRemove, MdAdd } from "react-icons/md";
 const invoiceSoftware = (path) => {
   const linkPath = path.path;
-    
-  const isIndia = linkPath.isIndia
+
+  const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
@@ -16,11 +16,11 @@ const invoiceSoftware = (path) => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
-                  Smart Online Invoice Software for all your Invoicing Needs
-                </h2>
+                <h1 className="heading col-primary c-fw-600 mb-4">
+                  Effortless Invoicing Solutions
+                </h1>
                 <p className="col-grey c-fs-3 mb-5">
-                  Creating and sending invoices doesn't have to be a pain.
+                  Invoicing is fun with online invoicing software.
                 </p>
                 <div className="features__heading_container__links">
                   <a
@@ -31,7 +31,15 @@ const invoiceSoftware = (path) => {
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a
+                    href="#"
+                    className="col-blue"
+                    onClick={() =>
+                      Calendly.initPopupWidget({
+                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                      })
+                    }
+                  >
                     Schedule Demo
                   </a>
                 </div>
@@ -43,7 +51,7 @@ const invoiceSoftware = (path) => {
                     width="90%"
                     alt="invoice-banner-image"
                   />
-                 <img
+                  <img
                     src="/img/all-features-cloud_icon.svg"
                     alt="cloud icons"
                     className="features__heading_container__right_banner_img"
@@ -59,15 +67,13 @@ const invoiceSoftware = (path) => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
-                  Save time with Invoicing Software
-                </h3>
+                <h1 className="sub-heading col-primary c-fw-600 mb-3">
+                  Save time. Stay ahead.
+                </h1>
                 <p className="c-fs-4 mb-5">
-                  Giddh makes the dull job of creating invoices so simple,
-                  you’ll be amazed how much time you can save to focus on your
-                  core business activities. With its beautiful templates and
-                  customization options, Giddh is the best online invoice
-                  software for all kinds of business owners.
+                  With GIDDH, Say Goodbye to Tedious Invoicing! Boost
+                  Productivity with Online Invoicing Software for Transactions,
+                  Gaining a Competitive Business Edge.
                 </p>
                 <a href={link + "/signup"} className="btn-link-purple">
                   Start Your Trial
@@ -83,13 +89,14 @@ const invoiceSoftware = (path) => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Create professional-looking invoices within minutes!
+                    Create and Send professional invoices with cloud based
+                    invoicing software
                   </h4>
                   <p>
-                    You are the real deal, so why not create invoices online
-                    that say the same? With a variety of templates and
-                    customizations at your disposal, create the best looking
-                    online invoices for your business, and wow your clients.
+                    Effortlessly create and send professional invoices using
+                    cloud-based invoicing software, streamlining your billing
+                    process and enhancing your business image with ease and
+                    efficiency.
                   </p>
                 </div>
               </div>
@@ -107,14 +114,40 @@ const invoiceSoftware = (path) => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    {isIndia ? "Stay GST Compliant" : "Stay VAT Compliant"}
+                    Use Barcode for making invoice
+                  </h4>
+                  <p>
+                    Simplify the invoicing process by utilizing barcodes for
+                    product identification. This eliminates the need to manually
+                    search for products every time you generate an invoice,
+                    streamlining your workflow.
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-12 col-lg-6 __image-alignment">
+                <figure>
+                  <img
+                    src="/img/feature-gallery-icons/gst-ready.svg"
+                    className="img-fluid"
+                    alt="barcode banner image"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+              <div className="col-md-12 col-lg-6">
+                <div className="features__description_container__content">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                    {isIndia
+                      ? "Effortless GST Invoicing"
+                      : "Incorporate VAT into the invoices"}
                   </h4>
                   <p>
                     {isIndia
-                      ? "Stay Goods and Services Tax(GST) compliant by creating online invoices that are GST compliant. Giddh’s invoice templates have fields for HSN or SAC code, GSTIN number,state of business operation which are mandatory for businessowners in order to stay compliant."
+                      ? "Simplify your invoices for you and your clients by applying GST. No more need to repeatedly verify the client's state for the correct GST type – simply enter the state, and GIDDH, the GST billing software will apply the appropriate GST type automatically."
                       : ""}
                     {isAE || isUK
-                      ? "Stay Value Added Tax(VAT) compliant by creating invoices that are VAT compliant. Giddh invoice templates have fields for HSN or SAC code, TRN number, state of business operation which are mandatory for business owners in order to stay compliant."
+                      ? "Simplify your invoices for you and your clients by applying VAT.."
                       : ""}
                   </p>
                 </div>
@@ -125,7 +158,7 @@ const invoiceSoftware = (path) => {
                     src={
                       isIndia
                         ? "/img/feature-gallery-icons/gst-ready.svg"
-                        : isAE
+                        : isAE || isUK
                         ? "/img/feature-gallery-icons/Invoicing.png"
                         : "/img/feature-gallery-icons/Group-5618.svg"
                     }
@@ -135,34 +168,557 @@ const invoiceSoftware = (path) => {
                 </figure>
               </div>
             </div>
-
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
-              <div className="col-md-12 col-lg-6">
-                <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Lock your invoices and move on!
-                  </h4>
-                  <p>
-                    {isIndia
-                      ? "Tired of unwanted tampering to your finalized invoices? Giddh’s invoicing software has an invoice locking feature with which you can lock your invoices from being edited or deleted once they are finalized."
-                      : ""}
-                    {isAE || isUK
-                      ? "Tired of unwanted tampering to your finalized invoices? With Giddh's invoice locking feature, lock your invoices from being edited or deleted once they are finalized."
-                      : ""}
-                  </p>
+            {isIndia && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Other taxes
+                    </h4>
+                    <p>
+                      Include additional taxes, such as TCS and TDS, on your
+                      invoice for comprehensive taxation transparency. Moreover,
+                      you have the option to manually create taxes based on your
+                      specific needs.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="barcode banner image"
+                    />
+                  </figure>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
-                <figure>
-                  <img
-                    src="/img/feature-gallery-icons/lockinv.svg"
-                    className="img-fluid"
-                    alt="invoicing banner image"
-                  />
-                </figure>
+            )}
+            {isIndia && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Multi-currency Invoices
+                    </h4>
+                    <p>
+                      Generate hassle-free invoices for international clients by
+                      automatically calculating real-time exchange rates. Say
+                      goodbye to the tedious task of manually looking up
+                      exchange rates and converting them to your base currency
+                      every time you create an invoice.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="invoicing banner image"
+                    />
+                  </figure>
+                </div>
               </div>
-            </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
+            )}
+            {(isAE || isUK) && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Multi-currency Invoices
+                    </h4>
+                    <p>
+                      Generate hassle-free invoices for international clients by
+                      automatically calculating real-time exchange rates. Say
+                      goodbye to the tedious task of manually looking up
+                      exchange rates and converting them to your base currency
+                      every time you create an invoice.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="invoicing banner image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {isIndia && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Sending invoice via multi-channels
+                    </h4>
+                    <p>
+                      You can efficiently send invoices through various channels
+                      like WhatsApp, email, and SMS directly from your
+                      accounting software, leading to effective communication
+                      with your clients and ensuring timely payments.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/lockinv.svg"
+                      className="img-fluid"
+                      alt="sending invoice image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {(isAE || isUK) && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Sending invoice via multi-channels
+                    </h4>
+                    <p>
+                      You can efficiently send invoices through various channels
+                      like WhatsApp, email, and SMS directly from your
+                      accounting software, leading to effective communication
+                      with your clients and ensuring timely payments.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/lockinv.svg"
+                      className="img-fluid"
+                      alt="sending invoice image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {isIndia && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Lock your invoices and move on!
+                    </h4>
+                    <p>
+                      Frustrated by unauthorized changes to your completed
+                      invoices? GIDDH's invoicing software offers an invoice
+                      locking feature, ensuring that once your invoices are
+                      finalized, they cannot be edited or deleted without
+                      authorization.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/lockinv.svg"
+                      className="img-fluid"
+                      alt="invoicing banner image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {(isAE || isUK) && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Lock your invoices and move on!
+                    </h4>
+                    <p>
+                      Frustrated by unauthorized changes to your completed
+                      invoices? GIDDH's invoicing software offers an invoice
+                      locking feature, ensuring that once your invoices are
+                      finalized, they cannot be edited or deleted without
+                      authorization.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/lockinv.svg"
+                      className="img-fluid"
+                      alt="invoicing banner image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {isIndia && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Add due date to invoices
+                    </h4>
+                    <p>
+                      Enhance your invoicing process by including due dates on
+                      each invoice, relieving you from the burden of having to
+                      recall payment collection dates for every individual
+                      invoice.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/invoice-due-dates.svg"
+                      className="img-fluid"
+                      alt="invoice-due-dates-logo"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {(isAE || isUK) && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Add due date to invoices
+                    </h4>
+                    <p>
+                      Enhance your invoicing process by including due dates on
+                      each invoice, relieving you from the burden of having to
+                      recall payment collection dates for every individual
+                      invoice.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/invoice-due-dates.svg"
+                      className="img-fluid"
+                      alt="invoice-due-dates-logo"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+
+            {isIndia && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Customize the invoice number
+                    </h4>
+                    <p>
+                      In the billing software, you have the flexibility to
+                      personalize your invoice numbers to suit your preferences,
+                      without being limited to the sequential format (1, 2, 3,
+                      etc).
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="custom invoice number image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {(isAE || isUK) && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Customize the invoice number
+                    </h4>
+                    <p>
+                      In the billing software, you have the flexibility to
+                      personalize your invoice numbers to suit your preferences,
+                      without being limited to the sequential format (1, 2, 3,
+                      etc).
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="custom invoice number image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {!isAE && (!isUK || isIndia) && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      {" "}
+                      Reverse charge
+                    </h4>
+                    <p>
+                      {" "}
+                      You have the option to implement the Reverse Charge
+                      mechanism on your invoices as well.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="reverse charge image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {isUK && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      {" "}
+                      Reverse charge
+                    </h4>
+                    <p>
+                      {" "}
+                      You have the option to implement the Reverse Charge
+                      mechanism on your invoices as well.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="reverse charge image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {(isIndia || isAE) && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Bulk Invoice update
+                    </h4>
+                    <p>
+                      Effortlessly manage your invoices by making bulk updates
+                      and deletions as needed.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/Professional-looking-inv.svg"
+                      className="img-fluid"
+                      alt="bulk invoice image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {isUK && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Bulk Invoice update
+                    </h4>
+                    <p>
+                      Effortlessly manage your invoices by making bulk updates
+                      and deletions as needed.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/Professional-looking-inv.svg"
+                      className="img-fluid"
+                      alt="bulk invoice image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {(isIndia || isAE) && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Copy from previous invoice
+                    </h4>
+                    <p>
+                      Streamline your workflow by duplicating invoice data from
+                      a previous invoice, eliminating the need to manually input
+                      the same information each time when it remains unchanged.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="copy from invoice image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {isUK && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Copy from previous invoice
+                    </h4>
+                    <p>
+                      Streamline your workflow by duplicating invoice data from
+                      a previous invoice, eliminating the need to manually input
+                      the same information each time when it remains unchanged.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="copy from invoice image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+
+            {(isIndia || isAE) && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Import and Export the invoice
+                    </h4>
+                    <p>
+                      No need to stress about recreating all your previous
+                      invoices when you have data in an Excel file. Just import
+                      the file, and you're good to go. Additionally, you can
+                      efficiently export the necessary invoices in bulk as per
+                      your requirements.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/Professional-looking-inv.svg"
+                      className="img-fluid"
+                      alt="import export image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {isUK && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Import and Export the invoice
+                    </h4>
+                    <p>
+                      No need to stress about recreating all your previous
+                      invoices when you have data in an Excel file. Just import
+                      the file, and you're good to go. Additionally, you can
+                      efficiently export the necessary invoices in bulk as per
+                      your requirements.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/Professional-looking-inv.svg"
+                      className="img-fluid"
+                      alt="import export image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+
+            {(isIndia || isAE) && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Generate multiple and compound invoices
+                    </h4>
+                    <p>
+                      Effortlessly create multiple invoices at once by
+                      leveraging your entries, also benefiting from the
+                      convenience of generating composite invoices using these
+                      recorded entries.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="multiple compound image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+            {isUK && (
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                <div className="col-md-12 col-lg-6">
+                  <div className="features__description_container__content">
+                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      Generate multiple and compound invoices
+                    </h4>
+                    <p>
+                      Effortlessly create multiple invoices at once by
+                      leveraging your entries, also benefiting from the
+                      convenience of generating composite invoices using these
+                      recorded entries.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-md-12 col-lg-6 __image-alignment">
+                  <figure>
+                    <img
+                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      className="img-fluid"
+                      alt="multiple compound image"
+                    />
+                  </figure>
+                </div>
+              </div>
+            )}
+
+            <div className="row mb-5 align-items-center features__description_container--row-even">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -170,7 +726,10 @@ const invoiceSoftware = (path) => {
                   </h4>
                   <p>
                     From setting payment reminders to sending{" "}
-                    <a href="https://giddh.com/blog/benefits-of-online-invoicing-for-small-business/" className="text-decoration-underline">
+                    <a
+                      href="https://giddh.com/blog/benefits-of-online-invoicing-for-small-business/"
+                      className="text-decoration-underline"
+                    >
                       online invoices
                     </a>{" "}
                     to clients on a recurring basis, you can utilize the
@@ -193,138 +752,12 @@ const invoiceSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid pricing_grid_section bg-transparent">
+        <section className="container-fluid bg-transparent">
           <div className="container features__e-invoice_page">
-            <h2 className="col-primary sub-heading mb-5 pb-5 c-fw-600 text-center">
-              Other equally important invoicing feature
-            </h2>
-            <div className="row flex-wrap row-gap-5 mb-5 pb-5">
-              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div className="pricing_grid_section__card">
-                  <figure>
-                    <img
-                      src="/img/invoice-due-dates.svg"
-                      alt="invoice-due-dates-logo"
-                    />
-                    <figcaption className="c-fs-5">
-                      Add invoice due dates
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div className="pricing_grid_section__card">
-                  <figure>
-                    <img
-                      src="/img/invoice-customize.svg"
-                      alt="invoice-customize-logo"
-                    />
-                    <figcaption className="c-fs-5">
-                      Customize invoice terms
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div className="pricing_grid_section__card">
-                  <figure>
-                    <img
-                      src="/img/invoice-preview.svg"
-                      alt="invoice-preview-logo"
-                    />
-                    <figcaption className="c-fs-5">
-                      Preview invoices before sending
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div className="pricing_grid_section__card">
-                  <figure>
-                    <img
-                      src="/img/invoice-currency.svg"
-                      alt="Multi-Currency-logo"
-                    />
-                    <figcaption className="c-fs-5">
-                      Choose preferred currency with multi currency option.
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div className="pricing_grid_section__card">
-                  <figure>
-                    <img
-                      src="/img/invoice-auto-update.svg"
-                      alt="invoice-auto-update-logo"
-                    />
-                    <figcaption className="c-fs-5">
-                      Automatic updates once an invoice has been paid
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-              <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div className="pricing_grid_section__card">
-                  <figure>
-                    <img
-                      src="/img/invoice-create.svg"
-                      alt="invoice-create-logo"
-                    />
-                    <figcaption className="c-fs-5">
-                      Once done, lock the invoice
-                    </figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-
             <div className="row mt-5">
               <div className="col-12">
-                <p>
-                  Now with Giddh’s invoicing software, you can manage all
-                  aspects of your invoicing in a matter of minutes.
-                </p>
-                <p>
-                  <span className="c-fw-600">
-                    Add due dates for customer payments –
-                  </span>{" "}
-                  Automate your invoicing process and add personalised due dates
-                  for individual clients and invoices and default dates for the
-                  expiry of invoice deadlines.
-                </p>
-                <p>
-                  <span className="c-fw-600">Customise invoice terms –</span>{" "}
-                  Personalise the terms and conditions for each invoice for each
-                  client as per your payment requirements.
-                </p>
-                <p>
-                  <span className="c-fw-600">
-                    Preview invoices before sending –
-                  </span>{" "}
-                  Reduce chances of errors. Live-preview your invoices as much
-                  as you have filled on your mobile or laptop.
-                </p>
-                <p>
-                  <span className="c-fw-600">
-                    Choose preferred currency with a multi-currency option –
-                  </span>{" "}
-                  Create seamless invoices for your foreign clients too by
-                  changing your base currency to required ones for each invoice.
-                </p>
-                <p>
-                  <span className="c-fw-600">
-                    Automatic updates once an invoice has been paid –
-                  </span>{" "}
-                  Keep track of all unpaid invoices and ensure effective cash
-                  flow management with automatic updates of paid invoices.
-                </p>
-
-                <div className="my-5 text-center">
-                  <a
-                    href={ link + "/signup" }
-                    className="btn-link-purple"
-                  >
+                <div className="text-center">
+                  <a href={link + "/signup"} className="btn-link-purple">
                     Try Now
                   </a>
                 </div>
@@ -491,16 +924,25 @@ const invoiceSoftware = (path) => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                  <a href={ link + "/all-features" } className="col-blue">
+                  <a href={link + "/all-features"} className="col-blue">
                     All features
                   </a>
-                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
+                  <a
+                    href={link + "/multi-user-accounting-software"}
+                    className="border-vertical col-blue"
+                  >
                     Share Data
                   </a>
-                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
+                  <a
+                    href={link + "/multi-currency-accounting-software"}
+                    className="border-vertical col-blue"
+                  >
                     Multi-Currency
                   </a>
-                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
+                  <a
+                    href={link + "/invoice-software"}
+                    className="border-vertical col-blue"
+                  >
                     Invoicing
                   </a>
                 </div>
