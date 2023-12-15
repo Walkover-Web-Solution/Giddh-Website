@@ -19,7 +19,7 @@
   }
 
   figure {
-    &.banner-image{
+    &.banner__image{
       position: absolute;
       right: -35%;
 
@@ -79,7 +79,7 @@
       line-height: 62px;
     }
     figure {
-      &.banner-image{
+      &.banner__image{
       img {
           width: 100%;
         }
@@ -95,7 +95,7 @@
     padding-bottom: 60px;
 
     figure {
-      &.banner-image{
+      &.banner__image{
         position: static;
       right: unset;
       margin-top: 4rem;

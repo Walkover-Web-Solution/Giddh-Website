@@ -58,8 +58,7 @@ const bannerSection = () => {
                   Contact Sales
                 </button>
               </div>
-              <div className="client-summary">
-                <div >
+              <div className="client-summary">                
                   <h2 className="client-summary__title c-fw-600">
                     Our clients
                   </h2>
@@ -90,11 +89,10 @@ const bannerSection = () => {
                       })}
                     </div>
                   </div>
-                </div>
               </div>
             </div>
             <div className="col-lg-6 col-md-12 position-relative">
-              <figure className="banner-image mb-0">
+              <figure className="banner__image mb-0">
                 <img
                   width="800"
                   height="auto"
