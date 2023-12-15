@@ -31,7 +31,15 @@ const conectBankReconcile = (path) => {
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a
+                    href="#"
+                    className="col-blue"
+                    onClick={() =>
+                      Calendly.initPopupWidget({
+                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                      })
+                    }
+                  >
                     Schedule Demo
                   </a>
                 </div>
@@ -39,7 +47,7 @@ const conectBankReconcile = (path) => {
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
                   <img src="/img/bank-banner.svg" width="90%" />
-                 <img
+                  <img
                     src="/img/all-features-cloud_icon.svg"
                     alt="cloud icons"
                     className="features__heading_container__right_banner_img"
@@ -155,32 +163,6 @@ const conectBankReconcile = (path) => {
                 </figure>
               </div>
             </div>
-            {isIndia ? (
-              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
-                <div className="col-md-12 col-lg-6">
-                  <div className="features__description_container__content">
-                    <h4 className="col-primary small-heading c-fw-600 mb-3">
-                      Giddh will connect to your favorite bank
-                    </h4>
-                    <p>
-                      Major national banks like SBI, ICICI and many more can be
-                      linked with Giddh to let your transactions to flow
-                      automatically. Can’t find your bank? Just let us know and
-                      we’ll try to help you out.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
-                  <figure>
-                    <img
-                      src="/img/bank-overview.svg"
-                      className="img-fluid"
-                      alt="bank overview image"
-                    />
-                  </figure>
-                </div>
-              </div>
-            ) : null}
           </div>
         </section>
 
@@ -197,8 +179,10 @@ const conectBankReconcile = (path) => {
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
-                  <span className="col-blue">{ isIndia ? "Connect Bank Reconcile" : "Bank Reconcile" }</span> also
-                  looked at
+                  <span className="col-blue">
+                    {isIndia ? "Connect Bank Reconcile" : "Bank Reconcile"}
+                  </span>{" "}
+                  also looked at
                 </h2>
 
                 <div className="features__suggestion_container__links">

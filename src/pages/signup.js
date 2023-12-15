@@ -456,338 +456,463 @@ const signUp = (path) => {
     }
 
     return (
-        <>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"></link>
-            <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
-            <section className="entry signup d-flex">
-                <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
-                    <a href={link == '' ? '/' : link}>
-                        <img
-                            src="/img/giddh-logo.svg"
-                            className="entry__left_section__brand_logo"
+      <>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
+        ></link>
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+        <section className="entry signup d-flex">
+          <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
+            <a href={link == "" ? "/" : link}>
+              <img
+                src="/img/giddh-logo.svg"
+                className="entry__left_section__brand_logo"
+              />
+            </a>
+            <div className="entry__left_section__details pe-5">
+              <div className="container">
+                <h2 className="c-fs-3 line-height-36 mb-4">
+                  Join GIDDH for Easy Bookkeeping
+                </h2>
+                <p>Features:</p>
+                <ul className="ps-0 my-4">
+                  <li className="d-flex align-items-center">
+                    <MdDone />
+                    Basic ledger accounting
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <MdDone />
+                    Manage branches & warehouses
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <MdDone />
+                    Streamlined inventory management
+                  </li>
+                </ul>
+                <p>Trusted by over 5,000 businesses</p>
+              </div>
+            </div>
+          </div>
+          <div className="entry__right_section col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12">
+            <div className="container entry__right_section__container">
+              {/* STEP #1 */}
+              {currentStep == 1 && (
+                <div className="entry__right_section__container--step entry__right_section__container--active">
+                  <a
+                    href={link == "" ? "/" : link}
+                    className="d-none entry__right_section__container--logo-visible-in-small"
+                  >
+                    <img
+                      src="/img/giddh-logo.svg"
+                      width="auto"
+                      height="40px"
+                      alt="Giddh Icon"
+                    />
+                  </a>
+                  <h1>Create an account</h1>
+                  <div className="entry__right_section__container__entry_with d-flex mb-4 me-4">
+                    <div>
+                      <span className="d-inline-block mb-4">Sign up with</span>
+
+                      <div className="d-flex align-items-center">
+                        <GoogleLogin
+                          googleApiSuccessCallback={googleApiSuccessCallback}
                         />
+                      </div>
+                    </div>
+                  </div>
+
+                  <span className="d-block line_on_right c-fs-6 mb-4">or</span>
+
+                  <button
+                    className="entry__right_section__container__entry_button mb-4"
+                    onClick={() => resetEverything()}
+                  >
+                    Sign up with Email
+                    <MdKeyboardArrowRight />
+                  </button>
+
+                  <p className="c-fs-6 mb-4">
+                    If you already have an account,{" "}
+                    <a href={link + "/login"} className="text_blue">
+                      Login
                     </a>
-                    <div className="entry__left_section__details pe-5">
-                        <div className="container">
-                            <h2 className="c-fs-3 line-height-36 mb-4">
-                                Join GIDDH for Easy Bookkeeping
-                            </h2>
-                            <p>Features:</p>
-                            <ul className="ps-0 my-4">
-                                <li className="d-flex align-items-center">
-                                    <MdDone />
-                                    Basic ledger accounting
-                                </li>
-                                <li className="d-flex align-items-center">
-                                    <MdDone />
-                                    Manage branches & warehouses
-                                </li>
-                                <li className="d-flex align-items-center">
-                                    <MdDone />
-                                    ICICI Bank connectivity
-                                </li>
-                                <li className="d-flex align-items-center">
-                                    <MdDone />
-                                    Streamlined inventory management
-                                </li>
-                            </ul>
-                            <p>Trusted by over 5,000 businesses</p>
-                        </div>
-                    </div>
+                  </p>
                 </div>
-                <div className="entry__right_section col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12">
-                    <div className="container entry__right_section__container">
-                        {/* STEP #1 */}
-                        {currentStep == 1 && (
-                            <div className="entry__right_section__container--step entry__right_section__container--active">
-                                <a href={link == '' ? '/' : link} className="d-none entry__right_section__container--logo-visible-in-small">
-                                    <img
-                                        src="/img/giddh-logo.svg"
-                                        width="auto"
-                                        height="40px"
-                                        alt="Giddh Icon"
-                                    />
-                                </a>
-                                <h1>Create an account</h1>
-                                <div className="entry__right_section__container__entry_with d-flex mb-4 me-4">
-                                    <div>
-                                        <span className="d-inline-block mb-4">Sign up with</span>
+              )}
 
-                                        <div className="d-flex align-items-center">
-                                            <GoogleLogin googleApiSuccessCallback={googleApiSuccessCallback} />
-                                        </div>
-                                    </div>
-                                </div>
+              {/* STEP #2 */}
+              {currentStep == 2 && (
+                <div className="entry__right_section__container--step entry__right_section__container--active">
+                  <a
+                    href={link == "" ? "/" : link}
+                    className="d-none entry__right_section__container--logo-visible-in-small"
+                  >
+                    <img
+                      src="/img/giddh-logo.svg"
+                      width="auto"
+                      height="40px"
+                      alt="Giddh Icon"
+                    />
+                  </a>
+                  <h1>Create an account</h1>
+                  <div className="entry__right_section__container__step_one mt-5">
+                    <div className="step_status_bar d-flex justify-content-between align-items-center ps-0">
+                      <div className="d-flex align-items-center">
+                        <MdCheckCircle
+                          className={
+                            "me-1 " +
+                            (emailDetails &&
+                            emailDetails.isVerified &&
+                            mobileDetails &&
+                            mobileDetails.isVerified
+                              ? " icon-success"
+                              : "")
+                          }
+                        />{" "}
+                        Verify email & mobile number
+                      </div>
+                    </div>
+                    <div className="row mx-0 px-0 step_input_wrapper mt-4">
+                      <label htmlFor="email" className="mb-3 ps-0">
+                        Verify email
+                      </label>
+                      <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
+                        <div
+                          className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12"
+                          style={{
+                            paddingRight:
+                              showEmailOtp ||
+                              (emailDetails && emailDetails.isVerified)
+                                ? "0"
+                                : null,
+                          }}
+                        >
+                          <div className="d-flex step_input_wrapper__mobile_veiw">
+                            <input
+                              type="email"
+                              className="form-control"
+                              id="email"
+                              name="email"
+                              placeholder="email@walkover.in"
+                              autoComplete="off"
+                              onKeyDown={onKeyDownEmail}
+                              disabled={
+                                showEmailOtp ||
+                                (emailDetails && emailDetails.isVerified)
+                              }
+                              autoFocus={
+                                !showEmailOtp &&
+                                (!emailDetails || !emailDetails.isVerified)
+                              }
+                            />
+                            {emailDetails && emailDetails.isVerified && (
+                              <span className="position-relative">
+                                <MdCheckCircle className="icon-success otp_verified_icon" />
+                              </span>
+                            )}
+                            {!showEmailOtp &&
+                              (!emailDetails || !emailDetails.isVerified) && (
+                                <button
+                                  className="btn custom-signup-btn opacity-100"
+                                  onClick={sendEmailOtp}
+                                  disabled={emailGetOtpInProgress}
+                                >
+                                  {emailGetOtpInProgress && (
+                                    <div
+                                      className="spinner-border spinner-border-sm col-primary"
+                                      role="status"
+                                    ></div>
+                                  )}
 
-                                <span className="d-block line_on_right c-fs-6 mb-4">or</span>
-
-                                <button className="entry__right_section__container__entry_button mb-4" onClick={() => resetEverything()}>
-                                    Sign up with Email
-                                    <MdKeyboardArrowRight />
+                                  {!emailGetOtpInProgress && (
+                                    <span>Get OTP</span>
+                                  )}
                                 </button>
+                              )}
+                            {showEmailOtp && (
+                              <button
+                                className="btn custom-signup-btn opacity-100 wide-btn"
+                                onClick={() => setShowEmailOtpSection(false)}
+                                disabled={emailGetOtpInProgress}
+                              >
+                                {emailGetOtpInProgress && (
+                                  <div
+                                    className="spinner-border spinner-border-sm col-primary"
+                                    role="status"
+                                  ></div>
+                                )}
 
-                                <p className="c-fs-6 mb-4">
-                                    If you already have an account,{" "}
-                                    <a href={link + '/login'} className="text_blue">
-                                        Login
-                                    </a>
-                                </p>
-                            </div>
-                        )}
+                                {!emailGetOtpInProgress && (
+                                  <span>Change Email</span>
+                                )}
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                        {showEmailOtp &&
+                          (!emailDetails || !emailDetails.isVerified) && (
+                            <div className="step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12">
+                              <div className="d-flex flex-column">
+                                <div className="d-flex">
+                                  <input
+                                    type="tel"
+                                    className="form-control otp_input email-otp-field"
+                                    placeholder="*"
+                                    maxLength="1"
+                                    id="emailOtpField1"
+                                    autoFocus={true}
+                                  />
+                                  <input
+                                    type="tel"
+                                    className="form-control otp_input email-otp-field"
+                                    placeholder="*"
+                                    maxLength="1"
+                                    id="emailOtpField2"
+                                  />
+                                  <input
+                                    type="tel"
+                                    className="form-control otp_input email-otp-field"
+                                    placeholder="*"
+                                    maxLength="1"
+                                    id="emailOtpField3"
+                                  />
+                                  <input
+                                    type="tel"
+                                    className="form-control otp_input email-otp-field"
+                                    placeholder="*"
+                                    maxLength="1"
+                                    id="emailOtpField4"
+                                  />
+                                  <button
+                                    id="verify-email-button"
+                                    className="btn custom-signup-btn opacity-100"
+                                    onClick={() => verifyOtp("email")}
+                                    disabled={emailVerifyOtpInProgress}
+                                  >
+                                    {emailVerifyOtpInProgress && (
+                                      <div
+                                        className="spinner-border spinner-border-sm col-primary"
+                                        role="status"
+                                      ></div>
+                                    )}
 
-                        {/* STEP #2 */}
-                        {currentStep == 2 && (
-                            <div className="entry__right_section__container--step entry__right_section__container--active">
-                                <a href={link == '' ? '/' : link} className="d-none entry__right_section__container--logo-visible-in-small">
-                                    <img
-                                        src="/img/giddh-logo.svg"
-                                        width="auto"
-                                        height="40px"
-                                        alt="Giddh Icon"
-
-                                    />
-                                </a>
-                                <h1>Create an account</h1>
-                                <div className="entry__right_section__container__step_one mt-5">
-                                    <div className="step_status_bar d-flex justify-content-between align-items-center ps-0">
-                                        <div className="d-flex align-items-center">
-                                            <MdCheckCircle className={"me-1 " + (emailDetails && emailDetails.isVerified && mobileDetails && mobileDetails.isVerified ? " icon-success" : "")} />{" "}
-                                            Verify email & mobile number
-                                        </div>
-                                    </div>
-                                    <div className="row mx-0 px-0 step_input_wrapper mt-4">
-                                        <label htmlFor="email" className="mb-3 ps-0">
-                                            Verify email
-                                        </label>
-                                        <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
-                                            <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12" style={{ paddingRight: showEmailOtp || (emailDetails && emailDetails.isVerified) ? "0" : null }}>
-                                                <div className="d-flex step_input_wrapper__mobile_veiw">
-                                                    <input
-                                                        type="email"
-                                                        className="form-control"
-                                                        id="email"
-                                                        name="email"
-                                                        placeholder="email@walkover.in"
-                                                        autoComplete="off"
-                                                        onKeyDown={onKeyDownEmail}
-                                                        disabled={(showEmailOtp || (emailDetails && emailDetails.isVerified))}
-                                                        autoFocus={!showEmailOtp && (!emailDetails || !emailDetails.isVerified)}
-                                                    />
-                                                    {emailDetails && emailDetails.isVerified && (
-                                                        <span className="position-relative">
-                                                            <MdCheckCircle className="icon-success otp_verified_icon" />
-                                                        </span>
-                                                    )}
-                                                    {!showEmailOtp && (!emailDetails || !emailDetails.isVerified) && (
-                                                        <button className="btn custom-signup-btn opacity-100" onClick={sendEmailOtp} disabled={emailGetOtpInProgress}>
-                                                            {emailGetOtpInProgress && (
-                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
-                                                            )}
-
-                                                            {!emailGetOtpInProgress && (
-                                                                <span>Get OTP</span>
-                                                            )}
-                                                        </button>
-                                                    )}
-                                                    {showEmailOtp && (
-                                                        <button className="btn custom-signup-btn opacity-100 wide-btn" onClick={() => setShowEmailOtpSection(false)} disabled={emailGetOtpInProgress}>
-                                                            {emailGetOtpInProgress && (
-                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
-                                                            )}
-
-                                                            {!emailGetOtpInProgress && (
-                                                                <span>Change Email</span>
-                                                            )}
-                                                        </button>
-                                                    )}
-                                                </div>
-                                            </div>
-                                            {showEmailOtp && (!emailDetails || !emailDetails.isVerified) && (
-                                                <div className="step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12">
-                                                    <div className="d-flex flex-column">
-                                                        <div className="d-flex">
-                                                            <input
-                                                                type="tel"
-                                                                className="form-control otp_input email-otp-field"
-                                                                placeholder="*"
-                                                                maxLength="1"
-                                                                id="emailOtpField1"
-                                                                autoFocus={true}
-                                                            />
-                                                            <input
-                                                                type="tel"
-                                                                className="form-control otp_input email-otp-field"
-                                                                placeholder="*"
-                                                                maxLength="1"
-                                                                id="emailOtpField2"
-                                                            />
-                                                            <input
-                                                                type="tel"
-                                                                className="form-control otp_input email-otp-field"
-                                                                placeholder="*"
-                                                                maxLength="1"
-                                                                id="emailOtpField3"
-                                                            />
-                                                            <input
-                                                                type="tel"
-                                                                className="form-control otp_input email-otp-field"
-                                                                placeholder="*"
-                                                                maxLength="1"
-                                                                id="emailOtpField4"
-                                                            />
-                                                            <button id="verify-email-button" className="btn custom-signup-btn opacity-100" onClick={() => verifyOtp('email')} disabled={emailVerifyOtpInProgress}>
-                                                                {emailVerifyOtpInProgress && (
-                                                                    <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
-                                                                )}
-
-                                                                {!emailVerifyOtpInProgress && (
-                                                                    <span>Verify</span>
-                                                                )}
-                                                            </button>
-                                                        </div>
-                                                        <a href="#" className="col-dark mt-3 c-fs-6">
-                                                            <span className="col-primary c-fw-600" onClick={() => retrySendOtp(3)}>Resend</span>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                    <div className="row mx-0 px-0 step_input_wrapper mb-3">
-                                        <label htmlFor="contact" className="mb-3 ps-0">
-                                            Verify Mobile number
-                                        </label>
-                                        <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
-                                            <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12" style={{ paddingRight: showMobileOtp || (mobileDetails && mobileDetails.isVerified) ? "0" : null }}>
-                                                <div className="d-flex step_input_wrapper__mobile_veiw">
-                                                    <input
-                                                        type="tel"
-                                                        className="form-control"
-                                                        id="mobileNo"
-                                                        placeholder="98********"
-                                                        autoComplete="off"
-                                                        onKeyDown={onKeyDownMobile}
-                                                        disabled={(showMobileOtp || (mobileDetails && mobileDetails.isVerified))}
-                                                    />
-                                                    {mobileDetails && mobileDetails.isVerified && (
-                                                        <span className="position-relative">
-                                                            <MdCheckCircle className="icon-success otp_verified_icon" />
-                                                        </span>
-                                                    )}
-                                                    {!showMobileOtp && (!mobileDetails || !mobileDetails.isVerified) && (
-                                                        <button className="btn custom-signup-btn opacity-100" onClick={sendMobileOtp} disabled={mobileGetOtpInProgress}>
-                                                            {mobileGetOtpInProgress && (
-                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
-                                                            )}
-
-                                                            {!mobileGetOtpInProgress && (
-                                                                <span>Get OTP</span>
-                                                            )}
-                                                        </button>
-                                                    )}
-                                                    {showMobileOtp && (
-                                                        <button className="btn custom-signup-btn opacity-100 wide-btn" onClick={() => setShowMobileOtpSection(false)} disabled={mobileGetOtpInProgress}>
-                                                            {mobileGetOtpInProgress && (
-                                                                <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
-                                                            )}
-
-                                                            {!mobileGetOtpInProgress && (
-                                                                <span>Change Mobile</span>
-                                                            )}
-                                                        </button>
-                                                    )}
-                                                </div>
-                                            </div>
-                                            {showMobileOtp && (!mobileDetails || !mobileDetails.isVerified) && (
-                                                <div className="step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12">
-                                                    <div className="d-flex flex-column">
-                                                        <div className="d-flex">
-                                                            <input
-                                                                type="tel"
-                                                                className="form-control otp_input mobile-otp-field"
-                                                                placeholder="*"
-                                                                maxLength="1"
-                                                                id="mobileOtpField1"
-                                                                autoFocus={true}
-                                                            />
-                                                            <input
-                                                                type="tel"
-                                                                className="form-control otp_input mobile-otp-field"
-                                                                placeholder="*"
-                                                                maxLength="1"
-                                                                id="mobileOtpField2"
-                                                            />
-                                                            <input
-                                                                type="tel"
-                                                                className="form-control otp_input mobile-otp-field"
-                                                                placeholder="*"
-                                                                maxLength="1"
-                                                                id="mobileOtpField3"
-                                                            />
-                                                            <input
-                                                                type="tel"
-                                                                className="form-control otp_input mobile-otp-field"
-                                                                placeholder="*"
-                                                                maxLength="1"
-                                                                id="mobileOtpField4"
-                                                            />
-                                                            <button id="verify-mobile-button" className="btn custom-signup-btn opacity-100" onClick={() => verifyOtp('mobile')} disabled={mobileVerifyOtpInProgress}>
-                                                                {mobileVerifyOtpInProgress && (
-                                                                    <div className="spinner-border spinner-border-sm col-primary" role="status"></div>
-                                                                )}
-
-                                                                {!mobileVerifyOtpInProgress && (
-                                                                    <span>Verify</span>
-                                                                )}
-                                                            </button>
-                                                        </div>
-                                                        {connectedChannels && (
-                                                            <a href="#" className="col-dark mt-3 c-fs-6 d-flex resend-text">
-                                                                Resend on{" "}
-                                                                <ul>
-                                                                    {connectedChannels.map((item, index) => (
-                                                                        <li key={item.value}><span className="col-primary c-fw-600" onClick={() => retrySendOtp(item.value)}> {item.name} </span>
-                                                                            {connectedChannels.length > (index + 1) && (
-                                                                                <span> or </span>
-                                                                            )}
-                                                                        </li>
-                                                                    ))}
-                                                                </ul>
-                                                            </a>
-                                                        )}
-                                                    </div>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </div>
-                                    <div className="row">
-                                        <div>
-                                            <button className="me-3 btn back_btn" onClick={() => updateCurrentStep(1)}>
-                                                {" "}
-                                                <MdKeyboardArrowLeft />
-                                                Back
-                                            </button>
-                                            <button className="btn submit_btn col-white opacity-100" onClick={() => initiateSignup()} disabled={signupInProgress}>
-                                                {signupInProgress && (
-                                                    <div className="spinner-border spinner-border-sm col-white" role="status"></div>
-                                                )}
-
-                                                {!signupInProgress && (
-                                                    <span>Submit</span>
-                                                )}
-                                            </button>
-                                        </div>
-                                    </div>
+                                    {!emailVerifyOtpInProgress && (
+                                      <span>Verify</span>
+                                    )}
+                                  </button>
                                 </div>
+                                <a href="#" className="col-dark mt-3 c-fs-6">
+                                  <span
+                                    className="col-primary c-fw-600"
+                                    onClick={() => retrySendOtp(3)}
+                                  >
+                                    Resend
+                                  </span>
+                                </a>
+                              </div>
                             </div>
-                        )}
-                        {showVerificationModal && (
-                            <OtpVerifyModal userResponse={userResponse} otpVerifyCallback={otpVerifyCallback} hideVerificationModal={() => { setShowVerificationModal(false); document.body.classList.remove('otp-verification'); }} />
-                        )}
+                          )}
+                      </div>
                     </div>
+                    <div className="row mx-0 px-0 step_input_wrapper mb-3">
+                      <label htmlFor="contact" className="mb-3 ps-0">
+                        Verify Mobile number
+                      </label>
+                      <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
+                        <div
+                          className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12"
+                          style={{
+                            paddingRight:
+                              showMobileOtp ||
+                              (mobileDetails && mobileDetails.isVerified)
+                                ? "0"
+                                : null,
+                          }}
+                        >
+                          <div className="d-flex step_input_wrapper__mobile_veiw">
+                            <input
+                              type="tel"
+                              className="form-control"
+                              id="mobileNo"
+                              placeholder="98********"
+                              autoComplete="off"
+                              onKeyDown={onKeyDownMobile}
+                              disabled={
+                                showMobileOtp ||
+                                (mobileDetails && mobileDetails.isVerified)
+                              }
+                            />
+                            {mobileDetails && mobileDetails.isVerified && (
+                              <span className="position-relative">
+                                <MdCheckCircle className="icon-success otp_verified_icon" />
+                              </span>
+                            )}
+                            {!showMobileOtp &&
+                              (!mobileDetails || !mobileDetails.isVerified) && (
+                                <button
+                                  className="btn custom-signup-btn opacity-100"
+                                  onClick={sendMobileOtp}
+                                  disabled={mobileGetOtpInProgress}
+                                >
+                                  {mobileGetOtpInProgress && (
+                                    <div
+                                      className="spinner-border spinner-border-sm col-primary"
+                                      role="status"
+                                    ></div>
+                                  )}
+
+                                  {!mobileGetOtpInProgress && (
+                                    <span>Get OTP</span>
+                                  )}
+                                </button>
+                              )}
+                            {showMobileOtp && (
+                              <button
+                                className="btn custom-signup-btn opacity-100 wide-btn"
+                                onClick={() => setShowMobileOtpSection(false)}
+                                disabled={mobileGetOtpInProgress}
+                              >
+                                {mobileGetOtpInProgress && (
+                                  <div
+                                    className="spinner-border spinner-border-sm col-primary"
+                                    role="status"
+                                  ></div>
+                                )}
+
+                                {!mobileGetOtpInProgress && (
+                                  <span>Change Mobile</span>
+                                )}
+                              </button>
+                            )}
+                          </div>
+                        </div>
+                        {showMobileOtp &&
+                          (!mobileDetails || !mobileDetails.isVerified) && (
+                            <div className="step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12">
+                              <div className="d-flex flex-column">
+                                <div className="d-flex">
+                                  <input
+                                    type="tel"
+                                    className="form-control otp_input mobile-otp-field"
+                                    placeholder="*"
+                                    maxLength="1"
+                                    id="mobileOtpField1"
+                                    autoFocus={true}
+                                  />
+                                  <input
+                                    type="tel"
+                                    className="form-control otp_input mobile-otp-field"
+                                    placeholder="*"
+                                    maxLength="1"
+                                    id="mobileOtpField2"
+                                  />
+                                  <input
+                                    type="tel"
+                                    className="form-control otp_input mobile-otp-field"
+                                    placeholder="*"
+                                    maxLength="1"
+                                    id="mobileOtpField3"
+                                  />
+                                  <input
+                                    type="tel"
+                                    className="form-control otp_input mobile-otp-field"
+                                    placeholder="*"
+                                    maxLength="1"
+                                    id="mobileOtpField4"
+                                  />
+                                  <button
+                                    id="verify-mobile-button"
+                                    className="btn custom-signup-btn opacity-100"
+                                    onClick={() => verifyOtp("mobile")}
+                                    disabled={mobileVerifyOtpInProgress}
+                                  >
+                                    {mobileVerifyOtpInProgress && (
+                                      <div
+                                        className="spinner-border spinner-border-sm col-primary"
+                                        role="status"
+                                      ></div>
+                                    )}
+
+                                    {!mobileVerifyOtpInProgress && (
+                                      <span>Verify</span>
+                                    )}
+                                  </button>
+                                </div>
+                                {connectedChannels && (
+                                  <a
+                                    href="#"
+                                    className="col-dark mt-3 c-fs-6 d-flex resend-text"
+                                  >
+                                    Resend on{" "}
+                                    <ul>
+                                      {connectedChannels.map((item, index) => (
+                                        <li key={item.value}>
+                                          <span
+                                            className="col-primary c-fw-600"
+                                            onClick={() =>
+                                              retrySendOtp(item.value)
+                                            }
+                                          >
+                                            {" "}
+                                            {item.name}{" "}
+                                          </span>
+                                          {connectedChannels.length >
+                                            index + 1 && <span> or </span>}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </a>
+                                )}
+                              </div>
+                            </div>
+                          )}
+                      </div>
+                    </div>
+                    <div className="row">
+                      <div>
+                        <button
+                          className="me-3 btn back_btn"
+                          onClick={() => updateCurrentStep(1)}
+                        >
+                          {" "}
+                          <MdKeyboardArrowLeft />
+                          Back
+                        </button>
+                        <button
+                          className="btn submit_btn col-white opacity-100"
+                          onClick={() => initiateSignup()}
+                          disabled={signupInProgress}
+                        >
+                          {signupInProgress && (
+                            <div
+                              className="spinner-border spinner-border-sm col-white"
+                              role="status"
+                            ></div>
+                          )}
+
+                          {!signupInProgress && <span>Submit</span>}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-            </section>
-        </>
+              )}
+              {showVerificationModal && (
+                <OtpVerifyModal
+                  userResponse={userResponse}
+                  otpVerifyCallback={otpVerifyCallback}
+                  hideVerificationModal={() => {
+                    setShowVerificationModal(false);
+                    document.body.classList.remove("otp-verification");
+                  }}
+                />
+              )}
+            </div>
+          </div>
+        </section>
+      </>
     );
 };
 export default signUp;
