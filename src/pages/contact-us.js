@@ -66,7 +66,11 @@ const contactUs = () => {
                   </address>
 
                   <button
-                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    onClick={() =>
+                      Calendly.initPopupWidget({
+                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                      })
+                    }
                   >
                     Schedule a meeting
                   </button>
@@ -78,7 +82,7 @@ const contactUs = () => {
                     data-tf-iframe-props="title=Accounting Software Company Contact Form"
                     data-tf-transitive-search-params
                     data-tf-medium="snippet"
-                    data-tf-hidden={ utm }
+                    data-tf-hidden={utm}
                     className="mt-0 mt-lg-2"
                   >
                     Contact Sales
@@ -92,7 +96,12 @@ const contactUs = () => {
                   <address>
                     <div className="d-flex align-items-center column-gap-3 mb-3">
                       <MdEmail />
-                      <a href="mailto:support@giddh.com"  className="contact-details__wapper--email">support@giddh.com</a>
+                      <a
+                        href="mailto:support@giddh.com"
+                        className="contact-details__wapper--email"
+                      >
+                        support@giddh.com
+                      </a>
                     </div>
                     <div className="d-flex align-items-center column-gap-3 mb-3">
                       <MdWhatsapp />
@@ -104,11 +113,15 @@ const contactUs = () => {
                     <div className="d-flex align-items-center column-gap-3">
                       <MdCall />
 
-                      <a href="tel:+918889500411"> +91 88895 00411</a>
+                      <a href="tel:+918889500411"> +91 88188 88768</a>
                     </div>
                   </address>
                   <button
-                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    onClick={() =>
+                      Calendly.initPopupWidget({
+                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                      })
+                    }
                   >
                     Schedule a meeting
                   </button>

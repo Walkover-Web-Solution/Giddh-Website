@@ -197,13 +197,6 @@
     },
     {
       "in": true,
-      "uk": false,
-      "ae": false,
-      "menuItem": "ICICI Integration",
-      "url": "/icici-integration"
-    },
-    {
-      "in": true,
       "uk": true,
       "ae": true,
       "menuItem": "API Integration",
