@@ -59,6 +59,13 @@ const pricing = (path) => {
                   No features sacrifices
                 </h2>
               </div>
+              {isIndia && (
+                <div className="pricing_main_section__grid__all-prices-message">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                    *All prices are exclusive of GST
+                  </h4>
+                </div>
+              )}
               <div className="pricing_main_section__grid__guarantee_logo">
                 <figure>
                   <img
@@ -2292,38 +2299,38 @@ const pricing = (path) => {
                     </span>
                     {icici && (
                       <p className="c-fw-400">
-                            Provides support in 12+ countries including USA,
-                            Canada, UK, Germany, France, Netherlands, Ireland,
-                            Spain, Sweden, Denmark, Poland, Portugal
+                        Provides support in 12+ countries including USA, Canada,
+                        UK, Germany, France, Netherlands, Ireland, Spain,
+                        Sweden, Denmark, Poland, Portugal
                       </p>
                     )}
                   </div>
                 </div>
               )}
               {!isIndia && (
-              <div className="pricing_main_section__grid__icici_5 display-all__child">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                >
-                  <span>
-                    Bank Integrations
-                    {icici ? (
-                      <MdKeyboardArrowUp />
-                    ) : (
-                      <MdKeyboardArrowDown />
-                    )}{" "}
-                  </span>
+                <div className="pricing_main_section__grid__icici_5 display-all__child">
+                  <div
+                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                    onClick={() => setIcici((icici) => !icici)}
+                  >
+                    <span>
+                      Bank Integrations
+                      {icici ? (
+                        <MdKeyboardArrowUp />
+                      ) : (
+                        <MdKeyboardArrowDown />
+                      )}{" "}
+                    </span>
                     {icici && (
                       <p className="c-fw-400">
-                        Provides support in 12+ countries including USA,
-                        Canada, UK, Germany, France, Netherlands, Ireland,
-                        Spain, Sweden, Denmark, Poland, Portugal
+                        Provides support in 12+ countries including USA, Canada,
+                        UK, Germany, France, Netherlands, Ireland, Spain,
+                        Sweden, Denmark, Poland, Portugal
                       </p>
                     )}
+                  </div>
                 </div>
-                </div>
-                  )}
+              )}
               {!isIndia && (
                 <div className="pricing_main_section__grid__ic2 text-center pricing-border-top">
                   <MdDone />
