@@ -181,7 +181,7 @@ const tallyVsGiddh = (path) => {
                     <tr>
                       <th>Auto fetching of transactions</th>
                       <td className="col-dark-light">Not Available</td>
-                      <td>Available for ICICI Bank</td>
+                      <td>Automatically transactions are fetched from Bank</td>
                     </tr>
                     <tr>
                       <th>Inventory with variant</th>
@@ -305,10 +305,14 @@ const tallyVsGiddh = (path) => {
                       </td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Customizable Permission</th>
+                      <th colspan="2" className="text-center">
+                        Customizable Permission
+                      </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">Not Available</td>
+                      <td width="50%" className="col-dark-light">
+                        Not Available
+                      </td>
                       <td width="50%">Available</td>
                     </tr>
                     <tr>
@@ -353,7 +357,9 @@ const tallyVsGiddh = (path) => {
                       <td width="50%" className="col-dark-light">
                         Not Available
                       </td>
-                      <td width="50%">Available for ICICI Bank</td>
+                      <td width="50%">
+                        Automatically transactions are fetched from Bank
+                      </td>
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center">
@@ -391,7 +397,7 @@ const tallyVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center">
-                      Attachment with Bills
+                        Attachment with Bills
                       </th>
                     </tr>
                     <tr>
@@ -399,11 +405,13 @@ const tallyVsGiddh = (path) => {
                         Not Available
                       </td>
                       <td width="50%">
-                      User can add attachment with the invoice
+                        User can add attachment with the invoice
                       </td>
                     </tr>
                     <tr>
-                      <th colspan="2" className="text-center">Shopify integration</th>
+                      <th colspan="2" className="text-center">
+                        Shopify integration
+                      </th>
                     </tr>
                     <tr>
                       <td width="50%">Third party provides the integration</td>

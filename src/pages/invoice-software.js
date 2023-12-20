@@ -127,7 +127,7 @@ const invoiceSoftware = (path) => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/gst-ready.svg"
+                    src="/img/feature-gallery-icons/barcode.svg"
                     className="img-fluid"
                     alt="barcode banner image"
                   />
@@ -186,7 +186,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 __image-alignment">
                   <figure>
                     <img
-                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      src="/img/feature-gallery-icons/other-tax.svg"
                       className="img-fluid"
                       alt="barcode banner image"
                     />
@@ -213,7 +213,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 __image-alignment">
                   <figure>
                     <img
-                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      src="/img/feature-gallery-icons/multi-currency.svg"
                       className="img-fluid"
                       alt="invoicing banner image"
                     />
@@ -266,7 +266,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 __image-alignment">
                   <figure>
                     <img
-                      src="/img/feature-gallery-icons/lockinv.svg"
+                      src="/img/feature-gallery-icons/share-invoice.svg"
                       className="img-fluid"
                       alt="sending invoice image"
                     />
@@ -319,7 +319,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 __image-alignment">
                   <figure>
                     <img
-                      src="/img/feature-gallery-icons/lockinv.svg"
+                      src="/img/feature-gallery-icons/lock-your-invoice.svg"
                       className="img-fluid"
                       alt="invoicing banner image"
                     />
@@ -425,7 +425,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 __image-alignment">
                   <figure>
                     <img
-                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      src="/img/invoice-customize.svg"
                       className="img-fluid"
                       alt="custom invoice number image"
                     />
@@ -477,7 +477,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 __image-alignment">
                   <figure>
                     <img
-                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      src="/img/feature-gallery-icons/reverse-charge.svg"
                       className="img-fluid"
                       alt="reverse charge image"
                     />
@@ -527,7 +527,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 __image-alignment">
                   <figure>
                     <img
-                      src="/img/feature-gallery-icons/Professional-looking-inv.svg"
+                      src="/img/feature-gallery-icons/bulk-update.svg"
                       className="img-fluid"
                       alt="bulk invoice image"
                     />
@@ -576,7 +576,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 __image-alignment">
                   <figure>
                     <img
-                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      src="/img/feature-gallery-icons/copy-from-invoice.svg"
                       className="img-fluid"
                       alt="copy from invoice image"
                     />
@@ -629,7 +629,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 __image-alignment">
                   <figure>
                     <img
-                      src="/img/feature-gallery-icons/Professional-looking-inv.svg"
+                      src="/img/feature-gallery-icons/Invoice.svg"
                       className="img-fluid"
                       alt="import export image"
                     />
@@ -683,7 +683,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 __image-alignment">
                   <figure>
                     <img
-                      src="/img/feature-gallery-icons/gst-ready.svg"
+                      src="/img/invoice-auto-update.svg"
                       className="img-fluid"
                       alt="multiple compound image"
                     />

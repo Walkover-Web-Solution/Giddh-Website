@@ -112,8 +112,7 @@ const contactUs = () => {
                     </div>
                     <div className="d-flex align-items-center column-gap-3">
                       <MdCall />
-
-                      <a href="tel:+918889500411"> +91 88188887681</a>
+                      <a href="tel:+918818888768"> +91 88188 88768</a>
                     </div>
                   </address>
                   <button

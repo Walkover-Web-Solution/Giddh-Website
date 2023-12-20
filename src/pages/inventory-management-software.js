@@ -104,11 +104,7 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src={
-                      isIndia || isAE
-                        ? "/img/feature-gallery-icons/inventory-invoice.svg"
-                        : "/img/feature-gallery-icons/inventory-uk.svg"
-                    }
+                    src="/img/feature-gallery-icons/record-inventory.svg"
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -132,7 +128,7 @@ const inventoryManagementSoftware = (path) => {
                 <figure>
                   <img
                     src="
-                    /img/feature-gallery-icons/inventory-uk.svg"
+                    /img/feature-gallery-icons/inventory-master.svg"
                     className="img-fluid"
                     alt="inventory master image"
                   />
@@ -156,7 +152,7 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-unit.svg"
+                    src="/img/feature-gallery-icons/bifurcate-inventory.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
@@ -182,7 +178,7 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-unit.svg"
+                    src="/img/feature-gallery-icons/reports.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
@@ -235,7 +231,7 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-unit.svg"
+                    src="/img/feature-gallery-icons/manufacturing-export.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
@@ -262,7 +258,7 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-unit.svg"
+                    src="/img/feature-gallery-icons/branch-warehouse.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
@@ -287,7 +283,7 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-branch.svg"
+                    src="/img/feature-gallery-icons/branch-transfer.svg"
                     className="img-fluid"
                     alt="bank account image"
                   />
@@ -311,7 +307,7 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-unit.svg"
+                    src="/img/feature-gallery-icons/custom-unit.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
                   />

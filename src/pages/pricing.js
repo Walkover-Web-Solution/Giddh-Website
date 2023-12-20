@@ -59,6 +59,13 @@ const pricing = (path) => {
                   No features sacrifices
                 </h2>
               </div>
+              {isIndia && (
+                <div className="pricing_main_section__grid__all-prices-message">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                    *All prices are exclusive of GST
+                  </h4>
+                </div>
+              )}
               <div className="pricing_main_section__grid__guarantee_logo">
                 <figure>
                   <img
@@ -181,7 +188,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__t5 text-center pricing-border-top display-all__child">
                 1,00,000
               </div>
-          
+
               <div className="pricing_main_section__grid__companies pricing-border-top">
                 Companies
               </div>
@@ -226,7 +233,7 @@ const pricing = (path) => {
                 Accountant Consultant
               </div>
 
-             <div className="pricing_main_section__grid__ac2 text-center pricing-border-top">
+              <div className="pricing_main_section__grid__ac2 text-center pricing-border-top">
                 <MdClose />
               </div>
               <div className="pricing_main_section__grid__ac3 text-center pricing-border-top">
@@ -238,7 +245,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__ac5 text-center pricing-border-top display-all__child">
                 10 hrs
               </div>
-              
+
               <div className="pricing_main_section__grid__customers_vendors pricing-border-top">
                 Unlimited Customers/Vendors
               </div>
@@ -301,7 +308,8 @@ const pricing = (path) => {
                   onClick={() => setInvoice((invoice) => !invoice)}
                 >
                   <span>
-                   Invoicing {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}               
+                    Invoicing{" "}
+                    {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {invoice && (
                     <p className="c-fw-400">
@@ -321,7 +329,8 @@ const pricing = (path) => {
                   onClick={() => setInvoice((invoice) => !invoice)}
                 >
                   <span>
-                   Invoicing {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Invoicing{" "}
+                    {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {invoice && (
                     <p className="c-fw-400">
@@ -341,7 +350,8 @@ const pricing = (path) => {
                   onClick={() => setInvoice((invoice) => !invoice)}
                 >
                   <span>
-                   Invoicing {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Invoicing{" "}
+                    {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {invoice && (
                     <p className="c-fw-400">
@@ -361,7 +371,8 @@ const pricing = (path) => {
                   onClick={() => setInvoice((invoice) => !invoice)}
                 >
                   <span>
-                   Invoicing {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Invoicing{" "}
+                    {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {invoice && (
                     <p className="c-fw-400">
@@ -381,7 +392,8 @@ const pricing = (path) => {
                   onClick={() => setInvoice((invoice) => !invoice)}
                 >
                   <span>
-                   Invoicing {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Invoicing{" "}
+                    {invoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {invoice && (
                     <p className="c-fw-400">
@@ -407,14 +419,19 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__in5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-              
+
               <div className="pricing_main_section__grid__record-bills pricing-border-top">
                 <div
                   className={"cursor-pointer " + (recordBill ? "pt-2" : "")}
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
                 >
                   <span>
-                    Record Bills {recordBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Record Bills{" "}
+                    {recordBill ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {recordBill && (
                     <p className="c-fw-400">
@@ -430,7 +447,12 @@ const pricing = (path) => {
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
                 >
                   <span>
-                    Record Bills {recordBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Record Bills{" "}
+                    {recordBill ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {recordBill && (
                     <p className="c-fw-400">
@@ -447,7 +469,12 @@ const pricing = (path) => {
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
                 >
                   <span>
-                    Record Bills {recordBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Record Bills{" "}
+                    {recordBill ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {recordBill && (
                     <p className="c-fw-400">
@@ -464,7 +491,12 @@ const pricing = (path) => {
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
                 >
                   <span>
-                    Record Bills {recordBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Record Bills{" "}
+                    {recordBill ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {recordBill && (
                     <p className="c-fw-400">
@@ -481,7 +513,12 @@ const pricing = (path) => {
                   onClick={() => setRecordBill((recordBill) => !recordBill)}
                 >
                   <span>
-                    Record Bills {recordBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Record Bills{" "}
+                    {recordBill ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {recordBill && (
                     <p className="c-fw-400">
@@ -504,7 +541,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__rb5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-              
+
               <div className="pricing_main_section__grid__managing-inventory pricing-border-top">
                 <div
                   className={
@@ -518,7 +555,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Managing Inventory{" "}
-                   {managingInventory ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {managingInventory ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {managingInventory && (
                     <p className="c-fw-400">
@@ -549,7 +590,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Managing Inventory{" "}
-                   {managingInventory ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {managingInventory ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {managingInventory && (
                     <p className="c-fw-400">
@@ -580,7 +625,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Managing Inventory{" "}
-                   {managingInventory ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {managingInventory ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {managingInventory && (
                     <p className="c-fw-400">
@@ -611,7 +660,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Managing Inventory{" "}
-                   {managingInventory ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {managingInventory ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {managingInventory && (
                     <p className="c-fw-400">
@@ -642,7 +695,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Managing Inventory{" "}
-                   {managingInventory ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {managingInventory ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {managingInventory && (
                     <p className="c-fw-400">
@@ -675,110 +732,120 @@ const pricing = (path) => {
 
               <div className="pricing_main_section__grid__journal-entry pricing-border-top">
                 <div
-                  className={
-                    "cursor-pointer " + (journalEntry ? "pt-2" : "")
-                  }
+                  className={"cursor-pointer " + (journalEntry ? "pt-2" : "")}
                   onClick={() =>
-                    setJournalEntry(
-                      (journalEntry) => !journalEntry
-                    )
+                    setJournalEntry((journalEntry) => !journalEntry)
                   }
                 >
                   <span>
                     Journal Entries{" "}
-                    {journalEntry ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {journalEntry ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {journalEntry && (
                     <p className="c-fw-400">
-                     We support ledger-based journal entries for all vouchers like Sales, Purchase, Payment, Receipt (Including Advance receipt), Debit Note, Credit Note, and Journal
+                      We support ledger-based journal entries for all vouchers
+                      like Sales, Purchase, Payment, Receipt (Including Advance
+                      receipt), Debit Note, Credit Note, and Journal
                     </p>
                   )}
                 </div>
               </div>
               <div className="pricing_main_section__grid__journal-entry_2">
                 <div
-                  className={
-                    "cursor-pointer " + (journalEntry ? "pt-2" : "")
-                  }
+                  className={"cursor-pointer " + (journalEntry ? "pt-2" : "")}
                   onClick={() =>
-                    setJournalEntry(
-                      (journalEntry) => !journalEntry
-                    )
+                    setJournalEntry((journalEntry) => !journalEntry)
                   }
                 >
                   <span>
                     Journal Entries{" "}
-                    {journalEntry ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                    
+                    {journalEntry ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {journalEntry && (
                     <p className="c-fw-400">
-                     We support ledger-based journal entries for all vouchers like Sales, Purchase, Payment, Receipt (Including Advance receipt), Debit Note, Credit Note, and Journal
+                      We support ledger-based journal entries for all vouchers
+                      like Sales, Purchase, Payment, Receipt (Including Advance
+                      receipt), Debit Note, Credit Note, and Journal
                     </p>
                   )}
                 </div>
               </div>
               <div className="pricing_main_section__grid__journal-entry_3">
                 <div
-                  className={
-                    "cursor-pointer " + (journalEntry ? "pt-2" : "")
-                  }
+                  className={"cursor-pointer " + (journalEntry ? "pt-2" : "")}
                   onClick={() =>
-                    setJournalEntry(
-                      (journalEntry) => !journalEntry
-                    )
+                    setJournalEntry((journalEntry) => !journalEntry)
                   }
                 >
                   <span>
                     Journal Entries{" "}
-                    {journalEntry ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {journalEntry ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {journalEntry && (
                     <p className="c-fw-400">
-                     We support ledger-based journal entries for all vouchers like Sales, Purchase, Payment, Receipt (Including Advance receipt), Debit Note, Credit Note, and Journal
+                      We support ledger-based journal entries for all vouchers
+                      like Sales, Purchase, Payment, Receipt (Including Advance
+                      receipt), Debit Note, Credit Note, and Journal
                     </p>
                   )}
                 </div>
               </div>
               <div className="pricing_main_section__grid__journal-entry_4">
                 <div
-                  className={
-                    "cursor-pointer " + (journalEntry ? "pt-2" : "")
-                  }
+                  className={"cursor-pointer " + (journalEntry ? "pt-2" : "")}
                   onClick={() =>
-                    setJournalEntry(
-                      (journalEntry) => !journalEntry
-                    )
+                    setJournalEntry((journalEntry) => !journalEntry)
                   }
                 >
                   <span>
                     Journal Entries{" "}
-                    {journalEntry ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {journalEntry ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {journalEntry && (
                     <p className="c-fw-400">
-                     We support ledger-based journal entries for all vouchers like Sales, Purchase, Payment, Receipt (Including Advance receipt), Debit Note, Credit Note, and Journal
+                      We support ledger-based journal entries for all vouchers
+                      like Sales, Purchase, Payment, Receipt (Including Advance
+                      receipt), Debit Note, Credit Note, and Journal
                     </p>
                   )}
                 </div>
               </div>
               <div className="pricing_main_section__grid__journal-entry_5 display-all__child">
                 <div
-                  className={
-                    "cursor-pointer " + (journalEntry ? "pt-2" : "")
-                  }
+                  className={"cursor-pointer " + (journalEntry ? "pt-2" : "")}
                   onClick={() =>
-                    setJournalEntry(
-                      (journalEntry) => !journalEntry
-                    )
+                    setJournalEntry((journalEntry) => !journalEntry)
                   }
                 >
                   <span>
                     Journal Entries{" "}
-                    {journalEntry ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {journalEntry ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {journalEntry && (
                     <p className="c-fw-400">
-                     We support ledger-based journal entries for all vouchers like Sales, Purchase, Payment, Receipt (Including Advance receipt), Debit Note, Credit Note, and Journal
+                      We support ledger-based journal entries for all vouchers
+                      like Sales, Purchase, Payment, Receipt (Including Advance
+                      receipt), Debit Note, Credit Note, and Journal
                     </p>
                   )}
                 </div>
@@ -796,7 +863,6 @@ const pricing = (path) => {
                 <MdDone />
               </div>
 
-
               <div className="pricing_main_section__grid__multi-currency pricing-border-top">
                 <div
                   className={"cursor-pointer " + (multiCurrency ? "pt-2" : "")}
@@ -805,7 +871,12 @@ const pricing = (path) => {
                   }
                 >
                   <span>
-                    Multi-currency {multiCurrency ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Multi-currency{" "}
+                    {multiCurrency ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {multiCurrency && (
                     <p className="c-fw-400">
@@ -831,7 +902,12 @@ const pricing = (path) => {
                   }
                 >
                   <span>
-                    Multi-currency {multiCurrency ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                      
+                    Multi-currency{" "}
+                    {multiCurrency ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {multiCurrency && (
                     <p className="c-fw-400">
@@ -857,7 +933,12 @@ const pricing = (path) => {
                   }
                 >
                   <span>
-                    Multi-currency {multiCurrency ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Multi-currency{" "}
+                    {multiCurrency ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {multiCurrency && (
                     <p className="c-fw-400">
@@ -883,7 +964,12 @@ const pricing = (path) => {
                   }
                 >
                   <span>
-                    Multi-currency {multiCurrency ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Multi-currency{" "}
+                    {multiCurrency ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {multiCurrency && (
                     <p className="c-fw-400">
@@ -909,7 +995,12 @@ const pricing = (path) => {
                   }
                 >
                   <span>
-                    Multi-currency {multiCurrency ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Multi-currency{" "}
+                    {multiCurrency ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {multiCurrency && (
                     <p className="c-fw-400">
@@ -951,24 +1042,35 @@ const pricing = (path) => {
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      { isIndia && (
-                    <>
-                      Create GST invoice, view GST reports, direct filing, and reconcile transaction with the GST portal and 
-                      <a href="/gst" target="_blank">{" "}more</a>
-                    </>
-                  )}
-                  { isAE && (
-                    <>
-                      Create VAT invoice, view VAT reports and 
-                      <a href={link + "/vat"} target="_blank">{" "}more</a>
-                    </>
-                  )}
-                  { isUK && (
-                    <>
-                    Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and
-                      <a href={link + "/vat"} target="_blank">{" "}more</a>
-                    </>
-                  )}
+                      {isIndia && (
+                        <>
+                          Create GST invoice, view GST reports, direct filing,
+                          and reconcile transaction with the GST portal and
+                          <a href="/gst" target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
+                      {isAE && (
+                        <>
+                          Create VAT invoice, view VAT reports and
+                          <a href={link + "/vat"} target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
+                      {isUK && (
+                        <>
+                          Create VAT invoice, view VAT reports, direct filing,
+                          and reconcile transaction with the VAT portal and
+                          <a href={link + "/vat"} target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
                     </p>
                   )}
                 </div>
@@ -980,28 +1082,39 @@ const pricing = (path) => {
                 >
                   <span>
                     {isIndia ? "GST" : "VAT"} Compliance{" "}
-                    {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                    
+                    {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      { isIndia && (
-                    <>
-                      Create GST invoice, view GST reports, direct filing, and reconcile transaction with the GST portal and 
-                      <a href="/gst" target="_blank">{" "}more</a>
-                    </>
-                  )}
-                  { isAE && (
-                    <>
-                      Create VAT invoice, view VAT reports and 
-                      <a href={link + "/vat"} target="_blank">{" "}more</a>
-                    </>
-                  )}
-                  { isUK && (
-                    <>
-                    Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and
-                      <a href={link + "/vat"} target="_blank">{" "}more</a>
-                    </>
-                  )}
+                      {isIndia && (
+                        <>
+                          Create GST invoice, view GST reports, direct filing,
+                          and reconcile transaction with the GST portal and
+                          <a href="/gst" target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
+                      {isAE && (
+                        <>
+                          Create VAT invoice, view VAT reports and
+                          <a href={link + "/vat"} target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
+                      {isUK && (
+                        <>
+                          Create VAT invoice, view VAT reports, direct filing,
+                          and reconcile transaction with the VAT portal and
+                          <a href={link + "/vat"} target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
                     </p>
                   )}
                 </div>
@@ -1017,24 +1130,35 @@ const pricing = (path) => {
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      { isIndia && (
-                    <>
-                      Create GST invoice, view GST reports, direct filing, and reconcile transaction with the GST portal and 
-                      <a href="/gst" target="_blank">{" "}more</a>
-                    </>
-                  )}
-                  { isAE && (
-                    <>
-                      Create VAT invoice, view VAT reports and 
-                      <a href={link + "/vat"} target="_blank">{" "}more</a>
-                    </>
-                  )}
-                  { isUK && (
-                    <>
-                    Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and
-                      <a href={link + "/vat"} target="_blank">{" "}more</a>
-                    </>
-                  )}
+                      {isIndia && (
+                        <>
+                          Create GST invoice, view GST reports, direct filing,
+                          and reconcile transaction with the GST portal and
+                          <a href="/gst" target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
+                      {isAE && (
+                        <>
+                          Create VAT invoice, view VAT reports and
+                          <a href={link + "/vat"} target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
+                      {isUK && (
+                        <>
+                          Create VAT invoice, view VAT reports, direct filing,
+                          and reconcile transaction with the VAT portal and
+                          <a href={link + "/vat"} target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
                     </p>
                   )}
                 </div>
@@ -1050,24 +1174,35 @@ const pricing = (path) => {
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      { isIndia && (
-                    <>
-                      Create GST invoice, view GST reports, direct filing, and reconcile transaction with the GST portal and 
-                      <a href="/gst" target="_blank">{" "}more</a>
-                    </>
-                  )}
-                  { isAE && (
-                    <>
-                      Create VAT invoice, view VAT reports and 
-                      <a href={link + "/vat"} target="_blank">{" "}more</a>
-                    </>
-                  )}
-                  { isUK && (
-                    <>
-                    Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and
-                      <a href={link + "/vat"} target="_blank">{" "}more</a>
-                    </>
-                  )}
+                      {isIndia && (
+                        <>
+                          Create GST invoice, view GST reports, direct filing,
+                          and reconcile transaction with the GST portal and
+                          <a href="/gst" target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
+                      {isAE && (
+                        <>
+                          Create VAT invoice, view VAT reports and
+                          <a href={link + "/vat"} target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
+                      {isUK && (
+                        <>
+                          Create VAT invoice, view VAT reports, direct filing,
+                          and reconcile transaction with the VAT portal and
+                          <a href={link + "/vat"} target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
                     </p>
                   )}
                 </div>
@@ -1083,24 +1218,35 @@ const pricing = (path) => {
                   </span>
                   {gst && (
                     <p className="c-fw-400">
-                      { isIndia && (
-                    <>
-                      Create GST invoice, view GST reports, direct filing, and reconcile transaction with the GST portal and 
-                      <a href="/gst" target="_blank">{" "}more</a>
-                    </>
-                  )}
-                  { isAE && (
-                    <>
-                      Create VAT invoice, view VAT reports and 
-                      <a href={link + "/vat"} target="_blank">{" "}more</a>
-                    </>
-                  )}
-                  { isUK && (
-                    <>
-                    Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and
-                      <a href={link + "/vat"} target="_blank">{" "}more</a>
-                    </>
-                  )}
+                      {isIndia && (
+                        <>
+                          Create GST invoice, view GST reports, direct filing,
+                          and reconcile transaction with the GST portal and
+                          <a href="/gst" target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
+                      {isAE && (
+                        <>
+                          Create VAT invoice, view VAT reports and
+                          <a href={link + "/vat"} target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
+                      {isUK && (
+                        <>
+                          Create VAT invoice, view VAT reports, direct filing,
+                          and reconcile transaction with the VAT portal and
+                          <a href={link + "/vat"} target="_blank">
+                            {" "}
+                            more
+                          </a>
+                        </>
+                      )}
                     </p>
                   )}
                 </div>
@@ -1124,14 +1270,16 @@ const pricing = (path) => {
                   onClick={() => setReport((report) => !report)}
                 >
                   <span>
-                    Reports {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Reports{" "}
+                    {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {report && (
                     <p className="c-fw-400">
                       Access various reports like Trial balance, Profit & loss,
                       Balance sheet, Daybook, Cash flow statement, Ledger, Sales
                       bifurcation, Columnar report, Purchase register, Sales
-                      register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and
+                      register, Inventory reports, Reverse charge report,
+                      Autopaid, Bill to bill report and
                       <a href={link + "/financial-reporting"} target="_blank">
                         {" "}
                         more
@@ -1146,14 +1294,16 @@ const pricing = (path) => {
                   onClick={() => setReport((report) => !report)}
                 >
                   <span>
-                    Reports {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                    
+                    Reports{" "}
+                    {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {report && (
                     <p className="c-fw-400">
                       Access various reports like Trial balance, Profit & loss,
                       Balance sheet, Daybook, Cash flow statement, Ledger, Sales
                       bifurcation, Columnar report, Purchase register, Sales
-                      register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and
+                      register, Inventory reports, Reverse charge report,
+                      Autopaid, Bill to bill report and
                       <a href={link + "/financial-reporting"} target="_blank">
                         {" "}
                         more
@@ -1168,14 +1318,16 @@ const pricing = (path) => {
                   onClick={() => setReport((report) => !report)}
                 >
                   <span>
-                    Reports {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Reports{" "}
+                    {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {report && (
                     <p className="c-fw-400">
                       Access various reports like Trial balance, Profit & loss,
                       Balance sheet, Daybook, Cash flow statement, Ledger, Sales
                       bifurcation, Columnar report, Purchase register, Sales
-                      register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and
+                      register, Inventory reports, Reverse charge report,
+                      Autopaid, Bill to bill report and
                       <a href={link + "/financial-reporting"} target="_blank">
                         {" "}
                         more
@@ -1190,14 +1342,16 @@ const pricing = (path) => {
                   onClick={() => setReport((report) => !report)}
                 >
                   <span>
-                    Reports {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Reports{" "}
+                    {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {report && (
                     <p className="c-fw-400">
                       Access various reports like Trial balance, Profit & loss,
                       Balance sheet, Daybook, Cash flow statement, Ledger, Sales
                       bifurcation, Columnar report, Purchase register, Sales
-                      register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and
+                      register, Inventory reports, Reverse charge report,
+                      Autopaid, Bill to bill report and
                       <a href={link + "/financial-reporting"} target="_blank">
                         {" "}
                         more
@@ -1212,14 +1366,16 @@ const pricing = (path) => {
                   onClick={() => setReport((report) => !report)}
                 >
                   <span>
-                    Reports {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Reports{" "}
+                    {report ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {report && (
                     <p className="c-fw-400">
                       Access various reports like Trial balance, Profit & loss,
                       Balance sheet, Daybook, Cash flow statement, Ledger, Sales
                       bifurcation, Columnar report, Purchase register, Sales
-                      register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and
+                      register, Inventory reports, Reverse charge report,
+                      Autopaid, Bill to bill report and
                       <a href={link + "/financial-reporting"} target="_blank">
                         {" "}
                         more
@@ -1247,7 +1403,8 @@ const pricing = (path) => {
                   onClick={() => setDashboard((dashoard) => !dashoard)}
                 >
                   <span>
-                    Real-time Dashboard {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Real-time Dashboard{" "}
+                    {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {dashoard && (
                     <p className="c-fw-400">
@@ -1267,7 +1424,8 @@ const pricing = (path) => {
                   onClick={() => setDashboard((dashoard) => !dashoard)}
                 >
                   <span>
-                    Real-time Dashboard {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Real-time Dashboard{" "}
+                    {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {dashoard && (
                     <p className="c-fw-400">
@@ -1287,7 +1445,8 @@ const pricing = (path) => {
                   onClick={() => setDashboard((dashoard) => !dashoard)}
                 >
                   <span>
-                    Real-time Dashboard {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Real-time Dashboard{" "}
+                    {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {dashoard && (
                     <p className="c-fw-400">
@@ -1307,7 +1466,8 @@ const pricing = (path) => {
                   onClick={() => setDashboard((dashoard) => !dashoard)}
                 >
                   <span>
-                    Real-time Dashboard {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Real-time Dashboard{" "}
+                    {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {dashoard && (
                     <p className="c-fw-400">
@@ -1327,7 +1487,8 @@ const pricing = (path) => {
                   onClick={() => setDashboard((dashoard) => !dashoard)}
                 >
                   <span>
-                    Real-time Dashboard {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    Real-time Dashboard{" "}
+                    {dashoard ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
                   </span>
                   {dashoard && (
                     <p className="c-fw-400">
@@ -1361,7 +1522,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Unlimited users access{" "}
-                   {userAccess ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {userAccess ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {userAccess && (
                     <p className="c-fw-400">
@@ -1386,7 +1551,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Unlimited users access{" "}
-                   {userAccess ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                    
+                    {userAccess ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {userAccess && (
                     <p className="c-fw-400">
@@ -1411,7 +1580,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Unlimited users access{" "}
-                   {userAccess ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {userAccess ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {userAccess && (
                     <p className="c-fw-400">
@@ -1436,7 +1609,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Unlimited users access{" "}
-                   {userAccess ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {userAccess ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {userAccess && (
                     <p className="c-fw-400">
@@ -1461,7 +1638,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Unlimited users access{" "}
-                   {userAccess ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {userAccess ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {userAccess && (
                     <p className="c-fw-400">
@@ -1499,7 +1680,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Reconciliation
-                    {bankRec ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}                    
+                    {bankRec ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {bankRec && (
                     <p className="c-fw-400">
@@ -1521,7 +1706,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Reconciliation
-                    {bankRec ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {bankRec ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {bankRec && (
                     <p className="c-fw-400">
@@ -1543,7 +1732,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Reconciliation
-                    {bankRec ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {bankRec ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {bankRec && (
                     <p className="c-fw-400">
@@ -1565,7 +1758,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Reconciliation
-                    {bankRec ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {bankRec ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {bankRec && (
                     <p className="c-fw-400">
@@ -1587,7 +1784,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Bank Reconciliation
-                    {bankRec ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {bankRec ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {bankRec && (
                     <p className="c-fw-400">
@@ -1624,7 +1825,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Manufacturing
-                    {manufacturing ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {manufacturing ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {manufacturing && (
                     <p className="c-fw-400">
@@ -1634,7 +1839,7 @@ const pricing = (path) => {
                   )}
                 </div>
               </div>
-               <div className="pricing_main_section__grid__manufacturing_2">
+              <div className="pricing_main_section__grid__manufacturing_2">
                 <div
                   className={"cursor-pointer " + (manufacturing ? "pt-2" : "")}
                   onClick={() =>
@@ -1643,7 +1848,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Manufacturing
-                    {manufacturing ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {manufacturing ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {manufacturing && (
                     <p className="c-fw-400">
@@ -1662,7 +1871,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Manufacturing
-                    {manufacturing ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {manufacturing ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {manufacturing && (
                     <p className="c-fw-400">
@@ -1681,7 +1894,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Manufacturing
-                    {manufacturing ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {manufacturing ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {manufacturing && (
                     <p className="c-fw-400">
@@ -1700,7 +1917,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Manufacturing
-                    {manufacturing ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {manufacturing ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {manufacturing && (
                     <p className="c-fw-400">
@@ -1731,7 +1952,11 @@ const pricing = (path) => {
                     >
                       <span>
                         E-invoice
-                        {eInvoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                        {eInvoice ? (
+                          <MdKeyboardArrowUp />
+                        ) : (
+                          <MdKeyboardArrowDown />
+                        )}{" "}
                       </span>
                       {eInvoice && (
                         <p className="c-fw-400">
@@ -1752,7 +1977,11 @@ const pricing = (path) => {
                     >
                       <span>
                         E-invoice
-                        {eInvoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                        {eInvoice ? (
+                          <MdKeyboardArrowUp />
+                        ) : (
+                          <MdKeyboardArrowDown />
+                        )}{" "}
                       </span>
                       {eInvoice && (
                         <p className="c-fw-400">
@@ -1773,7 +2002,11 @@ const pricing = (path) => {
                     >
                       <span>
                         E-invoice
-                        {eInvoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                        {eInvoice ? (
+                          <MdKeyboardArrowUp />
+                        ) : (
+                          <MdKeyboardArrowDown />
+                        )}{" "}
                       </span>
                       {eInvoice && (
                         <p className="c-fw-400">
@@ -1794,7 +2027,11 @@ const pricing = (path) => {
                     >
                       <span>
                         E-invoice
-                        {eInvoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                        {eInvoice ? (
+                          <MdKeyboardArrowUp />
+                        ) : (
+                          <MdKeyboardArrowDown />
+                        )}{" "}
                       </span>
                       {eInvoice && (
                         <p className="c-fw-400">
@@ -1815,7 +2052,11 @@ const pricing = (path) => {
                     >
                       <span>
                         E-invoice
-                        {eInvoice ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                        {eInvoice ? (
+                          <MdKeyboardArrowUp />
+                        ) : (
+                          <MdKeyboardArrowDown />
+                        )}{" "}
                       </span>
                       {eInvoice && (
                         <p className="c-fw-400">
@@ -1853,7 +2094,11 @@ const pricing = (path) => {
                     >
                       <span>
                         E-way bill
-                        {ewayBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                        {ewayBill ? (
+                          <MdKeyboardArrowUp />
+                        ) : (
+                          <MdKeyboardArrowDown />
+                        )}{" "}
                       </span>
                       {ewayBill && (
                         <p className="c-fw-400">
@@ -1871,7 +2116,11 @@ const pricing = (path) => {
                     >
                       <span>
                         E-way bill
-                        {ewayBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                        {ewayBill ? (
+                          <MdKeyboardArrowUp />
+                        ) : (
+                          <MdKeyboardArrowDown />
+                        )}{" "}
                       </span>
                       {ewayBill && (
                         <p className="c-fw-400">
@@ -1889,7 +2138,11 @@ const pricing = (path) => {
                     >
                       <span>
                         E-way bill
-                        {ewayBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                        {ewayBill ? (
+                          <MdKeyboardArrowUp />
+                        ) : (
+                          <MdKeyboardArrowDown />
+                        )}{" "}
                       </span>
                       {ewayBill && (
                         <p className="c-fw-400">
@@ -1907,7 +2160,11 @@ const pricing = (path) => {
                     >
                       <span>
                         E-way bill
-                        {ewayBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                        {ewayBill ? (
+                          <MdKeyboardArrowUp />
+                        ) : (
+                          <MdKeyboardArrowDown />
+                        )}{" "}
                       </span>
                       {ewayBill && (
                         <p className="c-fw-400">
@@ -1925,7 +2182,11 @@ const pricing = (path) => {
                     >
                       <span>
                         E-way bill
-                        {ewayBill ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                        {ewayBill ? (
+                          <MdKeyboardArrowUp />
+                        ) : (
+                          <MdKeyboardArrowDown />
+                        )}{" "}
                       </span>
                       {ewayBill && (
                         <p className="c-fw-400">
@@ -1950,154 +2211,146 @@ const pricing = (path) => {
                   </div>
                 </>
               )}
-              <div className="pricing_main_section__grid__icici pricing-border-top">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                >
-                  <span>
-                    Bank Integrations
-                    {icici ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
-                  </span>
-                  {icici && (
-                    <p className="c-fw-400">
-                      {isIndia ? (
-                        <>
-                          ICICI bank integration to simply the bank reconciliation, payment process and{" "}
-                          <a target="_blank" href={link + "/icici-integration"}>
-                            much more
-                          </a>{" "}
-                        </>
+              {!isIndia && (
+                <div className="pricing_main_section__grid__icici pricing-border-top">
+                  <div
+                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                    onClick={() => setIcici((icici) => !icici)}
+                  >
+                    <span>
+                      Bank Integrations
+                      {icici ? (
+                        <MdKeyboardArrowUp />
                       ) : (
-                        <>
-                          Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
-                        </>
-                      )} 
-                    </p>
-                  )}
+                        <MdKeyboardArrowDown />
+                      )}{" "}
+                    </span>
+                    {icici && (
+                      <p className="c-fw-400">
+                        Provides support in 12+ countries including USA, Canada,
+                        UK, Germany, France, Netherlands, Ireland, Spain,
+                        Sweden, Denmark, Poland, Portugal
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__icici_2">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                >
-                  <span>
-                    Bank Integrations
-                    {icici ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
-                  </span>
-                  {icici && (
-                 <p className="c-fw-400">
-                      {isIndia ? (
-                        <>
-                          ICICI bank integration to simply the bank reconciliation, payment process and{" "}
-                          <a target="_blank" href={link + "/icici-integration"}>
-                            much more
-                          </a>{" "}
-                        </>
+              )}
+              {!isIndia && (
+                <div className="pricing_main_section__grid__icici_2">
+                  <div
+                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                    onClick={() => setIcici((icici) => !icici)}
+                  >
+                    <span>
+                      Bank Integrations
+                      {icici ? (
+                        <MdKeyboardArrowUp />
                       ) : (
-                        <>
-                          Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
-                        </>
-                      )} 
-                    </p>
-                  )}
+                        <MdKeyboardArrowDown />
+                      )}{" "}
+                    </span>
+                    {icici && (
+                      <p className="c-fw-400">
+                        Provides support in 12+ countries including USA, Canada,
+                        UK, Germany, France, Netherlands, Ireland, Spain,
+                        Sweden, Denmark, Poland, Portugal
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__icici_3">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                >
-                  <span>
-                    Bank Integrations
-                    {icici ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
-                  </span>
-                  {icici && (
-                 <p className="c-fw-400">
-                      {isIndia ? (
-                        <>
-                          ICICI bank integration to simply the bank reconciliation, payment process and{" "}
-                          <a target="_blank" href={link + "/icici-integration"}>
-                            much more
-                          </a>{" "}
-                        </>
+              )}
+              {!isIndia && (
+                <div className="pricing_main_section__grid__icici_3">
+                  <div
+                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                    onClick={() => setIcici((icici) => !icici)}
+                  >
+                    <span>
+                      Bank Integrations
+                      {icici ? (
+                        <MdKeyboardArrowUp />
                       ) : (
-                        <>
-                          Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
-                        </>
-                      )} 
-                    </p>
-                  )}
+                        <MdKeyboardArrowDown />
+                      )}{" "}
+                    </span>
+                    {icici && (
+                      <p className="c-fw-400">
+                        Provides support in 12+ countries including USA, Canada,
+                        UK, Germany, France, Netherlands, Ireland, Spain,
+                        Sweden, Denmark, Poland, Portugal
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__icici_4">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                >
-                  <span>
-                    Bank Integrations
-                    {icici ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
-                  </span>
-                  {icici && (
-                 <p className="c-fw-400">
-                      {isIndia ? (
-                        <>
-                          ICICI bank integration to simply the bank reconciliation, payment process and{" "}
-                          <a target="_blank" href={link + "/icici-integration"}>
-                            much more
-                          </a>{" "}
-                        </>
+              )}
+              {!isIndia && (
+                <div className="pricing_main_section__grid__icici_4">
+                  <div
+                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                    onClick={() => setIcici((icici) => !icici)}
+                  >
+                    <span>
+                      Bank Integrations
+                      {icici ? (
+                        <MdKeyboardArrowUp />
                       ) : (
-                        <>
-                          Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
-                        </>
-                      )} 
-                    </p>
-                  )}
+                        <MdKeyboardArrowDown />
+                      )}{" "}
+                    </span>
+                    {icici && (
+                      <p className="c-fw-400">
+                        Provides support in 12+ countries including USA, Canada,
+                        UK, Germany, France, Netherlands, Ireland, Spain,
+                        Sweden, Denmark, Poland, Portugal
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__icici_5 display-all__child">
-                <div
-                  className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                  onClick={() => setIcici((icici) => !icici)}
-                >
-                  <span>
-                    Bank Integrations
-                    {icici ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
-                  </span>
-                  {icici && (
-                 <p className="c-fw-400">
-                      {isIndia ? (
-                        <>
-                          ICICI bank integration to simply the bank reconciliation, payment process and{" "}
-                          <a target="_blank" href={link + "/icici-integration"}>
-                            much more
-                          </a>{" "}
-                        </>
+              )}
+              {!isIndia && (
+                <div className="pricing_main_section__grid__icici_5 display-all__child">
+                  <div
+                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
+                    onClick={() => setIcici((icici) => !icici)}
+                  >
+                    <span>
+                      Bank Integrations
+                      {icici ? (
+                        <MdKeyboardArrowUp />
                       ) : (
-                        <>
-                          Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal
-                        </>
-                      )} 
-                    </p>
-                  )}
+                        <MdKeyboardArrowDown />
+                      )}{" "}
+                    </span>
+                    {icici && (
+                      <p className="c-fw-400">
+                        Provides support in 12+ countries including USA, Canada,
+                        UK, Germany, France, Netherlands, Ireland, Spain,
+                        Sweden, Denmark, Poland, Portugal
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-              <div className="pricing_main_section__grid__ic2 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ic3 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ic4 text-center pricing-border-top">
-                <MdDone />
-              </div>
-              <div className="pricing_main_section__grid__ic5 text-center pricing-border-top display-all__child">
-                <MdDone />
-              </div>
-
+              )}
+              {!isIndia && (
+                <div className="pricing_main_section__grid__ic2 text-center pricing-border-top">
+                  <MdDone />
+                </div>
+              )}
+              {!isIndia && (
+                <div className="pricing_main_section__grid__ic3 text-center pricing-border-top">
+                  <MdDone />
+                </div>
+              )}
+              {!isIndia && (
+                <div className="pricing_main_section__grid__ic4 text-center pricing-border-top">
+                  <MdDone />
+                </div>
+              )}
+              {!isIndia && (
+                <div className="pricing_main_section__grid__ic5 text-center pricing-border-top display-all__child">
+                  <MdDone />
+                </div>
+              )}
               <div className="pricing_main_section__grid__e-commerce pricing-border-top">
                 <div
                   className={"cursor-pointer " + (ecom ? "pt-2" : "")}
@@ -2105,7 +2358,11 @@ const pricing = (path) => {
                 >
                   <span>
                     E-commerce Integration
-                    {ecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {ecom ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {ecom && (
                     <p className="c-fw-400">
@@ -2122,7 +2379,11 @@ const pricing = (path) => {
                 >
                   <span>
                     E-commerce Integration
-                    {ecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {ecom ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {ecom && (
                     <p className="c-fw-400">
@@ -2139,7 +2400,11 @@ const pricing = (path) => {
                 >
                   <span>
                     E-commerce Integration
-                    {ecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {ecom ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {ecom && (
                     <p className="c-fw-400">
@@ -2156,7 +2421,11 @@ const pricing = (path) => {
                 >
                   <span>
                     E-commerce Integration
-                    {ecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {ecom ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {ecom && (
                     <p className="c-fw-400">
@@ -2173,7 +2442,11 @@ const pricing = (path) => {
                 >
                   <span>
                     E-commerce Integration
-                    {ecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {ecom ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {ecom && (
                     <p className="c-fw-400">
@@ -2203,75 +2476,105 @@ const pricing = (path) => {
                 >
                   <span>
                     Telecom Integration
-                    {telecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {telecom ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {telecom && (
                     <p className="c-fw-400">
-                      MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.
+                      MSG91 integration to automate the business communication
+                      like sending invoices, payment reminder and more via Mail,
+                      SMS, Whatsapp message.
                     </p>
                   )}
                 </div>
               </div>
               <div className="pricing_main_section__grid__telecom_2">
-                 <div
+                <div
                   className={"cursor-pointer " + (telecom ? "pt-2" : "")}
                   onClick={() => setTelecom((telecom) => !telecom)}
                 >
                   <span>
                     Telecom Integration
-                    {telecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {telecom ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {telecom && (
                     <p className="c-fw-400">
-                      MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.
+                      MSG91 integration to automate the business communication
+                      like sending invoices, payment reminder and more via Mail,
+                      SMS, Whatsapp message.
                     </p>
                   )}
                 </div>
               </div>
               <div className="pricing_main_section__grid__telecom_3">
-                 <div
+                <div
                   className={"cursor-pointer " + (telecom ? "pt-2" : "")}
                   onClick={() => setTelecom((telecom) => !telecom)}
                 >
                   <span>
                     Telecom Integration
-                    {telecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {telecom ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {telecom && (
                     <p className="c-fw-400">
-                      MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.
+                      MSG91 integration to automate the business communication
+                      like sending invoices, payment reminder and more via Mail,
+                      SMS, Whatsapp message.
                     </p>
                   )}
                 </div>
               </div>
               <div className="pricing_main_section__grid__telecom_4">
-                 <div
+                <div
                   className={"cursor-pointer " + (telecom ? "pt-2" : "")}
                   onClick={() => setTelecom((telecom) => !telecom)}
                 >
                   <span>
                     Telecom Integration
-                    {telecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {telecom ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {telecom && (
                     <p className="c-fw-400">
-                      MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.
+                      MSG91 integration to automate the business communication
+                      like sending invoices, payment reminder and more via Mail,
+                      SMS, Whatsapp message.
                     </p>
                   )}
                 </div>
               </div>
               <div className="pricing_main_section__grid__telecom_5 display-all__child">
-                 <div
+                <div
                   className={"cursor-pointer " + (telecom ? "pt-2" : "")}
                   onClick={() => setTelecom((telecom) => !telecom)}
                 >
                   <span>
                     Telecom Integration
-                    {telecom ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {telecom ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {telecom && (
                     <p className="c-fw-400">
-                      MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.
+                      MSG91 integration to automate the business communication
+                      like sending invoices, payment reminder and more via Mail,
+                      SMS, Whatsapp message.
                     </p>
                   )}
                 </div>
@@ -2296,7 +2599,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Branch and warehouse management
-                    {warehouse ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {warehouse ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {warehouse && (
                     <p className="c-fw-400">
@@ -2315,7 +2622,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Branch and warehouse management
-                    {warehouse ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {warehouse ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {warehouse && (
                     <p className="c-fw-400">
@@ -2334,7 +2645,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Branch and warehouse management
-                    {warehouse ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {warehouse ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {warehouse && (
                     <p className="c-fw-400">
@@ -2353,7 +2668,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Branch and warehouse management
-                    {warehouse ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {warehouse ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {warehouse && (
                     <p className="c-fw-400">
@@ -2372,7 +2691,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Branch and warehouse management
-                    {warehouse ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {warehouse ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {warehouse && (
                     <p className="c-fw-400">
@@ -2406,7 +2729,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Easy Import/Export of the data
-                    {importExport ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {importExport ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {importExport && (
                     <p className="c-fw-400">
@@ -2431,7 +2758,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Easy Import/Export of the data
-                    {importExport ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {importExport ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {importExport && (
                     <p className="c-fw-400">
@@ -2456,7 +2787,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Easy Import/Export of the data
-                    {importExport ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {importExport ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {importExport && (
                     <p className="c-fw-400">
@@ -2481,7 +2816,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Easy Import/Export of the data
-                    {importExport ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {importExport ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {importExport && (
                     <p className="c-fw-400">
@@ -2506,7 +2845,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Easy Import/Export of the data
-                    {importExport ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {importExport ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {importExport && (
                     <p className="c-fw-400">
@@ -2544,7 +2887,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Financial Year Locking
-                    {financialYear ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {financialYear ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
@@ -2564,7 +2911,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Financial Year Locking
-                    {financialYear ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {financialYear ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
@@ -2584,7 +2935,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Financial Year Locking
-                    {financialYear ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {financialYear ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
@@ -2604,7 +2959,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Financial Year Locking
-                    {financialYear ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {financialYear ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
@@ -2624,7 +2983,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Financial Year Locking
-                    {financialYear ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {financialYear ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {financialYear && (
                     <p className="c-fw-400">
@@ -2655,11 +3018,16 @@ const pricing = (path) => {
                 >
                   <span>
                     Security
-                    {security ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {security ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                     Your data is secured with IP security and Two-way verification, and{" "}
+                      Your data is secured with IP security and Two-way
+                      verification, and{" "}
                       <a href={link + "/security"} target="_blank">
                         more
                       </a>
@@ -2674,11 +3042,16 @@ const pricing = (path) => {
                 >
                   <span>
                     Security
-                    {security ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {security ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data is secured with IP security and Two-way verification, and{" "}
+                      Your data is secured with IP security and Two-way
+                      verification, and{" "}
                       <a href={link + "/security"} target="_blank">
                         more
                       </a>
@@ -2693,11 +3066,16 @@ const pricing = (path) => {
                 >
                   <span>
                     Security
-                    {security ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {security ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data is secured with IP security and Two-way verification, and{" "}
+                      Your data is secured with IP security and Two-way
+                      verification, and{" "}
                       <a href={link + "/security"} target="_blank">
                         more
                       </a>
@@ -2712,11 +3090,16 @@ const pricing = (path) => {
                 >
                   <span>
                     Security
-                    {security ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {security ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data is secured with IP security and Two-way verification, and{" "}
+                      Your data is secured with IP security and Two-way
+                      verification, and{" "}
                       <a href={link + "/security"} target="_blank">
                         more
                       </a>
@@ -2731,11 +3114,16 @@ const pricing = (path) => {
                 >
                   <span>
                     Security
-                    {security ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {security ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {security && (
                     <p className="c-fw-400">
-                      Your data is secured with IP security and Two-way verification, and{" "}
+                      Your data is secured with IP security and Two-way
+                      verification, and{" "}
                       <a href={link + "/security"} target="_blank">
                         more
                       </a>
@@ -2755,7 +3143,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__s5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-              
+
               <div className="pricing_main_section__grid__support pricing-border-top">
                 <div
                   className={"cursor-pointer " + (support ? "pt-2" : "")}
@@ -2763,7 +3151,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Support
-                    {support ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {support ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {support && (
                     <p className="c-fw-400">
@@ -2782,7 +3174,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Support
-                    {support ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {support ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {support && (
                     <p className="c-fw-400">
@@ -2801,7 +3197,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Support
-                    {support ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {support ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {support && (
                     <p className="c-fw-400">
@@ -2820,7 +3220,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Support
-                    {support ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {support ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {support && (
                     <p className="c-fw-400">
@@ -2839,7 +3243,11 @@ const pricing = (path) => {
                 >
                   <span>
                     Support
-                    {support ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                    {support ? (
+                      <MdKeyboardArrowUp />
+                    ) : (
+                      <MdKeyboardArrowDown />
+                    )}{" "}
                   </span>
                   {support && (
                     <p className="c-fw-400">
@@ -2868,7 +3276,7 @@ const pricing = (path) => {
                 <a href={link + "/all-features"}>Check all features</a>
               </div>
               <div className="pricing_main_section__grid__extra_charges">
-                <p className={"c-fs-6 c-fw-400" + (isIndia ? ' w-100' : '')}>
+                <p className={"c-fs-6 c-fw-400" + (isIndia ? " w-100" : "")}>
                   Extra Add ons:{" "}
                   <span className="c-fw-600">
                     {" "}
@@ -2914,7 +3322,11 @@ const pricing = (path) => {
               Introducing GIDDH – Your All-in-One Solution for Accounting
             </h2>
             <p className="c-fs-4 c-fw-600">
-            Are you tired of the hassle of manually inputting your financial data into spreadsheets or relying on offline software to handle your financial tasks? If so, it's high time to upgrade your approach by investing in a specialized cloud-based accounting solution such as GIDDH. 
+              Are you tired of the hassle of manually inputting your financial
+              data into spreadsheets or relying on offline software to handle
+              your financial tasks? If so, it's high time to upgrade your
+              approach by investing in a specialized cloud-based accounting
+              solution such as GIDDH.
             </p>
             <a href={link + "/signup"}>Start your trial</a>
           </div>
@@ -2935,7 +3347,11 @@ const pricing = (path) => {
                   WHY GIDDH?
                 </h4>
                 <p>
-                In today's business landscape, understanding and managing the financial status of your organization are crucial for making informed business decisions and sustainable growth. This necessity applies not only to professional accountants but also to all professionals working in various industries.
+                  In today's business landscape, understanding and managing the
+                  financial status of your organization are crucial for making
+                  informed business decisions and sustainable growth. This
+                  necessity applies not only to professional accountants but
+                  also to all professionals working in various industries.
                 </p>
                 <span
                   className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
@@ -2967,14 +3383,19 @@ const pricing = (path) => {
                     display: readMoreParagraphStatus1 ? "block" : "none",
                   }}
                 >
-                 GIDDH is a comprehensive accounting solution expertly crafted to cater to the specific demands of small and medium-sized enterprises (SMEs), all the while being budget-friendly.
+                  GIDDH is a comprehensive accounting solution expertly crafted
+                  to cater to the specific demands of small and medium-sized
+                  enterprises (SMEs), all the while being budget-friendly.
                 </p>
                 <p
                   style={{
                     display: readMoreParagraphStatus1 ? "block" : "none",
                   }}
                 >
-                  GIDDH incorporates multiple modules within its platform, making it effortless to maintain your financial records. This simplifies the process of tracking your cash flow and assessing the overall financial health of your business. 
+                  GIDDH incorporates multiple modules within its platform,
+                  making it effortless to maintain your financial records. This
+                  simplifies the process of tracking your cash flow and
+                  assessing the overall financial health of your business.
                 </p>
                 <span
                   className="pt-3 text-decoration-underline c-fw-600"
@@ -3190,15 +3611,19 @@ const pricing = (path) => {
                     display: readMoreParagraphStatus4 ? "block" : "none",
                   }}
                 >
-                  The accounting software pricing stands at just { isIndia && "INR 800/-"} { isAE && "AED 350/-"} { isUK && "GBP 70/-"} per
-                  organization/year with a capacity to handle { isIndia && " 10,000"} { (isAE || isUK) && " 40,000"} {" "}
-                  transactions and unlimited users. GIDDH prepares your {isIndia ? "GST" : "VAT"} {" "}
-                  return filing automatically, identifies potential errors,
-                  never lets you miss out deadlines, and streamlines the entire
-                  process. Another significant benefit of trusting GIDDH is that
-                  it allows you to grant your CA view access to the relevant {isIndia ? "GST" : "VAT"} {" "}
-                  tax return data and create {isIndia ? "GST" : "VAT"} invoices ensuring that
-                  compliance is no more a challenge.
+                  The accounting software pricing stands at just{" "}
+                  {isIndia && "INR 800/-"} {isAE && "AED 350/-"}{" "}
+                  {isUK && "GBP 70/-"} per organization/year with a capacity to
+                  handle {isIndia && " 10,000"} {(isAE || isUK) && " 40,000"}{" "}
+                  transactions and unlimited users. GIDDH prepares your{" "}
+                  {isIndia ? "GST" : "VAT"} return filing automatically,
+                  identifies potential errors, never lets you miss out
+                  deadlines, and streamlines the entire process. Another
+                  significant benefit of trusting GIDDH is that it allows you to
+                  grant your CA view access to the relevant{" "}
+                  {isIndia ? "GST" : "VAT"} tax return data and create{" "}
+                  {isIndia ? "GST" : "VAT"} invoices ensuring that compliance is
+                  no more a challenge.
                 </p>
                 <span
                   className="pt-3 text-decoration-underline c-fw-600"
