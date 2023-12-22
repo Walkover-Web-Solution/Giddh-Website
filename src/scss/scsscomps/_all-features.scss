@@ -43,6 +43,11 @@
   }
 
   &__description_container {
+    .image-alignment{
+      img{
+        height: 240px;
+      }
+    }
     &--row-odd {
       .image-alignment {
         text-align: end;
@@ -161,6 +166,7 @@
     background-color: var(--col-blue);
     color: var(--col-white);
     padding: 10px 18px;
+    margin-bottom: 1rem;
     transition: all 400ms ease;
     &:hover {
       background-color: var(--col-primary);
@@ -260,6 +266,10 @@
       .image-alignment {
         text-align: center;
         order: 1;
+        
+          img{
+            height: 150px;
+          }
       }
       &__content {
         margin-top: 25px;
