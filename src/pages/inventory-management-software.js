@@ -15,7 +15,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
                 <h1 className="heading col-primary c-fw-600 mb-4">
-                  Enhance Efficiency: Simplify Inventory Management"
+                  Enhance Efficiency: Simplify Inventory Management.
                 </h1>
                 <h2 className="col-grey c-fs-3 mb-5">
                   Streamline your inventory management in Giddh while gaining
@@ -101,7 +101,7 @@ const inventoryManagementSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/record-inventory.svg"
@@ -124,7 +124,7 @@ const inventoryManagementSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="
@@ -149,7 +149,7 @@ const inventoryManagementSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/bifurcate-inventory.svg"
@@ -175,7 +175,7 @@ const inventoryManagementSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/reports.svg"
@@ -202,12 +202,12 @@ const inventoryManagementSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/barcode-scanning.svg"
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="barcode-scanning-feature-icon"
                   />
                 </figure>
               </div>
@@ -228,7 +228,7 @@ const inventoryManagementSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/manufacturing-export.svg"
@@ -255,7 +255,7 @@ const inventoryManagementSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/branch-warehouse.svg"
@@ -280,7 +280,7 @@ const inventoryManagementSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/branch-transfer.svg"
@@ -291,7 +291,7 @@ const inventoryManagementSoftware = (path) => {
               </div>
             </div>
 
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
@@ -304,12 +304,12 @@ const inventoryManagementSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/custom-unit.svg"
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="custom-units-icon"
                   />
                 </figure>
               </div>

@@ -3366,7 +3366,7 @@ const pricing = (path) => {
                 </span>
               </div>
             </div>
-            <div className="col-md-12 col-lg-6 __image-alignment">
+            <div className="col-md-12 col-lg-6 image-alignment">
               <figure>
                 <img
                   src="/img/giddh-login-page.svg"
@@ -3445,7 +3445,7 @@ const pricing = (path) => {
                 </span>
               </div>
             </div>
-            <div className="col-md-12 col-lg-6 __image-alignment">
+            <div className="col-md-12 col-lg-6 image-alignment">
               <figure>
                 <img
                   src="/img/account-giddh-feature-image.svg"
@@ -3524,7 +3524,7 @@ const pricing = (path) => {
                 </span>
               </div>
             </div>
-            <div className="col-md-12 col-lg-6 __image-alignment">
+            <div className="col-md-12 col-lg-6 image-alignment">
               <figure>
                 <img
                   src="/img/giddh-invoice-send-success.svg"
@@ -3595,7 +3595,7 @@ const pricing = (path) => {
                 </span>
               </div>
             </div>
-            <div className="col-md-12 col-lg-6 __image-alignment">
+            <div className="col-md-12 col-lg-6 image-alignment">
               <figure>
                 <img
                   src="/img/accounting-software-feature.png"
@@ -3670,7 +3670,7 @@ const pricing = (path) => {
                 </span>
               </div>
             </div>
-            <div className="col-md-12 col-lg-6 __image-alignment">
+            <div className="col-md-12 col-lg-6 image-alignment">
               <figure>
                 <img
                   src="/img/education-economy-image.svg"

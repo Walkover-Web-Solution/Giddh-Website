@@ -91,7 +91,7 @@ const importExeclFiles = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/import-excel.svg"
@@ -116,7 +116,7 @@ const importExeclFiles = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/import-excel.svg"
@@ -141,7 +141,7 @@ const importExeclFiles = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/import-data.svg"
@@ -166,7 +166,7 @@ const importExeclFiles = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/import-prepare.svg"
@@ -192,7 +192,7 @@ const importExeclFiles = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src={

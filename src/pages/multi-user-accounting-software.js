@@ -99,7 +99,7 @@ const multiUserAccountingSoftware = (path) => {
                   </ul>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/share-admin.svg"
@@ -126,7 +126,7 @@ const multiUserAccountingSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src={
@@ -156,7 +156,7 @@ const multiUserAccountingSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/share-cash.svg"

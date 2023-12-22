@@ -102,7 +102,7 @@ const conectBankReconcile = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/bank-connect.svg"
@@ -128,7 +128,7 @@ const conectBankReconcile = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
@@ -153,7 +153,7 @@ const conectBankReconcile = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/bank-account.svg"

@@ -95,7 +95,7 @@ const contacts = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/import-data-feature-1.png"
@@ -119,7 +119,7 @@ const contacts = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src={ isIndia ? "/img/feature-gallery-icons/reporting-feature-3.png" : ( isAE ? "/img/feature-gallery-icons/uk-aging-report.svg" : "/img/feature-gallery-icons/uk-aging-report.svg") }
@@ -154,7 +154,7 @@ const contacts = (path) => {
                   </ul>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/import-data-feature-4.svg"

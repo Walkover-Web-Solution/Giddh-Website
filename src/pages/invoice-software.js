@@ -100,12 +100,12 @@ const invoiceSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/create-and-send-professional-invoices-with-cloud-based.svg"
                     className="img-fluid"
-                    alt="invoicing banner image"
+                    alt="create-professional-invoicing-icon"
                   />
                 </figure>
               </div>
@@ -124,7 +124,7 @@ const invoiceSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/barcode.svg"
@@ -147,12 +147,12 @@ const invoiceSoftware = (path) => {
                       ? "Simplify your invoices for you and your clients by applying GST. No more need to repeatedly verify the client's state for the correct GST type – simply enter the state, and GIDDH, the GST billing software will apply the appropriate GST type automatically."
                       : ""}
                     {isAE || isUK
-                      ? "Simplify your invoices for you and your clients by applying VAT.."
+                      ? "Simplify your invoices for you and your clients by applying VAT."
                       : ""}
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src={
@@ -181,12 +181,12 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/other-tax.svg"
                       className="img-fluid"
-                      alt="barcode banner image"
+                      alt="other-taxes-icon"
                     />
                   </figure>
                 </div>
@@ -208,12 +208,12 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/multi-currency.svg"
                       className="img-fluid"
-                      alt="invoicing banner image"
+                      alt="multi-currency-image"
                     />
                   </figure>
                 </div>
@@ -235,12 +235,12 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/multi-currency.svg"
                       className="img-fluid"
-                      alt="invoicing banner image"
+                      alt="multi-currency-image"
                     />
                   </figure>
                 </div>
@@ -261,12 +261,12 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/share-invoice.svg"
                       className="img-fluid"
-                      alt="sending invoice image"
+                      alt="share-invoice-image"
                     />
                   </figure>
                 </div>
@@ -287,12 +287,12 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/share-invoice.svg"
                       className="img-fluid"
-                      alt="sending invoice image"
+                      alt="share-invoice-image"
                     />
                   </figure>
                 </div>
@@ -314,12 +314,12 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/lock-your-invoice.svg"
                       className="img-fluid"
-                      alt="invoicing banner image"
+                      alt="lock your invoice image"
                     />
                   </figure>
                 </div>
@@ -341,12 +341,12 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/lock-your-invoice.svg"
                       className="img-fluid"
-                      alt="invoicing banner image"
+                      alt="lock your invoice image"
                     />
                   </figure>
                 </div>
@@ -367,7 +367,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/add-due-date-to-invoices.svg"
@@ -393,7 +393,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/add-due-date-to-invoices.svg"
@@ -420,7 +420,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/customize-the-invoice-number.svg"
@@ -446,7 +446,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                        src="/img/feature-gallery-icons/customize-the-invoice-number.svg"
@@ -472,7 +472,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/reverse-charge.svg"
@@ -498,7 +498,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/reverse-charge.svg"
@@ -522,12 +522,12 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/bulk-update.svg"
                       className="img-fluid"
-                      alt="bulk invoice image"
+                      alt="bulk invoice update image"
                     />
                   </figure>
                 </div>
@@ -546,12 +546,12 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/bulk-update.svg"
                       className="img-fluid"
-                      alt="bulk invoice image"
+                      alt="bulk invoice update image"
                     />
                   </figure>
                 </div>
@@ -571,7 +571,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/copy-from-invoice.svg"
@@ -596,7 +596,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/copy-from-invoice.svg"
@@ -624,7 +624,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/Invoice.svg"
@@ -651,7 +651,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/Invoice.svg"
@@ -678,7 +678,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                       src="/img/feature-gallery-icons/generate-multiple-and-compound-invoices.svg"
@@ -704,7 +704,7 @@ const invoiceSoftware = (path) => {
                     </p>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 __image-alignment">
+                <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
                        src="/img/feature-gallery-icons/generate-multiple-and-compound-invoices.svg"
@@ -726,6 +726,7 @@ const invoiceSoftware = (path) => {
                     From setting payment reminders to sending{" "}
                     <a
                       href="https://giddh.com/blog/benefits-of-online-invoicing-for-small-business/"
+                      target="_blank"
                       className="text-decoration-underline"
                     >
                       online invoices
@@ -737,12 +738,12 @@ const invoiceSoftware = (path) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
                     src="/img/feature-gallery-icons/run-your-business-with-automation.svg"
                     className="img-fluid"
-                    alt="invoicing banner image"
+                    alt="automation in accounting software image"
                   />
                 </figure>
               </div>
