@@ -14,13 +14,13 @@ const inventoryManagementSoftware = (path) => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
-                  Inventory management features for business of any size.
+                <h1 className="heading col-primary c-fw-600 mb-4">
+                  Enhance Efficiency: Simplify Inventory Management.
+                </h1>
+                <h2 className="col-grey c-fs-3 mb-5">
+                  Streamline your inventory management in Giddh while gaining
+                  real-time visibility into your stock levels.
                 </h2>
-                <p className="col-grey c-fs-3 mb-5">
-                  Manage your entire product catalog on the cloud and get a
-                  real-time overview of your stocks.
-                </p>
                 <div className="features__heading_container__links">
                   <a
                     href="#"
@@ -30,7 +30,15 @@ const inventoryManagementSoftware = (path) => {
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a
+                    href="#"
+                    className="col-blue"
+                    onClick={() =>
+                      Calendly.initPopupWidget({
+                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                      })
+                    }
+                  >
                     Schedule Demo
                   </a>
                 </div>
@@ -42,7 +50,7 @@ const inventoryManagementSoftware = (path) => {
                     width="90%"
                     alt="inventory-banner-image"
                   />
-                 <img
+                  <img
                     src="/img/all-features-cloud_icon.svg"
                     alt="cloud icons"
                     className="features__heading_container__right_banner_img"
@@ -58,9 +66,9 @@ const inventoryManagementSoftware = (path) => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
-                  Keep track of your inventory
-                </h3>
+                <h1 className="sub-heading col-primary c-fw-600 mb-3">
+                  Maintain inventory tracking. Stay updated.
+                </h1>
                 <p className="c-fs-4 mb-5">
                   Modern inventory management software for the modern
                   entrepreneur no stress, no hassles, no hidden costs. Managing
@@ -69,7 +77,7 @@ const inventoryManagementSoftware = (path) => {
                   accurately so you can get back to doing the thing you are best
                   at: Grow and Earn!
                 </p>
-                <a href={ link + '/signup' } className="btn-link-purple">
+                <a href={link + "/signup"} className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -83,21 +91,20 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Maintain stock visibility with inventory reports
+                    Record inventory for product, and Services
                   </h4>
-                  <p >
-                    Inventory management software will let you keep track of
-                    your stock When you buy and sell products, your inventory
-                    quantities will be automatically updated, making it easy to
-                    view your inventory reports so that you can keep up with
-                    what’s selling fast and what to reorder.
+                  <p>
+                    Inventory management isn't exclusive to product-based
+                    businesses; service-oriented businesses can benefit as well.
+                    With Giddh, you can efficiently handle both product and
+                    service inventory.
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src={isIndia || isAE ? '/img/feature-gallery-icons/inventory-invoice.svg' : '/img/feature-gallery-icons/inventory-uk.svg'}
+                    src="/img/feature-gallery-icons/record-inventory.svg"
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -108,49 +115,46 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Complete support for measurement units
+                    Inventory Master’s
                   </h4>
-                  <p >
-                    Where units of measurement are concerned, Giddh has got you
-                    covered. Our software allows you to create custom units of
-                    measurements for effective inventory management. With custom
-                    units, you can buy stocks in one unit and sell the same
-                    stock in a completely different one.
+                  <p>
+                    Giddh provides you with the "masters" of inventory. Here,
+                    you'll be able to view all your business inventory and
+                    easily create, modify, or remove inventory items.
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-unit.svg"
+                    src="
+                    /img/feature-gallery-icons/inventory-master.svg"
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="inventory master image"
                   />
                 </figure>
               </div>
             </div>
-
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Inter-branch stock transfer
+                    Bifurcate inventory into Groups, Items, and Variants
                   </h4>
-                  <p >
-                    Are you a growing business with multiple inventory branches
-                    to manage? Do you often struggle to keep up with stock
-                    requirements from multiple branches? With the Giddh
-                    inter-branch transfer feature, you can easily replenish your
-                    stock by transferring them from one branch to other.
+                  <p>
+                    Dealing with a large number of items can lead to confusion.
+                    Simplify your inventory management by categorizing it into
+                    Groups, Items, and Variants for a more organized and
+                    efficient approach.
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-branch.svg"
+                    src="/img/feature-gallery-icons/bifurcate-inventory.svg"
                     className="img-fluid"
-                    alt="bank account image"
+                    alt="bank reconcile image"
                   />
                 </figure>
               </div>
@@ -159,47 +163,153 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
-                    Save more time with bulk inventory import
+                    Real-time inventory reports
                   </h4>
-                  <p >
-                    Take the pain out of manually adding your entire inventory
-                    on Giddh by bulk inventory import. Just use our simple Excel
-                    template and have your inventory uploaded and ready in no
-                    time.
+                  <p>
+                    Tired of the hassle of manually tracking your business
+                    inventory? With Giddh, you can simplify your inventory
+                    management. Giddh offers real-time inventory reports, which
+                    are categorized by Groups, Items, and Variants for a clearer
+                    view. Additionally, it provides transaction-specific reports
+                    to simplify your inventory management experience.
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/import-excel.svg"
+                    src="/img/feature-gallery-icons/reports.svg"
                     className="img-fluid"
-                    alt="bank overview image"
+                    alt="bank reconcile image"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">                    
-                    { 
-                      isIndia ? "Giddh inventory software is GST ready!" : "Giddh inventory software is VAT ready!"
-                    }         
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                    Barcode Scanning
                   </h4>
-                  <p >
-                    
-                    { isIndia ? "Giddh inventory management software is fully compliant with the GST system. Track inventory, manage orders, assign HSN & SAC codes to items and send GST compliant invoices. Your search for a GST compliant inventory management software ends with Giddh." : ""}
-                    { isAE || isUK ? "Giddh inventory management software is fully compliant with the VAT system. Track inventory, manage orders, assign HSN & SAC codes to items and send VAT compliant invoices. Your search for a VAT compliant inventory management software ends with Giddh." : ""}
+                  <p>
+                    Utilizing barcode scanning within accounting software
+                    enables quick item addition to invoices and bills,
+                    eliminating the need for manual product inputs. This
+                    streamlines operations, enhances accuracy, saves time, and
+                    boosts efficiency. Furthermore, barcode-enabled inventory
+                    reports facilitate easy item search, enhancing inventory
+                    control and management.
                   </p>
                 </div>
               </div>
-              <div className="col-md-12 col-lg-6 __image-alignment">
+              <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src={isIndia ? '/img/feature-gallery-icons/gst-ready.svg' : '/img/feature-gallery-icons/vat-invoice.svg'}
+                    src="/img/feature-gallery-icons/barcode-scanning.svg"
+                    className="img-fluid"
+                    alt="barcode-scanning-feature-icon"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+              <div className="col-md-12 col-lg-6">
+                <div className="features__description_container__content">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                    Manufacturing
+                  </h4>
+                  <p>
+                    In manufacturing, inventory management can be tough, but
+                    Giddh simplifies it. Easily manage manufacturing and its
+                    expenses while focusing on your core production. Giddh takes
+                    care of your business inventory balances. It even manages
+                    any by-products created during manufacturing, making your
+                    business operations smoother.
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-12 col-lg-6 image-alignment">
+                <figure>
+                  <img
+                    src="/img/feature-gallery-icons/manufacturing-export.svg"
+                    className="img-fluid"
+                    alt="bank reconcile image"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+              <div className="col-md-12 col-lg-6">
+                <div className="features__description_container__content">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                    Branch and Warehouse inventory management-
+                  </h4>
+                  <p>
+                    If your business is expanded across multiple locations and
+                    has Expanding your business across multiple locations or
+                    warehouses? Giddh makes it easy to manage inventory across
+                    these various branches and warehouses. Plus, you can access
+                    the branch and warehouse specific inventory reports, as well
+                    as the overall company reports, simplifying your overall
+                    inventory management.
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-12 col-lg-6 image-alignment">
+                <figure>
+                  <img
+                    src="/img/feature-gallery-icons/branch-warehouse.svg"
+                    className="img-fluid"
+                    alt="bank reconcile image"
+                  />
+                </figure>
+              </div>
+            </div>
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+              <div className="col-md-12 col-lg-6">
+                <div className="features__description_container__content">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                    Branch transfer
+                  </h4>
+                  <p>
+                    Looking to transfer products between branches or warehouses?
+                    No worries! You can easily manage inventory transfers, and
+                    these changes will reflect in real-time inventory reports.
+                    Additionally, you can access individual reports for each
+                    transfer.
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-12 col-lg-6 image-alignment">
+                <figure>
+                  <img
+                    src="/img/feature-gallery-icons/branch-transfer.svg"
                     className="img-fluid"
                     alt="bank account image"
+                  />
+                </figure>
+              </div>
+            </div>
+
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd">
+              <div className="col-md-12 col-lg-6">
+                <div className="features__description_container__content">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                    Custom units
+                  </h4>
+                  <p>
+                    You're no longer limited to just a few inventory units;
+                    Giddh offers a solution to maintain and customize units
+                    according to your specific requirements.
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-12 col-lg-6 image-alignment">
+                <figure>
+                  <img
+                    src="/img/feature-gallery-icons/custom-unit.svg"
+                    className="img-fluid"
+                    alt="custom-units-icon"
                   />
                 </figure>
               </div>
@@ -227,16 +337,25 @@ const inventoryManagementSoftware = (path) => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                   <a href={ link + "/all-features" } className="col-blue">
+                  <a href={link + "/all-features"} className="col-blue">
                     All features
                   </a>
-                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
+                  <a
+                    href={link + "/multi-user-accounting-software"}
+                    className="border-vertical col-blue"
+                  >
                     Share Data
                   </a>
-                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
+                  <a
+                    href={link + "/multi-currency-accounting-software"}
+                    className="border-vertical col-blue"
+                  >
                     Multi-Currency
                   </a>
-                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
+                  <a
+                    href={link + "/invoice-software"}
+                    className="border-vertical col-blue"
+                  >
                     Invoicing
                   </a>
                 </div>

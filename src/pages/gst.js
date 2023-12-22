@@ -210,7 +210,7 @@ const gst = (path) => {
                 </span>
               </div>
             </div>
-            <div className="col-md-12 col-lg-6 __image-alignment text-center">
+            <div className="col-md-12 col-lg-6 image-alignment text-center">
               <figure>
                 <img
                   src="/img/tax-images/understanding-gst.svg"
@@ -280,7 +280,7 @@ const gst = (path) => {
                 </span>
               </div>
             </div>
-            <div className="col-md-12 col-lg-6 __image-alignment text-center">
+            <div className="col-md-12 col-lg-6 image-alignment text-center">
               <figure>
                 <img
                   src="/img/tax-images/group-5654.svg"
@@ -350,7 +350,7 @@ const gst = (path) => {
                 </span>
               </div>
             </div>
-            <div className="col-md-12 col-lg-6 __image-alignment text-center">
+            <div className="col-md-12 col-lg-6 image-alignment text-center">
               <figure>
                 <img
                   src="/img/tax-images/betnifits.svg"
