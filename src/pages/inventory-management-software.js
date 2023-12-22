@@ -205,7 +205,7 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6 __image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-unit.svg"
+                    src="/img/feature-gallery-icons/barcode-scanning.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
                   />
