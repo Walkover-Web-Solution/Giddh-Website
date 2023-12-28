@@ -137,7 +137,27 @@ const allFeatures = (path) => {
           <li>Real-Time Financial Updates</li>
         </ul>`,
         videoLink:
-          "https://www.youtube.com/embed/XQaJt4cZPRA?si=QBFvzfGrTt62LvvT",
+          "https://www.youtube.com/embed/VztCB0KeG70?si=d2zcmxboxBuECj4E",
+      },
+    },
+    {
+      name: "Barcode",
+      image: "/barcode-scanning.svg",
+      description: "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+      link: null,
+      hasMoreContent: true,
+      popupContent: {
+        heading: "Scan, Simplify, Succeed: Accelerate Your Workflow with Barcode Integration.",
+        contentText: `
+        <ul class='custom-ul-with-right-tick mt-5'>
+          <li>Easy search</li>
+          <li>Product identification</li>
+          <li>Streamline workflow</li>
+          <li>Inventory management</li>
+          <li>Simplification in invoice</li>
+        </ul>`,
+        videoLink:
+          "https://www.youtube.com/embed/x1OJlwia3OY?si=1OneZGjD99LzwB4C",
       },
     },
     {
@@ -264,6 +284,13 @@ const allFeatures = (path) => {
       hasMoreContent: false,
     },
     {
+      name: "Barcode",
+      image: "/barcode-scanning.svg",
+      description: "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+      link: null,
+      hasMoreContent: false
+    },
+    {
       name: "Audit Trail",
       image: "/feature-audit-trail.svg",
       description:
@@ -385,6 +412,13 @@ const allFeatures = (path) => {
         "Provides Shopify Integration with Giddh that streamlines sales data, automates order and payment sync for accurate financial records. It offers real-time insights into revenue, inventory, and customer data, enhancing efficiency and enabling informed decision-making for business growth.",
       link: null,
       hasMoreContent: false,
+    },
+    {
+      name: "Barcode",
+      image: "/barcode-scanning.svg",
+      description: "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+      link: null,
+      hasMoreContent: false
     },
     {
       name: "Audit Trail",
@@ -540,7 +574,7 @@ const allFeatures = (path) => {
       <div
         className="modal fade"
         id="viewMorePopup"
-        data-bs-backdrop="static" 
+        data-bs-backdrop="static"
         data-bs-keyboard="false"
         tabIndex="-1"
         aria-labelledby="viewMorePopupLabel"
@@ -572,8 +606,14 @@ const allFeatures = (path) => {
                           }}
                         />
                       </div>
-                      
-                      <a href={popupData?.link} className="learn-more d-inline-block mt-4 mb-5">Learn more about {popupData?.name}</a>
+                      {popupData?.link && (
+                        <a
+                          href={popupData?.link}
+                          className="learn-more d-inline-block mt-4 mb-5"
+                        >
+                          Learn more about {popupData?.name}
+                        </a>
+                      )}
                     </div>
                     <div className="col-xl-7 col-lg-12">
                       <div className="video-wrapper mt-2 mx-auto">
