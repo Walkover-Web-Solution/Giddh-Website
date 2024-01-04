@@ -35,10 +35,7 @@ const navbar = (props) => {
   let specificPath =
     pathname === "/" ||
     pathname === "/ae" ||
-    pathname === "/uk" ||
-    pathname === "/contact-us" ||
-    pathname === "/ae/contact-us" ||
-    pathname === "/uk/contact-us";
+    pathname === "/uk";
 
   const onScroll = useCallback((event) => {
     const { scrollY } = window;
