@@ -25,7 +25,8 @@ const header = (props) => {
     <>
       <Head>
         <title>{metaData?.title}</title>
-        <meta name="description" content={metaData?.description}></meta>
+        { metaData?.description && <meta name="description" content={metaData.description}></meta>}
+        { metaData?.keywords && <meta name="keywords" content={ metaData.keywords }></meta> }
         <link rel="icon" type="image/x-icon" href="/favico.svg"></link>
         <link rel="canonical" href={`https://giddh.com${currentPath}`} />
         <link rel="alternate" hrefLang="x-default" href={`https://giddh.com${currentPath}`} />

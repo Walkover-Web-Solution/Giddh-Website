@@ -20,10 +20,13 @@ collections:
     identifier_field: slug
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Seo Title", name: "seoTitle", widget: "string"}
       - {label: "Slug", name: "slug", widget: "hidden", default: "slug"}
       - {label: "Publish Date", name: "date", widget: "datetime", required: false}
       - {label: "author", name: "author", widget: "string"}
       - {label: "Tags", name: "tag", widget: "select", multiple: true, options: ["ai","banking","spreadsheets","software","business-accounting","accounting","accounting-software", "analysis","accounting-automation","gst-compliance", "diwali","accounting-services","business", "cloud-accounting","revenue","indian-accounting", "invoicing-software","cloud-computing","gst", "automation","invoice","bookkeeping", "online-accounting","taxes","finance", "cloud-computing","gst-tax","business-accounting", "sme","profit","guidelines", "income-tax","gst","gstr","tally", "financial-planing","gold","investing", "investment","small-business","entrepreneurship","financial-accounting", "management","new-year","good-and-service-tax", "inventory-management","inventory-software","ecommerce", "india","news","growth", "blogging","blogging-tips","business-blogging","excel", "technology","myths","covid-19-financial-impact", "expence-management","best-accounting-software","finance", "financial-management","investors","startup"], required: false}
       - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}   
-      - {label: "Short Description", name: "description", widget: "string", required: true}   
+      - {label: "Short Description", name: "description", widget: "string", required: true}
+      - {label: "Seo Description", name: "seoDescription", widget: "string"}
+      - {label: "Seo Keywords", name: "seoKeywords", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}

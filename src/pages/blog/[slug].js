@@ -26,7 +26,7 @@ const slugToPostContent = ((postContents) => {
   return hash;
 })(fetchPostContent());
 
-export default function TestPage({ source, title, date, author, tags }) {
+export default function TestPage({ source, title, date, author, tags, description, seoTitle, seoDescription, seoKeywords }) {
   const router = useRouter();
 
   const handleClick = (event) => {
@@ -36,7 +36,9 @@ export default function TestPage({ source, title, date, author, tags }) {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{seoTitle ? seoTitle : title }</title>
+        { (seoDescription || description)  && <meta name="description" content={ seoDescription ? seoDescription : description }></meta> }
+        { seoKeywords && <meta name="keywords" content={ seoKeywords }></meta> }
         <meta property="og:title" content={`Explore the world of ${title} Through our blog and stay informed about the latest developments, expert insights, and valuable tips that matter most. visit at GIDHH -The Best Accounting Software`} key="title" />
       </Head>
       <div className="wrapper container blog-container">
@@ -99,7 +101,11 @@ export async function getStaticProps(slug) {
   });
 
   const title = matterResult?.data?.title;
+  const seoTitle = matterResult?.data?.seoTitle;
+  const seoDescription = matterResult?.data?.seoDescription;
+  const seoKeywords = matterResult?.data?.seoKeywords;
   const author = matterResult?.data?.author;
+  const description = matterResult?.data?.description;
   const content = matterResult?.content;
   var date = new Date(matterResult?.data?.date);
   date = format(date, "LLLL d, yyyy");
@@ -113,6 +119,10 @@ export async function getStaticProps(slug) {
       title: title || "",
       author: author || "",
       tags: tags || "",
+      description: description || "",
+      seoTitle: seoTitle || "",
+      seoKeywords: seoKeywords || "",
+      seoDescription: seoDescription || ""
     },
   };
 }
