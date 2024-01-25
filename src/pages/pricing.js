@@ -89,14 +89,18 @@ const pricing = (path) => {
                   <>
                     <br />
                     <span className="pricing__heading__cost">
-                      <s>&nbsp;{isAE ? "AED 500" : "GBP 100"}&nbsp;</s>
+                      <s>
+                        &nbsp;
+                        {isGlobal ? "USD 100" : isAE ? "AED 500" : "GBP 100"}
+                        &nbsp;
+                      </s>
                     </span>
                   </>
                 )}
                 <br />
                 <span className="pricing__heading__cost">
                   {isGlobal
-                    ? "USD 100"
+                    ? "USD 50"
                     : isIndia
                     ? "INR 1,500"
                     : isAE
@@ -122,14 +126,18 @@ const pricing = (path) => {
                   <>
                     <br />
                     <span className="pricing__heading__cost">
-                      <s>&nbsp;{isAE ? "AED 1,500" : "GBP 300"}&nbsp;</s>
+                      <s>
+                        &nbsp;
+                        {isGlobal ? "USD 300" : isAE ? "AED 1,500" : "GBP 300"}
+                        &nbsp;
+                      </s>
                     </span>
                   </>
                 )}
                 <br />
                 <span className="pricing__heading__cost">
                   {isGlobal
-                    ? "USD 300"
+                    ? "USD 150"
                     : isIndia
                     ? "INR 4,000"
                     : isAE
@@ -148,14 +156,18 @@ const pricing = (path) => {
                   <>
                     <br />
                     <span className="pricing__heading__cost">
-                      <s>&nbsp;{isAE ? "AED 3,000" : "GBP 500"}&nbsp;</s>
+                      <s>
+                        &nbsp;
+                        {isGlobal ? "USD 500" : isAE ? "AED 3,000" : "GBP 500"}
+                        &nbsp;
+                      </s>
                     </span>
                   </>
                 )}
                 <br />
                 <span className="pricing__heading__cost">
                   {isGlobal
-                    ? "USD 500"
+                    ? "USD 250"
                     : isIndia
                     ? "INR 10,000"
                     : isAE
@@ -3303,15 +3315,33 @@ const pricing = (path) => {
                   Extra Add ons:{" "}
                   <span className="c-fw-600">
                     {" "}
-                    {isIndia ? "₹0.10" : isAE ? "د.إ0.03" : "£0.005"}
+                    {isGlobal
+                      ? "$0.005"
+                      : isIndia
+                      ? "₹0.10"
+                      : isAE
+                      ? "د.إ0.03"
+                      : "£0.005"}
                   </span>{" "}
                   per transaction |{" "}
                   <span className="c-fw-600">
-                    {isIndia ? "₹2000" : isAE ? "د.إ250" : "£60"}
+                    {isGlobal
+                      ? "$60"
+                      : isIndia
+                      ? "₹2000"
+                      : isAE
+                      ? "د.إ250"
+                      : "£60"}
                   </span>{" "}
                   per branch/year |{" "}
                   <span className="c-fw-600">
-                    {isIndia ? "₹1000" : isAE ? "د.إ120" : "£30"}
+                    {isGlobal
+                      ? "$30"
+                      : isIndia
+                      ? "₹1000"
+                      : isAE
+                      ? "د.إ120"
+                      : "£30"}
                   </span>{" "}
                   per warehouse/year
                 </p>
