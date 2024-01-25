@@ -9,7 +9,7 @@ const header = (props) => {
 
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
 
-  const countryList = ['','ae','uk'];
+  const countryList = ["", "ae", "uk"];
   const country = link.linkPrefix.replace('/','');
   if(countryList.includes(country)){
     var hreflang = country===''? "en-IN" : (country==='uk' ? "en-GB" : "en-AE")  ;

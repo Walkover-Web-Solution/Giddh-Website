@@ -124,6 +124,8 @@ const zohoVsGiddh = (path) => {
                           "AED 720/year, AED 1080/year, AED 1440/year, AED 3360/year, and AED 7920/year"}
                         {link.isUK &&
                           "£120/year, £240/year, £300/year, £1020/year, and £1980/year"}
+                        {link.isGlobal &&
+                          "$120/year, $240/year, $300/year, $1020/year, and $1980/year"}
                       </td>
                       <td>
                         Offers free plan, and paid plans are <br />
@@ -131,7 +133,8 @@ const zohoVsGiddh = (path) => {
                           "₹1500/year, ₹4000/year, ₹10000/year, and ₹15000/year"}
                         {link.isAE &&
                           "AED 350/year, AED 1050/year, and AED 2100/ year"}
-                        {link.isUK && "£70/year, £210/year, and £350/year"}
+                        {link.isUK && "£70/year, £210/year, and £350/year"}{" "}
+                        {link.isGlobal && "$70/year, $210/year, and $350/year"}
                       </td>
                     </tr>
                     <tr>
@@ -272,7 +275,7 @@ const zohoVsGiddh = (path) => {
                           "₹8988/year, ₹17988/year, ₹35988/year, ₹59988/year, and ₹95988/year"}
                         {link.isAE &&
                           "AED 720/year, AED 1080/year, AED 1440/year, AED 3360/year, and AED 7920/year"}
-                        {link.isUK &&
+                        {(link.isUK || link.isGlobal) &&
                           "£120/year, £240/year, £300/year, £1020/year, and £1980/year"}
                       </td>
                       <td width="50%">
@@ -281,7 +284,8 @@ const zohoVsGiddh = (path) => {
                           "₹1500/year, ₹4000/year, ₹10000/year, and ₹15000/year"}
                         {link.isAE &&
                           "AED 350/year, AED 1050/year, and AED 2100/ year"}
-                        {link.isUK && "£70/year, £210/year, and £350/year"}
+                        {(link.isUK || link.isGlobal) &&
+                          "£70/year, £210/year, and £350/year"}
                       </td>
                     </tr>
                     <tr>

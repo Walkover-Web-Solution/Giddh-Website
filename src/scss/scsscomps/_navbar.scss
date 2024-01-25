@@ -91,10 +91,11 @@
         }
 
         &__wapper {
-          grid-template-columns: repeat(4, 1fr);
+          grid-template-columns: repeat(3, 1fr);
           li {
             a {
               display: inline-block;
+              font-size: var(--c-fs-4);
               padding: 6px 5px;
               min-width: 200px;
               color: var(--col-dark);
@@ -102,6 +103,7 @@
               transition: all 200ms;
               &:hover {
                 color: var(--col-primary);
+                text-decoration: underline !important;
               }
             }
           }

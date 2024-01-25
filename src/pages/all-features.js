@@ -4,11 +4,135 @@ const allFeatures = (path) => {
   const [popupData, setPopupData] = useState({});
 
   const linkPath = path.path;
+  const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
 
   const directoryPath = "/img/feature-gallery-icons";
 
+  //Global Features
+    let globalFeatures = [
+      {
+        name: "Invoicing",
+        image: "/feature-invoicing-software-with-vat.svg",
+        description:
+          "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
+        link: "https://giddh.com/invoice-software",
+        hasMoreContent: false,
+      },
+      {
+        name: "Unlimited user access",
+        image: "/feature-unlimited-user-access.svg",
+        description:
+          "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
+        link: "https://giddh.com/multi-user-accounting-software",
+        hasMoreContent: false,
+      },
+      {
+        name: "IP Security",
+        image: "/feature-ip-security.svg",
+        description:
+          "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
+        link: "https://giddh.com/security",
+        hasMoreContent: false,
+      },
+      {
+        name: "Inventory Management",
+        image: "/feature-inventory-management.svg",
+        description:
+          "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, real-time inventory reports.",
+        link: "https://giddh.com/inventory-management-software",
+        hasMoreContent: false,
+      },
+      {
+        name: "Multi-currency",
+        image: "/feature-multi-currency.svg",
+        description:
+          "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates.",
+        link: "https://giddh.com/multi-currency-accounting-software",
+        hasMoreContent: false,
+      },
+      {
+        name: "Invoice on whatsapp, Email, and SMS",
+        image: "/feature-invoice-on-email-whatsapp-and-sms.svg",
+        description:
+          "You can efficiently send invoices through various channels like WhatsApp, email, and SMS directly from your accounting software.",
+        link: null,
+        hasMoreContent: false,
+      },
+      {
+        name: "Journal Entries",
+        image: "/feature-journal-entries.svg",
+        description:
+          "GIDDH offers a Ledger-Based Journal Entry feature, allowing users to directly input entries into the company's ledger (Accounts). This feature provides real-time updates on account balances, eliminating the need to navigate to separate pages for checking balances after posting entries.",
+        link: null,
+        hasMoreContent: false,
+      },
+      {
+        name: "Bank reconciliation",
+        image: "/feature-bank-reconciliation.svg",
+        description:
+          "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
+        link: "https://giddh.com/uk/conect-bank-reconcile",
+        hasMoreContent: false,
+      },
+      {
+        name: "Shopify Integration",
+        image: "/feature-share-invoice.svg",
+        description:
+          "Provides Shopify Integration with Giddh that streamlines sales data, automates order and payment sync for accurate financial records. It offers real-time insights into revenue, inventory, and customer data, enhancing efficiency and enabling informed decision-making for business growth.",
+        link: null,
+        hasMoreContent: false,
+      },
+      {
+        name: "Barcode",
+        image: "/barcode-scanning.svg",
+        description:
+          "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+        link: null,
+        hasMoreContent: false,
+      },
+      {
+        name: "Audit Trail",
+        image: "/feature-audit-trail.svg",
+        description:
+          "An audit trail in Giddh, logs all transactions, enabling a detailed record of changes, enhancing accountability, and facilitating error detection for regulatory compliance and transparency.",
+        link: null,
+        hasMoreContent: false,
+      },
+      {
+        name: "Date range security",
+        image: "/feature-date-range.svg",
+        description:
+          "Giddh's date range security feature enables setting user-specific date restrictions, ensuring confidential data access only within defined periods. This controls financial data access, maintaining privacy and limiting unauthorized entry to sensitive information.",
+        link: null,
+        hasMoreContent: false,
+      },
+      {
+        name: "Multiple Reports",
+        image: "/feature-multiple-reports.svg",
+        description:
+          "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+        link: null,
+        hasMoreContent: false,
+      },
+      {
+        name: "Fixed Asset Management",
+        image: "/feature-asset-management.svg",
+        description:
+          "Giddh's Fixed Asset Management streamlines the oversight and control of fixed assets, allowing for categorization into Groups, Stock, and variants. This feature offers real-time reports, enabling efficient monitoring and strategic asset management for your business.",
+        link: null,
+        hasMoreContent: false,
+      },
+      {
+        name: "Branch and warehouse management",
+        image: "/feature-branch-and-warehouse-management.svg",
+        description:
+          "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+        link: null,
+        hasMoreContent: false,
+      },
+    ];
   // All Feature Country Wise Data
   let indiaFeatures = [
     {
@@ -16,7 +140,7 @@ const allFeatures = (path) => {
       image: "/feature-invoicing-software.svg",
       description:
         "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
-      link: "https://giddh.com/invoice-software",
+      link: "https://giddh.com/in/invoice-software",
       hasMoreContent: true,
       popupContent: {
         heading: "Effortless Invoicing Solutions",
@@ -36,7 +160,7 @@ const allFeatures = (path) => {
       image: "/feature-unlimited-user-access.svg",
       description:
         "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
-      link: "https://giddh.com/multi-user-accounting-software",
+      link: "https://giddh.com/in/multi-user-accounting-software",
       hasMoreContent: false,
     },
     {
@@ -44,7 +168,7 @@ const allFeatures = (path) => {
       image: "/feature-ip-security.svg",
       description:
         "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
-      link: "https://giddh.com/security",
+      link: "https://giddh.com/in/security",
       hasMoreContent: false,
     },
     {
@@ -52,7 +176,7 @@ const allFeatures = (path) => {
       image: "/feature-gst-compliance.svg",
       description:
         "Create GST invoice, view GST reports, direct filing, check filing status and reconcile transaction with the GST portal.",
-      link: "https://giddh.com/gst",
+      link: "https://giddh.com/in/gst",
       hasMoreContent: true,
       popupContent: {
         heading: "Simplify Your GST Compliance",
@@ -72,7 +196,7 @@ const allFeatures = (path) => {
       image: "/feature-inventory-management.svg",
       description:
         "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, real-time inventory reports.",
-      link: "https://giddh.com/inventory-management-software",
+      link: "https://giddh.com/in/inventory-management-software",
       hasMoreContent: true,
       popupContent: {
         heading: "Efficiently manage your entire business inventory",
@@ -92,7 +216,7 @@ const allFeatures = (path) => {
       image: "/feature-multi-currency.svg",
       description:
         "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates.",
-      link: "https://giddh.com/multi-currency-accounting-software",
+      link: "https://giddh.com/in/multi-currency-accounting-software",
       hasMoreContent: false,
     },
     {
@@ -116,7 +240,7 @@ const allFeatures = (path) => {
       image: "/feature-bank-reconciliation.svg",
       description:
         "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
-      link: "https://giddh.com/conect-bank-reconcile",
+      link: "https://giddh.com/in/conect-bank-reconcile",
       hasMoreContent: false,
     },
     {
@@ -143,11 +267,13 @@ const allFeatures = (path) => {
     {
       name: "Barcode",
       image: "/barcode-scanning.svg",
-      description: "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+      description:
+        "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
       link: null,
       hasMoreContent: true,
       popupContent: {
-        heading: "Scan, Simplify, Succeed: Accelerate Your Workflow with Barcode Integration.",
+        heading:
+          "Scan, Simplify, Succeed: Accelerate Your Workflow with Barcode Integration.",
         contentText: `
         <ul class='custom-ul-with-right-tick mt-5'>
           <li>Easy search</li>
@@ -286,9 +412,10 @@ const allFeatures = (path) => {
     {
       name: "Barcode",
       image: "/barcode-scanning.svg",
-      description: "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+      description:
+        "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
       link: null,
-      hasMoreContent: false
+      hasMoreContent: false,
     },
     {
       name: "Audit Trail",
@@ -416,9 +543,10 @@ const allFeatures = (path) => {
     {
       name: "Barcode",
       image: "/barcode-scanning.svg",
-      description: "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+      description:
+        "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
       link: null,
-      hasMoreContent: false
+      hasMoreContent: false,
     },
     {
       name: "Audit Trail",
@@ -462,7 +590,9 @@ const allFeatures = (path) => {
     },
   ];
 
-  const countryWiseData = isIndia
+  const countryWiseData = isGlobal
+    ? globalFeatures
+    : isIndia
     ? indiaFeatures
     : isAE
     ? aeFeatures
@@ -507,7 +637,7 @@ const allFeatures = (path) => {
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
                   <img
-                    src={ directoryPath + "/all-features-banner-image.svg"}
+                    src={directoryPath + "/all-features-banner-image.svg"}
                     alt="giddh features banner image"
                     width="90%"
                   />
@@ -527,7 +657,7 @@ const allFeatures = (path) => {
                     <div className="col-md-5 col-sm-12 text-center">
                       <figure className="pt-2">
                         <img
-                          src={ directoryPath + item.image}
+                          src={directoryPath + item.image}
                           alt="Giddh features Icon"
                           height="auto"
                           width="160"
@@ -589,7 +719,9 @@ const allFeatures = (path) => {
                   className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
-                  onClick={ ()=> { setPopupData({})}}
+                  onClick={() => {
+                    setPopupData({});
+                  }}
                 ></button>
               </div>
               <div className="modal-body overflow-auto">

@@ -103,17 +103,25 @@ function formatMobileNumber(number) {
 
 function getCurrentSiteCountry() {
     const startPath = window.location.href.split("/");
-    var isIndia = startPath[startPath.indexOf('ae')] !== "ae" && startPath[startPath.indexOf('uk')] !== "uk";
-    var isAE = startPath[startPath.indexOf('ae')] === "ae";
-    var isUK = startPath[startPath.indexOf('uk')] === "uk";
-    return { isIndia: isIndia, isAE: isAE, isUK: isUK };
+    var isGlobal =
+      startPath[startPath.indexOf("ae")] !== "ae" &&
+      startPath[startPath.indexOf("in")] !== "in" &&
+      startPath[startPath.indexOf("uk")] !== "uk";
+    var isAE = startPath[startPath.indexOf("ae")] === "ae";
+    var isIndia = startPath[startPath.indexOf("in")] === "in";
+    var isUK = startPath[startPath.indexOf("uk")] === "uk";
+    return { isGlobal: isGlobal, isIndia: isIndia, isAE: isAE, isUK: isUK };
 }
 
 function getCurrentSiteCountryUrl(siteUrl) {
-    const startPath = window.location.href.split("/");
-    var isIndia = startPath[startPath.indexOf('ae')] !== "ae" && startPath[startPath.indexOf('uk')] !== "uk";
-    var isAE = startPath[startPath.indexOf('ae')] === "ae";
-    return siteUrl + (isIndia ? "" : isAE ? "/ae" : "/uk");
+  const startPath = window.location.href.split("/");
+  var isGlobal =
+    startPath[startPath.indexOf("ae")] !== "ae" &&
+    startPath[startPath.indexOf("in")] !== "in" &&
+    startPath[startPath.indexOf("uk")] !== "uk";
+  var isAE = startPath[startPath.indexOf("ae")] === "ae";
+  var isIndia = startPath[startPath.indexOf("in")] === "in";
+  return siteUrl + (isGlobal ? "" : isIndia ? "/in" : isAE ? "/ae" : "/uk");
 }
 
 function redirectPhpLink() {
