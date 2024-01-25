@@ -49,7 +49,11 @@ const pricing = (path) => {
             <div
               className={
                 "pricing_main_section__grid " +
-                (isIndia ? " display-all" : " display-four")
+                (isGlobal
+                  ? "global"
+                  : isIndia
+                  ? " display-all"
+                  : " display-four")
               }
             >
               <div className="pricing_main_section__grid__title">
@@ -1050,254 +1054,250 @@ const pricing = (path) => {
                 <MdDone />
               </div>
               {!isGlobal && (
-                <div className="pricing_main_section__grid__gst pricing-border-top">
-                  <div
-                    className={"cursor-pointer " + (gst ? "pt-2" : "")}
-                    onClick={() => setGst((gst) => !gst)}
-                  >
-                    <span>
-                      {isIndia ? "GST" : "VAT"} Compliance{" "}
-                      {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
-                    </span>
-                    {gst && (
-                      <p className="c-fw-400">
-                        {isIndia && (
-                          <>
-                            Create GST invoice, view GST reports, direct filing,
-                            and reconcile transaction with the GST portal and
-                            <a href="/gst" target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                        {isAE && (
-                          <>
-                            Create VAT invoice, view VAT reports and
-                            <a href={link + "/vat"} target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                        {isUK && (
-                          <>
-                            Create VAT invoice, view VAT reports, direct filing,
-                            and reconcile transaction with the VAT portal and
-                            <a href={link + "/vat"} target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                      </p>
-                    )}
+                <>
+                  <div className="pricing_main_section__grid__gst pricing-border-top">
+                    <div
+                      className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                      onClick={() => setGst((gst) => !gst)}
+                    >
+                      <span>
+                        {isIndia ? "GST" : "VAT"} Compliance{" "}
+                        {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                      </span>
+                      {gst && (
+                        <p className="c-fw-400">
+                          {isIndia && (
+                            <>
+                              Create GST invoice, view GST reports, direct
+                              filing, and reconcile transaction with the GST
+                              portal and
+                              <a href="/gst" target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                          {isAE && (
+                            <>
+                              Create VAT invoice, view VAT reports and
+                              <a href={link + "/vat"} target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                          {isUK && (
+                            <>
+                              Create VAT invoice, view VAT reports, direct
+                              filing, and reconcile transaction with the VAT
+                              portal and
+                              <a href={link + "/vat"} target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
-              {!isGlobal && (
-                <div className="pricing_main_section__grid__gst_2">
-                  <div
-                    className={"cursor-pointer " + (gst ? "pt-2" : "")}
-                    onClick={() => setGst((gst) => !gst)}
-                  >
-                    <span>
-                      {isIndia ? "GST" : "VAT"} Compliance{" "}
-                      {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
-                    </span>
-                    {gst && (
-                      <p className="c-fw-400">
-                        {isIndia && (
-                          <>
-                            Create GST invoice, view GST reports, direct filing,
-                            and reconcile transaction with the GST portal and
-                            <a href="/gst" target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                        {isAE && (
-                          <>
-                            Create VAT invoice, view VAT reports and
-                            <a href={link + "/vat"} target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                        {isUK && (
-                          <>
-                            Create VAT invoice, view VAT reports, direct filing,
-                            and reconcile transaction with the VAT portal and
-                            <a href={link + "/vat"} target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                      </p>
-                    )}
+                  <div className="pricing_main_section__grid__gst_2">
+                    <div
+                      className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                      onClick={() => setGst((gst) => !gst)}
+                    >
+                      <span>
+                        {isIndia ? "GST" : "VAT"} Compliance{" "}
+                        {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                      </span>
+                      {gst && (
+                        <p className="c-fw-400">
+                          {isIndia && (
+                            <>
+                              Create GST invoice, view GST reports, direct
+                              filing, and reconcile transaction with the GST
+                              portal and
+                              <a href="/gst" target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                          {isAE && (
+                            <>
+                              Create VAT invoice, view VAT reports and
+                              <a href={link + "/vat"} target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                          {isUK && (
+                            <>
+                              Create VAT invoice, view VAT reports, direct
+                              filing, and reconcile transaction with the VAT
+                              portal and
+                              <a href={link + "/vat"} target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
-              {!isGlobal && (
-                <div className="pricing_main_section__grid__gst_3">
-                  <div
-                    className={"cursor-pointer " + (gst ? "pt-2" : "")}
-                    onClick={() => setGst((gst) => !gst)}
-                  >
-                    <span>
-                      {isIndia ? "GST" : "VAT"} Compliance{" "}
-                      {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
-                    </span>
-                    {gst && (
-                      <p className="c-fw-400">
-                        {isIndia && (
-                          <>
-                            Create GST invoice, view GST reports, direct filing,
-                            and reconcile transaction with the GST portal and
-                            <a href="/gst" target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                        {isAE && (
-                          <>
-                            Create VAT invoice, view VAT reports and
-                            <a href={link + "/vat"} target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                        {isUK && (
-                          <>
-                            Create VAT invoice, view VAT reports, direct filing,
-                            and reconcile transaction with the VAT portal and
-                            <a href={link + "/vat"} target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                      </p>
-                    )}
+                  <div className="pricing_main_section__grid__gst_3">
+                    <div
+                      className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                      onClick={() => setGst((gst) => !gst)}
+                    >
+                      <span>
+                        {isIndia ? "GST" : "VAT"} Compliance{" "}
+                        {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                      </span>
+                      {gst && (
+                        <p className="c-fw-400">
+                          {isIndia && (
+                            <>
+                              Create GST invoice, view GST reports, direct
+                              filing, and reconcile transaction with the GST
+                              portal and
+                              <a href="/gst" target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                          {isAE && (
+                            <>
+                              Create VAT invoice, view VAT reports and
+                              <a href={link + "/vat"} target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                          {isUK && (
+                            <>
+                              Create VAT invoice, view VAT reports, direct
+                              filing, and reconcile transaction with the VAT
+                              portal and
+                              <a href={link + "/vat"} target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
-              {!isGlobal && (
-                <div className="pricing_main_section__grid__gst_4">
-                  <div
-                    className={"cursor-pointer " + (gst ? "pt-2" : "")}
-                    onClick={() => setGst((gst) => !gst)}
-                  >
-                    <span>
-                      {isIndia ? "GST" : "VAT"} Compliance{" "}
-                      {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
-                    </span>
-                    {gst && (
-                      <p className="c-fw-400">
-                        {isIndia && (
-                          <>
-                            Create GST invoice, view GST reports, direct filing,
-                            and reconcile transaction with the GST portal and
-                            <a href="/gst" target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                        {isAE && (
-                          <>
-                            Create VAT invoice, view VAT reports and
-                            <a href={link + "/vat"} target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                        {isUK && (
-                          <>
-                            Create VAT invoice, view VAT reports, direct filing,
-                            and reconcile transaction with the VAT portal and
-                            <a href={link + "/vat"} target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                      </p>
-                    )}
+                  <div className="pricing_main_section__grid__gst_4">
+                    <div
+                      className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                      onClick={() => setGst((gst) => !gst)}
+                    >
+                      <span>
+                        {isIndia ? "GST" : "VAT"} Compliance{" "}
+                        {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                      </span>
+                      {gst && (
+                        <p className="c-fw-400">
+                          {isIndia && (
+                            <>
+                              Create GST invoice, view GST reports, direct
+                              filing, and reconcile transaction with the GST
+                              portal and
+                              <a href="/gst" target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                          {isAE && (
+                            <>
+                              Create VAT invoice, view VAT reports and
+                              <a href={link + "/vat"} target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                          {isUK && (
+                            <>
+                              Create VAT invoice, view VAT reports, direct
+                              filing, and reconcile transaction with the VAT
+                              portal and
+                              <a href={link + "/vat"} target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
-              {!isGlobal && (
-                <div className="pricing_main_section__grid__gst_5 display-all__child">
-                  <div
-                    className={"cursor-pointer " + (gst ? "pt-2" : "")}
-                    onClick={() => setGst((gst) => !gst)}
-                  >
-                    <span>
-                      {isIndia ? "GST" : "VAT"} Compliance{" "}
-                      {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
-                    </span>
-                    {gst && (
-                      <p className="c-fw-400">
-                        {isIndia && (
-                          <>
-                            Create GST invoice, view GST reports, direct filing,
-                            and reconcile transaction with the GST portal and
-                            <a href="/gst" target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                        {isAE && (
-                          <>
-                            Create VAT invoice, view VAT reports and
-                            <a href={link + "/vat"} target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                        {isUK && (
-                          <>
-                            Create VAT invoice, view VAT reports, direct filing,
-                            and reconcile transaction with the VAT portal and
-                            <a href={link + "/vat"} target="_blank">
-                              {" "}
-                              more
-                            </a>
-                          </>
-                        )}
-                      </p>
-                    )}
+                  <div className="pricing_main_section__grid__gst_5 display-all__child">
+                    <div
+                      className={"cursor-pointer " + (gst ? "pt-2" : "")}
+                      onClick={() => setGst((gst) => !gst)}
+                    >
+                      <span>
+                        {isIndia ? "GST" : "VAT"} Compliance{" "}
+                        {gst ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                      </span>
+                      {gst && (
+                        <p className="c-fw-400">
+                          {isIndia && (
+                            <>
+                              Create GST invoice, view GST reports, direct
+                              filing, and reconcile transaction with the GST
+                              portal and
+                              <a href="/gst" target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                          {isAE && (
+                            <>
+                              Create VAT invoice, view VAT reports and
+                              <a href={link + "/vat"} target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                          {isUK && (
+                            <>
+                              Create VAT invoice, view VAT reports, direct
+                              filing, and reconcile transaction with the VAT
+                              portal and
+                              <a href={link + "/vat"} target="_blank">
+                                {" "}
+                                more
+                              </a>
+                            </>
+                          )}
+                        </p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
-              {!isGlobal && (
-                <div className="pricing_main_section__grid__g2 text-center pricing-border-top">
-                  <MdDone />
-                </div>
-              )}
-              {!isGlobal && (
-                <div className="pricing_main_section__grid__g3 text-center pricing-border-top">
-                  <MdDone />
-                </div>
-              )}
-              {!isGlobal && (
-                <div className="pricing_main_section__grid__g4 text-center pricing-border-top">
-                  <MdDone />
-                </div>
-              )}
-              {!isGlobal && (
-                <div className="pricing_main_section__grid__g5 text-center pricing-border-top display-all__child">
-                  <MdDone />
-                </div>
+                  <div className="pricing_main_section__grid__g2 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__g3 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__g4 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__g5 text-center pricing-border-top display-all__child">
+                    <MdDone />
+                  </div>
+                </>
               )}
               <div className="pricing_main_section__grid__reports pricing-border-top">
                 <div
