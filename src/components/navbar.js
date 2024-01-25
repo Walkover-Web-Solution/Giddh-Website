@@ -11,6 +11,11 @@ const navbar = (props) => {
   const [scrollStatus, setscrollStatus] = useState(false);
 
   function getCountryWiseData(data) {
+    if (link.isGlobal) {
+      if (data.global === true) {
+        return data;
+      }
+    }
     if (link.isIndia) {
       if (data.in === true) {
         return data;
@@ -34,6 +39,7 @@ const navbar = (props) => {
   // List of path where navbar Background will be transparent and turn Background white on scroll
   let specificPath =
     pathname === "/" ||
+    pathname === "/in" ||
     pathname === "/ae" ||
     pathname === "/uk";
 
@@ -77,7 +83,7 @@ const navbar = (props) => {
           <a
             className="navbar--navbar_brand"
             aria-label="Giddh Brand logo"
-            href={ urlPrefix == '' ? '/' : urlPrefix }
+            href={urlPrefix == "" ? "/" : urlPrefix}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -171,11 +177,9 @@ const navbar = (props) => {
                 <a
                   className={
                     "nav-link " +
-                    (activePath === "make-the-switch"
-                      ? "active"
-                      : "")
+                    (activePath === "make-the-switch" ? "active" : "")
                   }
-                  href={ urlPrefix + "/make-the-switch" } 
+                  href={urlPrefix + "/make-the-switch"}
                 >
                   Make the Switch
                 </a>
@@ -185,9 +189,7 @@ const navbar = (props) => {
                   <a
                     className={
                       "nav-link chevron_down nav-link--feature-menu " +
-                      (activePath === "all-features"
-                        ? "active"
-                        : "")
+                      (activePath === "all-features" ? "active" : "")
                     }
                     href="#"
                     id="allFeaturesDropdown"
@@ -208,13 +210,14 @@ const navbar = (props) => {
                             <li key={index}>
                               {data.menuItem !== "API Integration" && (
                                 <>
-                                  <a href={ urlPrefix + data.url }>{data.menuItem}</a>
+                                  <a href={urlPrefix + data.url}>
+                                    {data.menuItem}
+                                  </a>
                                 </>
                               )}
                               {data.menuItem === "API Integration" && (
                                 <>
-                                  <a
-                                    href={ data.url } target="_blank" >
+                                  <a href={data.url} target="_blank">
                                     {data.menuItem}
                                   </a>
                                 </>
@@ -229,12 +232,9 @@ const navbar = (props) => {
               <li className="nav-item">
                 <a
                   className={
-                    "nav-link " +
-                    (activePath === "pricing"
-                      ? "active"
-                      : "")
+                    "nav-link " + (activePath === "pricing" ? "active" : "")
                   }
-                  href={ urlPrefix + "/pricing"}
+                  href={urlPrefix + "/pricing"}
                 >
                   Pricing
                 </a>
@@ -243,23 +243,33 @@ const navbar = (props) => {
                 <a
                   className={
                     "nav-link " +
-                    (activePath === "gst" ||
-                    activePath === "vat"
+                    (activePath === "gst" || activePath === "vat"
                       ? "active"
                       : "")
                   }
-                  href={link.isIndia ? urlPrefix+"/gst" : link.isAE ? urlPrefix + "/vat" : urlPrefix + "/vat"}
+                  href={
+                    link.isGlobal
+                      ? urlPrefix + "/vat"
+                      : link.isIndia
+                      ? urlPrefix + "/gst"
+                      : link.isAE
+                      ? urlPrefix + "/vat"
+                      : urlPrefix + "/vat"
+                  }
                 >
-                  {link.isIndia ? "GST" : link.isAE || link.isUK ? "VAT" : ""}
+                  {link.isGlobal
+                    ? "VAT"
+                    : link.isIndia
+                    ? "GST"
+                    : link.isAE || link.isUK
+                    ? "VAT"
+                    : ""}
                 </a>
               </li>
               <li className="nav-item">
                 <a
                   className={
-                    "nav-link " +
-                    (activePath === "about"
-                      ? "active"
-                      : "")
+                    "nav-link " + (activePath === "about" ? "active" : "")
                   }
                   href={urlPrefix + "/about"}
                 >
@@ -285,7 +295,9 @@ const navbar = (props) => {
                       <a href="https://giddh.com/blog">Blog</a>
                     </li>
                     <li>
-                      <a href="https://giddh.com/help" target="_blank">Help</a>
+                      <a href="https://giddh.com/help" target="_blank">
+                        Help
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -326,8 +338,20 @@ const navbar = (props) => {
                 >
                   <li>
                     <a
-                      className={"dropdown-item" + (link.isIndia ? " active" : "")}
+                      className={
+                        "dropdown-item" + (link.isGlobal ? " active" : "")
+                      }
                       href={baseURL}
+                    >
+                      Global
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className={
+                        "dropdown-item" + (link.isIndia ? " active" : "")
+                      }
+                      href={baseURL + "/in"}
                     >
                       IN - India
                     </a>
@@ -335,7 +359,7 @@ const navbar = (props) => {
                   <li>
                     <a
                       className={"dropdown-item" + (link.isAE ? " active" : "")}
-                      href={baseURL+'/ae'}
+                      href={baseURL + "/ae"}
                     >
                       UAE - United Arab Emirates
                     </a>
@@ -343,7 +367,7 @@ const navbar = (props) => {
                   <li>
                     <a
                       className={"dropdown-item" + (link.isUK ? " active" : "")}
-                      href={baseURL+'/uk'}
+                      href={baseURL + "/uk"}
                     >
                       UK - United Kingdom
                     </a>

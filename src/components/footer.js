@@ -59,7 +59,9 @@ const Footer = (path) => {
                       <a href="https://giddh.com/blog">Blog</a>
                     </li>
                     <li>
-                      <a href={link.linkPrefix + "/privacy-policy"}>Privacy Policy</a>
+                      <a href={link.linkPrefix + "/privacy-policy"}>
+                        Privacy Policy
+                      </a>
                     </li>
                     <li>
                       <a
@@ -70,7 +72,9 @@ const Footer = (path) => {
                       </a>
                     </li>
                     <li>
-                      <a href={link.linkPrefix + "/affiliate"}>Affiliate With Us</a>
+                      <a href={link.linkPrefix + "/affiliate"}>
+                        Affiliate With Us
+                      </a>
                     </li>
                     <li>
                       <a href={link.linkPrefix + "/terms"}>Terms of Use</a>
@@ -85,10 +89,14 @@ const Footer = (path) => {
                 <h3 className="c-fs-4 c-fw-600">Compare</h3>
                 <ul className="footer-list list-unstyled mb-3">
                   <li>
-                    <a href={link.linkPrefix + "/zoho-vs-giddh"}>Giddh vs Zoho</a>
+                    <a href={link.linkPrefix + "/zoho-vs-giddh"}>
+                      Giddh vs Zoho
+                    </a>
                   </li>
                   <li>
-                    <a href={link.linkPrefix + "/tally-vs-giddh"}>Giddh vs Tally</a>
+                    <a href={link.linkPrefix + "/tally-vs-giddh"}>
+                      Giddh vs Tally
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -159,60 +167,7 @@ const Footer = (path) => {
                 Contact Us
               </h3>
               <div>
-                <div className="footer-dpn mb-3">
-                  <div className="dropdown btn-group w-100">
-                    <button
-                      type="button"
-                      className="btn btn-down dropdown-toggle country-icon"
-                      id="countryDropdownHeader"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <img src="/img/earth.svg" alt="Blue-Globe-icon" />
-
-                      {link.isIndia
-                        ? "IN - India"
-                        : link.isAE
-                        ? "UAE - United Arab Emirates"
-                        : "UK - United Kingdom"}
-                    </button>
-                    <ul
-                      className="dropdown-menu country_dropdown__menu"
-                      aria-labelledby="countryDropdownHeader"
-                    >
-                      <li>
-                        <a
-                          className={
-                            "dropdown-item" + (link.isIndia ? " active" : "")
-                          }
-                          href={link.baseURL}
-                        >
-                          IN - India
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className={
-                            "dropdown-item" + (link.isAE ? " active" : "")
-                          }
-                          href={link.baseURL+'/ae'}
-                        >
-                          UAE - United Arab Emirates
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className={
-                            "dropdown-item" + (link.isUK ? " active" : "")
-                          }
-                          href={link.baseURL+'/uk'}
-                        >
-                          UK - United Kingdom
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <div className="footer-dpn mb-3"></div>
                 <ul className="footer-list list-unstyled class">
                   <li className="widget_text widget widget_custom_html">
                     <div className="textwidget custom-html-widget">

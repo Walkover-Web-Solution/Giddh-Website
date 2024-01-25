@@ -2,7 +2,7 @@ import { MdRemove, MdAdd } from "react-icons/md";
 
 const inventoryManagementSoftware = (path) => {
   const linkPath = path.path;
-    
+  const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { MdRemove, MdAdd } from "react-icons/md";
 const invoiceSoftware = (path) => {
   const linkPath = path.path;
-
+  const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
@@ -146,7 +146,7 @@ const invoiceSoftware = (path) => {
                     {isIndia
                       ? "Simplify your invoices for you and your clients by applying GST. No more need to repeatedly verify the client's state for the correct GST type – simply enter the state, and GIDDH, the GST billing software will apply the appropriate GST type automatically."
                       : ""}
-                    {isAE || isUK
+                    {isAE || isUK || isGlobal
                       ? "Simplify your invoices for you and your clients by applying VAT."
                       : ""}
                   </p>
@@ -219,7 +219,7 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {(isAE || isUK) && (
+            {(isAE || isUK || isGlobal) && (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
@@ -272,7 +272,7 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {(isAE || isUK) && (
+            {(isAE || isUK || isGlobal) && (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
@@ -325,7 +325,7 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {(isAE || isUK) && (
+            {(isAE || isUK || isGlobal) && (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
@@ -378,7 +378,7 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {(isAE || isUK) && (
+            {(isAE || isUK || isGlobal) && (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
@@ -431,7 +431,7 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {(isAE || isUK) && (
+            {(isAE || isUK || isGlobal) && (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
@@ -449,7 +449,7 @@ const invoiceSoftware = (path) => {
                 <div className="col-md-12 col-lg-6 image-alignment">
                   <figure>
                     <img
-                       src="/img/feature-gallery-icons/customize-the-invoice-number.svg"
+                      src="/img/feature-gallery-icons/customize-the-invoice-number.svg"
                       className="img-fluid"
                       alt="custom invoice number image"
                     />
@@ -457,7 +457,7 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {!isAE && (!isUK || isIndia) && (
+            {!isAE && !isGlobal && (!isUK || isIndia) && (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
@@ -483,32 +483,33 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {isUK && (
-              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
-                <div className="col-md-12 col-lg-6">
-                  <div className="features__description_container__content">
-                    <h4 className="col-primary small-heading c-fw-600 mb-3">
-                      {" "}
-                      Reverse charge
-                    </h4>
-                    <p>
-                      {" "}
-                      You have the option to implement the Reverse Charge
-                      mechanism on your invoices as well.
-                    </p>
+            {isUK ||
+              (isGlobal && (
+                <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                  <div className="col-md-12 col-lg-6">
+                    <div className="features__description_container__content">
+                      <h4 className="col-primary small-heading c-fw-600 mb-3">
+                        {" "}
+                        Reverse charge
+                      </h4>
+                      <p>
+                        {" "}
+                        You have the option to implement the Reverse Charge
+                        mechanism on your invoices as well.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-12 col-lg-6 image-alignment">
+                    <figure>
+                      <img
+                        src="/img/feature-gallery-icons/reverse-charge.svg"
+                        className="img-fluid"
+                        alt="reverse charge image"
+                      />
+                    </figure>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 image-alignment">
-                  <figure>
-                    <img
-                      src="/img/feature-gallery-icons/reverse-charge.svg"
-                      className="img-fluid"
-                      alt="reverse charge image"
-                    />
-                  </figure>
-                </div>
-              </div>
-            )}
+              ))}
             {(isIndia || isAE) && (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
                 <div className="col-md-12 col-lg-6">
@@ -533,30 +534,31 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {isUK && (
-              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
-                <div className="col-md-12 col-lg-6">
-                  <div className="features__description_container__content">
-                    <h4 className="col-primary small-heading c-fw-600 mb-3">
-                      Bulk Invoice update
-                    </h4>
-                    <p>
-                      Effortlessly manage your invoices by making bulk updates
-                      and deletions as needed.
-                    </p>
+            {isUK ||
+              (isGlobal && (
+                <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                  <div className="col-md-12 col-lg-6">
+                    <div className="features__description_container__content">
+                      <h4 className="col-primary small-heading c-fw-600 mb-3">
+                        Bulk Invoice update
+                      </h4>
+                      <p>
+                        Effortlessly manage your invoices by making bulk updates
+                        and deletions as needed.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-12 col-lg-6 image-alignment">
+                    <figure>
+                      <img
+                        src="/img/feature-gallery-icons/bulk-update.svg"
+                        className="img-fluid"
+                        alt="bulk invoice update image"
+                      />
+                    </figure>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 image-alignment">
-                  <figure>
-                    <img
-                      src="/img/feature-gallery-icons/bulk-update.svg"
-                      className="img-fluid"
-                      alt="bulk invoice update image"
-                    />
-                  </figure>
-                </div>
-              </div>
-            )}
+              ))}
             {(isIndia || isAE) && (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
                 <div className="col-md-12 col-lg-6">
@@ -582,31 +584,33 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {isUK && (
-              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
-                <div className="col-md-12 col-lg-6">
-                  <div className="features__description_container__content">
-                    <h4 className="col-primary small-heading c-fw-600 mb-3">
-                      Copy from previous invoice
-                    </h4>
-                    <p>
-                      Streamline your workflow by duplicating invoice data from
-                      a previous invoice, eliminating the need to manually input
-                      the same information each time when it remains unchanged.
-                    </p>
+            {isUK ||
+              (isGlobal && (
+                <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                  <div className="col-md-12 col-lg-6">
+                    <div className="features__description_container__content">
+                      <h4 className="col-primary small-heading c-fw-600 mb-3">
+                        Copy from previous invoice
+                      </h4>
+                      <p>
+                        Streamline your workflow by duplicating invoice data
+                        from a previous invoice, eliminating the need to
+                        manually input the same information each time when it
+                        remains unchanged.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-12 col-lg-6 image-alignment">
+                    <figure>
+                      <img
+                        src="/img/feature-gallery-icons/copy-from-invoice.svg"
+                        className="img-fluid"
+                        alt="copy from invoice image"
+                      />
+                    </figure>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 image-alignment">
-                  <figure>
-                    <img
-                      src="/img/feature-gallery-icons/copy-from-invoice.svg"
-                      className="img-fluid"
-                      alt="copy from invoice image"
-                    />
-                  </figure>
-                </div>
-              </div>
-            )}
+              ))}
 
             {(isIndia || isAE) && (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
@@ -635,33 +639,34 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {isUK && (
-              <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
-                <div className="col-md-12 col-lg-6">
-                  <div className="features__description_container__content">
-                    <h4 className="col-primary small-heading c-fw-600 mb-3">
-                      Import and Export the invoice
-                    </h4>
-                    <p>
-                      No need to stress about recreating all your previous
-                      invoices when you have data in an Excel file. Just import
-                      the file, and you're good to go. Additionally, you can
-                      efficiently export the necessary invoices in bulk as per
-                      your requirements.
-                    </p>
+            {isUK ||
+              (isGlobal && (
+                <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+                  <div className="col-md-12 col-lg-6">
+                    <div className="features__description_container__content">
+                      <h4 className="col-primary small-heading c-fw-600 mb-3">
+                        Import and Export the invoice
+                      </h4>
+                      <p>
+                        No need to stress about recreating all your previous
+                        invoices when you have data in an Excel file. Just
+                        import the file, and you're good to go. Additionally,
+                        you can efficiently export the necessary invoices in
+                        bulk as per your requirements.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-12 col-lg-6 image-alignment">
+                    <figure>
+                      <img
+                        src="/img/feature-gallery-icons/Invoice.svg"
+                        className="img-fluid"
+                        alt="import export image"
+                      />
+                    </figure>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 image-alignment">
-                  <figure>
-                    <img
-                      src="/img/feature-gallery-icons/Invoice.svg"
-                      className="img-fluid"
-                      alt="import export image"
-                    />
-                  </figure>
-                </div>
-              </div>
-            )}
+              ))}
 
             {(isIndia || isAE) && (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
@@ -689,34 +694,42 @@ const invoiceSoftware = (path) => {
                 </div>
               </div>
             )}
-            {isUK && (
-              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
-                <div className="col-md-12 col-lg-6">
-                  <div className="features__description_container__content">
-                    <h4 className="col-primary small-heading c-fw-600 mb-3">
-                      Generate multiple and compound invoices
-                    </h4>
-                    <p>
-                      Effortlessly create multiple invoices at once by
-                      leveraging your entries, also benefiting from the
-                      convenience of generating composite invoices using these
-                      recorded entries.
-                    </p>
+            {isUK ||
+              (isGlobal && (
+                <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+                  <div className="col-md-12 col-lg-6">
+                    <div className="features__description_container__content">
+                      <h4 className="col-primary small-heading c-fw-600 mb-3">
+                        Generate multiple and compound invoices
+                      </h4>
+                      <p>
+                        Effortlessly create multiple invoices at once by
+                        leveraging your entries, also benefiting from the
+                        convenience of generating composite invoices using these
+                        recorded entries.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-12 col-lg-6 image-alignment">
+                    <figure>
+                      <img
+                        src="/img/feature-gallery-icons/generate-multiple-and-compound-invoices.svg"
+                        className="img-fluid"
+                        alt="multiple compound image"
+                      />
+                    </figure>
                   </div>
                 </div>
-                <div className="col-md-12 col-lg-6 image-alignment">
-                  <figure>
-                    <img
-                       src="/img/feature-gallery-icons/generate-multiple-and-compound-invoices.svg"
-                      className="img-fluid"
-                      alt="multiple compound image"
-                    />
-                  </figure>
-                </div>
-              </div>
-            )}
+              ))}
 
-            <div className={"row mb-5 align-items-center " + (isIndia || isAE ? " features__description_container--row-odd" : " features__description_container--row-even")} >
+            <div
+              className={
+                "row mb-5 align-items-center " +
+                (isIndia || isAE
+                  ? " features__description_container--row-odd"
+                  : " features__description_container--row-even")
+              }
+            >
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">

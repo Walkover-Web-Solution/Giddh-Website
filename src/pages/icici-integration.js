@@ -10,7 +10,11 @@ const iciciIntegration = () => {
               <div className="text-center">
                 <div className="d-flex align-items-end justify-content-center mb-5">
                   <span>
-                    <img src="/img/giddh-logo.svg" alt="Giddh Accounting Software Logo" height="33px" />
+                    <img
+                      src="/img/giddh-logo.svg"
+                      alt="Giddh Accounting Software Logo"
+                      height="33px"
+                    />
                   </span>
                   <span className="icici_integration__head_content__add_icon mx-3">
                     <MdAdd />
@@ -41,7 +45,7 @@ const iciciIntegration = () => {
                 </div>
                 <div className="mb-5">
                   <a
-                    href={ "https://giddh.com/signup" }
+                    href={"https://giddh.com/in/signup"}
                     target="_blank"
                     className="icici_integration__get_started_btn col-white"
                   >
@@ -70,7 +74,10 @@ const iciciIntegration = () => {
               <div className="col-md-6 col-lg-4">
                 <div className="px-3">
                   <figure>
-                    <img src="/img/shape.svg" alt="pen new ICICI account directly icon" />
+                    <img
+                      src="/img/shape.svg"
+                      alt="pen new ICICI account directly icon"
+                    />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
                     Open new ICICI account directly from Giddh
@@ -89,93 +96,130 @@ const iciciIntegration = () => {
                     <img src="/img/hand-shake.svg" alt="hand-shake icon" />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
-                  Easy<br/>Reconciliation
+                    Easy
+                    <br />
+                    Reconciliation
                   </h3>
                   <p className="c-fs-6">
-                  All the transactions are automatically fetched in Giddh once you integrate your ICICI bank corporate account. Keep your bank and books matched perfectly always.
+                    All the transactions are automatically fetched in Giddh once
+                    you integrate your ICICI bank corporate account. Keep your
+                    bank and books matched perfectly always.
                   </p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-4">
                 <div className="px-3">
                   <figure>
-                    <img src="/img/card-swipe-icon.svg" alt="Make payment to vendors directly Icon" />
+                    <img
+                      src="/img/card-swipe-icon.svg"
+                      alt="Make payment to vendors directly Icon"
+                    />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
-                  Make payment to vendors directly from Giddh
+                    Make payment to vendors directly from Giddh
                   </h3>
                   <p className="c-fs-6">
-                  Save a lot of time and never let your dues exceed the time line. Pay vendors directly from the Giddh through just one click. No need to go anywhere else to make the payment.
+                    Save a lot of time and never let your dues exceed the time
+                    line. Pay vendors directly from the Giddh through just one
+                    click. No need to go anywhere else to make the payment.
                   </p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-4">
                 <div className="px-3">
                   <figure>
-                    <img src="/img/set-payment-limit-icon.svg" alt="Set limit to payments Icon" />
+                    <img
+                      src="/img/set-payment-limit-icon.svg"
+                      alt="Set limit to payments Icon"
+                    />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
-                  Set limit to <br/>payments
+                    Set limit to <br />
+                    payments
                   </h3>
                   <p className="c-fs-6">
-                  Be carefree about your bank account. Set different OTP authorisation levels according to the amount being paid. Limit the transaction amount.
+                    Be carefree about your bank account. Set different OTP
+                    authorisation levels according to the amount being paid.
+                    Limit the transaction amount.
                   </p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-4">
                 <div className="px-3">
                   <figure>
-                    <img src="/img/money-loan-icon.svg" alt="Capital Loan at good rates Icon" />
+                    <img
+                      src="/img/money-loan-icon.svg"
+                      alt="Capital Loan at good rates Icon"
+                    />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
-                  Working Capital Loan at good  rates
+                    Working Capital Loan at good rates
                   </h3>
                   <p className="c-fs-6">
-                  Avail working capital loans faster at very good rates as compared to the market through Giddh. Get a loan in just a snap.
+                    Avail working capital loans faster at very good rates as
+                    compared to the market through Giddh. Get a loan in just a
+                    snap.
                   </p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-4">
                 <div className="px-3">
                   <figure>
-                    <img src="/img/bulk-payment-card-icon.svg" alt="Bulk Payment Icon" />
+                    <img
+                      src="/img/bulk-payment-card-icon.svg"
+                      alt="Bulk Payment Icon"
+                    />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
-                  Bulk <br/>Payment
+                    Bulk <br />
+                    Payment
                   </h3>
                   <p className="c-fs-6">
-                  Make payment for multiple invoices of a particular vendor via ICICI Bank in a single go using Giddh. This is the fastest and most accurate way of doing bulk payment.
+                    Make payment for multiple invoices of a particular vendor
+                    via ICICI Bank in a single go using Giddh. This is the
+                    fastest and most accurate way of doing bulk payment.
                   </p>
                 </div>
               </div>
               <div className="col-md-6 col-lg-4">
                 <div className="px-3">
                   <figure>
-                    <img src="/img/bank-statement-icon.svg" alt="Bank statement & bank balance icon" />
+                    <img
+                      src="/img/bank-statement-icon.svg"
+                      alt="Bank statement & bank balance icon"
+                    />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
-                  Bank statement <br/>& bank balance
+                    Bank statement <br />& bank balance
                   </h3>
                   <p className="c-fs-6">
-                  Keep a check on money flowing in and out of your ICICI bank account from anywhere. Have access to your bank statement in your hand held gizmo through Giddh mobile application.
+                    Keep a check on money flowing in and out of your ICICI bank
+                    account from anywhere. Have access to your bank statement in
+                    your hand held gizmo through Giddh mobile application.
                   </p>
                 </div>
               </div>
             </div>
             <div className="row icici_integration__benifits_section__step_guide text-center">
               <p className="c-fs-4 mb-0">
-                See step-by-step <a href="https://giddh.com/help/how-to-integrate-icici-bank-account-with-giddh" target="_blank">Guide</a> on how to connect ICICI
-                account with Giddh
+                See step-by-step{" "}
+                <a
+                  href="https://giddh.com/help/how-to-integrate-icici-bank-account-with-giddh"
+                  target="_blank"
+                >
+                  Guide
+                </a>{" "}
+                on how to connect ICICI account with Giddh
               </p>
             </div>
             <div className="text-center my-4">
-                <a
-                href={ "https://giddh.com/signup"}
+              <a
+                href={"https://giddh.com/in/signup"}
                 target="_blank"
                 className="icici_integration__get_started_btn col-white"
-                >
+              >
                 Get Started
-                </a>
+              </a>
             </div>
           </div>
         </section>

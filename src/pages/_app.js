@@ -12,15 +12,17 @@ export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
     var browserPath = router.asPath;   
     var path = browserPath.split("/")[1];      
-    var path = path!== "ae" && path!== "uk" ? '' : '/' + path;     
+    var path =
+      path !== "ae" && path !== "uk" && path !== "in" ? "" : "/" + path;     
 
     path = {
-        linkPrefix: path,
-        baseURL: "https://giddh.com",
-        isIndia: path === "",
-        isAE: path  === "/ae",
-        isUK: path === "/uk"
-    }
+      linkPrefix: path,
+      baseURL: "https://giddh.com",
+      isGlobal: path === "",
+      isIndia: path === "/in",
+      isAE: path === "/ae",
+      isUK: path === "/uk",
+    };
 
     let currentPathArray = browserPath.split("/");
     let loginSignupPath = currentPathArray[currentPathArray.length - 1];

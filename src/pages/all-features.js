@@ -4,32 +4,21 @@ const allFeatures = (path) => {
   const [popupData, setPopupData] = useState({});
 
   const linkPath = path.path;
+  const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
 
   const directoryPath = "/img/feature-gallery-icons";
 
-  // All Feature Country Wise Data
-  let indiaFeatures = [
+  //Global Features
+  let globalFeatures = [
     {
       name: "Invoicing",
-      image: "/feature-invoicing-software.svg",
+      image: "/feature-invoicing-software-with-vat.svg",
       description:
         "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
       link: "https://giddh.com/invoice-software",
-      hasMoreContent: true,
-      popupContent: {
-        heading: "Effortless Invoicing Solutions",
-        contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
-          <li>Effortless GST Invoicing</li>
-          <li>Multi-currency Invoices</li>
-          <li>Sending invoice via multi-channels</li>
-          <li>Use Barcode for making invoice</li>
-        </ul>`,
-        videoLink:
-          "https://www.youtube.com/embed/TDEl-daOySU?si=MFN14FthrEMqUdfS",
-      },
+      hasMoreContent: false,
     },
     {
       name: "Unlimited user access",
@@ -48,24 +37,12 @@ const allFeatures = (path) => {
       hasMoreContent: false,
     },
     {
-      name: "GST compliance",
-      image: "/feature-gst-compliance.svg",
+      name: "VAT compliance",
+      image: "/feature-uk-vat-compliance.svg",
       description:
-        "Create GST invoice, view GST reports, direct filing, check filing status and reconcile transaction with the GST portal.",
-      link: "https://giddh.com/gst",
-      hasMoreContent: true,
-      popupContent: {
-        heading: "Simplify Your GST Compliance",
-        contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
-          <li>Direct filing</li>
-          <li>GST reports</li>
-          <li>Manage multiple GSTIN</li>
-          <li>Easy Reconciliation of transactions</li>
-        </ul>`,
-        videoLink:
-          "https://www.youtube.com/embed/7NcUnWRlq6Q?si=XtSM-JH8tiY66p6X",
-      },
+        "Generate VAT-Compliant Invoices, Access VAT Reports, Streamline Direct Filing, and Simplify Transaction Reconciliation via VAT Portal.",
+      link: "https://giddh.com/vat",
+      hasMoreContent: false,
     },
     {
       name: "Inventory Management",
@@ -73,19 +50,7 @@ const allFeatures = (path) => {
       description:
         "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, real-time inventory reports.",
       link: "https://giddh.com/inventory-management-software",
-      hasMoreContent: true,
-      popupContent: {
-        heading: "Efficiently manage your entire business inventory",
-        contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
-          <li>Record inventory for Product and Services</li>
-          <li>Bifurcate inventory into Groups, Items, and Variants</li>
-          <li>Fixed Asset Management</li>
-          <li>Real-time inventory reports</li>
-        </ul>`,
-        videoLink:
-          "https://www.youtube.com/embed/Yqy0ee3fI7Y?si=LUxFdilGY11joVvb",
-      },
+      hasMoreContent: false,
     },
     {
       name: "Multi-currency",
@@ -125,6 +90,173 @@ const allFeatures = (path) => {
       description:
         "Provides Shopify Integration with Giddh that streamlines sales data, automates order and payment sync for accurate financial records. It offers real-time insights into revenue, inventory, and customer data, enhancing efficiency and enabling informed decision-making for business growth.",
       link: null,
+      hasMoreContent: false,
+    },
+    {
+      name: "Barcode",
+      image: "/barcode-scanning.svg",
+      description:
+        "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+      link: null,
+      hasMoreContent: false,
+    },
+    {
+      name: "Audit Trail",
+      image: "/feature-audit-trail.svg",
+      description:
+        "An audit trail in Giddh, logs all transactions, enabling a detailed record of changes, enhancing accountability, and facilitating error detection for regulatory compliance and transparency.",
+      link: null,
+      hasMoreContent: false,
+    },
+    {
+      name: "Date range security",
+      image: "/feature-date-range.svg",
+      description:
+        "Giddh's date range security feature enables setting user-specific date restrictions, ensuring confidential data access only within defined periods. This controls financial data access, maintaining privacy and limiting unauthorized entry to sensitive information.",
+      link: null,
+      hasMoreContent: false,
+    },
+    {
+      name: "Multiple Reports",
+      image: "/feature-multiple-reports.svg",
+      description:
+        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+      link: null,
+      hasMoreContent: false,
+    },
+    {
+      name: "Fixed Asset Management",
+      image: "/feature-asset-management.svg",
+      description:
+        "Giddh's Fixed Asset Management streamlines the oversight and control of fixed assets, allowing for categorization into Groups, Stock, and variants. This feature offers real-time reports, enabling efficient monitoring and strategic asset management for your business.",
+      link: null,
+      hasMoreContent: false,
+    },
+    {
+      name: "Branch and warehouse management",
+      image: "/feature-branch-and-warehouse-management.svg",
+      description:
+        "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+      link: null,
+      hasMoreContent: false,
+    },
+  ];
+  // All Feature Country Wise Data
+  let indiaFeatures = [
+    {
+      name: "Invoicing",
+      image: "/feature-invoicing-software.svg",
+      description:
+        "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
+      link: "https://giddh.com/in/invoice-software",
+      hasMoreContent: true,
+      popupContent: {
+        heading: "Effortless Invoicing Solutions",
+        contentText: `
+        <ul class='custom-ul-with-right-tick mt-5'>
+          <li>Effortless GST Invoicing</li>
+          <li>Multi-currency Invoices</li>
+          <li>Sending invoice via multi-channels</li>
+          <li>Use Barcode for making invoice</li>
+        </ul>`,
+        videoLink:
+          "https://www.youtube.com/embed/TDEl-daOySU?si=MFN14FthrEMqUdfS",
+      },
+    },
+    {
+      name: "Unlimited user access",
+      image: "/feature-unlimited-user-access.svg",
+      description:
+        "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
+      link: "https://giddh.com/in/multi-user-accounting-software",
+      hasMoreContent: false,
+    },
+    {
+      name: "IP Security",
+      image: "/feature-ip-security.svg",
+      description:
+        "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
+      link: "https://giddh.com/in/security",
+      hasMoreContent: false,
+    },
+    {
+      name: "GST compliance",
+      image: "/feature-gst-compliance.svg",
+      description:
+        "Create GST invoice, view GST reports, direct filing, check filing status and reconcile transaction with the GST portal.",
+      link: "https://giddh.com/in/gst",
+      hasMoreContent: true,
+      popupContent: {
+        heading: "Simplify Your GST Compliance",
+        contentText: `
+        <ul class='custom-ul-with-right-tick mt-5'>
+          <li>Direct filing</li>
+          <li>GST reports</li>
+          <li>Manage multiple GSTIN</li>
+          <li>Easy Reconciliation of transactions</li>
+        </ul>`,
+        videoLink:
+          "https://www.youtube.com/embed/7NcUnWRlq6Q?si=XtSM-JH8tiY66p6X",
+      },
+    },
+    {
+      name: "Inventory Management",
+      image: "/feature-inventory-management.svg",
+      description:
+        "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, real-time inventory reports.",
+      link: "https://giddh.com/in/inventory-management-software",
+      hasMoreContent: true,
+      popupContent: {
+        heading: "Efficiently manage your entire business inventory",
+        contentText: `
+        <ul class='custom-ul-with-right-tick mt-5'>
+          <li>Record inventory for Product and Services</li>
+          <li>Bifurcate inventory into Groups, Items, and Variants</li>
+          <li>Fixed Asset Management</li>
+          <li>Real-time inventory reports</li>
+        </ul>`,
+        videoLink:
+          "https://www.youtube.com/embed/Yqy0ee3fI7Y?si=LUxFdilGY11joVvb",
+      },
+    },
+    {
+      name: "Multi-currency",
+      image: "/feature-multi-currency.svg",
+      description:
+        "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates.",
+      link: "https://giddh.com/in/multi-currency-accounting-software",
+      hasMoreContent: false,
+    },
+    {
+      name: "Invoice on whatsapp, Email, and SMS",
+      image: "/feature-invoice-on-email-whatsapp-and-sms.svg",
+      description:
+        "You can efficiently send invoices through various channels like WhatsApp, email, and SMS directly from your accounting software.",
+      link: null,
+      hasMoreContent: false,
+    },
+    {
+      name: "Journal Entries",
+      image: "/feature-journal-entries.svg",
+      description:
+        "GIDDH offers a Ledger-Based Journal Entry feature, allowing users to directly input entries into the company's ledger (Accounts). This feature provides real-time updates on account balances, eliminating the need to navigate to separate pages for checking balances after posting entries.",
+      link: null,
+      hasMoreContent: false,
+    },
+    {
+      name: "Bank reconciliation",
+      image: "/feature-bank-reconciliation.svg",
+      description:
+        "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
+      link: "https://giddh.com/in/conect-bank-reconcile",
+      hasMoreContent: false,
+    },
+    {
+      name: "Shopify Integration",
+      image: "/feature-share-invoice.svg",
+      description:
+        "Provides Shopify Integration with Giddh that streamlines sales data, automates order and payment sync for accurate financial records. It offers real-time insights into revenue, inventory, and customer data, enhancing efficiency and enabling informed decision-making for business growth.",
+      link: null,
       hasMoreContent: true,
       popupContent: {
         heading: "Integrate with Shopify: Simplifying Connectivity",
@@ -143,11 +275,13 @@ const allFeatures = (path) => {
     {
       name: "Barcode",
       image: "/barcode-scanning.svg",
-      description: "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+      description:
+        "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
       link: null,
       hasMoreContent: true,
       popupContent: {
-        heading: "Scan, Simplify, Succeed: Accelerate Your Workflow with Barcode Integration.",
+        heading:
+          "Scan, Simplify, Succeed: Accelerate Your Workflow with Barcode Integration.",
         contentText: `
         <ul class='custom-ul-with-right-tick mt-5'>
           <li>Easy search</li>
@@ -286,9 +420,10 @@ const allFeatures = (path) => {
     {
       name: "Barcode",
       image: "/barcode-scanning.svg",
-      description: "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+      description:
+        "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
       link: null,
-      hasMoreContent: false
+      hasMoreContent: false,
     },
     {
       name: "Audit Trail",
@@ -416,9 +551,10 @@ const allFeatures = (path) => {
     {
       name: "Barcode",
       image: "/barcode-scanning.svg",
-      description: "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
+      description:
+        "The barcode feature in Giddh simplifies inventory management. By scanning a product's barcode, all its details seamlessly populate in invoices and purchase bills.",
       link: null,
-      hasMoreContent: false
+      hasMoreContent: false,
     },
     {
       name: "Audit Trail",
@@ -462,7 +598,9 @@ const allFeatures = (path) => {
     },
   ];
 
-  const countryWiseData = isIndia
+  const countryWiseData = isGlobal
+    ? globalFeatures
+    : isIndia
     ? indiaFeatures
     : isAE
     ? aeFeatures
@@ -507,7 +645,7 @@ const allFeatures = (path) => {
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
                   <img
-                    src={ directoryPath + "/all-features-banner-image.svg"}
+                    src={directoryPath + "/all-features-banner-image.svg"}
                     alt="giddh features banner image"
                     width="90%"
                   />
@@ -527,7 +665,7 @@ const allFeatures = (path) => {
                     <div className="col-md-5 col-sm-12 text-center">
                       <figure className="pt-2">
                         <img
-                          src={ directoryPath + item.image}
+                          src={directoryPath + item.image}
                           alt="Giddh features Icon"
                           height="auto"
                           width="160"
@@ -589,7 +727,9 @@ const allFeatures = (path) => {
                   className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
-                  onClick={ ()=> { setPopupData({})}}
+                  onClick={() => {
+                    setPopupData({});
+                  }}
                 ></button>
               </div>
               <div className="modal-body overflow-auto">
