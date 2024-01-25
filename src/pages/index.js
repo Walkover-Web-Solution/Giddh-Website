@@ -9,9 +9,9 @@ const index = (path) => {
   return (
     <>
       <BannerSection />
-      <ClientSummary />    
-      <FeatureGallery path={link}/>
-      <MakeTheSwitchIndexPage path={link}/>
+      <FeatureGallery path={link} />
+      <ClientSummary />
+      <MakeTheSwitchIndexPage path={link} />
       <FaqHomePage />
     </>
   );

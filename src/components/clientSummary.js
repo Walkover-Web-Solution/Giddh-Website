@@ -24,6 +24,9 @@ const clientSummary = () => {
     <>
       <section className="container-fluid client-summary">
         <div className="container">
+          <h2 className="client-summary__title text-center col-primary mt-5">
+            Our few clients
+          </h2>
           <div className="client-summary__content-wrapper">
             <div className="row row-gap-3 justify-content-center">
               {ourClient.map((res) => {
@@ -55,9 +58,6 @@ const clientSummary = () => {
             </div>
           </div>
         </div>
-        <h2 className="client-summary__title text-center col-primary mt-5">
-          Our few clients
-        </h2>
       </section>
     </>
   );

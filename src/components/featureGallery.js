@@ -62,15 +62,12 @@ const featureGallery = (path) => {
                   </div>
                 </div>
               ))}
-
-              {(link.isIndia || link.isAE || link.isUK) && (
-                <div className="col-lg-6 col-md-12 col-sm-12">
-                  <a
-                    className="feature-gallery__card feature-gallery--see-more"
-                    href={link.linkPrefix + "/all-features"}
-                  ></a>
-                </div>
-              )}
+              <div className="col-lg-6 col-md-12 col-sm-12">
+                <a
+                  className="feature-gallery__card feature-gallery--see-more"
+                  href={link.linkPrefix + "/all-features"}
+                ></a>
+              </div>
             </div>
           </div>
         </section>

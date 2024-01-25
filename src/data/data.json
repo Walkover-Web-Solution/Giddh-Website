@@ -1,46 +1,39 @@
 {
   "globalCardData": [
     {
-      "name": "Invoices",
-      "image": "/feature-invoicing-software.svg",
+      "name": "Invoicing",
+      "image": "/feature-invoicing-software-with-vat.svg",
       "description": "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
       "link": "https://giddh.com/invoice-software",
-      "hasMoreContent": true
+      "hasMoreContent": false
     },
     {
       "name": "Unlimited user access",
       "image": "/feature-unlimited-user-access.svg",
       "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
       "link": "https://giddh.com/multi-user-accounting-software",
-      "hasMoreContent": true
-    },
-    {
-      "name": "GST Compliances",
-      "image": "/feature-gst-compliance.svg",
-      "description": "Create GST invoice, view GST reports, direct filing, check filing status and reconcile transactions with the GST portal.",
-      "link": "https://giddh.com/gst",
-      "hasMoreContent": true
-    },
-    {
-      "name": "Inventory Management",
-      "image": "/feature-inventory-management.svg",
-      "description": "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, and real-time inventory reports.",
-      "link": "https://giddh.com/inventory-management-software",
-      "hasMoreContent": true
+      "hasMoreContent": false
     },
     {
       "name": "IP Security",
       "image": "/feature-ip-security.svg",
       "description": "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
       "link": "https://giddh.com/security",
-      "hasMoreContent": true
+      "hasMoreContent": false
+    },
+    {
+      "name": "Inventory Management",
+      "image": "/feature-inventory-management.svg",
+      "description": "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, real-time inventory reports.",
+      "link": "https://giddh.com/inventory-management-software",
+      "hasMoreContent": false
     },
     {
       "name": "Multi-currency",
       "image": "/feature-multi-currency.svg",
       "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates.",
       "link": "https://giddh.com/multi-currency-accounting-software",
-      "hasMoreContent": true
+      "hasMoreContent": false
     },
     {
       "name": "Invoice on whatsapp, Email, and SMS",
@@ -60,7 +53,8 @@
       "name": "Bank reconciliation",
       "image": "/feature-bank-reconciliation.svg",
       "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
-      "link": "https://giddh.com/conect-bank-reconcile"
+      "link": "https://giddh.com/uk/conect-bank-reconcile",
+      "hasMoreContent": false
     },
     {
       "name": "Shopify Integration",
@@ -114,39 +108,74 @@
   ],
   "indiaCardData": [
     {
-      "name": "Invoices",
+      "name": "Invoice",
       "image": "/feature-invoicing-software.svg",
-      "description": "Efficiently Create and Send professional business invoices, track payment statuses, establish due dates, apply reverse charge as necessary, and access a range of additional functionalities to streamline financial management and enhance business operations.",
+      "description": "Easily generate and send GST invoices, set due dates, and apply reverse charges.",
       "link": "https://giddh.com/in/invoice-software",
       "hasMoreContent": true
     },
     {
       "name": "Unlimited user access",
       "image": "/feature-unlimited-user-access.svg",
-      "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
+      "description": "As a cloud accounting software, we offer unlimited free user access across all plans, ensuring flexibility and inclusivity for all users.",
       "link": "https://giddh.com/in/multi-user-accounting-software",
+      "hasMoreContent": true
+    },
+    {
+      "name": "IP Security",
+      "image": "/feature-ip-security.svg",
+      "description": "Restrict user access to specific locations such as your office or home through IP security measures. Our cloud accounting ensures security akin to offline software.",
+      "link": "https://giddh.com/in/security",
       "hasMoreContent": true
     },
     {
       "name": "GST Compliances",
       "image": "/feature-gst-compliance.svg",
-      "description": "Create GST invoice, view GST reports, direct filing, check filing status and reconcile transactions with the GST portal.",
+      "description": "Create GST invoices, view GST reports, direct filing, E-invoice generation , and reconcile transactions with the GST portal.",
       "link": "https://giddh.com/in/gst",
       "hasMoreContent": true
     },
     {
       "name": "Inventory Management",
       "image": "/feature-inventory-management.svg",
-      "description": "Maintain inventory of Product, and Services in group, items and variant too, easy search with barcode, and real-time inventory reports.",
+      "description": "Efficiently manage stock and variants while also supporting customer-specific pricing and discount management.",
       "link": "https://giddh.com/in/inventory-management-software",
       "hasMoreContent": true
     },
     {
-      "name": "IP Security",
-      "image": "/feature-ip-security.svg",
-      "description": "Implementing IP security in Giddh ensures restricted access to authorized IP addresses, and protecting sensitive financial data. It ensures compliance, reduces the risk of breaches, and enhances overall control and monitoring of system access for better security.",
-      "link": "https://giddh.com/in/security",
-      "hasMoreContent": true
+      "name": "Multi-currency",
+      "image": "/feature-multi-currency.svg",
+      "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates.",
+      "link": "https://giddh.com/in/multi-currency-accounting-software",
+      "hasMoreContent": false
+    },
+    {
+      "name": "Audit Trail",
+      "image": "/feature-audit-trail.svg",
+      "description": "An audit trail in Giddh, logs all transactions, enabling a detailed record of changes, enhancing accountability, and facilitating error detection for regulatory compliance and transparency.",
+      "link": null,
+      "hasMoreContent": false
+    },
+    {
+      "name": "Multiple Reports",
+      "image": "/feature-multiple-reports.svg",
+      "description": "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+      "link": null,
+      "hasMoreContent": false
+    },
+    {
+      "name": "Fixed Asset Management",
+      "image": "/feature-asset-management.svg",
+      "description": "Giddh's Fixed Asset Management streamlines the oversight and control of fixed assets, allowing for categorization into Groups, Stock, and variants. This feature offers real-time reports, enabling efficient monitoring and strategic asset management for your business.",
+      "link": null,
+      "hasMoreContent": false
+    },
+    {
+      "name": "Branch and warehouse management",
+      "image": "/feature-branch-and-warehouse-management.svg",
+      "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+      "link": null,
+      "hasMoreContent": false
     }
   ],
   "aeCardData": [
@@ -225,7 +254,7 @@
   ],
   "features": [
     {
-      "global": true,
+      "global": false,
       "in": false,
       "uk": true,
       "ae": true,

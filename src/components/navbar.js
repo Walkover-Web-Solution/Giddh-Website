@@ -239,33 +239,27 @@ const navbar = (props) => {
                   Pricing
                 </a>
               </li>
-              <li className="nav-item">
-                <a
-                  className={
-                    "nav-link " +
-                    (activePath === "gst" || activePath === "vat"
-                      ? "active"
-                      : "")
-                  }
-                  href={
-                    link.isGlobal
-                      ? urlPrefix + "/vat"
-                      : link.isIndia
-                      ? urlPrefix + "/gst"
-                      : link.isAE
-                      ? urlPrefix + "/vat"
-                      : urlPrefix + "/vat"
-                  }
-                >
-                  {link.isGlobal
-                    ? "VAT"
-                    : link.isIndia
-                    ? "GST"
-                    : link.isAE || link.isUK
-                    ? "VAT"
-                    : ""}
-                </a>
-              </li>
+              {!link.isGlobal && (
+                <li className="nav-item">
+                  <a
+                    className={
+                      "nav-link " +
+                      (activePath === "gst" || activePath === "vat"
+                        ? "active"
+                        : "")
+                    }
+                    href={
+                      link.isIndia
+                        ? urlPrefix + "/gst"
+                        : link.isAE
+                        ? urlPrefix + "/vat"
+                        : urlPrefix + "/vat"
+                    }
+                  >
+                    {link.isIndia ? "GST" : link.isAE || link.isUK ? "VAT" : ""}
+                  </a>
+                </li>
+              )}
               <li className="nav-item">
                 <a
                   className={
