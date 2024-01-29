@@ -44,7 +44,14 @@ const featureGallery = (path) => {
                       <div className="col-md-7 col-sm-12">
                         <div className="pe-4">
                           <h3 className="c-fw-600 c-fs-4">{data?.name}</h3>
-                          <p className="mb-0">{data.description}</p>
+
+                          <span
+                            className="c-fs-5"
+                            dangerouslySetInnerHTML={{
+                              __html: data.description,
+                            }}
+                          />
+                          <br />
                           {data.hasMoreContent ? (
                             <a href={data.link} className="view-more-btn">
                               View More
