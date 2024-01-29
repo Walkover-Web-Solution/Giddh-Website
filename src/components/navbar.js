@@ -1,10 +1,12 @@
 import { useEffect, useCallback, useState } from "react";
 import Jsondata from '../data/data.json';
 const navbar = (props) => {
+  debugger
   const link = props.path;
   const pathname = props.browserPath;
   const baseURL = link.baseURL;
   const urlPrefix = link.linkPrefix;
+
 
   let activePath = pathname.split('/');
   activePath = activePath[activePath.length - 1];
@@ -335,7 +337,7 @@ const navbar = (props) => {
                       className={
                         "dropdown-item" + (link.isGlobal ? " active" : "")
                       }
-                      href={baseURL}
+                      href={baseURL + '/?'}
                     >
                       Global
                     </a>
