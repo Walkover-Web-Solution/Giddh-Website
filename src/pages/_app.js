@@ -23,7 +23,7 @@ export default function MyApp({ Component, pageProps }) {
     path = {
       linkPrefix: path,
       baseURL: "https://giddh.com",
-      isGlobal: path === "",
+      isGlobal: path === "" || path ==="/?" || path.length > 3 && path.includes("?"),
       isIndia: path === "/in",
       isAE: path === "/ae",
       isUK: path === "/uk",
