@@ -11,14 +11,19 @@ import Toastify from "@/components/toastify";
 export default function MyApp({ Component, pageProps }) {
     const router = useRouter();
     var browserPath = router.asPath;   
-    var path = browserPath.split("/")[1];      
-    var path =
-      path !== "ae" && path !== "uk" && path !== "in" ? "" : "/" + path;     
+
+    if (browserPath !== '/') {
+        const pattern = /\/([^/?]+)/;
+        const result = browserPath.match(pattern);    
+        browserPath = result ? result[0] : browserPath;
+      }
+      
+    var path = "/" + browserPath.split("/")[1];    
 
     path = {
       linkPrefix: path,
       baseURL: "https://giddh.com",
-      isGlobal: path === "",
+      isGlobal: path === "" || path ==="/?" || path.length > 3 && path.includes("?"),
       isIndia: path === "/in",
       isAE: path === "/ae",
       isUK: path === "/uk",

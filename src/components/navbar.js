@@ -5,7 +5,8 @@ const navbar = (props) => {
   const link = props.path;
   const pathname = props.browserPath;
   const baseURL = link.baseURL;
-  const urlPrefix = link.linkPrefix;
+  //const urlPrefix = link.linkPrefix;
+  const urlPrefix = baseURL;
 
 
   let activePath = pathname.split('/');
@@ -337,7 +338,7 @@ const navbar = (props) => {
                       className={
                         "dropdown-item" + (link.isGlobal ? " active" : "")
                       }
-                      href={baseURL + '/?'}
+                      href={baseURL+"/?"}
                     >
                       Global
                     </a>
@@ -371,12 +372,12 @@ const navbar = (props) => {
                 </ul>
               </div>
               <div>
-                <a href={urlPrefix + "/login"} className="login_page_link">
+                <a href={baseURL + "/login"} className="login_page_link">
                   Login
                 </a>
               </div>
               <div>
-                <a href={urlPrefix + "/signup"} className="signup_page_link">
+                <a href={baseURL + "/signup"} className="signup_page_link">
                   Sign Up
                 </a>
               </div>
