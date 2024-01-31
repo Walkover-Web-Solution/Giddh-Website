@@ -9,37 +9,47 @@ import { useRouter } from "next/router";
 import Toastify from "@/components/toastify";
 
 export default function MyApp({ Component, pageProps }) {
-    const router = useRouter();
-    var browserPath = router.asPath;   
-    var path = browserPath.split("/")[1];      
-    var path =
-      path !== "ae" && path !== "uk" && path !== "in" ? "" : "/" + path;     
+  const router = useRouter();
+  const browserPath = router.asPath;
 
-    path = {
-      linkPrefix: path,
-      baseURL: "https://giddh.com",
-      isGlobal: path === "",
-      isIndia: path === "/in",
-      isAE: path === "/ae",
-      isUK: path === "/uk",
-    };
+  const shortedPathArray = browserPath.match(/\/in/);
+  const shortedPath = shortedPathArray && shortedPathArray[0];
 
-    let currentPathArray = browserPath.split("/");
-    let loginSignupPath = currentPathArray[currentPathArray.length - 1];
-    let loginSignupPathStatus =
-        loginSignupPath === "login" || loginSignupPath === "signup" || loginSignupPath === "googleauth" ? false : true;
+  const isIndia = shortedPath === "/in";
+  const isAE = shortedPath === "/ae";
+  const isUK = shortedPath === "/uk";
 
-    useEffect(() => {
-        require("bootstrap/dist/js/bootstrap.bundle.min.js");
-    }, []);
-    return (
-        <>
-            {loginSignupPathStatus ? <Navbar browserPath={browserPath} path={path} /> : null}
-            <Header browserPath={browserPath} path={path} />
-            <Component path={path} {...pageProps} />
-            {loginSignupPathStatus ? <Footer path={path}/> : null}
-            <GlobalComponents />
-            <Toastify />
-        </>
-    );
+  const path = {
+    linkPrefix: shortedPath,
+    baseURL: "https://giddh.com",
+    isGlobal: shortedPath === "" || shortedPath === "/" || shortedPath === "/?",
+    isIndia: isIndia,
+    isAE: isAE,
+    isUK: isUK,
+  };
+
+  let currentPathArray = browserPath.split("/");
+  let loginSignupPath = currentPathArray[currentPathArray.length - 1];
+  let loginSignupPathStatus =
+    loginSignupPath === "login" ||
+    loginSignupPath === "signup" ||
+    loginSignupPath === "googleauth"
+      ? false
+      : true;
+
+  useEffect(() => {
+    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+  }, []);
+  return (
+    <>
+      {loginSignupPathStatus ? (
+        <Navbar browserPath={browserPath} path={path} />
+      ) : null}
+      <Header browserPath={browserPath} path={path} />
+      <Component path={path} {...pageProps} />
+      {loginSignupPathStatus ? <Footer path={path} /> : null}
+      <GlobalComponents />
+      <Toastify />
+    </>
+  );
 }
