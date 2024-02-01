@@ -10,11 +10,24 @@ import Toastify from "@/components/toastify";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
-  const browserPath = router.asPath;
+  const rawBrowserPath = router.asPath;
+  const arrayBrawserPath = rawBrowserPath.split("/");
+  var browserPath = `/${arrayBrawserPath[1]}`;
+  if (browserPath.includes("?")) {
+    var shortedPath = browserPath.slice(0, browserPath.indexOf("?"));
+  } else if (browserPath === "/") {
+    var shortedPath = "";
+  } else if (browserPath.length > 3) {
+    var shortedPath = "";
+  } else {
+    var shortedPath = browserPath;
+  }
 
-  const shortedPathArray = browserPath.match(/\/in/);
-  const shortedPath = shortedPathArray && shortedPathArray[0];
-
+  const isGlobal =
+    shortedPath === "" ||
+    shortedPath === "/" ||
+    shortedPath === "/?" ||
+    shortedPath.length > 3;
   const isIndia = shortedPath === "/in";
   const isAE = shortedPath === "/ae";
   const isUK = shortedPath === "/uk";
@@ -22,7 +35,7 @@ export default function MyApp({ Component, pageProps }) {
   const path = {
     linkPrefix: shortedPath,
     baseURL: "https://giddh.com",
-    isGlobal: shortedPath === "" || shortedPath === "/" || shortedPath === "/?",
+    isGlobal: isGlobal,
     isIndia: isIndia,
     isAE: isAE,
     isUK: isUK,

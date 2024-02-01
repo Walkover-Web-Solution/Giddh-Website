@@ -6,11 +6,9 @@ const header = (props) => {
   const link = props.path;
   const currentPath = props.browserPath
   const metaData = Data[currentPath];
-
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
-
   const countryList = ["", "ae", "uk"];
-  const country = link.linkPrefix.replace('/','');
+  const country = link?.linkPrefix?.replace('/','');
   if(countryList.includes(country)){
     var hreflang = country===''? "en-IN" : (country==='uk' ? "en-GB" : "en-AE")  ;
   }

@@ -1,12 +1,22 @@
 import { useEffect, useCallback, useState } from "react";
-import Jsondata from '../data/data.json';
+import Jsondata from "../data/data.json";
 const navbar = (props) => {
   const link = props.path;
   const pathname = props.browserPath;
   const baseURL = link.baseURL;
-  const urlPrefix = link.linkPrefix;
+  var basePrefix = "";
+  if (link.isGlobal === true) {
+    basePrefix = "";
+  } else if (link.isIndia) {
+    basePrefix = "/in";
+  } else if (link.isUK) {
+    basePrefix = "/uk";
+  } else if (link.isAE) {
+    basePrefix = "/ae";
+  }
+  const urlPrefix = basePrefix;
 
-  let activePath = pathname.split('/');
+  let activePath = pathname.split("/");
   activePath = activePath[activePath.length - 1];
   const [scrollStatus, setscrollStatus] = useState(false);
 
@@ -38,10 +48,10 @@ const navbar = (props) => {
   const features = Jsondata.features;
   // List of path where navbar Background will be transparent and turn Background white on scroll
   let specificPath =
-    pathname === "/" ||
-    pathname === "/in" ||
-    pathname === "/ae" ||
-    pathname === "/uk";
+    pathname === "" ||
+    pathname === "in" ||
+    pathname === "ae" ||
+    pathname === "uk";
 
   const onScroll = useCallback((event) => {
     const { scrollY } = window;
@@ -335,7 +345,7 @@ const navbar = (props) => {
                       className={
                         "dropdown-item" + (link.isGlobal ? " active" : "")
                       }
-                      href={baseURL + '/?'}
+                      href={baseURL + "/?"}
                     >
                       Global
                     </a>
