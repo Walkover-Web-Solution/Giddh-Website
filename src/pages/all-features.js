@@ -112,7 +112,7 @@ const allFeatures = (path) => {
         name: "Multiple Reports",
         image: "/feature-multiple-reports.svg",
         description:
-          "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+          "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
         link: null,
         hasMoreContent: false,
       },
@@ -437,7 +437,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>VAT reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       hasMoreContent: false,
     },
@@ -568,7 +568,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       hasMoreContent: false,
     },
