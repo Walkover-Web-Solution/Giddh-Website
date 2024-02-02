@@ -41,7 +41,7 @@ export default function MyApp({ Component, pageProps }) {
     isUK: isUK,
   };
 
-  let currentPathArray = browserPath.split("/");
+  let currentPathArray = rawBrowserPath.split("/");
   let loginSignupPath = currentPathArray[currentPathArray.length - 1];
   let loginSignupPathStatus =
     loginSignupPath === "login" ||
@@ -56,9 +56,9 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       {loginSignupPathStatus ? (
-        <Navbar browserPath={browserPath} path={path} />
+        <Navbar browserPath={rawBrowserPath} path={path} />
       ) : null}
-      <Header browserPath={browserPath} path={path} />
+      <Header browserPath={rawBrowserPath} path={path} />
       <Component path={path} {...pageProps} />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
       <GlobalComponents />
