@@ -58,7 +58,6 @@ const signUp = (path) => {
   async function initiateSignup() {
     if (emailDetails.isVerified && mobileDetails.isVerified) {
       setSignupInProgress(true);
-      console.log(process.env.NEXT_PUBLIC_API_URL + "/v2/register");
       await fetch(process.env.NEXT_PUBLIC_API_URL + "/v2/register", {
         method: "POST",
         mode: "cors",
