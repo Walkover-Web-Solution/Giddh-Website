@@ -112,9 +112,17 @@ const signUp = (path) => {
         document.getElementById("mobileNo").value
       ) {
         try {
-          sendEmailOtp();
+          if (document.getElementById("email").value) {
+            sendEmailOtp();
+          } else {
+            return;
+          }
           setTimeout(() => {
-            sendMobileOtp();
+            if (document.getElementById("mobileNo").value) {
+              sendMobileOtp();
+            } else {
+              return;
+            }
           }, 1000);
         } catch (error) {
           showToaster("Error sending mobile OTP", "error", "top-center");
@@ -710,7 +718,7 @@ const signUp = (path) => {
                     </label>
                     <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                       <div
-                        className="step_input_wrapper__left col-xxl-7 col-xl-7 col-lg-12"
+                        className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12"
                         style={{
                           paddingRight:
                             showEmailOtp ||
@@ -757,7 +765,7 @@ const signUp = (path) => {
                                 )}
 
                                 {!emailGetOtpInProgress && (
-                                  <span>Get OTP - Verify Email</span>
+                                  <span>Verify Email</span>
                                 )}
                               </button>
                             )}
@@ -783,7 +791,7 @@ const signUp = (path) => {
                       </div>
                       {showEmailOtp &&
                         (!emailDetails || !emailDetails.isVerified) && (
-                          <div className="step_input_wrapper__right col-xxl-5 col-xl-5 col-lg-12">
+                          <div className="step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12">
                             <div className="d-flex flex-column">
                               <div className="d-flex">
                                 <input
@@ -852,7 +860,7 @@ const signUp = (path) => {
                     </label>
                     <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                       <div
-                        className="step_input_wrapper__left col-xxl-7 col-xl-7 col-lg-12"
+                        className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12"
                         style={{
                           paddingRight:
                             showMobileOtp ||
@@ -894,7 +902,7 @@ const signUp = (path) => {
                                 )}
 
                                 {!mobileGetOtpInProgress && (
-                                  <span>Get OTP - Verify number</span>
+                                  <span>Verify number</span>
                                 )}
                               </button>
                             )}
@@ -920,7 +928,7 @@ const signUp = (path) => {
                       </div>
                       {showMobileOtp &&
                         (!mobileDetails || !mobileDetails.isVerified) && (
-                          <div className="step_input_wrapper__right col-xxl-5 col-xl-5 col-lg-12">
+                          <div className="step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12">
                             <div className="d-flex flex-column">
                               <div className="d-flex">
                                 <input
