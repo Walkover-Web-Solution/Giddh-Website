@@ -11,6 +11,7 @@ import GoogleLogin from "@/components/googleLogin";
 const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
   ssr: false,
 });
+var intlRef;
 
 const signUp = (path) => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -30,11 +31,16 @@ const signUp = (path) => {
   const [showVerificationModal, setShowVerificationModal] = useState(false);
   const [userResponse, setUserResponse] = useState(null);
   const link = path.path.linkPrefix;
+  const [mobileNo, setMobileNo] = useState(null);
 
   useEffect(() => {
     initOtpSignup();
+    setTimeout(() => {}, 100);
   }, []);
 
+  //  componentDidMount() {
+
+  // }
   function googleApiSuccessCallback(response) {
     setEmailDetails({
       email: response.email,
@@ -52,6 +58,7 @@ const signUp = (path) => {
   async function initiateSignup() {
     if (emailDetails.isVerified && mobileDetails.isVerified) {
       setSignupInProgress(true);
+      console.log(process.env.NEXT_PUBLIC_API_URL + "/v2/register");
       await fetch(process.env.NEXT_PUBLIC_API_URL + "/v2/register", {
         method: "POST",
         mode: "cors",
@@ -301,6 +308,7 @@ const signUp = (path) => {
     setMobileGetOtpInProgress(false);
     showToaster("OTP sent successfully.", "success", "top-center");
     var mobileNo = formatMobileNumber(intl.getNumber());
+
     setMobileDetails({
       mobileNo: mobileNo,
       accessToken: "",
@@ -474,6 +482,15 @@ const signUp = (path) => {
     setCurrentStep(step);
     setTimeout(() => {
       loadTelLibrary();
+      const input = document.getElementById("mobileNo");
+      if (input) {
+        input.addEventListener("countrychange", (event) => {
+          displayEnterNumber();
+        });
+        return () => {
+          input.removeEventListener("countrychange", displayEnterNumber());
+        };
+      }
     });
   }
 
@@ -487,6 +504,31 @@ const signUp = (path) => {
     if (event.keyCode === 13) {
       sendMobileOtp();
     }
+  }
+
+  function inputMobile(event) {
+    if (event) {
+      displayEnterNumber();
+    }
+  }
+
+  function displayEnterNumber() {
+    if (intlRef.getSelectedCountryData()?.dialCode) {
+      setDisplayMobileNumber();
+    } else {
+      intlRef.setCountry("in");
+      setTimeout(() => {
+        setDisplayMobileNumber();
+      }, 100);
+    }
+  }
+
+  function setDisplayMobileNumber() {
+    let number = intlRef.getNumber();
+    let displayMobileNumber = number.includes("+")
+      ? number
+      : `+${intlRef.getSelectedCountryData()?.dialCode}${intlRef.getNumber()}`;
+    setMobileNo(displayMobileNumber);
   }
 
   function showToaster(message, type, position) {
@@ -581,6 +623,7 @@ const signUp = (path) => {
           );
         },
       });
+      intlRef = intl;
       setIntl(intl);
     }
   }
@@ -869,7 +912,7 @@ const signUp = (path) => {
                               : null,
                         }}
                       >
-                        <div className="d-flex step_input_wrapper__mobile_veiw">
+                        <div className="d-flex step_input_wrapper__mobile_veiw position-relative">
                           <input
                             type="tel"
                             className="form-control"
@@ -877,11 +920,15 @@ const signUp = (path) => {
                             placeholder="98********"
                             autoComplete="off"
                             onKeyDown={onKeyDownMobile}
+                            onChange={inputMobile}
                             disabled={
                               showMobileOtp ||
                               (mobileDetails && mobileDetails.isVerified)
                             }
                           />
+                          <span className="position-absolute mobile-number">
+                            {mobileNo}
+                          </span>
                           {mobileDetails && mobileDetails.isVerified && (
                             <span className="position-relative">
                               <MdCheckCircle className="icon-success otp_verified_icon" />
