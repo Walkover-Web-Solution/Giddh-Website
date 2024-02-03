@@ -56,7 +56,7 @@ const tallyPlusGiddh = () => {
           <div className="text-center">
             <h2 className="col-dark">Download the Plugin</h2>
             <a
-              href="https://s3.ap-south-1.amazonaws.com/giddhbuildartifacts/Walkover+Prod.tcp"
+              href="https://giddhbuildartifacts.s3.ap-south-1.amazonaws.com/giddh_Prime2.0.tcp"
               className="d-inline-block col-white download-btn"
             >
               Plugin <MdFileDownload />
