@@ -7,10 +7,20 @@ const header = (props) => {
   const currentPath = props.browserPath
   const metaData = Data[currentPath];
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
-  const countryList = ["", "ae", "uk"];
+  const countryList = ["", "in", "ae", "uk"];
   const country = link?.linkPrefix?.replace('/','');
   if(countryList.includes(country)){
-    var hreflang = country===''? "en-IN" : (country==='uk' ? "en-GB" : "en-AE")  ;
+    var hreflang;
+
+    if(country === 'in'){
+        hreflang = 'en-IN';
+    } else if(country === 'uk'){
+        hreflang = 'en-GB';
+    } else if(country === 'ae'){
+        hreflang = 'en-AE';
+    } else {
+        hreflang = 'en-US';
+    }
   }
 
   useEffect(() => {

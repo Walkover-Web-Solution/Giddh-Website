@@ -45,7 +45,8 @@
   &__description_container {
     .image-alignment{
       img{
-        // height: 240px;
+        height: 200px;
+        object-fit: scale-down;
       }
     }
     &--row-odd {
