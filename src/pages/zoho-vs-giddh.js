@@ -116,43 +116,24 @@ const zohoVsGiddh = (path) => {
                     <tr>
                       <th>Pricing</th>
                       <td>
-                        Offers free plan, and paid plans are
-                        <br />
                         {link.isIndia &&
-                          "₹8988/year, ₹17988/year, ₹35988/year, ₹59988/year, and ₹95988/year"}
+                          "Plans start from INR 8988/year"}
                         {link.isAE &&
-                          "AED 720/year, AED 1080/year, AED 1440/year, AED 3360/year, and AED 7920/year"}
+                          "Plans start from AED 720/year"}
                         {link.isUK &&
-                          "£120/year, £240/year, £300/year, £1020/year, and £1980/year"}
+                          "Plans start from GBP 120/year"}
                         {link.isGlobal &&
-                          "$120/year, $240/year, $300/year, $1020/year, and $1980/year"}
+                          "Plans start from USD 120/year"}
                       </td>
                       <td>
-                        Offers free plan, and paid plans are <br />
                         {link.isIndia &&
-                          "₹1500/year, ₹4000/year, ₹10000/year, and ₹15000/year"}
+                          "Plans start from INR 1500/year"}
                         {link.isAE &&
-                          "AED 350/year, AED 1050/year, and AED 2100/ year"}
-                        {link.isUK && "£70/year, £210/year, and £350/year"}{" "}
-                        {link.isGlobal && "$70/year, $210/year, and $350/year"}
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>Features</th>
-                      <td>
-                        Upgrading to a higher plan unlocks additional features.
-                      </td>
-                      <td>Every paid plan unlocks all available features.</td>
-                    </tr>
-                    <tr>
-                      <th>Easy search</th>
-                      <td className="col-dark-light">Not available</td>
-                      <td>
-                        Provides Universal Search feature (
-                        <code className="text-nowrap col-dark">
-                          Ctrl+G / Cmd+G
-                        </code>
-                        )
+                          "Plans start from AED 350/year"}
+                        {link.isUK && 
+                           "Plans start from GBP 70/year"}
+                        {link.isGlobal && 
+                           "Plans start from USD 50/year"}
                       </td>
                     </tr>
                     <tr>
@@ -200,7 +181,7 @@ const zohoVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Year Locking </th>
-                      <td className="col-dark-light">Not available</td>
+                      <td className="col-dark-light align-middle">Not available</td>
                       <td>
                         Provides year locking feature, user can lock previous
                         financial year
@@ -224,7 +205,7 @@ const zohoVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Auto Paid feature</th>
-                      <td className="col-dark-light">Not available</td>
+                      <td className="col-dark-light align-middle">Not available</td>
                       <td>Auto adjustment of voucher with only one setting</td>
                     </tr>
                     <tr>
@@ -234,7 +215,7 @@ const zohoVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Universal Date</th>
-                      <td className="col-dark-light">Not available</td>
+                      <td className="col-dark-light align-middle">Not available</td>
                       <td>Available</td>
                     </tr>
                     <tr>
@@ -269,36 +250,24 @@ const zohoVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <td width="50%">
-                        Offers free plan, and paid plans are
-                        <br />
                         {link.isIndia &&
-                          "₹8988/year, ₹17988/year, ₹35988/year, ₹59988/year, and ₹95988/year"}
+                          "Plans start from INR 8988/year"}
                         {link.isAE &&
-                          "AED 720/year, AED 1080/year, AED 1440/year, AED 3360/year, and AED 7920/year"}
-                        {(link.isUK || link.isGlobal) &&
-                          "£120/year, £240/year, £300/year, £1020/year, and £1980/year"}
+                          "Plans start from AED 720/year"}
+                        {link.isUK &&
+                          "Plans start from GBP 120/year"}
+                        {link.isGlobal &&
+                          "Plans start from USD 120/year"}
                       </td>
                       <td width="50%">
-                        Offers free plan, and paid plans are <br />
                         {link.isIndia &&
-                          "₹1500/year, ₹4000/year, ₹10000/year, and ₹15000/year"}
+                          "Plans start from INR 1500/year"}
                         {link.isAE &&
-                          "AED 350/year, AED 1050/year, and AED 2100/ year"}
-                        {(link.isUK || link.isGlobal) &&
-                          "£70/year, £210/year, and £350/year"}
-                      </td>
-                    </tr>
-                    <tr>
-                      <th colspan="2" className="text-center bg-light c-fs-4">
-                        Features
-                      </th>
-                    </tr>
-                    <tr>
-                      <td width="50%">
-                        Upgrading to a higher plan unlocks additional features.
-                      </td>
-                      <td width="50%">
-                        Every paid plan unlocks all available features.
+                          "Plans start from AED 350/year"}
+                        {link.isUK &&
+                          "Plans start from GBP 70/year"}
+                        {link.isGlobal &&
+                          "Plans start from USD 50/year"}
                       </td>
                     </tr>
                     <tr>
@@ -307,7 +276,7 @@ const zohoVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not available
                       </td>
                       <td width="50%">
@@ -395,7 +364,7 @@ const zohoVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not available
                       </td>
                       <td width="50%">
@@ -433,7 +402,7 @@ const zohoVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not available
                       </td>
                       <td width="50%">
@@ -456,7 +425,7 @@ const zohoVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not available
                       </td>
                       <td width="50%">Available</td>
