@@ -115,12 +115,12 @@ const tallyVsGiddh = (path) => {
                   <tbody>
                     <tr>
                       <th>Entry System</th>
-                      <td>Only Voucher based</td>
+                      <td>Only Journal Entries</td>
                       <td>Both Ledger and Voucher based</td>
                     </tr>
                     <tr>
                       <th>Easy search</th>
-                      <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light align-middle">Not Available</td>
                       <td>
                         Provides Universal Search feature (
                         <code className="text-nowrap col-dark">
@@ -141,12 +141,12 @@ const tallyVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Mobile App</th>
-                      <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light align-middle">Not Available</td>
                       <td>For both Android and iOS</td>
                     </tr>
                     <tr>
                       <th>Company sharing</th>
-                      <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light align-middle">Not Available</td>
                       <td>
                         Unlimited company sharing feature is available in all
                         plan
@@ -154,7 +154,7 @@ const tallyVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Customizable Permission</th>
-                      <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light align-middle">Not Available</td>
                       <td>Available</td>
                     </tr>
                     <tr>
@@ -179,23 +179,18 @@ const tallyVsGiddh = (path) => {
                       </td>
                     </tr>
                     <tr>
-                      <th>Auto fetching of transactions</th>
-                      <td className="col-dark-light">Not Available</td>
-                      <td>Automatically transactions are fetched from Bank</td>
-                    </tr>
-                    <tr>
                       <th>Inventory with variant</th>
                       <td>Need to purchase add-on</td>
                       <td>Available in all plan</td>
                     </tr>
                     <tr>
                       <th>Real Time dashboard</th>
-                      <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light align-middle">Not Available</td>
                       <td>Available</td>
                     </tr>
                     <tr>
                       <th>Single ledger sharing</th>
-                      <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light align-middle">Not Available</td>
                       <td>
                         User can share single ledger from Email and by creating
                         magic link
@@ -203,7 +198,7 @@ const tallyVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Attachment with Bills</th>
-                      <td className="col-dark-light">Not Available</td>
+                      <td className="col-dark-light align-middle">Not Available</td>
                       <td>User can add attachment with the invoice</td>
                     </tr>
                     <tr>
@@ -237,7 +232,7 @@ const tallyVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%">Only Voucher based</td>
+                      <td width="50%">Only Journal Entries</td>
                       <td width="50%">Both Ledger and Voucher based</td>
                     </tr>
                     <tr>
@@ -246,7 +241,7 @@ const tallyVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not Available
                       </td>
                       <td width="50%">
@@ -285,7 +280,7 @@ const tallyVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not Available
                       </td>
                       <td width="50%">For both Android and iOS</td>
@@ -296,7 +291,7 @@ const tallyVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not Available
                       </td>
                       <td width="50%">
@@ -310,7 +305,7 @@ const tallyVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not Available
                       </td>
                       <td width="50%">Available</td>
@@ -350,19 +345,6 @@ const tallyVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th colspan="2" className="text-center">
-                        Auto fetching of transactions
-                      </th>
-                    </tr>
-                    <tr>
-                      <td width="50%" className="col-dark-light">
-                        Not Available
-                      </td>
-                      <td width="50%">
-                        Automatically transactions are fetched from Bank
-                      </td>
-                    </tr>
-                    <tr>
-                      <th colspan="2" className="text-center">
                         Inventory with variant
                       </th>
                     </tr>
@@ -376,7 +358,7 @@ const tallyVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not Available
                       </td>
                       <td width="50%">Available</td>
@@ -387,7 +369,7 @@ const tallyVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not Available
                       </td>
                       <td width="50%">
@@ -401,7 +383,7 @@ const tallyVsGiddh = (path) => {
                       </th>
                     </tr>
                     <tr>
-                      <td width="50%" className="col-dark-light">
+                      <td width="50%" className="col-dark-light align-middle">
                         Not Available
                       </td>
                       <td width="50%">
