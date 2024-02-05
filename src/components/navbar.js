@@ -345,7 +345,7 @@ const navbar = (props) => {
                       className={
                         "dropdown-item" + (link.isGlobal ? " active" : "")
                       }
-                      href={baseURL + "/?"}
+                      href={baseURL + "/?site=global"}
                     >
                       Global
                     </a>
