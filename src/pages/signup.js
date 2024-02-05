@@ -129,7 +129,7 @@ const signUp = (path) => {
             } else {
               return;
             }
-          }, 1000);
+          }, 1200);
         } catch (error) {
           showToaster("Error sending mobile OTP", "error", "top-center");
         }
