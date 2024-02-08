@@ -5,7 +5,7 @@ const navbar = (props) => {
   const pathname = props.browserPath;
   const baseURL = link.baseURL;
   var basePrefix = "";
-  if (link.isGlobal === true) {
+  if (link.isGlobal) {
     basePrefix = "";
   } else if (link.isIndia) {
     basePrefix = "/in";
