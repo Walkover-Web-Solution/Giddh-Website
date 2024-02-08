@@ -11,9 +11,7 @@ const eInvoice = () => {
                   Make Your Business E-Invoice Ready
                 </h2>
                 <p className="col-grey c-fs-3 mb-5">
-                  Now mandatory from 1st April 2022 for businesses whose
-                  turnover is INR 20 Crore+ Giddh is supporting e-invoice from
-                  1st April 2021
+                Now E-Invoice is mandatory from 1st August 2023 for the business whose turnover is INR 5 crore+. GIDDH is supporting e-invoice from 1st April 2021 
                 </p>
                 <div className="features__heading_container__links">
                   <a
