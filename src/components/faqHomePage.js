@@ -1,5 +1,43 @@
 import { MdRemove, MdAdd } from "react-icons/md";
 
+const faq = [
+    {
+        question: `How does this accounting software help in managing my finances and bookkeeping?`,
+        answer: `Accounting software streamlines financial tasks, enhancing
+        accuracy, and saving time by automating processes like
+        invoicing, reporting, and reconciliation. It provides
+        real-time insights, aiding informed decision-making and
+        compliance with financial regulations, ultimately
+        fostering business growth.`
+    },
+    {
+        question: `How secure is my financial data on online accounting software?`,
+        answer: `Giddh accounting software provides IP security that
+        restricts access to authorized IP addresses, safeguarding
+        sensitive financial data. By ensuring compliance,
+        minimizing breach risks, and offering enhanced control
+        over system access, it significantly fortifies overall
+        security and monitoring measures.`
+    },
+    {
+        question: `Is the accounting software compliant with tax regulations
+        and reporting standards?`,
+        answer: ` Yes, Giddh software complies with tax regulations and
+        reporting standards, offering features that facilitate
+        accurate tax calculations, generating reports aligned with
+        regulatory requirements, ensuring adherence to tax laws
+        for seamless tax filing and compliance.`
+    },
+    {
+        question: ``,
+        answer: ``
+    },
+    {
+        question: ``,
+        answer: ``
+    }
+]
+
 const faqHomePage = () => {
   return (
     <>

@@ -156,6 +156,7 @@ const invoiceSoftware = (path) => {
                 {globalData.map((feature, index) => {
                   return (
                     <div
+                      key={feature?.name}
                       className={`row mb-5 pb-5 align-items-center border-horizontal features__description_container--row-${
                         index % 2 === 0 ? "even" : "odd"
                       }`}
