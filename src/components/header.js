@@ -16,7 +16,8 @@ const header = (props) => {
   const pageNotInAE = ["/gst", "/e-invoice", "/tallyplusgiddh", "/blog"];
 
   var pathPage, pathCountry, isOnlyGlobal;
-  const pathArr = currentPath.split("/");
+  const pathArrRaw = currentPath.split("?");
+  const pathArr = pathArrRaw[0].split("/");
   if (pathArr.length == 2) {
     if (countryList.includes(pathArr[1])) {
       pathPage = "";
