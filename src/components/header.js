@@ -25,7 +25,11 @@ const header = (props) => {
       pathPage = "";
       pathCountry = "/" + pathArr[1];
     } else {
-      pathPage = "/" + pathArr[1];
+      if (pathArr[1]) {
+        pathPage = "/" + pathArr[1];
+      } else {
+        pathPage = "";
+      }
       pathCountry = "";
     }
   } else {
