@@ -11,10 +11,10 @@ const header = (props) => {
   const country = link?.linkPrefix?.replace("/", "");
 
   const exceptionPage = {
-    global: ["/gst", "/vat", "/e-invoice"],
+    global: ["/gst", "/vat", "/e-invoice", "/tallyplusgiddh"],
     in: ["/vat", "/blog"],
-    uk: ["/gst", "/e-invoice", "/blog"],
-    ae: ["/gst", "/e-invoice", "/blog"],
+    uk: ["/gst", "/e-invoice", "/blog", "/tallyplusgiddh"],
+    ae: ["/gst", "/e-invoice", "/blog", "/tallyplusgiddh"],
   };
 
   var pathPage, pathCountry, isOnlyGlobal;
