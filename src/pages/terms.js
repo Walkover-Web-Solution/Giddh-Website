@@ -113,7 +113,7 @@ const terms = (path) => {
                 applicable written agreement between the Subscriber and the
                 Invited Users, or any other applicable laws:
               </p>
-              <dl className="m-5">
+              <div className="m-5">
                 <p>
                   {" "}
                   The Subscriber determines who is an Invited User and what
@@ -139,7 +139,7 @@ const terms = (path) => {
                   Subscriber shall decide what access or level of access to the
                   relevant Data or Service that Invited User shall have, if any.
                 </p>
-              </dl>
+              </div>
 
               <h3 className="mb-3 c-fs-4 sub-heading" id="clause-31" >3. YOUR OBLIGATIONS</h3>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">
