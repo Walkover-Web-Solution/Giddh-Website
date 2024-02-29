@@ -1318,7 +1318,7 @@ const about = (path) => {
               <h1 className="heading fw-bold col-primary">
                 <span className="about--heading-underline about__see_more--pull-near-text">See More</span>
               </h1>
-              <h3 className="c-fs-3">See more about the Company</h3>
+              <h2 className="c-fs-3">See more about the Company</h2>
               <span className="c-fs-5">
                 Learn more about how Giddh can provide the solution you need.
               </span>

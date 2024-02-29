@@ -48,9 +48,9 @@ const clientSummary = () => {
                           height="60"
                         />
                       </figure>
-                      <h5 className="col-dark text-center">
+                      <h3 className="col-dark text-center fs-5">
                         {res.description}
-                      </h5>
+                      </h3>
                     </a>
                   </div>
                 );

@@ -162,9 +162,9 @@ const invoiceSoftware = (path) => {
                     >
                       <div className='col-md-12 col-lg-6'>
                         <div className='features__description_container__content'>
-                          <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                          <h2 className='col-primary small-heading c-fw-600 mb-3'>
                             {feature?.name}
-                          </h4>
+                          </h2>
                           <p>{feature?.des}</p>
                         </div>
                       </div>
@@ -186,10 +186,10 @@ const invoiceSoftware = (path) => {
                 <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                   <div className='col-md-12 col-lg-6'>
                     <div className='features__description_container__content'>
-                      <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                      <h2 className='col-primary small-heading c-fw-600 mb-3'>
                         Create and Send professional invoices with cloud based
                         invoicing software
-                      </h4>
+                      </h2>
                       <p>
                         Effortlessly create and send professional invoices using
                         cloud-based invoicing software, streamlining your
@@ -211,9 +211,9 @@ const invoiceSoftware = (path) => {
                 <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                   <div className='col-md-12 col-lg-6'>
                     <div className='features__description_container__content'>
-                      <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                      <h2 className='col-primary small-heading c-fw-600 mb-3'>
                         Use Barcode for making invoice
-                      </h4>
+                      </h2>
                       <p>
                         Simplify the invoicing process by utilizing barcodes for
                         product identification. This eliminates the need to
@@ -236,11 +236,11 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           {isIndia
                             ? "Effortless GST Invoicing"
                             : "Incorporate VAT into the invoices"}
-                        </h4>
+                        </h2>
                         <p>
                           {isIndia
                             ? "Simplify your invoices for you and your clients by applying GST. No more need to repeatedly verify the client's state for the correct GST type – simply enter the state, and GIDDH, the GST billing software will apply the appropriate GST type automatically."
@@ -271,9 +271,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Other taxes
-                        </h4>
+                        </h2>
                         <p>
                           Include additional taxes, such as TCS and TDS, on your
                           invoice for comprehensive taxation transparency.
@@ -297,9 +297,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Multi-currency Invoices
-                        </h4>
+                        </h2>
                         <p>
                           Generate hassle-free invoices for international
                           clients by automatically calculating real-time
@@ -325,9 +325,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Multi-currency Invoices
-                        </h4>
+                        </h2>
                         <p>
                           Generate hassle-free invoices for international
                           clients by automatically calculating real-time
@@ -353,9 +353,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Sending invoice via multi-channels
-                        </h4>
+                        </h2>
                         <p>
                           You can efficiently send invoices through various
                           channels like WhatsApp, email, and SMS directly from
@@ -380,9 +380,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Sending invoice via multi-channels
-                        </h4>
+                        </h2>
                         <p>
                           You can efficiently send invoices through various
                           channels like WhatsApp, email, and SMS directly from
@@ -407,9 +407,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Lock your invoices and move on!
-                        </h4>
+                        </h2>
                         <p>
                           Frustrated by unauthorized changes to your completed
                           invoices? GIDDH's invoicing software offers an invoice
@@ -434,9 +434,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Lock your invoices and move on!
-                        </h4>
+                        </h2>
                         <p>
                           Frustrated by unauthorized changes to your completed
                           invoices? GIDDH's invoicing software offers an invoice
@@ -461,9 +461,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Add due date to invoices
-                        </h4>
+                        </h2>
                         <p>
                           Enhance your invoicing process by including due dates
                           on each invoice, relieving you from the burden of
@@ -487,9 +487,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Add due date to invoices
-                        </h4>
+                        </h2>
                         <p>
                           Enhance your invoicing process by including due dates
                           on each invoice, relieving you from the burden of
@@ -514,9 +514,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Customize the invoice number
-                        </h4>
+                        </h2>
                         <p>
                           In the billing software, you have the flexibility to
                           personalize your invoice numbers to suit your
@@ -540,9 +540,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Customize the invoice number
-                        </h4>
+                        </h2>
                         <p>
                           In the billing software, you have the flexibility to
                           personalize your invoice numbers to suit your
@@ -566,10 +566,10 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           {" "}
                           Reverse charge
-                        </h4>
+                        </h2>
                         <p>
                           {" "}
                           You have the option to implement the Reverse Charge
@@ -593,10 +593,10 @@ const invoiceSoftware = (path) => {
                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                       <div className='col-md-12 col-lg-6'>
                         <div className='features__description_container__content'>
-                          <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                          <h2 className='col-primary small-heading c-fw-600 mb-3'>
                             {" "}
                             Reverse charge
-                          </h4>
+                          </h2>
                           <p>
                             {" "}
                             You have the option to implement the Reverse Charge
@@ -619,9 +619,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Bulk Invoice update
-                        </h4>
+                        </h2>
                         <p>
                           Effortlessly manage your invoices by making bulk
                           updates and deletions as needed.
@@ -644,9 +644,9 @@ const invoiceSoftware = (path) => {
                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                       <div className='col-md-12 col-lg-6'>
                         <div className='features__description_container__content'>
-                          <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                          <h2 className='col-primary small-heading c-fw-600 mb-3'>
                             Bulk Invoice update
-                          </h4>
+                          </h2>
                           <p>
                             Effortlessly manage your invoices by making bulk
                             updates and deletions as needed.
@@ -668,9 +668,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Copy from previous invoice
-                        </h4>
+                        </h2>
                         <p>
                           Streamline your workflow by duplicating invoice data
                           from a previous invoice, eliminating the need to
@@ -695,9 +695,9 @@ const invoiceSoftware = (path) => {
                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                       <div className='col-md-12 col-lg-6'>
                         <div className='features__description_container__content'>
-                          <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                          <h2 className='col-primary small-heading c-fw-600 mb-3'>
                             Copy from previous invoice
-                          </h4>
+                          </h2>
                           <p>
                             Streamline your workflow by duplicating invoice data
                             from a previous invoice, eliminating the need to
@@ -722,9 +722,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Import and Export the invoice
-                        </h4>
+                        </h2>
                         <p>
                           No need to stress about recreating all your previous
                           invoices when you have data in an Excel file. Just
@@ -750,9 +750,9 @@ const invoiceSoftware = (path) => {
                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                       <div className='col-md-12 col-lg-6'>
                         <div className='features__description_container__content'>
-                          <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                          <h2 className='col-primary small-heading c-fw-600 mb-3'>
                             Import and Export the invoice
-                          </h4>
+                          </h2>
                           <p>
                             No need to stress about recreating all your previous
                             invoices when you have data in an Excel file. Just
@@ -778,9 +778,9 @@ const invoiceSoftware = (path) => {
                   <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                     <div className='col-md-12 col-lg-6'>
                       <div className='features__description_container__content'>
-                        <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                        <h2 className='col-primary small-heading c-fw-600 mb-3'>
                           Generate multiple and compound invoices
-                        </h4>
+                        </h2>
                         <p>
                           Effortlessly create multiple invoices at once by
                           leveraging your entries, also benefiting from the
@@ -805,9 +805,9 @@ const invoiceSoftware = (path) => {
                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                       <div className='col-md-12 col-lg-6'>
                         <div className='features__description_container__content'>
-                          <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                          <h2 className='col-primary small-heading c-fw-600 mb-3'>
                             Generate multiple and compound invoices
-                          </h4>
+                          </h2>
                           <p>
                             Effortlessly create multiple invoices at once by
                             leveraging your entries, also benefiting from the
@@ -838,9 +838,9 @@ const invoiceSoftware = (path) => {
                 >
                   <div className='col-md-12 col-lg-6'>
                     <div className='features__description_container__content'>
-                      <h4 className='col-primary small-heading c-fw-600 mb-3'>
+                      <h2 className='col-primary small-heading c-fw-600 mb-3'>
                         Run your business with automation!
-                      </h4>
+                      </h2>
                       <p>
                         From setting payment reminders to sending{" "}
                         <a

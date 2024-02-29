@@ -46,7 +46,7 @@ const conectBankReconcile = (path) => {
               </div>
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
-                  <img src="/img/bank-banner.svg" width="90%" />
+                  <img src="/img/bank-banner.svg" width="90%" alt="bank banner icons"/>
                   <img
                     src="/img/all-features-cloud_icon.svg"
                     alt="cloud icons"
@@ -89,9 +89,9 @@ const conectBankReconcile = (path) => {
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
-                    <h4 className="col-primary small-heading c-fw-600 mb-3">
+                    <h2 className="col-primary small-heading c-fw-600 mb-3">
                       Connect bank and get automatic updates
-                    </h4>
+                    </h2>
                     <p>
                       As a growing business, your volume of bank transactions
                       must be growing. With bank account linking, you no longer
@@ -116,9 +116,9 @@ const conectBankReconcile = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Reconcile with a snap of fingers
-                  </h4>
+                  </h2>
                   <p>
                     With one-click reconciliation feature, we have made the
                     process of reconciliation so easy, it is no more a
@@ -142,9 +142,9 @@ const conectBankReconcile = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Got Multiple Bank Accounts? We got you Covered
-                  </h4>
+                  </h2>
                   <p>
                     With Giddh bank account linking, you can monitor the
                     deposit, transfer, and withdrawals of cash whether you hold

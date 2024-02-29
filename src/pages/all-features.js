@@ -666,7 +666,7 @@ const allFeatures = (path) => {
                     </div>
                     <div className="col-md-7 col-sm-12">
                       <div className="pe-4">
-                        <h3 className="c-fw-600 c-fs-4">{item.name}</h3>
+                        <h2 className="c-fw-600 c-fs-4">{item.name}</h2>
 
                         <span
                           className="c-fs-5"
