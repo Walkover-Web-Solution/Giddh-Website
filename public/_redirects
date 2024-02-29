@@ -11,6 +11,7 @@
 /signup/tally-vs-giddh /signup
 /signup/privacy-policy /signup
 /signup/about /signup
+/accountingsoftware.php /
 /help/MSG91/how-to-resolve-the-error-authentication-failure-and-no-internet-connection-in-excel-plugin /help
 /accounting-dashboard/terms /accounting-dashboard
 /blog/online-accounting-software-a-wise-choice-for-business/feed/ /blog
@@ -762,3 +763,5 @@ http://shopify.giddh.com/* /
 /ae/ae/vat/ /ae
 /ae/ae/import-data/ /ae
 /conect-bank-reconcile.php?source=post_page--------------------------- /
+/tallyplusgiddh.php /
+/uk/gst.php /uk
