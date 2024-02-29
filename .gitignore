@@ -16,9 +16,6 @@
 # production
 /build
 
-#
-/public/404.csv
-/public/node.js
 
 # misc
 .DS_Store
