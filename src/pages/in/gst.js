@@ -43,9 +43,9 @@ const gst = (path) => {
               <div className="filing-tax-card d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/tax-images/Direct-Filing.svg" alt="Tax Filling in Giddh Accounting Software Icon" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     Direct Filing
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     We prepare your GST return file automatically and do the
                     heavy lifting for you. Now file your Goods and Services Tax
@@ -59,9 +59,9 @@ const gst = (path) => {
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/tax-images/accurate.svg" alt="accurate results icon" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     100% Accurate
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     Get 10/10 on accuracy by identifying errors right before
                     submitting your GST return online with the help of our
@@ -75,9 +75,9 @@ const gst = (path) => {
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/tax-images/get-notified.svg" alt="Striking Gavel Hammer logo" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     Timely Notifications
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     Frustrated with last-minute tax return stress? With Giddh
                     GST accounting, you will never miss another deadline or
@@ -94,9 +94,9 @@ const gst = (path) => {
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/tax-images/easy-fast.svg" alt="Easy and fast icon" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     Highly Collaborative
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     Be on the same page with your team. With our role based
                     model, you can grant your CA the access to view the relevant
@@ -112,9 +112,9 @@ const gst = (path) => {
               >
                 <img src="/img/tax-images/secure-reliable.svg" alt="secure-reliable-icon" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     Secure & Reliable
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     With 2-factor authentication, industry leading security and
                     OTP verification, your GST return filing process is secure
@@ -128,9 +128,9 @@ const gst = (path) => {
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/tax-images/best-support.svg" alt="best-giddh-accounting-support-icon" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     Best in Class Support
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     Stuck somewhere? Count on our friendly and knowledgable
                     support team for your accounting & GST filing queries.

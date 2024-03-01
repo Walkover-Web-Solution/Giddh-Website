@@ -66,9 +66,9 @@ const pricing = (path) => {
               </div>
               {isIndia && (
                 <div className="pricing_main_section__grid__all-prices-message">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     *All prices are exclusive of GST
-                  </h4>
+                  </h2>
                 </div>
               )}
               <div className="pricing_main_section__grid__guarantee_logo">

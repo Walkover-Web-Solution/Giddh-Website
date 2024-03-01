@@ -45,9 +45,9 @@ const inVAT = () => {
                   alt="Direct-Tax-Filing-Icon"
                 />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     Direct Filing
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     We prepare your VAT return file automatically and do the
                     heavy lifting for you. Now file your Value Added Tax (VAT)
@@ -61,9 +61,9 @@ const inVAT = () => {
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
                 <img src="/img/tax-images/accurate.svg" alt="accurate-icon" />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     100% Accurate
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     Get 10/10 on accuracy by identifying errors right before
                     submitting your VAT return online with the help of our
@@ -80,9 +80,9 @@ const inVAT = () => {
                   alt="get-notified-icon"
                 />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     Timely Notifications
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     Frustrated with last-minute tax return stress? With Giddh
                     VAT accounting, you will never miss another deadline or
@@ -102,9 +102,9 @@ const inVAT = () => {
                   alt="easy and fast icon"
                 />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     Highly Collaborative
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     Be on the same page with your team. With our role based
                     model, you can grant your CA the access to view the relevant
@@ -121,9 +121,9 @@ const inVAT = () => {
                   alt="secure-reliable-icon"
                 />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     Secure & Reliable
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     With 2-factor authentication, industry leading security and
                     OTP verification, your VAT return filing process is secure
@@ -140,9 +140,9 @@ const inVAT = () => {
                   alt="support icon"
                 />
                 <div className="caption text-center">
-                  <h3 className="small-heading col-primary c-fw-600">
+                  <h2 className="small-heading col-primary c-fw-600">
                     Best in Class Support
-                  </h3>
+                  </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
                     Stuck somewhere? Count on our friendly and knowledgable
                     support team for your accounting & VAT filing queries.
@@ -183,9 +183,9 @@ const inVAT = () => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h2 className="col-primary small-heading c-fw-600 mb-3">
                   Understanding VAT
-                </h4>
+                </h2>
                 <p>
                   The full form of VAT is Value Added Tax. It’s a value-added
                   tax that is levied on many goods and services that are sold
@@ -253,9 +253,9 @@ const inVAT = () => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h2 className="col-primary small-heading c-fw-600 mb-3">
                   UAE VAT Software for business owners
-                </h4>
+                </h2>
                 <p>
                   Presently, many businesses (small, medium, and large scale)
                   are under constant pressure to be the first. And this can only
@@ -324,9 +324,9 @@ const inVAT = () => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h2 className="col-primary small-heading c-fw-600 mb-3">
                   Benefits of using VAT software:
-                </h4>
+                </h2>
                 <p>
                   When using a VAT online software, it will help business owners
                   be aware of the tax rate that they need to pay, to whom, and

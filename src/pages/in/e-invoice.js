@@ -190,12 +190,12 @@ const eInvoice = () => {
             <div className="row align-items-center my-5">
               <div className="col-lg-6">
                 <ul>
-                  <li>Register your business in the e-invoice portal</li>
-                  <li>
+                  <li className="text-black">Register your business in the e-invoice portal</li>
+                  <li className="text-black">
                     Create API credentials for GST Suvidha Provider (GSP) for
                     Giddh & login
                   </li>
-                  <li>
+                  <li className="text-black">
                     Push your invoices to IRP to get validated, signed
                     e-invoices with IRNs
                   </li>
