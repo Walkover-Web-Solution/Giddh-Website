@@ -3308,7 +3308,7 @@ const pricing = (path) => {
                 <MdDone />
               </div>
               <div className="pricing_main_section__grid__link_all_feature">
-                <a href={link + "/all-features"}>Check all features</a>
+                <a className="col-primary" href={link + "/all-features"}>Check all features</a>
               </div>
               <div className="pricing_main_section__grid__extra_charges">
                 <p className={"c-fs-6 c-fw-400" + (isIndia ? " w-100" : "")}>
