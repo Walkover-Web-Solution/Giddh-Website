@@ -225,7 +225,7 @@ const terms = (path) => {
                 <li>
                   As a condition of these Terms, when accessing and using the
                   Services, You must:
-                </li>
+                {/* </li> */}
                 <ul>
                   <li>
                     not attempt to undermine the security or integrity of
@@ -261,6 +261,7 @@ const terms = (path) => {
                     them for normal operation.
                   </li>
                 </ul>
+                </li>
                 <li>
                   By enabling the multi-currency functionality within the
                   Services You confirm that You have read and accept the XE.com
@@ -342,7 +343,6 @@ const terms = (path) => {
                   The provisions of clauses <a className="col-primary fw-medium" href="#clause-411">4.1.1</a> and{" "}
                   <a href="#clause-412" className="col-primary fw-medium"> 4.1.2</a> shall not apply to any information
                   which:
-                </li>
                 <ul>
                   <li>
                     is or becomes public knowledge other than by a breach of
@@ -362,6 +362,7 @@ const terms = (path) => {
                     Confidential Information.
                   </li>
                 </ul>
+                </li>
               </ol>
               <h3 className="mb-2  c-fw-400 c-fs-4">4.2. Privacy:</h3>
               <p className="mb-4 c-fs-5">
@@ -445,7 +446,6 @@ const terms = (path) => {
                   or access the Website on behalf of or for the benefit of
                   anyone other than yourself (whether a body corporate or
                   otherwise) you agree that:
-                </li>
                 <ul>
                   <li>
                     You are responsible for ensuring that You have the right to
@@ -461,7 +461,6 @@ const terms = (path) => {
                   <li>
                     You will indemnify Giddh against any claims or loss relating
                     to:
-                  </li>
                   <ul>
                     <li>
                       Giddh’s refusal to provide any person access to Your
@@ -472,7 +471,9 @@ const terms = (path) => {
                       with Your authorisation.
                     </li>
                   </ul>
+                  </li>
                 </ul>
+                </li>
                 <li>
                   The provision of, access to, and use of, the Services is on an
                   as is basis and at Your own risk.
