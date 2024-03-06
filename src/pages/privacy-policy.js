@@ -405,7 +405,6 @@ const privacyPolicy = (path) => {
                   information. You agree to keep Your account information up to
                   date and accurate.
                 </li>
-                {/* <br /> */}
                 <li>
                   <b>Proprietary Rights.</b> You are permitted to use
                   information, data or other materials delivered to You through
@@ -416,7 +415,6 @@ const privacyPolicy = (path) => {
                   Service technology, including but not limited to, any Java
                   applets associated with the Yodlee Service.
                 </li>
-                {/* <br /> */}
                 <li>
                   <b>Content You Provide.</b> You are licensing to Giddh and
                   Yodlee, Inc. (“Yodlee”), any data, passwords or other
@@ -430,7 +428,6 @@ const privacyPolicy = (path) => {
                   fees, Giddh and Yodlee may use the Content for the purposes
                   set out above.
                 </li>
-                {/* <br /> */}
                 <li>
                   <b>Third Party Accounts.</b> By using the Yodlee Service , You
                   authorise Giddh and Yodlee to access third party sites
@@ -458,12 +455,9 @@ const privacyPolicy = (path) => {
                   by any third party account providers accessible through the
                   Yodlee Service.
                 </li>
-                {/* <br /> */}
                 <li>
                   <b>Disclaimer of warranties.</b> You expressly understand and
                   agree that:
-                  {/* <br /> */}
-                  {/* <br /> */}
                   <p className="mt-4 c-fs-5">
                     Your use of the Yodlee Service and all information, products
                     and other content (including that of third parties) included
@@ -499,7 +493,6 @@ const privacyPolicy = (path) => {
                     warranty not expressly stated in these terms.
                   </p>
                 </li>{" "}
-                {/* <br /> */}
                 <li>
                   <b>Limitation of liability.</b> You agree that neither Giddh
                   or Yodlee nor any of their affiliates, account providers or
@@ -522,7 +515,6 @@ const privacyPolicy = (path) => {
                   of such damages; or (vii) any other matter relating to the
                   Yodlee Service.
                 </li>
-                {/* <br /> */}
                 <li>
                   <b>Indemnification. </b>You agree to protect and fully
                   compensate Giddh and Yodlee and their affiliates from any and
@@ -533,7 +525,6 @@ const privacyPolicy = (path) => {
                   infringement by any other user of Your account, of any
                   intellectual property or other right of anyone.
                 </li>{" "}
-                {/* <br /> */}
                 <li>
                   <b>Yodlee.</b> You agree that Yodlee is a third party
                   beneficiary of the above provisions, with all rights to

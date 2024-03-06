@@ -225,7 +225,6 @@ const terms = (path) => {
                 <li>
                   As a condition of these Terms, when accessing and using the
                   Services, You must:
-                {/* </li> */}
                 <ul>
                   <li>
                     not attempt to undermine the security or integrity of
