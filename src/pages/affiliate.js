@@ -189,7 +189,7 @@ const affiliate = (path) => {
                           className="col-primary fw-bold"
                           href={
                             isIndia ? "/in/gst" : isAE ? "/ae/vat" : "/uk/vat"
-                          } fw-bold
+                          }
                           title={
                             (isIndia ? "GST " : isAE ? "VAT " : "VAT ") +
                             " Accounting Software"

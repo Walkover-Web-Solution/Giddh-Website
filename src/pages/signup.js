@@ -701,7 +701,7 @@ const signUp = (path) => {
 
                                 <p className="c-fs-6 mb-4">
                                     If you already have an account,{" "}
-                                    <a href={link + "/login"} className="">
+                                    <a href={link + "/login"}>
                                         Login
                                     </a>
                                 </p>
