@@ -82,10 +82,6 @@
     "description": "Explore Giddh's journey, values, and mission in our section. Learn how we redefine financial solutions with innovation and commitment",
     "keywords": "about"
   },
-  "/in/blog": {
-    "title": "All You Need to Know About Online Accounting Software by Giddh",
-    "description": "Get all the information about the online accounting, bookkeeping, GST, etc., under one roof"
-  },
   "/in/help": {
     "title": "Giddh Support",
     "description": "Giddh Support Center helps you to find FAQ, how-to guides and step-by-step tutorials."
@@ -434,5 +430,9 @@
   "/tally-vs-giddh": {
     "title": "Tally alternative account software. Tally vs Giddh",
     "description": "Tally and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses."
+  },
+  "/blog": {
+    "title": "All You Need to Know About Online Accounting Software by Giddh",
+    "description": "Get all the information about the online accounting, bookkeeping, GST, etc., under one roof"
   }
 }

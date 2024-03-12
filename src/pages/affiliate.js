@@ -23,9 +23,9 @@ const affiliate = (path) => {
                       />
                     </div>
                     <div className="col-9 col-md-8">
-                      <h4 className="c-fs-1 col-primary c-fw-400 mb-3">
+                      <h2 className="c-fs-1 col-primary c-fw-400 mb-3">
                         Lucrative, Residual Commissions
-                      </h4>
+                      </h2>
                       <p className="c-fs-5">
                         Earn 50% of every new referral's first payment, 30% on
                         renewal or second payment and 20% on the third one. We
@@ -44,9 +44,9 @@ const affiliate = (path) => {
                       />
                     </div>
                     <div className="col-9 col-md-8">
-                      <h4 className="c-fs-1  col-primary c-fw-400 mb-3">
+                      <h2 className="c-fs-1  col-primary c-fw-400 mb-3">
                         Long Cookie Duration with Active Retargeting
-                      </h4>
+                      </h2>
                       <p className="c-fs-5">
                         Receive the credit you deserve with our 120-day cookie
                         duration, plus benefit from our active retargeting
@@ -65,9 +65,9 @@ const affiliate = (path) => {
                       />
                     </div>
                     <div className="col-9 col-md-8">
-                      <h4 className="c-fs-1  col-primary c-fw-400 mb-3">
+                      <h2 className="c-fs-1  col-primary c-fw-400 mb-3">
                         Reliable Tracking
-                      </h4>
+                      </h2>
                       <p className="c-fs-5">
                         Accumulate more referrals with the highly-accurate
                         tracking software we've implemented.
@@ -86,9 +86,9 @@ const affiliate = (path) => {
                       />
                     </div>
                     <div className="col-9 col-md-8">
-                      <h4 className="c-fs-1 col-primary c-fw-400 mb-3">
+                      <h2 className="c-fs-1 col-primary c-fw-400 mb-3">
                         Proven Results
-                      </h4>
+                      </h2>
                       <p className="c-fs-5">
                         Profit more from your efforts with our high conversion
                         rate, strong earnings per click, and great customer
@@ -108,9 +108,9 @@ const affiliate = (path) => {
                       />
                     </div>
                     <div className="col-9 col-md-8">
-                      <h4 className="c-fs-1 col-primary c-fw-400 mb-3">
+                      <h2 className="c-fs-1 col-primary c-fw-400 mb-3">
                         Free To Join
-                      </h4>
+                      </h2>
                       <p className="c-fs-5">
                         It's free to join our partner community and only takes
                         minutes to sign up and start promoting.
@@ -145,15 +145,15 @@ const affiliate = (path) => {
                   </div>
                   <div className="col-lg-6 col-md-12 order-1">
                     <div>
-                      <h4 className="c-fs-1 mb-4 col-primary">
+                      <h2 className="c-fs-1 mb-4 col-primary">
                         Dashboard To Track Your Success
-                      </h4>
-                      <p className="c-fs-4 col-grey-deep">
+                      </h2>
+                      <p className="c-fs-4">
                         Metrics are vital. As an{" "}
                         <a
                           href={isIndia ? "/" : link}
                           title="Accounting Software"
-                          className="col-primary "
+                          className="col-primary fw-bold"
                         >
                           Accounting Software
                         </a>{" "}
@@ -176,17 +176,17 @@ const affiliate = (path) => {
                   </div>
                   <div className="col-lg-6 col-md-12 order-lg-0 order-1">
                     <div>
-                      <h4 className="c-fs-1 mb-4 col-primary">
+                      <h2 className="c-fs-1 mb-4 col-primary">
                         Dedicated Affiliate Manager
-                      </h4>
-                      <p className="c-fs-4 col-grey-deep">
+                      </h2>
+                      <p className="c-fs-4">
                         At your service. We have an Affiliate Manager dedicated
                         to helping you promote Giddh and increase your
                         conversions for Accounting or Bookkeeping Software. He
                         can answer your questions and work with you on
                         strategies to sell this{" "}
                         <a
-                          className="col-primary"
+                          className="col-primary fw-bold"
                           href={
                             isIndia ? "/in/gst" : isAE ? "/ae/vat" : "/uk/vat"
                           }
@@ -213,10 +213,10 @@ const affiliate = (path) => {
                   </div>
                   <div className="col-lg-6 col-md-12 order-1">
                     <div>
-                      <h4 className="c-fs-1 mb-4 col-primary">
+                      <h2 className="c-fs-1 mb-4 col-primary fw-bold">
                         Exclusive Affiliate Newsletter
-                      </h4>
-                      <p className="c-fs-4 col-grey-deep">
+                      </h2>
+                      <p className="c-fs-4">
                         News you can use. As an Accounting Software reseller,
                         you’ll receive access to a special newsletter with
                         important product updates, news on promotions. Also you

@@ -90,9 +90,9 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Record inventory for product, and Services
-                  </h4>
+                  </h2>
                   <p>
                     Inventory management isn't exclusive to product-based
                     businesses; service-oriented businesses can benefit as well.
@@ -114,9 +114,9 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Inventory Master’s
-                  </h4>
+                  </h2>
                   <p>
                     Giddh provides you with the "masters" of inventory. Here,
                     you'll be able to view all your business inventory and
@@ -138,9 +138,9 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Bifurcate inventory into Groups, Items, and Variants
-                  </h4>
+                  </h2>
                   <p>
                     Dealing with a large number of items can lead to confusion.
                     Simplify your inventory management by categorizing it into
@@ -162,9 +162,9 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Real-time inventory reports
-                  </h4>
+                  </h2>
                   <p>
                     Tired of the hassle of manually tracking your business
                     inventory? With Giddh, you can simplify your inventory
@@ -188,9 +188,9 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Barcode Scanning
-                  </h4>
+                  </h2>
                   <p>
                     Utilizing barcode scanning within accounting software
                     enables quick item addition to invoices and bills,
@@ -215,9 +215,9 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Manufacturing
-                  </h4>
+                  </h2>
                   <p>
                     In manufacturing, inventory management can be tough, but
                     Giddh simplifies it. Easily manage manufacturing and its
@@ -241,9 +241,9 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Branch and Warehouse inventory management-
-                  </h4>
+                  </h2>
                   <p>
                     If your business is expanded across multiple locations and
                     has Expanding your business across multiple locations or
@@ -268,9 +268,9 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Branch transfer
-                  </h4>
+                  </h2>
                   <p>
                     Looking to transfer products between branches or warehouses?
                     No worries! You can easily manage inventory transfers, and
@@ -294,9 +294,9 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Custom units
-                  </h4>
+                  </h2>
                   <p>
                     You're no longer limited to just a few inventory units;
                     Giddh offers a solution to maintain and customize units

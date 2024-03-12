@@ -40,7 +40,7 @@ const makeTheSwitch = (path) => {
                 <p className="col-primary c-fs-4 c-fw-600">
                   Transfer customers and vendors seamlessly
                 </p>
-                <p className="col-dark-light">
+                <p>
                   We sync with Tally and almost every online accounting
                   software. It’s peanuts for us to transfer your data to Giddh.
                 </p>
@@ -48,7 +48,7 @@ const makeTheSwitch = (path) => {
                 <p className="col-primary c-fs-4 c-fw-600">
                   We are there for you.
                 </p>
-                <p className="col-dark-light">
+                <p>
                   If you still need help, our experts will guide you to the
                   quick transfer process.
                 </p>
@@ -69,13 +69,13 @@ const makeTheSwitch = (path) => {
                   <p className="col-primary c-fs-4 c-fw-600">
                     Inventory Management
                   </p>
-                  <p className="col-dark-light">
+                  <p>
                     Manufacturing and all necessary inventory solutions at your
                     rescue.
                   </p>
 
                   <p className="col-primary c-fs-4 c-fw-600">Invoicing</p>
-                  <p className="col-dark-light">
+                  <p>
                     Generate beautiful invoices on the tip of a button and share
                     it with your clients instantly.
                   </p>
@@ -93,7 +93,7 @@ const makeTheSwitch = (path) => {
                   <p className="col-primary c-fs-4 c-fw-600">
                     Direct Bank integration
                   </p>
-                  <p className="col-dark-light">
+                  <p>
                     No more downloading bank statements. Your mapped
                     transactions appear directly at Giddh.
                   </p>
@@ -101,7 +101,7 @@ const makeTheSwitch = (path) => {
                   <p className="col-primary c-fs-4 c-fw-600">
                     Expense Management
                   </p>
-                  <p className="col-dark-light">
+                  <p>
                     Enjoy FREE approval based expense management which comes
                     along with all other solutions.
                   </p>

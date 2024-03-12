@@ -66,9 +66,9 @@ const pricing = (path) => {
               </div>
               {isIndia && (
                 <div className="pricing_main_section__grid__all-prices-message">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     *All prices are exclusive of GST
-                  </h4>
+                  </h2>
                 </div>
               )}
               <div className="pricing_main_section__grid__guarantee_logo">
@@ -3308,7 +3308,7 @@ const pricing = (path) => {
                 <MdDone />
               </div>
               <div className="pricing_main_section__grid__link_all_feature">
-                <a href={link + "/all-features"}>Check all features</a>
+                <a className="col-primary" href={link + "/all-features"}>Check all features</a>
               </div>
               <div className="pricing_main_section__grid__extra_charges">
                 <p className={"c-fs-6 c-fw-400" + (isIndia ? " w-100" : "")}>
@@ -3396,9 +3396,9 @@ const pricing = (path) => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h2 className="col-primary small-heading c-fw-600 mb-3">
                   WHY GIDDH?
-                </h4>
+                </h2>
                 <p>
                   In today's business landscape, understanding and managing the
                   financial status of your organization are crucial for making
@@ -3472,9 +3472,9 @@ const pricing = (path) => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h2 className="col-primary small-heading c-fw-600 mb-3">
                   Accounting Software for Growing Businesses
-                </h4>
+                </h2>
                 <p>
                   The advancement and inception of technologies like Artificial
                   Intelligence (AI), Machine Learning (ML), etc. has been
@@ -3553,9 +3553,9 @@ const pricing = (path) => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h2 className="col-primary small-heading c-fw-600 mb-3">
                   Accounting Software for Startups
-                </h4>
+                </h2>
                 <p>
                   Entrepreneurship in any form gives you the option to wear
                   multiple caps at a time. If you’re a sole entrepreneur running
@@ -3624,9 +3624,9 @@ const pricing = (path) => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h2 className="col-primary small-heading c-fw-600 mb-3">
                   Accounting Software for CAs and CS
-                </h4>
+                </h2>
                 <p>
                   If you’re looking for a perfect software system to help you
                   with business operations, you’re at the right place. GIDDH –
@@ -3700,9 +3700,9 @@ const pricing = (path) => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h2 className="col-primary small-heading c-fw-600 mb-3">
                   Free Accounting Software For Students and Teachers
-                </h4>
+                </h2>
                 <p>
                   Here at Giddh, we want to spread awareness about the power and
                   convenience of cloud accounting to everyone. In this regard,
@@ -3771,9 +3771,9 @@ const pricing = (path) => {
       >
         <div className="container">
           <div className="col-12 pricing_description text-center">
-            <h4 className="col-primary c-fs-3 fw-bold mb-3">
+            <h2 className="col-primary c-fs-3 fw-bold mb-3">
               Traditional Vs Cloud Accounting Software: A Comparison
-            </h4>
+            </h2>
             <p className="c-fs-4 my-4">
               Not long ago, traditional accounting software like Tally was quite
               a rage and was considered an integral part of both small to

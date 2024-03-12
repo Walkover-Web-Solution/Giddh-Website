@@ -73,6 +73,7 @@ const featureGallery = (path) => {
                 <a
                   className="feature-gallery__card feature-gallery--see-more"
                   href={link.linkPrefix + "/all-features"}
+                  aria-label="Feature gallery card feature gallery"
                 ></a>
               </div>
             </div>

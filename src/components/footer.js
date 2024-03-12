@@ -202,12 +202,12 @@ const Footer = (path) => {
               </div>
             </div>
           </div>
-          <div className="d-flex mt-4 copyright-text">
-            <li className="widget_text widget widget_custom_html list-unstyled class">
+          <div className="d-flex mt-4 copyright-text ps-0">
+            <div className="widget_text widget widget_custom_html list-unstyled class">
               <div className="textwidget custom-html-widget c-fs-6">
                 All rights are reserved {year} Walkover
               </div>
-            </li>
+            </div>
           </div>
         </div>
       </footer>

@@ -13,7 +13,7 @@ const terms = (path) => {
               </h2>
               <p className="mb-4 c-fs-5">
                 Giddh is an{" "}
-                <a href={ "https://giddh.com" + link } title="online accounting service" className="col-primary">online accounting service</a>{" "}
+                <a href={ "https://giddh.com" + link } title="online accounting service" className="col-primary fw-medium">online accounting service</a>{" "}
                 designed especially for small businesses and consumers. These
                 Terms of Use are intended to explain our obligations as a
                 service provider and Your obligations as a customer. Please read
@@ -85,7 +85,7 @@ const terms = (path) => {
               </p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">Website</h3>
               <p className="mb-4 c-fs-5">
-                means the Internet site at the domain <a href={ "https://giddh.com" + link } className="col-primary" title="www.Giddh.com">www.Giddh.com</a> or any other
+                means the Internet site at the domain <a href={ "https://giddh.com" + link } className="col-primary fw-medium" title="www.Giddh.com">www.Giddh.com</a> or any other
                 site operated by Giddh.
               </p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">Invited User</h3>
@@ -113,7 +113,7 @@ const terms = (path) => {
                 applicable written agreement between the Subscriber and the
                 Invited Users, or any other applicable laws:
               </p>
-              <dl className="m-5">
+              <div className="m-5">
                 <p>
                   {" "}
                   The Subscriber determines who is an Invited User and what
@@ -139,7 +139,7 @@ const terms = (path) => {
                   Subscriber shall decide what access or level of access to the
                   relevant Data or Service that Invited User shall have, if any.
                 </p>
-              </dl>
+              </div>
 
               <h3 className="mb-3 c-fs-4 sub-heading" id="clause-31" >3. YOUR OBLIGATIONS</h3>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">
@@ -151,7 +151,7 @@ const terms = (path) => {
                 Your Giddh account. All invoices will include the Access Fee for
                 the preceding period one month of use. Giddh will continue
                 invoicing You monthly until this Agreement is terminated in
-                accordance with clause <a className="col-primary" href="#clause-8">8</a>. All Giddh invoices will be sent to
+                accordance with clause <a className="col-primary fw-medium" href="#clause-8">8</a>. All Giddh invoices will be sent to
                 You, or to a Billing Contact whose details are provided by You,
                 by email. You must pay or arrange payment of all amounts
                 specified in any invoice by the due date for payment and are
@@ -225,7 +225,6 @@ const terms = (path) => {
                 <li>
                   As a condition of these Terms, when accessing and using the
                   Services, You must:
-                </li>
                 <ul>
                   <li>
                     not attempt to undermine the security or integrity of
@@ -261,6 +260,7 @@ const terms = (path) => {
                     them for normal operation.
                   </li>
                 </ul>
+                </li>
                 <li>
                   By enabling the multi-currency functionality within the
                   Services You confirm that You have read and accept the XE.com
@@ -339,10 +339,9 @@ const terms = (path) => {
                   termination of these Terms.
                 </li>
                 <li>
-                  The provisions of clauses <a className="col-primary" href="#clause-411">4.1.1</a> and{" "}
-                  <a href="#clause-412" className="col-primary"> 4.1.2</a> shall not apply to any information
+                  The provisions of clauses <a className="col-primary fw-medium" href="#clause-411">4.1.1</a> and{" "}
+                  <a href="#clause-412" className="col-primary fw-medium"> 4.1.2</a> shall not apply to any information
                   which:
-                </li>
                 <ul>
                   <li>
                     is or becomes public knowledge other than by a breach of
@@ -362,6 +361,7 @@ const terms = (path) => {
                     Confidential Information.
                   </li>
                 </ul>
+                </li>
               </ol>
               <h3 className="mb-2  c-fw-400 c-fs-4">4.2. Privacy:</h3>
               <p className="mb-4 c-fs-5">
@@ -445,7 +445,6 @@ const terms = (path) => {
                   or access the Website on behalf of or for the benefit of
                   anyone other than yourself (whether a body corporate or
                   otherwise) you agree that:
-                </li>
                 <ul>
                   <li>
                     You are responsible for ensuring that You have the right to
@@ -461,7 +460,6 @@ const terms = (path) => {
                   <li>
                     You will indemnify Giddh against any claims or loss relating
                     to:
-                  </li>
                   <ul>
                     <li>
                       Giddh’s refusal to provide any person access to Your
@@ -472,7 +470,9 @@ const terms = (path) => {
                       with Your authorisation.
                     </li>
                   </ul>
+                  </li>
                 </ul>
+                </li>
                 <li>
                   The provision of, access to, and use of, the Services is on an
                   as is basis and at Your own risk.
@@ -578,7 +578,7 @@ const terms = (path) => {
               </h3>
               <p className="mb-4 c-fs-5">
                 These Terms will continue for the period covered by the Access
-                Fee paid or payable under clause <a href="#clause-31" className="col-primary">3.1.</a> At the
+                Fee paid or payable under clause <a href="#clause-31" className="col-primary fw-medium">3.1.</a> At the
                 end of each billing period these Terms will automatically
                 continue for another period of the same duration as that period,
                 provided You continue to pay the prescribed Access Fee when due,
@@ -601,7 +601,7 @@ const terms = (path) => {
                 <li>
                   breach any of these Terms and the breach is not capable of
                   being remedied (which includes (without limitation) any breach
-                  of clause <a className="col-primary" href="#clause-34"> 3.4 </a> or any payment of Access Fees that are more than
+                  of clause <a className="col-primary fw-medium" href="#clause-34"> 3.4 </a> or any payment of Access Fees that are more than
                   30 days overdue); or
                 </li>
                 <li>
@@ -626,7 +626,7 @@ const terms = (path) => {
                 <li>Suspend or terminate access to all or any Data.</li>
                 <li>
                   Take either of the actions in sub-clauses (d), (e) and (f) of
-                  this clause <a className="col-primary" href="#clause-84">8(4)</a> in respect of any or all other persons whom
+                  this clause <a className="col-primary fw-medium" href="#clause-84">8(4)</a> in respect of any or all other persons whom
                   You have authorized to have access to Your information or
                   Data.
                 </li>
@@ -634,7 +634,7 @@ const terms = (path) => {
                   For the avoidance of doubt, if payment of any invoice for
                   Access Fees due in relation to any of Your Billing Contacts,
                   Billing Plans or any of Your Organizations (as defined at
-                  clause <a className="col-primary" href="#clause-31">3</a>) is not made in full by the relevant due date, Giddh
+                  clause <a className="col-primary fw-medium" href="#clause-31">3</a>) is not made in full by the relevant due date, Giddh
                   may: suspend or terminate Your use of the Service, the
                   authority for all or any of Your Organizations to use the
                   Service, or Your rights of access to all or any Data.
@@ -655,7 +655,7 @@ const terms = (path) => {
                 8.6. Expiry or termination:
               </h3>
               <p className="mb-4 c-fs-5">
-                Clauses <a className="col-primary" href="#clause-31"> 3.1</a>,<a className="col-primary" href="#clause-37"> 3.7</a>,<a className="col-primary" href="#clause-4"> 4</a>,<a className="col-primary" href="#clause-5"> 5</a>,<a className="col-primary" href="#clause-6"> 6</a>,<a className="col-primary" href="#clause-7"> 7</a>,<a className="col-primary" href="#clause-8"> 8</a> and <a className="col-primary" href="#clause-10"> 10 </a> survive the expiry or
+                Clauses <a className="col-primary fw-medium" href="#clause-31"> 3.1</a>,<a className="col-primary fw-medium" href="#clause-37"> 3.7</a>,<a className="col-primary fw-medium" href="#clause-4"> 4</a>,<a className="col-primary fw-medium" href="#clause-5"> 5</a>,<a className="col-primary fw-medium" href="#clause-6"> 6</a>,<a className="col-primary fw-medium" href="#clause-7"> 7</a>,<a className="col-primary fw-medium" href="#clause-8"> 8</a> and <a className="col-primary fw-medium" href="#clause-10"> 10 </a> survive the expiry or
                 termination of these Terms.
               </p>
               <h3 className="mb-3  sub-heading c-fs-4">9. HELP DESK</h3>
