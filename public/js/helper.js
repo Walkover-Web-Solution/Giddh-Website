@@ -41,7 +41,7 @@ function setGiddhSession(sessionId) {
 
 function getOtpwidgetConfiguration(exposeMethods, callbackFunction) {
     var configuration = {
-        widgetId: "33686b716134333831313239",
+        widgetId: "346373686753373039373739",
         tokenAuth: "205968TmXguUAwoD633af103P1",
         exposeMethods: exposeMethods,
         success: function (data) {
