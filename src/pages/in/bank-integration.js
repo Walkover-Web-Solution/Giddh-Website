@@ -70,25 +70,6 @@ const bankIntegration = () => {
               <div className="col-md-6 col-lg-4">
                 <div className="px-3">
                   <figure>
-                    <img
-                      src="/img/shape.svg"
-                      alt="pen new Bank account directly icon"
-                    />
-                  </figure>
-                  <h3 className="c-fs-4 c-fw-600">
-                    Open new Bank account directly from Giddh
-                  </h3>
-                  <p className="c-fs-6">
-                    You can now open your new bank account directly from
-                    Giddh in 2 simple steps. Just fill the form with all your
-                    details in step one and verify the details in step 2. Yes,
-                    it is this simple.
-                  </p>
-                </div>
-              </div>
-              <div className="col-md-6 col-lg-4">
-                <div className="px-3">
-                  <figure>
                     <img src="/img/hand-shake.svg" alt="hand-shake icon" />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
@@ -195,18 +176,6 @@ const bankIntegration = () => {
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="row bank_integration__benifits_section__step_guide text-center">
-              <p className="c-fs-4 mb-0">
-                See step-by-step{" "}
-                <a
-                  href="https://giddh.com/help/how-to-integrate-icici-bank-account-with-giddh"
-                  target="_blank"
-                >
-                  Guide
-                </a>{" "}
-                on how to connect Bank account with Giddh
-              </p>
             </div>
             <div className="text-center my-4">
               <a
