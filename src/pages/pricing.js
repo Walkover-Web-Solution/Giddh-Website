@@ -25,7 +25,7 @@ const pricing = (path) => {
   const [manufacturing, setManufacturing] = useState(false);
   const [eInvoice, setEInvoice] = useState(false);
   const [ewayBill, setEwayBill] = useState(false);
-  const [icici, setIcici] = useState(false);
+  const [bank, setBank] = useState(false);
   const [ecom, setEcommerce] = useState(false);
   const [telecom, setTelecom] = useState(false);
   const [warehouse, setWarehouse] = useState(false);
@@ -2254,20 +2254,20 @@ const pricing = (path) => {
                 </>
               )}
               {!isIndia && (
-                <div className="pricing_main_section__grid__icici pricing-border-top">
+                <div className="pricing_main_section__grid__bankInt pricing-border-top">
                   <div
-                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                    onClick={() => setIcici((icici) => !icici)}
+                    className={"cursor-pointer " + (bank ? "pt-2" : "")}
+                    onClick={() => setBank((bank) => !bank)}
                   >
                     <span>
                       Bank Integrations
-                      {icici ? (
+                      {bank ? (
                         <MdKeyboardArrowUp />
                       ) : (
                         <MdKeyboardArrowDown />
                       )}{" "}
                     </span>
-                    {icici && (
+                    {bank && (
                       <p className="c-fw-400">
                         Provides support in 12+ countries including USA, Canada,
                         UK, Germany, France, Netherlands, Ireland, Spain,
@@ -2278,20 +2278,20 @@ const pricing = (path) => {
                 </div>
               )}
               {!isIndia && (
-                <div className="pricing_main_section__grid__icici_2">
+                <div className="pricing_main_section__grid__bankInt_2">
                   <div
-                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                    onClick={() => setIcici((icici) => !icici)}
+                    className={"cursor-pointer " + (bank ? "pt-2" : "")}
+                    onClick={() => setBank((bank) => !bank)}
                   >
                     <span>
                       Bank Integrations
-                      {icici ? (
+                      {bank ? (
                         <MdKeyboardArrowUp />
                       ) : (
                         <MdKeyboardArrowDown />
                       )}{" "}
                     </span>
-                    {icici && (
+                    {bank && (
                       <p className="c-fw-400">
                         Provides support in 12+ countries including USA, Canada,
                         UK, Germany, France, Netherlands, Ireland, Spain,
@@ -2302,20 +2302,20 @@ const pricing = (path) => {
                 </div>
               )}
               {!isIndia && (
-                <div className="pricing_main_section__grid__icici_3">
+                <div className="pricing_main_section__grid__bankInt_3">
                   <div
-                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                    onClick={() => setIcici((icici) => !icici)}
+                    className={"cursor-pointer " + (bank ? "pt-2" : "")}
+                    onClick={() => setBank((bank) => !bank)}
                   >
                     <span>
                       Bank Integrations
-                      {icici ? (
+                      {bank ? (
                         <MdKeyboardArrowUp />
                       ) : (
                         <MdKeyboardArrowDown />
                       )}{" "}
                     </span>
-                    {icici && (
+                    {bank && (
                       <p className="c-fw-400">
                         Provides support in 12+ countries including USA, Canada,
                         UK, Germany, France, Netherlands, Ireland, Spain,
@@ -2326,20 +2326,20 @@ const pricing = (path) => {
                 </div>
               )}
               {!isIndia && (
-                <div className="pricing_main_section__grid__icici_4">
+                <div className="pricing_main_section__grid__bankInt_4">
                   <div
-                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                    onClick={() => setIcici((icici) => !icici)}
+                    className={"cursor-pointer " + (bank ? "pt-2" : "")}
+                    onClick={() => setBank((bank) => !bank)}
                   >
                     <span>
                       Bank Integrations
-                      {icici ? (
+                      {bank ? (
                         <MdKeyboardArrowUp />
                       ) : (
                         <MdKeyboardArrowDown />
                       )}{" "}
                     </span>
-                    {icici && (
+                    {bank && (
                       <p className="c-fw-400">
                         Provides support in 12+ countries including USA, Canada,
                         UK, Germany, France, Netherlands, Ireland, Spain,
@@ -2350,20 +2350,20 @@ const pricing = (path) => {
                 </div>
               )}
               {!isIndia && (
-                <div className="pricing_main_section__grid__icici_5 display-all__child">
+                <div className="pricing_main_section__grid__bankInt_5 display-all__child">
                   <div
-                    className={"cursor-pointer " + (icici ? "pt-2" : "")}
-                    onClick={() => setIcici((icici) => !icici)}
+                    className={"cursor-pointer " + (bank ? "pt-2" : "")}
+                    onClick={() => setBank((bank) => !bank)}
                   >
                     <span>
                       Bank Integrations
-                      {icici ? (
+                      {bank ? (
                         <MdKeyboardArrowUp />
                       ) : (
                         <MdKeyboardArrowDown />
                       )}{" "}
                     </span>
-                    {icici && (
+                    {bank && (
                       <p className="c-fw-400">
                         Provides support in 12+ countries including USA, Canada,
                         UK, Germany, France, Netherlands, Ireland, Spain,

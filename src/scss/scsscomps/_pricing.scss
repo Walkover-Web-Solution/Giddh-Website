@@ -72,7 +72,7 @@
         "dashboard dashboard rd2 rd3 rd4"
         "bank bank br2 br3 br4"
         "manufacturing manufacturing m2 m3 m4"
-        "icici icici ic2 ic3 ic4"
+        "bankInt bankInt ic2 ic3 ic4"
         "e-commerce e-commerce ecom2 ecom3 ecom4"
         "telecom telecom tc2 tc3 tc4"
         "warehouse warehouse w2 w3 w4"
@@ -136,7 +136,7 @@
         "dashboard dashboard rd2 rd3 rd4"
         "bank bank br2 br3 br4"
         "manufacturing manufacturing m2 m3 m4"
-        "icici icici ic2 ic3 ic4"
+        "bankInt bankInt ic2 ic3 ic4"
         "e-commerce e-commerce ecom2 ecom3 ecom4"
         "telecom telecom tc2 tc3 tc4"
         "warehouse warehouse w2 w3 w4"
@@ -990,27 +990,27 @@
       display: none;
     }
 
-    &__icici {
-      grid-area: icici;
+    &__bankInt {
+      grid-area: bankInt;
       justify-content: start !important;
     }
-    &__icici_2 {
-      grid-area: icici_2;
-      justify-content: start !important;
-      display: none;
-    }
-    &__icici_3 {
-      grid-area: icici_3;
+    &__bankInt_2 {
+      grid-area: bankInt_2;
       justify-content: start !important;
       display: none;
     }
-    &__icici_4 {
-      grid-area: icici_4;
+    &__bankInt_3 {
+      grid-area: bankInt_3;
       justify-content: start !important;
       display: none;
     }
-    &__icici_5 {
-      grid-area: icici_5;
+    &__bankInt_4 {
+      grid-area: bankInt_4;
+      justify-content: start !important;
+      display: none;
+    }
+    &__bankInt_5 {
+      grid-area: bankInt_5;
       justify-content: start !important;
       display: none;
     }
@@ -1557,7 +1557,7 @@
           "dashboard_2 rd2"
           "bank_2 br2"
           "manufacturing_2 m2"
-          "icici_2 ic2"
+          "bank_2 ic2"
           "e-commerce_2 ecom2"
           "telecom_2 tc2"
           "warehouse_2 w2"
@@ -1583,7 +1583,7 @@
           "dashboard_3 rd3"
           "bank_3 br3"
           "manufacturing_3 m3"
-          "icici_3 ic3"
+          "bankInt_3 ic3"
           "e-commerce_3 ecom3"
           "telecom_3 tc3"
           "warehouse_3 w3"
@@ -1609,7 +1609,7 @@
           "dashboard_4 rd4"
           "bank_4 br4"
           "manufacturing_4 m4"
-          "icici_4 ic4"
+          "bankInt_4 ic4"
           "e-commerce_4 ecom4"
           "telecom_4 tc4"
           "warehouse_4 w4"
@@ -1720,7 +1720,7 @@
           "dashboard_2 rd2"
           "bank_2 br2"
           "manufacturing_2 m2"
-          "icici_2 ic2"
+          "bankInt_2 ic2"
           "e-commerce_2 ecom2"
           "telecom_2 tc2"
           "warehouse_2 w2"
@@ -1746,7 +1746,7 @@
           "dashboard_3 rd3"
           "bank_3 br3"
           "manufacturing_3 m3"
-          "icici_3 ic3"
+          "bankInt_3 ic3"
           "e-commerce_3 ecom3"
           "telecom_3 tc3"
           "warehouse_3 w3"
@@ -1772,7 +1772,7 @@
           "dashboard_4 rd4"
           "bank_4 br4"
           "manufacturing_4 m4"
-          "icici_4 ic4"
+          "bankInt_4 ic4"
           "e-commerce_4 ecom4"
           "telecom_4 tc4"
           "warehouse_4 w4"
@@ -2032,7 +2032,7 @@
       &__manufacturing,
       &__e-invoice,
       &__eway-bill,
-      &__icici,
+      &__bankInt,
       &__e-commerce,
       &__telecom,
       &__warehouse,
@@ -2115,10 +2115,10 @@
       &__eway-bill_3,
       &__eway-bill_4,
       &__eway-bill_5,
-      &__icici_2,
-      &__icici_3,
-      &__icici_4,
-      &__icici_5,
+      &__bankInt_2,
+      &__bankInt_3,
+      &__bankInt_4,
+      &__bankInt_5,
       &__e-commerce_2,
       &__e-commerce_3,
       &__e-commerce_4,

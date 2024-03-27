@@ -1,14 +1,14 @@
 import { MdAdd, MdKeyboardArrowDown } from "react-icons/md";
 
-const iciciIntegration = () => {
+const bankIntegration = () => {
   return (
     <>
-      <div className="icici_integration">
-        <section className="container-fluid icici_integration__head_content">
+      <div className="bank_integration">
+        <section className="container-fluid bank_integration__head_content">
           <div className="container">
             <div className="row">
               <div className="text-center">
-                <div className="d-flex align-items-end justify-content-center mb-5">
+                <div className="d-flex align-items-center justify-content-center mb-5">
                   <span>
                     <img
                       src="/img/giddh-logo.svg"
@@ -16,20 +16,16 @@ const iciciIntegration = () => {
                       height="33px"
                     />
                   </span>
-                  <span className="icici_integration__head_content__add_icon mx-3">
+                  <span className="bank_integration__head_content__add_icon mx-3">
                     <MdAdd />
                   </span>
-                  <span>
-                    <img
-                      src="/img/icici-bank-logo.svg"
-                      height="48px"
-                      alt="ICICI Bank Logo"
-                    />
+                  <span className="heading c-fw-600 col-primary">
+                    BANK INTEGRATION
                   </span>
                 </div>
                 <div className="mb-5 px-5 px-small">
                   <p className="c-fs-1 c-fw-600 col-primary">
-                    Connect your ICICI Bank account with Giddh and do much more
+                    Connect your Bank account with Giddh and do much more
                     than just monitor your daily transactions
                   </p>
                 </div>
@@ -47,7 +43,7 @@ const iciciIntegration = () => {
                   <a
                     href={"https://giddh.com/in/signup"}
                     target="_blank"
-                    className="icici_integration__get_started_btn col-white"
+                    className="bank_integration__get_started_btn col-white"
                   >
                     Get Started
                   </a>
@@ -57,11 +53,11 @@ const iciciIntegration = () => {
           </div>
         </section>
 
-        <section className="container-fluid icici_integration__benifits_section">
+        <section className="container-fluid bank_integration__benifits_section">
           <div className="container">
             <div className="row mb-5">
               <div className="text-center pt-2">
-                <span className="icici_integration__benifits_section__down_arrow_icon">
+                <span className="bank_integration__benifits_section__down_arrow_icon">
                   {" "}
                   <MdKeyboardArrowDown />{" "}
                 </span>
@@ -76,14 +72,14 @@ const iciciIntegration = () => {
                   <figure>
                     <img
                       src="/img/shape.svg"
-                      alt="pen new ICICI account directly icon"
+                      alt="pen new Bank account directly icon"
                     />
                   </figure>
                   <h3 className="c-fs-4 c-fw-600">
-                    Open new ICICI account directly from Giddh
+                    Open new Bank account directly from Giddh
                   </h3>
                   <p className="c-fs-6">
-                    You can now open your new ICICI bank account directly from
+                    You can now open your new bank account directly from
                     Giddh in 2 simple steps. Just fill the form with all your
                     details in step one and verify the details in step 2. Yes,
                     it is this simple.
@@ -102,7 +98,7 @@ const iciciIntegration = () => {
                   </h3>
                   <p className="c-fs-6">
                     All the transactions are automatically fetched in Giddh once
-                    you integrate your ICICI bank corporate account. Keep your
+                    you integrate your bank corporate account. Keep your
                     bank and books matched perfectly always.
                   </p>
                 </div>
@@ -176,7 +172,7 @@ const iciciIntegration = () => {
                   </h3>
                   <p className="c-fs-6">
                     Make payment for multiple invoices of a particular vendor
-                    via ICICI Bank in a single go using Giddh. This is the
+                    via Bank in a single go using Giddh. This is the
                     fastest and most accurate way of doing bulk payment.
                   </p>
                 </div>
@@ -193,14 +189,14 @@ const iciciIntegration = () => {
                     Bank statement <br />& bank balance
                   </h3>
                   <p className="c-fs-6">
-                    Keep a check on money flowing in and out of your ICICI bank
+                    Keep a check on money flowing in and out of your bank
                     account from anywhere. Have access to your bank statement in
                     your hand held gizmo through Giddh mobile application.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="row icici_integration__benifits_section__step_guide text-center">
+            <div className="row bank_integration__benifits_section__step_guide text-center">
               <p className="c-fs-4 mb-0">
                 See step-by-step{" "}
                 <a
@@ -209,14 +205,14 @@ const iciciIntegration = () => {
                 >
                   Guide
                 </a>{" "}
-                on how to connect ICICI account with Giddh
+                on how to connect Bank account with Giddh
               </p>
             </div>
             <div className="text-center my-4">
               <a
                 href={"https://giddh.com/in/signup"}
                 target="_blank"
-                className="icici_integration__get_started_btn col-white"
+                className="bank_integration__get_started_btn col-white"
               >
                 Get Started
               </a>
@@ -227,4 +223,4 @@ const iciciIntegration = () => {
     </>
   );
 };
-export default iciciIntegration;
+export default bankIntegration;
