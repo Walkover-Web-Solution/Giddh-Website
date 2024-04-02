@@ -9,7 +9,6 @@ const header = (props) => {
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
   const countryList = ["", "in", "ae", "uk"];
   const country = link?.linkPrefix?.replace("/", "");
-
   const exceptionPage = {
     global: ["/gst", "/vat", "/e-invoice", "/tallyplusgiddh"],
     in: ["/vat", "/blog"],
@@ -86,6 +85,16 @@ const header = (props) => {
             )}
           </>
         )}
+        {
+          isOnlyGlobal || country ==="" && !exceptionPage?.global.includes(pathPage) && (
+            <link
+                rel='alternate'
+                hrefLang='en'
+                href={`https://giddh.com${pathPage}`}
+              />
+
+          )
+        }
 
         {restrictFromSeo && <meta name='robots' content='noindex, nofollow' />}
       </Head>
