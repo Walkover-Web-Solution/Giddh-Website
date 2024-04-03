@@ -9,7 +9,6 @@ const header = (props) => {
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
   const countryList = ["", "in", "ae", "uk"];
   const country = link?.linkPrefix?.replace("/", "");
-
   const exceptionPage = {
     global: ["/gst", "/vat", "/e-invoice", "/tallyplusgiddh"],
     in: ["/vat", "/blog"],
@@ -61,30 +60,23 @@ const header = (props) => {
         )}
         <link rel='icon' type='image/x-icon' href='/favico.svg'></link>
         <link rel='canonical' href={`https://giddh.com${pathArrRaw[0]}`} />
-        {!exceptionPage?.global.includes(pathPage) && (
-          <link
-            rel='alternate'
-            hrefLang='x-default'
-            href={`https://giddh.com${pathPage}`}
-          />
-        )}
         {!isOnlyGlobal && (
           <>
-            {!exceptionPage?.in.includes(pathPage) && (
+            {!exceptionPage?.in.includes(pathPage) && country === 'in' && (
               <link
                 rel='alternate'
                 hrefLang='en-IN'
                 href={`https://giddh.com/in${pathPage}`}
               />
             )}
-            {!exceptionPage?.uk.includes(pathPage) && (
+            {!exceptionPage?.uk.includes(pathPage) &&  country === 'uk' && (
               <link
                 rel='alternate'
                 hrefLang='en-GB'
                 href={`https://giddh.com/uk${pathPage}`}
               />
             )}
-            {!exceptionPage?.ae.includes(pathPage) && (
+            {!exceptionPage?.ae.includes(pathPage) &&  country === 'ae' && (
               <link
                 rel='alternate'
                 hrefLang='en-AE'
@@ -93,6 +85,16 @@ const header = (props) => {
             )}
           </>
         )}
+        {
+          isOnlyGlobal || country ==="" && !exceptionPage?.global.includes(pathPage) && (
+            <link
+                rel='alternate'
+                hrefLang='en'
+                href={`https://giddh.com${pathPage}`}
+              />
+
+          )
+        }
 
         {restrictFromSeo && <meta name='robots' content='noindex, nofollow' />}
       </Head>
