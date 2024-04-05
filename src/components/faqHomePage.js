@@ -9,9 +9,9 @@ const faqHomePage = () => {
             <div className="col-12 px-0">
               <div className="accordion" id="accordionAllFeatures">
                 {/*============ Accordion #1 ===============*/}
-                <h2 className="fw-bold col-primary ps-3">FAQs</h2>
+                <h3 className="fw-bold col-primary ps-3">FAQs</h3>
                 <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingOne">
+                  <p className="accordion-header" id="headingOne">
                     <button
                       className="accordion-button collapsed"
                       type="button"
@@ -29,7 +29,7 @@ const faqHomePage = () => {
                       How does this accounting software help in managing my
                       finances and bookkeeping?
                     </button>
-                  </h2>
+                  </p>
                   <div
                     id="collapseOne"
                     className="accordion-collapse collapse"
@@ -48,7 +48,7 @@ const faqHomePage = () => {
                 </div>
                 {/*============ Accordion #2 ===============*/}
                 <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingTwo">
+                  <p className="accordion-header" id="headingTwo">
                     <button
                       className="accordion-button collapsed"
                       type="button"
@@ -66,7 +66,7 @@ const faqHomePage = () => {
                       How secure is my financial data on online accounting
                       software?
                     </button>
-                  </h2>
+                  </p>
                   <div
                     id="collapseTwo"
                     className="accordion-collapse collapse"
@@ -85,7 +85,7 @@ const faqHomePage = () => {
                 </div>
                 {/*============ Accordion #3 ===============*/}
                 <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingThree">
+                  <p className="accordion-header" id="headingThree">
                     <button
                       className="accordion-button collapsed"
                       type="button"
@@ -103,7 +103,7 @@ const faqHomePage = () => {
                       Is the accounting software compliant with tax regulations
                       and reporting standards?
                     </button>
-                  </h2>
+                  </p>
                   <div
                     id="collapseThree"
                     className="accordion-collapse collapse"
@@ -121,7 +121,7 @@ const faqHomePage = () => {
                 </div>
                 {/*============ Accordion #4 ===============*/}
                 <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingFour">
+                  <p className="accordion-header" id="headingFour">
                     <button
                       className="accordion-button collapsed"
                       type="button"
@@ -139,7 +139,7 @@ const faqHomePage = () => {
                       Is it possible for multiple users to access the accounting
                       software simultaneously?
                     </button>
-                  </h2>
+                  </p>
                   <div
                     id="collapseFour"
                     className="accordion-collapse collapse"
@@ -156,7 +156,7 @@ const faqHomePage = () => {
                 </div>
                 {/*============ Accordion #5 ===============*/}
                 <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingFive">
+                  <p className="accordion-header" id="headingFive">
                     <button
                       className="accordion-button collapsed"
                       type="button"
@@ -173,7 +173,7 @@ const faqHomePage = () => {
                       </span>
                       Can I access the accounting software on my mobile device?
                     </button>
-                  </h2>
+                  </p>
                   <div
                     id="collapseFive"
                     className="accordion-collapse collapse"
@@ -191,7 +191,7 @@ const faqHomePage = () => {
                 </div>
                 {/*============ Accordion #6 ===============*/}
                 <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingSix">
+                  <p className="accordion-header" id="headingSix">
                     <button
                       className="accordion-button collapsed"
                       type="button"
@@ -209,7 +209,7 @@ const faqHomePage = () => {
                       Does the accounting software have the capability to
                       integrate with Shopify?
                     </button>
-                  </h2>
+                  </p>
                   <div
                     id="collapseSix"
                     className="accordion-collapse collapse"

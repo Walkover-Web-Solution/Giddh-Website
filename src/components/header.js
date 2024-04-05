@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 const header = (props) => {
   const link = props.path;
   const currentPath = props.browserPath;
-  const metaData = Data[currentPath];
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
   const countryList = ["", "in", "ae", "uk"];
   const country = link?.linkPrefix?.replace("/", "");
@@ -17,8 +16,12 @@ const header = (props) => {
   };
 
   var pathPage, pathCountry, isOnlyGlobal;
-  const pathArrRaw = currentPath.split("?");
+  const pathArrRaw = currentPath.split("?"); // Remove ? form Url  
   const pathArr = pathArrRaw[0].split("/");
+  let metaPath = pathArrRaw[0].split('#'); // Remove # form Url to get correct meta data   
+  
+  const metaData = Data[metaPath[0]];
+
   if (pathArr.length == 2) {
     if (countryList.includes(pathArr[1])) {
       pathPage = "";

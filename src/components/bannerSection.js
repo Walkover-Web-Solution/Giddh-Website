@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
-const bannerSection = () => {
+const bannerSection = (path) => {
+  const link = path.path;
+
   const [utm, setUtm] = useState(null);
 
   useEffect(() => {
@@ -22,9 +24,24 @@ const bannerSection = () => {
           <div className="row h-100 align-items-xl-start align-items-lg-center">
             <div className="col-lg-6 col-md-12">
               <h1 className="col-primary">
-                <span className="heading-text">Accounting Software</span>
-                <br />
-                <span className="c-fs-2">that fits every business</span>
+                <span className="heading-text">
+                    { link.isGlobal && "Online Accounting Software"}
+                    { link.isIndia && "Business Accounting Software India"}
+                    { link.isUK && "VAT-Compliant Accounting Software"}
+                    { link.isAE && "Cloud-based Accounting Software"}
+                </span>
+                {
+                    (link.isGlobal || link.isAE || link.isUK) && (
+                        <>
+                            <br />
+                            <span className="c-fs-2">
+                                { link.isGlobal && "For Businesses" }
+                                { link.isUK && "For UK Small Businesses" }
+                                { link.isAE && "For UAE Businesses" }
+                            </span>
+                        </>
+                    )
+                }
               </h1>
               <div className="banner__contact_btn mt-5">
                 <button

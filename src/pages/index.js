@@ -8,7 +8,7 @@ const index = (path) => {
   const link = path.path;
   return (
     <>
-      <BannerSection />
+      <BannerSection path={link} />
       <FeatureGallery path={link} />
       <ClientSummary />
       <MakeTheSwitchIndexPage path={link} />
