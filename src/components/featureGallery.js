@@ -23,7 +23,7 @@ const featureGallery = (path) => {
           <div className="container">
             <div className="row">
               <div className="feature-gallery__title text-center mb-3">
-                <h2>Features that empower your business accounting</h2>
+                <h3>Features that empower your business accounting</h3>
               </div>
             </div>
             <div className="row">
@@ -43,8 +43,24 @@ const featureGallery = (path) => {
                       </div>
                       <div className="col-md-7 col-sm-12">
                         <div className="pe-4">
-                          <h3 className="c-fw-600 c-fs-4">{data?.name}</h3>
-
+                            {
+                                (link.isGlobal || link.isIndia) && 
+                                <>
+                                    { (index <= 2) && <h2 className="c-fw-600 c-fs-4">{data?.name}</h2> }
+                                    { (index >= 3 && index <= 5) && <h3 className="c-fw-600 c-fs-4">{data?.name}</h3> }
+                                    { (index >= 6 && index <= 8) && <h4 className="c-fw-600 c-fs-4">{data?.name}</h4> }
+                                    { (index >= 9 && index <= 11) && <h5 className="c-fw-600 c-fs-4">{data?.name}</h5> }
+                                    { (index >= 12) && <h6 className="c-fw-600 c-fs-4">{data?.name}</h6> }
+                                </>
+                            }
+                            {
+                                (link.isAE || link.isUK) && 
+                                <>
+                                    { (index <= 1) && <h2 className="c-fw-600 c-fs-4">{data?.name}</h2> }
+                                    { (index >= 2 && index <= 3) && <h3 className="c-fw-600 c-fs-4">{data?.name}</h3> }
+                                    { (index >  3 && index <= 8) && <h4 className="c-fw-600 c-fs-4">{data?.name}</h4> }
+                                </>
+                            }
                           <span
                             className="c-fs-5"
                             dangerouslySetInnerHTML={{
