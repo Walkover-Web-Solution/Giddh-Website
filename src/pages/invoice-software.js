@@ -928,7 +928,7 @@ const invoiceSoftware = (path) => {
                                         of sending and tracking invoices and can help reduce costs
                                         and save time.
                                     </p>
-                                    <p className="c-fw-600 d-inline-block">Let’s look at some of the benefits of {(isGlobal || isIndia) && "creating online invoices:"}</p>
+                                    <p className="c-fw-600 d-inline-block">Let’s look at some of the benefits of &nbsp; {(isGlobal || isIndia) && " creating online invoices:"}</p>
                                     {isAE && (<>
                                         <h2 className="c-fw-600 c-fs-5 d-inline-block">Create Custom Invoices for Your UAE Business</h2>:
                                     </>)}

@@ -24,10 +24,12 @@ const anywhereAnytime = (path) => {
                     { isAE && "VAT-Compliant Cloud Accounting in the UAE" }
                     { (isUK || isGlobal) && "Cloud Accounting Software" }
                 </h1>
-                <p className="col-grey c-fs-3 mb-5">
+                <span className="col-grey c-fs-3 mb-5 d-inline-block">
                   Generate invoices, view reports & manage your books wherever
-                  you are.
-                </p>
+                  you are
+                  { isIndia && <>, and <h2 className="col-grey c-fs-3 mb-5 d-inline">Simplify GST Filing and Compliance</h2></> }
+                  { isAE && <>, and <h2 className="col-grey c-fs-3 mb-5 d-inline">Effortless VAT Management and Reporting</h2></> }
+                </span>
                 <div className="features__heading_container__links">
                   <a
                     href="#"
@@ -73,9 +75,7 @@ const anywhereAnytime = (path) => {
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <h2 className="sub-heading col-primary c-fw-600 mb-3">
-                  { isIndia && "Simplify GST Filing and Compliance" } 
-                  { isAE && "Effortless VAT Management and Reporting" } 
-                  { isGlobal && isUK && "Run your business from any corner of the world!" }
+                  Run your business from any corner of the world!
                 </h2>
                 <p className="c-fs-4 mb-5">
                   {isIndia
