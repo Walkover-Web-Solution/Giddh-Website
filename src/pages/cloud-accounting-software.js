@@ -19,9 +19,11 @@ const anywhereAnytime = (path) => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
-                  Cloud Accounting Software
-                </h2>
+                <h1 className="heading col-primary c-fw-600 mb-4">
+                    { isIndia && "GST-Compliant Cloud Accounting for India" }
+                    { isAE && "VAT-Compliant Cloud Accounting in the UAE" }
+                    { (isUK || isGlobal) && "Cloud Accounting Software" }
+                </h1>
                 <p className="col-grey c-fs-3 mb-5">
                   Generate invoices, view reports & manage your books wherever
                   you are.
@@ -70,9 +72,11 @@ const anywhereAnytime = (path) => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
-                  Run your business from any corner of the world!
-                </h3>
+                <h2 className="sub-heading col-primary c-fw-600 mb-3">
+                  { isIndia && "Simplify GST Filing and Compliance" } 
+                  { isAE && "Effortless VAT Management and Reporting" } 
+                  { isGlobal && isUK && "Run your business from any corner of the world!" }
+                </h2>
                 <p className="c-fs-4 mb-5">
                   {isIndia
                     ? `All you ever need to be on top of your accounting is just an
@@ -592,9 +596,27 @@ const anywhereAnytime = (path) => {
               className="container text-center "
               style={{ maxHeight: readMoreStatus ? "100%" : "max-content" }}
             >
-              <h1 className="col-primary c-fs-3 c-fw-600">
+              <h3 className="col-primary c-fs-3 c-fw-600">
                 Why Giddh is Better Than Conventional Accounting Software
-              </h1>
+              </h3>
+            
+            { isIndia && 
+              <div className="d-flex column-gap-2 justify-content-center align-items-center">
+                <span>The two major advantages are </span>
+                <h2 className="c-fs-5 c-fw-600 mb-0">Access Your Accounting Anywhere, Anytime</h2>
+                 <span>and</span>
+                <h2 className="c-fs-5 c-fw-600 mb-0">Secure Cloud Storage for Financial Data</h2>
+             </div>
+            }
+            { isAE && 
+              <div className="d-flex column-gap-2 justify-content-center align-items-center">
+                <span>The two major advantages are </span>
+                <h2 className="c-fs-5 c-fw-600 mb-0">Streamlined Accounting for UAE Businesses</h2>
+                 <span>and</span>
+                <h2 className="c-fs-5 c-fw-600 mb-0">Cloud-Based Financial Insights on Demand</h2>
+             </div>
+            }
+
               <p className="my-3">
                 Although there exist some of the oldest tallying and accounting
                 software players in the market, with more emerging choices

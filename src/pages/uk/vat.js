@@ -12,12 +12,13 @@ const ukVAT = () => {
         <div className="tax-hero-container  text-center">
           <div className="row d-flex h-100 align-content-end">
             <div className=" d-flex flex-column  ">
-              <span className="c-fs-3  col-dark-light fw-light m-3">
-                From creating error-free VAT invoice to
-              </span>
+              <h2 className="c-fs-3  col-dark-light fw-light m-3">
+                Automate Your VAT Calculations
+              </h2>
               <h1 className="heading c-fw-600  col-primary ">
-                File your VAT Automatically
+                UK VAT Compliance Software - Made Easy
               </h1>
+              <h2 className="c-fs-3">UK VAT Regulations Compliance</h2>
             </div>
             <div className="tax-image mt-auto">
               <img
@@ -155,6 +156,7 @@ const ukVAT = () => {
 
       <section className="container-fluid features__description_container mt-5">
         <div className="container">
+            <h2 className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Simplify VAT Returns and Audits</h2>
           <div
             className={
               "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
