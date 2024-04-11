@@ -23,25 +23,11 @@ const bannerSection = (path) => {
         <div className="container-lg">
           <div className="row h-100 align-items-xl-start align-items-lg-center">
             <div className="col-lg-6 col-md-12">
-              <h1 className="col-primary">
-                <span className="heading-text">
-                    { link.isGlobal && "Online Accounting Software"}
+              <h1 className="col-primary heading-text">
+                    { link.isGlobal && "Online Accounting Software For Businesses"}
                     { link.isIndia && "Business Accounting Software India"}
-                    { link.isUK && "VAT-Compliant Accounting Software"}
-                    { link.isAE && "Cloud-based Accounting Software"}
-                </span>
-                {
-                    (link.isGlobal || link.isAE || link.isUK) && (
-                        <>
-                            <br />
-                            <span className="c-fs-2">
-                                { link.isGlobal && "For Businesses" }
-                                { link.isUK && "For UK Small Businesses" }
-                                { link.isAE && "For UAE Businesses" }
-                            </span>
-                        </>
-                    )
-                }
+                    { link.isUK && "VAT-Compliant Accounting Software For UK Small Businesses"}
+                    { link.isAE && "Cloud-based Accounting Software For UAE Businesses"}
               </h1>
               <div className="banner__contact_btn mt-5">
                 <button
