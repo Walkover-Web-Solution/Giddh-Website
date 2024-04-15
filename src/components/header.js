@@ -100,10 +100,6 @@ const header = (props) => {
                 }
 
                 {restrictFromSeo && <meta name='robots' content='noindex, nofollow' />}
-                <meta
-                    httpEquiv="Content-Security-Policy"
-                    content="default-src 'self'; img-src https://*; child-src 'none';"
-                />
             </Head>
         </>
     );
