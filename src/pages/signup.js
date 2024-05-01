@@ -33,10 +33,14 @@ const signUp = (path) => {
     const link = path.path.linkPrefix;
     const [mobileNo, setMobileNo] = useState(null);
 
+    let region = link ? link.replace("/", "") : "gl";
+    if (region) {
+        region = region.toUpperCase();
+    }
+
     useEffect(() => {
         initOtpSignup();
     }, []);
-
 
     function googleApiSuccessCallback(response) {
         setEmailDetails({
@@ -97,11 +101,7 @@ const signUp = (path) => {
                                 "&utm_content=" +
                                 getLocalStorage("utm_content") +
                                 "";
-                            window.location =
-                                process.env.NEXT_PUBLIC_APP_URL +
-                                "/token-verify?request=" +
-                                response.body.session.id +
-                                utmParams;
+                            window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id + utmParams + "&region=" + region;
                         }
                     } else {
                         setSignupInProgress(false);
@@ -617,7 +617,7 @@ const signUp = (path) => {
         window.location =
             process.env.NEXT_PUBLIC_APP_URL +
             "/token-verify?request=" +
-            response.session.id;
+            response.session.id + "&region=" + region;
     }
 
     return (

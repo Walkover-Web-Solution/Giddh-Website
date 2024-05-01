@@ -14,6 +14,10 @@ const logIn = (path) => {
     const [showVerificationModal, setShowVerificationModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
     const link = path.path.linkPrefix;    
+    let region = link ? link.replace("/", "") : "gl";
+    if (region) {
+        region = region.toUpperCase();
+    }
 
     useEffect(() => {
         if (getCookie("giddh_session_id")) {
@@ -31,7 +35,7 @@ const logIn = (path) => {
             .then((res) => res.json())
             .then((response) => {
                 if (response.status === "success") {
-                    window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
+                    window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id + "&region=" + region;
                 } else {
                     removeGiddhSession();
                 }
@@ -54,7 +58,7 @@ const logIn = (path) => {
                         setShowVerificationModal(true);
                     } else {
                         setGiddhSession(response.body.session.id);
-                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + result.accessToken;
+                        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + result.accessToken + "&region=" + region;
                     }
                 } else {
                     showToaster(response.message, "error");
@@ -87,7 +91,7 @@ const logIn = (path) => {
                             setShowVerificationModal(true);
                         } else {
                             setGiddhSession(response.body.session.id);
-                            window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
+                            window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id + "&region=" + region;
                         }
                     } else {
                         setAuthLoginInProgress(false);
@@ -102,7 +106,7 @@ const logIn = (path) => {
 
     function otpVerifyCallback(response) {
         setGiddhSession(response.session.id);
-        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.session.id;
+        window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.session.id + "&region=" + region;
     }
 
     function showToaster(message, type) {
