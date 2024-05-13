@@ -23,39 +23,15 @@
     font-weight: var(--c-fw-600);
 
     &.display-four {
-      grid-template-rows:
-        minmax(240px, auto) minmax(110px, auto) minmax(60px, auto)
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        46px;
+      grid-auto-rows: minmax(50px, auto);
+      grid-template-rows: minmax(240px, auto) minmax(110px, auto) minmax(60px, auto);
       grid-template-columns: auto 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title"
         "logo logo birch oak vine"
         "benefits benefits b2 b3 b4"
-        "transactions transactions t2 t3 t4"
+        "invoice_count invoice_count inc2 inc3 inc4"
+        "bill_count bill_count bc2 bc3 bc4"
         "companies companies c2 c3 c4"
         "accountant_consultant accountant_consultant ac2 ac3 ac4"
         "desktop_mobile_app desktop_mobile_app d2 d3 d4"
@@ -87,40 +63,17 @@
         }
       }
     }
+
     &.global {
-      grid-template-rows:
-        minmax(240px, auto) minmax(110px, auto) minmax(60px, auto)
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        46px;
+      grid-auto-rows: minmax(50px, auto);
+      grid-template-rows: minmax(240px, auto) minmax(110px, auto) minmax(60px, auto);
       grid-template-columns: auto 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title"
         "logo logo birch oak vine"
         "benefits benefits b2 b3 b4"
-        "transactions transactions t2 t3 t4"
+        "invoice_count invoice_count inc2 inc3 inc4"
+        "bill_count bill_count bc2 bc3 bc4"
         "companies companies c2 c3 c4"
         "accountant_consultant accountant_consultant ac2 ac3 ac4"
         "desktop_mobile_app desktop_mobile_app d2 d3 d4"
@@ -153,40 +106,16 @@
     }
 
     &.display-all {
-      grid-template-rows:
-        minmax(240px, auto) minmax(30px, auto) minmax(90px, auto)
-        minmax(60px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-          50px,
-          auto
-        )
-        minmax(50px, auto) minmax(50px, auto) 46px;
+      grid-auto-rows: minmax(50px, auto);
+      grid-template-rows: minmax(240px, auto) minmax(30px, auto) minmax(90px, auto) minmax(60px, auto);
       grid-template-columns: auto 180px 180px 180px 180px;
       grid-template-areas:
         "title title title title title"
         "gst-exclusive gst-exclusive gst-exclusive gst-exclusive gst-exclusive"
         "logo birch oak vine sequoia"
         "benefits b2 b3 b4 b5"
-        "transactions t2 t3 t4 t5"
+        "invoice_count inc2 inc3 inc4 inc5"
+        "bill_count bc2 bc3 bc4 bc5"
         "companies c2 c3 c4 c5"
         "accountant_consultant ac2 ac3 ac4 ac5"
         "desktop_mobile_app d2 d3 d4 d5"
@@ -272,78 +201,127 @@
       background-color: #ffe5e8;
     }
 
-    &__transactions {
-      grid-area: transactions;
+    &__bill_count {
+      grid-area: bill_count;
       justify-content: start !important;
     }
-    &__transactions_2 {
-      grid-area: transactions_2;
-      justify-content: start !important;
-      &.pricing-border-top {
-        display: none;
-      }
-    }
-    &__transactions_3 {
-      grid-area: transactions_3;
+    &__bill_count_2 {
+      grid-area: bill_count_2;
       justify-content: start !important;
       &.pricing-border-top {
         display: none;
       }
     }
-    &__transactions_4 {
-      grid-area: transactions_4;
+    &__bill_count_3 {
+      grid-area: bill_count_3;
       justify-content: start !important;
       &.pricing-border-top {
         display: none;
       }
     }
-    &__transactions_5 {
-      grid-area: transactions_5;
+    &__bill_count_4 {
+      grid-area: bill_count_4;
+      justify-content: start !important;
+      &.pricing-border-top {
+        display: none;
+      }
+    }
+    &__bill_count_5 {
+      grid-area: bill_count_5;
       justify-content: start !important;
       &.pricing-border-top {
         display: none;
       }
     }
 
-    &__t2 {
-      grid-area: t2;
+    &__bc2 {
+      grid-area: bc2;
     }
-    &__t3 {
-      grid-area: t3;
+    &__bc3 {
+      grid-area: bc3;
       background-color: var(--col-white);
     }
-    &__t4 {
-      grid-area: t4;
+    &__bc4 {
+      grid-area: bc4;
       background-color: #e6fff5;
     }
-    &__t5 {
-      grid-area: t5;
+    &__bc5 {
+      grid-area: bc5;
       background-color: #ffe5e8;
     }
 
+    &__invoice_count {
+        grid-area: invoice_count;
+        justify-content: start !important;
+      }
+    &__invoice_count_2 {
+        grid-area: invoice_count_2;
+        justify-content: start !important;
+    &.pricing-border-top {
+        display: none;
+    }
+    }
+    &__invoice_count_3 {
+        grid-area: invoice_count_3;
+        justify-content: start !important;
+    &.pricing-border-top {
+        display: none;
+    }
+    }
+    &__invoice_count_4 {
+        grid-area: invoice_count_4;
+        justify-content: start !important;
+    &.pricing-border-top {
+        display: none;
+    }
+    }
+    &__invoice_count_5 {
+        grid-area: invoice_count_5;
+        justify-content: start !important;
+    &.pricing-border-top {
+        display: none;
+    }
+    }
+
+    &__inc2 {
+        grid-area: inc2;
+    }
+    &__inc3 {
+        grid-area: inc3;
+        background-color: var(--col-white);
+    }
+    &__inc4 {
+        grid-area: inc4;
+        background-color: #e6fff5;
+    }
+    &__inc5 {
+        grid-area: inc5;
+        background-color: #ffe5e8;
+    }
+
     &__companies {
-      grid-area: companies;
-      justify-content: start !important;
+        grid-area: companies;
+        justify-content: start !important;
     }
     &__companies_2 {
-      grid-area: companies_2;
-      justify-content: start !important;
-      display: none;
+        grid-area: companies_2;
+        justify-content: start !important;
+        display: none;
     }
     &__companies_3 {
-      grid-area: companies_3;
-      justify-content: start !important;
-      display: none;
+        grid-area: companies_3;
+        justify-content: start !important;
+        display: none;
     }
     &__companies_4 {
-      grid-area: companies_4;
-      justify-content: start !important;
-      display: none;
+        grid-area: companies_4;
+        justify-content: start !important;
+        display: none;
     }
     &__companies_5 {
-      grid-area: companies_5;
-      justify-content: start !important;
-      display: none;
+        grid-area: companies_5;
+        justify-content: start !important;
+        display: none;
     }
 
     &__c2 {
@@ -1370,11 +1348,13 @@
 
     &__link_all_feature {
       grid-area: link_all_feature;
-      margin-top: auto;
+      place-self: start start;
+      width: 100%;
     }
     &__extra_charges {
       grid-area: extra_charges;
-      margin-top: auto;
+      place-self: start end;
+      width: 100%;
       text-align: end;
       p {
         background-color: #edf3ff;
@@ -1456,91 +1436,16 @@
       max-width: 720px;
       align-items: center;
       &.display-four {
-        grid-template-rows:
-          minmax(350px, auto) 60px
-          auto minmax(60px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto)
-          auto minmax(60px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto)
-          auto minmax(60px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto)
-          50px;
-        grid-template-columns: 50% 50%;
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-rows: minmax(350px, auto) 60px auto minmax(60px, auto);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
           "title title"
           "logo logo"
           "birch birch"
           "b2 b2"
-          "transactions_2 t2"
+          "invoice_count_2 inc2"
+          "bill_count_2 bc2"
           "companies_2 c2"
           "accountant_consultant_2 ac2"
           "desktop_mobile_app_2 d2"
@@ -1566,7 +1471,8 @@
           "support_2 sp2"
           "oak oak"
           "b3 b3"
-          "transactions_3 t3"
+          "invoice_count_3 inc3"
+          "bill_count_3 bc3"
           "companies_3 c3"
           "accountant_consultant_3 ac3"
           "desktop_mobile_app_3 d3"
@@ -1592,7 +1498,8 @@
           "support_3 sp3"
           "vine vine"
           "b4 b4"
-          "transactions_4 t4"
+          "invoice_count_4 inc4"
+          "bill_count_4 bc4"
           "companies_4 c4"
           "accountant_consultant_4 ac4"
           "desktop_mobile_app_4 d4"
@@ -1620,91 +1527,16 @@
           "extra_charges extra_charges";
       }
       &.global {
-        grid-template-rows:
-          minmax(350px, auto) 60px
-          auto minmax(60px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto)
-          auto minmax(60px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto)
-          auto minmax(60px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto)
-          50px;
-        grid-template-columns: 50% 50%;
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-rows: minmax(350px, auto) 60px auto minmax(60px, auto);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
           "title title"
           "logo logo"
           "birch birch"
           "b2 b2"
-          "transactions_2 t2"
+          "invoice_count_2 inc2"
+          "bill_count_2 bc2"
           "companies_2 c2"
           "accountant_consultant_2 ac2"
           "desktop_mobile_app_2 d2"
@@ -1729,7 +1561,8 @@
           "support_2 sp2"
           "oak oak"
           "b3 b3"
-          "transactions_3 t3"
+          "invoice_count_3 inc3"
+          "bill_count_3 bc3"
           "companies_3 c3"
           "accountant_consultant_3 ac3"
           "desktop_mobile_app_3 d3"
@@ -1755,7 +1588,8 @@
           "support_3 sp3"
           "vine vine"
           "b4 b4"
-          "transactions_4 t4"
+          "invoice_count_4 inc4"
+          "bill_count_4 bc4"
           "companies_4 c4"
           "accountant_consultant_4 ac4"
           "desktop_mobile_app_4 d4"
@@ -1783,117 +1617,18 @@
           "extra_charges extra_charges";
       }
       &.display-all {
+        grid-auto-rows: minmax(50px, auto);
         grid-template-rows:
-          minmax(350px, auto) 100px 60px auto minmax(60px, auto)
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) auto minmax(60px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) auto minmax(
-            60px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) auto minmax(60px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) minmax(
-            50px,
-            auto
-          )
-          minmax(50px, auto) minmax(50px, auto) minmax(50px, auto) 50px;
-        grid-template-columns: 50% 50%;
+          minmax(350px, auto) 100px 60px auto minmax(60px, auto);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
           "title title"
           "gst-exclusive gst-exclusive"
           "logo logo"
           "birch birch"
           "b2 b2"
-          "transactions_2 t2"
+          "invoice_count_2 inc2"
+          "bill_count_2 bc2"
           "companies_2 c2"
           "accountant_consultant_2 ac2"
           "desktop_mobile_app_2 d2"
@@ -1920,7 +1655,8 @@
           "support_2 sp2"
           "oak oak"
           "b3 b3"
-          "transactions_3 t3"
+          "invoice_count_3 inc3"
+          "bill_count_3 bc3"
           "companies_3 c3"
           "accountant_consultant_3 ac3"
           "desktop_mobile_app_3 d3"
@@ -1947,7 +1683,8 @@
           "support_3 sp3"
           "vine vine"
           "b4 b4"
-          "transactions_4 t4"
+          "invoice_count_4 inc4"
+          "bill_count_4 bc4"
           "companies_4 c4"
           "accountant_consultant_4 ac4"
           "desktop_mobile_app_4 d4"
@@ -1974,7 +1711,8 @@
           "support_4 sp4"
           "sequoia sequoia"
           "b5 b5"
-          "transactions_5 t5"
+          "invoice_count_5 inc5"
+          "bill_count_5 bc5"
           "companies_5 c5"
           "accountant_consultant_5 ac5"
           "desktop_mobile_app_5 d5"
@@ -2015,7 +1753,8 @@
       &__extra_charges {
         text-align: center;
       }
-      &__transactions,
+      &__bill_count,
+      &__invoice_count,
       &__companies,
       &__accountant_consultant,
       &__customers_vendors,
@@ -2043,10 +1782,18 @@
       &__journal-entry {
         display: none !important;
       }
-      &__transactions_2,
-      &__transactions_3,
-      &__transactions_4,
-      &__transactions_5 {
+      &__bill_count_2,
+      &__bill_count_3,
+      &__bill_count_4,
+      &__bill_count_5 {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      &__invoice_count_2,
+      &__invoice_count_3,
+      &__invoice_count_4,
+      &__invoice_count_5 {
         display: flex;
         align-items: center;
         height: 100%;
@@ -2166,10 +1913,14 @@
       &__b5 {
         background-color: inherit;
       }
-      &__t2,
-      &__t3,
-      &__t4,
-      &__t5,
+      &__bc2,
+      &__bc3,
+      &__bc4,
+      &__bc5,
+      &__inc2,
+      &__inc3,
+      &__inc4,
+      &__inc5,
       &__c2,
       &__c3,
       &__c4,
