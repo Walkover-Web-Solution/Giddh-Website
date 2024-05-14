@@ -224,13 +224,13 @@ const pricing = (path) => {
                 Invoice Count
               </div>
               <div className="pricing_main_section__grid__inc2 text-center pricing-border-top">
-                1,000
+              {isIndia ? '1,000' : '3,000' }
               </div>
               <div className="pricing_main_section__grid__inc3 text-center pricing-border-top">
-                3,000
+              {isIndia ? '3,000' : '5,000' }
               </div>
               <div className="pricing_main_section__grid__inc4 text-center pricing-border-top">
-                5,000
+              {isIndia ? '5,000' : '10,000' }
               </div>
               <div className="pricing_main_section__grid__inc5 text-center pricing-border-top display-all__child">
                 10,000
@@ -254,13 +254,13 @@ const pricing = (path) => {
                 Bill Count
               </div>
               <div className="pricing_main_section__grid__bc2 text-center pricing-border-top">
-                1,000
+                {isIndia ? '1,000' : '3,000' }
               </div>
               <div className="pricing_main_section__grid__bc3 text-center pricing-border-top">
-                3,000
+                {isIndia ? '3,000' : '5,000' }
               </div>
               <div className="pricing_main_section__grid__bc4 text-center pricing-border-top">
-                5,000
+                {isIndia ? '5,000' : '10,000' }
               </div>
               <div className="pricing_main_section__grid__bc5 text-center pricing-border-top display-all__child">
                 10,000
