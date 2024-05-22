@@ -81,7 +81,7 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__birch pricing__heading text-center">
                 {isIndia ? (
-                  <span className="pricing__heading__name">Birch</span>
+                  <span className="pricing__heading__name">Free</span>
                 ) : (
                   <span className="pricing__heading__name">Oak</span>
                 )}
@@ -102,7 +102,7 @@ const pricing = (path) => {
                   {isGlobal
                     ? "USD 50"
                     : isIndia
-                    ? "INR 1,500"
+                    ? "INR 0"
                     : isAE
                     ? "AED 350"
                     : "GBP 70"}
@@ -1777,7 +1777,7 @@ const pricing = (path) => {
                 </div>
               </div>
               <div className="pricing_main_section__grid__ua2 text-center pricing-border-top">
-                Unlimited
+                1
               </div>
               <div className="pricing_main_section__grid__ua3 text-center pricing-border-top">
                 Unlimited
@@ -3396,7 +3396,7 @@ const pricing = (path) => {
                 </div>
               </div>
               <div className="pricing_main_section__grid__sp2 text-center pricing-border-top">
-                <MdDone />
+                <MdClose />
               </div>
               <div className="pricing_main_section__grid__sp3 text-center pricing-border-top">
                 <MdDone />
