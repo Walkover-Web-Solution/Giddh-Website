@@ -1777,7 +1777,7 @@ const pricing = (path) => {
                 </div>
               </div>
               <div className="pricing_main_section__grid__ua2 text-center pricing-border-top">
-                1
+              { isIndia ? 1 : 'Unlimited' }
               </div>
               <div className="pricing_main_section__grid__ua3 text-center pricing-border-top">
                 Unlimited
@@ -3396,7 +3396,7 @@ const pricing = (path) => {
                 </div>
               </div>
               <div className="pricing_main_section__grid__sp2 text-center pricing-border-top">
-                <MdClose />
+              { isIndia ? <MdClose /> : <MdDone /> }
               </div>
               <div className="pricing_main_section__grid__sp3 text-center pricing-border-top">
                 <MdDone />
