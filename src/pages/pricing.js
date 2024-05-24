@@ -18,6 +18,7 @@ const pricing = (path) => {
   const [journalEntry, setJournalEntry] = useState(false);
   const [multiCurrency, setMultiCurrency] = useState(false);
   const [gst, setGst] = useState(false);
+  const [gstDirectFilling, setGstDirectFilling] = useState(false);
   const [report, setReport] = useState(false);
   const [dashoard, setDashboard] = useState(false);
   const [userAccess, setUserAccess] = useState(false);
@@ -1142,10 +1143,8 @@ const pricing = (path) => {
                         <p className="c-fw-400">
                           {isIndia && (
                             <>
-                              Create GST invoice, view GST reports, direct
-                              filing, and reconcile transaction with the GST
-                              portal and
-                              <a href="/gst" target="_blank">
+                              Create GST invoice, view GST reports and
+                              <a href="/in/gst" target="_blank">
                                 {" "}
                                 more
                               </a>
@@ -1188,10 +1187,8 @@ const pricing = (path) => {
                         <p className="c-fw-400">
                           {isIndia && (
                             <>
-                              Create GST invoice, view GST reports, direct
-                              filing, and reconcile transaction with the GST
-                              portal and
-                              <a href="/gst" target="_blank">
+                              Create GST invoice, view GST reports and
+                              <a href="/in/gst" target="_blank">
                                 {" "}
                                 more
                               </a>
@@ -1234,10 +1231,8 @@ const pricing = (path) => {
                         <p className="c-fw-400">
                           {isIndia && (
                             <>
-                              Create GST invoice, view GST reports, direct
-                              filing, and reconcile transaction with the GST
-                              portal and
-                              <a href="/gst" target="_blank">
+                              Create GST invoice, view GST reports and
+                              <a href="/in/gst" target="_blank">
                                 {" "}
                                 more
                               </a>
@@ -1280,10 +1275,8 @@ const pricing = (path) => {
                         <p className="c-fw-400">
                           {isIndia && (
                             <>
-                              Create GST invoice, view GST reports, direct
-                              filing, and reconcile transaction with the GST
-                              portal and
-                              <a href="/gst" target="_blank">
+                              Create GST invoice, view GST reports and
+                              <a href="/in/gst" target="_blank">
                                 {" "}
                                 more
                               </a>
@@ -1326,10 +1319,8 @@ const pricing = (path) => {
                         <p className="c-fw-400">
                           {isIndia && (
                             <>
-                              Create GST invoice, view GST reports, direct
-                              filing, and reconcile transaction with the GST
-                              portal and
-                              <a href="/gst" target="_blank">
+                              Create GST invoice, view GST reports and
+                              <a href="/in/gst" target="_blank">
                                 {" "}
                                 more
                               </a>
@@ -1374,6 +1365,125 @@ const pricing = (path) => {
                 </>
               )}
               {/* ====================== GST/VAT Row End ===================== */}
+
+              {/* ====================== GST Direct Filling Row Start ===================== */}
+              {isIndia && (
+                <>
+                  <div className="pricing_main_section__grid__gst-direct pricing-border-top">
+                    <div
+                      className={"cursor-pointer " + (gstDirectFilling ? "pt-2" : "")}
+                      onClick={() => setGstDirectFilling((gst) => !gst)}
+                    >
+                      <span>
+                        GST Direct Filling
+                        {gstDirectFilling ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                      </span>
+                      {gstDirectFilling && (
+                        <p className="c-fw-400">
+                            Direct filing, and reconcile transaction with the GST portal and
+                            <a href="/in/gst" target="_blank">
+                            {" "}
+                            more
+                            </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__gst-direct_2">
+                    <div
+                      className={"cursor-pointer " + (gstDirectFilling ? "pt-2" : "")}
+                      onClick={() => setGstDirectFilling((gst) => !gst)}
+                    >
+                      <span>
+                        GST Direct Filling
+                        {gstDirectFilling ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                      </span>
+                      {gstDirectFilling && (
+                        <p className="c-fw-400">
+                            Direct filing, and reconcile transaction with the GST portal and
+                            <a href="/in/gst" target="_blank">
+                            {" "}
+                            more
+                            </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__gst-direct_3">
+                    <div
+                      className={"cursor-pointer " + (gstDirectFilling ? "pt-2" : "")}
+                      onClick={() => setGstDirectFilling((gst) => !gst)}
+                    >
+                      <span>
+                        GST Direct Filling
+                        {gstDirectFilling ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                      </span>
+                      {gstDirectFilling && (
+                        <p className="c-fw-400">
+                            Direct filing, and reconcile transaction with the GST portal and
+                            <a href="/in/gst" target="_blank">
+                            {" "}
+                            more
+                            </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__gst-direct_4">
+                    <div
+                      className={"cursor-pointer " + (gstDirectFilling ? "pt-2" : "")}
+                      onClick={() => setGstDirectFilling((gst) => !gst)}
+                    >
+                      <span>
+                        GST Direct Filling
+                        {gstDirectFilling ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                      </span>
+                      {gstDirectFilling && (
+                        <p className="c-fw-400">
+                              Direct filing, and reconcile transaction with the GST portal and
+                            <a href="/in/gst" target="_blank">
+                            {" "}
+                            more
+                            </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__gst-direct_5 display-all__child">
+                    <div
+                      className={"cursor-pointer " + (gstDirectFilling ? "pt-2" : "")}
+                      onClick={() => setGstDirectFilling((gst) => !gst)}
+                    >
+                      <span>
+                        GST Direct Filling
+                        {gstDirectFilling ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}{" "}
+                      </span>
+                      {gstDirectFilling && (
+                        <p className="c-fw-400">
+                            Direct filing, and reconcile transaction with the GST portal and
+                            <a href="/in/gst" target="_blank">
+                            {" "}
+                            more
+                            </a>
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="pricing_main_section__grid__gdf2 text-center pricing-border-top">
+                    <MdClose />
+                  </div>
+                  <div className="pricing_main_section__grid__gdf3 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__gdf4 text-center pricing-border-top">
+                    <MdDone />
+                  </div>
+                  <div className="pricing_main_section__grid__gdf5 text-center pricing-border-top display-all__child">
+                    <MdDone />
+                  </div>
+                </>
+              )}
+              {/* ====================== GST Direct Filling Row End ===================== */}
 
               {/* ===================== Reports Row Start ==================== */}
               <div className="pricing_main_section__grid__reports pricing-border-top">
@@ -2194,7 +2304,7 @@ const pricing = (path) => {
                     </div>
                   </div>
                   <div className="pricing_main_section__grid__ei2 text-center pricing-border-top">
-                    <MdDone />
+                    <MdClose />
                   </div>
                   <div className="pricing_main_section__grid__ei3 text-center pricing-border-top">
                     <MdDone />
