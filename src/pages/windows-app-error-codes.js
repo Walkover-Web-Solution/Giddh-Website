@@ -1,7 +1,7 @@
 const windowsAppErrorCodes = () => {
     return (
         <>
-            <div className="container mt-5 py-5">
+            <div className="container error-codes mt-5 py-5">
                 <h1 className="fw-bold text-center c-fs-2">Windows app error codes</h1>
                 <ul className="mt-4">
                     <li className="description" id="1">

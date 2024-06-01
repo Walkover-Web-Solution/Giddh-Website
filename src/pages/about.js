@@ -142,7 +142,7 @@ const about = (path) => {
             display: currentMenu === 0 ? "block" : "none",
           }}
         >
-          <section className="about__content mb-5">
+          <section className="about__content">
             <div className="container gap-4">
               <p className="c-fs-5 mb-5">
                 Giddh is a team with members who have accounting running in
@@ -173,9 +173,8 @@ const about = (path) => {
             </div>
           </section>
 
-          <section className="container p-5 about__walkover d-grid px-3">
-            <div className="container about__walkover gap-3 mt-4"></div>
-            <h4 className=" heading col-primary fw-bold ms-0 py-4">
+          <section className="container about__walkover d-grid">
+            <h4 className=" heading col-primary fw-bold ms-0 pb-4">
               <span className="about--heading-underline">
                 A product from Walkover
               </span>
