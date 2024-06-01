@@ -21,6 +21,9 @@
       background-color: var(--col-primary);
     }
     &__walkover {
+      padding-top: 80px;
+      padding-bottom: 80px;
+        
       &__container {
         &__img {
           width: clamp(300px, 35vw, 500px);
@@ -36,7 +39,6 @@
     }
     &__see_more {
       padding: 60px 0;
-      margin-bottom: 80px;
       background: #e7e8ea url(/img/about/banner-grid-design-1.png) 0 0 repeat;
       &__btn {
         background-color: var(--col-white);
