@@ -31,12 +31,18 @@ const signUp = (path) => {
     const [showVerificationModal, setShowVerificationModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
     const link = path.path.linkPrefix;
+    const linkPath = path.path;
+    const isIndia = linkPath.isIndia;
+    const isGlobal = linkPath.isGlobal;
+    const isAE = linkPath.isAE;
+    const isUK = linkPath.isUK;
     const [mobileNo, setMobileNo] = useState(null);
 
     let region = link ? link.replace("/", "") : "gl";
     if (region) {
         region = region.toUpperCase();
     }
+
 
     useEffect(() => {
         initOtpSignup();
@@ -639,24 +645,76 @@ const signUp = (path) => {
                     <div className="entry__left_section__details pe-5">
                         <div className="container">
                             <h2 className="c-fs-3 line-height-36 mb-4">
-                                Join GIDDH for Easy Bookkeeping
+                                { isGlobal && "Experience Easy Accounting with GIDDH"}
+                                { isIndia && "Join GIDDH for Simplified Accounting Solutions"}
+                                { isAE && "Join GIDDH: Effortless Accounting Software"}
+                                { isUK && "GIDDH: Simplified Accounting at Your Fingertips"}
                             </h2>
                             <p>Features:</p>
                             <ul className="ps-0 my-4">
                                 <li className="d-flex align-items-center">
                                     <MdDone />
-                                    Basic ledger accounting
+                                    { isGlobal && "Basic Ledger Accounting Made Easy"}
+                                    { isIndia && "Easy Steps for Basic Ledger Accounting"}
+                                    { isAE && "Basic Ledger Accounting Simplified"}
+                                    { isUK && "Master Basic Ledger Accounting"}
                                 </li>
                                 <li className="d-flex align-items-center">
                                     <MdDone />
-                                    Manage branches & warehouses
+                                    { isGlobal && "Efficiently Manage Branches & Warehouses"}
+                                    { isIndia && "Simplify Branches & Warehouses Management"}
+                                    { isAE && "Centralized Control for Branches & Warehouses"}
+                                    { isUK && "Optimize Branches & Warehouses Operations"}
                                 </li>
                                 <li className="d-flex align-items-center">
                                     <MdDone />
-                                    Streamlined inventory management
+                                    { isGlobal && "Streamlined Inventory Management Solutions"}
+                                    { isIndia && "Simplify Your Inventory Management Process"}
+                                    { isAE && "Inventory Management Made Streamlined"}
+                                    { isUK && "Seamless and Streamlined Inventory Management"}
+                                </li>
+                                <li className="d-flex align-items-center">
+                                    <MdDone />
+                                    { isGlobal && "Easy Tax Reports Anywhere"}
+                                    { isIndia && "GST Reporting Anytime, Anywhere"}
+                                    { isAE && "VAT Reports on the Go"}
+                                    { isUK && "Fast VAT Reports on the Go"}
+                                </li>
+                                <li className="d-flex align-items-center">
+                                    <MdDone />
+                                    { isGlobal && "Native iOS & Android App Support"}
+                                    { isIndia && "Full Support for iOS & Android Apps"}
+                                    { isAE && "iOS & Android Apps Fully Supported"}
+                                    { isUK && "iOS & Android Native App Compatibility"}
+                                </li>
+                                <li className="d-flex align-items-center">
+                                    <MdDone />
+                                    { isGlobal && "Support for Unlimited Users"}
+                                    { isIndia && "Unlimited User Access Support"}
+                                    { isAE && "Unlimited Users, Full Support"}
+                                    { isUK && "Comprehensive Support for Unlimited Users"}
+                                </li>
+                                <li className="d-flex align-items-center">
+                                    <MdDone />
+                                    { isGlobal && "Simplified for Small Business Accounting"}
+                                    { isIndia && "Easy Accounting for Small Businesses"}
+                                    { isAE && "Small Business Accounting Made Easy"}
+                                    { isUK && "Streamlined Accounting for Small Businesses"}
+                                </li>
+                                <li className="d-flex align-items-center">
+                                    <MdDone />
+                                    { isGlobal && "Support for Multi-Currency Accounting"}
+                                    { isIndia && "Seamless Multi-Currency Accounting"}
+                                    { isAE && "Multi-Currency Accounting Solutions"}
+                                    { isUK && "Efficient Multi-Currency Accounting"}
                                 </li>
                             </ul>
-                            <p>Trusted by over 5,000 businesses</p>
+                            <p>
+                                { isGlobal && "Trusted Globally by 5,000+ Businesses"}
+                                { isIndia && "Trusted by 5,000+ Businesses Worldwide"}
+                                { isAE && "Join 5,000+ Trusted Businesses Worldwide"}
+                                { isUK && "Trusted by Over 5,000 Global Businesses"}
+                            </p>
                         </div>
                     </div>
                 </div>
