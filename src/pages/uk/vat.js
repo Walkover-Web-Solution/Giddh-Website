@@ -57,7 +57,7 @@ const ukVAT = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/accurate.svg"  alt="accurate-icon" />
+                <img src="/img/tax-images/accurate.svg" alt="accurate-icon" />
                 <div className="caption text-center">
                   <h2 className="small-heading col-primary c-fw-600">
                     100% Accurate
