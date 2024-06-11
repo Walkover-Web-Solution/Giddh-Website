@@ -24,7 +24,7 @@ const aeVAT = () => {
                             <img
                                 className="col-12"
                                 alt="vat"
-                                src="/img/tax-images/UAE-VAT-Background-image.png"
+                                src="/img/tax-images/UAE-VAT-Background-image.webp"
                             ></img>
                         </div>
                     </div>

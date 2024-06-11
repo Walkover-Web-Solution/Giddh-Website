@@ -75,7 +75,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__guarantee_logo">
                 <figure>
                   <img
-                    src="/img/guarantee-96.png"
+                    src="/img/guarantee-96.webp"
                     alt="90 Days guarantee logo"
                   />
                 </figure>
@@ -113,7 +113,7 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__oak pricing__heading text-center position-relative">
                 <span className="plan_tag">
                   <img
-                    src="/img/popular-plan.png"
+                    src="/img/popular-plan.webp"
                     width="70px"
                     alt="popular plan tag"
                   />
@@ -3865,7 +3865,7 @@ const pricing = (path) => {
             <div className="col-md-12 col-lg-6 image-alignment">
               <figure>
                 <img
-                  src="/img/accounting-software-feature.png"
+                  src="/img/accounting-software-feature.webp"
                   className="img-fluid"
                   alt="accounting-software-feature image"
                 />

@@ -74,7 +74,7 @@ const downloadFreeModal = () => {
               </p>
               <figure>
                 <img
-                  src="/img/laptop.png"
+                  src="/img/laptop.webp"
                   alt="laptop-with-giddh-dashboard-image"
                   width="200px"
                   height="auto"

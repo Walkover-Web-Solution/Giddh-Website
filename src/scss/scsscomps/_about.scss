@@ -39,7 +39,7 @@
     }
     &__see_more {
       padding: 60px 0;
-      background: #e7e8ea url(/img/about/banner-grid-design-1.png) 0 0 repeat;
+      background: #e7e8ea url(/img/about/banner-grid-design-1.webp) 0 0 repeat;
       &__btn {
         background-color: var(--col-white);
         min-width: 240px;
@@ -111,31 +111,31 @@
     &__banner_wrapper {
       .container-fluid {
         &:nth-child(1) {
-          background: url("/img/about/nature.jpg");
+          background: url("/img/about/nature.webp");
         }
         &:nth-child(2) {
-          background: url("/img/about/leadsthrough.jpg");
+          background: url("/img/about/leadsthrough.webp");
         }
         &:nth-child(3) {
-          background: url("/img/about/leads.jpg");
+          background: url("/img/about/leads.webp");
         }
         &:nth-child(4) {
-          background: url("/img/about/consult.png");
+          background: url("/img/about/consult.webp");
         }
         &:nth-child(5) {
-          background: url("/img/about/courageous.jpg");
+          background: url("/img/about/courageous.webp");
         }
         &:nth-child(6) {
-          background: url("/img/about/addintegrity.jpg");
+          background: url("/img/about/addintegrity.webp");
         }
         &:nth-child(7) {
-          background: url("/img/about/servegood-1.jpg");
+          background: url("/img/about/servegood-1.webp");
         }
         &:nth-child(8) {
-          background: url("/img/about/createprocess.png");
+          background: url("/img/about/createprocess.webp");
         }
         &:nth-child(9) {
-          background: url("/img/about/adapts.jpg");
+          background: url("/img/about/adapts.webp");
         }
       }
     }
@@ -195,7 +195,7 @@
       }
     }
     &__founder {
-      background: url("/img/about/team/shubendra-big-new.jpg");
+      background: url("/img/about/team/shubendra-big-new.webp");
       background-size: cover;
       min-height: 660px;
       margin-top: 60px;

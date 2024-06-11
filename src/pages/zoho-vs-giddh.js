@@ -41,7 +41,7 @@ const zohoVsGiddh = (path) => {
               <div className="col-lg-6 col-md-12 order-1 text-center">
                 <figure>
                   <img
-                    src="/img/compare-with-giddh/zoho-vs-giddh-compare-image.png"
+                    src="/img/compare-with-giddh/zoho-vs-giddh-compare-image.webp"
                     className="img-fluid banner-content__img"
                     width={540}
                     height={332}

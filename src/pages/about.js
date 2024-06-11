@@ -1093,7 +1093,7 @@ const about = (path) => {
                 <div className="d-flex flex-wrap justify-content-center column-gap-3 row-gap-3 pt-5 team__member_profile_pic_wapper">
                   <figure>
                     <img
-                      src="/img/about/team/gaurav.png"
+                      src="/img/about/team/gaurav.webp"
                       width="100%"
                       height="100%"
                       alt="Mr. Gaurav"
@@ -1105,7 +1105,7 @@ const about = (path) => {
                   </figure>
                   <figure>
                     <img
-                      src="/img/about/team/sheba.png"
+                      src="/img/about/team/sheba.webp"
                       width="100%"
                       height="100%"
                       alt="Sheba"
@@ -1117,7 +1117,7 @@ const about = (path) => {
                   </figure>
                   <figure>
                     <img
-                      src="/img/about/team/Ravinder.png"
+                      src="/img/about/team/Ravinder.webp"
                       width="100%"
                       height="100%"
                       alt="Mr. Ravinder"
@@ -1129,7 +1129,7 @@ const about = (path) => {
                   </figure>
                   <figure>
                     <img
-                      src={ isIndia ? "/img/about/team/dilpreet.jpg" : "/img/about/team/prateek.png"}
+                      src={ isIndia ? "/img/about/team/dilpreet.webp" : "/img/about/team/prateek.webp"}
                       width="100%"
                       height="100%"
                       alt={  isIndia ? "Mr. Dilpreet" : "Mr. Prateek"}
@@ -1141,7 +1141,7 @@ const about = (path) => {
                   </figure>
                   <figure>
                     <img
-                      src="/img/about/team/leena.png"
+                      src="/img/about/team/leena.webp"
                       width="100%"
                       height="100%"
                       alt="Mrs. Leena"
@@ -1153,7 +1153,7 @@ const about = (path) => {
                   </figure>
                   <figure>
                     <img
-                      src="/img/about/team/Kriti.png"
+                      src="/img/about/team/Kriti.webp"
                       width="100%"
                       height="100%"
                       alt="Miss Kriti"
@@ -1165,7 +1165,7 @@ const about = (path) => {
                   </figure>
                   <figure>
                     <img
-                      src="/img/about/team/rishi.png"
+                      src="/img/about/team/rishi.webp"
                       width="100%"
                       height="100%"
                       alt="Mr. Rishi"
@@ -1225,7 +1225,7 @@ const about = (path) => {
                   <div className="col-xl-6 col-lg-12 ps-lg-0 pt-lg-0 pt-2">
                     <figure className="mb-0">
                       <img
-                        src="/img/about/team/pushpendra.png"
+                        src="/img/about/team/pushpendra.webp"
                         width="100%"
                         height="100%"
                         alt="Mr. Pushpendra"
@@ -1254,7 +1254,7 @@ const about = (path) => {
                   <div className="col-xl-6 col-lg-12 px-lg-0 pt-lg-0 pt-2">
                     <figure className="mb-0">
                       <img
-                        src="/img/about/team/aashish-big.png"
+                        src="/img/about/team/aashish-big.webp"
                         width="100%"
                         height="100%"
                         alt="Mr. Ashish Yadav"
@@ -1281,7 +1281,7 @@ const about = (path) => {
                   <div className="col-xl-6 col-lg-12 ps-lg-0 pt-lg-0 pt-2">
                     <figure className="mb-0">
                       <img
-                        src="/img/about/team/ankita-big.png"
+                        src="/img/about/team/ankita-big.webp"
                         width="100%"
                         height="100%"
                         alt="Ankita Chadha"

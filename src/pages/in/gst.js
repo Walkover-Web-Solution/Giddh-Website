@@ -23,7 +23,7 @@ const gst = (path) => {
               <img
                 className="col-12"
                 alt="gst banner image"
-                src="/img/tax-images/tax-image.png"
+                src="/img/tax-images/tax-image.webp"
               ></img>
             </div>
           </div>
@@ -162,12 +162,12 @@ const gst = (path) => {
                 <h3>GST Return Collaborators</h3>
               </div>
               <div className="col text-center">
-                <img src="/img/Jio-GST.png" alt="JIO GST Icon" />
+                <img src="/img/Jio-GST.webp" alt="JIO GST Icon" />
               </div>
               <div className="col">
                 <img
                   className="tax-return__wrapper__large_img"
-                  src="/img/GST.png" alt="GST Icon"
+                  src="/img/GST.webp" alt="GST Icon"
                 />
               </div>
             </div>
