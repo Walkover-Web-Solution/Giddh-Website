@@ -9,7 +9,7 @@ const gstIndexPage = (path) => {
               className="img-fluid"
               src={
                 link.isIndia || link.isAE
-                  ? "/img/dashboard.png"
+                  ? "/img/dashboard.webp"
                   : "/img/uk-dashboard-laptop-img.svg"
               }
               alt="Laptop image with giddh.com dashboard screen"

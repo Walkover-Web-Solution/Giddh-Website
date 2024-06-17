@@ -98,7 +98,7 @@ const contacts = (path) => {
               <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/import-data-feature-1.png"
+                    src="/img/feature-gallery-icons/import-data-feature-1.webp"
                     className="img-fluid"
                     alt="connect bank image"
                   />
@@ -122,7 +122,7 @@ const contacts = (path) => {
               <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src={ isIndia ? "/img/feature-gallery-icons/reporting-feature-3.png" : ( isAE ? "/img/feature-gallery-icons/uk-aging-report.svg" : "/img/feature-gallery-icons/uk-aging-report.svg") }
+                    src={ isIndia ? "/img/feature-gallery-icons/reporting-feature-3.webp" : ( isAE ? "/img/feature-gallery-icons/uk-aging-report.svg" : "/img/feature-gallery-icons/uk-aging-report.svg") }
                     className="img-fluid"
                     alt="bank reconcile image"
                   />

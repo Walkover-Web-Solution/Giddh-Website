@@ -49,7 +49,7 @@ const bannerSection = (path) => {
                 <img
                   width="700"
                   height="auto"
-                  src="/img/giddh-dashboard-within-chrome-browser.png"
+                  src="/img/giddh-dashboard-within-chrome-browser.webp"
                   alt="Giddh Dashboard"
                 />
               </figure>

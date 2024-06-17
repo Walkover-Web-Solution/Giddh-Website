@@ -28,7 +28,7 @@ const makeTheSwitch = (path) => {
           <div className="row ">
             <div className="col-md-6 col-sm-12">
               <figure>
-                <img src={ isIndia || isAE ? "/img/switch-laptop-image.png" : "/img/uk-dashboard-laptop-and-pc-img.svg"} alt="Giddh Accounting Software Dashboard Image" className="img-fluid" />
+                <img src={ isIndia || isAE ? "/img/switch-laptop-image.webp" : "/img/uk-dashboard-laptop-and-pc-img.svg"} alt="Giddh Accounting Software Dashboard Image" className="img-fluid" />
               </figure>
             </div>
             <div className="col-md-6 col-sm-12">
@@ -83,7 +83,7 @@ const makeTheSwitch = (path) => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img src="/img/Accounting-sol-2.png" alt="make the switch to giddh banner image" className="img-fluid" />
+                  <img src="/img/Accounting-sol-2.webp" alt="make the switch to giddh banner image" className="img-fluid" />
                 </figure>
               </div>
             </div>
@@ -109,7 +109,7 @@ const makeTheSwitch = (path) => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img src="/img/Accounting-sol-1.png" alt="make the switch to giddh banner image" className="img-fluid" />
+                  <img src="/img/Accounting-sol-1.webp" alt="make the switch to giddh banner image" className="img-fluid" />
                 </figure>
               </div>
             </div>

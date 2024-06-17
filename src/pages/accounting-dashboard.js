@@ -96,7 +96,7 @@ const accountingDashboard = (path) => {
               <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src={isIndia ? '/img/feature-gallery-icons/networth.svg' : (isAE ? '/img/feature-gallery-icons/networth-ae.png' : '/img/feature-gallery-icons/networth-uk.svg')}
+                    src={isIndia ? '/img/feature-gallery-icons/networth.svg' : (isAE ? '/img/feature-gallery-icons/networth-ae.webp' : '/img/feature-gallery-icons/networth-uk.svg')}
                     className="img-fluid"
                     alt="Accounting Dashboard Image"
                   />
@@ -169,7 +169,7 @@ const accountingDashboard = (path) => {
               <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src={isIndia ? '/img/feature-gallery-icons/revenue.svg' : (isAE ? '/img/feature-gallery-icons/revenue-ae.png' : '/img/feature-gallery-icons/revenue-uk.svg')}
+                    src={isIndia ? '/img/feature-gallery-icons/revenue.svg' : (isAE ? '/img/feature-gallery-icons/revenue-ae.webp' : '/img/feature-gallery-icons/revenue-uk.svg')}
                     className="img-fluid"
                     alt="Accounting Dashboard Image"
                   />

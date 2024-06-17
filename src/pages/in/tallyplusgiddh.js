@@ -20,7 +20,7 @@ const tallyPlusGiddh = () => {
                   <figure>
                     <img
                       className="img-fluid"
-                      src="/img/tally-plus-giddh/tally-accounting-software-dashboard.png"
+                      src="/img/tally-plus-giddh/tally-accounting-software-dashboard.webp"
                       width={450}
                       height="auto"
                       alt="tally-accounting-software-dashboard"
@@ -39,7 +39,7 @@ const tallyPlusGiddh = () => {
                   <figure>
                     <img
                       className="img-fluid"
-                      src="/img/tally-plus-giddh/giddh-accounting-software-dashboard-2023.png"
+                      src="/img/tally-plus-giddh/giddh-accounting-software-dashboard-2023.webp"
                       width={450}
                       height="auto"
                       alt="giddh-accounting-software-dashboard"

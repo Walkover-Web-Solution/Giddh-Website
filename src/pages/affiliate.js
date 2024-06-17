@@ -18,7 +18,7 @@ const affiliate = (path) => {
                     <div className="col-md-3 col-sm-12 text-center align-content-center">
                       <img
                         className="mx-auto affiliate__img"
-                        src="/img/affilate/earn.png"
+                        src="/img/affilate/earn.webp"
                         alt="earn money icon"
                       />
                     </div>
@@ -39,7 +39,7 @@ const affiliate = (path) => {
                     <div className="col-md-3 col-sm-12 text-center align-content-center">
                       <img
                         className="mx-auto affiliate__img"
-                        src="/img/affilate/target.png"
+                        src="/img/affilate/target.webp"
                         alt="Achive taget icon"
                       />
                     </div>
@@ -60,7 +60,7 @@ const affiliate = (path) => {
                     <div className="col-md-3 col-sm-12 text-center align-content-center">
                       <img
                         className="mx-auto affiliate__img"
-                        src="/img/affilate/analytics.png"
+                        src="/img/affilate/analytics.webp"
                         alt="Giddh Analytics Reliable Tracking icons"
                       />
                     </div>
@@ -81,7 +81,7 @@ const affiliate = (path) => {
                     <div className="col-md-3 col-sm-12 text-center align-content-center">
                       <img
                         className="mx-auto affiliate__img"
-                        src="/img/affilate/meter.png"
+                        src="/img/affilate/meter.webp"
                         alt="Proven Results Measure Icon"
                       />
                     </div>
@@ -103,7 +103,7 @@ const affiliate = (path) => {
                     <div className="col-md-3 col-sm-12 text-center align-content-center">
                       <img
                         className="mx-auto affiliate__img"
-                        src="/img/affilate/free.png"
+                        src="/img/affilate/free.webp"
                         alt="Free to Join Icon"
                       />
                     </div>
@@ -139,7 +139,7 @@ const affiliate = (path) => {
                   <div className="col-lg-6 col-md-12 order-0 text-center">
                     <img
                       className="img-fluid mb-4 mb-lg-0"
-                      src="/img/affilate/graph.png"
+                      src="/img/affilate/graph.webp"
                       alt="Reliable Tracking Icon"
                     />
                   </div>
@@ -170,7 +170,7 @@ const affiliate = (path) => {
                   <div className="col-lg-6 col-md-12 order-lg-1 order-0 text-center">
                     <img
                       className="img-fluid mb-4 mb-lg-0"
-                      src="/img/affilate/affiliate_manager.png"
+                      src="/img/affilate/affiliate_manager.webp"
                       alt="Dedicated Affiliate Manager Banner Image"
                     />
                   </div>
@@ -207,7 +207,7 @@ const affiliate = (path) => {
                   <div className="col-lg-6 col-md-12 order-0 text-center">
                     <img
                       className="img-fluid mb-4 mb-lg-0"
-                      src="/img/affilate/newsletter.png"
+                      src="/img/affilate/newsletter.webp"
                       alt="Affiliate Newsletter Banner Image"
                     />
                   </div>

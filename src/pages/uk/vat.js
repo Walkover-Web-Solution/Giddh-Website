@@ -24,7 +24,7 @@ const ukVAT = () => {
               <img
                 className="col-12"
                 alt="vat"
-                src="/img/tax-images/UK-VAT-Background-image.png"
+                src="/img/tax-images/UK-VAT-Background-image.webp"
               ></img>
             </div>
           </div>
