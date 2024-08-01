@@ -128,7 +128,7 @@ const logIn = (path) => {
                     <div className="container">
                         <img
                             src="/img/login-page-left-section-banner.svg"
-                            className="entry__left_section__banner pe-4 img-fluid"
+                            className="entry__left_section__banner px-4 img-fluid"
                             alt="login page left section banner"
                         />
                     </div>
