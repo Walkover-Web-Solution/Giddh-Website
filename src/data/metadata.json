@@ -422,6 +422,10 @@
     "title": "Login | Giddh Accounting Software Access",
     "description": ""
   },
+  "/v2/login": {
+    "title": "Login | Giddh Accounting Software Access",
+    "description": ""
+  },
   "/signup": {
     "title": "Signup | Your Superb Accounting Partner",
     "description": ""
