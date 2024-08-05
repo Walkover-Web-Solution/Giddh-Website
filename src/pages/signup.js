@@ -122,8 +122,8 @@ const signUp = (path) => {
             ) {
                 sendEmailOtp();
                 setTimeout(() => {
-                    sendMobileOtp();
-                }, 1200);
+                  sendMobileOtp();
+                }, 3000);
             } else {
                 showToaster("Please verify email and mobile", "error", "top-center");
             }
