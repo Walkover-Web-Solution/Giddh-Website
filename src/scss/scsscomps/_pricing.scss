@@ -64,6 +64,42 @@
       }
     }
 
+    &.display-uk {
+      grid-auto-rows: minmax(50px, auto);
+      grid-template-rows: minmax(240px, auto) minmax(30px, auto) minmax(90px, auto) minmax(60px, auto);
+      grid-template-columns: auto 180px 180px 180px 180px;
+      grid-template-areas:
+        "title title title title title"
+        "logo birch oak vine sequoia"
+        "benefits b2 b3 b4 b5"
+        "invoice_count inc2 inc3 inc4 inc5"
+        "bill_count bc2 bc3 bc4 bc5"
+        "companies c2 c3 c4 c5"
+        "accountant_consultant ac2 ac3 ac4 ac5"
+        "desktop_mobile_app d2 d3 d4 d5"
+        "user-access ua2 ua3 ua4 ua5"
+        "security s2 s3 s4 s5"
+        "customers_vendors cv2 cv3 cv4 cv5"
+        "invoicing in2 in3 in4 in5"
+        "record-bills rb2 rb3 rb4 rb5"
+        "managing-inventory mi2 mi3 mi4 mi5"
+        "journal-entry je2 je3 je4 je5"
+        "multi-currency mc2 mc3 mc4 mc5"
+        "gst g2 g3 g4 g5"
+        "reports r2 r3 r4 r5"
+        "dashboard rd2 rd3 rd4 rd5"
+        "bank br2 br3 br4 br5"
+        "manufacturing m2 m3 m4 m5"
+        "bankInt ic2 ic3 ic4 ic5"
+        "e-commerce ecom2 ecom3 ecom4 ecom5"
+        "telecom tc2 tc3 tc4 tc5"
+        "warehouse w2 w3 w4 w5"
+        "easy-import imex2 imex3 imex4 imex5"
+        "financial fy2 fy3 fy4 fy5"
+        "support sp2 sp3 sp4 sp5"
+        "link_all_feature extra_charges extra_charges extra_charges extra_charges";
+    }
+
     &.global {
       grid-auto-rows: minmax(50px, auto);
       grid-template-rows: minmax(240px, auto) minmax(110px, auto) minmax(60px, auto);
@@ -1458,6 +1494,9 @@
       &.display-four {
         grid-template-columns: auto 160px 160px 160px;
       }
+      &.display-uk {
+        grid-template-columns: auto 160px 160px 160px;
+      }
       &.global {
         grid-template-columns: auto 160px 160px 160px;
       }
@@ -1479,6 +1518,97 @@
       max-width: 720px;
       align-items: center;
       &.display-four {
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-rows: minmax(350px, auto) 60px auto minmax(60px, auto);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          "title title"
+          "logo logo"
+          "birch birch"
+          "b2 b2"
+          "invoice_count_2 inc2"
+          "bill_count_2 bc2"
+          "companies_2 c2"
+          "accountant_consultant_2 ac2"
+          "desktop_mobile_app_2 d2"
+          "user-access_2 ua2"
+          "security_2 s2"
+          "customers_vendors_2 cv2"
+          "invoicing_2 in2"
+          "record-bills_2 rb2"
+          "managing-inventory_2 mi2"
+          "journal-entry_2 je2"
+          "multi-currency_2 mc2"
+          "gst_2 g2"
+          "reports_2 r2"
+          "dashboard_2 rd2"
+          "bank_2 br2"
+          "manufacturing_2 m2"
+          "bankInt_2 ic2"
+          "e-commerce_2 ecom2"
+          "telecom_2 tc2"
+          "warehouse_2 w2"
+          "easy-import_2 imex2"
+          "financial_2 fy2"
+          "support_2 sp2"
+          "oak oak"
+          "b3 b3"
+          "invoice_count_3 inc3"
+          "bill_count_3 bc3"
+          "companies_3 c3"
+          "accountant_consultant_3 ac3"
+          "desktop_mobile_app_3 d3"
+          "user-access_3 ua3"
+          "security_3 s3"
+          "customers_vendors_3 cv3"
+          "invoicing_3 in3"
+          "record-bills_3 rb3"
+          "managing-inventory_3 mi3"
+          "journal-entry_3 je3"
+          "multi-currency_3 mc3"
+          "gst_3 g3"
+          "reports_3 r3"
+          "dashboard_3 rd3"
+          "bank_3 br3"
+          "manufacturing_3 m3"
+          "bankInt_3 ic3"
+          "e-commerce_3 ecom3"
+          "telecom_3 tc3"
+          "warehouse_3 w3"
+          "easy-import_3 imex3"
+          "financial_3 fy3"
+          "support_3 sp3"
+          "vine vine"
+          "b4 b4"
+          "invoice_count_4 inc4"
+          "bill_count_4 bc4"
+          "companies_4 c4"
+          "accountant_consultant_4 ac4"
+          "desktop_mobile_app_4 d4"
+          "user-access_4 ua4"
+          "security_4 s4"
+          "customers_vendors_4 cv4"
+          "invoicing_4 in4"
+          "record-bills_4 rb4"
+          "managing-inventory_4 mi4"
+          "journal-entry_4 je4"
+          "multi-currency_4 mc4"
+          "gst_4 g4"
+          "reports_4 r4"
+          "dashboard_4 rd4"
+          "bank_4 br4"
+          "manufacturing_4 m4"
+          "bankInt_4 ic4"
+          "e-commerce_4 ecom4"
+          "telecom_4 tc4"
+          "warehouse_4 w4"
+          "easy-import_4 imex4"
+          "financial_4 fy4"
+          "support_4 sp4"
+          "link_all_feature link_all_feature"
+          "extra_charges extra_charges";
+      }
+      &.display-uk {
         grid-auto-rows: minmax(50px, auto);
         grid-template-rows: minmax(350px, auto) 60px auto minmax(60px, auto);
         grid-template-columns: repeat(2, 1fr);
