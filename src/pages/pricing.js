@@ -53,8 +53,10 @@ const pricing = (path) => {
                 (isGlobal
                   ? "global"
                   : isIndia
-                  ? " display-all"
-                  : " display-four")
+                  ? "display-all"
+                  : isUK
+                  ? "display-uk"
+                  : "display-four")
               }
             >
               <div className="pricing_main_section__grid__title">
@@ -81,12 +83,12 @@ const pricing = (path) => {
                 </figure>
               </div>
               <div className="pricing_main_section__grid__birch pricing__heading text-center">
-                {isIndia ? (
-                  <span className="pricing__heading__name">Free</span>
+                {isIndia || isUK ? (
+                  ""
                 ) : (
                   <span className="pricing__heading__name">Oak</span>
                 )}
-                {isIndia ? null : (
+                {isIndia || isUK ? null : (
                   <>
                     <br />
                     <span className="pricing__heading__cost">
@@ -103,14 +105,19 @@ const pricing = (path) => {
                   {isGlobal
                     ? "USD 50"
                     : isIndia
-                    ? "INR 0"
+                    ? "Free"
                     : isAE
                     ? "AED 350"
-                    : "GBP 70"}
-                  <span>/year</span>
+                    : "Free"}
+                  <span>
+                    {isUK || isIndia
+                    ? ""
+                    : "/year"}
+                    </span>
                 </span>
               </div>
               <div className="pricing_main_section__grid__oak pricing__heading text-center position-relative">
+                {isGlobal || isIndia || isAE ? (
                 <span className="plan_tag">
                   <img
                     src="/img/popular-plan.webp"
@@ -118,18 +125,22 @@ const pricing = (path) => {
                     alt="popular plan tag"
                   />
                 </span>
-                {isIndia ? (
+                )
+                : 
+                ""
+                }
+                {isIndia || isUK ? (
                   <span className="pricing__heading__name">Oak</span>
                 ) : (
                   <span className="pricing__heading__name">Vine</span>
                 )}
-                {isIndia ? null : (
+                {isIndia || isUK ? null : (
                   <>
                     <br />
                     <span className="pricing__heading__cost">
                       <s>
                         &nbsp;
-                        {isGlobal ? "USD 300" : isAE ? "AED 1,500" : "GBP 300"}
+                        {isGlobal ? "USD 300" : isAE ? "AED 1,500" : "GBP 300" }
                         &nbsp;
                       </s>
                     </span>
@@ -143,23 +154,41 @@ const pricing = (path) => {
                     ? "INR 4,000"
                     : isAE
                     ? "AED 1,050"
-                    : "GBP 210"}
-                  <span>/year</span>
+                    : isUK 
+                    ? "GBP 7"
+                    : ""}
+                  <span>/
+                    {isUK 
+                    ? "month"
+                    : "year"}
+                  </span>
                 </span>
               </div>
-              <div className="pricing_main_section__grid__vine pricing__heading text-center">
-                {isIndia ? (
+              <div className="pricing_main_section__grid__vine pricing__heading text-center position-relative">
+                {isUK ? (
+                <span className="plan_tag">
+                  <img
+                    src="/img/popular-plan.webp"
+                    width="70px"
+                    alt="popular plan tag"
+                  />
+                </span>
+                )
+                : 
+                ""
+                }
+                {isIndia || isUK ? (
                   <span className="pricing__heading__name">Vine</span>
                 ) : (
                   <span className="pricing__heading__name">Sequoia</span>
                 )}
-                {isIndia ? null : (
+                {isIndia || isUK ? null : (
                   <>
                     <br />
                     <span className="pricing__heading__cost">
                       <s>
                         &nbsp;
-                        {isGlobal ? "USD 500" : isAE ? "AED 3,000" : "GBP 500"}
+                        {isGlobal ? "USD 500" : isAE ? "AED 3,000" : "GBP 500" }
                         &nbsp;
                       </s>
                     </span>
@@ -173,15 +202,31 @@ const pricing = (path) => {
                     ? "INR 10,000"
                     : isAE
                     ? " AED 2,100"
-                    : "GBP 350"}
-                  <span>/year</span>
+                    : isUK 
+                    ? "GBP 21"
+                    : "GBP 21"}
+                  <span>/
+                    {isUK 
+                    ? "month"
+                    : "year"}
+                  </span>
                 </span>
               </div>
               <div className="pricing_main_section__grid__sequoia pricing__heading text-center display-all__child">
                 <span className="pricing__heading__name"> Sequoia</span>
                 <br />
                 <span className="pricing__heading__cost">
-                  INR 15,000<span>/year</span>
+                {isGlobal
+                    ? "USD 250"
+                    : isIndia
+                    ? "INR 15,000"
+                    : "GBP 35"}
+                  
+                  <span>/
+                    {isUK 
+                    ? "month"
+                    : "year"}
+                  </span>
                 </span>
               </div>
               <div className="pricing_main_section__grid__benefits">
@@ -225,16 +270,16 @@ const pricing = (path) => {
                 Invoice Count
               </div>
               <div className="pricing_main_section__grid__inc2 text-center pricing-border-top">
-              {isIndia ? '1,000' : '3,000' }
+              {isIndia ? '1,000' : isUK ? '100' : '3,000' }
               </div>
               <div className="pricing_main_section__grid__inc3 text-center pricing-border-top">
-              {isIndia ? '3,000' : '5,000' }
+              {isIndia ? '3,000' : isUK ? '500' : '5,000' }
               </div>
               <div className="pricing_main_section__grid__inc4 text-center pricing-border-top">
-              {isIndia ? '5,000' : '10,000' }
+              {isIndia ? '5,000' : isUK ? '700' : '10,000' }
               </div>
               <div className="pricing_main_section__grid__inc5 text-center pricing-border-top display-all__child">
-                10,000
+                {isUK ? '1,000' : '10,000'}
               </div>
               {/* ============================= Invoice Count Row End ========================== */}
 
@@ -255,16 +300,16 @@ const pricing = (path) => {
                 Bill Count
               </div>
               <div className="pricing_main_section__grid__bc2 text-center pricing-border-top">
-                {isIndia ? '1,000' : '3,000' }
+                {isIndia ? '1,000' : isUK ? '100' : '3,000' }
               </div>
               <div className="pricing_main_section__grid__bc3 text-center pricing-border-top">
-                {isIndia ? '3,000' : '5,000' }
+                {isIndia ? '3,000' : isUK ? '500' : '5,000' }
               </div>
               <div className="pricing_main_section__grid__bc4 text-center pricing-border-top">
-                {isIndia ? '5,000' : '10,000' }
+              {isIndia ? '5,000' : isUK ? '700' : '10,000' }
               </div>
               <div className="pricing_main_section__grid__bc5 text-center pricing-border-top display-all__child">
-                10,000
+                {isUK ? '1,000' : '10,000'}
               </div>
               {/* ============================= Bill Count Row End ============================= */}
 
@@ -288,10 +333,10 @@ const pricing = (path) => {
                 1
               </div>
               <div className="pricing_main_section__grid__c3 text-center pricing-border-top">
-                {isIndia ? "1" : isAE ? "10" : "10"}
+                {isIndia || isUK ? "1" : isAE ? "10" : "10"}
               </div>
               <div className="pricing_main_section__grid__c4 text-center pricing-border-top">
-                {isIndia ? "10" : isAE ? "100" : "100"}
+                {isIndia || isUK ? "10" : isAE ? "100" : "100"}
               </div>
               <div className="pricing_main_section__grid__c5 text-center pricing-border-top display-all__child">
                 100
@@ -318,13 +363,20 @@ const pricing = (path) => {
                 <MdClose />
               </div>
               <div className="pricing_main_section__grid__ac3 text-center pricing-border-top">
-                2 hrs
+                {isUK
+                ?  <MdClose />
+                : "2 hrs"}
               </div>
               <div className="pricing_main_section__grid__ac4 text-center pricing-border-top">
-                4 hrs
+                {isUK
+                ? "2 hrs"
+                : "4 hrs"}
               </div>
               <div className="pricing_main_section__grid__ac5 text-center pricing-border-top display-all__child">
-                10 hrs
+                {isUK
+                ? " 4 hrs"
+                : "10 hrs"
+                }
               </div>
              {/* ======================= Accountant Consultant Row Emd ===================== */}
 
@@ -1887,7 +1939,7 @@ const pricing = (path) => {
                 </div>
               </div>
               <div className="pricing_main_section__grid__ua2 text-center pricing-border-top">
-              { isIndia ? 1 : 'Unlimited' }
+              { isIndia || isUK ? 1 : 'Unlimited' }
               </div>
               <div className="pricing_main_section__grid__ua3 text-center pricing-border-top">
                 Unlimited
@@ -3506,7 +3558,7 @@ const pricing = (path) => {
                 </div>
               </div>
               <div className="pricing_main_section__grid__sp2 text-center pricing-border-top">
-              { isIndia ? <MdClose /> : <MdDone /> }
+              { isIndia || isUK ? <MdClose /> : <MdDone /> }
               </div>
               <div className="pricing_main_section__grid__sp3 text-center pricing-border-top">
                 <MdDone />
