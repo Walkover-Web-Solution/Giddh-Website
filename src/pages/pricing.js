@@ -84,7 +84,7 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__birch pricing__heading text-center">
                 {isIndia || isUK ? (
-                  <span className="pricing__heading__name">Free</span>
+                  ""
                 ) : (
                   <span className="pricing__heading__name">Oak</span>
                 )}
@@ -105,18 +105,19 @@ const pricing = (path) => {
                   {isGlobal
                     ? "USD 50"
                     : isIndia
-                    ? "INR 0"
+                    ? "Free"
                     : isAE
                     ? "AED 350"
-                    : "GBP 0"}
-                  <span>/
-                    {isUK 
-                    ? "month"
-                    : "year"}
+                    : "Free"}
+                  <span>
+                    {isUK || isIndia
+                    ? ""
+                    : "/year"}
                     </span>
                 </span>
               </div>
               <div className="pricing_main_section__grid__oak pricing__heading text-center position-relative">
+                {isGlobal || isIndia || isAE ? (
                 <span className="plan_tag">
                   <img
                     src="/img/popular-plan.webp"
@@ -124,6 +125,10 @@ const pricing = (path) => {
                     alt="popular plan tag"
                   />
                 </span>
+                )
+                : 
+                ""
+                }
                 {isIndia || isUK ? (
                   <span className="pricing__heading__name">Oak</span>
                 ) : (
@@ -159,7 +164,19 @@ const pricing = (path) => {
                   </span>
                 </span>
               </div>
-              <div className="pricing_main_section__grid__vine pricing__heading text-center">
+              <div className="pricing_main_section__grid__vine pricing__heading text-center position-relative">
+                {isUK ? (
+                <span className="plan_tag">
+                  <img
+                    src="/img/popular-plan.webp"
+                    width="70px"
+                    alt="popular plan tag"
+                  />
+                </span>
+                )
+                : 
+                ""
+                }
                 {isIndia || isUK ? (
                   <span className="pricing__heading__name">Vine</span>
                 ) : (

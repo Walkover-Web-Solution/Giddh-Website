@@ -208,11 +208,18 @@
         position: absolute;
         right: -5px;
         top: -4px;
+        z-index: 1;
       }
     }
     &__vine {
       grid-area: vine;
       background-color: #e6fff5;
+      .plan_tag {
+        position: absolute;
+        right: -5px;
+        top: -4px;
+        z-index: 1;
+      }
     }
     &__sequoia {
       grid-area: sequoia;
