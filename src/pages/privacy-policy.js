@@ -6,9 +6,9 @@ const privacyPolicy = (path) => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="sub-heading c-fw-600 mb-4 text-center col-dark">
+              <h1 className="sub-heading c-fw-600 mb-4 text-center col-dark">
                 Your privacy is respected.
-              </h2>
+              </h1>
               <p className="mb-4 c-fs-5">
                 We value our relationship with you and place the highest
                 importance on respecting and protecting your privacy. We want
