@@ -63,14 +63,14 @@ const Footer = (path) => {
                         Privacy Policy
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a
                         target="_blank"
                         href="https://apply.workable.com/walkover/"
                       >
                         Work With Us
                       </a>
-                    </li>
+                    </li> */}
                     <li>
                       <a href={link.linkPrefix + "/affiliate"}>
                         Affiliate With Us

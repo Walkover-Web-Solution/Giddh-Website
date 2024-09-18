@@ -13,9 +13,9 @@ const multiUserAccountingSoftware = (path) => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
+                <h1 className="heading col-primary c-fw-600 mb-4">
                   Work better together by sharing business insights
-                </h2>
+                </h1>
                 <p className="col-grey c-fs-3 mb-5">
                   Allow external accountants & internal team members across
                   different departments to work together seamlessly.

@@ -8,9 +8,9 @@ const terms = (path) => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2  className="sub-heading c-fw-600 mb-4 text-center col-primary" >
+              <h1  className="sub-heading c-fw-600 mb-4 text-center col-primary" >
                 Please pay attention
-              </h2>
+              </h1>
               <p className="mb-4 c-fs-5">
                 Giddh is an{" "}
                 <a href={ "https://giddh.com" + link } title="online accounting service" className="col-primary fw-medium">online accounting service</a>{" "}
