@@ -111,7 +111,7 @@ const pricing = (path) => {
                     : "GBP 0"}
                   <span>/
                     {isUK 
-                    ? "monthly"
+                    ? "month"
                     : "year"}
                     </span>
                 </span>
@@ -129,13 +129,13 @@ const pricing = (path) => {
                 ) : (
                   <span className="pricing__heading__name">Vine</span>
                 )}
-                {isIndia ? null : (
+                {isIndia || isUK ? null : (
                   <>
                     <br />
                     <span className="pricing__heading__cost">
                       <s>
                         &nbsp;
-                        {isGlobal ? "USD 300" : isAE ? "AED 1,500" : isUK ? "GBP 100" : "" }
+                        {isGlobal ? "USD 300" : isAE ? "AED 1,500" : "GBP 300" }
                         &nbsp;
                       </s>
                     </span>
@@ -150,11 +150,11 @@ const pricing = (path) => {
                     : isAE
                     ? "AED 1,050"
                     : isUK 
-                    ? "GBP 70"
+                    ? "GBP 7"
                     : ""}
                   <span>/
                     {isUK 
-                    ? "monthly"
+                    ? "month"
                     : "year"}
                   </span>
                 </span>
@@ -165,13 +165,13 @@ const pricing = (path) => {
                 ) : (
                   <span className="pricing__heading__name">Sequoia</span>
                 )}
-                {isIndia ? null : (
+                {isIndia || isUK ? null : (
                   <>
                     <br />
                     <span className="pricing__heading__cost">
                       <s>
                         &nbsp;
-                        {isGlobal ? "USD 500" : isAE ? "AED 3,000" : isUK ? "GBP 300" : isGlobal }
+                        {isGlobal ? "USD 500" : isAE ? "AED 3,000" : "GBP 500" }
                         &nbsp;
                       </s>
                     </span>
@@ -186,11 +186,11 @@ const pricing = (path) => {
                     : isAE
                     ? " AED 2,100"
                     : isUK 
-                    ? "GBP 210"
-                    : "GBP 210"}
+                    ? "GBP 21"
+                    : "GBP 21"}
                   <span>/
                     {isUK 
-                    ? "monthly"
+                    ? "month"
                     : "year"}
                   </span>
                 </span>
@@ -199,23 +199,15 @@ const pricing = (path) => {
                 <span className="pricing__heading__name"> Sequoia</span>
                 <br />
                 <span className="pricing__heading__cost">
-                    <s>
-                      &nbsp;
-                      {isUK ? "GBP 500" : null}
-                      &nbsp;
-                    </s>
-                </span>
-                <br />
-                <span className="pricing__heading__cost">
                 {isGlobal
                     ? "USD 250"
                     : isIndia
                     ? "INR 15,000"
-                    : "GBP 350"}
+                    : "GBP 35"}
                   
                   <span>/
                     {isUK 
-                    ? "monthly"
+                    ? "month"
                     : "year"}
                   </span>
                 </span>
@@ -264,13 +256,13 @@ const pricing = (path) => {
               {isIndia ? '1,000' : isUK ? '100' : '3,000' }
               </div>
               <div className="pricing_main_section__grid__inc3 text-center pricing-border-top">
-              {isIndia ? '3,000' : '5,000' }
+              {isIndia ? '3,000' : isUK ? '500' : '5,000' }
               </div>
               <div className="pricing_main_section__grid__inc4 text-center pricing-border-top">
-              {isIndia ? '5,000' : '10,000' }
+              {isIndia ? '5,000' : isUK ? '700' : '10,000' }
               </div>
               <div className="pricing_main_section__grid__inc5 text-center pricing-border-top display-all__child">
-                10,000
+                {isUK ? '1,000' : '10,000'}
               </div>
               {/* ============================= Invoice Count Row End ========================== */}
 
@@ -294,13 +286,13 @@ const pricing = (path) => {
                 {isIndia ? '1,000' : isUK ? '100' : '3,000' }
               </div>
               <div className="pricing_main_section__grid__bc3 text-center pricing-border-top">
-                {isIndia ? '3,000' : '5,000' }
+                {isIndia ? '3,000' : isUK ? '500' : '5,000' }
               </div>
               <div className="pricing_main_section__grid__bc4 text-center pricing-border-top">
-                {isIndia ? '5,000' : '10,000' }
+              {isIndia ? '5,000' : isUK ? '700' : '10,000' }
               </div>
               <div className="pricing_main_section__grid__bc5 text-center pricing-border-top display-all__child">
-                10,000
+                {isUK ? '1,000' : '10,000'}
               </div>
               {/* ============================= Bill Count Row End ============================= */}
 
@@ -1930,7 +1922,7 @@ const pricing = (path) => {
                 </div>
               </div>
               <div className="pricing_main_section__grid__ua2 text-center pricing-border-top">
-              { isIndia ? 1 : 'Unlimited' }
+              { isIndia || isUK ? 1 : 'Unlimited' }
               </div>
               <div className="pricing_main_section__grid__ua3 text-center pricing-border-top">
                 Unlimited
@@ -3549,7 +3541,7 @@ const pricing = (path) => {
                 </div>
               </div>
               <div className="pricing_main_section__grid__sp2 text-center pricing-border-top">
-              { isIndia ? <MdClose /> : <MdDone /> }
+              { isIndia || isUK ? <MdClose /> : <MdDone /> }
               </div>
               <div className="pricing_main_section__grid__sp3 text-center pricing-border-top">
                 <MdDone />
