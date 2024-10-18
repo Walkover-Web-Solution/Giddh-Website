@@ -2,7 +2,8 @@ function setCookie(cname, cvalue, exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toGMTString();
-    document.cookie = cname + "=" + cvalue + ";domain=giddh.com;" + expires + ";path=/";
+      document.cookie =
+        cname + "=" + cvalue + ";domain=giddh.com;" + expires + ";path=/";
 }
 
 function getCookie(cname) {
@@ -37,6 +38,9 @@ function removeGiddhSession() {
 function setGiddhSession(sessionId) {
     removeLocalStorage("session");
     setCookie("giddh_session_id", sessionId, 30);
+}
+function setGiddhRegion(region) {
+  setCookie("giddh_region", region, 30);
 }
 
 function getOtpwidgetConfiguration(exposeMethods, callbackFunction) {
