@@ -45,6 +45,7 @@ const signUp = (path) => {
 
 
     useEffect(() => {
+        setGiddhRegion(region.toLowerCase());
         initOtpSignup();
     }, []);
 
