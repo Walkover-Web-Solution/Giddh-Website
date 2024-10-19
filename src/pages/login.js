@@ -20,6 +20,7 @@ const logIn = (path) => {
     }
 
     useEffect(() => {
+        setGiddhRegion(region.toLowerCase());
         if (getCookie("giddh_session_id")) {
             validateUserSession(getCookie("giddh_session_id"));
         }

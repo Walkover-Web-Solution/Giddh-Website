@@ -49,7 +49,6 @@ const header = (props) => {
         const isRestrictedPage =
             window.location.href && window.location.href.indexOf("v2/login") > -1;
         setRestrictFromSeo(isRestrictedPage);
-        setGiddhRegion(country);
     }, []);
 
     return (
