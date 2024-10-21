@@ -19,30 +19,38 @@ const v2Login = () => {
     const [showLoginWithPasswordModal, setShowLoginWithPasswordModal] = useState(false);
     const [userResponse, setUserResponse] = useState(null);
     const [link, setLink] = useState(process.env.NEXT_PUBLIC_SITE_URL);
+    const isUK = path.path.isUK;
 
     useEffect(() => {
         setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
-
         if (getCookie("giddh_session_id")) {
             validateUserSession(getCookie("giddh_session_id"));
         }
     }, []);
 
     async function validateUserSession(sessionId) {
-        await fetch(process.env.NEXT_PUBLIC_API_URL + '/v2/user', {
+        await fetch(
+          (isUK
+            ? process.env.NEXT_PUBLIC_UK_API_URL
+            : process.env.NEXT_PUBLIC_API_URL) + "/v2/user",
+          {
             method: "GET",
             mode: "cors",
             cache: "no-store",
             headers: { "session-id": sessionId },
-        })
-            .then((res) => res.json())
-            .then((response) => {
-                if (response.status === "success") {
-                    window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?request=" + response.body.session.id;
-                } else {
-                    removeGiddhSession();
-                }
-            })
+          }
+        )
+          .then((res) => res.json())
+          .then((response) => {
+            if (response.status === "success") {
+              window.location =
+                process.env.NEXT_PUBLIC_APP_URL +
+                "/token-verify?request=" +
+                response.body.session.id;
+            } else {
+              removeGiddhSession();
+            }
+          });
     }
 
     async function initiateLogin(result) {
