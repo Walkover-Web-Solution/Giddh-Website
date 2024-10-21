@@ -3,7 +3,7 @@ function setCookie(cname, cvalue, exdays) {
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toGMTString();
       document.cookie =
-        cname + "=" + cvalue + ";localhost;" + expires + ";path=/";
+        cname + "=" + cvalue + ";domain=giddh.com;" + expires + ";path=/";
 }
 
 function getCookie(cname) {
