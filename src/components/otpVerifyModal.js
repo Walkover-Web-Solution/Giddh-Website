@@ -9,7 +9,7 @@ const otpVerifyModal = (props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [resendInProgress, setResendInProgress] = useState(false);
   const [verifyNumberInProgress, setVerifyNumberInProgress] = useState(false);
-  const isUK = path.path.isUK;
+  const isUK = props.path.isUK;
 
   useEffect(() => {
     document.body.classList.add("otp-verification");
