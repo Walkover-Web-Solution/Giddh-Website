@@ -198,6 +198,7 @@ const logIn = (path) => {
             {showVerificationModal && (
               <OtpVerifyModal
                 userResponse={userResponse}
+                path={path}
                 otpVerifyCallback={otpVerifyCallback}
                 hideVerificationModal={() => {
                   setShowVerificationModal(false);

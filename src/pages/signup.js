@@ -1141,6 +1141,7 @@ const signUp = (path) => {
             {showVerificationModal && (
               <OtpVerifyModal
                 userResponse={userResponse}
+                path={path}
                 otpVerifyCallback={otpVerifyCallback}
                 hideVerificationModal={() => {
                   setShowVerificationModal(false);
