@@ -183,6 +183,15 @@ const navbar = (props) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
+              { link.isUK && (
+                <li className="nav-item">
+                    <div className="trustpilot-widget" data-locale="en-GB" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="65d30a42565b997046d9df08" data-style-height="38px" data-style-width="224px">
+                      <a href="https://uk.trustpilot.com/review/giddh.com" target="_blank" rel="noopener">
+                        Review us
+                      </a>
+                    </div>
+                </li>
+              )}
               <li className="nav-item">
                 <a
                   className={
