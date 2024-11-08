@@ -194,7 +194,6 @@ const navbar = (props) => {
                       data-style-width="224px"
                     >
                       <a href="https://uk.trustpilot.com/review/giddh.com" target="_blank" rel="noopener">
-                        Review us
                       </a>
                     </div>
                 </li>
