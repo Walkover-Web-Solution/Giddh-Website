@@ -64,6 +64,14 @@ a {
     max-width: 100% !important;
   }
 }
+
 img{
   user-select: none;
+}
+
+// Trust pilot alignment
+.trustpilot-widget {
+  & > iframe {
+    transform: translateY(8px);
+  }
 }
