@@ -69,8 +69,11 @@ img{
   user-select: none;
 }
 
-// Trust pilot alignment
+// Trust pilot 
 .trustpilot-widget {
+  .video-placeholder-normal {
+    display: none !important;
+  }
   & > iframe {
     transform: translateY(8px);
   }
