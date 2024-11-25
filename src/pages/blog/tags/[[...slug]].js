@@ -6,13 +6,29 @@ import { useRouter } from "next/router";
 import PostItem from "../../../components/blogs/postItem";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import Head from "next/head";
+import { useSearchParams } from 'next/navigation';
+import { useCallback } from 'react';
+
 export default function Index({ posts, tag, pagination, page }) {
  const router  = useRouter();
+ const searchParams = useSearchParams();
+ let pageNo = searchParams.get('page');
+ let tagName = searchParams.get('tag');
 
-
- const handleClick = () =>{
-   router.back();
- }
+ const navigateToPreviousPage = useCallback((event) => {
+  event.preventDefault();
+  if (window.history.length > 1) {
+    router.back();
+  } else {
+    const basePath = tagName 
+      ? `/blog/tags/${tagName}`
+      : '/blog';
+    const pagePath = pageNo > 1 
+      ? tagName ? `/${pageNo}` : `/page/${pageNo}`
+      : '';
+    router.push(basePath + pagePath);
+  }
+}, [router, tagName, pageNo]);
 //   const title = tag.name; 
   return (
       <>
@@ -23,10 +39,10 @@ export default function Index({ posts, tag, pagination, page }) {
       <div className="blog">
 <div className={"container blog-home-container"}>
   <div className={"posts"}>
-    <button className="d-inline-block btn blog-container__back-btn mb-4" onClick={handleClick} ><MdKeyboardArrowLeft />Back</button>
+    <button className="d-inline-block btn blog-container__back-btn mb-4" onClick={(event) => navigateToPreviousPage(event)}><MdKeyboardArrowLeft />Back</button>
     <div className={"post-list"}>
       {posts?.map((it, i) => (                        
-          <PostItem key={i} post={it} />            
+          <PostItem key={i} post={it} tag={tag} page={pagination.current} />            
       ))}
     </div>
      <Pagination

@@ -2,7 +2,7 @@ import { MdDateRange } from "react-icons/md";
 import Date from "./date";
 import { parseISO } from "date-fns";
 
-export default function PostItem({ post }) {
+export default function PostItem({ post, tag, page }) {
   /* function calculateReadTime(articleText, wordsPerMinute = 200) {
     // Count the number of words in the article
     const words = articleText.match(/\w+/g);
@@ -30,7 +30,7 @@ export default function PostItem({ post }) {
   }
   return (
     <a
-      href={"/blog/" + post.slug}
+      href={`/blog/${post.slug}?page=${page}`+ (tag ? `&tag=${tag}` : '')}
       className={
         "blog-card" +
         (post.thumbnail ? " bg-dark" : " bg-light") +

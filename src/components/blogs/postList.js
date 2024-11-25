@@ -4,14 +4,14 @@ import PostItem from "./postItem";
 import Pagination from "./pagination";
 // import TagButton from "./tagButton";
 
-export default function PostList({ posts, tags, pagination }) {
+export default function PostList({ posts, pagination }) {
   return (
     <div className="blog">
     <div className={"container blog-home-container"}>
       <div className={"posts"}>
         <div className={"post-list"}>
           {posts?.map((it, i) => (                        
-              <PostItem key={i} post={it} />            
+              <PostItem key={i} post={it} page={pagination.current} />            
           ))}
         </div>
         <Pagination
