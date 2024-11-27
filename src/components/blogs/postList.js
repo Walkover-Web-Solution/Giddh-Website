@@ -11,12 +11,12 @@ export default function PostList({ posts, pagination }) {
       <div className={"posts"}>
         <div className={"post-list"}>
           {posts?.map((it, i) => (                        
-              <PostItem key={i} post={it} page={pagination.current} />            
+              <PostItem key={i} post={it} page={pagination?.current} />            
           ))}
         </div>
         <Pagination
-          current={pagination.current}
-          pages={pagination.pages}
+          current={pagination?.current}
+          pages={pagination?.pages}
           link={{
             href: (page) => (page === 1 ? "/blog" : "/blog/page/[page]"),
             as: (page) => (page === 1 ? null : "/blog/page/" + page),

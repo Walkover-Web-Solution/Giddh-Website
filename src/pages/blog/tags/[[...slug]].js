@@ -9,7 +9,7 @@ import Head from "next/head";
 import { useSearchParams } from 'next/navigation';
 import { useCallback } from 'react';
 
-export default function Index({ posts, tag, pagination, page }) {
+export default function Index({ posts, tag, pagination }) {
  const router  = useRouter();
  const searchParams = useSearchParams();
  let pageNo = searchParams.get('page');
@@ -42,12 +42,12 @@ export default function Index({ posts, tag, pagination, page }) {
     <button className="d-inline-block btn blog-container__back-btn mb-4" onClick={(event) => navigateToPreviousPage(event)}><MdKeyboardArrowLeft />Back</button>
     <div className={"post-list"}>
       {posts?.map((it, i) => (                        
-          <PostItem key={i} post={it} tag={tag} page={pagination.current} />            
+          <PostItem key={i} post={it} tag={tag} page={pagination?.current} />            
       ))}
     </div>
      <Pagination
-        current={pagination.current}
-        pages={pagination.pages}
+        current={pagination?.current}
+        pages={pagination?.pages}
         link={{
           href: () => "/blog/tags/[[...slug]]",
           as: (page) =>
@@ -81,7 +81,7 @@ export async function getStaticProps({ params }) {
   const props = {
     posts,
     tag,
-    pagination: { current: pagination.current, pages: pagination.pages },
+    pagination: { current: pagination?.current, pages: pagination?.pages },
     page,
   };
   if (page) {
@@ -94,15 +94,15 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const paths = listTags().flatMap((tag) => {
-    const pages = Math.ceil(countPosts(tag.slug) / config.posts_per_page);
+    const pages = Math.ceil(countPosts(tag?.slug) / config.posts_per_page);
 
     return Array.from(Array(pages).keys()).map((page) =>
       page === 0
         ? {
-            params: { slug: [tag.slug] },
+            params: { slug: [tag?.slug] },
           }
         : {
-            params: { slug: [tag.slug, (page + 1).toString()] },
+            params: { slug: [tag?.slug, (page + 1).toString()] },
           }
     );
   });

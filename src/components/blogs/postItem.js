@@ -30,21 +30,21 @@ export default function PostItem({ post, tag, page }) {
   }
   return (
     <a
-      href={`/blog/${post.slug}?page=${page}`+ (tag ? `&tag=${tag}` : '')}
+      href={`/blog/${post?.slug}?page=${page}`+ (tag ? `&tag=${tag}` : '')}
       className={
         "blog-card" +
-        (post.thumbnail ? " bg-dark" : " bg-light") +
-        getBlogStyle(post.title)
+        (post?.thumbnail ? " bg-dark" : " bg-light") +
+        getBlogStyle(post?.title)
       }
       style={{
-        backgroundImage: post.thumbnail
-          ? 'url("' + post.thumbnail + '")'
+        backgroundImage: post?.thumbnail
+          ? 'url("' + post?.thumbnail + '")'
           : "none",
       }}
     >
       <div className="blog-card__content">
         <div className="blog-card-body">
-          <h2 className="title">{post.title}</h2>
+          <h2 className="title">{post?.title}</h2>
 
           <p className="content">{post?.description}</p>
         </div>
@@ -57,7 +57,7 @@ export default function PostItem({ post, tag, page }) {
             ))}
           </div>
           <span>
-            <MdDateRange /> <Date date={parseISO(post.date)}/>
+            <MdDateRange /> <Date date={parseISO(post?.date)}/>
           </span>
         </div>
       </div>
