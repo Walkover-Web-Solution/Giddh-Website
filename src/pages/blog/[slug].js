@@ -12,8 +12,9 @@ import TagButton from "@/components/blogs/tags/tagButton";
 import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 const component = { ReactPlayer };
-
+import { useSearchParams } from 'next/navigation';
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { useCallback } from 'react';
 
 const slugToPostContent = ((postContents) => {
   let hash = {};
@@ -28,11 +29,24 @@ const slugToPostContent = ((postContents) => {
 
 export default function TestPage({ source, title, date, author, tags, description, seoTitle, seoDescription, seoKeywords }) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  let pageNo = searchParams.get('page');
+  let tagName = searchParams.get('tag');
 
-  const handleClick = (event) => {
+  const navigateToPreviousPage = useCallback((event) => {
     event.preventDefault();
-    router.back();
-  };
+    if (window.history.length > 1) {
+      router.back();
+    } else {
+      const basePath = tagName 
+        ? `/blog/tags/${tagName}`
+        : '/blog';
+      const pagePath = pageNo > 1 
+        ? tagName ? `/${pageNo}` : `/page/${pageNo}`
+        : '';
+      router.push(basePath + pagePath);
+    }
+  }, [router, tagName, pageNo]);
   return (
     <>
       <Head>
@@ -45,7 +59,7 @@ export default function TestPage({ source, title, date, author, tags, descriptio
        <a
         className="mb-3 d-inline-block btn blog-container__back-btn"
         href="#"
-        onClick={(event) => handleClick(event)}
+        onClick={(event) => navigateToPreviousPage(event)}
        >
         <MdKeyboardArrowLeft /> Back
        </a>
@@ -58,7 +72,6 @@ export default function TestPage({ source, title, date, author, tags, descriptio
         <div className="body">
           <MDXRemote {...source} components={component} />
         </div>
-
         <footer className="pt-3">
           <div className="blog-card-tags">
             <ul className="blog-page-tags d-flex gap-3 ps-0 mb-1">
@@ -72,7 +85,7 @@ export default function TestPage({ source, title, date, author, tags, descriptio
           </div>
           <button
             className="btn blog-container__back-btn mt-3"
-            onClick={handleClick}
+            onClick={(event) => navigateToPreviousPage(event)}
           >
             <MdKeyboardArrowLeft /> Back
           </button>
