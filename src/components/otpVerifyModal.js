@@ -131,7 +131,7 @@ const otpVerifyModal = (props) => {
       >
         <div className="modal-dialog modal-dialog-centered otp-verify-modal">
           <div className="modal-content bg-transparent">
-            <div className="modal-header">
+            <div className="modal-header justify-content-between">
               <h4
                 className="modal-title c-fs-5 col-white"
                 id="signWithOTPLabel"

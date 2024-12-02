@@ -17,8 +17,10 @@ export default function Index({ posts, tag, pagination }) {
 
  const navigateToPreviousPage = useCallback((event) => {
   event.preventDefault();
-  if (window.history.length > 1) {
+  if (window.history.length > 2) {
     router.back();
+  } else if (window.history.length > 1) {
+    router.push('/blog');
   } else {
     const basePath = tagName 
       ? `/blog/tags/${tagName}`
