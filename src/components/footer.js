@@ -59,6 +59,9 @@ const Footer = (path) => {
                       <a href="https://giddh.com/blog">Blog</a>
                     </li>
                     <li>
+                      <a href="https://giddh.com/api">API Documentation</a>
+                    </li>
+                    <li>
                       <a href={link.linkPrefix + "/privacy-policy"}>
                         Privacy Policy
                       </a>

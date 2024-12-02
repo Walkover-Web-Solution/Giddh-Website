@@ -35,8 +35,10 @@ export default function TestPage({ source, title, date, author, tags, descriptio
 
   const navigateToPreviousPage = useCallback((event) => {
     event.preventDefault();
-    if (window.history.length > 1) {
+    if (window.history.length > 2) {
       router.back();
+    } else if (window.history.length > 1) {
+      router.push('/blog');
     } else {
       const basePath = tagName 
         ? `/blog/tags/${tagName}`
@@ -47,6 +49,7 @@ export default function TestPage({ source, title, date, author, tags, descriptio
       router.push(basePath + pagePath);
     }
   }, [router, tagName, pageNo]);
+  
   return (
     <>
       <Head>
