@@ -4,7 +4,7 @@ import PostItem from "./postItem";
 import Pagination from "./pagination";
 // import TagButton from "./tagButton";
 
-export default function PostList({ posts, pagination }) {
+export default function PostList({ posts, pagination , page}) {  
   return (
     <div className="blog">
     <div className={"container blog-home-container"}>
@@ -15,11 +15,11 @@ export default function PostList({ posts, pagination }) {
           ))}
         </div>
         <Pagination
-          current={pagination?.current}
+          current={page || '1'}
           pages={pagination?.pages}
           link={{
-            href: (page) => (page === 1 ? "/blog" : "/blog/page/[page]"),
-            as: (page) => (page === 1 ? null : "/blog/page/" + page),
+            href: (page) => (page === 1 ? "/blog" : `/blog?page=${page}`),
+            as: (page) => (page === 1 ? null : `/blog?page=${page}`),
           }}
         />
       </div>  
