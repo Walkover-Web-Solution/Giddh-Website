@@ -1,37 +1,23 @@
 const config = require('../../../components/blogs/lib/config');
 const { countPosts, listPostContent } = require("../../../components/blogs/lib/posts");
-const { getTag, listTags } = require("../../../components/blogs/lib/tags");
+const { getTag } = require("../../../components/blogs/lib/tags");
 import Pagination from "../../../components/blogs/pagination";
 import { useRouter } from "next/router";
 import PostItem from "../../../components/blogs/postItem";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import Head from "next/head";
-import { useSearchParams } from 'next/navigation';
-import { useCallback } from 'react';
 
 export default function Index({ posts, tag, pagination }) {
  const router  = useRouter();
- const searchParams = useSearchParams();
- let pageNo = searchParams.get('page');
- let tagName = searchParams.get('tag');
 
- const navigateToPreviousPage = useCallback((event) => {
-  event.preventDefault();
-  if (window.history.length > 2) {
-    router.back();
-  } else if (window.history.length > 1) {
-    router.push('/blog');
-  } else {
-    const basePath = tagName 
-      ? `/blog/tags/${tagName}`
-      : '/blog';
-    const pagePath = pageNo > 1 
-      ? tagName ? `/${pageNo}` : `/page/${pageNo}`
-      : '';
-    router.push(basePath + pagePath);
+  const navigateToPreviousPage = (event) => {
+    event.preventDefault();
+    if (window.history.length > 2) {
+      router.back();
+    } else {
+      router.push('/blog');
+    }
   }
-}, [router, tagName, pageNo]);
-//   const title = tag.name; 
   return (
       <>
        <Head>
@@ -41,21 +27,21 @@ export default function Index({ posts, tag, pagination }) {
       <div className="blog">
 <div className={"container blog-home-container"}>
   <div className={"posts"}>
-    <button className="d-inline-block btn blog-container__back-btn mb-4" onClick={(event) => navigateToPreviousPage(event)}><MdKeyboardArrowLeft />Back</button>
+    <button className="d-inline-block btn blog-container__back-btn mb-4" onClick={navigateToPreviousPage}><MdKeyboardArrowLeft />Back</button>
     <div className={"post-list"}>
-      {posts?.map((it, i) => (                        
-          <PostItem key={i} post={it} tag={tag} page={pagination?.current} />            
+      {posts?.map((post, index) => (                        
+          <PostItem key={index} post={post} tag={tag} page={pagination?.current} />            
       ))}
     </div>
      <Pagination
         current={pagination?.current}
         pages={pagination?.pages}
         link={{
-          href: () => "/blog/tags/[[...slug]]",
+          href: (page) => `/blog/tags/${tag}?page=${page}`,
           as: (page) =>
             page === 1
-              ? "/blog/tags/" + tag
-              : `/blog/tags/${tag}/${page}`,
+              ? `/blog/tags/${tag}`
+              : `/blog/tags/${tag}?page=${page}`,
         }}
       />
   </div>
@@ -65,57 +51,31 @@ export default function Index({ posts, tag, pagination }) {
   );
 }
 
-export async function getStaticProps({ params }) {
-    let queries = []
-    queries = params.slug;
-  const [slug, page] = [queries[0], queries[1] || 1];
+export async function getServerSideProps({ params, query }) {
+  const queryPage = parseInt(query.page || "1", 10);
+  if (isNaN(queryPage) || queryPage < 1) {
+    return {
+      notFound: true,
+    };
+  }
+  const [slug] = params.slug || [];
+  const page = queryPage;
   const posts = listPostContent(
-    page ? parseInt(page) : 1,
+    page,
     config.posts_per_page,
     slug
   );
   const tag = getTag(slug);
 
   const pagination = {
-    current: page ? parseInt(page) : 1,
+    current: page,
     pages: Math.ceil(countPosts(slug) / config.posts_per_page),
   };
-  const props = {
-    posts,
-    tag,
-    pagination: { current: pagination?.current, pages: pagination?.pages },
-    page,
-  };
-  if (page) {
-    props.page = page;
-  }
   return {
-    props,
+    props: {
+      posts,
+      tag,
+      pagination,
+    },
   };
 }
-
-export async function getStaticPaths() {
-  const paths = listTags().flatMap((tag) => {
-    const pages = Math.ceil(countPosts(tag?.slug) / config.posts_per_page);
-
-    return Array.from(Array(pages).keys()).map((page) =>
-      page === 0
-        ? {
-            params: { slug: [tag?.slug] },
-          }
-        : {
-            params: { slug: [tag?.slug, (page + 1).toString()] },
-          }
-    );
-  });
-  return {
-    paths: paths,
-    fallback: false,
-  };
-}
-
-// module.exports = {
-//   // Index,
-//   getStaticProps,
-//   getStaticPaths,
-// };
