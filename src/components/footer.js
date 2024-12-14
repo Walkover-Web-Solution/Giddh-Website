@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const Footer = (path) => {
   const link = path.path;
+  const isUK = link.isUK;
 
   // Get Current Year
   const date = new Date();
@@ -176,20 +177,24 @@ const Footer = (path) => {
                     <div className="textwidget custom-html-widget">
                       <ul className="footer-list list-unstyled class">
                         <li>
-                          Sales:{" "}
-                          <a href="mailto:sales@giddh.com" className="cf_email">
-                            sales@giddh.com
+                          { isUK ? "Sales/Support: " : "Sales: " }
+                          <a href={`mailto:${isUK ? "hello@giddh.com" : "support@giddh.com"}`} className="cf_email">
+                            { isUK ? "hello@giddh.com" : "sales@giddh.com" }
                           </a>
                         </li>
-                        <li className="mt-3">
-                          Support:{" "}
-                          <a
-                            href="mailto:support@giddh.com"
-                            className="cf_email"
-                          >
-                            support@giddh.com
-                          </a>
-                        </li>
+                        {
+                          !isUK && (
+                          <li className="mt-3">
+                            Support:{" "}
+                            <a
+                              href="mailto:support@giddh.com"
+                              className="cf_email"
+                            >
+                              support@giddh.com
+                            </a>
+                          </li>
+                          )
+                        }
                       </ul>
                       <p className="contact-link mt-3">
                         <a

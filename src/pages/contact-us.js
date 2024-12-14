@@ -35,163 +35,107 @@ const contactUs = (path) => {
         </section>
         <section className="container-fluid contact_us__content">
           <div className="container">
-            <h2 className="col-primary c-fs-1 c-fw-600 text-center mb-5 pb-3">
+            <h2 className={"col-primary c-fs-1 c-fw-600 text-center pb-3" + (isUK ? " mb-3" : " mb-5")}>
               Contact Us
             </h2>
-            {!isUK && (
-              <>
-                <div className="row mt-5 align-items-start row-gap-4">
-                  <div className="col-lg-6 contact_us__form__left contact-details text-center">
-                    <div className="contact-details__wapper d-flex flex-column justify-content-center">
-                      <h3 className="mb-4 col-primary">Sales</h3>
 
-                      <address>
-                        <div className="d-flex align-items-center column-gap-3 mb-3">
-                          <MdEmail />
-                          <a
-                            href="mailto:sales@giddh.com"
-                            className="contact-details__wapper--email"
-                          >
-                            sales@giddh.com
-                          </a>
-                        </div>
-                        <div className="d-flex align-items-center column-gap-3 mb-3">
-                          <MdWhatsapp />
-                          <a href="http://wa.me/+918889500411?text=Hello,+I+need+help">
-                            {" "}
-                            +91 88895 00411
-                          </a>
-                        </div>
-                        <div className="d-flex align-items-center column-gap-3">
-                          <MdCall />
+            <div className={"row align-items-start row-gap-4" + (isUK ? " mb-3" : " mb-5")}>
+              <div className={"contact_us__form__left contact-details text-center" + (isUK ? " col-12" : " col-lg-6")}>
+                <div className="contact-details__wapper d-flex flex-column justify-content-center">
+                  { !isUK && (
+                    <h3 className="mb-4 col-primary">Sales</h3>
+                  )}
 
-                          <a href="tel:+918889500411"> +91 88895 00411</a>
-                        </div>
-                      </address>
-
-                      <button
-                        onClick={() =>
-                          Calendly.initPopupWidget({
-                            url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                          })
-                        }
+                  <address>
+                    <div className="d-flex align-items-center column-gap-3 mb-3">
+                      <MdEmail />
+                      <a
+                        href={`mailto:${isUK ? "hello@giddh.com" : "support@giddh.com"}`}
+                        className="contact-details__wapper--email"
                       >
-                        Schedule a meeting
-                      </button>
-                      <button
-                        data-tf-slider="uOtrQ4tb"
-                        data-tf-position="right"
-                        data-tf-opacity="83"
-                        data-tf-hide-headers
-                        data-tf-iframe-props="title=Accounting Software Company Contact Form"
-                        data-tf-transitive-search-params
-                        data-tf-medium="snippet"
-                        data-tf-hidden={utm}
-                        className="mt-0 mt-lg-2"
-                      >
-                        Contact Sales
-                      </button>
+                        { isUK ? "hello@giddh.com" : "support@giddh.com" }
+                      </a>
                     </div>
-                  </div>
-                  <div className="col-lg-6 contact_us__form__right text-center">
-                    <div className="contact-details__wapper d-flex flex-column justify-content-center">
-                      <h3 className="mb-4 col-primary">Support</h3>
-
-                      <address>
-                        <div className="d-flex align-items-center column-gap-3 mb-3">
-                          <MdEmail />
-                          <a
-                            href="mailto:support@giddh.com"
-                            className="contact-details__wapper--email"
-                          >
-                            support@giddh.com
-                          </a>
-                        </div>
-                        <div className="d-flex align-items-center column-gap-3 mb-3">
-                          <MdWhatsapp />
-                          <a href="http://wa.me/+918889500411?text=Hello,+I+need+help">
-                            {" "}
-                            +91 88895 00411
-                          </a>
-                        </div>
-                        <div className="d-flex align-items-center column-gap-3">
-                          <MdCall />
-                          <a href="tel:+918818888768"> +91 88188 88768</a>
-                        </div>
-                      </address>
-                      <button
-                        onClick={() =>
-                          Calendly.initPopupWidget({
-                            url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                          })
-                        }
-                      >
-                        Schedule a meeting
-                      </button>
+                    <div className="d-flex align-items-center column-gap-3 mb-3">
+                      <MdWhatsapp />
+                      <a href={`http://wa.me/${isUK ? "+447520603143" : "+918889500411"}?text=Hello,+I+need+help`}>
+                         { isUK ? "+44 7520 603143" : "+91 88895 00411"}
+                        </a>
                     </div>
+                    {
+                      !isUK && (
+                      <div className="d-flex align-items-center column-gap-3">
+                        <MdCall />
+
+                        <a href="tel:+918889500411"> +91 88895 00411</a>
+                      </div>
+                    )}
+                  </address>
+
+                  <button
+                    onClick={() =>
+                      Calendly.initPopupWidget({
+                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                      })
+                    }
+                  >
+                    Schedule a meeting
+                  </button>
+                  <button
+                    data-tf-slider="uOtrQ4tb"
+                    data-tf-position="right"
+                    data-tf-opacity="83"
+                    data-tf-hide-headers
+                    data-tf-iframe-props="title=Accounting Software Company Contact Form"
+                    data-tf-transitive-search-params
+                    data-tf-medium="snippet"
+                    data-tf-hidden={utm}
+                    className="mt-0 mt-lg-2"
+                  >
+                    Contact Sales
+                  </button>
+                </div>
+              </div>
+              { !isUK && (
+                <div className="col-lg-6 contact_us__form__right text-center">
+                  <div className="contact-details__wapper d-flex flex-column justify-content-center">
+                    <h3 className="mb-4 col-primary">Support</h3>
+
+                    <address>
+                      <div className="d-flex align-items-center column-gap-3 mb-3">
+                        <MdEmail />
+                        <a
+                          href="mailto:support@giddh.com"
+                          className="contact-details__wapper--email"
+                        >
+                          support@giddh.com
+                        </a>
+                      </div>
+                      <div className="d-flex align-items-center column-gap-3 mb-3">
+                        <MdWhatsapp />
+                        <a href="http://wa.me/+918889500411?text=Hello,+I+need+help">
+                          {" "}
+                          +91 88895 00411
+                        </a>
+                      </div>
+                      <div className="d-flex align-items-center column-gap-3">
+                        <MdCall />
+                        <a href="tel:+918818888768"> +91 88188 88768</a>
+                      </div>
+                    </address>
+                    <button
+                      onClick={() =>
+                        Calendly.initPopupWidget({
+                          url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                        })
+                      }
+                    >
+                      Schedule a meeting
+                    </button>
                   </div>
                 </div>
-              </>
-            )}
-
-            {isUK && (
-              <>
-                <div className="row mt-5 align-items-start row-gap-4">
-                  <div className="col-12 contact_us__form__left contact-details text-center">
-                    <div className="contact-details__wapper d-flex flex-column justify-content-center">
-                      <h3 className="mb-4 col-primary">Sales</h3>
-
-                      <address>
-                        <div className="d-flex align-items-center column-gap-3 mb-3">
-                          <MdEmail />
-                          <a
-                            href="mailto:sales@giddh.com"
-                            className="contact-details__wapper--email"
-                          >
-                            sales@giddh.com
-                          </a>
-                        </div>
-                        <div className="d-flex align-items-center column-gap-3 mb-3">
-                          <MdWhatsapp />
-                          <a href="http://wa.me/+918889500411?text=Hello,+I+need+help">
-                            {" "}
-                            +91 88895 00411
-                          </a>
-                        </div>
-                        <div className="d-flex align-items-center column-gap-3">
-                          <MdCall />
-
-                          <a href="tel:+918889500411"> +91 88895 00411</a>
-                        </div>
-                      </address>
-
-                      <button
-                        onClick={() =>
-                          Calendly.initPopupWidget({
-                            url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                          })
-                        }
-                      >
-                        Schedule a meeting
-                      </button>
-                      <button
-                        data-tf-slider="uOtrQ4tb"
-                        data-tf-position="right"
-                        data-tf-opacity="83"
-                        data-tf-hide-headers
-                        data-tf-iframe-props="title=Accounting Software Company Contact Form"
-                        data-tf-transitive-search-params
-                        data-tf-medium="snippet"
-                        data-tf-hidden={utm}
-                        className="mt-0 mt-lg-2"
-                      >
-                        Contact Sales
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </>
-            )}
+              )}
+            </div>
           </div>
         </section>
       </div>
