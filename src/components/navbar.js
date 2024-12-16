@@ -20,6 +20,7 @@ const navbar = (props) => {
   let activePath = pathname.split("/");
   activePath = activePath[activePath.length - 1];
   const [scrollStatus, setscrollStatus] = useState(false);
+  const [showTrustpilot, setShowTrustpilot] = useState(false);
 
   function getCountryWiseData(data) {
     if (link.isGlobal) {
@@ -76,6 +77,7 @@ const navbar = (props) => {
     } else {
       setscrollStatus(true);
     }
+    setShowTrustpilot(true);
 
     return () => {
       window.removeEventListener("scroll", onScroll, { passive: true });
@@ -184,7 +186,7 @@ const navbar = (props) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
-              { link.isUK && (
+              { showTrustpilot && link.isUK && (
                 <li className="nav-item">
                     <span 
                       className="trustpilot-widget d-block" 
@@ -194,7 +196,7 @@ const navbar = (props) => {
                       data-style-height="38px" 
                       data-style-width="224px"
                     >
-                      <a href="https://uk.trustpilot.com/review/giddh.com" target="_blank" rel="noopener">
+                      <a href="https://uk.trustpilot.com/review/giddh.com" target="_blank" rel="noopener noreferrer">
                       </a>
                     </span>
                 </li>
