@@ -1,8 +1,11 @@
 import { MdEmail, MdCall, MdWhatsapp } from "react-icons/md";
 import { useEffect, useState } from "react";
 
-const contactUs = () => {
+const contactUs = (path) => {
   const [utm, setUtm] = useState(null);
+  const linkPath = path.path;
+  const isUK = linkPath.isUK;
+
   useEffect(() => {
     var utmParams =
       "utm_source=" +
@@ -32,37 +35,41 @@ const contactUs = () => {
         </section>
         <section className="container-fluid contact_us__content">
           <div className="container">
-            <h2 className="col-primary c-fs-1 c-fw-600 text-center mb-5 pb-3">
+            <h2 className={"col-primary c-fs-1 c-fw-600 text-center pb-3" + (isUK ? " mb-3" : " mb-5")}>
               Contact Us
             </h2>
 
-            <div className="row mt-5 align-items-start row-gap-4">
-              <div className="col-lg-6 contact_us__form__left contact-details text-center">
+            <div className={"row align-items-start row-gap-4" + (isUK ? " mb-3" : " mb-5")}>
+              <div className={"contact_us__form__left contact-details text-center" + (isUK ? " col-12" : " col-lg-6")}>
                 <div className="contact-details__wapper d-flex flex-column justify-content-center">
-                  <h3 className="mb-4 col-primary">Sales</h3>
+                  { !isUK && (
+                    <h3 className="mb-4 col-primary">Sales</h3>
+                  )}
 
                   <address>
                     <div className="d-flex align-items-center column-gap-3 mb-3">
                       <MdEmail />
                       <a
-                        href="mailto:sales@giddh.com"
+                        href={`mailto:${isUK ? "hello@giddh.com" : "support@giddh.com"}`}
                         className="contact-details__wapper--email"
                       >
-                        sales@giddh.com
+                        { isUK ? "hello@giddh.com" : "support@giddh.com" }
                       </a>
                     </div>
                     <div className="d-flex align-items-center column-gap-3 mb-3">
                       <MdWhatsapp />
-                      <a href="http://wa.me/+918889500411?text=Hello,+I+need+help">
-                        {" "}
-                        +91 88895 00411
-                      </a>
+                      <a href={`http://wa.me/${isUK ? "+447520603143" : "+918889500411"}?text=Hello,+I+need+help`}>
+                         { isUK ? "+44 7520 603143" : "+91 88895 00411"}
+                        </a>
                     </div>
-                    <div className="d-flex align-items-center column-gap-3">
-                      <MdCall />
+                    {
+                      !isUK && (
+                      <div className="d-flex align-items-center column-gap-3">
+                        <MdCall />
 
-                      <a href="tel:+918889500411"> +91 88895 00411</a>
-                    </div>
+                        <a href="tel:+918889500411"> +91 88895 00411</a>
+                      </div>
+                    )}
                   </address>
 
                   <button
@@ -89,43 +96,45 @@ const contactUs = () => {
                   </button>
                 </div>
               </div>
-              <div className="col-lg-6 contact_us__form__right text-center">
-                <div className="contact-details__wapper d-flex flex-column justify-content-center">
-                  <h3 className="mb-4 col-primary">Support</h3>
+              { !isUK && (
+                <div className="col-lg-6 contact_us__form__right text-center">
+                  <div className="contact-details__wapper d-flex flex-column justify-content-center">
+                    <h3 className="mb-4 col-primary">Support</h3>
 
-                  <address>
-                    <div className="d-flex align-items-center column-gap-3 mb-3">
-                      <MdEmail />
-                      <a
-                        href="mailto:support@giddh.com"
-                        className="contact-details__wapper--email"
-                      >
-                        support@giddh.com
-                      </a>
-                    </div>
-                    <div className="d-flex align-items-center column-gap-3 mb-3">
-                      <MdWhatsapp />
-                      <a href="http://wa.me/+918889500411?text=Hello,+I+need+help">
-                        {" "}
-                        +91 88895 00411
-                      </a>
-                    </div>
-                    <div className="d-flex align-items-center column-gap-3">
-                      <MdCall />
-                      <a href="tel:+918818888768"> +91 88188 88768</a>
-                    </div>
-                  </address>
-                  <button
-                    onClick={() =>
-                      Calendly.initPopupWidget({
-                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                      })
-                    }
-                  >
-                    Schedule a meeting
-                  </button>
+                    <address>
+                      <div className="d-flex align-items-center column-gap-3 mb-3">
+                        <MdEmail />
+                        <a
+                          href="mailto:support@giddh.com"
+                          className="contact-details__wapper--email"
+                        >
+                          support@giddh.com
+                        </a>
+                      </div>
+                      <div className="d-flex align-items-center column-gap-3 mb-3">
+                        <MdWhatsapp />
+                        <a href="http://wa.me/+918889500411?text=Hello,+I+need+help">
+                          {" "}
+                          +91 88895 00411
+                        </a>
+                      </div>
+                      <div className="d-flex align-items-center column-gap-3">
+                        <MdCall />
+                        <a href="tel:+918818888768"> +91 88188 88768</a>
+                      </div>
+                    </address>
+                    <button
+                      onClick={() =>
+                        Calendly.initPopupWidget({
+                          url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                        })
+                      }
+                    >
+                      Schedule a meeting
+                    </button>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </section>

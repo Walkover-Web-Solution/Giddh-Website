@@ -1,5 +1,6 @@
 import { useEffect, useCallback, useState } from "react";
 import Jsondata from "../data/data.json";
+
 const navbar = (props) => {
   const link = props.path;
   const pathname = props.browserPath;
@@ -185,8 +186,8 @@ const navbar = (props) => {
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
               { link.isUK && (
                 <li className="nav-item">
-                    <div 
-                      className="trustpilot-widget" 
+                    <span 
+                      className="trustpilot-widget d-block" 
                       data-locale="en-GB" 
                       data-template-id="56278e9abfbbba0bdcd568bc" 
                       data-businessunit-id="65d30a42565b997046d9df08" 
@@ -195,7 +196,7 @@ const navbar = (props) => {
                     >
                       <a href="https://uk.trustpilot.com/review/giddh.com" target="_blank" rel="noopener">
                       </a>
-                    </div>
+                    </span>
                 </li>
               )}
               <li className="nav-item">
