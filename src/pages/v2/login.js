@@ -78,12 +78,7 @@ const v2Login = (path) => {
             setShowVerificationModal(true);
           } else {
             setGiddhSession(response.body.session.id);
-            window.location =
-              (isUK
-                ? process.env.NEXT_PUBLIC_UK_API_URL
-                : process.env.NEXT_PUBLIC_API_URL) +
-              "/token-verify?token=" +
-              result.accessToken;
+              window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + result.accessToken;
           }
         } else {
           showToaster(response.message, "error");
@@ -118,12 +113,10 @@ const v2Login = (path) => {
               setShowVerificationModal(true);
             } else {
               setGiddhSession(response.body.session.id);
-              window.location =
-                (isUK
-                  ? process.env.NEXT_PUBLIC_UK_API_URL
-                  : process.env.NEXT_PUBLIC_API_URL) +
-                "/token-verify?request=" +
-                response.body.session.id;
+             window.location =
+               process.env.NEXT_PUBLIC_APP_URL +
+               "/token-verify?request=" +
+               response.body.session.id;
             }
           } else {
             setAuthLoginInProgress(false);
@@ -162,9 +155,7 @@ const v2Login = (path) => {
           } else {
             setGiddhSession(response.body.session.id);
             window.location =
-              (isUK
-                ? process.env.NEXT_PUBLIC_UK_API_URL
-                : process.env.NEXT_PUBLIC_API_URL) +
+              process.env.NEXT_PUBLIC_APP_URL +
               "/token-verify?request=" +
               response.body.session.id;
           }
@@ -178,12 +169,10 @@ const v2Login = (path) => {
 
   function otpVerifyCallback(response) {
     setGiddhSession(response.session.id);
-    window.location =
-      (isUK
-        ? process.env.NEXT_PUBLIC_UK_API_URL
-        : process.env.NEXT_PUBLIC_API_URL) +
-      "/token-verify?request=" +
-      response.session.id;
+        window.location =
+          process.env.NEXT_PUBLIC_APP_URL +
+          "/token-verify?request=" +
+          response.session.id;
   }
 
   function showToaster(message, type) {
