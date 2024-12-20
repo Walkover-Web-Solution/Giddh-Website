@@ -39,7 +39,7 @@ const trustBadge = () => {
             className="position-relative w-100 bg-white mx-auto pb-3"
             style={{
               borderRadius: "10px",
-              minHeight: "180px",
+              minHeight: "180px"
             }}
           >
             <div
@@ -47,7 +47,7 @@ const trustBadge = () => {
               style={{
                 padding: "0px 5px 10px 5px",
                 letterSpacing: "8px",
-                lineHeight: 1.3,
+                lineHeight: 1.3
               }}
             >
               <div style={{ height: "58px" }}>
