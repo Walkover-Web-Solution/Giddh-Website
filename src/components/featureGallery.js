@@ -22,8 +22,10 @@ const featureGallery = (path) => {
       <>
         <section className="container-fluid feature-gallery">
           <div className="container">
-            { link.isUK && <TrustBadge /> }
-            <div className="row mt-3">
+            <div className="mb-3">
+              { link.isUK && <TrustBadge /> }
+            </div>
+            <div className="row">
               <div className="feature-gallery__title text-center mb-3">
                 <h3>Features that empower your business accounting</h3>
               </div>
