@@ -1,116 +1,112 @@
-.trust-badge {
-  padding: 5rem 0 7rem 0;
+.trust-badge-logo-container-item {
+  padding: 25px 50px;
+}
 
-  .trust-badge-logo-container-item {
-    padding: 25px 50px;
+.trust-badge-vertical-center {
+  height: inherit;
+
+  img {
+    &.trust-badge-news-logo {
+      max-width: 100px;
+      max-height: 66px;
+      min-width: 50px;
+      min-height: 14px;
+      margin: 7px 10px;
+    }
+  }
+}
+
+.trust-badge-title {
+  &:before,
+  &:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #d8d8d8;
+    margin: auto;
+    width: 27%;
+    display: block;
+    position: relative;
   }
 
-  .trust-badge-vertical-center {
-    height: inherit;
+  &:before {
+    margin-left: 30px;
+    top: 12px;
+  }
 
-    img {
-      &.trust-badge-news-logo {
-        max-width: 100px;
-        max-height: 66px;
-        min-width: 50px;
-        min-height: 14px;
-        margin: 7px 10px;
-      }
-    }
+  &:after {
+    margin-right: 30px;
+    top: -13px;
+  }
+}
+.trust-badge-leaf {
+  z-index: 0;
+  opacity: 0.2;
+  height: 110px;
+}
+
+@media screen and (min-width: 585px) {
+  .trust-badge-logo-container {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 584px) {
+  .trust-badge-news-logo {
+    max-width: 70px !important;
   }
 
   .trust-badge-title {
+    font-size: var(--c-fs-5, 16px);
+    top: -5px;
+    letter-spacing: 6px;
+    z-index: 1;
+    padding: 0 20px;
+    color: #0e0e0e;
+
     &:before,
     &:after {
-      content: "";
-      flex: 1 1;
-      border-bottom: 1px solid #d8d8d8;
-      margin: auto;
-      width: 27%;
-      display: block;
-      position: relative;
-    }
-
-    &:before {
-      margin-left: 30px;
-      top: 12px;
-    }
-
-    &:after {
-      margin-right: 30px;
-      top: -13px;
+      border-bottom: none !important;
     }
   }
+
   .trust-badge-leaf {
-    z-index: 0;
-    opacity: 0.2;
-    height: 110px;
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .trust-badge-title-hr {
+    display: none !important;
   }
 
-  @media screen and (min-width: 585px) {
-    .trust-badge-logo-container {
-      padding: 0 20px;
-    }
+  .trust-badge-title {
+    font-size: 14px;
+    padding: 0 !important;
   }
 
-  @media screen and (max-width: 584px) {
-    .trust-badge-news-logo {
-      max-width: 70px !important;
-    }
-
-    .trust-badge-title {
-      font-size: var(--c-fs-5, 16px);
-      top: -5px;
-      letter-spacing: 6px;
-      z-index: 1;
-      padding: 0 20px;
-      color: #0e0e0e;
-
-      &:before,
-      &:after {
-        border-bottom: none !important;
-      }
-    }
-
-    .trust-badge-leaf {
-      display: none !important;
-    }
+  .trust-badge-footer {
+    font-size: 11px !important;
+    margin: 20px 0 25px 0 !important;
+    letter-spacing: 2px !important;
   }
 
-  @media screen and (max-width: 340px) {
-    .trust-badge-title-hr {
-      display: none !important;
-    }
-
-    .trust-badge-title {
-      font-size: 14px;
-      padding: 0 !important;
-    }
-
-    .trust-badge-footer {
-      font-size: 11px !important;
-      margin: 20px 0 25px 0 !important;
-      letter-spacing: 2px !important;
-    }
-
-    .trust-badge-news-logo {
-      max-width: 50px !important;
-    }
+  .trust-badge-news-logo {
+    max-width: 50px !important;
   }
+}
 
-  .trust-badge-logo-container {
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-  }
+.trust-badge-logo-container {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
 
-  .trust-badge-newslogos {
-    display: inline-block;
-    position: relative;
-  }
+.trust-badge-newslogos {
+  display: inline-block;
+  position: relative;
 }

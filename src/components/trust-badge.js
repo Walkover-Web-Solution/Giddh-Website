@@ -33,65 +33,61 @@ const trustBadge = () => {
   ];
 
   return (
-      <section className="container-fluid trust-badge">
-        <div className="container">
-          <div
-            className="position-relative w-100 bg-white mx-auto pb-3"
-            style={{
-              borderRadius: "10px",
-              minHeight: "180px"
-            }}
-          >
-            <div
-              className="text-center c-fs-4 c-fw-600"
-              style={{
-                padding: "0px 5px 10px 5px",
-                letterSpacing: "8px",
-                lineHeight: 1.3
-              }}
-            >
-              <div style={{ height: "58px" }}>
-                <span className="trust-badge-title position-relative m-0 c-fs-5">
-                  AS SEEN ON
-                </span>
-              </div>
-              <div className="trust-badge-logo-container">
-                <img
-                  className="trust-badge-leaf position-absolute m-0 p-0"
-                  alt="Trust Reef"
-                  style={{ left: "25px" }}
-                  src="img/trust-badge/wheat-frame-left.svg"
-                />
-                <img
-                  className="trust-badge-leaf position-absolute m-0 p-0"
-                  alt="Trust Reef"
-                  style={{ transform: "scaleX(-1)", right: "25px" }}
-                  src="/img/trust-badge/wheat-frame-left.svg"
-                />
-                <div className="trust-badge-logo-container-item h-auto w-100 position-relative">
-                  <div className="trust-badge-vertical-center d-flex align-content-center justify-content-center align-items-center flex-wrap flex-row">
-                    {trustBadgeBrands.map((logo, index) => (
-                      <a
-                        key={index}
-                        href={logo.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="trust-badge-newslogos"
-                      >
-                        <img
-                          alt={logo.alt}
-                          className="trust-badge-news-logo me-4 h-auto w-auto overflow-visible"
-                          src={logo.src}
-                        />
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
+    <div
+      className="position-relative w-100 mx-auto pb-3"
+      style={{
+        borderRadius: "10px",
+        minHeight: "180px"
+      }}
+    >
+      <div
+        className="text-center c-fs-4 c-fw-600"
+        style={{
+          padding: "0px 5px 10px 5px",
+          letterSpacing: "8px",
+          lineHeight: 1.3
+        }}
+      >
+        <div style={{ height: "58px" }}>
+          <span className="trust-badge-title position-relative m-0 c-fs-5">
+            AS SEEN ON
+          </span>
+        </div>
+        <div className="trust-badge-logo-container">
+          <img
+            className="trust-badge-leaf position-absolute m-0 p-0"
+            alt="Trust Reef"
+            style={{ left: "25px" }}
+            src="img/trust-badge/wheat-frame-left.svg"
+          />
+          <img
+            className="trust-badge-leaf position-absolute m-0 p-0"
+            alt="Trust Reef"
+            style={{ transform: "scaleX(-1)", right: "25px" }}
+            src="/img/trust-badge/wheat-frame-left.svg"
+          />
+          <div className="trust-badge-logo-container-item h-auto w-100 position-relative">
+            <div className="trust-badge-vertical-center d-flex align-content-center justify-content-center align-items-center flex-wrap flex-row">
+              {trustBadgeBrands.map((logo, index) => (
+                <a
+                  key={index}
+                  href={logo.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="trust-badge-newslogos"
+                >
+                  <img
+                    alt={logo.alt}
+                    className="trust-badge-news-logo me-4 h-auto w-auto overflow-visible"
+                    src={logo.src}
+                  />
+                </a>
+              ))}
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
   );
 };
 
