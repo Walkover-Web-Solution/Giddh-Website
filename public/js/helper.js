@@ -75,7 +75,12 @@ function addOtpWidgetScript(exposeMethods, callbackFunction, widgetLoadCallbackF
 }
 
 function getLocalStorage(key) {
-    return (window.localStorage.getItem(key)) ? JSON.parse(window.localStorage.getItem(key)) : "";
+  const item = window.localStorage.getItem(key);
+  try {
+    return item ? JSON.parse(item) : "";
+  } catch {
+    return item || "";
+  }
 }
 
 function setLocalStorage(key, value) {
