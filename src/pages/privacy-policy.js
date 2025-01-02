@@ -25,9 +25,9 @@ const privacyPolicy = (path) => {
                 regularly and your continued access to or use of the website
                 will mean that you agree to the changes.
               </p>
-              <h3 className="mb-4 c-fs-3 c-fw-400 privacy2">
+              <h2 className="mb-4 c-fs-3 c-fw-400 privacy2">
                 You own Your Data{" "}
-              </h3>
+              </h2>
               <p className="mb-4 c-fs-5">
                 Giddh is an{" "}
                 <a href={ "https://giddh.com" + link } title="Accounting Software">online Accounting Software</a>{" "}

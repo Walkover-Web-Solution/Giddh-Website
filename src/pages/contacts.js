@@ -14,11 +14,11 @@ const contacts = (path) => {
                 <h1 className="heading col-primary c-fw-600 mb-4">
                   Elevate productivity by accessing your business contacts.
                 </h1>
-                <p className="col-grey c-fs-3 mb-5">
+                <h2 className="col-grey c-fs-3 mb-5 lh-base">
                   All the information you have stored about your customers –
                   their transaction history, balance to be paid or received,
                   personal info and so on.
-                </p>
+                </h2>
                 <div className="features__heading_container__links">
                   <a
                     href="#"

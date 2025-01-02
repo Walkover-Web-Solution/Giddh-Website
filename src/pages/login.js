@@ -182,7 +182,7 @@ const logIn = (path) => {
             </a>
             <h1>Welcome back!</h1>
             <div className="entry__right_section__container__entry_with mb-4">
-              <span className="d-inline-block mb-4">Login with</span>
+              <h2 className="d-inline-block mb-4 c-fw-400 c-fs-5">Login with</h2>
 
               <div className="d-flex align-items-center">
                 <GoogleLogin googleApiSuccessCallback={initiateLogin} />
