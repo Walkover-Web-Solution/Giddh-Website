@@ -6,13 +6,16 @@ const bannerSection = (path) => {
   const [utm, setUtm] = useState(null);
 
   useEffect(() => {
-    const utmParams = new URLSearchParams({
-      utm_source: getLocalStorage("utm_source"),
-      utm_medium: getLocalStorage("utm_medium"),
-      utm_campaign: getLocalStorage("utm_campaign"),
-    }).toString();
+    var utmParams =
+      "utm_source=" +
+      getLocalStorage("utm_source") +
+      ",utm_medium=" +
+      getLocalStorage("utm_medium") +
+      ",utm_campaign=" +
+      getLocalStorage("utm_campaign") +
+      "";
     setUtm(utmParams);
-  }, []);
+  });
 
   return (
     <>
