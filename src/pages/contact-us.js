@@ -29,6 +29,9 @@ const contactUs = (path) => {
       },
       transitiveSearchParams: true, // Pass search params to Typeform
       medium: "snippet", // Set the medium for analytics/tracking
+      hidden: {
+        utm: utm // Pass the UTM parameters as hidden fields
+      },
     });
 
     slider.open(); // Opens the slider
