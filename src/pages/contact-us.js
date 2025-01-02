@@ -20,7 +20,7 @@ const contactUs = (path) => {
     document.body.appendChild(script);
   }, []);
 
-  const handleTypeformClick = () => {
+  const openTypeForm = () => {
     const slider = createSlider("https://form.typeform.com/to/uOtrQ4tb", {
       position: "right", // Specify position ('left', 'center', 'right')
       opacity: 83, // Background overlay opacity
@@ -33,7 +33,6 @@ const contactUs = (path) => {
         utm: utm // Pass the UTM parameters as hidden fields
       },
     });
-
     slider.open(); // Opens the slider
   };
   return (
@@ -117,7 +116,7 @@ const contactUs = (path) => {
                     Schedule a meeting
                   </button>
                   <button
-                    onClick={handleTypeformClick}
+                    onClick={openTypeForm}
                     className="mt-0 mt-lg-2"
                   >
                     Contact Sales

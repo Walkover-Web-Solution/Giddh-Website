@@ -19,7 +19,7 @@ const bannerSection = (path) => {
     document.body.appendChild(script);
   }, []);
 
-  const handleTypeformClick = () => {
+  const openTypeForm = () => {
     const slider = createSlider("https://form.typeform.com/to/uOtrQ4tb", {
       position: "right", // Specify position ('left', 'center', 'right')
       opacity: 83, // Background overlay opacity
@@ -32,7 +32,6 @@ const bannerSection = (path) => {
         utm: utm // Pass the UTM parameters as hidden fields
       },
     });
-
     slider.open(); // Opens the slider
   };
   return (
@@ -50,7 +49,7 @@ const bannerSection = (path) => {
                   "Cloud-based Accounting Software For UAE Businesses"}
               </h1>
               <div className="banner__contact_btn mt-5">
-                <button onClick={handleTypeformClick}>Contact Sales</button>
+                <button onClick={openTypeForm}>Contact Sales</button>
               </div>
             </div>
             <div className="col-lg-6 col-md-12">
