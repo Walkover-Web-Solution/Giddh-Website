@@ -45,7 +45,7 @@ const Footer = (path) => {
       <footer>
         <div className="container">
           <div className="row row-gap-4">
-            <div className="col-xl-3 col-lg-6 col-md-12">
+            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
               <div className="d-flex">
                 <div className="d-flex flex-column gap-3 text-dark">
                   <h3 className="c-fs-4 c-fw-600">Quick Links</h3>
@@ -88,7 +88,7 @@ const Footer = (path) => {
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-6 col-md-12">
+            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
               <div className="d-flex flex-column gap-3">
                 <h3 className="c-fs-4 c-fw-600">Compare</h3>
                 <ul className="footer-list list-unstyled mb-3">
@@ -106,7 +106,7 @@ const Footer = (path) => {
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-6 col-md-12">
+            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
               <div className="d-flex flex-column gap-3">
                 <h3 className="c-fs-4 c-fw-600">Download</h3>
                 <div>
@@ -163,7 +163,7 @@ const Footer = (path) => {
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-6 col-md-12">
+            <div className="col-xl-3 col-lg-6 col-md-6 col-sm-6">
               <h3
                 className="list-unstyled d-flex flex-column gap-2 c-fs-4 c-fw-600"
                 id="footer-contact"
