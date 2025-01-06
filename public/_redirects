@@ -766,13 +766,13 @@ http://shopify.giddh.com/* /
 /icici-integration /in/bank-integration
 /in/icici-integration /in/bank-integration
 /var/task/_posts/blog/how-can-inventory-management-software-benefit-business.mdx /blog
-var/task/_posts/blog/features-every-online-accounting-software-should-have.mdx  /
+var/task/_posts/blog/features-every-online-accounting-software-should-have.mdx  /blog
 /billing.php /
 /login.php?p=login /login
 /login.php?p=signup /signup
 /blog/free-business-accounting-software-for-uk-vat-fillingMaximizing /blog
 /blog/3-most-common-invoicing-mistakes-you-might-be-making-and-their-fixes/feed/ /blog/3-most-common-invoicing-mistakes-you-might-be-making-and-their-fixes
-/opt/build/repo/_posts/blog/free-business-accounting-software-for-uk-vat-filling.mdx /
+/opt/build/repo/_posts/blog/free-business-accounting-software-for-uk-vat-filling.mdx /blog
 /blog/schools-in-india-must-opt-for-cloud-based-accounting-software/feed/ /blog/schools-in-india-must-opt-for-cloud-based-accounting-software
 /blog/lessons-you-should-learn-before-some-mishap-occurs/feed/ /blog/lessons-you-should-learn-before-some-mishap-occurs
 
@@ -889,7 +889,7 @@ http://shopify.giddh.com/docs/shop-coolant/ /
 http://shopify.giddh.com/docs/shop-generator/ /
 http://shopify.giddh.com/docs/shop-salep-dan-krim /
 http://shopify.giddh.com/docs/shop-Sabun-Batang /
-# http://shopify.giddh.com/docs/shop-boy's-muslim-wear  /
+http://shopify.giddh.com/docs/shop-boys-muslim-wear  /
 http://shopify.giddh.com/docs/shop-Sabun-Cair    /
 http://shopify.giddh.com/docs/jual-hoodie-pria/ /
 http://shopify.giddh.com/docs/jual-baju-kurung-wanita/ /
@@ -1445,7 +1445,7 @@ http://shopify.giddh.com/docs/beli-suplemen-kecantikan /
 http://shopify.giddh.com/docs/beli-furnitur/ /
 http://shopify.giddh.com/docs/jual-perlengkapan-kesehatan-seksual/ /
 http://shopify.giddh.com/docs/Kebun & Luar Ruangan/ / 
-# http://shopify.giddh.com/docs/shop-boy's-muslimin-pants /
+http://shopify.giddh.com/docs/shop-boys-muslimin-pants /
 http://shopify.giddh.com/docs/sepak-takraw/ /
 http://shopify.giddh.com/docs/shop-elektronik/ /
 http://shopify.giddh.com/docs/penerangan/ /
@@ -1644,7 +1644,7 @@ http://shopifytest.giddh.com/plugin/ /
 /uk/hrf_faq/does-the-giddh-software-support-multiple-users/ /uk
 /dictionary/knowledge-meaning-in-hindi/ /
 /blog/who-are-proficient-accountants-in-accounting/feed/ /blog/who-are-proficient-accountants-in-accounting
-/opt/build/repo/_posts/blog/things-to-keep-in-mind-before-closing-2013-financial-books.mdx /
+/opt/build/repo/_posts/blog/things-to-keep-in-mind-before-closing-2013-financial-books.mdx /blog
 /help/inventory /help
 http://shopify.giddh.com/bmc/video-london-v-toulouse-liv.6.html /
 https://bank.giddh.com/ /
