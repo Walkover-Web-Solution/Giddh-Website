@@ -1,10 +1,25 @@
 import { MdEmail, MdCall, MdWhatsapp } from "react-icons/md";
 import { useEffect, useState } from "react";
+import Head from 'next/head';
+import Jsondata from '../data/schema/organizationSchema.json';
 
 const contactUs = (path) => {
   const [utm, setUtm] = useState(null);
   const linkPath = path.path;
   const isUK = linkPath.isUK;
+
+  const schemaForUK = Jsondata.organizationSchema;
+
+  const getSchemaForLinkPath = (linkPath, data) => {
+    const activeKey = Object.keys(linkPath).find((key) => linkPath[key] === true);
+    if (!activeKey) return null; 
+  
+    const countryData = data.find((item) => item[activeKey]);
+    return countryData ? countryData.schema : null;
+  };
+  
+  const selectedSchema = getSchemaForLinkPath(linkPath, schemaForUK);
+  // console.log(selectedSchema, 'schema')
 
   useEffect(() => {
     var utmParams =
@@ -20,6 +35,14 @@ const contactUs = (path) => {
 
   return (
     <>
+    {isUK && (
+        <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(selectedSchema) }}
+          />
+      </Head>
+    )}
       <div className="contact_us">
         <section className="container-fluid contact_us__banner">
           <div className="container">

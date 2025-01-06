@@ -1,9 +1,25 @@
 import { useEffect, useState } from "react";
+import Head from 'next/head';
+import Jsondata from '../data/schema/organizationSchema.json';
 
 const bannerSection = (path) => {
   const link = path.path;
+  const isUK = link.isUK;
 
   const [utm, setUtm] = useState(null);
+  const schemaForUK = Jsondata.organizationSchema;
+
+  const getSchemaForLinkPath = (link, data) => {
+    
+    const activeKey = Object.keys(link).find((key) => link[key] === true);
+    if (!activeKey) return null; 
+
+    const countryData = data.find((item) => item[activeKey]);
+    return countryData ? countryData.schema : null;
+  };
+  
+  const selectedSchema = getSchemaForLinkPath(link, schemaForUK);
+
 
   useEffect(() => {
     var utmParams =
@@ -16,9 +32,17 @@ const bannerSection = (path) => {
       "";
     setUtm(utmParams);
   });
-
+   
   return (
     <>
+    {isUK && (
+       <Head>
+       <script
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{ __html: JSON.stringify(selectedSchema) }}
+       />
+     </Head>
+    )}
       <section className="container-fluid banner">
         <div className="container-lg">
           <div className="row h-100 align-items-xl-start align-items-lg-center">
