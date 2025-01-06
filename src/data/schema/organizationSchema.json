@@ -6,7 +6,7 @@
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "GIDDH Books",
-                "url": "https://giddh.com/",
+                "url": "https://giddh.com/uk/",
                 "address": [
                     {
                         "@type": "PostalAddress",
@@ -38,7 +38,6 @@
                 ]
             }
         },
-
         {
             "isGlobal": true,
             "schema": {
@@ -77,14 +76,13 @@
                 ]
             }
         },
-
         {
             "isAE": true,
             "schema": {
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "GIDDH Books",
-                "url": "https://giddh.com/",
+                "url": "https://giddh.com/ae/",
                 "address": [
                     {
                         "@type": "PostalAddress",
@@ -116,14 +114,13 @@
                 ]
             }
         },
-
         {
             "isIndia": true,
             "schema": {
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 "name": "GIDDH Books",
-                "url": "https://giddh.com/",
+                "url": "https://giddh.com/in/",
                 "address": [
                     {
                         "@type": "Walkover Web Solutions Private Limited",
