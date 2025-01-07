@@ -14,7 +14,7 @@ const contactUs = (path) => {
         utm_campaign: getLocalStorage("utm_campaign"),
       }).toString();
       setUtm(utmParams);
-    }, []);
+    }, [utm]);
 
    const openTypeForm = () => {
      const slider = createSlider("https://form.typeform.com/to/uOtrQ4tb", {
