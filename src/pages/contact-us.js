@@ -1,11 +1,15 @@
 import { MdEmail, MdCall, MdWhatsapp } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { createSlider } from "@typeform/embed";
+import Head from 'next/head';
+import Jsondata from '../data/schema/organizationSchema.json';
+import { getSchemaForLinkPath } from '../../public/js/utils';
 
 const contactUs = (path) => {
   const [utm, setUtm] = useState(null);
   const linkPath = path.path;
   const isUK = linkPath.isUK;
+  const selectedSchema = getSchemaForLinkPath(linkPath, Jsondata.organizationSchema);
 
     useEffect(() => {
       const utmParams = new URLSearchParams({
@@ -34,6 +38,14 @@ const contactUs = (path) => {
 
   return (
     <>
+    {selectedSchema && (
+        <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(selectedSchema) }}
+          />
+      </Head>
+    )}
       <div className="contact_us">
         <section className="container-fluid contact_us__banner">
           <div className="container">

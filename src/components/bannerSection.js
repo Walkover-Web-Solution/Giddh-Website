@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import { createSlider } from "@typeform/embed";
+import Head from 'next/head';
+import Jsondata from '../data/schema/organizationSchema.json';
+import { getSchemaForLinkPath } from '../../public/js/utils';
+
 const bannerSection = (path) => {
   const link = path.path;
-
   const [utm, setUtm] = useState(null);
+  const selectedSchema = getSchemaForLinkPath(link, Jsondata.organizationSchema);
 
  useEffect(() => {
    const utmParams = new URLSearchParams({
@@ -32,6 +36,14 @@ const bannerSection = (path) => {
 
   return (
     <>
+    {selectedSchema && (
+       <Head>
+       <script
+         type="application/ld+json"
+         dangerouslySetInnerHTML={{ __html: JSON.stringify(selectedSchema) }}
+       />
+     </Head>
+    )}
       <section className="container-fluid banner">
         <div className="container-lg">
           <div className="row h-100 align-items-xl-start align-items-lg-center">
