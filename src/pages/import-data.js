@@ -37,7 +37,8 @@ const importExeclFiles = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/import-banner.svg"
-                    width="90%"
+                    width="400"
+                    height="300"
                     alt="import-banner-icon"
                   />
                  <img

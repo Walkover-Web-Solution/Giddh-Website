@@ -141,6 +141,8 @@ const affiliate = (path) => {
                       className="img-fluid mb-4 mb-lg-0"
                       src="/img/affilate/graph.webp"
                       alt="Reliable Tracking Icon"
+                      width="600"
+                      height="300"
                     />
                   </div>
                   <div className="col-lg-6 col-md-12 order-1">
@@ -172,6 +174,8 @@ const affiliate = (path) => {
                       className="img-fluid mb-4 mb-lg-0"
                       src="/img/affilate/affiliate_manager.webp"
                       alt="Dedicated Affiliate Manager Banner Image"
+                      width="600"
+                      height="300"
                     />
                   </div>
                   <div className="col-lg-6 col-md-12 order-lg-0 order-1">
@@ -209,6 +213,8 @@ const affiliate = (path) => {
                       className="img-fluid mb-4 mb-lg-0"
                       src="/img/affilate/newsletter.webp"
                       alt="Affiliate Newsletter Banner Image"
+                      width="600"
+                      height="300"
                     />
                   </div>
                   <div className="col-lg-6 col-md-12 order-1">

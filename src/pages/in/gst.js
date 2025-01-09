@@ -162,10 +162,12 @@ const gst = (path) => {
                 <h3>GST Return Collaborators</h3>
               </div>
               <div className="col text-center">
-                <img src="/img/Jio-GST.webp" alt="JIO GST Icon" />
+                <img width="200" height="70" src="/img/Jio-GST.webp" alt="JIO GST Icon" />
               </div>
               <div className="col">
                 <img
+                  width="400" 
+                  height="70"
                   className="tax-return__wrapper__large_img"
                   src="/img/GST.webp" alt="GST Icon"
                 />

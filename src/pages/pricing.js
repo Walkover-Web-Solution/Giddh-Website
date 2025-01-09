@@ -122,6 +122,7 @@ const pricing = (path) => {
                   <img
                     src="/img/popular-plan.webp"
                     width="70px"
+                    height="70px"
                     alt="popular plan tag"
                   />
                 </span>
@@ -170,6 +171,7 @@ const pricing = (path) => {
                   <img
                     src="/img/popular-plan.webp"
                     width="70px"
+                    height="70px"
                     alt="popular plan tag"
                   />
                 </span>
@@ -3691,6 +3693,8 @@ const pricing = (path) => {
                   src="/img/giddh-login-page.svg"
                   className="img-fluid"
                   alt="giddh-login-page image"
+                  width="355"
+                  height="200"
                 />
               </figure>
             </div>
@@ -3770,6 +3774,8 @@ const pricing = (path) => {
                   src="/img/account-giddh-feature-image.svg"
                   className="img-fluid"
                   alt="account-giddh-feature-image"
+                  width="355"
+                  height="200"
                 />
               </figure>
             </div>
@@ -3849,6 +3855,8 @@ const pricing = (path) => {
                   src="/img/giddh-invoice-send-success.svg"
                   className="img-fluid"
                   alt="giddh-invoice-send-success image"
+                  width="355"
+                  height="200"
                 />
               </figure>
             </div>
@@ -3920,6 +3928,8 @@ const pricing = (path) => {
                   src="/img/accounting-software-feature.webp"
                   className="img-fluid"
                   alt="accounting-software-feature image"
+                  width="355"
+                  height="200"
                 />
               </figure>
             </div>
@@ -3995,6 +4005,8 @@ const pricing = (path) => {
                   src="/img/education-economy-image.svg"
                   className="img-fluid"
                   alt="education-economy-image"
+                  width="355"
+                  height="200"
                 />
               </figure>
             </div>

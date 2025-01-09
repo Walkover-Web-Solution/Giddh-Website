@@ -38,7 +38,8 @@ const multiCurrencyAccountingSoftware = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/multi-currency-banner.svg"
-                    width="90%"
+                    width="400"
+                    height="300"
                     alt="multi-currency-banner-image"
                   />
                  <img

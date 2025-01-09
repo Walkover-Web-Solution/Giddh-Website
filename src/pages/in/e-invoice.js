@@ -31,7 +31,8 @@ const eInvoice = () => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/e-invoice-banner.svg"
-                    width="90%"
+                    width="400"
+                    height="300"
                     alt="invoice-banner-image"
                   />
                  <img
@@ -207,6 +208,8 @@ const eInvoice = () => {
                     src="/img/gst-e-invoice-graphic.svg"
                     alt="gst e-invoice image"
                     className="img-fluid"
+                    width="400"
+                    height="300"
                   />
                 </figure>
               </div>

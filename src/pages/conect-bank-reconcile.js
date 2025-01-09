@@ -46,7 +46,10 @@ const conectBankReconcile = (path) => {
               </div>
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
-                  <img src="/img/bank-banner.svg" width="90%" alt="connect giddh with bank vector image"/>
+                  <img src="/img/bank-banner.svg" 
+                    width="400"
+                    height="300" 
+                    alt="connect giddh with bank vector image"/>
                   <img
                     src="/img/all-features-cloud_icon.svg"
                     alt="cloud icons"

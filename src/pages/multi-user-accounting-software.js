@@ -38,7 +38,8 @@ const multiUserAccountingSoftware = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/share-banner.svg"
-                    width="90%"
+                    width="400"
+                    height="300"
                     alt="share-banner-image"
                   />
                  <img

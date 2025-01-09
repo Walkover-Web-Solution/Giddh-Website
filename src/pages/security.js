@@ -19,8 +19,8 @@ const security = (path) => {
                           </h1>
                         </div>
                         <div className="security__banner">
-                            <figure>
-                              <img src="/img/security.webp" className="img-fluid" alt="security banner image" />
+                            <figure className="text-center">
+                              <img width="800" height="800" src="/img/security.webp" className="img-fluid" alt="security banner image" />
                             </figure>
                         </div>
                     </div>

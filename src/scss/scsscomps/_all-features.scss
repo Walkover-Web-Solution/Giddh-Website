@@ -37,8 +37,9 @@
     }
 
     &--banner_img {
-      width: auto;
+      width: 300px;
       max-width: 300px;
+      height: 180px;
     }
   }
 
@@ -47,6 +48,7 @@
       img{
         height: 200px;
         object-fit: scale-down;
+        width: 355px;
       }
     }
     &--row-odd {

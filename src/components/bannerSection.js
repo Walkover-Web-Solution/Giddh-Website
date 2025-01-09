@@ -57,16 +57,16 @@ const bannerSection = (path) => {
                   "Cloud-based Accounting Software For UAE Businesses"}
               </h1>
               <div className="banner__contact_btn mt-5">
-                <button onClick={openTypeForm}>Contact Sales</button>
+                <button onClick={openTypeForm} aria-label="Contact Sales for Accounting Software">Contact Sales</button>
               </div>
             </div>
             <div className="col-lg-6 col-md-12">
               <figure>
                 <img
                   width="700"
-                  height="auto"
+                  height="400"
                   src="/img/giddh-dashboard-within-chrome-browser.webp"
-                  alt="Giddh Dashboard"
+                  alt="Screenshot of Giddh Dashboard within a Chrome browser"
                 />
               </figure>
             </div>

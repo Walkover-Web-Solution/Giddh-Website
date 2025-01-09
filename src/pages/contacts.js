@@ -37,7 +37,8 @@ const contacts = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/contact.svg"
-                    width="90%"
+                    width="400"
+                    height="300" 
                     alt="contact-icon"
                   />
                  <img

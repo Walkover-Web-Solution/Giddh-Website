@@ -40,7 +40,8 @@ const financialReporting = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/report-banner.svg"
-                    width="90%"
+                    width="400"
+                    height="300"
                     alt="report-banner icon"
                   />
                  <img

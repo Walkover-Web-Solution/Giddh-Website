@@ -39,7 +39,8 @@ const accountingDashboard = (path) => {
                   <img
                     src="/img/feature-gallery-icons/dashboard-banner.svg"
                     alt="Giddh Dashboard Banner Image"
-                    width="90%"
+                    width="400"
+                    height="300"
                   />
                  <img
                     src="/img/all-features-cloud_icon.svg"

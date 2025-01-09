@@ -47,7 +47,8 @@ const inventoryManagementSoftware = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/inventory-banner.svg"
-                    width="90%"
+                    width="400"
+                    height="300"
                     alt="inventory-banner-image"
                   />
                   <img
