@@ -2,7 +2,7 @@ const clientSummary = () => {
   const ourClient = [
     {
       clientName: "RackBank",
-      clientLogo: "/rackbank-logo.png",
+      clientLogo: "/rackbank-logo.webp",
       websiteLink: "https://www.rackbank.com/",
       description: "Datacenter Accounting",
     },
@@ -14,7 +14,7 @@ const clientSummary = () => {
     },
     {
       clientName: "Mitti",
-      clientLogo: "/mitti-logo.png",
+      clientLogo: "/mitti-logo.webp", 
       websiteLink: "https://mitti.cafe/",
       description: "Restaurant Accounting",
     },
