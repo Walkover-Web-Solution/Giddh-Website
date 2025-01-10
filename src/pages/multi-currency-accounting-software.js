@@ -9,11 +9,11 @@ const multiCurrencyAccountingSoftware = (path) => {
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="multiCurrencyHeading">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary c-fw-600 mb-4">
+                <h1 id="multiCurrencyHeading" className="heading col-primary c-fw-600 mb-4">
                   Serve International Customers with Multi-Currency Accounting
                 </h1>
                 <p className="col-grey c-fs-3 mb-5">
@@ -26,10 +26,16 @@ const multiCurrencyAccountingSoftware = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of the software"
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a 
+                    href="#" 
+                    className="col-blue" 
+                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    aria-label="Schedule a demo with our sales team"
+                  >
                     Schedule Demo
                   </a>
                 </div>
@@ -40,11 +46,11 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src="/img/feature-gallery-icons/multi-currency-banner.svg"
                     width="400"
                     height="300"
-                    alt="multi-currency-banner-image"
+                    alt="Illustration representing multi-currency accounting"
                   />
-                 <img
+                  <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Cloud icons representing features"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -58,7 +64,7 @@ const multiCurrencyAccountingSoftware = (path) => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                <h3 className="sub-heading col-primary c-fw-600 mb-3" role="heading" aria-level="3">
                   Profits should know no borders
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -67,7 +73,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   growing business. Giddh makes managing multi-currency
                   payments, invoicing and accounts easy.
                 </p>
-                <a href={ link + '/signup' } className="btn-link-purple">
+                <a href={ link + '/signup' } className="btn-link-purple" aria-label="Start your trial for multi-currency accounting software">
                   Start Your Trial
                 </a>
               </div>
@@ -75,15 +81,16 @@ const multiCurrencyAccountingSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" aria-labelledby="description-heading">
           <div className="container">
+            <h2 id="description-heading" className="visually-hidden">Features Description</h2>
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Eliminate Confusion with Automatic Currency Conversion
                   </h4>
-                  <p >
+                  <p>
                     Say goodbye to unnecessary exchange rate confusions and
                     accounting mismatch with multi-currency accounting. Giddh
                     does all the heavy lifting & automatically converts the
@@ -98,7 +105,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <img
                      src={isIndia || isAE ?  '/img/feature-gallery-icons/multi-currency-create.svg' : '/img/feature-gallery-icons/multi-currency-create-uk.svg'}
                     className="img-fluid"
-                    alt="multi-currency-create-image"
+                    alt="Illustration of automatic currency conversion feature"
                   />
                 </figure>
               </div>
@@ -109,7 +116,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Keep Your International Customers Smilin
                   </h4>
-                  <p >
+                  <p>
                     Easily accept payments from your International customers &
                     invoice them with easy to use multi currency accounting
                     software. Send invoices in your customer’s currency, and
@@ -123,7 +130,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <img
                     src={isIndia ? '/img/feature-gallery-icons/multi-currency-invoice.svg' : (isAE ? '/img/feature-gallery-icons/multi-currency-invoice-ae.svg' : '/img/feature-gallery-icons/multi-currency-invoice-uk.svg')}
                     className="img-fluid"
-                    alt="multi-currency-invoice-image"
+                    alt="Illustration of invoicing feature for international customers"
                   />
                 </figure>
               </div>
@@ -135,7 +142,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Set Preferred Currency to Business Accounts
                   </h4>
-                  <p >
+                  <p>
                     With Giddh you are always in control! You can set a default
                     foreign currency to all the business accounts of your
                     foreign customers. After which, all the invoices and reports
@@ -148,7 +155,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <img
                     src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-setting.svg' : '/img/feature-gallery-icons/multi-currency-setting-uk.svg'}
                     className="img-fluid"
-                    alt="multi-currency-setting-image"
+                    alt="Illustration of setting preferred currency for business accounts"
                   />
                 </figure>
               </div>
@@ -159,7 +166,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Benefit from Dynamic Business Reporting
                   </h4>
-                  <p >
+                  <p>
                     All your financial reports; trial balance, profit & loss,
                     balance sheet, will be automatically created in your company
                     base currency so you have an accurate view of your financial
@@ -172,7 +179,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <img
                     src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-reports.svg' : '/img/feature-gallery-icons/multi-currency-reports-uk.svg'}
                     className="img-fluid"
-                    alt="multi-currency-reports-image"
+                    alt="Illustration of dynamic business reporting feature"
                   />
                 </figure>
               </div>
@@ -180,18 +187,18 @@ const multiCurrencyAccountingSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__suggestion_container">
+        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="people interested in Connect Bank Reconcile also looked at image"
+                    alt="Illustration of people interested in accounting software"
                     className="features__sub_heading_container--banner_img"
                   />
                 </figure>
-                <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
                   <span className="col-blue">
                     Multi Currency Accounting Software
@@ -200,16 +207,16 @@ const multiCurrencyAccountingSoftware = (path) => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                   <a href={ link + "/all-features" } className="col-blue">
+                   <a href={ link + "/all-features" } className="col-blue" aria-label="View all features">
                     All features
                   </a>
-                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
+                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue" aria-label="Learn about sharing data">
                     Share Data
                   </a>
-                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
+                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue" aria-label="Explore multi-currency features">
                     Multi-Currency
                   </a>
-                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
+                  <a href={ link + "/invoice-software" } className="border-vertical col-blue" aria-label="Discover invoicing options">
                     Invoicing
                   </a>
                 </div>

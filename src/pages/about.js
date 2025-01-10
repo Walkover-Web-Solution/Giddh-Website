@@ -12,13 +12,14 @@ const about = (path) => {
       <div className="about" id="top">
         <section className="container pb-3">
           <div className="row">
-            <ul className="col-12 mb-4 d-flex flex-wrap justify-content-center align-items-center column-gap-4 row-gap-5 c-fs-4">
+            <ul className="col-12 mb-4 d-flex flex-wrap justify-content-center align-items-center column-gap-4 row-gap-5 c-fs-4" role="navigation">
               <li>
                 <span
                   className={
                     "about__navbar " + (currentMenu === 0 ? "active" : "")
                   }
                   onClick={() => setCurrent(0)}
+                  role="button"
                 >
                   About Us
                 </span>
@@ -29,6 +30,7 @@ const about = (path) => {
                     "about__navbar " + (currentMenu === 1 ? "active" : "")
                   }
                   onClick={() => setCurrent(1)}
+                  role="button"
                 >
                   Our Values
                 </span>
@@ -39,6 +41,7 @@ const about = (path) => {
                     "about__navbar " + (currentMenu === 2 ? "active" : "")
                   }
                   onClick={() => setCurrent(2)}
+                  role="button"
                 >
                   Leadership Principles
                 </span>
@@ -49,6 +52,7 @@ const about = (path) => {
                     "about__navbar " + (currentMenu === 3 ? "active" : "")
                   }
                   onClick={() => setCurrent(3)}
+                  role="button"
                 >
                   The Team
                 </span>
@@ -65,6 +69,8 @@ const about = (path) => {
                     style={{
                       display: currentMenu === 0 ? "inline" : "none",
                     }}
+                    role="heading" 
+                    aria-level="4"
                   >
                     About Us
                   </span>
@@ -72,6 +78,8 @@ const about = (path) => {
                     style={{
                       display: currentMenu === 1 ? "inline" : "none",
                     }}
+                    role="heading" 
+                    aria-level="4"
                   >
                     Our Values
                   </span>
@@ -79,6 +87,8 @@ const about = (path) => {
                     style={{
                       display: currentMenu === 2 ? "inline" : "none",
                     }}
+                    role="heading" 
+                    aria-level="4"
                   >
                     Leadership Principles
                   </span>
@@ -86,6 +96,8 @@ const about = (path) => {
                     style={{
                       display: currentMenu === 3 ? "inline" : "none",
                     }}
+                    role="heading" 
+                    aria-level="4"
                   >
                     The Team
                   </span>
@@ -97,6 +109,8 @@ const about = (path) => {
                   style={{
                     display: currentMenu === 0 ? "inline" : "none",
                   }}
+                  role="heading" 
+                  aria-level="4"
                 >
                   Pioneering the Automation Revolution in Accounting!
                 </span>
@@ -105,6 +119,8 @@ const about = (path) => {
                   style={{
                     display: currentMenu === 1 ? "inline" : "none",
                   }}
+                  role="heading" 
+                  aria-level="4"
                 >
                   Our values are the essence of our identity and summarises the
                   purpose of our existence
@@ -114,6 +130,8 @@ const about = (path) => {
                   style={{
                     display: currentMenu === 2 ? "inline" : "none",
                   }}
+                  role="heading" 
+                  aria-level="4"
                 >
                   The difference between success and failure is not the amount
                   of money or resources you have, but how a leader leads his
@@ -124,6 +142,8 @@ const about = (path) => {
                   style={{
                     display: currentMenu === 3 ? "inline" : "none",
                   }}
+                  role="heading" 
+                  aria-level="4"
                 >
                   Our VISION is to provide technologies to organizations that
                   enables them to take data driven financial decisions in the

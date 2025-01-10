@@ -10,11 +10,11 @@ const financialReporting = (path) => {
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="financial-reporting-heading">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary c-fw-600 mb-4">
+                <h1 id="financial-reporting-heading" className="heading col-primary c-fw-600 mb-4">
                   Make sense of your numbers by automatic Financial Reports
                 </h1>
                 <p className="col-grey c-fs-3 mb-5">
@@ -28,10 +28,16 @@ const financialReporting = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download free financial report"
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a 
+                    href="#" 
+                    className="col-blue" 
+                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    aria-label="Schedule a demo with sales"
+                  >
                     Schedule Demo
                   </a>
                 </div>
@@ -42,11 +48,11 @@ const financialReporting = (path) => {
                     src="/img/feature-gallery-icons/report-banner.svg"
                     width="400"
                     height="300"
-                    alt="report-banner icon"
+                    alt="Illustration of a report banner"
                   />
-                 <img
+                  <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Cloud icons representing features"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -66,11 +72,11 @@ const financialReporting = (path) => {
                 <p className="c-fs-4 mb-5">
                   Stay on top of your numbers and make informed business
                   decisions. Analyse and share your vital financial reports
-                  like- balance sheet, trial balance, profit/loss to the key
+                  like balance sheet, trial balance, profit/loss to the key
                   decision maker of your business. Giddh gives you all reports
                   you may need to run your business better.
                 </p>
-                <a href={ link + '/signup' } className="btn-link-purple">
+                <a href={ link + '/signup' } className="btn-link-purple" aria-label="Start your trial">
                   Start Your Trial
                 </a>
               </div>
@@ -78,12 +84,13 @@ const financialReporting = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" aria-labelledby="description-heading">
+          <h2 id="description-heading" className="visually-hidden">Features Description</h2>
           <div className="container">
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3" role="heading" aria-level="4">
                     Big picture analysis made easy
                   </h4>
                   <p >
@@ -100,7 +107,7 @@ const financialReporting = (path) => {
                   <img
                     src="/img/feature-gallery-icons/report-sales-graph.svg"
                     className="img-fluid"
-                    alt="connect bank image"
+                    alt="Graph showing sales data for financial reporting"
                   />
                 </figure>
               </div>
@@ -108,7 +115,7 @@ const financialReporting = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3" role="heading" aria-level="4">
                     Ready-made reports when you need them
                   </h4>
                   <p >
@@ -124,7 +131,7 @@ const financialReporting = (path) => {
                   <img
                     src="/img/feature-gallery-icons/report-ready.svg"
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="Illustration of ready-made financial reports"
                   />
                 </figure>
               </div>
@@ -133,7 +140,7 @@ const financialReporting = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3" role="heading" aria-level="4">
                     Keep an eye on the money owed to you
                   </h4>
                   <p >
@@ -150,7 +157,7 @@ const financialReporting = (path) => {
                   <img
                     src={isIndia || isAE ? '/img/feature-gallery-icons/report-aging.svg' : '/img/feature-gallery-icons/aging.svg'}
                     className="img-fluid"
-                    alt="bank account image"
+                    alt="Aging report illustration showing outstanding invoices"
                   />
                 </figure>
               </div>
@@ -158,7 +165,7 @@ const financialReporting = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3" role="heading" aria-level="4">
                     Collaborate & grow
                   </h4>
                   <p >
@@ -175,41 +182,41 @@ const financialReporting = (path) => {
                   <img
                     src={isIndia || isAE ? '/img/feature-gallery-icons/report-collaborate.svg' : '/img/feature-gallery-icons/collab.svg'}
                     className="img-fluid"
-                    alt="bank overview image"
+                    alt="Collaboration illustration for financial reporting"
                   />
                 </figure>
               </div>
             </div>
           </div>
         </section>
-        <section className="container-fluid my-5 py-5">
+        <section className="container-fluid my-5 py-5" aria-labelledby="reporting-solution-heading">
           <div className="container">
             <div className="text-center">
-              <h2 className="col-primary sub-heading c-fw-600 mb-4">
+              <h2 id="reporting-solution-heading" className="col-primary sub-heading c-fw-600 mb-4">
                 Your all round reporting solution
               </h2>
               <p className="col-dark-light c-fs-3">
                 Giddh online accounting software produces all of the standard
-                financial reports required by a forward- thinking business to
+                financial reports required by a forward-thinking business to
                 make smarter and faster business decisions.
               </p>
             </div>
             <div className="d-flex my-5">
               <div className="mx-auto">
-                <ul className="custom-ul-with-right-tick c-fs-4 col-dark-light">
-                  <li className="mb-5">
+                <ul className="custom-ul-with-right-tick c-fs-4 col-dark-light" role="list">
+                  <li className="mb-5" role="listitem">
                     Profit/Loss Statement, Balance Sheet, General Ledger and
                     Trial Balance.
                   </li>
-                  <li className="mb-5">
+                  <li className="mb-5" role="listitem">
                     Drill down the reports by date, financial year, or even
                     project type.
                   </li>
-                  <li className="mb-5">
+                  <li className="mb-5" role="listitem">
                     Export reports in any of the two supported formats: PDF or
                     Excel.
                   </li>
-                  <li className="mb-5">
+                  <li className="mb-5" role="listitem">
                     Invite your accountant, partners or investors.
                   </li>
                 </ul>
@@ -218,34 +225,34 @@ const financialReporting = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__suggestion_container">
+        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="people interested in Connect Bank Reconcile also looked at image"
+                    alt="Illustration representing suggestions for financial reporting"
                     className="features__sub_heading_container--banner_img"
                   />
                 </figure>
-                <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
                   <span className="col-blue">Financial Reporting</span> also
                   looked at
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                   <a href={ link + "/all-features" } className="col-blue">
+                   <a href={ link + "/all-features" } className="col-blue" aria-label="View all features">
                     All features
                   </a>
-                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
+                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue" aria-label="Learn about sharing data">
                     Share Data
                   </a>
-                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
+                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue" aria-label="Explore multi-currency options">
                     Multi-Currency
                   </a>
-                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
+                  <a href={ link + "/invoice-software" } className="border-vertical col-blue" aria-label="Discover invoicing features">
                     Invoicing
                   </a>
                 </div>

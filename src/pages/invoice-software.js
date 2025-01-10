@@ -886,12 +886,12 @@ const invoiceSoftware = (path) => {
                     </div>
                 </section>
 
-                <section className='container-fluid bg-transparent'>
+                <section className='container-fluid bg-transparent' aria-labelledby="importance-of-invoices">
                     <div className='container features__e-invoice_page'>
                         <div className='row mt-5'>
                             <div className='col-12'>
                                 <div className='text-center'>
-                                    <a href={link + "/signup"} className='btn-link-purple'>
+                                    <a href={link + "/signup"} className='btn-link-purple' aria-label="Sign up for Giddh invoicing software">
                                         Try Now
                                     </a>
                                 </div>
@@ -1046,42 +1046,46 @@ const invoiceSoftware = (path) => {
                     </div>
                 </section>
 
-                <section className='container-fluid features__suggestion_container'>
+                <section className='container-fluid features__suggestion_container' aria-labelledby="suggestion-heading">
                     <div className='container'>
                         <div className='row'>
                             <div className='col-12 text-center features__sub_heading_container--pull-top'>
                                 <figure>
                                     <img
                                         src='/img/suggestion.svg'
-                                        alt='people interested in Connect Bank Reconcile also looked at image'
+                                        alt='Illustration representing suggestions for invoicing software'
                                         className='features__sub_heading_container--banner_img'
+                                        aria-hidden="true"
                                     />
                                 </figure>
-                                <h2 className='c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4'>
+                                <h2 id="suggestion-heading" className='c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4'>
                                     People interested in
                                     <span className='col-blue'> Invoicing Software </span> also
                                     looked at
                                 </h2>
 
-                                <div className='features__suggestion_container__links'>
-                                    <a href={link + "/all-features"} className='col-blue'>
+                                <div className='features__suggestion_container__links' role="navigation" aria-label="Related links">
+                                    <a href={link + "/all-features"} className='col-blue' aria-label="View all features">
                                         All features
                                     </a>
                                     <a
                                         href={link + "/multi-user-accounting-software"}
                                         className='border-vertical col-blue'
+                                        aria-label="Learn about multi-user accounting software"
                                     >
                                         Share Data
                                     </a>
                                     <a
                                         href={link + "/multi-currency-accounting-software"}
                                         className='border-vertical col-blue'
+                                        aria-label="Explore multi-currency accounting software"
                                     >
                                         Multi-Currency
                                     </a>
                                     <a
                                         href={link + "/invoice-software"}
                                         className='border-vertical col-blue'
+                                        aria-label="Discover more about invoicing software"
                                     >
                                         Invoicing
                                     </a>

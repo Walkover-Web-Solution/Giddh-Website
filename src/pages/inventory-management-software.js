@@ -10,11 +10,11 @@ const inventoryManagementSoftware = (path) => {
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="features-heading">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary c-fw-600 mb-4">
+                <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
                   Enhance Efficiency: Simplify Inventory Management.
                 </h1>
                 <h2 className="col-grey c-fs-3 mb-5">
@@ -27,6 +27,7 @@ const inventoryManagementSoftware = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of the inventory management software"
                   >
                     Download Free
                   </a>
@@ -38,6 +39,7 @@ const inventoryManagementSoftware = (path) => {
                         url: "https://calendly.com/sales-accounting-software/talk-to-sale",
                       })
                     }
+                    aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
                   </a>
@@ -49,11 +51,11 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/inventory-banner.svg"
                     width="400"
                     height="300"
-                    alt="inventory-banner-image"
+                    alt="An illustration representing inventory management"
                   />
                   <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Cloud icons representing various features"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -63,11 +65,11 @@ const inventoryManagementSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__sub_heading_container">
+        <section className="container-fluid features__sub_heading_container" aria-labelledby="inventory-tracking-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h1 className="sub-heading col-primary c-fw-600 mb-3">
+                <h1 id="inventory-tracking-heading" className="sub-heading col-primary c-fw-600 mb-3">
                   Maintain inventory tracking. Stay updated.
                 </h1>
                 <p className="c-fs-4 mb-5">
@@ -78,7 +80,7 @@ const inventoryManagementSoftware = (path) => {
                   accurately so you can get back to doing the thing you are best
                   at: Grow and Earn!
                 </p>
-                <a href={link + "/signup"} className="btn-link-purple">
+                <a href={link + "/signup"} className="btn-link-purple" aria-label="Start your trial for inventory management software">
                   Start Your Trial
                 </a>
               </div>
@@ -86,13 +88,14 @@ const inventoryManagementSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" aria-labelledby="features-description-heading">
+          <h2 id="features-description-heading" className="visually-hidden">Features Description</h2>
           <div className="container">
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
-                    Record inventory for product, and Services
+                  <h2 className="col-primary small-heading c-fw-600 mb-3" id="record-inventory-heading">
+                    Record inventory for products and services
                   </h2>
                   <p>
                     Inventory management isn't exclusive to product-based
@@ -107,7 +110,7 @@ const inventoryManagementSoftware = (path) => {
                   <img
                     src="/img/feature-gallery-icons/record-inventory.svg"
                     className="img-fluid"
-                    alt="connect bank image"
+                    alt="Illustration of recording inventory for products and services"
                   />
                 </figure>
               </div>
@@ -115,8 +118,8 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
-                    Inventory Master’s
+                  <h2 className="col-primary small-heading c-fw-600 mb-3" id="inventory-masters-heading">
+                    Inventory Masters
                   </h2>
                   <p>
                     Giddh provides you with the "masters" of inventory. Here,
@@ -128,10 +131,9 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src="
-                    /img/feature-gallery-icons/inventory-master.svg"
+                    src="/img/feature-gallery-icons/inventory-master.svg"
                     className="img-fluid"
-                    alt="inventory master image"
+                    alt="Illustration of inventory masters"
                   />
                 </figure>
               </div>
@@ -139,7 +141,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3" id="bifurcate-inventory-heading">
                     Bifurcate inventory into Groups, Items, and Variants
                   </h2>
                   <p>
@@ -155,7 +157,7 @@ const inventoryManagementSoftware = (path) => {
                   <img
                     src="/img/feature-gallery-icons/bifurcate-inventory.svg"
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="Illustration of bifurcating inventory"
                   />
                 </figure>
               </div>
@@ -163,7 +165,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3" id="real-time-reports-heading">
                     Real-time inventory reports
                   </h2>
                   <p>
@@ -181,7 +183,7 @@ const inventoryManagementSoftware = (path) => {
                   <img
                     src="/img/feature-gallery-icons/reports.svg"
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="Illustration of real-time inventory reports"
                   />
                 </figure>
               </div>
@@ -318,18 +320,18 @@ const inventoryManagementSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__suggestion_container">
+        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="people interested in Connect Bank Reconcile also looked at image"
+                    alt="Illustration of people interested in inventory management software"
                     className="features__sub_heading_container--banner_img"
                   />
                 </figure>
-                <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
                   <span className="col-blue">
                     Inventory Management Software
@@ -338,24 +340,27 @@ const inventoryManagementSoftware = (path) => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                  <a href={link + "/all-features"} className="col-blue">
+                  <a href={link + "/all-features"} className="col-blue" aria-label="View all features of the inventory management software">
                     All features
                   </a>
                   <a
                     href={link + "/multi-user-accounting-software"}
                     className="border-vertical col-blue"
+                    aria-label="Learn about sharing data with multi-user accounting software"
                   >
                     Share Data
                   </a>
                   <a
                     href={link + "/multi-currency-accounting-software"}
                     className="border-vertical col-blue"
+                    aria-label="Explore multi-currency accounting software"
                   >
                     Multi-Currency
                   </a>
                   <a
                     href={link + "/invoice-software"}
                     className="border-vertical col-blue"
+                    aria-label="Discover invoicing features"
                   >
                     Invoicing
                   </a>

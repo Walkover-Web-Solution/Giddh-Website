@@ -8,11 +8,11 @@ const conectBankReconcile = (path) => {
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="features-heading">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary c-fw-600 mb-4">
+                <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
                   {isIndia
                     ? "Monitor your transactions by connecting bank accounts"
                     : "Bank Reconciliation Made Easy"}
@@ -28,6 +28,7 @@ const conectBankReconcile = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of Giddh"
                   >
                     Download Free
                   </a>
@@ -39,6 +40,7 @@ const conectBankReconcile = (path) => {
                         url: "https://calendly.com/sales-accounting-software/talk-to-sale",
                       })
                     }
+                    aria-label="Schedule a demo with Giddh"
                   >
                     Schedule Demo
                   </a>
@@ -49,10 +51,10 @@ const conectBankReconcile = (path) => {
                   <img src="/img/bank-banner.svg" 
                     width="400"
                     height="300" 
-                    alt="connect giddh with bank vector image"/>
+                    alt="Illustration of connecting Giddh with bank accounts"/>
                   <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Icons representing various features of Giddh"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -78,7 +80,11 @@ const conectBankReconcile = (path) => {
                     keep track of your cash flow in the most secure, fast and
                     reliable way.
                   </p>
-                  <a href={link + "/signup"} className="btn-link-purple">
+                  <a 
+                    href={link + "/signup"} 
+                    className="btn-link-purple" 
+                    aria-label="Start your trial with Giddh"
+                  >
                     Start Your Trial
                   </a>
                 </div>
@@ -86,13 +92,13 @@ const conectBankReconcile = (path) => {
             </div>
           </section>
         ) : null}
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" aria-labelledby="description-heading">
           <div className="container">
             {isIndia ? (
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
-                    <h2 className="col-primary small-heading c-fw-600 mb-3">
+                    <h2 id="description-heading" className="col-primary small-heading c-fw-600 mb-3">
                       Connect bank and get automatic updates
                     </h2>
                     <p>
@@ -110,7 +116,7 @@ const conectBankReconcile = (path) => {
                     <img
                       src="/img/bank-connect.svg"
                       className="img-fluid"
-                      alt="connect bank image"
+                      alt="Illustration showing the process of connecting a bank account"
                     />
                   </figure>
                 </div>
@@ -136,7 +142,7 @@ const conectBankReconcile = (path) => {
                   <img
                     src="/img/suggestion.svg"
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="Illustration depicting the bank reconciliation process"
                   />
                 </figure>
               </div>
@@ -161,7 +167,7 @@ const conectBankReconcile = (path) => {
                   <img
                     src="/img/bank-account.svg"
                     className="img-fluid"
-                    alt="bank account image"
+                    alt="Illustration showing multiple bank accounts"
                   />
                 </figure>
               </div>
@@ -169,18 +175,18 @@ const conectBankReconcile = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__suggestion_container">
+        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="people interested in Connect Bank Reconcile also looked at image"
+                    alt="Illustration of people interested in Connect Bank Reconcile"
                     className="features__sub_heading_container--banner_img"
                   />
                 </figure>
-                <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
                   <span className="col-blue">
                     {isIndia ? "Connect Bank Reconcile" : "Bank Reconcile"}
@@ -188,7 +194,7 @@ const conectBankReconcile = (path) => {
                   also looked at
                 </h2>
 
-                <div className="features__suggestion_container__links">
+                <div className="features__suggestion_container__links" role="navigation" aria-label="Suggested links">
                   <a href={link + "/all-features"} className="col-blue">
                     All features
                   </a>

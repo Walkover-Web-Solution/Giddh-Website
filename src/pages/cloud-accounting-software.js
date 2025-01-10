@@ -15,11 +15,11 @@ const anywhereAnytime = (path) => {
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="features-heading">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary c-fw-600 mb-4">
+                <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
                     { isIndia && "GST-Compliant Cloud Accounting for India" }
                     { isAE && "VAT-Compliant Cloud Accounting in the UAE" }
                     { (isUK || isGlobal) && "Cloud Accounting Software" }
@@ -36,6 +36,7 @@ const anywhereAnytime = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of the software"
                   >
                     Download Free
                   </a>
@@ -47,6 +48,7 @@ const anywhereAnytime = (path) => {
                         url: "https://calendly.com/sales-accounting-software/talk-to-sale",
                       })
                     }
+                    aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
                   </a>
@@ -56,13 +58,13 @@ const anywhereAnytime = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/cloud-banner.svg"
-                    alt="cloud-banner-image"
+                    alt="Illustration of cloud accounting software"
                     width="400"
                     height="300"
                   />
                   <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Icons representing various features of cloud accounting"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -71,14 +73,14 @@ const anywhereAnytime = (path) => {
             </div>
           </div>
         </section>
-        <section className="container-fluid features__sub_heading_container">
+        <section className="container-fluid features__sub_heading_container" aria-labelledby="business-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h2 className="sub-heading col-primary c-fw-600 mb-3">
+                <h2 id="business-heading" className="sub-heading col-primary c-fw-600 mb-3">
                   Run your business from any corner of the world!
                 </h2>
-                <p className="c-fs-4 mb-5">
+                <p className="c-fs-4 mb-5" role="note">
                   {isIndia
                     ? `All you ever need to be on top of your accounting is just an
                   active internet connection. Conduct your business from
@@ -96,15 +98,16 @@ const anywhereAnytime = (path) => {
                     : null}
                 </p>
 
-                <a href={link + "/signup"} className="btn-link-purple">
+                <a href={link + "/signup"} className="btn-link-purple" aria-label="Start your trial for cloud accounting software">
                   Start Your Trial
                 </a>
               </div>
             </div>
           </div>
         </section>
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" aria-labelledby="features-description-heading">
           <div className="container">
+            <h2 id="features-description-heading" className="visually-hidden">Features Description</h2>
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
@@ -151,7 +154,7 @@ const anywhereAnytime = (path) => {
                   {isIndia ? (
                     <p>
                       With Giddh’s{" "}
-                      <a href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/">
+                      <a href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/" aria-label="Learn more about cloud based accounting software benefits">
                         cloud based accounting software
                       </a>
                       , you will automatically receive OTA (on the air) updates
@@ -702,41 +705,44 @@ const anywhereAnytime = (path) => {
             </div>
           </section>
         </section>
-        <section className="container-fluid features__suggestion_container">
+        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="people interested in Connect Bank Reconcile also looked at image"
+                    alt="Illustration representing suggestions for Cloud Accounting Software"
                     className="features__sub_heading_container--banner_img"
                   />
                 </figure>
-                <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
                   <span className="col-blue">Cloud Accounting Software</span>{" "}
                   also looked at
                 </h2>
                 <div className="features__suggestion_container__links">
-                  <a href={link + "/all-features"} className="col-blue">
+                  <a href={link + "/all-features"} className="col-blue" aria-label="View all features of Cloud Accounting Software">
                     All features
                   </a>
                   <a
                     href={link + "/multi-user-accounting-software"}
                     className="border-vertical col-blue"
+                    aria-label="Learn about multi-user accounting software"
                   >
                     Share Data
                   </a>
                   <a
                     href={link + "/multi-currency-accounting-software"}
                     className="border-vertical col-blue"
+                    aria-label="Learn about multi-currency accounting software"
                   >
                     Multi-Currency
                   </a>
                   <a
                     href={link + "/invoice-software"}
                     className="border-vertical col-blue"
+                    aria-label="Learn about invoicing software"
                   >
                     Invoicing
                   </a>

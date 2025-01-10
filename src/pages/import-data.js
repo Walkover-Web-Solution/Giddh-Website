@@ -8,11 +8,11 @@ const importExeclFiles = (path) => {
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="features-heading">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary c-fw-600 mb-4">
+                <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
                   Seamlessly bring your old accounting data to giddh
                 </h1>
                 <p className="col-grey c-fs-3 mb-5">
@@ -25,10 +25,16 @@ const importExeclFiles = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download Free Accounting Software"
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a 
+                    href="#" 
+                    className="col-blue" 
+                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    aria-label="Schedule a demo with our sales team"
+                  >
                     Schedule Demo
                   </a>
                 </div>
@@ -39,11 +45,11 @@ const importExeclFiles = (path) => {
                     src="/img/feature-gallery-icons/import-banner.svg"
                     width="400"
                     height="300"
-                    alt="import-banner-icon"
+                    alt="Illustration of importing accounting data"
                   />
-                 <img
+                  <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Cloud icons representing features"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -53,11 +59,11 @@ const importExeclFiles = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__sub_heading_container">
+        <section className="container-fluid features__sub_heading_container" aria-labelledby="sub-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                <h3 id="sub-heading" className="sub-heading col-primary c-fw-600 mb-3">
                   Switch from old accounting software or excel to giddh
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -66,7 +72,7 @@ const importExeclFiles = (path) => {
                   which minimizes the clutter of spreadsheets & confusion of
                   mismanaged accounting books.
                 </p>
-                <a href={ link + '/signup' } className="btn-link-purple">
+                <a href={ link + '/signup' } className="btn-link-purple" aria-label="Start your trial with Giddh">
                   Start Your Trial
                 </a>
               </div>
@@ -74,8 +80,9 @@ const importExeclFiles = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" aria-labelledby="description-heading">
           <div className="container">
+            <h2 id="description-heading" className="visually-hidden">Features Description</h2>
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
@@ -97,7 +104,7 @@ const importExeclFiles = (path) => {
                   <img
                     src="/img/feature-gallery-icons/import-excel.svg"
                     className="img-fluid"
-                    alt="connect bank image"
+                    alt="Illustration showing Excel as an accounting tool"
                   />
                 </figure>
               </div>
@@ -122,7 +129,7 @@ const importExeclFiles = (path) => {
                   <img
                     src="/img/feature-gallery-icons/import-excel.svg"
                     className="img-fluid"
-                    alt="bank reconcile image"
+                    alt="Transitioning from Excel to Giddh"
                   />
                 </figure>
               </div>
@@ -147,7 +154,7 @@ const importExeclFiles = (path) => {
                   <img
                     src="/img/feature-gallery-icons/import-data.svg"
                     className="img-fluid"
-                    alt="bank account image"
+                    alt="Data import illustration"
                   />
                 </figure>
               </div>
@@ -172,7 +179,7 @@ const importExeclFiles = (path) => {
                   <img
                     src="/img/feature-gallery-icons/import-prepare.svg"
                     className="img-fluid"
-                    alt="bank overview image"
+                    alt="Template preparation for data import"
                   />
                 </figure>
               </div>
@@ -202,7 +209,7 @@ const importExeclFiles = (path) => {
                         : "/img/feature-gallery-icons/support-uk.svg"
                     }
                     className="img-fluid"
-                    alt="bank account image"
+                    alt="Support illustration based on location"
                   />
                 </figure>
               </div>
@@ -210,23 +217,23 @@ const importExeclFiles = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__suggestion_container">
+        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="people interested in Connect Bank Reconcile also looked at image"
+                    alt="Illustration of people interested in accounting features"
                     className="features__sub_heading_container--banner_img"
                   />
                 </figure>
-                <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
                   <span className="col-blue">Import Data</span> also looked at
                 </h2>
 
-                <div className="features__suggestion_container__links">
+                <div className="features__suggestion_container__links" role="navigation" aria-label="Suggested links">
                    <a href={ link + "/all-features" } className="col-blue">
                     All features
                   </a>
