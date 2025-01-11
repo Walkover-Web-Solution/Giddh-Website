@@ -28,7 +28,7 @@ const makeTheSwitch = (path) => {
           <div className="row ">
             <div className="col-md-6 col-sm-12">
               <figure>
-                <img src={ isIndia || isAE ? "/img/switch-laptop-image.webp" : "/img/uk-dashboard-laptop-and-pc-img.svg"} alt="Image showing Giddh Accounting Software on a laptop" className="img-fluid" />
+                <img width="900" height="400" src={ isIndia || isAE ? "/img/switch-laptop-image.webp" : "/img/uk-dashboard-laptop-and-pc-img.svg"} alt="Image showing Giddh Accounting Software on a laptop" className="img-fluid" />
               </figure>
             </div>
             <div className="col-md-6 col-sm-12">
@@ -86,7 +86,7 @@ const makeTheSwitch = (path) => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img src="/img/Accounting-sol-2.webp" alt="Banner image showcasing features of Giddh accounting software, including inventory management and invoicing" className="img-fluid" />
+                  <img width="900" height="400" src="/img/Accounting-sol-2.webp" alt="Banner image showcasing features of Giddh accounting software, including inventory management and invoicing" className="img-fluid" />
                 </figure>
               </div>
             </div>
@@ -112,7 +112,7 @@ const makeTheSwitch = (path) => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img src="/img/Accounting-sol-1.webp" alt="Banner image illustrating Giddh's expense management features, highlighting direct bank integration and expense tracking" className="img-fluid" />
+                  <img width="900" height="400" src="/img/Accounting-sol-1.webp" alt="Banner image illustrating Giddh's expense management features, highlighting direct bank integration and expense tracking" className="img-fluid" />
                 </figure>
               </div>
             </div>
