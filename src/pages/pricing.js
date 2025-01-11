@@ -53,10 +53,10 @@ const pricing = (path) => {
                 (isGlobal
                   ? "global"
                   : isIndia
-                  ? "display-all"
-                  : isUK
-                  ? "display-uk"
-                  : "display-four")
+                    ? "display-all"
+                    : isUK
+                      ? "display-uk"
+                      : "display-four")
               }
             >
               <div className="pricing_main_section__grid__title">
@@ -105,29 +105,29 @@ const pricing = (path) => {
                   {isGlobal
                     ? "USD 50"
                     : isIndia
-                    ? "Free"
-                    : isAE
-                    ? "AED 350"
-                    : "Free"}
+                      ? "Free"
+                      : isAE
+                        ? "AED 350"
+                        : "Free"}
                   <span>
                     {isUK || isIndia
-                    ? ""
-                    : "/year"}
-                    </span>
+                      ? ""
+                      : "/year"}
+                  </span>
                 </span>
               </div>
               <div className="pricing_main_section__grid__oak pricing__heading text-center position-relative">
                 {isGlobal || isIndia || isAE ? (
-                <span className="plan_tag">
-                  <img
-                    src="/img/popular-plan.webp"
-                    width="70px"
-                    alt="popular plan tag"
-                  />
-                </span>
+                  <span className="plan_tag">
+                    <img
+                      src="/img/popular-plan.webp"
+                      width="70px"
+                      alt="popular plan tag"
+                    />
+                  </span>
                 )
-                : 
-                ""
+                  :
+                  ""
                 }
                 {isIndia || isUK ? (
                   <span className="pricing__heading__name">Oak</span>
@@ -140,7 +140,7 @@ const pricing = (path) => {
                     <span className="pricing__heading__cost">
                       <s>
                         &nbsp;
-                        {isGlobal ? "USD 300" : isAE ? "AED 1,500" : "GBP 300" }
+                        {isGlobal ? "USD 300" : isAE ? "AED 1,500" : "GBP 300"}
                         &nbsp;
                       </s>
                     </span>
@@ -151,31 +151,31 @@ const pricing = (path) => {
                   {isGlobal
                     ? "USD 150"
                     : isIndia
-                    ? "INR 4,000"
-                    : isAE
-                    ? "AED 1,050"
-                    : isUK 
-                    ? "GBP 7"
-                    : ""}
+                      ? "INR 4,000"
+                      : isAE
+                        ? "AED 1,050"
+                        : isUK
+                          ? "GBP 7"
+                          : ""}
                   <span>/
-                    {isUK 
-                    ? "month"
-                    : "year"}
+                    {isUK
+                      ? "month"
+                      : "year"}
                   </span>
                 </span>
               </div>
               <div className="pricing_main_section__grid__vine pricing__heading text-center position-relative">
                 {isUK ? (
-                <span className="plan_tag">
-                  <img
-                    src="/img/popular-plan.webp"
-                    width="70px"
-                    alt="popular plan tag"
-                  />
-                </span>
+                  <span className="plan_tag">
+                    <img
+                      src="/img/popular-plan.webp"
+                      width="70px"
+                      alt="popular plan tag"
+                    />
+                  </span>
                 )
-                : 
-                ""
+                  :
+                  ""
                 }
                 {isIndia || isUK ? (
                   <span className="pricing__heading__name">Vine</span>
@@ -188,7 +188,7 @@ const pricing = (path) => {
                     <span className="pricing__heading__cost">
                       <s>
                         &nbsp;
-                        {isGlobal ? "USD 500" : isAE ? "AED 3,000" : "GBP 500" }
+                        {isGlobal ? "USD 500" : isAE ? "AED 3,000" : "GBP 500"}
                         &nbsp;
                       </s>
                     </span>
@@ -199,16 +199,16 @@ const pricing = (path) => {
                   {isGlobal
                     ? "USD 250"
                     : isIndia
-                    ? "INR 10,000"
-                    : isAE
-                    ? " AED 2,100"
-                    : isUK 
-                    ? "GBP 21"
-                    : "GBP 21"}
+                      ? "INR 10,000"
+                      : isAE
+                        ? " AED 2,100"
+                        : isUK
+                          ? "GBP 21"
+                          : "GBP 21"}
                   <span>/
-                    {isUK 
-                    ? "month"
-                    : "year"}
+                    {isUK
+                      ? "month"
+                      : "year"}
                   </span>
                 </span>
               </div>
@@ -216,16 +216,16 @@ const pricing = (path) => {
                 <span className="pricing__heading__name"> Sequoia</span>
                 <br />
                 <span className="pricing__heading__cost">
-                {isGlobal
+                  {isGlobal
                     ? "USD 250"
                     : isIndia
-                    ? "INR 15,000"
-                    : "GBP 35"}
-                  
+                      ? "INR 15,000"
+                      : "GBP 35"}
+
                   <span>/
-                    {isUK 
-                    ? "month"
-                    : "year"}
+                    {isUK
+                      ? "month"
+                      : "year"}
                   </span>
                 </span>
               </div>
@@ -253,8 +253,8 @@ const pricing = (path) => {
                 </a>
               </div>
 
-               {/* ========================== Invoice Count Row Start ========================== */}
-               <div className="pricing_main_section__grid__invoice_count pricing-border-top">
+              {/* ========================== Invoice Count Row Start ========================== */}
+              <div className="pricing_main_section__grid__invoice_count pricing-border-top">
                 Invoice Count
               </div>
               <div className="pricing_main_section__grid__invoice_count_2 pricing-border-top d-lg-none">
@@ -270,13 +270,13 @@ const pricing = (path) => {
                 Invoice Count
               </div>
               <div className="pricing_main_section__grid__inc2 text-center pricing-border-top">
-              {isIndia ? '1,000' : isUK ? '100' : '3,000' }
+                {isIndia ? '1,000' : isUK ? '100' : '3,000'}
               </div>
               <div className="pricing_main_section__grid__inc3 text-center pricing-border-top">
-              {isIndia ? '3,000' : isUK ? '500' : '5,000' }
+                {isIndia ? '3,000' : isUK ? '500' : '5,000'}
               </div>
               <div className="pricing_main_section__grid__inc4 text-center pricing-border-top">
-              {isIndia ? '5,000' : isUK ? '700' : '10,000' }
+                {isIndia ? '5,000' : isUK ? '700' : '10,000'}
               </div>
               <div className="pricing_main_section__grid__inc5 text-center pricing-border-top display-all__child">
                 {isUK ? '1,000' : '10,000'}
@@ -300,13 +300,13 @@ const pricing = (path) => {
                 Bill Count
               </div>
               <div className="pricing_main_section__grid__bc2 text-center pricing-border-top">
-                {isIndia ? '1,000' : isUK ? '100' : '3,000' }
+                {isIndia ? '1,000' : isUK ? '100' : '3,000'}
               </div>
               <div className="pricing_main_section__grid__bc3 text-center pricing-border-top">
-                {isIndia ? '3,000' : isUK ? '500' : '5,000' }
+                {isIndia ? '3,000' : isUK ? '500' : '5,000'}
               </div>
               <div className="pricing_main_section__grid__bc4 text-center pricing-border-top">
-              {isIndia ? '5,000' : isUK ? '700' : '10,000' }
+                {isIndia ? '5,000' : isUK ? '700' : '10,000'}
               </div>
               <div className="pricing_main_section__grid__bc5 text-center pricing-border-top display-all__child">
                 {isUK ? '1,000' : '10,000'}
@@ -364,23 +364,23 @@ const pricing = (path) => {
               </div>
               <div className="pricing_main_section__grid__ac3 text-center pricing-border-top">
                 {isUK
-                ?  <MdClose />
-                : "2 hrs"}
+                  ? <MdClose />
+                  : "2 hrs"}
               </div>
               <div className="pricing_main_section__grid__ac4 text-center pricing-border-top">
                 {isUK
-                ? "2 hrs"
-                : "4 hrs"}
+                  ? "2 hrs"
+                  : "4 hrs"}
               </div>
               <div className="pricing_main_section__grid__ac5 text-center pricing-border-top display-all__child">
                 {isUK
-                ? " 4 hrs"
-                : "10 hrs"
+                  ? " 4 hrs"
+                  : "10 hrs"
                 }
               </div>
-             {/* ======================= Accountant Consultant Row Emd ===================== */}
+              {/* ======================= Accountant Consultant Row Emd ===================== */}
 
-             {/* ==================== Unlimited Customers/Vendors Row Start ================ */}
+              {/* ==================== Unlimited Customers/Vendors Row Start ================ */}
               <div className="pricing_main_section__grid__customers_vendors pricing-border-top">
                 Unlimited Customers/Vendors
               </div>
@@ -872,9 +872,9 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__mi5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-               {/* =================== Managing Inventory Row End ================== */}
+              {/* =================== Managing Inventory Row End ================== */}
 
-               {/* ==================== Journal Entries Row Start ================== */}
+              {/* ==================== Journal Entries Row Start ================== */}
               <div className="pricing_main_section__grid__journal-entry pricing-border-top">
                 <div
                   className={"cursor-pointer " + (journalEntry ? "pt-2" : "")}
@@ -1432,11 +1432,11 @@ const pricing = (path) => {
                       </span>
                       {gstDirectFilling && (
                         <p className="c-fw-400">
-                            Direct filing, and reconcile transaction with the GST portal and
-                            <a href="/in/gst" target="_blank">
+                          Direct filing, and reconcile transaction with the GST portal and
+                          <a href="/in/gst" target="_blank">
                             {" "}
                             more
-                            </a>
+                          </a>
                         </p>
                       )}
                     </div>
@@ -1452,11 +1452,11 @@ const pricing = (path) => {
                       </span>
                       {gstDirectFilling && (
                         <p className="c-fw-400">
-                            Direct filing, and reconcile transaction with the GST portal and
-                            <a href="/in/gst" target="_blank">
+                          Direct filing, and reconcile transaction with the GST portal and
+                          <a href="/in/gst" target="_blank">
                             {" "}
                             more
-                            </a>
+                          </a>
                         </p>
                       )}
                     </div>
@@ -1472,11 +1472,11 @@ const pricing = (path) => {
                       </span>
                       {gstDirectFilling && (
                         <p className="c-fw-400">
-                            Direct filing, and reconcile transaction with the GST portal and
-                            <a href="/in/gst" target="_blank">
+                          Direct filing, and reconcile transaction with the GST portal and
+                          <a href="/in/gst" target="_blank">
                             {" "}
                             more
-                            </a>
+                          </a>
                         </p>
                       )}
                     </div>
@@ -1492,11 +1492,11 @@ const pricing = (path) => {
                       </span>
                       {gstDirectFilling && (
                         <p className="c-fw-400">
-                              Direct filing, and reconcile transaction with the GST portal and
-                            <a href="/in/gst" target="_blank">
+                          Direct filing, and reconcile transaction with the GST portal and
+                          <a href="/in/gst" target="_blank">
                             {" "}
                             more
-                            </a>
+                          </a>
                         </p>
                       )}
                     </div>
@@ -1512,11 +1512,11 @@ const pricing = (path) => {
                       </span>
                       {gstDirectFilling && (
                         <p className="c-fw-400">
-                            Direct filing, and reconcile transaction with the GST portal and
-                            <a href="/in/gst" target="_blank">
+                          Direct filing, and reconcile transaction with the GST portal and
+                          <a href="/in/gst" target="_blank">
                             {" "}
                             more
-                            </a>
+                          </a>
                         </p>
                       )}
                     </div>
@@ -1670,9 +1670,9 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__r5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-                {/* ===================== Reports Row End ==================== */}
+              {/* ===================== Reports Row End ==================== */}
 
-                {/* ============== Real-time Dashboard Row Start ============= */}
+              {/* ============== Real-time Dashboard Row Start ============= */}
               <div className="pricing_main_section__grid__dashboard pricing-border-top">
                 <div
                   className={"cursor-pointer " + (dashoard ? "pt-2" : "")}
@@ -1790,9 +1790,9 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__rd5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-               {/* ============== Real-time Dashboard Row End ============= */}
+              {/* ============== Real-time Dashboard Row End ============= */}
 
-               {/* ============ Unlimited users access Row Start =========== */}
+              {/* ============ Unlimited users access Row Start =========== */}
               <div className="pricing_main_section__grid__user-access pricing-border-top">
                 <div
                   className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
@@ -1939,7 +1939,7 @@ const pricing = (path) => {
                 </div>
               </div>
               <div className="pricing_main_section__grid__ua2 text-center pricing-border-top">
-              { isIndia || isUK ? 1 : 'Unlimited' }
+                {isIndia || isUK ? 1 : 'Unlimited'}
               </div>
               <div className="pricing_main_section__grid__ua3 text-center pricing-border-top">
                 Unlimited
@@ -1950,9 +1950,9 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__ua5 text-center pricing-border-top display-all__child">
                 Unlimited
               </div>
-                {/* ============ Unlimited users access Row End =========== */}
+              {/* ============ Unlimited users access Row End =========== */}
 
-                {/* ============= Bank Reconciliation Row Start =========== */}
+              {/* ============= Bank Reconciliation Row Start =========== */}
               <div className="pricing_main_section__grid__bank pricing-border-top">
                 <div
                   className={"cursor-pointer " + (bankRec ? "pt-2" : "")}
@@ -2225,9 +2225,9 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__m5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-               {/* ================ Manufacturing Row End ============== */}
+              {/* ================ Manufacturing Row End ============== */}
 
-               {/* ================= E-invoice Row Start =============== */}
+              {/* ================= E-invoice Row Start =============== */}
               {isIndia && (
                 <>
                   <div className="pricing_main_section__grid__e-invoice pricing-border-top">
@@ -2503,135 +2503,135 @@ const pricing = (path) => {
               {/* ================ Bank Integrations Row Start ================ */}
               {!isIndia && (
                 <>
-                    <div className="pricing_main_section__grid__bankInt pricing-border-top">
+                  <div className="pricing_main_section__grid__bankInt pricing-border-top">
                     <div
-                        className={"cursor-pointer " + (bank ? "pt-2" : "")}
-                        onClick={() => setBank((bank) => !bank)}
+                      className={"cursor-pointer " + (bank ? "pt-2" : "")}
+                      onClick={() => setBank((bank) => !bank)}
                     >
-                        <span>
+                      <span>
                         Bank Integrations
                         {bank ? (
-                            <MdKeyboardArrowUp />
+                          <MdKeyboardArrowUp />
                         ) : (
-                            <MdKeyboardArrowDown />
+                          <MdKeyboardArrowDown />
                         )}{" "}
-                        </span>
-                        {bank && (
+                      </span>
+                      {bank && (
                         <p className="c-fw-400">
-                            Provides support in 12+ countries including USA, Canada,
-                            UK, Germany, France, Netherlands, Ireland, Spain,
-                            Sweden, Denmark, Poland, Portugal
+                          Provides support in 12+ countries including USA, Canada,
+                          UK, Germany, France, Netherlands, Ireland, Spain,
+                          Sweden, Denmark, Poland, Portugal
                         </p>
-                        )}
+                      )}
                     </div>
-                    </div>
-                    <div className="pricing_main_section__grid__bankInt_2">
+                  </div>
+                  <div className="pricing_main_section__grid__bankInt_2">
                     <div
-                        className={"cursor-pointer " + (bank ? "pt-2" : "")}
-                        onClick={() => setBank((bank) => !bank)}
+                      className={"cursor-pointer " + (bank ? "pt-2" : "")}
+                      onClick={() => setBank((bank) => !bank)}
                     >
-                        <span>
+                      <span>
                         Bank Integrations
                         {bank ? (
-                            <MdKeyboardArrowUp />
+                          <MdKeyboardArrowUp />
                         ) : (
-                            <MdKeyboardArrowDown />
+                          <MdKeyboardArrowDown />
                         )}{" "}
-                        </span>
-                        {bank && (
+                      </span>
+                      {bank && (
                         <p className="c-fw-400">
-                            Provides support in 12+ countries including USA, Canada,
-                            UK, Germany, France, Netherlands, Ireland, Spain,
-                            Sweden, Denmark, Poland, Portugal
+                          Provides support in 12+ countries including USA, Canada,
+                          UK, Germany, France, Netherlands, Ireland, Spain,
+                          Sweden, Denmark, Poland, Portugal
                         </p>
-                        )}
+                      )}
                     </div>
-                    </div>
-        
-                    <div className="pricing_main_section__grid__bankInt_3">
+                  </div>
+
+                  <div className="pricing_main_section__grid__bankInt_3">
                     <div
-                        className={"cursor-pointer " + (bank ? "pt-2" : "")}
-                        onClick={() => setBank((bank) => !bank)}
+                      className={"cursor-pointer " + (bank ? "pt-2" : "")}
+                      onClick={() => setBank((bank) => !bank)}
                     >
-                        <span>
+                      <span>
                         Bank Integrations
                         {bank ? (
-                            <MdKeyboardArrowUp />
+                          <MdKeyboardArrowUp />
                         ) : (
-                            <MdKeyboardArrowDown />
+                          <MdKeyboardArrowDown />
                         )}{" "}
-                        </span>
-                        {bank && (
+                      </span>
+                      {bank && (
                         <p className="c-fw-400">
-                            Provides support in 12+ countries including USA, Canada,
-                            UK, Germany, France, Netherlands, Ireland, Spain,
-                            Sweden, Denmark, Poland, Portugal
+                          Provides support in 12+ countries including USA, Canada,
+                          UK, Germany, France, Netherlands, Ireland, Spain,
+                          Sweden, Denmark, Poland, Portugal
                         </p>
-                        )}
+                      )}
                     </div>
-                    </div>
-        
-                    <div className="pricing_main_section__grid__bankInt_4">
+                  </div>
+
+                  <div className="pricing_main_section__grid__bankInt_4">
                     <div
-                        className={"cursor-pointer " + (bank ? "pt-2" : "")}
-                        onClick={() => setBank((bank) => !bank)}
+                      className={"cursor-pointer " + (bank ? "pt-2" : "")}
+                      onClick={() => setBank((bank) => !bank)}
                     >
-                        <span>
+                      <span>
                         Bank Integrations
                         {bank ? (
-                            <MdKeyboardArrowUp />
+                          <MdKeyboardArrowUp />
                         ) : (
-                            <MdKeyboardArrowDown />
+                          <MdKeyboardArrowDown />
                         )}{" "}
-                        </span>
-                        {bank && (
+                      </span>
+                      {bank && (
                         <p className="c-fw-400">
-                            Provides support in 12+ countries including USA, Canada,
-                            UK, Germany, France, Netherlands, Ireland, Spain,
-                            Sweden, Denmark, Poland, Portugal
+                          Provides support in 12+ countries including USA, Canada,
+                          UK, Germany, France, Netherlands, Ireland, Spain,
+                          Sweden, Denmark, Poland, Portugal
                         </p>
-                        )}
+                      )}
                     </div>
-                    </div>
-        
-                    <div className="pricing_main_section__grid__bankInt_5 display-all__child">
+                  </div>
+
+                  <div className="pricing_main_section__grid__bankInt_5 display-all__child">
                     <div
-                        className={"cursor-pointer " + (bank ? "pt-2" : "")}
-                        onClick={() => setBank((bank) => !bank)}
+                      className={"cursor-pointer " + (bank ? "pt-2" : "")}
+                      onClick={() => setBank((bank) => !bank)}
                     >
-                        <span>
+                      <span>
                         Bank Integrations
                         {bank ? (
-                            <MdKeyboardArrowUp />
+                          <MdKeyboardArrowUp />
                         ) : (
-                            <MdKeyboardArrowDown />
+                          <MdKeyboardArrowDown />
                         )}{" "}
-                        </span>
-                        {bank && (
+                      </span>
+                      {bank && (
                         <p className="c-fw-400">
-                            Provides support in 12+ countries including USA, Canada,
-                            UK, Germany, France, Netherlands, Ireland, Spain,
-                            Sweden, Denmark, Poland, Portugal
+                          Provides support in 12+ countries including USA, Canada,
+                          UK, Germany, France, Netherlands, Ireland, Spain,
+                          Sweden, Denmark, Poland, Portugal
                         </p>
-                        )}
+                      )}
                     </div>
-                    </div>
-            
-                    <div className="pricing_main_section__grid__ic2 text-center pricing-border-top">
+                  </div>
+
+                  <div className="pricing_main_section__grid__ic2 text-center pricing-border-top">
                     <MdDone />
-                    </div>
-        
-                    <div className="pricing_main_section__grid__ic3 text-center pricing-border-top">
+                  </div>
+
+                  <div className="pricing_main_section__grid__ic3 text-center pricing-border-top">
                     <MdDone />
-                    </div>
-    
-                    <div className="pricing_main_section__grid__ic4 text-center pricing-border-top">
+                  </div>
+
+                  <div className="pricing_main_section__grid__ic4 text-center pricing-border-top">
                     <MdDone />
-                    </div>
-            
-                    <div className="pricing_main_section__grid__ic5 text-center pricing-border-top display-all__child">
+                  </div>
+
+                  <div className="pricing_main_section__grid__ic5 text-center pricing-border-top display-all__child">
                     <MdDone />
-                    </div>
+                  </div>
                 </>
               )}
               {/* ================ Bank Integrations Row End ================ */}
@@ -2879,9 +2879,9 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__tc5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-               {/* ============== Telecom Integration Row End ============= */}
+              {/* ============== Telecom Integration Row End ============= */}
 
-               {/* ======= Branch and warehouse management Row Start ======= */}
+              {/* ======= Branch and warehouse management Row Start ======= */}
               <div className="pricing_main_section__grid__warehouse pricing-border-top">
                 <div
                   className={"cursor-pointer " + (warehouse ? "pt-2" : "")}
@@ -3009,9 +3009,9 @@ const pricing = (path) => {
               <div className="pricing_main_section__grid__w5 text-center pricing-border-top display-all__child">
                 <MdDone />
               </div>
-               {/* ======= Branch and warehouse management Row End ======= */}
+              {/* ======= Branch and warehouse management Row End ======= */}
 
-               {/* ======= Easy Import/Export of the data Row Start ======= */}
+              {/* ======= Easy Import/Export of the data Row Start ======= */}
               <div className="pricing_main_section__grid__easy-import pricing-border-top">
                 <div
                   className={"cursor-pointer " + (importExport ? "pt-2" : "")}
@@ -3558,7 +3558,7 @@ const pricing = (path) => {
                 </div>
               </div>
               <div className="pricing_main_section__grid__sp2 text-center pricing-border-top">
-              { isIndia || isUK ? <MdClose /> : <MdDone /> }
+                {isIndia || isUK ? <MdClose /> : <MdDone />}
               </div>
               <div className="pricing_main_section__grid__sp3 text-center pricing-border-top">
                 <MdDone />
@@ -3583,35 +3583,35 @@ const pricing = (path) => {
                     {isGlobal
                       ? "$0.005"
                       : isIndia
-                      ? "₹0.10"
-                      : isAE
-                      ? "د.إ0.03"
-                      : "£0.005"}
+                        ? "₹0.10"
+                        : isAE
+                          ? "د.إ0.03"
+                          : "£0.005"}
                   </span>{" "}
                   per transaction |{" "}
                   <span className="c-fw-600">
                     {isGlobal
                       ? "$60"
                       : isIndia
-                      ? "₹2000"
-                      : isAE
-                      ? "د.إ250"
-                      : "£60"}
+                        ? "₹2000"
+                        : isAE
+                          ? "د.إ250"
+                          : "£60"}
                   </span>{" "}
                   per branch/year |{" "}
                   <span className="c-fw-600">
                     {isGlobal
                       ? "$30"
                       : isIndia
-                      ? "₹1000"
-                      : isAE
-                      ? "د.إ120"
-                      : "£30"}
+                        ? "₹1000"
+                        : isAE
+                          ? "د.إ120"
+                          : "£30"}
                   </span>{" "}
                   per warehouse/year
                 </p>
               </div>
-               {/* ============== Check all features Row End ================== */}
+              {/* ============== Check all features Row End ================== */}
             </div>
           </div>
         </div>
@@ -3633,7 +3633,337 @@ const pricing = (path) => {
           </div>
         </div>
       </section>
+      <section className="container-fluid d-flex justify-content-center pricing_main_section">
+        <div className="row">
+          <div className="col-12">
+            <table className="pricing-table">
+              <thead>
+                <tr>
+                  <th className="pricing-table__first_row">
+                    <div className="pricing-table__first_row__guarantee_logo">
+                      <figure>
+                        <img
+                          src="/img/guarantee-96.webp"
+                          alt="90 Days guarantee logo"
+                        />
+                      </figure>
+                    </div>
+                    <p className="c-fw-600">Benefits</p>
+                  </th>
+                  <th className="pricing-table__second_row text-center">
+                    {isIndia || isUK ? (
+                      ""
+                    ) : (
+                      <span className="pricing__heading__name">Oak</span>
+                    )}
+                    {isIndia || isUK ? null : (
+                      <>
+                        <br />
+                        <span className="pricing__heading__cost">
+                          <s>
+                            &nbsp;
+                            {isGlobal ? "USD 100" : isAE ? "AED 500" : "GBP 100"}
+                            &nbsp;
+                          </s>
+                        </span>
+                      </>
+                    )}
+                    <br />
+                    <span className="pricing__heading__cost c-fw-500 c-fs-4">
+                      {isGlobal
+                        ? "USD 50"
+                        : isIndia
+                          ? "Free"
+                          : isAE
+                            ? "AED 350"
+                            : "Free"}
+                      <span>
+                        {isUK || isIndia
+                          ? ""
+                          : "/year"}
+                      </span>
+                    </span>
+                    <div className="pricing_main_section__grid__b2 text-center">
+                      <a href={link + "/signup"} className="benefits-link">
+                        Try Now
+                      </a>
+                    </div>
+                  </th>
+                  <th className="pricing-table__second_row text-center second_row_bg">
+                    {isGlobal || isIndia || isAE ? (
+                      <span className="plan_tag">
+                        {/* <img
+                          src="/img/popular-plan.webp"
+                          width="70px"
+                          alt="popular plan tag"
+                        /> */}
+                      </span>
+                    )
+                      :
+                      ""
+                    }
+                    {isIndia || isUK ? (
+                      <span className="pricing__heading__name">Oak</span>
+                    ) : (
+                      <span className="pricing__heading__name">Vine</span>
+                    )}
+                    {isIndia || isUK ? null : (
+                      <>
+                        <br />
+                        <span className="pricing__heading__cost">
+                          <s>
+                            &nbsp;
+                            {isGlobal ? "USD 300" : isAE ? "AED 1,500" : "GBP 300"}
+                            &nbsp;
+                          </s>
+                        </span>
+                      </>
+                    )}
+                    <br />
+                    <span className="pricing__heading__cost c-fw-500 c-fs-4">
+                      {isGlobal
+                        ? "USD 150"
+                        : isIndia
+                          ? "INR 4,000"
+                          : isAE
+                            ? "AED 1,050"
+                            : isUK
+                              ? "GBP 7"
+                              : ""}
+                      <span>/
+                        {isUK
+                          ? "month"
+                          : "year"}
+                      </span>
+                    </span>
+                    <div className="pricing_main_section__grid__b3 text-center">
+                      <a href={link + "/signup"} className="benefits-link">
+                        Try Now
+                      </a>
+                    </div>
+                  </th>
+                  <th className="pricing-table__second_row text-center bg-color">
+                    <span className="pricing__heading__name"> Sequoia</span>
+                    <br />
+                    <span className="c-fw-500 c-fs-4">
+                      {isGlobal
+                        ? "USD 250"
+                        : isIndia
+                          ? "INR 15,000"
+                          : "GBP 35"}
 
+                      <span>/
+                        {isUK
+                          ? "month"
+                          : "year"}
+                      </span>
+                    </span>
+                    <div className="pricing_main_section__grid__b4 text-center">
+                      <a href={link + "/signup"} className="benefits-link">
+                        Try Now
+                      </a>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-top">
+                  <td>
+                    <div>
+                      Invoice Count
+                    </div>
+                  </td>
+                  <td>
+                    <div className="text-center">
+                      {isIndia ? '1,000' : isUK ? '100' : '3,000'}
+                    </div>
+                  </td>
+                  <td className="second_row_bg">
+                    <div className="text-center">
+                      {isIndia ? '3,000' : isUK ? '500' : '5,000'}
+                    </div>
+                  </td>
+                  <td className="bg-color">
+                    <div className="text-center">
+                      {isUK ? '1,000' : '10,000'}
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-top">
+                  <td>
+                    <div>
+                      Bill Count
+                    </div>
+                  </td>
+                  <td>
+                    <div className="text-center">
+                      {isIndia ? '1,000' : isUK ? '100' : '3,000'}
+                    </div>
+                  </td>
+                  <td className="second_row_bg">
+                    <div className="text-center ">
+                      {isIndia ? '3,000' : isUK ? '500' : '5,000'}
+                    </div>
+                  </td>
+                  <td className=" bg-color">
+                    <div className="text-center">
+                      {isUK ? '1,000' : '10,000'}
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-top">
+                  <td>
+                    <div>
+                      Companies
+                    </div>
+                  </td>
+                  <td>
+                    <div className="text-center">
+                      {isIndia || isUK ? "1" : isAE ? "10" : "10"}
+                    </div>
+                  </td>
+                  <td className="second_row_bg">
+                    <div className="text-center">
+                      {isIndia || isUK ? "10" : isAE ? "100" : "100"}
+                    </div>
+                  </td>
+                  <td className=" bg-color">
+                    <div className="text-center">
+                      {isIndia || isUK ? "10" : isAE ? "100" : "100"}
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-top">
+                  <td>
+                    <div>
+                      Accountant Consultant
+                    </div>
+                  </td>
+                  <td>
+                    <div className="text-center">
+                      {isUK
+                        ? <MdClose />
+                        : "2 hrs"}
+                    </div>
+                  </td>
+                  <td className="second_row_bg">
+                    <div className="text-center">
+                      {isUK
+                        ? "2 hrs"
+                        : "4 hrs"}
+                    </div>
+                  </td>
+                  <td className="bg-color">
+                    <div className="text-center">
+                      {isUK
+                        ? " 4 hrs"
+                        : "10 hrs"
+                      }
+                    </div>
+                  </td>
+                </tr>
+                <tr className="border-top">
+                  <td>
+                    <div className="pricing_main_section__grid__user-access">
+                      <div
+                        className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
+                        onClick={() => setUserAccess((userAccess) => !userAccess)}
+                      >
+                        <span>
+                          Unlimited users access{" "}
+                          {userAccess ? (
+                            <MdKeyboardArrowUp />
+                          ) : (
+                            <MdKeyboardArrowDown />
+                          )}{" "}
+                        </span>
+                        {userAccess && (
+                          <p className="c-fw-400">
+                            Grant unlimited user access with customizable roles, to
+                            enhanced security and also allowing you to set
+                            restrictions such as Date ranges, CIDR ranges, and
+                            <a
+                              href={link + "/multi-user-accounting-software"}
+                              target="_blank"
+                            >
+                              {" "}
+                              more
+                            </a>
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div className="text-center">
+                      {isIndia || isUK ? 1 : 'Unlimited'}
+                    </div>
+                  </td>
+                  <td className="second_row_bg">
+                    <div className="text-center">
+                      Unlimited
+                    </div>
+                  </td>
+                  <td className="bg-color">
+                    <div className="text-center">
+                      Unlimited
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              {/* table footer starts */}
+              <tfoot>
+                <tr>
+                  <td colSpan="1">
+                    <div className="pricing_main_section__grid__link_all_feature">
+                      <a className="col-primary" href={link + "/all-features"}>Check all features</a>
+                    </div>
+                  </td>
+                  <td colSpan="3">
+                    <div className="pricing_main_section__grid__extra_charges">
+                      <p className={"c-fs-6 c-fw-400" + (isIndia ? " w-100" : "")}>
+                        Extra Add ons:{" "}
+                        <span className="c-fw-600">
+                          {" "}
+                          {isGlobal
+                            ? "$0.005"
+                            : isIndia
+                              ? "₹0.10"
+                              : isAE
+                                ? "د.إ0.03"
+                                : "£0.005"}
+                        </span>{" "}
+                        per transaction |{" "}
+                        <span className="c-fw-600">
+                          {isGlobal
+                            ? "$60"
+                            : isIndia
+                              ? "₹2000"
+                              : isAE
+                                ? "د.إ250"
+                                : "£60"}
+                        </span>{" "}
+                        per branch/year |{" "}
+                        <span className="c-fw-600">
+                          {isGlobal
+                            ? "$30"
+                            : isIndia
+                              ? "₹1000"
+                              : isAE
+                                ? "د.إ120"
+                                : "£30"}
+                        </span>{" "}
+                        per warehouse/year
+                      </p>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+              {/* table footer end */}
+            </table>
+          </div>
+        </div>
+      </section>
       <section className="container-fluid pricing_start_trail_section">
         <div className="container">
           <div className="text-center">

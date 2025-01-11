@@ -2326,7 +2326,7 @@
 .pricing_start_trail_section {
   background-color: #fafafa;
   padding: 5rem 0;
-  margin-top: 2.5rem;
+  // margin-top: 2.5rem;
 
   a {
     display: inline-block;
@@ -2352,6 +2352,37 @@
     a {
       text-decoration: underline !important;
       color: var(--col-dark);
+    }
+  }
+}
+.bg-color{
+  background-color: #e6fff5;
+}
+.border-top {
+  border-top: 1px solid #dee2e6; 
+  height: 60px;
+  font-weight: 600;
+}
+.table_bg_color{
+  background-color: #fafafa;
+}
+.second_row_bg {
+  background-color: #ffffff;
+}
+.pricing-table {
+  &__first_row{
+    width: 500px;
+  }
+  
+  &__second_row {
+    width: 200px;
+  }
+  &__guarantee_logo {
+    figure {
+      img {
+        max-width: 70px;
+        width: 100%;
+      }
     }
   }
 }
