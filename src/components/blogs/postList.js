@@ -8,9 +8,7 @@ export default function PostList({ posts, pagination , page}) {
   return (
     <div className="blog">
     <div className={"container blog-home-container"}>
-      <div>
-        <h1 className="text-center c-fs-3">Blogs</h1>
-      </div>
+      <h1 className="sub-heading text-center mb-5">Blogs</h1>
       <div className={"posts"}>
         <div className={"post-list"}>
           {posts?.map((it, i) => (                        
