@@ -2355,9 +2355,6 @@
     }
   }
 }
-.bg-color{
-  background-color: #e6fff5;
-}
 .border-top {
   border-top: 1px solid #dee2e6; 
   height: 60px;
@@ -2366,23 +2363,19 @@
 .table_bg_color{
   background-color: #fafafa;
 }
-.second_row_bg {
-  background-color: #ffffff;
-}
-.pricing-table {
-  &__first_row{
-    width: 500px;
-  }
-  
-  &__second_row {
-    width: 200px;
-  }
-  &__guarantee_logo {
-    figure {
-      img {
-        max-width: 70px;
-        width: 100%;
-      }
+  .pricing-table {
+    &__first_row{
+      width: 430px;
     }
+    &__second_row {
+      width: 200px;
+      
+      &__bg {
+        background-color: #ffffff;
+      }
+
+      &__bg-color{
+        background-color: #e6fff5;
+      }
   }
 }

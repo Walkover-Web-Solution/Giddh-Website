@@ -1,4 +1,5 @@
 import { useState } from "react";
+// import Jsondata from '/data/pricingData.json';
 import {
   MdDone,
   MdClose,
@@ -41,6 +42,8 @@ const pricing = (path) => {
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
+
+  // const pricingData = Jsondata.pricingData;
 
   return (
     <>
@@ -3636,13 +3639,23 @@ const pricing = (path) => {
       <section className="container-fluid d-flex justify-content-center pricing_main_section">
         <div className="row">
           <div className="col-12">
-            <table className="pricing-table">
+            <table className= { "pricing-table" +
+                (isGlobal
+                  ? "pricingData"
+                  : isIndia
+                    ? "display-all"
+                    : isUK
+                      ? "display-uk"
+                      : "display-four")
+                }
+                >
               <thead>
                 <tr>
                   <th className="pricing-table__first_row">
-                    <div className="pricing-table__first_row__guarantee_logo">
+                    <div className="pricing-table__first_row">
                       <figure>
                         <img
+                          width="70"
                           src="/img/guarantee-96.webp"
                           alt="90 Days guarantee logo"
                         />
@@ -3651,11 +3664,19 @@ const pricing = (path) => {
                     <p className="c-fw-600">Benefits</p>
                   </th>
                   <th className="pricing-table__second_row text-center">
-                    {isIndia || isUK ? (
+                  { isGlobal || isAE ? (
                       ""
                     ) : (
-                      <span className="pricing__heading__name">Oak</span>
+                      <span className="pricing__heading__name">Free</span>
                     )}
+                    {/* <div className="pricing_main_section__grid__b2 text-center">
+                      <a href={link + "/signup"} className="benefits-link">
+                        Try Now
+                      </a>
+                    </div> */}
+                  </th>
+                  <th className="pricing-table__second_row text-center">
+                      <span className="pricing__heading__name">Oak</span>
                     {isIndia || isUK ? null : (
                       <>
                         <br />
@@ -3689,7 +3710,7 @@ const pricing = (path) => {
                       </a>
                     </div>
                   </th>
-                  <th className="pricing-table__second_row text-center second_row_bg">
+                  <th className="pricing-table__second_row__bg text-center">
                     {isGlobal || isIndia || isAE ? (
                       <span className="plan_tag">
                         {/* <img
@@ -3742,7 +3763,7 @@ const pricing = (path) => {
                       </a>
                     </div>
                   </th>
-                  <th className="pricing-table__second_row text-center bg-color">
+                  <th className="pricing-table__second_row__bg-color text-center">
                     <span className="pricing__heading__name"> Sequoia</span>
                     <br />
                     <span className="c-fw-500 c-fs-4">
@@ -3775,15 +3796,20 @@ const pricing = (path) => {
                   </td>
                   <td>
                     <div className="text-center">
-                      {isIndia ? '1,000' : isUK ? '100' : '3,000'}
+                      {isIndia ? '2,000' : isUK ? '1' : ''}
                     </div>
                   </td>
-                  <td className="second_row_bg">
+                  <td>
+                    <div className="text-center">
+                      {isIndia ? '1,000' : '3,000'}
+                    </div>
+                  </td>
+                  <td className="pricing-table__second_row__bg">
                     <div className="text-center">
                       {isIndia ? '3,000' : isUK ? '500' : '5,000'}
                     </div>
                   </td>
-                  <td className="bg-color">
+                  <td className="pricing-table__second_row__bg-color">
                     <div className="text-center">
                       {isUK ? '1,000' : '10,000'}
                     </div>
@@ -3795,17 +3821,18 @@ const pricing = (path) => {
                       Bill Count
                     </div>
                   </td>
+                  <td></td>
                   <td>
                     <div className="text-center">
                       {isIndia ? '1,000' : isUK ? '100' : '3,000'}
                     </div>
                   </td>
-                  <td className="second_row_bg">
+                  <td className="pricing-table__second_row__bg">
                     <div className="text-center ">
                       {isIndia ? '3,000' : isUK ? '500' : '5,000'}
                     </div>
                   </td>
-                  <td className=" bg-color">
+                  <td className="pricing-table__second_row__bg-color">
                     <div className="text-center">
                       {isUK ? '1,000' : '10,000'}
                     </div>
@@ -3817,17 +3844,18 @@ const pricing = (path) => {
                       Companies
                     </div>
                   </td>
+                  <td></td>
                   <td>
                     <div className="text-center">
                       {isIndia || isUK ? "1" : isAE ? "10" : "10"}
                     </div>
                   </td>
-                  <td className="second_row_bg">
+                  <td className="pricing-table__second_row__bg">
                     <div className="text-center">
                       {isIndia || isUK ? "10" : isAE ? "100" : "100"}
                     </div>
                   </td>
-                  <td className=" bg-color">
+                  <td className="pricing-table__second_row__bg-color">
                     <div className="text-center">
                       {isIndia || isUK ? "10" : isAE ? "100" : "100"}
                     </div>
@@ -3839,6 +3867,7 @@ const pricing = (path) => {
                       Accountant Consultant
                     </div>
                   </td>
+                  <td></td>
                   <td>
                     <div className="text-center">
                       {isUK
@@ -3846,14 +3875,14 @@ const pricing = (path) => {
                         : "2 hrs"}
                     </div>
                   </td>
-                  <td className="second_row_bg">
+                  <td className="pricing-table__second_row__bg">
                     <div className="text-center">
                       {isUK
                         ? "2 hrs"
                         : "4 hrs"}
                     </div>
                   </td>
-                  <td className="bg-color">
+                  <td className="pricing-table__second_row__bg-color">
                     <div className="text-center">
                       {isUK
                         ? " 4 hrs"
@@ -3864,7 +3893,7 @@ const pricing = (path) => {
                 </tr>
                 <tr className="border-top">
                   <td>
-                    <div className="pricing_main_section__grid__user-access">
+                    <div>
                       <div
                         className={"cursor-pointer " + (userAccess ? "pt-2" : "")}
                         onClick={() => setUserAccess((userAccess) => !userAccess)}
@@ -3894,24 +3923,24 @@ const pricing = (path) => {
                       </div>
                     </div>
                   </td>
+                  <td></td>
                   <td>
                     <div className="text-center">
                       {isIndia || isUK ? 1 : 'Unlimited'}
                     </div>
                   </td>
-                  <td className="second_row_bg">
+                  <td className="pricing-table__second_row__bg">
                     <div className="text-center">
                       Unlimited
                     </div>
                   </td>
-                  <td className="bg-color">
+                  <td className="pricing-table__second_row__bg-color">
                     <div className="text-center">
                       Unlimited
                     </div>
                   </td>
                 </tr>
               </tbody>
-              {/* table footer starts */}
               <tfoot>
                 <tr>
                   <td colSpan="1">
@@ -3959,7 +3988,6 @@ const pricing = (path) => {
                   </td>
                 </tr>
               </tfoot>
-              {/* table footer end */}
             </table>
           </div>
         </div>
