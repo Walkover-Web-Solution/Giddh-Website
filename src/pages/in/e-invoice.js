@@ -7,9 +7,9 @@ const eInvoice = () => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
+                <h1 className="heading col-primary c-fw-600 mb-4">
                   Make Your Business E-Invoice Ready
-                </h2>
+                </h1>
                 <p className="col-grey c-fs-3 mb-5">
                 Now E-Invoice is mandatory from 1st August 2023 for the business whose turnover is INR 5 crore+. GIDDH is supporting e-invoice from 1st April 2021 
                 </p>

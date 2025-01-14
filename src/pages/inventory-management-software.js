@@ -66,9 +66,9 @@ const inventoryManagementSoftware = (path) => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h1 className="sub-heading col-primary c-fw-600 mb-3">
+                <h2 className="sub-heading col-primary c-fw-600 mb-3">
                   Maintain inventory tracking. Stay updated.
-                </h1>
+                </h2>
                 <p className="c-fs-4 mb-5">
                   Modern inventory management software for the modern
                   entrepreneur no stress, no hassles, no hidden costs. Managing

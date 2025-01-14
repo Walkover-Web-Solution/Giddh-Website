@@ -110,21 +110,21 @@
     {
       "name": "Invoice",
       "image": "/feature-invoicing-software.svg",
-      "description": "Easily generate and send GST invoices, set due dates, and apply reverse charges.",
+      "description": "Easily generate and send <strong>GST invoices</strong>, set due dates, and apply reverse charges.",
       "link": "https://giddh.com/in/invoice-software",
       "hasMoreContent": true
     },
     {
       "name": "Unlimited user access",
       "image": "/feature-unlimited-user-access.svg",
-      "description": "As a cloud accounting software, we offer unlimited free user access across all plans, ensuring flexibility and inclusivity for all users.",
+      "description": "As a cloud accounting software, we offer <strong>unlimited free user access</strong> across all plans, ensuring flexibility and inclusivity for all users.",
       "link": "https://giddh.com/in/multi-user-accounting-software",
       "hasMoreContent": true
     },
     {
       "name": "IP Security",
       "image": "/feature-ip-security.svg",
-      "description": "Restrict user access to specific locations such as your office or home through IP security measures. Our cloud accounting ensures security akin to offline software.",
+      "description": "Restrict user access to specific locations such as your office or home through <strong>IP security measures</strong>. Our cloud accounting ensures security akin to offline software.",
       "link": "https://giddh.com/in/security",
       "hasMoreContent": true
     },
@@ -145,7 +145,7 @@
     {
       "name": "Multi-currency",
       "image": "/feature-multi-currency.svg",
-      "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates.",
+      "description": "<strong>Manage invoicing and payments</strong> seamlessly across 100+ currencies, with <strong>automatic currency conversion</strong> based on real-time exchange rates.",
       "link": "https://giddh.com/in/multi-currency-accounting-software",
       "hasMoreContent": false
     },
@@ -166,7 +166,7 @@
     {
       "name": "Fixed Asset Management",
       "image": "/feature-asset-management.svg",
-      "description": "Giddh's Fixed Asset Management streamlines the oversight and control of fixed assets, allowing for categorization into Groups, Stock, and variants. This feature offers real-time reports, enabling efficient monitoring and strategic asset management for your business.",
+      "description": "Giddh's <strong>Fixed Asset Management</strong> streamlines the oversight and control of fixed assets, allowing for categorization into <strong>Groups, Stock, and variants</strong>. This feature offers real-time reports, enabling efficient monitoring and strategic asset management for your business.",
       "link": null,
       "hasMoreContent": false
     },

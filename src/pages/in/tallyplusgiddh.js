@@ -8,7 +8,7 @@ const tallyPlusGiddh = () => {
           <div className="row height-inherit">
             <div className="col-6 px-0">
               <div className="giddh-plus-tally__left-wrapper d-flex flex-column">
-                <h1 className="giddh-plus-tally__title">TALLY</h1>
+                <h1 className="giddh-plus-tally__title">TALLY an<span className="tittle-giddh">d GIDDH</span></h1>
                 <article>
                   <p className="col-dark">
                     Graphs, Analytics,
@@ -31,7 +31,7 @@ const tallyPlusGiddh = () => {
             </div>
             <div className="col-6 px-0">
               <div className="giddh-plus-tally__right-wrapper d-flex flex-column">
-                <h1 className="giddh-plus-tally__title">GIDDH</h1>
+                {/* <h1 className="giddh-plus-tally__title">GIDDH</h1> */}
                 <a href="https://giddh.com/help/sync-with-tally-1591360375828781" target="_blank" className="guide-link-btn col-white d-inline-block">
                   How it works
                 </a>

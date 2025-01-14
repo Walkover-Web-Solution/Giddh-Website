@@ -16,8 +16,14 @@
     padding-top: var(--content-distance-from-top);
     font-size: 56px;
     font-weight: var(--c-fw-600);
+    transform: translateX(28%);
+    -webkit-text-stroke-width: 1px;
   }
-
+  .tittle-giddh{
+    color:#f1f1f1;
+    font-weight: var(--c-fw-600);
+    margin-right: -6px;
+  }
   .banner-img {
     user-select: none;
     padding-top: var(--content-distance-from-top);
@@ -48,17 +54,17 @@
       color: var(--col-primary);
       margin-right: var(--content-distance-from-center);
       position: relative;
-      &::after {
-        content: "";
-        width: 32px;
-        height: 32px;
-        position: absolute;
-        right: -72px;
-        transform: translate(-50%, 18px);
-        background-image: url("/img/tally-plus-giddh/golden_plus_icon.webp");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+      // &::after {
+      //   content: "";
+      //   width: 32px;
+      //   height: 32px;
+      //   position: absolute;
+      //   right: -72px;
+      //   transform: translate(-50%, 18px);
+      //   background-image: url("/img/tally-plus-giddh/golden_plus_icon.webp");
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      // }
     }
     article {
       margin-top: var(--content-distance-from-top);
@@ -75,7 +81,8 @@
       margin-left: var(--content-distance-from-center);
     }
     .guide-link-btn {
-      margin-top: var(--content-distance-from-top);
+      // margin-top: var(--content-distance-from-top);
+      margin-top: 206px;
       margin-left: var(--content-distance-from-center);
       width: fit-content;
       border-radius: 4px;
