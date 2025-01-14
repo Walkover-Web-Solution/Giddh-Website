@@ -54,17 +54,6 @@
       color: var(--col-primary);
       margin-right: var(--content-distance-from-center);
       position: relative;
-      // &::after {
-      //   content: "";
-      //   width: 32px;
-      //   height: 32px;
-      //   position: absolute;
-      //   right: -72px;
-      //   transform: translate(-50%, 18px);
-      //   background-image: url("/img/tally-plus-giddh/golden_plus_icon.webp");
-      //   background-size: contain;
-      //   background-repeat: no-repeat;
-      // }
     }
     article {
       margin-top: var(--content-distance-from-top);
