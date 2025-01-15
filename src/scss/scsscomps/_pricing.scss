@@ -2363,19 +2363,18 @@
 .table_bg_color{
   background-color: #fafafa;
 }
-  .pricing-table {
+.pricing-table {
     &__first_row{
-      width: 430px;
+      width: 383px;
     }
     &__second_row {
-      width: 200px;
-      
-      &__bg {
-        background-color: #ffffff;
-      }
-
-      &__bg-color{
-        background-color: #e6fff5;
-      }
-  }
+      width: 178px;
+    }
 }
+ .bg {
+    background-color: var(--col-white); 
+  }
+  
+  .bg-color{
+    background-color: #e6fff5;
+  }
