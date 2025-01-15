@@ -45,7 +45,7 @@ const clientSummary = () => {
                         <img
                           src={"/img/our-clients" + res.clientLogo}
                           alt={res.clientName}
-                          width="auto"
+                          width="130"
                           height="60"
                         />
                       </figure>
