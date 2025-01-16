@@ -82,7 +82,7 @@ const invoiceSoftware = (path) => {
                     <div className='container features__heading_container'>
                         <div className='row'>
                             <div className='col-lg-7 order-lg-0 order-1'>
-                                <h1 className='heading col-primary c-fw-600 mb-4'>
+                                <h1 className='heading col-primary c-fw-600 mb-4' role="heading" aria-level="1">
                                     {isAE && "UAE-Specific Invoice Software for Business Efficiency"}
                                     {isUK && "Streamline Billing with Our UK Invoice Software"}
                                     {(isIndia || isGlobal) && "Effortless Invoicing Solutions"}
@@ -96,6 +96,8 @@ const invoiceSoftware = (path) => {
                                         className='download_free_btn me-4'
                                         data-bs-toggle='modal'
                                         data-bs-target='#downloadFree'
+                                        role="button"
+                                        aria-label="Download Free Invoice Software"
                                     >
                                         Download Free
                                     </a>
@@ -107,6 +109,8 @@ const invoiceSoftware = (path) => {
                                                 url: "https://calendly.com/sales-accounting-software/talk-to-sale",
                                             })
                                         }
+                                        role="button"
+                                        aria-label="Schedule a Demo"
                                     >
                                         Schedule Demo
                                     </a>
@@ -116,14 +120,15 @@ const invoiceSoftware = (path) => {
                                 <figure className='text-end'>
                                     <img
                                         src='/img/feature-gallery-icons/invoice-banner.svg'
-                                        width='90%'
-                                        alt='invoice-banner-image'
+                                        width="400"
+                                        height="300" 
+                                        alt='A banner showcasing the invoice software features'
                                     />
                                     <img
                                         src='/img/all-features-cloud_icon.svg'
-                                        alt='cloud icons'
+                                        alt='Cloud icons representing various features of the software'
                                         className='features__heading_container__right_banner_img'
-                                        width='90%'
+                                        width='90%' 
                                     />
                                 </figure>
                             </div>
@@ -135,7 +140,7 @@ const invoiceSoftware = (path) => {
                     <div className='container'>
                         <div className='row'>
                             <div className='col-12 text-center features__sub_heading_container--pull-top'>
-                                <h2 className='sub-heading col-primary c-fw-600 mb-3'>
+                                <h2 className='sub-heading col-primary c-fw-600 mb-3' role="heading" aria-level="2">
                                     {isAE && "Automated Invoicing: Save Time and Reduce Errors"}
                                     {isUK && "Compliance Made Simple with Automated Features"}
                                     {(isIndia || isGlobal) && "Save time. Stay ahead."}
@@ -145,8 +150,13 @@ const invoiceSoftware = (path) => {
                                     Productivity with Online Invoicing Software for Transactions,
                                     Gaining a Competitive Business Edge.
                                 </p>
-                                <a href={link + "/signup"} className='btn-link-purple'>
-                                    Start Your Trial
+                                <a 
+                                   href={link + "/signup"} 
+                                   className='btn-link-purple'
+                                   role="button" 
+                                   aria-label="Start your trial for GIDDH invoicing software"
+                                >
+                                   Start Your Trial
                                 </a>
                             </div>
                         </div>
@@ -165,7 +175,7 @@ const invoiceSoftware = (path) => {
                                         >
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                         {feature?.name}
                                                     </h2>
                                                     <p>{feature?.des}</p>
@@ -176,7 +186,7 @@ const invoiceSoftware = (path) => {
                                                     <img
                                                         src={feature?.img}
                                                         className='img-fluid'
-                                                        alt='create-professional-invoicing-icon'
+                                                        alt={`Image representing the feature: ${feature?.name}`}
                                                     />
                                                 </figure>
                                             </div>
@@ -206,7 +216,7 @@ const invoiceSoftware = (path) => {
                                             <img
                                                 src='/img/feature-gallery-icons/create-and-send-professional-invoices-with-cloud-based.svg'
                                                 className='img-fluid'
-                                                alt='create-professional-invoicing-icon'
+                                                alt='Create and send professional invoices with cloud-based software'
                                             />
                                         </figure>
                                     </div>
@@ -214,7 +224,7 @@ const invoiceSoftware = (path) => {
                                 <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
-                                            <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                            <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                 Use Barcode for making invoice
                                             </h2>
                                             <p>
@@ -230,7 +240,7 @@ const invoiceSoftware = (path) => {
                                             <img
                                                 src='/img/feature-gallery-icons/barcode.svg'
                                                 className='img-fluid'
-                                                alt='barcode banner image'
+                                                alt='Barcode for invoice processing'
                                             />
                                         </figure>
                                     </div>
@@ -239,7 +249,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     {isIndia
                                                         ? "Effortless GST Invoicing"
                                                         : "Incorporate VAT into the invoices"}
@@ -263,7 +273,7 @@ const invoiceSoftware = (path) => {
                                                             : "/img/feature-gallery-icons/effortless-vat-invoicing.svg"
                                                     }
                                                     className='img-fluid'
-                                                    alt='invoicing banner image'
+                                                    alt={isIndia ? 'Effortless GST invoicing' : 'Effortless VAT invoicing'}
                                                 />
                                             </figure>
                                         </div>
@@ -274,7 +284,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Other taxes
                                                 </h2>
                                                 <p>
@@ -300,7 +310,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Multi-currency Invoices
                                                 </h2>
                                                 <p>
@@ -318,7 +328,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/multi-currency.svg'
                                                     className='img-fluid'
-                                                    alt='multi-currency-image'
+                                                    alt='Multi-currency invoicing'
                                                 />
                                             </figure>
                                         </div>
@@ -328,7 +338,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Multi-currency Invoices
                                                 </h2>
                                                 <p>
@@ -346,7 +356,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/multi-currency.svg'
                                                     className='img-fluid'
-                                                    alt='multi-currency-image'
+                                                    alt='Multi-currency invoicing'
                                                 />
                                             </figure>
                                         </div>
@@ -356,7 +366,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Sending invoice via multi-channels
                                                 </h2>
                                                 <p>
@@ -373,7 +383,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/share-invoice.svg'
                                                     className='img-fluid'
-                                                    alt='share-invoice-image'
+                                                    alt='Sending invoice via multiple channels'
                                                 />
                                             </figure>
                                         </div>
@@ -383,7 +393,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Sending invoice via multi-channels
                                                 </h2>
                                                 <p>
@@ -400,7 +410,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/share-invoice.svg'
                                                     className='img-fluid'
-                                                    alt='share-invoice-image'
+                                                    alt='Sending invoice via multiple channels'
                                                 />
                                             </figure>
                                         </div>
@@ -410,7 +420,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Lock your invoices and move on!
                                                 </h2>
                                                 <p>
@@ -427,7 +437,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/lock-your-invoice.svg'
                                                     className='img-fluid'
-                                                    alt='lock your invoice image'
+                                                    alt='Lock your invoice feature'
                                                 />
                                             </figure>
                                         </div>
@@ -437,7 +447,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Lock your invoices and move on!
                                                 </h2>
                                                 <p>
@@ -454,7 +464,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/lock-your-invoice.svg'
                                                     className='img-fluid'
-                                                    alt='lock your invoice image'
+                                                    alt='Lock your invoice feature'
                                                 />
                                             </figure>
                                         </div>
@@ -464,7 +474,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Add due date to invoices
                                                 </h2>
                                                 <p>
@@ -480,7 +490,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/add-due-date-to-invoices.svg'
                                                     className='img-fluid'
-                                                    alt='invoice-due-dates-logo'
+                                                    alt='Invoice due dates feature'
                                                 />
                                             </figure>
                                         </div>
@@ -490,7 +500,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Add due date to invoices
                                                 </h2>
                                                 <p>
@@ -506,7 +516,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/add-due-date-to-invoices.svg'
                                                     className='img-fluid'
-                                                    alt='invoice-due-dates-logo'
+                                                    alt='Invoice due dates feature'
                                                 />
                                             </figure>
                                         </div>
@@ -517,7 +527,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Customize the invoice number
                                                 </h2>
                                                 <p>
@@ -533,7 +543,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/customize-the-invoice-number.svg'
                                                     className='img-fluid'
-                                                    alt='custom invoice number image'
+                                                    alt='Customize invoice number feature'
                                                 />
                                             </figure>
                                         </div>
@@ -543,7 +553,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Customize the invoice number
                                                 </h2>
                                                 <p>
@@ -559,7 +569,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/customize-the-invoice-number.svg'
                                                     className='img-fluid'
-                                                    alt='custom invoice number image'
+                                                    alt='Customize invoice number feature'
                                                 />
                                             </figure>
                                         </div>
@@ -569,7 +579,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     {" "}
                                                     Reverse charge
                                                 </h2>
@@ -585,7 +595,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/reverse-charge.svg'
                                                     className='img-fluid'
-                                                    alt='reverse charge image'
+                                                    alt='Reverse charge feature'
                                                 />
                                             </figure>
                                         </div>
@@ -596,7 +606,7 @@ const invoiceSoftware = (path) => {
                                         <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                         {" "}
                                                         Reverse charge
                                                     </h2>
@@ -612,7 +622,7 @@ const invoiceSoftware = (path) => {
                                                     <img
                                                         src='/img/feature-gallery-icons/reverse-charge.svg'
                                                         className='img-fluid'
-                                                        alt='reverse charge image'
+                                                        alt='Reverse charge feature'
                                                     />
                                                 </figure>
                                             </div>
@@ -622,7 +632,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Bulk Invoice update
                                                 </h2>
                                                 <p>
@@ -636,7 +646,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/bulk-update.svg'
                                                     className='img-fluid'
-                                                    alt='bulk invoice update image'
+                                                    alt='Bulk invoice update feature'
                                                 />
                                             </figure>
                                         </div>
@@ -647,7 +657,7 @@ const invoiceSoftware = (path) => {
                                         <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                         Bulk Invoice update
                                                     </h2>
                                                     <p>
@@ -661,7 +671,7 @@ const invoiceSoftware = (path) => {
                                                     <img
                                                         src='/img/feature-gallery-icons/bulk-update.svg'
                                                         className='img-fluid'
-                                                        alt='bulk invoice update image'
+                                                        alt='Bulk invoice update feature'
                                                     />
                                                 </figure>
                                             </div>
@@ -671,7 +681,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Copy from previous invoice
                                                 </h2>
                                                 <p>
@@ -687,7 +697,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/copy-from-invoice.svg'
                                                     className='img-fluid'
-                                                    alt='copy from invoice image'
+                                                    alt='Copy from previous invoice feature'
                                                 />
                                             </figure>
                                         </div>
@@ -698,7 +708,7 @@ const invoiceSoftware = (path) => {
                                         <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                         Copy from previous invoice
                                                     </h2>
                                                     <p>
@@ -714,7 +724,7 @@ const invoiceSoftware = (path) => {
                                                     <img
                                                         src='/img/feature-gallery-icons/copy-from-invoice.svg'
                                                         className='img-fluid'
-                                                        alt='copy from invoice image'
+                                                        alt='Copy from previous invoice feature'
                                                     />
                                                 </figure>
                                             </div>
@@ -725,7 +735,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Import and Export the invoice
                                                 </h2>
                                                 <p>
@@ -742,7 +752,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/Invoice.svg'
                                                     className='img-fluid'
-                                                    alt='import export image'
+                                                    alt='Import and export invoices feature'
                                                 />
                                             </figure>
                                         </div>
@@ -753,7 +763,7 @@ const invoiceSoftware = (path) => {
                                         <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                         Import and Export the invoice
                                                     </h2>
                                                     <p>
@@ -770,7 +780,7 @@ const invoiceSoftware = (path) => {
                                                     <img
                                                         src='/img/feature-gallery-icons/Invoice.svg'
                                                         className='img-fluid'
-                                                        alt='import export image'
+                                                        alt='Import and export invoices feature'
                                                     />
                                                 </figure>
                                             </div>
@@ -781,7 +791,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Generate multiple and compound invoices
                                                 </h2>
                                                 <p>
@@ -797,7 +807,7 @@ const invoiceSoftware = (path) => {
                                                 <img
                                                     src='/img/feature-gallery-icons/generate-multiple-and-compound-invoices.svg'
                                                     className='img-fluid'
-                                                    alt='multiple compound image'
+                                                    alt='Generate multiple and compound invoices feature'
                                                 />
                                             </figure>
                                         </div>
@@ -808,7 +818,7 @@ const invoiceSoftware = (path) => {
                                         <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                         Generate multiple and compound invoices
                                                     </h2>
                                                     <p>
@@ -824,7 +834,7 @@ const invoiceSoftware = (path) => {
                                                     <img
                                                         src='/img/feature-gallery-icons/generate-multiple-and-compound-invoices.svg'
                                                         className='img-fluid'
-                                                        alt='multiple compound image'
+                                                        alt='Generate multiple and compound invoices feature'
                                                     />
                                                 </figure>
                                             </div>
@@ -841,7 +851,7 @@ const invoiceSoftware = (path) => {
                                 >
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
-                                            <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                            <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
                                                 Run your business with automation!
                                             </h2>
                                             <p>
@@ -850,6 +860,7 @@ const invoiceSoftware = (path) => {
                                                     href='https://giddh.com/blog/benefits-of-online-invoicing-for-small-business/'
                                                     target='_blank'
                                                     className='text-decoration-underline'
+                                                    aria-label="Read about the benefits of online invoicing for small businesses"
                                                 >
                                                     online invoices
                                                 </a>{" "}
@@ -865,7 +876,7 @@ const invoiceSoftware = (path) => {
                                             <img
                                                 src='/img/feature-gallery-icons/run-your-business-with-automation.svg'
                                                 className='img-fluid'
-                                                alt='automation in accounting software image'
+                                                alt='Automation in accounting software'
                                             />
                                         </figure>
                                     </div>
@@ -875,12 +886,12 @@ const invoiceSoftware = (path) => {
                     </div>
                 </section>
 
-                <section className='container-fluid bg-transparent'>
+                <section className='container-fluid bg-transparent' aria-labelledby="importance-of-invoices">
                     <div className='container features__e-invoice_page'>
                         <div className='row mt-5'>
                             <div className='col-12'>
                                 <div className='text-center'>
-                                    <a href={link + "/signup"} className='btn-link-purple'>
+                                    <a href={link + "/signup"} className='btn-link-purple' aria-label="Sign up for Giddh invoicing software">
                                         Try Now
                                     </a>
                                 </div>
@@ -1035,42 +1046,46 @@ const invoiceSoftware = (path) => {
                     </div>
                 </section>
 
-                <section className='container-fluid features__suggestion_container'>
+                <section className='container-fluid features__suggestion_container' aria-labelledby="suggestion-heading">
                     <div className='container'>
                         <div className='row'>
                             <div className='col-12 text-center features__sub_heading_container--pull-top'>
                                 <figure>
                                     <img
                                         src='/img/suggestion.svg'
-                                        alt='people interested in Connect Bank Reconcile also looked at image'
+                                        alt='Illustration representing suggestions for invoicing software'
                                         className='features__sub_heading_container--banner_img'
+                                        aria-hidden="true"
                                     />
                                 </figure>
-                                <h2 className='c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4'>
+                                <h2 id="suggestion-heading" className='c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4'>
                                     People interested in
                                     <span className='col-blue'> Invoicing Software </span> also
                                     looked at
                                 </h2>
 
-                                <div className='features__suggestion_container__links'>
-                                    <a href={link + "/all-features"} className='col-blue'>
+                                <div className='features__suggestion_container__links' role="navigation" aria-label="Related links">
+                                    <a href={link + "/all-features"} className='col-blue' aria-label="View all features">
                                         All features
                                     </a>
                                     <a
                                         href={link + "/multi-user-accounting-software"}
                                         className='border-vertical col-blue'
+                                        aria-label="Learn about multi-user accounting software"
                                     >
                                         Share Data
                                     </a>
                                     <a
                                         href={link + "/multi-currency-accounting-software"}
                                         className='border-vertical col-blue'
+                                        aria-label="Explore multi-currency accounting software"
                                     >
                                         Multi-Currency
                                     </a>
                                     <a
                                         href={link + "/invoice-software"}
                                         className='border-vertical col-blue'
+                                        aria-label="Discover more about invoicing software"
                                     >
                                         Invoicing
                                     </a>

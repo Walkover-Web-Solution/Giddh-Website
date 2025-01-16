@@ -10,37 +10,37 @@ const gst = (path) => {
   return (
     <>
       <section className="container mb-5 ">
-        <div className="tax-hero-container  text-center">
+        <div className="tax-hero-container text-center" role="banner">
           <div className="row d-flex h-100 align-content-end">
-            <div className=" d-flex flex-column  ">
-              <h2 className="c-fs-3  col-dark-light fw-light m-3">
+            <div className="d-flex flex-column">
+              <h2 className="c-fs-3 col-dark-light fw-light m-3" id="gst-reporting-heading">
                 Error-Free GST Reporting for Your Business
               </h2>
               <h1 className="heading c-fw-600  col-primary">GST Filling & Accounting Software</h1>
               <h2 className="c-fs-3">Seamless Integration with Accounting Systems</h2>
             </div>
-            <div className="tax-image mt-auto">
+            <div className="tax-image mt-auto" role="img" aria-label="GST banner image">
               <img
                 className="col-12"
-                alt="gst banner image"
+                alt="A banner representing GST services with a professional theme"
                 src="/img/tax-images/tax-image.webp"
-              ></img>
+              />
             </div>
           </div>
         </div>
       </section>
-      <section className=" filing-tax py-5">
+      <section className="filing-tax py-5">
         <div className="container mt-5">
           <div className="text-center">
-            <p className="sub-heading c-fs-1 col-primary fw-bold mb-5">
+            <p className="sub-heading c-fs-1 col-primary fw-bold mb-5" id="advantages-heading">
               Advantages of filing GSTR with us
             </p>
           </div>
 
           <div className="row">
             <div className="col">
-              <div className="filing-tax-card d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/Direct-Filing.svg" alt="Tax Filling in Giddh Accounting Software Icon" />
+              <div className="filing-tax-card d-flex flex-column align-items-center gap-4 p-3" role="article">
+                <img src="/img/tax-images/Direct-Filing.svg" alt="Icon representing Direct Filing in Giddh Accounting Software" />
                 <div className="caption text-center">
                   <h2 className="small-heading col-primary c-fw-600">
                     Direct Filing
@@ -55,8 +55,8 @@ const gst = (path) => {
             </div>
             <div className="col">
               {" "}
-              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/accurate.svg" alt="accurate results icon" />
+              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3" role="article">
+                <img src="/img/tax-images/accurate.svg" alt="Icon representing 100% Accurate results" />
                 <div className="caption text-center">
                   <h2 className="small-heading col-primary c-fw-600">
                     100% Accurate
@@ -71,8 +71,8 @@ const gst = (path) => {
             </div>
             <div className="col">
               {" "}
-              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/get-notified.svg" alt="Striking Gavel Hammer logo" />
+              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3" role="article">
+                <img src="/img/tax-images/get-notified.svg" alt="Icon representing Timely Notifications" />
                 <div className="caption text-center">
                   <h2 className="small-heading col-primary c-fw-600">
                     Timely Notifications
@@ -90,8 +90,8 @@ const gst = (path) => {
           <div className="row">
             <div className="col">
               {" "}
-              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/easy-fast.svg" alt="Easy and fast icon" />
+              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3" role="article">
+                <img src="/img/tax-images/easy-fast.svg" alt="Icon representing Highly Collaborative features" />
                 <div className="caption text-center">
                   <h2 className="small-heading col-primary c-fw-600">
                     Highly Collaborative
@@ -106,10 +106,8 @@ const gst = (path) => {
             </div>
             <div className="col">
               {" "}
-              <div
-                className="filing-tax d-flex flex-column align-items-center gap-4 p-3"
-              >
-                <img src="/img/tax-images/secure-reliable.svg" alt="secure-reliable-icon" />
+              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3" role="article">
+                <img src="/img/tax-images/secure-reliable.svg" alt="Icon representing Secure & Reliable services" />
                 <div className="caption text-center">
                   <h2 className="small-heading col-primary c-fw-600">
                     Secure & Reliable
@@ -124,14 +122,14 @@ const gst = (path) => {
             </div>
             <div className="col">
               {" "}
-              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/best-support.svg" alt="best-giddh-accounting-support-icon" />
+              <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3" role="article">
+                <img src="/img/tax-images/best-support.svg" alt="Icon representing Best in Class Support" />
                 <div className="caption text-center">
                   <h2 className="small-heading col-primary c-fw-600">
                     Best in Class Support
                   </h2>
                   <p className="px-4 c-fs-5 lh-lg col-grey">
-                    Stuck somewhere? Count on our friendly and knowledgable
+                    Stuck somewhere? Count on our friendly and knowledgeable
                     support team for your accounting & GST filing queries.
                   </p>
                 </div>
@@ -140,34 +138,36 @@ const gst = (path) => {
           </div>
         </div>
       </section>
-      <section className=" py-4 my-4 mx-2 mx-md-0 ">
+      <section className="py-4 my-4 mx-2 mx-md-0 " aria-labelledby="business-charge-heading">
         <div className="d-flex flex-column gap-4 c-fs-3 text-center ">
-          <span>Take charge of your business with Giddh &</span>
+          <span id="business-charge-heading">Take charge of your business with Giddh &</span>
           <div className="c-fs-1 col-primary c-fw-600 ">
             Make GST Return Process Automatic.
           </div>
           <div>
-            <a href={ link + "/signup"} className="c-fs-4 tax-hero-container__try_now_btn">Try Now</a>
+            <a href={ link + "/signup"} className="c-fs-4 tax-hero-container__try_now_btn" aria-label="Sign up for Giddh GST services">Try Now</a>
           </div>
           <span className="c-fs-4 m-3">
             Cloud Based Accounting Software to File GST Return Online
           </span>
         </div>
       </section>
-      <section className="container-fluid tax-return">
+      <section className="container-fluid tax-return" aria-labelledby="gst-return-collaborators-heading">
         <div className="container">
           <div className="row">
-            <div className="tax-return__wrapper d-flex  flex-wrap align-items-center">
+            <div className="tax-return__wrapper d-flex flex-wrap align-items-center">
               <div className="col">
-                <h3>GST Return Collaborators</h3>
+                <h3 id="gst-return-collaborators-heading">GST Return Collaborators</h3>
               </div>
               <div className="col text-center">
-                <img src="/img/Jio-GST.webp" alt="JIO GST Icon" />
+                <img width="200" height="70" src="/img/Jio-GST.webp" alt="JIO GST Icon representing collaboration" />
               </div>
               <div className="col">
                 <img
+                  width="400" 
+                  height="70"
                   className="tax-return__wrapper__large_img"
-                  src="/img/GST.webp" alt="GST Icon"
+                  src="/img/GST.webp" alt="GST Icon representing GST services"
                 />
               </div>
             </div>
@@ -175,9 +175,9 @@ const gst = (path) => {
         </div>
       </section>
 
-      <section className="container-fluid features__description_container mt-5">
+      <section className="container-fluid features__description_container mt-5" aria-labelledby="automated-gst-heading">
         <div className="container">
-            <h2 className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Automated GST Calculations and Submissions</h2>
+            <h2 id="automated-gst-heading" className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Automated GST Calculations and Submissions</h2>
           <div
             className={
               "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
@@ -186,7 +186,7 @@ const gst = (path) => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3" id="understanding-gst-heading">
                   Understanding GST
                 </h4>
                 <p>
@@ -215,7 +215,7 @@ const gst = (path) => {
                 <img
                   src="/img/tax-images/understanding-gst.svg"
                   className="img-fluid"
-                  alt="gst logo"
+                  alt="Illustration explaining GST"
                 />
               </figure>
             </div>
@@ -256,7 +256,7 @@ const gst = (path) => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3" id="indian-gst-software-heading">
                   Indian GST Software for business owners
                 </h4>
                 <p>
@@ -285,7 +285,7 @@ const gst = (path) => {
                 <img
                   src="/img/tax-images/group-5654.svg"
                   className="img-fluid"
-                  alt="mobile image with giddh-app"
+                  alt="Mobile image with Giddh app"
                 />
               </figure>
             </div>
@@ -327,7 +327,7 @@ const gst = (path) => {
           >
             <div className="col-md-12 col-lg-6">
               <div className="features__description_container__content">
-                <h4 className="col-primary small-heading c-fw-600 mb-3">
+                <h4 className="col-primary small-heading c-fw-600 mb-3" id="benefits-gst-software-heading">
                   Benefits of using GST software:
                 </h4>
                 <p>
@@ -355,7 +355,7 @@ const gst = (path) => {
                 <img
                   src="/img/tax-images/betnifits.svg"
                   className="img-fluid"
-                  alt="gst benifits image"
+                  alt="Illustration of GST benefits"
                 />
               </figure>
             </div>

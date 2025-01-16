@@ -6,12 +6,12 @@ const makeTheSwitch = (path) => {
   return (
     <>
       <div className="make_the_switch">
-        <section className="container-fluid switch-section">
+        <section className="container-fluid switch-section" role="region" aria-labelledby="switch-heading">
           <div className="container">
             <div className="row">
               <div className="col-md-6 col-sm-12">
                 <div className="switch-section__content">
-                  <h1 className="heading col-primary c-fw-600">
+                  <h1 id="switch-heading" className="heading col-primary c-fw-600">
                     Make the switch
                   </h1>
                   <p className="col-dark-light c-fs-2">
@@ -28,12 +28,12 @@ const makeTheSwitch = (path) => {
           <div className="row ">
             <div className="col-md-6 col-sm-12">
               <figure>
-                <img src={ isIndia || isAE ? "/img/switch-laptop-image.webp" : "/img/uk-dashboard-laptop-and-pc-img.svg"} alt="Giddh Accounting Software Dashboard Image" className="img-fluid" />
+                <img width="900" height="400" src={ isIndia || isAE ? "/img/switch-laptop-image.webp" : "/img/uk-dashboard-laptop-and-pc-img.svg"} alt="Image showing Giddh Accounting Software on a laptop" className="img-fluid" />
               </figure>
             </div>
             <div className="col-md-6 col-sm-12">
               <div className="make_the_switch__sub_section__content_wrapper">
-                <h2 className="col-primary sub-heading c-fw-600 pb-3">
+                <h2 id="switch-software-heading" className="col-primary sub-heading c-fw-600 pb-3">
                   Switch from any Offline/Online Software.{" "}
                 </h2>
 
@@ -57,11 +57,14 @@ const makeTheSwitch = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid make_the_switch__sub_section">
+        <section className="container-fluid make_the_switch__sub_section" role="region" aria-labelledby="accounting-solutions-heading">
           <div className="container">
+            <h2 id="accounting-solutions-heading" className="col-primary sub-heading c-fw-600 text-center pb-4">
+              A Simple Accounting Solution for all your Business needs.
+            </h2>
             <div className="row align-items-center mb-5">
               <div className="col-md-6 col-sm-12 order-1">
-                <div >
+                <div>
                   <h2 className="col-primary sub-heading c-fw-600 pb-3">
                     A Simple Accounting Solution for all your Business needs.
                   </h2>
@@ -83,13 +86,13 @@ const makeTheSwitch = (path) => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img src="/img/Accounting-sol-2.webp" alt="make the switch to giddh banner image" className="img-fluid" />
+                  <img width="900" height="400" src="/img/Accounting-sol-2.webp" alt="Banner image showcasing features of Giddh accounting software, including inventory management and invoicing" className="img-fluid" />
                 </figure>
               </div>
             </div>
             <div className="row align-items-center flex-row-reverse">
               <div className="col-md-6 col-sm-12 order-1">
-                <div >
+                <div>
                   <p className="col-primary c-fs-4 c-fw-600">
                     Direct Bank integration
                   </p>
@@ -109,26 +112,26 @@ const makeTheSwitch = (path) => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img src="/img/Accounting-sol-1.webp" alt="make the switch to giddh banner image" className="img-fluid" />
+                  <img width="900" height="400" src="/img/Accounting-sol-1.webp" alt="Banner image illustrating Giddh's expense management features, highlighting direct bank integration and expense tracking" className="img-fluid" />
                 </figure>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="container-fluid make_the_switch__sub_section container-fluid make_the_switch__sub_section--bg-white">
+        <section className="container-fluid make_the_switch__sub_section container-fluid make_the_switch__sub_section--bg-white" role="region" aria-labelledby="greeting-heading">
           <div className="container">
-            <h2 className="col-primary sub-heading c-fw-600 text-center pb-4">
+            <h2 id="greeting-heading" className="col-primary sub-heading c-fw-600 text-center pb-4">
               Goodbye, complicated softwares.
               <br />
               Hello Giddh
             </h2>
             <div className="row row-gap-4">
               <div className="col-lg-3 col-md-6 col-sm-12">
-                <div className="make_the_switch__sub_section__card">
+                <div className="make_the_switch__sub_section__card" role="article">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
-                      <img src="/img/superfast.svg" alt="superfast giddh icon" />
+                      <img src="/img/superfast.svg" alt="Icon representing superfast performance of Giddh" />
                     </figure>
                   </div>
                   <div className="make_the_switch__sub_section__card__content_wrapper make_the_switch__sub_section__card__content_wrapper--blue">
@@ -137,10 +140,10 @@ const makeTheSwitch = (path) => {
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 col-sm-12">
-                <div className="make_the_switch__sub_section__card">
+                <div className="make_the_switch__sub_section__card" role="article">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
-                      <img src="/img/ledger.svg" alt="giddh ledger icon" />
+                      <img src="/img/ledger.svg" alt="Icon representing ledger based shareable accounts" />
                     </figure>
                   </div>
                   <div className="make_the_switch__sub_section__card__content_wrapper make_the_switch__sub_section__card__content_wrapper--golden">
@@ -149,22 +152,22 @@ const makeTheSwitch = (path) => {
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 col-sm-12">
-                <div className="make_the_switch__sub_section__card">
+                <div className="make_the_switch__sub_section__card" role="article">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
-                      <img src="/img/multi-user.svg" alt="multiuser giddh app icons " />
+                      <img src="/img/multi-user.svg" alt="Icon representing unlimited multi-user access" />
                     </figure>
                   </div>
                   <div className="make_the_switch__sub_section__card__content_wrapper make_the_switch__sub_section__card__content_wrapper--pink">
-                    <p>Unlimited  Multi-user access.</p>
+                    <p>Unlimited Multi-user access.</p>
                   </div>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6 col-sm-12">
-                <div className="make_the_switch__sub_section__card">
+                <div className="make_the_switch__sub_section__card" role="article">
                   <div className="make_the_switch__sub_section__card__img_wrapper">
                     <figure>
-                      <img src="/img/autoupdate.svg" alt="autoupdate icon" />
+                      <img src="/img/autoupdate.svg" alt="Icon representing auto updates feature" />
                     </figure>
                   </div>
                   <div className="make_the_switch__sub_section__card__content_wrapper make_the_switch__sub_section__card__content_wrapper--dark-green">

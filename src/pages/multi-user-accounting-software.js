@@ -26,10 +26,16 @@ const multiUserAccountingSoftware = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of the software"
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a 
+                    href="#" 
+                    className="col-blue" 
+                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    aria-label="Schedule a demo with our sales team"
+                  >
                     Schedule Demo
                   </a>
                 </div>
@@ -38,12 +44,13 @@ const multiUserAccountingSoftware = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/share-banner.svg"
-                    width="90%"
-                    alt="share-banner-image"
+                    width="400"
+                    height="300"
+                    alt="An illustration representing sharing business insights"
                   />
-                 <img
+                  <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Cloud icons representing various features"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -52,11 +59,11 @@ const multiUserAccountingSoftware = (path) => {
             </div>
           </div>
         </section>
-        <section className="container-fluid features__sub_heading_container">
+        <section className="container-fluid features__sub_heading_container" aria-labelledby="sub-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                <h3 className="sub-heading col-primary c-fw-600 mb-3" id="sub-heading">
                   Smart collaboration across all departments
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -65,22 +72,22 @@ const multiUserAccountingSoftware = (path) => {
                   With real time sharing of financial data, you can derive
                   meaningful insight and run your business with efficiency.
                 </p>
-                <a href={ link + '/signup' } className="btn-link-purple">
+                <a href={ link + '/signup' } className="btn-link-purple" aria-label="Start your trial for multi-user accounting software">
                   Start Your Trial
                 </a>
               </div>
             </div>
           </div>
         </section>
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" aria-labelledby="features-description">
           <div className="container">
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary small-heading c-fw-600 mb-3" id="features-description">
                     Always be on the driver’s seat.
                   </h4>
-                  <ul className="custom-ul-with-right-tick">
+                  <ul className="custom-ul-with-right-tick" role="list">
                     <li>
                       Profit/Loss Statement, Balance Sheet, General Ledger and
                       Trial Balance.
@@ -104,7 +111,7 @@ const multiUserAccountingSoftware = (path) => {
                   <img
                     src="/img/feature-gallery-icons/share-admin.svg"
                     className="img-fluid"
-                    alt="share to admin image"
+                    alt="An illustration of sharing to admin"
                   />
                 </figure>
               </div>
@@ -115,12 +122,12 @@ const multiUserAccountingSoftware = (path) => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Collaborate across multiple departments
                   </h4>
-                  <p >
+                  <p>
                     Give your staff specific access to the different accounting
                     modules they need to do their job. With multi-user
                     accounting, your sales manager will be happy with real time
                     invoice sharing and your accounting staff will always be on
-                    top of the tax filing.And when it matters the most, you can
+                    top of the tax filing. And when it matters the most, you can
                     get your advisor on board to speed up the process of
                     decision making.
                   </p>
@@ -135,7 +142,7 @@ const multiUserAccountingSoftware = (path) => {
                         : "/img/feature-gallery-icons/layer-uk.svg"
                     }
                     className="img-fluid"
-                    alt="share-collaborate-image"
+                    alt="An illustration of collaboration"
                   />
                 </figure>
               </div>
@@ -146,7 +153,7 @@ const multiUserAccountingSoftware = (path) => {
                   <h4 className="col-primary small-heading c-fw-600 mb-3">
                     Avoid unnecessary confusion with ledger sharing
                   </h4>
-                  <p >
+                  <p>
                     Giddh multi-user accounting software lets you share your
                     ledger with view access to external accounting team or
                     client so that all the discrepancies can be avoided.
@@ -161,7 +168,7 @@ const multiUserAccountingSoftware = (path) => {
                   <img
                     src="/img/feature-gallery-icons/share-cash.svg"
                     className="img-fluid"
-                    alt="share-cash-image"
+                    alt="An illustration of sharing cash"
                   />
                 </figure>
               </div>

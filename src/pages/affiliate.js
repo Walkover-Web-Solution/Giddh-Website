@@ -7,9 +7,9 @@ const affiliate = (path) => {
     return (
       <>
         <div className="affiliate">
-          <section className="affiliate__top_section">
+          <section className="affiliate__top_section" aria-labelledby="affiliate-top-heading">
             <div className="container">
-              <h1 className="text-center heading col-primary mb-4">
+              <h1 id="affiliate-top-heading" className="text-center heading col-primary mb-4">
                 Why Join Us?
               </h1>
               <div className="d-flex flex-column justify-content-center col-12">
@@ -19,7 +19,7 @@ const affiliate = (path) => {
                       <img
                         className="mx-auto affiliate__img"
                         src="/img/affilate/earn.webp"
-                        alt="earn money icon"
+                        alt="Icon representing earning money through commissions"
                       />
                     </div>
                     <div className="col-9 col-md-8">
@@ -40,7 +40,7 @@ const affiliate = (path) => {
                       <img
                         className="mx-auto affiliate__img"
                         src="/img/affilate/target.webp"
-                        alt="Achive taget icon"
+                        alt="Icon representing achieving targets"
                       />
                     </div>
                     <div className="col-9 col-md-8">
@@ -61,7 +61,7 @@ const affiliate = (path) => {
                       <img
                         className="mx-auto affiliate__img"
                         src="/img/affilate/analytics.webp"
-                        alt="Giddh Analytics Reliable Tracking icons"
+                        alt="Icon representing reliable tracking analytics"
                       />
                     </div>
                     <div className="col-9 col-md-8">
@@ -82,7 +82,7 @@ const affiliate = (path) => {
                       <img
                         className="mx-auto affiliate__img"
                         src="/img/affilate/meter.webp"
-                        alt="Proven Results Measure Icon"
+                        alt="Icon representing proven results"
                       />
                     </div>
                     <div className="col-9 col-md-8">
@@ -92,7 +92,7 @@ const affiliate = (path) => {
                       <p className="c-fs-5">
                         Profit more from your efforts with our high conversion
                         rate, strong earnings per click, and great customer
-                        lifetime value..
+                        lifetime value.
                       </p>
                     </div>
                   </div>
@@ -104,7 +104,7 @@ const affiliate = (path) => {
                       <img
                         className="mx-auto affiliate__img"
                         src="/img/affilate/free.webp"
-                        alt="Free to Join Icon"
+                        alt="Icon representing free to join"
                       />
                     </div>
                     <div className="col-9 col-md-8">
@@ -134,30 +134,32 @@ const affiliate = (path) => {
               <div className="text-center col-primary pt-5 pb-4">
                 <h2 className="heading">We Help you With Resources</h2>
               </div>
-              <section className="container my-5">
+              <section className="container my-5" aria-labelledby="resources-heading">
                 <div className="row mb-5 pb-5 align-items-center">
                   <div className="col-lg-6 col-md-12 order-0 text-center">
                     <img
                       className="img-fluid mb-4 mb-lg-0"
                       src="/img/affilate/graph.webp"
-                      alt="Reliable Tracking Icon"
+                      alt="Graph representing reliable tracking metrics"
+                      width="600"
+                      height="300"
                     />
                   </div>
                   <div className="col-lg-6 col-md-12 order-1">
                     <div>
-                      <h2 className="c-fs-1 mb-4 col-primary">
+                      <h2 id="resources-heading" className="c-fs-1 mb-4 col-primary">
                         Dashboard To Track Your Success
                       </h2>
                       <p className="c-fs-4">
                         Metrics are vital. As an{" "}
                         <a
                           href={isIndia ? "/" : link}
-                          title="Accounting Software"
+                          title="Learn more about our Accounting Software"
                           className="col-primary fw-bold"
                         >
                           Accounting Software
                         </a>{" "}
-                        affiliate you will have your own reporting dashboard
+                        affiliate, you will have your own reporting dashboard
                         where you can track shares, clicks, enrollments, and
                         more. Keep track of your success and know which types of
                         promotions are working the best for your audience.
@@ -171,7 +173,9 @@ const affiliate = (path) => {
                     <img
                       className="img-fluid mb-4 mb-lg-0"
                       src="/img/affilate/affiliate_manager.webp"
-                      alt="Dedicated Affiliate Manager Banner Image"
+                      alt="Dedicated Affiliate Manager assisting with promotions"
+                      width="600"
+                      height="300"
                     />
                   </div>
                   <div className="col-lg-6 col-md-12 order-lg-0 order-1">
@@ -208,7 +212,9 @@ const affiliate = (path) => {
                     <img
                       className="img-fluid mb-4 mb-lg-0"
                       src="/img/affilate/newsletter.webp"
-                      alt="Affiliate Newsletter Banner Image"
+                      alt="Banner for the Affiliate Newsletter"
+                      width="600"
+                      height="300"
                     />
                   </div>
                   <div className="col-lg-6 col-md-12 order-1">
@@ -219,8 +225,8 @@ const affiliate = (path) => {
                       <p className="c-fs-4">
                         News you can use. As an Accounting Software reseller,
                         you’ll receive access to a special newsletter with
-                        important product updates, news on promotions. Also you
-                        will get all details on Cloud based{" "}
+                        important product updates and news on promotions. Also, you
+                        will get all details on Cloud-based{" "}
                         {isIndia ? " GST " : isAE ? " VAT " : " VAT "} software.
                       </p>
                     </div>

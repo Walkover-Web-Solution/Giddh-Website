@@ -9,11 +9,11 @@ const accountingDashboard = (path) => {
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="dashboard-heading">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary c-fw-600 mb-4">
+                <h1 id="dashboard-heading" className="heading col-primary c-fw-600 mb-4">
                   Know your business's worth with simple online dashboard
                 </h1>
                 <p className="col-grey c-fs-3 mb-5">
@@ -26,10 +26,16 @@ const accountingDashboard = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of Giddh Dashboard"
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a 
+                    href="#" 
+                    className="col-blue" 
+                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    aria-label="Schedule a demo with Giddh"
+                  >
                     Schedule Demo
                   </a>
                 </div>
@@ -38,12 +44,13 @@ const accountingDashboard = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/dashboard-banner.svg"
-                    alt="Giddh Dashboard Banner Image"
-                    width="90%"
+                    alt="Giddh Dashboard Banner Image showcasing the dashboard interface"
+                    width="400"
+                    height="300"
                   />
-                 <img
+                  <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Illustration of cloud features related to Giddh Dashboard"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -57,7 +64,7 @@ const accountingDashboard = (path) => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3 ">
+                <h3 className="sub-heading col-primary c-fw-600 mb-3" role="heading" aria-level="2">
                   Assess your numbers in one glance
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -67,7 +74,7 @@ const accountingDashboard = (path) => {
                   Actively keep an eye on the net worth, revenue, profit/loss
                   and other key information of your business.
                 </p>
-                <a href={ link + '/signup' } className="btn-link-purple">
+                <a href={ link + '/signup' } className="btn-link-purple" aria-label="Start your trial for the accounting dashboard">
                   Start Your Trial
                 </a>
               </div>
@@ -75,7 +82,8 @@ const accountingDashboard = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" role="region" aria-labelledby="features-description">
+          <h2 id="features-description" className="visually-hidden">Features Description</h2>
           <div className="container">
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
@@ -98,7 +106,7 @@ const accountingDashboard = (path) => {
                   <img
                     src={isIndia ? '/img/feature-gallery-icons/networth.svg' : (isAE ? '/img/feature-gallery-icons/networth-ae.webp' : '/img/feature-gallery-icons/networth-uk.svg')}
                     className="img-fluid"
-                    alt="Accounting Dashboard Image"
+                    alt="Net worth representation for accounting dashboard"
                   />
                 </figure>
               </div>
@@ -122,7 +130,7 @@ const accountingDashboard = (path) => {
                   <img
                     src="/img/feature-gallery-icons/totaloverdue.svg"
                     className="img-fluid"
-                    alt="Accounting Dashboard Image"
+                    alt="Summary of monthly overdues in accounting dashboard"
                   />
                 </figure>
               </div>
@@ -147,7 +155,7 @@ const accountingDashboard = (path) => {
                   <img
                     src="/img/feature-gallery-icons/expense-report.svg"
                     className="img-fluid"
-                    alt="Accounting Dashboard Image"
+                    alt="Expense tracking in accounting dashboard"
                   />
                 </figure>
               </div>
@@ -171,7 +179,7 @@ const accountingDashboard = (path) => {
                   <img
                     src={isIndia ? '/img/feature-gallery-icons/revenue.svg' : (isAE ? '/img/feature-gallery-icons/revenue-ae.webp' : '/img/feature-gallery-icons/revenue-uk.svg')}
                     className="img-fluid"
-                    alt="Accounting Dashboard Image"
+                    alt="Revenue prediction in accounting dashboard"
                   />
                 </figure>
               </div>
@@ -198,7 +206,7 @@ const accountingDashboard = (path) => {
                   <img
                     src="/img/feature-gallery-icons/financial-ratio.svg"
                     className="img-fluid"
-                    alt="Accounting Dashboard Image"
+                    alt="Financial ratio analysis in accounting dashboard"
                   />
                 </figure>
               </div>
@@ -213,7 +221,7 @@ const accountingDashboard = (path) => {
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="people interested in Connect Bank Reconcile also looked at image"
+                    alt="Illustration of people interested in accounting dashboard features"
                     className="features__sub_heading_container--banner_img"
                   />
                 </figure>
@@ -224,16 +232,16 @@ const accountingDashboard = (path) => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                   <a href={ link + "/all-features" } className="col-blue">
+                   <a href={ link + "/all-features" } className="col-blue" aria-label="View all features of the accounting dashboard">
                     All features
                   </a>
-                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
+                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue" aria-label="Learn about multi-user accounting software">
                     Share Data
                   </a>
                   <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
                     Multi-Currency
                   </a>
-                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
+                  <a href={ link + "/invoice-software" } className="border-vertical col-blue" aria-label="Discover invoicing features">
                     Invoicing
                   </a>
                 </div>

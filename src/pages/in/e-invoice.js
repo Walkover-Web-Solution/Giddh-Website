@@ -19,10 +19,11 @@ const eInvoice = () => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    role="button"
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})} role="button">
                     Schedule Demo
                   </a>
                 </div>
@@ -31,12 +32,13 @@ const eInvoice = () => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/e-invoice-banner.svg"
-                    width="90%"
-                    alt="invoice-banner-image"
+                    width="400"
+                    height="300"
+                    alt="E-invoice banner promoting e-invoicing services"
                   />
                  <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Illustration of cloud features related to e-invoicing"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -46,17 +48,17 @@ const eInvoice = () => {
           </div>
         </section>
 
-        <section className="container-fluid  e-invoice__first_section">
+        <section className="container-fluid  e-invoice__first_section" aria-labelledby="eInvoiceHeading">
           <div className="container">
-            <h2 className="col-primary sub-heading text-center c-fw-600">
+            <h2 id="eInvoiceHeading" className="col-primary sub-heading text-center c-fw-600">
               Why Giddh is the most reliable and smartest e-invoicing solution
               for your business?
             </h2>
             <div className="row">
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="e-invoice__first_section__card text-center">
+                <div className="e-invoice__first_section__card text-center" role="article">
                   <figure>
-                    <img src="/img/support-1.svg" alt="support-icon" />
+                    <img src="/img/support-1.svg" alt="Icon representing support services" />
                   </figure>
                   <h3 className="col-primary c-fs-4 c-fw-600">
                     Fast & Reliable
@@ -65,11 +67,11 @@ const eInvoice = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="e-invoice__first_section__card text-center">
+                <div className="e-invoice__first_section__card text-center" role="article">
                   <figure>
                     <img
                       src="/img/smart-secure-1.svg"
-                      alt="smart-secure-icon"
+                      alt="Icon representing customer support"
                     />
                   </figure>
                   <h3 className="col-primary c-fs-4 c-fw-600">
@@ -80,11 +82,11 @@ const eInvoice = () => {
               </div>
 
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="e-invoice__first_section__card text-center">
+                <div className="e-invoice__first_section__card text-center" role="article">
                   <figure>
                     <img
                       src="/img/auto-invoice-1.svg"
-                      alt="auto-invoice-icon"
+                      alt="Icon representing a secure platform"
                     />
                   </figure>
                   <h3 className="col-primary c-fs-4 c-fw-600">
@@ -94,11 +96,11 @@ const eInvoice = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="e-invoice__first_section__card text-center">
+                <div className="e-invoice__first_section__card text-center" role="article">
                   <figure>
                     <img
                       src="/img/reconciliation-1.svg"
-                      alt="reconciliation-icon"
+                      alt="Icon representing auto-push of e-invoice"
                     />
                   </figure>
                   <h3 className="col-primary c-fs-4 c-fw-600">
@@ -108,11 +110,11 @@ const eInvoice = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="e-invoice__first_section__card text-center">
+                <div className="e-invoice__first_section__card text-center" role="article">
                   <figure>
                     <img
                       src="/img/invoice-status-1.svg"
-                      alt="invoice-status-icon"
+                      alt="Icon representing auto reconciliation"
                     />
                   </figure>
                   <h3 className="col-primary c-fs-4 c-fw-600">
@@ -125,11 +127,11 @@ const eInvoice = () => {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-12">
-                <div className="e-invoice__first_section__card text-center">
+                <div className="e-invoice__first_section__card text-center" role="article">
                   <figure>
                     <img
                       src="/img/fast-reliable-1.svg"
-                      alt="fast-reliable-icon"
+                      alt="Icon representing tracking e-invoice status"
                     />
                   </figure>
                   <h3 className="col-primary c-fs-4 c-fw-600">
@@ -145,36 +147,36 @@ const eInvoice = () => {
           </div>
         </section>
 
-        <section className="container-fluid  e-invoice__second_section">
+        <section className="container-fluid e-invoice__second_section" aria-labelledby="benefitsHeading">
           <div className="container">
-            <h2 className="col-primary sub-heading text-center c-fw-600">
+            <h2 id="benefitsHeading" className="col-primary sub-heading text-center c-fw-600">
               Benefits of e-invoicing with Giddh
             </h2>
-            <div className="e-invoice__second_section__benefits_custom_view mt-5">
-              <div className="e-invoice__second_section__benefits_custom_view__row">
-                <div className="e-invoice__second_section__benefits_custom_view__row__item">
+            <div className="e-invoice__second_section__benefits_custom_view mt-5" role="list">
+              <div className="e-invoice__second_section__benefits_custom_view__row" role="listitem">
+                <div className="e-invoice__second_section__benefits_custom_view__row__item" role="listitem">
                   Increased Accuracy
                 </div>
-                <div className="e-invoice__second_section__benefits_custom_view__row__item">
+                <div className="e-invoice__second_section__benefits_custom_view__row__item" role="listitem">
                   Real-Time Tracking
                 </div>
-                <div className="e-invoice__second_section__benefits_custom_view__row__item">
+                <div className="e-invoice__second_section__benefits_custom_view__row__item" role="listitem">
                   Reduced Risk of Tax Evasion
                 </div>
               </div>
-              <div className="e-invoice__second_section__benefits_custom_view__row">
-                <div className="e-invoice__second_section__benefits_custom_view__row__item">
+              <div className="e-invoice__second_section__benefits_custom_view__row" role="listitem">
+                <div className="e-invoice__second_section__benefits_custom_view__row__item" role="listitem">
                   Uniqueness with IRN and QR Code for B2B
                 </div>
               </div>
-              <div className=" e-invoice__second_section__benefits_custom_view__row">
-                <div className="e-invoice__second_section__benefits_custom_view__row__item">
+              <div className="e-invoice__second_section__benefits_custom_view__row" role="listitem">
+                <div className="e-invoice__second_section__benefits_custom_view__row__item" role="listitem">
                   Better Visibility and Transparency
                 </div>
-                <div className="e-invoice__second_section__benefits_custom_view__row__item">
+                <div className="e-invoice__second_section__benefits_custom_view__row__item" role="listitem">
                   Uniqueness with QR Code for B2C
                 </div>
-                <div className="e-invoice__second_section__benefits_custom_view__row__item">
+                <div className="e-invoice__second_section__benefits_custom_view__row__item" role="listitem">
                   Auto-Populated Data in GST
                 </div>
               </div>
@@ -182,14 +184,14 @@ const eInvoice = () => {
           </div>
         </section>
 
-        <section className="container-fluid  e-invoice__third_section">
+        <section className="container-fluid  e-invoice__third_section" aria-labelledby="stepsToStartHeading">
           <div className="container">
-            <h2 className="col-primary sub-heading text-center c-fw-600 pb-3">
+            <h2 id="stepsToStartHeading" className="col-primary sub-heading text-center c-fw-600 pb-3">
               3 simple steps to start e-invoicing now
             </h2>
-            <div className="row align-items-center my-5">
+            <div className="row align-items-center my-5" role="group" aria-labelledby="stepsList">
               <div className="col-lg-6">
-                <ul>
+                <ul id="stepsList" aria-label="Steps to start e-invoicing">
                   <li className="text-black">Register your business in the e-invoice portal</li>
                   <li className="text-black">
                     Create API credentials for GST Suvidha Provider (GSP) for
@@ -205,8 +207,10 @@ const eInvoice = () => {
                 <figure>
                   <img
                     src="/img/gst-e-invoice-graphic.svg"
-                    alt="gst e-invoice image"
+                    alt="Illustration showing the process of e-invoicing"
                     className="img-fluid"
+                    width="400"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -228,10 +232,16 @@ const eInvoice = () => {
                   <a
                     href="/signup"
                     className="download_free_btn me-4"
+                    aria-label="Sign up for free e-invoicing service"
                   >
                     Sign up for free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a 
+                    href="#" 
+                    className="col-blue" 
+                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    aria-label="Schedule a demo for e-invoicing"
+                  >
                     Schedule Demo
                   </a>
                 </div>

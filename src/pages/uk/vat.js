@@ -8,14 +8,14 @@ const ukVAT = () => {
 
   return (
     <>
-      <section className="container mb-5 ">
+      <section className="container mb-5">
         <div className="tax-hero-container  text-center">
           <div className="row d-flex h-100 align-content-end">
-            <div className=" d-flex flex-column  ">
+            <div className=" d-flex flex-column">
               <h2 className="c-fs-3  col-dark-light fw-light m-3">
                 Automate Your VAT Calculations
               </h2>
-              <h1 className="heading c-fw-600  col-primary ">
+              <h1 className="heading c-fw-600  col-primary">
                 UK VAT Compliance Software - Made Easy
               </h1>
               <h2 className="c-fs-3">UK VAT Regulations Compliance</h2>

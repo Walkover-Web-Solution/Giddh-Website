@@ -4,16 +4,16 @@ const terms = (path) => {
   const link = path.path.linkPrefix;
   return (
     <>
-      <section className="container-fluid privacy">
+      <section className="container-fluid privacy" aria-labelledby="terms-heading">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1  className="sub-heading c-fw-600 mb-4 text-center col-primary" >
+              <h1 id="terms-heading" className="sub-heading c-fw-600 mb-4 text-center col-primary" >
                 Please pay attention
               </h1>
               <p className="mb-4 c-fs-5">
                 Giddh is an{" "}
-                <a href={ "https://giddh.com" + link } title="online accounting service" className="col-primary fw-medium">online accounting service</a>{" "}
+                <a href={ "https://giddh.com" + link } title="online accounting service" className="col-primary fw-medium" aria-label="Giddh online accounting service">online accounting service</a>{" "}
                 designed especially for small businesses and consumers. These
                 Terms of Use are intended to explain our obligations as a
                 service provider and Your obligations as a customer. Please read
@@ -85,7 +85,7 @@ const terms = (path) => {
               </p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">Website</h3>
               <p className="mb-4 c-fs-5">
-                means the Internet site at the domain <a href={ "https://giddh.com" + link } className="col-primary fw-medium" title="www.Giddh.com">www.Giddh.com</a> or any other
+                means the Internet site at the domain <a href={ "https://giddh.com" + link } className="col-primary fw-medium" title="www.Giddh.com" aria-label="Visit Giddh website">www.Giddh.com</a> or any other
                 site operated by Giddh.
               </p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">Invited User</h3>
