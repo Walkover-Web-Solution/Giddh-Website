@@ -3665,7 +3665,7 @@ const pricing = (path) => {
                         <a href={link + "/signup"} className="benefits-link">
                           Try Now
                         </a>
-                      </div> */}
+                      </div>  */}
                   </th>
                   {/* oak */}
                   <th className="pricing-table__second_row text-center">
@@ -3831,7 +3831,7 @@ const pricing = (path) => {
                   </td>
                   <td>
                     <div className="text-center">
-                      {isIndia || isUK ? '1,000' : '1'}
+                      {isIndia ? '1,000' : isUK ? '1' : ''}
                     </div>
                   </td>
                   <td>
@@ -3858,7 +3858,7 @@ const pricing = (path) => {
                   </td>
                   <td>
                     <div className="text-center">
-                      {isIndia || isUK ? '1' : '1'}
+                    {isIndia ? '1' : isUK ? '1' : ''}
                     </div>
                   </td>
                   <td>
@@ -3945,8 +3945,8 @@ const pricing = (path) => {
                   </td>
                   <td>
                   <div className="text-center">
-                      {isIndia || isUK ? '1' : '1'}
-                    </div>
+                    {isIndia ? '1' : isUK ? '1' : ''}
+                  </div>
                   </td>
                   <td>
                     <div className="text-center">
