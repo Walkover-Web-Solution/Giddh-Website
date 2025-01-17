@@ -62,6 +62,7 @@ const header = (props) => {
                     <meta name='keywords' content={metaData.keywords}></meta>
                 )}
                 <link rel='icon' type='image/x-icon' href='/favico.svg'></link>
+                <link rel="alternate" href="https://giddh.com/" hreflang="x-default" />
                 <link rel='canonical' href={`https://giddh.com${pathArrRaw[0]}`} />
                 {!isOnlyGlobal && (
                     <>
@@ -70,6 +71,9 @@ const header = (props) => {
                                 rel='alternate'
                                 hrefLang='en-IN'
                                 href={`https://giddh.com/in${pathPage}`}
+                                property='og:locale'
+                                content='en-IN'
+                                url={`https://giddh.com${pathPage}`}
                             />
                         )}
                         {!exceptionPage?.uk.includes(pathPage) && country === 'uk' && (
@@ -77,6 +81,9 @@ const header = (props) => {
                                 rel='alternate'
                                 hrefLang='en-GB'
                                 href={`https://giddh.com/uk${pathPage}`}
+                                property='og:locale'
+                                content='en-GB'
+                                url={`https://giddh.com${pathPage}`}
                             />
                         )}
                         {!exceptionPage?.ae.includes(pathPage) && country === 'ae' && (
@@ -84,6 +91,9 @@ const header = (props) => {
                                 rel='alternate'
                                 hrefLang='en-AE'
                                 href={`https://giddh.com/ae${pathPage}`}
+                                property='og:locale'
+                                content='en-AE'
+                                url={`https://giddh.com${pathPage}`}
                             />
                         )}
                     </>
@@ -94,12 +104,25 @@ const header = (props) => {
                             rel='alternate'
                             hrefLang='en'
                             href={`https://giddh.com${pathPage}`}
+                            property='og:locale'
+                            content='en'
+                            url={`https://giddh.com${pathPage}`}
                         />
 
                     )
                 }
 
                 {restrictFromSeo && <meta name='robots' content='noindex, nofollow' />}
+
+                {(!metaData?.ogTitle && metaData?.title) ? (
+                    <meta property="og:title" content={metaData.title}/>
+                ) : (
+                    metaData?.ogTitle && (
+                        <meta property="og:title" content={metaData.ogTitle}/>
+                    )
+                )}
+                <meta property="og:description" content={metaData.ogDescription || metaData?.description} />
+                <meta property="og:type" content="website" />
             </Head>
         </>
     );
