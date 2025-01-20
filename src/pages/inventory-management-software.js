@@ -1,4 +1,5 @@
 import { MdRemove, MdAdd } from "react-icons/md";
+import { useEffect } from "react";
 
 const inventoryManagementSoftware = (path) => {
   const linkPath = path.path;
@@ -7,6 +8,12 @@ const inventoryManagementSoftware = (path) => {
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
+
+  useEffect(() => {
+    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+    appendLink("https://assets.calendly.com/assets/external/widget.css");
+  }, []);
+
   return (
     <>
       <div className="features">
