@@ -121,7 +121,7 @@ const header = (props) => {
                     <meta property="og:description" content={metaData.ogDescription || metaData.description}/>
                 )}
                 {(metaData?.title || metaData?.ogContent) && (
-                <meta property="og:type" content={metaData.ogContent || "website"} />
+                <meta property="og:type" content="website" />
                 )}
             </Head>
         </>
