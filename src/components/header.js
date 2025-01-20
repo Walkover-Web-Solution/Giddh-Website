@@ -114,21 +114,15 @@ const header = (props) => {
 
                 {restrictFromSeo && <meta name='robots' content='noindex, nofollow' />}
 
-                {(!metaData?.ogTitle && metaData?.title) ? (
-                    <meta property="og:title" content={metaData.title}/>
-                ) : (
-                    metaData?.ogTitle && (
-                        <meta property="og:title" content={metaData.ogTitle}/>
-                    )
+                {(metaData?.ogTitle || metaData?.title) && (
+                    <meta property="og:title" content={metaData.ogTitle || metaData.title }/>
                 )}
-                {(!metaData?.ogDescription && metaData?.description) ? (
-                    <meta property="og:description" content={metaData.description}/>
-                ) : (
-                    metaData?.ogDescription && (
-                        <meta property="og:description" content={metaData.ogDescription}/>
-                    )
+                {(metaData?.ogDescription || metaData?.description) && (
+                    <meta property="og:description" content={metaData.ogDescription || metaData.description}/>
                 )}
-                <meta property="og:type" content="website" />
+                {(metaData.content || "website") && (
+                <meta property="og:type" content={metaData.content || "website"} />
+                )}
             </Head>
         </>
     );
