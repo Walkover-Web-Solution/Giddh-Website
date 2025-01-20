@@ -77,7 +77,11 @@ const navbar = (props) => {
     } else {
       setscrollStatus(true);
     }
-    setShowTrustpilot(true);
+
+    if (link.isUK) {
+      appendScript("https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js", true);
+      setShowTrustpilot(true);
+    }
 
     return () => {
       window.removeEventListener("scroll", onScroll, { passive: true });
@@ -186,7 +190,7 @@ const navbar = (props) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
-              { showTrustpilot && link.isUK && (
+              { showTrustpilot && (
                 <li className="nav-item">
                     <span 
                       className="trustpilot-widget d-block" 

@@ -1,9 +1,17 @@
+import { useEffect } from "react";
+
 const contacts = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
+
+  useEffect(() => {
+    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+    appendLink("https://assets.calendly.com/assets/external/widget.css");
+  }, []);
+  
   return (
     <>
       <div className="features">
