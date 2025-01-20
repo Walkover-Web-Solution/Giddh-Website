@@ -232,24 +232,13 @@ const navbar = (props) => {
                   >
                     <li>
                       <ul className="dropdown-menu__wapper d-grid ps-0">
-                        {features
+                      {features
                           .filter(getCountryWiseData)
                           .map((data, index) => (
                             <li key={index}>
-                              {data.menuItem !== "API Integration" && (
-                                <>
-                                  <a href={urlPrefix + data.url}>
-                                    {data.menuItem}
-                                  </a>
-                                </>
-                              )}
-                              {data.menuItem === "API Integration" && (
-                                <>
-                                  <a href={data.url} target="_blank">
-                                    {data.menuItem}
-                                  </a>
-                                </>
-                              )}
+                              <a href={urlPrefix + data.url}>
+                                {data.menuItem}
+                              </a>
                             </li>
                           ))}
                       </ul>
