@@ -73,7 +73,7 @@ const header = (props) => {
                                 href={`https://giddh.com/in${pathPage}`}
                                 property='og:locale'
                                 content='en-IN'
-                                url={`https://giddh.com${pathPage}`}
+                                url={`https://giddh.com/in${pathPage}`}
                             />
                         )}
                         {!exceptionPage?.uk.includes(pathPage) && country === 'uk' && (
@@ -83,7 +83,7 @@ const header = (props) => {
                                 href={`https://giddh.com/uk${pathPage}`}
                                 property='og:locale'
                                 content='en-GB'
-                                url={`https://giddh.com${pathPage}`}
+                                url={`https://giddh.com/uk${pathPage}`}
                             />
                         )}
                         {!exceptionPage?.ae.includes(pathPage) && country === 'ae' && (
@@ -93,7 +93,7 @@ const header = (props) => {
                                 href={`https://giddh.com/ae${pathPage}`}
                                 property='og:locale'
                                 content='en-AE'
-                                url={`https://giddh.com${pathPage}`}
+                                url={`https://giddh.com/ae${pathPage}`}
                             />
                         )}
                     </>
@@ -120,8 +120,8 @@ const header = (props) => {
                 {(metaData?.ogDescription || metaData?.description) && (
                     <meta property="og:description" content={metaData.ogDescription || metaData.description}/>
                 )}
-                {(metaData.content || "website") && (
-                <meta property="og:type" content={metaData.content || "website"} />
+                {(metaData?.title || metaData?.ogContent) && (
+                <meta property="og:type" content={metaData.ogContent || "website"} />
                 )}
             </Head>
         </>
