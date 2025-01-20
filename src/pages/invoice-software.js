@@ -175,7 +175,7 @@ const invoiceSoftware = (path) => {
                                         >
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                    <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                         {feature?.name}
                                                     </h2>
                                                     <p>{feature?.des}</p>
@@ -199,7 +199,7 @@ const invoiceSoftware = (path) => {
                                 <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
-                                            <h2 className='col-primary small-heading c-fw-600 mb-3'>
+                                            <h2 className='col-primary c-fw-600 mb-3'>
                                                 Create and Send professional invoices with cloud based
                                                 invoicing software
                                             </h2>
@@ -224,7 +224,7 @@ const invoiceSoftware = (path) => {
                                 <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
-                                            <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                            <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                 Use Barcode for making invoice
                                             </h2>
                                             <p>
@@ -249,7 +249,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     {isIndia
                                                         ? "Effortless GST Invoicing"
                                                         : "Incorporate VAT into the invoices"}
@@ -284,7 +284,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Other taxes
                                                 </h2>
                                                 <p>
@@ -310,7 +310,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Multi-currency Invoices
                                                 </h2>
                                                 <p>
@@ -338,7 +338,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Multi-currency Invoices
                                                 </h2>
                                                 <p>
@@ -366,7 +366,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Sending invoice via multi-channels
                                                 </h2>
                                                 <p>
@@ -393,7 +393,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Sending invoice via multi-channels
                                                 </h2>
                                                 <p>
@@ -420,7 +420,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Lock your invoices and move on!
                                                 </h2>
                                                 <p>
@@ -447,7 +447,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Lock your invoices and move on!
                                                 </h2>
                                                 <p>
@@ -474,7 +474,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Add due date to invoices
                                                 </h2>
                                                 <p>
@@ -500,7 +500,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Add due date to invoices
                                                 </h2>
                                                 <p>
@@ -527,7 +527,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Customize the invoice number
                                                 </h2>
                                                 <p>
@@ -553,7 +553,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Customize the invoice number
                                                 </h2>
                                                 <p>
@@ -579,7 +579,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     {" "}
                                                     Reverse charge
                                                 </h2>
@@ -606,7 +606,7 @@ const invoiceSoftware = (path) => {
                                         <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                    <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                         {" "}
                                                         Reverse charge
                                                     </h2>
@@ -632,7 +632,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Bulk Invoice update
                                                 </h2>
                                                 <p>
@@ -657,7 +657,7 @@ const invoiceSoftware = (path) => {
                                         <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                    <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                         Bulk Invoice update
                                                     </h2>
                                                     <p>
@@ -681,7 +681,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Copy from previous invoice
                                                 </h2>
                                                 <p>
@@ -708,7 +708,7 @@ const invoiceSoftware = (path) => {
                                         <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                    <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                         Copy from previous invoice
                                                     </h2>
                                                     <p>
@@ -735,7 +735,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Import and Export the invoice
                                                 </h2>
                                                 <p>
@@ -763,7 +763,7 @@ const invoiceSoftware = (path) => {
                                         <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                    <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                         Import and Export the invoice
                                                     </h2>
                                                     <p>
@@ -791,7 +791,7 @@ const invoiceSoftware = (path) => {
                                     <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
-                                                <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                     Generate multiple and compound invoices
                                                 </h2>
                                                 <p>
@@ -818,7 +818,7 @@ const invoiceSoftware = (path) => {
                                         <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
                                             <div className='col-md-12 col-lg-6'>
                                                 <div className='features__description_container__content'>
-                                                    <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                                    <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                         Generate multiple and compound invoices
                                                     </h2>
                                                     <p>
@@ -851,7 +851,7 @@ const invoiceSoftware = (path) => {
                                 >
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
-                                            <h2 className='col-primary small-heading c-fw-600 mb-3' role="heading" aria-level="3">
+                                            <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
                                                 Run your business with automation!
                                             </h2>
                                             <p>

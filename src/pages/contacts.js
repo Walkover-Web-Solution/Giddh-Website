@@ -85,7 +85,7 @@ const contacts = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 id="description-heading" className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 id="description-heading" className="col-primary c-fw-600 mb-3">
                     Valuable business intelligence you can act on
                   </h4>
                   <p >
@@ -115,7 +115,7 @@ const contacts = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Easily know who owes how much
                   </h4>
                   <p >
@@ -140,7 +140,7 @@ const contacts = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     What could you do with giddh smart list?
                   </h4>
 

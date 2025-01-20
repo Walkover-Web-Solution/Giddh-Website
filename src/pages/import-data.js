@@ -86,7 +86,7 @@ const importExeclFiles = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Excel isn’t a long term solution
                   </h4>
                   <p >
@@ -112,7 +112,7 @@ const importExeclFiles = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Simple transition to powerful alternative.
                   </h4>
                   <p >
@@ -138,7 +138,7 @@ const importExeclFiles = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     No data category left behind
                   </h4>
                   <p >
@@ -162,7 +162,7 @@ const importExeclFiles = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Prepare your data with a little help
                   </h4>
                   <p >
@@ -188,7 +188,7 @@ const importExeclFiles = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Stuck somewhere? Help us help you!
                   </h4>
                   <p >

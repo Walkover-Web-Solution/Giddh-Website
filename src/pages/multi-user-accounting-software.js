@@ -84,7 +84,7 @@ const multiUserAccountingSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3" id="features-description">
+                  <h4 className="col-primary c-fw-600 mb-3" id="features-description">
                     Always be on the driver’s seat.
                   </h4>
                   <ul className="custom-ul-with-right-tick" role="list">
@@ -119,7 +119,7 @@ const multiUserAccountingSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Collaborate across multiple departments
                   </h4>
                   <p>
@@ -150,7 +150,7 @@ const multiUserAccountingSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Avoid unnecessary confusion with ledger sharing
                   </h4>
                   <p>
