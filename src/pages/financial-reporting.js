@@ -1,5 +1,5 @@
 import { MdRemove, MdAdd } from "react-icons/md";
-import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 const financialReporting = (path) => {
   const linkPath = path.path;
@@ -7,6 +7,12 @@ const financialReporting = (path) => {
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
+
+  useEffect(() => {
+    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+    appendLink("https://assets.calendly.com/assets/external/widget.css");
+  }, []);
+
   return (
     <>
       <div className="features">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const allFeatures = (path) => {
   const [popupData, setPopupData] = useState({});
@@ -601,6 +601,11 @@ const allFeatures = (path) => {
   const setCurrentFeatureData = (item) => {
     setPopupData(item);
   };
+
+  useEffect(() => {
+    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+    appendLink("https://assets.calendly.com/assets/external/widget.css");
+  }, []);
 
   return (
     <>
