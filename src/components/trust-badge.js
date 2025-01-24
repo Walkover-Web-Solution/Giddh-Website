@@ -110,7 +110,7 @@ const trustBadge = ({ country }) => {
           <div className="trust-badge-logo-container-item h-auto w-100 position-relative">
             <div className="trust-badge-vertical-center d-flex align-content-center justify-content-center align-items-center flex-wrap flex-row">
 
-              {badges && badges.map((logo, index) => (
+              { badges.map((logo, index) => (
                 <a
                   key={index}
                   href={logo.href}
