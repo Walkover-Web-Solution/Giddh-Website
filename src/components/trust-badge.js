@@ -1,4 +1,8 @@
-const trustBadge = ({ country }) => {
+import { useEffect, useState } from "react";
+const trustBadge = (path) => {
+  const [trustBadgeBrand, setTrustBadgeBrand] = useState([]);
+  const link = path.path;
+
   const trustBadgeBrands = {
     "isUK":[
       {
@@ -35,43 +39,45 @@ const trustBadge = ({ country }) => {
     "isIndia": [
       {
         href: "https://www.tribuneindia.com/news/business/giddh-books-makes-accounting-accessible-and-automated-for-indian-small-businesses/",
-        alt: "Accounting Software",
-        src: "/img/trust-badge/The Tribute.svg"
+        alt: "Accessible Accounting Software for Small Businesses",
+        src: "/img/trust-badge/the-tribute.svg"
       },
       {
-        href: "https://m.dailyhunt.in/news/india/english/sangri+today-epaper-dhca0872bf801748bd9f43[…]01748bd9f43791084210e94_e4f3a6f0d4bf11efb7bb631dcbb8c226?sm=Y",
-        alt: "Book keeping software",
+        href: "https://m.dailyhunt.in/news/india/english/sangri+today-epaper-dhca0872bf801748bd9f43791084210e94/giddh+revolutionizing+accounting+software+with+advanced+features+and+security-newsid-dhca0872bf801748bd9f43791084210e94_e4f3a6f0d4bf11efb7bb631dcbb8c226?sm=Y",
+        alt: "Dailyhunt Trust Badge for Bookkeeping",
         src: "/img/trust-badge/dailyhunt.svg"
       },
       {
         href: "https://en.jaipurtimes.org/giddh-revolutionizing-accounting-software-with-advanced-features-and-security",
-        alt: "GST Software (ONLY INDIA)",
+        alt: "Advanced GST Accounting Software for India",
         src: "/img/trust-badge/jaipur-times.svg"
       },
       {
         href: "https://www.sangritoday.com/spotlight/giddh-revolutionizing-accounting-software-with-advanced-features-and-security",
-        alt: "E-Invoice software",
+        alt: "Giddh: Revolutionary Accounting Software with Advanced Features and Security",
         src: "/img/trust-badge/sangri-today.webp"
       },
       {
         href: "https://www.indiadazzle.com/giddh-revolutionizing-accounting-software-with-advanced-features-and-security",
-        alt: "Cloud Accounting Software",
+        alt: "Trusted Cloud Accounting Solution with advanced features and security",
         src: "/img/trust-badge/India-dazzle.webp"
       },
       {
         href: "https://biharnewswatch.in/giddh-revolutionizing-accounting-software-with-advanced-features-and-security/",
-        alt: "Cloud Accounting Software",
+        alt: "Giddh Cloud Accounting Software with Advanced Features",
         src: "/img/trust-badge/bihar-news.svg"
       },
       {
         href: "https://rajasthannewstime.in/giddh-revolutionizing-accounting-software-with-advanced-features-and-security/",
-        alt: "Cloud Accounting Software",
-        src: "/img/trust-badge/Rajasthan-News-Time.png"
+        alt: "Rajasthan News Time - Giddh Accounting Software",
+        src: "/img/trust-badge/rajasthan-news-time.svg"
       }
     ]
   };
 
-  const badges = trustBadgeBrands[country]
+  useEffect(() => {
+    setTrustBadgeBrand(trustBadgeBrands[Object.keys(link).find((key) => link[key] === true)]);
+  }, [link]);
 
   return (
     <div
@@ -110,7 +116,7 @@ const trustBadge = ({ country }) => {
           <div className="trust-badge-logo-container-item h-auto w-100 position-relative">
             <div className="trust-badge-vertical-center d-flex align-content-center justify-content-center align-items-center flex-wrap flex-row">
 
-              { badges.map((logo, index) => (
+              { trustBadgeBrand?.map((logo, index) => (
                 <a
                   key={index}
                   href={logo.href}
