@@ -1,6 +1,8 @@
 import { MdRemove, MdAdd } from "react-icons/md";
+import Jsondata from '../data/FAQ.json'
 
 const faqHomePage = () => {
+
   return (
     <>
       <section className="container-fluid features__accordion_container">
@@ -10,8 +12,9 @@ const faqHomePage = () => {
               <div className="accordion" id="accordionAllFeatures">
                 {/*============ Accordion #1 ===============*/}
                 <h3 className="fw-bold col-primary ps-3">FAQs</h3>
-                <div className="accordion-item">
-                  <p className="accordion-header" id="headingOne">
+                {Object.keys(Jsondata).map((index) => (
+                  <div className="accordion-item" key={index}>
+                    <p className="accordion-header" id="headingOne">
                     <button
                       className="accordion-button collapsed"
                       type="button"
@@ -26,8 +29,7 @@ const faqHomePage = () => {
                       <span className="me-2 collapse-icon collapse-icon--close">
                         <MdRemove />
                       </span>
-                      How does this accounting software help in managing my
-                      finances and bookkeeping?
+                      {Jsondata.question}
                     </button>
                   </p>
                   <div
@@ -46,6 +48,7 @@ const faqHomePage = () => {
                     </div>
                   </div>
                 </div>
+                ))} 
                 {/*============ Accordion #2 ===============*/}
                 <div className="accordion-item">
                   <p className="accordion-header" id="headingTwo">
