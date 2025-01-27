@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-// import Faqs from "@/components/faq";
-// import faqs from '../data/faqs.json';
+import Faqs from "@/components/faq";
+import faqs from '../../data/faqs.json';
 
 const eInvoice = () => {
-  // const [faq, setFaq] = useState([]);
+  const [faq, setFaq] = useState([]);
 
   useEffect(() => {
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
     appendLink("https://assets.calendly.com/assets/external/widget.css");
-    // setFaq(faqs['e-invoice']);
+    setFaq(faqs['e-invoice']);
   }, []);
 
   return (
@@ -260,7 +260,7 @@ const eInvoice = () => {
         </div>
       </section>
 
-      {/* <Faqs faq={faq} /> */}
+      <Faqs faq={faq} />
     </div>
   );
 };

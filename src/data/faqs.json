@@ -208,13 +208,17 @@
         },
         {
             "question": "What types of reports are available in Giddh?",
-            "answer": " Giddh’s financial analysis software offers different financial reports to help you understand the financial condition of your business. The four major reports that are necessary to indicate the financial well-being of business are–",
+            "answer": "Giddh’s financial analysis software offers different financial reports to help you understand the financial condition of your business. The four major reports that are necessary to indicate the financial well-being of business are–",
             "list": "<ul>\n <li>Balance Sheet: These offer a comparison between the assets against liabilities and equity.</li>\n <li>Income Statement: These reports are an indication of the income earned in an annual reporting period.</li>\n <li>Capital Statement: These statements present an estimate of the increase or decrease in the capital accounts of the owner over a certain period.</li>\n <li>Cash Flows: Cash flows are budgeting tools that are used for making predictions of the cash flow fluctuations in the future by analysing the performance of the past.<li>\n</ul>"
         },
         {
             "question": "What are the three objectives of financial reporting?",
-            "answer": " Majorly, there are three essential objectives of financial reporting, which are:",
-            "list": "<ul>\n <li>Inform investors about how efficiently their cash is being utilised and being reinvested in the business.</li>\n <li>Track the cash flow to determine the source of incoming business finances</li>\n <li>Offer an analysis of the assets, liabilities and owner’s equity</li>\n </ul>"
+            "answer": "Majorly, there are three essential objectives of financial reporting, which are:",
+            "list": [
+                "Inform investors about how efficiently their cash is being utilised and being reinvested in the business.",
+                "Track the cash flow to determine the source of incoming business finances",
+                "Offer an analysis of the assets, liabilities and owner’s equity"
+            ]
         },
         {
             "question": "Does Giddh provide a Balance sheet, P&amp;L and Balance sheet reports?",

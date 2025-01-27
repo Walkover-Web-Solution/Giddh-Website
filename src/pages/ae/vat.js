@@ -1,6 +1,6 @@
-import { useState } from "react";
-// import Faqs from "@/components/faq";
-// import faqs from '../data/faqs.json';
+import { useState, useEffect } from "react";
+import Faqs from "@/components/faq";
+import faqs from '../../data/faqs.json';
 
 const aeVAT = () => {
     const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
@@ -8,9 +8,9 @@ const aeVAT = () => {
     const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
     const [faq, setFaq] = useState([]);
 
-    // useEffect(() => {
-    //     setFaq(faqs['vat-ae']);
-    // }, []);
+    useEffect(() => {
+        setFaq(faqs['vat-ae']);
+    }, []);
 
     return (
         <>
@@ -420,7 +420,7 @@ const aeVAT = () => {
                 </div>
             </section>
 
-            {/* <Faqs faq={faq} /> */}
+            <Faqs faq={faq} />
         </>
     );
 };
