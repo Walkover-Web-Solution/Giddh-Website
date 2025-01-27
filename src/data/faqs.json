@@ -1,73 +1,73 @@
 {
-    "indexPage" : [
-      {
-        "question": "How does this accounting software help in managing my finances and bookkeeping?",
-        "answer": "Accounting software streamlines financial tasks, enhancing accuracy, and saving time by automating processes like invoicing, reporting, and reconciliation. It provides real-time insights, aiding informed decision-making and compliance with financial regulations, ultimately fostering business growth."
-      },
-      {
-        "question": "How secure is my financial data on online accounting software?",
-        "answer": "Accounting software streamlines financial tasks, enhancing accuracy, and saving time by automating processes like invoicing, reporting, and reconciliation. It provides real-time insights, aiding informed decision-making and compliance with financial regulations, ultimately fostering business growth."
-      },
-      {
-        "question": " Is the accounting software compliant with tax regulations and reporting standards?",
-        "answer": "Yes, Giddh software complies with tax regulations and reporting standards, offering features that facilitate accurate tax calculations, generating reports aligned with regulatory requirements, ensuring adherence to tax laws for seamless tax filing and compliance."
-      },
-      {
-        "question": " Is it possible for multiple users to access the accounting software simultaneously?",
-        "answer": "Yes, Giddh accounting software allows multiple users to access it simultaneously, facilitating collaborative work and real-time updates across the platform for enhanced efficiency and teamwork."
-      },
-      {
-        "question": "Can I access the accounting software on my mobile device?",
-        "answer": " Yes, Giddh offers a mobile app for both iOS and Android devices. With the mobile app, you can create entries, access your financial data on-the-go, manage invoices, track expenses, and more. You can manage the financial data anytime, anywhere from your mobile device."
-      },
-      {
-        "question": "Does the accounting software have the capability tointegrate with Shopify?",
-        "answer": "Yes, Giddh accounting software is capable of integrating seamlessly with Shopify, allowing for efficient data synchronization and streamlined processes between the two platforms."
-      }
+    "home": [
+        {
+            "question": "How does this accounting software help in managing my finances and bookkeeping?",
+            "answer": "Accounting software streamlines financial tasks, enhancing accuracy, and saving time by automating processes like invoicing, reporting, and reconciliation. It provides real-time insights, aiding informed decision-making and compliance with financial regulations, ultimately fostering business growth."
+        },
+        {
+            "question": "How secure is my financial data on online accounting software?",
+            "answer": "Accounting software streamlines financial tasks, enhancing accuracy, and saving time by automating processes like invoicing, reporting, and reconciliation. It provides real-time insights, aiding informed decision-making and compliance with financial regulations, ultimately fostering business growth."
+        },
+        {
+            "question": " Is the accounting software compliant with tax regulations and reporting standards?",
+            "answer": "Yes, Giddh software complies with tax regulations and reporting standards, offering features that facilitate accurate tax calculations, generating reports aligned with regulatory requirements, ensuring adherence to tax laws for seamless tax filing and compliance."
+        },
+        {
+            "question": " Is it possible for multiple users to access the accounting software simultaneously?",
+            "answer": "Yes, Giddh accounting software allows multiple users to access it simultaneously, facilitating collaborative work and real-time updates across the platform for enhanced efficiency and teamwork."
+        },
+        {
+            "question": "Can I access the accounting software on my mobile device?",
+            "answer": " Yes, Giddh offers a mobile app for both iOS and Android devices. With the mobile app, you can create entries, access your financial data on-the-go, manage invoices, track expenses, and more. You can manage the financial data anytime, anywhere from your mobile device."
+        },
+        {
+            "question": "Does the accounting software have the capability tointegrate with Shopify?",
+            "answer": "Yes, Giddh accounting software is capable of integrating seamlessly with Shopify, allowing for efficient data synchronization and streamlined processes between the two platforms."
+        }
     ],
-    "invoiceSoftwarePage" : [
-      {
-        "question": "Does Giddh software support recurring invoicing?",
-        "answer": "Yes. Giddh automatically generates invoices for a set interval of time as mentioned by the user."
-      },
-      {
-        "question": "Are my invoices secure in the Giddh Cloud Invoicing Software?",
-        "answer": "We take various measures to ensure that your invoices are safe on our software. Your data is encrypted with SSL encryption which is stored on our AWS servers, known for offering the highest level of security. The data is further recorded in a Javascript object and secured by our robust firewall system."
-      },
-      {
-        "question": "Are there different template options for the invoices?",
-        "answer": "You can select professional looking invoices from our wide range of templates and customisations. All templates are well-thought out and designed to meet a variety of needs and create a lasting impression on your client."
-      },
-      {
-        "question": " Will my invoices look professional?",
-        "answer": "  The invoices you make on the Giddh software can be made to look extremely professional and on-brand. You can also insert logos and icons in the invoices as well as customise the colour schemes and designs as per your brand guidelines."
-      },
-      {
-        "question": "How can I create estimates / proformas and convert them to invoices in Giddh?",
-        "answer": "Press Ctrl/cmd+G, search for and select the voucher type. Fill in the necessary details and save it. Now, go to the list of estimate/proforma, select the one you want to convert to invoice and convert them to invoices from their settings."
-      }
+    "invoice-software": [
+        {
+            "question": "Does Giddh software support recurring invoicing?",
+            "answer": "Yes. Giddh automatically generates invoices for a set interval of time as mentioned by the user."
+        },
+        {
+            "question": "Are my invoices secure in the Giddh Cloud Invoicing Software?",
+            "answer": "We take various measures to ensure that your invoices are safe on our software. Your data is encrypted with SSL encryption which is stored on our AWS servers, known for offering the highest level of security. The data is further recorded in a Javascript object and secured by our robust firewall system."
+        },
+        {
+            "question": "Are there different template options for the invoices?",
+            "answer": "You can select professional looking invoices from our wide range of templates and customisations. All templates are well-thought out and designed to meet a variety of needs and create a lasting impression on your client."
+        },
+        {
+            "question": " Will my invoices look professional?",
+            "answer": "  The invoices you make on the Giddh software can be made to look extremely professional and on-brand. You can also insert logos and icons in the invoices as well as customise the colour schemes and designs as per your brand guidelines."
+        },
+        {
+            "question": "How can I create estimates / proformas and convert them to invoices in Giddh?",
+            "answer": "Press Ctrl/cmd+G, search for and select the voucher type. Fill in the necessary details and save it. Now, go to the list of estimate/proforma, select the one you want to convert to invoice and convert them to invoices from their settings."
+        }
     ],
     "multiUserAccounting": [
-       {
-        "question": "What are the benefits of using a multi-accounting software?",
-        "answer": " With Giddh’s multi-accounting software, you can easily add, remove and manage access to multiple users within an organization. Multi-accounting software also makes it easy to create groups and share only a portion of data to various departments. Its monitoring capabilities helps keep track of what data is accessible to whom."
-       },
-       {
-        "question": "Do I need to be a techie to handle the Giddh software?",
-        "answer": "The Giddh software has a really simple interface that can be used by a layman without a technical background. The cloud-based system also means that you can access the software from anywhere and on any device."
-       },
-       {
-        "question": "Can I provide access to the Giddh software to other team members?",
-        "answer": "The Giddh software offers collaboration options so that you can work along with your team members on the software. Moreover, it also gives you the power to provide time-restricted access to external members such as CAs and share the data with them only for a limited period of time after which permissions are revoked."
-       },
-       {
-        "question": "Is the Giddh software ideal for all types of businesses?",
-        "answer": "Giddh is especially ideal for small and medium enterprises (SMEs) thanks to its affordable pricing and easy to use interface that quickly helps owners get familiarised with the user interface."
-       },
-       {
-        "question": "How does a multi-accounting software work?",
-        "answer": "With Giddh’s multi-accounting software, you can easily add, remove and manage access to multiple users within an organization. Multi-accounting software also makes it easy to create groups and share only a portion of data to various departments. Its monitoring capabilities helps keep track of what data is accessible to whom."
-       }
+        {
+            "question": "What are the benefits of using a multi-accounting software?",
+            "answer": " With Giddh’s multi-accounting software, you can easily add, remove and manage access to multiple users within an organization. Multi-accounting software also makes it easy to create groups and share only a portion of data to various departments. Its monitoring capabilities helps keep track of what data is accessible to whom."
+        },
+        {
+            "question": "Do I need to be a techie to handle the Giddh software?",
+            "answer": "The Giddh software has a really simple interface that can be used by a layman without a technical background. The cloud-based system also means that you can access the software from anywhere and on any device."
+        },
+        {
+            "question": "Can I provide access to the Giddh software to other team members?",
+            "answer": "The Giddh software offers collaboration options so that you can work along with your team members on the software. Moreover, it also gives you the power to provide time-restricted access to external members such as CAs and share the data with them only for a limited period of time after which permissions are revoked."
+        },
+        {
+            "question": "Is the Giddh software ideal for all types of businesses?",
+            "answer": "Giddh is especially ideal for small and medium enterprises (SMEs) thanks to its affordable pricing and easy to use interface that quickly helps owners get familiarised with the user interface."
+        },
+        {
+            "question": "How does a multi-accounting software work?",
+            "answer": "With Giddh’s multi-accounting software, you can easily add, remove and manage access to multiple users within an organization. Multi-accounting software also makes it easy to create groups and share only a portion of data to various departments. Its monitoring capabilities helps keep track of what data is accessible to whom."
+        }
     ],
     "accountingDashboardPage": [
         {
@@ -111,26 +111,26 @@
         }
     ],
     "connectBankREconcilePage": [
-    {
-        "question": "What is bank reconciliation? Why is it done?",
-        "answer": "A bank reconciliation compares the difference between the bank balance on the bank statement with the balance on the accounting records of the company. Sometimes, certain transactions may be accounted for in the bank’s system before it is integrated into the company’s accounting system. Hence, bank reconciliation is done so that such differences can be detected."
-    },
-    {
-        "question":" What is reconciliation software?",
-        "answer": "A reconciliation software is a tool that can help you automate and standardise the reconciliation process to ensure quality and accuracy in preparing financial statements. With a bank reconciliation software, it becomes easier for accountants to compare bank, general ledger and other data, verify the correctness of balance sheets as well as identify any discrepancies, attach supporting documentation, etc."
-    },
-    {
-        "question": "How can Giddh help streamline bank transactions?",
-        "answer": "Giddh, one of the best bank reconciliation software in India, can directly be integrated with your respective banking partner. As a result you can easily make payments to vendors from a single window, without the need for opening your online banking website and reentering your credentials. Since the bank’s API is integrated directly within the app, Giddh automatically monitors and categorizes your bank transactions and makes the reconciliation process smoother and smarter."
-    },
-    {
-        "question": "How does integrating a bank account with Giddh benefit me?",
-        "answer": "1. Easily send and receive vendor payments from a single window in a convenient manner.",
-        "list2": "2. Have a clearer view of the company’s cash status in no time",
-        "list3": "3. Easy and automated import of bank statement transactions",
-        "list4" : "4. Automated reconciliation of transactions by value and reconciliation code",
-        "list5" : "5. Detailed reporting of bank activities and daily payments"
-    }
+        {
+            "question": "What is bank reconciliation? Why is it done?",
+            "answer": "A bank reconciliation compares the difference between the bank balance on the bank statement with the balance on the accounting records of the company. Sometimes, certain transactions may be accounted for in the bank’s system before it is integrated into the company’s accounting system. Hence, bank reconciliation is done so that such differences can be detected."
+        },
+        {
+            "question": " What is reconciliation software?",
+            "answer": "A reconciliation software is a tool that can help you automate and standardise the reconciliation process to ensure quality and accuracy in preparing financial statements. With a bank reconciliation software, it becomes easier for accountants to compare bank, general ledger and other data, verify the correctness of balance sheets as well as identify any discrepancies, attach supporting documentation, etc."
+        },
+        {
+            "question": "How can Giddh help streamline bank transactions?",
+            "answer": "Giddh, one of the best bank reconciliation software in India, can directly be integrated with your respective banking partner. As a result you can easily make payments to vendors from a single window, without the need for opening your online banking website and reentering your credentials. Since the bank’s API is integrated directly within the app, Giddh automatically monitors and categorizes your bank transactions and makes the reconciliation process smoother and smarter."
+        },
+        {
+            "question": "How does integrating a bank account with Giddh benefit me?",
+            "answer": "1. Easily send and receive vendor payments from a single window in a convenient manner.",
+            "list2": "2. Have a clearer view of the company’s cash status in no time",
+            "list3": "3. Easy and automated import of bank statement transactions",
+            "list4": "4. Automated reconciliation of transactions by value and reconciliation code",
+            "list5": "5. Detailed reporting of bank activities and daily payments"
+        }
     ],
     "multiCurrencyAccountingSofteware": [
         {
@@ -202,7 +202,7 @@
         {
             "question": "What are the disadvantages of using Excel for Accounting?",
             "answer": "The following are some of the major disadvantages of using accounting software in Excel.",
-            "list1" : "Excel is good only for basic tasks like managing pricing strategies not for advanced factors like value-based pricing or customers’ willingness to pay.",
+            "list1": "Excel is good only for basic tasks like managing pricing strategies not for advanced factors like value-based pricing or customers’ willingness to pay.",
             "list2": "Excel accounting software can’t handle large data files or a single file that has high volumes of data.",
             "list3": "It is easy to make fraudulent manipulations when data is kept in Excel sheets.",
             "list4": " In an organisation, information from different departments are required to prepare the final accounting or pricing document, and Excel is not feasible for that."
@@ -210,7 +210,7 @@
         {
             "question": "How does integrating a bank account with Giddh benefit me?",
             "answer": "Here are some advantages of using cloud accounting software over Excel",
-            "list1" : " Unlike Excel, accounting software is well-designed to handle simple and complex accounting tasks.",
+            "list1": " Unlike Excel, accounting software is well-designed to handle simple and complex accounting tasks.",
             "list2": "It can generate better and high-level reports than Excel to indicate different aspects of your accounting functions.",
             "list3": "The mathematical operations are handled by the backend processes of accounting software that reduces the chances of manual errors."
         }
@@ -253,4 +253,4 @@
             "answer": "Giddh’s finance reporting software offers the financial reports in formats like PDF and Excel, which make it easier to download or directly share the report to the CA or accountant, stakeholders of your business as well as other departments of your organisation."
         }
     ]
-  }
+}
