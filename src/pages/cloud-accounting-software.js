@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
-import { MdRemove, MdAdd } from "react-icons/md";
+import Faqs from "@/components/faq";
+import faqs from '../data/faqs.json';
+
 const anywhereAnytime = (path) => {
   const [readMoreStatus, readmoreAction] = useState(false);
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
+  const [faq, setFaq]= useState([]);
 
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
@@ -15,6 +18,7 @@ const anywhereAnytime = (path) => {
   useEffect(() => {
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
     appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setFaq(faqs['cloud-accounting-software'])
   }, []);
 
   return (
@@ -756,235 +760,8 @@ const anywhereAnytime = (path) => {
             </div>
           </div>
         </section>
-        <section className="container-fluid features__accordion_container">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 px-0">
-                <div className="accordion" id="accordionAllFeatures">
-                  {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3 ">FAQs</h2>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What does cloud accounting mean?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        A cloud accounting software isn’t very different from
-                        the traditional, locally-hosted software, but it is
-                        capable of handling more complex tasks and is hosted on
-                        remote servers or the cloud. Here, the data and the
-                        software are stored on remote servers instead of the
-                        user’s desktop, and the user can access it through the
-                        internet via a cloud service provider.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #2 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How can accounting software help us?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        An accounting software can help you carry out financial
-                        tasks, such as recording your company expenses,
-                        preparing estimates, creating and sending invoices,
-                        filing tax returns, keeping a record of profit and loss
-                        statements, allocating budgets and making forecasts. It
-                        can also be used to automate the manual and repetitive
-                        tasks involved in maintaining financial accounts, and
-                        save up on significant time and resources.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #3 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Is my data safe & secure in the cloud accounting system?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        As compared to traditional accounting software,
-                        cloud-based accounting systems offer better security for
-                        your financial information. All your data is stored on
-                        remote servers in an encrypted format. Besides, the best
-                        cloud accounting software ensures that critical
-                        financial data is not exposed to unauthorised sources
-                        and has backup servers to ensure there is zero data
-                        loss. With cloud-based accounting software, it is safe
-                        and easy to share data as well. You can just grant
-                        access rights to the person you want to share your data
-                        with.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #4 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Can I access my accounting data from multiple devices &
-                        multiple users at the same time?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          {" "}
-                          Web-based accounting software allows access to your
-                          accounting data through the internet to different
-                          users and systems. Therefore, your data can be
-                          accessed by multiple users and multiple devices at the
-                          same time. Besides, you can set the access permission
-                          for each user so that you can control which data can
-                          be accessed by a particular user.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/*============ Accordion #5 ===============*/}
-
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFive">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How cloud accounting is better than an offline solution?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFive"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          Online cloud accounting software offers several
-                          advantages over offline solutions, which are described
-                          below.
-                        </p>
-                        <ul>
-                          <li>
-                            Cloud accounting software offers more flexibility
-                            and accessibility than its offline counterpart.
-                          </li>
-                          <li>
-                            The errors that may occur while manually entering
-                            the data in offline solutions can be prevented.
-                          </li>
-                          <li>
-                            Cloud accounting solutions are better equipped to
-                            handle multi-currency and multi-company transactions
-                            efficiently.
-                          </li>
-                          <li>
-                            Cloud accounting solutions are easier to manage and
-                            require less maintenance.
-                          </li>
-                          <li>
-                            Collaboration between different departments becomes
-                            easier thanks to a common platform where one can
-                            track, communicate and edit accounts.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
+        <Faqs faq={faq} />
       </div>
     </>
   );

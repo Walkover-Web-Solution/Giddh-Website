@@ -1,5 +1,6 @@
-import { MdRemove, MdAdd } from "react-icons/md";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Faqs from "@/components/faq";
+import faqs from '../data/faqs.json';
 
 const multiCurrencyAccountingSoftware = (path) => {
   const linkPath = path.path;
@@ -7,10 +8,12 @@ const multiCurrencyAccountingSoftware = (path) => {
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
+  const [faq, setFaq] = useState([]);
 
   useEffect(() => {
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
     appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setFaq(faqs['multi-currency-accounting-software']);
   }, []);
 
   return (
@@ -232,220 +235,7 @@ const multiCurrencyAccountingSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__accordion_container">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 px-0">
-                <div className="accordion" id="accordionAllFeatures">
-                  {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What type of businesses can use the Giddh multi-currency
-                        accounting software?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        Giddh’s innovative multi-currency accounting software is
-                        designed to cater to all the accounting, invoicing and
-                        related activities of businesses at a budget-friendly
-                        price. Hence, it is widely used by start-ups, agencies,
-                        enterprises and SMEs that require managing accounts that
-                        deal with multiple currencies.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #2 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What are the advantages of using the Giddh
-                        multi-currency accounting software?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          The following are the advantages of using the Giddh
-                          multi-currency accounting software that make it worth
-                          the try.
-                        </p>
-                        <ul>
-                          <li>
-                            Flexibility: Giddh offers you flexibility in payment
-                            options. It helps you handle transactions involving
-                            different currencies.
-                          </li>
-                          <li>
-                            Money-saving: With Giddh, you get the increased
-                            convenience of dealing with multiple accounts
-                            without investing in an expert or a manual system.
-                          </li>
-                          <li>
-                            Better security: Your financial reports are safe
-                            from any security breaches with Giddh.
-                          </li>
-                          <li>
-                            Linked bank accounts: Giddh allows you to link
-                            multiple bank accounts so that you can check your
-                            transaction history anywhere and anytime you want.
-                          </li>
-                          <li>
-                            Diligent support team: Giddh’s support team is just
-                            a call or email away to help you with any issue that
-                            arises.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #3 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Are the currency rates mentioned updated and accurate?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        Yes, the mentioned currency rates are updated and
-                        accurate. Giddh periodically pulls in the exchange rates
-                        online to ensure that businesses and financial advisors
-                        have the accurate data needed to make effective
-                        decisions. Giddh also allows you to set a default
-                        currency so that you can receive your invoices according
-                        to the set currency.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #4 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How does the currency converter work?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        We save the latest data of currency conversion in our
-                        system. So, when the user creates an invoice or uses a
-                        related functionality for bookkeeping, the conversion
-                        amount is shown in the respective entry form/field.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #5 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFive">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Can I customize the exchange rates?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFive"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        Yes, you can customize the currency exchange rate and
-                        enter the desired amount as per the situation or
-                        requirement.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Faqs faq={faq} />
       </div>
     </>
   );

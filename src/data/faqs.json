@@ -47,7 +47,7 @@
             "answer": "Press Ctrl/cmd+G, search for and select the voucher type. Fill in the necessary details and save it. Now, go to the list of estimate/proforma, select the one you want to convert to invoice and convert them to invoices from their settings."
         }
     ],
-    "multiUserAccounting": [
+    "multi-user-accounting-software": [
         {
             "question": "What are the benefits of using a multi-accounting software?",
             "answer": " With Giddh’s multi-accounting software, you can easily add, remove and manage access to multiple users within an organization. Multi-accounting software also makes it easy to create groups and share only a portion of data to various departments. Its monitoring capabilities helps keep track of what data is accessible to whom."
@@ -69,29 +69,30 @@
             "answer": "With Giddh’s multi-accounting software, you can easily add, remove and manage access to multiple users within an organization. Multi-accounting software also makes it easy to create groups and share only a portion of data to various departments. Its monitoring capabilities helps keep track of what data is accessible to whom."
         }
     ],
-    "accountingDashboardPage": [
+    "accounting-dashboard": [
         {
             "question": "What is an accounting dashboard?",
-            "asnwer": "An accounting dashboard is a management tool that helps you to view your financial data and other essential metrics from several sources all at one place. It offers a real-time view of the cash flow, invoices, accounts payable and receivable, profit and loss, etc. so that business owners, bookkeeping professionals or accountants always have an idea about where the business is heading towards at all times. Keeping track of the relevant finance KPIs ensures that the financial objectives of a company are met."
+            "answer": "An accounting dashboard is a management tool that helps you to view your financial data and other essential metrics from several sources all at one place. It offers a real-time view of the cash flow, invoices, accounts payable and receivable, profit and loss, etc. so that business owners, bookkeeping professionals or accountants always have an idea about where the business is heading towards at all times. Keeping track of the relevant finance KPIs ensures that the financial objectives of a company are met."
         },
         {
             "question": "What should be on a financial dashboard?",
-            "asnwer": "A financial dashboard software should be able to present all the relevant financial metrics in an actionable way to enable a business to understand and measure the data accurately. Here are some metrics that a good financial dashboard must display.",
-            "list": ""
+            "answer": "A financial dashboard software should be able to present all the relevant financial metrics in an actionable way to enable a business to understand and measure the data accurately. Here are some metrics that a good financial dashboard must display.",
+            "list": "<ul>\n  <li>A graphic budget-to-actual table that shows how a business is working in alignment with the set goals or objectives</li>\n  <li>Sales report that shows the data of sales and orders invoiced during a specific period</li> \n  <li>Cash flow projection to assist during periods of thin cash availability and cash-intensive growth</li>\n <li>Peer benchmark metric to compare margins against market peers</li>\n <li>Industry performance metrics</li>\n <li>Value drivers over the long-term</li>\n <li>Performance metrics to measure the progress of current initiatives</li>\n  </ul>"
+            
         },
         {
             "question": "How does Giddh accounting dashboard help to understand my accounting data and make a decision?",
-            "asnwer": " Giddh’s real-time accounting dashboard provides you with clarity and insights about the core KPIs of your business. The dashboard highlights the metrics that directly impact your bottom line thereby saving up your time that would have otherwise been spent in building custom reports in Excel. This enables your finance professionals to access figures faster and understand the financial details that are needed to make proper decisions and ensure a stable financial environment."
+            "answer": " Giddh’s real-time accounting dashboard provides you with clarity and insights about the core KPIs of your business. The dashboard highlights the metrics that directly impact your bottom line thereby saving up your time that would have otherwise been spent in building custom reports in Excel. This enables your finance professionals to access figures faster and understand the financial details that are needed to make proper decisions and ensure a stable financial environment."
         }
     ],
-    "inventoryManagementSoftwarePage": [
+    "inventory-management-software": [
         {
             "question": "What does inventory management software do?",
-            "asnwer": "An inventory management software allows enterprises to keep track of the goods at every level of the supply chain of the business. It can help to optimise every process of the product journey from the placement of order with the vendor to the delivery of the order to the customer."
+            "answer": "An inventory management software allows enterprises to keep track of the goods at every level of the supply chain of the business. It can help to optimise every process of the product journey from the placement of order with the vendor to the delivery of the order to the customer."
         },
         {
             "question": "What makes Giddh different from other inventory management software in the market?",
-            "asnwer": "Giddh offers the best inventory management software in India that can accurately track the goods, reduce wastage and provide trend analysis to help make better investment decisions. Giddh is very particular about its transparency to the users, and this can have a huge impact on the bottom line of the organisation or enterprise."
+            "answer": "Giddh offers the best inventory management software in India that can accurately track the goods, reduce wastage and provide trend analysis to help make better investment decisions. Giddh is very particular about its transparency to the users, and this can have a huge impact on the bottom line of the organisation or enterprise."
         },
         {
             "question": "Why do we need an inventory management system?",
@@ -100,17 +101,14 @@
         {
             "question": "What are the reasons behind using an inventory management system?",
             "answer": "Some of the reasons behind using an inventory management system are",
-            "list1": "1. You can track your inventory levels at all times and place your orders whenever you see them falling low.",
-            "list2": "2.They can assist you to set up automatic emails that update your customers about every step of their order process.",
-            "list3": "3.Enables you to have an accurate idea of when the order leaves from the supplier and reaches the customer.",
-            "list4": "4. Offers a fully customised and visual dashboard that can be a game-changer for your inventory management processes."
+            "list":"<ul>\n <li>1. You can track your inventory levels at all times and place your orders whenever you see them falling low.<li>\n <li>2.They can assist you to set up automatic emails that update your customers about every step of their order process.</li>\n <li>3.Enables you to have an accurate idea of when the order leaves from the supplier and reaches the customer.</li>\n <li>4. Offers a fully customised and visual dashboard that can be a game-changer for your inventory management processes.</li>\n </ul>"
         },
         {
             "question": "What are the benefits of inventory management?",
             "answer": " Inventory management lays down the foundation to managing the supply and demand within a business. Other benefits of using inventory management include."
         }
     ],
-    "connectBankREconcilePage": [
+    "conect-bank-reconcile": [
         {
             "question": "What is bank reconciliation? Why is it done?",
             "answer": "A bank reconciliation compares the difference between the bank balance on the bank statement with the balance on the accounting records of the company. Sometimes, certain transactions may be accounted for in the bank’s system before it is integrated into the company’s accounting system. Hence, bank reconciliation is done so that such differences can be detected."
@@ -125,14 +123,10 @@
         },
         {
             "question": "How does integrating a bank account with Giddh benefit me?",
-            "answer": "1. Easily send and receive vendor payments from a single window in a convenient manner.",
-            "list2": "2. Have a clearer view of the company’s cash status in no time",
-            "list3": "3. Easy and automated import of bank statement transactions",
-            "list4": "4. Automated reconciliation of transactions by value and reconciliation code",
-            "list5": "5. Detailed reporting of bank activities and daily payments"
+            "answer":"<ul>\n <li>1. Easily send and receive vendor payments from a single window in a convenient manner.</li>\n <li>2. Have a clearer view of the company’s cash status in no time<li> \n <li>3. Easy and automated import of bank statement transactions</li> \n <li>4. Automated reconciliation of transactions by value and reconciliation code</li> \n  <li>5. Detailed reporting of bank activities and daily payments</li>\n </ul>"
         }
     ],
-    "multiCurrencyAccountingSofteware": [
+    "multi-currency-accounting-software": [
         {
             "question": "What type of businesses can use the Giddh multi-currency accounting software?",
             "answer": "Giddh’s innovative multi-currency accounting software is designed to cater to all the accounting, invoicing and related activities of businesses at a budget-friendly price. Hence, it is widely used by start-ups, agencies, enterprises and SMEs that require managing accounts that deal with multiple currencies."
@@ -140,18 +134,14 @@
         {
             "question": "What are the advantages of using the Giddh multi-currency accounting software?",
             "answer": " The following are the advantages of using the Giddh multi-currency accounting software that make it worth the try.",
-            "list1": "Flexibility: Giddh offers you flexibility in payment options. It helps you handle transactions involving different currencies.",
-            "list2": "Money-saving: With Giddh, you get the increased convenience of dealing with multiple accounts without investing in an expert or a manual system.",
-            "list3": "Better security: Your financial reports are safe from any security breaches with Giddh.",
-            "list4": "Linked bank accounts: Giddh allows you to link multiple bank accounts so that you can check your transaction history anywhere and anytime you want.",
-            "list5": "Diligent support team: Giddh’s support team is just a call or email away to help you with any issue that arises."
+            "list": "<ul>\n <li>Flexibility: Giddh offers you flexibility in payment options. It helps you handle transactions involving different currencies.</li>\n <li>Money-saving: With Giddh, you get the increased convenience of dealing with multiple accounts without investing in an expert or a manual system.</li>\n <li>Better security: Your financial reports are safe from any security breaches with Giddh.</li>\n <li>Linked bank accounts: Giddh allows you to link multiple bank accounts so that you can check your transaction history anywhere and anytime you want.<li>\n <li>Diligent support team: Giddh’s support team is just a call or email away to help you with any issue that arises.</li>\n </ul>"
         },
         {
             "question": "Are the currency rates mentioned updated and accurate?",
             "answer": "Yes, the mentioned currency rates are updated and accurate. Giddh periodically pulls in the exchange rates online to ensure that businesses and financial advisors have the accurate data needed to make effective decisions. Giddh also allows you to set a defaultcurrency so that you can receive your invoices according to the set currency."
         },
         {
-            "queation": "How does the currency converter work?",
+            "question": "How does the currency converter work?",
             "answer": "We save the latest data of currency conversion in our system. So, when the user creates an invoice or uses a related functionality for bookkeeping, the conversion amount is shown in the respective entry form/field."
         },
         {
@@ -159,7 +149,7 @@
             "answer": "Yes, you can customize the currency exchange rate and enter the desired amount as per the situation or requirement."
         }
     ],
-    "cloudAccountingSoftware": [
+    "cloud-accounting-software": [
         {
             "question": "What does cloud accounting mean?",
             "answer": "A cloud accounting software isn’t very different from the traditional, locally-hosted software, but it is capable of handling more complex tasks and is hosted on remote servers or the cloud. Here, the data and the software are stored on remote servers instead of the user’s desktop, and the user can access it through the internet via a cloud service provider."
@@ -179,14 +169,10 @@
         {
             "question": "How cloud accounting is better than an offline solution?",
             "answer": "Online cloud accounting software offers several advantages over offline solutions, which are described below.",
-            "list1": " Cloud accounting software offers more flexibility and accessibility than its offline counterpart.",
-            "list2": "The errors that may occur while manually entering the data in offline solutions can be prevented.",
-            "list3": "Cloud accounting solutions are better equipped to handle multi-currency and multi-company transactions efficiently.",
-            "list4": "Cloud accounting solutions are easier to manage and require less maintenance.",
-            "list5": "Collaboration between different departments becomes easier thanks to a common platform where one can track, communicate and edit accounts."
+            "list": "<ul>\n <li>Cloud accounting software offers more flexibility and accessibility than its offline counterpart.</li>\n <li>The errors that may occur while manually entering the data in offline solutions can be prevented.<li>\n <li>Cloud accounting solutions are better equipped to handle multi-currency and multi-company transactions efficiently.</li>\n  <li>Cloud accounting solutions are easier to manage and require less maintenance.</li>\n  </ul>"
         }
     ],
-    "importDataPage": [
+    "import-data": [
         {
             "question": "What are the three golden rules of accounting?",
             "answer": " You need to debit the account when you receive something, and credit the account if you give something. You have to debit the account if something such as an asset comes into your business, and credit the account when something goes out of your business. You have to debit the account if your business has a profit or loss, and credit the account if income or gain needs to be recorded."
@@ -202,20 +188,15 @@
         {
             "question": "What are the disadvantages of using Excel for Accounting?",
             "answer": "The following are some of the major disadvantages of using accounting software in Excel.",
-            "list1": "Excel is good only for basic tasks like managing pricing strategies not for advanced factors like value-based pricing or customers’ willingness to pay.",
-            "list2": "Excel accounting software can’t handle large data files or a single file that has high volumes of data.",
-            "list3": "It is easy to make fraudulent manipulations when data is kept in Excel sheets.",
-            "list4": " In an organisation, information from different departments are required to prepare the final accounting or pricing document, and Excel is not feasible for that."
+            "list": "<ul>\n <li>Excel is good only for basic tasks like managing pricing strategies not for advanced factors like value-based pricing or customers’ willingness to pay.</li>\n <li>Excel accounting software can’t handle large data files or a single file that has high volumes of data.</li>\n <li>It is easy to make fraudulent manipulations when data is kept in Excel sheets.</li>\n <li>In an organisation, information from different departments are required to prepare the final accounting or pricing document, and Excel is not feasible for that.</li>\n </ul>"
         },
         {
             "question": "How does integrating a bank account with Giddh benefit me?",
             "answer": "Here are some advantages of using cloud accounting software over Excel",
-            "list1": " Unlike Excel, accounting software is well-designed to handle simple and complex accounting tasks.",
-            "list2": "It can generate better and high-level reports than Excel to indicate different aspects of your accounting functions.",
-            "list3": "The mathematical operations are handled by the backend processes of accounting software that reduces the chances of manual errors."
+            "list": "<ul>\n <li>Unlike Excel, accounting software is well-designed to handle simple and complex accounting tasks</li>\n <li>It can generate better and high-level reports than Excel to indicate different aspects of your accounting functions.</li>\n <li>The mathematical operations are handled by the backend processes of accounting software that reduces the chances of manual errors.</li>\n</ul>"
         }
     ],
-    "financialReportingPage": [
+    "financial-reporting": [
         {
             "question": "What is financial reporting software?",
             "answer": " Financial reporting is a crucial part of business accounting functions. A financial reporting software helps a business automate the financial and accounting tasks. The financial reports software is available as a basic single-entry system and complex double-entry solutions. In this competitive business environment, adopting the best financial reporting tools are essential to ensure accuracy in accounting functions, cut down on expenses and boost efficiency. Top financial analysis software like Giddh can help you do that and offer greater visibility of your current financial standing and insights on factors that can impact your profitability."
@@ -223,26 +204,17 @@
         {
             "question": "What does financial reporting include?",
             "answer": "The financial reporting process produces statements that present a business’s financial standing to the management, investors as well as the government. It includes the following.",
-            "list1": "Financial statements of income, comprehensive income, cash flows, stockholders’ equities and balance sheet",
-            "list2": "Any financial information available on the enterprise’s website",
-            "list3": "Documents of common stock and securities",
-            "list4": "Communication regarding quarterly earning and other relevant information",
-            "list5": "Quarterly and annual reports to stockholders as well as government agencies and SEC (Securities and Exchange Commission)"
+            "list": "<ul>\n <li>Financial statements of income, comprehensive income, cash flows, stockholders’ equities and balance sheet</li>\n <li>Any financial information available on the enterprise’s website</li>\n <li>Documents of common stock and securities</li>\n <li>Communication regarding quarterly earning and other relevant information</li>\n <li>Quarterly and annual reports to stockholders as well as government agencies and SEC (Securities and Exchange Commission)</li>\n </ul>"
         },
         {
             "question": "What types of reports are available in Giddh?",
             "answer": " Giddh’s financial analysis software offers different financial reports to help you understand the financial condition of your business. The four major reports that are necessary to indicate the financial well-being of business are–",
-            "list1": " Balance Sheet: These offer a comparison between the assets against liabilities and equity.",
-            "list2": "Income Statement: These reports are an indication of the income earned in an annual reporting period.",
-            "list3": " Capital Statement: These statements present an estimate of the increase or decrease in the capital accounts of the owner over a certain period.",
-            "list4": "Cash Flows: Cash flows are budgeting tools that are used for making predictions of the cash flow fluctuations in the future by analysing the performance of the past."
+            "list": "<ul>\n <li>Balance Sheet: These offer a comparison between the assets against liabilities and equity.</li>\n <li>Income Statement: These reports are an indication of the income earned in an annual reporting period.</li>\n <li>Capital Statement: These statements present an estimate of the increase or decrease in the capital accounts of the owner over a certain period.</li>\n <li>Cash Flows: Cash flows are budgeting tools that are used for making predictions of the cash flow fluctuations in the future by analysing the performance of the past.<li>\n</ul>"
         },
         {
             "question": "What are the three objectives of financial reporting?",
             "answer": " Majorly, there are three essential objectives of financial reporting, which are:",
-            "list1": "Inform investors about how efficiently their cash is being utilised and being reinvested in the business.",
-            "list2": "Track the cash flow to determine the source of incoming business finances",
-            "list3": "Offer an analysis of the assets, liabilities and owner’s equity"
+            "list": "<ul>\n <li>Inform investors about how efficiently their cash is being utilised and being reinvested in the business.</li>\n <li>Track the cash flow to determine the source of incoming business finances</li>\n <li>Offer an analysis of the assets, liabilities and owner’s equity</li>\n </ul>"
         },
         {
             "question": "Does Giddh provide a Balance sheet, P&amp;L and Balance sheet reports?",
@@ -253,7 +225,7 @@
             "answer": "Giddh’s finance reporting software offers the financial reports in formats like PDF and Excel, which make it easier to download or directly share the report to the CA or accountant, stakeholders of your business as well as other departments of your organisation."
         }
     ],
-    "vatAEPage": [
+    "vat-ae": [
         {
             "question": "What is VAT?",
             "answer": " VAT stands for Value-Added Tax. It is a consumption tax imposed on the value added to goods and services at each stage of production or distribution. Unlike a sales tax, which is typically collected only at the final point of sale to the end consumer, VAT is collected at multiple points along the supply chain."
@@ -281,7 +253,7 @@
             "list6": "Complete support for all VAT-related issues"
         }
     ],
-    "eInvoicePage": [
+    "e-invoice": [
         {
             "question": "What is e-invoicing?",
             "answer": "Electronic Invoicing, commonly known as ‘e-invoicing’ is a system in which B2B invoices are authenticated electronically on the Invoice Registration Portal (IRP) for further use on the Good and Services Tax (GST) portal."
@@ -314,7 +286,7 @@
             "answer": "E-invoicing is available in all the paid plans of Giddh Accounting Software."
         }
     ],
-    "gstPage": [
+    "gst": [
         {
             "question": "What is GST?",
             "answer": "GST (also known as Goods and Services Tax) is a value-added tax that is levied on a majority of goods and services that are sold for domestic consumption. This tax is paid by consumers while availing a service or purchasing a product, but it is remitted to the government by businesses that are selling the respective goods and services. In other words, GST provides a means of revenue for the government."
@@ -357,7 +329,7 @@
             "list6": "Complete support for all GST-related issues"
         }
     ],
-    "vatUKPage": [
+    "vat-uk": [
         {
             "question": "What is VAT?",
             "answer": "VAT stands for Value-Added Tax. It is a consumption tax imposed on the value added to goods and services at each stage of production or distribution. Unlike a sales tax, which is typically collected only at the final point of sale to the end consumer, VAT is collected at multiple points along the supply chain."

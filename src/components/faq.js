@@ -36,7 +36,9 @@ const Faqs = ({ faq }) => {
                       aria-labelledby="headingOne"
                       data-bs-parent="#accordionAllFeatures"
                     >
-                      <div className="accordion-body">{item?.answer}</div>
+                      <div className="accordion-body">{item?.answer}
+                        {item?.list}
+                      </div>
                     </div>
                   </div>
                 ))}

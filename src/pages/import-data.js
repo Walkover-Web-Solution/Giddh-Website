@@ -1,15 +1,18 @@
-import { MdRemove, MdAdd } from "react-icons/md";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Faqs from "@/components/faq";
+import faqs from '../data/faqs.json';
 
 const importExeclFiles = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
   const link = linkPath.linkPrefix;
+  const [faq, setFaq]= useState([])
   
   useEffect(() => {
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
     appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setFaq(faqs['import-data']);
   }, []);
 
   return (
@@ -259,242 +262,7 @@ const importExeclFiles = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__accordion_container">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 px-0">
-                <div className="accordion" id="accordionAllFeatures">
-                  {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ">FAQs</h2>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What are the three golden rules of accounting?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        You need to debit the account when you receive
-                        something, and credit the account if you give something.
-                        You have to debit the account if something such as an
-                        asset comes into your business, and credit the account
-                        when something goes out of your business. You have to
-                        debit the account if your business has a profit or loss,
-                        and credit the account if income or gain needs to be
-                        recorded.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #2 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How do I import Excel data into accounting software?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        If you are looking for an Excel import software to shift
-                        away from complex spreadsheet data without losing your
-                        existing data, try Giddh. To migrate your data, you can
-                        seamlessly import the data from your Excel sheets in CSV
-                        or excel format and directly upload it to Giddh’s
-                        software.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #3 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Is Excel an accounting system?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        Businesses, while starting out, often use Excel for
-                        their accounting needs, but that can be done until a
-                        certain point. Once the business starts to evolve and
-                        grow, they have to adopt an Excel accounting
-                        alternative, such as Giddh because spreadsheets may
-                        increase the chances of human errors and aren’t agile
-                        enough to handle large volumes of accounting
-                        information.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #4 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What are the disadvantages of using Excel for
-                        Accounting?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          {" "}
-                          The following are some of the major disadvantages of
-                          using accounting software in Excel.{" "}
-                        </p>
-                        <ul>
-                          <li>
-                            Excel is good only for basic tasks like managing
-                            pricing strategies not for advanced factors like
-                            value-based pricing or customers’ willingness to
-                            pay.
-                          </li>
-                          <li>
-                            Excel accounting software can’t handle large data
-                            files or a single file that has high volumes of
-                            data.
-                          </li>
-                          <li>
-                            It is easy to make fraudulent manipulations when
-                            data is kept in Excel sheets.
-                          </li>
-                          <li>
-                            In an organisation, information from different
-                            departments are required to prepare the final
-                            accounting or pricing document, and Excel is not
-                            feasible for that.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/*============ Accordion #5 ===============*/}
-
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFive">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How does integrating a bank account with Giddh benefit
-                        me?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFive"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          {" "}
-                          Here are some advantages of using cloud accounting
-                          software over Excel
-                        </p>
-                        <ul>
-                          <li>
-                            Unlike Excel, accounting software is well-designed
-                            to handle simple and complex accounting tasks.
-                          </li>
-                          <li>
-                            It can generate better and high-level reports than
-                            Excel to indicate different aspects of your
-                            accounting functions.
-                          </li>
-                          <li>
-                            The mathematical operations are handled by the
-                            backend processes of accounting software that
-                            reduces the chances of manual errors.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Faqs faq={faq} />
       </div>
     </>
   );
