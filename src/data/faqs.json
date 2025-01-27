@@ -214,11 +214,7 @@
         {
             "question": "What are the three objectives of financial reporting?",
             "answer": "Majorly, there are three essential objectives of financial reporting, which are:",
-            "list": [
-                "Inform investors about how efficiently their cash is being utilised and being reinvested in the business.",
-                "Track the cash flow to determine the source of incoming business finances",
-                "Offer an analysis of the assets, liabilities and owner’s equity"
-            ]
+            "list": "<ul> <li>Inform investors about how efficiently their cash is being utilised and being reinvested in the business.</li> <li>Track the cash flow to determine the source of incoming business finances</li> <li>Offer an analysis of the assets, liabilities and owner’s equity</li> </ul>"
         },
         {
             "question": "Does Giddh provide a Balance sheet, P&amp;L and Balance sheet reports?",
