@@ -110,7 +110,7 @@
             "answer": " Inventory management lays down the foundation to managing the supply and demand within a business. Other benefits of using inventory management include."
         }
     ],
-    "connectBankREconcilePage": [
+    "connectBankReconcilePage": [
     {
         "question": "What is bank reconciliation? Why is it done?",
         "answer": "A bank reconciliation compares the difference between the bank balance on the bank statement with the balance on the accounting records of the company. Sometimes, certain transactions may be accounted for in the bank’s system before it is integrated into the company’s accounting system. Hence, bank reconciliation is done so that such differences can be detected."
@@ -251,6 +251,138 @@
         {
             "question": "Can I download or directly share the report to the CA or accountant or anyone from Giddh?",
             "answer": "Giddh’s finance reporting software offers the financial reports in formats like PDF and Excel, which make it easier to download or directly share the report to the CA or accountant, stakeholders of your business as well as other departments of your organisation."
+        }
+    ],
+    "vatAEPage": [
+        {
+            "question": "What is VAT?",
+            "answer": " VAT stands for Value-Added Tax. It is a consumption tax imposed on the value added to goods and services at each stage of production or distribution. Unlike a sales tax, which is typically collected only at the final point of sale to the end consumer, VAT is collected at multiple points along the supply chain."
+        },
+        {
+            "question": "what is the VAT Number?",
+            "answer": " When you register for value-added tax (VAT), HMRC issue you with a unique VAT number which identifies your business for tax records and payment purposes. It's also referred to as a VAT registration number (VRN). Your VAT number is unrelated to your unique taxpayer reference or your company number."
+        },
+        {
+           "question": "What is VAT Return Filing?",
+           "answer": "VAT Returns filing is the registration of VAT Returns document, which contains all details concerning VAT invoices, payments, and receipts during a specific period. The details that need to be filed in the VAT Returns document are:",
+           "list1": "Total sales",
+           "list2": "Total purchases",
+           "list3": "Output VAT (paid by customers)",
+           "list4": "Input Tax Credit (ITC paid by businesses)"
+        },
+        {
+            "question": " What are the benefits of using Giddh software for VAT Returns Filing?",
+            "answer": "There are several benefits to using the Giddh software for VAT Returns Filing:",
+            "list1": "Prepare your VAT return file automatically on the portal",
+            "list2": "100% accurate filing with zero chances of errors",
+            "list3": "Notifications of deadlines so that you don’t miss any deadline",
+            "list4": "Collaborate with your team and allow access of VAT data to your CA",
+            "list5": " Secure and reliable with 2-factor authentication and OTP verification",
+            "list6": "Complete support for all VAT-related issues"
+        }
+    ],
+    "eInvoicePage": [
+        {
+            "question": "What is e-invoicing?",
+            "answer": "Electronic Invoicing, commonly known as ‘e-invoicing’ is a system in which B2B invoices are authenticated electronically on the Invoice Registration Portal (IRP) for further use on the Good and Services Tax (GST) portal."
+        },
+        {
+            "question": "What is the applicability of e-invoicing?",
+            "answer": "From 1st October 2020, e-invoicing was made applicable to businesses with turnover exceeding INR 500 crore. From 1st January 2021, it was extended to businesses with turnover exceeding INR 100 crore. From 1st April 2021, businesses with more than INR 50 crore turnover have to comply with e-invoicing. From 1st April 2022, it is again extended to businesses with turnover exceeding INR 20 crore. If your turnover exceeds the specified turnover in any financial year from 2017-18 onwards, you are required to comply with e-invoicing."
+        },
+        {
+            "question": "What does an e-invoice look like?",
+            "answer": "The GST portal has released two e-invoice templates. You can use any of the templates that follow the prescribed e‑invoice schema, standard and format. You can also customize the templates to personalize your invoices so it reflects your brand by adding your logo or choosing a colour scheme."
+        },
+        {
+            "question": "What is the e-invoice Registration Portal (IRP)?",
+            "answer": "The e-invoices generated need to be reported to the Invoice Registration Portal (IRP), which validates the invoice and returns it along with an Invoice Reference Number (IRN) and QR Code that is digitally signed."
+        },
+        {
+            "question": "What is an Invoice Reference Number (IRN)?",
+            "answer": "An Invoice Reference Number (IRN) is a unique code issued for every e-invoice. It is a combination of the supplier GSTIN, invoice number and financial year."
+        },
+        {
+            "question": "What is the end-to-end workflow of an e-invoice like?",
+            "list1": "Generation of the invoice on the taxpayer’s respective ERP system",
+            "list2": "Upload the JSON file of the e-invoice to the IRP for validation",
+            "list3": "The IRP will generate/validate the hash/IRN and will add a digital signature and QR code, and return the JSON to the taxpayer",
+            "list4": "The IRP will share this invoice data with the e-way bill system and the GSTN"
+        },
+        {
+            "question": "Is e-invoicing available in all Giddh plans?",
+            "answer": "E-invoicing is available in all the paid plans of Giddh Accounting Software."
+        }
+    ],
+    "gstPage": [
+        {
+            "question": "What is GST?",
+            "answer": "GST (also known as Goods and Services Tax) is a value-added tax that is levied on a majority of goods and services that are sold for domestic consumption. This tax is paid by consumers while availing a service or purchasing a product, but it is remitted to the government by businesses that are selling the respective goods and services. In other words, GST provides a means of revenue for the government."
+        },
+        {
+            "question": "what is the GST Number?",
+            "answer": "GST Identification Number or GSTIN is a unique 15-digit identification number allotted to every registered person under GST. Every person who crosses the threshold for GST registration is required to get a GSTIN."
+        },
+        {
+            "question": "How to Register for GST?",
+            "answer": "As per the GST rules, a business having a turnover of Rs 40 lakhs ( Rs 10 lakhs for businesses in hill states and North East states) has to register as a taxable entity, known as GST registration process. It can be completed online on the official GST website within 6 working days. Here’s the step-by-step process for GST registration:",
+            "list1": "Log in to the GST portal (https://www.gst.gov.in/) or visit a facilitation center and submit your PAN, email id, and mobile number in Part A of Form GST REG–01",
+            "list2": "The PAN is verified on the portal, while the email id and mobile number are verified through an OTP.",
+            "list3": "Once verified, you’ll receive an application reference number on your registered mobile number and email id.",
+            "list4": "You can file and submit Part- B of Form GST REG-01 with the required documents and the application reference number.",
+            "list5": " In case any additional information is required, GST REG-03 will be issued.",
+            "list6": "You’ll need to respond to GST REG-04 within 7 days from the date of receipt of GST REG-03.",
+            "list7": "Once you’ve provided all details from Form 01-04, the registration certificate will be issued in Form GST REG –06.",
+            "list8": "If you’ve multiple businesses, then you’ll need to file separate GSTs for your separate businesses.",
+            "list9": "Form GST REG-05 is used to reject the applications which don’t meet the criteria.",
+            "list10": "If you deduct TDS and collect TCS, then you can submit Form GST REG – 07 at the time of registration.",
+            "list11": "Giddh makes this even easier by letting business owners directly file their GST from within the software."
+        },
+        {
+            "question": "What is GST Return Filing?",
+            "answer": "GST Returns filing is the registration of GST Returns document, which contains all details concerning GST invoices, payments, and receipts during a specific period. The details that need to be filed in the GST Returns document are:",
+            "list1": "Total sales",
+            "list2": "Total purchases",
+            "list3": "Output GST (paid by customers)",
+            "list4": "Input Tax Credit (ITC paid by businesses)"
+        },
+        {
+            "question": "What are the benefits of using Giddh software for GST Returns Filing?",
+            "answer": "There are several benefits to using the Giddh software for GST Returns Filing:",
+            "list1": "Prepare your GST return file automatically on the portal",
+            "list2": "100% accurate filing with zero chances of errors",
+            "list3": "Notifications of deadlines so that you don’t miss any deadline",
+            "list4": "Collaborate with your team and allow access of GST data to your CA",
+            "list5": "Secure and reliable with 2-factor authentication and OTP verification",
+            "list6": "Complete support for all GST-related issues"
+        }
+    ],
+    "vatUKPage": [
+        {
+            "question": "What is VAT?",
+            "answer": "VAT stands for Value-Added Tax. It is a consumption tax imposed on the value added to goods and services at each stage of production or distribution. Unlike a sales tax, which is typically collected only at the final point of sale to the end consumer, VAT is collected at multiple points along the supply chain."
+        },
+        {
+            "question": "what is the VAT Number?",
+            "answer": "When you register for value-added tax (VAT), HMRC issue you with a unique VAT number which identifies your business for tax records and payment purposes. It's also referred to as a VAT registration number (VRN). Your VAT number is unrelated to your unique taxpayer reference or your company number."
+        },
+        {
+            "question": "What is VAT Return Filing?",
+            "answer": "VAT Returns filing is the registration of VAT Returns document, which contains all details concerning VAT invoices, payments, and receipts during a specific period. The details that need to be filed in the VAT Returns document are:",
+            "list1": "Total sales",
+            "list2": "Total purchases",
+            "list3": "Output VAT (paid by customers)",
+            "list4": "Input Tax Credit (ITC paid by businesses)"
+        },
+        {
+            "question": "What are the benefits of using Giddh software for VAT Returns Filing?",
+            "answer": "There are several benefits to using the Giddh software for VAT Returns Filing:",
+            "list1": "Prepare your VAT return file automatically on the portal",
+            "list2": "100% accurate filing with zero chances of errors",
+            "list3": "Notifications of deadlines so that you don’t miss any deadline",
+            "list4": "Collaborate with your team and allow access of VAT data to your CA",
+            "list5": "Secure and reliable with 2-factor authentication and OTP verification",
+            "list6": "Complete support for all VAT-related issues"
         }
     ]
   }

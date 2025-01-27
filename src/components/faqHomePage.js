@@ -12,8 +12,8 @@ const faqHomePage = () => {
               <div className="accordion" id="accordionAllFeatures">
                 {/*============ Accordion #1 ===============*/}
                 <h3 className="fw-bold col-primary ps-3">FAQs</h3>
-                {Object.keys(Jsondata).map((index) => (
-                  <div className="accordion-item" key={index}>
+                {/* {Object.keys(Jsondata).map((index) => ( */}
+                  <div className="accordion-item">
                     <p className="accordion-header" id="headingOne">
                     <button
                       className="accordion-button collapsed"
@@ -29,7 +29,7 @@ const faqHomePage = () => {
                       <span className="me-2 collapse-icon collapse-icon--close">
                         <MdRemove />
                       </span>
-                      {Jsondata.question}
+                      How does this accounting software help in managing my finances and bookkeeping?
                     </button>
                   </p>
                   <div
@@ -48,7 +48,7 @@ const faqHomePage = () => {
                     </div>
                   </div>
                 </div>
-                ))} 
+                {/* ))}  */}
                 {/*============ Accordion #2 ===============*/}
                 <div className="accordion-item">
                   <p className="accordion-header" id="headingTwo">
