@@ -1,8 +1,37 @@
 import { MdRemove, MdAdd } from "react-icons/md";
+import { useEffect, useState } from "react";
+import Head from "next/head";
 
 const Faqs = ({ faq }) => {
+  const [faqSchema, setFaqSchema] = useState(null);
+
+  useEffect(() => {
+    if (faq) {
+      const allQuestionAnswer = faq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      }));
+      setFaqSchema({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: allQuestionAnswer,
+      });
+    }
+  }, [faq]);
   return (
     <>
+      {faqSchema && (
+        <Head>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        </Head>
+      )}
       <section className="container-fluid features__accordion_container">
         <div className="container">
           <div className="row">
@@ -36,7 +65,8 @@ const Faqs = ({ faq }) => {
                       aria-labelledby="headingOne"
                       data-bs-parent="#accordionAllFeatures"
                     >
-                      <div className="accordion-body">{item?.answer}
+                      <div className="accordion-body">
+                        {item?.answer}
                         {item?.list}
                       </div>
                     </div>
