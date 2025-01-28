@@ -76,9 +76,7 @@
         },
         {
             "question": "What should be on a financial dashboard?",
-            "answer": "A financial dashboard software should be able to present all the relevant financial metrics in an actionable way to enable a business to understand and measure the data accurately. Here are some metrics that a good financial dashboard must display.",
-            "list": "<ul>\n  <li>A graphic budget-to-actual table that shows how a business is working in alignment with the set goals or objectives</li>\n  <li>Sales report that shows the data of sales and orders invoiced during a specific period</li> \n  <li>Cash flow projection to assist during periods of thin cash availability and cash-intensive growth</li>\n <li>Peer benchmark metric to compare margins against market peers</li>\n <li>Industry performance metrics</li>\n <li>Value drivers over the long-term</li>\n <li>Performance metrics to measure the progress of current initiatives</li>\n  </ul>"
-            
+            "answer": "A financial dashboard software should be able to present all the relevant financial metrics in an actionable way to enable a business to understand and measure the data accurately. Here are some metrics that a good financial dashboard must display. <ul><li>A graphic budget-to-actual table that shows how a business is working in alignment with the set goals or objectives</li><li>Sales report that shows the data of sales and orders invoiced during a specific period</li><li>Cash flow projection to assist during periods of thin cash availability and cash-intensive growth</li><li>Peer benchmark metric to compare margins against market peers</li>\n <li>Industry performance metrics</li><li>Value drivers over the long-term</li><li>Performance metrics to measure the progress of current initiatives</li></ul>"
         },
         {
             "question": "How does Giddh accounting dashboard help to understand my accounting data and make a decision?",
@@ -105,6 +103,14 @@
         {
             "question": "What are the benefits of inventory management?",
             "answer": " Inventory management lays down the foundation to managing the supply and demand within a business. Other benefits of using inventory management include."
+        },
+        {
+            "question": "Can I manage inventory in Giddh?",
+            "answer": "Yes, you can. Giddh offers inventory management for every kind of business be it a small manufacturer or reseller or a large organisation with operations across multiple locations. It helps you stay on top of your supply chain and ensure that your business is making more profits while reducing wastage. It also helps you track your inventory with minimal efforts. If you are looking for the best inventory management software in India, Giddh is your best bet."
+        },
+        {
+            "question": "Can I manage inventory in a different group or category?",
+            "answer": "Giddh’s inventory management software comes with default groups and accounts. You can also manage your inventory by creating different groups and accounts as is necessary for your business. However, you need to reach out to our customer support team for assistance in creating main groups. A new group can always be created under the main groups only."
         }
     ],
     "conect-bank-reconcile": [
@@ -166,7 +172,7 @@
         },
         {
             "question": "How cloud accounting is better than an offline solution?",
-            "answer": "Online cloud accounting software offers several advantages over offline solutions, which are described below. <ul><li>Cloud accounting software offers more flexibility and accessibility than its offline counterpart.</li><li>The errors that may occur while manually entering the data in offline solutions can be prevented.</li><li>Cloud accounting solutions are better equipped to handle multi-currency and multi-company transactions efficiently.</li><li>Cloud accounting solutions are easier to manage and require less maintenance.</li></ul>"
+            "answer": "Online cloud accounting software offers several advantages over offline solutions, which are described below. <ul><li>Cloud accounting software offers more flexibility and accessibility than its offline counterpart.</li><li>The errors that may occur while manually entering the data in offline solutions can be prevented.</li><li>Cloud accounting solutions are better equipped to handle multi-currency and multi-company transactions efficiently.</li><li>Cloud accounting solutions are easier to manage and require less maintenance.</li><li>Collaboration between different departments becomes easier thanks to a common platform where one can track, communicate and edit accounts.</li></ul>"
         }
     ],
     "import-data": [
@@ -202,7 +208,7 @@
         },
         {
             "question": "What types of reports are available in Giddh?",
-            "answer": "Giddh’s financial analysis software offers different financial reports to help you understand the financial condition of your business. The four major reports that are necessary to indicate the financial well-being of business are– <ul><li>Balance Sheet: These offer a comparison between the assets against liabilities and equity.</li><li>Income Statement: These reports are an indication of the income earned in an annual reporting period.</li><li>Capital Statement: These statements present an estimate of the increase or decrease in the capital accounts of the owner over a certain period.</li><li>Cash Flows: Cash flows are budgeting tools that are used for making predictions of the cash flow fluctuations in the future by analysing the performance of the past.<li></ul>"
+            "answer": "Giddh’s financial analysis software offers different financial reports to help you understand the financial condition of your business. The four major reports that are necessary to indicate the financial well-being of business are– <ul><li>Balance Sheet: These offer a comparison between the assets against liabilities and equity.</li><li>Income Statement: These reports are an indication of the income earned in an annual reporting period.</li><li>Capital Statement: These statements present an estimate of the increase or decrease in the capital accounts of the owner over a certain period.</li><li>Cash Flows: Cash flows are budgeting tools that are used for making predictions of the cash flow fluctuations in the future by analysing the performance of the past.</li></ul>"
         },
         {
             "question": "What are the three objectives of financial reporting?",
@@ -228,21 +234,11 @@
         },
         {
            "question": "What is VAT Return Filing?",
-           "answer": "VAT Returns filing is the registration of VAT Returns document, which contains all details concerning VAT invoices, payments, and receipts during a specific period. The details that need to be filed in the VAT Returns document are: <ul><li>Total sales</li><li>Total purchases</li><li>Output VAT (paid by customers)<li><li>Input Tax Credit (ITC paid by businesses)</li>",
-           "list1": "",
-           "list2": "",
-           "list3": "",
-           "list4": "Input Tax Credit (ITC paid by businesses)"
+           "answer": "VAT Returns filing is the registration of VAT Returns document, which contains all details concerning VAT invoices, payments, and receipts during a specific period. The details that need to be filed in the VAT Returns document are: <ul><li>Total sales</li><li>Total purchases</li><li>Output VAT (paid by customers)</li><li>Input Tax Credit (ITC paid by businesses)</li>"
         },
         {
             "question": " What are the benefits of using Giddh software for VAT Returns Filing?",
-            "answer": "There are several benefits to using the Giddh software for VAT Returns Filing:",
-            "list1": "Prepare your VAT return file automatically on the portal",
-            "list2": "100% accurate filing with zero chances of errors",
-            "list3": "Notifications of deadlines so that you don’t miss any deadline",
-            "list4": "Collaborate with your team and allow access of VAT data to your CA",
-            "list5": " Secure and reliable with 2-factor authentication and OTP verification",
-            "list6": "Complete support for all VAT-related issues"
+            "answer": "There are several benefits to using the Giddh software for VAT Returns Filing: <ul><li>Prepare your VAT return file automatically on the portal</li><li>100% accurate filing with zero chances of errors</li><li>Notifications of deadlines so that you don’t miss any deadline</li><li>Collaborate with your team and allow access of VAT data to your CA</li><li>Secure and reliable with 2-factor authentication and OTP verification</li><li>Complete support for all VAT-related issues</li>"
         }
     ],
     "e-invoice": [
@@ -268,10 +264,7 @@
         },
         {
             "question": "What is the end-to-end workflow of an e-invoice like?",
-            "list1": "Generation of the invoice on the taxpayer’s respective ERP system",
-            "list2": "Upload the JSON file of the e-invoice to the IRP for validation",
-            "list3": "The IRP will generate/validate the hash/IRN and will add a digital signature and QR code, and return the JSON to the taxpayer",
-            "list4": "The IRP will share this invoice data with the e-way bill system and the GSTN"
+            "answer": "<ul><li>Generation of the invoice on the taxpayer’s respective ERP system</li><li>Generation of IRN</li><li>Upload the JSON file of the e-invoice to the IRP for validation</li><li>The IRP will generate/validate the hash/IRN and will add a digital signature and QR code, and return the JSON to the taxpayer</li><li>The IRP will share this invoice data with the e-way bill system and the GSTN</li>"
         },
         {
             "question": "Is e-invoicing available in all Giddh plans?",
@@ -289,36 +282,15 @@
         },
         {
             "question": "How to Register for GST?",
-            "answer": "As per the GST rules, a business having a turnover of Rs 40 lakhs ( Rs 10 lakhs for businesses in hill states and North East states) has to register as a taxable entity, known as GST registration process. It can be completed online on the official GST website within 6 working days. Here’s the step-by-step process for GST registration:",
-            "list1": "Log in to the GST portal (https://www.gst.gov.in/) or visit a facilitation center and submit your PAN, email id, and mobile number in Part A of Form GST REG–01",
-            "list2": "The PAN is verified on the portal, while the email id and mobile number are verified through an OTP.",
-            "list3": "Once verified, you’ll receive an application reference number on your registered mobile number and email id.",
-            "list4": "You can file and submit Part- B of Form GST REG-01 with the required documents and the application reference number.",
-            "list5": " In case any additional information is required, GST REG-03 will be issued.",
-            "list6": "You’ll need to respond to GST REG-04 within 7 days from the date of receipt of GST REG-03.",
-            "list7": "Once you’ve provided all details from Form 01-04, the registration certificate will be issued in Form GST REG –06.",
-            "list8": "If you’ve multiple businesses, then you’ll need to file separate GSTs for your separate businesses.",
-            "list9": "Form GST REG-05 is used to reject the applications which don’t meet the criteria.",
-            "list10": "If you deduct TDS and collect TCS, then you can submit Form GST REG – 07 at the time of registration.",
-            "list11": "Giddh makes this even easier by letting business owners directly file their GST from within the software."
+            "answer": "As per the GST rules, a business having a turnover of Rs 40 lakhs ( Rs 10 lakhs for businesses in hill states and North East states) has to register as a taxable entity, known as GST registration process. It can be completed online on the official GST website within 6 working days. Here’s the step-by-step process for GST registration: <ul><li>Log in to the GST portal (https://www.gst.gov.in/) or visit a facilitation center and submit your PAN, email id, and mobile number in Part A of Form GST REG–01</li><li>The PAN is verified on the portal, while the email id and mobile number are verified through an OTP.</li><li>Once verified, you’ll receive an application reference number on your registered mobile number and email id.</li><li>You can file and submit Part- B of Form GST REG-01 with the required documents and the application reference number.</li><li>In case any additional information is required, GST REG-03 will be issued.</li><li>You’ll need to respond to GST REG-04 within 7 days from the date of receipt of GST REG-03.</li><li>Once you’ve provided all details from Form 01-04, the registration certificate will be issued in Form GST REG –06.</li><li>If you’ve multiple businesses, then you’ll need to file separate GSTs for your separate businesses.</li><li>Form GST REG-05 is used to reject the applications which don’t meet the criteria.</li><li>If you deduct TDS and collect TCS, then you can submit Form GST REG – 07 at the time of registration.</li><li>Giddh makes this even easier by letting business owners directly file their GST from within the software.</li></ul>"
         },
         {
             "question": "What is GST Return Filing?",
-            "answer": "GST Returns filing is the registration of GST Returns document, which contains all details concerning GST invoices, payments, and receipts during a specific period. The details that need to be filed in the GST Returns document are:",
-            "list1": "Total sales",
-            "list2": "Total purchases",
-            "list3": "Output GST (paid by customers)",
-            "list4": "Input Tax Credit (ITC paid by businesses)"
+            "answer": "GST Returns filing is the registration of GST Returns document, which contains all details concerning GST invoices, payments, and receipts during a specific period. The details that need to be filed in the GST Returns document are:<ul><li>Total sales</li><li>Total purchases</li><li>Output GST (paid by customers)</li><li>Input Tax Credit (ITC paid by businesses)</li></ul>"
         },
         {
             "question": "What are the benefits of using Giddh software for GST Returns Filing?",
-            "answer": "There are several benefits to using the Giddh software for GST Returns Filing:",
-            "list1": "Prepare your GST return file automatically on the portal",
-            "list2": "100% accurate filing with zero chances of errors",
-            "list3": "Notifications of deadlines so that you don’t miss any deadline",
-            "list4": "Collaborate with your team and allow access of GST data to your CA",
-            "list5": "Secure and reliable with 2-factor authentication and OTP verification",
-            "list6": "Complete support for all GST-related issues"
+            "answer": "There are several benefits to using the Giddh software for GST Returns Filing:<ul><li>Prepare your GST return file automatically on the portal</li><li>100% accurate filing with zero chances of errors</li><li>Notifications of deadlines so that you don’t miss any deadline</li><li>Collaborate with your team and allow access of GST data to your CA</li><li>Secure and reliable with 2-factor authentication and OTP verification</li><li>Complete support for all GST-related issues</li>"
         }
     ],
     "vat-uk": [
@@ -332,21 +304,11 @@
         },
         {
             "question": "What is VAT Return Filing?",
-            "answer": "VAT Returns filing is the registration of VAT Returns document, which contains all details concerning VAT invoices, payments, and receipts during a specific period. The details that need to be filed in the VAT Returns document are:",
-            "list1": "Total sales",
-            "list2": "Total purchases",
-            "list3": "Output VAT (paid by customers)",
-            "list4": "Input Tax Credit (ITC paid by businesses)"
+            "answer": "VAT Returns filing is the registration of VAT Returns document, which contains all details concerning VAT invoices, payments, and receipts during a specific period. The details that need to be filed in the VAT Returns document are:<ul><li>Total sales</li><li>Total purchases</li><li>Output VAT (paid by customers)</li><li>Input Tax Credit (ITC paid by businesses)</li></ul>"
         },
         {
             "question": "What are the benefits of using Giddh software for VAT Returns Filing?",
-            "answer": "There are several benefits to using the Giddh software for VAT Returns Filing:",
-            "list1": "Prepare your VAT return file automatically on the portal",
-            "list2": "100% accurate filing with zero chances of errors",
-            "list3": "Notifications of deadlines so that you don’t miss any deadline",
-            "list4": "Collaborate with your team and allow access of VAT data to your CA",
-            "list5": "Secure and reliable with 2-factor authentication and OTP verification",
-            "list6": "Complete support for all VAT-related issues"
+            "answer": "There are several benefits to using the Giddh software for VAT Returns Filing: <ul><li>Prepare your VAT return file automatically on the portal</li><li>100% accurate filing with zero chances of errors</li><li>Notifications of deadlines so that you don’t miss any deadline</li><li>Collaborate with your team and allow access of VAT data to your CA</li><li>Secure and reliable with 2-factor authentication and OTP verification</li><li>Complete support for all VAT-related issues</li></ul>"
         }
     ]
 }

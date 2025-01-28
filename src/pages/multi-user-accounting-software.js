@@ -14,7 +14,7 @@ const multiUserAccountingSoftware = (path) => {
   useEffect(() => {
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
     appendLink("https://assets.calendly.com/assets/external/widget.css");
-    setFaq(faqs['invoice-software']);
+    setFaq(faqs['multi-user-accounting-software']);
   }, []);
   
   return (
