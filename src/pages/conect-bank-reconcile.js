@@ -1,15 +1,18 @@
-import { MdRemove, MdAdd } from "react-icons/md";
-import { useEffect } from "react";
+import { useEffect, useState} from "react";
+import Faqs from "@/components/faq";
+import faqs from '../data/faqs.json';
 
 const conectBankReconcile = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
   const link = linkPath.linkPrefix;
+  const [faq, setFaq] = useState([])
 
   useEffect(() => {
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
     appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setFaq(faqs['conect-bank-reconcile']);
   }, []);
   return (
     <>
@@ -228,184 +231,7 @@ const conectBankReconcile = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__accordion_container">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 px-0">
-                <div className="accordion" id="accordionAllFeatures">
-                  {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What is bank reconciliation? Why is it done?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        A bank reconciliation compares the difference between
-                        the bank balance on the bank statement with the balance
-                        on the accounting records of the company. Sometimes,
-                        certain transactions may be accounted for in the bank’s
-                        system before it is integrated into the company’s
-                        accounting system. Hence, bank reconciliation is done so
-                        that such differences can be detected.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #2 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What is reconciliation software?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        A reconciliation software is a tool that can help you
-                        automate and standardise the reconciliation process to
-                        ensure quality and accuracy in preparing financial
-                        statements. With a bank reconciliation software, it
-                        becomes easier for accountants to compare bank, general
-                        ledger and other data, verify the correctness of balance
-                        sheets as well as identify any discrepancies, attach
-                        supporting documentation, etc.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #3 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How can Giddh help streamline bank transactions?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        Giddh, one of the best bank reconciliation software in
-                        India, can directly be integrated with your respective
-                        banking partner. As a result you can easily make
-                        payments to vendors from a single window, without the
-                        need for opening your online banking website and
-                        reentering your credentials. Since the bank’s API is
-                        integrated directly within the app, Giddh automatically
-                        monitors and categorizes your bank transactions and
-                        makes the reconciliation process smoother and smarter.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #4 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How does integrating a bank account with Giddh benefit
-                        me?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <ul>
-                          <li>
-                            Easily send and receive vendor payments from a
-                            single window in a convenient manner.
-                          </li>
-                          <li>
-                            Have a clearer view of the company’s cash status in
-                            no time
-                          </li>
-                          <li>
-                            Easy and automated import of bank statement
-                            transactions
-                          </li>
-                          <li>
-                            Automated reconciliation of transactions by value
-                            and reconciliation code
-                          </li>
-                          <li>
-                            Detailed reporting of bank activities and daily
-                            payments
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Faqs faq={faq} />
       </div>
     </>
   );
