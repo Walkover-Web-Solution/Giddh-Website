@@ -100,8 +100,7 @@
         },
         {
             "question": "What are the reasons behind using an inventory management system?",
-            "answer": "Some of the reasons behind using an inventory management system are",
-            "list":"<ul>\n <li>1. You can track your inventory levels at all times and place your orders whenever you see them falling low.<li>\n <li>2.They can assist you to set up automatic emails that update your customers about every step of their order process.</li>\n <li>3.Enables you to have an accurate idea of when the order leaves from the supplier and reaches the customer.</li>\n <li>4. Offers a fully customised and visual dashboard that can be a game-changer for your inventory management processes.</li>\n </ul>"
+            "answer": "Some of the reasons behind using an inventory management system are <ul><li>1. You can track your inventory levels at all times and place your orders whenever you see them falling low.<li><li>2.They can assist you to set up automatic emails that update your customers about every step of their order process.</li><li>3.Enables you to have an accurate idea of when the order leaves from the supplier and reaches the customer.</li><li>4. Offers a fully customised and visual dashboard that can be a game-changer for your inventory management processes.</li></ul>"
         },
         {
             "question": "What are the benefits of inventory management?",

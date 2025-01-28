@@ -56,7 +56,7 @@ const Faqs = ({ faq }) => {
                         <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
-                        {item.question}
+                        <div dangerouslySetInnerHTML={{ __html: item.question }} />
                       </button>
                     </p>
                     <div
@@ -66,8 +66,7 @@ const Faqs = ({ faq }) => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                        {item?.answer}
-                        {item?.list}
+                        <div dangerouslySetInnerHTML={{ __html: item.answer }} />
                       </div>
                     </div>
                   </div>
