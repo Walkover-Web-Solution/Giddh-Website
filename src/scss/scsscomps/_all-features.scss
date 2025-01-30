@@ -88,66 +88,6 @@
       }
     }
   }
-  &__accordion_container {
-    padding: 3rem 0;
-    .accordion {
-      margin: 0 auto;
-      .accordion-item {
-        border: none !important;
-      }
-      .accordion-button {
-        color: var(--col-deep) !important;
-        background-color: unset !important;
-        box-shadow: unset !important;
-
-        &::after {
-          display: none;
-        }
-        &:focus {
-          box-shadow: none !important;
-          border: none !important;
-        }
-
-        &.collapsed {
-          .collapse-icon--open {
-            display: inline-block;
-          }
-          .collapse-icon--close {
-            display: none !important;
-          }
-        }
-        &:not(.collapsed) {
-          .collapse-icon--open {
-            display: none !important;
-          }
-          .collapse-icon--close {
-            display: inline-block !important;
-          }
-        }
-        .collapse-icon {
-          width: 30px;
-          height: 30px;
-          min-width: 30px;
-          min-height: 30px;
-          background-color: var(--col-blue);
-          color: var(--col-white);
-          font-size: var(--c-fs-3);
-          text-align: center;
-          line-height: 25px;
-        }
-      }
-      &-body {
-        padding: 0 0 0 60px;
-        color: var(--col-deep);
-
-        ul {
-          list-style: disc;
-          padding-left: 20px;
-          margin-top: 1rem;
-        }
-      }
-    }
-  }
 
   &__e-invoice_page {
     &.container {

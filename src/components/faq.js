@@ -7,12 +7,12 @@ const Faqs = ({ faq }) => {
 
   useEffect(() => {
     if (faq) {
-      const allQuestionAnswer = faq.map((item) => ({
+      const allQuestionAnswer = faq.map((faq) => ({
         "@type": "Question",
-        name: item.question,
+        name: faq.question,
         acceptedAnswer: {
           "@type": "Answer",
-          text: item.answer,
+          text: faq.answer,
         },
       }));
       setFaqSchema({
@@ -32,14 +32,14 @@ const Faqs = ({ faq }) => {
           />
         </Head>
       )}
-      <section className="container-fluid features__accordion_container">
+      <section className="container-fluid faqs__accordion_container">
         <div className="container">
           <div className="row">
             <div className="col-12 px-0">
               <div className="accordion" id="accordionAllFeatures">
                 {/*============ Accordion #1 ===============*/}
                 <h3 className="fw-bold col-primary ps-3">FAQs</h3>
-                {faq?.map((item, index) => (
+                {faq?.map((faq, index) => (
                   <div className="accordion-item" key={index}>
                     <p className="accordion-header" id={"heading" + index}>
                       <button
@@ -56,7 +56,7 @@ const Faqs = ({ faq }) => {
                         <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
-                        <div dangerouslySetInnerHTML={{ __html: item.question }} />
+                        <div dangerouslySetInnerHTML={{ __html: faq.question }} />
                       </button>
                     </p>
                     <div
@@ -66,7 +66,7 @@ const Faqs = ({ faq }) => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                        <div dangerouslySetInnerHTML={{ __html: item.answer }} />
+                        <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                       </div>
                     </div>
                   </div>

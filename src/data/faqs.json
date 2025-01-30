@@ -6,7 +6,7 @@
         },
         {
             "question": "How secure is my financial data on online accounting software?",
-            "answer": "Accounting software streamlines financial tasks, enhancing accuracy, and saving time by automating processes like invoicing, reporting, and reconciliation. It provides real-time insights, aiding informed decision-making and compliance with financial regulations, ultimately fostering business growth."
+            "answer": "Giddh accounting software provides IP security that restricts access to authorized IP addresses, safeguarding sensitive financial data. By ensuring compliance, minimizing breach risks, and offering enhanced control over system access, it significantly fortifies overall security and monitoring measures."
         },
         {
             "question": " Is the accounting software compliant with tax regulations and reporting standards?",
@@ -113,7 +113,7 @@
             "answer": "Giddh’s inventory management software comes with default groups and accounts. You can also manage your inventory by creating different groups and accounts as is necessary for your business. However, you need to reach out to our customer support team for assistance in creating main groups. A new group can always be created under the main groups only."
         }
     ],
-    "conect-bank-reconcile": [
+    "connect-bank-reconcile": [
         {
             "question": "What is bank reconciliation? Why is it done?",
             "answer": "A bank reconciliation compares the difference between the bank balance on the bank statement with the balance on the accounting records of the company. Sometimes, certain transactions may be accounted for in the bank’s system before it is integrated into the company’s accounting system. Hence, bank reconciliation is done so that such differences can be detected."
