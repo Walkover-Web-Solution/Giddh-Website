@@ -108,7 +108,7 @@ const Footer = (path) => {
                     </a>
                   </li>
                   <li>
-                    <a href={link.linkPrefix + "/accounting-dashboard"}>
+                    <a href={link.linkPrefix + "/small-business-bookkeeping-software"}>
                     Dashboard
                     </a>
                   </li>
