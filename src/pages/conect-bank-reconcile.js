@@ -104,7 +104,7 @@ const conectBankReconcile = (path) => {
               <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
-                    <h2 id="description-heading" className="col-primary small-heading c-fw-600 mb-3">
+                    <h2 id="description-heading" className="col-primary c-fw-600 mb-3">
                       Connect bank and get automatic updates
                     </h2>
                     <p>
@@ -131,7 +131,7 @@ const conectBankReconcile = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary c-fw-600 mb-3">
                     Reconcile with a snap of fingers
                   </h2>
                   <p>
@@ -157,7 +157,7 @@ const conectBankReconcile = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary c-fw-600 mb-3">
                     Got Multiple Bank Accounts? We got you Covered
                   </h2>
                   <p>

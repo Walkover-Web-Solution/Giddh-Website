@@ -1693,7 +1693,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
-                      <a href={link + "/accounting-dashboard"} target="_blank">
+                      <a href={link + "/small-business-bookkeeping-software"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1714,7 +1714,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
-                      <a href={link + "/accounting-dashboard"} target="_blank">
+                      <a href={link + "/small-business-bookkeeping-software"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1735,7 +1735,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
-                      <a href={link + "/accounting-dashboard"} target="_blank">
+                      <a href={link + "/small-business-bookkeeping-software"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1756,7 +1756,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
-                      <a href={link + "/accounting-dashboard"} target="_blank">
+                      <a href={link + "/small-business-bookkeeping-software"} target="_blank">
                         {" "}
                         more
                       </a>
@@ -1777,7 +1777,7 @@ const pricing = (path) => {
                     <p className="c-fw-400">
                       View visual representation of the company data like Total
                       overdues, Profit & loss, Bank Account balances, and
-                      <a href={link + "/accounting-dashboard"} target="_blank">
+                      <a href={link + "/small-business-bookkeeping-software"} target="_blank">
                         {" "}
                         more
                       </a>
