@@ -1,5 +1,4 @@
 .faqs {
-  &__accordion_container {
     padding: 3rem 0;
     .accordion {
       margin: 0 auto;
@@ -58,14 +57,11 @@
         }
       }
     }
-  }
 }
 @media (max-width: 575px) {
-  .features {
-    &__accordion_container {
-      .accordion-button {
-        align-items: start !important;
-      }
+  .faqs {
+    .accordion-button {
+      align-items: start !important;
     }
   }
 }
