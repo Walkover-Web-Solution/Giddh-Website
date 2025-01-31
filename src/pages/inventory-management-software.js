@@ -104,7 +104,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3" id="record-inventory-heading">
+                  <h2 className="col-primary c-fw-600 mb-3" id="record-inventory-heading">
                     Record inventory for products and services
                   </h2>
                   <p>
@@ -128,7 +128,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3" id="inventory-masters-heading">
+                  <h2 className="col-primary c-fw-600 mb-3" id="inventory-masters-heading">
                     Inventory Masters
                   </h2>
                   <p>
@@ -151,7 +151,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3" id="bifurcate-inventory-heading">
+                  <h2 className="col-primary c-fw-600 mb-3" id="bifurcate-inventory-heading">
                     Bifurcate inventory into Groups, Items, and Variants
                   </h2>
                   <p>
@@ -175,7 +175,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3" id="real-time-reports-heading">
+                  <h2 className="col-primary c-fw-600 mb-3" id="real-time-reports-heading">
                     Real-time inventory reports
                   </h2>
                   <p>
@@ -201,7 +201,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary c-fw-600 mb-3">
                     Barcode Scanning
                   </h2>
                   <p>
@@ -228,7 +228,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary c-fw-600 mb-3">
                     Manufacturing
                   </h2>
                   <p>
@@ -254,7 +254,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary c-fw-600 mb-3">
                     Branch and Warehouse inventory management-
                   </h2>
                   <p>
@@ -281,7 +281,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary c-fw-600 mb-3">
                     Branch transfer
                   </h2>
                   <p>
@@ -307,7 +307,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                  <h2 className="col-primary c-fw-600 mb-3">
                     Custom units
                   </h2>
                   <p>

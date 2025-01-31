@@ -29,7 +29,7 @@ const Faqs = ({ faq }) => {
         <Head>
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(JSON.stringify(faqSchema)) }}
           />
         </Head>
       )}
@@ -57,7 +57,7 @@ const Faqs = ({ faq }) => {
                         <span className="me-2 collapse-icon collapse-icon--close">
                           <MdRemove />
                         </span>
-                        <div dangerouslySetInnerHTML={{ __html: faq.question }} />
+                        <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(faq.question) }} />
                       </button>
                     </p>
                     <div
@@ -67,7 +67,7 @@ const Faqs = ({ faq }) => {
                       data-bs-parent="#accordionAllFeatures"
                     >
                       <div className="accordion-body">
-                        <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                        <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(faq.answer) }} />
                       </div>
                     </div>
                   </div>

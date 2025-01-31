@@ -282,24 +282,8 @@
       "in": true,
       "uk": true,
       "ae": true,
-      "menuItem": "Share Data",
+      "menuItem": "Unlimited Users",
       "url": "/multi-user-accounting-software"
-    },
-    {
-      "global": true,
-      "in": true,
-      "uk": true,
-      "ae": true,
-      "menuItem": "Contacts",
-      "url": "/contacts"
-    },
-    {
-      "global": true,
-      "in": true,
-      "uk": true,
-      "ae": true,
-      "menuItem": "Dashboard",
-      "url": "/accounting-dashboard"
     },
     {
       "global": true,
@@ -308,14 +292,6 @@
       "ae": true,
       "menuItem": "Inventory",
       "url": "/inventory-management-software"
-    },
-    {
-      "global": true,
-      "in": true,
-      "uk": true,
-      "ae": true,
-      "menuItem": "Security",
-      "url": "/security"
     },
     {
       "global": false,
@@ -348,22 +324,6 @@
       "ae": true,
       "menuItem": "Multi Currency",
       "url": "/multi-currency-accounting-software"
-    },
-    {
-      "global": true,
-      "in": true,
-      "uk": true,
-      "ae": true,
-      "menuItem": "API Integration",
-      "url": "https://giddh.com/api"
-    },
-    {
-      "global": true,
-      "in": true,
-      "uk": true,
-      "ae": true,
-      "menuItem": "Anywhere-Anytime",
-      "url": "/cloud-accounting-software"
     },
     {
       "global": true,

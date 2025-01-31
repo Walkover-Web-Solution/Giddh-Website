@@ -99,7 +99,7 @@ const financialReporting = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3" role="heading" aria-level="4">
+                  <h4 className="col-primary c-fw-600 mb-3" role="heading" aria-level="4">
                     Big picture analysis made easy
                   </h4>
                   <p >
@@ -124,7 +124,7 @@ const financialReporting = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3" role="heading" aria-level="4">
+                  <h4 className="col-primary c-fw-600 mb-3" role="heading" aria-level="4">
                     Ready-made reports when you need them
                   </h4>
                   <p >
@@ -149,7 +149,7 @@ const financialReporting = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3" role="heading" aria-level="4">
+                  <h4 className="col-primary c-fw-600 mb-3" role="heading" aria-level="4">
                     Keep an eye on the money owed to you
                   </h4>
                   <p >
@@ -174,7 +174,7 @@ const financialReporting = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3" role="heading" aria-level="4">
+                  <h4 className="col-primary c-fw-600 mb-3" role="heading" aria-level="4">
                     Collaborate & grow
                   </h4>
                   <p >

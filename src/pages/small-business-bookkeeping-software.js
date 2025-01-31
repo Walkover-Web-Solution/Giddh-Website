@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Faqs from "@/components/faq";
 import faqs from '../data/faqs.json';
 
-const accountingDashboard = (path) => {
+const smallBusinessBookkeepingSoftware = (path) => {
     const linkPath = path.path;
     const isGlobal = linkPath.isGlobal;
     const isIndia = linkPath.isIndia
@@ -13,7 +13,7 @@ const accountingDashboard = (path) => {
     useEffect(() => {
       appendScript("https://assets.calendly.com/assets/external/widget.js", true);
       appendLink("https://assets.calendly.com/assets/external/widget.css");
-      setFaq(faqs['accounting-dashboard'])
+      setFaq(faqs['small-business-bookkeeping-software'])
     }, []);
   return (
     <>
@@ -97,7 +97,7 @@ const accountingDashboard = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Know the true worth of your business
                   </h4>
                   <p >
@@ -123,7 +123,7 @@ const accountingDashboard = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Track your monthly overdues
                   </h4>
                   <p >
@@ -148,7 +148,7 @@ const accountingDashboard = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Keep an eye on where your money goes
                   </h4>
                   <p >
@@ -172,7 +172,7 @@ const accountingDashboard = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Predict with more precision
                   </h4>
                   <p >
@@ -197,7 +197,7 @@ const accountingDashboard = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Financial ratio analysis
                   </h4>
                   <p >
@@ -265,4 +265,4 @@ const accountingDashboard = (path) => {
   );
 };
 
-export default accountingDashboard;
+export default smallBusinessBookkeepingSoftware;
