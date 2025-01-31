@@ -66,7 +66,7 @@
         },
         {
             "question": "How does a multi-accounting software work?",
-            "answer": "With Giddh’s multi-accounting software, you can easily add, remove and manage access to multiple users within an organization. Multi-accounting software also makes it easy to create groups and share only a portion of data to various departments. Its monitoring capabilities helps keep track of what data is accessible to whom."
+            "answer": "A multi-accounting software allows businesses to manage multiple accounts from a single platform, offering role-based access, data segregation, real-time synchronization, and automated reporting. It enhances security, collaboration, and financial transparency."
         }
     ],
     "accounting-dashboard": [
@@ -223,7 +223,7 @@
             "answer": "Giddh’s finance reporting software offers the financial reports in formats like PDF and Excel, which make it easier to download or directly share the report to the CA or accountant, stakeholders of your business as well as other departments of your organisation."
         }
     ],
-    "vat-ae": [
+    "vat": [
         {
             "question": "What is VAT?",
             "answer": " VAT stands for Value-Added Tax. It is a consumption tax imposed on the value added to goods and services at each stage of production or distribution. Unlike a sales tax, which is typically collected only at the final point of sale to the end consumer, VAT is collected at multiple points along the supply chain."
@@ -291,24 +291,6 @@
         {
             "question": "What are the benefits of using Giddh software for GST Returns Filing?",
             "answer": "There are several benefits to using the Giddh software for GST Returns Filing:<ul><li>Prepare your GST return file automatically on the portal</li><li>100% accurate filing with zero chances of errors</li><li>Notifications of deadlines so that you don’t miss any deadline</li><li>Collaborate with your team and allow access of GST data to your CA</li><li>Secure and reliable with 2-factor authentication and OTP verification</li><li>Complete support for all GST-related issues</li>"
-        }
-    ],
-    "vat-uk": [
-        {
-            "question": "What is VAT?",
-            "answer": "VAT stands for Value-Added Tax. It is a consumption tax imposed on the value added to goods and services at each stage of production or distribution. Unlike a sales tax, which is typically collected only at the final point of sale to the end consumer, VAT is collected at multiple points along the supply chain."
-        },
-        {
-            "question": "what is the VAT Number?",
-            "answer": "When you register for value-added tax (VAT), HMRC issue you with a unique VAT number which identifies your business for tax records and payment purposes. It's also referred to as a VAT registration number (VRN). Your VAT number is unrelated to your unique taxpayer reference or your company number."
-        },
-        {
-            "question": "What is VAT Return Filing?",
-            "answer": "VAT Returns filing is the registration of VAT Returns document, which contains all details concerning VAT invoices, payments, and receipts during a specific period. The details that need to be filed in the VAT Returns document are:<ul><li>Total sales</li><li>Total purchases</li><li>Output VAT (paid by customers)</li><li>Input Tax Credit (ITC paid by businesses)</li></ul>"
-        },
-        {
-            "question": "What are the benefits of using Giddh software for VAT Returns Filing?",
-            "answer": "There are several benefits to using the Giddh software for VAT Returns Filing: <ul><li>Prepare your VAT return file automatically on the portal</li><li>100% accurate filing with zero chances of errors</li><li>Notifications of deadlines so that you don’t miss any deadline</li><li>Collaborate with your team and allow access of VAT data to your CA</li><li>Secure and reliable with 2-factor authentication and OTP verification</li><li>Complete support for all VAT-related issues</li></ul>"
         }
     ]
 }

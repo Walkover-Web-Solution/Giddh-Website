@@ -9,7 +9,7 @@ const aeVAT = () => {
     const [faq, setFaq] = useState([]);
 
     useEffect(() => {
-        setFaq(faqs['vat-ae']);
+        setFaq(faqs['vat']);
     }, []);
 
     return (

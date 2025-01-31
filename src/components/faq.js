@@ -1,6 +1,7 @@
 import { MdRemove, MdAdd } from "react-icons/md";
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import DOMPurify from 'dompurify';
 
 const Faqs = ({ faq }) => {
   const [faqSchema, setFaqSchema] = useState(null);
