@@ -1,5 +1,6 @@
-import { MdRemove, MdAdd } from "react-icons/md";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Faqs from "@/components/faq";
+import faqs from '../data/faqs.json';
 
 const smallBusinessBookkeepingSoftware = (path) => {
     const linkPath = path.path;
@@ -7,10 +8,12 @@ const smallBusinessBookkeepingSoftware = (path) => {
     const isIndia = linkPath.isIndia
     const isAE = linkPath.isAE;
     const link = linkPath.linkPrefix;
+    const [faq, setFaq] = useState([])
 
     useEffect(() => {
       appendScript("https://assets.calendly.com/assets/external/widget.js", true);
       appendLink("https://assets.calendly.com/assets/external/widget.css");
+      setFaq(faqs['small-business-bookkeeping-software'])
     }, []);
   return (
     <>
@@ -256,159 +259,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__accordion_container">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 px-0">
-                <div className="accordion" id="accordionAllFeatures">
-                  {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What is an accounting dashboard?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        An accounting dashboard is a management tool that helps
-                        you to view your financial data and other essential
-                        metrics from several sources all at one place. It offers
-                        a real-time view of the cash flow, invoices, accounts
-                        payable and receivable, profit and loss, etc. so that
-                        business owners, bookkeeping professionals or
-                        accountants always have an idea about where the business
-                        is heading towards at all times. Keeping track of the
-                        relevant finance KPIs ensures that the financial
-                        objectives of a company are met.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #2 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What should be on a financial dashboard?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          A financial dashboard software should be able to
-                          present all the relevant financial metrics in an
-                          actionable way to enable a business to understand and
-                          measure the data accurately. Here are some metrics
-                          that a good financial dashboard must display.
-                        </p>
-                        <ul>
-                          <li>
-                            A graphic budget-to-actual table that shows how a
-                            business is working in alignment with the set goals
-                            or objectives
-                          </li>
-                          <li>
-                            Sales report that shows the data of sales and orders
-                            invoiced during a specific period
-                          </li>
-                          <li>
-                            Cash flow projection to assist during periods of
-                            thin cash availability and cash-intensive growth
-                          </li>
-                          <li>
-                            Peer benchmark metric to compare margins against
-                            market peers
-                          </li>
-                          <li>Industry performance metrics</li>
-                          <li>Value drivers over the long-term</li>
-                          <li>
-                            Performance metrics to measure the progress of
-                            current initiatives
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #3 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How does Giddh accounting dashboard help to understand
-                        my accounting data and make a decision?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        Giddh’s real-time accounting dashboard provides you with
-                        clarity and insights about the core KPIs of your
-                        business. The dashboard highlights the metrics that
-                        directly impact your bottom line thereby saving up your
-                        time that would have otherwise been spent in building
-                        custom reports in Excel. This enables your finance
-                        professionals to access figures faster and understand
-                        the financial details that are needed to make proper
-                        decisions and ensure a stable financial environment.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+       <Faqs faq={faq} />
       </div>
     </>
   );
