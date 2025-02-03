@@ -94,22 +94,22 @@ const Footer = (path) => {
                 <ul className="footer-list list-unstyled mb-3">
                   <li>
                     <a href={link.linkPrefix + "/cloud-accounting-software"}>
-                    Cloud Accounting Software
+                      Cloud Accounting Software
                     </a>
                   </li>
                   <li>
                     <a href={link.linkPrefix + "/security"}>
-                    Security
+                      Security
                     </a>
                   </li>
                   <li>
                     <a href={link.linkPrefix + "/contacts"}>
-                    Contacts
+                      Contacts
                     </a>
                   </li>
                   <li>
                     <a href={link.linkPrefix + "/small-business-bookkeeping-software"}>
-                    Dashboard
+                      Bookkeeping Software
                     </a>
                   </li>
                 </ul>
