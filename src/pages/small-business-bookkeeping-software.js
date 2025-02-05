@@ -28,7 +28,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 id="dashboard-heading" className="heading col-primary sub-heading c-fw-600 mb-4">
+                <h1 id="dashboard-heading" className="col-primary sub-heading c-fw-600 mb-4">
                   {(isGlobal || isIndia) && "Small business bookkeeping software"}
                   {(isUK || isAE) && "Free small business bookkeeping software"}
                 </h1>
@@ -107,7 +107,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
           <div className="container">
             <div className="row mb-5 pb-5 align-items-start features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
-                <div className="features__description_container__content">
+                <div className="features__description_container">
                   <h4 className="col-primary sub-heading c-fw-600 mb-3">
                     {isGlobal && "Custom Tax Reports Tailored to Your Country's Regulations"}
                     {isIndia && "GST compliant"}
