@@ -170,7 +170,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
                             display: readMoreParagraphStatus1 ? "block" : "none",
                           }}
                         >
-                           With direct GST filing from Giddh, businesses can save time and stay compliant without any hassle.
+                          With direct GST filing from Giddh, businesses can save time and stay compliant without any hassle.
                         </p>
                         <span
                           className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
@@ -258,10 +258,6 @@ const smallBusinessBookkeepingSoftware = (path) => {
                       </div>
                     </>
                   )}
-                  {/* {isIndia && "Managing GST compliance is easy with Giddh, a free bookkeeping software designed for small businesses. It helps businesses track and view GSTR reports effortlessly and ensures accurate tax calculations. With direct GST filing from Giddh, businesses can save time and stay compliant without any hassle."} */}
-                  {/* {isUK && "Stay on top of your VAT obligations with Giddh, an HMRC-compliant bookkeeping software designed for UK businesses. It allows you to track VAT payments, monitor delays, generate VAT reports, and file VAT returns in real-time directly to HMRC. With Giddh, VAT compliance becomes effortless, helping businesses avoid penalties and stay financially organized."} */}
-                  {/* {isAE && "A UAE VAT-Supportbookkeeping software designed to help businesses stay tax-ready. It allows you to view VAT reports as per UAE FTA regulations. With real-time insights and automated calculations, Giddh simplifies VAT reporting and ensures accuracy."} */}
-
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 image-alignment">
