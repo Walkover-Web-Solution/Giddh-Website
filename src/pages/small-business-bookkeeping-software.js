@@ -10,11 +10,6 @@ const smallBusinessBookkeepingSoftware = (path) => {
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
   const [faq, setFaq] = useState([])
-  const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
-  const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
-  const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
-  const [readMoreParagraphStatus4, showMoreParagraph4] = useState(false);
-  const [readMoreParagraphStatus5, showMoreParagraph5] = useState(false);
 
   useEffect(() => {
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
@@ -105,7 +100,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
         <section className="container-fluid features__description_container mt-5" role="region" aria-labelledby="features-description">
           <h2 id="features-description" className="visually-hidden">Features Description</h2>
           <div className="container">
-            <div className="row mb-5 pb-5 align-items-start features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container">
                   <h4 className="col-primary sub-heading c-fw-600 mb-3">
@@ -114,154 +109,12 @@ const smallBusinessBookkeepingSoftware = (path) => {
                     {isUK && "HMRC VAT compliant"}
                     {isAE && "VAT-Support Bookkeeping Software for UAE Businesses"}
                   </h4>
-                  {isGlobal && (
-                    <>
-                      <div>
-                        <p className="c-fs-5">Giddh offers customizable tax reports to match the tax regulations of any country. Whether you need VAT, GST, or other tax reports, Giddh adapts to your local requirements, ensuring accurate compliance.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-                        <p
-                          className="c-fs-5"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "block" : "none"
-                          }}
-                        >
-                          With flexible tax settings, businesses can customize reports as per their country’s rules and stay tax-ready effortlessly.
-                        </p>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
-                    </>
-                  )}
-                  {isIndia && (
-                    <>
-                      <div>
-                        <p className="c-fs-5">Managing GST compliance is easy with Giddh, a free bookkeeping software designed for small businesses. It helps businesses track and view GSTR reports effortlessly and ensures accurate tax calculations.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-                        <p
-                          className="c-fs-5"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "block" : "none"
-                          }}
-                        >
-                          With direct GST filing from Giddh, businesses can save time and stay compliant without any hassle.
-                        </p>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
-                    </>
-                  )}
-                  {isUK && (
-                    <>
-                      <div>
-                        <p className="c-fs-5">Stay on top of your VAT obligations with Giddh, an HMRC-compliant bookkeeping software designed for UK businesses. It allows you to track VAT payments, monitor delays, generate VAT reports, and file VAT returns in real-time directly to HMRC.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-                        <p
-                          className="c-fs-5"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "block" : "none"
-                          }}
-                        >
-                          With Giddh, VAT compliance becomes effortless, helping businesses avoid penalties and stay financially organized.
-                        </p>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
-                    </>
-                  )}
-                  {isAE && (
-                    <>
-                      <div>
-                        <p className="c-fs-5">A UAE VAT-Supportbookkeeping software designed to help businesses stay tax-ready. It allows you to view VAT reports as per UAE FTA regulations.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-                        <p
-                        className="c-fs-5"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "block" : "none"
-                          }}
-                        >
-                          With real-time insights and automated calculations, Giddh simplifies VAT reporting and ensures accuracy.
-                        </p>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus1 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph1((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
-                    </>
-                  )}
+                  <p className="c-fs-5">
+                    {isGlobal && "Giddh offers customizable tax reports to match the tax regulations of any country. Whether you need VAT, GST, or other tax reports, Giddh adapts to your local requirements, ensuring accurate compliance. With flexible tax settings, businesses can customize reports as per their country’s rules and stay tax-ready effortlessly."}
+                    {isIndia && "Managing GST compliance is easy with Giddh, a free bookkeeping software designed for small businesses. It helps businesses track and view GSTR reports effortlessly and ensures accurate tax calculations. With direct GST filing from Giddh, businesses can save time and stay compliant without any hassle."}
+                    {isUK && "Stay on top of your VAT obligations with Giddh, an HMRC-compliant bookkeeping software designed for UK businesses. It allows you to track VAT payments, monitor delays, generate VAT reports, and file VAT returns in real-time directly to HMRC. With Giddh, VAT compliance becomes effortless, helping businesses avoid penalties and stay financially organized."}
+                    {isAE && "A UAE VAT-Supportbookkeeping software designed to help businesses stay tax-ready. It allows you to view VAT reports as per UAE FTA regulations. With real-time insights and automated calculations, Giddh simplifies VAT reporting and ensures accuracy."}
+                  </p>
                 </div>
               </div>
               <div className="col-md-12 col-lg-6 image-alignment">
@@ -274,7 +127,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-start features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container">
                   <h4 className="col-primary sub-heading c-fw-600 mb-3">
@@ -285,206 +138,62 @@ const smallBusinessBookkeepingSoftware = (path) => {
                   </h4>
                   {isGlobal && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus2 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">
-                          GIDDH mobile ensures you always have access to your business finances, no matter where you are.
-                        </p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus2 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus2 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Mobile Access – View and manage accounts on any device.</li>
-                            <li>Live Updates – Get real-time reports and insights.</li>
-                            <li>Seamless Invoicing – Send and track invoices effortlessly.</li>
-                            <li>Expense Tracking – Record and categorize expenses instantly.</li>
-                            <li>Financial Management – Monitor payments and improve cash flow.</li>
-                            <li>Cloud Security – Keep your data safe and encrypted.</li>
-                            <li>Smart Insights – Make better business decisions.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus2 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">
+                        GIDDH mobile ensures you always have access to your business finances, no matter where you are.
+                      </p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Mobile Access </strong>– View and manage accounts on any device.</li>
+                        <li><strong>Live Updates </strong>– Get real-time reports and insights.</li>
+                        <li><strong>Seamless Invoicing </strong>– Send and track invoices effortlessly.</li>
+                        <li><strong>Expense Tracking </strong>– Record and categorize expenses instantly.</li>
+                        <li><strong>Financial Management </strong>– Monitor payments and improve cash flow.</li>
+                        <li><strong>Cloud Security </strong>– Keep your data safe and encrypted.</li>
+                        <li><strong>Smart Insights </strong>– Make better business decisions.</li>
+                      </ul>
                     </>
                   )}
                   {isIndia && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus2 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">
-                          GIDDH mobile makes accounting effortless, giving you full control of your finances wherever you are.
-                        </p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus2 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus2 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Access Anywhere – Stay connected without needing a desktop</li>
-                            <li>Real-Time Updates – Get instant financial data and reports</li>
-                            <li>Fast Invoicing – Create, send, and track invoices on the go</li>
-                            <li>Expense Management – Capture and log expenses in real time</li>
-                            <li>Cash Flow Tracking – Monitor payments and dues easily</li>
-                            <li>Secure Cloud Storage – Protect your financial data with encryption</li>
-                            <li>Business Insights – Make smarter financial decisions instantly</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus2 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">
+                        GIDDH mobile makes accounting effortless, giving you full control of your finances wherever you are.
+                      </p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Access Anywhere </strong>– Stay connected without needing a desktop</li>
+                        <li><strong>Real-Time Updates </strong>– Get instant financial data and reports</li>
+                        <li><strong>Fast Invoicing </strong>– Create, send, and track invoices on the go</li>
+                        <li><strong>Expense Management </strong>– Capture and log expenses in real time</li>
+                        <li><strong>Cash Flow Tracking </strong>– Monitor payments and dues easily</li>
+                        <li><strong>Secure Cloud Storage </strong>– Protect your financial data with encryption</li>
+                        <li><strong>Business Insights </strong>– Make smarter financial decisions instantly</li>
+                      </ul>
                     </>
                   )}
                   {isUK && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus2 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">With GIDDH mobile, you can track and manage your business finances from anywhere with ease.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus2 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus2 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Anywhere Access – No need for a desktop, manage accounts on the move</li>
-                            <li>Live Financial Data – Stay updated with real-time reports</li>
-                            <li>Instant Invoicing – Send invoices and track payments anytime</li>
-                            <li>Expense Logging – Record and organize expenses instantly</li>
-                            <li>Better Cash Flow Control – Stay on top of dues and payments</li>
-                            <li>Cloud Security – Keep financial records safe and backed up</li>
-                            <li>Data-Driven Decisions – Gain insights to grow your business</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus2 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">With GIDDH mobile, you can track and manage your business finances from anywhere with ease.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Anywhere Access </strong>– No need for a desktop, manage accounts on the move</li>
+                        <li><strong>Live Financial Data </strong>– Stay updated with real-time reports</li>
+                        <li><strong>Instant Invoicing </strong>– Send invoices and track payments anytime</li>
+                        <li><strong>Expense Logging </strong>– Record and organize expenses instantly</li>
+                        <li><strong>Better Cash Flow Control </strong>– Stay on top of dues and payments</li>
+                        <li><strong>Cloud Security </strong>– Keep financial records safe and backed up</li>
+                        <li><strong>Data-Driven Decisions </strong>– Gain insights to grow your business</li>
+                      </ul>
                     </>
                   )}
                   {isAE && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus2 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">GIDDH mobile puts your business finances at your fingertips, making accounting simpler and faster.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus2 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus2 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Manage Finances Anywhere – No need for a desktop</li>
-                            <li>Live Financial Reports – Access real-time data anytime</li>
-                            <li>Instant Invoicing – Send and track invoices on the go</li>
-                            <li>Quick Expense Logging – Capture and organize expenses effortlessly</li>
-                            <li>Improved Cash Flow Tracking – Stay ahead of payments and dues</li>
-                            <li>Secure Cloud Storage – Keep your data protected and backed up</li>
-                            <li>Smarter Business Insights – Make informed financial decisions</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus2 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph2((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">GIDDH mobile puts your business finances at your fingertips, making accounting simpler and faster.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Manage Finances Anywhere </strong>– No need for a desktop</li>
+                        <li><strong>Live Financial Reports </strong>– Access real-time data anytime</li>
+                        <li><strong>Instant Invoicing </strong>– Send and track invoices on the go</li>
+                        <li><strong>Quick Expense Logging </strong>– Capture and organize expenses effortlessly</li>
+                        <li><strong>Improved Cash Flow Tracking </strong>– Stay ahead of payments and dues</li>
+                        <li><strong>Secure Cloud Storage </strong>– Keep your data protected and backed up</li>
+                        <li><strong>Smarter Business Insights </strong>– Make informed financial decisions</li>
+                      </ul>
                     </>
                   )}
                 </div>
@@ -500,7 +209,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
               </div>
             </div>
 
-            <div className="row mb-5 pb-5 align-items-start features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container">
                   <h4 className="col-primary sub-heading c-fw-600 mb-3">
@@ -511,194 +220,50 @@ const smallBusinessBookkeepingSoftware = (path) => {
                   </h4>
                   {isGlobal && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus3 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">A complete solution for tracking inventory, managing warehouses, and handling financial reports in one place. Stay organized and make data-driven decisions with ease.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus3 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph3((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus3 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Smart Inventory Tracking – Get real-time stock visibility across all branches.</li>
-                            <li>Multi-Warehouse Management – Easily track stock movement between warehouses.</li>
-                            <li>Inventory Adjustments – Fix stock errors, manage returns, and update damages effortlessly.</li>
-                            <li>Real-Time Financial Reports – Generate instant reports for stock, sales, and accounts.</li>
-                            <li>Tax & Pricing Customization – Apply different tax rules and pricing for each branch.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus3 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph3((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">A complete solution for tracking inventory, managing warehouses, and handling financial reports in one place. Stay organized and make data-driven decisions with ease.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Smart Inventory Tracking </strong>– Get real-time stock visibility across all branches.</li>
+                        <li><storng>Multi-Warehouse Management </storng>– Easily track stock movement between warehouses.</li>
+                        <li><strong>Inventory Adjustments </strong>– Fix stock errors, manage returns, and update damages effortlessly.</li>
+                        <li><strong>Real-Time Financial Reports </strong>– Generate instant reports for stock, sales, and accounts.</li>
+                        <li><strong>Tax & Pricing Customization </strong>– Apply different tax rules and pricing for each branch.</li>
+                      </ul>
                     </>
                   )}
                   {isIndia && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus3 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">Manage your inventory, warehouses, and branches seamlessly with advanced bookkeeping features. Stay updated with real-time stock tracking, easy adjustments, and instant financial reports.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus3 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph3((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus3 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Real-Time Inventory Tracking – Monitor stock levels, purchases, and sales with live updates.</li>
-                            <li>Warehouse Management – Easily manage multiple warehouses and transfer stock seamlessly.</li>
-                            <li>Stock Adjustments – Update inventory records for returns, damages, and corrections.</li>
-                            <li>Instant Reports – Generate real-time reports on inventory, sales, and financials.</li>
-                            <li>Custom Tax & Pricing – Configure tax and pricing structures based on branch locations.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus3 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph3((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">Manage your inventory, warehouses, and branches seamlessly with advanced bookkeeping features. Stay updated with real-time stock tracking, easy adjustments, and instant financial reports.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Real-Time Inventory Tracking </strong>– Monitor stock levels, purchases, and sales with live updates.</li>
+                        <li><strong>Warehouse Management </strong>– Easily manage multiple warehouses and transfer stock seamlessly.</li>
+                        <li><strong>Stock Adjustments </strong>– Update inventory records for returns, damages, and corrections.</li>
+                        <li><strong>Instant Reports </strong>– Generate real-time reports on inventory, sales, and financials.</li>
+                        <li><strong>Custom Tax & Pricing </strong>– Configure tax and pricing structures based on branch locations.</li>
+                      </ul>
                     </>
                   )}
                   {isUK && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus3 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">Take full control of your business inventory with a bookkeeping system that tracks stock, manages warehouses, and customizes pricing for multiple locations.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus3 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph3((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus3 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Track Inventory in Real Time – Monitor stock, sales, and purchases with up-to-date records.</li>
-                            <li>Multi-Warehouse Support – Manage multiple warehouses and move stock effortlessly.</li>
-                            <li>Stock Corrections – Adjust inventory for damaged, returned, or misplaced items.</li>
-                            <li>Detailed Reporting – Access real-time reports on inventory, sales, and finances.</li>
-                            <li>Branch-Wise Tax & Pricing – Customize tax rates and pricing for different branches.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus3 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph3((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">Take full control of your business inventory with a bookkeeping system that tracks stock, manages warehouses, and customizes pricing for multiple locations.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Track Inventory in Real Time </strong>– Monitor stock, sales, and purchases with up-to-date records.</li>
+                        <li><strong>Multi-Warehouse Support </strong>– Manage multiple warehouses and move stock effortlessly.</li>
+                        <li><strong>Stock Corrections </strong>– Adjust inventory for damaged, returned, or misplaced items.</li>
+                        <li><strong>Detailed Reporting </strong>– Access real-time reports on inventory, sales, and finances.</li>
+                        <li><strong>Branch-Wise Tax & Pricing </strong>– Customize tax rates and pricing for different branches.</li>
+                      </ul>
                     </>
                   )}
                   {isAE && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus3 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">Improve efficiency with a bookkeeping software that integrates inventory, warehouse, and branch management. Gain better visibility and control over stock movements and tax compliance.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus3 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph3((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus3 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Live Inventory Monitoring – Stay updated on stock movement, purchases, and sales in real time.</li>
-                            <li>Warehouse Stock Control – Manage stock transfers and warehouse inventory with ease.</li>
-                            <li>Stock Modification – Adjust inventory records for discrepancies, returns, or damages.</li>
-                            <li>Comprehensive Reports – Get instant insights into inventory and sales performance.</li>
-                            <li>Branch-Specific Tax & Pricing – Set up tax structures and pricing variations per location.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus3 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph3((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">Improve efficiency with a bookkeeping software that integrates inventory, warehouse, and branch management. Gain better visibility and control over stock movements and tax compliance.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Live Inventory Monitoring </strong>– Stay updated on stock movement, purchases, and sales in real time.</li>
+                        <li><strong>Warehouse Stock Control </strong>– Manage stock transfers and warehouse inventory with ease.</li>
+                        <li><strong>Stock Modification </strong>– Adjust inventory records for discrepancies, returns, or damages.</li>
+                        <li><strong>Comprehensive Reports </strong>– Get instant insights into inventory and sales performance.</li>
+                        <li><strong>Branch-Specific Tax & Pricing </strong>– Set up tax structures and pricing variations per location.</li>
+                      </ul>
                     </>
                   )}
                 </div>
@@ -713,7 +278,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-start features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container">
                   <h4 className="col-primary sub-heading c-fw-600 mb-3">
@@ -724,207 +289,64 @@ const smallBusinessBookkeepingSoftware = (path) => {
                   </h4>
                   {isGlobal && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus4 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">GIDDH provides free bookkeeping software designed to help small businesses stay on top of their financial records with in-depth reporting tools.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus4 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
+                      <p className="c-fs-5">GIDDH provides free bookkeeping software designed to help small businesses stay on top of their financial records with in-depth reporting tools.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Trial Balance Report </strong>– Ensures accurate financial balancing.</li>
+                        <li><strong>Balance Sheet Report </strong>– Gives a clear picture of assets and liabilities.</li>
+                        <li><strong>Profit & Loss Report </strong>– Helps measure business profitability.</li>
+                        <li><strong>Day Book Report </strong>– Records all daily transactions.</li>
+                        <li><strong>Columnar Report </strong>– Presents structured financial data for better insights.</li>
+                        <li><strong>Customer & Vendor Reports </strong>– Monitors business transactions efficiently.</li>
+                        <li><strong>Sales Register </strong>– Tracks every sales entry systematically.</li>
+                        <li><strong>Purchase Register </strong>– Keeps records of all purchases for financial accuracy.</li>
+                      </ul>
 
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus4 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Trial Balance Report – Ensures accurate financial balancing.</li>
-                            <li>Balance Sheet Report – Gives a clear picture of assets and liabilities.</li>
-                            <li>Profit & Loss Report – Helps measure business profitability.</li>
-                            <li>Day Book Report – Records all daily transactions.</li>
-                            <li>Columnar Report – Presents structured financial data for better insights.</li>
-                            <li>Customer & Vendor Reports – Monitors business transactions efficiently.</li>
-                            <li>Sales Register – Tracks every sales entry systematically.</li>
-                            <li>Purchase Register – Keeps records of all purchases for financial accuracy.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus4 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
                     </>
                   )}
                   {isIndia && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus4 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">GIDDH offers free bookkeeping software designed for small businesses, providing essential financial reports to track and manage business performance efficiently.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus4 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus4 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <p>Key Reporting Features:</p>
-                            <li>Trial Balance Report – View all account balances for financial accuracy.</li>
-                            <li>Balance Sheet Report – Get a snapshot of assets, liabilities, and equity.</li>
-                            <li>Profit & Loss Report – Analyze revenue and expenses to track profitability.</li>
-                            <li>Day Book Report – Record daily transactions for better financial tracking.</li>
-                            <li>Columnar Report – View categorized financial data in a structured format.</li>
-                            <li>Customer & Vendor Reports – Monitor transactions with customers and suppliers.</li>
-                            <li>Sales Register – Keep track of all sales transactions efficiently.</li>
-                            <li>Purchase Register – Maintain records of all purchases for accurate accounting.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus4 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">GIDDH offers free bookkeeping software designed for small businesses, providing essential financial reports to track and manage business performance efficiently.</p>
+                      <ul className="c-fs-5" role="list">
+                        <p>Key Reporting Features:</p>
+                        <li><strong>Trial Balance Report </strong>– View all account balances for financial accuracy.</li>
+                        <li><strong>Balance Sheet Report </strong>– Get a snapshot of assets, liabilities, and equity.</li>
+                        <li><strong>Profit & Loss Report </strong>– Analyze revenue and expenses to track profitability.</li>
+                        <li><strong>Day Book Report </strong>– Record daily transactions for better financial tracking.</li>
+                        <li><strong>Columnar Report </strong>– View categorized financial data in a structured format.</li>
+                        <li><strong>Customer & Vendor Reports </strong>– Monitor transactions with customers and suppliers.</li>
+                        <li><strong>Sales Register </strong>– Keep track of all sales transactions efficiently.</li>
+                        <li><strong>Purchase Register </strong>– Maintain records of all purchases for accurate accounting.</li>
+                      </ul>
                     </>
                   )}
                   {isUK && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus4 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">GIDDH’s free bookkeeping software is built for small businesses, offering key financial reports to help monitor and manage business performance.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus4 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus4 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Trial Balance Report – Ensures all accounts are balanced.</li>
-                            <li>Balance Sheet Report – Provides a financial overview of assets and liabilities.</li>
-                            <li>Profit & Loss Report – Tracks business revenue and expenses.</li>
-                            <li>Day Book Report – Records daily financial transactions.</li>
-                            <li>Columnar Report – Presents financial data in a structured format.</li>
-                            <li>Customer & Vendor Reports – Helps track supplier and client transactions.</li>
-                            <li>Sales Register – Logs all sales for accurate financial tracking.</li>
-                            <li>Purchase Register – Keeps a detailed record of all business purchases.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus4 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">GIDDH’s free bookkeeping software is built for small businesses, offering key financial reports to help monitor and manage business performance.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Trial Balance Report </strong>– Ensures all accounts are balanced.</li>
+                        <li><strong>Balance Sheet Report </strong>– Provides a financial overview of assets and liabilities.</li>
+                        <li><strong>Profit & Loss Report </strong>– Tracks business revenue and expenses.</li>
+                        <li><strong>Day Book Report </strong>– Records daily financial transactions.</li>
+                        <li><strong>Columnar Report </strong>– Presents financial data in a structured format.</li>
+                        <li><strong>Customer & Vendor Reports </strong>– Helps track supplier and client transactions.</li>
+                        <li><strong>Sales Register </strong>– Logs all sales for accurate financial tracking.</li>
+                        <li><strong>Purchase Register </strong>– Keeps a detailed record of all business purchases.</li>
+                      </ul>
                     </>
                   )}
                   {isAE && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus4 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">GIDDH offers free bookkeeping software with powerful financial reports, making business accounting simple and efficient for small businesses.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus4 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus4 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Trial Balance Report – Ensures financial data accuracy.</li>
-                            <li>Balance Sheet Report – Displays the financial position of your business.</li>
-                            <li>Profit & Loss Report – Helps track profitability and business performance.</li>
-                            <li>Day Book Report – Keeps a log of daily transactions.</li>
-                            <li>Columnar Report – Organizes financial data for easy analysis.</li>
-                            <li>Customer & Vendor Reports – Tracks payments and transactions.</li>
-                            <li>Sales Register – Monitors all sales records efficiently.</li>
-                            <li>Purchase Register – Maintains records of purchases for accurate accounting.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus4 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">GIDDH offers free bookkeeping software with powerful financial reports, making business accounting simple and efficient for small businesses.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Trial Balance Report </strong>– Ensures financial data accuracy.</li>
+                        <li><strong>Balance Sheet Report </strong>– Displays the financial position of your business.</li>
+                        <li><strong>Profit & Loss Report </strong>– Helps track profitability and business performance.</li>
+                        <li><strong>Day Book Report </strong>– Keeps a log of daily transactions.</li>
+                        <li><strong>Columnar Report </strong>– Organizes financial data for easy analysis.</li>
+                        <li><strong>Customer & Vendor Reports </strong>– Tracks payments and transactions.</li>
+                        <li><strong>Sales Register </strong>– Monitors all sales records efficiently.</li>
+                        <li><strong>Purchase Register </strong>– Maintains records of purchases for accurate accounting.</li>
+                      </ul>
                     </>
                   )}
                 </div>
@@ -940,7 +362,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
               </div>
             </div>
 
-            <div className="row mb-5 pb-5 align-items-start features__description_container--row-odd ">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd ">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container">
                   <h4 className="col-primary sub-heading c-fw-600 mb-3">
@@ -951,194 +373,50 @@ const smallBusinessBookkeepingSoftware = (path) => {
                   </h4>
                   {isGlobal && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus5 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">mpower your business with bookkeeping software that features a customer portal for real-time financial tracking, ensuring better transparency and control.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus5 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph5((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus5 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Real-Time Statements – Instantly track financial statements and reports.</li>
-                            <li>Invoice Handling – View, manage, and download invoices effortlessly.</li>
-                            <li>Payment Monitoring – Track payments and outstanding dues in seconds.</li>
-                            <li>Multi-User Access – Grant access to customers and accountants securely.</li>
-                            <li>Intuitive Dashboard – Manage financial data in a single, streamlined portal.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus5 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph4((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">mpower your business with bookkeeping software that features a customer portal for real-time financial tracking, ensuring better transparency and control.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Real-Time Statements </strong>– Instantly track financial statements and reports.</li>
+                        <li><strong>Invoice Handling </strong>– View, manage, and download invoices effortlessly.</li>
+                        <li><strong>Payment Monitoring </strong>– Track payments and outstanding dues in seconds.</li>
+                        <li><strong>Multi-User Access </strong>– Grant access to customers and accountants securely.</li>
+                        <li><strong>Intuitive Dashboard </strong>– Manage financial data in a single, streamlined portal.</li>
+                      </ul>
                     </>
                   )}
                   {isIndia && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus5 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">Easily manage your business finances with bookkeeping software that includes a customer portal for real-time financial tracking and seamless access to essential data.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus5 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph5((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus5 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Real-Time Statements – Instantly view and track financial reports.</li>
-                            <li>Invoice Management – Access, download, and manage invoices effortlessly.</li>
-                            <li>Payment Tracking – Monitor payments and pending dues with ease.</li>
-                            <li>Multi-Member Access – Allow customers, accountants, and team members to collaborate.</li>
-                            <li>One-Click Dashboard – View all financial data in a user-friendly portal.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus5 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph5((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">Easily manage your business finances with bookkeeping software that includes a customer portal for real-time financial tracking and seamless access to essential data.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Real-Time Statements </strong>– Instantly view and track financial reports.</li>
+                        <li><strong>Invoice Management </strong>– Access, download, and manage invoices effortlessly.</li>
+                        <li><strong>Payment Tracking </strong>– Monitor payments and pending dues with ease.</li>
+                        <li><strong>Multi-Member Access </strong>– Allow customers, accountants, and team members to collaborate.</li>
+                        <li><strong>One-Click Dashboard </strong>– View all financial data in a user-friendly portal.</li>
+                      </ul>
                     </>
                   )}
                   {isUK && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus5 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">Small businesses can simplify financial management with bookkeeping software that offers a customer portal for easy access to real-time statements, invoices, and payments.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus5 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph5((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus5 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Live Financial Statements – Get instant updates on financial reports.</li>
-                            <li>Invoice Access – View, download, and manage invoices in one place.</li>
-                            <li>Payment Insights – Keep track of payments and outstanding balances.</li>
-                            <li>Multi-User Support – Enable controlled access for customers and accountants.</li>
-                            <li>All-in-One Dashboard – Manage everything from a single, intuitive interface.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus5 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph5((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">Small businesses can simplify financial management with bookkeeping software that offers a customer portal for easy access to real-time statements, invoices, and payments.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Live Financial Statements </strong>– Get instant updates on financial reports.</li>
+                        <li><strong>Invoice Access </strong>– View, download, and manage invoices in one place.</li>
+                        <li><strong>Payment Insights </strong>– Keep track of payments and outstanding balances.</li>
+                        <li><strong>Multi-User Support </strong>– Enable controlled access for customers and accountants.</li>
+                        <li><strong>All-in-One Dashboard </strong>– Manage everything from a single, intuitive interface.</li>
+                      </ul>
                     </>
                   )}
                   {isAE && (
                     <>
-                      <div
-                        className={
-                          "row pb-5 align-items-center features__description_container--row-odd" +
-                          (readMoreParagraphStatus5 ? " --read-more" : "")
-                        }
-                      >
-                        <p className="c-fs-5">Keep your finances organized with bookkeeping software that offers a customer portal for real-time insights into invoices, payments, and financial reports.</p>
-                        <span
-                          className="pt-3 text-decoration-underline c-fw-600 cursor-pointer"
-                          style={{
-                            display: readMoreParagraphStatus5 ? "none" : "block"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph5((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read More...
-                        </span>
-
-                        <div
-                          style={{
-                            display: readMoreParagraphStatus5 ? "block" : "none"
-                          }}
-                        >
-                          <ul className="custom-ul-with-right-tick c-fs-5" role="list">
-                            <li>Instant Financial Reports – Get real-time access to financial statements.</li>
-                            <li>Invoice Management – View and handle invoices without hassle.</li>
-                            <li>Payment Tracking – Easily monitor transactions and outstanding balances.</li>
-                            <li>Collaborative Access – Share financial data with customers, accountants, or team members.</li>
-                            <li>User-Friendly Dashboard – Access everything in one simple interface.</li>
-                          </ul>
-                        </div>
-                        <span
-                          className="pt-3 text-decoration-underline cursor-pointer c-fw-600"
-                          style={{
-                            display: readMoreParagraphStatus5 ? "block" : "none"
-                          }}
-                          onClick={() =>
-                            showMoreParagraph5((readmoreDisplay) => !readmoreDisplay)
-                          }
-                        >
-                          Read Less
-                        </span>
-                      </div>
+                      <p className="c-fs-5">Keep your finances organized with bookkeeping software that offers a customer portal for real-time insights into invoices, payments, and financial reports.</p>
+                      <ul className="c-fs-5" role="list">
+                        <li><strong>Instant Financial Reports </strong>– Get real-time access to financial statements.</li>
+                        <li><strong>Invoice Management </strong>– View and handle invoices without hassle.</li>
+                        <li><strong>Payment Tracking </strong>– Easily monitor transactions and outstanding balances.</li>
+                        <li><strong>Collaborative Access </strong>– Share financial data with customers, accountants, or team members.</li>
+                        <li><strong>User-Friendly Dashboard </strong>– Access everything in one simple interface.</li>
+                      </ul>
                     </>
                   )}
                 </div>
