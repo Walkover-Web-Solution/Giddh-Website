@@ -62,7 +62,7 @@ const header = (props) => {
                     <meta name='keywords' content={metaData.keywords}></meta>
                 )}
                 <link rel='icon' type='image/x-icon' href='/favico.svg'></link>
-                <link rel="alternate" href="https://giddh.com/" hreflang="x-default" />
+                <link rel="alternate" href="https://giddh.com/" hrefLang="x-default" />
                 <link rel='canonical' href={`https://giddh.com${pathArrRaw[0]}`} />
                 {!isOnlyGlobal && (
                     <>
