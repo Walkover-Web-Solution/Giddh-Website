@@ -76,7 +76,7 @@
         },
         {
             "question": "What should be on a financial dashboard?",
-            "answer": "A financial dashboard software should be able to present all the relevant financial metrics in an actionable way to enable a business to understand and measure the data accurately. Here are some metrics that a good financial dashboard must display. <ul><li>A graphic budget-to-actual table that shows how a business is working in alignment with the set goals or objectives</li><li>Sales report that shows the data of sales and orders invoiced during a specific period</li><li>Cash flow projection to assist during periods of thin cash availability and cash-intensive growth</li><li>Peer benchmark metric to compare margins against market peers</li>\n <li>Industry performance metrics</li><li>Value drivers over the long-term</li><li>Performance metrics to measure the progress of current initiatives</li></ul>"
+            "answer": "A financial dashboard software should be able to present all the relevant financial metrics in an actionable way to enable a business to understand and measure the data accurately. Here are some metrics that a good financial dashboard must display. <ul><li>A graphic budget-to-actual table that shows how a business is working in alignment with the set goals or objectives.</li><li>Sales report that shows the data of sales and orders invoiced during a specific period.</li><li>Cash flow projection to assist during periods of thin cash availability and cash-intensive growth.</li><li>Peer benchmark metric to compare margins against market peers.</li><li>Industry performance metrics.</li><li>Value drivers over the long-term.</li><li>Performance metrics to measure the progress of current initiatives.</li></ul>"
         },
         {
             "question": "How does Giddh accounting dashboard help to understand my accounting data and make a decision?",
@@ -98,7 +98,7 @@
         },
         {
             "question": "What are the reasons behind using an inventory management system?",
-            "answer": "Some of the reasons behind using an inventory management system are <ul><li>1. You can track your inventory levels at all times and place your orders whenever you see them falling low.</li><li>2.They can assist you to set up automatic emails that update your customers about every step of their order process.</li><li>3.Enables you to have an accurate idea of when the order leaves from the supplier and reaches the customer.</li><li>4. Offers a fully customised and visual dashboard that can be a game-changer for your inventory management processes.</li></ul>"
+            "answer": "Some of the reasons behind using an inventory management system are <ul><li>You can track your inventory levels at all times and place your orders whenever you see them falling low.</li><li>They can assist you to set up automatic emails that update your customers about every step of their order process.</li><li>Enables you to have an accurate idea of when the order leaves from the supplier and reaches the customer.</li><li>Offers a fully customised and visual dashboard that can be a game-changer for your inventory management processes.</li></ul>"
         },
         {
             "question": "What are the benefits of inventory management?",
@@ -113,7 +113,7 @@
             "answer": "Giddh’s inventory management software comes with default groups and accounts. You can also manage your inventory by creating different groups and accounts as is necessary for your business. However, you need to reach out to our customer support team for assistance in creating main groups. A new group can always be created under the main groups only."
         }
     ],
-    "connect-bank-reconcile": [
+    "conect-bank-reconcile": [
         {
             "question": "What is bank reconciliation? Why is it done?",
             "answer": "A bank reconciliation compares the difference between the bank balance on the bank statement with the balance on the accounting records of the company. Sometimes, certain transactions may be accounted for in the bank’s system before it is integrated into the company’s accounting system. Hence, bank reconciliation is done so that such differences can be detected."
@@ -212,7 +212,7 @@
         },
         {
             "question": "What are the three objectives of financial reporting?",
-            "answer": "Majorly, there are three essential objectives of financial reporting, which are: <ul><li>Inform investors about how efficiently their cash is being utilised and being reinvested in the business.</li><li>Track the cash flow to determine the source of incoming business finances</li><li>Offer an analysis of the assets, liabilities and owner’s equity</li></ul>"
+            "answer": "Majorly, there are three essential objectives of financial reporting, which are: <ul><li>Inform investors about how efficiently their cash is being utilised and being reinvested in the business.</li><li>Track the cash flow to determine the source of incoming business finances.</li><li>Offer an analysis of the assets, liabilities and owner’s equity.</li></ul>"
         },
         {
             "question": "Does Giddh provide a Balance sheet, P&amp;L and Balance sheet reports?",
@@ -234,11 +234,11 @@
         },
         {
            "question": "What is VAT Return Filing?",
-           "answer": "VAT Returns filing is the registration of VAT Returns document, which contains all details concerning VAT invoices, payments, and receipts during a specific period. The details that need to be filed in the VAT Returns document are: <ul><li>Total sales</li><li>Total purchases</li><li>Output VAT (paid by customers)</li><li>Input Tax Credit (ITC paid by businesses)</li>"
+           "answer": "VAT Returns filing is the registration of VAT Returns document, which contains all details concerning VAT invoices, payments, and receipts during a specific period. The details that need to be filed in the VAT Returns document are: <ul><li>Total sales</li><li>Total purchases</li><li>Output VAT (paid by customers)</li><li>Input Tax Credit (ITC paid by businesses)</li></ul>"
         },
         {
             "question": " What are the benefits of using Giddh software for VAT Returns Filing?",
-            "answer": "There are several benefits to using the Giddh software for VAT Returns Filing: <ul><li>Prepare your VAT return file automatically on the portal</li><li>100% accurate filing with zero chances of errors</li><li>Notifications of deadlines so that you don’t miss any deadline</li><li>Collaborate with your team and allow access of VAT data to your CA</li><li>Secure and reliable with 2-factor authentication and OTP verification</li><li>Complete support for all VAT-related issues</li>"
+            "answer": "There are several benefits to using the Giddh software for VAT Returns Filing: <ul><li>Prepare your VAT return file automatically on the portal</li><li>100% accurate filing with zero chances of errors</li><li>Notifications of deadlines so that you don’t miss any deadline</li><li>Collaborate with your team and allow access of VAT data to your CA</li><li>Secure and reliable with 2-factor authentication and OTP verification</li><li>Complete support for all VAT-related issues</li></ul>"
         }
     ],
     "e-invoice": [
@@ -264,7 +264,7 @@
         },
         {
             "question": "What is the end-to-end workflow of an e-invoice like?",
-            "answer": "<ul><li>Generation of the invoice on the taxpayer’s respective ERP system</li><li>Generation of IRN</li><li>Upload the JSON file of the e-invoice to the IRP for validation</li><li>The IRP will generate/validate the hash/IRN and will add a digital signature and QR code, and return the JSON to the taxpayer</li><li>The IRP will share this invoice data with the e-way bill system and the GSTN</li>"
+            "answer": "<ul><li>Generation of the invoice on the taxpayer’s respective ERP system</li><li>Generation of IRN</li><li>Upload the JSON file of the e-invoice to the IRP for validation</li><li>The IRP will generate/validate the hash/IRN and will add a digital signature and QR code, and return the JSON to the taxpayer</li><li>The IRP will share this invoice data with the e-way bill system and the GSTN</li></ul>"
         },
         {
             "question": "Is e-invoicing available in all Giddh plans?",
@@ -290,7 +290,7 @@
         },
         {
             "question": "What are the benefits of using Giddh software for GST Returns Filing?",
-            "answer": "There are several benefits to using the Giddh software for GST Returns Filing:<ul><li>Prepare your GST return file automatically on the portal</li><li>100% accurate filing with zero chances of errors</li><li>Notifications of deadlines so that you don’t miss any deadline</li><li>Collaborate with your team and allow access of GST data to your CA</li><li>Secure and reliable with 2-factor authentication and OTP verification</li><li>Complete support for all GST-related issues</li>"
+            "answer": "There are several benefits to using the Giddh software for GST Returns Filing:<ul><li>Prepare your GST return file automatically on the portal</li><li>100% accurate filing with zero chances of errors</li><li>Notifications of deadlines so that you don’t miss any deadline</li><li>Collaborate with your team and allow access of GST data to your CA</li><li>Secure and reliable with 2-factor authentication and OTP verification</li><li>Complete support for all GST-related issues</li></ul>"
         }
     ]
 }

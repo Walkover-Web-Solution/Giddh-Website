@@ -223,7 +223,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
                       <p className="c-fs-5">A complete solution for tracking inventory, managing warehouses, and handling financial reports in one place. Stay organized and make data-driven decisions with ease.</p>
                       <ul className="c-fs-5" role="list">
                         <li><strong>Smart Inventory Tracking </strong>– Get real-time stock visibility across all branches.</li>
-                        <li><storng>Multi-Warehouse Management </storng>– Easily track stock movement between warehouses.</li>
+                        <li><strong>Multi-Warehouse Management </strong>– Easily track stock movement between warehouses.</li>
                         <li><strong>Inventory Adjustments </strong>– Fix stock errors, manage returns, and update damages effortlessly.</li>
                         <li><strong>Real-Time Financial Reports </strong>– Generate instant reports for stock, sales, and accounts.</li>
                         <li><strong>Tax & Pricing Customization </strong>– Apply different tax rules and pricing for each branch.</li>
