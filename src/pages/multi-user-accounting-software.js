@@ -1,22 +1,31 @@
-import { MdRemove, MdAdd } from "react-icons/md";
 import { useEffect, useState } from "react";
 import Faqs from "@/components/faq";
 import faqs from '../data/faqs.json';
 
 const multiUserAccountingSoftware = (path) => {
   const linkPath = path.path;
-  const isGlobal = linkPath.isGlobal; 
+  const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
   const [faq, setFaq] = useState([]);
 
-  useEffect(() => {
+  function openCalendly() {
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
     appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setTimeout(() => {
+      if (window.Calendly) {
+        window.Calendly.initPopupWidget({
+          url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
+        }, 500);
+      };
+    })
+  }
+
+  useEffect(() => {
     setFaq(faqs['multi-user-accounting-software']);
   }, []);
-  
+
   return (
     <>
       <div className="features">
@@ -41,10 +50,10 @@ const multiUserAccountingSoftware = (path) => {
                   >
                     Download Free
                   </a>
-                  <a 
-                    href="#" 
-                    className="col-blue" 
-                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                  <a
+                    href="#"
+                    className="col-blue"
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
@@ -83,7 +92,7 @@ const multiUserAccountingSoftware = (path) => {
                   With real time sharing of financial data, you can derive
                   meaningful insight and run your business with efficiency.
                 </p>
-                <a href={ link + '/signup' } className="btn-link-purple" aria-label="Start your trial for multi-user accounting software">
+                <a href={link + '/signup'} className="btn-link-purple" aria-label="Start your trial for multi-user accounting software">
                   Start Your Trial
                 </a>
               </div>
@@ -123,6 +132,8 @@ const multiUserAccountingSoftware = (path) => {
                     src="/img/feature-gallery-icons/share-admin.svg"
                     className="img-fluid"
                     alt="An illustration of sharing to admin"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -154,6 +165,8 @@ const multiUserAccountingSoftware = (path) => {
                     }
                     className="img-fluid"
                     alt="An illustration of collaboration"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -180,6 +193,8 @@ const multiUserAccountingSoftware = (path) => {
                     src="/img/feature-gallery-icons/share-cash.svg"
                     className="img-fluid"
                     alt="An illustration of sharing cash"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -195,6 +210,8 @@ const multiUserAccountingSoftware = (path) => {
                     src="/img/suggestion.svg"
                     alt="people interested in Connect Bank Reconcile also looked at image"
                     className="features__sub_heading_container--banner_img"
+                    width="200"
+                    height="200"
                   />
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
@@ -206,16 +223,16 @@ const multiUserAccountingSoftware = (path) => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                   <a href={ link + "/all-features" } className="col-blue">
+                  <a href={link + "/all-features"} className="col-blue">
                     All features
                   </a>
-                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
+                  <a href={link + "/multi-user-accounting-software"} className="border-vertical col-blue">
                     Share Data
                   </a>
-                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
+                  <a href={link + "/multi-currency-accounting-software"} className="border-vertical col-blue">
                     Multi-Currency
                   </a>
-                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
+                  <a href={link + "/invoice-software"} className="border-vertical col-blue">
                     Invoicing
                   </a>
                 </div>
@@ -223,7 +240,7 @@ const multiUserAccountingSoftware = (path) => {
             </div>
           </div>
         </section>
-        
+
         <Faqs faq={faq} />
       </div>
     </>

@@ -10,9 +10,19 @@ const multiCurrencyAccountingSoftware = (path) => {
   const link = linkPath.linkPrefix;
   const [faq, setFaq] = useState([]);
 
+  function openCalendly(){
+      appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+      appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setTimeout(()=>{
+      if (window.Calendly) {
+        window.Calendly.initPopupWidget({
+          url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
+        }, 500);
+      };
+    })
+  }
+
   useEffect(() => {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
     setFaq(faqs['multi-currency-accounting-software']);
   }, []);
 
@@ -43,7 +53,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <a 
                     href="#" 
                     className="col-blue" 
-                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
@@ -113,7 +123,7 @@ const multiCurrencyAccountingSoftware = (path) => {
               <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                     src={isIndia || isAE ?  '/img/feature-gallery-icons/multi-currency-create.svg' : '/img/feature-gallery-icons/multi-currency-create-uk.svg'}
+                    src={isIndia || isAE ?  '/img/feature-gallery-icons/multi-currency-create.svg' : '/img/feature-gallery-icons/multi-currency-create-uk.svg'}
                     className="img-fluid"
                     alt="Illustration of automatic currency conversion feature"
                   />

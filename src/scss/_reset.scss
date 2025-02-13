@@ -1,5 +1,8 @@
 ::-webkit-scrollbar {
   width: 8px;
+  @media (max-width: 991px) {
+    display: none;
+  }
 }
 ::-webkit-scrollbar-thumb {
   width: 8px;
@@ -9,13 +12,6 @@
   background: rgba(0, 0, 0, 0.1);
   width: 8px;
 }
-
-@media (max-width: 991px) {
-  ::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 ::selection {
   background-color: var(--col-primary);
   color: var(--col-white);

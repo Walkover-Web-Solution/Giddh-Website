@@ -8,10 +8,20 @@ const importExeclFiles = (path) => {
   const isIndia = linkPath.isIndia
   const link = linkPath.linkPrefix;
   const [faq, setFaq]= useState([])
-  
-  useEffect(() => {
+
+  function openCalendly(){
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
     appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setTimeout(()=>{
+      if (window.Calendly) {
+        window.Calendly.initPopupWidget({
+          url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
+        }, 500);
+      };
+    })
+  }
+  
+  useEffect(() => {
     setFaq(faqs['import-data']);
   }, []);
 
@@ -42,7 +52,7 @@ const importExeclFiles = (path) => {
                   <a 
                     href="#" 
                     className="col-blue" 
-                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
@@ -115,6 +125,8 @@ const importExeclFiles = (path) => {
                     src="/img/feature-gallery-icons/import-excel.svg"
                     className="img-fluid"
                     alt="Illustration showing Excel as an accounting tool"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -140,6 +152,8 @@ const importExeclFiles = (path) => {
                     src="/img/feature-gallery-icons/import-excel.svg"
                     className="img-fluid"
                     alt="Transitioning from Excel to Giddh"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -165,6 +179,8 @@ const importExeclFiles = (path) => {
                     src="/img/feature-gallery-icons/import-data.svg"
                     className="img-fluid"
                     alt="Data import illustration"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -190,6 +206,8 @@ const importExeclFiles = (path) => {
                     src="/img/feature-gallery-icons/import-prepare.svg"
                     className="img-fluid"
                     alt="Template preparation for data import"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -220,6 +238,8 @@ const importExeclFiles = (path) => {
                     }
                     className="img-fluid"
                     alt="Support illustration based on location"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -236,6 +256,8 @@ const importExeclFiles = (path) => {
                     src="/img/suggestion.svg"
                     alt="Illustration of people interested in accounting features"
                     className="features__sub_heading_container--banner_img"
+                    width="200"
+                    height="200"
                   />
                 </figure>
                 <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">

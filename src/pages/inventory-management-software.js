@@ -11,9 +11,19 @@ const inventoryManagementSoftware = (path) => {
   const link = linkPath.linkPrefix;
   const [faq, setFaq]= useState([])
 
-  useEffect(() => {
+  function openCalendly() {
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
     appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setTimeout(() => {
+      if (window.Calendly) {
+        window.Calendly.initPopupWidget({
+          url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
+        }, 500);
+      };
+    })
+  }
+
+  useEffect(() => {
     setFaq(faqs['inventory-management-software']);
   }, []);
 
@@ -44,11 +54,7 @@ const inventoryManagementSoftware = (path) => {
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() =>
-                      Calendly.initPopupWidget({
-                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                      })
-                    }
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
@@ -121,6 +127,8 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/record-inventory.svg"
                     className="img-fluid"
                     alt="Illustration of recording inventory for products and services"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -144,6 +152,8 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/inventory-master.svg"
                     className="img-fluid"
                     alt="Illustration of inventory masters"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -168,6 +178,8 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/bifurcate-inventory.svg"
                     className="img-fluid"
                     alt="Illustration of bifurcating inventory"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -194,6 +206,8 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/reports.svg"
                     className="img-fluid"
                     alt="Illustration of real-time inventory reports"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -221,6 +235,8 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/barcode-scanning.svg"
                     className="img-fluid"
                     alt="barcode-scanning-feature-icon"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -247,6 +263,8 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/manufacturing-export.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -274,6 +292,8 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/branch-warehouse.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -299,6 +319,8 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/branch-transfer.svg"
                     className="img-fluid"
                     alt="bank account image"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -323,6 +345,8 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/custom-unit.svg"
                     className="img-fluid"
                     alt="custom-units-icon"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -339,6 +363,8 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/suggestion.svg"
                     alt="Illustration of people interested in inventory management software"
                     className="features__sub_heading_container--banner_img"
+                    width="200"
+                    height="200"
                   />
                 </figure>
                 <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">

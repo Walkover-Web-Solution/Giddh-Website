@@ -78,7 +78,19 @@ const invoiceSoftware = (path) => {
     ];
     const [readMoreStatus, readmoreAction] = useState(false);
     const [faq, setFaq] = useState([]);
-    
+
+    function openCalendly() {
+        appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+        appendLink("https://assets.calendly.com/assets/external/widget.css");
+        setTimeout(() => {
+            if (window.Calendly) {
+                window.Calendly.initPopupWidget({
+                    url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
+                }, 500);
+            };
+        })
+    }
+
     useEffect(() => {
         appendScript("https://assets.calendly.com/assets/external/widget.js", true);
         appendLink("https://assets.calendly.com/assets/external/widget.css");
@@ -113,11 +125,7 @@ const invoiceSoftware = (path) => {
                                 <a
                                     href='#'
                                     className='col-blue'
-                                    onClick={() =>
-                                        Calendly.initPopupWidget({
-                                            url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                                        })
-                                    }
+                                    onClick={() => openCalendly()}
                                     role="button"
                                     aria-label="Schedule a Demo"
                                 >
@@ -130,14 +138,14 @@ const invoiceSoftware = (path) => {
                                 <img
                                     src='/img/feature-gallery-icons/invoice-banner.svg'
                                     width="400"
-                                    height="300" 
+                                    height="300"
                                     alt='A banner showcasing the invoice software features'
                                 />
                                 <img
                                     src='/img/all-features-cloud_icon.svg'
                                     alt='Cloud icons representing various features of the software'
                                     className='features__heading_container__right_banner_img'
-                                    width='90%' 
+                                    width='90%'
                                 />
                             </figure>
                         </div>
@@ -159,10 +167,10 @@ const invoiceSoftware = (path) => {
                                 Productivity with Online Invoicing Software for Transactions,
                                 Gaining a Competitive Business Edge.
                             </p>
-                            <a 
-                                href={link + "/signup"} 
+                            <a
+                                href={link + "/signup"}
                                 className='btn-link-purple'
-                                role="button" 
+                                role="button"
                                 aria-label="Start your trial for GIDDH invoicing software"
                             >
                                 Start Your Trial
@@ -226,6 +234,8 @@ const invoiceSoftware = (path) => {
                                             src='/img/feature-gallery-icons/create-and-send-professional-invoices-with-cloud-based.svg'
                                             className='img-fluid'
                                             alt='Create and send professional invoices with cloud-based software'
+                                            width="200"
+                                            height="200"
                                         />
                                     </figure>
                                 </div>
@@ -250,6 +260,8 @@ const invoiceSoftware = (path) => {
                                             src='/img/feature-gallery-icons/barcode.svg'
                                             className='img-fluid'
                                             alt='Barcode for invoice processing'
+                                            width="200"
+                                            height="200"
                                         />
                                     </figure>
                                 </div>
@@ -283,6 +295,8 @@ const invoiceSoftware = (path) => {
                                                 }
                                                 className='img-fluid'
                                                 alt={isIndia ? 'Effortless GST invoicing' : 'Effortless VAT invoicing'}
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -310,6 +324,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/other-tax.svg'
                                                 className='img-fluid'
                                                 alt='other-taxes-icon'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -338,6 +354,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/multi-currency.svg'
                                                 className='img-fluid'
                                                 alt='Multi-currency invoicing'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -366,6 +384,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/multi-currency.svg'
                                                 className='img-fluid'
                                                 alt='Multi-currency invoicing'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -393,6 +413,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/share-invoice.svg'
                                                 className='img-fluid'
                                                 alt='Sending invoice via multiple channels'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -420,6 +442,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/share-invoice.svg'
                                                 className='img-fluid'
                                                 alt='Sending invoice via multiple channels'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -447,6 +471,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/lock-your-invoice.svg'
                                                 className='img-fluid'
                                                 alt='Lock your invoice feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -474,6 +500,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/lock-your-invoice.svg'
                                                 className='img-fluid'
                                                 alt='Lock your invoice feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -500,6 +528,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/add-due-date-to-invoices.svg'
                                                 className='img-fluid'
                                                 alt='Invoice due dates feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -526,6 +556,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/add-due-date-to-invoices.svg'
                                                 className='img-fluid'
                                                 alt='Invoice due dates feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -553,6 +585,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/customize-the-invoice-number.svg'
                                                 className='img-fluid'
                                                 alt='Customize invoice number feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -579,6 +613,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/customize-the-invoice-number.svg'
                                                 className='img-fluid'
                                                 alt='Customize invoice number feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -605,6 +641,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/reverse-charge.svg'
                                                 className='img-fluid'
                                                 alt='Reverse charge feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -632,6 +670,8 @@ const invoiceSoftware = (path) => {
                                                     src='/img/feature-gallery-icons/reverse-charge.svg'
                                                     className='img-fluid'
                                                     alt='Reverse charge feature'
+                                                    width="200"
+                                                    height="200"
                                                 />
                                             </figure>
                                         </div>
@@ -656,6 +696,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/bulk-update.svg'
                                                 className='img-fluid'
                                                 alt='Bulk invoice update feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -681,6 +723,8 @@ const invoiceSoftware = (path) => {
                                                     src='/img/feature-gallery-icons/bulk-update.svg'
                                                     className='img-fluid'
                                                     alt='Bulk invoice update feature'
+                                                    width="200"
+                                                    height="200"
                                                 />
                                             </figure>
                                         </div>
@@ -707,6 +751,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/copy-from-invoice.svg'
                                                 className='img-fluid'
                                                 alt='Copy from previous invoice feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -734,6 +780,8 @@ const invoiceSoftware = (path) => {
                                                     src='/img/feature-gallery-icons/copy-from-invoice.svg'
                                                     className='img-fluid'
                                                     alt='Copy from previous invoice feature'
+                                                    width="200"
+                                                    height="200"
                                                 />
                                             </figure>
                                         </div>
@@ -762,6 +810,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/Invoice.svg'
                                                 className='img-fluid'
                                                 alt='Import and export invoices feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -790,6 +840,8 @@ const invoiceSoftware = (path) => {
                                                     src='/img/feature-gallery-icons/Invoice.svg'
                                                     className='img-fluid'
                                                     alt='Import and export invoices feature'
+                                                    width="200"
+                                                    height="200"
                                                 />
                                             </figure>
                                         </div>
@@ -817,6 +869,8 @@ const invoiceSoftware = (path) => {
                                                 src='/img/feature-gallery-icons/generate-multiple-and-compound-invoices.svg'
                                                 className='img-fluid'
                                                 alt='Generate multiple and compound invoices feature'
+                                                width="200"
+                                                height="200"
                                             />
                                         </figure>
                                     </div>
@@ -844,6 +898,8 @@ const invoiceSoftware = (path) => {
                                                     src='/img/feature-gallery-icons/generate-multiple-and-compound-invoices.svg'
                                                     className='img-fluid'
                                                     alt='Generate multiple and compound invoices feature'
+                                                    width="200"
+                                                    height="200"
                                                 />
                                             </figure>
                                         </div>
@@ -886,6 +942,8 @@ const invoiceSoftware = (path) => {
                                             src='/img/feature-gallery-icons/run-your-business-with-automation.svg'
                                             className='img-fluid'
                                             alt='Automation in accounting software'
+                                            width="200"
+                                            height="200"
                                         />
                                     </figure>
                                 </div>
@@ -1065,6 +1123,8 @@ const invoiceSoftware = (path) => {
                                     alt='Illustration representing suggestions for invoicing software'
                                     className='features__sub_heading_container--banner_img'
                                     aria-hidden="true"
+                                    width="200"
+                                    height="200"
                                 />
                             </figure>
                             <h2 id="suggestion-heading" className='c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4'>

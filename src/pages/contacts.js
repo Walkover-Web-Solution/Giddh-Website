@@ -7,6 +7,18 @@ const contacts = (path) => {
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
 
+  function openCalendly() {
+    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+    appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setTimeout(() => {
+      if (window.Calendly) {
+        window.Calendly.initPopupWidget({
+          url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
+        }, 500);
+      };
+    })
+  }
+
   useEffect(() => {
     appendScript("https://assets.calendly.com/assets/external/widget.js", true);
     appendLink("https://assets.calendly.com/assets/external/widget.css");
@@ -40,7 +52,7 @@ const contacts = (path) => {
                   <a 
                     href="#" 
                     className="col-blue" 
-                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
@@ -116,6 +128,8 @@ const contacts = (path) => {
                     src="/img/feature-gallery-icons/import-data-feature-1.webp"
                     className="img-fluid"
                     alt="Illustration of connecting bank data"
+                    width="400"
+                    height="400"
                   />
                 </figure>
               </div>
@@ -140,6 +154,8 @@ const contacts = (path) => {
                     src={ isIndia ? "/img/feature-gallery-icons/reporting-feature-3.webp" : ( isAE ? "/img/feature-gallery-icons/uk-aging-report.svg" : "/img/feature-gallery-icons/uk-aging-report.svg") }
                     className="img-fluid"
                     alt="Aging report illustration based on region"
+                    width="400"
+                    height="400"
                   />
                 </figure>
               </div>
@@ -175,6 +191,8 @@ const contacts = (path) => {
                     src="/img/feature-gallery-icons/import-data-feature-4.svg"
                     className="img-fluid"
                     alt="Illustration of bank account management"
+                    width="400"
+                    height="400"
                   />
                 </figure>
               </div>
@@ -191,6 +209,8 @@ const contacts = (path) => {
                     src="/img/suggestion.svg"
                     alt="Illustration of people interested in Connect Bank Reconcile"
                     className="features__sub_heading_container--banner_img"
+                    width="200"
+                    height="200"
                   />
                 </figure>
                 <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
