@@ -12,10 +12,21 @@ const smallBusinessBookkeepingSoftware = (path) => {
   const [faq, setFaq] = useState([])
 
   useEffect(() => {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
     setFaq(faqs['small-business-bookkeeping-software'])
   }, []);
+  
+  function openCalendly() {
+    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+    appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setTimeout(() => {
+      if (window.Calendly) {
+        window.Calendly.initPopupWidget({
+          url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
+        }, 500);
+      };
+    })
+  }
+
   return (
     <>
       <div className="features">
@@ -46,7 +57,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() => Calendly.initPopupWidget({ url: 'https://calendly.com/sales-accounting-software/talk-to-sale' })}
+                    onClick={() => openCalendly() }
                     aria-label="Schedule a demo with Giddh"
                   >
                     Schedule Demo

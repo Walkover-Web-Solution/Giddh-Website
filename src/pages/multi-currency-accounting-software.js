@@ -126,6 +126,8 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src={isIndia || isAE ?  '/img/feature-gallery-icons/multi-currency-create.svg' : '/img/feature-gallery-icons/multi-currency-create-uk.svg'}
                     className="img-fluid"
                     alt="Illustration of automatic currency conversion feature"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -151,6 +153,8 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src={isIndia ? '/img/feature-gallery-icons/multi-currency-invoice.svg' : (isAE ? '/img/feature-gallery-icons/multi-currency-invoice-ae.svg' : '/img/feature-gallery-icons/multi-currency-invoice-uk.svg')}
                     className="img-fluid"
                     alt="Illustration of invoicing feature for international customers"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -176,6 +180,8 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-setting.svg' : '/img/feature-gallery-icons/multi-currency-setting-uk.svg'}
                     className="img-fluid"
                     alt="Illustration of setting preferred currency for business accounts"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -200,6 +206,8 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-reports.svg' : '/img/feature-gallery-icons/multi-currency-reports-uk.svg'}
                     className="img-fluid"
                     alt="Illustration of dynamic business reporting feature"
+                    width="300"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -216,6 +224,8 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src="/img/suggestion.svg"
                     alt="Illustration of people interested in accounting software"
                     className="features__sub_heading_container--banner_img"
+                    width="200"
+                    height="200"
                   />
                 </figure>
                 <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">

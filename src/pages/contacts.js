@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 const contacts = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
@@ -18,11 +16,6 @@ const contacts = (path) => {
       };
     })
   }
-
-  useEffect(() => {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
-  }, []);
   
   return (
     <>
