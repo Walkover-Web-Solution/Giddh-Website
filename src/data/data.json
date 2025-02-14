@@ -87,7 +87,7 @@
     {
       "name": "Multiple Reports",
       "image": "/feature-multiple-reports.svg",
-      "description": "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
+      "description": "We provides various types of reports, like <ol className='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
       "link": null,
       "hasMoreContent": false
     },
@@ -159,7 +159,7 @@
     {
       "name": "Multiple Reports",
       "image": "/feature-multiple-reports.svg",
-      "description": "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+      "description": "We provides various types of reports, like <ol className='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
       "link": null,
       "hasMoreContent": false
     },

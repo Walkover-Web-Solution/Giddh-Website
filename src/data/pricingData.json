@@ -1,2130 +1,638 @@
 {
-"isGlobal": [
-       {
-           "title": "Invoice Count",
-           "description": null,
-           "link": null,
-           "plan": [
-               {
-                   "name": "Oak",
-                   "feature": "3,000"
-               },
-               {
-                   "name": "Vine",
-                   "feature": "5,000"
-               },
-               {
-                   "name": "Sequoia",
-                   "feature": "10,000"
-               }
-           ]
-       },
-       {
-        "title": "Bill Count",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "feature": "3,000"
-            },
-            {
-                "name": "Vine",
-                "feature": "5,000"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "10,000"
-            }
-        ]
-       },
-       {
-           "title": "Companies",
-           "description": null,
-           "link": null,
-           "plan": [
-               {
-                   "name": "Oak",
-                   "feature": "1"
-               },
-               {
-                   "name": "Vine",
-                   "feature": "10"
-               },
-               {
-                   "name": "Sequoia",
-                   "feature": "100"
-               }
-           ]
-       },
-       {
-           "title": "Accountant Consultant",
-           "description": null,
-           "link": null,
-           "plan": [
-               {
-                   "name": "Oak",
-                   "feature": "close"
-               },
-               {
-                   "name": "Vine",
-                   "feature": "2 hrs"
-               },
-               {
-                   "name": "Sequoia",
-                   "feature": "4 hrs"
-               }
-           ]
-       },
-       {
-        "title": "Desktop/Mobile App",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "feature": true
-            },
-            {
-                "name": "Vine",
-                "feature": true
-            },
-            {
-                "name": "Sequoia",
-                "feature": true
-            }
-        ]
-       },
-       {
-        "title": "Unlimited users access",
-        "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
-        "link": "/multi-user-accounting-software",
-        "plan": [
-            {
-                "name": "Oak",
-                "feature": "Unlimited"
-            },
-            {
-                "name": "Vine",
-                "feature": "Unlimited"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "Unlimited"
-            }
-        ]
-       },
-       {
-        "title": "Security",
-        "description": "Your data is secured with IP security and Two-way verification, and",
-        "link": "/security",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-       },
-       {
-        "title": "Unlimited Customers/Vendors",
-        "description": "Your data is secured with IP security and Two-way verification, and",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-       },
-       {
-           "title": "Invoicing",
-           "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
-           "link": "/in/invoice-software",
-           "plan": [
-               {
-                   "name": "Oak",
-                   "isAvailable": true
-               },
-               {
-                   "name": "Vine",
-                   "isAvailable": true
-               },
-               {
-                   "name": "Sequoia",
-                   "isAvailable": true
-               }
-           ]
-       },
-       {
-        "title": "Record Bills",
-        "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-     "title": "Managing Inventory",
-     "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
-     "link": "/inventory-management-software",
-     "plan": [
-         {
-             "name": "Oak",
-             "isAvailable": true
-         },
-         {
-             "name": "Vine",
-             "isAvailable": true
-         },
-         {
-             "name": "Sequoia",
-             "isAvailable": true
-         }
-     ]
-    },
-    {
-    "title": "Journal Entries",
-    "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
-    "link": null,
-    "plan": [
+   "isGlobal": [
         {
-            "name": "Oak",
-            "isAvailable": true
+            "title": "Invoice Count",
+            "yearly": "invoicesAllowed",
+            "monthly": "invoicesAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
         },
         {
-            "name": "Vine",
-            "isAvailable": true
+            "title": "Bill Count",
+            "yearly": "billsAllowed",
+            "monthly": "monthlyBillsAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
         },
         {
-            "name": "Sequoia",
-            "isAvailable": true
+            "title": "Companies",
+            "yearly": "companiesLimit",
+            "monthly": "monthlyCompaniesLimit",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Accountant Consultant",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Desktop/Mobile App",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited users access",
+            "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
+            "link": "/multi-user-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Security",
+            "description": "Your data is secured with IP security and Two-way verification, and",
+            "link": "/security",
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited Customers/Vendors",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Invoicing",
+            "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
+            "link": "/in/invoice-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Record Bills",
+            "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Managing Inventory",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": "/inventory-management-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Journal Entries",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Multi-currency",
+            "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
+            "link": "/multi-currency-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Reports",
+            "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
+            "link": "/financial-reporting",
+            "isExpanded": false
+        },
+        {
+            "title": "Real-time Dashboard",
+            "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
+            "link": "/accounting-dashboard",
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Reconciliation",
+            "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
+            "link": "/conect-bank-reconcile",
+            "isExpanded": false
+        },
+        {
+            "title": "Manufacturing",
+            "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Integrations",
+            "description": "Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "E-commerce Integration",
+            "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Telecom Integration",
+            "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Branch and warehouse management",
+            "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Easy Import/Export of the data",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and other relevant data. Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "link": "/import-data",
+            "isExpanded": false
+        },
+        {
+            "title": "Financial Year Locking",
+            "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Support",
+            "description": "You are just one call or email away from us, Connect with us",
+            "link": "/contact-us",
+            "isExpanded": false
+        }
+    ],
+    "isAE": [
+        {
+            "title": "Invoice Count",
+            "yearly": "invoicesAllowed",
+            "monthly": "invoicesAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bill Count",
+            "yearly": "billsAllowed",
+            "monthly": "monthlyBillsAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Companies",
+            "yearly": "companiesLimit",
+            "monthly": "monthlyCompaniesLimit",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Accountant Consultant",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Desktop/Mobile App",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited users access",
+            "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
+            "link": "/ae/multi-user-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Security",
+            "description": "Your data is secured with IP security and Two-way verification, and",
+            "link": "/ae/security",
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited Customers/Vendors",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Invoicing",
+            "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
+            "link": "/ae/invoice-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Record Bills",
+            "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Managing Inventory",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": "/ae/inventory-management-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Journal Entries",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Multi-currency",
+            "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
+            "link": "/ae/multi-currency-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Reports",
+            "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
+            "link": "/ae/financial-reporting",
+            "isExpanded": false
+        },
+        {
+            "title": "Real-time Dashboard",
+            "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
+            "link": "/ae/accounting-dashboard",
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Reconciliation",
+            "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
+            "link": "/ae/conect-bank-reconcile",
+            "isExpanded": false
+        },
+        {
+            "title": "Manufacturing",
+            "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Integrations",
+            "description": "Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "E-commerce Integration",
+            "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Telecom Integration",
+            "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Branch and warehouse management",
+            "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Easy Import/Export of the data",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and other relevant data. Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "link": "/ae/import-data",
+            "isExpanded": false
+        },
+        {
+            "title": "Financial Year Locking",
+            "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Support",
+            "description": "You are just one call or email away from us, Connect with us",
+            "link": "/ae/contact-us",
+            "isExpanded": false
+        }
+    ],
+    "isUK": [
+        {
+            "title": "Invoice Count",
+            "yearly": "invoicesAllowed",
+            "monthly": "invoicesAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bill Count",
+            "yearly": "billsAllowed",
+            "monthly": "monthlyBillsAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Companies",
+            "yearly": "companiesLimit",
+            "monthly": "monthlyCompaniesLimit",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Accountant Consultant",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Desktop/Mobile App",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited users access",
+            "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
+            "link": "/uk/multi-user-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Security",
+            "description": "Your data is secured with IP security and Two-way verification, and",
+            "link": "/uk/security",
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited Customers/Vendors",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Invoicing",
+            "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
+            "link": "/uk/invoice-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Record Bills",
+            "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Managing Inventory",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": "/uk/inventory-management-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Journal Entries",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Multi-currency",
+            "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
+            "link": "/uk/multi-currency-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "VAT Compliance",
+            "description": "Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and",
+            "link": "/uk/vat",
+            "isExpanded": false
+        },
+        {
+            "title": "Reports",
+            "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
+            "link": "/uk/financial-reporting",
+            "isExpanded": false
+        },
+        {
+            "title": "Real-time Dashboard",
+            "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
+            "link": "/uk/accounting-dashboard",
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Reconciliation",
+            "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
+            "link": "/uk/conect-bank-reconcile",
+            "isExpanded": false
+        },
+        {
+            "title": "Manufacturing",
+            "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Integrations",
+            "description": "Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "E-commerce Integration",
+            "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Telecom Integration",
+            "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Branch and warehouse management",
+            "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Easy Import/Export of the data",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and other relevant data. Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "link": "/uk/import-data",
+            "isExpanded": false
+        },
+        {
+            "title": "Financial Year Locking",
+            "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Support",
+            "description": "You are just one call or email away from us, Connect with us",
+            "link": "/uk/contact-us",
+            "isExpanded": false
+        }
+    ],
+    "isIndia": [
+        {
+            "title": "Invoice Count",
+            "yearly": "invoicesAllowed",
+            "monthly": "invoicesAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bill Count",
+            "yearly": "billsAllowed",
+            "monthly": "monthlyBillsAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Companies",
+            "yearly": "companiesLimit",
+            "monthly": "monthlyCompaniesLimit",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Accountant Consultant",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Desktop/Mobile App",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited users access",
+            "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
+            "link": "/in/multi-user-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Security",
+            "description": "Your data is secured with IP security and Two-way verification, and",
+            "link": "/in/security",
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited Customers/Vendors",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Invoicing",
+            "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
+            "link": "/in/invoice-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Record Bills",
+            "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Managing Inventory",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": "/in/inventory-management-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Journal Entries",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Multi-currency",
+            "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
+            "link": "/in/multi-currency-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "GST Compliance",
+            "description": "Create GST invoice, view GST reports and",
+            "link": "/in/gst",
+            "isExpanded": false
+        },
+        {
+            "title": "GST Direct Filling",
+            "description": "Direct filing, and reconcile transaction with the GST portal and",
+            "link": "/in/gst",
+            "isExpanded": false
+        },
+        {
+            "title": "Reports",
+            "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
+            "link": "/in/financial-reporting",
+            "isExpanded": false
+        },
+        {
+            "title": "Real-time Dashboard",
+            "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
+            "link": "/in/accounting-dashboard",
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Reconciliation",
+            "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
+            "link": "/in/conect-bank-reconcile",
+            "isExpanded": false
+        },
+        {
+            "title": "Manufacturing",
+            "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "E-invoice",
+            "description": "Easily create E-invoice, auto-push E-invoice to its portal, monitor its status, and",
+            "link": "/e-invoice",
+            "isExpanded": false
+        },
+        {
+            "title": "E-way bill",
+            "description": "E-way bill",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "E-commerce Integration",
+            "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Telecom Integration",
+            "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Branch and warehouse management",
+            "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Easy Import/Export of the data",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and other relevant data. Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "link": "/in/import-data",
+            "isExpanded": false
+        },
+        {
+            "title": "Financial Year Locking",
+            "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Support",
+            "description": "You are just one call or email away from us, Connect with us",
+            "link": "/in/contact-us",
+            "isExpanded": false
         }
     ]
-    },
-    {
-        "title": "Multi-currency",
-        "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
-        "link": "/multi-currency-accounting-software",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Reports",
-        "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
-        "link": "/financial-reporting",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Real-time Dashboard",
-        "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
-        "link": "/accounting-dashboard",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Bank Reconciliation",
-        "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
-        "link": "/conect-bank-reconcile",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Manufacturing",
-        "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Bank Integrations",
-        "description": "Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "E-commerce Integration",
-        "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Telecom Integration",
-        "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Branch and warehouse management",
-        "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Easy Import/Export of the data",
-        "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and other relevant data. Effortlessly export and share data, including ledgers, invoices, reports, and many more",
-        "link": "/import-data",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Financial Year Locking",
-        "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Support",
-        "description": "You are just one call or email away from us, Connect with us",
-        "link": "/contact-us",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    }
-],
-
-"isAE": [
-    {
-        "title": "Invoice Count",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "feature": "3,000"
-            },
-            {
-                "name": "Vine",
-                "feature": "5,000"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "10,000"
-            }
-        ]
-    },
-    {
-     "title": "Bill Count",
-     "description": null,
-     "link": null,
-     "plan": [
-         {
-             "name": "Oak",
-             "feature": "3,000"
-         },
-         {
-             "name": "Vine",
-             "feature": "5,000"
-         },
-         {
-             "name": "Sequoia",
-             "feature": "10,000"
-         }
-     ]
-    },
-    {
-        "title": "Companies",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "feature": "1"
-            },
-            {
-                "name": "Vine",
-                "feature": "10"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "100"
-            }
-        ]
-    },
-    {
-        "title": "Accountant Consultant",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "feature": "close"
-            },
-            {
-                "name": "Vine",
-                "feature": "2 hrs"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "4 hrs"
-            }
-        ]
-    },
-    {
-     "title": "Desktop/Mobile App",
-     "description": null,
-     "link": null,
-     "plan": [
-         {
-             "name": "Oak",
-             "feature": true
-         },
-         {
-             "name": "Vine",
-             "feature": true
-         },
-         {
-             "name": "Sequoia",
-             "feature": true
-         }
-     ]
-    },
-    {
-     "title": "Unlimited users access",
-     "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
-     "link": "/ae/multi-user-accounting-software",
-     "plan": [
-         {
-             "name": "Oak",
-             "feature": "Unlimited"
-         },
-         {
-             "name": "Vine",
-             "feature": "Unlimited"
-         },
-         {
-             "name": "Sequoia",
-             "feature": "Unlimited"
-         }
-     ]
-    },
-    {
-     "title": "Security",
-     "description": "Your data is secured with IP security and Two-way verification, and",
-     "link": "/ae/security",
-     "plan": [
-         {
-             "name": "Oak",
-             "isAvailable": true
-         },
-         {
-             "name": "Vine",
-             "isAvailable": true
-         },
-         {
-             "name": "Sequoia",
-             "isAvailable": true
-         }
-     ]
-    },
-    {
-     "title": "Unlimited Customers/Vendors",
-     "description": "Your data is secured with IP security and Two-way verification, and",
-     "link": null,
-     "plan": [
-         {
-             "name": "Oak",
-             "isAvailable": true
-         },
-         {
-             "name": "Vine",
-             "isAvailable": true
-         },
-         {
-             "name": "Sequoia",
-             "isAvailable": true
-         }
-     ]
-    },
-    {
-        "title": "Invoicing",
-        "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
-        "link": "/ae/invoice-software",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Record Bills",
-        "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Managing Inventory",
-        "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
-        "link": "/ae/inventory-management-software",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Journal Entries",
-        "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Multi-currency",
-        "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
-        "link": "/ae/multi-currency-accounting-software",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Reports",
-        "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
-        "link": "/ae/financial-reporting",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Real-time Dashboard",
-        "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
-        "link": "/ae/accounting-dashboard",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Bank Reconciliation",
-        "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
-        "link": "/ae/conect-bank-reconcile",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Manufacturing",
-        "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Bank Integrations",
-        "description": "Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "E-commerce Integration",
-        "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Telecom Integration",
-        "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Branch and warehouse management",
-        "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Easy Import/Export of the data",
-        "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and other relevant data. Effortlessly export and share data, including ledgers, invoices, reports, and many more",
-        "link": "/ae/import-data",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Financial Year Locking",
-        "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
-        "link": null,
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Support",
-        "description": "You are just one call or email away from us, Connect with us",
-        "link": "/ae/contact-us",
-        "plan": [
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    }
-],
-
-"isUK": [
-    {
-        "title": "Invoice Count",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-               "name": "Free",
-               "feature": "100"
-            },
-            {
-                "name": "Oak",
-                "feature": "500"
-            },
-            {
-                "name": "Vine",
-                "feature": "700"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "1,000"
-            }
-        ]
-    },
-    {
-     "title": "Bill Count",
-     "description": null,
-     "link": null,
-     "plan": [
-        {
-            "name": "Free",
-            "feature": "1"
-        },
-        {
-             "name": "Oak",
-             "feature": "500"
-        },
-        {
-             "name": "Vine",
-             "feature": "700"
-        },
-        {
-             "name": "Sequoia",
-             "feature": "1,000"
-        }
-     ]
-    },
-    {
-        "title": "Companies",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "feature": "1"
-            },
-            {
-                "name": "Oak",
-                "feature": "1"
-            },
-            {
-                "name": "Vine",
-                "feature": "10"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "100"
-            }
-        ]
-    },
-    {
-        "title": "Accountant Consultant",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "feature": "close"
-            },
-            {
-                "name": "Oak",
-                "feature": "close"
-            },
-            {
-                "name": "Vine",
-                "feature": "2 hrs"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "4 hrs"
-            }
-        ]
-    },
-    {
-     "title": "Desktop/Mobile App",
-     "description": null,
-     "link": null,
-     "plan": [
-        {
-            "name": "Free",
-            "isAvailable": true
-        },
-        {
-            "name": "Oak",
-            "isAvailable": true
-        },
-        {
-            "name": "Vine",
-            "isAvailable": true
-        },
-        {
-            "name": "Sequoia",
-            "isAvailable": true
-        }
-     ]
-    },
-    {
-     "title": "Unlimited users access",
-     "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
-     "link": "/uk/multi-user-accounting-software",
-     "plan": [
-        {
-            "name": "Free",
-            "feature": "1"
-        },
-         {
-            "name": "Oak",
-            "feature": "Unlimited"
-         },
-         {
-             "name": "Vine",
-             "feature": "Unlimited"
-         },
-         {
-             "name": "Sequoia",
-             "feature": "Unlimited"
-         }
-     ]
-    },
-    {
-     "title": "Security",
-     "description": "Your data is secured with IP security and Two-way verification, and",
-     "link": "/uk/security",
-     "plan": [
-        {
-            "name": "Free",
-            "isAvailable": true
-        },
-         {
-             "name": "Oak",
-             "isAvailable": true
-         },
-         {
-             "name": "Vine",
-             "isAvailable": true
-         },
-         {
-             "name": "Sequoia",
-             "isAvailable": true
-         }
-     ]
-    },
-    {
-     "title": "Unlimited Customers/Vendors",
-     "description": "Your data is secured with IP security and Two-way verification, and",
-     "link": null,
-     "plan": [
-        {
-            "name": "Free",
-            "isAvailable": true
-        },
-         {
-             "name": "Oak",
-             "isAvailable": true
-         },
-         {
-             "name": "Vine",
-             "isAvailable": true
-         },
-         {
-             "name": "Sequoia",
-             "isAvailable": true
-         }
-     ]
-    },
-    {
-        "title": "Invoicing",
-        "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
-        "link": "/uk/invoice-software",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Record Bills",
-        "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Managing Inventory",
-        "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
-        "link": "/uk/inventory-management-software",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Journal Entries",
-        "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Multi-currency",
-        "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
-        "link": "/uk/multi-currency-accounting-software",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "VAT Compliance",
-        "description": "Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and",
-        "link": "/uk/vat",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Reports",
-        "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
-        "link": "/uk/financial-reporting",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Real-time Dashboard",
-        "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
-        "link": "/uk/accounting-dashboard",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Bank Reconciliation",
-        "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
-        "link": "/uk/conect-bank-reconcile",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Manufacturing",
-        "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Bank Integrations",
-        "description": "Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "E-commerce Integration",
-        "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Telecom Integration",
-        "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Branch and warehouse management",
-        "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Easy Import/Export of the data",
-        "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and other relevant data. Effortlessly export and share data, including ledgers, invoices, reports, and many more",
-        "link": "/uk/import-data",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Financial Year Locking",
-        "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Support",
-        "description": "You are just one call or email away from us, Connect with us",
-        "link": "/uk/contact-us",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    }
-] ,
-
-"isIndia": [
-    {
-        "title": "Invoice Count",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-               "name": "Free",
-               "feature": "1,000"
-            },
-            {
-                "name": "Oak",
-                "feature": "3,000"
-            },
-            {
-                "name": "Vine",
-                "feature": "5,000"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "10,000"
-            }
-        ]
-    },
-    {
-     "title": "Bill Count",
-     "description": null,
-     "link": null,
-     "plan": [
-        {
-            "name": "Free",
-            "feature": "1,000"
-        },
-        {
-             "name": "Oak",
-             "feature": "3,000"
-        },
-        {
-             "name": "Vine",
-             "feature": "5,000"
-        },
-        {
-             "name": "Sequoia",
-             "feature": "10,000"
-        }
-     ]
-    },
-    {
-        "title": "Companies",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "feature": "1"
-            },
-            {
-                "name": "Oak",
-                "feature": "1"
-            },
-            {
-                "name": "Vine",
-                "feature": "10"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "100"
-            }
-        ]
-    },
-    {
-        "title": "Accountant Consultant",
-        "description": null,
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "feature": "close"
-            },
-            {
-                "name": "Oak",
-                "feature": "2 hrs"
-            },
-            {
-                "name": "Vine",
-                "feature": "4 hrs"
-            },
-            {
-                "name": "Sequoia",
-                "feature": "10 hrs"
-            }
-        ]
-    },
-    {
-     "title": "Desktop/Mobile App",
-     "description": null,
-     "link": null,
-     "plan": [
-        {
-            "name": "Free",
-            "isAvailable": true
-        },
-        {
-            "name": "Oak",
-            "isAvailable": true
-        },
-        {
-            "name": "Vine",
-            "isAvailable": true
-        },
-        {
-            "name": "Sequoia",
-            "isAvailable": true
-        }
-     ]
-    },
-    {
-     "title": "Unlimited users access",
-     "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
-     "link": "/in/multi-user-accounting-software",
-     "plan": [
-        {
-            "name": "Free",
-            "feature": "1"
-        },
-         {
-            "name": "Oak",
-            "feature": "Unlimited"
-         },
-         {
-             "name": "Vine",
-             "feature": "Unlimited"
-         },
-         {
-             "name": "Sequoia",
-             "feature": "Unlimited"
-         }
-     ]
-    },
-    {
-     "title": "Security",
-     "description": "Your data is secured with IP security and Two-way verification, and",
-     "link": "/in/security",
-     "plan": [
-        {
-            "name": "Free",
-            "isAvailable": true
-        },
-         {
-             "name": "Oak",
-             "isAvailable": true
-         },
-         {
-             "name": "Vine",
-             "isAvailable": true
-         },
-         {
-             "name": "Sequoia",
-             "isAvailable": true
-         }
-     ]
-    },
-    {
-     "title": "Unlimited Customers/Vendors",
-     "description": "Your data is secured with IP security and Two-way verification, and",
-     "link": null,
-     "plan": [
-        {
-            "name": "Free",
-            "isAvailable": true
-        },
-         {
-             "name": "Oak",
-             "isAvailable": true
-         },
-         {
-             "name": "Vine",
-             "isAvailable": true
-         },
-         {
-             "name": "Sequoia",
-             "isAvailable": true
-         }
-     ]
-    },
-    {
-        "title": "Invoicing",
-        "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
-        "link": "/in/invoice-software",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Record Bills",
-        "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Managing Inventory",
-        "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
-        "link": "/in/inventory-management-software",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Journal Entries",
-        "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Multi-currency",
-        "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
-        "link": "/in/multi-currency-accounting-software",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "GST Compliance",
-        "description": "Create GST invoice, view GST reports and",
-        "link": "/in/gst",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "GST Direct Filling",
-        "description": "Direct filing, and reconcile transaction with the GST portal and",
-        "link": "/in/gst",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": "close"
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Reports",
-        "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
-        "link": "/in/financial-reporting",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Real-time Dashboard",
-        "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
-        "link": "/in/accounting-dashboard",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Bank Reconciliation",
-        "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
-        "link": "/in/conect-bank-reconcile",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Manufacturing",
-        "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "E-invoice",
-        "description": "Easily create E-invoice, auto-push E-invoice to its portal, monitor its status, and",
-        "link": "/e-invoice",
-        "plan": [
-            {
-                "name": "Free",
-                "feature": "close"
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "E-way bill",
-        "description": "E-way bill",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "E-commerce Integration",
-        "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Telecom Integration",
-        "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Branch and warehouse management",
-        "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Easy Import/Export of the data",
-        "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and other relevant data. Effortlessly export and share data, including ledgers, invoices, reports, and many more",
-        "link": "/in/import-data",
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Financial Year Locking",
-        "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
-        "link": null,
-        "plan": [
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Free",
-                "isAvailable": true
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    },
-    {
-        "title": "Support",
-        "description": "You are just one call or email away from us, Connect with us",
-        "link": "/in/contact-us",
-        "plan": [
-            {
-                "name": "Free",
-                "feature": "close"
-            },
-            {
-                "name": "Oak",
-                "isAvailable": true
-            },
-            {
-                "name": "Vine",
-                "isAvailable": true
-            },
-            {
-                "name": "Sequoia",
-                "isAvailable": true
-            }
-        ]
-    }
-] 
-
 }

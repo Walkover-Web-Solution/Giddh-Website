@@ -40,6 +40,15 @@ a{
 .cursor-pointer{
     cursor: pointer !important;
 }
+.vertical-align-top {
+  vertical-align: top;
+}
+.vertical-align-middle {
+  vertical-align: middle;
+}
+.vertical-align-bottom {
+  vertical-align: bottom;
+}
 // Country Dropdown
 .country_dropdown {
     &__menu {
