@@ -395,8 +395,8 @@ const pricing = (path) => {
                                       {feature.link && (
                                         <a href={feature.link} target="_blank">
                                           {" "}
-                                          more
-                                        </a>
+                                          more 
+                                        </a> 
                                       )}
                                     </p>
                                   )}
