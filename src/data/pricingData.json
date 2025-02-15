@@ -135,7 +135,7 @@
         },
         {
             "title": "Easy Import/Export of the data",
-            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, <a href='/import-data'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, <a href='/import-data' target='_blank'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
             "link": null,
             "isExpanded": false
         },
@@ -147,7 +147,7 @@
         },
         {
             "title": "Support",
-            "description": "You are just one call or email away from us, <a href='/contact-us'>Connect with us</a>",
+            "description": "You are just one call or email away from us, <a href='/contact-us' target='_blank'>Connect with us</a>",
             "link": null,
             "isExpanded": false
         }
@@ -288,7 +288,7 @@
         },
         {
             "title": "Easy Import/Export of the data",
-            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and <a href='/ae/import-data'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and <a href='/ae/import-data' target='_blank'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
             "link": null,
             "isExpanded": false
         },
@@ -300,7 +300,7 @@
         },
         {
             "title": "Support",
-            "description": "You are just one call or email away from us, <a href='/ae/contact-us'>Connect with us</a>",
+            "description": "You are just one call or email away from us, <a href='/ae/contact-us' target='_blank'>Connect with us</a>",
             "link": null,
             "isExpanded": false
         }
@@ -464,7 +464,7 @@
         {
             "title": "Easy Import/Export of the data",
             "isAvailableForAll": "true",
-            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and <a href='/uk/import-data'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and <a href='/uk/import-data' target='_blank'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
             "link": null,
             "isExpanded": false
         },
@@ -477,7 +477,7 @@
         },
         {
             "title": "Support",
-            "description": "You are just one call or email away from us, <a href='/uk/contact-us'>Connect with us</a>",
+            "description": "You are just one call or email away from us, <a href='/uk/contact-us' target='_blank'>Connect with us</a>",
             "link": null,
             "isExpanded": false
         }
@@ -653,7 +653,7 @@
         {
             "title": "Easy Import/Export of the data",
             "isAvailableForAll": "true",
-            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and <a href='/in/import-data'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and <a href='/in/import-data' target='_blank'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
             "link": null,
             "isExpanded": false
         },
@@ -666,7 +666,7 @@
         },
         {
             "title": "Support",
-            "description": "You are just one call or email away from us, <a href='/in/contact-us'>Connect with us</a>",
+            "description": "You are just one call or email away from us, <a href='/in/contact-us' target='_blank'>Connect with us</a>",
             "link": null,
             "isExpanded": false
         }

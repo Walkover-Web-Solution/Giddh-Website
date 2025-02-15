@@ -391,12 +391,16 @@ const pricing = (path) => {
                                   )}
                                   {feature.isExpanded && (
                                     <p className="c-fw-400">
-                                      {feature.description}
+                                      <span
+                                          dangerouslySetInnerHTML={{
+                                            __html: feature?.description
+                                          }}
+                                        />
                                       {feature.link && (
                                         <a href={feature.link} target="_blank">
                                           {" "}
-                                          more 
-                                        </a> 
+                                          more
+                                        </a>
                                       )}
                                     </p>
                                   )}
@@ -439,30 +443,30 @@ const pricing = (path) => {
                             {isGlobal
                               ? "$0.005"
                               : isIndia
-                              ? "₹0.10"
-                              : isAE
-                              ? "د.إ0.03"
-                              : "£0.005"}
+                                ? "₹0.10"
+                                : isAE
+                                  ? "د.إ0.03"
+                                  : "£0.005"}
                           </span>{" "}
                           per transaction |{" "}
                           <span className="c-fw-600">
                             {isGlobal
                               ? "$60"
                               : isIndia
-                              ? "₹2000"
-                              : isAE
-                              ? "د.إ250"
-                              : "£60"}
+                                ? "₹2000"
+                                : isAE
+                                  ? "د.إ250"
+                                  : "£60"}
                           </span>{" "}
                           per branch/year |{" "}
                           <span className="c-fw-600">
                             {isGlobal
                               ? "$30"
                               : isIndia
-                              ? "₹1000"
-                              : isAE
-                              ? "د.إ120"
-                              : "£30"}
+                                ? "₹1000"
+                                : isAE
+                                  ? "د.إ120"
+                                  : "£30"}
                           </span>{" "}
                           per warehouse/year
                         </p>
@@ -490,7 +494,7 @@ const pricing = (path) => {
                 <tbody>
                   {plans?.map((plan, i) => (
                     <>
-                      <tr key={"row1"+i}>
+                      <tr key={"row1" + i}>
                         <td colSpan={2} className={`text-center`}>
                           <span className="c-fs-6 c-fw-600">{plan?.name}</span>
                           {getAmount(plan) > 0 && (
@@ -519,7 +523,7 @@ const pricing = (path) => {
                           )}
                         </td>
                       </tr>
-                      <tr key={"row2"+i} className="vertical-align-top">
+                      <tr key={"row2" + i} className="vertical-align-top">
                         <td colSpan={2} className={`text-center pt-0`}>
                           <a href={link + "/signup"} className="benefits-link">
                             Try Now
@@ -527,7 +531,7 @@ const pricing = (path) => {
                         </td>
                       </tr>
                       {pricingData?.map((pricingData, index) => (
-                        <tr key={"content" + i + "-" +index} className="border-top">
+                        <tr key={"content" + i + "-" + index} className="border-top">
                           <td width="50%">
                             <div
                               className={"cursor-pointer"}
@@ -544,7 +548,11 @@ const pricing = (path) => {
                                     )}
                                     {pricingData?.isExpanded && (
                                       <p className="c-fw-400">
-                                        {pricingData?.description}
+                                        <span
+                                          dangerouslySetInnerHTML={{
+                                            __html: pricingData?.description,
+                                          }}
+                                        />
                                         {pricingData?.link && (
                                           <a
                                             href={pricingData?.link}
@@ -596,30 +604,30 @@ const pricing = (path) => {
                             {isGlobal
                               ? "$0.005"
                               : isIndia
-                              ? "₹0.10"
-                              : isAE
-                              ? "د.إ0.03"
-                              : "£0.005"}
+                                ? "₹0.10"
+                                : isAE
+                                  ? "د.إ0.03"
+                                  : "£0.005"}
                           </span>{" "}
                           per transaction |{" "}
                           <span className="c-fw-600">
                             {isGlobal
                               ? "$60"
                               : isIndia
-                              ? "₹2000"
-                              : isAE
-                              ? "د.إ250"
-                              : "£60"}
+                                ? "₹2000"
+                                : isAE
+                                  ? "د.إ250"
+                                  : "£60"}
                           </span>{" "}
                           per branch/year |{" "}
                           <span className="c-fw-600">
                             {isGlobal
                               ? "$30"
                               : isIndia
-                              ? "₹1000"
-                              : isAE
-                              ? "د.إ120"
-                              : "£30"}
+                                ? "₹1000"
+                                : isAE
+                                  ? "د.إ120"
+                                  : "£30"}
                           </span>{" "}
                           per warehouse/year
                         </p>
