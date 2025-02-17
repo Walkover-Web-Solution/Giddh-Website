@@ -44,8 +44,8 @@ const Footer = (path) => {
     <div className="footer py-5">
       <footer>
         <div className="container">
-          <div className="row row-gap-4">
-            <div className="col-xl-3 col-lg-6 col-md-12">
+          <div className="row row-gap-5">
+            <div className="col-xl-auto col-lg-4 col-md-6 col-12 flex-grow-1">
               <div className="d-flex">
                 <div className="d-flex flex-column gap-3 text-dark">
                   <h3 className="c-fs-4 c-fw-600">Quick Links</h3>
@@ -88,25 +88,35 @@ const Footer = (path) => {
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-6 col-md-12">
+            <div className="col-xl-auto col-lg-4 col-md-6 col-12 flex-grow-1">
               <div className="d-flex flex-column gap-3">
-                <h3 className="c-fs-4 c-fw-600">Compare</h3>
+                <h3 className="c-fs-4 c-fw-600">Features</h3>
                 <ul className="footer-list list-unstyled mb-3">
                   <li>
-                    <a href={link.linkPrefix + "/zoho-vs-giddh"}>
-                      Giddh vs Zoho
+                    <a href={link.linkPrefix + "/cloud-accounting-software"}>
+                      Cloud Accounting Software
                     </a>
                   </li>
                   <li>
-                    <a href={link.linkPrefix + "/tally-vs-giddh"}>
-                      Giddh vs Tally
+                    <a href={link.linkPrefix + "/security"}>
+                      Security
+                    </a>
+                  </li>
+                  <li>
+                    <a href={link.linkPrefix + "/contacts"}>
+                      Contacts
+                    </a>
+                  </li>
+                  <li>
+                    <a href={link.linkPrefix + "/small-business-bookkeeping-software"}>
+                      Bookkeeping Software
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-6 col-md-12">
+            <div className="col-xl-auto col-lg-4 col-md-6 col-12 flex-grow-1">
               <div className="d-flex flex-column gap-3">
                 <h3 className="c-fs-4 c-fw-600">Download</h3>
                 <div>
@@ -163,7 +173,25 @@ const Footer = (path) => {
               </div>
             </div>
 
-            <div className="col-xl-3 col-lg-6 col-md-12">
+            <div className="col-xl-auto col-lg-4 col-md-6 col-12 flex-grow-1">
+              <div className="d-flex flex-column gap-3">
+                <h3 className="c-fs-4 c-fw-600">Compare</h3>
+                <ul className="footer-list list-unstyled mb-3">
+                  <li>
+                    <a href={link.linkPrefix + "/zoho-vs-giddh"}>
+                      Giddh vs Zoho
+                    </a>
+                  </li>
+                  <li>
+                    <a href={link.linkPrefix + "/tally-vs-giddh"}>
+                      Giddh vs Tally
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-xl-auto col-lg-4 col-md-6 col-12 flex-grow-1">
               <h3
                 className="list-unstyled d-flex flex-column gap-2 c-fs-4 c-fw-600"
                 id="footer-contact"

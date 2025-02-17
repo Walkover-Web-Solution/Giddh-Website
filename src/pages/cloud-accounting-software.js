@@ -1,9 +1,12 @@
-import { useState } from "react";
-import { MdRemove, MdAdd } from "react-icons/md";
+import { useState, useEffect } from "react";
+import Faqs from "@/components/faq";
+import faqs from '../data/faqs.json';
+
 const anywhereAnytime = (path) => {
   const [readMoreStatus, readmoreAction] = useState(false);
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
+  const [faq, setFaq]= useState([]);
 
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
@@ -12,14 +15,20 @@ const anywhereAnytime = (path) => {
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
 
+  useEffect(() => {
+    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+    appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setFaq(faqs['cloud-accounting-software'])
+  }, []);
+
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="features-heading">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary c-fw-600 mb-4">
+                <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
                     { isIndia && "GST-Compliant Cloud Accounting for India" }
                     { isAE && "VAT-Compliant Cloud Accounting in the UAE" }
                     { (isUK || isGlobal) && "Cloud Accounting Software" }
@@ -36,6 +45,7 @@ const anywhereAnytime = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of the software"
                   >
                     Download Free
                   </a>
@@ -47,6 +57,7 @@ const anywhereAnytime = (path) => {
                         url: "https://calendly.com/sales-accounting-software/talk-to-sale",
                       })
                     }
+                    aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
                   </a>
@@ -56,12 +67,13 @@ const anywhereAnytime = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/cloud-banner.svg"
-                    alt="cloud-banner-image"
-                    width="90%"
+                    alt="Illustration of cloud accounting software"
+                    width="400"
+                    height="300"
                   />
                   <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Icons representing various features of cloud accounting"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -70,14 +82,14 @@ const anywhereAnytime = (path) => {
             </div>
           </div>
         </section>
-        <section className="container-fluid features__sub_heading_container">
+        <section className="container-fluid features__sub_heading_container" aria-labelledby="business-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h2 className="sub-heading col-primary c-fw-600 mb-3">
+                <h2 id="business-heading" className="sub-heading col-primary c-fw-600 mb-3">
                   Run your business from any corner of the world!
                 </h2>
-                <p className="c-fs-4 mb-5">
+                <p className="c-fs-4 mb-5" role="note">
                   {isIndia
                     ? `All you ever need to be on top of your accounting is just an
                   active internet connection. Conduct your business from
@@ -95,19 +107,20 @@ const anywhereAnytime = (path) => {
                     : null}
                 </p>
 
-                <a href={link + "/signup"} className="btn-link-purple">
+                <a href={link + "/signup"} className="btn-link-purple" aria-label="Start your trial for cloud accounting software">
                   Start Your Trial
                 </a>
               </div>
             </div>
           </div>
         </section>
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" aria-labelledby="features-description-heading">
           <div className="container">
+            <h2 id="features-description-heading" className="visually-hidden">Features Description</h2>
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Turn your browser into your office
                   </h4>
                   <p>
@@ -144,13 +157,13 @@ const anywhereAnytime = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Stay ahead with automatic updates
                   </h4>
                   {isIndia ? (
                     <p>
                       With Giddh’s{" "}
-                      <a href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/">
+                      <a href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/" aria-label="Learn more about cloud based accounting software benefits">
                         cloud based accounting software
                       </a>
                       , you will automatically receive OTA (on the air) updates
@@ -191,7 +204,7 @@ const anywhereAnytime = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Save more on all fronts
                   </h4>
                   {isIndia ? (
@@ -238,7 +251,7 @@ const anywhereAnytime = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Work smarter, grow faster!
                   </h4>
                   <p>
@@ -277,7 +290,7 @@ const anywhereAnytime = (path) => {
                 >
                   <div className="col-md-12 col-lg-6">
                     <div className="features__description_container__content">
-                      <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      <h4 className="col-primary c-fw-600 mb-3">
                         Online Vs. Offline Accounting Software
                       </h4>
                       <p>
@@ -417,7 +430,7 @@ const anywhereAnytime = (path) => {
                 >
                   <div className="col-md-12 col-lg-6">
                     <div className="features__description_container__content">
-                      <h4 className="col-primary small-heading c-fw-600 mb-3">
+                      <h4 className="col-primary c-fw-600 mb-3">
                         Advantages of Cloud Accounting Software
                       </h4>
                       <p>
@@ -701,41 +714,44 @@ const anywhereAnytime = (path) => {
             </div>
           </section>
         </section>
-        <section className="container-fluid features__suggestion_container">
+        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="people interested in Connect Bank Reconcile also looked at image"
+                    alt="Illustration representing suggestions for Cloud Accounting Software"
                     className="features__sub_heading_container--banner_img"
                   />
                 </figure>
-                <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
                   <span className="col-blue">Cloud Accounting Software</span>{" "}
                   also looked at
                 </h2>
                 <div className="features__suggestion_container__links">
-                  <a href={link + "/all-features"} className="col-blue">
+                  <a href={link + "/all-features"} className="col-blue" aria-label="View all features of Cloud Accounting Software">
                     All features
                   </a>
                   <a
                     href={link + "/multi-user-accounting-software"}
                     className="border-vertical col-blue"
+                    aria-label="Learn about multi-user accounting software"
                   >
                     Share Data
                   </a>
                   <a
                     href={link + "/multi-currency-accounting-software"}
                     className="border-vertical col-blue"
+                    aria-label="Learn about multi-currency accounting software"
                   >
                     Multi-Currency
                   </a>
                   <a
                     href={link + "/invoice-software"}
                     className="border-vertical col-blue"
+                    aria-label="Learn about invoicing software"
                   >
                     Invoicing
                   </a>
@@ -744,235 +760,8 @@ const anywhereAnytime = (path) => {
             </div>
           </div>
         </section>
-        <section className="container-fluid features__accordion_container">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 px-0">
-                <div className="accordion" id="accordionAllFeatures">
-                  {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3 ">FAQs</h2>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What does cloud accounting mean?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        A cloud accounting software isn’t very different from
-                        the traditional, locally-hosted software, but it is
-                        capable of handling more complex tasks and is hosted on
-                        remote servers or the cloud. Here, the data and the
-                        software are stored on remote servers instead of the
-                        user’s desktop, and the user can access it through the
-                        internet via a cloud service provider.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #2 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How can accounting software help us?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        An accounting software can help you carry out financial
-                        tasks, such as recording your company expenses,
-                        preparing estimates, creating and sending invoices,
-                        filing tax returns, keeping a record of profit and loss
-                        statements, allocating budgets and making forecasts. It
-                        can also be used to automate the manual and repetitive
-                        tasks involved in maintaining financial accounts, and
-                        save up on significant time and resources.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #3 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Is my data safe & secure in the cloud accounting system?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        As compared to traditional accounting software,
-                        cloud-based accounting systems offer better security for
-                        your financial information. All your data is stored on
-                        remote servers in an encrypted format. Besides, the best
-                        cloud accounting software ensures that critical
-                        financial data is not exposed to unauthorised sources
-                        and has backup servers to ensure there is zero data
-                        loss. With cloud-based accounting software, it is safe
-                        and easy to share data as well. You can just grant
-                        access rights to the person you want to share your data
-                        with.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #4 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Can I access my accounting data from multiple devices &
-                        multiple users at the same time?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          {" "}
-                          Web-based accounting software allows access to your
-                          accounting data through the internet to different
-                          users and systems. Therefore, your data can be
-                          accessed by multiple users and multiple devices at the
-                          same time. Besides, you can set the access permission
-                          for each user so that you can control which data can
-                          be accessed by a particular user.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/*============ Accordion #5 ===============*/}
-
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFive">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How cloud accounting is better than an offline solution?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFive"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          Online cloud accounting software offers several
-                          advantages over offline solutions, which are described
-                          below.
-                        </p>
-                        <ul>
-                          <li>
-                            Cloud accounting software offers more flexibility
-                            and accessibility than its offline counterpart.
-                          </li>
-                          <li>
-                            The errors that may occur while manually entering
-                            the data in offline solutions can be prevented.
-                          </li>
-                          <li>
-                            Cloud accounting solutions are better equipped to
-                            handle multi-currency and multi-company transactions
-                            efficiently.
-                          </li>
-                          <li>
-                            Cloud accounting solutions are easier to manage and
-                            require less maintenance.
-                          </li>
-                          <li>
-                            Collaboration between different departments becomes
-                            easier thanks to a common platform where one can
-                            track, communicate and edit accounts.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
+        <Faqs faq={faq} />
       </div>
     </>
   );

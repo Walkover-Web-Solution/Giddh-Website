@@ -702,6 +702,8 @@ const pricing = (path) => {
                   src="/img/giddh-login-page.svg"
                   className="img-fluid"
                   alt="giddh-login-page image"
+                  width="355"
+                  height="200"
                 />
               </figure>
             </div>
@@ -781,6 +783,8 @@ const pricing = (path) => {
                   src="/img/account-giddh-feature-image.svg"
                   className="img-fluid"
                   alt="account-giddh-feature-image"
+                  width="355"
+                  height="200"
                 />
               </figure>
             </div>
@@ -860,6 +864,8 @@ const pricing = (path) => {
                   src="/img/giddh-invoice-send-success.svg"
                   className="img-fluid"
                   alt="giddh-invoice-send-success image"
+                  width="355"
+                  height="200"
                 />
               </figure>
             </div>
@@ -931,6 +937,8 @@ const pricing = (path) => {
                   src="/img/accounting-software-feature.webp"
                   className="img-fluid"
                   alt="accounting-software-feature image"
+                  width="355"
+                  height="200"
                 />
               </figure>
             </div>
@@ -1006,6 +1014,8 @@ const pricing = (path) => {
                   src="/img/education-economy-image.svg"
                   className="img-fluid"
                   alt="education-economy-image"
+                  width="355"
+                  height="200"
                 />
               </figure>
             </div>
@@ -1113,7 +1123,7 @@ const pricing = (path) => {
                   <img
                     className="img-fluid"
                     src="/img/feature-invoice.svg"
-                    alt="Invoicing-logo"
+                    alt="An illustration representing invoicing features"
                   />
                   <figcaption>Invoicing</figcaption>
                 </figure>
@@ -1125,7 +1135,7 @@ const pricing = (path) => {
                   <img
                     className="img-fluid"
                     src="/img/feature-inventory.svg"
-                    alt="Inventory-Management-logo"
+                    alt="An illustration representing inventory management features"
                   />
                   <figcaption>Inventory Management</figcaption>
                 </figure>
@@ -1137,7 +1147,7 @@ const pricing = (path) => {
                   <img
                     className="img-fluid"
                     src="/img/feature-reconcile.svg"
-                    alt="Bank-Reconciliation-logo"
+                    alt="An illustration representing bank reconciliation features"
                   />
                   <figcaption>Bank Reconciliation</figcaption>
                 </figure>
@@ -1149,7 +1159,7 @@ const pricing = (path) => {
                   <img
                     className="img-fluid"
                     src="/img/multi-currency-banner.svg"
-                    alt="Multi-Currency-logo"
+                    alt="An illustration representing multi-currency features"
                   />
                   <figcaption>Multi Currency</figcaption>
                 </figure>
@@ -1161,7 +1171,7 @@ const pricing = (path) => {
                   <img
                     className="img-fluid"
                     src="/img/feature-tax.svg"
-                    alt="Tax-Compliant-logo"
+                    alt="An illustration representing tax compliance features"
                   />
                   <figcaption>Tax Compliant</figcaption>
                 </figure>
@@ -1173,7 +1183,7 @@ const pricing = (path) => {
                   <img
                     className="img-fluid"
                     src="/img/feature-report.svg"
-                    alt="Expense-Management-logo"
+                    alt="An illustration representing expense management features"
                   />
                   <figcaption>Expense Management</figcaption>
                 </figure>
@@ -1183,11 +1193,11 @@ const pricing = (path) => {
         </div>
       </section>
 
-      <section className="container-fluid pricing_support_section">
+      <section className="container-fluid pricing_support_section" role="region" aria-labelledby="support-section">
         <div className="container">
           <div className="row justify-content-center align-items-center">
             <div className="col-md-6 col-sm-12 text-end">
-              <h2 className="sub-heading col-white">18X6 Instant Support</h2>
+              <h2 id="support-section" className="sub-heading col-white">18X6 Instant Support</h2>
             </div>
             <div className="col-md-6 col-sm-12">
               <a href="/contact-us">CONTACT US</a>

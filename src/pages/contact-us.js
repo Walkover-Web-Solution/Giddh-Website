@@ -20,6 +20,11 @@ const contactUs = (path) => {
       setUtm(utmParams);
     }, [utm]);
 
+    useEffect(() => {
+      appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+      appendLink("https://assets.calendly.com/assets/external/widget.css");
+    }, []);
+
    const openTypeForm = () => {
      const slider = createSlider("https://form.typeform.com/to/uOtrQ4tb", {
        position: "right", // Specify position ('left', 'center', 'right')

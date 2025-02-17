@@ -27,8 +27,8 @@
                 ],
                 "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": 51.5744364,
-                    "longitude": -0.4286821
+                    "latitude": "51.5744364",
+                    "longitude": "-0.4286821"
                 },
                 "sameAs": [
                     "https://www.facebook.com/giddh",
@@ -65,8 +65,8 @@
                 ],
                 "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": 51.5744364,
-                    "longitude": -0.4286821
+                    "latitude": "51.5744364",
+                    "longitude": "-0.4286821"
                 },
                 "sameAs": [
                     "https://www.facebook.com/giddh",
@@ -103,8 +103,8 @@
                 ],
                 "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": 51.5744364,
-                    "longitude": -0.4286821
+                    "latitude": "51.5744364",
+                    "longitude": "-0.4286821"
                 },
                 "sameAs": [
                     "https://www.facebook.com/giddh",
@@ -133,8 +133,8 @@
                 ],
                 "geo": {
                     "@type": "GeoCoordinates",
-                    "latitude": 22.72518302541323,
-                    "longitude": 75.89048628834328
+                    "latitude": "22.72518302541323",
+                    "longitude": "75.89048628834328"
                 },
                 "sameAs": [
                     "https://www.facebook.com/giddh",

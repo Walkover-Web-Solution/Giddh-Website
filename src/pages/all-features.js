@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const allFeatures = (path) => {
   const [popupData, setPopupData] = useState({});
@@ -602,14 +602,19 @@ const allFeatures = (path) => {
     setPopupData(item);
   };
 
+  useEffect(() => {
+    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+    appendLink("https://assets.calendly.com/assets/external/widget.css");
+  }, []);
+
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="features-heading">
           <div className="container features__heading_container">
             <div className="row align-items-center">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary fw-bold mb-5">
+                <h1 id="features-heading" className="heading col-primary fw-bold mb-5">
                   Explore the Game-Changing Accounting features
                 </h1>
                 <div className="features__heading_container__links">
@@ -618,6 +623,7 @@ const allFeatures = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of the software"
                   >
                     Download Free
                   </a>
@@ -629,6 +635,7 @@ const allFeatures = (path) => {
                         url: "https://calendly.com/sales-accounting-software/talk-to-sale",
                       })
                     }
+                    aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
                   </a>
@@ -638,8 +645,9 @@ const allFeatures = (path) => {
                 <figure className="text-end">
                   <img
                     src={directoryPath + "/all-features-banner-image.svg"}
-                    alt="giddh features banner image"
+                    alt="Banner showcasing Giddh features"
                     width="90%"
+                    role="img"
                   />
                 </figure>
               </div>
@@ -647,13 +655,13 @@ const allFeatures = (path) => {
           </div>
         </section>
       </div>
-      <section className="container-fluid feature-gallery all_features">
+      <section className="container-fluid feature-gallery all_features" aria-label="Feature Gallery">
         <div className="container">
           <div className="row">
             {countryWiseData.map((item, index) => (
               <div className="col-lg-6 col-md-12 col-sm-12" key={index}>
-                <div className="feature-gallery__card container">
-                  <div className="row h-100 w-100 align-items-start row-gap-3  text-md-start text-sm-center text-center">
+                <div className="feature-gallery__card container" role="article">
+                  <div className="row h-100 w-100 align-items-start row-gap-3 text-md-start text-sm-center text-center">
                     <div className="col-md-5 col-sm-12 text-center">
                       <figure className="pt-2">
                         <img

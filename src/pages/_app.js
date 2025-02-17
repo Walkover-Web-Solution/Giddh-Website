@@ -52,10 +52,6 @@ export default function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
-       const script = document.createElement("script");
-       script.src = "https://embed.typeform.com/embed.js";
-       script.async = true;
-       document.body.appendChild(script);
   }, []);
   return (
     <>
