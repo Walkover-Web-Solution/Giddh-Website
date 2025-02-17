@@ -1,4 +1,4 @@
-# next-commands
+# Next-commands
 
 # start project
 npm run dev
