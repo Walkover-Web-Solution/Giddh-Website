@@ -270,7 +270,7 @@ const pricing = (path) => {
         <div className="container">
           <div className="row mt-5">
             <div className="col-12">
-            <h1>Pricing Page is in Development Phase.</h1>
+            <h1>Pricing Page is in Development Phase</h1>
               <div className="text-end mb-3">
                 <div
                   className="toggle-button btn-group"
