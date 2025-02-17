@@ -52,6 +52,7 @@ const pricing = (path) => {
       <section className="container-fluid pricing_main_section">
         <div className="row justify-content-center">
           <div className="col-12">
+            <h1>Pricing Page is in Development Phase.</h1>
             <div
               className={
                 "pricing_main_section__grid " +
