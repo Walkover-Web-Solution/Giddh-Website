@@ -3,18 +3,92 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
+  .pricing-table {
+    tr {
+      th,
+      td {
+        --column-background: transparent;
+        background-color: var(--column-background);
+        padding: 12px;
+        @media screen and (max-width: 992px) {
+          padding: 8px;
+        }
+        svg {
+          font-size: var(--c-fs-3);
+        }
+
+        .popular-plan-tag {
+          right: -5px;
+          top: -4px;
+          z-index: 1;
+        }
+
+        &.bg {
+          &-0 {
+            --column-background: transparent;
+          }
+          &-1 {
+            --column-background: var(--col-white);
+          }
+          &-2 {
+            --column-background: var(--col-light-green);
+          }
+          &-3 {
+            --column-background: var(--col-baby-pink);
+          }
+          &-4 {
+            --column-background: var(--col-light-blue);
+          }
+          &-5 {
+            --column-background: var(--col-light-golden);
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+          border-top: 1px solid #dee2e6;
+          height: 60px;
+          font-weight: 600;
+      }
+    }
+  }
+
+  .toggle-button {
+    label {
+      min-width: 80px;
+    }
+    .btn-check:checked + .btn {
+      --bs-btn-active-bg: var(--col-primary);
+      --bs-btn-active-color: var(--col-white);
+      --bs-btn-active-border-color: var(--col-primary);
+    }
+    & > .btn {
+      --button-color: var(--col-primary);
+      --bs-btn-color: var(--col-primary);
+      --bs-btn-border-color: var(--col-primary);
+    }
+  }
+
   .benefits-link {
     display: inline-block;
     padding: 6px 14px;
     font-size: 14px;
     color: var(--col-white);
     background-color: var(--col-primary);
-    &.bg-grey {
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
       background-color: #494d50;
+      max-width: 160px;
     }
   }
-  .font-46 {
+  .pricing-heading {
     font-size: 46px;
+    @media screen and (max-width: 992px) {
+      font-size: 30px;
+    }
   }
 }
 
@@ -59,7 +133,9 @@
 .pricing_start_trail_section {
   background-color: #fafafa;
   padding: 5rem 0;
-  // margin-top: 2.5rem;
+  @media screen and (max-width: 992px) {
+    padding: 0;
+  }
 
   a {
     display: inline-block;
@@ -85,61 +161,6 @@
     a {
       text-decoration: underline !important;
       color: var(--col-dark);
-    }
-  }
-}
-.border-top {
-  border-top: 1px solid #dee2e6;
-  height: 60px;
-  font-weight: 600;
-}
-.table_bg_color {
-  background-color: #fafafa;
-}
-
-.pricing_main_section {
-  .pricing-table {
-    tr {
-      th,
-      td {
-        --column-background: transparent;
-        padding: 12px;
-        background-color: var(--column-background);
-        svg {
-          font-size: var(--c-fs-3);
-        }
-
-        &.bg {
-          &-0 {
-            --column-background: transparent;
-          }
-          &-1 {
-            --column-background: var(--col-white);
-          }
-          &-2 {
-            --column-background: var(--col-light-green);
-          }
-          &-3 {
-            --column-background: var(--col-baby-pink);
-          }
-        }
-      }
-    }
-  }
-
-  .toggle-button {
-    label {
-      min-width: 80px;
-    }
-    .btn-check:checked + .btn {
-      --bs-btn-active-bg: var(--col-primary);
-      --bs-btn-active-color: var(--col-white);
-      --bs-btn-active-border-color: var(--col-primary);
-    }
-    & > .btn {
-      --button-color: var(--col-primary);
-      --bs-btn-color: var(--col-primary);
-      --bs-btn-border-color: var(--col-primary);
     }
   }
 }

@@ -27,11 +27,21 @@
   --col-light-gray: #e7e8ea;
   --col-light-green: #e6fff5;
   --col-baby-pink: #ffe5e8;
+  --col-light-blue: #b9d1fd;
+  --col-light-golden: #f9dcae;
 }
 
 @media (max-width: 575px){
   :root {
     --heading: 40px;
-    --sub-heading: 28px;
+    --sub-heading: 24px;
+    --small-heading: 20px;
+    --c-fs-1: 24px;
+    --c-fs-2: 22px;
+    --c-fs-3: 18px;
+    --c-fs-4: 16px;
+    --c-fs-5: 14px;
+    --c-fs-6: 12px;
+    --c-fs-7: 10px;
   }
 }
