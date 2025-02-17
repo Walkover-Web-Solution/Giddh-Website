@@ -147,7 +147,7 @@ const pricing = (path) => {
     const fetchData = async (region) => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/v2/subscription/plans/all?regionCode=${region}`
+          `https://apitest.giddh.com/v2/subscription/plans/all?regionCode=${region}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -312,7 +312,7 @@ const pricing = (path) => {
                 <thead>
                   <tr>
                     <th>
-                      <figure>
+                      <figure className="mb-0">
                         <img
                           width="70"
                           src="/img/guarantee-96.webp"
@@ -431,10 +431,10 @@ const pricing = (path) => {
                       </div>
                     </td>
                     <td colSpan="4" className="p-0">
-                      <div className="pricing_main_section__grid__extra_charges">
                         <p
+                          style={{ backgroundColor: "#edf3ff"}}
                           className={
-                            "c-fs-6 c-fw-400" + (isIndia ? " w-100" : "")
+                            "c-fs-6 c-fw-400 text-end py-1 pe-2"
                           }
                         >
                           Extra Add ons:{" "}
@@ -470,7 +470,6 @@ const pricing = (path) => {
                           </span>{" "}
                           per warehouse/year
                         </p>
-                      </div>
                     </td>
                   </tr>
                 </tfoot>
@@ -480,8 +479,8 @@ const pricing = (path) => {
               <table className="pricing-table w-100">
                 <thead>
                   <tr>
-                    <th colSpan={2}>
-                      <figure>
+                    <th colSpan={2} className="text-center">
+                      <figure className="mb-0">
                         <img
                           width="70"
                           src="/img/guarantee-96.webp"
@@ -579,25 +578,18 @@ const pricing = (path) => {
                 </tbody>
                 <tfoot>
                   <tr>
-                    <td className="py-0" colSpan={2}>
-                      <div className="pricing_main_section__grid__link_all_feature">
+                    <td className="py-3 text-center" colSpan={2} style={{ backgroundColor: "#edf3ff"}}>
                         <a
                           className="col-primary"
                           href={link + "/all-features"}
                         >
                           Check all features
                         </a>
-                      </div>
                     </td>
                   </tr>
                   <tr>
-                    <td colSpan="2" className="p-0">
-                      <div className="pricing_main_section__grid__extra_charges">
-                        <p
-                          className={
-                            "c-fs-6 c-fw-400" + (isIndia ? " w-100" : "")
-                          }
-                        >
+                    <td colSpan="2" className="py-0 px-0">
+                        <p className={"text-center c-fs-6 c-fw-400 py-2"} style={{ backgroundColor: "#edf3ff"}}>
                           Extra Add ons:{" "}
                           <span className="c-fw-600">
                             {" "}
@@ -631,7 +623,6 @@ const pricing = (path) => {
                           </span>{" "}
                           per warehouse/year
                         </p>
-                      </div>
                     </td>
                   </tr>
                 </tfoot>
