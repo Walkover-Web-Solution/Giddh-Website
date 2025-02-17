@@ -49,7 +49,7 @@ const bannerSection = (path) => {
           <div className="row h-100 align-items-xl-start align-items-lg-center">
             <div className="col-lg-6 col-md-12">
               <h1 className="col-primary heading-text">
-                {link.isGlobal && "Online TEST Accounting Software For Businesses"}
+                {link.isGlobal && "Online Accounting Software For Businesses"}
                 {link.isIndia && "Business Accounting Software India"}
                 {link.isUK &&
                   "VAT-Compliant Accounting Software For UK Small Businesses"}
