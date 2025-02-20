@@ -41,6 +41,7 @@
             "title": "Unlimited users access",
             "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
             "link": "/multi-user-accounting-software",
+            "specificContent": "Unlimited",
             "isExpanded": false
         },
         {
@@ -194,6 +195,7 @@
             "title": "Unlimited users access",
             "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
             "link": "/ae/multi-user-accounting-software",
+            "specificContent": "Unlimited",
             "isExpanded": false
         },
         {
@@ -347,6 +349,7 @@
             "title": "Unlimited users access",
             "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
             "link": "/uk/multi-user-accounting-software",
+            "specificContent": "Unlimited",
             "isExpanded": false
         },
         {
@@ -524,6 +527,7 @@
             "title": "Unlimited users access",
             "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
             "link": "/in/multi-user-accounting-software",
+            "specificContent": "Unlimited",
             "isExpanded": false
         },
         {

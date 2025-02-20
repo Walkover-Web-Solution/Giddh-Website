@@ -17,10 +17,8 @@
           font-size: var(--c-fs-3);
         }
 
-        .popular-plan-tag {
-          right: -5px;
-          top: -4px;
-          z-index: 1;
+        s {
+          color: var(--col-dark-light);
         }
 
         &.bg {
@@ -43,6 +41,12 @@
             --column-background: var(--col-light-golden);
           }
         }
+      }
+    }
+
+    thead {
+      th {
+        vertical-align: top;
       }
     }
 
