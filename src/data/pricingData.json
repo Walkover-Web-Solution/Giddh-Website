@@ -3,7 +3,7 @@
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
-            "monthly": "invoicesAllowed",
+            "monthly": "monthlyInvoicesAllowed",
             "description": null,
             "link": null,
             "isExpanded": false
@@ -156,7 +156,7 @@
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
-            "monthly": "invoicesAllowed",
+            "monthly": "monthlyInvoicesAllowed",
             "description": null,
             "link": null,
             "isExpanded": false
@@ -309,7 +309,7 @@
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
-            "monthly": "invoicesAllowed",
+            "monthly": "monthlyInvoicesAllowed",
             "description": null,
             "link": null,
             "isExpanded": false
@@ -486,7 +486,7 @@
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
-            "monthly": "invoicesAllowed",
+            "monthly": "monthlyInvoicesAllowed",
             "description": null,
             "link": null,
             "isExpanded": false
