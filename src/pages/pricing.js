@@ -57,6 +57,11 @@ const pricing = (path) => {
         //     item.name === "AshishPlan" ? 0 : item.yearlyAmount;
         //   item.yearlyDiscount =
         //     item.name === "AshishPlan" ? 0 : item.yearlyDiscount;
+
+        //   item.monthlyAmount =
+        //     item.name === "AshishPlan" ? 0 : item.monthlyAmount;
+        //   item.monthlyDiscount =
+        //     item.name === "AshishPlan" ? 0 : item.monthlyDiscount;
         // });
         setPlans(sortPlansByAmount(jsonData.body));
       } catch (err) {
@@ -146,15 +151,16 @@ const pricing = (path) => {
     if (!plan && !feature) {
       return;
     }
+
     if (Object.hasOwn(feature, "yearly")) {
       return plan[isYearPlan ? feature.yearly : feature.monthly];
-    } else if (feature.specificContent) {
+    } else if (feature.specificContent && !isFreePlan(plan)) {
       return (
         <span dangerouslySetInnerHTML={{ __html: feature.specificContent }} />
       );
     } else if (feature.isAvailableForAll) {
       return <MdDone />;
-    } else if (plan?.monthlyAmount === 0 && plan?.yearlyAmount === 0) {
+    } else if (isFreePlan(plan)) {
       return <MdClose />;
     }
     return <MdDone />;
@@ -176,6 +182,98 @@ const pricing = (path) => {
     });
   };
 
+  /**
+   * Return true if plan is free
+   *
+   * @param {*} plan
+   * @returns
+   */
+  const isFreePlan = (plan) => {
+    if (
+      (isYearPlan && plan?.yearlyAmount === 0 && !plan?.yearlyDiscount) ||
+      (!isYearPlan && plan?.monthlyAmount === 0 && !plan?.monthlyDiscount)
+    ) {
+      return true;
+    }
+    return false;
+  };
+
+  /**
+   * Return Plan details as html
+   *
+   * @param {*} plan
+   * @param {boolean} [isMobile=false]
+   * @return {*}
+   */
+  const getPlanDetails = (plan, isMobile = false) => {
+    return (
+      <>
+        {/* Plan Name */}
+        <p
+          className={`${
+            isMobile ? "c-fs-3" : "c-fs-5"
+          } c-fw-600 mb-1 text-capitalize`}
+          aria-label="Subscription Plan Name"
+        >
+          {plan.name}
+        </p>
+
+        {/* Plan Amount */}
+        {getAmount(plan) > 0 && (
+          <>
+            <p className="c-fs-3 mb-1">
+              {getCurrencyCodeOrSymbol(plan)}
+              &nbsp;
+              {getAmount(plan, true)}
+              <span className="c-fs-6">{isYearPlan ? "/year" : "/month"}</span>
+            </p>
+
+            {/* Plan Discount with strike though */}
+            {(plan.yearlyDiscountAmount > 0 ||
+              plan.monthlyDiscountAmount > 0) && (
+              <>
+                <p className="my-1 line-height-24">
+                  <s>
+                    &nbsp;
+                    {getCurrencyCodeOrSymbol(plan)}
+                    &nbsp;
+                    {getAmount(plan)}
+                    &nbsp;
+                  </s>
+                </p>
+              </>
+            )}
+
+            {/* Plan Description */}
+            <p
+              className="c-fs-6 c-fw-400 my-1 text-capitalize line-height-24"
+              aria-label="Subscription Plan Description"
+            >
+              {plan.description}
+            </p>
+
+            {/* Free Plan with duration message */}
+            {((isYearPlan && plan?.yearlyDiscount?.duration) ||
+              (!isYearPlan && plan?.monthlyDiscount?.duration)) && (
+              <p className="c-fw-400 c-fs-5 col-primary mb-1 white-space-no-wrap">
+                Free to <wbr />
+                {isYearPlan
+                  ? `${plan?.yearlyDiscount?.duration} year`
+                  : `${plan?.monthlyDiscount?.duration} month`}
+              </p>
+            )}
+          </>
+        )}
+        {/* Free Plan with duration message */}
+        {isFreePlan(plan) && (
+          <p className="c-fw-400 c-fs-4 col-primary mb-1 white-space-no-wrap">
+            Free
+          </p>
+        )}
+      </>
+    );
+  };
+
   return (
     <>
       <section className="container-fluid pricing_main_section">
@@ -190,14 +288,14 @@ const pricing = (path) => {
                 No features sacrifices
               </h2>
               {isIndia && (
-                <h2 className="col-primary small-heading c-fw-600 mb-3">
+                <h2 className="col-primary small-heading c-fw-600 mb-3 text-center text-lg-start">
                   *All prices are exclusive of GST
                 </h2>
               )}
 
               {/* Month/Year Toggle Button */}
               {isIndia && (
-                <div className="text-end mb-3">
+                <div className="text-center text-lg-end mb-3 mt-4 mt-lg-0">
                   <div
                     className="toggle-button btn-group"
                     role="group"
@@ -257,75 +355,7 @@ const pricing = (path) => {
                           width={`${(100 - 40) / plans?.length}%`}
                           className={`text-center bg-${i}`}
                         >
-                          {/* Plan Name */}
-                          <p
-                            className="c-fs-5 c-fw-600 mb-1 text-capitalize"
-                            aria-label="Subscription Plan Name"
-                          >
-                            {plan.name}
-                          </p>
-
-                          {/* Plan Amount */}
-                          {getAmount(plan) > 0 && (
-                            <>
-                              <p className="c-fs-3 mb-1">
-                                {getCurrencyCodeOrSymbol(plan)}
-                                &nbsp;
-                                {getAmount(plan, true)}
-                                <span className="c-fs-6">
-                                  {isYearPlan ? "/year" : "/month"}
-                                </span>
-                              </p>
-
-                              {/* Plan Discount with strike though */}
-                              {(plan.yearlyDiscountAmount > 0 ||
-                                plan.monthlyDiscountAmount > 0) && (
-                                <>
-                                  <p className="my-1 line-height-24">
-                                    <s>
-                                      &nbsp;
-                                      {getCurrencyCodeOrSymbol(plan)}
-                                      &nbsp;
-                                      {getAmount(plan)}
-                                      &nbsp;
-                                    </s>
-                                  </p>
-                                </>
-                              )}
-
-                              {/* Plan Description */}
-                              <p
-                                className="c-fs-6 c-fw-400 my-1 text-capitalize line-height-24"
-                                aria-label="Subscription Plan Description"
-                              >
-                                {plan.description}
-                              </p>
-
-                              {/* Free Plan with duration message */}
-                              {((isYearPlan &&
-                                plan?.yearlyDiscount?.duration) ||
-                                (!isYearPlan &&
-                                  plan?.monthlyDiscount?.duration)) && (
-                                <p className="c-fw-400 c-fs-5 col-primary mb-1 white-space-no-wrap">
-                                  *Free to <wbr />
-                                  {isYearPlan
-                                    ? `${plan?.yearlyDiscount?.duration} year`
-                                    : `${plan?.monthlyDiscount?.duration} month`}
-                                </p>
-                              )}
-                            </>
-                          )}
-                          {/* Free Plan with duration message */}
-                          {((isYearPlan &&
-                            plan?.yearlyAmount === 0 &&
-                            !plan?.yearlyDiscount) ||
-                            (!isYearPlan &&
-                              plan?.monthlyAmount === 0 &&
-                              !plan?.monthlyDiscount)) && (
-                            <p className="c-fw-400 c-fs-4 col-primary mb-1 white-space-no-wrap">
-                              *Free
-                            </p>
-                          )}
+                          {getPlanDetails(plan)}
                         </th>
                       ))}
                     </tr>
@@ -471,38 +501,15 @@ const pricing = (path) => {
                   <tbody>
                     {plans?.map((plan, i) => (
                       <>
-                        <tr key={"row1" + i}>
-                          <td colSpan={2} className={`text-center`}>
-                            <span className="c-fs-6 c-fw-600">
-                              {plan?.name}
-                            </span>
-                            {getAmount(plan) > 0 && (
-                              <>
-                                {isUK && (
-                                  <>
-                                    <br />
-                                    <s>
-                                      &nbsp;
-                                      {getCurrencyCodeOrSymbol(plan)}
-                                      &nbsp;
-                                      {getAmount(plan) * 2}
-                                      &nbsp;
-                                    </s>
-                                  </>
-                                )}
-                                <br />
-                                <span className="c-fs-3">
-                                  {getCurrencyCodeOrSymbol(plan)}
-                                  {getAmount(plan)}
-                                  <span className="c-fs-6">
-                                    {isYearPlan ? "/year" : "/month"}
-                                  </span>
-                                </span>
-                              </>
-                            )}
+                        <tr key={"row1" + i} className="border-top-0">
+                          <td colSpan={2} className="text-center pt-4">
+                            {getPlanDetails(plan, true)}
                           </td>
                         </tr>
-                        <tr key={"row2" + i} className="vertical-align-top">
+                        <tr
+                          key={"row2" + i}
+                          className="vertical-align-top border-top-0"
+                        >
                           <td colSpan={2} className={`text-center pt-0`}>
                             <a
                               href={link + "/signup"}
@@ -513,7 +520,10 @@ const pricing = (path) => {
                           </td>
                         </tr>
                         {pricingData?.map((pricingData, index) => (
-                          <tr key={"content" + i + "-" + index}>
+                          <tr
+                            key={"content" + i + "-" + index}
+                            className={index == 0 ? "border-top-0" : ""}
+                          >
                             <td width="50%">
                               <div
                                 className={"cursor-pointer"}
