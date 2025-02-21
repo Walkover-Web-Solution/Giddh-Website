@@ -27,6 +27,8 @@ const pricing = (path) => {
   const link = linkPath.linkPrefix;
 
   useEffect(() => {
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
+    console.log(`Base URL: ${baseUrl}`);
     // Function to update the state based on screen width
     const handleResize = () => {
       setIsMobile(window.innerWidth < 992);
@@ -46,23 +48,12 @@ const pricing = (path) => {
     const fetchData = async (region) => {
       try {
         const response = await fetch(
-          `https://apitest.giddh.com/v2/subscription/plans/all?regionCode=${region}`
+          `https://api.giddh.com/v2/subscription/plans/all?regionCode=${region}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const jsonData = await response.json();
-        // jsonData?.body?.map((item) => {
-        //   item.yearlyAmount =
-        //     item.name === "AshishPlan" ? 0 : item.yearlyAmount;
-        //   item.yearlyDiscount =
-        //     item.name === "AshishPlan" ? 0 : item.yearlyDiscount;
-
-        //   item.monthlyAmount =
-        //     item.name === "AshishPlan" ? 0 : item.monthlyAmount;
-        //   item.monthlyDiscount =
-        //     item.name === "AshishPlan" ? 0 : item.monthlyDiscount;
-        // });
         setPlans(sortPlansByAmount(jsonData.body));
       } catch (err) {
         console.error(err);
@@ -278,7 +269,7 @@ const pricing = (path) => {
     <>
       <section className="container-fluid pricing_main_section">
         <div className="container">
-          <div className="row mt-5">
+          <div className="row mt-2 mt-lg-5">
             <div className="col-12">
               <h1 className="pricing-heading col-primary c-fw-600 ms-4 text-center">
                 Powerful Accounting Software. <wbr />
@@ -669,7 +660,7 @@ const pricing = (path) => {
         <div className="container">
           <div
             className={
-              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
+              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom" +
               (readMoreParagraphStatus1 ? " --read-more" : "")
             }
           >
@@ -747,7 +738,7 @@ const pricing = (path) => {
           </div>
           <div
             className={
-              "row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal" +
+              "row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom" +
               (readMoreParagraphStatus2 ? " --read-more" : "")
             }
           >
@@ -830,7 +821,7 @@ const pricing = (path) => {
 
           <div
             className={
-              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
+              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom" +
               (readMoreParagraphStatus3 ? " --read-more" : "")
             }
           >
@@ -903,7 +894,7 @@ const pricing = (path) => {
           </div>
           <div
             className={
-              "row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal" +
+              "row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom" +
               (readMoreParagraphStatus4 ? " --read-more" : "")
             }
           >
@@ -981,7 +972,7 @@ const pricing = (path) => {
           </div>
           <div
             className={
-              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
+              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom" +
               (readMoreParagraphStatus5 ? " --read-more" : "")
             }
           >

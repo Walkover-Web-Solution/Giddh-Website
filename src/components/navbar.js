@@ -69,6 +69,7 @@ const navbar = (props) => {
   }, []);
 
   useEffect(() => {
+    console.log("In Navbar baseURL", baseURL);
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("load", onScroll, { passive: true });
 

@@ -179,7 +179,7 @@ const invoiceSoftware = (path) => {
                             {globalData.map((feature, index) => {
                                 return (
                                     <div
-                                        className={`row mb-5 pb-5 align-items-center border-horizontal features__description_container--row-${index % 2 === 0 ? "even" : "odd"
+                                        className={`row mb-5 pb-5 align-items-center border-bottom features__description_container--row-${index % 2 === 0 ? "even" : "odd"
                                             }`}
                                     >
                                         <div className='col-md-12 col-lg-6'>
@@ -205,7 +205,7 @@ const invoiceSoftware = (path) => {
                         </>
                     ) : (
                         <>
-                            <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                            <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                 <div className='col-md-12 col-lg-6'>
                                     <div className='features__description_container__content'>
                                         <h2 className='col-primary c-fw-600 mb-3'>
@@ -230,7 +230,7 @@ const invoiceSoftware = (path) => {
                                     </figure>
                                 </div>
                             </div>
-                            <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                            <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                 <div className='col-md-12 col-lg-6'>
                                     <div className='features__description_container__content'>
                                         <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -255,7 +255,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             </div>
                             {!isGlobal && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -290,7 +290,7 @@ const invoiceSoftware = (path) => {
                             )}
 
                             {isIndia && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -316,7 +316,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             )}
                             {isIndia && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -344,7 +344,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             )}
                             {(isAE || isUK || isGlobal) && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -372,7 +372,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             )}
                             {isIndia && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -399,7 +399,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             )}
                             {(isAE || isUK || isGlobal) && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -426,7 +426,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             )}
                             {isIndia && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -453,7 +453,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             )}
                             {(isAE || isUK || isGlobal) && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -480,7 +480,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             )}
                             {isIndia && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -506,7 +506,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             )}
                             {(isAE || isUK || isGlobal) && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -533,7 +533,7 @@ const invoiceSoftware = (path) => {
                             )}
 
                             {isIndia && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -559,7 +559,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             )}
                             {(isAE || isUK || isGlobal) && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -585,7 +585,7 @@ const invoiceSoftware = (path) => {
                                 </div>
                             )}
                             {!isAE && !isGlobal && (!isUK || isIndia) && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -612,7 +612,7 @@ const invoiceSoftware = (path) => {
                             )}
                             {isUK ||
                                 (isGlobal && (
-                                    <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                    <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
                                                 <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -638,7 +638,7 @@ const invoiceSoftware = (path) => {
                                     </div>
                                 ))}
                             {(isIndia || isAE) && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -663,7 +663,7 @@ const invoiceSoftware = (path) => {
                             )}
                             {isUK ||
                                 (isGlobal && (
-                                    <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                    <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
                                                 <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -687,7 +687,7 @@ const invoiceSoftware = (path) => {
                                     </div>
                                 ))}
                             {(isIndia || isAE) && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -714,7 +714,7 @@ const invoiceSoftware = (path) => {
                             )}
                             {isUK ||
                                 (isGlobal && (
-                                    <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                    <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
                                                 <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -741,7 +741,7 @@ const invoiceSoftware = (path) => {
                                 ))}
 
                             {(isIndia || isAE) && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -769,7 +769,7 @@ const invoiceSoftware = (path) => {
                             )}
                             {isUK ||
                                 (isGlobal && (
-                                    <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                    <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
                                                 <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -797,7 +797,7 @@ const invoiceSoftware = (path) => {
                                 ))}
 
                             {(isIndia || isAE) && (
-                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal'>
+                                <div className='row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom'>
                                     <div className='col-md-12 col-lg-6'>
                                         <div className='features__description_container__content'>
                                             <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -824,7 +824,7 @@ const invoiceSoftware = (path) => {
                             )}
                             {isUK ||
                                 (isGlobal && (
-                                    <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal'>
+                                    <div className='row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom'>
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
                                                 <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
@@ -1079,21 +1079,21 @@ const invoiceSoftware = (path) => {
                                 </a>
                                 <a
                                     href={link + "/multi-user-accounting-software"}
-                                    className='border-vertical col-blue'
+                                    className='border-left col-blue'
                                     aria-label="Learn about multi-user accounting software"
                                 >
                                     Share Data
                                 </a>
                                 <a
                                     href={link + "/multi-currency-accounting-software"}
-                                    className='border-vertical col-blue'
+                                    className='border-left col-blue'
                                     aria-label="Explore multi-currency accounting software"
                                 >
                                     Multi-Currency
                                 </a>
                                 <a
                                     href={link + "/invoice-software"}
-                                    className='border-vertical col-blue'
+                                    className='border-left col-blue'
                                     aria-label="Discover more about invoicing software"
                                 >
                                     Invoicing

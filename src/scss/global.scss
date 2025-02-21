@@ -1,82 +1,95 @@
-@import 'import';
-html{
-    scroll-behavior: smooth;
+@import "import";
+
+html {
+  scroll-behavior: smooth;
 }
-body{
-    background: rgb(102, 102, 102);
-    font-family: "Opel Sans" !important;
-    font-weight:normal;
+body {
+  background: rgb(102, 102, 102);
+  font-family: "Opel Sans" !important;
+  font-weight: normal;
 }
 
-.border-horizontal{
-    border-bottom: 1px solid currentColor;
-}
-.border-vertical{
-    border-left: 1px solid currentColor;
-
-}
-
-// For Ul list with right tick in each li (list element)
-ul{
-    &.custom-ul-with-right-tick{
-        padding: 0;
-        li{
-            padding-left: 50px;
-            background: url(/img/right-tick-icon.svg);
-            background-repeat: no-repeat;
-            background-position: left top 8px;
-            background-size: 25px;
-            margin-bottom: 1.5rem;
-            min-height: 32px;
-        }
-    }
+// Utility Class
+a {
+  &.read-more-text {
+    text-decoration: underline !important;
+  }
 }
 
-a{
-    &.read-more-text{
-        text-decoration: underline !important;
-    }
+.line-height-24 {
+  line-height: 24px !important;
 }
-.cursor-pointer{
-    cursor: pointer !important;
+
+.white-space-no-wrap {
+  white-space: nowrap !important;
 }
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
 .vertical-align-top {
   vertical-align: top;
 }
+
 .vertical-align-middle {
   vertical-align: middle;
 }
+
 .vertical-align-bottom {
   vertical-align: bottom;
 }
+
+// Other  Global SCSS
+
+// For Ul list with right tick in each li (list element)
+ul {
+  &.custom-ul-with-right-tick {
+    padding: 0;
+    li {
+      padding-left: 50px;
+      background: url(/img/right-tick-icon.svg);
+      background-repeat: no-repeat;
+      background-position: left top 8px;
+      background-size: 25px;
+      margin-bottom: 1.5rem;
+      min-height: 32px;
+    }
+  }
+}
+
 // Country Dropdown
 .country_dropdown {
-    &__menu {
-      li {
-        a {
-          color: var(--col-dark);
-          transition: all 200ms;
-          &:hover, &.active {
-            background-color: var(--col-primary);
-            color: var(--col-white);
-          }
+  &__menu {
+    li {
+      a {
+        color: var(--col-dark);
+        transition: all 200ms;
+        &:hover,
+        &.active {
+          background-color: var(--col-primary);
+          color: var(--col-white);
         }
       }
     }
   }
-body{
-    &.otp-verification{
-        #signWithOTP{
-          z-index: 1060 !important;
-        }
-        .modal-backdrop{
-            z-index: 1056 !important;
-        }
+}
+
+
+body {
+  &.otp-verification {
+    #signWithOTP {
+      z-index: 1060 !important;
     }
+    .modal-backdrop {
+      z-index: 1056 !important;
+    }
+  }
 }
-.modal-backdrop~.modal-backdrop {
-  opacity : 0 !important;
+.modal-backdrop ~ .modal-backdrop {
+  opacity: 0 !important;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -88,12 +101,4 @@ body{
   clip-path: inset(50%);
   border: 0;
   white-space: nowrap;
-}
-
-.line-height-24 {
-  line-height: 24px !important;
-}
-
-.white-space-no-wrap {
-  white-space: nowrap !important;
 }
