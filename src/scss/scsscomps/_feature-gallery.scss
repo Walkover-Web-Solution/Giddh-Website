@@ -76,6 +76,7 @@
     &__card {
       padding-bottom: 20px;
       figure{
+        padding-top: 0px;
         img{
           height: 120px;
         }
@@ -101,5 +102,28 @@
         margin-top: auto;
       }
     }
+    &__card {
+      padding-bottom: 20px;
+      figure{
+        img{
+          height: 160px;
+          width: auto;
+        }
+      }
+    }
   }
 }
+
+// @media (min-width: 360px) {
+//   .feature-gallery {
+//     &__card {
+//       padding-bottom: 20px;
+//       figure{
+//         img{
+//           height: 160px;
+//           width: auto;
+//         }
+//       }
+//     }
+//   }
+// }
