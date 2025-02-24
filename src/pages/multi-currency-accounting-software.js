@@ -10,18 +10,6 @@ const multiCurrencyAccountingSoftware = (path) => {
   const link = linkPath.linkPrefix;
   const [faq, setFaq] = useState([]);
 
-  function openCalendly(){
-      appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-      appendLink("https://assets.calendly.com/assets/external/widget.css");
-    setTimeout(()=>{
-      if (window.Calendly) {
-        window.Calendly.initPopupWidget({
-          url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
-        }, 500);
-      };
-    })
-  }
-
   useEffect(() => {
     setFaq(faqs['multi-currency-accounting-software']);
   }, []);
@@ -126,7 +114,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src={isIndia || isAE ?  '/img/feature-gallery-icons/multi-currency-create.svg' : '/img/feature-gallery-icons/multi-currency-create-uk.svg'}
                     className="img-fluid"
                     alt="Illustration of automatic currency conversion feature"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -153,7 +141,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src={isIndia ? '/img/feature-gallery-icons/multi-currency-invoice.svg' : (isAE ? '/img/feature-gallery-icons/multi-currency-invoice-ae.svg' : '/img/feature-gallery-icons/multi-currency-invoice-uk.svg')}
                     className="img-fluid"
                     alt="Illustration of invoicing feature for international customers"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -180,7 +168,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-setting.svg' : '/img/feature-gallery-icons/multi-currency-setting-uk.svg'}
                     className="img-fluid"
                     alt="Illustration of setting preferred currency for business accounts"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -206,7 +194,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-reports.svg' : '/img/feature-gallery-icons/multi-currency-reports-uk.svg'}
                     className="img-fluid"
                     alt="Illustration of dynamic business reporting feature"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -224,7 +212,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                     src="/img/suggestion.svg"
                     alt="Illustration of people interested in accounting software"
                     className="features__sub_heading_container--banner_img"
-                    width="200"
+                    width="auto"
                     height="200"
                   />
                 </figure>

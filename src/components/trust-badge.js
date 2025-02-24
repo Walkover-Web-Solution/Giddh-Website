@@ -128,7 +128,7 @@ const trustBadge = (path) => {
                     alt={logo.alt}
                     className="trust-badge-news-logo me-4 h-auto w-auto overflow-visible"
                     src={logo.src}
-                    width="200"
+                    width="auto"
                     height="200"
                   />
                 </a>

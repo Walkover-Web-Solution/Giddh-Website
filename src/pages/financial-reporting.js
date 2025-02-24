@@ -8,21 +8,7 @@ const financialReporting = (path) => {
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
-  const [faq, setFaq] = useState([])
-
-  function openCalendly() {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
-    setTimeout(()=>{
-      setTimeout(() => {
-        if (window.Calendly) {
-          window.Calendly.initPopupWidget({
-            url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
-          }, 500);
-        };
-      })
-    })
-  } 
+  const [faq, setFaq] = useState([]) 
 
   useEffect(() => {
     setFaq(faqs['financial-reporting']);
@@ -129,7 +115,7 @@ const financialReporting = (path) => {
                     src="/img/feature-gallery-icons/report-sales-graph.svg"
                     className="img-fluid"
                     alt="Graph showing sales data for financial reporting"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -155,7 +141,7 @@ const financialReporting = (path) => {
                     src="/img/feature-gallery-icons/report-ready.svg"
                     className="img-fluid"
                     alt="Illustration of ready-made financial reports"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -183,7 +169,7 @@ const financialReporting = (path) => {
                     src={isIndia || isAE ? '/img/feature-gallery-icons/report-aging.svg' : '/img/feature-gallery-icons/aging.svg'}
                     className="img-fluid"
                     alt="Aging report illustration showing outstanding invoices"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -210,7 +196,7 @@ const financialReporting = (path) => {
                     src={isIndia || isAE ? '/img/feature-gallery-icons/report-collaborate.svg' : '/img/feature-gallery-icons/collab.svg'}
                     className="img-fluid"
                     alt="Collaboration illustration for financial reporting"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -263,7 +249,7 @@ const financialReporting = (path) => {
                     src="/img/suggestion.svg"
                     alt="Illustration representing suggestions for financial reporting"
                     className="features__sub_heading_container--banner_img"
-                    width="200"
+                    width="auto"
                     height="200"
                   />
                 </figure>

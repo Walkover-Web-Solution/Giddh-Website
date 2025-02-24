@@ -10,18 +10,6 @@ const multiUserAccountingSoftware = (path) => {
   const link = linkPath.linkPrefix;
   const [faq, setFaq] = useState([]);
 
-  function openCalendly() {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
-    setTimeout(() => {
-      if (window.Calendly) {
-        window.Calendly.initPopupWidget({
-          url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
-        }, 500);
-      };
-    })
-  }
-
   useEffect(() => {
     setFaq(faqs['multi-user-accounting-software']);
   }, []);
@@ -132,7 +120,7 @@ const multiUserAccountingSoftware = (path) => {
                     src="/img/feature-gallery-icons/share-admin.svg"
                     className="img-fluid"
                     alt="An illustration of sharing to admin"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -165,7 +153,7 @@ const multiUserAccountingSoftware = (path) => {
                     }
                     className="img-fluid"
                     alt="An illustration of collaboration"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -193,7 +181,7 @@ const multiUserAccountingSoftware = (path) => {
                     src="/img/feature-gallery-icons/share-cash.svg"
                     className="img-fluid"
                     alt="An illustration of sharing cash"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -210,7 +198,7 @@ const multiUserAccountingSoftware = (path) => {
                     src="/img/suggestion.svg"
                     alt="people interested in Connect Bank Reconcile also looked at image"
                     className="features__sub_heading_container--banner_img"
-                    width="200"
+                    width="auto"
                     height="200"
                   />
                 </figure>

@@ -602,18 +602,6 @@ const allFeatures = (path) => {
     setPopupData(item);
   };
 
-  function openCalendly(){
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
-    setTimeout(() => {
-      if (window.Calendly) {
-        window.Calendly.initPopupWidget({
-          url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
-        }, 500);
-      };
-    })
-  }
-
   return (
     <>
       <div className="features">
@@ -650,7 +638,7 @@ const allFeatures = (path) => {
                     src={directoryPath + "/all-features-banner-image.svg"}
                     alt="Banner showcasing Giddh features"
                     width="400"
-                    height="400"
+                    height="auto"
                     role="img"
                   />
                 </figure>

@@ -8,18 +8,6 @@ const importExeclFiles = (path) => {
   const isIndia = linkPath.isIndia
   const link = linkPath.linkPrefix;
   const [faq, setFaq]= useState([])
-
-  function openCalendly(){
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
-    setTimeout(()=>{
-      if (window.Calendly) {
-        window.Calendly.initPopupWidget({
-          url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
-        }, 500);
-      };
-    })
-  }
   
   useEffect(() => {
     setFaq(faqs['import-data']);
@@ -125,7 +113,7 @@ const importExeclFiles = (path) => {
                     src="/img/feature-gallery-icons/import-excel.svg"
                     className="img-fluid"
                     alt="Illustration showing Excel as an accounting tool"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -152,7 +140,7 @@ const importExeclFiles = (path) => {
                     src="/img/feature-gallery-icons/import-excel.svg"
                     className="img-fluid"
                     alt="Transitioning from Excel to Giddh"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -179,7 +167,7 @@ const importExeclFiles = (path) => {
                     src="/img/feature-gallery-icons/import-data.svg"
                     className="img-fluid"
                     alt="Data import illustration"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -206,7 +194,7 @@ const importExeclFiles = (path) => {
                     src="/img/feature-gallery-icons/import-prepare.svg"
                     className="img-fluid"
                     alt="Template preparation for data import"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>
@@ -238,7 +226,7 @@ const importExeclFiles = (path) => {
                     }
                     className="img-fluid"
                     alt="Support illustration based on location"
-                    width="300"
+                    width="auto"
                     height="300"
                   />
                 </figure>

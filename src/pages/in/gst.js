@@ -222,7 +222,7 @@ const gst = (path) => {
                   src="/img/tax-images/understanding-gst.svg"
                   className="img-fluid"
                   alt="Illustration explaining GST"
-                  width="400"
+                  width="auto"
                   height="400"
                 />
               </figure>
@@ -294,7 +294,7 @@ const gst = (path) => {
                   src="/img/tax-images/group-5654.svg"
                   className="img-fluid"
                   alt="Mobile image with Giddh app"
-                   width="400"
+                  width="auto"
                   height="400"
                 />
               </figure>
@@ -366,7 +366,7 @@ const gst = (path) => {
                   src="/img/tax-images/betnifits.svg"
                   className="img-fluid"
                   alt="Illustration of GST benefits"
-                   width="400"
+                  width="auto"
                   height="400"
                 />
               </figure>
