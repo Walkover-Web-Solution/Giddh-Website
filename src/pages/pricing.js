@@ -48,7 +48,7 @@ const pricing = (path) => {
     const fetchData = async (region) => {
       try {
         const response = await fetch(
-          `https://api.giddh.com/v2/subscription/plans/all?regionCode=${region}`
+          `https://apitest.giddh.com/v2/subscription/plans/all?regionCode=${region}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
