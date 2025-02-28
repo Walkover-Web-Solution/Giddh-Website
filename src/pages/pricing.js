@@ -456,7 +456,7 @@ const pricing = (path) => {
                           Check all features
                         </a>
                       </td>
-                      <td colSpan="4" className="p-0">
+                      <td colSpan="100%" className="p-0">
                         <p
                           style={{ backgroundColor: "#edf3ff" }}
                           className={"c-fs-6 c-fw-400 text-end py-1 pe-2"}
