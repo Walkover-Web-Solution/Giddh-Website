@@ -18,6 +18,8 @@ const pricing = (path) => {
   const [plans, setPlans] = useState([]);
   const [pricingData, setPricingData] = useState([]);
   const [isYearPlan, setIsYearPlan] = useState(true);
+  /** Holds true if Monthly and Yearly plans available */
+  const [showToggleButton, setShowToggleButton] = useState(false);
 
   const linkPath = path.path;
   const isIndia = linkPath.isIndia;
@@ -55,6 +57,7 @@ const pricing = (path) => {
         }
         const jsonData = await response.json();
         setPlans(sortPlansByAmount(jsonData.body));
+        findMonthlyAndYearlyPlans(jsonData.body);
       } catch (err) {
         console.error(err);
       }
@@ -265,6 +268,30 @@ const pricing = (path) => {
     );
   };
 
+  /**
+   * Find Month and Year plan all plan 
+   * and set showToggleButton status
+   * 
+   * @param {*} jsonData 
+   */
+  const findMonthlyAndYearlyPlans = (plans) => {
+    let hasMonthly = false;
+    let hasYearly = false;
+  
+    for (const plan of plans) {
+      if (!hasMonthly && plan.hasOwnProperty("monthlyAmount") && plan.monthlyAmount !== null) {
+        hasMonthly = true;
+      }
+      if (!hasYearly && plan.hasOwnProperty("yearlyAmount") && plan.yearlyAmount !== null) {
+        hasYearly = true;
+      }
+      if (hasMonthly && hasYearly) {
+        break;
+      }
+    }
+    setShowToggleButton(hasMonthly && hasYearly);
+  }
+
   return (
     <>
       <section className="container-fluid pricing_main_section">
@@ -285,7 +312,7 @@ const pricing = (path) => {
               )}
 
               {/* Month/Year Toggle Button */}
-              {isIndia && (
+              {showToggleButton && (
                 <div className="text-center text-lg-end mb-3 mt-4 mt-lg-0">
                   <div
                     className="toggle-button btn-group"
