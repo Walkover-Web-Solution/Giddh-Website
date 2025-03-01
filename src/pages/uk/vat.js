@@ -165,7 +165,7 @@ const ukVAT = () => {
             <h2 className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Simplify VAT Returns and Audits</h2>
           <div
             className={
-              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
+              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom" +
               (readMoreParagraphStatus1 ? " --read-more" : "")
             }
           >
@@ -235,7 +235,7 @@ const ukVAT = () => {
 
           <div
             className={
-              "row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal" +
+              "row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom" +
               (readMoreParagraphStatus2 ? " --read-more" : "")
             }
           >
