@@ -185,7 +185,7 @@ function openCalendly() {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
         url: 'https://calendly.com/sales-accounting-software/talk-to-sale',
-      }, 1000);
-    };
-  })
+      });
+    }
+  }, 1000)
 }
