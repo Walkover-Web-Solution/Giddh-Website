@@ -313,3 +313,17 @@
     }
   }
 }
+@media (max-width: 360px) {
+  .features {
+    &__heading_container {
+      h1 {
+        font-size: var(--c-fs-2);
+      }
+      figure {
+        img {
+          width: 80% !important;
+        }
+      }
+    }
+  }
+}

@@ -65,3 +65,12 @@
     }
   }
 }
+@media (max-width: 360px) {
+  .faqs {
+    .accordion-button {
+      .collapse-icon {
+        margin-top: 4px;
+      }
+    }
+  }  
+}
