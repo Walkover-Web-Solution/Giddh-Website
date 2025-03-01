@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { createSlider } from "@typeform/embed";
 import Head from 'next/head';
 import Jsondata from '../data/schema/organizationSchema.json';
@@ -9,16 +9,14 @@ const bannerSection = (path) => {
   const [utm, setUtm] = useState(null);
   const selectedSchema = getSchemaForLinkPath(link, Jsondata.organizationSchema);
 
- useEffect(() => {
-   const utmParams = new URLSearchParams({
-     utm_source: getLocalStorage("utm_source"),
-     utm_medium: getLocalStorage("utm_medium"),
-     utm_campaign: getLocalStorage("utm_campaign"),
-   }).toString();
-   setUtm(utmParams);
- }, [utm]);
 
     const openTypeForm = () => {
+      const utmParams = new URLSearchParams({
+        utm_source: getLocalStorage("utm_source"),
+        utm_medium: getLocalStorage("utm_medium"),
+        utm_campaign: getLocalStorage("utm_campaign"),
+      }).toString();
+      setUtm(utmParams);
       const slider = createSlider("https://form.typeform.com/to/uOtrQ4tb", {
         position: "right", // Specify position ('left', 'center', 'right')
         opacity: 83, // Background overlay opacity

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   MdDone,
   MdClose,
@@ -41,11 +41,6 @@ const pricing = (path) => {
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
-
-  useEffect(() => {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
-  }, []);
 
   return (
     <>
@@ -3629,11 +3624,7 @@ const pricing = (path) => {
             <a
               href="javascript:;"
               className="benefits-link"
-              onClick={() =>
-                Calendly.initPopupWidget({
-                  url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                })
-              }
+              onClick={() => openCalendly() }
             >
               TALK TO US
             </a>
