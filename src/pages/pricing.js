@@ -6,6 +6,7 @@ import {
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
 } from "react-icons/md";
+import CustomLoader from "@/components/customLoader";
 
 const pricing = (path) => {
   const [readMoreStatus, readmoreAction] = useState(false);
@@ -15,9 +16,11 @@ const pricing = (path) => {
   const [readMoreParagraphStatus4, showMoreParagraph4] = useState(false);
   const [readMoreParagraphStatus5, showMoreParagraph5] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [allPlans, setAllPlans] = useState([]);
   const [plans, setPlans] = useState([]);
   const [pricingData, setPricingData] = useState([]);
   const [isYearPlan, setIsYearPlan] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   /** Holds true if Monthly and Yearly plans available */
   const [showToggleButton, setShowToggleButton] = useState(false);
 
@@ -29,8 +32,6 @@ const pricing = (path) => {
   const link = linkPath.linkPrefix;
 
   useEffect(() => {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
-    console.log(`Base URL: ${baseUrl}`);
     // Function to update the state based on screen width
     const handleResize = () => {
       setIsMobile(window.innerWidth < 992);
@@ -56,9 +57,12 @@ const pricing = (path) => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const jsonData = await response.json();
-        setPlans(sortPlansByAmount(jsonData.body));
+        setAllPlans(jsonData.body);
+        setPlanDurationsWise(jsonData.body, isYearPlan);
         findMonthlyAndYearlyPlans(jsonData.body);
+        setIsLoading(false);
       } catch (err) {
+        setIsLoading(false);
         console.error(err);
       }
     };
@@ -68,6 +72,16 @@ const pricing = (path) => {
       setPricingData(PricingData.isIndia);
     }
   }, [PricingData]);
+
+  /**
+   * Set plans duration wise with sorting asc
+   *
+   * @param {*} plans
+   * @param {*} isYear
+   */
+  const setPlanDurationsWise = (plans, isYear) => {
+    setPlans(sortPlansByAmount(plans, isYear));
+  }
 
   /**
    * Returns Region code to fetch plans
@@ -95,10 +109,11 @@ const pricing = (path) => {
    * @param {*} plans
    * @returns
    */
-  const sortPlansByAmount = (plans) => {
-    return plans.sort((a, b) => {
-      const amountA = a.yearlyAmount || 0; // Default to 0 if amount is missing
-      const amountB = b.yearlyAmount || 0;
+  const sortPlansByAmount = (plans, isYear) => {
+    const key = isYear ? 'yearlyAmount' : 'monthlyAmount';
+    return plans.filter(plan => plan.hasOwnProperty(key)).sort((a, b) => {
+      const amountA = a[key] || 0; // Default to 0 if amount is missing
+      const amountB = b[key] || 0;
       return amountA - amountB;
     });
   };
@@ -311,341 +326,352 @@ const pricing = (path) => {
                 </h2>
               )}
 
-              {/* Month/Year Toggle Button */}
-              {showToggleButton && (
-                <div className="text-center text-lg-end mb-3 mt-4 mt-lg-0">
-                  <div
-                    className="toggle-button btn-group"
-                    role="group"
-                    aria-label="Toggle to get monthly or yearly wise plan"
-                  >
-                    <input
-                      type="radio"
-                      className="btn-check"
-                      name="plan-duration"
-                      id="month"
-                      autoComplete="off"
-                    />
-                    <label
-                      className="btn btn-outline-primary"
-                      htmlFor="month"
-                      onClick={() => setIsYearPlan(false)}
-                    >
-                      Month
-                    </label>
-
-                    <input
-                      type="radio"
-                      className="btn-check"
-                      name="plan-duration"
-                      id="year"
-                      autoComplete="off"
-                      defaultChecked
-                    />
-                    <label
-                      className="btn btn-outline-primary"
-                      htmlFor="year"
-                      onClick={() => setIsYearPlan(true)}
-                    >
-                      Year
-                    </label>
-                  </div>
-                </div>
-              )}
-
-              {/* Pricing Table Large Device */}
-              {!isMobile && (
-                <table className="pricing-table w-100">
-                  <thead>
-                    <tr>
-                      <th>
-                        <figure className="mb-0">
-                          <img
-                            width="70"
-                            src="/img/guarantee-96.webp"
-                            alt="90 Days guarantee logo"
-                          />
-                        </figure>
-                      </th>
-                      {plans?.map((plan, i) => (
-                        <th
-                          key={i}
-                          width={`${(100 - 40) / plans?.length}%`}
-                          className={`text-center bg-${i}`}
+              {
+                isLoading ?
+                (
+                  <CustomLoader />
+                )
+                :
+                (
+                  <>
+                  {/* Month/Year Toggle Button */}
+                  {showToggleButton && (
+                    <div className="text-center text-lg-end mb-3 mt-4 mt-lg-0">
+                      <div
+                        className="toggle-button btn-group"
+                        role="group"
+                        aria-label="Toggle to get monthly or yearly wise plan"
+                      >
+                        <input
+                          type="radio"
+                          className="btn-check"
+                          name="plan-duration"
+                          id="month"
+                          autoComplete="off"
+                        />
+                        <label
+                          className="btn btn-outline-primary"
+                          htmlFor="month"
+                          onClick={() => {setIsYearPlan(false); setPlanDurationsWise(allPlans, false)}}
                         >
-                          {getPlanDetails(plan)}
-                        </th>
-                      ))}
-                    </tr>
-                    <tr className="vertical-align-top">
-                      <th className="pt-0">
-                        <p className="c-fw-600 mb-0">Benefits</p>
-                      </th>
-                      {plans?.map((plan, i) => (
-                        <th
-                          key={i}
-                          width={`${(100 - 40) / plans?.length}%`}
-                          className={`text-center pt-0 bg-${i}`}
+                          Month
+                        </label>
+
+                        <input
+                          type="radio"
+                          className="btn-check"
+                          name="plan-duration"
+                          id="year"
+                          autoComplete="off"
+                          defaultChecked
+                        />
+                        <label
+                          className="btn btn-outline-primary"
+                          htmlFor="year"
+                          onClick={() => {setIsYearPlan(true); setPlanDurationsWise(allPlans, true)}}
                         >
-                          <a href={link + "/signup"} className="benefits-link">
-                            Try Now
-                          </a>
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {pricingData?.map((feature, i) => (
-                      <tr key={i}>
-                        <td>
-                          <div>
-                            <div
-                              className={
-                                "cursor-pointer " + (true ? "pt-2" : "")
-                              }
-                              onClick={() => toggleFeatureExpansion(i)}
+                          Year
+                        </label>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Pricing Table Large Device */}
+                  {!isMobile && (
+                    <table className="pricing-table w-100">
+                      <thead>
+                        <tr>
+                          <th>
+                            <figure className="mb-0">
+                              <img
+                                width="70"
+                                src="/img/guarantee-96.webp"
+                                alt="90 Days guarantee logo"
+                              />
+                            </figure>
+                          </th>
+                          {plans?.map((plan, i) => (
+                            <th
+                              key={i}
+                              width={`${(100 - 40) / plans?.length}%`}
+                              className={`text-center bg-${i}`}
                             >
-                              <span>
-                                {feature.title}
-                                {feature.description !== null && (
-                                  <>
-                                    {feature.isExpanded ? (
-                                      <MdKeyboardArrowUp />
-                                    ) : (
-                                      <MdKeyboardArrowDown />
-                                    )}
-                                    {feature.isExpanded && (
-                                      <p className="c-fw-400">
-                                        <span
-                                          dangerouslySetInnerHTML={{
-                                            __html: feature?.description,
-                                          }}
-                                        />
-                                        {feature.link && (
-                                          <a
-                                            href={feature.link}
-                                            target="_blank"
-                                          >
-                                            {" "}
-                                            more
-                                          </a>
+                              {getPlanDetails(plan)}
+                            </th>
+                          ))}
+                        </tr>
+                        <tr className="vertical-align-top">
+                          <th className="pt-0">
+                            <p className="c-fw-600 mb-0">Benefits</p>
+                          </th>
+                          {plans?.map((plan, i) => (
+                            <th
+                              key={i}
+                              width={`${(100 - 40) / plans?.length}%`}
+                              className={`text-center pt-0 bg-${i}`}
+                            >
+                              <a href={link + "/signup"} className="benefits-link">
+                                Try Now
+                              </a>
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {pricingData?.map((feature, i) => (
+                          <tr key={i}>
+                            <td>
+                              <div>
+                                <div
+                                  className={
+                                    "cursor-pointer " + (true ? "pt-2" : "")
+                                  }
+                                  onClick={() => toggleFeatureExpansion(i)}
+                                >
+                                  <span>
+                                    {feature.title}
+                                    {feature.description !== null && (
+                                      <>
+                                        {feature.isExpanded ? (
+                                          <MdKeyboardArrowUp />
+                                        ) : (
+                                          <MdKeyboardArrowDown />
                                         )}
-                                      </p>
+                                        {feature.isExpanded && (
+                                          <p className="c-fw-400">
+                                            <span
+                                              dangerouslySetInnerHTML={{
+                                                __html: feature?.description,
+                                              }}
+                                            />
+                                            {feature.link && (
+                                              <a
+                                                href={feature.link}
+                                                target="_blank"
+                                              >
+                                                {" "}
+                                                more
+                                              </a>
+                                            )}
+                                          </p>
+                                        )}
+                                      </>
                                     )}
-                                  </>
-                                )}
-                              </span>
-                            </div>
-                          </div>
-                        </td>
-                        {plans?.map((plan, index) => (
-                          <td key={index} className={`text-center bg-${index}`}>
-                            {getPlanInfoByFeature(plan, feature)}
-                          </td>
+                                  </span>
+                                </div>
+                              </div>
+                            </td>
+                            {plans?.map((plan, index) => (
+                              <td key={index} className={`text-center bg-${index}`}>
+                                {getPlanInfoByFeature(plan, feature)}
+                              </td>
+                            ))}
+                          </tr>
                         ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td className="py-0">
-                        <a
-                          className="col-primary c-fw-600"
-                          href={link + "/all-features"}
-                        >
-                          Check all features
-                        </a>
-                      </td>
-                      <td colSpan="100%" className="p-0">
-                        <p
-                          style={{ backgroundColor: "#edf3ff" }}
-                          className={"c-fs-6 c-fw-400 text-end py-1 pe-2"}
-                        >
-                          Extra Add ons:{" "}
-                          <span className="c-fw-600">
-                            {" "}
-                            {isGlobal
-                              ? "$0.005"
-                              : isIndia
-                              ? "₹0.10"
-                              : isAE
-                              ? "د.إ0.03"
-                              : "£0.005"}
-                          </span>{" "}
-                          per transaction |{" "}
-                          <span className="c-fw-600">
-                            {isGlobal
-                              ? "$60"
-                              : isIndia
-                              ? "₹2000"
-                              : isAE
-                              ? "د.إ250"
-                              : "£60"}
-                          </span>{" "}
-                          per branch/year |{" "}
-                          <span className="c-fw-600">
-                            {isGlobal
-                              ? "$30"
-                              : isIndia
-                              ? "₹1000"
-                              : isAE
-                              ? "د.إ120"
-                              : "£30"}
-                          </span>{" "}
-                          per warehouse/year
-                        </p>
-                      </td>
-                    </tr>
-                  </tfoot>
-                </table>
-              )}
-
-              {/* Pricing Table Small Device */}
-              {isMobile && (
-                <table className="pricing-table w-100">
-                  <thead>
-                    <tr>
-                      <th colSpan={2} className="text-center">
-                        <figure className="mb-0">
-                          <img
-                            width="70"
-                            src="/img/guarantee-96.webp"
-                            alt="90 Days guarantee logo"
-                          />
-                        </figure>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {plans?.map((plan, i) => (
-                      <>
-                        <tr key={"row1" + i} className="border-top-0">
-                          <td colSpan={2} className="text-center pt-4">
-                            {getPlanDetails(plan, true)}
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td className="py-0">
+                            <a
+                              className="col-primary c-fw-600"
+                              href={link + "/all-features"}
+                            >
+                              Check all features
+                            </a>
+                          </td>
+                          <td colSpan="100%" className="p-0">
+                            <p
+                              style={{ backgroundColor: "#edf3ff" }}
+                              className={"c-fs-6 c-fw-400 text-end py-1 pe-2"}
+                            >
+                              Extra Add ons:{" "}
+                              <span className="c-fw-600">
+                                {" "}
+                                {isGlobal
+                                  ? "$0.005"
+                                  : isIndia
+                                  ? "₹0.10"
+                                  : isAE
+                                  ? "د.إ0.03"
+                                  : "£0.005"}
+                              </span>{" "}
+                              per transaction |{" "}
+                              <span className="c-fw-600">
+                                {isGlobal
+                                  ? "$60"
+                                  : isIndia
+                                  ? "₹2000"
+                                  : isAE
+                                  ? "د.إ250"
+                                  : "£60"}
+                              </span>{" "}
+                              per branch/year |{" "}
+                              <span className="c-fw-600">
+                                {isGlobal
+                                  ? "$30"
+                                  : isIndia
+                                  ? "₹1000"
+                                  : isAE
+                                  ? "د.إ120"
+                                  : "£30"}
+                              </span>{" "}
+                              per warehouse/year
+                            </p>
                           </td>
                         </tr>
-                        <tr
-                          key={"row2" + i}
-                          className="vertical-align-top border-top-0"
-                        >
-                          <td colSpan={2} className={`text-center pt-0`}>
-                            <a
-                              href={link + "/signup"}
-                              className="benefits-link"
+                      </tfoot>
+                    </table>
+                  )}
+
+                  {/* Pricing Table Small Device */}
+                  {isMobile && (
+                    <table className="pricing-table w-100">
+                      <thead>
+                        <tr>
+                          <th colSpan={2} className="text-center">
+                            <figure className="mb-0">
+                              <img
+                                width="70"
+                                src="/img/guarantee-96.webp"
+                                alt="90 Days guarantee logo"
+                              />
+                            </figure>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {plans?.map((plan, i) => (
+                          <>
+                            <tr key={"row1" + i} className="border-top-0">
+                              <td colSpan={2} className="text-center pt-4">
+                                {getPlanDetails(plan, true)}
+                              </td>
+                            </tr>
+                            <tr
+                              key={"row2" + i}
+                              className="vertical-align-top border-top-0"
                             >
-                              Try Now
+                              <td colSpan={2} className={`text-center pt-0`}>
+                                <a
+                                  href={link + "/signup"}
+                                  className="benefits-link"
+                                >
+                                  Try Now
+                                </a>
+                              </td>
+                            </tr>
+                            {pricingData?.map((pricingData, index) => (
+                              <tr
+                                key={"content" + i + "-" + index}
+                                className={index == 0 ? "border-top-0" : ""}
+                              >
+                                <td width="50%">
+                                  <div
+                                    className={"cursor-pointer"}
+                                    onClick={() => toggleFeatureExpansion(index)}
+                                  >
+                                    <span>
+                                      {pricingData?.title}
+                                      {pricingData?.description !== null && (
+                                        <>
+                                          {pricingData?.isExpanded ? (
+                                            <MdKeyboardArrowUp />
+                                          ) : (
+                                            <MdKeyboardArrowDown />
+                                          )}
+                                          {pricingData?.isExpanded && (
+                                            <p className="c-fw-400">
+                                              <span
+                                                dangerouslySetInnerHTML={{
+                                                  __html: pricingData?.description,
+                                                }}
+                                              />
+                                              {pricingData?.link && (
+                                                <a
+                                                  href={pricingData?.link}
+                                                  target="_blank"
+                                                >
+                                                  {" "}
+                                                  more
+                                                </a>
+                                              )}
+                                            </p>
+                                          )}
+                                        </>
+                                      )}
+                                    </span>
+                                  </div>
+                                </td>
+                                <td width="50%" className="text-center bg-1">
+                                  {getPlanInfoByFeature(plan, pricingData)}
+                                </td>
+                              </tr>
+                            ))}
+                          </>
+                        ))}
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <td
+                            className="pt-3 pb-2 text-center"
+                            colSpan={2}
+                            style={{ backgroundColor: "#edf3ff" }}
+                          >
+                            <a
+                              className="col-primary c-fw-600"
+                              href={link + "/all-features"}
+                            >
+                              Check all features
                             </a>
                           </td>
                         </tr>
-                        {pricingData?.map((pricingData, index) => (
-                          <tr
-                            key={"content" + i + "-" + index}
-                            className={index == 0 ? "border-top-0" : ""}
-                          >
-                            <td width="50%">
-                              <div
-                                className={"cursor-pointer"}
-                                onClick={() => toggleFeatureExpansion(index)}
-                              >
-                                <span>
-                                  {pricingData?.title}
-                                  {pricingData?.description !== null && (
-                                    <>
-                                      {pricingData?.isExpanded ? (
-                                        <MdKeyboardArrowUp />
-                                      ) : (
-                                        <MdKeyboardArrowDown />
-                                      )}
-                                      {pricingData?.isExpanded && (
-                                        <p className="c-fw-400">
-                                          <span
-                                            dangerouslySetInnerHTML={{
-                                              __html: pricingData?.description,
-                                            }}
-                                          />
-                                          {pricingData?.link && (
-                                            <a
-                                              href={pricingData?.link}
-                                              target="_blank"
-                                            >
-                                              {" "}
-                                              more
-                                            </a>
-                                          )}
-                                        </p>
-                                      )}
-                                    </>
-                                  )}
-                                </span>
-                              </div>
-                            </td>
-                            <td width="50%" className="text-center bg-1">
-                              {getPlanInfoByFeature(plan, pricingData)}
-                            </td>
-                          </tr>
-                        ))}
-                      </>
-                    ))}
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td
-                        className="pt-3 pb-2 text-center"
-                        colSpan={2}
-                        style={{ backgroundColor: "#edf3ff" }}
-                      >
-                        <a
-                          className="col-primary c-fw-600"
-                          href={link + "/all-features"}
-                        >
-                          Check all features
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colSpan="2" className="py-0 px-0">
-                        <p
-                          className={"text-center c-fs-6 c-fw-400 py-2"}
-                          style={{ backgroundColor: "#edf3ff" }}
-                        >
-                          Extra Add ons:{" "}
-                          <span className="c-fw-600">
-                            {" "}
-                            {isGlobal
-                              ? "$0.005"
-                              : isIndia
-                              ? "₹0.10"
-                              : isAE
-                              ? "د.إ0.03"
-                              : "£0.005"}
-                          </span>{" "}
-                          per transaction |{" "}
-                          <span className="c-fw-600">
-                            {isGlobal
-                              ? "$60"
-                              : isIndia
-                              ? "₹2000"
-                              : isAE
-                              ? "د.إ250"
-                              : "£60"}
-                          </span>{" "}
-                          per branch/year |{" "}
-                          <span className="c-fw-600">
-                            {isGlobal
-                              ? "$30"
-                              : isIndia
-                              ? "₹1000"
-                              : isAE
-                              ? "د.إ120"
-                              : "£30"}
-                          </span>{" "}
-                          per warehouse/year
-                        </p>
-                      </td>
-                    </tr>
-                  </tfoot>
-                </table>
-              )}
+                        <tr>
+                          <td colSpan="2" className="py-0 px-0">
+                            <p
+                              className={"text-center c-fs-6 c-fw-400 py-2"}
+                              style={{ backgroundColor: "#edf3ff" }}
+                            >
+                              Extra Add ons:{" "}
+                              <span className="c-fw-600">
+                                {" "}
+                                {isGlobal
+                                  ? "$0.005"
+                                  : isIndia
+                                  ? "₹0.10"
+                                  : isAE
+                                  ? "د.إ0.03"
+                                  : "£0.005"}
+                              </span>{" "}
+                              per transaction |{" "}
+                              <span className="c-fw-600">
+                                {isGlobal
+                                  ? "$60"
+                                  : isIndia
+                                  ? "₹2000"
+                                  : isAE
+                                  ? "د.إ250"
+                                  : "£60"}
+                              </span>{" "}
+                              per branch/year |{" "}
+                              <span className="c-fw-600">
+                                {isGlobal
+                                  ? "$30"
+                                  : isIndia
+                                  ? "₹1000"
+                                  : isAE
+                                  ? "د.إ120"
+                                  : "£30"}
+                              </span>{" "}
+                              per warehouse/year
+                            </p>
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  )}
+                  </>
+                )
+              }
             </div>
             <div className="col-12 text-center mt-5">
               <h3 className="c-fs-3 c-fw-600">Big Enterprises?</h3>
