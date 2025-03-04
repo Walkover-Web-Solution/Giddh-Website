@@ -112,7 +112,7 @@ const allFeatures = (path) => {
         name: "Multiple Reports",
         image: "/feature-multiple-reports.svg",
         description:
-          "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
+          "We provides various types of reports, like <ol className='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
         link: null,
         hasMoreContent: false,
       },
@@ -145,7 +145,7 @@ const allFeatures = (path) => {
       popupContent: {
         heading: "Effortless Invoicing Solutions",
         contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
+        <ul className='custom-ul-with-right-tick mt-5'>
           <li>Effortless GST Invoicing</li>
           <li>Multi-currency Invoices</li>
           <li>Sending invoice via multi-channels</li>
@@ -181,7 +181,7 @@ const allFeatures = (path) => {
       popupContent: {
         heading: "Simplify Your GST Compliance",
         contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
+        <ul className='custom-ul-with-right-tick mt-5'>
           <li>Direct filing</li>
           <li>GST reports</li>
           <li>Manage multiple GSTIN</li>
@@ -201,7 +201,7 @@ const allFeatures = (path) => {
       popupContent: {
         heading: "Efficiently manage your entire business inventory",
         contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
+        <ul className='custom-ul-with-right-tick mt-5'>
           <li>Record inventory for Product and Services</li>
           <li>Bifurcate inventory into Groups, Items, and Variants</li>
           <li>Fixed Asset Management</li>
@@ -253,7 +253,7 @@ const allFeatures = (path) => {
       popupContent: {
         heading: "Integrate with Shopify: Simplifying Connectivity",
         contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
+        <ul className='custom-ul-with-right-tick mt-5'>
           <li>Automated Data Sync</li>
           <li>Efficient Order Management</li>
           <li>Inventory Management</li>
@@ -275,7 +275,7 @@ const allFeatures = (path) => {
         heading:
           "Scan, Simplify, Succeed: Accelerate Your Workflow with Barcode Integration.",
         contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
+        <ul className='custom-ul-with-right-tick mt-5'>
           <li>Easy search</li>
           <li>Product identification</li>
           <li>Streamline workflow</li>
@@ -306,7 +306,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol className='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       hasMoreContent: false,
     },
@@ -437,7 +437,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>VAT reports</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol className='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>VAT reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       hasMoreContent: false,
     },
@@ -568,7 +568,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol className='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       hasMoreContent: false,
     },
