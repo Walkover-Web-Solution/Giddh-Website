@@ -44,9 +44,6 @@ const pricing = (path) => {
   }, []);
 
   useEffect(() => {
-    // Show Monthly plans for UK
-    setIsYearPlan(!isUK);
-
     /** API Call */
     const fetchData = async (region) => {
       try {
@@ -58,7 +55,7 @@ const pricing = (path) => {
         }
         const jsonData = await response.json();
         setAllPlans(jsonData.body);
-        setPlanDurationsWise(jsonData.body, isYearPlan);
+        setPlanDurationsWise(jsonData.body, null); 
         findMonthlyAndYearlyPlans(jsonData.body);
         setIsLoading(false);
       } catch (err) {
@@ -109,8 +106,12 @@ const pricing = (path) => {
    * @param {*} plans
    * @returns
    */
-  const sortPlansByAmount = (plans, isYear) => {
-    const key = isYear ? 'yearlyAmount' : 'monthlyAmount';
+  const sortPlansByAmount = (plans, isYearPlan) => {
+    if (isYearPlan === null) {
+      isYearPlan = plans.some(plan => plan.hasOwnProperty("yearlyAmount"));
+    }
+    setIsYearPlan(isYearPlan);
+    const key = isYearPlan ? 'yearlyAmount' : 'monthlyAmount';
     return plans.filter(plan => plan.hasOwnProperty(key)).sort((a, b) => {
       const amountA = a[key] || 0; // Default to 0 if amount is missing
       const amountB = b[key] || 0;
@@ -320,12 +321,6 @@ const pricing = (path) => {
               <h2 className="sub-heading c-fw-600 ms-4 mt-4 mb-md-4 mb-3 text-center">
                 No features sacrifices
               </h2>
-              {isIndia && (
-                <h2 className="col-primary small-heading c-fw-600 mb-3 text-center text-lg-start">
-                  *All prices are exclusive of GST
-                </h2>
-              )}
-
               {
                 isLoading ?
                 (
@@ -334,9 +329,15 @@ const pricing = (path) => {
                 :
                 (
                   <>
+                  <div className={"d-flex align-items-center mb-3" + (isIndia ? ' justify-content-between' : ' justify-content-end')}>
+                  {isIndia && (
+                    <h2 className="col-primary small-heading c-fw-600 mb-0 text-center text-lg-start">
+                      *All prices are exclusive of GST
+                    </h2>
+                  )}
                   {/* Month/Year Toggle Button */}
                   {showToggleButton && (
-                    <div className="text-center text-lg-end mb-3 mt-4 mt-lg-0">
+                    <div className="text-center text-lg-end mt-4 mt-lg-0">
                       <div
                         className="toggle-button btn-group"
                         role="group"
@@ -375,6 +376,7 @@ const pricing = (path) => {
                       </div>
                     </div>
                   )}
+                  </div>
 
                   {/* Pricing Table Large Device */}
                   {!isMobile && (
@@ -676,7 +678,7 @@ const pricing = (path) => {
             <div className="col-12 text-center mt-5">
               <h3 className="c-fs-3 c-fw-600">Big Enterprises?</h3>
               <a
-                href="javascript:;"
+                href="#"
                 className="benefits-link"
                 onClick={() =>
                   Calendly.initPopupWidget({
