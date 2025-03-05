@@ -329,7 +329,7 @@ const pricing = (path) => {
                 :
                 (
                   <>
-                  <div className={"d-flex align-items-center mb-3" + (isIndia ? ' justify-content-between' : ' justify-content-end')}>
+                  <div className={"d-flex flex-column flex-lg-row align-items-center mb-3" + (isIndia ? ' justify-content-between' : ' justify-content-end')}>
                   {isIndia && (
                     <h2 className="col-primary small-heading c-fw-600 mb-0 text-center text-lg-start">
                       *All prices are exclusive of GST
@@ -337,7 +337,7 @@ const pricing = (path) => {
                   )}
                   {/* Month/Year Toggle Button */}
                   {showToggleButton && (
-                    <div className="text-center text-lg-end mt-4 mt-lg-0">
+                    <div className="text-center text-lg-end mt-3 mt-lg-0">
                       <div
                         className="toggle-button btn-group"
                         role="group"
