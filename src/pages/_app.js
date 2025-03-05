@@ -34,7 +34,7 @@ export default function MyApp({ Component, pageProps }) {
 
   const path = {
     linkPrefix: shortedPath,
-    baseURL: "https://giddh.com",
+    baseURL: process.env.NEXT_PUBLIC_SITE_URL || "https://giddh.com",
     isGlobal: isGlobal,
     isIndia: isIndia,
     isAE: isAE,
