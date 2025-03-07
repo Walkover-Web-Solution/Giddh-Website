@@ -680,11 +680,7 @@ const pricing = (path) => {
               <a
                 href="#"
                 className="benefits-link"
-                onClick={() =>
-                  Calendly.initPopupWidget({
-                    url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                  })
-                }
+                onClick={() => openCalendly()}
               >
                 TALK TO US
               </a>

@@ -6,8 +6,6 @@ const eInvoice = () => {
   const [faq, setFaq] = useState([]);
 
   useEffect(() => {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
     setFaq(faqs['e-invoice']);
   }, []);
 
@@ -33,7 +31,7 @@ const eInvoice = () => {
                 >
                   Download Free
                 </a>
-                <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})} role="button">
+                <a href="#" className="col-blue" onClick={() => openCalendly()} role="button">
                   Schedule Demo
                 </a>
               </div>
@@ -249,7 +247,7 @@ const eInvoice = () => {
                 <a 
                   href="#" 
                   className="col-blue" 
-                  onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                  onClick={() => openCalendly()}
                   aria-label="Schedule a demo for e-invoicing"
                 >
                   Schedule Demo

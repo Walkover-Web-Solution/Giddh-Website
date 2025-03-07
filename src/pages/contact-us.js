@@ -1,5 +1,5 @@
 import { MdEmail, MdCall, MdWhatsapp } from "react-icons/md";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { createSlider } from "@typeform/embed";
 import Head from 'next/head';
 import Jsondata from '../data/schema/organizationSchema.json';
@@ -11,21 +11,13 @@ const contactUs = (path) => {
   const isUK = linkPath.isUK;
   const selectedSchema = getSchemaForLinkPath(linkPath, Jsondata.organizationSchema);
 
-    useEffect(() => {
-      const utmParams = new URLSearchParams({
-        utm_source: getLocalStorage("utm_source"),
-        utm_medium: getLocalStorage("utm_medium"),
-        utm_campaign: getLocalStorage("utm_campaign"),
-      }).toString();
-      setUtm(utmParams);
-    }, [utm]);
-
-    useEffect(() => {
-      appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-      appendLink("https://assets.calendly.com/assets/external/widget.css");
-    }, []);
-
    const openTypeForm = () => {
+    const utmParams = new URLSearchParams({
+      utm_source: getLocalStorage("utm_source"),
+      utm_medium: getLocalStorage("utm_medium"),
+      utm_campaign: getLocalStorage("utm_campaign"),
+    }).toString();
+    setUtm(utmParams);
      const slider = createSlider("https://form.typeform.com/to/uOtrQ4tb", {
        position: "right", // Specify position ('left', 'center', 'right')
        opacity: 83, // Background overlay opacity
@@ -120,11 +112,7 @@ const contactUs = (path) => {
                     )}
                   </address>
                   <button
-                    onClick={() =>
-                      Calendly.initPopupWidget({
-                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                      })
-                    }
+                    onClick={() => openCalendly()}
                   >
                     Schedule a meeting
                   </button>
@@ -161,11 +149,7 @@ const contactUs = (path) => {
                       </div>
                     </address>
                     <button
-                      onClick={() =>
-                        Calendly.initPopupWidget({
-                          url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                        })
-                      }
+                      onClick={() => openCalendly()}
                     >
                       Schedule a meeting
                     </button>

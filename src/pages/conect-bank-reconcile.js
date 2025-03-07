@@ -10,8 +10,6 @@ const conectBankReconcile = (path) => {
   const [faq, setFaq] = useState([])
 
   useEffect(() => {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
     setFaq(faqs['conect-bank-reconcile']);
   }, []);
   return (
@@ -44,11 +42,7 @@ const conectBankReconcile = (path) => {
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() =>
-                      Calendly.initPopupWidget({
-                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                      })
-                    }
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with Giddh"
                   >
                     Schedule Demo
@@ -126,6 +120,8 @@ const conectBankReconcile = (path) => {
                       src="/img/bank-connect.svg"
                       className="img-fluid"
                       alt="Illustration showing the process of connecting a bank account"
+                      width="300"
+                      height="auto"
                     />
                   </figure>
                 </div>
@@ -152,6 +148,8 @@ const conectBankReconcile = (path) => {
                     src="/img/suggestion.svg"
                     className="img-fluid"
                     alt="Illustration depicting the bank reconciliation process"
+                    width="300"
+                    height="auto"
                   />
                 </figure>
               </div>
@@ -177,6 +175,8 @@ const conectBankReconcile = (path) => {
                     src="/img/bank-account.svg"
                     className="img-fluid"
                     alt="Illustration showing multiple bank accounts"
+                    width="300"
+                    height="auto"
                   />
                 </figure>
               </div>
@@ -193,6 +193,8 @@ const conectBankReconcile = (path) => {
                     src="/img/suggestion.svg"
                     alt="Illustration of people interested in Connect Bank Reconcile"
                     className="features__sub_heading_container--banner_img"
+                    width="200"
+                    height="auto"
                   />
                 </figure>
                 <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">

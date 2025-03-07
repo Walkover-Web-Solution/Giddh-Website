@@ -16,8 +16,6 @@ const anywhereAnytime = (path) => {
   const link = linkPath.linkPrefix;
 
   useEffect(() => {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
     setFaq(faqs['cloud-accounting-software'])
   }, []);
 
@@ -52,11 +50,7 @@ const anywhereAnytime = (path) => {
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() =>
-                      Calendly.initPopupWidget({
-                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                      })
-                    }
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
@@ -69,7 +63,7 @@ const anywhereAnytime = (path) => {
                     src="/img/feature-gallery-icons/cloud-banner.svg"
                     alt="Illustration of cloud accounting software"
                     width="400"
-                    height="300"
+                    height="auto"
                   />
                   <img
                     src="/img/all-features-cloud_icon.svg"
@@ -150,6 +144,8 @@ const anywhereAnytime = (path) => {
                     }
                     className="img-fluid"
                     alt="connect bank image"
+                    width="400"
+                    height="auto"
                   />
                 </figure>
               </div>
@@ -197,6 +193,8 @@ const anywhereAnytime = (path) => {
                     }
                     className="img-fluid"
                     alt="bank reconcile image"
+                    width="400"
+                    height="auto"
                   />
                 </figure>
               </div>
@@ -244,6 +242,8 @@ const anywhereAnytime = (path) => {
                     }
                     className="img-fluid"
                     alt="bank account image"
+                    width="400"
+                    height="auto"
                   />
                 </figure>
               </div>
@@ -276,6 +276,8 @@ const anywhereAnytime = (path) => {
                     src="/img/feature-gallery-icons/Group-5642.svg"
                     className="img-fluid"
                     alt="bank overview image"
+                    width="400"
+                    height="auto"
                   />
                 </figure>
               </div>
@@ -327,6 +329,8 @@ const anywhereAnytime = (path) => {
                         src="/img/feature-gallery-icons/Group-5651.svg"
                         className="img-fluid"
                         alt="bank account image"
+                        width="400"
+                        height="auto"
                       />
                     </figure>
                   </div>
@@ -462,6 +466,8 @@ const anywhereAnytime = (path) => {
                         src="/img/feature-gallery-icons/Group-5649.svg"
                         className="img-fluid"
                         alt="bank overview image"
+                        width="400"
+                        height="auto"
                       />
                     </figure>
                   </div>
@@ -723,6 +729,8 @@ const anywhereAnytime = (path) => {
                     src="/img/suggestion.svg"
                     alt="Illustration representing suggestions for Cloud Accounting Software"
                     className="features__sub_heading_container--banner_img"
+                    width="200"
+                    height="auto"
                   />
                 </figure>
                 <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
