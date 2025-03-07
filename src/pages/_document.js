@@ -13,10 +13,6 @@ export default function Document() {
             })(window,document,'script','dataLayer','GTM-K2L9QG');`,
           }}
         />
-         <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-         <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async />
-         <script src="https://embed.typeform.com/next/embed.js" />
-         <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
          <script src="/js/helper.js" />
       </Head>
       <body>

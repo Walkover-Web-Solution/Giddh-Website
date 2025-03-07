@@ -77,7 +77,11 @@ const navbar = (props) => {
     } else {
       setscrollStatus(true);
     }
-    setShowTrustpilot(true);
+
+    if (link.isUK) {
+      appendScript("https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js", true);
+      setShowTrustpilot(true);
+    }
 
     return () => {
       window.removeEventListener("scroll", onScroll, { passive: true });
@@ -152,8 +156,8 @@ const navbar = (props) => {
             aria-label="Toggle navigation"
           >
             <svg
-              width="40"
-              height="40"
+              width="30"
+              height="30"
               viewBox="0 0 40 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +190,7 @@ const navbar = (props) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
-              { showTrustpilot && link.isUK && (
+              { showTrustpilot && (
                 <li className="nav-item">
                     <span 
                       className="trustpilot-widget d-block" 
@@ -232,24 +236,13 @@ const navbar = (props) => {
                   >
                     <li>
                       <ul className="dropdown-menu__wapper d-grid ps-0">
-                        {features
+                      {features
                           .filter(getCountryWiseData)
                           .map((data, index) => (
                             <li key={index}>
-                              {data.menuItem !== "API Integration" && (
-                                <>
-                                  <a href={urlPrefix + data.url}>
-                                    {data.menuItem}
-                                  </a>
-                                </>
-                              )}
-                              {data.menuItem === "API Integration" && (
-                                <>
-                                  <a href={data.url} target="_blank">
-                                    {data.menuItem}
-                                  </a>
-                                </>
-                              )}
+                              <a href={urlPrefix + data.url}>
+                                {data.menuItem}
+                              </a>
                             </li>
                           ))}
                       </ul>

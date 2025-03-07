@@ -1,4 +1,6 @@
-import { MdRemove, MdAdd } from "react-icons/md";
+import { useEffect, useState } from "react";
+import Faqs from "@/components/faq";
+import faqs from '../data/faqs.json';
 
 const multiCurrencyAccountingSoftware = (path) => {
   const linkPath = path.path;
@@ -6,14 +8,22 @@ const multiCurrencyAccountingSoftware = (path) => {
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
+  const [faq, setFaq] = useState([]);
+
+  useEffect(() => {
+    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
+    appendLink("https://assets.calendly.com/assets/external/widget.css");
+    setFaq(faqs['multi-currency-accounting-software']);
+  }, []);
+
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="multiCurrencyHeading">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary c-fw-600 mb-4">
+                <h1 id="multiCurrencyHeading" className="heading col-primary c-fw-600 mb-4">
                   Serve International Customers with Multi-Currency Accounting
                 </h1>
                 <p className="col-grey c-fs-3 mb-5">
@@ -26,10 +36,16 @@ const multiCurrencyAccountingSoftware = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of the software"
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a 
+                    href="#" 
+                    className="col-blue" 
+                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    aria-label="Schedule a demo with our sales team"
+                  >
                     Schedule Demo
                   </a>
                 </div>
@@ -38,12 +54,13 @@ const multiCurrencyAccountingSoftware = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/multi-currency-banner.svg"
-                    width="90%"
-                    alt="multi-currency-banner-image"
+                    width="400"
+                    height="300"
+                    alt="Illustration representing multi-currency accounting"
                   />
-                 <img
+                  <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Cloud icons representing features"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -57,7 +74,7 @@ const multiCurrencyAccountingSoftware = (path) => {
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                <h3 className="sub-heading col-primary c-fw-600 mb-3" role="heading" aria-level="3">
                   Profits should know no borders
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -66,7 +83,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   growing business. Giddh makes managing multi-currency
                   payments, invoicing and accounts easy.
                 </p>
-                <a href={ link + '/signup' } className="btn-link-purple">
+                <a href={ link + '/signup' } className="btn-link-purple" aria-label="Start your trial for multi-currency accounting software">
                   Start Your Trial
                 </a>
               </div>
@@ -74,15 +91,16 @@ const multiCurrencyAccountingSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" aria-labelledby="description-heading">
           <div className="container">
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <h2 id="description-heading" className="visually-hidden">Features Description</h2>
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Eliminate Confusion with Automatic Currency Conversion
                   </h4>
-                  <p >
+                  <p>
                     Say goodbye to unnecessary exchange rate confusions and
                     accounting mismatch with multi-currency accounting. Giddh
                     does all the heavy lifting & automatically converts the
@@ -97,18 +115,18 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <img
                      src={isIndia || isAE ?  '/img/feature-gallery-icons/multi-currency-create.svg' : '/img/feature-gallery-icons/multi-currency-create-uk.svg'}
                     className="img-fluid"
-                    alt="multi-currency-create-image"
+                    alt="Illustration of automatic currency conversion feature"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Keep Your International Customers Smilin
                   </h4>
-                  <p >
+                  <p>
                     Easily accept payments from your International customers &
                     invoice them with easy to use multi currency accounting
                     software. Send invoices in your customer’s currency, and
@@ -122,19 +140,19 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <img
                     src={isIndia ? '/img/feature-gallery-icons/multi-currency-invoice.svg' : (isAE ? '/img/feature-gallery-icons/multi-currency-invoice-ae.svg' : '/img/feature-gallery-icons/multi-currency-invoice-uk.svg')}
                     className="img-fluid"
-                    alt="multi-currency-invoice-image"
+                    alt="Illustration of invoicing feature for international customers"
                   />
                 </figure>
               </div>
             </div>
 
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Set Preferred Currency to Business Accounts
                   </h4>
-                  <p >
+                  <p>
                     With Giddh you are always in control! You can set a default
                     foreign currency to all the business accounts of your
                     foreign customers. After which, all the invoices and reports
@@ -147,7 +165,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <img
                     src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-setting.svg' : '/img/feature-gallery-icons/multi-currency-setting-uk.svg'}
                     className="img-fluid"
-                    alt="multi-currency-setting-image"
+                    alt="Illustration of setting preferred currency for business accounts"
                   />
                 </figure>
               </div>
@@ -155,10 +173,10 @@ const multiCurrencyAccountingSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-even">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Benefit from Dynamic Business Reporting
                   </h4>
-                  <p >
+                  <p>
                     All your financial reports; trial balance, profit & loss,
                     balance sheet, will be automatically created in your company
                     base currency so you have an accurate view of your financial
@@ -171,7 +189,7 @@ const multiCurrencyAccountingSoftware = (path) => {
                   <img
                     src={isIndia || isAE ? '/img/feature-gallery-icons/multi-currency-reports.svg' : '/img/feature-gallery-icons/multi-currency-reports-uk.svg'}
                     className="img-fluid"
-                    alt="multi-currency-reports-image"
+                    alt="Illustration of dynamic business reporting feature"
                   />
                 </figure>
               </div>
@@ -179,18 +197,18 @@ const multiCurrencyAccountingSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__suggestion_container">
+        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="people interested in Connect Bank Reconcile also looked at image"
+                    alt="Illustration of people interested in accounting software"
                     className="features__sub_heading_container--banner_img"
                   />
                 </figure>
-                <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
                   <span className="col-blue">
                     Multi Currency Accounting Software
@@ -199,16 +217,16 @@ const multiCurrencyAccountingSoftware = (path) => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                   <a href={ link + "/all-features" } className="col-blue">
+                   <a href={ link + "/all-features" } className="col-blue" aria-label="View all features">
                     All features
                   </a>
-                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
+                  <a href={ link + "/multi-user-accounting-software" } className="border-left col-blue" aria-label="Learn about sharing data">
                     Share Data
                   </a>
-                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
+                  <a href={ link + "/multi-currency-accounting-software" } className="border-left col-blue" aria-label="Explore multi-currency features">
                     Multi-Currency
                   </a>
-                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
+                  <a href={ link + "/invoice-software" } className="border-left col-blue" aria-label="Discover invoicing options">
                     Invoicing
                   </a>
                 </div>
@@ -217,220 +235,7 @@ const multiCurrencyAccountingSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__accordion_container">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 px-0">
-                <div className="accordion" id="accordionAllFeatures">
-                  {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What type of businesses can use the Giddh multi-currency
-                        accounting software?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        Giddh’s innovative multi-currency accounting software is
-                        designed to cater to all the accounting, invoicing and
-                        related activities of businesses at a budget-friendly
-                        price. Hence, it is widely used by start-ups, agencies,
-                        enterprises and SMEs that require managing accounts that
-                        deal with multiple currencies.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #2 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What are the advantages of using the Giddh
-                        multi-currency accounting software?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          The following are the advantages of using the Giddh
-                          multi-currency accounting software that make it worth
-                          the try.
-                        </p>
-                        <ul>
-                          <li>
-                            Flexibility: Giddh offers you flexibility in payment
-                            options. It helps you handle transactions involving
-                            different currencies.
-                          </li>
-                          <li>
-                            Money-saving: With Giddh, you get the increased
-                            convenience of dealing with multiple accounts
-                            without investing in an expert or a manual system.
-                          </li>
-                          <li>
-                            Better security: Your financial reports are safe
-                            from any security breaches with Giddh.
-                          </li>
-                          <li>
-                            Linked bank accounts: Giddh allows you to link
-                            multiple bank accounts so that you can check your
-                            transaction history anywhere and anytime you want.
-                          </li>
-                          <li>
-                            Diligent support team: Giddh’s support team is just
-                            a call or email away to help you with any issue that
-                            arises.
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #3 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Are the currency rates mentioned updated and accurate?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        Yes, the mentioned currency rates are updated and
-                        accurate. Giddh periodically pulls in the exchange rates
-                        online to ensure that businesses and financial advisors
-                        have the accurate data needed to make effective
-                        decisions. Giddh also allows you to set a default
-                        currency so that you can receive your invoices according
-                        to the set currency.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #4 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How does the currency converter work?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        We save the latest data of currency conversion in our
-                        system. So, when the user creates an invoice or uses a
-                        related functionality for bookkeeping, the conversion
-                        amount is shown in the respective entry form/field.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #5 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFive">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Can I customize the exchange rates?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFive"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        Yes, you can customize the currency exchange rate and
-                        enter the desired amount as per the situation or
-                        requirement.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Faqs faq={faq} />
       </div>
     </>
   );
