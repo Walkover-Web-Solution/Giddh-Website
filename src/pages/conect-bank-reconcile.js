@@ -42,7 +42,7 @@ const conectBankReconcile = (path) => {
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() => openCalendly() }
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with Giddh"
                   >
                     Schedule Demo
@@ -98,7 +98,7 @@ const conectBankReconcile = (path) => {
         <section className="container-fluid features__description_container mt-5" aria-labelledby="description-heading">
           <div className="container">
             {isIndia ? (
-              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
                     <h2 id="description-heading" className="col-primary c-fw-600 mb-3">
@@ -127,7 +127,7 @@ const conectBankReconcile = (path) => {
                 </div>
               </div>
             ) : null}
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h2 className="col-primary c-fw-600 mb-3">
@@ -155,7 +155,7 @@ const conectBankReconcile = (path) => {
               </div>
             </div>
 
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h2 className="col-primary c-fw-600 mb-3">
@@ -211,19 +211,19 @@ const conectBankReconcile = (path) => {
                   </a>
                   <a
                     href={link + "/multi-user-accounting-software"}
-                    className="border-vertical col-blue"
+                    className="border-left col-blue"
                   >
                     Share Data
                   </a>
                   <a
                     href={link + "/multi-currency-accounting-software"}
-                    className="border-vertical col-blue"
+                    className="border-left col-blue"
                   >
                     Multi-Currency
                   </a>
                   <a
                     href={link + "/invoice-software"}
-                    className="border-vertical col-blue"
+                    className="border-left col-blue"
                   >
                     Invoicing
                   </a>

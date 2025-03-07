@@ -149,7 +149,7 @@ const contactUs = (path) => {
                       </div>
                     </address>
                     <button
-                      onClick={() => openCalendly() }
+                      onClick={() => openCalendly()}
                     >
                       Schedule a meeting
                     </button>

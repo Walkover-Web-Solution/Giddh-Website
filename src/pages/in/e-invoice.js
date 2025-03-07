@@ -247,7 +247,7 @@ const eInvoice = () => {
                 <a 
                   href="#" 
                   className="col-blue" 
-                  onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                  onClick={() => openCalendly()}
                   aria-label="Schedule a demo for e-invoicing"
                 >
                   Schedule Demo

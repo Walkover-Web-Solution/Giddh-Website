@@ -45,7 +45,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() => openCalendly() }
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with Giddh"
                   >
                     Schedule Demo
@@ -99,7 +99,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
         <section className="container-fluid features__description_container mt-5" role="region" aria-labelledby="features-description">
           <h2 id="features-description" className="visually-hidden">Features Description</h2>
           <div className="container">
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container">
                   <h4 className="col-primary sub-heading c-fw-600 mb-3">
@@ -128,7 +128,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container">
                   <h4 className="col-primary sub-heading c-fw-600 mb-3">
@@ -212,7 +212,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
               </div>
             </div>
 
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container">
                   <h4 className="col-primary sub-heading c-fw-600 mb-3">
@@ -283,7 +283,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container">
                   <h4 className="col-primary sub-heading c-fw-600 mb-3">
@@ -466,13 +466,13 @@ const smallBusinessBookkeepingSoftware = (path) => {
                   <a href={link + "/all-features"} className="col-blue" aria-label="View all features of the accounting dashboard">
                     All features
                   </a>
-                  <a href={link + "/multi-user-accounting-software"} className="border-vertical col-blue" aria-label="Learn about multi-user accounting software">
+                  <a href={link + "/multi-user-accounting-software"} className="border-left col-blue" aria-label="Learn about multi-user accounting software">
                     Share Data
                   </a>
-                  <a href={link + "/multi-currency-accounting-software"} className="border-vertical col-blue">
+                  <a href={link + "/multi-currency-accounting-software"} className="border-left col-blue">
                     Multi-Currency
                   </a>
-                  <a href={link + "/invoice-software"} className="border-vertical col-blue" aria-label="Discover invoicing features">
+                  <a href={link + "/invoice-software"} className="border-left col-blue" aria-label="Discover invoicing features">
                     Invoicing
                   </a>
                 </div>

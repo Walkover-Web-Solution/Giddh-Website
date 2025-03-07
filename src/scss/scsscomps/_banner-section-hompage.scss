@@ -103,3 +103,18 @@
     }
   }
 }
+@media (max-width: 390px) {
+  .banner {
+    .heading-text {
+      line-height: 48px !important;
+      font-size: 35px;
+    }
+
+    figure {
+      img {
+        width: 60%;
+        min-width: 315px;
+      }
+    }
+  }
+}

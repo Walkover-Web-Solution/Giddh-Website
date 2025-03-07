@@ -111,7 +111,7 @@ const anywhereAnytime = (path) => {
         <section className="container-fluid features__description_container mt-5" aria-labelledby="features-description-heading">
           <div className="container">
             <h2 id="features-description-heading" className="visually-hidden">Features Description</h2>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary c-fw-600 mb-3">
@@ -150,7 +150,7 @@ const anywhereAnytime = (path) => {
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary c-fw-600 mb-3">
@@ -199,7 +199,7 @@ const anywhereAnytime = (path) => {
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary c-fw-600 mb-3">
@@ -248,7 +248,7 @@ const anywhereAnytime = (path) => {
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h4 className="col-primary c-fw-600 mb-3">
@@ -286,7 +286,7 @@ const anywhereAnytime = (path) => {
               <>
                 <div
                   className={
-                    "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
+                    "row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom" +
                     (readMoreParagraphStatus1 ? " --read-more" : "")
                   }
                 >
@@ -744,21 +744,21 @@ const anywhereAnytime = (path) => {
                   </a>
                   <a
                     href={link + "/multi-user-accounting-software"}
-                    className="border-vertical col-blue"
+                    className="border-left col-blue"
                     aria-label="Learn about multi-user accounting software"
                   >
                     Share Data
                   </a>
                   <a
                     href={link + "/multi-currency-accounting-software"}
-                    className="border-vertical col-blue"
+                    className="border-left col-blue"
                     aria-label="Learn about multi-currency accounting software"
                   >
                     Multi-Currency
                   </a>
                   <a
                     href={link + "/invoice-software"}
-                    className="border-vertical col-blue"
+                    className="border-left col-blue"
                     aria-label="Learn about invoicing software"
                   >
                     Invoicing

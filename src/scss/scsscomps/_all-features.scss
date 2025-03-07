@@ -210,7 +210,7 @@
     }
 
     &__description_container {
-      .border-horizontal {
+      .border-bottom {
         border: none !important;
       }
       .image-alignment {
@@ -231,7 +231,7 @@
         flex-direction: column-reverse !important;
       }
       .row {
-        &.border-horizontal {
+        &.border-bottom {
           margin-bottom: 1rem !important;
           padding-bottom: 1rem !important;
         }
@@ -308,6 +308,20 @@
           .video-wrapper {
             margin-bottom: 80px;
           }       
+        }
+      }
+    }
+  }
+}
+@media (max-width: 360px) {
+  .features {
+    &__heading_container {
+      h1 {
+        font-size: var(--c-fs-2);
+      }
+      figure {
+        img {
+          width: 80% !important;
         }
       }
     }

@@ -1,0 +1,678 @@
+{
+   "isGlobal": [
+        {
+            "title": "Invoice Count",
+            "yearly": "invoicesAllowed",
+            "monthly": "monthlyInvoicesAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bill Count",
+            "yearly": "billsAllowed",
+            "monthly": "monthlyBillsAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Companies",
+            "yearly": "companiesLimit",
+            "monthly": "monthlyCompaniesLimit",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Accountant Consultant",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Desktop/Mobile App",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited users access",
+            "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
+            "link": "/multi-user-accounting-software",
+            "specificContent": "Unlimited",
+            "isExpanded": false
+        },
+        {
+            "title": "Security",
+            "description": "Your data is secured with IP security and Two-way verification, and",
+            "link": "/security",
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited Customers/Vendors",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Invoicing",
+            "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
+            "link": "/in/invoice-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Record Bills",
+            "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Managing Inventory",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": "/inventory-management-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Journal Entries",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Multi-currency",
+            "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
+            "link": "/multi-currency-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Reports",
+            "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
+            "link": "/financial-reporting",
+            "isExpanded": false
+        },
+        {
+            "title": "Real-time Dashboard",
+            "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
+            "link": "/accounting-dashboard",
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Reconciliation",
+            "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
+            "link": "/conect-bank-reconcile",
+            "isExpanded": false
+        },
+        {
+            "title": "Manufacturing",
+            "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Integrations",
+            "description": "Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "E-commerce Integration",
+            "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Telecom Integration",
+            "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Branch and warehouse management",
+            "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Easy Import/Export of the data",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, <a href='/import-data' target='_blank'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Financial Year Locking",
+            "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Support",
+            "description": "You are just one call or email away from us, <a href='/contact-us' target='_blank'>Connect with us</a>",
+            "link": null,
+            "isExpanded": false
+        }
+    ],
+    "isAE": [
+        {
+            "title": "Invoice Count",
+            "yearly": "invoicesAllowed",
+            "monthly": "monthlyInvoicesAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bill Count",
+            "yearly": "billsAllowed",
+            "monthly": "monthlyBillsAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Companies",
+            "yearly": "companiesLimit",
+            "monthly": "monthlyCompaniesLimit",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Accountant Consultant",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Desktop/Mobile App",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited users access",
+            "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
+            "link": "/ae/multi-user-accounting-software",
+            "specificContent": "Unlimited",
+            "isExpanded": false
+        },
+        {
+            "title": "Security",
+            "description": "Your data is secured with IP security and Two-way verification, and",
+            "link": "/ae/security",
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited Customers/Vendors",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Invoicing",
+            "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
+            "link": "/ae/invoice-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Record Bills",
+            "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Managing Inventory",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": "/ae/inventory-management-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Journal Entries",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Multi-currency",
+            "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
+            "link": "/ae/multi-currency-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Reports",
+            "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
+            "link": "/ae/financial-reporting",
+            "isExpanded": false
+        },
+        {
+            "title": "Real-time Dashboard",
+            "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
+            "link": "/ae/accounting-dashboard",
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Reconciliation",
+            "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
+            "link": "/ae/conect-bank-reconcile",
+            "isExpanded": false
+        },
+        {
+            "title": "Manufacturing",
+            "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Integrations",
+            "description": "Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "E-commerce Integration",
+            "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Telecom Integration",
+            "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Branch and warehouse management",
+            "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Easy Import/Export of the data",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and <a href='/ae/import-data' target='_blank'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Financial Year Locking",
+            "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Support",
+            "description": "You are just one call or email away from us, <a href='/ae/contact-us' target='_blank'>Connect with us</a>",
+            "link": null,
+            "isExpanded": false
+        }
+    ],
+    "isUK": [
+        {
+            "title": "Invoice Count",
+            "yearly": "invoicesAllowed",
+            "monthly": "monthlyInvoicesAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bill Count",
+            "yearly": "billsAllowed",
+            "monthly": "monthlyBillsAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Companies",
+            "yearly": "companiesLimit",
+            "monthly": "monthlyCompaniesLimit",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Accountant Consultant",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Desktop/Mobile App",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited users access",
+            "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
+            "link": "/uk/multi-user-accounting-software",
+            "specificContent": "Unlimited",
+            "isExpanded": false
+        },
+        {
+            "title": "Security",
+            "isAvailableForAll": "true",
+            "description": "Your data is secured with IP security and Two-way verification, and",
+            "link": "/uk/security",
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited Customers/Vendors",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Invoicing",
+            "isAvailableForAll": "true",
+            "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
+            "link": "/uk/invoice-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Record Bills",
+            "isAvailableForAll": "true",
+            "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Managing Inventory",
+            "isAvailableForAll": "true",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": "/uk/inventory-management-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Journal Entries",
+            "isAvailableForAll": "true",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Multi-currency",
+            "isAvailableForAll": "true",
+            "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
+            "link": "/uk/multi-currency-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "VAT Compliance",
+            "isAvailableForAll": "true",
+            "description": "Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and",
+            "link": "/uk/vat",
+            "isExpanded": false
+        },
+        {
+            "title": "Reports",
+            "isAvailableForAll": "true",
+            "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
+            "link": "/uk/financial-reporting",
+            "isExpanded": false
+        },
+        {
+            "title": "Real-time Dashboard",
+            "isAvailableForAll": "true",
+            "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
+            "link": "/uk/accounting-dashboard",
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Reconciliation",
+            "isAvailableForAll": "true",
+            "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
+            "link": "/uk/conect-bank-reconcile",
+            "isExpanded": false
+        },
+        {
+            "title": "Manufacturing",
+            "isAvailableForAll": "true",
+            "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Integrations",
+            "isAvailableForAll": "true",
+            "description": "Provides support in 12+ countries including USA, Canada, UK, Germany, France, Netherlands, Ireland, Spain, Sweden, Denmark, Poland, Portugal",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "E-commerce Integration",
+            "isAvailableForAll": "true",
+            "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Telecom Integration",
+            "isAvailableForAll": "true",
+            "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Branch and warehouse management",
+            "isAvailableForAll": "true",
+            "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Easy Import/Export of the data",
+            "isAvailableForAll": "true",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and <a href='/uk/import-data' target='_blank'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Financial Year Locking",
+            "isAvailableForAll": "true",
+            "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Support",
+            "description": "You are just one call or email away from us, <a href='/uk/contact-us' target='_blank'>Connect with us</a>",
+            "link": null,
+            "isExpanded": false
+        }
+    ],
+    "isIndia": [
+        {
+            "title": "Invoice Count",
+            "yearly": "invoicesAllowed",
+            "monthly": "monthlyInvoicesAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Bill Count",
+            "yearly": "billsAllowed",
+            "monthly": "monthlyBillsAllowed",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Companies",
+            "yearly": "companiesLimit",
+            "monthly": "monthlyCompaniesLimit",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Accountant Consultant",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Desktop/Mobile App",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited users access",
+            "description": "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions such as Date ranges, CIDR ranges, and",
+            "link": "/in/multi-user-accounting-software",
+            "specificContent": "Unlimited",
+            "isExpanded": false
+        },
+        {
+            "title": "Security",
+            "isAvailableForAll": "true",
+            "description": "Your data is secured with IP security and Two-way verification, and",
+            "link": "/in/security",
+            "isExpanded": false
+        },
+        {
+            "title": "Unlimited Customers/Vendors",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Invoicing",
+            "isAvailableForAll": "true",
+            "description": "Create, and send the cash and sales invoices, check payment status, set due dates, apply reverse charge",
+            "link": "/in/invoice-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Record Bills",
+            "isAvailableForAll": "true",
+            "description": "Create purchase order, and purchase bill, attach files in the bill, pay directly to the vendor, and ",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Managing Inventory",
+            "isAvailableForAll": "true",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": "/in/inventory-management-software",
+            "isExpanded": false
+        },
+        {
+            "title": "Journal Entries",
+            "isAvailableForAll": "true",
+            "description": "Maintain inventory of product, services, and fixed asset in group, items and variant too, easy search with barcode, and",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Multi-currency",
+            "isAvailableForAll": "true",
+            "description": "Manage invoicing and payments seamlessly across 100+ currencies, with automatic currency conversion based on real-time exchange rates and ",
+            "link": "/in/multi-currency-accounting-software",
+            "isExpanded": false
+        },
+        {
+            "title": "GST Compliance",
+            "isAvailableForAll": "true",
+            "description": "Create GST invoice, view GST reports and",
+            "link": "/in/gst",
+            "isExpanded": false
+        },
+        {
+            "title": "GST Direct Filling",
+            "description": "Direct filing, and reconcile transaction with the GST portal and",
+            "link": "/in/gst",
+            "isExpanded": false
+        },
+        {
+            "title": "Reports",
+            "isAvailableForAll": "true",
+            "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
+            "link": "/in/financial-reporting",
+            "isExpanded": false
+        },
+        {
+            "title": "Real-time Dashboard",
+            "isAvailableForAll": "true",
+            "description": "View visual representation of the company data like Total overdues, Profit & loss, Bank Account balances, and",
+            "link": "/in/accounting-dashboard",
+            "isExpanded": false
+        },
+        {
+            "title": "Bank Reconciliation",
+            "isAvailableForAll": "true",
+            "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
+            "link": "/in/conect-bank-reconcile",
+            "isExpanded": false
+        },
+        {
+            "title": "Manufacturing",
+            "isAvailableForAll": "true",
+            "description": "Create manufacturing recipe, do manufacturing, add manufacturing expenses, and view its reports.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "E-invoice",
+            "description": "Easily create E-invoice, auto-push E-invoice to its portal, monitor its status, and",
+            "link": "/e-invoice",
+            "isExpanded": false
+        },
+        {
+            "title": "E-way bill",
+            "isAvailableForAll": "true",
+            "description": "E-way bill",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "E-commerce Integration",
+            "isAvailableForAll": "true",
+            "description": "Shopify integration to enhance the efficiency and growth of Ecommerce business.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Telecom Integration",
+            "isAvailableForAll": "true",
+            "description": "MSG91 integration to automate the business communication like sending invoices, payment reminder and more via Mail, SMS, Whatsapp message.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Branch and warehouse management",
+            "isAvailableForAll": "true",
+            "description": "Efficiently manage the company's numerous branches and warehouses, access branch- and warehouse-specific reports, facilitate branch transfers, archive the branch and warehouse and perform various related tasks.",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Easy Import/Export of the data",
+            "isAvailableForAll": "true",
+            "description": "Accelerate the accounting process by importing data such as company master information, inventory details, financial entries, bank statements, and <a href='/in/import-data' target='_blank'>and other relevant data.</a> Effortlessly export and share data, including ledgers, invoices, reports, and many more",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Financial Year Locking",
+            "isAvailableForAll": "true",
+            "description": "You have the ability to lock a specific financial year within your company, preventing any further entries or modifications during that period",
+            "link": null,
+            "isExpanded": false
+        },
+        {
+            "title": "Support",
+            "description": "You are just one call or email away from us, <a href='/in/contact-us' target='_blank'>Connect with us</a>",
+            "link": null,
+            "isExpanded": false
+        }
+    ]
+}
