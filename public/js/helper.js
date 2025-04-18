@@ -74,8 +74,7 @@ function addOtpWidgetScript(
   );
 
   let scriptTag = document.createElement("script");
-  scriptTag.src =
-    "https://control.msg91.com/app/assets/otp-provider/otp-provider.js";
+  scriptTag.src = "https://verify.msg91.com/otp-provider.js";
   scriptTag.type = "text/javascript";
   scriptTag.defer = true;
   scriptTag.onload = () => {
