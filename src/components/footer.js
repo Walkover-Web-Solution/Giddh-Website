@@ -241,7 +241,7 @@ const Footer = (path) => {
           <div className="d-flex mt-4 copyright-text ps-0">
             <div className="widget_text widget widget_custom_html list-unstyled class">
               <div className="textwidget custom-html-widget c-fs-6">
-                All rights are reserved {year}
+                Copyright 2008-{year}, Walkover Technologies Pvt Ltd | All rights reserved.
               </div>
             </div>
           </div>
