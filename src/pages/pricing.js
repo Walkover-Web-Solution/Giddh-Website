@@ -308,6 +308,26 @@ const pricing = (path) => {
     setShowToggleButton(hasMonthly && hasYearly);
   }
 
+  /**
+   * Get Extra Add Ons
+   * 
+   * @returns
+   */
+  const getExtraAddOns = () => {
+    return (
+      <>
+        Extra Add-ons:{" "}
+        <span className="c-fw-600">
+          {isGlobal && "$0.012"}
+          {isIndia && "₹1"}
+          {isAE && "د.إ0.043"}
+          {isUK && "£0.0087"}
+        </span>{" "}
+        per voucher
+      </>
+    );
+  }
+
   return (
     <>
       <section className="container-fluid pricing_main_section">
@@ -486,38 +506,7 @@ const pricing = (path) => {
                               style={{ backgroundColor: "#edf3ff" }}
                               className={"c-fs-6 c-fw-400 text-end py-1 pe-2"}
                             >
-                              Extra Add ons:{" "}
-                              <span className="c-fw-600">
-                                {" "}
-                                {isGlobal
-                                  ? "$0.005"
-                                  : isIndia
-                                  ? "₹0.10"
-                                  : isAE
-                                  ? "د.إ0.03"
-                                  : "£0.005"}
-                              </span>{" "}
-                              per transaction |{" "}
-                              <span className="c-fw-600">
-                                {isGlobal
-                                  ? "$60"
-                                  : isIndia
-                                  ? "₹2000"
-                                  : isAE
-                                  ? "د.إ250"
-                                  : "£60"}
-                              </span>{" "}
-                              per branch/year |{" "}
-                              <span className="c-fw-600">
-                                {isGlobal
-                                  ? "$30"
-                                  : isIndia
-                                  ? "₹1000"
-                                  : isAE
-                                  ? "د.إ120"
-                                  : "£30"}
-                              </span>{" "}
-                              per warehouse/year
+                              {getExtraAddOns()}
                             </p>
                           </td>
                         </tr>
@@ -633,38 +622,7 @@ const pricing = (path) => {
                               className={"text-center c-fs-6 c-fw-400 py-2"}
                               style={{ backgroundColor: "#edf3ff" }}
                             >
-                              Extra Add ons:{" "}
-                              <span className="c-fw-600">
-                                {" "}
-                                {isGlobal
-                                  ? "$0.005"
-                                  : isIndia
-                                  ? "₹0.10"
-                                  : isAE
-                                  ? "د.إ0.03"
-                                  : "£0.005"}
-                              </span>{" "}
-                              per transaction |{" "}
-                              <span className="c-fw-600">
-                                {isGlobal
-                                  ? "$60"
-                                  : isIndia
-                                  ? "₹2000"
-                                  : isAE
-                                  ? "د.إ250"
-                                  : "£60"}
-                              </span>{" "}
-                              per branch/year |{" "}
-                              <span className="c-fw-600">
-                                {isGlobal
-                                  ? "$30"
-                                  : isIndia
-                                  ? "₹1000"
-                                  : isAE
-                                  ? "د.إ120"
-                                  : "£30"}
-                              </span>{" "}
-                              per warehouse/year
+                              {getExtraAddOns()}
                             </p>
                           </td>
                         </tr>
