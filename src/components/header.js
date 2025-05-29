@@ -15,7 +15,7 @@ const header = (props) => {
         ae: ["/gst", "/e-invoice", "/blog", "/tallyplusgiddh"],
     };
 
-    var pathPage, pathCountry, isOnlyGlobal;
+    var pathPage, pathCountry, isBlogPage;
     const pathArrRaw = currentPath.split("?"); // Remove ? form Url  
     const pathArr = pathArrRaw[0].split("/");
     let metaPath = pathArrRaw[0].split('#'); // Remove # form Url to get correct meta data   
@@ -41,7 +41,7 @@ const header = (props) => {
         } else {
             pathPage = "/" + pathArr.slice(1).join("/");
             pathCountry = "";
-            isOnlyGlobal = pathArr[1] === "blog";
+            isBlogPage = pathArr[1] === "blog";
         }
     }
 
@@ -64,7 +64,7 @@ const header = (props) => {
                 <link rel='icon' type='image/x-icon' href='/favico.svg'></link>
                 <link rel="alternate" href="https://giddh.com/" hrefLang="x-default" />
                 <link rel='canonical' href={`https://giddh.com${pathArrRaw[0]}`} />
-                {!isOnlyGlobal && (
+                {!isBlogPage && (
                     <>
                         {!exceptionPage?.in.includes(pathPage) && country === 'in' && (
                             <link
@@ -99,17 +99,17 @@ const header = (props) => {
                     </>
                 )}
                 {
-                    isOnlyGlobal || country === "" && !exceptionPage?.global.includes(pathPage) && (
+                    ((isBlogPage || country === "") && !exceptionPage?.global.includes(pathPage)) && 
+                    <>
                         <link
-                            rel='alternate'
-                            hrefLang='en'
+                            rel="alternate"
+                            hrefLang="en"
                             href={`https://giddh.com${pathPage}`}
-                            property='og:locale'
-                            content='en'
+                            property="og:locale"
+                            content="en"
                             url={`https://giddh.com${pathPage}`}
                         />
-
-                    )
+                    </>
                 }
 
                 {restrictFromSeo && <meta name='robots' content='noindex, nofollow' />}

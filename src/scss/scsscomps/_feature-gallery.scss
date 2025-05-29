@@ -76,6 +76,7 @@
     &__card {
       padding-bottom: 20px;
       figure{
+        padding-top: 0px;
         img{
           height: 120px;
         }
@@ -99,6 +100,15 @@
         margin-right: 50%;
         margin-left: 50%;
         margin-top: auto;
+      }
+    }
+    &__card {
+      padding-bottom: 20px;
+      figure{
+        img{
+          height: 160px;
+          width: auto;
+        }
       }
     }
   }

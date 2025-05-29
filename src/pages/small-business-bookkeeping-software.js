@@ -12,10 +12,9 @@ const smallBusinessBookkeepingSoftware = (path) => {
   const [faq, setFaq] = useState([])
 
   useEffect(() => {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
     setFaq(faqs['small-business-bookkeeping-software'])
   }, []);
+
   return (
     <>
       <div className="features">
@@ -46,7 +45,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() => Calendly.initPopupWidget({ url: 'https://calendly.com/sales-accounting-software/talk-to-sale' })}
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with Giddh"
                   >
                     Schedule Demo
@@ -123,6 +122,8 @@ const smallBusinessBookkeepingSoftware = (path) => {
                     src={isIndia ? '/img/feature-gallery-icons/networth.svg' : (isAE ? '/img/feature-gallery-icons/networth-ae.webp' : '/img/feature-gallery-icons/networth-uk.svg')}
                     className="img-fluid"
                     alt="Net worth representation for accounting dashboard"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -204,6 +205,8 @@ const smallBusinessBookkeepingSoftware = (path) => {
                     src="/img/feature-gallery-icons/totaloverdue.svg"
                     className="img-fluid"
                     alt="Summary of monthly overdues in accounting dashboard"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -274,6 +277,8 @@ const smallBusinessBookkeepingSoftware = (path) => {
                     src="/img/feature-gallery-icons/expense-report.svg"
                     className="img-fluid"
                     alt="Expense tracking in accounting dashboard"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -357,6 +362,8 @@ const smallBusinessBookkeepingSoftware = (path) => {
                     src={isIndia ? '/img/feature-gallery-icons/revenue.svg' : (isAE ? '/img/feature-gallery-icons/revenue-ae.webp' : '/img/feature-gallery-icons/revenue-uk.svg')}
                     className="img-fluid"
                     alt="Revenue prediction in accounting dashboard"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -427,6 +434,8 @@ const smallBusinessBookkeepingSoftware = (path) => {
                     src="/img/feature-gallery-icons/financial-ratio.svg"
                     className="img-fluid"
                     alt="Financial ratio analysis in accounting dashboard"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -443,6 +452,8 @@ const smallBusinessBookkeepingSoftware = (path) => {
                     src="/img/suggestion.svg"
                     alt="Illustration of people interested in accounting dashboard features"
                     className="features__sub_heading_container--banner_img"
+                    width="auto"
+                    height="200"
                   />
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">

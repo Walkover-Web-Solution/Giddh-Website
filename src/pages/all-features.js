@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const allFeatures = (path) => {
   const [popupData, setPopupData] = useState({});
@@ -602,11 +602,6 @@ const allFeatures = (path) => {
     setPopupData(item);
   };
 
-  useEffect(() => {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
-  }, []);
-
   return (
     <>
       <div className="features">
@@ -630,11 +625,7 @@ const allFeatures = (path) => {
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() =>
-                      Calendly.initPopupWidget({
-                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                      })
-                    }
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
@@ -646,7 +637,8 @@ const allFeatures = (path) => {
                   <img
                     src={directoryPath + "/all-features-banner-image.svg"}
                     alt="Banner showcasing Giddh features"
-                    width="90%"
+                    width="400"
+                    height="auto"
                     role="img"
                   />
                 </figure>

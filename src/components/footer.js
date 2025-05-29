@@ -144,7 +144,7 @@ const Footer = (path) => {
                 </div>
 
                 <div>
-                  <p className="d-flex flex-column gap-3">Desktop Apps</p>
+                  <p>Desktop Apps</p>
                   <ul className="list-unstyled d-flex gap-3">
                     <li>
                       <a
@@ -236,12 +236,18 @@ const Footer = (path) => {
                   </li>
                 </ul>
               </div>
+              <p className="mt-3 mb-1">Address</p>
+              <address className="m-0">
+                  Captain C.S. Nayudu Arcade<br></br>
+                  401 Old Palasia Road, <br></br>
+                  Indore, Madhya Pradesh
+              </address>
             </div>
           </div>
           <div className="d-flex mt-4 copyright-text ps-0">
             <div className="widget_text widget widget_custom_html list-unstyled class">
-              <div className="textwidget custom-html-widget c-fs-6">
-                All rights are reserved {year}
+              <div className="textwidget custom-html-widget">
+                Copyright 2008-{year}, Walkover Technologies Pvt Ltd | All rights reserved.
               </div>
             </div>
           </div>

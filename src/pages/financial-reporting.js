@@ -8,11 +8,9 @@ const financialReporting = (path) => {
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
-  const [faq, setFaq] = useState([])
+  const [faq, setFaq] = useState([]) 
 
   useEffect(() => {
-    appendScript("https://assets.calendly.com/assets/external/widget.js", true);
-    appendLink("https://assets.calendly.com/assets/external/widget.css");
     setFaq(faqs['financial-reporting']);
   }, []);
 
@@ -44,7 +42,7 @@ const financialReporting = (path) => {
                   <a 
                     href="#" 
                     className="col-blue" 
-                    onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}
+                    onClick={() => openCalendly()}
                     aria-label="Schedule a demo with sales"
                   >
                     Schedule Demo
@@ -117,6 +115,8 @@ const financialReporting = (path) => {
                     src="/img/feature-gallery-icons/report-sales-graph.svg"
                     className="img-fluid"
                     alt="Graph showing sales data for financial reporting"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -141,6 +141,8 @@ const financialReporting = (path) => {
                     src="/img/feature-gallery-icons/report-ready.svg"
                     className="img-fluid"
                     alt="Illustration of ready-made financial reports"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -167,6 +169,8 @@ const financialReporting = (path) => {
                     src={isIndia || isAE ? '/img/feature-gallery-icons/report-aging.svg' : '/img/feature-gallery-icons/aging.svg'}
                     className="img-fluid"
                     alt="Aging report illustration showing outstanding invoices"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -192,6 +196,8 @@ const financialReporting = (path) => {
                     src={isIndia || isAE ? '/img/feature-gallery-icons/report-collaborate.svg' : '/img/feature-gallery-icons/collab.svg'}
                     className="img-fluid"
                     alt="Collaboration illustration for financial reporting"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -243,6 +249,8 @@ const financialReporting = (path) => {
                     src="/img/suggestion.svg"
                     alt="Illustration representing suggestions for financial reporting"
                     className="features__sub_heading_container--banner_img"
+                    width="auto"
+                    height="200"
                   />
                 </figure>
                 <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
