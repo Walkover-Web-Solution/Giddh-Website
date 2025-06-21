@@ -257,6 +257,10 @@ $font-weight-500: var(--c-fw-600);
         &:focus-visible {
           background-color: $color-primary !important;
         }
+        &:disabled {
+          color: var(--col-dark) !important;
+          background-color: var(--col-light-gray) !important;
+        }
       }
       .back_btn,
       .submit_btn {
