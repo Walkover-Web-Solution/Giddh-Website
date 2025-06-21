@@ -14,7 +14,7 @@ const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
 var intlRef;
 
 const signUp = (path) => {
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(2);
   const [showEmailOtp, setShowEmailOtp] = useState(false);
   const [showMobileOtp, setShowMobileOtp] = useState(false);
   const [emailDetails, setEmailDetails] = useState(null);
@@ -1111,19 +1111,20 @@ const signUp = (path) => {
                     </div>
                   </div>
                   <div className="mb-4">
-                    <p className="d-flex c-fs-6 mb-1 c-fs-7">
+                    <p className="d-flex c-fs-5 m-0">
                       I hereby authorise to send notifications via SMS, Email,
                       RCS and others as per Terms of Service | Privacy Policy *
                     </p>
-                    <div class="d-flex align-items-center gap-1">
+                    <div class="d-flex align-items-center gap-2">
                       <input
+                        className="form-check-input m-0"
                         type="checkbox"
                         id="agreeCheckBox"
                         value={termsAgree}
                         onChange={() => setTermsAgree(!termsAgree)}
                       />
                       <label
-                        className="form-check-label c-fs-7"
+                        className="form-check-label c-fs-5"
                         htmlFor="agreeCheckBox"
                       >
                         Agree
