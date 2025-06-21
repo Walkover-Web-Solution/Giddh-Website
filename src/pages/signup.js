@@ -28,6 +28,7 @@ const signUp = (path) => {
   const [mobileVerifyOtpInProgress, setMobileVerifyOtpInProgress] =
     useState(false);
   const [signupInProgress, setSignupInProgress] = useState(false);
+  const [termsAgree, setTermsAgree] = useState(false);
   const [showVerificationModal, setShowVerificationModal] = useState(false);
   const [userResponse, setUserResponse] = useState(null);
   const link = path.path.linkPrefix;
@@ -43,7 +44,7 @@ const signUp = (path) => {
     region = region.toUpperCase();
   }
 
-    useEffect(() => {
+  useEffect(() => {
     setGiddhRegion(region.toLowerCase());
     initOtpSignup();
   }, []);
@@ -1109,6 +1110,26 @@ const signUp = (path) => {
                         )}
                     </div>
                   </div>
+                  <div className="mb-4">
+                    <p className="d-flex c-fs-6 mb-1 c-fs-7">
+                      I hereby authorise to send notifications via SMS, Email,
+                      RCS and others as per Terms of Service | Privacy Policy *
+                    </p>
+                    <div class="d-flex align-items-center gap-1">
+                      <input
+                        type="checkbox"
+                        id="agreeCheckBox"
+                        value={termsAgree}
+                        onChange={() => setTermsAgree(!termsAgree)}
+                      />
+                      <label
+                        className="form-check-label c-fs-7"
+                        htmlFor="agreeCheckBox"
+                      >
+                        Agree
+                      </label>
+                    </div>
+                  </div>
                   <div className="row">
                     <div>
                       <button
@@ -1122,7 +1143,7 @@ const signUp = (path) => {
                       <button
                         className="btn submit_btn col-white opacity-100"
                         onClick={() => initiateSignup()}
-                        disabled={signupInProgress}
+                        disabled={signupInProgress || !termsAgree}
                       >
                         {signupInProgress && (
                           <div
