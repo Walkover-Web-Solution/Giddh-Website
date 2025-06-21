@@ -14,7 +14,7 @@ const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
 var intlRef;
 
 const signUp = (path) => {
-  const [currentStep, setCurrentStep] = useState(2);
+  const [currentStep, setCurrentStep] = useState(1);
   const [showEmailOtp, setShowEmailOtp] = useState(false);
   const [showMobileOtp, setShowMobileOtp] = useState(false);
   const [emailDetails, setEmailDetails] = useState(null);
