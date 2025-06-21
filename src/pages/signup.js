@@ -640,83 +640,82 @@ const signUp = (path) => {
       region;
   }
 
-
   return (
     <>
       <link
-        rel='stylesheet'
-        href='https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css'
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
       ></link>
-      <script src='https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js'></script>
-      <section className='entry signup d-flex'>
-        <div className='entry__left_section col-xl-3 col-lg-4 col-md-5'>
+      <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+      <section className="entry signup d-flex">
+        <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
           <a href={link == "" ? "/" : link}>
             <img
-              src='/img/giddh-logo.svg'
-              className='entry__left_section__brand_logo'
-              alt='giddh logo'
+              src="/img/giddh-logo.svg"
+              className="entry__left_section__brand_logo"
+              alt="giddh logo"
             />
           </a>
-          <div className='entry__left_section__details pe-5'>
-            <div className='container'>
-              <h2 className='c-fs-3 line-height-36 mb-4'>
+          <div className="entry__left_section__details pe-5">
+            <div className="container">
+              <h2 className="c-fs-3 line-height-36 mb-4">
                 {isGlobal && "Experience Easy Accounting with GIDDH"}
                 {isIndia && "Join GIDDH for Simplified Accounting Solutions"}
                 {isAE && "Join GIDDH: Effortless Accounting Software"}
                 {isUK && "GIDDH: Simplified Accounting at Your Fingertips"}
               </h2>
               <p>Features:</p>
-              <ul className='ps-0 my-4'>
-                <li className='d-flex align-items-center'>
+              <ul className="ps-0 my-4">
+                <li className="d-flex align-items-center">
                   <MdDone />
                   {isGlobal && "Basic Ledger Accounting Made Easy"}
                   {isIndia && "Easy Steps for Basic Ledger Accounting"}
                   {isAE && "Basic Ledger Accounting Simplified"}
                   {isUK && "Master Basic Ledger Accounting"}
                 </li>
-                <li className='d-flex align-items-center'>
+                <li className="d-flex align-items-center">
                   <MdDone />
                   {isGlobal && "Efficiently Manage Branches & Warehouses"}
                   {isIndia && "Simplify Branches & Warehouses Management"}
                   {isAE && "Centralized Control for Branches & Warehouses"}
                   {isUK && "Optimize Branches & Warehouses Operations"}
                 </li>
-                <li className='d-flex align-items-center'>
+                <li className="d-flex align-items-center">
                   <MdDone />
                   {isGlobal && "Streamlined Inventory Management Solutions"}
                   {isIndia && "Simplify Your Inventory Management Process"}
                   {isAE && "Inventory Management Made Streamlined"}
                   {isUK && "Seamless and Streamlined Inventory Management"}
                 </li>
-                <li className='d-flex align-items-center'>
+                <li className="d-flex align-items-center">
                   <MdDone />
                   {isGlobal && "Easy Tax Reports Anywhere"}
                   {isIndia && "GST Reporting Anytime, Anywhere"}
                   {isAE && "VAT Reports on the Go"}
                   {isUK && "Fast VAT Reports on the Go"}
                 </li>
-                <li className='d-flex align-items-center'>
+                <li className="d-flex align-items-center">
                   <MdDone />
                   {isGlobal && "Native iOS & Android App Support"}
                   {isIndia && "Full Support for iOS & Android Apps"}
                   {isAE && "iOS & Android Apps Fully Supported"}
                   {isUK && "iOS & Android Native App Compatibility"}
                 </li>
-                <li className='d-flex align-items-center'>
+                <li className="d-flex align-items-center">
                   <MdDone />
                   {isGlobal && "Support for Unlimited Users"}
                   {isIndia && "Unlimited User Access Support"}
                   {isAE && "Unlimited Users, Full Support"}
                   {isUK && "Comprehensive Support for Unlimited Users"}
                 </li>
-                <li className='d-flex align-items-center'>
+                <li className="d-flex align-items-center">
                   <MdDone />
                   {isGlobal && "Simplified for Small Business Accounting"}
                   {isIndia && "Easy Accounting for Small Businesses"}
                   {isAE && "Small Business Accounting Made Easy"}
                   {isUK && "Streamlined Accounting for Small Businesses"}
                 </li>
-                <li className='d-flex align-items-center'>
+                <li className="d-flex align-items-center">
                   <MdDone />
                   {isGlobal && "Support for Multi-Currency Accounting"}
                   {isIndia && "Seamless Multi-Currency Accounting"}
@@ -733,28 +732,28 @@ const signUp = (path) => {
             </div>
           </div>
         </div>
-        <div className='entry__right_section col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12'>
-          <div className='container entry__right_section__container'>
+        <div className="entry__right_section col-xl-9 col-lg-8 col-md-7 col-sm-12 col-12">
+          <div className="container entry__right_section__container">
             {/* STEP #1 */}
             {currentStep == 1 && (
-              <div className='entry__right_section__container--step entry__right_section__container--active'>
+              <div className="entry__right_section__container--step entry__right_section__container--active">
                 <a
                   href={link == "" ? "/" : link}
-                  className='d-none entry__right_section__container--logo-visible-in-small'
+                  className="d-none entry__right_section__container--logo-visible-in-small"
                 >
                   <img
-                    src='/img/giddh-logo.svg'
-                    width='auto'
-                    height='40px'
-                    alt='Giddh Icon'
+                    src="/img/giddh-logo.svg"
+                    width="auto"
+                    height="40px"
+                    alt="Giddh Icon"
                   />
                 </a>
                 <h1>Create an account</h1>
-                <div className='entry__right_section__container__entry_with d-flex mb-4 me-4'>
+                <div className="entry__right_section__container__entry_with d-flex mb-4 me-4">
                   <div>
-                    <span className='d-inline-block mb-4'>Sign up with</span>
+                    <span className="d-inline-block mb-4">Sign up with</span>
 
-                    <div className='d-flex align-items-center'>
+                    <div className="d-flex align-items-center">
                       <GoogleLogin
                         googleApiSuccessCallback={googleApiSuccessCallback}
                       />
@@ -762,17 +761,17 @@ const signUp = (path) => {
                   </div>
                 </div>
 
-                <span className='d-block line_on_right c-fs-6 mb-4'>or</span>
+                <span className="d-block line_on_right c-fs-6 mb-4">or</span>
 
                 <button
-                  className='entry__right_section__container__entry_button mb-4'
+                  className="entry__right_section__container__entry_button mb-4"
                   onClick={() => resetEverything()}
                 >
                   Sign up with Email
                   <MdKeyboardArrowRight />
                 </button>
 
-                <p className='c-fs-6 mb-4'>
+                <p className="c-fs-6 mb-4">
                   If you already have an account,{" "}
                   <a href={link + "/login"}>Login</a>
                 </p>
@@ -781,22 +780,22 @@ const signUp = (path) => {
 
             {/* STEP #2 */}
             {currentStep == 2 && (
-              <div className='entry__right_section__container--step entry__right_section__container--active'>
+              <div className="entry__right_section__container--step entry__right_section__container--active">
                 <a
                   href={link == "" ? "/" : link}
-                  className='d-none entry__right_section__container--logo-visible-in-small'
+                  className="d-none entry__right_section__container--logo-visible-in-small"
                 >
                   <img
-                    src='/img/giddh-logo.svg'
-                    width='auto'
-                    height='40px'
-                    alt='Giddh Icon'
+                    src="/img/giddh-logo.svg"
+                    width="auto"
+                    height="40px"
+                    alt="Giddh Icon"
                   />
                 </a>
                 <h1>Create an account</h1>
-                <div className='entry__right_section__container__step_one mt-5'>
-                  <div className='step_status_bar d-flex justify-content-between align-items-center ps-0'>
-                    <div className='d-flex align-items-center'>
+                <div className="entry__right_section__container__step_one mt-5">
+                  <div className="step_status_bar d-flex justify-content-between align-items-center ps-0">
+                    <div className="d-flex align-items-center">
                       <MdCheckCircle
                         className={
                           "me-1 " +
@@ -811,13 +810,13 @@ const signUp = (path) => {
                       Verify email & mobile number
                     </div>
                   </div>
-                  <div className='row mx-0 px-0 step_input_wrapper mt-4'>
-                    <label htmlFor='email' className='mb-3 ps-0'>
+                  <div className="row mx-0 px-0 step_input_wrapper mt-4">
+                    <label htmlFor="email" className="mb-3 ps-0">
                       Verify email
                     </label>
-                    <div className='step_input_wrapper--fixed-height d-flex flex-wrap p-0'>
+                    <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                       <div
-                        className='step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12'
+                        className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12"
                         style={{
                           paddingRight:
                             showEmailOtp ||
@@ -826,14 +825,14 @@ const signUp = (path) => {
                               : null,
                         }}
                       >
-                        <div className='d-flex step_input_wrapper__mobile_veiw'>
+                        <div className="d-flex step_input_wrapper__mobile_veiw">
                           <input
-                            type='email'
-                            className='form-control'
-                            id='email'
-                            name='email'
-                            placeholder='email@walkover.in'
-                            autoComplete='off'
+                            type="email"
+                            className="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="email@walkover.in"
+                            autoComplete="off"
                             onKeyDown={onKeyDownEmail}
                             disabled={
                               showEmailOtp ||
@@ -845,21 +844,21 @@ const signUp = (path) => {
                             }
                           />
                           {emailDetails && emailDetails.isVerified && (
-                            <span className='position-relative'>
-                              <MdCheckCircle className='icon-success otp_verified_icon' />
+                            <span className="position-relative">
+                              <MdCheckCircle className="icon-success otp_verified_icon" />
                             </span>
                           )}
                           {!showEmailOtp &&
                             (!emailDetails || !emailDetails.isVerified) && (
                               <button
-                                className='btn custom-signup-btn opacity-100'
+                                className="btn custom-signup-btn opacity-100"
                                 onClick={sendEmailOtp}
                                 disabled={emailGetOtpInProgress}
                               >
                                 {emailGetOtpInProgress && (
                                   <div
-                                    className='spinner-border spinner-border-sm col-primary'
-                                    role='status'
+                                    className="spinner-border spinner-border-sm col-primary"
+                                    role="status"
                                   ></div>
                                 )}
 
@@ -870,14 +869,14 @@ const signUp = (path) => {
                             )}
                           {showEmailOtp && (
                             <button
-                              className='btn custom-signup-btn opacity-100 wide-btn'
+                              className="btn custom-signup-btn opacity-100 wide-btn"
                               onClick={() => setShowEmailOtpSection(false)}
                               disabled={emailGetOtpInProgress}
                             >
                               {emailGetOtpInProgress && (
                                 <div
-                                  className='spinner-border spinner-border-sm col-primary'
-                                  role='status'
+                                  className="spinner-border spinner-border-sm col-primary"
+                                  role="status"
                                 ></div>
                               )}
 
@@ -890,48 +889,48 @@ const signUp = (path) => {
                       </div>
                       {showEmailOtp &&
                         (!emailDetails || !emailDetails.isVerified) && (
-                          <div className='step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12'>
-                            <div className='d-flex flex-column'>
-                              <div className='d-flex'>
+                          <div className="step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12">
+                            <div className="d-flex flex-column">
+                              <div className="d-flex">
                                 <input
-                                  type='tel'
-                                  className='form-control otp_input email-otp-field'
-                                  placeholder='*'
-                                  maxLength='1'
-                                  id='emailOtpField1'
+                                  type="tel"
+                                  className="form-control otp_input email-otp-field"
+                                  placeholder="*"
+                                  maxLength="1"
+                                  id="emailOtpField1"
                                   autoFocus={true}
                                 />
                                 <input
-                                  type='tel'
-                                  className='form-control otp_input email-otp-field'
-                                  placeholder='*'
-                                  maxLength='1'
-                                  id='emailOtpField2'
+                                  type="tel"
+                                  className="form-control otp_input email-otp-field"
+                                  placeholder="*"
+                                  maxLength="1"
+                                  id="emailOtpField2"
                                 />
                                 <input
-                                  type='tel'
-                                  className='form-control otp_input email-otp-field'
-                                  placeholder='*'
-                                  maxLength='1'
-                                  id='emailOtpField3'
+                                  type="tel"
+                                  className="form-control otp_input email-otp-field"
+                                  placeholder="*"
+                                  maxLength="1"
+                                  id="emailOtpField3"
                                 />
                                 <input
-                                  type='tel'
-                                  className='form-control otp_input email-otp-field'
-                                  placeholder='*'
-                                  maxLength='1'
-                                  id='emailOtpField4'
+                                  type="tel"
+                                  className="form-control otp_input email-otp-field"
+                                  placeholder="*"
+                                  maxLength="1"
+                                  id="emailOtpField4"
                                 />
                                 <button
-                                  id='verify-email-button'
-                                  className='btn custom-signup-btn opacity-100'
+                                  id="verify-email-button"
+                                  className="btn custom-signup-btn opacity-100"
                                   onClick={() => verifyOtp("email")}
                                   disabled={emailVerifyOtpInProgress}
                                 >
                                   {emailVerifyOtpInProgress && (
                                     <div
-                                      className='spinner-border spinner-border-sm col-primary'
-                                      role='status'
+                                      className="spinner-border spinner-border-sm col-primary"
+                                      role="status"
                                     ></div>
                                   )}
 
@@ -940,9 +939,9 @@ const signUp = (path) => {
                                   )}
                                 </button>
                               </div>
-                              <a href='#' className='col-dark mt-3 c-fs-6'>
+                              <a href="#" className="col-dark mt-3 c-fs-6">
                                 <span
-                                  className='col-primary c-fw-600'
+                                  className="col-primary c-fw-600"
                                   onClick={() => retrySendOtp(3)}
                                 >
                                   Resend
@@ -953,13 +952,13 @@ const signUp = (path) => {
                         )}
                     </div>
                   </div>
-                  <div className='row mx-0 px-0 step_input_wrapper mb-3'>
-                    <label htmlFor='contact' className='mb-3 ps-0'>
+                  <div className="row mx-0 px-0 step_input_wrapper mb-3">
+                    <label htmlFor="contact" className="mb-3 ps-0">
                       Verify Mobile number
                     </label>
-                    <div className='step_input_wrapper--fixed-height d-flex flex-wrap p-0'>
+                    <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                       <div
-                        className='step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12'
+                        className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12"
                         style={{
                           paddingRight:
                             showMobileOtp ||
@@ -968,13 +967,13 @@ const signUp = (path) => {
                               : null,
                         }}
                       >
-                        <div className='d-flex step_input_wrapper__mobile_veiw position-relative'>
+                        <div className="d-flex step_input_wrapper__mobile_veiw position-relative">
                           <input
-                            type='tel'
-                            className='form-control'
-                            id='mobileNo'
-                            placeholder='98********'
-                            autoComplete='off'
+                            type="tel"
+                            className="form-control"
+                            id="mobileNo"
+                            placeholder="98********"
+                            autoComplete="off"
                             onKeyDown={onKeyDownMobile}
                             onChange={inputMobile}
                             disabled={
@@ -982,25 +981,25 @@ const signUp = (path) => {
                               (mobileDetails && mobileDetails.isVerified)
                             }
                           />
-                          <span className='position-absolute mobile-number'>
+                          <span className="position-absolute mobile-number">
                             {mobileNo}
                           </span>
                           {mobileDetails && mobileDetails.isVerified && (
-                            <span className='position-relative'>
-                              <MdCheckCircle className='icon-success otp_verified_icon' />
+                            <span className="position-relative">
+                              <MdCheckCircle className="icon-success otp_verified_icon" />
                             </span>
                           )}
                           {!showMobileOtp &&
                             (!mobileDetails || !mobileDetails.isVerified) && (
                               <button
-                                className='btn custom-signup-btn opacity-100'
+                                className="btn custom-signup-btn opacity-100"
                                 onClick={sendMobileOtp}
                                 disabled={mobileGetOtpInProgress}
                               >
                                 {mobileGetOtpInProgress && (
                                   <div
-                                    className='spinner-border spinner-border-sm col-primary'
-                                    role='status'
+                                    className="spinner-border spinner-border-sm col-primary"
+                                    role="status"
                                   ></div>
                                 )}
 
@@ -1011,14 +1010,14 @@ const signUp = (path) => {
                             )}
                           {showMobileOtp && (
                             <button
-                              className='btn custom-signup-btn opacity-100 wide-btn'
+                              className="btn custom-signup-btn opacity-100 wide-btn"
                               onClick={() => setShowMobileOtpSection(false)}
                               disabled={mobileGetOtpInProgress}
                             >
                               {mobileGetOtpInProgress && (
                                 <div
-                                  className='spinner-border spinner-border-sm col-primary'
-                                  role='status'
+                                  className="spinner-border spinner-border-sm col-primary"
+                                  role="status"
                                 ></div>
                               )}
 
@@ -1031,48 +1030,48 @@ const signUp = (path) => {
                       </div>
                       {showMobileOtp &&
                         (!mobileDetails || !mobileDetails.isVerified) && (
-                          <div className='step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12'>
-                            <div className='d-flex flex-column'>
-                              <div className='d-flex'>
+                          <div className="step_input_wrapper__right col-xxl-6 col-xl-5 col-lg-12">
+                            <div className="d-flex flex-column">
+                              <div className="d-flex">
                                 <input
-                                  type='tel'
-                                  className='form-control otp_input mobile-otp-field'
-                                  placeholder='*'
-                                  maxLength='1'
-                                  id='mobileOtpField1'
+                                  type="tel"
+                                  className="form-control otp_input mobile-otp-field"
+                                  placeholder="*"
+                                  maxLength="1"
+                                  id="mobileOtpField1"
                                   autoFocus={true}
                                 />
                                 <input
-                                  type='tel'
-                                  className='form-control otp_input mobile-otp-field'
-                                  placeholder='*'
-                                  maxLength='1'
-                                  id='mobileOtpField2'
+                                  type="tel"
+                                  className="form-control otp_input mobile-otp-field"
+                                  placeholder="*"
+                                  maxLength="1"
+                                  id="mobileOtpField2"
                                 />
                                 <input
-                                  type='tel'
-                                  className='form-control otp_input mobile-otp-field'
-                                  placeholder='*'
-                                  maxLength='1'
-                                  id='mobileOtpField3'
+                                  type="tel"
+                                  className="form-control otp_input mobile-otp-field"
+                                  placeholder="*"
+                                  maxLength="1"
+                                  id="mobileOtpField3"
                                 />
                                 <input
-                                  type='tel'
-                                  className='form-control otp_input mobile-otp-field'
-                                  placeholder='*'
-                                  maxLength='1'
-                                  id='mobileOtpField4'
+                                  type="tel"
+                                  className="form-control otp_input mobile-otp-field"
+                                  placeholder="*"
+                                  maxLength="1"
+                                  id="mobileOtpField4"
                                 />
                                 <button
-                                  id='verify-mobile-button'
-                                  className='btn custom-signup-btn opacity-100'
+                                  id="verify-mobile-button"
+                                  className="btn custom-signup-btn opacity-100"
                                   onClick={() => verifyOtp("mobile")}
                                   disabled={mobileVerifyOtpInProgress}
                                 >
                                   {mobileVerifyOtpInProgress && (
                                     <div
-                                      className='spinner-border spinner-border-sm col-primary'
-                                      role='status'
+                                      className="spinner-border spinner-border-sm col-primary"
+                                      role="status"
                                     ></div>
                                   )}
 
@@ -1083,15 +1082,15 @@ const signUp = (path) => {
                               </div>
                               {connectedChannels && (
                                 <a
-                                  href='#'
-                                  className='col-dark mt-3 c-fs-6 d-flex resend-text'
+                                  href="#"
+                                  className="col-dark mt-3 c-fs-6 d-flex resend-text"
                                 >
                                   Resend on{" "}
                                   <ul>
                                     {connectedChannels.map((item, index) => (
                                       <li key={item.value}>
                                         <span
-                                          className='col-primary c-fw-600'
+                                          className="col-primary c-fw-600"
                                           onClick={() =>
                                             retrySendOtp(item.value)
                                           }
@@ -1111,31 +1110,30 @@ const signUp = (path) => {
                         )}
                     </div>
                   </div>
-                  <div className='mb-4'>
-                    <p className='d-flex c-fs-6 mb-1 c-fs-7'>
+                  <div className="mb-4">
+                    <p className="d-flex c-fs-6 mb-1 c-fs-7">
                       I hereby authorise to send notifications via SMS, Email,
                       RCS and others as per Terms of Service | Privacy Policy *
                     </p>
-                    <div class=' d-flex align-items-center gap-1'>
+                    <div class=" d-flex align-items-center gap-1">
                       <input
-                        class=''
-                        type='checkbox'
-                        id='inlineCheckbox1'
+                        type="checkbox"
+                        id="agreeCheckBox"
                         value={termsAgree}
                         onChange={() => setTermsAgree(!termsAgree)}
                       />
                       <label
-                        class='form-check-label c-fs-7'
-                        for='inlineCheckbox1'
+                        className="form-check-label c-fs-7"
+                        htmlFor="agreeCheckBox"
                       >
                         Agree
                       </label>
                     </div>
                   </div>
-                  <div className='row'>
+                  <div className="row">
                     <div>
                       <button
-                        className='me-3 btn back_btn'
+                        className="me-3 btn back_btn"
                         onClick={() => updateCurrentStep(1)}
                       >
                         {" "}
@@ -1143,15 +1141,14 @@ const signUp = (path) => {
                         Back
                       </button>
                       <button
-                        className='btn submit_btn col-white opacity-100'
+                        className="btn submit_btn col-white opacity-100"
                         onClick={() => initiateSignup()}
                         disabled={signupInProgress || !termsAgree}
-                        
                       >
                         {signupInProgress && (
                           <div
-                            className='spinner-border spinner-border-sm col-white'
-                            role='status'
+                            className="spinner-border spinner-border-sm col-white"
+                            role="status"
                           ></div>
                         )}
 

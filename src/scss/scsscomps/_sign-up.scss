@@ -258,8 +258,8 @@ $font-weight-500: var(--c-fw-600);
           background-color: $color-primary !important;
         }
         &:disabled {
-          color: black !important;
-          background-color: #1b1f6d1d !important;
+          color: var(--col-dark) !important;
+          background-color: var(--col-light-gray) !important;
         }
       }
       .back_btn,
