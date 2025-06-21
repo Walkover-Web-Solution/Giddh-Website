@@ -1115,7 +1115,7 @@ const signUp = (path) => {
                       I hereby authorise to send notifications via SMS, Email,
                       RCS and others as per Terms of Service | Privacy Policy *
                     </p>
-                    <div class=" d-flex align-items-center gap-1">
+                    <div class="d-flex align-items-center gap-1">
                       <input
                         type="checkbox"
                         id="agreeCheckBox"
