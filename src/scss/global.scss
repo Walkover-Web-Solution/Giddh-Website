@@ -125,7 +125,7 @@ body {
 }
 
 //custom SCSS
-.figcaption{
+.figcaption {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -137,11 +137,21 @@ body {
   border: 0;
 }
 
-.section{
-  &_py{
+.section {
+  &_py {
     padding: 100px 0;
     @media (max-width: 769px) {
       padding: 50px 0;
     }
+  }
+}
+
+.content_w {
+  max-width: 900px;
+}
+
+.bg {
+  &-light-blue {
+    background-color: var(--col-extra-light-blue);
   }
 }

@@ -26,5 +26,25 @@ export default function GiddhFor() {
       },
     ],
   };
-  return <></>;
+  return (
+    <section className="container section_py d-flex flex-column gap-4">
+      <div className="d-flex flex-column text-center content_w mx-auto">
+        <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
+        <p>{data?.subheading}</p>
+      </div>
+      <div className="row row-cols-1 row-cols-md-2 g-4">
+        {data?.content.map((feature, index) => {
+          return (
+            <div className="col" key={index}>
+              <div className="d-flex flex-column h-100 p-4 border rounded">
+                <span className="c-fs-1">{feature?.icon}</span>
+                <h3 className="mt-3 c-fs-3">{feature?.name}</h3>
+                <p>{feature?.des}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
 }

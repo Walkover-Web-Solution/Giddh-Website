@@ -1,0 +1,24 @@
+.testimonials_scroller {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.testimonial {
+  min-width: 480px;
+  background: #fff;
+  border-radius: 12px;
+  border-left:12px solid var(--col-light-blue) ;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
