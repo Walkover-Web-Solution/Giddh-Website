@@ -1,0 +1,22 @@
+.img_cont {
+  width: 440px !important;
+  height: 440px !important;
+  background-color: #e9ecff;
+  border-radius: 12px;
+  padding: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img{
+    max-height: 100%;
+}
+  @media (max-width: 1025px) {
+    height: 380px !important;
+    width: 380px !important;
+  }
+  @media (max-width: 769px) {
+    height: 280px !important;
+    width: 100% !important;
+
+  }
+}

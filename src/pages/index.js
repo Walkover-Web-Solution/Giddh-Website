@@ -5,6 +5,8 @@ import ClientSummary from "@/components/clientSummary";
 import Faqs from "@/components/faq";
 import faqs from "../data/faqs.json";
 import { useState, useEffect } from "react";
+import Banner from "@/components/NewComps/Banner";
+import Features from "@/components/NewComps/Features";
 
 const index = (path) => {
   const link = path.path;
@@ -15,8 +17,10 @@ const index = (path) => {
   }, []);
   return (
     <>
-      <BannerSection path={link} />
-      <FeatureGallery path={link} />
+      <Banner path={link} />
+      <Features path={link} />
+      {/* <BannerSection path={link} /> */}
+      {/* <FeatureGallery path={link} /> */}
       <ClientSummary />
       <MakeTheSwitchIndexPage path={link} />
       <Faqs faq={faq} />
