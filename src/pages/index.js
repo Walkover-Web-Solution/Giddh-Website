@@ -9,6 +9,7 @@ import Banner from "@/components/NewComps/Banner";
 import Features from "@/components/NewComps/Features";
 import GiddhFor from "@/components/NewComps/GiddhFor";
 import Testimonials from "@/components/NewComps/Testimonials";
+import OurClient from "@/components/NewComps/OurClients";
 
 const index = (path) => {
   const link = path.path;
@@ -23,9 +24,10 @@ const index = (path) => {
       <Features path={link} />
       <GiddhFor/>
       <Testimonials/>
+      <OurClient/>
       {/* <BannerSection path={link} /> */}
       {/* <FeatureGallery path={link} /> */}
-      <ClientSummary />
+      {/* <ClientSummary /> */}
       <MakeTheSwitchIndexPage path={link} />
       <Faqs faq={faq} />
     </>

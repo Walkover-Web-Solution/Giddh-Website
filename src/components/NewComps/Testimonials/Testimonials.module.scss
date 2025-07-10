@@ -15,10 +15,22 @@
   min-width: 480px;
   background: #fff;
   border-radius: 12px;
-  border-left:12px solid var(--col-light-blue) ;
+  border-left: 12px solid var(--col-light-blue);
   padding: 18px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 12px;
+  @media (max-width: 1025px) {
+    min-width: 400px;
+    width: 400px;
+  }
+  @media (max-width: 769px) {
+    min-width: 320px;
+    width: 320px;
+  }
+  @media (max-width: 425px) {
+    min-width: 260px;
+    width: 260px;
+  }
 }

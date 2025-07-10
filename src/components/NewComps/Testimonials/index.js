@@ -1,11 +1,6 @@
 import React, { useRef } from "react";
 import style from "./Testimonials.module.scss";
-import {
-  MdArrowBack,
-  MdArrowForward,
-  MdChevronLeft,
-  MdChevronRight,
-} from "react-icons/md";
+import { MdArrowBack, MdArrowForward } from "react-icons/md";
 export default function Testimonials() {
   const data = {
     heading: "Hear how we’ve made a difference",
@@ -55,7 +50,8 @@ export default function Testimonials() {
   };
   const scrollerRef = useRef(null);
 
-  const scrollByAmount = 920;
+  const scrollByAmount =
+    typeof window !== "undefined" && window.innerWidth < 1025 ? 640 : 920;
 
   const scrollLeft = () => {
     if (scrollerRef.current) {
@@ -92,7 +88,7 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
-        <div className="d-flex align-items-end justify-content-end w-100 gap-2">
+        <div className="d-md-flex d-none align-items-end justify-content-end w-100 gap-2">
           <button
             className="btn btn-secondary"
             onClick={scrollLeft}
