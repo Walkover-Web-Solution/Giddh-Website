@@ -12,6 +12,7 @@ import Testimonials from "@/components/NewComps/Testimonials";
 import OurClient from "@/components/NewComps/OurClients";
 import PreFooter from "@/components/NewComps/PreFooter";
 import FAQs from "@/components/NewComps/FAQs";
+import TrustBadge from "@/components/NewComps/TrustBadge";
 
 const index = (path) => {
   const link = path.path;
@@ -23,6 +24,7 @@ const index = (path) => {
   return (
     <>
       <Banner path={link} />
+      <TrustBadge path={link}/>
       <Features path={link} />
       <GiddhFor/>
       <Testimonials/>

@@ -1,0 +1,23 @@
+.logo_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  
+.logo {
+  height: 30px;
+  width: fit-content;
+  max-width: 125px;
+  @media (max-width:1025px) {
+ height: 24px;
+}
+}
+.leaf{
+    height: 120px;
+    width: fit-content;
+    @media (max-width:1025px) {
+        display: none;
+    }
+}
