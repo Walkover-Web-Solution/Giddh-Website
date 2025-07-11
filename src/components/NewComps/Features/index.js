@@ -10,18 +10,18 @@ export default function Features(path) {
         return (
           <div
           key={index}
-            className={`d-flex gap-5 flex-column flex-md-row align-items-center ${
+            className={`d-flex gap-lg-5 gap-md-3 gap-2 flex-column flex-md-row align-items-center col-12 ${
               index % 2 === 1 ? "flex-md-row-reverse" : ""
             }`}
           >
-            <div>
+            <div className="w-100">
               <h2 className="c-fs-3 c-fw-600  col-primary">{feature?.name}</h2>
-              <p>{feature?.description}</p>
+              <p dangerouslySetInnerHTML={{ __html: feature?.description }} />
               {feature?.link && <Link href={feature?.link}>Learn More</Link>}
             </div>
             <div className={style.img_cont}>
               <Image
-                src={`/img/feature-gallery-icons${feature?.image}`}
+                src={feature?.image}
                 className={style.img}
                 width={440}
                 height={440}

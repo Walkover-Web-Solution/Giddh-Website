@@ -8,8 +8,11 @@
     gap: 0px;
   }
   &_cont {
-    max-width: 130px;
-    max-height: 130px;
+    max-width: 160px;
+    max-height: 160px;
+    @media (max-width: 722px) {
+        max-width: 120px;
+      }
   }
   &_img {
     width: 100%;
@@ -17,7 +20,7 @@
     max-height: 100%;
     max-width: 240px;
     @media (max-width: 722px) {
-      max-width: 200px;
+      max-width: 100%;
     }
   }
 }
