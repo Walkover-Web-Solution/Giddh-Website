@@ -33,6 +33,7 @@ export default function MyApp({ Component, pageProps }) {
   const isUK = shortedPath === "/uk";
 
   const path = {
+    country: shortedPath ? shortedPath.replace("/", "") : "global",
     linkPrefix: shortedPath,
     baseURL: process.env.NEXT_PUBLIC_SITE_URL || "https://giddh.com",
     isGlobal: isGlobal,

@@ -37,6 +37,24 @@ export default function Banner(path) {
     });
     slider.open(); // Opens the slider
   };
+  const data = {
+    global: {
+      h1: "Online Accounting Software For Businesses",
+      p: "Fits the needs of every business. fits the needs of every business.fits the needs of every business. fits the needs of every business.",
+    },
+    in: {
+      h1: "Business Accounting Software India",
+      p: "Fits the needs of every business. fits the needs of every business.fits the needs of every business. fits the needs of every business.",
+    },
+    ae: {
+      h1: "Cloud-based Accounting Software For UAE Businesses",
+      p: "Fits the needs of every business. fits the needs of every business.fits the needs of every business. fits the needs of every business.",
+    },
+    uk: {
+      h1: "VAT-Compliant Accounting Software For UK Small Businesses",
+      p: "Fits the needs of every business. fits the needs of every business.fits the needs of every business. fits the needs of every business.",
+    },
+  };
 
   return (
     <>
@@ -53,13 +71,9 @@ export default function Banner(path) {
           <div className="d-flex flex-column gap-3">
             <div className={style.banner_heading}>
               <h1 className="heading col-primary c-fw-600">
-                GIDDH - Secure, Scalable, and Compliant Accounting Software
+                {data[link?.country]?.h1}
               </h1>
-              <p className="c-fs-4">
-                Fits the needs of every business. fits the needs of every
-                business.fits the needs of every business. fits the needs of
-                every business.
-              </p>
+              <p className="c-fs-4">{data[link?.country]?.p}</p>
             </div>
             <div className="d-flex flex-column gap-2">
               <div className="d-flex flex-sm-row  gap-md-4 gap-2 justify-content-start w-12">
@@ -93,7 +107,7 @@ export default function Banner(path) {
               className={style.img}
               width="1440"
               height="1080"
-              src="/img/giddh-dashboard-within-chrome-browser.webp"
+              src="/img/giddh_dashboard.webp"
               alt="Screenshot of Giddh Dashboard within a Chrome browser"
             />
             <figcaption className="figcaption">
