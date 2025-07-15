@@ -102,7 +102,7 @@ body {
   white-space: nowrap;
 }
 
-//btns
+//Buttons
 .btn {
   width: fit-content;
   &.btn-primary {
@@ -146,12 +146,20 @@ body {
   }
 }
 
-.content_w {
-  max-width: 900px;
+.content-width {
+  max-width: var(--w-max-content);
 }
 
 .bg {
   &-light-blue {
     background-color: var(--col-extra-light-blue);
   }
+}
+
+//Custom Classes
+.w-fit-content {
+  width: fit-content !important;
+}
+.h-fit-content {
+  height: fit-content !important;
 }

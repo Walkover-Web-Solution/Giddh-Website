@@ -17,11 +17,11 @@ export default function Features(path) {
             }`}
           >
             <div className="w-100">
-              <h2 className="c-fs-3 c-fw-600  col-primary">{feature?.name}</h2>
+              <h2 className="c-fs-3 c-fw-600 col-primary">{feature?.name}</h2>
               <div dangerouslySetInnerHTML={{ __html: feature?.description }} />
               {feature?.link && <Link href={feature?.link}>Learn More</Link>}
             </div>
-            <div className={style.img_cont}>
+            <div className={`${style.img_cont} w-100 d-flex align-items-center justify-content-center p-4 bg-light-blue`}>
               <Image
                 src={feature?.image}
                 className={style.img}
@@ -38,7 +38,7 @@ export default function Features(path) {
           }`}
         >
           <div className="w-100">
-            <h2 className="c-fs-1 c-fw-600  col-primary">
+            <h2 className="c-fs-1 c-fw-600 col-primary">
               Explore More Features
             </h2>
             <p>

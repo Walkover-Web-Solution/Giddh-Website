@@ -74,13 +74,13 @@ export default function Testimonials() {
   return (
     <section className="bg-light-blue section_py">
       <div className="container">
-        <div className="d-flex flex-column content_w">
+        <div className="d-flex flex-column content-width">
           <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
           <p>{data?.subheading}</p>
         </div>
-        <div className={style.testimonials_scroller} ref={scrollerRef}>
+        <div className={`${style.testimonials_scroller} d-flex gap-4 pb-3`} ref={scrollerRef}>
           {data?.content.map((feature, index) => (
-            <div className={style.testimonial} key={index}>
+            <div className={`${style.testimonial} d-flex flex-column justify-content-center bg-white`} key={index}>
               <span className="c-fs-6 col-primary c-fw-600">
                 ~ {feature?.name}
               </span>

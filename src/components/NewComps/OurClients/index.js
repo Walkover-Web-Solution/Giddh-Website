@@ -31,11 +31,11 @@ export default function OurClient() {
   return (
     <>
       <section className="container section_py d-flex flex-column gap-4">
-        <div className="d-flex flex-column text-center content_w mx-auto">
+        <div className="d-flex flex-column text-center content-width mx-auto">
           <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
           <p>{data?.subheading}</p>
         </div>
-        <div className={styles.clients}>
+        <div className={`${styles.clients} d-flex flex-md-row flex-column align-items-center gap-0 justify-content-center gap-md-5 `}>
           {data?.clients.map((client) => {
             return (
               <a
@@ -47,7 +47,7 @@ export default function OurClient() {
                 aria-label={`Visit ${client?.name} website`}
               >
                 <Image
-                  className={styles.clients_img}
+                  className={`${styles.clients_img} w-100 h-fit-content`}
                   src={client?.logo}
                   alt={client?.name}
                   width="360"

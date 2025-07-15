@@ -34,7 +34,7 @@ export default function PreFooter() {
   return (
     <section className="bg-light-blue section_py">
       <div className="container d-flex flex-column gap-3">
-        <div className="d-flex flex-column content_w">
+        <div className="d-flex flex-column content-width">
           <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
           <p>{data?.subheading}</p>
         </div>

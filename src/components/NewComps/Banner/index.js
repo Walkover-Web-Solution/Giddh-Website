@@ -69,7 +69,7 @@ export default function Banner(path) {
       <section className={style.banner}>
         <div className="section_py container d-flex flex-column gap-5">
           <div className="d-flex flex-column gap-3">
-            <div className={style.banner_heading}>
+            <div className="content-width">
               <h1 className="heading col-primary c-fw-600">
                 {data[link?.country]?.h1}
               </h1>
@@ -104,7 +104,7 @@ export default function Banner(path) {
           </div>
           <figure>
             <Image
-              className={style.img}
+              className="w-100 h-fit-content"
               width="1440"
               height="1080"
               src="/img/giddh_dashboard.webp"

@@ -28,7 +28,7 @@ export default function GiddhFor() {
   };
   return (
     <section className="container section_py d-flex flex-column gap-4">
-      <div className="d-flex flex-column text-center content_w mx-auto">
+      <div className="d-flex flex-column text-center content-width mx-auto">
         <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
         <p>{data?.subheading}</p>
       </div>

@@ -1,12 +1,4 @@
 .clients {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  @media (max-width: 722px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 0px;
-  }
   &_cont {
     max-width: 160px;
     max-height: 160px;
@@ -15,8 +7,6 @@
       }
   }
   &_img {
-    width: 100%;
-    height: fit-content;
     max-height: 100%;
     max-width: 240px;
     @media (max-width: 722px) {

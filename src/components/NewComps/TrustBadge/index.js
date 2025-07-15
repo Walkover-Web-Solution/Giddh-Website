@@ -2,11 +2,10 @@ import { useEffect, useState } from "react";
 import style from "./TrustBadge.module.scss";
 
 export default function TrustBadge(path) {
-  const [trustBadgeBrand, setTrustBadgeBrand] = useState([]);
   const link = path.path;
 
   const trustBadgeBrands = {
-    isUK: [
+    uk: [
       {
         href: "https://markets.businessinsider.com/news/stocks/giddh-launches-online-accounting-software-for-businesses-1034090245",
         alt: "Featured on Business Insider",
@@ -38,7 +37,7 @@ export default function TrustBadge(path) {
         src: "/img/trust-badge/benzinga.svg",
       },
     ],
-    isIndia: [
+    in: [
       {
         href: "https://www.tribuneindia.com/news/business/giddh-books-makes-accounting-accessible-and-automated-for-indian-small-businesses/",
         alt: "Accessible Accounting Software for Small Businesses",
@@ -77,110 +76,48 @@ export default function TrustBadge(path) {
     ],
   };
 
-  useEffect(() => {
-    setTrustBadgeBrand(
-      trustBadgeBrands[Object.keys(link).find((key) => link[key] === true)]
+  if (trustBadgeBrands[path.path.country]) {
+    return (
+      <section className="container section_py d-flex flex-column gap-4">
+        <div className="d-flex flex-column text-center content-width mx-auto">
+          <h2 className="sub-heading c-fw-600 col-primary ">
+            Our Media Highlights
+          </h2>
+          <p>
+            See who’s talking about us and why businesses trust us around the
+            globe.
+          </p>
+        </div>
+        <div className={`${style.logo_container} d-flex flex-wrap align-items-center justify-content-center`}>
+          <img
+            className={`${style.leaf} w-fit-content`}
+            alt="Trust Reef"
+            src="img/trust-badge/wheat-frame-left.svg"
+          />
+          {trustBadgeBrands[path.path.country]?.map((logo, index) => (
+            <a
+              key={index}
+              href={logo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${style.logo_link} w-fit-content`}
+            >
+              <img
+                alt={logo.alt}
+                className={`${style.logo} w-fit-content`}
+                src={logo.src}
+                width="auto"
+                height="200"
+              />
+            </a>
+          ))}
+          <img
+            className={`${style.leaf} w-fit-content`}
+            alt="Trust Reef"
+            src="img/trust-badge/wheat-frame-right.svg"
+          />
+        </div>
+      </section>
     );
-  }, [link]);
-
-  return (
-    <section className="container section_py d-flex flex-column gap-4">
-      <div className="d-flex flex-column text-center content_w mx-auto">
-        <h2 className="sub-heading c-fw-600 col-primary ">
-          Our Media Highlights
-        </h2>
-        <p>
-          See who’s talking about us and why businesses trust us around the
-          globe.
-        </p>
-      </div>
-      <div className={style.logo_container}>
-        <img
-                className={style.leaf}
-          alt="Trust Reef"
-          src="img/trust-badge/wheat-frame-left.svg"
-        />
-        {trustBadgeBrand?.map((logo, index) => (
-          <a
-            key={index}
-            href={logo.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={style.logo_link}
-          >
-            <img
-              alt={logo.alt}
-              className={style.logo}
-              src={logo.src}
-              width="auto"
-              height="200"
-            />
-          </a>
-        ))}
-        <img
-        className={style.leaf}
-          alt="Trust Reef"
-          src="img/trust-badge/wheat-frame-right.svg"
-        />
-      </div>
-    </section>
-    // <div
-    //   className="position-relative w-100 mx-auto pb-3"
-    //   style={{
-    //     borderRadius: "10px",
-    //     minHeight: "180px"
-    //   }}
-    // >
-    //   <div
-    //     className="text-center c-fs-4 c-fw-600"
-    //     style={{
-    //       padding: "0px 5px 10px 5px",
-    //       letterSpacing: "8px",
-    //       lineHeight: 1.3
-    //     }}
-    //   >
-    //     <div style={{ height: "58px" }}>
-    //       <span className="trust-badge-title position-relative m-0 c-fs-5">
-    //         AS SEEN ON
-    //       </span>
-    //     </div>
-    //     <div className="trust-badge-logo-container">
-    //       <img
-    //         className="trust-badge-leaf position-absolute m-0 p-0"
-    //         alt="Trust Reef"
-    //         style={{ left: "25px" }}
-    //         src="img/trust-badge/wheat-frame-left.svg"
-    //       />
-    //       <img
-    //         className="trust-badge-leaf position-absolute m-0 p-0"
-    //         alt="Trust Reef"
-    //         style={{ transform: "scaleX(-1)", right: "25px" }}
-    //         src="/img/trust-badge/wheat-frame-left.svg"
-    //       />
-    //       <div className="trust-badge-logo-container-item h-auto w-100 position-relative">
-    //         <div className="trust-badge-vertical-center d-flex align-content-center justify-content-center align-items-center flex-wrap flex-row">
-
-    //           { trustBadgeBrand?.map((logo, index) => (
-    //             <a
-    //               key={index}
-    //               href={logo.href}
-    //               target="_blank"
-    //               rel="noopener noreferrer"
-    //               className="trust-badge-newslogos"
-    //             >
-    //               <img
-    //                 alt={logo.alt}
-    //                 className="trust-badge-news-logo me-4 h-auto w-auto overflow-visible"
-    //                 src={logo.src}
-    //                 width="auto"
-    //                 height="200"
-    //               />
-    //             </a>
-    //           ))}
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
-  );
+  }
 }

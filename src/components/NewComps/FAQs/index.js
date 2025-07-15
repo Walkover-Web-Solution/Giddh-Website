@@ -2,7 +2,7 @@ import { MdRemove, MdAdd } from "react-icons/md";
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import DOMPurify from "dompurify";
-
+import style from "./FAQs.module.scss";
 export default function FAQs({ faq }) {
   const [faqSchema, setFaqSchema] = useState(null);
 
@@ -37,7 +37,9 @@ export default function FAQs({ faq }) {
       )}
       <section className="container-fluid faqs">
         <div className="container d-flex flex-lg-row flex-column">
-          <h2 className="fw-bold subheading col-primary col-lg-2 col-12">Frequently Asked Questions</h2>
+          <h2 className="fw-bold subheading col-primary col-lg-2 col-12">
+            Frequently Asked Questions
+          </h2>
           <div className="col-lg-10 col-12">
             <div className="col-12 px-0">
               <div className="accordion" id="accordionAllFeatures">
