@@ -396,7 +396,7 @@ const navbar = (props) => {
               </div>
               <div>
                 <a href={urlPrefix + "/signup"} className="signup_page_link">
-                  Sign Up
+                  Try Giddh for free
                 </a>
               </div>
             </div>

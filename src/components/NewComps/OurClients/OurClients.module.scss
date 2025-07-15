@@ -1,0 +1,16 @@
+.clients {
+  &_cont {
+    max-width: 160px;
+    max-height: 160px;
+    @media (max-width: 722px) {
+        max-width: 120px;
+      }
+  }
+  &_img {
+    max-height: 100%;
+    max-width: 240px;
+    @media (max-width: 722px) {
+      max-width: 100%;
+    }
+  }
+}
