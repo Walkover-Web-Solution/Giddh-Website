@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-
+import { createSlider } from "@typeform/embed";
 export default function PreFooter() {
   const data = {
     heading: "Start Your Accounting Revolution with Giddh",
