@@ -2,13 +2,13 @@ const clientSummary = () => {
   const ourClient = [
     {
       clientName: "RackBank",
-      clientLogo: "/rackbank-logo.png",
+      clientLogo: "/rackbank-logo.webp",
       websiteLink: "https://www.rackbank.com/",
       description: "Datacenter Accounting",
     },
     {
       clientName: "MSG91",
-      clientLogo: "/msg91-logo.svg",
+      clientLogo: "/msg91-logo.webp",
       websiteLink: "https://msg91.com/",
       description: "SaaS Accounting",
     },

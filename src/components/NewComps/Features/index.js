@@ -1,8 +1,8 @@
-import data from "@/data/data.json";
+import data from "./data.json";
 import Link from "next/link";
 import style from "./Features.module.scss";
 import Image from "next/image";
-import { MdArrowLeft, MdChevronRight } from "react-icons/md";
+import { MdChevronRight } from "react-icons/md";
 
 export default function Features(path) {
   const features = data[path.path.country] || data["global"];
