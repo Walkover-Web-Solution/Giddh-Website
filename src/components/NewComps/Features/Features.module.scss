@@ -2,11 +2,11 @@
   background-color: var(--col-extra-light-blue);
 }
 .img_cont {
-  max-width: 440px;
-  height: 440px;
+  max-width: 320px;
+  height: 320px;
   border-radius: 12px;
   img {
-    max-width: 380px;
+    max-width: 0px;
   }
   @media (max-width: 1025px) {
     max-width: 360px;
@@ -24,4 +24,3 @@
     }
   }
 }
-

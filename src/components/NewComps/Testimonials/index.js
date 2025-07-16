@@ -3,8 +3,7 @@ import style from "./Testimonials.module.scss";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 export default function Testimonials() {
   const data = {
-    heading: "Hear how we’ve made a difference",
-    subheading: "Stories that inspire us to keep delivering our best.",
+    heading: "Why do companies prefer Giddh for smarter accounting?",
     content: [
       {
         name: "Priya Shah",

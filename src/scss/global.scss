@@ -122,6 +122,14 @@ body {
       background: var(--col-dark);
     }
   }
+  &.btn-white {
+    background: var(--col-white);
+    outline: none;
+    border: none;
+    &:hover {
+      background: var(--col-extra-light-blue);
+    }
+  }
 }
 
 //custom SCSS
@@ -151,6 +159,9 @@ body {
 }
 
 .bg {
+  &-accent {
+    background-color: var(--col-primary);
+  }
   &-light-blue {
     background-color: var(--col-extra-light-blue);
   }
@@ -162,4 +173,10 @@ body {
 }
 .h-fit-content {
   height: fit-content !important;
+}
+
+.list {
+  &-disc {
+    list-style: disc;
+  }
 }
