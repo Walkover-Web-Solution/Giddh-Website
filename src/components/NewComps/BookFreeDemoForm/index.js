@@ -39,7 +39,7 @@ export default function BookFreeDemoForm() {
   return (
     <>
       <div
-        className={`${style.form_container} w-100 bg-light-blue p-5 d-flex align-items-center justify-content-center rounded`}
+        className={`${style.form_container} w-100 bg-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}
       >
         {submitted ? (
           <div className="d-flex align-items-center justify-content-center flex-column gap-0">
