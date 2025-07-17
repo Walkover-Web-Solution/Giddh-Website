@@ -1,9 +1,6 @@
 import { MdRemove, MdAdd } from "react-icons/md";
-import { useEffect, useState } from "react";
 import Head from "next/head";
-import DOMPurify from "dompurify";
 export default function FAQs() {
-  const [faqSchema, setFaqSchema] = useState(null);
   const data = [
     {
       question: "How secure is my financial data on Giddh?",
@@ -44,33 +41,33 @@ export default function FAQs() {
         "Giddh is ideal for accounting software for startups, small to medium-sized businesses (with a revenue of ₹1 lakh to ₹10 crore), accounting firms, B2B service providers, and manufacturers. Whether you need multi-branch accounting, inventory tracking, or GST & VAT compliance, Giddh streamlines your financial management, helping you scale efficiently and stay compliant across India, UAE, and the UK.",
     },
   ];
-  useEffect(() => {
-    if (data) {
-      const allQuestionAnswer = data.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      }));
-      setFaqSchema({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: allQuestionAnswer,
-      });
-    }
-  }, [data]);
+
+    const allQuestionAnswer = data.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    }));
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: allQuestionAnswer,
+    };
+  
   return (
     <>
       {faqSchema && (
         <Head>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(JSON.stringify(faqSchema)),
-            }}
-          />
+          <Head>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: JSON.stringify(faqSchema),
+              }}
+            />
+          </Head>
         </Head>
       )}
       <section className="container-fluid faqs">
