@@ -1,7 +1,6 @@
 import style from "./TrustBadge.module.scss";
 
 export default function TrustBadge() {
-
   const trustBadgeBrands = [
     {
       href: "https://www.tribuneindia.com/news/business/giddh-books-makes-accounting-accessible-and-automated-for-indian-small-businesses/",

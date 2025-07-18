@@ -122,14 +122,6 @@ body {
       background: var(--col-dark);
     }
   }
-  &.btn-white {
-    background: var(--col-white);
-    outline: none;
-    border: none;
-    &:hover {
-      background: var(--col-extra-light-blue);
-    }
-  }
 }
 
 //custom SCSS

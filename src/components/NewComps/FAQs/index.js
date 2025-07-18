@@ -42,20 +42,20 @@ export default function FAQs() {
     },
   ];
 
-    const allQuestionAnswer = data.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    }));
-    const faqSchema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: allQuestionAnswer,
-    };
-  
+  const allQuestionAnswer = data.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  }));
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: allQuestionAnswer,
+  };
+
   return (
     <>
       {faqSchema && (

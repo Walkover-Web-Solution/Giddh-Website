@@ -2,11 +2,11 @@
   max-width: 460px;
   min-width: 300px;
   min-height: 460px;
-  form{
+  form {
     max-width: 460px;
   }
-  @media (max-width:769px) {
-    max-width: 769px; 
+  @media (max-width: 769px) {
+    max-width: 769px;
     min-height: fit-content;
   }
 }

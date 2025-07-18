@@ -14,13 +14,12 @@ const index = (path) => {
   return (
     <>
       <Banner path={link} />
-
       <Features path={link} />
-      <TrustBadge/>
+      <TrustBadge />
       <GiddhFor />
-<SwitchToGiddh/>
+      <SwitchToGiddh />
       <Testimonials />
-      <SeeGiddhInAction/>
+      <SeeGiddhInAction />
       <PreFooter />
       <FAQs />
     </>
