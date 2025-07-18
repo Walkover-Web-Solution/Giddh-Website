@@ -6,22 +6,26 @@ export default function GiddhFor() {
     content: [
       {
         name: "Retailers & Traders",
-        des: "Track inventory, manage billing, and stay GST-compliant — all in real time.",
+        description:
+          "Track inventory, manage billing, and stay GST-compliant — all in real time.",
         icon: "🛒",
       },
       {
         name: "Startups & Service Providers",
-        des: "Speed up payments and streamline cash flow with smart invoicing and reminders.",
+        description:
+          "Speed up payments and streamline cash flow with smart invoicing and reminders.",
         icon: "🚀",
       },
       {
         name: "Accountants & Finance Teams",
-        des: "Collaborate with teams, access ledgers instantly, and close books with confidence.",
+        description:
+          "Collaborate with teams, access ledgers instantly, and close books with confidence.",
         icon: "📊",
       },
       {
         name: "Shopify & E-commerce Brands",
-        des: "Auto-sync sales, manage stock, and generate clean, audit-ready reports.",
+        description:
+          "Auto-sync sales, manage stock, and generate clean, audit-ready reports.",
         icon: "🛍️",
       },
     ],
@@ -39,7 +43,7 @@ export default function GiddhFor() {
               <div className="d-flex flex-column h-100 p-4 border rounded">
                 <span className="c-fs-1">{feature?.icon}</span>
                 <h3 className="mt-3 c-fs-3">{feature?.name}</h3>
-                <p>{feature?.des}</p>
+                <p>{feature?.description}</p>
               </div>
             </div>
           );
