@@ -27,6 +27,7 @@ export default function BookFreeDemoForm() {
       phone: formData.phone,
       business: formData.business,
     };
+    sendDataInSegmento(dataToStore);
     console.log("Form Data as JSON:", JSON.stringify(dataToStore));
     setSubmitted(true);
     setFormData({
@@ -111,4 +112,24 @@ export default function BookFreeDemoForm() {
       </div>
     </>
   );
+}
+
+function sendDataInSegmento(data) {
+  const options = {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      authkey: process.env.MSG91_AUTH_KEY,
+    },
+    body: JSON.stringify(data),
+  };
+
+  fetch(
+    `https://control.msg91.com/api/v5/segmento/api/v1/phonebooks/${process.env.MSG91_PHONEBOOK_ID}/contacts`,
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => console.log(response))
+    .catch((err) => console.error(err));
 }
