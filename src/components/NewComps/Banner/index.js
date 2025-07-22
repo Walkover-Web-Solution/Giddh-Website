@@ -39,7 +39,6 @@ export default function Banner(path) {
                   breakdowns, in one subscription
                 </li>
               </ul>
-              <p className="c-fs-4"></p>
             </div>
             <div className="d-flex flex-column gap-2">
               <div className="d-flex flex-sm-row  gap-md-4 gap-2 justify-content-start w-12">
