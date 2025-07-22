@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Features() {
   return (
-    <section className="container section_py d-flex flex-column gap-5">
+    <section className="container section_py d-flex flex-column gap-4">
       {data.map((feature, index) => (
         <div
           key={index}
@@ -14,7 +14,7 @@ export default function Features() {
         >
           <div className="w-100">
             <h2 className="c-fs-3 c-fw-600 col-primary">{feature?.name}</h2>
-            {feature?.description && <p>{feature?.description}</p>}
+            {feature?.description && <p className="mb-0">{feature?.description}</p>}
             <div>
               {feature?.moreHeading && (
                 <p className="mb-1 c-fw-600">{feature?.moreHeading}</p>
