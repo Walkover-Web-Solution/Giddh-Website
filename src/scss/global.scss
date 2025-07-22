@@ -151,6 +151,9 @@ body {
 }
 
 .bg {
+  &-accent {
+    background-color: var(--col-primary);
+  }
   &-light-blue {
     background-color: var(--col-extra-light-blue);
   }
@@ -162,4 +165,10 @@ body {
 }
 .h-fit-content {
   height: fit-content !important;
+}
+
+.list {
+  &-disc {
+    list-style: disc;
+  }
 }
