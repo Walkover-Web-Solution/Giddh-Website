@@ -32,6 +32,7 @@ export default function Features() {
                 onClick={() => handleReadMore(index)}
                 aria-expanded={readMore === index}
                 aria-controls={`feature-readmore-${index}`}
+                aria-hidden={readMore !== index}
               >
                 {readMore === index ? (
                   <>
