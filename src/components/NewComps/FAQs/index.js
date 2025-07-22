@@ -60,14 +60,12 @@ export default function FAQs() {
     <>
       {faqSchema && (
         <Head>
-          <Head>
             <script
               type="application/ld+json"
               dangerouslySetInnerHTML={{
                 __html: JSON.stringify(faqSchema),
               }}
             />
-          </Head>
         </Head>
       )}
       <section className="container-fluid faqs">
