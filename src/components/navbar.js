@@ -79,7 +79,10 @@ const navbar = (props) => {
     }
 
     if (link.isUK) {
-      appendScript("https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js", true);
+      appendScript(
+        "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+        true
+      );
       setShowTrustpilot(true);
     }
 
@@ -190,19 +193,22 @@ const navbar = (props) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
-              { showTrustpilot && (
+              {showTrustpilot && (
                 <li className="nav-item">
-                    <span 
-                      className="trustpilot-widget d-block" 
-                      data-locale="en-GB" 
-                      data-template-id="56278e9abfbbba0bdcd568bc" 
-                      data-businessunit-id="65d30a42565b997046d9df08" 
-                      data-style-height="38px" 
-                      data-style-width="224px"
-                    >
-                      <a href="https://uk.trustpilot.com/review/giddh.com" target="_blank" rel="noopener noreferrer">
-                      </a>
-                    </span>
+                  <span
+                    className="trustpilot-widget d-block"
+                    data-locale="en-GB"
+                    data-template-id="56278e9abfbbba0bdcd568bc"
+                    data-businessunit-id="65d30a42565b997046d9df08"
+                    data-style-height="38px"
+                    data-style-width="224px"
+                  >
+                    <a
+                      href="https://uk.trustpilot.com/review/giddh.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    ></a>
+                  </span>
                 </li>
               )}
               <li className="nav-item">
@@ -236,13 +242,11 @@ const navbar = (props) => {
                   >
                     <li>
                       <ul className="dropdown-menu__wapper d-grid ps-0">
-                      {features
+                        {features
                           .filter(getCountryWiseData)
                           .map((data, index) => (
                             <li key={index}>
-                              <a href={urlPrefix + data.url}>
-                                {data.menuItem}
-                              </a>
+                              <a href={urlPrefix + data.url}>{data.menuItem}</a>
                             </li>
                           ))}
                       </ul>
@@ -396,7 +400,9 @@ const navbar = (props) => {
               </div>
               <div>
                 <a href={urlPrefix + "/signup"} className="signup_page_link">
-                  Try Giddh for free
+                  {link.country === "in"
+                    ? "Try Giddh For Free"
+                    : "Try Giddh Now"}
                 </a>
               </div>
             </div>
