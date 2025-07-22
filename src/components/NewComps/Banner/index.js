@@ -24,26 +24,30 @@ export default function Banner(path) {
       )}
       <section className={style.banner}>
         <div className="section_py container d-flex gap-3 gap-md-5 w-100 align-items-center justify-content-center flex-column flex-md-row">
-          <div className="d-flex flex-column gap-3 w-100">
+          <div className="d-flex flex-column gap-1 gap-md-3 w-100">
             <div className="content-width">
               <h1 className="heading col-primary c-fw-600">
                 One Platform for All Your Accounting Needs
               </h1>
-              <p className="c-fs-4">
-                ✅ Manage multiple companies, ✅ Simplify ledger entries with a
-                one-step process, ✅ Seamless integration with open API, ✅ Stay
-                compliant with GST and VAT, and ✅ Comprehensive financial
-                reports, including aging breakdowns, in one subscription.
-              </p>
+              <ul>
+                <li>✅ Manage multiple companies</li>
+                <li>✅ Simplify ledger entries with a one-step process</li>
+                <li>✅ Seamless integration with open API</li>
+                <li>✅ Stay compliant with GST and VAT</li>
+                <li>
+                  ✅ Comprehensive financial reports, including aging
+                  breakdowns, in one subscription
+                </li>
+              </ul>
             </div>
             <div className="d-flex flex-column gap-2">
               <div className="d-flex flex-sm-row  gap-md-4 gap-2 justify-content-start w-12">
                 <Link href={"/signup"}>
                   <button
-                    className="btn btn-primary "
+                    className="btn btn-primary btn-lg"
                     aria-label="Signup for Accounting Software"
                   >
-                    Get Started For Free
+                    Get Started
                   </button>
                 </Link>
               </div>

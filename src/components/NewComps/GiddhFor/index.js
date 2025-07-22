@@ -31,12 +31,12 @@ export default function GiddhFor() {
     ],
   };
   return (
-    <section className="container section_py d-flex flex-column gap-4">
+    <section className="container section_py d-flex flex-column gap-3">
       <div className="d-flex flex-column text-center content-width mx-auto">
         <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
         <p>{data?.subheading}</p>
       </div>
-      <div className="row row-cols-1 row-cols-md-2 g-4">
+      <div className="row row-cols-1 row-cols-md-2 g-2 g-md-4">
         {data?.content.map((feature, index) => {
           return (
             <div className="col" key={index}>

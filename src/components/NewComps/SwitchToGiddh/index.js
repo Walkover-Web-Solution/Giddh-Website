@@ -32,19 +32,19 @@ export default function SwitchToGiddh() {
     ],
   };
   return (
-    <section className="container section_py d-flex flex-column gap-4">
+    <section className="container section_py d-flex flex-column gap-1 gap-md-2">
       <div className="d-flex flex-column content-width">
         <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
         <p className="c-fs-2 col-primary">{data?.subheading}</p>
       </div>
-      <div className="d-flex flex-column gap-4 ">
+      <div className="d-flex flex-column gap-1 gap-md-2 ">
         <div className="d-none d-md-flex align-items-center gap-1 gap-md-4">
           <h3 className="c-fs-4 col-4">Problem</h3>
           <p className="c-fs-4">Giddh Solution</p>
         </div>
         {data?.content.map((feature, index) => {
           return (
-            <div className="d-flex gap-1 gap-md-4 flex-column flex-md-row " key={index}>
+            <div className="d-flex gap-md-4 flex-column flex-md-row" key={index}>
               <h3 className="c-fs-4 c-fw-600 col-12 col-md-4">{feature?.name}</h3>
               <p className="c-fs-4">{feature?.description}</p>
             </div>
