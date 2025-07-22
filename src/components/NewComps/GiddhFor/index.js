@@ -6,22 +6,26 @@ export default function GiddhFor() {
     content: [
       {
         name: "Retailers & Traders",
-        description: "Track inventory, manage billing, and stay GST-compliant — all in real time.",
+        description:
+          "Track inventory, manage billing, and stay GST-compliant — all in real time.",
         icon: "🛒",
       },
       {
         name: "Startups & Service Providers",
-        description: "Speed up payments and streamline cash flow with smart invoicing and reminders.",
+        description:
+          "Speed up payments and streamline cash flow with smart invoicing and reminders.",
         icon: "🚀",
       },
       {
         name: "Accountants & Finance Teams",
-        description: "Collaborate with teams, access ledgers instantly, and close books with confidence.",
+        description:
+          "Collaborate with teams, access ledgers instantly, and close books with confidence.",
         icon: "📊",
       },
       {
         name: "Shopify & E-commerce Brands",
-        description: "Auto-sync sales, manage stock, and generate clean, audit-ready reports.",
+        description:
+          "Auto-sync sales, manage stock, and generate clean, audit-ready reports.",
         icon: "🛍️",
       },
     ],

@@ -3,8 +3,7 @@ import style from "./Testimonials.module.scss";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 export default function Testimonials() {
   const data = {
-    heading: "Hear how we’ve made a difference",
-    subheading: "Stories that inspire us to keep delivering our best.",
+    heading: "Why do companies prefer Giddh for smarter accounting?",
     content: [
       {
         name: "Priya Shah",
@@ -78,9 +77,15 @@ export default function Testimonials() {
           <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
           <p>{data?.subheading}</p>
         </div>
-        <div className={`${style.testimonials_scroller} d-flex gap-4 pb-3`} ref={scrollerRef}>
+        <div
+          className={`${style.testimonials_scroller} d-flex gap-4 pb-3`}
+          ref={scrollerRef}
+        >
           {data?.content.map((feature, index) => (
-            <div className={`${style.testimonial} d-flex flex-column justify-content-center bg-white`} key={index}>
+            <div
+              className={`${style.testimonial} d-flex flex-column justify-content-center bg-white`}
+              key={index}
+            >
               <span className="c-fs-6 col-primary c-fw-600">
                 ~ {feature?.name}
               </span>
