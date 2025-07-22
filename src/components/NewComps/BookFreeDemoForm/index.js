@@ -1,5 +1,5 @@
 import { useState } from "react";
-import style from "./BookFreeDemoFrom.module.scss";
+import style from "./BookFreeDemoForm.module.scss";
 import { MdCheckCircleOutline } from "react-icons/md";
 
 export default function BookFreeDemoForm() {
@@ -120,7 +120,7 @@ export default function BookFreeDemoForm() {
                 } w-100`}
                 aria-label="Signup for Accounting Software"
               >
-                {submitting ? "Sheduling..." : "Book Free Demo"}
+                {submitting ? "Scheduling..." : "Book Free Demo"}
               </button>
             </form>
           </div>
