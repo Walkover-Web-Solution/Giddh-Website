@@ -1,6 +1,5 @@
 import { MdCheckCircleOutline } from "react-icons/md";
 import style from "./ThankYou.module.scss";
-import Link from "next/link";
 export default function ThankYou() {
   return (
     <section
@@ -14,9 +13,9 @@ export default function ThankYou() {
           Our team will get in touch with you shortly.
         </p>
         <div>
-          <Link href="https://giddh.com/contact-us">
+          <a href="https://giddh.com/contact-us">
             <button className="btn btn-link"> Contact us</button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>
