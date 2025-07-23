@@ -83,8 +83,8 @@ export default function BookFreeDemoForm() {
             <input
               type="tel"
               name="phone"
-              aria-label="Phone Number*"
-              placeholder="Contact No."
+              aria-label="Phone Number"
+              placeholder="Contact No.*"
               required
               className="form-control border-0 c-fs-5"
               value={formData.phone}
@@ -92,9 +92,9 @@ export default function BookFreeDemoForm() {
             />
             <input
               type="text"
-              name="business*"
+              name="business"
               aria-label="Business name"
-              placeholder="Business Name"
+              placeholder="Business Name*"
               required
               className="form-control border-0 c-fs-5"
               value={formData.business}
