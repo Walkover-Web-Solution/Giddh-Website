@@ -1,7 +1,8 @@
 import { useState } from "react";
 import style from "./BookFreeDemoForm.module.scss";
+import { MdChevronRight, MdClose } from "react-icons/md";
 
-export default function BookFreeDemoForm() {
+export default function BookFreeDemoForm({ hiddenAbsolute }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -9,6 +10,7 @@ export default function BookFreeDemoForm() {
     business: "",
   });
   const [submitting, setSubmitting] = useState(false);
+  const [showAbsoluteModal, setShowAbsoluteModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -51,68 +53,156 @@ export default function BookFreeDemoForm() {
   };
 
   return (
-    <div
-      className={`${style.form_container} w-100 bg-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}
-    >
-      <div className="d-flex align-items-center justify-content-center flex-column gap-3 w-100">
-        <p className="col-primary c-fw-600 mb-0 c-fs-4">
-          Explore the Advanced Accounting Features of Giddh
-        </p>
-        <form onSubmit={handleSubmit} className="w-100">
-          <div className="d-flex flex-column gap-2 input-group-lg mb-4">
-            <input
-              type="text"
-              name="name"
-              aria-label="Name"
-              placeholder="Name*"
-              required
-              className="form-control border-0 c-fs-5"
-              value={formData.name}
-              onChange={handleChange}
-            />
-            <input
-              type="email"
-              name="email"
-              aria-label="Email"
-              placeholder="Email*"
-              required
-              className="form-control border-0 c-fs-5"
-              value={formData.email}
-              onChange={handleChange}
-            />
-            <input
-              type="tel"
-              name="phone"
-              aria-label="Phone Number"
-              placeholder="Contact No.*"
-              required
-              className="form-control border-0 c-fs-5"
-              value={formData.phone}
-              onChange={handleChange}
-            />
-            <input
-              type="text"
-              name="business"
-              aria-label="Business name"
-              placeholder="Business Name*"
-              required
-              className="form-control border-0 c-fs-5"
-              value={formData.business}
-              onChange={handleChange}
-            />
-          </div>
-          <button
-            type="submit"
-            className={`btn ${
-              submitting ? "btn-disabled" : "btn-primary"
-            } w-100`}
-            aria-label="Signup for Accounting Software"
+    <>
+      {!hiddenAbsolute &&
+        (!showAbsoluteModal ? (
+          <div
+            className={`${style.bookdemo_btn_cont} d-flex align-items-end justify-content-end`}
           >
-            {submitting ? "Scheduling..." : "Book Free Demo"}
-          </button>
-        </form>
+            <button
+              className={`btn btn-primary btn-lg ${style.bookdemo_btn}`}
+              onClick={() => setShowAbsoluteModal(true)}
+            >
+              <MdChevronRight className="c-fs-4" /> Free Demo
+            </button>
+          </div>
+        ) : (
+          <div
+            className={`${style.absolute_form_container} bg-light-blue p-4 d-flex gap-2 flex-column align-items-center justify-content-center rounded`}
+          >
+            <div className="d-flex align-items-center justify-content-center flex-column gap-3 w-100">
+              <div className="d-flex justify-content-between align-items-center w-100">
+                <p className="col-primary c-fw-600 mb-0 c-fs-4">
+                  Book Free Demo
+                </p>
+                <span
+                  role="button"
+                  className="ms-auto"
+                  onClick={() => setShowAbsoluteModal(false)}
+                >
+                  <MdClose className="c-fs-2" />
+                </span>
+              </div>
+              <form onSubmit={handleSubmit} className="w-100">
+                <div className="d-flex flex-column gap-2 input-group-lg mb-4">
+                  <input
+                    type="text"
+                    name="name"
+                    aria-label="Name"
+                    placeholder="Name*"
+                    required
+                    className="form-control border-0 c-fs-5"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    aria-label="Email"
+                    placeholder="Email*"
+                    required
+                    className="form-control border-0 c-fs-5"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    aria-label="Phone Number"
+                    placeholder="Contact No.*"
+                    required
+                    className="form-control border-0 c-fs-5"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
+                  <input
+                    type="text"
+                    name="business"
+                    aria-label="Business name"
+                    placeholder="Business Name*"
+                    required
+                    className="form-control border-0 c-fs-5"
+                    value={formData.business}
+                    onChange={handleChange}
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className={`btn ${
+                    submitting ? "btn-disabled" : "btn-primary"
+                  } w-100`}
+                  aria-label="Signup for Accounting Software"
+                >
+                  {submitting ? "Scheduling..." : "Book Free Demo"}
+                </button>
+              </form>
+            </div>
+          </div>
+        ))}
+
+      <div
+        className={`${style.form_container} w-100 bg-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}
+      >
+        <div className="d-flex align-items-center justify-content-center flex-column gap-3 w-100">
+          <p className="col-primary c-fw-600 mb-0 c-fs-4">
+            Explore the Advanced Accounting Features of Giddh
+          </p>
+          <form onSubmit={handleSubmit} className="w-100">
+            <div className="d-flex flex-column gap-2 input-group-lg mb-4">
+              <input
+                type="text"
+                name="name"
+                aria-label="Name"
+                placeholder="Name*"
+                required
+                className="form-control border-0 c-fs-5"
+                value={formData.name}
+                onChange={handleChange}
+              />
+              <input
+                type="email"
+                name="email"
+                aria-label="Email"
+                placeholder="Email*"
+                required
+                className="form-control border-0 c-fs-5"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              <input
+                type="tel"
+                name="phone"
+                aria-label="Phone Number"
+                placeholder="Contact No.*"
+                required
+                className="form-control border-0 c-fs-5"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="business"
+                aria-label="Business name"
+                placeholder="Business Name*"
+                required
+                className="form-control border-0 c-fs-5"
+                value={formData.business}
+                onChange={handleChange}
+              />
+            </div>
+            <button
+              type="submit"
+              className={`btn ${
+                submitting ? "btn-disabled" : "btn-primary"
+              } w-100`}
+              aria-label="Signup for Accounting Software"
+            >
+              {submitting ? "Scheduling..." : "Book Free Demo"}
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
