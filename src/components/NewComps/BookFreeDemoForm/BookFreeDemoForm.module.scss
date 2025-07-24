@@ -10,3 +10,37 @@
     min-height: fit-content;
   }
 }
+
+.bookdemo_btn_cont {
+  position: fixed;
+  bottom: 80px;
+  right: 0;
+  @media (max-width: 560px) {
+    bottom: 70px;
+    right: 0;
+  }
+}
+
+.bookdemo_btn {
+  border-radius: 8px 0 0 8px;
+}
+
+.absolute_form_container {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 300px;
+
+  form {
+    max-width: 460px;
+  }
+
+  @media (max-width: 560px) {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 100dvw;
+    height: 100dvh;
+  }
+}
