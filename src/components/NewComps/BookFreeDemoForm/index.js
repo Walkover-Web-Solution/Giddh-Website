@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import style from "./BookFreeDemoForm.module.scss";
+import { useRouter } from "next/router";
 
 export default function BookFreeDemoForm() {
   const [formData, setFormData] = useState({
@@ -8,6 +10,8 @@ export default function BookFreeDemoForm() {
     phone: "",
     business: "",
   });
+  const [error, setError] = useState("");
+  const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e) => {
@@ -38,14 +42,16 @@ export default function BookFreeDemoForm() {
           phone: "",
           business: "",
         });
-        window.location.href = "/thank-you";
+        router.push("/thank-you");
         setSubmitting(false);
       } else {
+        setError(data?.errors);
+        console.error("Error submitting form:", data?.error);
         setSubmitting(false);
-        console.error("Error submitting form:", data?.message);
       }
     } catch (error) {
       setSubmitting(false);
+      setError(data.errors);
       console.error("Error submitting form:", error);
     }
   };
@@ -101,6 +107,12 @@ export default function BookFreeDemoForm() {
               onChange={handleChange}
             />
           </div>
+          {error && (
+            <div className="alert alert-danger w-100" role="alert">
+              Error submitting form: {error}
+            </div>
+          )}
+
           <button
             type="submit"
             className={`btn ${
