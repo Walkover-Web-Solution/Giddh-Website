@@ -3,7 +3,6 @@ import { MdKeyboardArrowUp } from "react-icons/md";
 import { useState, useEffect, useCallback } from "react";
 
 const globalComponents = ({ path }) => {
-  console.log("⚡️ ~ :6 ~ globalComponents ~ path:", path);
   const [scrollStatus, setscrollStatus] = useState(false);
 
   const onScroll = useCallback((event) => {
@@ -21,7 +20,7 @@ const globalComponents = ({ path }) => {
       window.removeEventListener("scroll", onScroll, { passive: true });
     };
   }, []);
-  if (path[1] === "online-accounting-software") {
+  if (path && path[1] === "online-accounting-software") {
     return null;
   } else {
     return (
