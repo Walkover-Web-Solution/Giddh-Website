@@ -1,7 +1,5 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useRouter } from "react";
 import style from "./BookFreeDemoForm.module.scss";
-import { useRouter } from "next/router";
 
 export default function BookFreeDemoForm() {
   const [formData, setFormData] = useState({
