@@ -50,7 +50,7 @@ export default function BookFreeDemoForm() {
       }
     } catch (error) {
       setSubmitting(false);
-      setError(data.errors);
+      setError(data?.errors);
       console.error("Error submitting form:", error);
     }
   };
