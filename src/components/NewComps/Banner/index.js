@@ -4,6 +4,7 @@ import { getSchemaForLinkPath } from "../../../../public/js/utils";
 import style from "./Banner.module.scss";
 import Link from "next/link";
 import BookFreeDemoForm from "../BookFreeDemoForm";
+import { MdCheck } from "react-icons/md";
 
 export default function Banner(path) {
   const link = path.path;
@@ -29,13 +30,21 @@ export default function Banner(path) {
               <h1 className="heading col-primary c-fw-600">
                 One Platform for All Your Accounting Needs
               </h1>
-              <ul>
-                <li>✅ Manage multiple companies</li>
-                <li>✅ Simplify ledger entries with a one-step process</li>
-                <li>✅ Seamless integration with open API</li>
-                <li>✅ Stay compliant with GST and VAT</li>
+              <ul className="d-flex flex-column gap-2 ">
                 <li>
-                  ✅ Comprehensive financial reports, including aging
+                  <MdCheck /> Manage multiple companies
+                </li>
+                <li>
+                  <MdCheck /> Simplify ledger entries with a one-step process
+                </li>
+                <li>
+                  <MdCheck /> Seamless integration with open API
+                </li>
+                <li>
+                  <MdCheck /> Stay compliant with GST and VAT
+                </li>
+                <li>
+                  <MdCheck /> Comprehensive financial reports, including aging
                   breakdowns, in one subscription
                 </li>
               </ul>
@@ -53,7 +62,7 @@ export default function Banner(path) {
               </div>
             </div>
           </div>
-          <BookFreeDemoForm />
+          <BookFreeDemoForm hiddenAbsolute={true} />
         </div>
       </section>
     </>
