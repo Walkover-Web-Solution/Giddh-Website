@@ -20,9 +20,9 @@ const header = (props) => {
   const pathArr = pathArrRaw[0].split("/");
   let metaPath = pathArrRaw[0].split("#"); // Remove # form Url to get correct meta data
 
-  const metaData = Data[metaPath[0]];
+  const metaData = Data[metaPath[0]] || {};
 
-  if (pathArr.length == 2) {
+  if (pathArr.length === 2) {
     if (countryList.includes(pathArr[1])) {
       pathPage = "";
       pathCountry = "/" + pathArr[1];
