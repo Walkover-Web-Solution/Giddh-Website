@@ -100,18 +100,16 @@ export default function TestPage({
         />
 
         {scripts &&
-          (typeof scripts === "string"
-            ? extractScripts(scripts).map((script, idx) => (
-                <script
-                  key={idx}
-                  // Optionally parse type attribute, etc. from script.attrs if needed
-                  type={
-                    /type=["']([^"']+)["']/.exec(script.attrs)?.[1] || undefined
-                  }
-                  dangerouslySetInnerHTML={{ __html: script.content }}
-                />
-              ))
-            : scripts)}
+          typeof scripts === "string" &&
+          extractScripts(scripts).map((script, idx) => (
+            <script
+              key={idx}
+              type={
+                /type=["']([^"']+)["']/.exec(script.attrs)?.[1] || undefined
+              }
+              dangerouslySetInnerHTML={{ __html: script.content }}
+            />
+          ))}
       </Head>
       <div className="wrapper container blog-container">
         <a
