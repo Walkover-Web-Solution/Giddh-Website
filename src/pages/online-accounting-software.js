@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Banner from "@/components/NewComps/Banner";
 import Features from "@/components/NewComps/Features";
 import GiddhFor from "@/components/NewComps/GiddhFor";
@@ -10,6 +11,15 @@ import SwitchToGiddh from "@/components/NewComps/SwitchToGiddh";
 
 const index = (path) => {
   const link = path.path;
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const style = document.createElement("style");
+      style.textContent =
+        "#hello-chatbot-launcher-icon { display: none !important; }";
+      document.head.appendChild(style);
+    }
+  }, []);
 
   return (
     <>
