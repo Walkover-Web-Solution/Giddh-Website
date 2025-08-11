@@ -15,6 +15,7 @@ const component = { ReactPlayer };
 import { useSearchParams } from "next/navigation";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { useCallback } from "react";
+import { getBlogSchema } from "@/utils/getBlogSchema";
 
 const slugToPostContent = ((postContents) => {
   let hash = {};
@@ -39,11 +40,13 @@ export default function TestPage({
   seoKeywords,
   html,
   scripts,
+  url,
 }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   let pageNo = searchParams.get("page");
   let tagName = searchParams.get("tag");
+  const blogSchema = getBlogSchema(url);
 
   const navigateToPreviousPage = useCallback(
     (event) => {
@@ -110,6 +113,8 @@ export default function TestPage({
               dangerouslySetInnerHTML={{ __html: script.content }}
             />
           ))}
+
+        {blogSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />}
       </Head>
       <div className="wrapper container blog-container">
         <a
@@ -197,6 +202,7 @@ export async function getStaticProps(slug) {
       "utf8"
     );
   }
+  const url = matterResult?.data?.slug;
   const mdxSource = await serialize(content);
 
   return {
@@ -212,6 +218,7 @@ export async function getStaticProps(slug) {
       seoDescription: seoDescription || "",
       html: htmlContent || "",
       scripts: scripts || "",
+      url: url || "",
     },
   };
 }
