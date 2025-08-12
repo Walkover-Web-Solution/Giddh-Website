@@ -40,13 +40,12 @@ export default function TestPage({
   seoKeywords,
   html,
   scripts,
-  url,
+  blogSchema,
 }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   let pageNo = searchParams.get("page");
   let tagName = searchParams.get("tag");
-  const blogSchema = getBlogSchema(url);
 
   const navigateToPreviousPage = useCallback(
     (event) => {
@@ -114,7 +113,12 @@ export default function TestPage({
             />
           ))}
 
-        {blogSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />}
+        {blogSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+          />
+        )}
       </Head>
       <div className="wrapper container blog-container">
         <a
@@ -203,6 +207,7 @@ export async function getStaticProps(slug) {
     );
   }
   const url = matterResult?.data?.slug;
+  const blogSchema = getBlogSchema(url);
   const mdxSource = await serialize(content);
 
   return {
@@ -218,7 +223,7 @@ export async function getStaticProps(slug) {
       seoDescription: seoDescription || "",
       html: htmlContent || "",
       scripts: scripts || "",
-      url: url || "",
+      blogSchema: blogSchema || "",
     },
   };
 }
