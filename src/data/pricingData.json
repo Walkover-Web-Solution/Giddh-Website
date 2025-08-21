@@ -241,6 +241,13 @@
             "isExpanded": false
         },
         {
+            "title": "VAT Compliance",
+            "isAvailableForAll": "true",
+            "description": "Create VAT invoice, view VAT reports, and reconcile transaction with the VAT portal and",
+            "link": "/ae/vat",
+            "isExpanded": false
+        },
+        {
             "title": "Reports",
             "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
             "link": "/ae/financial-reporting",
@@ -406,6 +413,13 @@
             "isAvailableForAll": "true",
             "description": "Create VAT invoice, view VAT reports, direct filing, and reconcile transaction with the VAT portal and",
             "link": "/uk/vat",
+            "isExpanded": false
+        },
+        {
+            "title": "VAT Direct Filing",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
             "isExpanded": false
         },
         {
