@@ -1,5 +1,5 @@
 {
-   "isGlobal": [
+   "global": [
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
@@ -153,7 +153,7 @@
             "isExpanded": false
         }
     ],
-    "isAE": [
+    "ae": [
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
@@ -307,7 +307,7 @@
             "isExpanded": false
         }
     ],
-    "isUK": [
+    "uk": [
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
@@ -485,7 +485,7 @@
             "isExpanded": false
         }
     ],
-    "isIndia": [
+    "in": [
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
