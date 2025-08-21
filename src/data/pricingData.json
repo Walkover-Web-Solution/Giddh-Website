@@ -1,5 +1,5 @@
 {
-   "isGlobal": [
+   "global": [
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
@@ -153,7 +153,7 @@
             "isExpanded": false
         }
     ],
-    "isAE": [
+    "ae": [
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
@@ -241,6 +241,13 @@
             "isExpanded": false
         },
         {
+            "title": "VAT Compliance",
+            "isAvailableForAll": "true",
+            "description": "Create VAT invoice, view VAT reports, and reconcile transaction with the VAT portal and",
+            "link": "/ae/vat",
+            "isExpanded": false
+        },
+        {
             "title": "Reports",
             "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
             "link": "/ae/financial-reporting",
@@ -307,7 +314,7 @@
             "isExpanded": false
         }
     ],
-    "isUK": [
+    "uk": [
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
@@ -409,6 +416,13 @@
             "isExpanded": false
         },
         {
+            "title": "VAT Direct Filing",
+            "isAvailableForAll": "true",
+            "description": null,
+            "link": null,
+            "isExpanded": false
+        },
+        {
             "title": "Reports",
             "isAvailableForAll": "true",
             "description": "Access various reports like Trial balance, Profit & loss, Balance sheet, Daybook, Cash flow statement, Ledger, Sales bifurcation, Columnar report, Purchase register, Sales register, Inventory reports, Reverse charge report, Autopaid, Bill to bill report and",
@@ -485,7 +499,7 @@
             "isExpanded": false
         }
     ],
-    "isIndia": [
+    "in": [
         {
             "title": "Invoice Count",
             "yearly": "invoicesAllowed",
