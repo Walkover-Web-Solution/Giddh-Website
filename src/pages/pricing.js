@@ -24,12 +24,9 @@ const pricing = (path) => {
   /** Holds true if Monthly and Yearly plans available */
   const [showToggleButton, setShowToggleButton] = useState(false);
 
-  const linkPath = path.path;
-  const isIndia = linkPath.isIndia;
-  const isGlobal = linkPath.isGlobal;
-  const isAE = linkPath.isAE;
-  const isUK = linkPath.isUK;
-  const link = linkPath.linkPrefix;
+  const linkPath = path?.path;
+  const link = linkPath?.linkPrefix;
+  const country = path?.path?.country || "global";
 
   useEffect(() => {
     // Function to update the state based on screen width
@@ -55,7 +52,7 @@ const pricing = (path) => {
         }
         const jsonData = await response.json();
         setAllPlans(jsonData.body);
-        setPlanDurationsWise(jsonData.body, null); 
+        setPlanDurationsWise(jsonData.body, null);
         findMonthlyAndYearlyPlans(jsonData.body);
         setIsLoading(false);
       } catch (err) {
@@ -65,8 +62,8 @@ const pricing = (path) => {
     };
 
     fetchData(getRegionByLink());
-    if (PricingData && PricingData.isIndia) {
-      setPricingData(PricingData.isIndia);
+    if (PricingData) {
+      setPricingData(PricingData[country]);
     }
   }, [PricingData]);
 
@@ -78,7 +75,7 @@ const pricing = (path) => {
    */
   const setPlanDurationsWise = (plans, isYear) => {
     setPlans(sortPlansByAmount(plans, isYear));
-  }
+  };
 
   /**
    * Returns Region code to fetch plans
@@ -108,15 +105,17 @@ const pricing = (path) => {
    */
   const sortPlansByAmount = (plans, isYearPlan) => {
     if (isYearPlan === null) {
-      isYearPlan = plans.some(plan => plan.hasOwnProperty("yearlyAmount"));
+      isYearPlan = plans.some((plan) => plan.hasOwnProperty("yearlyAmount"));
     }
     setIsYearPlan(isYearPlan);
-    const key = isYearPlan ? 'yearlyAmount' : 'monthlyAmount';
-    return plans.filter(plan => plan.hasOwnProperty(key)).sort((a, b) => {
-      const amountA = a[key] || 0; // Default to 0 if amount is missing
-      const amountB = b[key] || 0;
-      return amountA - amountB;
-    });
+    const key = isYearPlan ? "yearlyAmount" : "monthlyAmount";
+    return plans
+      .filter((plan) => plan.hasOwnProperty(key))
+      .sort((a, b) => {
+        const amountA = a[key] || 0; // Default to 0 if amount is missing
+        const amountB = b[key] || 0;
+        return amountA - amountB;
+      });
   };
 
   /**
@@ -285,20 +284,28 @@ const pricing = (path) => {
   };
 
   /**
-   * Find Month and Year plan all plan 
+   * Find Month and Year plan all plan
    * and set showToggleButton status
-   * 
-   * @param {*} jsonData 
+   *
+   * @param {*} jsonData
    */
   const findMonthlyAndYearlyPlans = (plans) => {
     let hasMonthly = false;
     let hasYearly = false;
-  
+
     for (const plan of plans) {
-      if (!hasMonthly && plan.hasOwnProperty("monthlyAmount") && plan.monthlyAmount !== null) {
+      if (
+        !hasMonthly &&
+        plan.hasOwnProperty("monthlyAmount") &&
+        plan.monthlyAmount !== null
+      ) {
         hasMonthly = true;
       }
-      if (!hasYearly && plan.hasOwnProperty("yearlyAmount") && plan.yearlyAmount !== null) {
+      if (
+        !hasYearly &&
+        plan.hasOwnProperty("yearlyAmount") &&
+        plan.yearlyAmount !== null
+      ) {
         hasYearly = true;
       }
       if (hasMonthly && hasYearly) {
@@ -306,11 +313,11 @@ const pricing = (path) => {
       }
     }
     setShowToggleButton(hasMonthly && hasYearly);
-  }
+  };
 
   /**
    * Get Extra Add Ons
-   * 
+   *
    * @returns
    */
   const getExtraAddOns = () => {
@@ -318,15 +325,15 @@ const pricing = (path) => {
       <>
         Extra Add-ons:{" "}
         <span className="c-fw-600">
-          {isGlobal && "$0.012"}
-          {isIndia && "₹1"}
-          {isAE && "د.إ0.043"}
-          {isUK && "£0.0087"}
+          {linkPath?.isGlobal && "$0.012"}
+          {linkPath?.isIndia && "₹1"}
+          {linkPath?.isAE && "د.إ0.043"}
+          {linkPath?.isUK && "£0.0087"}
         </span>{" "}
         per voucher
       </>
     );
-  }
+  };
 
   return (
     <>
@@ -341,61 +348,70 @@ const pricing = (path) => {
               <h2 className="sub-heading c-fw-600 ms-4 mt-4 mb-md-4 mb-3 text-center">
                 No features sacrifices
               </h2>
-              {
-                isLoading ?
-                (
-                  <CustomLoader />
-                )
-                :
-                (
-                  <>
-                  <div className={"d-flex flex-column flex-lg-row align-items-center mb-3" + (isIndia ? ' justify-content-between' : ' justify-content-end')}>
-                  {isIndia && (
-                    <h2 className="col-primary small-heading c-fw-600 mb-0 text-center text-lg-start">
-                      *All prices are exclusive of GST
-                    </h2>
-                  )}
-                  {/* Month/Year Toggle Button */}
-                  {showToggleButton && (
-                    <div className="text-center text-lg-end mt-3 mt-lg-0">
-                      <div
-                        className="toggle-button btn-group"
-                        role="group"
-                        aria-label="Toggle to get monthly or yearly wise plan"
-                      >
-                        <input
-                          type="radio"
-                          className="btn-check"
-                          name="plan-duration"
-                          id="month"
-                          autoComplete="off"
-                        />
-                        <label
-                          className="btn btn-outline-primary"
-                          htmlFor="month"
-                          onClick={() => {setIsYearPlan(false); setPlanDurationsWise(allPlans, false)}}
+              {isLoading ? (
+                <CustomLoader />
+              ) : (
+                <>
+                  <div
+                    className={
+                      "d-flex flex-column flex-lg-row align-items-center mb-3" +
+                      (linkPath?.isIndia
+                        ? " justify-content-between"
+                        : " justify-content-end")
+                    }
+                  >
+                    {linkPath?.isIndia && (
+                      <h2 className="col-primary small-heading c-fw-600 mb-0 text-center text-lg-start">
+                        *All prices are exclusive of GST
+                      </h2>
+                    )}
+                    {/* Month/Year Toggle Button */}
+                    {showToggleButton && (
+                      <div className="text-center text-lg-end mt-3 mt-lg-0">
+                        <div
+                          className="toggle-button btn-group"
+                          role="group"
+                          aria-label="Toggle to get monthly or yearly wise plan"
                         >
-                          Month
-                        </label>
+                          <input
+                            type="radio"
+                            className="btn-check"
+                            name="plan-duration"
+                            id="month"
+                            autoComplete="off"
+                          />
+                          <label
+                            className="btn btn-outline-primary"
+                            htmlFor="month"
+                            onClick={() => {
+                              setIsYearPlan(false);
+                              setPlanDurationsWise(allPlans, false);
+                            }}
+                          >
+                            Month
+                          </label>
 
-                        <input
-                          type="radio"
-                          className="btn-check"
-                          name="plan-duration"
-                          id="year"
-                          autoComplete="off"
-                          defaultChecked
-                        />
-                        <label
-                          className="btn btn-outline-primary"
-                          htmlFor="year"
-                          onClick={() => {setIsYearPlan(true); setPlanDurationsWise(allPlans, true)}}
-                        >
-                          Year
-                        </label>
+                          <input
+                            type="radio"
+                            className="btn-check"
+                            name="plan-duration"
+                            id="year"
+                            autoComplete="off"
+                            defaultChecked
+                          />
+                          <label
+                            className="btn btn-outline-primary"
+                            htmlFor="year"
+                            onClick={() => {
+                              setIsYearPlan(true);
+                              setPlanDurationsWise(allPlans, true);
+                            }}
+                          >
+                            Year
+                          </label>
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    )}
                   </div>
 
                   {/* Pricing Table Large Device */}
@@ -432,7 +448,10 @@ const pricing = (path) => {
                               width={`${(100 - 40) / plans?.length}%`}
                               className={`text-center pt-0 bg-${i}`}
                             >
-                              <a href={link + "/signup"} className="benefits-link">
+                              <a
+                                href={link + "/signup"}
+                                className="benefits-link"
+                              >
                                 Try Now
                               </a>
                             </th>
@@ -484,7 +503,10 @@ const pricing = (path) => {
                               </div>
                             </td>
                             {plans?.map((plan, index) => (
-                              <td key={index} className={`text-center bg-${index}`}>
+                              <td
+                                key={index}
+                                className={`text-center bg-${index}`}
+                              >
                                 {getPlanInfoByFeature(plan, feature)}
                               </td>
                             ))}
@@ -559,7 +581,9 @@ const pricing = (path) => {
                                 <td width="50%">
                                   <div
                                     className={"cursor-pointer"}
-                                    onClick={() => toggleFeatureExpansion(index)}
+                                    onClick={() =>
+                                      toggleFeatureExpansion(index)
+                                    }
                                   >
                                     <span>
                                       {pricingData?.title}
@@ -574,7 +598,8 @@ const pricing = (path) => {
                                             <p className="c-fw-400">
                                               <span
                                                 dangerouslySetInnerHTML={{
-                                                  __html: pricingData?.description,
+                                                  __html:
+                                                    pricingData?.description,
                                                 }}
                                               />
                                               {pricingData?.link && (
@@ -629,9 +654,8 @@ const pricing = (path) => {
                       </tfoot>
                     </table>
                   )}
-                  </>
-                )
-              }
+                </>
+              )}
             </div>
             <div className="col-12 text-center mt-5">
               <h3 className="c-fs-3 c-fw-600">Big Enterprises?</h3>
@@ -952,18 +976,22 @@ const pricing = (path) => {
                   }}
                 >
                   The accounting software pricing stands at just{" "}
-                  {isIndia && "INR 800/-"} {isAE && "AED 350/-"}{" "}
-                  {(isUK || isGlobal) && "GBP 70/-"} per organization/year with
-                  a capacity to handle {isIndia && " 10,000"}{" "}
-                  {(isAE || isUK || isGlobal) && " 40,000"} transactions and
-                  unlimited users. GIDDH prepares your {isIndia ? "GST" : "VAT"}{" "}
-                  return filing automatically, identifies potential errors,
-                  never lets you miss out deadlines, and streamlines the entire
-                  process. Another significant benefit of trusting GIDDH is that
-                  it allows you to grant your CA view access to the relevant{" "}
-                  {isIndia ? "GST" : "VAT"} tax return data and create{" "}
-                  {isIndia ? "GST" : "VAT"} invoices ensuring that compliance is
-                  no more a challenge.
+                  {linkPath?.isIndia && "INR 800/-"}{" "}
+                  {linkPath?.isAE && "AED 350/-"}{" "}
+                  {(linkPath?.isUK || linkPath?.isGlobal) && "GBP 70/-"} per
+                  organization/year with a capacity to handle{" "}
+                  {linkPath?.isIndia && " 10,000"}{" "}
+                  {(linkPath?.isAE || linkPath?.isUK || linkPath?.isGlobal) &&
+                    " 40,000"}{" "}
+                  transactions and unlimited users. GIDDH prepares your{" "}
+                  {linkPath?.isIndia ? "GST" : "VAT"} return filing
+                  automatically, identifies potential errors, never lets you
+                  miss out deadlines, and streamlines the entire process.
+                  Another significant benefit of trusting GIDDH is that it
+                  allows you to grant your CA view access to the relevant{" "}
+                  {linkPath?.isIndia ? "GST" : "VAT"} tax return data and create{" "}
+                  {linkPath?.isIndia ? "GST" : "VAT"} invoices ensuring that
+                  compliance is no more a challenge.
                 </p>
                 <span
                   className="pt-3 text-decoration-underline c-fw-600"
