@@ -22,30 +22,33 @@ export function generateBlogSchema(data) {
   const formattedDate = data?.date
     ? format(parseISO(data?.date), "yyyy-MM-dd")
     : "";
-  const schema = `{
+  const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "${data?.title}",
-    "alternativeHeadline": "${data?.title}",
-    ${data?.coverImage ? `"image": "${baseurl}${data?.coverImage}",` : ``}
-    ${
-      data?.author && data?.author.toLowerCase() !== "giddh"
-        ? `"author": {"@type": "Person","name": "${data?.author}"},`
-        : ``
-    }
-    "publisher": {
+    headline: data?.title || "",
+    alternativeHeadline: data?.title || "",
+    publisher: {
       "@type": "Organization",
-      "name": "Giddh",
-      "logo": {
+      name: "Giddh",
+      logo: {
         "@type": "ImageObject",
-        "url": "${baseurl}/img/giddh-logo.svg"
-      }
+        url: `${baseurl}/img/giddh-logo.svg`,
+      },
     },
-    "url": "${baseurl}/blog/${data?.url}",
-    "mainEntityOfPage": "${baseurl}/blog/${data?.url}",
-    "datePublished": "${formattedDate}",
-    "dateModified": "${formattedDate}",
-    "description": "${data?.description}"
-  },`;
+    url: `${baseurl}/blog/${data?.url}`,
+    mainEntityOfPage: `${baseurl}/blog/${data?.url}`,
+    datePublished: formattedDate,
+    dateModified: formattedDate,
+    description: data?.description || "",
+  };
+
+  if (data?.coverImage) {
+    schema.image = `${baseurl}${data.coverImage}`;
+  }
+
+  if (data?.author && data?.author.toLowerCase() !== "giddh") {
+    schema.author = { "@type": "Person", name: data.author };
+  }
+
   return schema;
 }

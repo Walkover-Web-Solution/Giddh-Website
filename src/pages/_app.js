@@ -12,6 +12,12 @@ export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const rawBrowserPath = router.asPath;
   const arrayBrawserPath = rawBrowserPath.split("/");
+  const page =
+    (arrayBrawserPath[1] === "in" ||
+    arrayBrawserPath[1] === "ae" ||
+    arrayBrawserPath[1] === "uk"
+      ? arrayBrawserPath[2]
+      : arrayBrawserPath[1]) || "home";
   var browserPath = `/${arrayBrawserPath[1]}`;
   if (browserPath.includes("?")) {
     var shortedPath = browserPath.slice(0, browserPath.indexOf("?"));
@@ -36,6 +42,7 @@ export default function MyApp({ Component, pageProps }) {
     country: shortedPath ? shortedPath.replace("/", "") : "global",
     linkPrefix: shortedPath,
     baseURL: process.env.NEXT_PUBLIC_SITE_URL || "https://giddh.com",
+    page: page,
     isGlobal: isGlobal,
     isIndia: isIndia,
     isAE: isAE,
@@ -62,7 +69,7 @@ export default function MyApp({ Component, pageProps }) {
       <Header browserPath={rawBrowserPath} path={path} />
       <Component path={path} {...pageProps} />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
-      <GlobalComponents path={arrayBrawserPath}/>
+      <GlobalComponents path={arrayBrawserPath} />
       <Toastify />
     </>
   );
