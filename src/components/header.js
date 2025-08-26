@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Data from "@/data/metadata.json";
 import { useEffect, useState } from "react";
+import hrefLangTag from "@/data/hrefLangTag.json";
 
 const header = (props) => {
   const link = props.path;
@@ -63,42 +64,49 @@ const header = (props) => {
         )}
         <link rel="icon" type="image/x-icon" href="/favico.svg"></link>
         <link rel="alternate" href="https://giddh.com/" hrefLang="x-default" />
-        <link rel="canonical" href={`https://giddh.com${pathArrRaw[0]}`} />
+        {/* <link rel="canonical" href={`https://giddh.com${link?.page}`} /> */}
         {!isBlogPage && (
           <>
-            {!exceptionPage?.in.includes(pathPage) && country === "in" && (
+            {hrefLangTag?.["global"]?.includes(link?.page) && (
+              <link
+                rel="alternate"
+                hrefLang="en"
+                href={`https://giddh.com${
+                  link?.page === "home" ? "" : "/" + link?.page
+                }`}
+              />
+            )}
+            {hrefLangTag?.["in"]?.includes(link?.page) && (
               <link
                 rel="alternate"
                 hrefLang="en-IN"
-                href={`https://giddh.com/in${pathPage}`}
-                property="og:locale"
-                content="en-IN"
-                url={`https://giddh.com/in${pathPage}`}
+                href={`https://giddh.com/in${
+                  link?.page === "home" ? "" : "/" + link?.page
+                }`}
               />
             )}
-            {!exceptionPage?.uk.includes(pathPage) && country === "uk" && (
-              <link
-                rel="alternate"
-                hrefLang="en-GB"
-                href={`https://giddh.com/uk${pathPage}`}
-                property="og:locale"
-                content="en-GB"
-                url={`https://giddh.com/uk${pathPage}`}
-              />
-            )}
-            {!exceptionPage?.ae.includes(pathPage) && country === "ae" && (
+            {hrefLangTag?.["ae"]?.includes(link?.page) && (
               <link
                 rel="alternate"
                 hrefLang="en-AE"
-                href={`https://giddh.com/ae${pathPage}`}
-                property="og:locale"
-                content="en-AE"
-                url={`https://giddh.com/ae${pathPage}`}
+                href={`https://giddh.com/ae${
+                  link?.page === "home" ? "" : "/" + link?.page
+                }`}
+              />
+            )}
+            {hrefLangTag?.["uk"]?.includes(link?.page) && (
+              <link
+                rel="alternate"
+                hrefLang="en-GB"
+                href={`https://giddh.com/uk${
+                  link?.page === "home" ? "" : "/" + link?.page
+                }`}
               />
             )}
           </>
         )}
-        {(isBlogPage || country === "") &&
+
+        {/* {(isBlogPage || country === "") &&
           !exceptionPage?.global.includes(pathPage) && (
             <>
               <link
@@ -110,7 +118,7 @@ const header = (props) => {
                 url={`https://giddh.com${pathPage}`}
               />
             </>
-          )}
+          )} */}
 
         {restrictFromSeo && <meta name="robots" content="noindex, nofollow" />}
 
