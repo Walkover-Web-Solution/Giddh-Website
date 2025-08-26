@@ -16,13 +16,6 @@ export default function Header (props) {
     ae: ["/gst", "/e-invoice", "/blog", "/tallyplusgiddh"],
   };
 
-  // Configuration for generating hreflang alternate links
-  const altConfigs = [
-    { key: "global", hrefLang: "en", base: "" },
-    { key: "in", hrefLang: "en-IN", base: "/in" },
-    { key: "ae", hrefLang: "en-AE", base: "/ae" },
-    { key: "uk", hrefLang: "en-GB", base: "/uk" },
-  ];
 
   var pathPage, pathCountry, isBlogPage;
   const pathArrRaw = currentPath.split("?"); // Remove ? form Url
@@ -74,17 +67,41 @@ export default function Header (props) {
         <link rel="alternate" href="https://giddh.com/" hrefLang="x-default" />
         {/* <link rel="canonical" href={`https://giddh.com${link?.page}`} /> */}
 
-        {altConfigs.map(({ key, hrefLang, base }) =>
-          hrefLangTag?.[key]?.includes(link?.page) ? (
-            <link
-              key={key}
-              rel="alternate"
-              hrefLang={hrefLang}
-              href={`https://giddh.com${base}${
-                link?.page === "home" ? "" : `/${link?.page}`
-              }`}
-            />
-          ) : null
+        {hrefLangTag?.["global"]?.includes(link?.page) && (
+          <link
+            rel="alternate"
+            hrefLang="en"
+            href={`https://giddh.com${
+              link?.page === "home" ? "" : "/" + link?.page
+            }`}
+          />
+        )}
+        {hrefLangTag?.["in"]?.includes(link?.page) && (
+          <link
+            rel="alternate"
+            hrefLang="en-IN"
+            href={`https://giddh.com/in${
+              link?.page === "home" ? "" : "/" + link?.page
+            }`}
+          />
+        )}
+        {hrefLangTag?.["ae"]?.includes(link?.page) && (
+          <link
+            rel="alternate"
+            hrefLang="en-AE"
+            href={`https://giddh.com/ae${
+              link?.page === "home" ? "" : "/" + link?.page
+            }`}
+          />
+        )}
+        {hrefLangTag?.["uk"]?.includes(link?.page) && (
+          <link
+            rel="alternate"
+            hrefLang="en-GB"
+            href={`https://giddh.com/uk${
+              link?.page === "home" ? "" : "/" + link?.page
+            }`}
+          />
         )}
 
         {/* {(isBlogPage || country === "") &&
