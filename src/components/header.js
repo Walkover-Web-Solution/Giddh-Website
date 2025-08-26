@@ -3,7 +3,7 @@ import Data from "@/data/metadata.json";
 import { useEffect, useState } from "react";
 import hrefLangTag from "@/data/hrefLangTag.json";
 
-const header = (props) => {
+export default function Header (props) {
   const link = props.path;
   const currentPath = props.browserPath;
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
@@ -15,6 +15,14 @@ const header = (props) => {
     uk: ["/gst", "/e-invoice", "/blog", "/tallyplusgiddh"],
     ae: ["/gst", "/e-invoice", "/blog", "/tallyplusgiddh"],
   };
+
+  // Configuration for generating hreflang alternate links
+  const altConfigs = [
+    { key: "global", hrefLang: "en", base: "" },
+    { key: "in", hrefLang: "en-IN", base: "/in" },
+    { key: "ae", hrefLang: "en-AE", base: "/ae" },
+    { key: "uk", hrefLang: "en-GB", base: "/uk" },
+  ];
 
   var pathPage, pathCountry, isBlogPage;
   const pathArrRaw = currentPath.split("?"); // Remove ? form Url
@@ -65,45 +73,18 @@ const header = (props) => {
         <link rel="icon" type="image/x-icon" href="/favico.svg"></link>
         <link rel="alternate" href="https://giddh.com/" hrefLang="x-default" />
         {/* <link rel="canonical" href={`https://giddh.com${link?.page}`} /> */}
-        {!isBlogPage && (
-          <>
-            {hrefLangTag?.["global"]?.includes(link?.page) && (
-              <link
-                rel="alternate"
-                hrefLang="en"
-                href={`https://giddh.com${
-                  link?.page === "home" ? "" : "/" + link?.page
-                }`}
-              />
-            )}
-            {hrefLangTag?.["in"]?.includes(link?.page) && (
-              <link
-                rel="alternate"
-                hrefLang="en-IN"
-                href={`https://giddh.com/in${
-                  link?.page === "home" ? "" : "/" + link?.page
-                }`}
-              />
-            )}
-            {hrefLangTag?.["ae"]?.includes(link?.page) && (
-              <link
-                rel="alternate"
-                hrefLang="en-AE"
-                href={`https://giddh.com/ae${
-                  link?.page === "home" ? "" : "/" + link?.page
-                }`}
-              />
-            )}
-            {hrefLangTag?.["uk"]?.includes(link?.page) && (
-              <link
-                rel="alternate"
-                hrefLang="en-GB"
-                href={`https://giddh.com/uk${
-                  link?.page === "home" ? "" : "/" + link?.page
-                }`}
-              />
-            )}
-          </>
+
+        {altConfigs.map(({ key, hrefLang, base }) =>
+          hrefLangTag?.[key]?.includes(link?.page) ? (
+            <link
+              key={key}
+              rel="alternate"
+              hrefLang={hrefLang}
+              href={`https://giddh.com${base}${
+                link?.page === "home" ? "" : `/${link?.page}`
+              }`}
+            />
+          ) : null
         )}
 
         {/* {(isBlogPage || country === "") &&
@@ -140,4 +121,3 @@ const header = (props) => {
   );
 };
 
-export default header;
