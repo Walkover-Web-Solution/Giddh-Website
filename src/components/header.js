@@ -3,19 +3,11 @@ import Data from "@/data/metadata.json";
 import { useEffect, useState } from "react";
 import hrefLangTag from "@/data/hrefLangTag.json";
 
-export default function Header (props) {
+export default function Header(props) {
   const link = props.path;
   const currentPath = props.browserPath;
   const [restrictFromSeo, setRestrictFromSeo] = useState(false);
   const countryList = ["", "in", "ae", "uk"];
-  const country = link?.linkPrefix?.replace("/", "");
-  const exceptionPage = {
-    global: ["/gst", "/vat", "/e-invoice", "/tallyplusgiddh"],
-    in: ["/vat", "/blog"],
-    uk: ["/gst", "/e-invoice", "/blog", "/tallyplusgiddh"],
-    ae: ["/gst", "/e-invoice", "/blog", "/tallyplusgiddh"],
-  };
-
 
   var pathPage, pathCountry, isBlogPage;
   const pathArrRaw = currentPath.split("?"); // Remove ? form Url
@@ -65,7 +57,6 @@ export default function Header (props) {
         )}
         <link rel="icon" type="image/x-icon" href="/favico.svg"></link>
         <link rel="alternate" href="https://giddh.com/" hrefLang="x-default" />
-        {/* <link rel="canonical" href={`https://giddh.com${link?.page}`} /> */}
 
         {hrefLangTag?.["global"]?.includes(link?.page) && (
           <link
@@ -104,20 +95,6 @@ export default function Header (props) {
           />
         )}
 
-        {/* {(isBlogPage || country === "") &&
-          !exceptionPage?.global.includes(pathPage) && (
-            <>
-              <link
-                rel="alternate"
-                hrefLang="en"
-                href={`https://giddh.com${pathPage}`}
-                property="og:locale"
-                content="en"
-                url={`https://giddh.com${pathPage}`}
-              />
-            </>
-          )} */}
-
         {restrictFromSeo && <meta name="robots" content="noindex, nofollow" />}
 
         {(metaData?.ogTitle || metaData?.title) && (
@@ -136,5 +113,4 @@ export default function Header (props) {
       </Head>
     </>
   );
-};
-
+}
