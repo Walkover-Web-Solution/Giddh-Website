@@ -1,19 +1,17 @@
 [
   {
-    "name": "Simplify Accounting with Efficient Ledger Management",
+    "name": "Effortless Ledger Management",
     "image": "/img/seo_features/ledger_management.svg",
-    "description": "Giddh simplifies accounting by streamlining your ledger entries, saving time, reducing errors, and enabling business growth.",
-    "moreHeading": "Automated ledger management for easy financial oversight",
+    "description": "Giddh accounting software for small businesses that saves you time, reduces errors, and fuels growth",
     "content": [
-      "Effortless one-step journal entries",
-      "Instant real-time account balance updates",
-      "Quick entries for faster accounting",
-      "Streamlined financial tracking for seamless management",
-      "Access your accounting anytime, anywhere, with multi-device support"
+      "Automated Ledger Management",
+      "Real-time Account Balances",
+      "Quick, One-Step Journal Entries",
+      "Multi-Device Support"
     ]
   },
   {
-    "name": "GST Accounting Software:  Giddh for GST Filing",
+    "name": "Simplify GST Compliance",
     "image": "/img/seo_features/gst_accounting_software.svg",
     "description": "Giddh simplifies GST and VAT compliance for businesses in India, the UAE, and the UK. Easily manage tax filings and stay compliant without manual effort.",
     "content": [
@@ -24,7 +22,7 @@
     ]
   },
   {
-    "name": "Simplify Billing & GST with the Best Invoice Software in India",
+    "name": "Streamline Billing & Invoicing",
     "image": "/img/seo_features/gst_with_the_best_invoice.svg",
     "description": "Giddh makes invoicing simple, quick, and efficient, allowing you to streamline finances with the best software for billing and invoicing and focus more on business growth.",
     "content": [
@@ -35,7 +33,7 @@
     ]
   },
   {
-    "name": "Master Inventory Management with Smart Software Features",
+    "name": "Inventory Management Software",
     "image": "/img/seo_features/inventory_management.svg",
     "description": "Giddh streamlines inventory management with real-time tracking and easy organization. With this inventory management system for small businesses, you can record inventory for both products and services while categorizing items into Groups, Items, and Variants for improved organization and management.",
     "content": [
@@ -48,7 +46,7 @@
     ]
   },
   {
-    "name": "Expand Globally with Giddh's Multi-Currency Accounting Software",
+    "name": "Multi-Currency Accounting Solution",
     "image": "/img/seo_features/multi_currency_accounting.svg",
     "description": "Turn your business into an International brand with Giddh's multi-currency accounting. Giddh makes managing international transactions easy, allowing you to handle multiple currencies, global invoicing, and real-time financial reporting with ease.",
     "content": [
@@ -59,15 +57,14 @@
     ]
   },
   {
-    "name": "Bookkeeping Software for Small Businesses",
+    "name": "Cloud-Based Bookkeeping Software",
     "image": "/img/seo_features/bookkeeping_software.svg",
-    "description": "Giddh’s online accounting bookkeeping software is designed to simplify business finances, offering an easy-to-use solution for small businesses to manage accounts, stay GST-compliant, and generate accurate financial reports.",
+    "description": "Giddh simplifies cloud bookkeeping software for small businesses, offering easy account management, accurate reports, and more.",
     "content": [
-      "Track and view GSTR reports with accurate tax calculations and direct filing from Giddh.",
-      "Manage finances on the go with access to real-time updates, fast invoicing, and expense tracking.",
-      "Monitor inventory levels, manage warehouses, and generate real-time reports on sales and stock.",
-      "View trial balance, profit & loss, balance sheet, and more in real-time for an accurate financial snapshot.",
-      "Manage client interactions with real-time financial statements, invoice management, and easy payment tracking."
+      "Real-Time Updates",
+      "Inventory & Warehouse Management.",
+      "Instant Financial Snapshots",
+      "Smart Billing Management"
     ]
   }
 ]

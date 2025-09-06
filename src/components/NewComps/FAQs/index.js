@@ -86,6 +86,7 @@ export default function FAQs() {
                         data-bs-target={"#collapse" + index}
                         aria-expanded="false"
                         aria-controls={"collapse" + index}
+                        style={{ cursor: 'pointer' }}
                       >
                         <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />
@@ -105,6 +106,7 @@ export default function FAQs() {
                       <div className="accordion-body">
                         <div>{faq.answer}</div>
                       </div>
+
                     </div>
                   </div>
                 ))}
@@ -116,3 +118,4 @@ export default function FAQs() {
     </>
   );
 }
+

@@ -1,7 +1,6 @@
 import style from "./TrustBadge.module.scss";
 
-export default function TrustBadge() {
-  const trustBadgeBrands = [
+export const trustBadgeBrands = [
     {
       href: "https://www.tribuneindia.com/news/business/giddh-books-makes-accounting-accessible-and-automated-for-indian-small-businesses/",
       alt: "Accessible Accounting Software for Small Businesses",
@@ -32,13 +31,10 @@ export default function TrustBadge() {
       alt: "Giddh Cloud Accounting Software with Advanced Features",
       src: "/img/trust-badge/bihar-news.svg",
     },
-    {
-      href: "https://rajasthannewstime.in/giddh-revolutionizing-accounting-software-with-advanced-features-and-security/",
-      alt: "Rajasthan News Time - Giddh Accounting Software",
-      src: "/img/trust-badge/rajasthan-news-time.svg",
-    },
-  ];
 
+];
+
+export default function TrustBadge() {
   return (
     <section className="container section_py d-flex flex-column gap-4">
       <div className="d-flex flex-column text-center content-width mx-auto">

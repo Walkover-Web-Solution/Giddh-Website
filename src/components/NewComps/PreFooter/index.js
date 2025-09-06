@@ -20,6 +20,7 @@ export default function PreFooter() {
           <button
             className=" btn btn-light "
             aria-label="Signup for Accounting Software"
+            style={{ cursor: 'pointer' }}
           >
             Try Giddh Now
           </button>

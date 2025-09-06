@@ -16,7 +16,7 @@ export default function SeeGiddhInAction() {
             </p>
           </div>
         </div>
-        <BookFreeDemoForm hiddenAbsolute={false} />
+        <BookFreeDemoForm hiddenAbsolute={false}  Heading={false} />
       </div>
     </section>
   );

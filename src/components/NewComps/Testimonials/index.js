@@ -1,115 +1,107 @@
 import React, { useRef } from "react";
 import style from "./Testimonials.module.scss";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import data from "./data.json";
 export default function Testimonials() {
-  const data = {
-    heading: "Why do companies prefer Giddh for smarter accounting?",
-    content: [
-      {
-        name: "Priya Shah",
-        comment:
-          "Switching to Giddh has completely streamlined our accounts. I love how it integrates GST and e-invoicing so smoothly — it’s like it was built for Indian businesses!",
-      },
-      {
-        name: "Rahul Mehta",
-        comment:
-          "We moved from Tally to Giddh last year and haven’t looked back. Real-time ledger syncing and multi-branch support makes it perfect for retail chains like ours.",
-      },
-      {
-        name: "Anjali Verma",
-        comment:
-          "As a CA handling 30+ SMEs, Giddh helps me keep things in control. The cloud access is a blessing, and GST-ready reports save me hours every week.",
-      },
-      {
-        name: "Sandeep Rathi",
-        comment:
-          "What impressed me the most is how developer-friendly Giddh is. We used their APIs to plug accounting into our internal CRM. No messy hacks. Just clean integrations.",
-      },
-      {
-        name: "Neha Kulkarni",
-        comment:
-          "Giddh is surprisingly simple. I’m not a finance person but I can pull out balance sheets, profit-loss, GST reports in seconds. The interface feels natural and clutter-free.",
-      },
-      {
-        name: "Karan Bansal",
-        comment:
-          "Our accounts team had a tough time managing multi-state operations. With Giddh’s branch accounting, everything's under one dashboard. Huge win for our transparency and audit trail.",
-      },
-      {
-        name: "Pooja Jain",
-        comment:
-          "I used to dread month-end GST filings. Now it takes less than 10 minutes with Giddh. Even invoice creation is so easy — no jargon, just simple steps.",
-      },
-      {
-        name: "Mohit Arora",
-        comment:
-          "I recommend Giddh to every startup I consult. It has the right balance — powerful enough for growing businesses, but simple enough that founders can use it without needing a finance degree.",
-      },
-    ],
-  };
-  const scrollerRef = useRef(null);
-
-  const scrollByAmount =
-    typeof window !== "undefined" && window.innerWidth < 1025 ? 640 : 920;
-
-  const scrollLeft = () => {
-    if (scrollerRef.current) {
-      scrollerRef.current.scrollBy({
-        left: -scrollByAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollerRef.current) {
-      scrollerRef.current.scrollBy({
-        left: scrollByAmount,
-        behavior: "smooth",
-      });
-    }
-  };
+  
+  
 
   return (
-    <section className="bg-light-blue section_py">
-      <div className="container">
-        <div className="d-flex flex-column content-width">
-          <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
-          <p>{data?.subheading}</p>
-        </div>
-        <div
-          className={`${style.testimonials_scroller} d-flex gap-4 pb-3`}
-          ref={scrollerRef}
-        >
-          {data?.content.map((feature, index) => (
-            <div
-              className={`${style.testimonial} d-flex flex-column justify-content-center bg-white`}
-              key={index}
-            >
-              <span className="c-fs-6 col-primary c-fw-600">
-                ~ {feature?.name}
-              </span>
-              <p>{feature?.comment}</p>
+       <section className={style.testimonialsSection} style={{ maxHeight: '586px', backgroundColor: '#1A237E' }}>
+     <div className="d-flex flex-column text-center mx-auto px-3 pt-5 my-1">
+       <h2
+         className={`fw-normal ${style.mainHeading}`}
+         style={{
+           fontFamily: 'Cactus Classical Serif, serif',
+           fontWeight: 400,
+           fontSize: '40px',
+         }}
+       >
+         Success Stories with Giddh
+       </h2>
+       <p
+         className={`${style.subHeading} mx-auto pb-4`}
+         style={{
+           fontFamily: 'Outfit, sans-serif',
+           fontWeight: 400,
+           fontStyle: 'normal',
+           fontSize: '18px',
+         }}
+       >
+         See who's talking about us and why businesses trust us around the globe.
+       </p>
+     </div>
+           <div className="d-flex flex-column flex-md-row mb-5 pb-4 gap-5  justify-content-center">
+        <div className="d-flex justify-content-center ">
+          <div className="px-4">
+                                                   <div className={`border border-light rounded mx-auto ${style.scrollableContainer}`} style={{ maxWidth: '715px', borderColor: 'rgba(255, 255, 255, 0.3)', maxHeight: '350px', overflowY: 'auto' }}>
+              {data.map((testimonial, index) => (
+                <div key={index} className={`py-2 px-3 ${index < data.length - 1 ? 'border-bottom' : ''}`} style={{ borderColor: 'rgba(255, 255, 255, 0.2)' }}>
+                  <div className="d-flex align-items-start gap-3 " style={{paddingRight: '100px' }}>
+                    <img 
+                      src={`https://i.pravatar.cc/50?img=${index + 1}`}
+                      alt={testimonial.name}
+                      className="rounded-circle"
+                      style={{ width: '50px', height: '50px', objectFit: 'cover' }}
+                    />
+                    <div className="flex-grow-1">
+                                             <p
+                         className="text-white mb-0  mt-2"
+                         style={{
+                           fontFamily: 'Outfit, sans-serif',
+                           fontWeight: 400,
+                           fontStyle: 'normal',
+                           fontSize: '16px',
+                           lineHeight: '100%',
+                           letterSpacing: '0%'
+                         }}
+                       >
+                        {testimonial.testimonial}
+                      </p>
+                      <div
+                        className="d-flex align-items-center justify-content-start mt-2 gap-2"
+                        style={{
+                          fontFamily: 'Outfit, sans-serif',
+                          fontWeight: 400,
+                          fontStyle: 'normal',
+                          fontSize: '16px',
+                          lineHeight: '100%',
+                          letterSpacing: '0%',
+                        }}
+                      >
+                        <div>
+                      
+                          
+                          <div className="text-white-50" style={{ fontSize: '0.8rem' }}>
+                            {testimonial.name} , {` `}
+                            {testimonial.designation}
+                          </div>
+                        </div>
+                        <div className="d-flex align-items-center gap-2 " style={{  }}>
+                          <div className="bg-light bg-opacity-25 rounded " style={{ width: '20px', height: '20px' }}></div>
+                          <span className="text-white-50" style={{ fontSize: '0.8rem', fontWeight: '500' }}>{testimonial.logo}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-        <div className="d-md-flex d-none align-items-end justify-content-end w-100 gap-2">
-          <button
-            className="btn btn-secondary"
-            onClick={scrollLeft}
-            aria-label="Scroll testimonials left"
-          >
-            <MdArrowBack />
-          </button>
-          <button
-            className="btn btn-secondary"
-            onClick={scrollRight}
-            aria-label="Scroll testimonials right"
-          >
-            <MdArrowForward />
-          </button>
+
+
+
+      <div className="d-flex align-items-center justify-content-center max-content ">
+        <div className="border border-light rounded p-4 text-center d-flex align-items-center h-100" style={{ maxWidth: '350px', borderColor: 'rgba(255, 255, 255, 0.3)',  }}>
+          <h2 className="text-white" style={{ fontSize: '2.8rem', fontWeight: '300', lineHeight: '1.1' }}>
+            <em style={{ fontStyle: 'italic', fontWeight: '300' }}>Stories of</em><br />
+            <em style={{ fontStyle: 'italic', fontWeight: '300' }}>Growth with</em><br />
+            <strong style={{ fontWeight: '800', fontStyle: 'normal', letterSpacing: '2px' }}>GIDDH</strong>
+          </h2>
         </div>
       </div>
+     </div>
     </section>
   );
 }
