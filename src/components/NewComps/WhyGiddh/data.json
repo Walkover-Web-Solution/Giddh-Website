@@ -1,0 +1,37 @@
+[
+    {
+        "Feature": "Multi-company support",
+        "Giddh": "Included in one subscription",
+        "MSG91": "Separate plan required per company"
+    },
+    {
+        "Feature": "Branch & VAT support",
+        "Giddh": "Unlimited branches and multiple VAT numbers",
+        "MSG91": "Limited based on plan"
+    },
+    {
+        "Feature": "Inventory & warehouse",
+        "Giddh": "Built-in inventory, warehouse support",
+        "MSG91": "Inventory needs Zoho Inventory (extra)"
+    },
+    {
+        "Feature": "Year locking",
+        "Giddh": "Available",
+        "MSG91": "Not available"
+    },
+    {
+        "Feature": "Entry system",
+        "Giddh": "Both ledger and voucher-based",
+        "MSG91": "Voucher only"
+    },
+    {
+        "Feature": "Custom permissions",
+        "Giddh": "Highly customisable",
+        "MSG91": "Limited"
+    },
+    {
+        "Feature": "Support",
+        "Giddh": "Chat support in all plans",
+        "MSG91": "Only in higher plans"
+    }
+]

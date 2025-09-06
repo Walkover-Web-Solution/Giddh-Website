@@ -66,7 +66,7 @@ function FormFields({ formData, handleChange, error }) {
   );
 }
 
-export default function BookFreeDemoForm({ hiddenAbsolute }) {
+export default function BookFreeDemoForm({ hiddenAbsolute , location , Heading }) {
   const [formData, setFormData] = useState(initialFormState);
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -106,6 +106,106 @@ export default function BookFreeDemoForm({ hiddenAbsolute }) {
     [formData, router]
   );
 
+  if (location === "banner") {
+    return (
+      <div className="col-lg-6 d-flex justify-content-lg-end ">
+        <div className="card shadow-sm p-5 banner-form-card  mx-auto " style={{ height: "100%", width: "100%" }}>
+          <h5 className="mb-3 p-3 fw-bold banner-form-title" style={{ fontSize: "24px", color: "#1A237E" }}>
+            Discover How GIDDH Can Simplify Your Accounting
+          </h5>
+          <form onSubmit={handleSubmit} className="w-100" autoComplete="on">
+            <div className="row g-5 mb-3 ">
+              <div className="col-6 pb-2">
+                <input 
+                  type="text" 
+                  name="name"
+                  className="form-control custom-form-input" 
+                  placeholder="Name*" 
+                  required 
+                  value={formData.name}
+                  onChange={handleChange}
+                  autoComplete="name"
+                />
+              </div>
+              <div className="col-6">
+                <input 
+                  type="text" 
+                  name="phone"
+                  className="form-control custom-form-input" 
+                  placeholder="Mobile Number*" 
+                  required 
+                  value={formData.phone}
+                  onChange={handleChange}
+                  autoComplete="tel"
+                />
+              </div>
+            </div>
+            <div className="row g-5 mb-3 pb-2">
+              <div className="col-6">
+                <input 
+                  type="text" 
+                  name="business"
+                  className="form-control custom-form-input" 
+                  placeholder="Business Name" 
+                  value={formData.business}
+                  onChange={handleChange}
+                  autoComplete="organization"
+                />
+              </div>
+              <div className="col-6">
+                <input 
+                  type="email" 
+                  name="email"
+                  className="form-control custom-form-input" 
+                  placeholder="Email Address*" 
+                  required 
+                  value={formData.email}
+                  onChange={handleChange}
+                  autoComplete="email"
+                />
+              </div>
+            </div>
+            {error && (
+              <div className="alert alert-danger w-100" role="alert">
+                Error submitting form: {error}
+              </div>
+            )}
+            <div className="form-check pb-4  " style={{  color: "#3F4346" }}>
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="termsCheck"
+                required
+                style={{
+                  border: "1px solid #3F4346",
+                  borderRadius: "2px"
+                }}
+              />
+              <label className="form-check-label" htmlFor="termsCheck">
+                I accept the <a href=" " target="_blank" className="text-decoration-underline " style={{ fontFamily: "Outfit, sans-serif" , color: "#3F4346" }}>Terms & Conditions</a>
+              </label>
+            </div>
+            <button 
+              type="submit" 
+              className="btn btn-primary w-100 fw-semibold d-flex align-items-center justify-content-center 
+                        px-3 py-2 rounded"
+              style={{
+                backgroundColor: "#1A237E",
+                height: "52px",
+                gap: "10px",
+                borderRadius: "8px",
+                cursor: submitting ? "not-allowed" : "pointer"
+              }}
+              disabled={submitting}
+            >
+              {submitting ? "Scheduling..." : "Book A Free Demo"}
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <>
       {!hiddenAbsolute && (
@@ -115,6 +215,7 @@ export default function BookFreeDemoForm({ hiddenAbsolute }) {
               className={`btn btn-primary btn-lg ${style.bookdemo_btn}`}
               onClick={() => setShowAbsoluteModal(true)}
               type="button"
+              style={{ cursor: 'pointer' }}
             >
               <MdChevronRight className="c-fs-4" /> Free Demo
             </button>
@@ -143,6 +244,7 @@ export default function BookFreeDemoForm({ hiddenAbsolute }) {
                   className={`btn ${submitting ? "btn-disabled" : "btn-primary"} w-100`}
                   aria-label="Signup for Accounting Software"
                   disabled={submitting}
+                  style={{ cursor: submitting ? "not-allowed" : "pointer" }}
                 >
                   {submitting ? "Scheduling..." : "Book Free Demo"}
                 </button>
@@ -153,9 +255,10 @@ export default function BookFreeDemoForm({ hiddenAbsolute }) {
       )}
 
       <div className={`${style.form_container} w-100 bg-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}>
-        <div className="d-flex align-items-center justify-content-center flex-column gap-3 w-100">
+        <div className="d-flex align-items-center  justify-content-center flex-column gap-3 w-100">
           <p className="col-primary c-fw-600 mb-0 c-fs-4">
-            Explore the Advanced Accounting Features of Giddh
+            {Heading ? "Explore the Advanced Accounting Features of Giddh" : ""}
+           
           </p>
           <form onSubmit={handleSubmit} className="w-100" autoComplete="on">
             <FormFields formData={formData} handleChange={handleChange} error={error} />
@@ -164,6 +267,7 @@ export default function BookFreeDemoForm({ hiddenAbsolute }) {
               className={`btn ${submitting ? "btn-disabled" : "btn-primary"} w-100`}
               aria-label="Signup for Accounting Software"
               disabled={submitting}
+              style={{ cursor: submitting ? "not-allowed" : "pointer" }}
             >
               {submitting ? "Scheduling..." : "Book Free Demo"}
             </button>

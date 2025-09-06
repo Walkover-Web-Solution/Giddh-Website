@@ -1,6 +1,334 @@
-.explore_card:hover {
-  background-color: var(--col-extra-light-blue);
+
+// Feature accordion styles
+.featureContainer {
+  max-width: 600px;
+  padding: 20px;
+  max-height: 614px;
+  height: auto;
+  min-height: 400px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  overflow-y: auto;
+  justify-content: center;
+  
+  @media (max-width: 991.98px) {
+    max-width: 100%;
+    padding: 15px;
+    max-height: none;
+    height: auto;
+    min-height: auto;
+  }
+  
+  @media (max-width: 575.98px) {
+    padding: 10px;
+  }
 }
+
+.featureItem {
+
+  border-radius: 8px;
+  overflow: hidden;
+ 
+  
+  &.collapsed {
+    height: 60px;
+  }
+  
+  &.expanded {
+    height: 200px;
+  }
+}
+
+.collapsedRow {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 14px 20px 14px 16px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  height: 60px;
+}
+
+.expandedCard {
+  background: #fff;
+  border: 1px solid #ddd;
+  max-height: 400px;
+  box-shadow: 4px 4px 33px 0px #0000000F;
+}
+
+.expandedHeader {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px 0 16px;
+  cursor: pointer;
+  box-shadow: 4px 4px 33px 0px #0000000F;
+}
+
+.expandedContent {
+  padding: 12px 32px 16px 56px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.1s, transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.1s;
+  animation: fadeInContent 0.4s ease 0.1s both;
+  
+}
+
+.featureIcon {
+  margin-right: 12px;
+  background: #E9ECFF;
+  border-radius: 4px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  
+  span {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1A237E;
+  }
+}
+
+.featureHeader {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 60px;
+  min-height: 60px;
+
+  
+  .collapsed & {
+    padding: 14px 20px 14px 16px;
+  }
+  
+  .expanded & {
+    padding: 16px 20px 0 16px;
+    
+  }
+}
+
+.featureTitle {
+  color: #1A237E;
+  font-weight: 700;
+  font-size: 18px;
+  
+
+}
+
+.animating {
+  pointer-events: none;
+}
+
+.featureDescription {
+  color: #222;
+  font-size: 15px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+
+}
+
+.featureList {
+  margin: 0;
+  padding-left: 18px;
+  color: #222;
+  font-size: 15px;
+  line-height: 1.6;
+  
+  li {
+    margin-bottom: 4px;
+  }
+}
+
+@keyframes slideInListItem {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes expandCard {
+  0% {
+    max-height: 60px;
+    opacity: 0.9;
+  }
+  100% {
+    max-height: 400px;
+    opacity: 1;
+  }
+}
+
+@keyframes collapseCard {
+  0% {
+    max-height: 400px;
+    opacity: 1;
+  }
+  100% {
+    max-height: 60px;
+    opacity: 0.9;
+  }
+}
+
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutContent {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+.imageContainer {
+  padding: 20px;
+  display: inline-block;
+  border-radius: 12px;
+  max-width: 600px;
+  max-height: 614px;
+  width: 100%;
+  
+  @media (max-width: 991.98px) {
+    max-width: 100%;
+    max-height: 400px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 575.98px) {
+    padding: 10px;
+    max-height: 300px;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+  overflow: hidden;
+  
+  img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+    
+    &:hover {
+      transform: scale(1.02);
+      
+      + .imageOverlay {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+  
+  img:hover + .imageOverlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  padding: 20px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+  border-radius: 8px;
+  
+  &:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.overlayContent {
+  color: white;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.overlayTitle {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  color: white;
+  text-align: start;
+}
+
+.overlayDescription {
+  font-size: 16px;
+ 
+
+  color: #FFFFFF;
+  text-align: start;
+  max-width: 80%;
+}
+
+.overlayButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #FFFFFFAB;
+  border-radius: 9px;
+  width: 80%;
+  height: 68px;
+  opacity: 1;
+  padding: 16px 24px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 auto;
+
+  
+  span:first-child {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  span:last-child {
+    white-space: nowrap;
+    text-align: center;
+    line-height: 1.2;
+    overflow: hidden;
+   
+   
+  }
+}
+
 .img_cont {
   max-width: 320px;
   height: 320px;
