@@ -9,56 +9,6 @@
   overflow-y: auto;
   justify-content: center;
 
-  @media (max-width: 991.98px) {
-    max-width: 100%;
-    padding: 15px;
-    max-height: none;
-    height: auto;
-    min-height: auto;
-  }
-
-  @media (max-width: 575.98px) {
-    padding: 10px;
-  }
-}
-
-.featureItem {
-  overflow: hidden;
-}
-
-.collapsedRow {
-  display: flex;
-  align-items: center;
-  background: #fff;
-  padding: 14px 20px 14px 16px;
-  cursor: pointer;
-  border: 1px solid #ddd;
-  height: 60px;
-}
-
-.expandedCard {
-  background: #fff;
-  border: 1px solid #ddd;
-  max-height: 400px;
-  box-shadow: 4px 4px 33px 0px #0000000f;
-}
-
-.expandedHeader {
-  display: flex;
-  align-items: center;
-  padding: 16px 20px 0 16px;
-  cursor: pointer;
-  box-shadow: 4px 4px 33px 0px #0000000f;
-}
-
-.expandedContent {
-  padding: 12px 32px 16px 56px;
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.1s,
-    transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.1s;
-  animation: fadeInContent 0.4s ease 0.1s both;
-  box-shadow: 4px 4px 33px 0px #0000000f;
 }
 
 .featureIcon {
@@ -66,85 +16,6 @@
   height: 32px;
   border: 1px solid var(--col-primary);
 }
-
-.featureHeader {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  height: 60px;
-  min-height: 60px;
-}
-
-
-.animating {
-  pointer-events: none;
-}
-
-
-
-.featureList {
-  margin: 0;
-  padding-left: 18px;
-  color: #222;
-  font-size: 15px;
-  line-height: 1.6;
-
-  li {
-    margin-bottom: 4px;
-  }
-}
-
-@keyframes slideInListItem {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes expandCard {
-  0% {
-    max-height: 60px;
-    opacity: 0.9;
-  }
-  100% {
-    max-height: 400px;
-    opacity: 1;
-  }
-}
-
-@keyframes collapseCard {
-  0% {
-    max-height: 400px;
-    opacity: 1;
-  }
-  100% {
-    max-height: 60px;
-    opacity: 0.9;
-  }
-}
-
-@keyframes fadeInContent {
-  0% {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeOutContent {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-}
-
 
 
 .imageWrapper {
@@ -159,7 +30,6 @@
     display: block;
     width: 100%;
     height: auto;
-
     &:hover {
       transform: scale(1.02);
 
@@ -168,11 +38,6 @@
         visibility: visible;
       }
     }
-  }
-
-  img:hover + .imageOverlay {
-    opacity: 1;
-    visibility: visible;
   }
 }
 
@@ -204,79 +69,4 @@
   }
 }
 
-.overlayContent {
-  color: white;
-  text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-}
 
-.overlayTitle {
-  font-family: "Outfit", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
-
-  letter-spacing: 0;
-  margin-bottom: 8px;
-  color: white;
-  text-align: start;
-}
-
-.overlayButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid #ffffffab;
-  border-radius: 9px;
-  width: 80%;
-  height: 68px;
-  opacity: 1;
-  padding: 16px 24px;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  cursor: pointer;
-  margin: 0 auto;
-
-  span:first-child {
-    font-size: 18px;
-    font-weight: 600;
-  }
-
-  span:last-child {
-    white-space: nowrap;
-    text-align: center;
-    line-height: 1.2;
-    overflow: hidden;
-  }
-}
-
-.img_cont {
-  max-width: 320px;
-  height: 320px;
-  border-radius: 12px;
-  img {
-    max-width: 300px;
-  }
-  @media (max-width: 1025px) {
-    max-width: 360px;
-    height: 360px;
-    img {
-      max-width: 300px;
-    }
-  }
-  @media (max-width: 769px) {
-    width: 100%;
-    max-width: 100%;
-    height: 320px;
-    img {
-      max-width: 290px;
-    }
-  }
-}

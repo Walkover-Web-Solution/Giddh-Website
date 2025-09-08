@@ -2,13 +2,17 @@ import data from "./data.json";
 import style from "./Features.module.scss";
 import { useState, useCallback, memo } from "react";
 import Image from "next/image";
-import { MdCircle, MdCurrencyRupee } from "react-icons/md";
+import * as MdIcons from "react-icons/md";
+import { MdCircle  } from "react-icons/md";
+
 
 const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
   const handleToggle = useCallback(() => {
     onToggle(index);
   }, [index, onToggle]);
 
+
+  const Icon = MdIcons[feature.icon];
   return (
     <div
       className={`d-flex flex-column gap-1 rounded ${
@@ -22,7 +26,7 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
         <div
           className={`${style.featureIcon} rounded d-flex align-items-center justify-content-center`}
         >
-          <MdCurrencyRupee className="text-accent" />
+           {Icon && <Icon size={18} className={`col-primary`} />}
         </div>
         <span className="col-primary c-fw-600 c-fs-5">{feature?.name} </span>
       </div>
@@ -86,14 +90,14 @@ export default function Features() {
                   style={{ objectFit: "contain" }}
                 />
                 <div className={style.imageOverlay}>
-                  <div className={style.overlayContent}>
-                    <h3 className={style.overlayTitle}>
+                  <div className="text-center text-white text-start justify-content-center flex-column ">
+                    <h3 className="font-outfit text-white  c-fw-600 c-fs-4 text-start mb-2">
                       {data[expandedFeature].name}
                     </h3>
                     <p className={` c-fs-5 text-start`}>
                       {data[expandedFeature].description}
                     </p>
-                    <button className={style.overlayButton}>
+                    <button className='flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 bg-transparent text-white cursor-pointer c-fw-600 c-fs-5'>
                       <span>₹</span>
                       <span style={{ marginLeft: 8 }}>
                         {data[expandedFeature].name}

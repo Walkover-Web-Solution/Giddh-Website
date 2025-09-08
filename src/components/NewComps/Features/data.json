@@ -1,6 +1,7 @@
 [
   {
     "name": "Effortless Ledger Management",
+    "icon": "MdCalculate",
     "image": "/img/seo_features/ledger_management.svg",
     "description": "Giddh accounting software for small businesses that saves you time, reduces errors, and fuels growth",
     "content": [
@@ -12,6 +13,7 @@
   },
   {
     "name": "Simplify GST Compliance",
+    "icon": "MdRequestPage",
     "image": "/img/seo_features/gst_accounting_software.svg",
     "description": "Giddh is India's best software for GST, enabling users to stay updated and ensure full compliance with automated tax calculations.",
     "content": [
@@ -23,6 +25,7 @@
   },
   {
     "name": "Streamline Billing & Invoicing",
+    "icon" : "MdReceiptLong",
     "image": "/img/seo_features/gst_with_the_best_invoice.svg",
     "description": "Stay compliant and boost business growth with the best software for billing and invoicing.",
     "content": [
@@ -34,6 +37,7 @@
   },
   {
     "name": "Inventory Management Software",
+    "icon" : "MdProductionQuantityLimits",
     "image": "/img/seo_features/inventory_management.svg",
     "description": "Stay ahead with the best software for inventory management, featuring real-time tracking and easy organization.",
     "content": [
@@ -45,6 +49,7 @@
   },
   {
     "name": "Multi-Currency Accounting Solution",
+    "icon" : "MdCurrencyBitcoin",
     "image": "/img/seo_features/multi_currency_accounting.svg",
     "description": "Manage international transactions with ease and expand your business worldwide",
     "content": [
@@ -56,6 +61,7 @@
   },
   {
     "name": "Cloud-Based Bookkeeping Software",
+    "icon" : "MdCloudDone",
     "image": "/img/seo_features/bookkeeping_software.svg",
     "description": "Giddh simplifies cloud bookkeeping software for small businesses, offering easy account management, accurate reports, and more.",
     "content": [
