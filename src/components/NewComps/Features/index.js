@@ -49,54 +49,60 @@ export default function Features() {
 
 
   return (
-    <section className="container-fluid py-3 py-md-4">
+    <section className="container px-0  py-3 py-md-4 ">
+      <h2
+        className="text-center mb-3 mb-md-4"
+        style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)' }}
+      >
+        Features
+      </h2>
+
      
-        <h2 className="text-center mb-3 mb-md-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)' }}>Features</h2>
+      <div className="d-flex flex-column flex-lg-row gap-4 align-items-start justify-content-between">
         
-        <div className="row g-3 g-lg-4  px-3 mx-auto align-items-stretch">
-          <div className="col-12 col-lg-6 order-1 order-lg-1">
-            <div id="features" className={style.featureContainer}>
-              {data.slice(0, 5).map((feature, index) => (
-                <FeatureItem
-                  key={index}
-                  feature={feature}
-                  index={index}
-                  isExpanded={expandedFeature === index}
-                  onToggle={handleFeatureToggle}
-                />
-              ))}
-            </div>
+        <div className="col-12 col-lg-6 order-1 order-lg-1">
+          <div id="features" className={style.featureContainer}>
+            {data.slice(0, 5).map((feature, index) => (
+              <FeatureItem
+                key={index}
+                feature={feature}
+                index={index}
+                isExpanded={expandedFeature === index}
+                onToggle={handleFeatureToggle}
+              />
+            ))}
           </div>
-          
-          <div className="col-12 col-lg-6 order-2 order-lg-2">
-            <div className="d-flex align-items-center justify-content-center h-100">
-              <div className={style.imageContainer}>
-                <div className={style.imageWrapper}>
-                  <Image
-                    src={data[expandedFeature].image}
-                    alt={data[expandedFeature].name}
-                    height={400}
-                    width={350}
-                    style={{ objectFit: 'contain' }}
-                  />
-                  <div className={style.imageOverlay}>
-                    <div className={style.overlayContent}>
-                      <h3 className={style.overlayTitle}>{data[expandedFeature].name}</h3>
-                      <p className={style.overlayDescription}>
-                        {data[expandedFeature].description}
-                      </p>
-                      <button className={style.overlayButton}>
-                        <span>₹</span>
-                        <span>{data[expandedFeature].name}</span>
-                      </button>
-                    </div>
+        </div>
+
+      
+        <div className="col-12 col-lg-6 order-2 order-lg-2">
+          <div className="d-flex align-items-center justify-content-center h-100">
+            <div className={style.imageContainer}>
+              <div className={style.imageWrapper}>
+                <Image
+                  src={data[expandedFeature].image}
+                  alt={data[expandedFeature].name}
+                  height={400}
+                  width={350}
+                  style={{ objectFit: 'contain' }}
+                />
+                <div className={style.imageOverlay}>
+                  <div className={style.overlayContent}>
+                    <h3 className={style.overlayTitle}>{data[expandedFeature].name}</h3>
+                    <p className={style.overlayDescription}>
+                      {data[expandedFeature].description}
+                    </p>
+                    <button className={style.overlayButton}>
+                      <span>₹</span>
+                      <span style={{ marginLeft: 8 }}>{data[expandedFeature].name}</span>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      
+      </div>
     </section>
   );
 }

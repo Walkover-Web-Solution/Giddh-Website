@@ -2,7 +2,7 @@
 // Feature accordion styles
 .featureContainer {
   max-width: 600px;
-  padding: 20px;
+ padding: 10px;
   max-height: 614px;
   height: auto;
   min-height: 400px;
@@ -54,6 +54,8 @@
   border: 1px solid #ddd;
   max-height: 400px;
   box-shadow: 4px 4px 33px 0px #0000000F;
+
+  
 }
 
 .expandedHeader {
@@ -62,6 +64,8 @@
   padding: 16px 20px 0 16px;
   cursor: pointer;
   box-shadow: 4px 4px 33px 0px #0000000F;
+
+
 }
 
 .expandedContent {
@@ -72,6 +76,7 @@
   animation: fadeInContent 0.4s ease 0.1s both;
   box-shadow: 4px 4px 33px 0px #0000000F;
 
+ 
   
 }
 
@@ -103,14 +108,14 @@
   min-height: 60px;
 
   
-  .collapsed & {
-    padding: 14px 20px 14px 16px;
-  }
-  
-  .expanded & {
-    padding: 16px 20px 0 16px;
+  // .collapsed & {
     
-  }
+  // }
+  
+  // .expanded & {
+  //   padding: 16px 20px 0 16px;
+    
+  // }
 }
 
 .featureTitle {
