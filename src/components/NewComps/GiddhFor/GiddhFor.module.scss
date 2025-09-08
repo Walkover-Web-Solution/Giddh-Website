@@ -1,0 +1,9 @@
+.tab{
+    &:hover{
+      background: var(--col-primary);  
+    }
+}
+.tabUnderline{
+    height: 3px;
+    background: var(--col-white);
+}

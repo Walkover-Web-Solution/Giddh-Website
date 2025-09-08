@@ -39,7 +39,7 @@ export default function Banner(path) {
           <div className="row align-items-center justify-content-between ">
             {/* Left Side: Text and Logos */}
             <div className="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 pe-3">
-              <h1 class="cactus-font heading col-primary">
+              <h1 className="cactus-font heading col-primary">
                 Smart, Simple & Powerful Accounting for Growing Businesses
               </h1>
               <p className="col-grey ">
