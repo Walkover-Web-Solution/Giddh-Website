@@ -10,88 +10,10 @@ const initialFormState = {
   business: "",
 };
 
-function FormFields({ formData, handleChange, error, isAbsolute }) {
-  return (
-    <div className="w-100 gap-3 d-flex flex-column">
-      {/* First div with 2 inputs */}
-      <div className={`d-flex m-0 gap-3 flex-column  ${isAbsolute ? "flex-column" : "flex-md-row"}`}>
-        <div className="w-100">
-          <input
-            type="text"
-            name="name"
-            className="form-control"
-            placeholder="Name*"
-            required
-            value={formData.name}
-            onChange={handleChange}
-            autoComplete="name"
-          />
-        </div>
-        <div className="w-100">
-          <input
-            type="text"
-            name="phone"
-            className="form-control"
-            placeholder="Mobile Number*"
-            required
-            value={formData.phone}
-            onChange={handleChange}
-            autoComplete="tel"
-          />
-        </div>
-      </div>
-      <div className={`d-flex m-0 gap-3 flex-column  ${isAbsolute ? "flex-column" : "flex-md-row"}`}>
-        <div className="w-100">
-          <input
-            type="text"
-            name="business"
-            className="form-control"
-            placeholder="Business Name"
-            value={formData.business}
-            onChange={handleChange}
-            autoComplete="organization"
-          />
-        </div>
-        <div className="w-100">
-          <input
-            type="email"
-            name="email"
-            className="form-control"
-            placeholder="Email Address*"
-            required
-            value={formData.email}
-            onChange={handleChange}
-            autoComplete="email"
-          />
-        </div>
-      </div>
-      {error && (
-        <div className="alert alert-danger w-100" role="alert">
-          Error submitting form: {error}
-        </div>
-      )}
-      <div className="form-check">
-        <input
-          className="form-check-input"
-          type="checkbox"
-          id="termsCheck"
-          required
-        />
-        <label className="form-check-label" htmlFor="termsCheck">
-          I accept the{" "}
-          <a href=" " target="_blank" className="text-decoration-underline">
-            Terms & Conditions
-          </a>
-        </label>
-      </div>
-    </div>
-  );
-}
-
 export default function BookFreeDemoForm({
   hiddenAbsolute,
   location,
-  Heading,
+  heading,
 }) {
   const [formData, setFormData] = useState(initialFormState);
   const [error, setError] = useState("");
@@ -227,7 +149,7 @@ export default function BookFreeDemoForm({
       >
         <div className="d-flex align-items-center  justify-content-center flex-column gap-3 w-100">
           <p className="col-primary c-fw-600 mb-0 c-fs-4">
-            {Heading ? "Explore the Advanced Accounting Features of Giddh" : ""}
+            {heading ? "Explore the Advanced Accounting Features of Giddh" : ""}
           </p>
           <form
             onSubmit={handleSubmit}
@@ -254,6 +176,92 @@ export default function BookFreeDemoForm({
         </div>
       </div>
     </>
+  );
+}
+
+function FormFields({ formData, handleChange, error, isAbsolute }) {
+  return (
+    <div className="w-100 gap-3 d-flex flex-column">
+      {/* First div with 2 inputs */}
+      <div
+        className={`d-flex m-0 gap-3 flex-column  ${
+          isAbsolute ? "flex-column" : "flex-md-row"
+        }`}
+      >
+        <div className="w-100">
+          <input
+            type="text"
+            name="name"
+            className="form-control"
+            placeholder="Name*"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            autoComplete="name"
+          />
+        </div>
+        <div className="w-100">
+          <input
+            type="text"
+            name="phone"
+            className="form-control"
+            placeholder="Mobile Number*"
+            required
+            value={formData.phone}
+            onChange={handleChange}
+            autoComplete="tel"
+          />
+        </div>
+      </div>
+      <div
+        className={`d-flex m-0 gap-3 flex-column  ${
+          isAbsolute ? "flex-column" : "flex-md-row"
+        }`}
+      >
+        <div className="w-100">
+          <input
+            type="text"
+            name="business"
+            className="form-control"
+            placeholder="Business Name"
+            value={formData.business}
+            onChange={handleChange}
+            autoComplete="organization"
+          />
+        </div>
+        <div className="w-100">
+          <input
+            type="email"
+            name="email"
+            className="form-control"
+            placeholder="Email Address*"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            autoComplete="email"
+          />
+        </div>
+      </div>
+      {error && (
+        <div className="alert alert-danger w-100" role="alert">
+          Error submitting form: {error}
+        </div>
+      )}
+      <div className="form-check">
+        <input
+          className="form-check-input"
+          type="checkbox"
+          id="termsCheck"
+          required
+        />
+        <label className="form-check-label" htmlFor="termsCheck">
+          I accept the{" "}
+          <a href=" " target="_blank" className="text-decoration-underline">
+            Terms & Conditions
+          </a>
+        </label>
+      </div>
+    </div>
   );
 }
 

@@ -52,7 +52,7 @@ export default function GiddhFor() {
                 <img
                   src={data?.content[activeTab]?.image}
                   alt={data?.content[activeTab]?.name}
-                  className={style.image}
+                  className={`${style.image} rounded`}
                 />
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function GiddhFor() {
                 <div className="d-flex justify-content-center">
                   <img
                     src={item?.image}
-                    className={style.image}
+                    className={`${style.image} rounded`}
                     alt={item?.name}
                   />
                 </div>
