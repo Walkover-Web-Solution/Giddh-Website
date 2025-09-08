@@ -80,7 +80,7 @@ export default function Features() {
 
         <div className="col-12 col-lg-6 order-2 order-lg-2">
           <div className="d-flex align-items-center justify-content-center h-100">
-            <div  >
+            <div>
               <div className={style.imageWrapper}>
                 <Image
                   src={data[expandedFeature].image}

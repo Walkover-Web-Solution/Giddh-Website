@@ -1,7 +1,22 @@
-.banner{
-    padding-top: var(--nav-height);
+.banner {
+  padding-top: var(--nav-height);
+  background: radial-gradient(50% 50% at 50% 50%, #d2d8ff 0%, #ffffff 100%);
 }
 
 .btnhover:hover {
-    color: #1c1c1c;
+  color: #1c1c1c;
+}
+
+.getStarted {
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid var(--col-primary);
+  color: var(--col-primary);
+  transition: all 0.2s ease;
+  &:hover {
+    background-color: var(--col-primary);
+    color: var(--col-white);
+  }
 }
