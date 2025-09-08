@@ -1,81 +1,102 @@
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import data from "./data.json";
 import style from "./Features.module.scss";
+import { useState, useCallback, memo } from "react";
 import Image from "next/image";
-import { useState } from "react";
 
-export default function Features() {
-  const [readMore, setReadMore] = useState(null);
 
-  const handleReadMore = (index) => {
-    setReadMore((prev) => (prev === index ? null : index));
-  };
+const   FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
+  const handleToggle = useCallback(() => {
+    onToggle(index);
+  }, [index, onToggle]);
 
   return (
-    <section className="container section_py d-flex flex-column gap-4">
-      {data.map((feature, index) => (
-        <div
-          key={index}
-          className={`d-flex gap-lg-5 gap-md-3 gap-2 flex-column flex-md-row align-items-center col-12 ${
-            index % 2 === 1 ? "flex-md-row-reverse" : ""
-          }`}
-        >
-          <div className="w-100">
-            <h2 className="c-fs-3 c-fw-600 col-primary">{feature?.name}</h2>
-            {feature?.description && (
-              <p className="mb-0">{feature?.description}</p>
-            )}
-            <div className="d-block d-md-none">
-              <button
-                type="button"
-                className="btn btn-link p-0"
-                onClick={() => handleReadMore(index)}
-                aria-expanded={readMore === index}
-                aria-controls={`feature-readmore-${index}`}
-                aria-hidden={readMore !== index}
-              >
-                {readMore === index ? (
-                  <>
-                    Read Less <MdKeyboardArrowUp fontSize={20} />
-                  </>
-                ) : (
-                  <>
-                    Read More <MdKeyboardArrowDown fontSize={20} />
-                  </>
-                )}
-              </button>
+    <div className={`${style.featureItem} ${isExpanded ? style.expanded : style.collapsed}`}>
+      <div className={style.featureHeader} onClick={handleToggle}>
+        <div className={style.featureIcon}>
+          <img src="/img/rupeeicon.svg" alt="Rupee Icon" style={{ width: 12, height: 14 }} />
+        </div>
+        <span className={style.featureTitle}>{feature.name} </span>
+      </div>
+      
+      {isExpanded && (
+
+<div className={style.expandedContent} style={{ boxShadow: '4px 4px 33px 0px #0000000F' }}>
+    <div >
+
+          <div className={style.featureDescription}>
+            {feature.description}
             </div>
-            <div
-              id={`feature-readmore-${index}`}
-              className={`${
-                readMore === index ? "d-block" : "d-none"
-              } d-md-block`}
-            >
-              {feature?.moreHeading && (
-                <p className="mb-1 c-fw-600">{feature?.moreHeading}</p>
-              )}
-              {feature?.content && feature?.content?.length > 0 && (
-                <ul className="list-disc ms-4">
-                  {feature?.content.map((point, i) => (
-                    <li key={i}>{point}</li>
+          <ul className={style.featureList}>
+            {feature.content?.map((point, pointIndex) => (
+              <li key={pointIndex} style={{ animationDelay: `${0.2 + (pointIndex * 0.05)}s` }}>
+                {point}
+              </li>
                   ))}
                 </ul>
+        </div>
+        </div>
               )}
             </div>
+  );
+});
+
+export default function Features() {
+  const [expandedFeature, setExpandedFeature] = useState(0);
+
+  const handleFeatureToggle = useCallback((index) => {
+    setExpandedFeature((prev) => (prev === index ? prev : index));
+  }, []);
+
+
+  return (
+    <section className="container-fluid py-3 py-md-4">
+     
+        <h2 className="text-center mb-3 mb-md-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)' }}>Features</h2>
+        
+        <div className="row g-3 g-lg-4  px-3 mx-auto align-items-stretch">
+          <div className="col-12 col-lg-6 order-1 order-lg-1">
+            <div id="features" className={style.featureContainer}>
+              {data.slice(0, 5).map((feature, index) => (
+                <FeatureItem
+                  key={index}
+                  feature={feature}
+                  index={index}
+                  isExpanded={expandedFeature === index}
+                  onToggle={handleFeatureToggle}
+                />
+              ))}
+            </div>
           </div>
-          <div
-            className={`${style.img_cont} w-100 d-flex align-items-center justify-content-center p-4 bg-light-blue`}
-          >
-            <Image
-              src={feature?.image}
-              className={style.img}
-              width={440}
-              height={440}
-              alt={feature?.name}
-            />
+          
+          <div className="col-12 col-lg-6 order-2 order-lg-2">
+            <div className="d-flex align-items-center justify-content-center h-100">
+              <div className={style.imageContainer}>
+                <div className={style.imageWrapper}>
+                  <Image
+                    src={data[expandedFeature].image}
+                    alt={data[expandedFeature].name}
+                    height={400}
+                    width={350}
+                    style={{ objectFit: 'contain' }}
+                  />
+                  <div className={style.imageOverlay}>
+                    <div className={style.overlayContent}>
+                      <h3 className={style.overlayTitle}>{data[expandedFeature].name}</h3>
+                      <p className={style.overlayDescription}>
+                        {data[expandedFeature].description}
+                      </p>
+                      <button className={style.overlayButton}>
+                        <span>₹</span>
+                        <span>{data[expandedFeature].name}</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      ))}
+      
     </section>
   );
 }
