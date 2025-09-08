@@ -50,10 +50,10 @@ export default function Features() {
 
   return (
     <section className="container-fluid py-3 py-md-4">
-      <div className="container">
+     
         <h2 className="text-center mb-3 mb-md-4" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)' }}>Features</h2>
         
-        <div className="row g-3 g-lg-4 align-items-stretch">
+        <div className="row g-3 g-lg-4  px-3 mx-auto align-items-stretch">
           <div className="col-12 col-lg-6 order-1 order-lg-1">
             <div id="features" className={style.featureContainer}>
               {data.slice(0, 5).map((feature, index) => (
@@ -96,7 +96,7 @@ export default function Features() {
             </div>
           </div>
         </div>
-      </div>
+      
     </section>
   );
 }

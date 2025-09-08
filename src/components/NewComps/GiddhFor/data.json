@@ -6,25 +6,25 @@
       "name": "Retailers & Traders",
       "description": "Track inventory, manage billing, and stay GST-compliant — all in real time.",
       "icon": "🛒",
-      "image": "/img/online-accounting-software/Inventory-Management-Software.svg"
+      "image": "/img/online-accounting-software/Retailers.svg"
     },
     {
       "name": "Startups & Service Providers",
       "description": "Speed up payments and streamline cash flow with smart invoicing and reminders.",
       "icon": "🚀", 
-      "image": "/img/online-accounting-software/Streamline-Billing-&-Invoicing.svg"
+      "image": "/img/online-accounting-software/Startups.svg"
     },
     {
       "name": "Accountants & Finance Teams",
       "description": "Collaborate with teams, access ledgers instantly, and close books with confidence.",
       "icon": "📊",
-      "image": "/img/online-accounting-software/Simplify-GST-Compliance.svg"
+      "image": "/img/online-accounting-software/Accountants.svg"
     },
     {
       "name": "Shopify & E-commerce Brands",
       "description": "Auto-sync sales, manage stock, and generate clean, audit-ready reports.",
         "icon": "🛍️",
-      "image": "/img/online-accounting-software/Cloud-Based-Bookkeeping-Software.svg"
+      "image": "/img/online-accounting-software/E-commerce.svg"
     
     }
   ]

@@ -14,7 +14,7 @@ export default function CTASection() {
   return (
     <section className={styles.ctaSection} aria-label="Giddh hero">
       <div className={styles.inner}>
-        <div className={styles.left}>
+        <div className={`${styles.left} p-4`}>
           <h1 className={styles.heading}>{data.heading}</h1>
           <p className={styles.subheading}>{data.subheading}</p>
           <div className={styles.actions}>
