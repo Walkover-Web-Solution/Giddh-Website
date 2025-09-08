@@ -1,15 +1,14 @@
-
 // Feature accordion styles
 .featureContainer {
   max-width: 600px;
- padding: 10px;
+  padding: 10px;
   max-height: 614px;
   height: auto;
   min-height: 400px;
-  font-family: 'Inter', 'Arial', sans-serif;
+  font-family: "Inter", "Arial", sans-serif;
   overflow-y: auto;
   justify-content: center;
-  
+
   @media (max-width: 991.98px) {
     max-width: 100%;
     padding: 15px;
@@ -17,26 +16,14 @@
     height: auto;
     min-height: auto;
   }
-  
+
   @media (max-width: 575.98px) {
     padding: 10px;
   }
 }
 
 .featureItem {
-
-  border-radius: 8px;
   overflow: hidden;
- 
-  
-  &.collapsed {
-    height: 60px;
-  }
-  
-  &.expanded {
-    height: 200px;
-    box-shadow: 4px 4px 33px 0px #0000000F;
-  }
 }
 
 .collapsedRow {
@@ -53,9 +40,7 @@
   background: #fff;
   border: 1px solid #ddd;
   max-height: 400px;
-  box-shadow: 4px 4px 33px 0px #0000000F;
-
-  
+  box-shadow: 4px 4px 33px 0px #0000000f;
 }
 
 .expandedHeader {
@@ -63,41 +48,23 @@
   align-items: center;
   padding: 16px 20px 0 16px;
   cursor: pointer;
-  box-shadow: 4px 4px 33px 0px #0000000F;
-
-
+  box-shadow: 4px 4px 33px 0px #0000000f;
 }
 
 .expandedContent {
   padding: 12px 32px 16px 56px;
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.1s, transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.1s;
+  transition: opacity 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.1s,
+    transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) 0.1s;
   animation: fadeInContent 0.4s ease 0.1s both;
-  box-shadow: 4px 4px 33px 0px #0000000F;
-
- 
-  
+  box-shadow: 4px 4px 33px 0px #0000000f;
 }
 
 .featureIcon {
-  margin-right: 12px;
-  background: #E9ECFF;
-  border-radius: 4px;
-  padding: 8px;
-  border: 1px solid #ddd;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  
-  span {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1A237E;
-  }
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--col-primary);
 }
 
 .featureHeader {
@@ -107,36 +74,22 @@
   height: 60px;
   min-height: 60px;
 
-  
   // .collapsed & {
-    
+
   // }
-  
+
   // .expanded & {
   //   padding: 16px 20px 0 16px;
-    
+
   // }
 }
 
-.featureTitle {
-  color: #1A237E;
-  font-weight: 700;
-  font-size: 18px;
-  
-
-}
 
 .animating {
   pointer-events: none;
 }
 
-.featureDescription {
-  color: #222;
-  font-size: 15px;
-  margin-bottom: 8px;
-  line-height: 1.5;
 
-}
 
 .featureList {
   margin: 0;
@@ -144,7 +97,7 @@
   color: #222;
   font-size: 15px;
   line-height: 1.6;
-  
+
   li {
     margin-bottom: 4px;
   }
@@ -205,17 +158,15 @@
   padding: 20px;
   display: inline-block;
   border-radius: 12px;
-  max-width: 600px;
-  max-height: 614px;
   width: 100%;
-  
+
   @media (max-width: 991.98px) {
     max-width: 100%;
     max-height: 400px;
     padding: 15px;
     margin: 0 auto;
   }
-  
+
   @media (max-width: 575.98px) {
     padding: 10px;
     max-height: 300px;
@@ -227,24 +178,24 @@
   display: inline-block;
   border-radius: 8px;
   overflow: hidden;
-  
+
   img {
     cursor: pointer;
     transition: transform 0.3s ease;
     display: block;
     width: 100%;
     height: auto;
-    
+
     &:hover {
       transform: scale(1.02);
-      
+
       + .imageOverlay {
         opacity: 1;
         visibility: visible;
       }
     }
   }
-  
+
   img:hover + .imageOverlay {
     opacity: 1;
     visibility: visible;
@@ -253,8 +204,15 @@
 
 .imageOverlay {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
   opacity: 0;
   visibility: hidden;
   display: flex;
@@ -265,7 +223,7 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(2px);
   border-radius: 8px;
-  
+
   &:hover {
     opacity: 1;
     visibility: visible;
@@ -283,7 +241,7 @@
 }
 
 .overlayTitle {
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 20px;
@@ -296,9 +254,8 @@
 
 .overlayDescription {
   font-size: 16px;
- 
 
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: start;
   max-width: 80%;
 }
@@ -309,31 +266,28 @@
   justify-content: center;
   gap: 10px;
   background: rgba(255, 255, 255, 0.15);
-  border: 1px solid #FFFFFFAB;
+  border: 1px solid #ffffffab;
   border-radius: 9px;
   width: 80%;
   height: 68px;
   opacity: 1;
   padding: 16px 24px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
   margin: 0 auto;
 
-  
   span:first-child {
     font-size: 18px;
     font-weight: 600;
   }
-  
+
   span:last-child {
     white-space: nowrap;
     text-align: center;
     line-height: 1.2;
     overflow: hidden;
-   
-   
   }
 }
 
