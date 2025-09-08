@@ -218,6 +218,8 @@
         color: #000 !important;
         background-color: #dddddd;
         text-transform: uppercase;
+        white-space: nowrap;
+        word-break: keep-all;
       }
     }
   }
