@@ -76,7 +76,7 @@ export default function Features() {
 
         <div className="col-12 col-lg-6 order-2 order-lg-2">
           <div className="d-flex align-items-center justify-content-center h-100">
-            <div className={style.imageContainer}>
+            <div  >
               <div className={style.imageWrapper}>
                 <Image
                   src={data[expandedFeature].image}
@@ -90,7 +90,7 @@ export default function Features() {
                     <h3 className={style.overlayTitle}>
                       {data[expandedFeature].name}
                     </h3>
-                    <p className={style.overlayDescription}>
+                    <p className={` c-fs-5 text-start`}>
                       {data[expandedFeature].description}
                     </p>
                     <button className={style.overlayButton}>
