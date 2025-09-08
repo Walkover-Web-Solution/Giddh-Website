@@ -15,12 +15,8 @@ export default function GiddhFor() {
           </p>
         </div>
 
-        {/* Main Content Container with Border */}
-        <div className="border border-white rounded ">
-          {/* Tab Navigation - Mobile First Responsive */}
-
-          {/* Desktop: Horizontal tabs */}
-          <div className="d-none d-lg-block">
+        <div className="border border-white rounded d-none d-lg-block">
+          <div className="">
             <div className="d-flex justify-content-between align-items-center border-bottom border-white  overflow-hidden">
               {data?.content.map((item, index) => (
                 <div key={index} className="position-relative flex-fill">
@@ -31,7 +27,6 @@ export default function GiddhFor() {
                     <span>{item?.icon}</span>
                     <span>{item?.name.split(" ")[0]}</span>
                   </div>
-                  {/* White underline for active tab */}
                   {activeTab === index && (
                     <div
                       className={`${style.tabUnderline} position-absolute bottom-0 left-0 w-100`}
@@ -57,10 +52,36 @@ export default function GiddhFor() {
                 <img
                   src={data?.content[activeTab]?.image}
                   alt={data?.content[activeTab]?.name}
+                  className={style.image}
                 />
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="d-grid  g-3 d-lg-none ">
+          {data?.content.map((item, index) => (
+            <div
+              key={index}
+              className="d-flex flex-column align-items-center g-3 g-md-4 p-4"
+            >
+              <div className="col-12 col-lg-6 order-1 order-lg-2">
+                <div className="text-center">
+                  <h3 className="mb-1 c-fs-4 c-fw-600">{item?.name}</h3>
+                  <p>{item?.description}</p>
+                </div>
+              </div>
+              <div className="col-12 col-lg-6 order-2 order-lg-1">
+                <div className="d-flex justify-content-center">
+                  <img
+                    src={item?.image}
+                    className={style.image}
+                    alt={item?.name}
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
