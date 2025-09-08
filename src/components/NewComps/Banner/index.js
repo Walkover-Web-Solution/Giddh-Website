@@ -77,7 +77,7 @@ export default function Banner(path) {
         background: "radial-gradient(50% 50% at 50% 50%, #D2D8FF 0%, #FFFFFF 100%)"
       }}
     >
-      <div className="container-lg">
+      <div className="container">
         <div className="mb-5 pb-3 d-flex justify-content-between align-items-center">
               <img
                 src="/img/giddh-logo.svg"
