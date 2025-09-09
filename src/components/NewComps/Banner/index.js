@@ -38,13 +38,12 @@ export default function Banner(path) {
               href="https://giddh.com/in/signup"
               target="_blank"
               rel="noopener noreferrer"
-              className={style.getStarted}
+              className={`px-3 py-2 c-fs-5 rounded  ${style.getStarted}`}
             >
               Get Started
             </a>
           </div>
           <div className="row align-items-center justify-content-between ">
-            {/* Left Side: Text and Logos */}
             <div className="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 pe-3">
               <h1 className="cactus-font heading col-primary">
                 Smart, Simple & Powerful Accounting for Growing Businesses

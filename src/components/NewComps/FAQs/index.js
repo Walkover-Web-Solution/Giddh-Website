@@ -80,13 +80,13 @@ export default function FAQs() {
                   <div className="accordion-item" key={index}>
                     <h3 className="accordion-header" id={"heading" + index}>
                       <button
-                        className="accordion-button collapsed"
+                        className="accordion-button collapsed cursor-pointer"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target={"#collapse" + index}
                         aria-expanded="false"
                         aria-controls={"collapse" + index}
-                        style={{ cursor: 'pointer' }}
+                        
                       >
                         <span className="me-2 collapse-icon collapse-icon--open">
                           <MdAdd />

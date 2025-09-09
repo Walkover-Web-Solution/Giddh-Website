@@ -27,8 +27,8 @@ export default function Testimonials() {
                     <img
                       src={`https://i.pravatar.cc/50?img=${index + 1}`}
                       alt={testimonial.name}
-                      className="rounded-circle  "
-                      style={{ width: '32px', height: '32px', objectFit: 'cover' }}
+                      className="rounded-circle p-1 object-fit-cover "
+                     
                     />
                     <div className="flex-grow-1">
                       <p
