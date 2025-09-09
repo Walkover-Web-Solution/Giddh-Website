@@ -2,13 +2,13 @@ const privacyPolicy = (path) => {
   const link = path.path.linkPrefix;
   return (
     <>
-      <section className="container-fluid privacy">
+      <section className="container-fluid privacy" aria-labelledby="privacy-policy-heading">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="sub-heading c-fw-600 mb-4 text-center col-dark">
+              <h1 id="privacy-policy-heading" className="sub-heading c-fw-600 mb-4 text-center col-dark">
                 Your privacy is respected.
-              </h2>
+              </h1>
               <p className="mb-4 c-fs-5">
                 We value our relationship with you and place the highest
                 importance on respecting and protecting your privacy. We want
@@ -16,7 +16,7 @@ const privacyPolicy = (path) => {
                 with entrusting your personal, company and financial information
                 to us.
               </p>
-              <p className=" mb-4 c-fs-5">
+              <p className="mb-4 c-fs-5">
                 This privacy statement sets out our current policies and
                 demonstrates our commitment to your financial privacy. We may
                 change the content or services found on our website at any time
@@ -25,12 +25,12 @@ const privacyPolicy = (path) => {
                 regularly and your continued access to or use of the website
                 will mean that you agree to the changes.
               </p>
-              <h3 className="mb-4 c-fs-3 c-fw-400 privacy2">
+              <h2 className="mb-4 c-fs-3 c-fw-400 privacy2">
                 You own Your Data{" "}
-              </h3>
+              </h2>
               <p className="mb-4 c-fs-5">
                 Giddh is an{" "}
-                <a href={ "https://giddh.com" + link } title="Accounting Software">online Accounting Software</a>{" "}
+                <a href={ "https://giddh.com" + link } title="Accounting Software" aria-label="Visit Giddh online Accounting Software">online Accounting Software</a>{" "}
                 which stores financial information about a company or individual
                 (Organization) as provided or entered by that company or
                 individual. Giddh will store information that is entered by You,

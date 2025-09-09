@@ -4,16 +4,16 @@ const terms = (path) => {
   const link = path.path.linkPrefix;
   return (
     <>
-      <section className="container-fluid privacy">
+      <section className="container-fluid privacy" aria-labelledby="terms-heading">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2  className="sub-heading c-fw-600 mb-4 text-center col-primary" >
+              <h1 id="terms-heading" className="sub-heading c-fw-600 mb-4 text-center col-primary" >
                 Please pay attention
-              </h2>
+              </h1>
               <p className="mb-4 c-fs-5">
                 Giddh is an{" "}
-                <a href={ "https://giddh.com" + link } title="online accounting service" className="col-primary fw-medium">online accounting service</a>{" "}
+                <a href={ "https://giddh.com" + link } title="online accounting service" className="col-primary fw-medium" aria-label="Giddh online accounting service">online accounting service</a>{" "}
                 designed especially for small businesses and consumers. These
                 Terms of Use are intended to explain our obligations as a
                 service provider and Your obligations as a customer. Please read
@@ -43,7 +43,7 @@ const terms = (path) => {
               <p className="mb-4 c-fs-5">
                 These Terms were last updated on 10 May 2016.
               </p>
-              <h3 className="mb-3 c-fs-4 heading">1. DEFINITIONS</h3>
+              <h2 className="mb-3 c-fs-4 heading">1. DEFINITIONS</h2>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">Agreement</h3>
               <p className="mb-4 c-fs-5">means these Terms of Use.</p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">Access Fee</h3>
@@ -85,7 +85,7 @@ const terms = (path) => {
               </p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">Website</h3>
               <p className="mb-4 c-fs-5">
-                means the Internet site at the domain <a href={ "https://giddh.com" + link } className="col-primary fw-medium" title="www.Giddh.com">www.Giddh.com</a> or any other
+                means the Internet site at the domain <a href={ "https://giddh.com" + link } className="col-primary fw-medium" title="www.Giddh.com" aria-label="Visit Giddh website">www.Giddh.com</a> or any other
                 site operated by Giddh.
               </p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">Invited User</h3>
@@ -102,7 +102,7 @@ const terms = (path) => {
               </p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">You</h3>
               <p className="mb-4 c-fs-5">Your has a corresponding meaning.</p>
-              <h3 className="mb-3 c-fs-4  sub-heading">2. USE OF SOFTWARE</h3>
+              <h2 className="mb-3 c-fs-4  sub-heading">2. USE OF SOFTWARE</h2>
 
               <p className="mb-4 c-fs-5">
                 Giddh grants You the right to access and use the Service via the
@@ -141,7 +141,7 @@ const terms = (path) => {
                 </p>
               </div>
 
-              <h3 className="mb-3 c-fs-4 sub-heading" id="clause-31" >3. YOUR OBLIGATIONS</h3>
+              <h2 className="mb-3 c-fs-4 sub-heading" id="clause-31" >3. YOUR OBLIGATIONS</h2>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">
                 3.1. Payment obligations:
               </h3>
@@ -316,9 +316,9 @@ const terms = (path) => {
                 relating to the recovery of any Access Fees that are due but
                 have not been paid by You.
               </p>
-              <h3 className="mb-3 c-fs-4  sub-heading" id="clause-4">
+              <h2 className="mb-3 c-fs-4  sub-heading" id="clause-4">
                 4. CONFIDENTIALITY AND PRIVACY
-              </h3>
+              </h2>
               <h3 className="mb-2 c-fw-400 c-fs-4" >4.1. Confidentiality:</h3>
               <p className="mb-4 c-fs-5"> 
                 Unless the relevant party has the prior written consent of the
@@ -370,9 +370,9 @@ const terms = (path) => {
                 that policy at privacy and You will be taken to have accepted
                 that policy when You accept these Terms.
               </p>
-              <h3 className="mb-3 c-fs-4  sub-heading" id="clause-5">
+              <h2 className="mb-3 c-fs-4  sub-heading" id="clause-5">
                 5. INTELLECTUAL PROPERTY
-              </h3>
+              </h2>
 
               <h3 className="mb-2  c-fw-400 c-fs-4">5.1. General:</h3>
               <p className="mb-4 c-fs-5">
@@ -412,9 +412,9 @@ const terms = (path) => {
                 resulting from any such access by third-party application
                 providers.
               </p>
-              <h3 className="mb-3 c-fs-4  sub-heading" id="clause-6">
+              <h2 className="mb-3 c-fs-4  sub-heading" id="clause-6">
                 6. WARRANTIES AND ACKNOWLEDGEMENTS
-              </h3>
+              </h2>
               <h3 className="mb-2  c-fw-400 c-fs-4">6.1. Authority:</h3>
               <p className="mb-4 c-fs-5">
                 You warrant that where You have registered to use the Service on
@@ -528,9 +528,9 @@ const terms = (path) => {
                 non-business consumers in any jurisdiction does not apply to the
                 supply of the Services, the Website or these Terms.
               </p>
-              <h3 className="mb-3  sub-heading c-fs-4" id="clause-7">
+              <h2 className="mb-3  sub-heading c-fs-4" id="clause-7">
                 7. LIMITATION OF LIABILITY
-              </h3>
+              </h2>
               <ol>
                 <li>
                   To the maximum extent permitted by law, Giddh excludes all
@@ -554,7 +554,7 @@ const terms = (path) => {
                   with Clause 8.
                 </li>
               </ol>
-              <h3 className="mb-3  sub-heading c-fs-4" id="clause-8">8. TERMINATION</h3>
+              <h2 className="mb-3  sub-heading c-fs-4" id="clause-8">8. TERMINATION</h2>
               <h3 className="mb-2  c-fw-400 c-fs-4">8.1. Trial policy</h3>
               <p className="mb-4 c-fs-5">
                 When You first sign up for access to the Services You can
@@ -658,7 +658,7 @@ const terms = (path) => {
                 Clauses <a className="col-primary fw-medium" href="#clause-31"> 3.1</a>,<a className="col-primary fw-medium" href="#clause-37"> 3.7</a>,<a className="col-primary fw-medium" href="#clause-4"> 4</a>,<a className="col-primary fw-medium" href="#clause-5"> 5</a>,<a className="col-primary fw-medium" href="#clause-6"> 6</a>,<a className="col-primary fw-medium" href="#clause-7"> 7</a>,<a className="col-primary fw-medium" href="#clause-8"> 8</a> and <a className="col-primary fw-medium" href="#clause-10"> 10 </a> survive the expiry or
                 termination of these Terms.
               </p>
-              <h3 className="mb-3  sub-heading c-fs-4">9. HELP DESK</h3>
+              <h2 className="mb-3  sub-heading c-fs-4">9. HELP DESK</h2>
               <h3 className="mb-2  c-fw-400 c-fs-4">
                 9.1. Technical Problems:
               </h3>
@@ -677,7 +677,7 @@ const terms = (path) => {
                 the Services or Website may be unavailable to permit maintenance
                 or other development activity to take place.
               </p>
-              <h3 className="mb-3  sub-heading c-fs-4" id="clause-10">10. GENERAL</h3>
+              <h2 className="mb-3  sub-heading c-fs-4" id="clause-10">10. GENERAL</h2>
               <h3 className="mb-2  c-fw-400 c-fs-4">10.1. Entire agreement:</h3>
               <p className="mb-4 c-fs-5">
                 These Terms, together with the Giddh Privacy Policy and the

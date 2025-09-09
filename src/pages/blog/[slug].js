@@ -12,8 +12,10 @@ import TagButton from "@/components/blogs/tags/tagButton";
 import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 const component = { ReactPlayer };
-
+import { useSearchParams } from "next/navigation";
 import { MdKeyboardArrowLeft } from "react-icons/md";
+import { useCallback } from "react";
+import getBlogSchema from "@/utils/getBlogSchema";
 
 const slugToPostContent = ((postContents) => {
   let hash = {};
@@ -26,38 +28,124 @@ const slugToPostContent = ((postContents) => {
   return hash;
 })(fetchPostContent());
 
-export default function TestPage({ source, title, date, author, tags, description, seoTitle, seoDescription, seoKeywords }) {
+export default function TestPage({
+  source,
+  title,
+  date,
+  author,
+  tags,
+  description,
+  seoTitle,
+  seoDescription,
+  seoKeywords,
+  html,
+  scripts,
+  blogSchema,
+}) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  let pageNo = searchParams.get("page");
+  let tagName = searchParams.get("tag");
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    router.back();
-  };
+  const navigateToPreviousPage = useCallback(
+    (event) => {
+      event.preventDefault();
+      if (window.history.length > 2) {
+        router.back();
+      } else if (window.history.length > 1) {
+        router.push("/blog");
+      } else {
+        const basePath = tagName ? `/blog/tags/${tagName}` : "/blog";
+        const pagePath =
+          pageNo > 1 ? (tagName ? `/${pageNo}` : `/page/${pageNo}`) : "";
+        router.push(basePath + pagePath);
+      }
+    },
+    [router, tagName, pageNo]
+  );
+
+  function extractScripts(scriptsString) {
+    const regex = /<script([^>]*)>([\s\S]*?)<\/script>/g;
+    let match;
+    const scripts = [];
+    while ((match = regex.exec(scriptsString)) !== null) {
+      scripts.push({
+        attrs: match[1],
+        content: match[2],
+      });
+    }
+    return scripts;
+  }
+
   return (
     <>
       <Head>
-        <title>{seoTitle ? seoTitle : title }</title>
-        { (seoDescription || description)  && <meta name="description" content={ seoDescription ? seoDescription : description }></meta> }
-        { seoKeywords && <meta name="keywords" content={ seoKeywords }></meta> }
-        <meta property="og:title" content={`Explore the world of ${title} Through our blog and stay informed about the latest developments, expert insights, and valuable tips that matter most. visit at GIDHH -The Best Accounting Software`} key="title" />
+        {(seoTitle || title) && <title>{seoTitle ? seoTitle : title}</title>}
+        {(seoDescription || description) && (
+          <meta
+            name="description"
+            content={seoDescription ? seoDescription : description}
+          ></meta>
+        )}
+
+        {seoKeywords && <meta name="keywords" content={seoKeywords}></meta>}
+
+        <meta
+          property="og:title"
+          content={seoTitle ? seoTitle : title}
+          key="title"
+        />
+        <meta
+          property="og:description"
+          content={seoDescription ? seoDescription : description}
+          key="title"
+        />
+
+        {scripts &&
+          typeof scripts === "string" &&
+          extractScripts(scripts).map((script, idx) => (
+            <script
+              key={idx}
+              type={
+                /type=["']([^"']+)["']/.exec(script.attrs)?.[1] || undefined
+              }
+              dangerouslySetInnerHTML={{ __html: script.content }}
+            />
+          ))}
+
+        {blogSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+          />
+        )}
       </Head>
       <div className="wrapper container blog-container">
-       <a
-        className="mb-3 d-inline-block btn blog-container__back-btn"
-        href="#"
-        onClick={(event) => handleClick(event)}
-       >
-        <MdKeyboardArrowLeft /> Back
-       </a>
-        <div className="blog-header mt-4">
-          <div>
-            {author}, {date}
-          </div>
-          <h1>{title}</h1>
+        <a
+          className="mb-3 d-inline-block btn blog-container__back-btn"
+          href="#"
+          onClick={(event) => navigateToPreviousPage(event)}
+        >
+          <MdKeyboardArrowLeft /> Back
+        </a>
+        <div className="w-100 d-flex align-items-end justify-content-end">
+          {author}, {date}
         </div>
-        <div className="body">
-          <MDXRemote {...source} components={component} />
-        </div>
+        {html ? (
+          <div
+            dangerouslySetInnerHTML={html ? { __html: html } : undefined}
+          ></div>
+        ) : (
+          <>
+            {" "}
+            <div className="blog-header mt-4">
+              <h1>{title}</h1>
+            </div>
+            <div className="body">
+              <MDXRemote {...source} components={component} />
+            </div>
+          </>
+        )}
 
         <footer className="pt-3">
           <div className="blog-card-tags">
@@ -72,7 +160,7 @@ export default function TestPage({ source, title, date, author, tags, descriptio
           </div>
           <button
             className="btn blog-container__back-btn mt-3"
-            onClick={handleClick}
+            onClick={(event) => navigateToPreviousPage(event)}
           >
             <MdKeyboardArrowLeft /> Back
           </button>
@@ -83,7 +171,6 @@ export default function TestPage({ source, title, date, author, tags, descriptio
 }
 
 export async function getStaticPaths() {
-
   const paths = fetchPostContent().map((it) => "/blog/" + it.staticPath);
 
   return {
@@ -110,8 +197,30 @@ export async function getStaticProps(slug) {
   var date = new Date(matterResult?.data?.date);
   date = format(date, "LLLL d, yyyy");
   const tags = matterResult?.data?.tag;
+  const html = matterResult?.data?.html;
+  const scripts = matterResult?.data?.scripts;
+  let htmlContent = null;
+  if (html) {
+    htmlContent = require("fs").readFileSync(
+      `src/data/htmlblogs/${html}.html`,
+      "utf8"
+    );
+  }
+  const url = matterResult?.data?.slug;
   const mdxSource = await serialize(content);
-
+  const noSchema = matterResult?.data?.noSchema;
+  const coverImage = matterResult?.data?.coverImage;
+  const schema = getBlogSchema({
+    data: {
+      noSchema,
+      title,
+      description,
+      author,
+      date: matterResult?.data?.date,
+      url,
+      coverImage,
+    },
+  });
   return {
     props: {
       source: mdxSource,
@@ -122,7 +231,10 @@ export async function getStaticProps(slug) {
       description: description || "",
       seoTitle: seoTitle || "",
       seoKeywords: seoKeywords || "",
-      seoDescription: seoDescription || ""
+      seoDescription: seoDescription || "",
+      html: htmlContent || "",
+      scripts: scripts || "",
+      blogSchema: schema || "",
     },
   };
 }

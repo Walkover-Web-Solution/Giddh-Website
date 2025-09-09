@@ -1,0 +1,14 @@
+.footer {
+  @media (max-width: 768px) {
+    text-align: center;
+    
+    .row > div {
+      margin-bottom: 1rem;
+    }
+    
+    .row > div:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+

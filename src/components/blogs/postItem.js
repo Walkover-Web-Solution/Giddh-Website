@@ -2,7 +2,7 @@ import { MdDateRange } from "react-icons/md";
 import Date from "./date";
 import { parseISO } from "date-fns";
 
-export default function PostItem({ post }) {
+export default function PostItem({ post, tag, page }) {
   /* function calculateReadTime(articleText, wordsPerMinute = 200) {
     // Count the number of words in the article
     const words = articleText.match(/\w+/g);
@@ -18,33 +18,33 @@ export default function PostItem({ post }) {
   const readTime = calculateReadTime(article); */
   //  articleText end code
 
-  function getBlogStyle(titleText){
+  function getBlogStyle(titleText) {
     let textLength = titleText?.length;
     let wordLength = titleText?.split(" ").length;
 
-    if(wordLength > 8 || textLength > 48){
+    if (wordLength > 8 || textLength > 48) {
       return " blog-card--large";
-    }else{
+    } else {
       return " blog-card--small";
     }
   }
   return (
     <a
-      href={"/blog/" + post.slug}
+      href={`/blog/${post?.slug}`}
       className={
         "blog-card" +
-        (post.thumbnail ? " bg-dark" : " bg-light") +
-        getBlogStyle(post.title)
+        (post?.thumbnail ? " bg-dark" : " bg-light") +
+        getBlogStyle(post?.title)
       }
       style={{
-        backgroundImage: post.thumbnail
-          ? 'url("' + post.thumbnail + '")'
+        backgroundImage: post?.thumbnail
+          ? 'url("' + post?.thumbnail + '")'
           : "none",
       }}
     >
       <div className="blog-card__content">
         <div className="blog-card-body">
-          <h2 className="title">{post.title}</h2>
+          <h2 className="title">{post?.title}</h2>
 
           <p className="content">{post?.description}</p>
         </div>
@@ -57,7 +57,7 @@ export default function PostItem({ post }) {
             ))}
           </div>
           <span>
-            <MdDateRange /> <Date date={parseISO(post.date)}/>
+            <MdDateRange /> <Date date={parseISO(post?.date)} />
           </span>
         </div>
       </div>

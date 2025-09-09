@@ -9,6 +9,7 @@
   --c-fs-4: 20px;
   --c-fs-5: 16px;
   --c-fs-6: 14px;
+  --c-fs-7: 12px;
 
   --c-fw-400: 400;
   --c-fw-600: 600;
@@ -23,12 +24,30 @@
   --col-success: #28a745;
   --col-danger: #dc3545;
   --col-grey-deep: #6c757d;
-  --col-light-gray: #e7e8ea 
+  --col-light-gray: #e7e8ea;
+  --col-light-green: #e6fff5;
+  --col-baby-pink: #ffe5e8;
+  --col-light-blue: #b9d1fd;
+  --col-light-golden: #f9dcae;
+  --col-extra-light-blue: #F5F6FF;
+
+
+  //Content Width
+  --w-max-content:900px;
+  --nav-height:54px;
 }
 
-@media (max-width: 575px){
+@media (max-width: 992px){
   :root {
-    --heading: 40px;
-    --sub-heading: 28px;
+    --heading: 32px;
+    --sub-heading: 24px;
+    --small-heading: 20px;
+    --c-fs-1: 24px;
+    --c-fs-2: 22px;
+    --c-fs-3: 18px;
+    --c-fs-4: 16px;
+    --c-fs-5: 14px;
+    --c-fs-6: 12px;
+    --c-fs-7: 10px;
   }
 }

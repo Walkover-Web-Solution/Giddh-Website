@@ -1,11 +1,19 @@
-import { MdRemove, MdAdd } from "react-icons/md";
+import { useEffect, useState } from "react";
+import Faqs from "@/components/faq";
+import faqs from '../data/faqs.json';
 
 const multiUserAccountingSoftware = (path) => {
   const linkPath = path.path;
-  const isGlobal = linkPath.isGlobal; 
+  const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
+  const [faq, setFaq] = useState([]);
+
+  useEffect(() => {
+    setFaq(faqs['multi-user-accounting-software']);
+  }, []);
+
   return (
     <>
       <div className="features">
@@ -13,9 +21,9 @@ const multiUserAccountingSoftware = (path) => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h2 className="heading col-primary c-fw-600 mb-4">
+                <h1 className="heading col-primary c-fw-600 mb-4">
                   Work better together by sharing business insights
-                </h2>
+                </h1>
                 <p className="col-grey c-fs-3 mb-5">
                   Allow external accountants & internal team members across
                   different departments to work together seamlessly.
@@ -26,10 +34,16 @@ const multiUserAccountingSoftware = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of the software"
                   >
                     Download Free
                   </a>
-                  <a href="#" className="col-blue" onClick={() => Calendly.initPopupWidget({url: 'https://calendly.com/sales-accounting-software/talk-to-sale'})}>
+                  <a
+                    href="#"
+                    className="col-blue"
+                    onClick={() => openCalendly()}
+                    aria-label="Schedule a demo with our sales team"
+                  >
                     Schedule Demo
                   </a>
                 </div>
@@ -38,12 +52,13 @@ const multiUserAccountingSoftware = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/share-banner.svg"
-                    width="90%"
-                    alt="share-banner-image"
+                    width="400"
+                    height="300"
+                    alt="An illustration representing sharing business insights"
                   />
-                 <img
+                  <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="cloud icons"
+                    alt="Cloud icons representing various features"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -52,11 +67,11 @@ const multiUserAccountingSoftware = (path) => {
             </div>
           </div>
         </section>
-        <section className="container-fluid features__sub_heading_container">
+        <section className="container-fluid features__sub_heading_container" aria-labelledby="sub-heading">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h3 className="sub-heading col-primary c-fw-600 mb-3">
+                <h3 className="sub-heading col-primary c-fw-600 mb-3" id="sub-heading">
                   Smart collaboration across all departments
                 </h3>
                 <p className="c-fs-4 mb-5">
@@ -65,22 +80,22 @@ const multiUserAccountingSoftware = (path) => {
                   With real time sharing of financial data, you can derive
                   meaningful insight and run your business with efficiency.
                 </p>
-                <a href={ link + '/signup' } className="btn-link-purple">
+                <a href={link + '/signup'} className="btn-link-purple" aria-label="Start your trial for multi-user accounting software">
                   Start Your Trial
                 </a>
               </div>
             </div>
           </div>
         </section>
-        <section className="container-fluid features__description_container mt-5">
+        <section className="container-fluid features__description_container mt-5" aria-labelledby="features-description">
           <div className="container">
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3" id="features-description">
                     Always be on the driver’s seat.
                   </h4>
-                  <ul className="custom-ul-with-right-tick">
+                  <ul className="custom-ul-with-right-tick" role="list">
                     <li>
                       Profit/Loss Statement, Balance Sheet, General Ledger and
                       Trial Balance.
@@ -104,23 +119,25 @@ const multiUserAccountingSoftware = (path) => {
                   <img
                     src="/img/feature-gallery-icons/share-admin.svg"
                     className="img-fluid"
-                    alt="share to admin image"
+                    alt="An illustration of sharing to admin"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Collaborate across multiple departments
                   </h4>
-                  <p >
+                  <p>
                     Give your staff specific access to the different accounting
                     modules they need to do their job. With multi-user
                     accounting, your sales manager will be happy with real time
                     invoice sharing and your accounting staff will always be on
-                    top of the tax filing.And when it matters the most, you can
+                    top of the tax filing. And when it matters the most, you can
                     get your advisor on board to speed up the process of
                     decision making.
                   </p>
@@ -135,18 +152,20 @@ const multiUserAccountingSoftware = (path) => {
                         : "/img/feature-gallery-icons/layer-uk.svg"
                     }
                     className="img-fluid"
-                    alt="share-collaborate-image"
+                    alt="An illustration of collaboration"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h4 className="col-primary small-heading c-fw-600 mb-3">
+                  <h4 className="col-primary c-fw-600 mb-3">
                     Avoid unnecessary confusion with ledger sharing
                   </h4>
-                  <p >
+                  <p>
                     Giddh multi-user accounting software lets you share your
                     ledger with view access to external accounting team or
                     client so that all the discrepancies can be avoided.
@@ -161,7 +180,9 @@ const multiUserAccountingSoftware = (path) => {
                   <img
                     src="/img/feature-gallery-icons/share-cash.svg"
                     className="img-fluid"
-                    alt="share-cash-image"
+                    alt="An illustration of sharing cash"
+                    width="auto"
+                    height="300"
                   />
                 </figure>
               </div>
@@ -177,6 +198,8 @@ const multiUserAccountingSoftware = (path) => {
                     src="/img/suggestion.svg"
                     alt="people interested in Connect Bank Reconcile also looked at image"
                     className="features__sub_heading_container--banner_img"
+                    width="auto"
+                    height="200"
                   />
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
@@ -188,16 +211,16 @@ const multiUserAccountingSoftware = (path) => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                   <a href={ link + "/all-features" } className="col-blue">
+                  <a href={link + "/all-features"} className="col-blue">
                     All features
                   </a>
-                  <a href={ link + "/multi-user-accounting-software" } className="border-vertical col-blue">
+                  <a href={link + "/multi-user-accounting-software"} className="border-left col-blue">
                     Share Data
                   </a>
-                  <a href={ link + "/multi-currency-accounting-software" } className="border-vertical col-blue">
+                  <a href={link + "/multi-currency-accounting-software"} className="border-left col-blue">
                     Multi-Currency
                   </a>
-                  <a href={ link + "/invoice-software" } className="border-vertical col-blue">
+                  <a href={link + "/invoice-software"} className="border-left col-blue">
                     Invoicing
                   </a>
                 </div>
@@ -205,198 +228,8 @@ const multiUserAccountingSoftware = (path) => {
             </div>
           </div>
         </section>
-        <section className="container-fluid features__accordion_container">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 px-0">
-                <div className="accordion" id="accordionAllFeatures">
-                  {/*============ Accordion #1 ===============*/}
-                  <h2 className="fw-bold col-primary ">FAQs</h2>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        What are the benefits of using a multi-accounting
-                        software?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        With Giddh’s multi-accounting software, you can easily
-                        add, remove and manage access to multiple users within
-                        an organization. Multi-accounting software also makes it
-                        easy to create groups and share only a portion of data
-                        to various departments. Its monitoring capabilities
-                        helps keep track of what data is accessible to whom.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #2 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Do I need to be a techie to handle the Giddh software?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        The Giddh software has a really simple interface that
-                        can be used by a layman without a technical background.
-                        The cloud-based system also means that you can access
-                        the software from anywhere and on any device.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #3 ===============*/}
 
-                  {/*============ Accordion #4 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Can I provide access to the Giddh software to other team
-                        members?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        The Giddh software offers collaboration options so that
-                        you can work along with your team members on the
-                        software. Moreover, it also gives you the power to
-                        provide time-restricted access to external members such
-                        as CAs and share the data with them only for a limited
-                        period of time after which permissions are revoked.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #5 ===============*/}
-
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFive">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        Is the Giddh software ideal for all types of businesses?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFive"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        Giddh is especially ideal for small and medium
-                        enterprises (SMEs) thanks to its affordable pricing and
-                        easy to use interface that quickly helps owners get
-                        familiarised with the user interface.
-                      </div>
-                    </div>
-                  </div>
-                  {/*============ Accordion #6 ===============*/}
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingSix">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix"
-                        aria-expanded="false"
-                        aria-controls="collapseSix"
-                      >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
-                        </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        How does a multi-accounting software work?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseSix"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingSix"
-                      data-bs-parent="#accordionAllFeatures"
-                    >
-                      <div className="accordion-body">
-                        With Giddh’s multi-accounting software, you can easily
-                        add, remove and manage access to multiple users within
-                        an organization. Multi-accounting software also makes it
-                        easy to create groups and share only a portion of data
-                        to various departments. Its monitoring capabilities
-                        helps keep track of what data is accessible to whom.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Faqs faq={faq} />
       </div>
     </>
   );

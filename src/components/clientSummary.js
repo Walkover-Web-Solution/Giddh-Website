@@ -2,19 +2,19 @@ const clientSummary = () => {
   const ourClient = [
     {
       clientName: "RackBank",
-      clientLogo: "/rackbank-logo.png",
+      clientLogo: "/rackbank-logo.webp",
       websiteLink: "https://www.rackbank.com/",
       description: "Datacenter Accounting",
     },
     {
       clientName: "MSG91",
-      clientLogo: "/msg91-logo.svg",
+      clientLogo: "/msg91-logo.webp",
       websiteLink: "https://msg91.com/",
       description: "SaaS Accounting",
     },
     {
       clientName: "Mitti",
-      clientLogo: "/mitti-logo.png",
+      clientLogo: "/mitti-logo.webp", 
       websiteLink: "https://mitti.cafe/",
       description: "Restaurant Accounting",
     },
@@ -22,7 +22,7 @@ const clientSummary = () => {
 
   return (
     <>
-      <section className="container-fluid client-summary">
+      <section className="container-fluid client-summary" aria-labelledby="client-summary-title">
         <div className="container">
           <h3 className="client-summary__title text-center col-primary mt-5">
             Our few clients
@@ -39,12 +39,13 @@ const clientSummary = () => {
                       href={res.websiteLink}
                       target="_blank"
                       className="d-block client"
+                      aria-label={`Visit ${res.clientName} website`}
                     >
                       <figure>
                         <img
                           src={"/img/our-clients" + res.clientLogo}
                           alt={res.clientName}
-                          width="auto"
+                          width="130"
                           height="60"
                         />
                       </figure>

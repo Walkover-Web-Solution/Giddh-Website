@@ -112,7 +112,7 @@ const allFeatures = (path) => {
         name: "Multiple Reports",
         image: "/feature-multiple-reports.svg",
         description:
-          "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
+          "We provides various types of reports, like <ol className='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
         link: null,
         hasMoreContent: false,
       },
@@ -145,7 +145,7 @@ const allFeatures = (path) => {
       popupContent: {
         heading: "Effortless Invoicing Solutions",
         contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
+        <ul className='custom-ul-with-right-tick mt-5'>
           <li>Effortless GST Invoicing</li>
           <li>Multi-currency Invoices</li>
           <li>Sending invoice via multi-channels</li>
@@ -181,7 +181,7 @@ const allFeatures = (path) => {
       popupContent: {
         heading: "Simplify Your GST Compliance",
         contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
+        <ul className='custom-ul-with-right-tick mt-5'>
           <li>Direct filing</li>
           <li>GST reports</li>
           <li>Manage multiple GSTIN</li>
@@ -201,7 +201,7 @@ const allFeatures = (path) => {
       popupContent: {
         heading: "Efficiently manage your entire business inventory",
         contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
+        <ul className='custom-ul-with-right-tick mt-5'>
           <li>Record inventory for Product and Services</li>
           <li>Bifurcate inventory into Groups, Items, and Variants</li>
           <li>Fixed Asset Management</li>
@@ -253,7 +253,7 @@ const allFeatures = (path) => {
       popupContent: {
         heading: "Integrate with Shopify: Simplifying Connectivity",
         contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
+        <ul className='custom-ul-with-right-tick mt-5'>
           <li>Automated Data Sync</li>
           <li>Efficient Order Management</li>
           <li>Inventory Management</li>
@@ -275,7 +275,7 @@ const allFeatures = (path) => {
         heading:
           "Scan, Simplify, Succeed: Accelerate Your Workflow with Barcode Integration.",
         contentText: `
-        <ul class='custom-ul-with-right-tick mt-5'>
+        <ul className='custom-ul-with-right-tick mt-5'>
           <li>Easy search</li>
           <li>Product identification</li>
           <li>Streamline workflow</li>
@@ -306,7 +306,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol className='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>GST reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       hasMoreContent: false,
     },
@@ -437,7 +437,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>VAT reports</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol className='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>VAT reports</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       hasMoreContent: false,
     },
@@ -568,7 +568,7 @@ const allFeatures = (path) => {
       name: "Multiple Reports",
       image: "/feature-multiple-reports.svg",
       description:
-        "We provides various types of reports, like <ol class='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
+        "We provides various types of reports, like <ol className='ps-3 text-start'><li>Trial balance</li><li>Profit & loss</li><li>Balance sheet</li><li>Daybook</li><li>Aging report</li></ol>",
       link: null,
       hasMoreContent: false,
     },
@@ -605,11 +605,11 @@ const allFeatures = (path) => {
   return (
     <>
       <div className="features">
-        <section className="container-fluid">
+        <section className="container-fluid" aria-labelledby="features-heading">
           <div className="container features__heading_container">
             <div className="row align-items-center">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 className="heading col-primary fw-bold mb-5">
+                <h1 id="features-heading" className="heading col-primary fw-bold mb-5">
                   Explore the Game-Changing Accounting features
                 </h1>
                 <div className="features__heading_container__links">
@@ -618,17 +618,15 @@ const allFeatures = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
+                    aria-label="Download the free version of the software"
                   >
                     Download Free
                   </a>
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() =>
-                      Calendly.initPopupWidget({
-                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
-                      })
-                    }
+                    onClick={() => openCalendly()}
+                    aria-label="Schedule a demo with our sales team"
                   >
                     Schedule Demo
                   </a>
@@ -638,8 +636,10 @@ const allFeatures = (path) => {
                 <figure className="text-end">
                   <img
                     src={directoryPath + "/all-features-banner-image.svg"}
-                    alt="giddh features banner image"
-                    width="90%"
+                    alt="Banner showcasing Giddh features"
+                    width="400"
+                    height="auto"
+                    role="img"
                   />
                 </figure>
               </div>
@@ -647,13 +647,13 @@ const allFeatures = (path) => {
           </div>
         </section>
       </div>
-      <section className="container-fluid feature-gallery all_features">
+      <section className="container-fluid feature-gallery all_features" aria-label="Feature Gallery">
         <div className="container">
           <div className="row">
             {countryWiseData.map((item, index) => (
               <div className="col-lg-6 col-md-12 col-sm-12" key={index}>
-                <div className="feature-gallery__card container">
-                  <div className="row h-100 w-100 align-items-start row-gap-3  text-md-start text-sm-center text-center">
+                <div className="feature-gallery__card container" role="article">
+                  <div className="row h-100 w-100 align-items-start row-gap-3 text-md-start text-sm-center text-center">
                     <div className="col-md-5 col-sm-12 text-center">
                       <figure className="pt-2">
                         <img

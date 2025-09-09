@@ -21,6 +21,8 @@
   text-rendering: optimizeLegibility;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Outfit:wght@100..900&display=swap');
+
 //====================================FONT SIZE========================================
 
 .heading {
@@ -49,6 +51,9 @@
 }
 .c-fs-6 {
   font-size: var(--c-fs-6) !important; // 14px
+}
+.c-fs-7 {
+  font-size: var(--c-fs-7) !important; // 12px
 }
 
 //font weight
@@ -94,4 +99,19 @@
 }
 .col-light-gray {
   color: var(--col-light-gray) !important;
+}
+.col-light-green {
+  color: var(--col-light-green) !important;
+}
+.col-baby-pink {
+  color: var(--col-baby-pink) !important;
+}
+
+
+.outfit-font{
+    font-family: 'Outfit', sans-serif;
+}
+
+.cactus-font{
+    font-family: 'Cactus Classical Serif', serif;
 }

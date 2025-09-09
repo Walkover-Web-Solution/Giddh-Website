@@ -44,7 +44,7 @@ const downloadFreeModal = () => {
       >
         <div className="modal-dialog modal-dialog-centered download-free-modal">
           <div className="modal-content bg-transparent">
-            <div className="modal-header">
+            <div className="modal-header justify-content-between">
               <h4
                 className="modal-title c-fs-5 col-white"
                 id="downloadFreeLabel"

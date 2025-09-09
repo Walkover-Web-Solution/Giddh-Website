@@ -1,70 +1,174 @@
-@import 'import';
-html{
-    scroll-behavior: smooth;
+@import "import";
+
+html {
+  scroll-behavior: smooth;
 }
-body{
-    background: rgb(102, 102, 102);
-    font-family: "Opel Sans" !important;
-    font-weight:normal;
+body {
+  background: rgb(102, 102, 102);
+  font-family: "Opel Sans" !important;
+  font-weight: normal;
 }
 
-.border-horizontal{
-    border-bottom: 1px solid currentColor;
+// Utility Class
+a {
+  &.read-more-text {
+    text-decoration: underline !important;
+  }
 }
-.border-vertical{
-    border-left: 1px solid currentColor;
 
+.line-height-24 {
+  line-height: 24px !important;
 }
+
+.white-space-no-wrap {
+  white-space: nowrap !important;
+}
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.vertical-align-top {
+  vertical-align: top;
+}
+
+.vertical-align-middle {
+  vertical-align: middle;
+}
+
+.vertical-align-bottom {
+  vertical-align: bottom;
+}
+
+// Other  Global SCSS
 
 // For Ul list with right tick in each li (list element)
-ul{
-    &.custom-ul-with-right-tick{
-        padding: 0;
-        li{
-            padding-left: 50px;
-            background: url(/img/right-tick-icon.svg);
-            background-repeat: no-repeat;
-            background-position: left top 8px;
-            background-size: 25px;
-            margin-bottom: 1.5rem;
-            min-height: 32px;
-        }
+ul {
+  &.custom-ul-with-right-tick {
+    padding: 0;
+    li {
+      padding-left: 50px;
+      background: url(/img/right-tick-icon.svg);
+      background-repeat: no-repeat;
+      background-position: left top 8px;
+      background-size: 25px;
+      margin-bottom: 1.5rem;
+      min-height: 32px;
     }
+  }
 }
 
-a{
-    &.read-more-text{
-        text-decoration: underline !important;
-    }
-}
-.cursor-pointer{
-    cursor: pointer !important;
-}
 // Country Dropdown
 .country_dropdown {
-    &__menu {
-      li {
-        a {
-          color: var(--col-dark);
-          transition: all 200ms;
-          &:hover, &.active {
-            background-color: var(--col-primary);
-            color: var(--col-white);
-          }
+  &__menu {
+    li {
+      a {
+        color: var(--col-dark);
+        transition: all 200ms;
+        &:hover,
+        &.active {
+          background-color: var(--col-primary);
+          color: var(--col-white);
         }
       }
     }
   }
-body{
-    &.otp-verification{
-        #signWithOTP{
-          z-index: 1060 !important;
-        }
-        .modal-backdrop{
-            z-index: 1056 !important;
-        }
-    }
 }
-  .modal-backdrop~.modal-backdrop {
-    opacity : 0 !important;
+
+body {
+  &.otp-verification {
+    #signWithOTP {
+      z-index: 1060 !important;
+    }
+    .modal-backdrop {
+      z-index: 1056 !important;
+    }
   }
+}
+.modal-backdrop ~ .modal-backdrop {
+  opacity: 0 !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+//Buttons
+.btn {
+  width: fit-content;
+  &.btn-primary {
+    background: var(--col-primary);
+    outline: none;
+    border: none;
+    &:hover {
+      background: var(--col-dark);
+    }
+  }
+  &.btn-secondary {
+    background: var(--col-light-blue);
+    color: var(--col-primary);
+    outline: var(--col-primary) !important;
+    border: var(--col-primary) !important;
+    &:hover {
+      background: var(--col-dark);
+    }
+  }
+}
+
+//custom SCSS
+.figcaption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.section {
+  &_py {
+    padding: 40px 0;
+    @media (max-width: 769px) {
+      padding: 24px 0;
+    }
+  }
+}
+
+.content-width {
+  max-width: var(--w-max-content);
+}
+
+.bg {
+  &-accent {
+    background-color: var(--col-primary);
+  }
+  &-light-blue {
+    background-color: var(--col-extra-light-blue);
+  }
+}
+
+//Custom Classes
+.w-fit-content {
+  width: fit-content !important;
+}
+.h-fit-content {
+  height: fit-content !important;
+}
+
+.list {
+  &-disc {
+    list-style: disc;
+  }
+}

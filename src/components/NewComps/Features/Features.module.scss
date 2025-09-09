@@ -1,0 +1,36 @@
+// Feature accordion styles
+.image {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.02);
+
+      + .imageOverlay {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+ 
+  &:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
