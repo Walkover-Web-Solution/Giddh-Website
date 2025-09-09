@@ -12,12 +12,17 @@ export default function WhyGiddh() {
       <h1 className="text-center mb-4 cactus-font">{data.heading}</h1>
       <p className="text-center mb-4 w-75 mx-auto ">{data.subheading}</p>
 
-     
       <div className="bg-white border rounded overflow-hidden d-none d-md-block">
         <div className="row border-bottom">
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">Feature</div>
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">Giddh</div>
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">Zoho</div>
+          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">
+            Feature
+          </div>
+          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">
+            Giddh
+          </div>
+          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">
+            Zoho
+          </div>
           <div className="col-md-3 px-4 py-3 fw-semibold text-dark">Tally</div>
         </div>
 
@@ -31,7 +36,6 @@ export default function WhyGiddh() {
         ))}
       </div>
 
-     
       <div className="d-block d-md-none ">
         {whyGiddhData.map((row, index) => (
           <div key={index} className="bg-white border rounded shadow p-3 mb-3">

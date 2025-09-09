@@ -1,37 +1,36 @@
 import style from "./TrustBadge.module.scss";
 
 export const trustBadgeBrands = [
-    {
-      href: "https://www.tribuneindia.com/news/business/giddh-books-makes-accounting-accessible-and-automated-for-indian-small-businesses/",
-      alt: "Accessible Accounting Software for Small Businesses",
-      src: "/img/trust-badge/the-tribute.svg",
-    },
-    {
-      href: "https://m.dailyhunt.in/news/india/english/sangri+today-epaper-dhca0872bf801748bd9f43791084210e94/giddh+revolutionizing+accounting+software+with+advanced+features+and+security-newsid-dhca0872bf801748bd9f43791084210e94_e4f3a6f0d4bf11efb7bb631dcbb8c226?sm=Y",
-      alt: "Dailyhunt Trust Badge for Bookkeeping",
-      src: "/img/trust-badge/dailyhunt.svg",
-    },
-    {
-      href: "https://en.jaipurtimes.org/giddh-revolutionizing-accounting-software-with-advanced-features-and-security",
-      alt: "Advanced GST Accounting Software for India",
-      src: "/img/trust-badge/jaipur-times.svg",
-    },
-    {
-      href: "https://www.sangritoday.com/spotlight/giddh-revolutionizing-accounting-software-with-advanced-features-and-security",
-      alt: "Giddh: Revolutionary Accounting Software with Advanced Features and Security",
-      src: "/img/trust-badge/sangri-today.webp",
-    },
-    {
-      href: "https://www.indiadazzle.com/giddh-revolutionizing-accounting-software-with-advanced-features-and-security",
-      alt: "Trusted Cloud Accounting Solution with advanced features and security",
-      src: "/img/trust-badge/India-dazzle.webp",
-    },
-    {
-      href: "https://biharnewswatch.in/giddh-revolutionizing-accounting-software-with-advanced-features-and-security/",
-      alt: "Giddh Cloud Accounting Software with Advanced Features",
-      src: "/img/trust-badge/bihar-news.svg",
-    },
-
+  {
+    href: "https://www.tribuneindia.com/news/business/giddh-books-makes-accounting-accessible-and-automated-for-indian-small-businesses/",
+    alt: "Accessible Accounting Software for Small Businesses",
+    src: "/img/trust-badge/the-tribute.svg",
+  },
+  {
+    href: "https://m.dailyhunt.in/news/india/english/sangri+today-epaper-dhca0872bf801748bd9f43791084210e94/giddh+revolutionizing+accounting+software+with+advanced+features+and+security-newsid-dhca0872bf801748bd9f43791084210e94_e4f3a6f0d4bf11efb7bb631dcbb8c226?sm=Y",
+    alt: "Dailyhunt Trust Badge for Bookkeeping",
+    src: "/img/trust-badge/dailyhunt.svg",
+  },
+  {
+    href: "https://en.jaipurtimes.org/giddh-revolutionizing-accounting-software-with-advanced-features-and-security",
+    alt: "Advanced GST Accounting Software for India",
+    src: "/img/trust-badge/jaipur-times.svg",
+  },
+  {
+    href: "https://www.sangritoday.com/spotlight/giddh-revolutionizing-accounting-software-with-advanced-features-and-security",
+    alt: "Giddh: Revolutionary Accounting Software with Advanced Features and Security",
+    src: "/img/trust-badge/sangri-today.webp",
+  },
+  {
+    href: "https://www.indiadazzle.com/giddh-revolutionizing-accounting-software-with-advanced-features-and-security",
+    alt: "Trusted Cloud Accounting Solution with advanced features and security",
+    src: "/img/trust-badge/India-dazzle.webp",
+  },
+  {
+    href: "https://biharnewswatch.in/giddh-revolutionizing-accounting-software-with-advanced-features-and-security/",
+    alt: "Giddh Cloud Accounting Software with Advanced Features",
+    src: "/img/trust-badge/bihar-news.svg",
+  },
 ];
 
 export default function TrustBadge() {
