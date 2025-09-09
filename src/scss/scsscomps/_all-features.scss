@@ -74,14 +74,6 @@
         }
       }
     }
-    &__content {
-      h2, h3, h4 {
-        font-size: var(--c-fs-3);
-      }
-      p, ul li {
-        font-size: var(--c-fs-4);
-      }
-    }
   }
 
   &__suggestion_container {
@@ -92,6 +84,65 @@
         padding: 2px 14px;
         &:hover {
           color: var(--col-primary) !important;
+        }
+      }
+    }
+  }
+  &__accordion_container {
+    padding: 3rem 0;
+    .accordion {
+      margin: 0 auto;
+      .accordion-item {
+        border: none !important;
+      }
+      .accordion-button {
+        color: var(--col-deep) !important;
+        background-color: unset !important;
+        box-shadow: unset !important;
+
+        &::after {
+          display: none;
+        }
+        &:focus {
+          box-shadow: none !important;
+          border: none !important;
+        }
+
+        &.collapsed {
+          .collapse-icon--open {
+            display: inline-block;
+          }
+          .collapse-icon--close {
+            display: none !important;
+          }
+        }
+        &:not(.collapsed) {
+          .collapse-icon--open {
+            display: none !important;
+          }
+          .collapse-icon--close {
+            display: inline-block !important;
+          }
+        }
+        .collapse-icon {
+          width: 30px;
+          height: 30px;
+          min-width: 30px;
+          min-height: 30px;
+          background-color: var(--col-blue);
+          color: var(--col-white);
+          font-size: var(--c-fs-3);
+          text-align: center;
+          line-height: 25px;
+        }
+      }
+      &-body {
+        padding: 0 0 0 60px;
+        color: var(--col-deep);
+
+        ul {
+          list-style: disc;
+          padding-left: 20px;
         }
       }
     }
@@ -210,7 +261,7 @@
     }
 
     &__description_container {
-      .border-bottom {
+      .border-horizontal {
         border: none !important;
       }
       .image-alignment {
@@ -231,7 +282,7 @@
         flex-direction: column-reverse !important;
       }
       .row {
-        &.border-bottom {
+        &.border-horizontal {
           margin-bottom: 1rem !important;
           padding-bottom: 1rem !important;
         }
@@ -308,20 +359,6 @@
           .video-wrapper {
             margin-bottom: 80px;
           }       
-        }
-      }
-    }
-  }
-}
-@media (max-width: 360px) {
-  .features {
-    &__heading_container {
-      h1 {
-        font-size: var(--c-fs-2);
-      }
-      figure {
-        img {
-          width: 80% !important;
         }
       }
     }

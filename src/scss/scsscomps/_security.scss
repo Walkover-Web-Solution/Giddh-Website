@@ -5,6 +5,7 @@
         padding: 200px 0 80px;
 
         p {
+            line-height: 44px;
             font-size: clamp(var(--c-fs-5), 2.4vw,var(--c-fs-3));
         }
     }

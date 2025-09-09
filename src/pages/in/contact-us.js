@@ -1,8 +1,8 @@
 import ContactUS from "@/pages/contact-us";
-const inContactUS = (path) => {
+const inContactUS = () => {
   return (
     <>
-      <ContactUS path={path.path} />
+      <ContactUS />
     </>
   );
 };

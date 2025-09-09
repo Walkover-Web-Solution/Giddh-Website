@@ -1,6 +1,5 @@
 import { useEffect, useCallback, useState } from "react";
 import Jsondata from "../data/data.json";
-
 const navbar = (props) => {
   const link = props.path;
   const pathname = props.browserPath;
@@ -20,7 +19,6 @@ const navbar = (props) => {
   let activePath = pathname.split("/");
   activePath = activePath[activePath.length - 1];
   const [scrollStatus, setscrollStatus] = useState(false);
-  const [showTrustpilot, setShowTrustpilot] = useState(false);
 
   function getCountryWiseData(data) {
     if (link.isGlobal) {
@@ -76,14 +74,6 @@ const navbar = (props) => {
       setscrollStatus(false);
     } else {
       setscrollStatus(true);
-    }
-
-    if (link.isUK) {
-      appendScript(
-        "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
-        true
-      );
-      setShowTrustpilot(true);
     }
 
     return () => {
@@ -159,8 +149,8 @@ const navbar = (props) => {
             aria-label="Toggle navigation"
           >
             <svg
-              width="30"
-              height="30"
+              width="40"
+              height="40"
               viewBox="0 0 40 40"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -193,24 +183,6 @@ const navbar = (props) => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul className="navbar-nav ms-auto text-light mb-2 mb-lg-0">
-              {showTrustpilot && (
-                <li className="nav-item">
-                  <span
-                    className="trustpilot-widget d-block"
-                    data-locale="en-GB"
-                    data-template-id="56278e9abfbbba0bdcd568bc"
-                    data-businessunit-id="65d30a42565b997046d9df08"
-                    data-style-height="38px"
-                    data-style-width="224px"
-                  >
-                    <a
-                      href="https://uk.trustpilot.com/review/giddh.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    ></a>
-                  </span>
-                </li>
-              )}
               <li className="nav-item">
                 <a
                   className={
@@ -246,7 +218,20 @@ const navbar = (props) => {
                           .filter(getCountryWiseData)
                           .map((data, index) => (
                             <li key={index}>
-                              <a href={urlPrefix + data.url}>{data.menuItem}</a>
+                              {data.menuItem !== "API Integration" && (
+                                <>
+                                  <a href={urlPrefix + data.url}>
+                                    {data.menuItem}
+                                  </a>
+                                </>
+                              )}
+                              {data.menuItem === "API Integration" && (
+                                <>
+                                  <a href={data.url} target="_blank">
+                                    {data.menuItem}
+                                  </a>
+                                </>
+                              )}
                             </li>
                           ))}
                       </ul>
@@ -400,9 +385,7 @@ const navbar = (props) => {
               </div>
               <div>
                 <a href={urlPrefix + "/signup"} className="signup_page_link">
-                  {link.country === "in"
-                    ? "Try Giddh For Free"
-                    : "Try Giddh Now"}
+                  Sign Up
                 </a>
               </div>
             </div>

@@ -1,29 +1,22 @@
-import { useEffect, useState} from "react";
-import Faqs from "@/components/faq";
-import faqs from '../data/faqs.json';
+import { MdRemove, MdAdd } from "react-icons/md";
 
 const conectBankReconcile = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
   const link = linkPath.linkPrefix;
-  const [faq, setFaq] = useState([])
-
-  useEffect(() => {
-    setFaq(faqs['conect-bank-reconcile']);
-  }, []);
   return (
     <>
       <div className="features">
-        <section className="container-fluid" aria-labelledby="features-heading">
+        <section className="container-fluid">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
+                <h2 className="heading col-primary c-fw-600 mb-4">
                   {isIndia
                     ? "Monitor your transactions by connecting bank accounts"
                     : "Bank Reconciliation Made Easy"}
-                </h1>
+                </h2>
                 <p className="col-grey c-fs-3 mb-5">
                   {isIndia
                     ? "Once your bank account connects to Giddh, you get an overview of the most important asset of your business – cash."
@@ -35,15 +28,17 @@ const conectBankReconcile = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
-                    aria-label="Download the free version of Giddh"
                   >
                     Download Free
                   </a>
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() => openCalendly()}
-                    aria-label="Schedule a demo with Giddh"
+                    onClick={() =>
+                      Calendly.initPopupWidget({
+                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                      })
+                    }
                   >
                     Schedule Demo
                   </a>
@@ -51,13 +46,10 @@ const conectBankReconcile = (path) => {
               </div>
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
-                  <img src="/img/bank-banner.svg" 
-                    width="400"
-                    height="300" 
-                    alt="Illustration of connecting Giddh with bank accounts"/>
+                  <img src="/img/bank-banner.svg" width="90%" alt="connect giddh with bank vector image"/>
                   <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="Icons representing various features of Giddh"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -83,11 +75,7 @@ const conectBankReconcile = (path) => {
                     keep track of your cash flow in the most secure, fast and
                     reliable way.
                   </p>
-                  <a 
-                    href={link + "/signup"} 
-                    className="btn-link-purple" 
-                    aria-label="Start your trial with Giddh"
-                  >
+                  <a href={link + "/signup"} className="btn-link-purple">
                     Start Your Trial
                   </a>
                 </div>
@@ -95,13 +83,13 @@ const conectBankReconcile = (path) => {
             </div>
           </section>
         ) : null}
-        <section className="container-fluid features__description_container mt-5" aria-labelledby="description-heading">
+        <section className="container-fluid features__description_container mt-5">
           <div className="container">
             {isIndia ? (
-              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
+              <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
                 <div className="col-md-12 col-lg-6">
                   <div className="features__description_container__content">
-                    <h2 id="description-heading" className="col-primary c-fw-600 mb-3">
+                    <h2 className="col-primary small-heading c-fw-600 mb-3">
                       Connect bank and get automatic updates
                     </h2>
                     <p>
@@ -119,18 +107,16 @@ const conectBankReconcile = (path) => {
                     <img
                       src="/img/bank-connect.svg"
                       className="img-fluid"
-                      alt="Illustration showing the process of connecting a bank account"
-                      width="300"
-                      height="auto"
+                      alt="connect bank image"
                     />
                   </figure>
                 </div>
               </div>
             ) : null}
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Reconcile with a snap of fingers
                   </h2>
                   <p>
@@ -147,18 +133,16 @@ const conectBankReconcile = (path) => {
                   <img
                     src="/img/suggestion.svg"
                     className="img-fluid"
-                    alt="Illustration depicting the bank reconciliation process"
-                    width="300"
-                    height="auto"
+                    alt="bank reconcile image"
                   />
                 </figure>
               </div>
             </div>
 
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Got Multiple Bank Accounts? We got you Covered
                   </h2>
                   <p>
@@ -174,9 +158,7 @@ const conectBankReconcile = (path) => {
                   <img
                     src="/img/bank-account.svg"
                     className="img-fluid"
-                    alt="Illustration showing multiple bank accounts"
-                    width="300"
-                    height="auto"
+                    alt="bank account image"
                   />
                 </figure>
               </div>
@@ -184,20 +166,18 @@ const conectBankReconcile = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
+        <section className="container-fluid features__suggestion_container">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="Illustration of people interested in Connect Bank Reconcile"
+                    alt="people interested in Connect Bank Reconcile also looked at image"
                     className="features__sub_heading_container--banner_img"
-                    width="200"
-                    height="auto"
                   />
                 </figure>
-                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
                   <span className="col-blue">
                     {isIndia ? "Connect Bank Reconcile" : "Bank Reconcile"}
@@ -205,25 +185,25 @@ const conectBankReconcile = (path) => {
                   also looked at
                 </h2>
 
-                <div className="features__suggestion_container__links" role="navigation" aria-label="Suggested links">
+                <div className="features__suggestion_container__links">
                   <a href={link + "/all-features"} className="col-blue">
                     All features
                   </a>
                   <a
                     href={link + "/multi-user-accounting-software"}
-                    className="border-left col-blue"
+                    className="border-vertical col-blue"
                   >
                     Share Data
                   </a>
                   <a
                     href={link + "/multi-currency-accounting-software"}
-                    className="border-left col-blue"
+                    className="border-vertical col-blue"
                   >
                     Multi-Currency
                   </a>
                   <a
                     href={link + "/invoice-software"}
-                    className="border-left col-blue"
+                    className="border-vertical col-blue"
                   >
                     Invoicing
                   </a>
@@ -233,7 +213,184 @@ const conectBankReconcile = (path) => {
           </div>
         </section>
 
-        <Faqs faq={faq} />
+        <section className="container-fluid features__accordion_container">
+          <div className="container">
+            <div className="row">
+              <div className="col-12 px-0">
+                <div className="accordion" id="accordionAllFeatures">
+                  {/*============ Accordion #1 ===============*/}
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        What is bank reconciliation? Why is it done?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        A bank reconciliation compares the difference between
+                        the bank balance on the bank statement with the balance
+                        on the accounting records of the company. Sometimes,
+                        certain transactions may be accounted for in the bank’s
+                        system before it is integrated into the company’s
+                        accounting system. Hence, bank reconciliation is done so
+                        that such differences can be detected.
+                      </div>
+                    </div>
+                  </div>
+                  {/*============ Accordion #2 ===============*/}
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingTwo">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        What is reconciliation software?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        A reconciliation software is a tool that can help you
+                        automate and standardise the reconciliation process to
+                        ensure quality and accuracy in preparing financial
+                        statements. With a bank reconciliation software, it
+                        becomes easier for accountants to compare bank, general
+                        ledger and other data, verify the correctness of balance
+                        sheets as well as identify any discrepancies, attach
+                        supporting documentation, etc.
+                      </div>
+                    </div>
+                  </div>
+                  {/*============ Accordion #3 ===============*/}
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingThree">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        How can Giddh help streamline bank transactions?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        Giddh, one of the best bank reconciliation software in
+                        India, can directly be integrated with your respective
+                        banking partner. As a result you can easily make
+                        payments to vendors from a single window, without the
+                        need for opening your online banking website and
+                        reentering your credentials. Since the bank’s API is
+                        integrated directly within the app, Giddh automatically
+                        monitors and categorizes your bank transactions and
+                        makes the reconciliation process smoother and smarter.
+                      </div>
+                    </div>
+                  </div>
+                  {/*============ Accordion #4 ===============*/}
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingFour">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        How does integrating a bank account with Giddh benefit
+                        me?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        <ul>
+                          <li>
+                            Easily send and receive vendor payments from a
+                            single window in a convenient manner.
+                          </li>
+                          <li>
+                            Have a clearer view of the company’s cash status in
+                            no time
+                          </li>
+                          <li>
+                            Easy and automated import of bank statement
+                            transactions
+                          </li>
+                          <li>
+                            Automated reconciliation of transactions by value
+                            and reconciliation code
+                          </li>
+                          <li>
+                            Detailed reporting of bank activities and daily
+                            payments
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

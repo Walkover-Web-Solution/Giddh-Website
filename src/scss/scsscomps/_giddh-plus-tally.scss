@@ -1,7 +1,7 @@
 .giddh-plus-tally {
   // Variables
   --content-distance-from-center: 40px;
-  --content-distance-from-top: 20dvh;
+  --content-distance-from-top: 8dvh;
   margin-top: 54px;
 
   .row {
@@ -13,15 +13,11 @@
   }
 
   &__title {
+    padding-top: var(--content-distance-from-top);
     font-size: 56px;
     font-weight: var(--c-fw-600);
-    white-space: nowrap;
-    -webkit-text-stroke-width: 1px;
-    top: 50px;
-    left: 50%;
-    --translateX-value: calc(-50% - 5px);
-    transform: translateX(var(--translateX-value));
   }
+
   .banner-img {
     user-select: none;
     padding-top: var(--content-distance-from-top);
@@ -50,6 +46,19 @@
 
     .giddh-plus-tally__title {
       color: var(--col-primary);
+      margin-right: var(--content-distance-from-center);
+      position: relative;
+      &::after {
+        content: "";
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        right: -72px;
+        transform: translate(-50%, 18px);
+        background-image: url("/img/tally-plus-giddh/golden_plus_icon.webp");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
     article {
       margin-top: var(--content-distance-from-top);
@@ -92,15 +101,22 @@
   .giddh-plus-tally {
     // Variables
     --content-distance-from-center: 30px;
-    --content-distance-from-top: 22dvh !important;
+    --content-distance-from-top: 8dvh !important;
 
+    &__left-wrapper {
+      .giddh-plus-tally__title {
+        &::after {
+          right: -63px;
+        }
+      }
+    }
   }
 }
 @media (max-width: 991px) {
   .giddh-plus-tally {
     // Variables
     --content-distance-from-center: 20px;
-    --content-distance-from-top: clamp(90px, 20dvh, 145px) !important;
+    --content-distance-from-top: clamp(50px, 12dvh, 80px) !important;
 
     .row {
       min-height: calc(60dvh - 64px);
@@ -111,6 +127,14 @@
     }
 
     &__left-wrapper {
+      .giddh-plus-tally__title {
+        &::after {
+          width: 26px;
+          height: 26px;
+          right: -46px;
+          transform: translate(-50%, 12px);
+        }
+      }
       p {
         font-size: var(--c-fs-5);
       }
@@ -124,7 +148,7 @@
   .giddh-plus-tally {
     // Variables
     --content-distance-from-center: 15px;
-    --content-distance-from-top: clamp(50px, 19dvh, 122px) !important;
+    --content-distance-from-top: clamp(40px, 7dvh, 60px) !important;
 
     &__title {
       font-size: var(--c-fs-1) !important;
@@ -137,6 +161,14 @@
     }
 
     &__left-wrapper {
+      .giddh-plus-tally__title {
+        &::after {
+          width: 16px;
+          height: 16px;
+          right: -31px;
+          transform: translate(-50%, 12px);
+        }
+      }
       p {
         font-size: var(--c-fs-6);
       }
