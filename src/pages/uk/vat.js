@@ -1,27 +1,21 @@
-import { useState, useEffect } from "react";
-import Faqs from "@/components/faq";
-import faqs from '../../data/faqs.json';
+import { useState } from "react";
+import { MdRemove, MdAdd } from "react-icons/md";
 
 const ukVAT = () => {
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
   const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
-  const [faq , setFaq] = useState([]);
-
-  useEffect(() =>{
-    setFaq(faqs['vat']);
-  }, []);
 
   return (
     <>
-      <section className="container mb-5">
+      <section className="container mb-5 ">
         <div className="tax-hero-container  text-center">
           <div className="row d-flex h-100 align-content-end">
-            <div className=" d-flex flex-column">
+            <div className=" d-flex flex-column  ">
               <h2 className="c-fs-3  col-dark-light fw-light m-3">
                 Automate Your VAT Calculations
               </h2>
-              <h1 className="heading c-fw-600  col-primary">
+              <h1 className="heading c-fw-600  col-primary ">
                 UK VAT Compliance Software - Made Easy
               </h1>
               <h2 className="c-fs-3">UK VAT Regulations Compliance</h2>
@@ -165,7 +159,7 @@ const ukVAT = () => {
             <h2 className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Simplify VAT Returns and Audits</h2>
           <div
             className={
-              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom" +
+              "row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal" +
               (readMoreParagraphStatus1 ? " --read-more" : "")
             }
           >
@@ -235,7 +229,7 @@ const ukVAT = () => {
 
           <div
             className={
-              "row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom" +
+              "row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal" +
               (readMoreParagraphStatus2 ? " --read-more" : "")
             }
           >
@@ -420,7 +414,190 @@ const ukVAT = () => {
         </div>
       </section>
 
-      <Faqs faq={faq} />
+      <section className="container-fluid features__accordion_container">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <div className="accordion" id="accordionAllFeatures">
+                {/*============ Accordion #1 ===============*/}
+                <h2 className="fw-bold col-primary ps-3">FAQs</h2>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingOne">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="false"
+                      aria-controls="collapseOne"
+                    >
+                      <span className="me-2 collapse-icon collapse-icon--open">
+                        <MdAdd />
+                      </span>
+                      <span className="me-2 collapse-icon collapse-icon--close">
+                        <MdRemove />
+                      </span>
+                      What is VAT?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionAllFeatures"
+                  >
+                    <div className="accordion-body">
+                      VAT stands for Value-Added Tax. It is a consumption tax
+                      imposed on the value added to goods and services at each
+                      stage of production or distribution. Unlike a sales tax,
+                      which is typically collected only at the final point of
+                      sale to the end consumer, VAT is collected at multiple
+                      points along the supply chain.
+                    </div>
+                  </div>
+                </div>
+                {/*============ Accordion #2 ===============*/}
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingTwo">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <span className="me-2 collapse-icon collapse-icon--open">
+                        <MdAdd />
+                      </span>
+                      <span className="me-2 collapse-icon collapse-icon--close">
+                        <MdRemove />
+                      </span>
+                      what is the VAT Number?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionAllFeatures"
+                  >
+                    <div className="accordion-body">
+                      When you register for value-added tax (VAT), HMRC issue
+                      you with a unique VAT number which identifies your
+                      business for tax records and payment purposes. It's also
+                      referred to as a VAT registration number (VRN). Your VAT
+                      number is unrelated to your unique taxpayer reference or
+                      your company number.
+                    </div>
+                  </div>
+                </div>
+                {/*============ Accordion #3 ===============*/}
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingThree">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      <span className="me-2 collapse-icon collapse-icon--open">
+                        <MdAdd />
+                      </span>
+                      <span className="me-2 collapse-icon collapse-icon--close">
+                        <MdRemove />
+                      </span>
+                      What is VAT Return Filing?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionAllFeatures"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        {" "}
+                        VAT Returns filing is the registration of VAT Returns
+                        document, which contains all details concerning VAT
+                        invoices, payments, and receipts during a specific
+                        period. The details that need to be filed in the VAT
+                        Returns document are:{" "}
+                      </p>
+                      <ul>
+                        <li>Total sales</li>
+                        <li>Total purchases</li>
+                        <li>Output VAT (paid by customers)</li>
+                        <li>Input Tax Credit (ITC paid by businesses)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                {/*============ Accordion #4 ===============*/}
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingFour">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      <span className="me-2 collapse-icon collapse-icon--open">
+                        <MdAdd />
+                      </span>
+                      <span className="me-2 collapse-icon collapse-icon--close">
+                        <MdRemove />
+                      </span>
+                      What are the benefits of using Giddh software for VAT
+                      Returns Filing?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFive"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionAllFeatures"
+                  >
+                    <div className="accordion-body">
+                      <p>
+                        There are several benefits to using the Giddh software
+                        for VAT Returns Filing:
+                      </p>
+                      <ul>
+                        <li>
+                          Prepare your VAT return file automatically on the
+                          portal
+                        </li>
+                        <li>
+                          100% accurate filing with zero chances of errors
+                        </li>
+                        <li>
+                          Notifications of deadlines so that you don’t miss any
+                          deadline
+                        </li>
+                        <li>
+                          Collaborate with your team and allow access of VAT
+                          data to your CA
+                        </li>
+                        <li>
+                          Secure and reliable with 2-factor authentication and
+                          OTP verification
+                        </li>
+                        <li>Complete support for all VAT-related issues</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };

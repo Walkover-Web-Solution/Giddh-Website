@@ -33,9 +33,8 @@ export default function MyApp({ Component, pageProps }) {
   const isUK = shortedPath === "/uk";
 
   const path = {
-    country: shortedPath ? shortedPath.replace("/", "") : "global",
     linkPrefix: shortedPath,
-    baseURL: process.env.NEXT_PUBLIC_SITE_URL || "https://giddh.com",
+    baseURL: "https://giddh.com",
     isGlobal: isGlobal,
     isIndia: isIndia,
     isAE: isAE,
@@ -56,13 +55,13 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
-      {/* {loginSignupPathStatus ? (
+      {loginSignupPathStatus ? (
         <Navbar browserPath={rawBrowserPath} path={path} />
-      ) : null} */}
+      ) : null}
       <Header browserPath={rawBrowserPath} path={path} />
       <Component path={path} {...pageProps} />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
-      <GlobalComponents path={arrayBrawserPath}/>
+      <GlobalComponents />
       <Toastify />
     </>
   );

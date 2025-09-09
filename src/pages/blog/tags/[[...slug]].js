@@ -1,23 +1,19 @@
 const config = require('../../../components/blogs/lib/config');
 const { countPosts, listPostContent } = require("../../../components/blogs/lib/posts");
-const { getTag } = require("../../../components/blogs/lib/tags");
+const { getTag, listTags } = require("../../../components/blogs/lib/tags");
 import Pagination from "../../../components/blogs/pagination";
 import { useRouter } from "next/router";
 import PostItem from "../../../components/blogs/postItem";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import Head from "next/head";
-
-export default function Index({ posts, tag, pagination }) {
+export default function Index({ posts, tag, pagination, page }) {
  const router  = useRouter();
 
-  const navigateToPreviousPage = (event) => {
-    event.preventDefault();
-    if (window.history.length > 2) {
-      router.back();
-    } else {
-      router.push('/blog');
-    }
-  }
+
+ const handleClick = () =>{
+   router.back();
+ }
+//   const title = tag.name; 
   return (
       <>
        <Head>
@@ -27,21 +23,21 @@ export default function Index({ posts, tag, pagination }) {
       <div className="blog">
 <div className={"container blog-home-container"}>
   <div className={"posts"}>
-    <button className="d-inline-block btn blog-container__back-btn mb-4" onClick={navigateToPreviousPage}><MdKeyboardArrowLeft />Back</button>
+    <button className="d-inline-block btn blog-container__back-btn mb-4" onClick={handleClick} ><MdKeyboardArrowLeft />Back</button>
     <div className={"post-list"}>
-      {posts?.map((post, index) => (                        
-          <PostItem key={index} post={post} tag={tag} page={pagination?.current} />            
+      {posts?.map((it, i) => (                        
+          <PostItem key={i} post={it} />            
       ))}
     </div>
      <Pagination
-        current={pagination?.current}
-        pages={pagination?.pages}
+        current={pagination.current}
+        pages={pagination.pages}
         link={{
-          href: (page) => `/blog/tags/${tag}?page=${page}`,
+          href: () => "/blog/tags/[[...slug]]",
           as: (page) =>
             page === 1
-              ? `/blog/tags/${tag}`
-              : `/blog/tags/${tag}?page=${page}`,
+              ? "/blog/tags/" + tag
+              : `/blog/tags/${tag}/${page}`,
         }}
       />
   </div>
@@ -51,31 +47,57 @@ export default function Index({ posts, tag, pagination }) {
   );
 }
 
-export async function getServerSideProps({ params, query }) {
-  const queryPage = parseInt(query.page || "1", 10);
-  if (isNaN(queryPage) || queryPage < 1) {
-    return {
-      notFound: true,
-    };
-  }
-  const [slug] = params.slug || [];
-  const page = queryPage;
+export async function getStaticProps({ params }) {
+    let queries = []
+    queries = params.slug;
+  const [slug, page] = [queries[0], queries[1] || 1];
   const posts = listPostContent(
-    page,
+    page ? parseInt(page) : 1,
     config.posts_per_page,
     slug
   );
   const tag = getTag(slug);
 
   const pagination = {
-    current: page,
+    current: page ? parseInt(page) : 1,
     pages: Math.ceil(countPosts(slug) / config.posts_per_page),
   };
+  const props = {
+    posts,
+    tag,
+    pagination: { current: pagination.current, pages: pagination.pages },
+    page,
+  };
+  if (page) {
+    props.page = page;
+  }
   return {
-    props: {
-      posts,
-      tag,
-      pagination,
-    },
+    props,
   };
 }
+
+export async function getStaticPaths() {
+  const paths = listTags().flatMap((tag) => {
+    const pages = Math.ceil(countPosts(tag.slug) / config.posts_per_page);
+
+    return Array.from(Array(pages).keys()).map((page) =>
+      page === 0
+        ? {
+            params: { slug: [tag.slug] },
+          }
+        : {
+            params: { slug: [tag.slug, (page + 1).toString()] },
+          }
+    );
+  });
+  return {
+    paths: paths,
+    fallback: false,
+  };
+}
+
+// module.exports = {
+//   // Index,
+//   getStaticProps,
+//   getStaticPaths,
+// };

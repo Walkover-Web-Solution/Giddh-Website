@@ -1,5 +1,4 @@
 import Jsondata from '../data/data.json'
-import TrustBadge from "@/components/trust-badge";
 
 const featureGallery = (path) => {
   const link = path.path;
@@ -22,9 +21,6 @@ const featureGallery = (path) => {
       <>
         <section className="container-fluid feature-gallery">
           <div className="container">
-            <div className="mb-3">
-              { (link.isUK || link.isIndia)  && <TrustBadge path={link} />}
-            </div>
             <div className="row">
               <div className="feature-gallery__title text-center mb-3">
                 <h3>Features that empower your business accounting</h3>

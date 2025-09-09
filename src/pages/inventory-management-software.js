@@ -1,6 +1,4 @@
-import Faqs from "@/components/faq";
-import faqs from '../data/faqs.json';
-import { useEffect, useState} from "react";
+import { MdRemove, MdAdd } from "react-icons/md";
 
 const inventoryManagementSoftware = (path) => {
   const linkPath = path.path;
@@ -9,20 +7,14 @@ const inventoryManagementSoftware = (path) => {
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
-  const [faq, setFaq]= useState([])
-
-  useEffect(() => {
-    setFaq(faqs['inventory-management-software']);
-  }, []);
-
   return (
     <>
       <div className="features">
-        <section className="container-fluid" aria-labelledby="features-heading">
+        <section className="container-fluid">
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
+                <h1 className="heading col-primary c-fw-600 mb-4">
                   Enhance Efficiency: Simplify Inventory Management.
                 </h1>
                 <h2 className="col-grey c-fs-3 mb-5">
@@ -35,15 +27,17 @@ const inventoryManagementSoftware = (path) => {
                     className="download_free_btn me-4"
                     data-bs-toggle="modal"
                     data-bs-target="#downloadFree"
-                    aria-label="Download the free version of the inventory management software"
                   >
                     Download Free
                   </a>
                   <a
                     href="#"
                     className="col-blue"
-                    onClick={() => openCalendly()}
-                    aria-label="Schedule a demo with our sales team"
+                    onClick={() =>
+                      Calendly.initPopupWidget({
+                        url: "https://calendly.com/sales-accounting-software/talk-to-sale",
+                      })
+                    }
                   >
                     Schedule Demo
                   </a>
@@ -53,13 +47,12 @@ const inventoryManagementSoftware = (path) => {
                 <figure className="text-end">
                   <img
                     src="/img/feature-gallery-icons/inventory-banner.svg"
-                    width="400"
-                    height="300"
-                    alt="An illustration representing inventory management"
+                    width="90%"
+                    alt="inventory-banner-image"
                   />
                   <img
                     src="/img/all-features-cloud_icon.svg"
-                    alt="Cloud icons representing various features"
+                    alt="cloud icons"
                     className="features__heading_container__right_banner_img"
                     width="90%"
                   />
@@ -69,13 +62,13 @@ const inventoryManagementSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__sub_heading_container" aria-labelledby="inventory-tracking-heading">
+        <section className="container-fluid features__sub_heading_container">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
-                <h2 id="inventory-tracking-heading" className="sub-heading col-primary c-fw-600 mb-3">
+                <h1 className="sub-heading col-primary c-fw-600 mb-3">
                   Maintain inventory tracking. Stay updated.
-                </h2>
+                </h1>
                 <p className="c-fs-4 mb-5">
                   Modern inventory management software for the modern
                   entrepreneur no stress, no hassles, no hidden costs. Managing
@@ -84,7 +77,7 @@ const inventoryManagementSoftware = (path) => {
                   accurately so you can get back to doing the thing you are best
                   at: Grow and Earn!
                 </p>
-                <a href={link + "/signup"} className="btn-link-purple" aria-label="Start your trial for inventory management software">
+                <a href={link + "/signup"} className="btn-link-purple">
                   Start Your Trial
                 </a>
               </div>
@@ -92,14 +85,13 @@ const inventoryManagementSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__description_container mt-5" aria-labelledby="features-description-heading">
-          <h2 id="features-description-heading" className="visually-hidden">Features Description</h2>
+        <section className="container-fluid features__description_container mt-5">
           <div className="container">
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3" id="record-inventory-heading">
-                    Record inventory for products and services
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                    Record inventory for product, and Services
                   </h2>
                   <p>
                     Inventory management isn't exclusive to product-based
@@ -114,18 +106,16 @@ const inventoryManagementSoftware = (path) => {
                   <img
                     src="/img/feature-gallery-icons/record-inventory.svg"
                     className="img-fluid"
-                    alt="Illustration of recording inventory for products and services"
-                    width="auto"
-                    height="200"
+                    alt="connect bank image"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3" id="inventory-masters-heading">
-                    Inventory Masters
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
+                    Inventory Master’s
                   </h2>
                   <p>
                     Giddh provides you with the "masters" of inventory. Here,
@@ -137,19 +127,18 @@ const inventoryManagementSoftware = (path) => {
               <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src="/img/feature-gallery-icons/inventory-master.svg"
+                    src="
+                    /img/feature-gallery-icons/inventory-master.svg"
                     className="img-fluid"
-                    alt="Illustration of inventory masters"
-                    width="auto"
-                    height="200"
+                    alt="inventory master image"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3" id="bifurcate-inventory-heading">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Bifurcate inventory into Groups, Items, and Variants
                   </h2>
                   <p>
@@ -165,17 +154,15 @@ const inventoryManagementSoftware = (path) => {
                   <img
                     src="/img/feature-gallery-icons/bifurcate-inventory.svg"
                     className="img-fluid"
-                    alt="Illustration of bifurcating inventory"
-                    width="auto"
-                    height="200"
+                    alt="bank reconcile image"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3" id="real-time-reports-heading">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Real-time inventory reports
                   </h2>
                   <p>
@@ -193,17 +180,15 @@ const inventoryManagementSoftware = (path) => {
                   <img
                     src="/img/feature-gallery-icons/reports.svg"
                     className="img-fluid"
-                    alt="Illustration of real-time inventory reports"
-                    width="auto"
-                    height="200"
+                    alt="bank reconcile image"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Barcode Scanning
                   </h2>
                   <p>
@@ -223,16 +208,14 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/barcode-scanning.svg"
                     className="img-fluid"
                     alt="barcode-scanning-feature-icon"
-                    width="auto"
-                    height="200"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Manufacturing
                   </h2>
                   <p>
@@ -251,16 +234,14 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/manufacturing-export.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
-                    width="auto"
-                    height="200"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Branch and Warehouse inventory management-
                   </h2>
                   <p>
@@ -280,16 +261,14 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/branch-warehouse.svg"
                     className="img-fluid"
                     alt="bank reconcile image"
-                    width="auto"
-                    height="200"
                   />
                 </figure>
               </div>
             </div>
-            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-bottom">
+            <div className="row mb-5 pb-5 align-items-center features__description_container--row-even border-horizontal">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Branch transfer
                   </h2>
                   <p>
@@ -307,8 +286,6 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/branch-transfer.svg"
                     className="img-fluid"
                     alt="bank account image"
-                    width="auto"
-                    height="200"
                   />
                 </figure>
               </div>
@@ -317,7 +294,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
-                  <h2 className="col-primary c-fw-600 mb-3">
+                  <h2 className="col-primary small-heading c-fw-600 mb-3">
                     Custom units
                   </h2>
                   <p>
@@ -333,8 +310,6 @@ const inventoryManagementSoftware = (path) => {
                     src="/img/feature-gallery-icons/custom-unit.svg"
                     className="img-fluid"
                     alt="custom-units-icon"
-                    width="auto"
-                    height="200"
                   />
                 </figure>
               </div>
@@ -342,20 +317,18 @@ const inventoryManagementSoftware = (path) => {
           </div>
         </section>
 
-        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
+        <section className="container-fluid features__suggestion_container">
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <figure>
                   <img
                     src="/img/suggestion.svg"
-                    alt="Illustration of people interested in inventory management software"
+                    alt="people interested in Connect Bank Reconcile also looked at image"
                     className="features__sub_heading_container--banner_img"
-                    width="auto"
-                    height="200"
                   />
                 </figure>
-                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
                   People interested in{" "}
                   <span className="col-blue">
                     Inventory Management Software
@@ -364,27 +337,24 @@ const inventoryManagementSoftware = (path) => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                  <a href={link + "/all-features"} className="col-blue" aria-label="View all features of the inventory management software">
+                  <a href={link + "/all-features"} className="col-blue">
                     All features
                   </a>
                   <a
                     href={link + "/multi-user-accounting-software"}
-                    className="border-left col-blue"
-                    aria-label="Learn about sharing data with multi-user accounting software"
+                    className="border-vertical col-blue"
                   >
                     Share Data
                   </a>
                   <a
                     href={link + "/multi-currency-accounting-software"}
-                    className="border-left col-blue"
-                    aria-label="Explore multi-currency accounting software"
+                    className="border-vertical col-blue"
                   >
                     Multi-Currency
                   </a>
                   <a
                     href={link + "/invoice-software"}
-                    className="border-left col-blue"
-                    aria-label="Discover invoicing features"
+                    className="border-vertical col-blue"
                   >
                     Invoicing
                   </a>
@@ -394,7 +364,319 @@ const inventoryManagementSoftware = (path) => {
           </div>
         </section>
 
-        <Faqs faq={faq} />
+        <section className="container-fluid features__accordion_container">
+          <div className="container">
+            <div className="row">
+              <div className="col-12 px-0">
+                <div className="accordion" id="accordionAllFeatures">
+                  {/*============ Accordion #1 ===============*/}
+                  <h2 className="fw-bold col-primary ps-3">FAQs</h2>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        What does inventory management software do?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        An inventory management software allows enterprises to
+                        keep track of the goods at every level of the supply
+                        chain of the business. It can help to optimise every
+                        process of the product journey from the placement of
+                        order with the vendor to the delivery of the order to
+                        the customer.
+                      </div>
+                    </div>
+                  </div>
+                  {/*============ Accordion #2 ===============*/}
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingTwo">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        What makes Giddh different from other inventory
+                        management software in the market?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        <p>
+                          Giddh offers the best inventory management software in
+                          India that can accurately track the goods, reduce
+                          wastage and provide trend analysis to help make better
+                          investment decisions. Giddh is very particular about
+                          its transparency to the users, and this can have a
+                          huge impact on the bottom line of the organisation or
+                          enterprise.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  {/*============ Accordion #3 ===============*/}
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingThree">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        Why do we need an inventory management system?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        An inventory is one of the most important assets of a
+                        business on the balance sheet. It is also a crucial part
+                        of the functions that keep a business going. Hence, a
+                        business should invest in nothing but the best inventory
+                        management software to ensure that the business stays
+                        profitable while delivering more for the customers.
+                      </div>
+                    </div>
+                  </div>
+                  {/*============ Accordion #4 ===============*/}
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingFour">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        What are the reasons behind using an inventory
+                        management system?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        <p>
+                          Some of the reasons behind using an inventory
+                          management system are
+                        </p>
+                        <ul>
+                          <li>
+                            You can track your inventory levels at all times and
+                            place your orders whenever you see them falling low.
+                          </li>
+                          <li>
+                            They can assist you to set up automatic emails that
+                            update your customers about every step of their
+                            order process.
+                          </li>
+                          <li>
+                            Enables you to have an accurate idea of when the
+                            order leaves from the supplier and reaches the
+                            customer.
+                          </li>
+                          <li>
+                            Offers a fully customised and visual dashboard that
+                            can be a game-changer for your inventory management
+                            processes.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  {/*============ Accordion #5 ===============*/}
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingFive">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        What are the benefits of inventory management?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingFive"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        <p>
+                          Inventory management lays down the foundation to
+                          managing the supply and demand within a business.
+                          Other benefits of using inventory management include.
+                        </p>
+                        <ul>
+                          <li>
+                            Helps you save your company expenses as you can
+                            manage the costs of stocking your inventory,
+                            storage, and handling.
+                          </li>
+                          <li>
+                            You can fulfill customer demands and prevent them
+                            from back ordering the items or switching to a
+                            different supplier.
+                          </li>
+                          <li>
+                            Keeps your warehouse organised, which in turn,
+                            speeds up order fulfillment and prevents
+                            miscommunications and loss of productivity.
+                          </li>
+                          <li>
+                            With accurate record-keeping, barcode scanners,
+                            integrated data storage and analysis systems,
+                            inventory management operations can become more
+                            efficient and productive.
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  {/*============ Accordion #6 ===============*/}
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingSix">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        Can I manage inventory in Giddh?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingSix"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        Yes, you can. Giddh offers inventory management for
+                        every kind of business be it a small manufacturer or
+                        reseller or a large organisation with operations across
+                        multiple locations. It helps you stay on top of your
+                        supply chain and ensure that your business is making
+                        more profits while reducing wastage. It also helps you
+                        track your inventory with minimal efforts. If you are
+                        looking for the best inventory management software in
+                        India, Giddh is your best bet.
+                      </div>
+                    </div>
+                  </div>
+                  {/*============ Accordion #7 ===============*/}
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingSeven">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven"
+                        aria-expanded="false"
+                        aria-controls="collapseSeven"
+                      >
+                        <span className="me-2 collapse-icon collapse-icon--open">
+                          <MdAdd />
+                        </span>
+                        <span className="me-2 collapse-icon collapse-icon--close">
+                          <MdRemove />
+                        </span>
+                        Can I manage inventory in a different group or category?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSeven"
+                      className="accordion-collapse collapse"
+                      aria-labelledby="headingSeven"
+                      data-bs-parent="#accordionAllFeatures"
+                    >
+                      <div className="accordion-body">
+                        Giddh’s inventory management software comes with default
+                        groups and accounts. You can also manage your inventory
+                        by creating different groups and accounts as is
+                        necessary for your business. However, you need to reach
+                        out to our customer support team for assistance in
+                        creating main groups. A new group can always be created
+                        under the main groups only.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
