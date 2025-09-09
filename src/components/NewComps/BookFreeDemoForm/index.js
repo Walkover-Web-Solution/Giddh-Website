@@ -166,7 +166,7 @@ export default function BookFreeDemoForm({
               className={`btn ${
                 submitting ? "btn-disabled" : "btn-primary"
               } w-100`}
-              aria-label="Signup for Accounting Software"
+              
               disabled={submitting}
               style={{ cursor: submitting ? "not-allowed" : "pointer" }}
             >
@@ -256,7 +256,7 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
         />
         <label className="form-check-label" htmlFor="termsCheck">
           I accept the{" "}
-          <a href=" " target="_blank" className="text-decoration-underline">
+          <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="text-decoration-underline">
             Terms & Conditions
           </a>
         </label>

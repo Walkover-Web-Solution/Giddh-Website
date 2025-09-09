@@ -34,7 +34,14 @@ export default function Banner(path) {
               width={120}
               height={24}
             />
-            <button className={style.getStarted}>Get Started</button>
+            <a
+              href="https://giddh.com/in/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.getStarted}
+            >
+              Get Started
+            </a>
           </div>
           <div className="row align-items-center justify-content-between ">
             {/* Left Side: Text and Logos */}

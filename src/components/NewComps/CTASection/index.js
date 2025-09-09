@@ -18,9 +18,14 @@ export default function CTASection() {
           <h1 className=' c-fw-400 text-white ' style={{ fontFamily: 'Cactus Classical Serif, serif' }}>{data.heading}</h1>
           <p className='fw-normal text-white-50 m-0 pb-2 c-fw-600 '>{data.subheading}</p>
           <div className={styles.actions}>
-            <button className='btn btn-outline-light fw-semibold text-center align-self-start rounded-2 px-4 py-2 mt-3 w-50' type="button">
+            <a
+              href="https://giddh.com/in/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className='btn btn-outline-light fw-semibold text-center align-self-start rounded-2 px-4 py-2 mt-3 w-50'
+            >
               {data.buttonText}
-            </button>
+            </a>
           </div>
         </div>
         <div className={styles.imageWrap}>

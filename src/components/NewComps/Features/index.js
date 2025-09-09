@@ -97,7 +97,7 @@ export default function Features() {
                     <p className={` c-fs-5 text-start`}>
                       {data[expandedFeature].description}
                     </p>
-                    <button className='flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 bg-transparent text-white cursor-pointer c-fw-600 c-fs-5'>
+                    <button className='d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 bg-transparent text-white cursor-pointer c-fw-600 c-fs-5'>
                       <span>₹</span>
                       <span style={{ marginLeft: 8 }}>
                         {data[expandedFeature].name}
