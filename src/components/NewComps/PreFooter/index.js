@@ -18,9 +18,9 @@ export default function PreFooter() {
         </div>
         <Link href={"/signup"}>
           <button
-            className=" btn btn-light "
+            className=" btn btn-light cursor-pointer"
             aria-label="Signup for Accounting Software"
-            style={{ cursor: 'pointer' }}
+          
           >
             Try Giddh Now
           </button>

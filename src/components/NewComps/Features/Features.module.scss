@@ -1,35 +1,6 @@
 // Feature accordion styles
-.featureContainer {
-  max-width: 600px;
-  padding: 10px;
-  max-height: 614px;
-  height: auto;
-  min-height: 400px;
-  font-family: "Inter", "Arial", sans-serif;
-  overflow-y: auto;
-  justify-content: center;
-
-}
-
-.featureIcon {
-  width: 32px;
-  height: 32px;
-  border: 1px solid var(--col-primary);
-}
-
-
-.imageWrapper {
-  position: relative;
-  display: inline-block;
-  border-radius: 8px;
-  overflow: hidden;
-
-  img {
-    cursor: pointer;
+.image {
     transition: transform 0.3s ease;
-    display: block;
-    width: 100%;
-    height: auto;
     &:hover {
       transform: scale(1.02);
 
@@ -39,7 +10,6 @@
       }
     }
   }
-}
 
 .imageOverlay {
   position: absolute;
@@ -52,17 +22,11 @@
     rgba(0, 0, 0, 0.1) 0%,
     rgba(0, 0, 0, 0.8) 100%
   );
-  opacity: 0;
+
   visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: end;
-  padding: 20px;
   transition: all 0.3s ease;
   backdrop-filter: blur(2px);
-  border-radius: 8px;
-
+ 
   &:hover {
     opacity: 1;
     visibility: visible;

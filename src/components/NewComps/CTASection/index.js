@@ -15,7 +15,7 @@ export default function CTASection() {
     <section className='bg-accent position-relative' aria-label="Giddh hero">
       <div className={styles.inner}>
         <div className=' p-4'>
-          <h1 className=' c-fw-400 text-white ' style={{ fontFamily: 'Cactus Classical Serif, serif' }}>{data.heading}</h1>
+          <h1 className=' c-fw-400 text-white cactus-font ' >{data.heading}</h1>
           <p className='fw-normal text-white-50 m-0 pb-2 c-fw-600 '>{data.subheading}</p>
           <div className={styles.actions}>
             <a
@@ -35,7 +35,7 @@ export default function CTASection() {
             width={320}
             height={320}
             priority
-            style={{ objectFit: "contain", width: "100%", height: "auto" }}
+            className="object-fit-contain w-100 h-auto"
           />
         </div>
       </div>
