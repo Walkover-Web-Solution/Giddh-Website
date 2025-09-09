@@ -8,9 +8,9 @@ export default function WhyGiddh() {
   };
 
   return (
-    <section className="container py-4 mt-5 mb-5">
-      <h1 className="text-center mb-4">{data.heading}</h1>
-      <p className="text-center mb-4 w-75 mx-auto">{data.subheading}</p>
+    <section className="container py-4 mt-5 mb-5 outfit-font">
+      <h1 className="text-center mb-4 cactus-font">{data.heading}</h1>
+      <p className="text-center mb-4 w-75 mx-auto ">{data.subheading}</p>
 
      
       <div className="bg-white border rounded overflow-hidden d-none d-md-block">
@@ -22,7 +22,7 @@ export default function WhyGiddh() {
         </div>
 
         {whyGiddhData.map((row, index) => (
-          <div key={index} className="row border-bottom">
+          <div key={index} className="row border-bottom ">
             <div className="col-md-3 px-4 py-3 border-end">{row.feature}</div>
             <div className="col-md-3 px-4 py-3 border-end">{row.giddh}</div>
             <div className="col-md-3 px-4 py-3 border-end">{row.zoho}</div>
@@ -32,7 +32,7 @@ export default function WhyGiddh() {
       </div>
 
      
-      <div className="d-block d-md-none">
+      <div className="d-block d-md-none ">
         {whyGiddhData.map((row, index) => (
           <div key={index} className="bg-white border rounded shadow p-3 mb-3">
             <div className="mb-2">

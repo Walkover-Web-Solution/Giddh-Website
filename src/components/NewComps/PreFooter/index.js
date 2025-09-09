@@ -8,7 +8,7 @@ export default function PreFooter() {
   };
 
   return (
-    <section className="bg-accent section_py">
+    <section className="bg-accent section_py outfit-font">
       <div className="container d-flex flex-column gap-3 align-items-center justify-content-center">
         <div className="d-flex flex-column content-width">
           <h2 className="sub-heading c-fw-600 col-white text-center">
