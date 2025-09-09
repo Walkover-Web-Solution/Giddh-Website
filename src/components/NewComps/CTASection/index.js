@@ -8,36 +8,35 @@ export default function CTASection() {
     subheading:
       "Try Giddh free and see how effortless accounting can be. Your books deserve better.",
     buttonText: "Get Started",
-    image: "/img/girl-avatar.svg", 
+    image: "/img/girl-avatar.svg",
   };
 
   return (
-    <section className={styles.ctaSection} aria-label="Giddh hero">
+    <section className='bg-accent position-relative' aria-label="Giddh hero">
       <div className={styles.inner}>
-        <div className={`${styles.left} p-4`}>
-          <h1 className={styles.heading}>{data.heading}</h1>
-          <p className={styles.subheading}>{data.subheading}</p>
+        <div className=' p-4'>
+          <h1 className=' c-fw-400 text-white ' style={{ fontFamily: 'Cactus Classical Serif, serif' }}>{data.heading}</h1>
+          <p className='fw-normal text-white-50 m-0 pb-2 c-fw-600 '>{data.subheading}</p>
           <div className={styles.actions}>
-            <button className={styles.ctaButton} type="button">
+            <a
+              href="https://giddh.com/in/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className='btn btn-outline-light fw-semibold text-center align-self-start rounded-2 px-4 py-2 mt-3 w-50'
+            >
               {data.buttonText}
-            </button>
+            </a>
           </div>
         </div>
-
-      
-        <div className={styles.right}>
-          <div className={styles.imageWrap}>
-          
-            <Image
-              src={data.image}
-              alt="Person holding laptop"
-              width={320}
-              height={320}
-              priority
-              style={{ objectFit: "contain", width: "100%", height: "auto" }}
-            />
-          
-          </div>
+        <div className={styles.imageWrap}>
+          <Image
+            src={data.image}
+            alt="Person holding laptop"
+            width={320}
+            height={320}
+            priority
+            style={{ objectFit: "contain", width: "100%", height: "auto" }}
+          />
         </div>
       </div>
     </section>
