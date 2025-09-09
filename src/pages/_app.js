@@ -56,9 +56,9 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
-      {loginSignupPathStatus ? (
+      {/* {loginSignupPathStatus ? (
         <Navbar browserPath={rawBrowserPath} path={path} />
-      ) : null}
+      ) : null} */}
       <Header browserPath={rawBrowserPath} path={path} />
       <Component path={path} {...pageProps} />
       {loginSignupPathStatus ? <Footer path={path} /> : null}

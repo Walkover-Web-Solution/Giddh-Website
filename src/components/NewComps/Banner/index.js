@@ -1,10 +1,9 @@
 import Head from "next/head";
 import Jsondata from "@/data/schema/organizationSchema.json";
 import { getSchemaForLinkPath } from "../../../../public/js/utils";
-import style from "./Banner.module.scss";
-import Link from "next/link";
 import BookFreeDemoForm from "../BookFreeDemoForm";
-import { MdCheck } from "react-icons/md";
+import { trustBadgeBrands } from "../TrustBadge";
+import style from "./Banner.module.scss";
 
 export default function Banner(path) {
   const link = path.path;
@@ -23,46 +22,55 @@ export default function Banner(path) {
           />
         </Head>
       )}
-      <section className={style.banner}>
-        <div className="section_py container d-flex gap-3 gap-md-5 w-100 align-items-center justify-content-center flex-column flex-md-row">
-          <div className="d-flex flex-column gap-1 gap-md-3 w-100">
-            <div className="content-width">
-              <h1 className="heading col-primary c-fw-600">
-                One Platform for All Your Accounting Needs
+      <section
+        className={`banner-new-comp py-3 mb-5 outfit-font ${style.banner}`}
+      >
+        <div className="container px-4">
+          <div className="mb-5 pb-3 d-flex justify-content-between align-items-center">
+            <img
+              src="/img/giddh-logo.svg"
+              alt="Giddh Logo"
+              className="banner-logo"
+              width={120}
+              height={24}
+            />
+            <a
+              href="https://giddh.com/in/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-3 py-2 c-fs-5 rounded  ${style.getStarted}`}
+            >
+              Get Started
+            </a>
+          </div>
+          <div className="row align-items-center justify-content-between cactus-font ">
+            <div className="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 pe-3">
+              <h1 className="cactus-font heading col-primary">
+                Smart, Simple & Powerful Accounting for Growing Businesses
               </h1>
-              <ul className="d-flex flex-column gap-2 ">
-                <li>
-                  <MdCheck /> Manage multiple companies
-                </li>
-                <li>
-                  <MdCheck /> Simplify ledger entries with a one-step process
-                </li>
-                <li>
-                  <MdCheck /> Seamless integration with open API
-                </li>
-                <li>
-                  <MdCheck /> Stay compliant with GST and VAT
-                </li>
-                <li>
-                  <MdCheck /> Comprehensive financial reports, including aging
-                  breakdowns, in one subscription
-                </li>
-              </ul>
-            </div>
-            <div className="d-flex flex-column gap-2">
-              <div className="d-flex flex-sm-row  gap-md-4 gap-2 justify-content-start w-12">
-                <Link href={"/signup"}>
-                  <button
-                    className="btn btn-primary btn-lg"
-                    aria-label="Signup for Accounting Software"
+              <p className="col-grey outfit-font ">
+                GIDDH makes accounting easy with clear ledger entries, unlimited users, and strong inventory management — all at affordable prices. Track sales, purchases, and manufacturing in one place and grow your business with confidence.
+              </p>
+              <div className="d-flex flex-wrap align-items-center gap-4">
+                {trustBadgeBrands?.map((logo, index) => (
+                  <a
+                    key={index}
+                    href={logo.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    Get Started
-                  </button>
-                </Link>
+                    <img
+                      src={logo.src}
+                      alt={logo.alt}
+                      className="logo-item"
+                      height={34}
+                    />
+                  </a>
+                ))}
               </div>
             </div>
+            <BookFreeDemoForm hiddenAbsolute={false} location="banner" />
           </div>
-          <BookFreeDemoForm hiddenAbsolute={true} />
         </div>
       </section>
     </>
