@@ -17,7 +17,7 @@ export default function Features() {
     <section className="container px-0 py-3 py-md-4">
       <h1 className="text-center cactus-font mb-3 mb-md-4">Features</h1>
 
-      <div className="d-flex flex-column flex-lg-row gap-4 align-items-center justify-content-between">
+      <div className="d-flex flex-column flex-lg-row gap-4 outfit-font align-items-center justify-content-between">
        
         <div className="col-12 col-lg-6 order-1">
           <div id="features" className="p-2">
