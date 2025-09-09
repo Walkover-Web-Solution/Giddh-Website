@@ -47,6 +47,7 @@ export default function MyApp({ Component, pageProps }) {
   let loginSignupPathStatus =
     loginSignupPath === "login" ||
     loginSignupPath === "signup" ||
+    loginSignupPath === "online-accounting-software" ||
     loginSignupPath === "googleauth"
       ? false
       : true;
@@ -56,13 +57,13 @@ export default function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
-      {/* {loginSignupPathStatus ? (
+      {loginSignupPathStatus ? (
         <Navbar browserPath={rawBrowserPath} path={path} />
-      ) : null} */}
+      ) : null}
       <Header browserPath={rawBrowserPath} path={path} />
       <Component path={path} {...pageProps} />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
-      <GlobalComponents path={arrayBrawserPath}/>
+      <GlobalComponents path={arrayBrawserPath} />
       <Toastify />
     </>
   );
