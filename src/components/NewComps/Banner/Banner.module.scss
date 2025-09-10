@@ -1,14 +1,13 @@
 .banner {
-  background: radial-gradient(50% 50% at 50% 50%, #d2d8ff 0%, #ffffff 100%);
+  background: radial-gradient(50% 50% at 50% 50%, var(--col-soft-blue) 0%, var(--col-white) 100%);
 }
-
-
 
 .getStarted {
   background-color: transparent;
   border: 1px solid var(--col-primary);
   color: var(--col-primary);
   transition: all 0.2s ease;
+
   &:hover {
     background-color: var(--col-primary);
     color: var(--col-white);

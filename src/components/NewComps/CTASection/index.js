@@ -13,10 +13,10 @@ export default function CTASection() {
 
   return (
     <section className='bg-accent position-relative' aria-label="Giddh hero">
-      <div className={styles.inner}>
+      <div className={`${styles.inner} d-grid align-items-center`}>
         <div className=' p-4'>
-          <h1 className=' c-fw-400 text-white cactus-font ' >{data.heading}</h1>
-          <p className='fw-normal text-white-50 m-0 pb-2 c-fw-600 '>{data.subheading}</p>
+          <h1 className=' c-fw-400 text-white cactus-font mx-auto' >{data.heading}</h1>
+          <p className='fw-normal text-white-50 m-0 pb-2 c-fw-600'>{data.subheading}</p>
           <div className={styles.actions}>
             <a
               href="https://giddh.com/in/signup"

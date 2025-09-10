@@ -1,21 +1,13 @@
-
 .inner {
-  width: min(1180px, 92%);
-  margin: 0 auto;
-  display: grid;
- 
   grid-template-columns: 1fr 480px;
-  gap: clamp(16px, 4vw, 48px);
-  align-items: center;
 
   @media (max-width: 992px) {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 }
 
 @media screen and (max-width: 992px) {
-  .imageWrap{
+  .imageWrap {
     display: none;
   }
 }
-

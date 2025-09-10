@@ -23,7 +23,7 @@ export default function Banner(path) {
         </Head>
       )}
       <section
-        className={`banner-new-comp py-3 mb-5 outfit-font ${style.banner}`}
+        className={`py-3 mb-5 outfit-font ${style.banner}`}
       >
         <div className="container px-4">
           <div className="mb-5 pb-3 d-flex justify-content-between align-items-center">
@@ -57,7 +57,6 @@ export default function Banner(path) {
                     key={index}
                     href={logo.href}
                     target="_blank"
-                    rel="noopener noreferrer"
                   >
                     <img
                       src={logo.src}
