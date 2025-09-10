@@ -7,7 +7,7 @@ import faqs from "../data/faqs.json";
 import { useState, useEffect } from "react";
 import Faqs from "@/components/faq";
 
-const index = (path) => {
+const index = (path, pageInfo) => {
   const link = path.path;
   const [faq, setFaq] = useState([]);
 

@@ -7,6 +7,7 @@ import GlobalComponents from "@/components/globalComponents";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Toastify from "@/components/toastify";
+import getPageInfo from "@/utils/getPageInfo";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -54,15 +55,20 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
+
+  // Get page info
+  const rawPath = router.asPath;
+  const pageInfo = getPageInfo(rawPath);
+
   return (
     <>
       {loginSignupPathStatus ? (
         <Navbar browserPath={rawBrowserPath} path={path} />
       ) : null}
       <Header browserPath={rawBrowserPath} path={path} />
-      <Component path={path} {...pageProps} />
+      <Component path={path} {...pageProps} pageInfo={pageInfo} />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
-      <GlobalComponents path={arrayBrawserPath}/>
+      <GlobalComponents path={arrayBrawserPath} />
       <Toastify />
     </>
   );
