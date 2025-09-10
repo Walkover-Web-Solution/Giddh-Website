@@ -1,9 +1,15 @@
 const security = (path) => {
   const linkPath = path.path;
-    
-  const isIndia = linkPath.isIndia
+  const country = path.path.country || "global";
+  const isIndia = linkPath.isIndia;
   const isGlobal = linkPath.isGlobal;
   const link = linkPath.linkPrefix;
+  const heading = {
+    global: "Trusted Security for Giddh Users",
+    in: "Secure Your Data with Giddh Accounting Tools",
+    uk: "Giddh: Safe & Secure Accounting Software",
+    ae: "Protect Your Accounting Data with Giddh",
+  };
     return (
       <>
         <section className="container-fluid security ">
@@ -14,8 +20,7 @@ const security = (path) => {
                           <p className="text-center col-white">
                           Still managing your accounts offline?</p>
                           <h1 className="text-center col-white c-fs-4 c-fw-400" role="heading">
-                          Go online with Giddh. It gives you high level data security with<br/>
-                          its unmatched data encryption algorithm.
+                          {heading[country] || heading.global}
                           </h1>
                         </div>
                         <div className="security__banner">

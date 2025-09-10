@@ -2,6 +2,13 @@ import { usePathname } from "next/navigation";
 
 const terms = (path) => {
   const link = path.path.linkPrefix;
+  const country = path.path.country || "global";
+  const heading = {
+    global: "GIDDH- Best accounting software terms",
+    in: "Giddh Terms",
+    uk: "GIDDH- An accounting software terms",
+    ae: "GIDDH - an online accounting software",
+  };
   return (
     <>
       <section className="container-fluid privacy" aria-labelledby="terms-heading">
@@ -102,7 +109,7 @@ const terms = (path) => {
               </p>
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">You</h3>
               <p className="mb-4 c-fs-5">Your has a corresponding meaning.</p>
-              <h2 className="mb-3 c-fs-4  sub-heading">2. USE OF SOFTWARE</h2>
+              <h2 className="mb-3 c-fs-4  sub-heading">2. {heading[country] || heading.global}</h2>
 
               <p className="mb-4 c-fs-5">
                 Giddh grants You the right to access and use the Service via the
