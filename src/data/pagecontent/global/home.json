@@ -14,5 +14,117 @@
                 "variant": "secondary"
             }
         ]
+    },
+    "stats": {
+        "heading": "",
+        "stats": [
+            {
+                "title": "Average User Rating",
+                "value": "4.8/5"
+            },
+            {
+                "title": "Improvement in Financial Visibility",
+                "value": "85%"
+            },
+            {
+                "title": "Data Security & Uptime Guarantee",
+                "value": "100%"
+            }
+        ]
+    },
+    "features": {
+        "heading": "What Makes Giddh the Smart Accounting Choice",
+        "features": [
+            {
+                "title": "Simplified Ledger-Based Accounting",
+                "description": "Giddh automates repetitive and manual accounting processes, saving you valuable time to focus on growing your business.",
+                "img": "/images/giddh.svg",
+                "content": [
+                    "No need for voucher navigation",
+                    "Quick and intuitive ledger-based entries",
+                    "Streamline your accounting workflow with ease"
+                ]
+            },
+            {
+                "title": "Anytime, Anywhere, and on Any Device",
+                "description": "Access and manage your finances seamlessly, whether you're on your desktop, Android, or iOS device",
+                "img": "/images/device-access.svg",
+                "content": [
+                    "Cloud-based access across devices",
+                    "Access real-time financial data",
+                    "Track sales and send invoices"
+                ]
+            },
+            {
+                "title": "Cloud Storage for Your Data Synced",
+                "description": "Giddh utilizes advanced security measures to ensure your accounting data remains safe and private.",
+                "img": "/images/cloud-storage.svg",
+                "content": [
+                    "Password-Protected Logins",
+                    "User Access Limitations",
+                    "Automatic Data Backup"
+                ]
+            },
+            {
+                "title": "Automatic Currency Conversion",
+                "description": "Giddh, the best multi-currency accounting software, streamlines international transactions with automatic currency conversion, ensuring accurate financial records with minimal manual effort.",
+                "img": "/images/currency-conversion.svg",
+                "content": [
+                    "Auto-converts foreign currencies to local",
+                    "Saves time by eliminating manual calculations",
+                    "Ensures accurate financial data for global businesses"
+                ]
+            },
+            {
+                "title": "Seamless GST Compliance",
+                "description": "Giddh is a GST compliant accounting software in India that simplifies tax filing with built-in GST return features. As a powerful GST filing software, it ensures accurate reports and effortless compliance",
+                "img": "/images/gst-compliance.svg",
+                "content": [
+                    "Fully automated GST filing for smooth compliance",
+                    "Auto-generates GST reports in the correct format",
+                    "Keeps your business compliant with evolving tax laws"
+                ]
+            },
+            {
+                "title": "Track Your Business Performance in Real-Time",
+                "description": "Stay updated with live data and make informed decisions on the fly. With real-time insights, you'll always know how your business is performing.",
+                "img": "/images/real-time-tracking.svg",
+                "content": [
+                    "Instant Insights",
+                    "Real-Time Tracking",
+                    "Data-Driven Decisions"
+                ]
+            },
+            {
+                "title": "Easily Secure Data in the Cloud",
+                "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
+                "img": "/images/secure-cloud-data.svg",
+                "content": [
+                    "Encrypted data storage",
+                    "Prevent data loss",
+                    "Top industry security standards"
+                ]
+            },
+            {
+                "title": "Unlimited User Access",
+                "description": "Collaborate seamlessly with your members by adding unlimited users and assigning role-based access.",
+                "img": "/images/unlimited-user-access.svg",
+                "content": [
+                    "Control access with specific user permissions",
+                    "Smooth collaboration across departments",
+                    "Scale user access as your team grows at no extra cost"
+                ]
+            },
+            {
+                "title": "Manage Over 100 Companies",
+                "description": "Giddh supports over 100 companies under a single subscription, making it ideal for businesses with multiple entities.",
+                "img": "/images/manage-companies.svg",
+                "content": [
+                    "Manage financial data for all companies on one platform",
+                    "Access reports and data for all companies in one place",
+                    "No need for separate logins or subscriptions"
+                ]
+            }
+        ]
     }
 }

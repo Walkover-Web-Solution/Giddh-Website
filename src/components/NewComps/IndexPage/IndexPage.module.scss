@@ -1,0 +1,11 @@
+.banner {
+  &_cont {
+    margin-top: var(--nav-height);
+  }
+  &_img{
+    width: clamp(300px, 50vw, 600px);
+    @media (max-width: 769px) {
+      width: 100%;
+    }
+  }
+}
