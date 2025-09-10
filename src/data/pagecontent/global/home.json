@@ -1,0 +1,18 @@
+{
+    "banner": {
+        "heading": "Powerful All-in-One Accounting Software for Indian Businesses Growth",
+        "subHeading": "Effortlessly manage accounting, taxes, invoicing, sales, inventory, and other business processes with Giddh.",
+        "buttons": [
+            {
+                "label": "Get Started",
+                "link": "/signup",
+                "variant": "primary"
+            },
+            {
+                "label": "Request A Demo",
+                "link": "/demo",
+                "variant": "secondary"
+            }
+        ]
+    }
+}
