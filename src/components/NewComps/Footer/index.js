@@ -33,7 +33,7 @@ export default function Footer() {
                 Privacy Policy
               </a>
               <a
-                href="/terms-of-service"
+                href="/terms"
                 className="text-decoration-none c-fs-7 col-grey-deep"
               >
                 Term of Service
@@ -55,6 +55,8 @@ export default function Footer() {
                 <a
                   href="https://apps.apple.com/in/app/giddh-accounting-billing-app/id1491003438"
                   className="d-flex align-items-center justify-content-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img
                     src="/img/footer-icons/appstoreicon.svg"
@@ -62,8 +64,10 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="https://play.google.com/store/apps/details?id=com.app.Giddh&pli=1"
+                  href="https://play.google.com/store/apps/details?id=com.app.Giddh"
                   className="d-flex align-items-center justify-content-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <img
                     src="/img/footer-icons/playstoreicon.svg"
