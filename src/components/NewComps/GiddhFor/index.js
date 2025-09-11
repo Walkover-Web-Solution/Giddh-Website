@@ -1,53 +1,88 @@
+import data from "./data.json";
+import { useState } from "react";
+import style from "./GiddhFor.module.scss";
+
 export default function GiddhFor() {
-  const data = {
-    heading: "Who Is Giddh For?",
-    subheading:
-      "Built for every business that values clarity, compliance, and control. Whether you’re selling products, offering services, or managing multiple clients — Giddh adapts to your needs and grows with you.",
-    content: [
-      {
-        name: "Retailers & Traders",
-        description:
-          "Track inventory, manage billing, and stay GST-compliant — all in real time.",
-        icon: "🛒",
-      },
-      {
-        name: "Startups & Service Providers",
-        description:
-          "Speed up payments and streamline cash flow with smart invoicing and reminders.",
-        icon: "🚀",
-      },
-      {
-        name: "Accountants & Finance Teams",
-        description:
-          "Collaborate with teams, access ledgers instantly, and close books with confidence.",
-        icon: "📊",
-      },
-      {
-        name: "Shopify & E-commerce Brands",
-        description:
-          "Auto-sync sales, manage stock, and generate clean, audit-ready reports.",
-        icon: "🛍️",
-      },
-    ],
-  };
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
-    <section className="container section_py d-flex flex-column gap-3">
-      <div className="d-flex flex-column text-center content-width mx-auto">
-        <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
-        <p>{data?.subheading}</p>
-      </div>
-      <div className="row row-cols-1 row-cols-md-2 g-2 g-md-4">
-        {data?.content.map((feature, index) => {
-          return (
-            <div className="col" key={index}>
-              <div className="d-flex flex-column h-100 p-4 border rounded">
-                <span className="c-fs-1">{feature?.icon}</span>
-                <h3 className="mt-3 c-fs-3">{feature?.name}</h3>
-                <p>{feature?.description}</p>
+    <section className="outfit-font bg-black text-white py-5 ">
+      <div className="container px-3">
+        <div className="text-center">
+          <h2 className="cactus-font">{data?.heading}</h2>
+          <p className="mb-3 mb-md-4 w-100 w-md-75 mx-auto px-3">
+            {data?.subheading}
+          </p>
+        </div>
+
+        <div className="border border-white rounded d-none d-lg-block">
+          <div className="">
+            <div className="d-flex justify-content-between align-items-center border-bottom border-white  overflow-hidden">
+              {data?.content.map((item, index) => (
+                <div key={index} className="position-relative flex-fill">
+                  <div
+                    className={`d-flex align-items-center justify-content-center gap-2 w-100 px-3 py-3 cursor-pointer ${style.tab}`}
+                    onClick={() => setActiveTab(index)}
+                  >
+                    <span>{item?.icon}</span>
+                    <span>{item?.name.split(" ")[0]}</span>
+                  </div>
+                  {activeTab === index && (
+                    <div
+                      className={`${style.tabUnderline} position-absolute bottom-0 left-0 w-100`}
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="row align-items-center g-3 g-md-4 p-4">
+            <div className="col-12 col-lg-6 order-1 order-lg-2">
+              <div className="text-center text-lg-start px-2">
+                <h3 className="mb-1 c-fs-4 c-fw-600">
+                  {data?.content[activeTab]?.name}
+                </h3>
+                <p>{data?.content[activeTab]?.description}</p>
               </div>
             </div>
-          );
-        })}
+
+            <div className="col-12 col-lg-6 order-2 order-lg-1">
+              <div className="d-flex justify-content-center">
+                <img
+                  src={data?.content[activeTab]?.image}
+                  alt={data?.content[activeTab]?.name}
+                  className={`${style.image} rounded`}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="d-grid  g-3 d-lg-none ">
+          {data?.content.map((item, index) => (
+            <div
+              key={index}
+              className="d-flex flex-column align-items-center g-3 g-md-4 p-4"
+            >
+              <div className="col-12 col-lg-6 order-1 order-lg-2">
+                <div className="text-center">
+                  <h3 className="mb-1 c-fs-4 c-fw-600">{item?.name}</h3>
+                  <p>{item?.description}</p>
+                </div>
+              </div>
+              <div className="col-12 col-lg-6 order-2 order-lg-1">
+                <div className="d-flex justify-content-center">
+                  <img
+                    src={item?.image}
+                    className={`${style.image} rounded`}
+                    alt={item?.name}
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

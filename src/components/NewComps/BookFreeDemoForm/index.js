@@ -10,63 +10,11 @@ const initialFormState = {
   business: "",
 };
 
-function FormFields({ formData, handleChange, error }) {
-  return (
-    <div className="d-flex flex-column gap-2 input-group-lg mb-4">
-      <input
-        type="text"
-        name="name"
-        aria-label="Name"
-        placeholder="Name*"
-        required
-        className="form-control border-0 c-fs-5"
-        value={formData.name}
-        onChange={handleChange}
-        autoComplete="name"
-      />
-      <input
-        type="email"
-        name="email"
-        aria-label="Email"
-        placeholder="Email*"
-        required
-        className="form-control border-0 c-fs-5"
-        value={formData.email}
-        onChange={handleChange}
-        autoComplete="email"
-      />
-      <input
-        type="tel"
-        name="phone"
-        aria-label="Phone Number"
-        placeholder="Contact No.*"
-        required
-        className="form-control border-0 c-fs-5"
-        value={formData.phone}
-        onChange={handleChange}
-        autoComplete="tel"
-      />
-      <input
-        type="text"
-        name="business"
-        aria-label="Business name"
-        placeholder="Business Name*"
-        required
-        className="form-control border-0 c-fs-5"
-        value={formData.business}
-        onChange={handleChange}
-        autoComplete="organization"
-      />
-      {error && (
-        <div className="alert alert-danger w-100" role="alert">
-          Error submitting form: {error}
-        </div>
-      )}
-    </div>
-  );
-}
-
-export default function BookFreeDemoForm({ hiddenAbsolute }) {
+export default function BookFreeDemoForm({
+  hiddenAbsolute,
+  location,
+  heading,
+}) {
   const [formData, setFormData] = useState(initialFormState);
   const [error, setError] = useState("");
   const [submitting, setSubmitting] = useState(false);
@@ -106,11 +54,42 @@ export default function BookFreeDemoForm({ hiddenAbsolute }) {
     [formData, router]
   );
 
+  if (location === "banner") {
+    return (
+      <div
+        className={`outfit-font card col-lg-5 col-md-6 col-12 p-4 gap-4 rounded ${style.form_container} d-flex flex-column align-items-center justify-content-center`}
+      >
+        <h5 className="col-primary c-fw-600 c-fs-8">
+          Discover How GIDDH Can Simplify Your Accounting
+        </h5>
+        <form
+          onSubmit={handleSubmit}
+          className="w-100 gap-3 d-flex flex-column"
+        >
+          <FormFields
+            formData={formData}
+            handleChange={handleChange}
+            error={error}
+          />
+          <button
+            type="submit"
+            className="btn btn-primary w-100  d-flex align-items-center justify-content-center px-3 py-2 rounded"
+            disabled={submitting}
+          >
+            {submitting ? "Scheduling..." : "Book A Free Demo"}
+          </button>
+        </form>
+      </div>
+    );
+  }
+
   return (
     <>
-      {!hiddenAbsolute && (
-        !showAbsoluteModal ? (
-          <div className={`${style.bookdemo_btn_cont} d-flex align-items-end justify-content-end`}>
+      {!hiddenAbsolute &&
+        (!showAbsoluteModal ? (
+          <div
+            className={`${style.bookdemo_btn_cont} d-flex align-items-end justify-content-end`}
+          >
             <button
               className={`btn btn-primary btn-lg ${style.bookdemo_btn}`}
               onClick={() => setShowAbsoluteModal(true)}
@@ -120,7 +99,9 @@ export default function BookFreeDemoForm({ hiddenAbsolute }) {
             </button>
           </div>
         ) : (
-          <div className={`${style.absolute_form_container} bg-light-blue p-4 d-flex gap-2 flex-column align-items-center justify-content-center rounded`}>
+          <div
+            className={`${style.absolute_form_container} bg-light-blue p-4 d-flex gap-2 flex-column align-items-center justify-content-center rounded`}
+          >
             <div className="d-flex align-items-center justify-content-center flex-column gap-3 w-100">
               <div className="d-flex justify-content-between align-items-center w-100">
                 <p className="col-primary c-fw-600 mb-0 c-fs-4">
@@ -136,34 +117,56 @@ export default function BookFreeDemoForm({ hiddenAbsolute }) {
                   <MdClose className="c-fs-2" />
                 </span>
               </div>
-              <form onSubmit={handleSubmit} className="w-100" autoComplete="on">
-                <FormFields formData={formData} handleChange={handleChange} error={error} />
+              <form
+                onSubmit={handleSubmit}
+                className="w-100 gap-3 d-flex flex-column"
+                autoComplete="on"
+              >
+                <FormFields
+                  formData={formData}
+                  handleChange={handleChange}
+                  error={error}
+                  isAbsolute={true}
+                />
                 <button
                   type="submit"
-                  className={`btn ${submitting ? "btn-disabled" : "btn-primary"} w-100`}
+                  className={`btn ${submitting ? "btn-disabled" : "btn-primary"
+                    } w-100`}
                   aria-label="Signup for Accounting Software"
                   disabled={submitting}
+                  style={{ cursor: submitting ? "not-allowed" : "pointer" }}
                 >
                   {submitting ? "Scheduling..." : "Book Free Demo"}
                 </button>
               </form>
             </div>
           </div>
-        )
-      )}
+        ))}
 
-      <div className={`${style.form_container} w-100 bg-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}>
-        <div className="d-flex align-items-center justify-content-center flex-column gap-3 w-100">
+      <div
+        className={`${style.form_container} w-100 bg-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}
+      >
+        <div className="d-flex align-items-center  justify-content-center flex-column gap-3 w-100">
           <p className="col-primary c-fw-600 mb-0 c-fs-4">
-            Explore the Advanced Accounting Features of Giddh
+            {heading ? "Explore the Advanced Accounting Features of Giddh" : ""}
           </p>
-          <form onSubmit={handleSubmit} className="w-100" autoComplete="on">
-            <FormFields formData={formData} handleChange={handleChange} error={error} />
+          <form
+            onSubmit={handleSubmit}
+            className="w-100 gap-3 d-flex flex-column"
+            autoComplete="on"
+          >
+            <FormFields
+              formData={formData}
+              handleChange={handleChange}
+              error={error}
+            />
             <button
               type="submit"
-              className={`btn ${submitting ? "btn-disabled" : "btn-primary"} w-100`}
-              aria-label="Signup for Accounting Software"
+              className={`btn ${submitting ? "btn-disabled" : "btn-primary"
+                } w-100`}
+
               disabled={submitting}
+              style={{ cursor: submitting ? "not-allowed" : "pointer" }}
             >
               {submitting ? "Scheduling..." : "Book Free Demo"}
             </button>
@@ -171,6 +174,89 @@ export default function BookFreeDemoForm({ hiddenAbsolute }) {
         </div>
       </div>
     </>
+  );
+}
+
+function FormFields({ formData, handleChange, error, isAbsolute }) {
+  return (
+    <div className="w-100 gap-3 d-flex flex-column">
+      <div
+        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute ? "flex-column" : "flex-md-row"
+          }`}
+      >
+        <div className="w-100">
+          <input
+            type="text"
+            name="name"
+            className="form-control"
+            placeholder="Name*"
+            required
+            value={formData.name}
+            onChange={handleChange}
+            autoComplete="name"
+          />
+        </div>
+        <div className="w-100">
+          <input
+            type="text"
+            name="phone"
+            className="form-control"
+            placeholder="Mobile Number*"
+            required
+            value={formData.phone}
+            onChange={handleChange}
+            autoComplete="tel"
+          />
+        </div>
+      </div>
+      <div
+        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute ? "flex-column" : "flex-md-row"
+          }`}
+      >
+        <div className="w-100">
+          <input
+            type="text"
+            name="business"
+            className="form-control"
+            placeholder="Business Name"
+            value={formData.business}
+            onChange={handleChange}
+            autoComplete="organization"
+          />
+        </div>
+        <div className="w-100">
+          <input
+            type="email"
+            name="email"
+            className="form-control"
+            placeholder="Email Address*"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            autoComplete="email"
+          />
+        </div>
+      </div>
+      {error && (
+        <div className="alert alert-danger w-100" role="alert">
+          Error submitting form: {error}
+        </div>
+      )}
+      <div className="form-check">
+        <input
+          className="form-check-input"
+          type="checkbox"
+          id="termsCheck"
+          required
+        />
+        <label className="form-check-label" htmlFor="termsCheck">
+          I accept the{" "}
+          <a href="/terms" target="_blank" className="text-decoration-underline">
+            Terms & Conditions
+          </a>
+        </label>
+      </div>
+    </div>
   );
 }
 

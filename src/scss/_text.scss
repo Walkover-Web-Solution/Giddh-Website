@@ -21,6 +21,8 @@
   text-rendering: optimizeLegibility;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Outfit:wght@100..900&display=swap');
+
 //====================================FONT SIZE========================================
 
 .heading {
@@ -103,4 +105,13 @@
 }
 .col-baby-pink {
   color: var(--col-baby-pink) !important;
+}
+
+
+.outfit-font{
+    font-family: 'Outfit', sans-serif;
+}
+
+.cactus-font{
+    font-family: 'Cactus Classical Serif', serif;
 }
