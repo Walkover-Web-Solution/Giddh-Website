@@ -28,16 +28,17 @@
   --col-light-green: #e6fff5;
   --col-baby-pink: #ffe5e8;
   --col-light-blue: #b9d1fd;
+  --col-soft-blue: #d2d8ff;
   --col-light-golden: #f9dcae;
   --col-extra-light-blue: #F5F6FF;
 
 
   //Content Width
-  --w-max-content:900px;
-  --nav-height:54px;
+  --w-max-content: 900px;
+  --nav-height: 54px;
 }
 
-@media (max-width: 992px){
+@media (max-width: 992px) {
   :root {
     --heading: 32px;
     --sub-heading: 24px;
