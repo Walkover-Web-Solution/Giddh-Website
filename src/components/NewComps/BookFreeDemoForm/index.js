@@ -130,9 +130,8 @@ export default function BookFreeDemoForm({
                 />
                 <button
                   type="submit"
-                  className={`btn ${
-                    submitting ? "btn-disabled" : "btn-primary"
-                  } w-100`}
+                  className={`btn ${submitting ? "btn-disabled" : "btn-primary"
+                    } w-100`}
                   aria-label="Signup for Accounting Software"
                   disabled={submitting}
                   style={{ cursor: submitting ? "not-allowed" : "pointer" }}
@@ -163,10 +162,9 @@ export default function BookFreeDemoForm({
             />
             <button
               type="submit"
-              className={`btn ${
-                submitting ? "btn-disabled" : "btn-primary"
-              } w-100`}
-              
+              className={`btn ${submitting ? "btn-disabled" : "btn-primary"
+                } w-100`}
+
               disabled={submitting}
               style={{ cursor: submitting ? "not-allowed" : "pointer" }}
             >
@@ -182,11 +180,9 @@ export default function BookFreeDemoForm({
 function FormFields({ formData, handleChange, error, isAbsolute }) {
   return (
     <div className="w-100 gap-3 d-flex flex-column">
-      {/* First div with 2 inputs */}
       <div
-        className={`d-flex m-0 gap-3 flex-column  ${
-          isAbsolute ? "flex-column" : "flex-md-row"
-        }`}
+        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute ? "flex-column" : "flex-md-row"
+          }`}
       >
         <div className="w-100">
           <input
@@ -214,9 +210,8 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
         </div>
       </div>
       <div
-        className={`d-flex m-0 gap-3 flex-column  ${
-          isAbsolute ? "flex-column" : "flex-md-row"
-        }`}
+        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute ? "flex-column" : "flex-md-row"
+          }`}
       >
         <div className="w-100">
           <input
@@ -256,7 +251,7 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
         />
         <label className="form-check-label" htmlFor="termsCheck">
           I accept the{" "}
-          <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="text-decoration-underline">
+          <a href="/terms" target="_blank" className="text-decoration-underline">
             Terms & Conditions
           </a>
         </label>

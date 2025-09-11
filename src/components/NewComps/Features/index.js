@@ -18,7 +18,7 @@ export default function Features() {
       <h1 className="text-center cactus-font mb-3 mb-md-4">Features</h1>
 
       <div className="d-flex flex-column flex-lg-row gap-4 outfit-font align-items-center justify-content-between">
-       
+
         <div className="col-12 col-lg-6 order-1">
           <div id="features" className="p-2">
             {data.slice(0, 5).map((feature, index) => (
@@ -32,8 +32,6 @@ export default function Features() {
             ))}
           </div>
         </div>
-
-       
         <div className="col-12 col-lg-6 order-2">
           <div className="d-flex align-items-center justify-content-center h-100">
             <div className="position-relative d-inline-block rounded overflow-hidden">
@@ -78,11 +76,10 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
 
   return (
     <div
-      className={`d-flex flex-column gap-1 rounded ${
-        isExpanded && "shadow-sm"
-      } cursor-pointer`}
+      className={`d-flex flex-column gap-1 rounded ${isExpanded && "shadow-sm"
+        } cursor-pointer`}
     >
-      
+
       <div
         className="d-flex align-items-center gap-2 p-2"
         onClick={handleToggle}
@@ -99,7 +96,7 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
           <ul className="list-unstyled d-flex flex-column gap-1">
             {feature.content?.map((point, pointIndex) => (
               <li className="d-flex gap-2" key={pointIndex}>
-                <MdCircle className="text-accent mt-2" fontSize={7} /> {point}
+                <MdCircle className="text-accent mt-2" fontSize={7}/> {point}
               </li>
             ))}
           </ul>

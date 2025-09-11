@@ -37,7 +37,6 @@ export default function Banner(path) {
             <a
               href="https://giddh.com/in/signup"
               target="_blank"
-              rel="noopener noreferrer"
               className={`px-3 py-2 c-fs-5 rounded  ${style.getStarted}`}
             >
               Get Started

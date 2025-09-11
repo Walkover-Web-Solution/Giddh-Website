@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Testimonials.module.scss";
 import data from "./data.json";
+import { MdReviews } from "react-icons/md";
 export default function Testimonials() {
   return (
     <section className="py-5 outfit-font bg-accent">
@@ -15,52 +16,39 @@ export default function Testimonials() {
           globe.
         </p>
       </div>
-      <div className="d-flex flex-row py-1 gap-5 justify-content-center">
+      <div className="container d-flex flex-row py-1 gap-5 justify-content-center">
         <div className="d-flex justify-content-center">
-          <div className="px-4">
-            <div
-              className={`border border-light rounded mx-auto overflow-y-auto border-col-light ${style.scrollableContainer}`}
-            >
-              {data.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className={`py-2 px-3 ${
-                    index < data.length - 1 ? "border-bottom" : ""
+          <div
+            className={`border border-light rounded mx-auto overflow-y-auto border-col-light ${style.scrollableContainer}`}
+          >
+            {data.map((testimonial, index) => (
+              <div
+                key={index}
+                className={`py-2 px-3 ${index < data.length - 1 ? "border-bottom" : ""
                   } border-col-light`}
-                >
-                  <div className="d-flex gap-sm-3 gap-0 flex-column flex-sm-row align-items-sm-center align-items-start">
-                    <img
-                      src={`https://i.pravatar.cc/50?img=${index + 1}`}
-                      alt={testimonial.name}
-                      className="rounded-circle p-1 object-fit-cover"
-                    />
-                    <div className="flex-grow-1">
-                      <p className="text-white mb-0  mt-2 c-fw-400 c-fs-5">
-                        {testimonial.testimonial}
-                      </p>
-                      <div className="d-flex align-items-center justify-content-start gap-2 c-fw-400 c-fs-5">
-                        <div>
-                          <div className="text-white-50 c-fs-6">
-                            {testimonial.name} , {` `}
-                            {testimonial.designation}
-                          </div>
-                        </div>
-                        <div className="d-flex align-items-center gap-2">
-                          <div className="bg-light bg-opacity-25 rounded  w-20 h-20"></div>
-                          <span className="text-white-50 c-fs-6 c-fw-500">
-                            {testimonial.logo}
-                          </span>
-                        </div>
+              >
+                <div className="d-flex gap-sm-3 gap-0 flex-column flex-sm-row align-items-sm-center align-items-start">
+                  <div className="d-flex align-items-center justify-content-center">
+                    <MdReviews className="text-white c-fs-1"/>
+                  </div>
+                  <div>
+                    <p className="text-white mb-0 mt-2 c-fw-400 c-fs-5">
+                      {testimonial.testimonial}
+                    </p>
+                    <div className="d-flex align-items-center justify-content-start gap-2 c-fw-400 c-fs-5 mt-2">
+                      <div className="text-white-50 c-fs-6">
+                        {testimonial.owner ? testimonial.owner + ", " : ""}
+                        {testimonial.company}
                       </div>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
         <div
-          className={`d-none d-md-flex story-card align-items-center px-1 mx-2 border border-light rounded justify-content-center`}
+          className={`d-none d-md-flex story-card align-items-center px-5 mx-2 border border-light rounded justify-content-center`}
         >
           <div className="p-4 text-center d-flex align-items-center">
             <h2 className="text-white c-fs-1 c-fw-400">
