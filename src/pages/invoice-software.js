@@ -9,6 +9,13 @@ const invoiceSoftware = (path) => {
     const isAE = linkPath.isAE;
     const isUK = linkPath.isUK;
     const link = linkPath.linkPrefix;
+    const country = linkPath.country || "global";
+    const heading = {
+        "global": "Create & Send Professional Invoices with Cloud Software",
+        "ae": "Invoicing is fun with GIDDH online invoicing software",
+        "uk": "Make invoice ease with billing and invoicing software",
+        "in": "Invoicing is fun with online invoicing software.",
+    }
     const globalData = [
         {
             name: "Create and Send professional invoices with cloud based invoicing software",
@@ -203,8 +210,7 @@ const invoiceSoftware = (path) => {
                                 <div className='col-md-12 col-lg-6'>
                                     <div className='features__description_container__content'>
                                         <h2 className='col-primary c-fw-600 mb-3'>
-                                            Create and Send professional invoices with cloud based
-                                            invoicing software
+                                            {heading[country] || heading.global}
                                         </h2>
                                         <p>
                                             Effortlessly create and send professional invoices using
@@ -219,7 +225,7 @@ const invoiceSoftware = (path) => {
                                         <img
                                             src='/img/feature-gallery-icons/create-and-send-professional-invoices-with-cloud-based.svg'
                                             className='img-fluid'
-                                            alt='Create and send professional invoices with cloud-based software'
+                                            alt='Icon representing creation and sending of professional invoices using cloud accounting'
                                             width="auto"
                                             height="200"
                                         />

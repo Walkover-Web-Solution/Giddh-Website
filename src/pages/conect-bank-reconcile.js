@@ -1,4 +1,4 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import Faqs from "@/components/faq";
 import faqs from '../data/faqs.json';
 
@@ -8,7 +8,12 @@ const conectBankReconcile = (path) => {
   const isIndia = linkPath.isIndia
   const link = linkPath.linkPrefix;
   const [faq, setFaq] = useState([])
-
+  const country = linkPath.country || "global";
+  const heading = {
+    "global": "Best Bank Reconciliation Software for Accuracy",
+    "ae": "Multi-Currency Bank Reconciliation Software",
+    "uk": "Seamless Bank Reconciliation Integration Tool for Businesses",
+  }
   useEffect(() => {
     setFaq(faqs['conect-bank-reconcile']);
   }, []);
@@ -51,10 +56,10 @@ const conectBankReconcile = (path) => {
               </div>
               <div className="col-lg-5 order-lg-1 order-0 position-relative">
                 <figure className="text-end">
-                  <img src="/img/bank-banner.svg" 
+                  <img src="/img/bank-banner.svg"
                     width="400"
-                    height="300" 
-                    alt="Illustration of connecting Giddh with bank accounts"/>
+                    height="300"
+                    alt="Illustration of connecting Giddh with bank accounts" />
                   <img
                     src="/img/all-features-cloud_icon.svg"
                     alt="Icons representing various features of Giddh"
@@ -83,9 +88,9 @@ const conectBankReconcile = (path) => {
                     keep track of your cash flow in the most secure, fast and
                     reliable way.
                   </p>
-                  <a 
-                    href={link + "/signup"} 
-                    className="btn-link-purple" 
+                  <a
+                    href={link + "/signup"}
+                    className="btn-link-purple"
                     aria-label="Start your trial with Giddh"
                   >
                     Start Your Trial
@@ -131,7 +136,7 @@ const conectBankReconcile = (path) => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h2 className="col-primary c-fw-600 mb-3">
-                    Reconcile with a snap of fingers
+                    {isIndia ? "Link your bank account seamlessly with GIDDH" : "Reconcile with a snap of fingers"}
                   </h2>
                   <p>
                     With one-click reconciliation feature, we have made the
@@ -159,7 +164,7 @@ const conectBankReconcile = (path) => {
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
                   <h2 className="col-primary c-fw-600 mb-3">
-                    Got Multiple Bank Accounts? We got you Covered
+                    {heading[country] || heading.global}
                   </h2>
                   <p>
                     With Giddh bank account linking, you can monitor the

@@ -22,7 +22,7 @@ const aeVAT = () => {
                                 Streamlined VAT Reconciliation
                             </h2>
                             <h1 className="heading c-fw-600  col-primary ">
-                                Effortless VAT Management for UAE Businesses
+                                Streamlined VAT Reconciliation
                             </h1>
                             <h2 className="c-fs-3">Navigate UAE VAT Laws with Ease</h2>
                         </div>
@@ -162,7 +162,7 @@ const aeVAT = () => {
 
             <section className="container-fluid features__description_container mt-5">
                 <div className="container">
-                        <h2 className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Accurate VAT Filing and Reporting</h2>
+                    <h2 className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Accurate VAT Filing and Reporting</h2>
                     <div
                         className={
                             "row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom" +

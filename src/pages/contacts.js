@@ -4,7 +4,13 @@ const contacts = (path) => {
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
-  
+  const country = linkPath.country || "global";
+  const heading = {
+    "global": "Easily Track & Manage Your Contacts",
+    "ae": "Track and Organize Contacts in One View ",
+    "uk": "Track and manage your contacts in one glance"
+  }
+
   return (
     <>
       <div className="features">
@@ -16,9 +22,7 @@ const contacts = (path) => {
                   Elevate productivity by accessing your business contacts.
                 </h1>
                 <h2 className="col-grey c-fs-3 mb-5 lh-base">
-                  All the information you have stored about your customers –
-                  their transaction history, balance to be paid or received,
-                  personal info and so on.
+                  {heading[country] || heading.global}
                 </h2>
                 <div className="features__heading_container__links">
                   <a
@@ -30,9 +34,9 @@ const contacts = (path) => {
                   >
                     Download Free
                   </a>
-                  <a 
-                    href="#" 
-                    className="col-blue" 
+                  <a
+                    href="#"
+                    className="col-blue"
                     onClick={() => openCalendly()}
                     aria-label="Schedule a demo with our sales team"
                   >
@@ -45,7 +49,7 @@ const contacts = (path) => {
                   <img
                     src="/img/feature-gallery-icons/contact.svg"
                     width="400"
-                    height="300" 
+                    height="300"
                     alt="Illustration representing business contacts"
                   />
                   <img
@@ -73,7 +77,7 @@ const contacts = (path) => {
                   growing business. Giddh makes managing multi-currency
                   payments, invoicing and accounts easy.
                 </p>
-                <a href={ link + '/signup' } className="btn-link-purple" aria-label="Start your trial for Giddh">
+                <a href={link + '/signup'} className="btn-link-purple" aria-label="Start your trial for Giddh">
                   Start Your Trial
                 </a>
               </div>
@@ -132,7 +136,7 @@ const contacts = (path) => {
               <div className="col-md-12 col-lg-6 image-alignment">
                 <figure>
                   <img
-                    src={ isIndia ? "/img/feature-gallery-icons/reporting-feature-3.webp" : ( isAE ? "/img/feature-gallery-icons/uk-aging-report.svg" : "/img/feature-gallery-icons/uk-aging-report.svg") }
+                    src={isIndia ? "/img/feature-gallery-icons/reporting-feature-3.webp" : (isAE ? "/img/feature-gallery-icons/uk-aging-report.svg" : "/img/feature-gallery-icons/uk-aging-report.svg")}
                     className="img-fluid"
                     alt="Aging report illustration based on region"
                     width="auto"
@@ -200,16 +204,16 @@ const contacts = (path) => {
                 </h2>
 
                 <div className="features__suggestion_container__links">
-                   <a href={ link + "/all-features" } className="col-blue" aria-label="View all features">
+                  <a href={link + "/all-features"} className="col-blue" aria-label="View all features">
                     All features
                   </a>
-                  <a href={ link + "/multi-user-accounting-software" } className="border-left col-blue" aria-label="Learn about sharing data">
+                  <a href={link + "/multi-user-accounting-software"} className="border-left col-blue" aria-label="Learn about sharing data">
                     Share Data
                   </a>
-                  <a href={ link + "/multi-currency-accounting-software" } className="border-left col-blue" aria-label="Explore multi-currency options">
+                  <a href={link + "/multi-currency-accounting-software"} className="border-left col-blue" aria-label="Explore multi-currency options">
                     Multi-Currency
                   </a>
-                  <a href={ link + "/invoice-software" } className="border-left col-blue" aria-label="Discover invoicing features">
+                  <a href={link + "/invoice-software"} className="border-left col-blue" aria-label="Discover invoicing features">
                     Invoicing
                   </a>
                 </div>

@@ -7,7 +7,7 @@ const gst = (path) => {
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
   const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
   const [faq, setFaq] = useState([]);
-  
+
   useEffect(() => {
     setFaq(faqs['gst']);
   }, []);
@@ -22,7 +22,7 @@ const gst = (path) => {
               <h2 className="c-fs-3 col-dark-light fw-light m-3" id="gst-reporting-heading">
                 Error-Free GST Reporting for Your Business
               </h2>
-              <h1 className="heading c-fw-600  col-primary">GST Filling & Accounting Software</h1>
+              <h1 className="heading c-fw-600  col-primary">Error-Free GST Reporting for Your Business</h1>
               <h2 className="c-fs-3">Seamless Integration with Accounting Systems</h2>
             </div>
             <div className="tax-image mt-auto" role="img" aria-label="GST banner image">
@@ -151,7 +151,7 @@ const gst = (path) => {
             Make GST Return Process Automatic.
           </div>
           <div>
-            <a href={ link + "/signup"} className="c-fs-4 tax-hero-container__try_now_btn" aria-label="Sign up for Giddh GST services">Try Now</a>
+            <a href={link + "/signup"} className="c-fs-4 tax-hero-container__try_now_btn" aria-label="Sign up for Giddh GST services">Try Now</a>
           </div>
           <span className="c-fs-4 m-3">
             Cloud Based Accounting Software to File GST Return Online
@@ -170,7 +170,7 @@ const gst = (path) => {
               </div>
               <div className="col">
                 <img
-                  width="400" 
+                  width="400"
                   height="70"
                   className="tax-return__wrapper__large_img"
                   src="/img/GST.webp" alt="GST Icon representing GST services"
@@ -183,7 +183,7 @@ const gst = (path) => {
 
       <section className="container-fluid features__description_container mt-5" aria-labelledby="automated-gst-heading">
         <div className="container">
-            <h2 id="automated-gst-heading" className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Automated GST Calculations and Submissions</h2>
+          <h2 id="automated-gst-heading" className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Automated GST Calculations and Submissions</h2>
           <div
             className={
               "row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom" +
