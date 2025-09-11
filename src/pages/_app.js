@@ -54,6 +54,7 @@ export default function MyApp({ Component, pageProps }) {
   let loginSignupPathStatus =
     loginSignupPath === "login" ||
     loginSignupPath === "signup" ||
+    loginSignupPath === "online-accounting-software" ||
     loginSignupPath === "googleauth"
       ? false
       : true;
