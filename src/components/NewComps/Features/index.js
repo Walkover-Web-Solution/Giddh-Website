@@ -33,15 +33,15 @@ export default function Features() {
           </div>
         </div>
 
-        <div className="col-12 col-sm-6 order-2 order-sm-2 d-none d-sm-flex">
-          <div className="d-flex align-items-center justify-content-center h-100 w-100">
-            <div className="position-relative d-inline-block rounded overflow-hidden w-100">
+        <div className="col-12 col-sm-6 order-2 order-sm-2 d-none d-sm-flex justify-content-center">
+          <div className="d-flex align-items-center justify-content-center h-100 ">
+            <div className="position-relative d-inline-block rounded overflow-hidden ">
               <Image
                 src={data[expandedFeature].image}
                 alt={data[expandedFeature].name}
                 height={400}
-                width={350}
-                className={`object-fit-contain cursor-pointer w-100 ${style.image}`}
+                width={400}
+                className={`cursor-pointer ${style.image}`}
               />
 
               <div

@@ -9,20 +9,41 @@ export default function Testimonials() {
     let scrollStep = 1;
     let interval;
 
+    const startScrolling = () => {
+      if (!interval && scrollContainer) {
+        interval = setInterval(() => {
+          if (
+            scrollContainer.scrollTop + scrollContainer.clientHeight >=
+            scrollContainer.scrollHeight
+          ) {
+            scrollContainer.scrollTop = 0;
+          } else {
+            scrollContainer.scrollTop += scrollStep;
+          }
+        }, 30);
+      }
+    };
+
+    const stopScrolling = () => {
+      if (interval) {
+        clearInterval(interval);
+        interval = null;
+      }
+    };
+
     if (scrollContainer) {
-      interval = setInterval(() => {
-        if (
-          scrollContainer.scrollTop + scrollContainer.clientHeight >=
-          scrollContainer.scrollHeight
-        ) {
-          scrollContainer.scrollTop = 0;
-        } else {
-          scrollContainer.scrollTop += scrollStep;
-        }
-      }, 30);
+      startScrolling();
+      scrollContainer.addEventListener('mouseenter', stopScrolling);
+      scrollContainer.addEventListener('mouseleave', startScrolling);
     }
 
-    return () => clearInterval(interval);
+    return () => {
+      stopScrolling();
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('mouseenter', stopScrolling);
+        scrollContainer.removeEventListener('mouseleave', startScrolling);
+      }
+    };
   }, []);
 
   return (
@@ -68,6 +89,7 @@ export default function Testimonials() {
                 </div>
               </div>
             ))}
+            
           </div>
         </div>
         <div
