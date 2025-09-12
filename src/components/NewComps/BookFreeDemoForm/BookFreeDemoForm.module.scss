@@ -1,9 +1,14 @@
 .form_container {
   min-width: 300px;
   min-height: 360px;
+
   form {
     max-width: 460px;
   }
+}
+
+.formPlaceholder::placeholder {
+  color: var(--col-grey-faded);
 }
 
 .bookdemo_btn_cont {

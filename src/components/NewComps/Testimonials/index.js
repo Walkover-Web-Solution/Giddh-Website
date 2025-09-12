@@ -1,8 +1,30 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import style from "./Testimonials.module.scss";
 import data from "./data.json";
 import { MdReviews } from "react-icons/md";
 export default function Testimonials() {
+  const scrollRef = useRef(null);
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    let scrollStep = 1;
+    let interval;
+
+    if (scrollContainer) {
+      interval = setInterval(() => {
+        if (
+          scrollContainer.scrollTop + scrollContainer.clientHeight >=
+          scrollContainer.scrollHeight
+        ) {
+          scrollContainer.scrollTop = 0;
+        } else {
+          scrollContainer.scrollTop += scrollStep;
+        }
+      }, 30);
+    }
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-5 outfit-font bg-accent">
       <div className="d-flex flex-column text-center mx-auto px-3">
@@ -19,7 +41,8 @@ export default function Testimonials() {
       <div className="container d-flex flex-row py-1 gap-5 justify-content-center">
         <div className="d-flex justify-content-center">
           <div
-            className={`border border-light rounded mx-auto overflow-y-auto border-col-light ${style.scrollableContainer}`}
+            ref={scrollRef}
+            className={`border overflow-y-hidden border-light rounded mx-auto ${style.scrollableContainer}`}
           >
             {data.map((testimonial, index) => (
               <div
@@ -56,7 +79,7 @@ export default function Testimonials() {
               <br />
               <em className="c-fw-400">Growth with</em>
               <br />
-              <strong className="c-fw-600">GIDDH</strong>
+              <img src="/img/giddh-logo-primary.svg" alt="Giddh Logo"/>
             </h2>
           </div>
         </div>

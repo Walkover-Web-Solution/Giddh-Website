@@ -1,0 +1,21 @@
+.accordionButton::after {
+  display: none;
+}
+
+.collapseIcon {
+  min-width: 30px;
+  min-height: 30px;
+  background-color: var(--col-faded-blue);
+}
+
+@media (max-width: 575px) {
+  .accordionButton {
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .collapseIcon {
+    margin-top: 4px;
+  }
+}

@@ -188,7 +188,7 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
           <input
             type="text"
             name="name"
-            className="form-control"
+            className={`form-control ${style.formPlaceholder}`}
             placeholder="Name*"
             required
             value={formData.name}
@@ -200,7 +200,7 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
           <input
             type="text"
             name="phone"
-            className="form-control"
+            className={`form-control ${style.formPlaceholder}`}
             placeholder="Mobile Number*"
             required
             value={formData.phone}
@@ -217,7 +217,7 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
           <input
             type="text"
             name="business"
-            className="form-control"
+            className={`form-control ${style.formPlaceholder}`}
             placeholder="Business Name"
             value={formData.business}
             onChange={handleChange}
@@ -228,7 +228,7 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
           <input
             type="email"
             name="email"
-            className="form-control"
+            className={`form-control ${style.formPlaceholder}`}
             placeholder="Email Address*"
             required
             value={formData.email}

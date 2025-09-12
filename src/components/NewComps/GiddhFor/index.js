@@ -52,7 +52,7 @@ export default function GiddhFor() {
                 <img
                   src={data?.content[activeTab]?.image}
                   alt={data?.content[activeTab]?.name}
-                  className={`${style.image} rounded`}
+                  className={`${style.image} w-100 h-auto rounded`}
                 />
               </div>
             </div>
