@@ -42,7 +42,7 @@ export default function Testimonials() {
         <div className="d-flex justify-content-center">
           <div
             ref={scrollRef}
-            className={`border overflow-y-hidden border-light rounded mx-auto border-col-light ${style.scrollableContainer}`}
+            className={`border overflow-y-hidden border-light rounded mx-auto ${style.scrollableContainer}`}
           >
             {data.map((testimonial, index) => (
               <div
@@ -79,7 +79,7 @@ export default function Testimonials() {
               <br />
               <em className="c-fw-400">Growth with</em>
               <br />
-              <img src="/img/giddh-logo-primary.svg" alt="Giddh Logo" className="text-white" />
+              <img src="/img/giddh-logo-primary.svg" alt="Giddh Logo"/>
             </h2>
           </div>
         </div>

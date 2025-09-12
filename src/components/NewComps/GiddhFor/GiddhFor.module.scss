@@ -3,9 +3,6 @@
   background: var(--col-faded-blue);
 }
 
-.image{
-  width: 100%;
-  height: auto;
+.image {
   max-width: clamp(320px, 50%, 520px);
-
 }
