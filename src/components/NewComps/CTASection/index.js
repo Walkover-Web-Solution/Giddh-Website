@@ -16,12 +16,12 @@ export default function CTASection() {
       <div className={`container ${styles.inner} d-grid align-items-center`}>
         <div className='p-4'>
           <h1 className='c-fw-400 text-white cactus-font mx-auto' >{data.heading}</h1>
-          <p className='fw-normal text-white-50 m-0 pb-2 c-fw-600'>{data.subheading}</p>
+          <p className='fw-normal text-white m-0 pb-2 c-fw-600'>{data.subheading}</p>
           <div className={styles.actions}>
             <a
               href="https://giddh.com/in/signup"
               target="_blank"
-              className='btn btn-outline-light fw-semibold text-center align-self-start rounded-2 px-4 py-2 mt-3 w-50'
+              className='btn btn-outline-light fw-semibold text-center align-self-start rounded-2 px-4 py-2 mt-3 col-12 col-sm-6'
             >
               {data.buttonText}
             </a>

@@ -14,6 +14,7 @@ export default function BookFreeDemoForm({
   hiddenAbsolute,
   location,
   heading,
+  verticalFileds
 }) {
   const [formData, setFormData] = useState(initialFormState);
   const [error, setError] = useState("");
@@ -159,6 +160,7 @@ export default function BookFreeDemoForm({
               formData={formData}
               handleChange={handleChange}
               error={error}
+              verticalFileds={verticalFileds}
             />
             <button
               type="submit"
@@ -177,18 +179,18 @@ export default function BookFreeDemoForm({
   );
 }
 
-function FormFields({ formData, handleChange, error, isAbsolute }) {
+function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds }) {
   return (
     <div className="w-100 gap-3 d-flex flex-column">
       <div
-        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute ? "flex-column" : "flex-md-row"
+        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
           }`}
       >
         <div className="w-100">
           <input
             type="text"
             name="name"
-            className="form-control"
+            className={`form-control ${style.formPlaceholder}`}
             placeholder="Name*"
             required
             value={formData.name}
@@ -200,7 +202,7 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
           <input
             type="text"
             name="phone"
-            className="form-control"
+            className={`form-control ${style.formPlaceholder}`}
             placeholder="Mobile Number*"
             required
             value={formData.phone}
@@ -210,14 +212,14 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
         </div>
       </div>
       <div
-        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute ? "flex-column" : "flex-md-row"
+        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
           }`}
       >
         <div className="w-100">
           <input
             type="text"
             name="business"
-            className="form-control"
+            className={`form-control ${style.formPlaceholder}`}
             placeholder="Business Name"
             value={formData.business}
             onChange={handleChange}
@@ -228,7 +230,7 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
           <input
             type="email"
             name="email"
-            className="form-control"
+            className={`form-control ${style.formPlaceholder}`}
             placeholder="Email Address*"
             required
             value={formData.email}
