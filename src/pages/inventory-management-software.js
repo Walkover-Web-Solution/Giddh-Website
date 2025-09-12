@@ -1,6 +1,6 @@
 import Faqs from "@/components/faq";
 import faqs from '../data/faqs.json';
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 const inventoryManagementSoftware = (path) => {
   const linkPath = path.path;
@@ -9,8 +9,14 @@ const inventoryManagementSoftware = (path) => {
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
-  const [faq, setFaq]= useState([])
-
+  const [faq, setFaq] = useState([])
+  const country = linkPath.country || "global";
+  const heading = {
+    "global": "Efficient Warehouse Inventory Management Solutions",
+    "ae": "Advanced Inventory Tracking System for Real-Time Insights",
+    "uk": "Best Inventory Management Software for Businesses",
+    "in": "Top Inventory Accounting Software for Efficient Tracking",
+  }
   useEffect(() => {
     setFaq(faqs['inventory-management-software']);
   }, []);
@@ -74,7 +80,7 @@ const inventoryManagementSoftware = (path) => {
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <h2 id="inventory-tracking-heading" className="sub-heading col-primary c-fw-600 mb-3">
-                  Maintain inventory tracking. Stay updated.
+                  {heading[country] || heading.global}
                 </h2>
                 <p className="c-fs-4 mb-5">
                   Modern inventory management software for the modern

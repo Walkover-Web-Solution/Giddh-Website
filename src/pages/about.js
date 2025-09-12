@@ -3,6 +3,13 @@ import { useState } from "react";
 
 const about = (path) => {
   const [currentMenu, setCurrentMenu] = useState(0);
+  const country = path.path.country || "global";
+  const heading = {
+    "global": "GIDDH -A Multi user accounting software",
+    "ae": "GIDDH -best accounting and inventory managment software",
+    "uk": "GIDDH -An online accounting software",
+    "in": "A product from Walkover",
+  }
   const setCurrent = (index) => {
     setCurrentMenu(index);
   };
@@ -69,7 +76,7 @@ const about = (path) => {
                     style={{
                       display: currentMenu === 0 ? "inline" : "none",
                     }}
-                    role="heading" 
+                    role="heading"
                     aria-level="4"
                   >
                     About Us
@@ -78,7 +85,7 @@ const about = (path) => {
                     style={{
                       display: currentMenu === 1 ? "inline" : "none",
                     }}
-                    role="heading" 
+                    role="heading"
                     aria-level="4"
                   >
                     Our Values
@@ -87,7 +94,7 @@ const about = (path) => {
                     style={{
                       display: currentMenu === 2 ? "inline" : "none",
                     }}
-                    role="heading" 
+                    role="heading"
                     aria-level="4"
                   >
                     Leadership Principles
@@ -96,7 +103,7 @@ const about = (path) => {
                     style={{
                       display: currentMenu === 3 ? "inline" : "none",
                     }}
-                    role="heading" 
+                    role="heading"
                     aria-level="4"
                   >
                     The Team
@@ -109,7 +116,7 @@ const about = (path) => {
                   style={{
                     display: currentMenu === 0 ? "inline" : "none",
                   }}
-                  role="heading" 
+                  role="heading"
                   aria-level="4"
                 >
                   Pioneering the Automation Revolution in Accounting!
@@ -119,7 +126,7 @@ const about = (path) => {
                   style={{
                     display: currentMenu === 1 ? "inline" : "none",
                   }}
-                  role="heading" 
+                  role="heading"
                   aria-level="4"
                 >
                   Our values are the essence of our identity and summarises the
@@ -130,7 +137,7 @@ const about = (path) => {
                   style={{
                     display: currentMenu === 2 ? "inline" : "none",
                   }}
-                  role="heading" 
+                  role="heading"
                   aria-level="4"
                 >
                   The difference between success and failure is not the amount
@@ -142,7 +149,7 @@ const about = (path) => {
                   style={{
                     display: currentMenu === 3 ? "inline" : "none",
                   }}
-                  role="heading" 
+                  role="heading"
                   aria-level="4"
                 >
                   Our VISION is to provide technologies to organizations that
@@ -437,7 +444,7 @@ const about = (path) => {
                     <div className="row align-items-center">
                       <div className="col-12">
                         <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
-                          Embracing Setbacks to Break Boundaries
+                          {heading[country] || heading.global}
                         </h2>
                       </div>
                       <div className="col-lg-8">
@@ -793,7 +800,7 @@ const about = (path) => {
                 </div>
               </section>
               <section className="leadership_principles__banner_wrapper">
-                <div className="container-fluid leadership_principles__banner_image_background"  id="nurturesCollaboration">
+                <div className="container-fluid leadership_principles__banner_image_background" id="nurturesCollaboration">
                   <div className="container">
                     <div className="row leadership_principles__content_wrapper align-items-center">
                       <div className="col-lg-3 col-md-12">
@@ -1149,14 +1156,14 @@ const about = (path) => {
                   </figure>
                   <figure>
                     <img
-                      src={ isIndia ? "/img/about/team/dilpreet.webp" : "/img/about/team/prateek.webp"}
+                      src={isIndia ? "/img/about/team/dilpreet.webp" : "/img/about/team/prateek.webp"}
                       width="100%"
                       height="100%"
-                      alt={  isIndia ? "Mr. Dilpreet" : "Mr. Prateek"}
+                      alt={isIndia ? "Mr. Dilpreet" : "Mr. Prateek"}
                     />
                     <div>
-                      <figcaption>{ isIndia ? "Dilpreet" : "Prateek"}</figcaption>
-                      <figcaption>{ isIndia ? "Jr." : "Sr."} Software Developer</figcaption>
+                      <figcaption>{isIndia ? "Dilpreet" : "Prateek"}</figcaption>
+                      <figcaption>{isIndia ? "Jr." : "Sr."} Software Developer</figcaption>
                     </div>
                   </figure>
                   <figure>
@@ -1335,7 +1342,7 @@ const about = (path) => {
           <div className="d-flex py-4">
             <div className="container d-flex gap-4 flex-column text-center">
               <h1 className="heading fw-bold col-primary">
-                <span className="about--heading-underline about__see_more--pull-near-text">See More</span>
+                <span className="about--heading-underline about__see_more--pull-near-text">About us -GIDDH</span>
               </h1>
               <h2 className="c-fs-3">See more about the Company</h2>
               <span className="c-fs-5">

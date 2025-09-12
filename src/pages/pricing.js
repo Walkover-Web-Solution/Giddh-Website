@@ -27,6 +27,12 @@ const pricing = (path) => {
   const linkPath = path?.path;
   const link = linkPath?.linkPrefix;
   const country = path?.path?.country || "global";
+  const heading = {
+    "global": "GIDDH: Simplify Your Accounting and Inventory Management",
+    "ae": "Effortless Multi-Currency Accounting with GIDDH Software",
+    "uk": "GIDDH: The Ultimate Accounting Solution for Your Business",
+    "in": "Introducing GIDDH – Your All-in-One Solution for Accounting",
+  }
 
   useEffect(() => {
     // Function to update the state based on screen width
@@ -219,9 +225,8 @@ const pricing = (path) => {
       <>
         {/* Plan Name */}
         <p
-          className={`${
-            isMobile ? "c-fs-3" : "c-fs-5"
-          } c-fw-600 mb-1 text-capitalize`}
+          className={`${isMobile ? "c-fs-3" : "c-fs-5"
+            } c-fw-600 mb-1 text-capitalize`}
           aria-label="Subscription Plan Name"
         >
           {plan.name}
@@ -240,18 +245,18 @@ const pricing = (path) => {
             {/* Plan Discount with strike though */}
             {(plan.yearlyDiscountAmount > 0 ||
               plan.monthlyDiscountAmount > 0) && (
-              <>
-                <p className="my-1 line-height-24">
-                  <s>
-                    &nbsp;
-                    {getCurrencyCodeOrSymbol(plan)}
-                    &nbsp;
-                    {getAmount(plan)}
-                    &nbsp;
-                  </s>
-                </p>
-              </>
-            )}
+                <>
+                  <p className="my-1 line-height-24">
+                    <s>
+                      &nbsp;
+                      {getCurrencyCodeOrSymbol(plan)}
+                      &nbsp;
+                      {getAmount(plan)}
+                      &nbsp;
+                    </s>
+                  </p>
+                </>
+              )}
 
             {/* Plan Description */}
             <p
@@ -264,13 +269,13 @@ const pricing = (path) => {
             {/* Free Plan with duration message */}
             {((isYearPlan && plan?.yearlyDiscount?.duration) ||
               (!isYearPlan && plan?.monthlyDiscount?.duration)) && (
-              <p className="c-fw-400 c-fs-5 col-primary mb-1 white-space-no-wrap">
-                Free to <wbr />
-                {isYearPlan
-                  ? `${plan?.yearlyDiscount?.duration} year`
-                  : `${plan?.monthlyDiscount?.duration} month`}
-              </p>
-            )}
+                <p className="c-fw-400 c-fs-5 col-primary mb-1 white-space-no-wrap">
+                  Free to <wbr />
+                  {isYearPlan
+                    ? `${plan?.yearlyDiscount?.duration} year`
+                    : `${plan?.monthlyDiscount?.duration} month`}
+                </p>
+              )}
           </>
         )}
         {/* Free Plan with duration message */}
@@ -675,7 +680,7 @@ const pricing = (path) => {
         <div className="container">
           <div className="text-center">
             <h2 className="sub-heading col-primary c-fw-600">
-              Introducing GIDDH – Your All-in-One Solution for Accounting
+              {heading[country] || heading.global}
             </h2>
             <p className="c-fs-4 c-fw-600">
               Are you tired of the hassle of manually inputting your financial
