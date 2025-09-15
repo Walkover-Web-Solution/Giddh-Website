@@ -1,7 +1,5 @@
-import React from "react";
 import Image from "next/image";
 import styles from "./GiddhPopUp.module.scss";
-import { MdClose } from "react-icons/md";
 
 export default function GiddhPopUp() {
     return (
