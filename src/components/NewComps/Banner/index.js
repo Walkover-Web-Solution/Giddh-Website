@@ -34,13 +34,18 @@ export default function Banner(path) {
               width={120}
               height={24}
             />
-            <a
-              href="https://giddh.com/in/signup"
-              target="_blank"
+            <button
+              onClick={() =>
+                document.getElementById("SeeGiddhInAction")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                })
+              }
               className={`px-3 py-2 c-fs-5 rounded  ${style.getStarted}`}
             >
               Get Started
-            </a>
+            </button>
+
           </div>
           <div className="row align-items-center justify-content-between cactus-font ">
             <div className="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 pe-3">

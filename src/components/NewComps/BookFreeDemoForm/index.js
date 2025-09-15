@@ -212,7 +212,7 @@ function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds 
         </div>
       </div>
       <div
-        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
+        className={`d-flex m-0 gap-3 flex-column mb-3 ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
           }`}
       >
         <div className="w-100">
@@ -244,20 +244,7 @@ function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds 
           Error submitting form: {error}
         </div>
       )}
-      <div className="form-check">
-        <input
-          className="form-check-input"
-          type="checkbox"
-          id="termsCheck"
-          required
-        />
-        <label className="form-check-label" htmlFor="termsCheck">
-          I accept the{" "}
-          <a href="/terms" target="_blank" className="text-decoration-underline">
-            Terms & Conditions
-          </a>
-        </label>
-      </div>
+
     </div>
   );
 }
