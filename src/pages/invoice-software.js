@@ -92,7 +92,7 @@ const invoiceSoftware = (path) => {
                             <h1 className='heading col-primary c-fw-600 mb-4' role="heading" aria-level="1">
                                 {isAE && "UAE-Specific Invoice Software for Business Efficiency"}
                                 {isUK && "Streamline Billing with Our UK Invoice Software"}
-                                {(isIndia || isGlobal) && "Effortless Invoicing Solutions"}
+                                {(isIndia || isGlobal) && "Invoicing Software in India "}
                             </h1>
                             <p className='col-grey c-fs-3 mb-5'>
                                 Invoicing is fun with online invoicing software.

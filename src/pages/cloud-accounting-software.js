@@ -27,7 +27,7 @@ const anywhereAnytime = (path) => {
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
                 <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
-                    { isIndia && "GST-Compliant Cloud Accounting for India" }
+                    { isIndia && "Cloud Accounting Software for Indian Businesse" }
                     { isAE && "VAT-Compliant Cloud Accounting in the UAE" }
                     { (isUK || isGlobal) && "Cloud Accounting Software" }
                 </h1>
