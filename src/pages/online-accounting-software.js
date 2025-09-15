@@ -25,21 +25,19 @@ const index = (path) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       const modalEl = document.getElementById("giddhPopUp");
-    
-        modalEl.classList.add("show");
-        modalEl.style.display = "block";
-        document.body.classList.add("modal-open");
-        const backdrop = document.createElement("div");
-        backdrop.className = "modal-backdrop fade show";
-        document.body.appendChild(backdrop);
-      
-    }, 200);
-  
+      modalEl.classList.add("show");
+      modalEl.style.display = "block";
+      document.body.classList.add("modal-open");
+      const backdrop = document.createElement("div");
+      backdrop.className = "modal-backdrop fade show";
+      document.body.appendChild(backdrop);
+    }, 10);
+
     return () => clearTimeout(timer);
   }, []);
   return (
     <>
-      <GiddhPopUp/>
+      <GiddhPopUp />
       <Banner path={link} />
       <Features path={link} />
       <WhyGiddh />
