@@ -72,7 +72,7 @@ export default function Testimonials() {
               >
                 <div className="d-flex gap-sm-3 gap-0 flex-column flex-sm-row align-items-sm-center align-items-start">
                   <div className="d-flex align-items-center justify-content-center">
-                    <MdReviews className="text-white c-fs-1" />
+                    <MdReviews className="text-white c-fs-1"/>
                   </div>
                   <div>
                     <p className="text-white mb-0 mt-2 c-fw-400 c-fs-5">
@@ -88,7 +88,6 @@ export default function Testimonials() {
                 </div>
               </div>
             ))}
-
           </div>
         </div>
         <div
@@ -100,7 +99,7 @@ export default function Testimonials() {
               <br />
               <em className="c-fw-400">Growth with</em>
               <br />
-              <img src="/img/giddh-logo-primary.svg" alt="Giddh Logo" />
+              <img src="/img/giddh-logo-primary.svg" alt="Giddh Logo"/>
             </h2>
           </div>
         </div>
