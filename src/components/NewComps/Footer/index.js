@@ -32,18 +32,6 @@ export default function Footer() {
               >
                 Privacy Policy
               </a>
-              <a
-                href="/terms"
-                className="text-decoration-none c-fs-7 col-grey-deep"
-              >
-                Term of Service
-              </a>
-              <a
-                href="/pricing"
-                className="text-decoration-none c-fs-7 col-grey-deep"
-              >
-                Pricing
-              </a>
             </div>
           </div>
           <div className="col-12 col-md-4 text-center text-md-end">

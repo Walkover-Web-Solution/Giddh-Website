@@ -61,7 +61,7 @@ export default function BookFreeDemoForm({
         className={`outfit-font card col-lg-5 col-md-6 col-12 p-4 gap-4 rounded ${style.form_container} d-flex flex-column align-items-center justify-content-center`}
       >
         <h5 className="col-primary c-fw-600 c-fs-8">
-          Discover How GIDDH Can Simplify Your Accounting
+          Upgrade Your Accounting with Giddh
         </h5>
         <form
           onSubmit={handleSubmit}

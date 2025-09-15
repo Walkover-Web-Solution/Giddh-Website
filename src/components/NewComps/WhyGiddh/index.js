@@ -4,9 +4,9 @@ import { MdClose, MdDone } from "react-icons/md";
 
 export default function WhyGiddh() {
   const data = {
-    heading: "Why is Giddh better than most!",
+    heading: "Why Choose Giddh?",
     subheading:
-      "In today's business landscape, understanding and managing the financial status of your organization are crucial for making informed business decisions and sustainable growth. This necessity applies not only to professional accountants but also to all professionals working in various industries.",
+      "Giddh combines real-time insights, seamless compliance, and powerful features to simplify accounting. It grows with your business, offering clarity, control, and ease at every step."
   };
 
   return (
