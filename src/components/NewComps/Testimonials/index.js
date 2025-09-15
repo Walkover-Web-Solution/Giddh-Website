@@ -9,20 +9,41 @@ export default function Testimonials() {
     let scrollStep = 1;
     let interval;
 
+    const startScrolling = () => {
+      if (!interval && scrollContainer) {
+        interval = setInterval(() => {
+          if (
+            scrollContainer.scrollTop + scrollContainer.clientHeight >=
+            scrollContainer.scrollHeight
+          ) {
+            scrollContainer.scrollTop = 0;
+          } else {
+            scrollContainer.scrollTop += scrollStep;
+          }
+        }, 30);
+      }
+    };
+
+    const stopScrolling = () => {
+      if (interval) {
+        clearInterval(interval);
+        interval = null;
+      }
+    };
+
     if (scrollContainer) {
-      interval = setInterval(() => {
-        if (
-          scrollContainer.scrollTop + scrollContainer.clientHeight >=
-          scrollContainer.scrollHeight
-        ) {
-          scrollContainer.scrollTop = 0;
-        } else {
-          scrollContainer.scrollTop += scrollStep;
-        }
-      }, 30);
+      startScrolling();
+      scrollContainer.addEventListener('mouseenter', stopScrolling);
+      scrollContainer.addEventListener('mouseleave', startScrolling);
     }
 
-    return () => clearInterval(interval);
+    return () => {
+      stopScrolling();
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('mouseenter', stopScrolling);
+        scrollContainer.removeEventListener('mouseleave', startScrolling);
+      }
+    };
   }, []);
 
   return (
@@ -34,8 +55,7 @@ export default function Testimonials() {
         <p
           className={`c-fs-5 mx-auto pb-4 text-white-50 text-center c-fw-400`}
         >
-          See who's talking about us and why businesses trust us around the
-          globe.
+          Real businesses. Real results. Look how Giddh empowers companies worldwide to streamline accounting, save time, and accelerate growth.
         </p>
       </div>
       <div className="container d-flex flex-row py-1 gap-5 justify-content-center">

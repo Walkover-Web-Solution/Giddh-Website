@@ -4,13 +4,12 @@ import styles from "./CTASection.module.scss";
 
 export default function CTASection() {
   const data = {
-    heading: "Start Your Accounting Revolution with Giddh",
+    heading: "Tired Of Overpriced Accounting Software With Fewer Features?",
     subheading:
-      "Try Giddh free and see how effortless accounting can be. Your books deserve better.",
-    buttonText: "Get Started",
+      "Get an advanced, affordable solution with Giddh!",
+    buttonText: "Switch To Giddh Now",
     image: "/img/girl-avatar.svg",
   };
-
   return (
     <section className='bg-accent position-relative' aria-label="Giddh hero">
       <div className={`container ${styles.inner} d-grid align-items-center`}>
@@ -18,13 +17,17 @@ export default function CTASection() {
           <h1 className='c-fw-400 text-white cactus-font mx-auto' >{data.heading}</h1>
           <p className='fw-normal text-white m-0 pb-2 c-fw-600'>{data.subheading}</p>
           <div className={styles.actions}>
-            <a
-              href="https://giddh.com/in/signup"
-              target="_blank"
-              className='btn btn-outline-light fw-semibold text-center align-self-start rounded-2 px-4 py-2 mt-3 col-12 col-sm-6'
+            <button
+              onClick={() =>
+                document.getElementById("SeeGiddhInAction")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                })
+              }
+              className="btn btn-outline-light fw-semibold text-center align-self-start rounded-2 px-4 py-2 mt-3 col-12 col-sm-6"
             >
               {data.buttonText}
-            </a>
+            </button>
           </div>
         </div>
         <div className={styles.imageWrap}>

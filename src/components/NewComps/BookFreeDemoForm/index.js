@@ -14,6 +14,7 @@ export default function BookFreeDemoForm({
   hiddenAbsolute,
   location,
   heading,
+  verticalFileds
 }) {
   const [formData, setFormData] = useState(initialFormState);
   const [error, setError] = useState("");
@@ -60,7 +61,7 @@ export default function BookFreeDemoForm({
         className={`outfit-font card col-lg-5 col-md-6 col-12 p-4 gap-4 rounded ${style.form_container} d-flex flex-column align-items-center justify-content-center`}
       >
         <h5 className="col-primary c-fw-600 c-fs-8">
-          Discover How GIDDH Can Simplify Your Accounting
+          Upgrade Your Accounting with Giddh
         </h5>
         <form
           onSubmit={handleSubmit}
@@ -159,6 +160,7 @@ export default function BookFreeDemoForm({
               formData={formData}
               handleChange={handleChange}
               error={error}
+              verticalFileds={verticalFileds}
             />
             <button
               type="submit"
@@ -177,11 +179,11 @@ export default function BookFreeDemoForm({
   );
 }
 
-function FormFields({ formData, handleChange, error, isAbsolute }) {
+function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds }) {
   return (
     <div className="w-100 gap-3 d-flex flex-column">
       <div
-        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute ? "flex-column" : "flex-md-row"
+        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
           }`}
       >
         <div className="w-100">
@@ -210,7 +212,7 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
         </div>
       </div>
       <div
-        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute ? "flex-column" : "flex-md-row"
+        className={`d-flex m-0 gap-3 flex-column mb-3 ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
           }`}
       >
         <div className="w-100">
@@ -242,20 +244,7 @@ function FormFields({ formData, handleChange, error, isAbsolute }) {
           Error submitting form: {error}
         </div>
       )}
-      <div className="form-check">
-        <input
-          className="form-check-input"
-          type="checkbox"
-          id="termsCheck"
-          required
-        />
-        <label className="form-check-label" htmlFor="termsCheck">
-          I accept the{" "}
-          <a href="/terms" target="_blank" className="text-decoration-underline">
-            Terms & Conditions
-          </a>
-        </label>
-      </div>
+
     </div>
   );
 }
