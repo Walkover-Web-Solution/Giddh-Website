@@ -5,7 +5,6 @@ import Image from "next/image";
 import * as MdIcons from "react-icons/md";
 import { MdCircle } from "react-icons/md";
 
-
 export default function Features() {
   const [expandedFeature, setExpandedFeature] = useState(0);
   const Icon = MdIcons[data[expandedFeature].icon];
@@ -21,15 +20,16 @@ export default function Features() {
       <div className="d-flex flex-column flex-sm-row gap-4 outfit-font align-items-center justify-content-between">
         <div className="col-12 col-sm-6 order-1 order-md-1">
           <div id="features" className="p-2">
-            {data.slice(0, 5).map((feature, index) => (
-              <FeatureItem
-                key={index}
-                feature={feature}
-                index={index}
-                isExpanded={expandedFeature === index}
-                onToggle={handleFeatureToggle}
-              />
-            ))}
+            {data?.length > 0 &&
+              data.map((feature, index) => (
+                <FeatureItem
+                  key={index}
+                  feature={feature}
+                  index={index}
+                  isExpanded={expandedFeature === index}
+                  onToggle={handleFeatureToggle}
+                />
+              ))}
           </div>
         </div>
 
@@ -59,7 +59,9 @@ export default function Features() {
                   className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 ${style.imageButton} cursor-pointer c-fw-600 c-fs-5`}
                 >
                   <div>{Icon && <Icon size={18} className="text-white" />}</div>
-                  <span className="text-white">{data[expandedFeature].name}</span>
+                  <span className="text-white">
+                    {data[expandedFeature].name}
+                  </span>
                 </button>
               </div>
             </div>
@@ -79,7 +81,9 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
 
   return (
     <div
-      className={`d-flex flex-column gap-1 rounded p-2 ${isExpanded ? "shadow-sm" : ""} cursor-pointer`}
+      className={`d-flex flex-column gap-1 rounded p-2 ${
+        isExpanded ? "shadow-sm" : ""
+      } cursor-pointer`}
     >
       <div className="d-flex align-items-center gap-2" onClick={handleToggle}>
         <div className="border border-col-primary p-2 bg-light-blue rounded d-flex align-items-center justify-content-center">
