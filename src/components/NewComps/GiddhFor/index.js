@@ -25,7 +25,7 @@ export default function GiddhFor() {
                     onClick={() => setActiveTab(index)}
                   >
                     <span>{item?.icon}</span>
-                    <span>{item?.name.split(" ")[0]}</span>
+                    <span>{item?.title}</span>
                   </div>
                   {activeTab === index && (
                     <div

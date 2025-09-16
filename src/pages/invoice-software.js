@@ -9,9 +9,16 @@ const invoiceSoftware = (path) => {
     const isAE = linkPath.isAE;
     const isUK = linkPath.isUK;
     const link = linkPath.linkPrefix;
+    const country = linkPath.country || "global";
+    const heading = {
+        "global": "Create & Send Professional Invoices with Cloud Software",
+        "ae": "Invoicing is fun with GIDDH online invoicing software",
+        "uk": "Make invoice ease with billing and invoicing software",
+        "in": "Invoicing is fun with online invoicing software",
+    }
     const globalData = [
         {
-            name: "Create and Send professional invoices with cloud based invoicing software",
+            name: "Create & Send Professional Invoices with Cloud Software",
             des: "Effortlessly create and send professional invoices using cloud-based invoicing software, streamlining your billing process and enhancing your business image with ease and efficiency.",
             img: "/img/feature-gallery-icons/create-and-send-professional-invoices-with-cloud-based.svg",
         },
@@ -92,7 +99,7 @@ const invoiceSoftware = (path) => {
                             <h1 className='heading col-primary c-fw-600 mb-4' role="heading" aria-level="1">
                                 {isAE && "UAE-Specific Invoice Software for Business Efficiency"}
                                 {isUK && "Streamline Billing with Our UK Invoice Software"}
-                                {(isIndia || isGlobal) && "Effortless Invoicing Solutions"}
+                                {(isIndia || isGlobal) && "Invoicing Software in India "}
                             </h1>
                             <p className='col-grey c-fs-3 mb-5'>
                                 Invoicing is fun with online invoicing software.
@@ -144,7 +151,7 @@ const invoiceSoftware = (path) => {
                     <div className='row'>
                         <div className='col-12 text-center features__sub_heading_container--pull-top'>
                             <h2 className='sub-heading col-primary c-fw-600 mb-3' role="heading" aria-level="2">
-                                {isAE && "Automated Invoicing: Save Time and Reduce Errors"}
+                                {isAE && "Invoicing is fun with GIDDH online invoicing software"}
                                 {isUK && "Compliance Made Simple with Automated Features"}
                                 {(isIndia || isGlobal) && "Save time. Stay ahead."}
                             </h2>
@@ -179,7 +186,7 @@ const invoiceSoftware = (path) => {
                                         <div className='col-md-12 col-lg-6'>
                                             <div className='features__description_container__content'>
                                                 <h2 className='col-primary c-fw-600 mb-3' role="heading" aria-level="3">
-                                                    {feature?.name}
+                                                    { isGlobal ? "Make invoice ease with billing and invoicing software" : feature?.name }
                                                 </h2>
                                                 <p>{feature?.des}</p>
                                             </div>
@@ -203,8 +210,7 @@ const invoiceSoftware = (path) => {
                                 <div className='col-md-12 col-lg-6'>
                                     <div className='features__description_container__content'>
                                         <h2 className='col-primary c-fw-600 mb-3'>
-                                            Create and Send professional invoices with cloud based
-                                            invoicing software
+                                            {heading[country] || heading.global}
                                         </h2>
                                         <p>
                                             Effortlessly create and send professional invoices using
@@ -219,7 +225,7 @@ const invoiceSoftware = (path) => {
                                         <img
                                             src='/img/feature-gallery-icons/create-and-send-professional-invoices-with-cloud-based.svg'
                                             className='img-fluid'
-                                            alt='Create and send professional invoices with cloud-based software'
+                                            alt='Icon representing creation and sending of professional invoices using cloud accounting'
                                             width="auto"
                                             height="200"
                                         />

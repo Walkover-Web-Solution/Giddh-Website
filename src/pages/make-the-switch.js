@@ -1,5 +1,5 @@
 const makeTheSwitch = (path) => {
-  const linkPath = path.path;    
+  const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
   const isAE = linkPath.isAE;
@@ -28,7 +28,7 @@ const makeTheSwitch = (path) => {
           <div className="row ">
             <div className="col-md-6 col-sm-12">
               <figure>
-                <img width="900" height="400" src={ isIndia || isAE ? "/img/switch-laptop-image.webp" : "/img/uk-dashboard-laptop-and-pc-img.svg"} alt="Image showing Giddh Accounting Software on a laptop" className="img-fluid" />
+                <img width="900" height="400" src={isIndia || isAE ? "/img/switch-laptop-image.webp" : "/img/uk-dashboard-laptop-and-pc-img.svg"} alt="Image showing Giddh Accounting Software on a laptop" className="img-fluid" />
               </figure>
             </div>
             <div className="col-md-6 col-sm-12">
@@ -38,7 +38,7 @@ const makeTheSwitch = (path) => {
                 </h2>
 
                 <p className="col-primary c-fs-4 c-fw-600">
-                  Transfer customers and vendors seamlessly
+                  Simplify Bank Reconciliation with System Software
                 </p>
                 <p>
                   We sync with Tally and almost every online accounting
@@ -60,15 +60,11 @@ const makeTheSwitch = (path) => {
         <section className="container-fluid make_the_switch__sub_section" role="region" aria-labelledby="accounting-solutions-heading">
           <div className="container">
             <h2 id="accounting-solutions-heading" className="col-primary sub-heading c-fw-600 text-center pb-4">
-              A Simple Accounting Solution for all your Business needs.
+              Invoices,Unlimited user access ,"Features that empower your business accounting".
             </h2>
             <div className="row align-items-center mb-5">
               <div className="col-md-6 col-sm-12 order-1">
                 <div>
-                  <h2 className="col-primary sub-heading c-fw-600 pb-3">
-                    A Simple Accounting Solution for all your Business needs.
-                  </h2>
-
                   <p className="col-primary c-fs-4 c-fw-600">
                     Inventory Management
                   </p>
@@ -86,7 +82,7 @@ const makeTheSwitch = (path) => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img width="900" height="400" src="/img/Accounting-sol-2.webp" alt="Banner image showcasing features of Giddh accounting software, including inventory management and invoicing" className="img-fluid" />
+                  <img width="900" height="400" src="/img/Accounting-sol-2.webp" alt="Team collaborating over cloud accounting platform on multiple devices" className="img-fluid" />
                 </figure>
               </div>
             </div>
@@ -112,7 +108,7 @@ const makeTheSwitch = (path) => {
               </div>
               <div className="col-md-6 col-sm-12 order-0">
                 <figure>
-                  <img width="900" height="400" src="/img/Accounting-sol-1.webp" alt="Banner image illustrating Giddh's expense management features, highlighting direct bank integration and expense tracking" className="img-fluid" />
+                  <img width="900" height="400" src="/img/Accounting-sol-1.webp" alt="Dashboard view of cloud-based accounting software showing financial reports and charts" className="img-fluid" />
                 </figure>
               </div>
             </div>

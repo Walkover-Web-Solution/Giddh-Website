@@ -9,6 +9,13 @@ const smallBusinessBookkeepingSoftware = (path) => {
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
+  const country = linkPath.country || "global";
+  const heading = {
+    global: "Key Features of Small Business Bookkeeping Software",
+    india: "Top Functions of Bookkeeping Software for Small Businesses",
+    ae: "Top Functions of Bookkeeping Software for Small Businesses",
+    uk: "Top Features of Bookkeeping Software for Small Businesses",
+  };
   const [faq, setFaq] = useState([])
 
   useEffect(() => {
@@ -457,9 +464,7 @@ const smallBusinessBookkeepingSoftware = (path) => {
                   />
                 </figure>
                 <h2 className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
-                  People interested in{" "}
-                  <span className="col-blue">Small Business Bookkeeping Software</span> also
-                  looked at
+                  {heading[country] || heading.global}
                 </h2>
 
                 <div className="features__suggestion_container__links">

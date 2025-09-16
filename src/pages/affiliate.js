@@ -4,6 +4,11 @@ const affiliate = (path) => {
     const isIndia = linkPath.isIndia;
     const isAE = linkPath.isAE;
     const link = linkPath.linkPrefix;
+    const country = linkPath.country || "global";
+    const heading = {
+      global: "Long Cookie Duration with Active Retargeting",
+      india: "We Help you With Resources",
+    };
     return (
       <>
         <div className="affiliate">
@@ -45,7 +50,7 @@ const affiliate = (path) => {
                     </div>
                     <div className="col-9 col-md-8">
                       <h2 className="c-fs-1  col-primary c-fw-400 mb-3">
-                        Long Cookie Duration with Active Retargeting
+                        {heading[country] || heading.global}
                       </h2>
                       <p className="c-fs-5">
                         Receive the credit you deserve with our 120-day cookie
