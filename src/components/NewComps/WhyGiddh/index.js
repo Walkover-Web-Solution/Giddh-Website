@@ -41,15 +41,15 @@ export default function WhyGiddh() {
       </div>
       <div className="d-block d-md-none overflow-y-auto">
         <div className="bg-white border rounded">
-          <div className="row border-bottom fw-semibold text-dark">
-            <div className="col-4 px-2 py-2 ps-4 border-end">Feature</div>
+          <div className="row border-bottom fw-semibold text-dark c-fs-5">
+            <div className="col-4 px-2 py-2 ps-3 border-end">Feature</div>
             <div className="col-4 px-2 py-2 border-end">Other</div>
             <div className="col-4 px-2 py-2">Giddh</div>
           </div>
 
           {whyGiddhData.map((row, index) => (
-            <div key={index} className="row border-bottom">
-              <div className="col-4 px-2 py-2 border-end ps-4">{row["features"]}</div>
+            <div key={index} className="row border-bottom c-fs-6">
+              <div className="col-4 px-2 py-2 border-end ps-3 overflow-hidden">{row["features"]}</div>
               <div className="col-4 px-2 py-2 border-end">
                 {row["Other Accounting Software"] === "true" ? (
                   <MdDone size={20} className="text-success" />
