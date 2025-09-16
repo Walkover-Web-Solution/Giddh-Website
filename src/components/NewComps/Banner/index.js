@@ -50,10 +50,10 @@ export default function Banner(path) {
           <div className="row align-items-center justify-content-between cactus-font ">
             <div className="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 pe-3">
               <h1 className="cactus-font heading col-primary">
-                Smart, Simple & Powerful Accounting for Growing Businesses
+                Smart, Simple & All-in-One Accounting for Growing Businesses
               </h1>
               <p className="col-grey outfit-font ">
-                GIDDH makes accounting easy with clear ledger entries, unlimited users, and strong inventory management — all at affordable prices. Track sales, purchases, and manufacturing in one place and grow your business with confidence.
+                Giddh brings everything together on a secure, cloud platform built for growing businesses. Simplifies accounting with GST-ready billing, smart inventory sync, and real-time financial insights.
               </p>
               <div className="d-flex flex-wrap align-items-center gap-4">
                 {trustBadgeBrands?.map((logo, index) => (

@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./CTASection.module.scss";
-import Link from "next/link";
-import { useRouter } from "next/router";
 
 export default function CTASection() {
   const data = {
@@ -12,7 +10,6 @@ export default function CTASection() {
     buttonText: "Switch To Giddh Now",
     image: "/img/girl-avatar.svg",
   };
-  const router = useRouter();
   return (
     <section className='bg-accent position-relative' aria-label="Giddh hero">
       <div className={`container ${styles.inner} d-grid align-items-center`}>
