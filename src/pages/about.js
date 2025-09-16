@@ -10,6 +10,13 @@ const about = (path) => {
     "uk": "GIDDH -An online accounting software",
     "in": "A product from Walkover",
   }
+  const subheading = {
+    global: "GIDDH -A Multi user accounting software",
+    india: "Setbacks to Break Boundaries",
+    ae: "GIDDH -best accounting and inventory managment software",
+    uk: "GIDDH -An online accounting software",
+  };
+
   const setCurrent = (index) => {
     setCurrentMenu(index);
   };
@@ -315,7 +322,7 @@ const about = (path) => {
                       />
                       <figcaption className="col-primary c-fs-6">
                         {" "}
-                        Setbacks to Break Boundaries
+                       {heading[country] || heading.global}
                       </figcaption>
                     </figure>
                   </a>
@@ -444,7 +451,7 @@ const about = (path) => {
                     <div className="row align-items-center">
                       <div className="col-12">
                         <h2 className="col-primary heading c-fw-600 mb-5 mb-lg-3 about--heading-underline">
-                          {heading[country] || heading.global}
+                        {subheading[country] || subheading.global}
                         </h2>
                       </div>
                       <div className="col-lg-8">

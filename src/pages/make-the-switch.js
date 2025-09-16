@@ -38,7 +38,7 @@ const makeTheSwitch = (path) => {
                 </h2>
 
                 <p className="col-primary c-fs-4 c-fw-600">
-                  Transfer customers and vendors seamlessly
+                  Simplify Bank Reconciliation with System Software
                 </p>
                 <p>
                   We sync with Tally and almost every online accounting
@@ -60,15 +60,11 @@ const makeTheSwitch = (path) => {
         <section className="container-fluid make_the_switch__sub_section" role="region" aria-labelledby="accounting-solutions-heading">
           <div className="container">
             <h2 id="accounting-solutions-heading" className="col-primary sub-heading c-fw-600 text-center pb-4">
-              A Simple Accounting Solution for all your Business needs.
+              Invoices,Unlimited user access ,"Features that empower your business accounting".
             </h2>
             <div className="row align-items-center mb-5">
               <div className="col-md-6 col-sm-12 order-1">
                 <div>
-                  <h2 className="col-primary sub-heading c-fw-600 pb-3">
-                    A Simple Accounting Solution for all your Business needs.
-                  </h2>
-
                   <p className="col-primary c-fs-4 c-fw-600">
                     Inventory Management
                   </p>

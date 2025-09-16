@@ -9,14 +9,14 @@ const inventoryManagementSoftware = (path) => {
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
-  const [faq, setFaq] = useState([])
-  const country = linkPath.country || "global";
-  const heading = {
-    "global": "Efficient Warehouse Inventory Management Solutions",
-    "ae": "Advanced Inventory Tracking System for Real-Time Insights",
-    "uk": "Best Inventory Management Software for Businesses",
-    "in": "Top Inventory Accounting Software for Efficient Tracking",
-  }
+  const [faq, setFaq]= useState([])
+const country = linkPath.country;
+const heading = {
+  global: "Efficient Warehouse Inventory Management Solutions",
+  india: "Top Inventory Accounting Software for Efficient Tracking",
+  ae: "Advanced Inventory Tracking System for Real-Time Insights",
+  uk: "Best Inventory Management Software for Businesses",
+}
   useEffect(() => {
     setFaq(faqs['inventory-management-software']);
   }, []);

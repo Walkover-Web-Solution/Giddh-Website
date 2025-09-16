@@ -22,7 +22,7 @@ const gst = (path) => {
               <h2 className="c-fs-3 col-dark-light fw-light m-3" id="gst-reporting-heading">
                 Error-Free GST Reporting for Your Business
               </h2>
-
+              <h1 className="heading c-fw-600  col-primary">GST Software for Filing & Accounting in India</h1>
               <h2 className="c-fs-3">Seamless Integration with Accounting Systems</h2>
             </div>
             <div className="tax-image mt-auto" role="img" aria-label="GST banner image">

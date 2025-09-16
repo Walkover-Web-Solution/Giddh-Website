@@ -110,7 +110,6 @@ const terms = (path) => {
               <h3 className="mb-2 c-fs-3 c-fw-400 c-fs-4">You</h3>
               <p className="mb-4 c-fs-5">Your has a corresponding meaning.</p>
               <h2 className="mb-3 c-fs-4  sub-heading">2. {heading[country] || heading.global}</h2>
-
               <p className="mb-4 c-fs-5">
                 Giddh grants You the right to access and use the Service via the
                 Website with the particular user roles available to You

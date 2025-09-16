@@ -21,7 +21,7 @@ const allFeatures = (path) => {
         hasMoreContent: false,
       },
       {
-        name: "Unlimited user access",
+        name: "Unlimited User Accounting Software for Scalable Growth",
         image: "/feature-unlimited-user-access.svg",
         description:
           "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
@@ -156,7 +156,7 @@ const allFeatures = (path) => {
       },
     },
     {
-      name: "Unlimited user access",
+      name: "Invoicing to Branch and warehouse management",
       image: "/feature-unlimited-user-access.svg",
       description:
         "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",
@@ -469,7 +469,7 @@ const allFeatures = (path) => {
       hasMoreContent: false,
     },
     {
-      name: "Unlimited user access",
+      name: "Seamless Online Accounting Software with Multi-Currency Support",
       image: "/feature-unlimited-user-access.svg",
       description:
         "Grant unlimited user access with customizable roles, to enhanced security and also allowing you to set restrictions based on  Date range, CIDR ranges.",

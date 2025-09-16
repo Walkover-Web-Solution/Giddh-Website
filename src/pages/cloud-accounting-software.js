@@ -14,7 +14,13 @@ const anywhereAnytime = (path) => {
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
-
+  const country = linkPath.country || "global";
+  const heading = {
+    global: "Cloud Accounting Software",
+    india: "Run your business from any corner of the world!, Why Giddh is Better Than Conventional Accounting Software",
+    ae: "VAT-Compliant Cloud Accounting in the UAE",
+    uk: "Cloud Accounting Software",
+  };
   useEffect(() => {
     setFaq(faqs['cloud-accounting-software'])
   }, []);
@@ -35,7 +41,7 @@ const anywhereAnytime = (path) => {
                   Generate invoices, view reports & manage your books wherever
                   you are
                   { isIndia && <>, and <h2 className="col-grey c-fs-3 mb-5 d-inline">Simplify GST Filing and Compliance</h2></> }
-                  { isAE && <>, and <h2 className="col-grey c-fs-3 mb-5 d-inline">Effortless VAT Management and Reporting</h2></> }
+                  { isAE && <>, and <h2 className="col-grey c-fs-3 mb-5 d-inline">Why Giddh is Better Than Conventional Accounting Software</h2></> }
                 </span>
                 <div className="features__heading_container__links">
                   <a
@@ -81,7 +87,7 @@ const anywhereAnytime = (path) => {
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
                 <h2 id="business-heading" className="sub-heading col-primary c-fw-600 mb-3">
-                  Run your business from any corner of the world!
+                  {heading[country] || heading.global}
                 </h2>
                 <p className="c-fs-4 mb-5" role="note">
                   {isIndia
@@ -110,7 +116,7 @@ const anywhereAnytime = (path) => {
         </section>
         <section className="container-fluid features__description_container mt-5" aria-labelledby="features-description-heading">
           <div className="container">
-            <h2 id="features-description-heading" className="visually-hidden">Features Description</h2>
+            <h2 id="features-description-heading" className="visually-hidden">Feature Description</h2>
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
               <div className="col-md-12 col-lg-6">
                 <div className="features__description_container__content">
