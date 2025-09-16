@@ -72,7 +72,7 @@ export default function GiddhPopUp() {
                             </div>
 
                             <div
-                                className={`sm:pt-5 pt-3 lg:align-self-baseline md:align-self-end align-self-center`}
+                                className="pt-3 pt-sm-5 align-self-center align-self-md-end align-self-lg-start"
                             >
                                 <Image
                                     src="/img/laptop_mockup.svg"
