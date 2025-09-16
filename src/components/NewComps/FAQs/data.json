@@ -1,25 +1,13 @@
 [
     {
+      "question": "Is Giddh the Right Accounting Solution for My Business?",
+      "answer":
+        "Giddh is ideal for cloud-based accounting software for startups, small to medium-sized businesses (with a revenue of ₹1 lakh to ₹10 crore), accounting firms, B2B service providers, and manufacturers. Whether you need multi-branch accounting, inventory tracking, or GST & VAT compliance, Giddh streamlines your financial management, helping you scale efficiently and stay compliant across India, UAE, and the UK"
+    },
+    {
       "question": "How secure is my financial data on Giddh?",
       "answer":
         "Giddh takes data security seriously. We implement IP security, encryption, and secure access controls to ensure that your financial data is protected from unauthorized access. With regular backups and secure cloud infrastructure, your sensitive business data is safe and always available when you need it."
-    },
-    {
-      "question":
-        "Can Giddh assist my business in complying with GST and VAT regulations?",
-      "answer":
-        "Yes! Giddh, a software for GST billings, simplifies GST & VAT compliance for enterprises operating in India, UAE, and the UK. With direct integration for GST invoicing, filing, and reconciliation, Giddh ensures that your business stays compliant with regional tax regulations effortlessly."
-    },
-    {
-      "question": "How does Giddh simplify inventory management for my business?",
-      "answer":
-        "Giddh's real-time inventory tracking, along with features like barcode integration, helps you manage products and services efficiently. Whether you're tracking stock in different locations or syncing data with platforms like Shopify, Giddh ensures accurate and timely inventory management."
-    },
-    {
-      "question":
-        "Can Giddh handle the accounting needs of accounting firms and chartered accountants?",
-      "answer":
-        "Yes! Giddh offers white-label solutions, making it easy for accounting firms to manage multiple clients and handle complex accounting tasks, such as ledger entries and tax compliance, all within one platform. Simplify your client management and focus on delivering value."
     },
     {
       "question": "Can Giddh integrate with other tools and platforms I use?",
@@ -28,13 +16,25 @@
     },
     {
       "question":
-        "Is Giddh suitable for businesses with multiple branches or warehouses?",
+        "Can Giddh assist my business in complying with GST and VAT regulations?",
       "answer":
-        "Yes! Giddh's multi-branch and warehouse management capabilities enable you to manage operations efficiently across various locations. Whether you're tracking inventory, transferring stock, or generating location-specific reports, Giddh provides a unified solution to handle all your business functions under one subscription."
+        "Yes! Giddh, a GST accounting software for billing, simplifies GST & VAT compliance for enterprises operating in India, UAE, and the UK. With Giddh, you can directly integrate GST billing software for small businesses, making it effortless to stay compliant with regional tax regulations and facilitating seamless filing and reconciliation."
     },
     {
-      "question": "Is Giddh the Right Accounting Solution for My Business?",
+      "question":
+        "Can Giddh handle the accounting needs of accounting firms and chartered accountants?",
       "answer":
-        "Giddh is ideal for accounting software for startups, small to medium-sized businesses (with a revenue of ₹1 lakh to ₹10 crore), accounting firms, B2B service providers, and manufacturers. Whether you need multi-branch accounting, inventory tracking, or GST & VAT compliance, Giddh streamlines your financial management, helping you scale efficiently and stay compliant across India, UAE, and the UK."
+        "Yes! Giddh offers white-label solutions, making it easy for accounting firms to manage multiple clients and handle complex accounting tasks, such as ledger entries and tax compliance, all within one platform. Simplify your client management and focus on delivering value."
+    },
+    {
+      "question":
+        "Is Giddh suitable for businesses with multiple branches or warehouses?",
+      "answer":
+        "Yes! Giddh's multi-branch and warehouse management capabilities enable you to manage operations efficiently across various locations. Whether you're tracking an inventory management system for small business or generating location-specific reports, Giddh provides a unified solution to handle all your business functions under one subscription."
+    },
+    {
+      "question": "How does Giddh simplify inventory management for my business?",
+      "answer":
+        "Giddh's real-time inventory management software, along with features like barcode integration, helps you manage products and services efficiently. Whether you're tracking stock in different locations or syncing data with platforms like Shopify, Giddh ensures accurate and timely inventory management."
     }
   ]
