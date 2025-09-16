@@ -1,10 +1,12 @@
+import React from "react";
 import whyGiddhData from "./data.json";
+import { MdClose, MdDone } from "react-icons/md";
 
 export default function WhyGiddh() {
   const data = {
-    heading: "Why is Giddh better than most!",
+    heading: "Why Choose Giddh?",
     subheading:
-      "In today's business landscape, understanding and managing the financial status of your organization are crucial for making informed business decisions and sustainable growth. This necessity applies not only to professional accountants but also to all professionals working in various industries.",
+      "Giddh combines real-time insights, seamless compliance, and powerful features to simplify accounting. It grows with your business, offering clarity, control, and ease at every step."
   };
 
   return (
@@ -14,51 +16,57 @@ export default function WhyGiddh() {
 
       <div className="bg-white border rounded overflow-hidden d-none d-md-block">
         <div className="row border-bottom">
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">
+          <div className="col-md-4 px-4 py-3 fw-semibold text-dark border-end">
             Feature
           </div>
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">
-            Giddh
+          <div className="col-md-4 px-4 py-3 fw-semibold text-dark border-end">
+            Other Accounting Software
           </div>
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">
-            Zoho
+          <div className="col-md-4 px-4 py-3 fw-semibold text-dark">
+            Giddh Accounting Software
           </div>
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark">Tally</div>
         </div>
 
         {whyGiddhData.map((row, index) => (
           <div key={index} className="row border-bottom ">
-            <div className="col-md-3 px-4 py-3 border-end">{row.feature}</div>
-            <div className="col-md-3 px-4 py-3 border-end">{row.giddh}</div>
-            <div className="col-md-3 px-4 py-3 border-end">{row.zoho}</div>
-            <div className="col-md-3 px-4 py-3">{row.tally}</div>
+            <div className="col-md-4 px-4 py-3 border-end">{row["features"]}</div>
+            <div className="col-md-4 px-4 py-3 border-end">
+              {row["Other Accounting Software"] === "true" ? <MdDone size={26} className="text-success" /> : <MdClose size={26} className="text-danger" />}
+            </div>
+            <div className="col-md-4 px-4 py-3">
+              {row["Giddh Accounting Software"] === "true" ? <MdDone size={26} className="text-success" /> : <MdClose size={26} className="text-danger" />}
+            </div>
           </div>
         ))}
       </div>
-
-      <div className="d-block d-md-none ">
-        {whyGiddhData.map((row, index) => (
-          <div key={index} className="bg-white border rounded shadow p-3 mb-3">
-            <div className="mb-2">
-              <div className="c-fw-600 c-fs-2">{row.feature}</div>
-            </div>
-
-            <div className="mb-2 lh-sm">
-              <small className="fw-semibold col-primary">Giddh</small>
-              <div>{row.giddh}</div>
-            </div>
-
-            <div className="mb-2 lh-sm">
-              <small className="fw-semibold col-primary">Zoho</small>
-              <div>{row.zoho}</div>
-            </div>
-
-            <div className="lh-sm">
-              <small className="fw-semibold col-primary">Tally</small>
-              <div>{row.tally}</div>
-            </div>
+      <div className="d-block d-md-none overflow-y-auto">
+        <div className="bg-white border rounded">
+          <div className="row border-bottom fw-semibold text-dark">
+            <div className="col-4 px-2 py-2 ps-4 border-end">Feature</div>
+            <div className="col-4 px-2 py-2 border-end">Other</div>
+            <div className="col-4 px-2 py-2">Giddh</div>
           </div>
-        ))}
+
+          {whyGiddhData.map((row, index) => (
+            <div key={index} className="row border-bottom">
+              <div className="col-4 px-2 py-2 border-end ps-4">{row["features"]}</div>
+              <div className="col-4 px-2 py-2 border-end">
+                {row["Other Accounting Software"] === "true" ? (
+                  <MdDone size={20} className="text-success" />
+                ) : (
+                  <MdClose size={20} className="text-danger" />
+                )}
+              </div>
+              <div className="col-4 px-2 py-2">
+                {row["Giddh Accounting Software"] === "true" ? (
+                  <MdDone size={20} className="text-success" />
+                ) : (
+                  <MdClose size={20} className="text-danger" />
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

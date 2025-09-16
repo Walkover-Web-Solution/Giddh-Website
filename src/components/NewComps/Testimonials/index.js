@@ -55,8 +55,7 @@ export default function Testimonials() {
         <p
           className={`c-fs-5 mx-auto pb-4 text-white-50 text-center c-fw-400`}
         >
-          See who's talking about us and why businesses trust us around the
-          globe.
+          Real businesses. Real results. Look how Giddh empowers companies worldwide to streamline accounting, save time, and accelerate growth.
         </p>
       </div>
       <div className="container d-flex flex-row py-1 gap-5 justify-content-center">
@@ -89,7 +88,6 @@ export default function Testimonials() {
                 </div>
               </div>
             ))}
-            
           </div>
         </div>
         <div
