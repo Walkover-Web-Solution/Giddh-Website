@@ -25,7 +25,7 @@ export default function GiddhFor() {
                     onClick={() => setActiveTab(index)}
                   >
                     <span>{item?.icon}</span>
-                    <span>{item?.name.split(" ")[0]}</span>
+                    <span>{item?.title}</span>
                   </div>
                   {activeTab === index && (
                     <div
@@ -52,7 +52,7 @@ export default function GiddhFor() {
                 <img
                   src={data?.content[activeTab]?.image}
                   alt={data?.content[activeTab]?.name}
-                  className={`${style.image} rounded`}
+                  className={`${style.image} w-100 h-auto rounded`}
                 />
               </div>
             </div>

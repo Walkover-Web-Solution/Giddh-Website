@@ -1,16 +1,8 @@
-.tab {
-  &:hover {
-    background: var(--col-primary);
-  }
-}
 .tabUnderline {
   height: 3px;
-  background: var(--col-white);
+  background: var(--col-faded-blue);
 }
 
-.image{
-    width: 100%;
-    height: auto;
-    max-width: clamp(320px, 50%, 520px);
-    
+.image {
+  max-width: clamp(320px, 50%, 520px);
 }

@@ -8,6 +8,7 @@ import FAQs from "@/components/NewComps/FAQs";
 import SeeGiddhInAction from "@/components/NewComps/SeeGiddhInAction";
 import CTASection from "@/components/NewComps/CTASection";
 import Footer from "@/components/NewComps/Footer";
+import GiddhPopUp from "@/components/NewComps/GiddhPopUp";
 
 const index = (path) => {
   const link = path.path;
@@ -21,8 +22,22 @@ const index = (path) => {
     }
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const modalEl = document.getElementById("giddhPopUp");
+      modalEl.classList.add("show");
+      modalEl.style.display = "block";
+      document.body.classList.add("modal-open");
+      const backdrop = document.createElement("div");
+      backdrop.className = "modal-backdrop fade show";
+      document.body.appendChild(backdrop);
+    }, 45000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
+      <GiddhPopUp />
       <Banner path={link} />
       <Features path={link} />
       <WhyGiddh />

@@ -1,61 +1,42 @@
+import React from "react";
 import whyGiddhData from "./data.json";
+import { MdClose, MdDone } from "react-icons/md";
 
 export default function WhyGiddh() {
   const data = {
-    heading: "Why is Giddh better than most!",
+    heading: "Why Choose Giddh?",
     subheading:
-      "In today's business landscape, understanding and managing the financial status of your organization are crucial for making informed business decisions and sustainable growth. This necessity applies not only to professional accountants but also to all professionals working in various industries.",
+      "Giddh combines real-time insights, seamless compliance, and powerful features to simplify accounting. It grows with your business, offering clarity, control, and ease at every step."
   };
 
   return (
     <section className="container py-4 mt-5 mb-5 outfit-font">
       <h1 className="text-center mb-4 cactus-font">{data.heading}</h1>
-      <p className="text-center mb-4 w-75 mx-auto ">{data.subheading}</p>
-
-      <div className="bg-white border rounded overflow-hidden d-none d-md-block">
-        <div className="row border-bottom">
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">
-            Feature
-          </div>
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">
-            Giddh
-          </div>
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark border-end">
-            Zoho
-          </div>
-          <div className="col-md-3 px-4 py-3 fw-semibold text-dark">Tally</div>
+      <p className="text-center mb-4 w-75 mx-auto">{data.subheading}</p>
+      <div className="bg-white border rounded overflow-hidden">
+        <div className="row border-bottom fw-semibold text-dark text-center">
+          <div className="col-6 col-md-4 px-3 py-2 border-end">Feature</div>
+          <div className="col-3 col-md-4 px-3 py-2 border-end">Other</div>
+          <div className="col-3 col-md-4 px-3 py-2">Giddh</div>
         </div>
-
         {whyGiddhData.map((row, index) => (
-          <div key={index} className="row border-bottom ">
-            <div className="col-md-3 px-4 py-3 border-end">{row.feature}</div>
-            <div className="col-md-3 px-4 py-3 border-end">{row.giddh}</div>
-            <div className="col-md-3 px-4 py-3 border-end">{row.zoho}</div>
-            <div className="col-md-3 px-4 py-3">{row.tally}</div>
-          </div>
-        ))}
-      </div>
-
-      <div className="d-block d-md-none ">
-        {whyGiddhData.map((row, index) => (
-          <div key={index} className="bg-white border rounded shadow p-3 mb-3">
-            <div className="mb-2">
-              <div className="c-fw-600 c-fs-2">{row.feature}</div>
+          <div key={index} className="row border-bottom text-center">
+            <div className="col-6 col-md-4 px-3 py-2 border-end ">
+              {row["features"]}
             </div>
-
-            <div className="mb-2 lh-sm">
-              <small className="fw-semibold col-primary">Giddh</small>
-              <div>{row.giddh}</div>
+            <div className="col-3 col-md-4 px-3 py-2 border-end">
+              {row["Other Accounting Software"] === "true" ? (
+                <MdDone size={20} className="text-success" />
+              ) : (
+                <MdClose size={20} className="text-danger" />
+              )}
             </div>
-
-            <div className="mb-2 lh-sm">
-              <small className="fw-semibold col-primary">Zoho</small>
-              <div>{row.zoho}</div>
-            </div>
-
-            <div className="lh-sm">
-              <small className="fw-semibold col-primary">Tally</small>
-              <div>{row.tally}</div>
+            <div className="col-3 col-md-4 px-3 py-2">
+              {row["Giddh Accounting Software"] === "true" ? (
+                <MdDone size={20} className="text-success" />
+              ) : (
+                <MdClose size={20} className="text-danger" />
+              )}
             </div>
           </div>
         ))}

@@ -1,8 +1,51 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import style from "./Testimonials.module.scss";
 import data from "./data.json";
 import { MdReviews } from "react-icons/md";
 export default function Testimonials() {
+  const scrollRef = useRef(null);
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    let scrollStep = 1;
+    let interval;
+
+    const startScrolling = () => {
+      if (!interval && scrollContainer) {
+        interval = setInterval(() => {
+          if (
+            scrollContainer.scrollTop + scrollContainer.clientHeight >=
+            scrollContainer.scrollHeight
+          ) {
+            scrollContainer.scrollTop = 0;
+          } else {
+            scrollContainer.scrollTop += scrollStep;
+          }
+        }, 30);
+      }
+    };
+
+    const stopScrolling = () => {
+      if (interval) {
+        clearInterval(interval);
+        interval = null;
+      }
+    };
+
+    if (scrollContainer) {
+      startScrolling();
+      scrollContainer.addEventListener('mouseenter', stopScrolling);
+      scrollContainer.addEventListener('mouseleave', startScrolling);
+    }
+
+    return () => {
+      stopScrolling();
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('mouseenter', stopScrolling);
+        scrollContainer.removeEventListener('mouseleave', startScrolling);
+      }
+    };
+  }, []);
+
   return (
     <section className="py-5 outfit-font bg-accent">
       <div className="d-flex flex-column text-center mx-auto px-3">
@@ -12,14 +55,14 @@ export default function Testimonials() {
         <p
           className={`c-fs-5 mx-auto pb-4 text-white-50 text-center c-fw-400`}
         >
-          See who's talking about us and why businesses trust us around the
-          globe.
+          Real businesses. Real results. Look how Giddh empowers companies worldwide to streamline accounting, save time, and accelerate growth.
         </p>
       </div>
       <div className="container d-flex flex-row py-1 gap-5 justify-content-center">
         <div className="d-flex justify-content-center">
           <div
-            className={`border border-light rounded mx-auto overflow-y-auto border-col-light ${style.scrollableContainer}`}
+            ref={scrollRef}
+            className={`border overflow-y-hidden border-light rounded mx-auto ${style.scrollableContainer}`}
           >
             {data.map((testimonial, index) => (
               <div
@@ -56,7 +99,7 @@ export default function Testimonials() {
               <br />
               <em className="c-fw-400">Growth with</em>
               <br />
-              <strong className="c-fw-600">GIDDH</strong>
+              <img src="/img/giddh-logo-primary.svg" alt="Giddh Logo"/>
             </h2>
           </div>
         </div>
