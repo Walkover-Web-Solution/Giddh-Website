@@ -1,7 +1,25 @@
 {
-    "StackedBanner": {
+    "stackedBanner": {
         "heading": "GIDDH — Smart, Simple & Powerful Accounting for Growing Businesses",
         "subHeading": "GIDDH makes accounting easy with clear ledger entries, unlimited users, and strong inventory management — all at affordable prices. Track sales, purchases, and manufacturing in one place and grow your business with confidence.",
         "image": "/img/home-page/powerful-accounting-for-growing-businesses.svg"
+    },
+    "cta": {
+        "heading": "Start Your Accounting Revolution with Giddh",
+        "subheading": "Try Giddh free and see how effortless accounting can be. Your books deserve better.",
+        "image": "/img/girl-avatar.svg",
+        "buttons": [
+            {
+                "text": "Get Started",
+                "link": "/signup",
+                "type": "primary",
+                "scroll": "SeeGiddhInAction"
+            },
+            {
+                "text": "Watch Video",
+                "link": "https://www.youtube.com/watch?v=KlW0pX0pX0",
+                "type": "secondary"
+            }
+        ]
     }
 }

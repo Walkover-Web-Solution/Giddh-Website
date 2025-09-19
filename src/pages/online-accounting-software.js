@@ -6,7 +6,7 @@ import WhyGiddh from "@/components/NewComps/WhyGiddh";
 import Testimonials from "@/components/NewComps/Testimonials";
 import FAQs from "@/components/NewComps/FAQs";
 import SeeGiddhInAction from "@/components/NewComps/SeeGiddhInAction";
-import CTASection from "@/components/NewComps/CTASection";
+import CTASection from "@/components/NewComps/CTA";
 import Footer from "@/components/NewComps/Footer";
 import GiddhPopUp from "@/components/NewComps/GiddhPopUp";
 
