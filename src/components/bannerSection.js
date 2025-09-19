@@ -52,7 +52,7 @@ const bannerSection = (path) => {
               <h1 className="col-primary heading-text">
                 {link.isGlobal &&
                   "Giddh - Secure, Scalable, and Compliant Accounting Software"}
-                {link.isIndia && "Business Accounting Software India"}
+                {link.isIndia && "Best Accounting & Cloud Software for Businesses in India"}
                 {link.isUK &&
                   "VAT-Compliant Accounting Software For UK Small Businesses"}
                 {link.isAE &&

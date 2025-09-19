@@ -31,7 +31,7 @@ const index = (path) => {
       const backdrop = document.createElement("div");
       backdrop.className = "modal-backdrop fade show";
       document.body.appendChild(backdrop);
-    }, 1);
+    }, 45000);
 
     return () => clearTimeout(timer);
   }, []);
