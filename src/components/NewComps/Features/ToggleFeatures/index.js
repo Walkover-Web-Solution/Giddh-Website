@@ -1,11 +1,11 @@
 import data from "./data.json";
-import style from "./Features.module.scss";
+import style from "./ToggleFeatures.module.scss";
 import { useState, useCallback, memo } from "react";
 import Image from "next/image";
 import * as MdIcons from "react-icons/md";
 import { MdCircle } from "react-icons/md";
 
-export default function Features() {
+export default function ToggleFeatures() {
   const [expandedFeature, setExpandedFeature] = useState(0);
   const Icon = MdIcons[data[expandedFeature].icon];
 

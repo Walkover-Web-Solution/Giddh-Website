@@ -2,7 +2,7 @@ import Image from "next/image";
 import data from "./data.json";
 import { MdCircle } from "react-icons/md";
 
-export default function HomePageFeatures() {
+export default function AlternateFeatures() {
   const features = Array.isArray(data) ? data : [];
 
   return (

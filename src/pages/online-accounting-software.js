@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import Banner from "@/components/NewComps/Banner";
-import Features from "@/components/NewComps/Features";
+import SplitBanner from "@/components/NewComps/Banner/SplitBanner";
+import ToggleFeatures from "@/components/NewComps/Features/ToggleFeatures";
 import GiddhFor from "@/components/NewComps/GiddhFor";
 import WhyGiddh from "@/components/NewComps/WhyGiddh";
 import Testimonials from "@/components/NewComps/Testimonials";
@@ -38,8 +38,8 @@ const index = (path) => {
   return (
     <>
       <GiddhPopUp />
-      <Banner path={link} />
-      <Features path={link} />
+      <SplitBanner path={link} />
+      <ToggleFeatures path={link} />
       <WhyGiddh />
       <CTASection />
       <GiddhFor />
