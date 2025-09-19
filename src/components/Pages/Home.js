@@ -9,8 +9,7 @@ import GiddhIndustries from "@/components/NewComps/GiddhIndustries";
 import Pricing from "@/components/NewComps/Pricing";
 import GiddhBenefits from "@/components/NewComps/GiddhBenefits";
 
-export default function HomePage({ pageData }) {
-  console.log("⚡️ ~ :13 ~ HomePage ~ pageData:", pageData)
+export default function Home({ pageData }) {
   return (
     <>
       <StackedBanner compData={pageData?.StackedBanner} />
