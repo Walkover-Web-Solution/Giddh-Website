@@ -1,0 +1,112 @@
+{
+    "features": [
+      "Invoice Count",
+      "Bill Count",
+      "Companies",
+      "Accountant Consultant",
+      "Unlimited users access"
+    ],
+    "plans": {
+      "annual": [
+        {
+          "name": "Free Plan",
+          "price": "Free",
+          "billing": "per annum",
+          "features": {
+            "Invoice Count": 1000,
+            "Bill Count": 1000,
+            "Companies": 1,
+            "Accountant Consultant": false,
+            "Unlimited users access": false
+          }
+        },
+        {
+          "name": "Oak",
+          "price": "₹ 4,000",
+          "billing": "per annum",
+          "features": {
+            "Invoice Count": 3000,
+            "Bill Count": 3000,
+            "Companies": 1,
+            "Accountant Consultant": true,
+            "Unlimited users access": true
+          }
+        },
+        {
+          "name": "Pro",
+          "price": "₹ 10,000",
+          "billing": "per annum",
+          "features": {
+            "Invoice Count": 5000,
+            "Bill Count": 5000,
+            "Companies": 10,
+            "Accountant Consultant": true,
+            "Unlimited users access": true
+          }
+        },
+        {
+          "name": "Enterprise",
+          "price": "₹ 15,000",
+          "billing": "per annum",
+          "features": {
+            "Invoice Count": 10000,
+            "Bill Count": 10000,
+            "Companies": 100,
+            "Accountant Consultant": true,
+            "Unlimited users access": true
+          }
+        }
+      ],
+      "monthly": [
+        {
+          "name": "Free Plan",
+          "price": "Free",
+          "billing": "per month",
+          "features": {
+            "Invoice Count": 80,
+            "Bill Count": 80,
+            "Companies": 1,
+            "Accountant Consultant": false,
+            "Unlimited users access": false
+          }
+        },
+        {
+          "name": "Oak",
+          "price": "₹ 400",
+          "billing": "per month",
+          "features": {
+            "Invoice Count": 250,
+            "Bill Count": 250,
+            "Companies": 1,
+            "Accountant Consultant": true,
+            "Unlimited users access": "unlimited"
+          }
+        },
+        {
+          "name": "Pro",
+          "price": "₹ 1,000",
+          "billing": "per month",
+          "features": {
+            "Invoice Count": 500,
+            "Bill Count": 500,
+            "Companies": 10,
+            "Accountant Consultant": true,
+            "Unlimited users access": "unlimited"
+          }
+        },
+        {
+          "name": "Enterprise",
+          "price": "₹ 1,500",
+          "billing": "per month",
+          "features": {
+            "Invoice Count": 1000,
+            "Bill Count": 1000,
+            "Companies": 100,
+            "Accountant Consultant": true,
+            "Unlimited users access": "unlimited"
+          }
+        }
+      ]
+    }
+  }
+  
