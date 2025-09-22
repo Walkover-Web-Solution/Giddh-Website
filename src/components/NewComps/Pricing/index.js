@@ -1,8 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Pricing.module.scss";
+import staticData from "./pricingData.json";
 
 export default function Pricing({ pageInfo }) {
   const [isAnnual, setIsAnnual] = useState(true);
+  const [pricingData, setPricingData] = useState([]);
+
+  useEffect(() => {
+    const fetchPricingData = async () => {
+      try {
+        const response = await fetch(
+          `https://api.giddh.com/v2/subscription/plans/all?regionCode=${`IND`}`
+        ); // Replace with actual API endpoint
+        const data = await response.json();
+        setPricingData(data?.body);
+      } catch (error) {
+        console.error("Error fetching pricing data:", error);
+      }
+    };
+
+    fetchPricingData();
+  }, []);
+
   return (
     <section>
       <div className="container py-5 d-flex flex-column gap-4">
@@ -58,45 +77,52 @@ export default function Pricing({ pageInfo }) {
                 *All prices are exclusive of GST
               </p>
             </div>
-            <div className="p-2">
-              <p>Invoice Count</p>
-            </div>
-            <div className="p-2">
-              <p>Bill Count</p>
-            </div>
-            <div className="p-2">
-              <p>Companies Limit</p>
-            </div>
-            <div className="p-2">
-              <p>Accountant Consultant</p>
-            </div>
-            <div className="p-2">
-              <p>Unlimited users access</p>
-            </div>
+            {staticData?.features?.map((feature, index) => (
+              <div className="p-2" key={index}>
+                <p>{feature}</p>
+              </div>
+            ))}
           </div>
-          <div
-            className={`p-2 col-2 border-end border-bottom ${styles?.table_header}`}
-          >
-            <p className="p-0 m-0 c-fs-5 text-center">Free Plan</p>
-            <p className="p-0 m-0 c-fs-3 col-primary text-center fw-bold">
-              Free
-            </p>
-            <div className="p-2">
-              <p>Invoice Count</p>
+          {pricingData.map((plan, index) => (
+            <div
+              key={index}
+              className={`p-2 col-2 border-end border-bottom ${styles?.table_header}`}
+            >
+              <div className={`p-2 ${styles.table_header}`}>
+                <p className="p-0 m-0 c-fs-5 text-center">{plan.name}</p>
+                <p className="p-0 m-0 c-fs-3 col-primary text-center fw-bold">
+                  {plan.price}
+                </p>
+              </div>
+              <div className="p-2">
+                <p>{plan.invoicesAllowed}</p>
+              </div>
+              <div className="p-2">
+                <p>{plan.billsAllowed}</p>
+              </div>
+              <div className="p-2">
+                <p>{plan.companiesLimit}</p>
+              </div>
+              <div className="p-2">
+                <p>
+                  {staticData?.plans?.[isAnnual ? 'annual' : 'monthly']?.[
+                    plan.name
+                  ]?.accountantConsultant.includes("in")
+                    ? "Yes"
+                    : "No"}
+                </p>
+              </div>
+              <div className="p-2">
+                <p>
+                  {staticData?.plans?.[isAnnual ? 'annual' : 'monthly']?.[
+                    plan.name
+                  ]?.unlimitedUsersAccess.includes("in")
+                    ? "Yes"
+                    : "No"}
+                </p>
+              </div>
             </div>
-            <div className="p-2">
-              <p>Bill Count</p>
-            </div>
-            <div className="p-2">
-              <p>Companies Limit</p>
-            </div>
-            <div className="p-2">
-              <p>Accountant Consultant</p>
-            </div>
-            <div className="p-2">
-              <p>Unlimited users access</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

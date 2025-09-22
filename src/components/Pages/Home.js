@@ -20,7 +20,7 @@ export default function Home({ pageData, pageInfo }) {
       <CTA hasImage={false} compData={pageData?.cta} />
       <FeedbackCards testimonials={pageData?.testimonials} />
       <Giddhvscomp giddhvscomp={pageData?.giddhvscomp} />
-      {/* <Pricing pageInfo={pageInfo} /> */}
+      <Pricing pageInfo={pageInfo} />
       <GiddhBenefits benefits={pageData?.benefits} />
       <GiddhIndustries giddhIndustries={pageData?.giddhIndustries} />
       <CTA hasImage={false} compData={pageData?.ctaTwo} />
