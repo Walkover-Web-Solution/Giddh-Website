@@ -1,4 +1,4 @@
-import Home from "@/components/Pages/in/Home";
+import Home from "@/components/Pages/Home";
 const inIndex = ({pageData, pageinfo}) => {
   return (
     <>
