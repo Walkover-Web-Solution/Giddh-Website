@@ -15,7 +15,7 @@ export default function Home({ pageData, pageInfo }) {
     <>
       <StackedBanner compData={pageData?.stackedBanner} />
       <Stats stats={pageData?.stats} />
-      <AlternateFeatures feat={pageData?.features} />
+      <AlternateFeatures features={pageData?.features} />
       <TrustBadgeScrollable heading={pageData?.trustBadgeBrands} />
       <CTA hasImage={false} compData={pageData?.cta} />
       <FeedbackCards testimonials={pageData?.testimonials} />

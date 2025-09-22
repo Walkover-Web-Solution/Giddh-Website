@@ -1,49 +1,51 @@
 {
-    "stackedBanner": {
-      "heading": "Powerful All-in-One Accounting Software For Your Business Growth",
-      "subHeading": "Effortlessly manage accounting, taxes, invoicing, sales, inventory, and other business processes with Giddh.",
-      "image": "/img/home-page/powerful-accounting-for-growing-businesses.svg",
-      "buttons": [
-        {
-          "text": "Get Started",
-          "link": "/signup"
-        },
-        {
-          "text": "Request a Demo",
-          "link": "/signup"
-        }
-      ]
-    },
-    "cta": {
-      "heading": "Smarter accounting starts here.",
-      "subheading": "Giddh simplifies your finances so you can focus on what matters—growing your business.",
-      "image": "/img/girl-avatar.svg",
-      "buttons": [
-        {
-          "text": "Try Giddh for free",
-          "link": "/signup",
-          "type": "secondary"
-        }
-      ]
-    },
-    "stats": {
-      "heading": "Our Commitment Backed by Data",
-      "stats": [
-        {
-          "value": "4.8/5",
-          "label": "Average User Rating"
-        },
-        {
-          "value": "85%",
-          "label": "Improvement in Financial Visibility"
-        },
-        {
-          "value": "100%",
-          "label": "Data Security & Uptime Guarantee"
-        }
-      ]
-    },
-    "features": [
+  "stackedBanner": {
+    "heading": "Powerful All-in-One Accounting Software For Your Business Growth",
+    "subHeading": "Effortlessly manage accounting, taxes, invoicing, sales, inventory, and other business processes with Giddh.",
+    "image": "/img/home-page/powerful-accounting-for-growing-businesses.svg",
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/signup"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Smarter accounting starts here.",
+    "subheading": "Giddh simplifies your finances so you can focus on what matters—growing your business.",
+    "image": "/img/girl-avatar.svg",
+    "buttons": [
+      {
+        "text": "Try Giddh for free",
+        "link": "/signup",
+        "type": "secondary"
+      }
+    ]
+  },
+  "stats": {
+    "heading": "Our Commitment Backed by Data",
+    "stats": [
+      {
+        "value": "4.8/5",
+        "label": "Average User Rating"
+      },
+      {
+        "value": "85%",
+        "label": "Improvement in Financial Visibility"
+      },
+      {
+        "value": "100%",
+        "label": "Data Security & Uptime Guarantee"
+      }
+    ]
+  },
+  "features": {
+    "heading": "What Makes Giddh the Smart Accounting Choice",
+    "content": [
       {
         "feature": "Simplified Ledger-Based Accounting",
         "img": "/img/home-page/simplified-ledger-based-accounting.svg",
@@ -134,7 +136,7 @@
           "Scale user access as your team grows at no extra cost."
         ]
       }
-    ],
+    ]},
     "trustBadgeBrands": {
       "title": "Our few clients",
       "description": "See who’s talking about us and why businesses trust us around the globe."
@@ -143,20 +145,56 @@
       "heading": "Industries Love Giddh",
       "description": "Industries love Giddh because it transforms the way businesses manage their finances. By automating routine accounting processes, offering instant access to data, and ensuring accuracy at every step, Giddh helps organisations across sectors save time, cut costs, and make smarter decisions for long-term growth.",
       "row-one": [
-        { "name": "Manufacturing", "img": "/img/industries/manufacturing.svg" },
-        { "name": "Trading", "img": "/img/industries/trading.svg" },
-        { "name": "Agri-Fintech", "img": "/img/industries/agri-fintech.svg" },
-        { "name": "Tourism", "img": "/img/industries/tourism.svg" },
-        { "name": "Construction", "img": "/img/industries/construction.svg" },
-        { "name": "Infrastructure", "img": "/img/industries/infrastructure.svg" }
+        {
+          "name": "Manufacturing",
+          "img": "/img/industries/manufacturing.svg"
+        },
+        {
+          "name": "Trading",
+          "img": "/img/industries/trading.svg"
+        },
+        {
+          "name": "Agri-Fintech",
+          "img": "/img/industries/agri-fintech.svg"
+        },
+        {
+          "name": "Tourism",
+          "img": "/img/industries/tourism.svg"
+        },
+        {
+          "name": "Construction",
+          "img": "/img/industries/construction.svg"
+        },
+        {
+          "name": "Infrastructure",
+          "img": "/img/industries/infrastructure.svg"
+        }
       ],
       "row-two": [
-        { "name": "Ayurveda", "img": "/img/industries/ayurveda.svg" },
-        { "name": "Jewellery", "img": "/img/industries/jewellery.svg" },
-        { "name": "FMCG", "img": "/img/industries/fmcg.svg" },
-        { "name": "E-commerce", "img": "/img/industries/e-commerce.svg" },
-        { "name": "Clothing", "img": "/img/industries/clothing.svg" },
-        { "name": "Food & Beverage", "img": "/img/industries/food&beverage.svg" }
+        {
+          "name": "Ayurveda",
+          "img": "/img/industries/ayurveda.svg"
+        },
+        {
+          "name": "Jewellery",
+          "img": "/img/industries/jewellery.svg"
+        },
+        {
+          "name": "FMCG",
+          "img": "/img/industries/fmcg.svg"
+        },
+        {
+          "name": "E-commerce",
+          "img": "/img/industries/e-commerce.svg"
+        },
+        {
+          "name": "Clothing",
+          "img": "/img/industries/clothing.svg"
+        },
+        {
+          "name": "Food & Beverage",
+          "img": "/img/industries/food&beverage.svg"
+        }
       ]
     },
     "testimonials": [
@@ -231,103 +269,101 @@
         "testimonial": "The inventory management helps in restaurant management and the branch creation helps to manage multiple branches under a single platform. It helps to see the branch profiles along with the warehouses."
       }
     ],
-    "giddhvscomp": {
-      "heading": "The Smart Choice for Your Business Accounting",
-      "subheading": "Streamline your finances with Giddh’s unique features and superior value in accounting software for businesses over the competition.",
-      "content": [
-        {
-          "feature": "Multi-User Access",
-          "giddh": "Unlimited user access",
-          "quickbooks": "Limited users (Additional cost)",
-          "tally": "Limited users (Additional cost)"
-        },
-        {
-          "feature": "Bank Reconciliation",
-          "giddh": "Automated real-time bank reconciliation",
-          "quickbooks": "Manual reconciliation, limited support",
-          "tally": "Limited automation for reconciliation"
-        },
-        {
-          "feature": "Mobile App",
-          "giddh": "iOS and Android mobile apps",
-          "quickbooks": "iOS and Android apps (Limited features)",
-          "tally": "No mobile app"
-        },
-        {
-          "feature": "Online Inventory Management",
-          "giddh": "Integrated inventory management",
-          "quickbooks": "Separate integrations required",
-          "tally": "Basic inventory management available"
-        },
-        {
-          "feature": "Audit Trail & Security",
-          "giddh": "Full audit trail with IP-based access security",
-          "quickbooks": "Limited audit trail, basic security features",
-          "tally": "Basic security, no detailed audit trail"
-        },
-        {
-          "feature": "Integration with Shopify",
-          "giddh": "Seamless integration with Shopify",
-          "quickbooks": "Limited integrations, needs third-party apps",
-          "tally": "Not supported"
-        },
-        {
-          "feature": "Real-Time Financial Insights",
-          "giddh": "Comprehensive dashboard with real-time updates",
-          "quickbooks": "Limited insights and delayed reports",
-          "tally": "Basic financial reports"
-        },
-        {
-          "feature": "Support for SMEs",
-          "giddh": "Tailored for small to medium businesses",
-          "quickbooks": "Focused on larger businesses",
-          "tally": "Primarily for large businesses"
-        },
-        {
-          "feature": "Pricing",
-          "giddh": "Transparent, affordable pricing with no hidden fees",
-          "quickbooks": "Expensive pricing plans with hidden charges",
-          "tally": "Cost-effective but limited features"
-        }
+  "giddhvscomp": {
+    "heading": "The Smart Choice for Your Business Accounting",
+    "subheading": "Streamline your finances with Giddh’s unique features and superior value in accounting software for businesses over the competition.",
+    "content": [
+      {
+        "feature": "Multi-User Access",
+        "giddh": "Unlimited user access",
+        "quickbooks": "Limited users (Additional cost)",
+        "tally": "Limited users (Additional cost)"
+      },
+      {
+        "feature": "Bank Reconciliation",
+        "giddh": "Automated real-time bank reconciliation",
+        "quickbooks": "Manual reconciliation, limited support",
+        "tally": "Limited automation for reconciliation"
+      },
+      {
+        "feature": "Mobile App",
+        "giddh": "iOS and Android mobile apps",
+        "quickbooks": "iOS and Android apps (Limited features)",
+        "tally": "No mobile app"
+      },
+      {
+        "feature": "Online Inventory Management",
+        "giddh": "Integrated inventory management",
+        "quickbooks": "Separate integrations required",
+        "tally": "Basic inventory management available"
+      },
+      {
+        "feature": "Audit Trail & Security",
+        "giddh": "Full audit trail with IP-based access security",
+        "quickbooks": "Limited audit trail, basic security features",
+        "tally": "Basic security, no detailed audit trail"
+      },
+      {
+        "feature": "Integration with Shopify",
+        "giddh": "Seamless integration with Shopify",
+        "quickbooks": "Limited integrations, needs third-party apps",
+        "tally": "Not supported"
+      },
+      {
+        "feature": "Real-Time Financial Insights",
+        "giddh": "Comprehensive dashboard with real-time updates",
+        "quickbooks": "Limited insights and delayed reports",
+        "tally": "Basic financial reports"
+      },
+      {
+        "feature": "Support for SMEs",
+        "giddh": "Tailored for small to medium businesses",
+        "quickbooks": "Focused on larger businesses",
+        "tally": "Primarily for large businesses"
+      },
+      {
+        "feature": "Pricing",
+        "giddh": "Transparent, affordable pricing with no hidden fees",
+        "quickbooks": "Expensive pricing plans with hidden charges",
+        "tally": "Cost-effective but limited features"
+      }
+    ]
+  },
+  "benefits": [
+    {
+      "cols": 3,
+      "items": [
+        "Unlimited Users – No Extra Cost",
+        "No Voucher Screens – Just Type & Save",
+        "Built-In White Label Option"
       ]
     },
-  
-    "benefits": [
-      {
-        "cols": 3,
-        "items": [
-          "Unlimited Users – No Extra Cost",
-          "No Voucher Screens – Just Type & Save",
-          "Built-In White Label Option"
-        ]
-      },
-      {
-        "cols": 2,
-        "items": [
-          "Easy Synchronization with Tally",
-          " One Subscription, Up to 100 Companies"
-        ]
-      },
-      {
-        "cols": 3,
-        "items": [
-          "Auto Updates. Always getting faster.",
-          "Manage Multiple Companies & Branches",
-          " Open & Public API Access"
-        ]
-      }
-    ],
-    "ctaTwo": {
-      "heading": "Streamline your accounting with Giddh to simplify, automate, and save time today!",
-      "subheading": "",
-      "image": "/img/girl-avatar.svg",
-      "buttons": [
-        {
-          "text": "Start Your Free Trial",
-          "link": "/signup",
-          "type": "secondary"
-        }
+    {
+      "cols": 2,
+      "items": [
+        "Easy Synchronization with Tally",
+        " One Subscription, Up to 100 Companies"
+      ]
+    },
+    {
+      "cols": 3,
+      "items": [
+        "Auto Updates. Always getting faster.",
+        "Manage Multiple Companies & Branches",
+        " Open & Public API Access"
       ]
     }
+  ],
+  "ctaTwo": {
+    "heading": "Streamline your accounting with Giddh to simplify, automate, and save time today!",
+    "subheading": "",
+    "image": "/img/girl-avatar.svg",
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup",
+        "type": "secondary"
+      }
+    ]
   }
-  
+}
