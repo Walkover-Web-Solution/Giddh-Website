@@ -1,15 +1,13 @@
 import Image from "next/image";
-import data from "./data.json";
 import { MdCircle } from "react-icons/md";
 
-export default function AlternateFeatures() {
-  const features = Array.isArray(data) ? data : [];
+export default function AlternateFeatures({ feat }) {
+  const features = Array.isArray(feat) ? feat : [];
 
   return (
-    <section className="bg-neutral py-5">
+    <section className="bg-neutral pt-5">
       <div className="container">
-        <h2 className="text-center sub-heading py-5">Features</h2>
-
+        <h2 className="text-center sub-heading py-2 garamond-font">Why Businesses Prefer Giddh for Accounting</h2>
         {features.map((feature, index) => {
           const imageRight = index % 2 === 0;
           return (
@@ -21,7 +19,7 @@ export default function AlternateFeatures() {
                 {Array.isArray(feature.more_content) && (
                   <ul className="ps-3 mb-0 col-dark-grey c-fs-4">
                     {feature.more_content.map((content, index) => (
-                      <li key={index}><MdCircle fontSize={5} className="align-self-center mx-1"/> {content}</li>
+                      <li key={index}><MdCircle fontSize={5} className="align-self-center mx-1" /> {content}</li>
                     ))}
                   </ul>
                 )}

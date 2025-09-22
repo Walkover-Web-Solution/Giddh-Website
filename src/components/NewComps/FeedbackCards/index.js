@@ -1,17 +1,19 @@
 import { useEffect, useRef } from "react";
 import styles from "./FeedbackCards.module.scss";
+import Image from "next/image";
+import { MdOutlineFormatQuote } from "react-icons/md";
 
-export default function FeedbackCards() {
-  const testimonials = require("./data.json");
+export default function FeedbackCards({ testimonials }) {
+
   const scrollRef = useRef(null);
   const frameRef = useRef(null);
-  
+
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
 
     let scrollAmount = 0;
-    const speed = 1;
+    const speed = 3;
 
     const step = () => {
       scrollAmount += speed;
@@ -22,10 +24,8 @@ export default function FeedbackCards() {
       frameRef.current = requestAnimationFrame(step);
     };
 
-    // start loop
     frameRef.current = requestAnimationFrame(step);
 
-    // pause on hover
     const handleMouseEnter = () => {
       if (frameRef.current) cancelAnimationFrame(frameRef.current);
     };
@@ -58,15 +58,18 @@ export default function FeedbackCards() {
           ref={scrollRef}
           className="d-flex flex-row gap-5 overflow-hidden py-5"
         >
-          {testimonials.concat(testimonials).map((t, i) => (
+          {testimonials?.concat(testimonials)?.map((t, i) => (
             <div key={i}>
               <div
                 className={`rounded-4 p-4 bg-white ${styles.feedbackCards}`}
               >
-                <h6 className="fw-bold mb-3">
-                  ~ {t.name}, {t.designation}, {t.company}
-                </h6>
-                <p>{t.testimonial}</p>
+                <div className="d-flex  justify-content-between">
+                  <h6 className="fw-bold mb-3 c-fs-5">
+                    ~ {t?.owner ? t?.owner + ", " : ""} {t?.company}
+                  </h6>
+                  <MdOutlineFormatQuote />
+                </div>
+                <p className="c-fs-6">{t?.testimonial}</p>
               </div>
             </div>
           ))}

@@ -1,8 +1,8 @@
-import Index from "@/pages/index";
-const inIndex = (path) => {
+import Home from "@/components/Pages/in/Home";
+const inIndex = ({pageData, pageinfo}) => {
   return (
     <>
-      <Index path={path.path} />
+      <Home pageData={pageData} pageinfo={pageinfo} />
     </>
   );
 };

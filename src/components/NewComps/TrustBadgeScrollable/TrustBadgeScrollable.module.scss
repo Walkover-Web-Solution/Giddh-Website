@@ -1,0 +1,39 @@
+.scrollWrapper {
+    overflow-x: hidden; 
+    position: relative;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  
+  .scrollInner {
+    display: inline-flex;
+    gap: 2rem;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+  .logoItem {
+    display: inline-block;
+    height: 34px;
+  }
+  
+  .startFade,
+  .endFade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .startFade {
+    left: 0;
+    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+  }
+  
+  .endFade {
+    right: 0;
+    background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+  }
+  

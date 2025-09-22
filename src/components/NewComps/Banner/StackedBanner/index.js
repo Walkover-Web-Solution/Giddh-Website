@@ -4,7 +4,7 @@ import styles from "./StackedBanner.module.scss";
 export default function StackedBanner({ compData }) {
   return (
     <section className={`bg-soft-blue ${styles.topSection}`}>
-      <div className="container py-5 d-flex flex-row flex-wrap gap-4 justify-content-center align-items-center ">
+      <div className="container pt-5 d-flex flex-row flex-wrap gap-4 justify-content-center align-items-center">
         {compData?.image ? (
           <Image
             width={1080}
@@ -21,6 +21,10 @@ export default function StackedBanner({ compData }) {
         <div className="col-lg-8 mx-auto">
           <p className="text-center col-grey-deep">{compData?.subHeading}</p>
         </div>
+      </div>
+      <div className="pb-5 container d-flex gap-4 justify-content-center">
+        <button className="btn btn-primary">{compData?.buttons[0].text}</button>
+        <button className={`btn ${styles.getStarted}`}>{compData?.buttons[1].text}</button>
       </div>
     </section>
   );

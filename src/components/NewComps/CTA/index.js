@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 import styles from "./CTA.module.scss";
 
-export default function CTA({ compData }) {
-  const hasImage = compData?.image ? true : false;
+export default function CTA({ compData, hasImage }) {
+
   return (
     <section className="bg-accent position-relative" aria-label="Giddh hero">
       <div
@@ -11,21 +11,19 @@ export default function CTA({ compData }) {
       >
         <div className="py-5 d-flex flex-column align-items-center justify-content-center">
           <h1
-            className={`${
-              !hasImage && "text-center"
-            } c-fw-400 text-white cactus-font mx-auto`}
+            className={`${!hasImage && "text-center"
+              } c-fw-400 text-white cactus-font mx-auto`}
           >
-            {compData.heading}
+            {compData?.heading}
           </h1>
           <p
-            className={`${
-              !hasImage && "text-center"
-            } fw-normal text-white m-0 pb-2 c-fw-600`}
+            className={`${!hasImage && "text-center"
+              } fw-normal text-white m-0 pb-2 c-fw-600`}
           >
-            {compData.subheading}
+            {compData?.subheading}
           </p>
           <div>
-            {compData.buttons.map((button, index) => (
+            {compData?.buttons.map((button, index) => (
               <button
                 key={index}
                 onClick={() =>
@@ -34,11 +32,10 @@ export default function CTA({ compData }) {
                     block: "center",
                   })
                 }
-                className={`btn ${
-                  button.type === "primary"
+                className={`btn ${button.type === "primary"
                     ? "btn-primary"
                     : "btn-outline-light"
-                }`}
+                  }`}
               >
                 {button.text}
               </button>
@@ -47,7 +44,7 @@ export default function CTA({ compData }) {
           {hasImage ? (
             <div className={styles.imageWrap}>
               <Image
-                src={compData.image}
+                src={compData?.image}
                 alt="Person holding laptop"
                 width={320}
                 height={320}
