@@ -28,20 +28,22 @@ export default function TrustBadgeScrollable({ heading }) {
 
   return (
     <section className="py-5">
-      <div className="container text-center">
-        <h2 className="sub-heading col-primary c-fw-400 garamond-font">{heading?.title}</h2>
-        <p className="col-dark-grey cactus-font c-fs-4">{heading?.description}</p>
+      <div className="container text-center d-flex flex-column gap-3">
+        <div className="d-flex flex-column gap-1">
+          <h2 className="sub-heading col-primary c-fw-400 garamond-font">{heading?.title}</h2>
+          <p className="col-dark-grey cactus-font c-fs-4">{heading?.description}</p>
+        </div>
 
-        <div className={styles.scrollWrapper}>
-          <div className={styles.scrollInner} ref={scrollRef}>
-            {trustBadgeBrands?.map((logo, i) => (
-              <a key={i} href={logo?.href} target="_blank" rel="noreferrer">
-                <img src={logo?.src} alt={logo?.alt} className={styles.logoItem} height={34} />
+        <div className="position-relative overflow-hidden w-100 px-5">
+          <div className={`d-inline-flex align-items-center gap-4`} ref={scrollRef}>
+            {trustBadgeBrands?.map((logo, index) => (
+              <a key={index} href={logo?.href} target="_blank" rel="noreferrer">
+                <img src={logo?.src} alt={logo?.alt} className="display-inline-block" height={34} />
               </a>
             ))}
-            {trustBadgeBrands?.map((logo, i) => (
-              <a key={`dup-${i}`} href={logo?.href} target="_blank" rel="noreferrer">
-                <img src={logo?.src} alt={logo?.alt} className={styles.logoItem} height={34} />
+            {trustBadgeBrands?.map((logo, index) => (
+              <a key={`dup-${index}`} href={logo?.href} target="_blank" rel="noreferrer">
+                <img src={logo?.src} alt={logo?.alt} className="display-inline-block" height={34} />
               </a>
             ))}
           </div>

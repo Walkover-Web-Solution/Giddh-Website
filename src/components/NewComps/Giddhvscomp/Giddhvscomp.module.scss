@@ -1,11 +1,11 @@
 .giddhScrollWrapper {
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch; // smooth scroll on iOS
+    -webkit-overflow-scrolling: touch; 
     width: 100%;
-    padding-bottom: 4px; // so scrollbar doesn't overlap corners
+    padding-bottom: 4px;  
   
     .giddhScrollInner {
-      min-width: 920px; // adjust as needed for column widths
+      min-width: 920px; 
       display: inline-block;
     }
   }

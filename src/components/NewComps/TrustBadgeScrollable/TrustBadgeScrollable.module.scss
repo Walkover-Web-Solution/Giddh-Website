@@ -1,18 +1,4 @@
-.scrollWrapper {
-    overflow-x: hidden; 
-    position: relative;
-    width: 100%;
-    padding: 0 2rem;
-  }
-  
-  .scrollInner {
-    display: inline-flex;
-    gap: 2rem;
-    align-items: center;
-    white-space: nowrap;
-  }
-  
-  .logoItem {
+.logoItem {
     display: inline-block;
     height: 34px;
   }

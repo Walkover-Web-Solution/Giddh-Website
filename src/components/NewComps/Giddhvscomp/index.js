@@ -1,12 +1,8 @@
 import styles from "./Giddhvscomp.module.scss";
 
-
 export default function Giddhvscomp({ giddhvscomp }) {
-     
-
   return (
-
-    <section className="container py-4 mt-5 mb-5 outfit-font">
+    <section className="container py-5 outfit-font">
       <h1 className="text-center mb-4 cactus-font">{giddhvscomp?.heading}</h1>
       <p className="text-center mb-4 w-75 mx-auto">{giddhvscomp?.subheading}</p>
       <div className={`text-center ${styles.giddhScrollWrapper}`}>
@@ -18,11 +14,9 @@ export default function Giddhvscomp({ giddhvscomp }) {
               <div className="col-3 col-md-3 px-3 py-2 border-end">Giddh</div>
               <div className="col-3 col-md-3 px-3 py-2 border-end">Quick Books</div>
               <div className="col-3 col-md-3 px-3 py-2 border-end">Tally</div>
-
             </div>
 
             {giddhvscomp?.content?.map((row, index) => (
-
               <div key={index} className="row border-bottom c-fs-6 text-center">
                 <div className="col-3 col-md-3 px-3 py-2 border-end">
                   {row?.feature}

@@ -17,9 +17,8 @@ export default function AlternateFeatures({ features }) {
               key={feature?.feature + "-" + index}
             >
               <div
-                className={`col-12 col-md-6  ${
-                  imageRight ? "order-md-1" : "order-md-2"
-                }`}
+                className={`col-12 col-md-6  ${imageRight ? "order-md-1" : "order-md-2"
+                  }`}
               >
                 <h3 className="garamond-font col-primary c-fs-1 c-fw-400">
                   {feature?.feature}
@@ -40,9 +39,8 @@ export default function AlternateFeatures({ features }) {
                 )}
               </div>
               <div
-                className={`col-12 col-md-6 ${
-                  imageRight ? "order-md-2" : "order-md-1"
-                }`}
+                className={`col-12 col-md-6 ${imageRight ? "order-md-2" : "order-md-1"
+                  }`}
               >
                 {feature?.img ? (
                   <div className="d-flex justify-content-center">

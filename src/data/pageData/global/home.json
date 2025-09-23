@@ -135,7 +135,7 @@
   "giddhIndustries": {
     "heading": "Industries Love Giddh",
     "description": "Industries love Giddh because it transforms the way businesses manage their finances. By automating routine accounting processes, offering instant access to data, and ensuring accuracy at every step, Giddh helps organisations across sectors save time, cut costs, and make smarter decisions for long-term growth.",
-    "row-one": [
+    "rowOne": [
       {
         "name": "Manufacturing",
         "img": "/img/industries/manufacturing.svg"
@@ -161,7 +161,7 @@
         "img": "/img/industries/infrastructure.svg"
       }
     ],
-    "row-two": [
+    "rowTwo": [
       {
         "name": "Ayurveda",
         "img": "/img/industries/ayurveda.svg"
