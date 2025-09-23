@@ -14,55 +14,61 @@ export default function Features() {
   }, []);
 
   return (
-    <section className="container px-0 py-3 py-md-4">
-      <h2 className="heading text-center cactus-font mb-3 mb-md-4">Features</h2>
+    <section className={style.section}>
+      <div className="container px-0 py-3 py-md-4">
+        <h2 className="heading text-center cactus-font mb-3 mb-md-4">
+          Features
+        </h2>
 
-      <div className="d-flex flex-column flex-sm-row gap-4 outfit-font align-items-center justify-content-between">
-        <div className="col-12 col-sm-6 order-1 order-md-1">
-          <div id="features" className="p-2">
-            {data?.length > 0 &&
-              data.map((feature, index) => (
-                <FeatureItem
-                  key={index}
-                  feature={feature}
-                  index={index}
-                  isExpanded={expandedFeature === index}
-                  onToggle={handleFeatureToggle}
-                />
-              ))}
+        <div className="d-flex flex-column flex-sm-row gap-4 outfit-font align-items-center justify-content-between">
+          <div className="col-12 col-sm-6 order-1 order-md-1">
+            <div id="features" className="p-2">
+              {data?.length > 0 &&
+                data.map((feature, index) => (
+                  <FeatureItem
+                    key={index}
+                    feature={feature}
+                    index={index}
+                    isExpanded={expandedFeature === index}
+                    onToggle={handleFeatureToggle}
+                  />
+                ))}
+            </div>
           </div>
-        </div>
 
-        <div className="col-12 col-sm-6 order-2 order-sm-2 d-none d-sm-flex justify-content-center">
-          <div className="d-flex align-items-center justify-content-center h-100 ">
-            <div className="position-relative d-inline-block rounded overflow-hidden ">
-              <Image
-                src={data[expandedFeature].image}
-                alt={data[expandedFeature].name}
-                height={400}
-                width={400}
-                className={`cursor-pointer ${style.image}`}
-              />
+          <div className="col-12 col-sm-6 order-2 order-sm-2 d-none d-sm-flex justify-content-center">
+            <div className="d-flex align-items-center justify-content-center h-100 ">
+              <div className="position-relative d-inline-block rounded overflow-hidden ">
+                <Image
+                  src={data[expandedFeature].image}
+                  alt={data[expandedFeature].name}
+                  height={400}
+                  width={400}
+                  className={`cursor-pointer ${style.image}`}
+                />
 
-              <div
-                className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4`}
-              >
-                <div className="text-start text-white">
-                  <h3 className="font-outfit text-white c-fw-600 c-fs-4 text-start mb-2">
-                    {data[expandedFeature].name}
-                  </h3>
-                  <p className="c-fs-5 text-start">
-                    {data[expandedFeature].description}
-                  </p>
-                </div>
-                <button
-                  className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 ${style.imageButton} cursor-pointer c-fw-600 c-fs-5`}
+                <div
+                  className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4`}
                 >
-                  <div>{Icon && <Icon size={18} className="text-white" />}</div>
-                  <span className="text-white">
-                    {data[expandedFeature].name}
-                  </span>
-                </button>
+                  <div className="text-start text-white">
+                    <h3 className="font-outfit text-white c-fw-600 c-fs-4 text-start mb-2">
+                      {data[expandedFeature].name}
+                    </h3>
+                    <p className="c-fs-5 text-start">
+                      {data[expandedFeature].description}
+                    </p>
+                  </div>
+                  <button
+                    className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 ${style.imageButton} cursor-pointer c-fw-600 c-fs-5`}
+                  >
+                    <div>
+                      {Icon && <Icon size={18} className="text-white" />}
+                    </div>
+                    <span className="text-white">
+                      {data[expandedFeature].name}
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -82,7 +88,7 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
   return (
     <div
       className={`d-flex flex-column gap-1 rounded p-2 ${
-        isExpanded ? "shadow-sm" : ""
+        isExpanded ? "bg-white border" : ""
       } cursor-pointer`}
     >
       <div className="d-flex align-items-center gap-2" onClick={handleToggle}>
