@@ -8,7 +8,7 @@ import FAQs from "@/components/NewComps/FAQs";
 import SeeGiddhInAction from "@/components/NewComps/SeeGiddhInAction";
 import CTASection from "@/components/NewComps/CTA";
 import Footer from "@/components/NewComps/Footer";
-import GiddhPopUp from "@/components/NewComps/GiddhPopUp";
+import GiddhPopUp from "@/components/NewComps/PopUp";
 
 const index = (path) => {
   const link = path.path;

@@ -2,19 +2,19 @@ import Image from "next/image";
 import { MdCircle } from "react-icons/md";
 
 export default function AlternateFeatures({ features }) {
-  if (features.content.length === 0) return null;
+  if (features?.content?.length === 0) return null;
   return (
     <section className="bg-neutral pt-5">
       <div className="container">
         <h2 className="text-center sub-heading py-2 garamond-font">
-          {features.heading}
+          {features?.heading}
         </h2>
-        {features.content.map((feature, index) => {
+        {features?.content?.map((feature, index) => {
           const imageRight = index % 2 === 0;
           return (
             <div
               className="row align-items-center text-start py-5"
-              key={feature.feature + "-" + index}
+              key={feature?.feature + "-" + index}
             >
               <div
                 className={`col-12 col-md-6  ${
@@ -27,7 +27,7 @@ export default function AlternateFeatures({ features }) {
                 <p className="col-dark-grey c-fs-4">{feature?.description}</p>
                 {Array.isArray(feature?.more_content) && (
                   <ul className="mb-0 col-dark-grey c-fs-4">
-                    {feature?.more_content.map((content, index) => (
+                    {feature?.more_content?.map((content, index) => (
                       <li key={index}>
                         <MdCircle
                           fontSize={5}

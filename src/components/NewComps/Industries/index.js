@@ -1,6 +1,5 @@
-import React from "react";
 
-export default function GiddhIndustries({ giddhIndustries }) {
+export default function Industries({ giddhIndustries }) {
 
 
     const renderIconsRow = (row) =>

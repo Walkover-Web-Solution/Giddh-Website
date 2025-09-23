@@ -13,6 +13,7 @@ export default function Pricing({ pageInfo }) {
           `https://api.giddh.com/v2/subscription/plans/all?regionCode=${`IND`}`
         ); // Replace with actual API endpoint
         const data = await response.json();
+        console.log(data);
         setPricingData(data?.body);
       } catch (error) {
         console.error("Error fetching pricing data:", error);
@@ -69,7 +70,7 @@ export default function Pricing({ pageInfo }) {
         </div>
         <div className="d-flex border rounded-2">
           <div className="border-end col-4">
-            <div className={`p-2 ${styles.table_header}`}>
+            <div className={`${styles.table_header} pt-2 px-3 border-bottom d-flex align-items-start justify-content-center flex-column gap-1`}>
               <p className="fw-bold mb-1 c-fs-5">
                 Select a plan that best suits your needs
               </p>
@@ -86,22 +87,22 @@ export default function Pricing({ pageInfo }) {
           {pricingData.map((plan, index) => (
             <div
               key={index}
-              className={`p-2 col-2 border-end border-bottom ${styles?.table_header}`}
+              className={`col-2 border-end border-bottom ${styles?.table_header}`}
             >
-              <div className={`p-2 ${styles.table_header}`}>
-                <p className="p-0 m-0 c-fs-5 text-center">{plan.name}</p>
+              <div className={`${styles.table_header} p-2 border-bottom`}>
+                <p className="p-0 m-0 c-fs-5 text-center fw-bold ">{plan.name}</p>
                 <p className="p-0 m-0 c-fs-3 col-primary text-center fw-bold">
-                  {plan.price}
+                  {plan?.price}
                 </p>
               </div>
               <div className="p-2">
-                <p>{plan.invoicesAllowed}</p>
+                <p>{isAnnual ? plan?.invoicesAllowed : plan?.monthlyInvoicesAllowed}</p>
               </div>
               <div className="p-2">
-                <p>{plan.billsAllowed}</p>
+                <p>{isAnnual ? plan?.billsAllowed : plan?.monthlyBillsAllowed}</p>
               </div>
               <div className="p-2">
-                <p>{plan.companiesLimit}</p>
+                <p>{plan?.companiesLimit}</p>
               </div>
               <div className="p-2">
                 <p>

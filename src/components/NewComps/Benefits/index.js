@@ -1,6 +1,6 @@
-import styles from "./GiddhBenefits.module.scss";
+import styles from "./Benefits.module.scss";
 
-export default function GiddhBenefits({ benefits }) {
+export default function Benefits({ benefits }) {
 
   return (
     <section className="py-5 bg-dark">
