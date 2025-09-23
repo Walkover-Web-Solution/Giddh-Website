@@ -43,88 +43,91 @@
       }
     ]
   },
-  "features": [
-    {
-      "feature": "Simplified Ledger-Based Accounting",
-      "img": "/img/home-page/simplified-ledger-based-accounting.svg",
-      "description": "Giddh automates repetitive and manual accounting processes, saving you valuable time to focus on growing your business.",
-      "more_content": [
-        "No need for voucher navigation",
-        "Quick and intuitive ledger-based entries",
-        "Streamline your accounting workflow with ease"
-      ]
-    },
-    {
-      "feature": "Anytime, Anywhere, and on Any Device",
-      "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
-      "description": "Access and manage your finances seamlessly, whether you're on your desktop, Android, or iOS device",
-      "more_content": [
-        "Cloud-based access across devices.",
-        "Access real-time financial data.",
-        "Track sales and send invoices."
-      ]
-    },
-    {
-      "feature": "Cloud Storage for Your Data Synced",
-      "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
-      "description": "Giddh utilizes advanced security measures to ensure your accounting data remains safe and private.",
-      "more_content": [
-        "Password-Protected Logins",
-        "User Access Limitations",
-        "Automatic Data Backup"
-      ]
-    },
-    {
-      "feature": "Automatic Currency Conversion",
-      "img": "/img/home-page/automatic-currency-conversion.svg",
-      "description": "Giddh, the best multi-currency accounting software, streamlines international transactions with automatic currency conversion, ensuring accurate financial records with minimal manual effort.",
-      "more_content": [
-        "Auto-converts foreign currencies to local",
-        "Saves time by eliminating manual calculations",
-        "Ensures accurate financial data for global businesses"
-      ]
-    },
-    {
-      "feature": "Easily Secure Data in the Cloud",
-      "img": "/img/home-page/seamless-gst-compliance.svg",
-      "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
-      "more_content": [
-        "Encrypted data storage",
-        "Prevent data loss.",
-        "Top industry security standards"
-      ]
-    },
-    {
-      "feature": "Track Your Business Performance in Real-Time",
-      "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
-      "description": "Stay updated with live data and make informed decisions on the fly. With real-time insights, you’ll always know how your business is performing.",
-      "more_content": [
-        "Instant Insights",
-        "Real-Time Tracking",
-        "Data-Driven Decisions"
-      ]
-    },
-    {
-      "feature": "Manage Over 100 Companies",
-      "img": "/img/home-page/manage-over-100-companies.svg",
-      "description": "Giddh supports over 100 companies under a single subscription, making it ideal for businesses with multiple entities.",
-      "more_content": [
-        "Manage financial data for all companies on one platform.",
-        "Access reports and data for all companies in one place.",
-        "No need for separate logins or subscriptions."
-      ]
-    },
-    {
-      "feature": "Unlimited User Access",
-      "img": "/img/home-page/unlimited-user-access.svg",
-      "description": "Collaborate seamlessly with your members by adding unlimited users and assigning role-based access",
-      "more_content": [
-        "Control access with specific user permissions",
-        "Smooth collaboration across departments.",
-        "Scale user access as your team grows at no extra cost."
-      ]
-    }
-  ],
+  "features": {
+    "heading": "What Makes Giddh the Smart Accounting Choice",
+    "content": [
+      {
+        "feature": "Simplified Ledger-Based Accounting",
+        "img": "/img/home-page/simplified-ledger-based-accounting.svg",
+        "description": "Giddh automates repetitive and manual accounting processes, saving you valuable time to focus on growing your business.",
+        "more_content": [
+          "No need for voucher navigation",
+          "Quick and intuitive ledger-based entries",
+          "Streamline your accounting workflow with ease"
+        ]
+      },
+      {
+        "feature": "Anytime, Anywhere, and on Any Device",
+        "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
+        "description": "Access and manage your finances seamlessly, whether you're on your desktop, Android, or iOS device",
+        "more_content": [
+          "Cloud-based access across devices.",
+          "Access real-time financial data.",
+          "Track sales and send invoices."
+        ]
+      },
+      {
+        "feature": "Cloud Storage for Your Data Synced",
+        "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
+        "description": "Giddh utilizes advanced security measures to ensure your accounting data remains safe and private.",
+        "more_content": [
+          "Password-Protected Logins",
+          "User Access Limitations",
+          "Automatic Data Backup"
+        ]
+      },
+      {
+        "feature": "Automatic Currency Conversion",
+        "img": "/img/home-page/automatic-currency-conversion.svg",
+        "description": "Giddh, the best multi-currency accounting software, streamlines international transactions with automatic currency conversion, ensuring accurate financial records with minimal manual effort.",
+        "more_content": [
+          "Auto-converts foreign currencies to local",
+          "Saves time by eliminating manual calculations",
+          "Ensures accurate financial data for global businesses"
+        ]
+      },
+      {
+        "feature": "Easily Secure Data in the Cloud",
+        "img": "/img/home-page/seamless-gst-compliance.svg",
+        "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
+        "more_content": [
+          "Encrypted data storage",
+          "Prevent data loss.",
+          "Top industry security standards"
+        ]
+      },
+      {
+        "feature": "Track Your Business Performance in Real-Time",
+        "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
+        "description": "Stay updated with live data and make informed decisions on the fly. With real-time insights, you’ll always know how your business is performing.",
+        "more_content": [
+          "Instant Insights",
+          "Real-Time Tracking",
+          "Data-Driven Decisions"
+        ]
+      },
+      {
+        "feature": "Manage Over 100 Companies",
+        "img": "/img/home-page/manage-over-100-companies.svg",
+        "description": "Giddh supports over 100 companies under a single subscription, making it ideal for businesses with multiple entities.",
+        "more_content": [
+          "Manage financial data for all companies on one platform.",
+          "Access reports and data for all companies in one place.",
+          "No need for separate logins or subscriptions."
+        ]
+      },
+      {
+        "feature": "Unlimited User Access",
+        "img": "/img/home-page/unlimited-user-access.svg",
+        "description": "Collaborate seamlessly with your members by adding unlimited users and assigning role-based access",
+        "more_content": [
+          "Control access with specific user permissions",
+          "Smooth collaboration across departments.",
+          "Scale user access as your team grows at no extra cost."
+        ]
+      }
+    ]
+  },
   "trustBadgeBrands": {
     "title": "Trusted By Industry Leaders",
     "description": "See who’s talking about us and why businesses trust us around the globe."
@@ -133,20 +136,56 @@
     "heading": "Industries Love Giddh",
     "description": "Industries love Giddh because it transforms the way businesses manage their finances. By automating routine accounting processes, offering instant access to data, and ensuring accuracy at every step, Giddh helps organisations across sectors save time, cut costs, and make smarter decisions for long-term growth.",
     "row-one": [
-      { "name": "Manufacturing", "img": "/img/industries/manufacturing.svg" },
-      { "name": "Trading", "img": "/img/industries/trading.svg" },
-      { "name": "Agri-Fintech", "img": "/img/industries/agri-fintech.svg" },
-      { "name": "Tourism", "img": "/img/industries/tourism.svg" },
-      { "name": "Construction", "img": "/img/industries/construction.svg" },
-      { "name": "Infrastructure", "img": "/img/industries/infrastructure.svg" }
+      {
+        "name": "Manufacturing",
+        "img": "/img/industries/manufacturing.svg"
+      },
+      {
+        "name": "Trading",
+        "img": "/img/industries/trading.svg"
+      },
+      {
+        "name": "Agri-Fintech",
+        "img": "/img/industries/agri-fintech.svg"
+      },
+      {
+        "name": "Tourism",
+        "img": "/img/industries/tourism.svg"
+      },
+      {
+        "name": "Construction",
+        "img": "/img/industries/construction.svg"
+      },
+      {
+        "name": "Infrastructure",
+        "img": "/img/industries/infrastructure.svg"
+      }
     ],
     "row-two": [
-      { "name": "Ayurveda", "img": "/img/industries/ayurveda.svg" },
-      { "name": "Jewellery", "img": "/img/industries/jewellery.svg" },
-      { "name": "FMCG", "img": "/img/industries/fmcg.svg" },
-      { "name": "E-commerce", "img": "/img/industries/e-commerce.svg" },
-      { "name": "Clothing", "img": "/img/industries/clothing.svg" },
-      { "name": "Food & Beverage", "img": "/img/industries/food&beverage.svg" }
+      {
+        "name": "Ayurveda",
+        "img": "/img/industries/ayurveda.svg"
+      },
+      {
+        "name": "Jewellery",
+        "img": "/img/industries/jewellery.svg"
+      },
+      {
+        "name": "FMCG",
+        "img": "/img/industries/fmcg.svg"
+      },
+      {
+        "name": "E-commerce",
+        "img": "/img/industries/e-commerce.svg"
+      },
+      {
+        "name": "Clothing",
+        "img": "/img/industries/clothing.svg"
+      },
+      {
+        "name": "Food & Beverage",
+        "img": "/img/industries/food&beverage.svg"
+      }
     ]
   },
   "testimonials": [
@@ -281,7 +320,6 @@
       }
     ]
   },
-
   "benefits": [
     {
       "cols": 3,
