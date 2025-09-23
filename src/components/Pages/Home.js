@@ -10,17 +10,17 @@ import GiddhBenefits from "@/components/NewComps/GiddhBenefits";
 import CTA from "@/components/NewComps/CTA";
 import Giddhvscomp from "@/components/NewComps/Giddhvscomp";
 
-export default function Home({ pageData }) {
+export default function Home({ pageData, pageInfo }) {
   return (
     <>
       <StackedBanner compData={pageData?.stackedBanner} />
-      <Stats stats={pageData?.stats}  />
-      <AlternateFeatures feat={pageData?.features} />
+      <Stats stats={pageData?.stats} />
+      <AlternateFeatures features={pageData?.features} />
       <TrustBadgeScrollable heading={pageData?.trustBadgeBrands} />
       <CTA hasImage={false} compData={pageData?.cta} />
       <FeedbackCards testimonials={pageData?.testimonials} />
       <Giddhvscomp giddhvscomp={pageData?.giddhvscomp} />
-      <Pricing />
+      <Pricing pageInfo={pageInfo} />
       <GiddhBenefits benefits={pageData?.benefits} />
       <GiddhIndustries giddhIndustries={pageData?.giddhIndustries} />
       <CTA hasImage={false} compData={pageData?.ctaTwo} />

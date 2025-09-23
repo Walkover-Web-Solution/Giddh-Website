@@ -9,18 +9,20 @@ export default function GiddhBenefits({ benefits }) {
 
         <div className="row g-4">
           {benefits?.map((row, rowIdx) =>
-            row?.items?.map((item, idx) => (
-              <div
-                key={`${rowIdx}-${idx}`}
-                className={`col-12 col-md-${12 / row?.cols}`}
-              >
+            row?.items?.map((item, idx) => {
+              return (
                 <div
-                  className={`${styles.card} card bg-dark text-white text-center border border-white rounded-3 p-4`}
+                  key={`${rowIdx}-${idx}`}
+                  className={`col-12 col-md-${12 / row?.cols}`}
                 >
-                  <div className="card-body fs-6 fw-medium">{item?.item}</div>
+                  <div
+                    className={`${styles.card} card bg-dark text-white text-center border border-white rounded-3 p-4`}
+                  >
+                    <div className="card-body fs-6 fw-medium">{item}</div>
+                  </div>
                 </div>
-              </div>
-            ))
+              );
+            })
           )}
         </div>
       </div>
