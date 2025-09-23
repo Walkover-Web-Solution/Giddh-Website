@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import styles from "./FeedbackCards.module.scss";
-import Image from "next/image";
 import { MdOutlineFormatQuote } from "react-icons/md";
 
 export default function FeedbackCards({ testimonials }) {
@@ -13,7 +12,7 @@ export default function FeedbackCards({ testimonials }) {
     if (!container) return;
 
     let scrollAmount = 0;
-    const speed = 3;
+    const speed = 2;
 
     const step = () => {
       scrollAmount += speed;
@@ -61,7 +60,7 @@ export default function FeedbackCards({ testimonials }) {
           {testimonials?.concat(testimonials)?.map((t, i) => (
             <div key={i}>
               <div
-                className={`rounded-4 p-4 bg-white ${styles.feedbackCards}`}
+                className={`rounded-4 p-4 bg-white d-flex flex-column ${styles.feedbackCards}`}
               >
                 <div className="d-flex  justify-content-between">
                   <h6 className="fw-bold mb-3 c-fs-5">

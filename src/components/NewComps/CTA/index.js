@@ -1,15 +1,14 @@
-import React from "react";
 import Image from "next/image";
 import styles from "./CTA.module.scss";
 
 export default function CTA({ compData, hasImage }) {
 
   return (
-    <section className="bg-accent position-relative" aria-label="Giddh hero">
+    <section className="bg-accent position-relative py-5">
       <div
         className={`container ${styles.inner} d-flex align-items-center justify-content-center`}
       >
-        <div className="py-5 d-flex flex-column align-items-center justify-content-center">
+        <div className="d-flex flex-column align-items-center justify-content-center gap-4">
           <h1
             className={`${!hasImage && "text-center"
               } c-fw-400 text-white cactus-font mx-auto`}
@@ -33,8 +32,8 @@ export default function CTA({ compData, hasImage }) {
                   })
                 }
                 className={`btn ${button.type === "primary"
-                    ? "btn-primary"
-                    : "btn-outline-light"
+                  ? "btn-primary"
+                  : "btn-outline-light"
                   }`}
               >
                 {button.text}
@@ -48,7 +47,6 @@ export default function CTA({ compData, hasImage }) {
                 alt="Person holding laptop"
                 width={320}
                 height={320}
-                priority
                 className="object-fit-contain w-100 h-auto"
               />
             </div>

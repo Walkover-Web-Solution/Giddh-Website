@@ -5,15 +5,15 @@ export default function AlternateFeatures({ features }) {
   if (features?.content?.length === 0) return null;
   return (
     <section className="bg-neutral pt-5">
-      <div className="container">
-        <h2 className="text-center sub-heading py-2 garamond-font">
+      <div className="container d-flex flex-column gap-5">
+        <h2 className="text-center sub-heading garamond-font">
           {features?.heading}
         </h2>
         {features?.content?.map((feature, index) => {
           const imageRight = index % 2 === 0;
           return (
             <div
-              className="row align-items-center text-start py-5"
+              className="row align-items-center text-start"
               key={feature?.feature + "-" + index}
             >
               <div

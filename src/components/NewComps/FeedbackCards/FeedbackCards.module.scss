@@ -1,12 +1,6 @@
 .feedbackCards {
     width: 360px !important;
     height: 260px;
-  
-    /* Solid left strip shadow */
     box-shadow: -8px 0 0 0 rgb(212, 216, 255);
-  
-    /* Make text flow properly */
-    display: flex;
-    flex-direction: column;
   }
   
