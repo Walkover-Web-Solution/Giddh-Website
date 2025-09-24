@@ -88,40 +88,48 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
   return (
     <div
       className={`d-flex flex-column gap-1 rounded p-2 ${
-        isExpanded ? "bg-white border" : ""
+        isExpanded ? "bg-accent text-white border" : ""
       } cursor-pointer`}
     >
       <div className="d-flex align-items-center gap-2" onClick={handleToggle}>
         <div className="border border-col-primary p-2 bg-light-blue rounded d-flex align-items-center justify-content-center">
           {Icon && <Icon size={18} className="col-primary" />}
         </div>
-        <span className="col-primary c-fw-600 c-fs-4">{feature?.name}</span>
+        <h3
+          className={`col-primary c-fw-600 c-fs-4 ${
+            isExpanded ? "text-white" : ""
+          }`}
+        >
+          {feature?.name}
+        </h3>
       </div>
 
-      {isExpanded && (
-        <div className="d-flex flex-column gap-2 pt-2 ps-sm-4">
-          <div className="d-block d-sm-none">
-            <Image
-              src={feature.image}
-              alt={feature.name}
-              width={800}
-              height={400}
-              className={`object-fit-contain cursor-pointer w-100 h-fit ${style.image}`}
-            />
-          </div>
-
-          <div className="d-flex flex-column gap-2">
-            <p className="m-0 p-0 c-fs-5">{feature.description}</p>
-            <ul className="list-unstyled d-flex flex-column gap-1">
-              {feature.content?.map((point, pointIndex) => (
-                <li className="d-flex gap-2 c-fs-5" key={pointIndex}>
-                  <MdCircle className="text-accent mt-2" fontSize={7} /> {point}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div
+        className={`d-flex flex-column gap-2 pt-2 ps-sm-5 ${
+          isExpanded ? "d-flex" : "d-none"
+        }`}
+      >
+        <div className="d-block d-sm-none">
+          <Image
+            src={feature?.image}
+            alt={feature?.name}
+            width={800}
+            height={400}
+            className={`object-fit-contain cursor-pointer w-100 h-fit ${style.image}`}
+          />
         </div>
-      )}
+
+        <div className="d-flex flex-column gap-2">
+          <p className="m-0 p-0 c-fs-4">{feature?.description}</p>
+          <ul className="list-unstyled d-flex flex-column gap-1">
+            {feature?.content?.map((point, pointIndex) => (
+              <li className="d-flex gap-2 c-fs-4" key={pointIndex}>
+                <MdCircle className="text-accent mt-2" fontSize={7} /> {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 });
