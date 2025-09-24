@@ -51,7 +51,7 @@ export default function Features() {
                   className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4`}
                 >
                   <div className="text-start text-white">
-                    <h3 className="font-outfit text-white c-fw-600 c-fs-4 text-start mb-2">
+                    <h3 className="font-outfit text-white c-fw-600 c-fs-4 text-start">
                       {data[expandedFeature].name}
                     </h3>
                     <p className="c-fs-5 text-start">
