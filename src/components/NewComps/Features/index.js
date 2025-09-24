@@ -16,7 +16,7 @@ export default function Features() {
   return (
     <section className={style.section}>
       <div className="container px-0 py-3 py-md-4">
-        <h2 className="heading text-center cactus-font mb-3 mb-md-4">
+        <h2 className="heading text-center garmond-font mb-3 mb-md-4">
           Features
         </h2>
 
