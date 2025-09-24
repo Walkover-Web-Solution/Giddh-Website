@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./CTASection.module.scss";
+import { MdArrowForward } from "react-icons/md";
 
 export default function CTASection() {
   const data = {
@@ -14,7 +15,7 @@ export default function CTASection() {
     <section className='bg-accent position-relative' aria-label="Giddh hero">
       <div className={`container ${styles.inner} d-grid align-items-center`}>
         <div className='p-4'>
-          <h1 className='c-fw-400 text-white cactus-font mx-auto' >{data.heading}</h1>
+          <h1 className='c-fw-400 text-white garmond-font c-fw-600 mx-auto' >{data.heading}</h1>
           <p className='fw-normal text-white m-0 pb-2 c-fw-600'>{data.subheading}</p>
           <div className={styles.actions}>
             <button
@@ -24,9 +25,9 @@ export default function CTASection() {
                   block: "center",
                 })
               }
-              className="btn btn-outline-light fw-semibold text-center align-self-start rounded-2 px-4 py-2 mt-3 col-12 col-sm-6"
+              className="btn bg-white col-primary fw-semibold text-center align-self-start rounded-2 px-4 py-2 mt-3 col-12 col-sm-6"
             >
-              {data.buttonText}
+              {data.buttonText} <MdArrowForward/>
             </button>
           </div>
         </div>

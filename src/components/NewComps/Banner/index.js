@@ -22,9 +22,7 @@ export default function Banner(path) {
           />
         </Head>
       )}
-      <section
-        className={`py-3 mb-5 outfit-font ${style.banner}`}
-      >
+      <section className={`py-3 mb-5 outfit-font ${style.banner}`}>
         <div className="container px-4">
           <div className="mb-5 pb-3 d-flex justify-content-between align-items-center">
             <img
@@ -45,23 +43,19 @@ export default function Banner(path) {
             >
               Get Started
             </button>
-
           </div>
-          <div className="row align-items-center justify-content-between cactus-font ">
-            <div className="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 pe-3">
-              <h1 className="cactus-font heading col-primary">
+          <div className="row align-items-center justify-content-between garmond-font">
+            <div className="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 pe-3 d-flex flex-column gap-2">
+              <span className="c-fs-4 outfit-font"> BUILD FOR <span className="col-primary"> SMBs</span></span>
+              <h1 className="garmond-font new-heading col-primary">
                 Smart, Simple & All-in-One Accounting for Growing Businesses
               </h1>
               <p className="col-grey outfit-font ">
-                Giddh brings everything together on a secure, cloud platform built for growing businesses. Simplifies accounting with GST-ready billing, smart inventory sync, and real-time financial insights.
+                Giddh simplifies accounting with GST billing, smart inventory, and real-time insights—all on a secure cloud platform.
               </p>
               <div className="d-flex flex-wrap align-items-center gap-4">
                 {trustBadgeBrands?.map((logo, index) => (
-                  <a
-                    key={index}
-                    href={logo.href}
-                    target="_blank"
-                  >
+                  <a key={index} href={logo.href} target="_blank">
                     <img
                       src={logo.src}
                       alt={logo.alt}
