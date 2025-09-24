@@ -14,10 +14,10 @@ export default function Features() {
   }, []);
 
   return (
-    <section className={style.section}>
-      <div className="container px-0 py-3 py-md-4">
-        <h2 className="heading text-center garmond-font mb-3 mb-md-4">
-          Features
+    <section className="py-5">
+      <div className="container">
+        <h2 className="new-sub-heading text-center garmond-font mb-3 mb-md-4">
+        <span className="col-primary">Giddh Features</span> That Make Business Easy
         </h2>
 
         <div className="d-flex flex-column flex-sm-row gap-4 outfit-font align-items-center justify-content-between">

@@ -39,10 +39,10 @@ export default function FAQs() {
         </Head>
       )}
 
-      <section className={`container p-2 my-4`}>
+      <section className={`container py-5`}>
         <div className="d-flex flex-lg-row flex-column">
           <div className="col-lg-4 col-12">
-            <h2 className="subheading col-dark garmond-font col-lg-2 col-12">
+            <h2 className="new-sub-heading col-dark garmond-font col-lg-2 col-12">
               Frequently Asked Questions
             </h2>
           </div>

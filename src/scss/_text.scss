@@ -119,3 +119,11 @@
 .garmond-font{
   font-family: 'Cormorant Garamond', serif;
 }
+
+// new headings
+.new-heading{
+  font-size: var(--new-heading);
+}
+.new-sub-heading{
+  font-size: var(--new-sub-heading);
+}

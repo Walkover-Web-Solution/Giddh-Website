@@ -6,9 +6,9 @@ import Image from "next/image";
 export default function WhyGiddh() {
   return (
     <section className="bg-light-blue outfit-font">
-      <div className="container py-5">
+      <div className="container py-5 d-flex flex-column gap-4">
 
-      <h2 className="text-center mb-4 col-primary c-fw-600 ">
+      <h2 className="text-center mb-4 col-primary new-sub-heading c-fw-600 ">
       Why Giddh Is The Best Choice For Your Business?
       </h2>
       <div className="bg-white border-end border-accent border-2 rounded-4 overflow-hidden">
