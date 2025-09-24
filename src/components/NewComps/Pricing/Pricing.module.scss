@@ -1,3 +1,26 @@
-.table_header {
-  min-height: 90px;
+.tableWrapper {
+  -webkit-overflow-scrolling: touch;
 }
+
+.fixedTable {
+  table-layout: fixed;
+  min-width: 220px; 
+}
+
+.firstCol {
+  width: 180px;
+}
+
+.otherCol {
+  width: 180px;
+}
+
+
+.fixedTable th,
+.fixedTable td {
+  border: 1px solid #dee2e6;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+

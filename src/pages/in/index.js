@@ -1,8 +1,8 @@
 import Home from "@/components/Pages/Home";
-const inIndex = ({pageData, pageinfo}) => {
+const inIndex = ({pageData, pageInfo}) => {
   return (
     <>
-      <Home pageData={pageData} pageinfo={pageinfo} />
+      <Home pageData={pageData} pageInfo={pageInfo}  />
     </>
   );
 };

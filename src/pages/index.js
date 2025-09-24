@@ -1,5 +1,5 @@
 import Home from "@/components/Pages/Home";
 
-export default function Index({ pageData, pageinfo }) {
-  return <Home pageData={pageData} pageinfo={pageinfo} />;
+export default function Index({ pageData, pageInfo}) {
+  return <Home pageData={pageData} pageInfo={pageInfo} />;
 }
