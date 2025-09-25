@@ -14,10 +14,10 @@ export default function Features() {
   }, []);
 
   return (
-    <section className={style.section}>
-      <div className="container px-0 py-3 py-md-4">
-        <h2 className="heading text-center cactus-font mb-3 mb-md-4">
-          Features
+    <section className="py-5">
+      <div className="container">
+        <h2 className="new-sub-heading text-center garmond-font mb-3 mb-md-4">
+        <span className="col-primary">Giddh Features</span> That Make Business Easy
         </h2>
 
         <div className="d-flex flex-column flex-sm-row gap-4 outfit-font align-items-center justify-content-between">
@@ -51,7 +51,7 @@ export default function Features() {
                   className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4`}
                 >
                   <div className="text-start text-white">
-                    <h3 className="font-outfit text-white c-fw-600 c-fs-4 text-start mb-2">
+                    <h3 className="font-outfit text-white c-fw-600 c-fs-4 text-start">
                       {data[expandedFeature].name}
                     </h3>
                     <p className="c-fs-5 text-start">
@@ -88,40 +88,48 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
   return (
     <div
       className={`d-flex flex-column gap-1 rounded p-2 ${
-        isExpanded ? "bg-white border" : ""
+        isExpanded ? "bg-accent text-white border" : ""
       } cursor-pointer`}
     >
       <div className="d-flex align-items-center gap-2" onClick={handleToggle}>
         <div className="border border-col-primary p-2 bg-light-blue rounded d-flex align-items-center justify-content-center">
           {Icon && <Icon size={18} className="col-primary" />}
         </div>
-        <span className="col-primary c-fw-600 c-fs-4">{feature?.name}</span>
+        <h3
+          className={`col-primary c-fw-600 c-fs-4 m-0 ${
+            isExpanded ? "text-white" : ""
+          }`}
+        >
+          {feature?.name}
+        </h3>
       </div>
 
-      {isExpanded && (
-        <div className="d-flex flex-column gap-2 pt-2 ps-sm-4">
-          <div className="d-block d-sm-none">
-            <Image
-              src={feature.image}
-              alt={feature.name}
-              width={800}
-              height={400}
-              className={`object-fit-contain cursor-pointer w-100 h-fit ${style.image}`}
-            />
-          </div>
-
-          <div className="d-flex flex-column gap-2">
-            <p className="m-0 p-0 c-fs-5">{feature.description}</p>
-            <ul className="list-unstyled d-flex flex-column gap-1">
-              {feature.content?.map((point, pointIndex) => (
-                <li className="d-flex gap-2 c-fs-5" key={pointIndex}>
-                  <MdCircle className="text-accent mt-2" fontSize={7} /> {point}
-                </li>
-              ))}
-            </ul>
-          </div>
+      <div
+        className={`d-flex flex-column gap-2 pt-2 ps-sm-5 ${
+          isExpanded ? "d-flex" : "d-none"
+        }`}
+      >
+        <div className="d-block d-sm-none">
+          <Image
+            src={feature?.image}
+            alt={feature?.name}
+            width={800}
+            height={400}
+            className={`object-fit-contain cursor-pointer w-100 h-fit ${style.image}`}
+          />
         </div>
-      )}
+
+        <div className="d-flex flex-column gap-2">
+          <p className="m-0 p-0 c-fs-4">{feature?.description}</p>
+          <ul className="list-unstyled d-flex flex-column gap-1">
+            {feature?.content?.map((point, pointIndex) => (
+              <li className="d-flex gap-2 c-fs-4" key={pointIndex}>
+                <MdCircle className="text-accent mt-2" fontSize={7} /> {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 });

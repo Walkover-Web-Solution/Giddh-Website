@@ -60,9 +60,9 @@ export default function BookFreeDemoForm({
       <div
         className={`outfit-font card col-lg-5 col-md-6 col-12 p-4 gap-4 rounded ${style.form_container} d-flex flex-column align-items-center justify-content-center`}
       >
-        <h5 className="col-primary c-fw-600 c-fs-8">
+        <span className="col-primary c-fw-600 c-fs-3 mb-4">
           Upgrade Your Accounting with Giddh
-        </h5>
+        </span>
         <form
           onSubmit={handleSubmit}
           className="w-100 gap-3 d-flex flex-column"
@@ -71,6 +71,7 @@ export default function BookFreeDemoForm({
             formData={formData}
             handleChange={handleChange}
             error={error}
+            verticalFileds={verticalFileds}
           />
           <button
             type="submit"
@@ -131,7 +132,7 @@ export default function BookFreeDemoForm({
                 />
                 <button
                   type="submit"
-                  className={`btn ${submitting ? "btn-disabled" : "btn-primary"
+                  className={`btn btn-lg ${submitting ? "btn-disabled" : "btn-primary"
                     } w-100`}
                   aria-label="Signup for Accounting Software"
                   disabled={submitting}
@@ -148,7 +149,7 @@ export default function BookFreeDemoForm({
         className={`${style.form_container} w-100 bg-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}
       >
         <div className="d-flex align-items-center  justify-content-center flex-column gap-3 w-100">
-          <p className="col-primary c-fw-600 mb-0 c-fs-4">
+          <p className="col-primary c-fw-600 mb-0 c-fs-3">
             {heading ? "Explore the Advanced Accounting Features of Giddh" : ""}
           </p>
           <form
@@ -181,16 +182,16 @@ export default function BookFreeDemoForm({
 
 function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds }) {
   return (
-    <div className="w-100 gap-3 d-flex flex-column">
+    <div className="w-100 gap-4 d-flex flex-column">
       <div
-        className={`d-flex m-0 gap-3 flex-column  ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
+        className={`d-flex m-0 gap-4 flex-column  ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
           }`}
       >
         <div className="w-100">
           <input
             type="text"
             name="name"
-            className={`form-control ${style.formPlaceholder}`}
+            className={`form-control form-control-lg ${style.formPlaceholder}`}
             placeholder="Name*"
             required
             value={formData.name}
@@ -202,7 +203,7 @@ function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds 
           <input
             type="text"
             name="phone"
-            className={`form-control ${style.formPlaceholder}`}
+            className={`form-control form-control-lg ${style.formPlaceholder}`}
             placeholder="Mobile Number*"
             required
             value={formData.phone}
@@ -212,14 +213,14 @@ function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds 
         </div>
       </div>
       <div
-        className={`d-flex m-0 gap-3 flex-column mb-3 ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
+        className={`d-flex m-0 gap-4 flex-column mb-3 ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
           }`}
       >
         <div className="w-100">
           <input
             type="text"
             name="business"
-            className={`form-control ${style.formPlaceholder}`}
+            className={`form-control form-control-lg ${style.formPlaceholder}`}
             placeholder="Business Name"
             value={formData.business}
             onChange={handleChange}
@@ -230,7 +231,7 @@ function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds 
           <input
             type="email"
             name="email"
-            className={`form-control ${style.formPlaceholder}`}
+            className={`form-control form-control-lg ${style.formPlaceholder}`}
             placeholder="Email Address*"
             required
             value={formData.email}
