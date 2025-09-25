@@ -63,9 +63,9 @@ export default function FeedbackCards({ testimonials }) {
                 className={`rounded-4 p-4 bg-white d-flex flex-column ${styles.feedbackCards}`}
               >
                 <div className="d-flex  justify-content-between">
-                  <h6 className="fw-bold mb-3 c-fs-5">
+                  <h3 className="fw-bold mb-3 c-fs-5">
                     ~ {t?.owner ? t?.owner + ", " : ""} {t?.company}
-                  </h6>
+                  </h3>
                   <MdOutlineFormatQuote />
                 </div>
                 <p className="c-fs-6">{t?.testimonial}</p>
