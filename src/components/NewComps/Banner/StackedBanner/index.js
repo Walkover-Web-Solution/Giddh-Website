@@ -9,7 +9,7 @@ export default function StackedBanner({ compData }) {
           <Image
             width={1080}
             height={585}
-            className="img-fluid align-self-center"
+            className="img-fluid align-self-center rounded-2"
             src={compData?.image}
             alt={compData?.heading}
           />
