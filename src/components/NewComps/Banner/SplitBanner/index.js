@@ -2,7 +2,7 @@ import BookFreeDemoForm from "../../BookFreeDemoForm";
 import { trustBadgeBrands } from "../../TrustBadge";
 import style from "./SplitBanner.module.scss";
 
-export default function SplitBanner(path) {
+export default function SplitBanner() {
   return (
     <>
       <section className={`py-3 mb-5 outfit-font ${style.banner}`}>

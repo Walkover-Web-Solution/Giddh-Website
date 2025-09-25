@@ -176,7 +176,7 @@ export default function Pricing({ pageInfo, pageData }) {
           </table>
         </div>
         <div className="d-flex flex-column gap-2 align-items-center">
-          <h2 className="sub-heading garamond-font">
+          <h2 className="sub-heading garamond-font text-center">
             {pageData?.pricing?.footer?.heading}
           </h2>
           <button className="btn btn-primary">{pageData?.pricing?.footer?.button?.text}</button>
