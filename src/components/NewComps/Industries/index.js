@@ -9,8 +9,7 @@ export default function Industries({ giddhIndustries }) {
                 <img
                     src={item?.img}
                     alt={item?.name}
-                    className="img-fluid "
-                    style={{ width: 72, height: "auto" }}
+                    className="img-fluid max-width-5"
                 />
                 <div className="col-grey c-fw-600 c-fs-5">{item?.name}</div>
             </div>
@@ -22,7 +21,7 @@ export default function Industries({ giddhIndustries }) {
                 <h2 className="cactus-font text-center garamond-font sub-heading c-fw-400">
                     {giddhIndustries?.heading}
                 </h2>
-                <p className="text-center c-fs-5 mb-5 w-75 mx-auto pb-3">{giddhIndustries?.description}</p>
+                <p className="text-center c-fs-4 mb-5 w-md-75 w-100 mx-auto pb-3">{giddhIndustries?.description}</p>
                 <div className="row justify-content-center align-items-center mb-3">
                     {renderIconsRow(giddhIndustries?.rowOne)}
                 </div>
