@@ -151,13 +151,15 @@
   font-family: "Cormorant Garamond", serif;
 }
 
+//====================================MIXINS========================================
+
 // new headings
-.new-heading {
-  font-size: var(--new-heading);
+.font-heading {
+  font-size: var(--font-heading);
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 800;
 }
-.new-sub-heading {
-  font-size: var(--new-sub-heading);
+.font-sub-heading {
+  font-size: var(--font-sub-heading);
 }
-.new-base-2 {
-  font-size: var(--new-base-2);
-}
+

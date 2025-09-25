@@ -33,7 +33,7 @@ export default function SplitBanner() {
                 {" "}
                 BUILD FOR <span className="col-primary"> SMBs</span>
               </span>
-              <h1 className="garmond-font  new-heading col-primary">
+              <h1 className="font-heading col-primary">
                 Smart, Simple & All-in-One Accounting for Growing Businesses
               </h1>
               <p className="col-grey outfit-font ">
