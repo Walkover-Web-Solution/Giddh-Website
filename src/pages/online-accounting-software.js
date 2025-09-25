@@ -38,7 +38,7 @@ const index = (path) => {
   return (
     <>
       <GiddhPopUp />
-      <SplitBanner path={link} />
+      <SplitBanner />
       <ToggleFeatures path={link} />
       <WhyGiddh />
       <CTASection />
