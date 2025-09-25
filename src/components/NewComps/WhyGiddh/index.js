@@ -1,6 +1,4 @@
-import React from "react";
 import whyGiddhData from "./data.json";
-import { MdClose, MdDone } from "react-icons/md";
 import Image from "next/image";
 export default function WhyGiddh() {
   return (
