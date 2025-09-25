@@ -16,7 +16,7 @@ export default function ToggleFeatures() {
   return (
     <section className="py-5">
       <div className="container">
-        <h2 className="new-sub-heading text-center garmond-font mb-3 mb-md-4">
+        <h2 className="new-sub-heading text-center garmond-font  mb-3 mb-md-4">
         <span className="col-primary">Giddh Features</span> That Make Business Easy
         </h2>
 

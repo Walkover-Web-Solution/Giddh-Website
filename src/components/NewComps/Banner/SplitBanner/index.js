@@ -27,13 +27,13 @@ export default function SplitBanner() {
               Get Started
             </button>
           </div>
-          <div className="row align-items-center justify-content-between garmond-font">
+          <div className="row align-items-center justify-content-between garmond-font ">
             <div className="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 pe-3 d-flex flex-column gap-2">
               <span className="c-fs-4 outfit-font">
                 {" "}
                 BUILD FOR <span className="col-primary"> SMBs</span>
               </span>
-              <h1 className="garmond-font new-heading col-primary">
+              <h1 className="garmond-font  new-heading col-primary">
                 Smart, Simple & All-in-One Accounting for Growing Businesses
               </h1>
               <p className="col-grey outfit-font ">

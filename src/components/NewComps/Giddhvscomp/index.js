@@ -3,7 +3,7 @@ import styles from "./Giddhvscomp.module.scss";
 export default function Giddhvscomp({ giddhvscomp }) {
   return (
     <section className="container py-5 outfit-font">
-      <h1 className="text-center mb-4 cactus-font">{giddhvscomp?.heading}</h1>
+      <h1 className="text-center mb-4 garmond-font ">{giddhvscomp?.heading}</h1>
       <p className="text-center mb-4 w-75 mx-auto">{giddhvscomp?.subheading}</p>
       <div className={`text-center ${styles.giddhScrollWrapper}`}>
         <div className={styles.giddhScrollInner}>

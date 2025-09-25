@@ -15,13 +15,11 @@
   font-display: swap;
   src: url("../../public/fonts/OpelSans-Bold.ttf");
   src: url("../../public/fonts/OpelSans-Bold.ttf") format("truetype"),
-       url("../../public/fonts/OpelSans-Bold.woff") format("woff");
+    url("../../public/fonts/OpelSans-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 600;
   text-rendering: optimizeLegibility;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Outfit:wght@100..900&display=swap');
 
 //====================================FONT SIZE========================================
 
@@ -107,29 +105,59 @@
   color: var(--col-baby-pink) !important;
 }
 
+//font family
 
-.outfit-font{
-    font-family: 'Outfit', sans-serif;
+@font-face {
+  font-family: "Outfit";
+  font-display: swap;
+  src: url("../../public/fonts/outfit/outfit.ttf");
+  src: url("../../public/fonts/outfit/outfit.ttf") format("truetype"),
+    url("../../public/fonts/outfit/outfit.woff") format("woff");
+  font-style: normal;
+  text-rendering: optimizeLegibility;
 }
 
-.cactus-font{
-    font-family: 'Cactus Classical Serif', serif;
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-display: swap;
+  src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_regular.ttf");
+  src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_regular.ttf")
+      format("truetype"),
+    url("../../public/fonts/cormorant_garamond/cormorant_garamond_regular.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
 }
 
-.garamond-font{
-    font-family: 'EB Garamond', serif;
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-display: swap;
+  src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_bold.ttf");
+  src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_bold.ttf")
+      format("truetype"),
+    url("../../public/fonts/cormorant_garamond/cormorant_garamond_bold.woff")
+      format("woff");
+  font-style: bold;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
 }
-.garmond-font{
-  font-family: 'Cormorant Garamond', serif;
+
+.outfit-font {
+  font-family: "Outfit", sans-serif;
+}
+
+.garmond-font {
+  font-family: "Cormorant Garamond", serif;
 }
 
 // new headings
-.new-heading{
+.new-heading {
   font-size: var(--new-heading);
 }
-.new-sub-heading{
+.new-sub-heading {
   font-size: var(--new-sub-heading);
 }
-.new-base-2{
+.new-base-2 {
   font-size: var(--new-base-2);
 }

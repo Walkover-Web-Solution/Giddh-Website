@@ -20,7 +20,7 @@ export default function AlternateFeatures({ features }) {
                 className={`col-12 col-md-6  ${imageRight ? "order-md-1" : "order-md-2"
                   }`}
               >
-                <h3 className="garamond-font col-primary c-fs-1 c-fw-400">
+                <h3 className="garmond-font col-primary c-fs-1 c-fw-400">
                   {feature?.feature}
                 </h3>
                 <p className="col-dark-grey c-fs-4">{feature?.description}</p>

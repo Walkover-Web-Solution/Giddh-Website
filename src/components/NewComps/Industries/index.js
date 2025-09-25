@@ -18,7 +18,7 @@ export default function Industries({ giddhIndustries }) {
     return (
         <section className="py-5 col-grey">
             <div className="container d-flex flex-column gap-1">
-                <h2 className="cactus-font text-center garamond-font sub-heading c-fw-400">
+                <h2 className="garmond-font  text-center garmond-font sub-heading c-fw-400">
                     {giddhIndustries?.heading}
                 </h2>
                 <p className="text-center c-fs-4 mb-5 w-md-75 w-100 mx-auto pb-3">{giddhIndustries?.description}</p>

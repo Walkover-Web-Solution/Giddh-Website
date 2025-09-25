@@ -31,7 +31,7 @@ export default function TrustBadgeScrollable({ heading }) {
       <div className="container text-center d-flex flex-column gap-3">
         <div className="d-flex flex-column gap-1">
           <h2 className="sub-heading col-primary c-fw-400 garamond-font">{heading?.title}</h2>
-          <p className="col-dark-grey cactus-font c-fs-4">{heading?.description}</p>
+          <p className="col-dark-grey garmond-font  c-fs-4">{heading?.description}</p>
         </div>
 
         <div className="position-relative overflow-hidden w-100 px-5">

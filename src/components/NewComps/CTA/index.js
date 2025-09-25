@@ -11,7 +11,7 @@ export default function CTA({ compData, hasImage }) {
         <div className="d-flex flex-column align-items-center justify-content-center gap-4">
           <h1
             className={`${!hasImage && "text-center"
-              } c-fw-400 text-white cactus-font mx-auto`}
+              } c-fw-400 text-white garmond-font  mx-auto`}
           >
             {compData?.heading}
           </h1>

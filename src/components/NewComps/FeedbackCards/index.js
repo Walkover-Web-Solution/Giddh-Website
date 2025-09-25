@@ -46,10 +46,10 @@ export default function FeedbackCards({ testimonials }) {
   return (
     <section className="py-5 bg-light-blue">
       <div className="container">
-        <h2 className="c-fw-400 garamond-font col-primary sub-heading">
+        <h2 className="c-fw-400 garmond-font col-primary sub-heading">
           Hear how we’ve made a difference
         </h2>
-        <p className="c-fw-400 col-primary cactus-font c-fs-4">
+        <p className="c-fw-400 col-primary garmond-font  c-fs-4">
           Stories that inspire us to keep delivering our best.
         </p>
 
