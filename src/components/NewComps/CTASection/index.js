@@ -5,7 +5,7 @@ import { MdArrowForward } from "react-icons/md";
 
 export default function CTASection() {
   const data = {
-    heading: "Tired Of Overpriced Accounting Software With Fewer Features?",
+    heading: "Tired Of Overpriced Accounting Software With Limited Features?",
     subheading:
       "Get an advanced, affordable solution with Giddh!",
     buttonText: "Switch To Giddh Now",

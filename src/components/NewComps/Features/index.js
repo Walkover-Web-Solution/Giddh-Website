@@ -96,7 +96,7 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
           {Icon && <Icon size={18} className="col-primary" />}
         </div>
         <h3
-          className={`col-primary c-fw-600 c-fs-4 ${
+          className={`col-primary c-fw-600 c-fs-4 m-0 ${
             isExpanded ? "text-white" : ""
           }`}
         >
