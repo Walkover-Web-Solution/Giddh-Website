@@ -122,6 +122,7 @@ body {
       background: var(--col-dark);
     }
   }
+  
 }
 
 //custom SCSS
@@ -174,4 +175,20 @@ body {
   &-disc {
     list-style: disc;
   }
+}
+
+.border-accent {
+  &.border-start {
+    border-color: var(--col-primary) !important;
+  }
+  &.border-top {
+    border-color: var(--col-primary) !important;
+  }
+  &.border-bottom {
+    border-color: var(--col-primary) !important;
+  }
+  &.border-end {
+    border-color: var(--col-primary) !important;
+  }
+
 }
