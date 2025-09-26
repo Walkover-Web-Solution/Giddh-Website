@@ -22,19 +22,7 @@ const index = (path) => {
     }
   }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const modalEl = document.getElementById("giddhPopUp");
-      modalEl.classList.add("show");
-      modalEl.style.display = "block";
-      document.body.classList.add("modal-open");
-      const backdrop = document.createElement("div");
-      backdrop.className = "modal-backdrop fade show";
-      document.body.appendChild(backdrop);
-    }, 20000);
 
-    return () => clearTimeout(timer);
-  }, []);
   return (
     <>
       <GiddhPopUp />
