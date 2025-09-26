@@ -1,11 +1,11 @@
 import data from "./data.json";
-import style from "./ToggleFeatures.module.scss";
+import style from "./Features.module.scss";
 import { useState, useCallback, memo } from "react";
 import Image from "next/image";
 import * as MdIcons from "react-icons/md";
 import { MdCircle } from "react-icons/md";
 
-export default function ToggleFeatures() {
+export default function Features() {
   const [expandedFeature, setExpandedFeature] = useState(0);
   const Icon = MdIcons[data[expandedFeature].icon];
 
@@ -16,7 +16,7 @@ export default function ToggleFeatures() {
   return (
     <section className="py-5">
       <div className="container">
-        <h2 className="new-sub-heading text-center garmond-font  mb-3 mb-md-4">
+        <h2 className="new-sub-heading text-center garmond-font mb-3 mb-md-4">
         <span className="col-primary">Giddh Features</span> That Make Business Easy
         </h2>
 
@@ -48,7 +48,7 @@ export default function ToggleFeatures() {
                 />
 
                 <div
-                  className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4 position-absolute top-0 left-0 right-0 bottom-0`}
+                  className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4`}
                 >
                   <div className="text-start text-white">
                     <h3 className="font-outfit text-white c-fw-600 c-fs-4 text-start">
