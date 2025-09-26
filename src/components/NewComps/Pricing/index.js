@@ -3,7 +3,7 @@ import styles from "./Pricing.module.scss";
 import staticData from "./pricingData.json";
 import { MdDone, MdClose } from "react-icons/md";
 
-export default function Pricing({ pageInfo, pageData }) {
+export default function Pricing({ pageInfo, compData }) {
   const [isAnnual, setIsAnnual] = useState(true);
   const [pricingData, setPricingData] = useState([]);
   const country = pageInfo?.country;
@@ -29,7 +29,9 @@ export default function Pricing({ pageInfo, pageData }) {
     (async () => {
       try {
         const res = await fetch(
-          `https://api.giddh.com/v2/subscription/plans/all?regionCode=${getRegion(country)}`
+          `https://api.giddh.com/v2/subscription/plans/all?regionCode=${getRegion(
+            country
+          )}`
         );
         const data = await res.json();
         setPricingData(data?.body || []);
@@ -43,11 +45,13 @@ export default function Pricing({ pageInfo, pageData }) {
   const featureConfig = [
     {
       label: "Invoices Allowed",
-      getValue: (plan) => isAnnual ? plan?.invoicesAllowed : plan?.invoicesAllowed / 10,
+      getValue: (plan) =>
+        isAnnual ? plan?.invoicesAllowed : plan?.invoicesAllowed / 10,
     },
     {
       label: "Bills Allowed",
-      getValue: (plan) => (isAnnual ? plan?.billsAllowed : plan?.billsAllowed / 10),
+      getValue: (plan) =>
+        isAnnual ? plan?.billsAllowed : plan?.billsAllowed / 10,
     },
     {
       label: "Companies Limit",
@@ -57,7 +61,8 @@ export default function Pricing({ pageInfo, pageData }) {
       label: "Accountant Consultant",
       getValue: (plan) => {
         const mode = isAnnual ? "annual" : "monthly";
-        const flag = staticData?.plans?.[mode]?.[plan?.name]?.accountantConsultant;
+        const flag =
+          staticData?.plans?.[mode]?.[plan?.name]?.accountantConsultant;
         return flag?.includes("in") ? <MdDone /> : <MdClose />;
       },
     },
@@ -65,7 +70,8 @@ export default function Pricing({ pageInfo, pageData }) {
       label: "Unlimited Users Access",
       getValue: (plan) => {
         const mode = isAnnual ? "annual" : "monthly";
-        const flag = staticData?.plans?.[mode]?.[plan?.name]?.unlimitedUsersAccess;
+        const flag =
+          staticData?.plans?.[mode]?.[plan?.name]?.unlimitedUsersAccess;
         return flag?.includes("in") ? <MdDone /> : <MdClose />;
       },
     },
@@ -74,7 +80,11 @@ export default function Pricing({ pageInfo, pageData }) {
   const renderPrice = (plan) => {
     const isFreePlan = plan?.name === "Free Plan";
     const symbol = isFreePlan ? "" : plan?.currency?.symbol || "$";
-    const price = isFreePlan ? "Free" : isAnnual ? plan?.yearlyAmount : plan?.monthlyAmount;
+    const price = isFreePlan
+      ? "Free"
+      : isAnnual
+      ? plan?.yearlyAmount
+      : plan?.monthlyAmount;
     const duration = isFreePlan ? "" : isAnnual ? "per annum" : "per month";
 
     return (
@@ -92,17 +102,14 @@ export default function Pricing({ pageInfo, pageData }) {
       <div className="container py-5 d-flex flex-column gap-4">
         <div className="w-full text-center">
           <h2 className="sub-heading fw-semibold mb-2 garamond-font">
-            {pageData?.pricing?.heading}
+            {compData?.heading}
           </h2>
-          <p>{pageData?.pricing?.subheading}</p>
+          <p>{compData?.subheading}</p>
         </div>
 
         {!isGlobal && (
           <div className="d-flex justify-content-end">
-            <div
-              className="btn-group"
-              role="group"
-            >
+            <div className="btn-group" role="group">
               <input
                 type="radio"
                 className="btn-check"
@@ -130,16 +137,21 @@ export default function Pricing({ pageInfo, pageData }) {
               </label>
             </div>
           </div>
-
         )}
 
-        <div className={`${styles.tableWrapper} w-full overflow-x-auto outfit-font`}>
+        <div
+          className={`${styles.tableWrapper} w-full overflow-x-auto outfit-font`}
+        >
           <table className={`table ${styles.fixedTable} w-100`}>
             <thead>
               <tr>
                 <th className={` ${styles.firstCol} text-start`}>
-                  <p className="fw-bold mb-1 p-1 c-fs-5">Select a plan that best suits your needs</p>
-                  <p className="fw-bold mb-1 p-1 c-fs-6">*All prices are exclusive of GST</p>
+                  <p className="fw-bold mb-1 p-1 c-fs-5">
+                    Select a plan that best suits your needs
+                  </p>
+                  <p className="fw-bold mb-1 p-1 c-fs-6">
+                    *All prices are exclusive of GST
+                  </p>
                 </th>
 
                 {pricingData.map((plan, index) => {
@@ -149,9 +161,13 @@ export default function Pricing({ pageInfo, pageData }) {
                       key={index}
                       className={`${styles.otherCol} overflow-hidden text-center`}
                     >
-                      <div className={`p-2 d-flex flex-column gap-2 ${isFreePlan ? "mb-3" : ""}`}>
+                      <div
+                        className={`p-2 d-flex flex-column gap-2 ${
+                          isFreePlan ? "mb-3" : ""
+                        }`}
+                      >
                         <p className="m-0 fw-bold c-fs-5">{plan.name}</p>
-                        <div >{renderPrice(plan)}</div>
+                        <div>{renderPrice(plan)}</div>
                       </div>
                     </th>
                   );
@@ -166,7 +182,10 @@ export default function Pricing({ pageInfo, pageData }) {
                     <p className="m-0">{feature.label}</p>
                   </td>
                   {pricingData.map((plan, pIndex) => (
-                    <td key={pIndex} className={`${styles.otherCol} text-center`}>
+                    <td
+                      key={pIndex}
+                      className={`${styles.otherCol} text-center`}
+                    >
                       {feature.getValue(plan)}
                     </td>
                   ))}
@@ -177,9 +196,13 @@ export default function Pricing({ pageInfo, pageData }) {
         </div>
         <div className="d-flex flex-column gap-2 align-items-center">
           <h2 className="sub-heading garmond-font text-center">
-            {pageData?.pricing?.footer?.heading}
+            {compData?.footer?.heading}
           </h2>
-          <button className="btn btn-primary">{pageData?.pricing?.footer?.button?.text}</button>
+          <a href={compData?.footer?.button?.link} target="_blank">
+            <button className="btn btn-primary">
+              {compData?.footer?.button?.text}
+            </button>
+          </a>
         </div>
       </div>
     </section>

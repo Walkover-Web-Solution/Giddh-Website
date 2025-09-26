@@ -48,7 +48,7 @@ export default function ToggleFeatures() {
                 />
 
                 <div
-                  className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4`}
+                  className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4 position-absolute top-0 left-0 right-0 bottom-0`}
                 >
                   <div className="text-start text-white">
                     <h3 className="font-outfit text-white c-fw-600 c-fs-4 text-start">

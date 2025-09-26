@@ -3,7 +3,6 @@ import styles from "./FeedbackCards.module.scss";
 import { MdOutlineFormatQuote } from "react-icons/md";
 
 export default function FeedbackCards({ testimonials }) {
-
   const scrollRef = useRef(null);
   const frameRef = useRef(null);
 
@@ -12,7 +11,7 @@ export default function FeedbackCards({ testimonials }) {
     if (!container) return;
 
     let scrollAmount = 0;
-    const speed = 2;
+    const speed = 1;
 
     const step = () => {
       scrollAmount += speed;
@@ -57,18 +56,19 @@ export default function FeedbackCards({ testimonials }) {
           ref={scrollRef}
           className="d-flex flex-row gap-5 overflow-hidden py-5"
         >
-          {testimonials?.concat(testimonials)?.map((t, i) => (
-            <div key={i}>
+          {testimonials?.concat(testimonials)?.map((testimonial, index) => (
+            <div key={index}>
               <div
                 className={`rounded-4 p-4 bg-white d-flex flex-column ${styles.feedbackCards}`}
               >
                 <div className="d-flex  justify-content-between">
                   <h3 className="fw-bold mb-3 c-fs-5">
-                    ~ {t?.owner ? t?.owner + ", " : ""} {t?.company}
+                    ~ {testimonial?.owner ? testimonial?.owner + ", " : ""}{" "}
+                    {testimonial?.company}
                   </h3>
                   <MdOutlineFormatQuote />
                 </div>
-                <p className="c-fs-6">{t?.testimonial}</p>
+                <p className="c-fs-6">{testimonial?.testimonial}</p>
               </div>
             </div>
           ))}

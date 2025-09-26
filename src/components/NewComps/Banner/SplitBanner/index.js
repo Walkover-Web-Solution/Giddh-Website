@@ -22,7 +22,7 @@ export default function SplitBanner() {
                   block: "center",
                 })
               }
-              className={`px-3 py-2 c-fs-5 rounded  ${style.getStarted}`}
+              className="btn btn-primary-outline"
             >
               Get Started
             </button>

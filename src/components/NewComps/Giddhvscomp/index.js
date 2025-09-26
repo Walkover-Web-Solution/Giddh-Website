@@ -5,7 +5,7 @@ export default function Giddhvscomp({ giddhvscomp }) {
     <section className="container py-5 outfit-font">
       <h1 className="text-center mb-4 garmond-font ">{giddhvscomp?.heading}</h1>
       <p className="text-center mb-4 w-75 mx-auto">{giddhvscomp?.subheading}</p>
-      <div className={`text-center ${styles.giddhScrollWrapper}`}>
+      <div className={`text-center ${styles.giddhScrollWrapper} overflow-touch overflow-x-auto w-100 mp-1 display-inline-block`}>
         <div className={styles.giddhScrollInner}>
 
           <div className="bg-white border rounded overflow-hidden">

@@ -6,17 +6,20 @@ import { MdArrowForward } from "react-icons/md";
 export default function CTASection() {
   const data = {
     heading: "Tired Of Overpriced Accounting Software With Limited Features?",
-    subheading:
-      "Get an advanced, affordable solution with Giddh!",
+    subheading: "Get an advanced, affordable solution with Giddh!",
     buttonText: "Switch To Giddh Now",
     image: "/img/girl-avatar.svg",
   };
   return (
-    <section className='bg-accent position-relative' aria-label="Giddh hero">
+    <section className="bg-accent position-relative" aria-label="Giddh hero">
       <div className={`container ${styles.inner} d-grid align-items-center`}>
-        <div className='p-4'>
-          <h1 className='c-fw-400 text-white garmond-font  c-fw-600 mx-auto' >{data.heading}</h1>
-          <p className='fw-normal text-white m-0 pb-2 c-fw-600'>{data.subheading}</p>
+        <div className="p-4">
+          <h1 className="c-fw-400 text-white garmond-font  c-fw-600 mx-auto">
+            {data.heading}
+          </h1>
+          <p className="fw-normal text-white m-0 pb-2 c-fw-600">
+            {data.subheading}
+          </p>
           <div className={styles.actions}>
             <button
               onClick={() =>
@@ -27,7 +30,7 @@ export default function CTASection() {
               }
               className="btn bg-white col-primary fw-semibold text-center align-self-start rounded-2 px-4 py-2 mt-3 col-12 col-sm-6"
             >
-              {data.buttonText} <MdArrowForward/>
+              {data.buttonText} <MdArrowForward />
             </button>
           </div>
         </div>

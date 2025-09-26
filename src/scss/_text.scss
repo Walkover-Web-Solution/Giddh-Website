@@ -110,9 +110,7 @@
 @font-face {
   font-family: "Outfit";
   font-display: swap;
-  src: url("../../public/fonts/outfit/outfit.ttf");
-  src: url("../../public/fonts/outfit/outfit.ttf") format("truetype"),
-    url("../../public/fonts/outfit/outfit.woff") format("woff");
+  src: url("../../public/fonts/outfit/outfit.ttf") format("truetype");
   font-style: normal;
   text-rendering: optimizeLegibility;
 }
@@ -120,11 +118,8 @@
 @font-face {
   font-family: "Cormorant Garamond";
   font-display: swap;
-  src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_regular.ttf");
   src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_regular.ttf")
-      format("truetype"),
-    url("../../public/fonts/cormorant_garamond/cormorant_garamond_regular.woff")
-      format("woff");
+    format("truetype");
   font-style: normal;
   font-weight: 400;
   text-rendering: optimizeLegibility;
@@ -133,11 +128,8 @@
 @font-face {
   font-family: "Cormorant Garamond";
   font-display: swap;
-  src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_bold.ttf");
   src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_bold.ttf")
-      format("truetype"),
-    url("../../public/fonts/cormorant_garamond/cormorant_garamond_bold.woff")
-      format("woff");
+    format("truetype");
   font-style: bold;
   font-weight: 600;
   text-rendering: optimizeLegibility;
@@ -162,4 +154,3 @@
 .font-sub-heading {
   font-size: var(--font-sub-heading);
 }
-

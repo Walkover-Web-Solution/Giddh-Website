@@ -7,7 +7,7 @@ export default function getPageInfo(route) {
   let page = "home";
   let path = route;
 
-  const routeParts = route.split("/").filter((part) => part !== "");
+  const routeParts = route?.split("/")?.filter((part) => part !== "");
 
   if (routeParts.length === 1) {
     if (countries.includes(routeParts[0])) {
@@ -18,11 +18,10 @@ export default function getPageInfo(route) {
   } else if (routeParts.length === 2) {
     if (countries.includes(routeParts[0])) {
       country = routeParts[0];
-      page = routeParts[1];
     } else {
       folder = routeParts[0];
-      page = routeParts[1];
     }
+    page = routeParts[1];
   } else if (routeParts.length === 3) {
     if (countries.includes(routeParts[0])) {
       country = routeParts[0];

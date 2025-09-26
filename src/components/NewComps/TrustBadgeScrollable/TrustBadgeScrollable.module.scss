@@ -1,25 +1,17 @@
 .logoItem {
-    display: inline-block;
-    height: 34px;
-  }
-  
-  .startFade,
-  .endFade {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100px;
-    pointer-events: none;
-    z-index: 2;
-  }
-  
-  .startFade {
-    left: 0;
-    background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
-  }
-  
-  .endFade {
-    right: 0;
-    background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
-  }
-  
+  height: 34px;
+}
+
+.startFade,
+.endFade {
+  width: 100px;
+  pointer-events: none;
+}
+
+.startFade {
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+}
+
+.endFade {
+  background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+}

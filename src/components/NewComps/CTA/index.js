@@ -2,42 +2,48 @@ import Image from "next/image";
 import styles from "./CTA.module.scss";
 
 export default function CTA({ compData, hasImage }) {
-
   return (
-    <section className="bg-accent position-relative py-5">
+    <section className="bg-accent py-5">
       <div
         className={`container ${styles.inner} d-flex align-items-center justify-content-center`}
       >
         <div className="d-flex flex-column align-items-center justify-content-center gap-4">
           <h1
-            className={`${!hasImage && "text-center"
-              } c-fw-400 text-white garmond-font  mx-auto`}
+            className={`${
+              !hasImage && "text-center"
+            } c-fw-400 text-white garmond-font  mx-auto`}
           >
             {compData?.heading}
           </h1>
           <p
-            className={`${!hasImage && "text-center"
-              } fw-normal text-white m-0 pb-2 c-fw-600`}
+            className={`${
+              !hasImage && "text-center"
+            } fw-normal text-white m-0 pb-2 c-fw-600`}
           >
             {compData?.subheading}
           </p>
           <div>
             {compData?.buttons.map((button, index) => (
-              <button
-                key={index}
-                onClick={() =>
-                  document.getElementById("SeeGiddhInAction")?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                  })
-                }
-                className={`btn ${button.type === "primary"
-                  ? "btn-primary"
-                  : "btn-outline-light"
+              <a href={button?.link} target="_blank">
+                <button
+                  key={index}
+                  onClick={() =>
+                    document
+                      .getElementById("SeeGiddhInAction")
+                      ?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
+                  }
+                  className={`btn ${
+                    button?.type === "primary"
+                      ? "btn-primary"
+                      : "btn-outline-light"
                   }`}
-              >
-                {button.text}
-              </button>
+                >
+                  {button.text}
+                </button>
+              </a>
             ))}
           </div>
           {hasImage ? (

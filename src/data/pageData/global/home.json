@@ -2,11 +2,11 @@
   "stackedBanner": {
     "heading": "Powerful All-in-One Accounting Software For Your Business Growth",
     "subHeading": "Transform your accounting from invoicing to expenses across multiple branches. Unlock real-time insights and make smarter, data-driven decisions—simple, fast, and effective.",
-    "image": "/img/home-page/powerful-accounting-for-growing-businesses.webp",
+    "image": "/img/home-page/index_banner_global.webp",
     "buttons": [
       {
         "text": "Book a Free Demo",
-        "link": "/signup"
+        "link": "/online-accounting-software"
       },
       {
         "text": "Try Giddh for free",
@@ -347,7 +347,6 @@
   ],
   "ctaTwo": {
     "heading": "Streamline your accounting with Giddh to simplify, automate, and save time today!",
-    "subheading": "",
     "image": "/img/girl-avatar.svg",
     "buttons": [
       {
@@ -366,7 +365,7 @@
       "subheading": "If you are not satisfied with Giddh’s accounting software, we will refund your money within 90 days.",
       "button": {
         "text": "Schedule a Demo",
-        "link": "/signup"
+        "link": "/online-accounting-software"
       }
     }
   }

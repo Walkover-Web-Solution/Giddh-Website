@@ -9,7 +9,7 @@ import Benefits from "@/components/NewComps/Benefits";
 import CTA from "@/components/NewComps/CTA";
 import Giddhvscomp from "@/components/NewComps/Giddhvscomp";
 
-export default function Home({ pageData, pageInfo, path }) {
+export default function Home({ pageData }) {
   return (
     <>
       <StackedBanner compData={pageData?.stackedBanner} />
@@ -19,7 +19,7 @@ export default function Home({ pageData, pageInfo, path }) {
       <CTA hasImage={false} compData={pageData?.cta} />
       <FeedbackCards testimonials={pageData?.testimonials} />
       <Giddhvscomp giddhvscomp={pageData?.giddhvscomp} />
-      <Pricing pageInfo={pageInfo} pageData={pageData}/>   
+      <Pricing compData={pageData?.pricing}/>   
       <Benefits benefits={pageData?.benefits} />
       <Industries giddhIndustries={pageData?.giddhIndustries} />
       <CTA hasImage={false} compData={pageData?.ctaTwo} />

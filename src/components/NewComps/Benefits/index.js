@@ -1,7 +1,6 @@
 import styles from "./Benefits.module.scss";
 
 export default function Benefits({ benefits }) {
-
   return (
     <section className="py-5 bg-dark">
       <div className="container">
@@ -13,7 +12,7 @@ export default function Benefits({ benefits }) {
               return (
                 <div
                   key={`${rowIdx}-${idx}`}
-                  className={`col-12 col-md-${12 / row?.cols}`}
+                  className={`col-12 col-md-${12 / row?.cols || 1}`}
                 >
                   <div
                     className={`${styles.card} card bg-dark text-white text-center border border-white rounded-3 p-4`}

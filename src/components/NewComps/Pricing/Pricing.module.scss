@@ -4,23 +4,16 @@
 
 .fixedTable {
   table-layout: fixed;
-  min-width: 220px; 
+  min-width: 220px;
 }
 
-.firstCol {
-  width: 180px;
-}
-
+.firstCol,
 .otherCol {
   width: 180px;
 }
 
-
 .fixedTable th,
 .fixedTable td {
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--col-light-gray);
   padding: 12px;
-  box-sizing: border-box;
 }
-
-
