@@ -3,7 +3,7 @@ import styles from "./StackedBanner.module.scss";
 
 export default function StackedBanner({ compData }) {
   return (
-    <section className={`  ${styles.topSection}`}>
+    <section className={`${styles.topSection}`}>
       <div className="container pt-5 d-flex flex-row flex-wrap gap-4 justify-content-center align-items-center">
         {compData?.image ? (
           <Image
