@@ -59,7 +59,7 @@ export default function MyApp({ Component, pageProps }) {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
 
-  const rawPath = router.asPath;
+  const rawPath = router.asPath?.split("#")[0]?.split("?")[0];
   const pageInfo = getPageInfo(rawPath);
   const pageData = getPageData(pageInfo);
   return (
@@ -68,7 +68,12 @@ export default function MyApp({ Component, pageProps }) {
         <Navbar browserPath={rawBrowserPath} path={path} />
       ) : null}
       <Header browserPath={rawBrowserPath} path={path} />
-      <Component path={path} {...pageProps} pageInfo={pageInfo} pageData={pageData} />
+      <Component
+        path={path}
+        {...pageProps}
+        pageInfo={pageInfo}
+        pageData={pageData}
+      />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
       <GlobalComponents path={arrayBrawserPath} />
       <Toastify />

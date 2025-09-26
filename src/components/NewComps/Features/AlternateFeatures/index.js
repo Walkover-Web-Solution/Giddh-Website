@@ -6,7 +6,7 @@ export default function AlternateFeatures({ features }) {
   return (
     <section className="bg-neutral pt-5">
       <div className="container d-flex flex-column gap-5">
-        <h2 className="text-center sub-heading garamond-font">
+        <h2 className="text-center sub-heading garmond-font">
           {features?.heading}
         </h2>
         {features?.content?.map((feature, index) => {

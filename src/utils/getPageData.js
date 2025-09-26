@@ -3,7 +3,7 @@ export default function getPageData(pageInfo) {
 
   if (!pagesToGetData.includes(pageInfo?.page)) return null;
   try {
-    const pageData = require(`@/data/pagedata/${pageInfo?.country}/${pageInfo?.page}.json`);
+    const pageData = require(`@/data/pagesdata/${pageInfo?.country}/${pageInfo?.page}.json`);
     return pageData || null;
   } catch (error) {
     console.error(`Error loading page data: ${error.message}`);

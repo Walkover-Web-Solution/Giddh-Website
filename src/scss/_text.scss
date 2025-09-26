@@ -131,7 +131,7 @@
   src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_bold.ttf")
     format("truetype");
   font-style: bold;
-  font-weight: 600;
+  font-weight: 700;
   text-rendering: optimizeLegibility;
 }
 
@@ -142,8 +142,6 @@
 .garmond-font {
   font-family: "Cormorant Garamond", serif;
 }
-
-//====================================MIXINS========================================
 
 // new headings
 .font-heading {

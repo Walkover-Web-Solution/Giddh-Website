@@ -7,7 +7,7 @@ export default function Benefits({ benefits }) {
         <h2 className="text-white text-center mb-5">What sets Giddh apart!</h2>
 
         <div className="row g-4">
-          {benefits?.map((row, rowIdx) =>
+          {Array.isArray(benefits) && benefits?.map((row, rowIdx) =>
             row?.items?.map((item, idx) => {
               return (
                 <div
