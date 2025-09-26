@@ -49,7 +49,7 @@ export default function Testimonials() {
   return (
     <section className="py-5 outfit-font bg-accent">
       <div className="d-flex flex-column text-center mx-auto px-3">
-        <h2 className="fw-normal new-sub-heading c-fw-400 text-white garmond-font ">
+        <h2 className="fw-normal new-sub-heading c-fw-400 text-white garmond-font">
           Success Stories with Giddh
         </h2>
         <p

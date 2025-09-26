@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import SplitBanner from "@/components/NewComps/Banner/SplitBanner";
-import ToggleFeatures from "@/components/NewComps/Features/ToggleFeatures";
+import Banner from "@/components/NewComps/Banner";
+import Features from "@/components/NewComps/Features";
 import GiddhFor from "@/components/NewComps/GiddhFor";
 import WhyGiddh from "@/components/NewComps/WhyGiddh";
 import Testimonials from "@/components/NewComps/Testimonials";
 import FAQs from "@/components/NewComps/FAQs";
 import SeeGiddhInAction from "@/components/NewComps/SeeGiddhInAction";
-import CTASection from "@/components/NewComps/CTA";
+import CTASection from "@/components/NewComps/CTASection";
 import Footer from "@/components/NewComps/Footer";
-import GiddhPopUp from "@/components/NewComps/PopUp";
+import GiddhPopUp from "@/components/NewComps/GiddhPopUp";
 
 const index = (path) => {
   const link = path.path;
@@ -22,12 +22,24 @@ const index = (path) => {
     }
   }, []);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const modalEl = document.getElementById("giddhPopUp");
+      modalEl.classList.add("show");
+      modalEl.style.display = "block";
+      document.body.classList.add("modal-open");
+      const backdrop = document.createElement("div");
+      backdrop.className = "modal-backdrop fade show";
+      document.body.appendChild(backdrop);
+    }, 20000);
 
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
       <GiddhPopUp />
-      <SplitBanner />
-      <ToggleFeatures path={link} />
+      <Banner path={link} />
+      <Features path={link} />
       <WhyGiddh />
       <CTASection />
       <GiddhFor />
