@@ -1,27 +1,10 @@
-import Head from "next/head";
-import Jsondata from "@/data/schema/organizationSchema.json";
-import { getSchemaForLinkPath } from "../../../../public/js/utils";
-import BookFreeDemoForm from "../BookFreeDemoForm";
-import { trustBadgeBrands } from "../TrustBadge";
-import style from "./Banner.module.scss";
+import BookFreeDemoForm from "../../BookFreeDemoForm";
+import { trustBadgeBrands } from "../../TrustBadge";
+import style from "./SplitBanner.module.scss";
 
-export default function Banner(path) {
-  const link = path.path;
-  const selectedSchema = getSchemaForLinkPath(
-    link,
-    Jsondata.organizationSchema
-  );
-
+export default function SplitBanner() {
   return (
     <>
-      {selectedSchema && (
-        <Head>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(selectedSchema) }}
-          />
-        </Head>
-      )}
       <section className={`py-3 mb-5 outfit-font ${style.banner}`}>
         <div className="container px-4">
           <div className="mb-5 pb-3 d-flex justify-content-between align-items-center">
@@ -39,19 +22,25 @@ export default function Banner(path) {
                   block: "center",
                 })
               }
-              className={`px-3 py-2 c-fs-5 rounded  ${style.getStarted}`}
+              className="btn btn-primary-outline"
             >
               Get Started
             </button>
           </div>
-          <div className="row align-items-center justify-content-between garmond-font">
+          <div className="row align-items-center justify-content-between garmond-font ">
             <div className="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 pe-3 d-flex flex-column gap-2">
-              <span className="c-fs-4 outfit-font"> BUILD FOR <span className="col-primary"> SMBs</span></span>
-              <h1 className="garmond-font new-heading col-primary">
+              <span className="c-fs-4 outfit-font">
+                {" "}
+                BUILD FOR <span className="col-primary"> SMBs</span>
+              </span>
+              <h1 className="font-heading col-primary">
                 Smart, Simple & All-in-One Accounting for Growing Businesses
               </h1>
               <p className="col-grey outfit-font ">
-                Giddh simplifies accounting with GST billing, smart inventory, and real-time insights—all on a secure cloud platform.
+                Giddh brings everything together on a secure, cloud platform
+                built for growing businesses. Simplifies accounting with
+                GST-ready billing, smart inventory sync, and real-time financial
+                insights.
               </p>
               <div className="d-flex flex-wrap align-items-center gap-4">
                 {trustBadgeBrands?.map((logo, index) => (

@@ -1,0 +1,19 @@
+.tableWrapper {
+  -webkit-overflow-scrolling: touch;
+}
+
+.fixedTable {
+  table-layout: fixed;
+  min-width: 220px;
+}
+
+.firstCol,
+.otherCol {
+  width: 180px;
+}
+
+.fixedTable th,
+.fixedTable td {
+  border: 1px solid var(--col-light-gray);
+  padding: 12px;
+}

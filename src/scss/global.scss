@@ -112,6 +112,15 @@ body {
     &:hover {
       background: var(--col-dark);
     }
+    &-outline {
+      background: transparent;
+      border: 1px solid var(--col-primary);
+      color: var(--col-primary);
+      &:hover {
+        background: var(--col-primary);
+        color: var(--col-white);
+      }
+    }
   }
   &.btn-secondary {
     background: var(--col-light-blue);
@@ -122,7 +131,6 @@ body {
       background: var(--col-dark);
     }
   }
-  
 }
 
 //custom SCSS
@@ -158,6 +166,9 @@ body {
   &-light-blue {
     background-color: var(--col-extra-light-blue);
   }
+  &-soft-blue {
+    background-color: var(--col-soft-blue);
+  }
 }
 
 //Custom Classes
@@ -175,17 +186,26 @@ body {
 }
 
 .border-accent {
-  &.border-start {
-    border-color: var(--col-primary) !important;
-  }
-  &.border-top {
-    border-color: var(--col-primary) !important;
-  }
-  &.border-bottom {
-    border-color: var(--col-primary) !important;
-  }
+  &.border-start,
+  &.border-top,
+  &.border-bottom,
   &.border-end {
     border-color: var(--col-primary) !important;
   }
+}
 
+.left {
+  &-0 {
+    left: 0;
+  }
+}
+
+.right {
+  &-0 {
+    right: 0;
+  }
+}
+
+.overflow-touch {
+  -webkit-overflow-scrolling: touch;
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "./GiddhPopUp.module.scss";
+import styles from "./PopUp.module.scss";
 
-export default function GiddhPopUp() {
+export default function PopUp() {
     return (
         <div
             className={`modal fade `}
