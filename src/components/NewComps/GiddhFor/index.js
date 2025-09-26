@@ -9,7 +9,7 @@ export default function GiddhFor() {
     <section className="outfit-font bg-black text-white py-5 ">
       <div className="container px-3 d-flex flex-column gap-3">
         <div className="text-center d-flex flex-column gap-2">
-          <h2 className="garmond-font new-sub-heading">{data?.heading}</h2>
+          <h2 className="garmond-font  new-sub-heading">{data?.heading}</h2>
           <p className="mb-3 mb-md-4 w-100 w-md-75 new-base-2 mx-auto px-3">
             {data?.subheading}
           </p>

@@ -14,7 +14,7 @@ export default function BookFreeDemoForm({
   hiddenAbsolute,
   location,
   heading,
-  verticalFileds
+  verticalFileds,
 }) {
   const [formData, setFormData] = useState(initialFormState);
   const [error, setError] = useState("");
@@ -132,8 +132,9 @@ export default function BookFreeDemoForm({
                 />
                 <button
                   type="submit"
-                  className={`btn btn-lg ${submitting ? "btn-disabled" : "btn-primary"
-                    } w-100`}
+                  className={`btn btn-lg ${
+                    submitting ? "btn-disabled" : "btn-primary"
+                  } w-100`}
                   aria-label="Signup for Accounting Software"
                   disabled={submitting}
                   style={{ cursor: submitting ? "not-allowed" : "pointer" }}
@@ -165,9 +166,9 @@ export default function BookFreeDemoForm({
             />
             <button
               type="submit"
-              className={`btn ${submitting ? "btn-disabled" : "btn-primary"
-                } w-100`}
-
+              className={`btn ${
+                submitting ? "btn-disabled" : "btn-primary"
+              } w-100`}
               disabled={submitting}
               style={{ cursor: submitting ? "not-allowed" : "pointer" }}
             >
@@ -180,12 +181,19 @@ export default function BookFreeDemoForm({
   );
 }
 
-function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds }) {
+function FormFields({
+  formData,
+  handleChange,
+  error,
+  isAbsolute,
+  verticalFileds,
+}) {
   return (
     <div className="w-100 gap-4 d-flex flex-column">
       <div
-        className={`d-flex m-0 gap-4 flex-column  ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
-          }`}
+        className={`d-flex m-0 gap-4 flex-column  ${
+          isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
+        }`}
       >
         <div className="w-100">
           <input
@@ -213,8 +221,9 @@ function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds 
         </div>
       </div>
       <div
-        className={`d-flex m-0 gap-4 flex-column mb-3 ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
-          }`}
+        className={`d-flex m-0 gap-4 flex-column mb-3 ${
+          isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
+        }`}
       >
         <div className="w-100">
           <input
@@ -245,7 +254,6 @@ function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds 
           Error submitting form: {error}
         </div>
       )}
-
     </div>
   );
 }
