@@ -42,7 +42,7 @@ export default function FAQs() {
       <section className={`container py-5`}>
         <div className="d-flex flex-lg-row flex-column">
           <div className="col-lg-4 col-12">
-            <h2 className="new-sub-heading col-dark garmond-font  col-lg-2 col-12">
+            <h2 className="new-sub-heading col-dark garmond-font col-lg-2 col-12">
               Frequently Asked Questions
             </h2>
           </div>

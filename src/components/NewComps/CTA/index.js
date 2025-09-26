@@ -23,10 +23,9 @@ export default function CTA({ compData, hasImage }) {
             {compData?.subheading}
           </p>
           <div>
-            {compData?.buttons.map((button, index) => (
-              <a href={button?.link} target="_blank">
+            {Array.isArray(compData?.buttons) && compData?.buttons.map((button, index) => (
+              <a key={index} href={button?.link} target="_blank">
                 <button
-                  key={index}
                   onClick={() =>
                     document
                       .getElementById("SeeGiddhInAction")

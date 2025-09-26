@@ -4,7 +4,6 @@ import AlternateFeatures from "@/components/NewComps/Features/AlternateFeatures"
 import TrustBadgeScrollable from "@/components/NewComps/TrustBadgeScrollable";
 import FeedbackCards from "@/components/NewComps/FeedbackCards";
 import Industries from "@/components/NewComps/Industries";
-import Pricing from "@/components/NewComps/Pricing";
 import Benefits from "@/components/NewComps/Benefits";
 import CTA from "@/components/NewComps/CTA";
 import Giddhvscomp from "@/components/NewComps/Giddhvscomp";
@@ -19,7 +18,6 @@ export default function Home({ pageData }) {
       <CTA hasImage={false} compData={pageData?.cta} />
       <FeedbackCards testimonials={pageData?.testimonials} />
       <Giddhvscomp giddhvscomp={pageData?.giddhvscomp} />
-      {/* <Pricing compData={pageData?.pricing}/>    */}
       <Benefits benefits={pageData?.benefits} />
       <Industries giddhIndustries={pageData?.giddhIndustries} />
       <CTA hasImage={false} compData={pageData?.ctaTwo} />

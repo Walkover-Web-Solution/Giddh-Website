@@ -14,7 +14,7 @@ export default function CTASection() {
     <section className="bg-accent position-relative" aria-label="Giddh hero">
       <div className={`container ${styles.inner} d-grid align-items-center`}>
         <div className="p-4">
-          <h1 className="c-fw-400 text-white garmond-font  c-fw-600 mx-auto">
+          <h1 className="c-fw-400 text-white garmond-font c-fw-600 mx-auto">
             {data.heading}
           </h1>
           <p className="fw-normal text-white m-0 pb-2 c-fw-600">
