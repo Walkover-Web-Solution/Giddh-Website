@@ -1,4 +1,7 @@
 export default function getPageData(pageInfo) {
+  const pagesToGetData = ["home"];
+
+  if (!pagesToGetData.includes(pageInfo?.page)) return null;
   try {
     const pageData = require(`@/data/pagedata/${pageInfo?.country}/${pageInfo?.page}.json`);
     return pageData || null;
