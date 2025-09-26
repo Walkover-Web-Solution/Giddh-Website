@@ -20,7 +20,7 @@ export default function PopUp() {
         backdrop.className = "modal-backdrop fade show";
         document.body.appendChild(backdrop);
       }
-    }, 2000); // 2 seconds
+    }, 20000); // 2 seconds
 
     return () => clearTimeout(timer);
   }, []);
