@@ -45,13 +45,12 @@ export default function FeedbackCards({ testimonials }) {
   return (
     <section className="py-5 bg-light-blue">
       <div className="container">
-        <h2 className="c-fw-400 garmond-font col-primary sub-heading">
+        <h2 className="fontw-400 garmond-font font-primary font-sub-heading">
           Hear how we’ve made a difference
         </h2>
-        <p className="c-fw-400 col-primary garmond-font  c-fs-4">
+        <p className="fontw-400 font-primary garmond-font font-md">
           Stories that inspire us to keep delivering our best.
         </p>
-
         <div
           ref={scrollRef}
           className="d-flex flex-row gap-5 overflow-hidden py-5"
@@ -61,14 +60,14 @@ export default function FeedbackCards({ testimonials }) {
               <div
                 className={`rounded-4 p-4 bg-white d-flex flex-column ${styles.feedbackCards}`}
               >
-                <div className="d-flex  justify-content-between">
-                  <h3 className="fw-bold mb-3 c-fs-5">
+                <div className="d-flex justify-content-between">
+                  <h3 className="fontw-600 mb-3 font-md">
                     ~ {testimonial?.owner ? testimonial?.owner + ", " : ""}{" "}
                     {testimonial?.company}
                   </h3>
                   <MdOutlineFormatQuote />
                 </div>
-                <p className="c-fs-6">{testimonial?.testimonial}</p>
+                <p className="font-sm">{testimonial?.testimonial}</p>
               </div>
             </div>
           ))}

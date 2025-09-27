@@ -9,16 +9,14 @@ export default function CTA({ compData, hasImage }) {
       >
         <div className="d-flex flex-column align-items-center justify-content-center gap-4">
           <h1
-            className={`${
-              !hasImage && "text-center"
-            } c-fw-400 text-white garmond-font  mx-auto`}
+            className={`${!hasImage && "text-center"
+              } fontw-400 text-white garmond-font mx-auto`}
           >
             {compData?.heading}
           </h1>
           <p
-            className={`${
-              !hasImage && "text-center"
-            } fw-normal text-white m-0 pb-2 c-fw-600`}
+            className={`${!hasImage && "text-center"
+              } fw-normal text-white m-0 pb-2 fontw-600`}
           >
             {compData?.subheading}
           </p>
@@ -34,11 +32,10 @@ export default function CTA({ compData, hasImage }) {
                         block: "center",
                       })
                   }
-                  className={`btn ${
-                    button?.type === "primary"
-                      ? "btn-primary"
-                      : "btn-outline-light"
-                  }`}
+                  className={`btn ${button?.type === "primary"
+                    ? "btn-primary"
+                    : "btn-outline-light"
+                    }`}
                 >
                   {button.text}
                 </button>

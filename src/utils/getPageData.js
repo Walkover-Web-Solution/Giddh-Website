@@ -1,5 +1,5 @@
 export default function getPageData(pageInfo) {
-  const pagesToGetData = ["home"];
+  const pagesToGetData = ["home" , "cloud-accounting-software"];
 
   if (!pagesToGetData.includes(pageInfo?.page)) return null;
   try {
