@@ -52,7 +52,7 @@ export default function Testimonials({ testimonials }) {
           {testimonials?.heading}
         </h2>
         <p
-          className={`font-md mx-auto pb-4 font-white text-center font-400`}
+          className="font-md mx-auto pb-4 font-white text-center font-400"
         >
           {testimonials?.subheading}
         </p>

@@ -4,10 +4,9 @@ import styles from "./GiddhPopUp.module.scss";
 export default function GiddhPopUp() {
     return (
         <div
-            className={`modal fade `}
+            className="modal fade"
             id="giddhPopUp"
             tabIndex="-1"
-            aria-hidden="true"
         >
             <div className="modal-dialog modal-dialog-centered modal-lg">
                 <div className={`modal-content p-4 ${styles.bgModal}`}>
@@ -27,9 +26,9 @@ export default function GiddhPopUp() {
                             }
                         }}
                     ></button>
-                    <div className=" pt-5">
+                    <div className="pt-5">
                         <div className="d-flex align-items-start gap-2 mb-4 flex-column-reverse flex-md-row">
-                            <span className="fw-bold m-0 col-primary sub-heading">
+                            <span className="font-600 m-0 font-primary font-sub-heading">
                                 Still stuck somewhere?
                             </span>
                             <div className="ms-auto">
@@ -44,7 +43,7 @@ export default function GiddhPopUp() {
                         </div>
                         <div className="d-flex flex-column gap-2 flex-md-row">
                             <div className="col-md-6">
-                                <h2 className="c-fs-3">
+                                <h2 className="font-lg">
                                     Don’t worry, getting started with Giddh is quick and simple.
                                 </h2>
 
@@ -79,7 +78,7 @@ export default function GiddhPopUp() {
                                     alt="Giddh dashboard screenshot"
                                     width={600}
                                     height={400}
-                                    className={`w-100 h-auto `}
+                                    className="w-100 h-auto"
                                 />
                             </div>
                         </div>
