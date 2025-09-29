@@ -15,7 +15,7 @@ export default function StackedBanner({ compData }) {
           />
         ) : null}
 
-        <h1 className="text-center fontw-400 heading garmond-font font-primary">
+        <h1 className="text-center font-400 heading garmond-font font-primary">
           {compData?.heading}
         </h1>
         <div className="col-lg-8 mx-auto">

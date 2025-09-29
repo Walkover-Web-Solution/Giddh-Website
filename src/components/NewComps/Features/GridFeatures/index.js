@@ -23,6 +23,7 @@ export default function GridFeatures({ compData }) {
             </div>
           ))}
         </div>
+        <button className="btn btn-primary-outline mx-auto">Explore Features</button>
       </div>
     </section>
   );

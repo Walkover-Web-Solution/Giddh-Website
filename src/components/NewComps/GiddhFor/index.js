@@ -1,24 +1,23 @@
-import data from "./data.json";
 import { useState } from "react";
 import style from "./GiddhFor.module.scss";
 
-export default function GiddhFor() {
+export default function GiddhFor({ compdata }) {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="outfit-font bg-black text-white py-5 ">
+    <section className="outfit-font bg-black font-white py-5">
       <div className="container px-3 d-flex flex-column gap-3">
         <div className="text-center d-flex flex-column gap-2">
-          <h2 className="garmond-font  new-sub-heading">{data?.heading}</h2>
-          <p className="mb-3 mb-md-4 w-100 w-md-75 new-base-2 mx-auto px-3">
-            {data?.subheading}
+          <h2 className="garmond-font font-sub-heading">{compdata?.heading}</h2>
+          <p className="mb-3 mb-md-4 w-100 w-md-75 font-sm mx-auto px-3">
+            {compdata?.subheading}
           </p>
         </div>
 
         <div className="border border-white rounded d-none d-lg-block">
           <div className="">
-            <div className="d-flex justify-content-between align-items-center border-bottom border-white  overflow-hidden">
-              {data?.content.map((item, index) => (
+            <div className="d-flex justify-content-between align-items-center border-bottom border-white overflow-hidden">
+              {compdata?.content.map((item, index) => (
                 <div key={index} className="position-relative flex-fill">
                   <div
                     className={`d-flex align-items-center justify-content-center gap-2 w-100 px-3 py-3 cursor-pointer ${style.tab}`}
@@ -40,18 +39,18 @@ export default function GiddhFor() {
           <div className="row align-items-center g-3 g-md-4 p-4">
             <div className="col-12 col-lg-6 order-1 order-lg-2">
               <div className="text-center text-lg-start px-2">
-                <h3 className="mb-1 c-fs-4 c-fw-600">
-                  {data?.content[activeTab]?.name}
+                <h3 className="mb-1 font-md font-600">
+                  {compdata?.content[activeTab]?.name}
                 </h3>
-                <p>{data?.content[activeTab]?.description}</p>
+                <p>{compdata?.content[activeTab]?.description}</p>
               </div>
             </div>
 
             <div className="col-12 col-lg-6 order-2 order-lg-1">
               <div className="d-flex justify-content-center">
                 <img
-                  src={data?.content[activeTab]?.image}
-                  alt={data?.content[activeTab]?.name}
+                  src={compdata?.content[activeTab]?.image}
+                  alt={compdata?.content[activeTab]?.name}
                   className={`${style.image} w-100 h-auto rounded`}
                 />
               </div>
@@ -59,15 +58,15 @@ export default function GiddhFor() {
           </div>
         </div>
 
-        <div className="d-grid  g-3 d-lg-none ">
-          {data?.content.map((item, index) => (
+        <div className="d-grid g-3 d-lg-none">
+          {compdata?.content.map((item, index) => (
             <div
               key={index}
               className="d-flex flex-column align-items-center g-3 g-md-4 p-4"
             >
               <div className="col-12 col-lg-6 order-1 order-lg-2">
                 <div className="text-center">
-                  <h3 className="mb-1 c-fs-4 c-fw-600">{item?.name}</h3>
+                  <h3 className="mb-1 font-md font-600">{item?.name}</h3>
                   <p>{item?.description}</p>
                 </div>
               </div>

@@ -45,10 +45,10 @@ export default function FeedbackCards({ testimonials }) {
   return (
     <section className="py-5 bg-light-blue">
       <div className="container">
-        <h2 className="fontw-400 garmond-font font-primary font-sub-heading">
+        <h2 className="font-400 garmond-font font-primary font-sub-heading">
           Hear how we’ve made a difference
         </h2>
-        <p className="fontw-400 font-primary garmond-font font-md">
+        <p className="font-400 font-primary garmond-font font-md">
           Stories that inspire us to keep delivering our best.
         </p>
         <div
@@ -61,7 +61,7 @@ export default function FeedbackCards({ testimonials }) {
                 className={`rounded-4 p-4 bg-white d-flex flex-column ${styles.feedbackCards}`}
               >
                 <div className="d-flex justify-content-between">
-                  <h3 className="fontw-600 mb-3 font-md">
+                  <h3 className="font-600 mb-3 font-md">
                     ~ {testimonial?.owner ? testimonial?.owner + ", " : ""}{" "}
                     {testimonial?.company}
                   </h3>

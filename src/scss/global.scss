@@ -114,11 +114,11 @@ body {
     }
     &-outline {
       background: transparent;
-      border: 1px solid var(--col-primary);
-      color: var(--col-primary);
+      border: 1px solid var(--col-primary) !important;
+      color: var(--col-primary) !important;
       &:hover {
         background: var(--col-primary);
-        color: var(--col-white);
+        color: var(--col-white) !important;
       }
     }
   }

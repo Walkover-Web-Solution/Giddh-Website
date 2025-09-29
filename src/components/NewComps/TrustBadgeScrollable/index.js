@@ -30,17 +30,17 @@ export default function TrustBadgeScrollable({ heading }) {
     <section className="py-5">
       <div className="container text-center d-flex flex-column gap-3">
         <div className="d-flex flex-column gap-1">
-          <h2 className="sub-heading col-primary c-fw-400 garmond-font">
+          <h2 className="font-sub-heading font-primary font-400 garmond-font">
             {heading?.title}
           </h2>
-          <p className="col-dark-grey garmond-font c-fs-4">
+          <p className="font-dark-grey garmond-font font-md">
             {heading?.description}
           </p>
         </div>
 
         <div className="position-relative overflow-hidden w-100 px-5">
           <div
-            className={`d-inline-flex align-items-center gap-4`}
+            className="d-inline-flex align-items-center gap-4"
             ref={scrollRef}
           >
             {trustBadgeBrands?.map((logo, index) => (

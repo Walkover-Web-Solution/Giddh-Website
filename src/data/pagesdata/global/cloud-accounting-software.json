@@ -57,7 +57,7 @@
     "content": [
       {
         "feature": "Anytime, Anywhere, and on Any Device",
-        "img": "/img/home-page/simplified-ledger-based-accounting.svg",
+        "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
         "description": "Access and manage your finances seamlessly, whether you're using your desktop, Android, or iOS device.",
         "more_content": [
           "Cloud-based access across devices.",
@@ -67,7 +67,7 @@
       },
       {
         "feature": "Cloud Storage for Your Data Synced",
-        "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
+        "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
         "description": "Giddh utilizes advanced security measures to ensure your accounting data remains safe and private.",
         "more_content": [
           "Password-Protected Logins",
@@ -86,33 +86,13 @@
         ]
       },
       {
-        "feature": "Automatic Currency Conversion",
-        "img": "/img/home-page/automatic-currency-conversion.svg",
-        "description": "Giddh, the best multi-currency accounting software, streamlines international transactions with automatic currency conversion, ensuring accurate financial records with minimal manual effort.",
-        "more_content": [
-          "Auto-converts foreign currencies to local",
-          "Saves time by eliminating manual calculations",
-          "Ensures accurate financial data for global businesses"
-        ]
-      },
-      {
         "feature": "Easily Secure Data in the Cloud",
-        "img": "/img/home-page/seamless-gst-compliance.svg",
+        "img": "/img/home-page/easily-secure-data-in-the-cloud.svg",
         "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
         "more_content": [
           "Encrypted data storage",
           "Prevent data loss.",
           "Top industry security standards"
-        ]
-      },
-      {
-        "feature": "Track Your Business Performance in Real-Time",
-        "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
-        "description": "Stay updated with live data and make informed decisions on the fly. With real-time insights, you’ll always know how your business is performing.",
-        "more_content": [
-          "Instant Insights",
-          "Real-Time Tracking",
-          "Data-Driven Decisions"
         ]
       },
       {
@@ -137,13 +117,13 @@
       }
     ],
     "buttons": [
-        {
-          "text": "Explore Features",
-          "link": "/testimonials"
-        }
-      ]
+      {
+        "text": "Explore Features",
+        "link": "/testimonials"
+      }
+    ]
   },
-  "testimonials":[
+  "testimonials": [
     {
       "company": "Sinead North",
       "owner": "Christian Schiel",
@@ -264,5 +244,5 @@
       "question": "Which is the best cloud-based accounting software?",
       "answer": "Giddh is among the best cloud accounting software options, offering affordable, scalable, and feature-rich solutions for businesses of all sizes. With automated invoicing, multi-user collaboration, and real-time reporting, Giddh provides a comprehensive toolset for companies seeking to streamline their accounting processes."
     }
-  ]  
+  ]
 }

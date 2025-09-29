@@ -3,20 +3,20 @@ import styles from "./CTA.module.scss";
 
 export default function CTA({ compData, hasImage }) {
   return (
-    <section className="bg-accent py-5">
+    <section className={`${compData?.theme === "light" ? "bg-accent-light font-dark" : "bg-accent font-white"} py-5`}>
       <div
         className={`container ${styles.inner} d-flex align-items-center justify-content-center`}
       >
         <div className="d-flex flex-column align-items-center justify-content-center gap-4">
           <h1
             className={`${!hasImage && "text-center"
-              } fontw-400 text-white garmond-font mx-auto`}
+              } font-400 garmond-font mx-auto`}
           >
             {compData?.heading}
           </h1>
           <p
             className={`${!hasImage && "text-center"
-              } fw-normal text-white m-0 pb-2 fontw-600`}
+              } font-md font-white m-0 pb-2 font-600`}
           >
             {compData?.subheading}
           </p>
@@ -34,7 +34,7 @@ export default function CTA({ compData, hasImage }) {
                   }
                   className={`btn ${button?.type === "primary"
                     ? "btn-primary"
-                    : "btn-outline-light"
+                    : "btn-primary-outline"
                     }`}
                 >
                   {button.text}

@@ -6,9 +6,12 @@ export default function AlternateFeatures({ features }) {
   return (
     <section className="bg-neutral py-5">
       <div className="container d-flex flex-column gap-5">
-        <h2 className="text-center font-sub-heading garmond-font">
-          {features?.heading}
-        </h2>
+        <div className="d-flex flex-column g-2">
+          <h2 className="text-center font-sub-heading garmond-font">
+            {features?.heading}
+          </h2>
+          <p className="text-center font-slate-grey font-md">{features?.subHeading}</p>
+        </div>
         {features?.content?.map((feature, index) => {
           const imageRight = index % 2 === 0;
           return (
@@ -20,7 +23,7 @@ export default function AlternateFeatures({ features }) {
                 className={`col-12 col-md-6 ${imageRight ? "order-md-1" : "order-md-2"
                   }`}
               >
-                <h3 className="garmond-font font-primary font-xl fontw-400">
+                <h3 className="garmond-font font-primary font-xl font-400">
                   {feature?.feature}
                 </h3>
                 <p className="font-slate-grey font-md">{feature?.description}</p>

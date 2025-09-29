@@ -10,7 +10,7 @@ export default function FAQs({ faqs }) {
 
   return (
     <>
-      <section className={`container py-5`}>
+      <section className="container py-5">
         <div className="d-flex flex-lg-row flex-column">
           <div className="col-lg-4 col-12">
             <h2 className="font-sub-heading font-dark garmond-font col-lg-2 col-12">
@@ -38,14 +38,14 @@ export default function FAQs({ faqs }) {
                           className={`me-2 rounded-2 d-inline-flex align-items-center justify-content-center ${styles.collapseIcon}`}
                         >
                           {isOpen ? (
-                            <MdRemove className='font-lg font-primary' />
+                            <MdRemove className="font-lg font-primary" />
                           ) : (
                             <MdKeyboardArrowDown
-                              className='font-lg font-primary'
+                              className="font-lg font-primary"
                             />
                           )}
                         </span>
-                        <div className="fontw-600">{faq.question}</div>
+                        <div className="font-600">{faq.question}</div>
                       </button>
                     </h3>
                     < div
@@ -66,6 +66,10 @@ export default function FAQs({ faqs }) {
               })}
             </div>
           </div>
+        </div>
+        <div className="d-flex flex-column justify-content-between align-items-center pt-5">
+          <p className="font-sub-heading garmond-font font-dark">Still have questions?</p>
+          <button className="btn btn-primary-outline" onClick={() => window.location.href = "/contact-us"}>Contact Us</button>
         </div>
       </section>
     </>
