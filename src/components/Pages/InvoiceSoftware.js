@@ -9,14 +9,13 @@ import FAQs from "../NewComps/FAQs";
 import SupportedPlatforms from "../NewComps/SupportedPlatforms";
 
 export default function InvoiceSoftware({ pageData, pageInfo }) {
-  console.log(pageData?.splitBanner)
   return (
     <>
       <SplitBanner compdata={pageData?.splitBanner} />
       <Stats stats={pageData?.stats} />
       <CTA compData={pageData?.cta} />
       <AlternateFeatures features={pageData?.features} />
-      <GridFeatures compData={pageData?.characteristics} />
+      <GridFeatures features={pageData?.characteristics} />
       <FeedbackCards testimonials={pageData?.testimonials} />
       <CTA compData={pageData?.ctaTwo} />
       <TrustBadgeScrollable heading={pageData?.trustBadgeBrands} />

@@ -1,11 +1,11 @@
 import Image from "next/image";
-import styles from "./StackedBanner.module.scss";
 
 export default function StackedBanner({ compData }) {
+
   return (
-    <section className={`${styles.topSection}`}>
+    <section className="gradient padding-nav">
       <div className="container pt-5 d-flex flex-row flex-wrap gap-4 justify-content-center align-items-center">
-        {compData?.image ? (
+        {compData?.image && (
           <Image
             width={1080}
             height={585}
@@ -13,7 +13,7 @@ export default function StackedBanner({ compData }) {
             src={compData?.image}
             alt={compData?.heading}
           />
-        ) : null}
+        )}
 
         <h1 className="text-center font-400 heading garmond-font font-primary">
           {compData?.heading}

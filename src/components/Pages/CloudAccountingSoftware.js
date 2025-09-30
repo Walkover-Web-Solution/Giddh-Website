@@ -10,7 +10,7 @@ export default function CloudAccountingSoftware({ pageData, pageInfo }) {
   return (
     <>
       <SplitBanner compdata={pageData?.splitBanner} />
-      <GridFeatures compData={pageData?.characteristics} />
+      <GridFeatures features={pageData?.characteristics} />
       <AlternateFeatures features={pageData?.features} />
       <FeedbackCards testimonials={pageData?.testimonials} />
       <FAQs faqs={pageData?.faqs} />

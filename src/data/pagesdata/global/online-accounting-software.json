@@ -2,9 +2,9 @@
   "splitBanner": {
     "heading": "Smart, Simple & All-in-One Accounting for Growing Businesses",
     "subHeading": "Giddh brings everything together on a secure, cloud platform built for growing businesses. Simplifies accounting with GST-ready billing, smart inventory sync, and real-time financial insights.",
-    "image": "/img/home-page/index_banner_global.webp",
     "form": true,
-    "header": true
+    "header": true,
+    "tagline": true
   },
   "toggleFeatures": [
     {
@@ -140,7 +140,14 @@
   "cta": {
     "heading": "Tired Of Overpriced Accounting Software With Limited Features?",
     "subheading": "Get an advanced, affordable solution with Giddh!",
-    "buttonText": "Switch To Giddh Now",
+    "buttons": [
+      {
+        "text": "Switch To Giddh Now",
+        "link": "/signup",
+        "type": "btn-secondary",
+        "arrow": true
+      }
+    ],
     "image": "/img/girl-avatar.svg"
   },
   "giddhFor": {
@@ -255,7 +262,8 @@
   },
   "seeGiddhInAction": {
     "heading": " Giddh For All Your Accounting Needs",
-    "subheading": "Manage 100 companies, unlimited users, real-time reports, GST & VAT compliance, and more—streamline accounting and inventory in one platform."
+    "subheading": "Manage 100 companies, unlimited users, real-time reports, GST & VAT compliance, and more—streamline accounting and inventory in one platform.",
+    "form": true
   },
   "faqs": [
     {

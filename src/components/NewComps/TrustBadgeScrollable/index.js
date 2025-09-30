@@ -43,12 +43,12 @@ export default function TrustBadgeScrollable({ heading }) {
             className="d-inline-flex align-items-center gap-4"
             ref={scrollRef}
           >
-            {trustBadgeBrands?.map((logo, index) => (
+            {trustBadgeBrands?.length > 0 && trustBadgeBrands?.map((logo, index) => (
               <a key={index} href={logo?.href} target="_blank" rel="noreferrer">
                 <img src={logo?.src} alt={logo?.alt} height={34} />
               </a>
             ))}
-            {trustBadgeBrands?.map((logo, index) => (
+            {trustBadgeBrands?.length > 0 && trustBadgeBrands?.map((logo, index) => (
               <a
                 key={`dup-${index}`}
                 href={logo?.href}

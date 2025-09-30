@@ -1,22 +1,23 @@
 import Image from "next/image";
 import styles from "./CTA.module.scss";
+import { MdArrowForward } from "react-icons/md";
 
 export default function CTA({ compData, hasImage }) {
   return (
-    <section className={`${compData?.theme === "light" ? "bg-accent-light font-dark" : "bg-accent font-white"} py-5`}>
+    <section className={`${compData?.theme === "light" ? "bg-accent-light font-dark" : "bg-accent font-white position-relative"} position-relative pt-5`}>
       <div
-        className={`container ${styles.inner} d-flex align-items-center justify-content-center`}
+        className={`container ${styles.inner} ${!hasImage ? styles.noImage : ""} d-grid align-items-center justify-content-center`}
       >
-        <div className="d-flex flex-column align-items-center justify-content-center gap-4">
-          <h1
+        <div className="d-flex  flex-column align-items-center justify-content-center gap-2 pb-5">
+          <h2
             className={`${!hasImage && "text-center"
-              } font-400 garmond-font mx-auto`}
+              } font-400 font-sub-heading garmond-font text-center mx-auto`}
           >
             {compData?.heading}
-          </h1>
+          </h2>
           <p
             className={`${!hasImage && "text-center"
-              } font-md font-white m-0 pb-2 font-600`}
+              } font-md font-white text-center font-600`}
           >
             {compData?.subheading}
           </p>
@@ -32,28 +33,26 @@ export default function CTA({ compData, hasImage }) {
                         block: "center",
                       })
                   }
-                  className={`btn ${button?.type === "primary"
-                    ? "btn-primary"
-                    : "btn-primary-outline"
-                    }`}
+                  className={`btn font-600 ${button?.type}`}
                 >
-                  {button.text}
+                  {button.text} {button.arrow && <MdArrowForward />}
                 </button>
               </a>
             ))}
           </div>
-          {hasImage ? (
-            <div className={styles.imageWrap}>
-              <Image
-                src={compData?.image}
-                alt="Person holding laptop"
-                width={320}
-                height={320}
-                className="object-fit-contain w-100 h-auto"
-              />
-            </div>
-          ) : null}
         </div>
+        {hasImage && (
+          <div className={styles.imageWrap}>
+            <Image
+              src={compData?.image}
+              alt="Person holding laptop"
+              width={320}
+              height={320}
+              priority
+              className="object-fit-contain w-100 h-auto"
+            />
+          </div>
+        )}
       </div>
     </section>
   );

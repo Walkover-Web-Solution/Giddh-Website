@@ -6,6 +6,10 @@
   }
 }
 
+.noImage {
+  grid-template-columns: 1fr;
+}
+
 @media screen and (max-width: 992px) {
   .imageWrap {
     display: none;

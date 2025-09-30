@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import style from "./Testimonials.module.scss";
 import { MdReviews } from "react-icons/md";
 export default function Testimonials({ testimonials }) {
+  if (testimonials?.data?.length === 0) return null;
   const scrollRef = useRef(null);
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -63,7 +64,7 @@ export default function Testimonials({ testimonials }) {
             ref={scrollRef}
             className={`border overflow-y-hidden border-light rounded mx-auto ${style.scrollableContainer}`}
           >
-            {testimonials?.data.map((testimonial, index) => (
+            {testimonials?.data?.length > 0 && testimonials?.data?.map((testimonial, index) => (
               <div
                 key={index}
                 className={`py-2 px-3 ${index < testimonials?.data.length - 1 ? "border-bottom" : ""
