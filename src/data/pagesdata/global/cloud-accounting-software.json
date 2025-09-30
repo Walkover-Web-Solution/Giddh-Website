@@ -1,8 +1,8 @@
 {
-  "stackedBanner": {
+  "splitBanner": {
     "heading": "Empower Your Business Accounting with Giddh",
     "subHeading": "Cloud accounting software for businesses to streamline finances, manage inventory, and boost growth.",
-    "image": "/img/home-page/index_banner_global.webp",
+    "image": "/img/cloud-accounting-software/cloud-accounting-software.svg",
     "buttons": [
       {
         "text": "Start Your Free Trial",
@@ -12,7 +12,8 @@
         "text": "Schedule a Demo",
         "link": "/online-accounting-software"
       }
-    ]
+    ],
+    "form": false
   },
   "characteristics": {
     "heading": "Powerful Features To Enhance Your Accounting Process",

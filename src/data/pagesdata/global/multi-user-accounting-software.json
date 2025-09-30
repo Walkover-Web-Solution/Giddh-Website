@@ -1,8 +1,8 @@
 {
-  "stackedBanner": {
+  "splitBanner": {
     "heading": "Transform Your Business with Real-Time Collaboration in Accounting",
     "subHeading": "Manage your finances, collaborate with members, and ensure seamless decision-making. Giddh’s multi-user accounting software for business is designed for growth and efficiency",
-    "image": "/img/home-page/index_banner_global.webp",
+    "image": "/img/multi-user-accounting-software/multi-user-accounting-software.svg",
     "buttons": [
       {
         "text": "Start Your Free Trial",
@@ -12,7 +12,8 @@
         "text": "Request a Demo",
         "link": "/online-accounting-software"
       }
-    ]
+    ],
+    "form": false
   },
   "characteristics": {
     "heading": "Excellent Features of Giddh’s Cloud Multi-User Accounting Software",

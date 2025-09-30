@@ -6,23 +6,23 @@ import WhyGiddh from "../NewComps/WhyGiddh";
 import CTASection from "../NewComps/CTASection";
 import GiddhFor from "../NewComps/GiddhFor";
 import Testimonials from "../NewComps/Testimonials";
-
+import FAQs from "../NewComps/FAQs";
+import Footer from "../NewComps/Footer";
+import SeeGiddhInAction from "../NewComps/SeeGiddhInAction";
 
 export default function OnlineAccountingSoftware({ pageData }) {
   return (
     <>
       <SplitBanner compdata={pageData?.splitBanner} />
-      <ToggleFeatures features={pageData?.toggleFeatures} />
       <Stats stats={pageData?.stats} />
+      <ToggleFeatures features={pageData?.toggleFeatures} />
       <WhyGiddh compdata={pageData?.whyGiddh} />
       <CTASection hasImage={true} compData={pageData?.cta} />
       <GiddhFor compdata={pageData?.giddhFor} />
       <Testimonials testimonials={pageData?.testimonials} />
-       {/* <GiddhFor />
-       <Testimonials />
-       <SeeGiddhInAction />
-       <FAQs />
-       <Footer /> */}
+      <SeeGiddhInAction compdata={pageData?.seeGiddhInAction} />
+      <FAQs faqs={pageData?.faqs} />
+      <Footer />
     </>
   );
 }

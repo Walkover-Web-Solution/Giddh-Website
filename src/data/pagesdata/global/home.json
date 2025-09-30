@@ -368,5 +368,43 @@
         "link": "/online-accounting-software"
       }
     }
-  }
+  },
+  "faqs": [
+    {
+      "question": "What are the benefits of accounting software?",
+      "answer": "Accounting software automates financial tasks, such as invoicing, expense tracking, and tax calculations. It also provides real-time insights, improves accuracy, and ensures compliance. Whether you're looking for online accounting software or unlimited user accounting software, it helps streamline processes and support growth."
+    },
+    {
+      "question": "What is the most commonly used accounting application?",
+      "answer": "The most commonly used accounting application is Giddh, popular among businesses of all sizes due to its ease of use, scalability, and integration features. It’s a top choice for companies seeking the best accounting software."
+    },
+    {
+      "question": "Which top accounting software do small accountants use?",
+      "answer": "Small accountants often choose Giddh, Xero, or FreshBooks for their simplicity, affordability, and cloud-based features. These tools offer robust solutions and are among the best accounting software for businesses."
+    },
+    {
+      "question": "How does this accounting software help in managing my finances and bookkeeping?",
+      "answer": "Accounting software for businesses like Giddh automates invoicing, reporting, and reconciliation, saving time and improving accuracy. It provides real-time financial insights, ensuring tax compliance, and streamlining tasks like GST filing and bank reconciliation—all contributing to informed decision-making and business growth."
+    },
+    {
+      "question": "How secure is my financial data on online accounting software?",
+      "answer": "Giddh’s online accounting software ensures top-notch security by restricting access to authorized IP addresses. It offers audit trail accounting software to track every change, minimizing breach risks and maintaining control over sensitive financial data."
+    },
+    {
+      "question": "Is the accounting software compliant with tax regulations and reporting standards?",
+      "answer": "Yes, Giddh offers GST compliant accounting software, ensuring accurate tax calculations and seamless GST filing. It generates reports that align with regulatory requirements, making tax compliance straightforward and hassle-free."
+    },
+    {
+      "question": "Is it possible for multiple users to access the accounting software simultaneously?",
+      "answer": "Yes, Giddh allows unlimited users to access the software at once. This feature supports real-time collaboration, making it ideal for teams and businesses, enhancing efficiency, and ensuring smooth bank reconciliation and inventory management."
+    },
+    {
+      "question": "Can I access the accounting software on my mobile device?",
+      "answer": "Yes, with Giddh’s mobile app, available for both iOS and Android, you can manage your invoicing software, track expenses, view financial reports, and update your data anywhere, anytime."
+    },
+    {
+      "question": "Does the accounting software have the capability to integrate with Shopify?",
+      "answer": "Yes, Giddh seamlessly integrates with Shopify, enabling smooth online inventory management and real-time data synchronization between the platforms for efficient financial tracking and reporting."
+    }
+  ]
 }

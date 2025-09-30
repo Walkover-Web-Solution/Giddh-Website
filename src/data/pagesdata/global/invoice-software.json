@@ -1,8 +1,10 @@
 {
-  "stackedBanner": {
+  "splitBanner": {
     "heading": "India’s Smartest Online Invoicing Software to Simplify Billing",
     "subHeading": "Send professional GST-compliant invoices in seconds. Save time and boost productivity with smart, cloud-based invoicing.",
-    "image": "/img/home-page/index_banner_global.webp",
+    "image": "/img/invoice-software/invoice-software.svg",
+    "form": false,
+    "header": false,
     "buttons": [
       {
         "text": "Start Your Free Trial",

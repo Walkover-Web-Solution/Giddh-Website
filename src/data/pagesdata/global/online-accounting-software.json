@@ -2,7 +2,9 @@
   "splitBanner": {
     "heading": "Smart, Simple & All-in-One Accounting for Growing Businesses",
     "subHeading": "Giddh brings everything together on a secure, cloud platform built for growing businesses. Simplifies accounting with GST-ready billing, smart inventory sync, and real-time financial insights.",
-    "image": "/img/home-page/index_banner_global.webp"
+    "image": "/img/home-page/index_banner_global.webp",
+    "form": true,
+    "header": true
   },
   "toggleFeatures": [
     {
@@ -250,5 +252,39 @@
         "testimonial": "The inventory management helps in restaurant management and the branch creation helps to manage multiple branches under a single platform. It helps to see the branch profiles along with the warehouses."
       }
     ]
-  }
+  },
+  "seeGiddhInAction": {
+    "heading": " Giddh For All Your Accounting Needs",
+    "subheading": "Manage 100 companies, unlimited users, real-time reports, GST & VAT compliance, and more—streamline accounting and inventory in one platform."
+  },
+  "faqs": [
+    {
+      "question": "Is Giddh the Right Accounting Solution for My Business?",
+      "answer": "Giddh is ideal for cloud-based accounting software for startups, small to medium-sized businesses (with a revenue of ₹1 lakh to ₹10 crore), accounting firms, B2B service providers, and manufacturers. Whether you need multi-branch accounting, inventory tracking, or GST & VAT compliance, Giddh streamlines your financial management, helping you scale efficiently and stay compliant across India, UAE, and the UK"
+    },
+    {
+      "question": "How secure is my financial data on Giddh?",
+      "answer": "Giddh takes data security seriously. We implement IP security, encryption, and secure access controls to ensure that your financial data is protected from unauthorized access. With regular backups and secure cloud infrastructure, your sensitive business data is safe and always available when you need it."
+    },
+    {
+      "question": "Can Giddh integrate with other tools and platforms I use?",
+      "answer": "Absolutely! Giddh offers an Open API for customer integration, allowing seamless connections with platforms like Shopify, payment gateways, and other business tools. This flexibility ensures that Giddh fits perfectly into your existing tech stack, streamlining your operations."
+    },
+    {
+      "question": "Can Giddh assist my business in complying with GST and VAT regulations?",
+      "answer": "Yes! Giddh, a GST accounting software for billing, simplifies GST & VAT compliance for enterprises operating in India, UAE, and the UK. With Giddh, you can directly integrate GST billing software for small businesses, making it effortless to stay compliant with regional tax regulations and facilitating seamless filing and reconciliation."
+    },
+    {
+      "question": "Can Giddh handle the accounting needs of accounting firms and chartered accountants?",
+      "answer": "Yes! Giddh offers white-label solutions, making it easy for accounting firms to manage multiple clients and handle complex accounting tasks, such as ledger entries and tax compliance, all within one platform. Simplify your client management and focus on delivering value."
+    },
+    {
+      "question": "Is Giddh suitable for businesses with multiple branches or warehouses?",
+      "answer": "Yes! Giddh's multi-branch and warehouse management capabilities enable you to manage operations efficiently across various locations. Whether you're tracking an inventory management system for small business or generating location-specific reports, Giddh provides a unified solution to handle all your business functions under one subscription."
+    },
+    {
+      "question": "How does Giddh simplify inventory management for my business?",
+      "answer": "Giddh's real-time inventory management software, along with features like barcode integration, helps you manage products and services efficiently. Whether you're tracking stock in different locations or syncing data with platforms like Shopify, Giddh ensures accurate and timely inventory management."
+    }
+  ]
 }

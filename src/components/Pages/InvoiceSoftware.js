@@ -1,4 +1,4 @@
-import StackedBanner from "../NewComps/Banner/StackedBanner";
+import SplitBanner from "../NewComps/Banner/SplitBanner";
 import AlternateFeatures from "../NewComps/Features/AlternateFeatures";
 import Stats from "../NewComps/Stats";
 import CTA from "../NewComps/CTA";
@@ -9,9 +9,10 @@ import FAQs from "../NewComps/FAQs";
 import SupportedPlatforms from "../NewComps/SupportedPlatforms";
 
 export default function InvoiceSoftware({ pageData, pageInfo }) {
+  console.log(pageData?.splitBanner)
   return (
     <>
-      <StackedBanner compData={pageData?.stackedBanner} />
+      <SplitBanner compdata={pageData?.splitBanner} />
       <Stats stats={pageData?.stats} />
       <CTA compData={pageData?.cta} />
       <AlternateFeatures features={pageData?.features} />

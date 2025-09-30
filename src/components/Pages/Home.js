@@ -7,6 +7,7 @@ import Industries from "@/components/NewComps/Industries";
 import Benefits from "@/components/NewComps/Benefits";
 import CTA from "@/components/NewComps/CTA";
 import Giddhvscomp from "@/components/NewComps/Giddhvscomp";
+import FAQs from "../NewComps/FAQs";
 
 export default function Home({ pageData }) {
   return (
@@ -21,6 +22,7 @@ export default function Home({ pageData }) {
       <Benefits benefits={pageData?.benefits} />
       <Industries giddhIndustries={pageData?.giddhIndustries} />
       <CTA hasImage={false} compData={pageData?.ctaTwo} />
+      <FAQs faqs={pageData?.faqs} />
     </>
   );
 }
