@@ -1,10 +1,16 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import styles from "./FeedbackCards.module.scss";
 import { MdOutlineFormatQuote } from "react-icons/md";
 
 export default function FeedbackCards({ testimonials }) {
+  if (Array.isArray(testimonials) && testimonials.length === 0) return null;
   const scrollRef = useRef(null);
   const frameRef = useRef(null);
+  const items = useMemo(() => {
+    const list = testimonials.data || [];
+    return list.length > 0 ? list.concat(list) : [];
+  }, [testimonials]);
+
 
   useEffect(() => {
     const container = scrollRef.current;
@@ -40,22 +46,22 @@ export default function FeedbackCards({ testimonials }) {
       container.removeEventListener("mouseenter", handleMouseEnter);
       container.removeEventListener("mouseleave", handleMouseLeave);
     };
-  }, []);
+  }, [items.length]);
 
   return (
     <section className="py-5 bg-light-blue">
       <div className="container">
         <h2 className="font-400 garmond-font font-primary font-sub-heading">
-          Hear how we’ve made a difference
+          {testimonials?.heading}
         </h2>
         <p className="font-400 font-primary garmond-font font-md">
-          Stories that inspire us to keep delivering our best.
+          {testimonials?.subheading}
         </p>
         <div
           ref={scrollRef}
           className="d-flex flex-row gap-5 overflow-hidden py-5"
         >
-          {testimonials?.concat(testimonials)?.map((testimonial, index) => (
+          {items.map((testimonial, index) => (
             <div key={index}>
               <div
                 className={`rounded-4 p-4 bg-white d-flex flex-column ${styles.feedbackCards}`}

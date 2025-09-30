@@ -24,7 +24,9 @@ export default function GridFeatures({ features }) {
             </div>
           ))}
         </div>
-        <button className="btn btn-primary-outline mx-auto">Explore Features</button>
+        {features?.buttons?.length > 0 && features?.buttons?.map((button, index) => (
+          <button key={index} className={`btn ${button?.type} mx-auto`} onClick={() => window.location.href = button?.link}>{button?.text}</button>
+        ))}
       </div>
     </section>
   );

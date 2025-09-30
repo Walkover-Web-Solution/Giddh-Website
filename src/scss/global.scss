@@ -130,7 +130,26 @@ body {
     &:hover {
       background: var(--col-primary) !important;
       color: var(--col-white) !important;
-      border: var(--col-white) !important;
+      outline: var(--col-white) !important;
+    }
+    &-outline {
+      background: transparent;
+      border: 1px solid var(--col-white) !important;
+      color: var(--col-white) !important;
+      outline: var(--col-white) !important;
+      &:hover {
+        background: var(--col-white);
+        color: var(--col-primary) !important;
+      }
+    }
+  }&.btn-tertiary {
+    background: transparent;
+    color: var(--col-primary) !important;
+    border: 1px solid var(--col-primary) !important;
+    outline: var(--col-primary) !important;
+    &:hover {
+      background: var(--col-primary);
+      color: var(--col-white) !important;
       outline: var(--col-white) !important;
     }
   }
