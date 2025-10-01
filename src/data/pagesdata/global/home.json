@@ -126,6 +126,12 @@
           "Scale user access as your team grows at no extra cost."
         ]
       }
+    ],
+    "buttons": [
+      {
+        "text": "Explore Features",
+        "link": "/all-features"
+      }
     ]
   },
   "trustBadgeBrands": {

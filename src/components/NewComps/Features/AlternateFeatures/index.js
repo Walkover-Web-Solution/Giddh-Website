@@ -62,6 +62,13 @@ export default function AlternateFeatures({ features }) {
             </div>
           );
         })}
+        {features?.buttons && (
+          <div className="d-flex justify-content-center">
+            {features?.buttons?.map((button, index) => (
+              <button key={index} className={`btn btn-primary-outline mx-auto`} onClick={() => window.location.href = button?.link}>{button?.text}</button>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );
