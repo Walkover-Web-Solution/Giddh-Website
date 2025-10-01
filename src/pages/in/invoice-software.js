@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Faqs from "@/components/faq";
 import faqs from '../../data/faqs.json';
 
-const inInvoiceSoftware = (path) => {
+const OldInvoiceSoftware = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia;
@@ -1155,4 +1155,4 @@ const inInvoiceSoftware = (path) => {
   );
 };
 
-export default inInvoiceSoftware;
+export default OldInvoiceSoftware;

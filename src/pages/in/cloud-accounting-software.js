@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Faqs from "@/components/faq";
-import faqs from "../data/faqs.json";
+import faqs from "../../data/faqs.json";
 
-const anywhereAnytime = (path) => {
+const OldCloudAccountingSoftware = (path) => {
   const [readMoreStatus, readmoreAction] = useState(false);
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
@@ -827,4 +827,4 @@ const anywhereAnytime = (path) => {
     </>
   );
 };
-export default anywhereAnytime;
+export default OldCloudAccountingSoftware;

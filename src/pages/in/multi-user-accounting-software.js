@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Faqs from "@/components/faq";
 import faqs from '../../data/faqs.json';
 
-const inMultiUserAccountingSoftware = (path) => {
+const OldMultiUserAccountingSoftware = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
@@ -234,4 +234,4 @@ const inMultiUserAccountingSoftware = (path) => {
     </>
   );
 };
-export default inMultiUserAccountingSoftware;
+export default OldMultiUserAccountingSoftware;
