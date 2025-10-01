@@ -72,7 +72,7 @@
       {
         "text": "Try Giddh for Free",
         "link": "/signup",
-        "type": "secondary"
+        "type": "btn-tertiary"
       }
     ],
     "theme": "light"
