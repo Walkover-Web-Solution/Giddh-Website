@@ -22,7 +22,7 @@
       {
         "text": "Get Started",
         "link": "/signup",
-        "type": "secondary"
+        "type": "btn-secondary-outline"
       }
     ]
   },

@@ -22,7 +22,7 @@
       {
         "text": "Try Giddh for free",
         "link": "/signup",
-        "type": "secondary"
+        "type": "btn-secondary-outline"
       }
     ]
   },

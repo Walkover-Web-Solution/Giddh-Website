@@ -144,7 +144,7 @@
       {
         "text": "Switch To Giddh Now",
         "link": "/signup",
-        "type": "btn-secondary",
+        "type": "btn-secondary-outline",
         "arrow": true
       }
     ],

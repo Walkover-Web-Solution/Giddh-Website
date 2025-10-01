@@ -5,19 +5,18 @@ import { MdArrowForward } from "react-icons/md";
 export default function CTA({ compData, hasImage }) {
   return (
     <section
-      className={`${
-        compData?.theme === "light"
-          ? "bg-accent-light font-dark"
-          : "bg-accent font-white outfit-font"
-      } pt-5 pb-5 pb-md-0 text-center text-md-start`}
+      className={`${compData?.theme === "light"
+        ? "bg-accent-light font-dark"
+        : "bg-accent font-white outfit-font"
+        } py-5 ${hasImage && "pb-md-0"} text-center text-md-start`}
     >
       <div className={`container ${!hasImage ? styles.noImage : "d-flex"}`}>
         <div className="d-flex justify-content-center flex-column">
-          <h2 className={`${!hasImage && ""} font-sub-heading garmond-font`}>
+          <h2 className={`${!hasImage && "text-center"} font-sub-heading garmond-font`}>
             {compData?.heading}
           </h2>
-          <p className={`${!hasImage && ""} `}>{compData?.subheading}</p>
-          <div>
+          <p className={`${!hasImage && "text-center"} `}>{compData?.subheading}</p>
+          <div className={`${!hasImage && "d-flex justify-content-center"}`}>
             {Array.isArray(compData?.buttons) &&
               compData?.buttons.map((button, index) => (
                 <a key={index} href={button?.link} target="_blank">

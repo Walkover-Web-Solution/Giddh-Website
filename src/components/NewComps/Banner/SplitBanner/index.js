@@ -6,9 +6,8 @@ export default function SplitBanner({ compdata }) {
   return (
     <>
       <section
-        className={`py-3 outfit-font gradient ${
-          !compdata?.header ? "padding-nav" : ""
-        }`}
+        className={`py-3 outfit-font gradient ${!compdata?.header ? "padding-nav" : ""
+          }`}
       >
         <div className="container px-4 py-5">
           {compdata?.header && (
@@ -33,18 +32,16 @@ export default function SplitBanner({ compdata }) {
             </div>
           )}
           <div
-            className={`row align-items-center ${
-              !compdata?.form && !compdata?.image
-                ? "justify-content-center"
-                : "justify-content-between"
-            } garmond-font`}
+            className={`row align-items-center ${!compdata?.form && !compdata?.image
+              ? "justify-content-center"
+              : "justify-content-between"
+              } garmond-font`}
           >
             <div
-              className={`col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 d-flex flex-column gap-2 ${
-                !compdata?.form && !compdata?.image
-                  ? "pe-0 text-center col-lg-8 mx-auto"
-                  : "pe-3"
-              }`}
+              className={`col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 d-flex flex-column gap-2 ${!compdata?.form && !compdata?.image
+                ? "pe-0 text-center col-lg-8 mx-auto"
+                : "pe-3"
+                }`}
             >
               {compdata?.tagline && (
                 <span className="font-md outfit-font">
@@ -55,11 +52,10 @@ export default function SplitBanner({ compdata }) {
               <h1 className="font-heading font-primary">{compdata?.heading}</h1>
               <p className="font-grey outfit-font">{compdata?.subHeading}</p>
               <div
-                className={`d-flex flex-wrap align-items-center gap-4 ${
-                  !compdata?.form && !compdata?.image
-                    ? "justify-content-center"
-                    : ""
-                }`}
+                className={`d-flex flex-wrap align-items-center gap-4 ${!compdata?.form && !compdata?.image
+                  ? "justify-content-center"
+                  : ""
+                  }`}
               >
                 {Array.isArray(trustBadgeBrands) &&
                   trustBadgeBrands?.map((logo, index) => (
@@ -84,7 +80,7 @@ export default function SplitBanner({ compdata }) {
                   alt={compdata?.heading}
                   width={600}
                   height={700}
-                  className="w-100"
+                  className="img-fluid"
                 />
               </div>
             )}
