@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 import style from "./Testimonials.module.scss";
-import data from "./data.json";
 import { MdReviews } from "react-icons/md";
-export default function Testimonials() {
+import Image from "next/image";
+export default function Testimonials({ testimonials }) {
+  if (testimonials?.data?.length === 0) return null;
   const scrollRef = useRef(null);
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -49,13 +50,13 @@ export default function Testimonials() {
   return (
     <section className="py-5 outfit-font bg-accent">
       <div className="d-flex flex-column text-center mx-auto px-3">
-        <h2 className="fw-normal new-sub-heading c-fw-400 text-white garmond-font ">
-          Success Stories with Giddh
+        <h2 className="font-400 font-sub-heading font-600 font-white garmond-font">
+          {testimonials?.heading}
         </h2>
         <p
-          className={`c-fs-5 mx-auto pb-4 text-white-50 text-center c-fw-400`}
+          className="font-md mx-auto pb-4 font-white text-center font-400"
         >
-          Real businesses. Real results. Look how Giddh empowers companies worldwide to streamline accounting, save time, and accelerate growth.
+          {testimonials?.subheading}
         </p>
       </div>
       <div className="container d-flex flex-row py-1 gap-5 justify-content-center">
@@ -64,18 +65,18 @@ export default function Testimonials() {
             ref={scrollRef}
             className={`border overflow-y-hidden border-light rounded mx-auto ${style.scrollableContainer}`}
           >
-            {data.map((testimonial, index) => (
+            {testimonials.data.map((testimonial, index) => (
               <div
                 key={index}
-                className={`py-2 px-3 ${index < data.length - 1 ? "border-bottom" : ""
+                className={`py-2 px-3 ${index < testimonials?.data.length - 1 ? "border-bottom" : ""
                   } border-col-light`}
               >
                 <div className="d-flex gap-sm-3 gap-0 flex-column flex-sm-row align-items-sm-center align-items-start">
                   <div className="d-flex align-items-center justify-content-center">
-                    <MdReviews className="text-white c-fs-1"/>
+                    <MdReviews className="font-white font-xl" />
                   </div>
                   <div>
-                    <p className="text-white mb-0 mt-2 c-fw-400 c-fs-5">
+                    <p className="text-white mb-0 mt-2 font-400 font-sm">
                       {testimonial.testimonial}
                     </p>
                     <div className="d-flex align-items-center justify-content-start gap-2 c-fw-400 c-fs-5 mt-2">
@@ -99,7 +100,7 @@ export default function Testimonials() {
               <br />
               <em className="c-fw-400">Growth with</em>
               <br />
-              <img src="/img/giddh-logo-primary.svg" alt="Giddh Logo"/>
+              <Image src="/img/giddh-logo-primary.svg" alt="Giddh Logo" width={100} height={100} />
             </h2>
           </div>
         </div>

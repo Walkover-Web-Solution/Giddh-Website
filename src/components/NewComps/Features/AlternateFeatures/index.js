@@ -4,11 +4,14 @@ import { MdCircle } from "react-icons/md";
 export default function AlternateFeatures({ features }) {
   if (features?.content?.length === 0) return null;
   return (
-    <section className="bg-neutral pt-5">
+    <section className="bg-neutral py-5">
       <div className="container d-flex flex-column gap-5">
-        <h2 className="text-center sub-heading garmond-font">
-          {features?.heading}
-        </h2>
+        <div className="d-flex flex-column g-2">
+          <h2 className="text-center font-sub-heading garmond-font">
+            {features?.heading}
+          </h2>
+          <p className="text-center font-slate-grey font-md">{features?.subHeading}</p>
+        </div>
         {features?.content?.map((feature, index) => {
           const imageRight = index % 2 === 0;
           return (
@@ -17,15 +20,15 @@ export default function AlternateFeatures({ features }) {
               key={feature?.feature + "-" + index}
             >
               <div
-                className={`col-12 col-md-6  ${imageRight ? "order-md-1" : "order-md-2"
+                className={`col-12 col-md-6 ${imageRight ? "order-md-1" : "order-md-2"
                   }`}
               >
-                <h3 className="garmond-font col-primary c-fs-1 c-fw-400">
+                <h3 className="garmond-font font-primary font-xl font-400">
                   {feature?.feature}
                 </h3>
-                <p className="col-dark-grey c-fs-4">{feature?.description}</p>
-                {Array.isArray(feature?.more_content) && (
-                  <ul className="mb-0 col-dark-grey c-fs-4">
+                <p className="font-slate-grey font-md">{feature?.description}</p>
+                {feature?.more_content && (
+                  <ul className="mb-0 font-slate-grey font-md">
                     {feature?.more_content?.map((content, index) => (
                       <li key={index}>
                         <MdCircle
@@ -59,6 +62,13 @@ export default function AlternateFeatures({ features }) {
             </div>
           );
         })}
+        {features?.buttons && (
+          <div className="d-flex justify-content-center">
+            {features?.buttons?.map((button, index) => (
+              <button key={index} className={`btn btn-primary-outline mx-auto`} onClick={() => window.location.href = button?.link}>{button?.text}</button>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

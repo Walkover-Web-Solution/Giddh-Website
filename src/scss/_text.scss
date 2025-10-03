@@ -152,3 +152,12 @@
 .font-sub-heading {
   font-size: var(--font-sub-heading);
 }
+
+// new font weight
+
+.font-400 {
+  font-weight: var(--c-fw-400) !important;
+}
+.font-600 {
+  font-weight: var(--c-fw-600) !important;
+}

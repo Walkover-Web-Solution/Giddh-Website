@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 import { trustBadgeBrands } from "../TrustBadge";
 import styles from "./TrustBadgeScrollable.module.scss";
+import Image from "next/image";
 
-export default function TrustBadgeScrollable({ heading }) {
+export default function TrustBadgeScrollable({ compdata }) {
   const scrollRef = useRef(null);
   const frameRef = useRef(null);
 
@@ -30,32 +31,32 @@ export default function TrustBadgeScrollable({ heading }) {
     <section className="py-5">
       <div className="container text-center d-flex flex-column gap-3">
         <div className="d-flex flex-column gap-1">
-          <h2 className="sub-heading col-primary c-fw-400 garmond-font">
-            {heading?.title}
+          <h2 className="font-sub-heading font-primary font-400 garmond-font">
+            {compdata?.title}
           </h2>
-          <p className="col-dark-grey garmond-font c-fs-4">
-            {heading?.description}
+          <p className="font-dark-grey garmond-font font-md">
+            {compdata?.description}
           </p>
         </div>
 
         <div className="position-relative overflow-hidden w-100 px-5">
           <div
-            className={`d-inline-flex align-items-center gap-4`}
+            className="d-inline-flex align-items-center gap-4"
             ref={scrollRef}
           >
-            {trustBadgeBrands?.map((logo, index) => (
+            {trustBadgeBrands?.length > 0 && trustBadgeBrands?.map((logo, index) => (
               <a key={index} href={logo?.href} target="_blank" rel="noreferrer">
-                <img src={logo?.src} alt={logo?.alt} height={34} />
+                <Image src={logo?.src} alt={logo?.alt} width={100} height={40} />
               </a>
             ))}
-            {trustBadgeBrands?.map((logo, index) => (
+            {trustBadgeBrands?.length > 0 && trustBadgeBrands?.map((logo, index) => (
               <a
                 key={`dup-${index}`}
                 href={logo?.href}
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={logo?.src} alt={logo?.alt} height={34} />
+                <Image src={logo?.src} alt={logo?.alt} width={100} height={40} />
               </a>
             ))}
           </div>

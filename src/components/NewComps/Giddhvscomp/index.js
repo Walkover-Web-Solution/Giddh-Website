@@ -16,7 +16,7 @@ export default function Giddhvscomp({ giddhvscomp }) {
               <div className="col-3 col-md-3 px-3 py-2 border-end">Tally</div>
             </div>
 
-            {Array.isArray(giddhvscomp?.content) && giddhvscomp?.content?.map((row, index) => (
+            {giddhvscomp?.content?.map((row, index) => (
               <div key={index} className="row border-bottom c-fs-6 text-center">
                 <div className="col-3 col-md-3 px-3 py-2 border-end">
                   {row?.feature}

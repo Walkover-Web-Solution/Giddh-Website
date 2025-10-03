@@ -1,62 +1,50 @@
 import Image from "next/image";
-import styles from "./CTA.module.scss";
+import { MdArrowForward } from "react-icons/md";
 
 export default function CTA({ compData, hasImage }) {
   return (
-    <section className="bg-accent py-5">
-      <div
-        className={`container ${styles.inner} d-flex align-items-center justify-content-center`}
-      >
-        <div className="d-flex flex-column align-items-center justify-content-center gap-4">
-          <h1
-            className={`${
-              !hasImage && "text-center"
-            } c-fw-400 text-white garmond-font  mx-auto`}
-          >
+    <section
+      className={`${compData?.theme === "light"
+        ? "bg-accent-light font-dark"
+        : "bg-accent font-white outfit-font"
+        } py-5 ${hasImage && "pb-md-0"} text-center text-md-start`}
+    >
+      <div className={`container ${hasImage ? "d-flex" : ""}`}>
+        <div className="d-flex justify-content-center flex-column">
+          <h2 className={`${!hasImage && "text-center"} font-sub-heading garmond-font`}>
             {compData?.heading}
-          </h1>
-          <p
-            className={`${
-              !hasImage && "text-center"
-            } fw-normal text-white m-0 pb-2 c-fw-600`}
-          >
-            {compData?.subheading}
-          </p>
-          <div>
-            {Array.isArray(compData?.buttons) && compData?.buttons.map((button, index) => (
-              <a key={index} href={button?.link} target="_blank">
-                <button
-                  onClick={() =>
-                    document
-                      .getElementById("SeeGiddhInAction")
-                      ?.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                      })
-                  }
-                  className={`btn ${
-                    button?.type === "primary"
-                      ? "btn-primary"
-                      : "btn-outline-light"
-                  }`}
-                >
-                  {button.text}
-                </button>
-              </a>
-            ))}
+          </h2>
+          <p className={`${!hasImage ? "text-center" : ""} `}>{compData?.subheading}</p>
+          <div className={`${!hasImage && "d-flex justify-content-center"}`}>
+              {compData?.buttons?.map((button, index) => (
+                <a key={index} href={button?.link} target="_blank">
+                  <button
+                    onClick={() =>
+                      document
+                        .getElementById("SeeGiddhInAction")
+                        ?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "center",
+                        })
+                    }
+                    className={`${button?.type} btn`}
+                  >
+                    {button.text} {button.arrow && <MdArrowForward />}
+                  </button>
+                </a>
+              ))}
           </div>
-          {hasImage ? (
-            <div className={styles.imageWrap}>
-              <Image
-                src={compData?.image}
-                alt="Person holding laptop"
-                width={320}
-                height={320}
-                className="object-fit-contain w-100 h-auto"
-              />
-            </div>
-          ) : null}
         </div>
+        {hasImage && (
+          <Image
+            src={compData?.image}
+            alt="Person holding laptop"
+            width={320}
+            height={320}
+            priority
+            className="w-75 d-none d-md-block"
+          />
+        )}
       </div>
     </section>
   );

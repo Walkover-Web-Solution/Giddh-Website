@@ -7,6 +7,7 @@ import Industries from "@/components/NewComps/Industries";
 import Benefits from "@/components/NewComps/Benefits";
 import CTA from "@/components/NewComps/CTA";
 import Giddhvscomp from "@/components/NewComps/Giddhvscomp";
+import FAQs from "../NewComps/FAQs";
 
 export default function Home({ pageData }) {
   return (
@@ -14,13 +15,14 @@ export default function Home({ pageData }) {
       <StackedBanner compData={pageData?.stackedBanner} />
       <Stats stats={pageData?.stats} />
       <AlternateFeatures features={pageData?.features} />
-      <TrustBadgeScrollable heading={pageData?.trustBadgeBrands} />
+      <TrustBadgeScrollable compdata={pageData?.trustBadgeBrands} />
       <CTA hasImage={false} compData={pageData?.cta} />
       <FeedbackCards testimonials={pageData?.testimonials} />
       <Giddhvscomp giddhvscomp={pageData?.giddhvscomp} />
       <Benefits benefits={pageData?.benefits} />
       <Industries giddhIndustries={pageData?.giddhIndustries} />
       <CTA hasImage={false} compData={pageData?.ctaTwo} />
+      <FAQs faqs={pageData?.faqs} />
     </>
   );
 }
