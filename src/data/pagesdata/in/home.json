@@ -17,7 +17,6 @@
   "cta": {
     "heading": "Smarter accounting starts here.",
     "subheading": "Giddh simplifies your finances so you can focus on what matters—growing your business.",
-    "image": "/img/girl-avatar.svg",
     "buttons": [
       {
         "text": "Try Giddh for free",
@@ -368,12 +367,11 @@
   "ctaTwo": {
     "heading": "Streamline your accounting with Giddh to simplify, automate, and save time today!",
     "subheading": "",
-    "image": "/img/girl-avatar.svg",
     "buttons": [
       {
         "text": "Start Your Free Trial",
         "link": "/signup",
-        "type": "secondary"
+        "type": "btn-secondary-outline"
       }
     ]
   },
