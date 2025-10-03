@@ -1,5 +1,4 @@
 import SplitBanner from "../NewComps/Banner/SplitBanner";
-import StackedBanner from "../NewComps/Banner/StackedBanner";
 import AlternateFeatures from "../NewComps/Features/AlternateFeatures";
 import GridFeatures from "../NewComps/Features/GridFeatures";
 import FeedbackCards from "../NewComps/FeedbackCards";

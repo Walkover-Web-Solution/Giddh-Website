@@ -2,7 +2,6 @@ import SplitBanner from "../NewComps/Banner/SplitBanner";
 import ToggleFeatures from "../NewComps/Features/ToggleFeatures";
 import Stats from "../NewComps/Stats";
 import WhyGiddh from "../NewComps/WhyGiddh";
-
 import GiddhFor from "../NewComps/GiddhFor";
 import Testimonials from "../NewComps/Testimonials";
 import FAQs from "../NewComps/FAQs";

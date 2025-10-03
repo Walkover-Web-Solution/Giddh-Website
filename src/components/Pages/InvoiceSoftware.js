@@ -18,7 +18,7 @@ export default function InvoiceSoftware({ pageData, pageInfo }) {
       <GridFeatures features={pageData?.characteristics} />
       <FeedbackCards testimonials={pageData?.testimonials} />
       <CTA compData={pageData?.ctaTwo} />
-      <TrustBadgeScrollable heading={pageData?.trustBadgeBrands} />
+      <TrustBadgeScrollable compdata={pageData?.trustBadgeBrands} />
       <SupportedPlatforms supportedPlatforms={pageData?.supportedPlatforms} />
       <FAQs faqs={pageData?.faqs} />
     </>

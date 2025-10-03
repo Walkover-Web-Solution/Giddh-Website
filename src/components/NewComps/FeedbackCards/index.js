@@ -3,11 +3,11 @@ import styles from "./FeedbackCards.module.scss";
 import { MdOutlineFormatQuote } from "react-icons/md";
 
 export default function FeedbackCards({ testimonials }) {
-  if (Array.isArray(testimonials) && testimonials.length === 0) return null;
+  if (testimonials?.data?.length === 0) return null;
   const scrollRef = useRef(null);
   const frameRef = useRef(null);
   const items = useMemo(() => {
-    const list = testimonials.data || [];
+    const list = testimonials?.data || [];
     return list.length > 0 ? list.concat(list) : [];
   }, [testimonials]);
 

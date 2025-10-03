@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./CTA.module.scss";
 import { MdArrowForward } from "react-icons/md";
 
 export default function CTA({ compData, hasImage }) {
@@ -10,7 +9,7 @@ export default function CTA({ compData, hasImage }) {
         : "bg-accent font-white outfit-font"
         } py-5 ${hasImage && "pb-md-0"} text-center text-md-start`}
     >
-      <div className={`container ${!hasImage ? styles.noImage : "d-flex"}`}>
+      <div className={`container ${hasImage ? "d-flex" : ""}`}>
         <div className="d-flex justify-content-center flex-column">
           <h2 className={`${!hasImage && "text-center"} font-sub-heading garmond-font`}>
             {compData?.heading}

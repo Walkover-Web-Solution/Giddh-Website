@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 import { trustBadgeBrands } from "../TrustBadge";
 import styles from "./TrustBadgeScrollable.module.scss";
+import Image from "next/image";
 
-export default function TrustBadgeScrollable({ heading }) {
+export default function TrustBadgeScrollable({ compdata }) {
   const scrollRef = useRef(null);
   const frameRef = useRef(null);
 
@@ -31,10 +32,10 @@ export default function TrustBadgeScrollable({ heading }) {
       <div className="container text-center d-flex flex-column gap-3">
         <div className="d-flex flex-column gap-1">
           <h2 className="font-sub-heading font-primary font-400 garmond-font">
-            {heading?.title}
+            {compdata?.title}
           </h2>
           <p className="font-dark-grey garmond-font font-md">
-            {heading?.description}
+            {compdata?.description}
           </p>
         </div>
 
@@ -45,7 +46,7 @@ export default function TrustBadgeScrollable({ heading }) {
           >
             {trustBadgeBrands?.length > 0 && trustBadgeBrands?.map((logo, index) => (
               <a key={index} href={logo?.href} target="_blank" rel="noreferrer">
-                <img src={logo?.src} alt={logo?.alt} height={34} />
+                <Image src={logo?.src} alt={logo?.alt} width={100} height={40} />
               </a>
             ))}
             {trustBadgeBrands?.length > 0 && trustBadgeBrands?.map((logo, index) => (
@@ -55,7 +56,7 @@ export default function TrustBadgeScrollable({ heading }) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <img src={logo?.src} alt={logo?.alt} height={34} />
+                <Image src={logo?.src} alt={logo?.alt} width={100} height={40} />
               </a>
             ))}
           </div>

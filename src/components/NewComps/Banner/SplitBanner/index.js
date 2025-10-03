@@ -65,7 +65,7 @@ export default function SplitBanner({ compdata }) {
                       rel="noopener noreferrer"
                       target="_blank"
                     >
-                      <img src={logo.src} alt={logo.alt} height={34} />
+                      <Image src={logo.src} alt={logo.alt} width={100} height={40} />
                     </a>
                   ))}
               </div>

@@ -49,10 +49,12 @@ export default function GiddhFor({ compdata }) {
             {compdata?.content[activeTab]?.image && (
               <div className="col-12 col-lg-6 order-2 order-lg-1">
                 <div className="d-flex justify-content-center">
-                  <img
+                  <Image
                     src={compdata?.content[activeTab]?.image}
                     alt={compdata?.content[activeTab]?.name}
-                    className={`${style.image} w-100 h-auto rounded`}
+                    className={`${style.image} rounded`}
+                    width={400}
+                    height={400}
                   />
                 </div>
               </div>

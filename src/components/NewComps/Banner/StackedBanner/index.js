@@ -23,7 +23,7 @@ export default function StackedBanner({ compData }) {
         </div>
       </div>
       <div className="pb-5 container d-flex gap-2 gap-md-4 justify-content-center align-items-center flex-column flex-md-row">
-        {compData?.buttons?.map((button, index) => (
+        {Array.isArray(compData?.buttons) && compData?.buttons?.map((button, index) => (
           <a
             key={index}
             href={button.link}

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import style from "./Testimonials.module.scss";
 import { MdReviews } from "react-icons/md";
+import Image from "next/image";
 export default function Testimonials({ testimonials }) {
   if (testimonials?.data?.length === 0) return null;
   const scrollRef = useRef(null);
@@ -64,7 +65,7 @@ export default function Testimonials({ testimonials }) {
             ref={scrollRef}
             className={`border overflow-y-hidden border-light rounded mx-auto ${style.scrollableContainer}`}
           >
-            {testimonials?.data?.length > 0 && testimonials?.data?.map((testimonial, index) => (
+            {testimonials?.data?.map((testimonial, index) => (
               <div
                 key={index}
                 className={`py-2 px-3 ${index < testimonials?.data.length - 1 ? "border-bottom" : ""
@@ -99,7 +100,7 @@ export default function Testimonials({ testimonials }) {
               <br />
               <em className="c-fw-400">Growth with</em>
               <br />
-              <img src="/img/giddh-logo-primary.svg" alt="Giddh Logo" />
+              <Image src="/img/giddh-logo-primary.svg" alt="Giddh Logo" width={100} height={100} />
             </h2>
           </div>
         </div>

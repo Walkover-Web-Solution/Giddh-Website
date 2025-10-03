@@ -6,21 +6,16 @@ export default function PopUp() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    // Show modal after 2 seconds
     const timer = setTimeout(() => {
       setShowModal(true);
-      
-      // Set up backdrop and body class
       document.body.classList.add("modal-open");
-      
-      // Create and add backdrop if it doesn't exist
       let backdrop = document.querySelector(".modal-backdrop");
       if (!backdrop) {
         backdrop = document.createElement("div");
         backdrop.className = "modal-backdrop fade show";
         document.body.appendChild(backdrop);
       }
-    }, 20000); // 2 seconds
+    }, 20000);
 
     return () => clearTimeout(timer);
   }, []);

@@ -37,7 +37,7 @@ export default function WhyGiddh({ compdata }) {
               </span>
             </div>
           </div>
-          {compdata?.features.map((row, index) => (
+          {Array.isArray(compdata?.features) && compdata?.features.map((row, index) => (
             <div key={index} className="row border-bottom text-center">
               <div className="col-6 col-md-4 px-2 py-2 border-end">
                 {row?.features}

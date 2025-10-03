@@ -5,7 +5,7 @@ import * as MdIcons from "react-icons/md";
 import { MdCircle } from "react-icons/md";
 
 export default function ToggleFeatures({ features }) {
-  if (!Array.isArray(features) || features.length === 0) return null;
+  if (features?.length === 0) return null;
   const [expandedFeature, setExpandedFeature] = useState(0);
   const Icon = MdIcons[features[expandedFeature].icon];
   const handleFeatureToggle = useCallback((index) => {
@@ -23,16 +23,15 @@ export default function ToggleFeatures({ features }) {
           <div className="d-flex flex-column flex-sm-row gap-4 outfit-font align-items-center justify-content-between">
             <div className="col-12 col-sm-6 order-1 order-md-1">
               <div id="features" className="p-2">
-                {features?.length > 0 &&
-                  features.map((feature, index) => (
-                    <FeatureItem
-                      key={index}
-                      feature={feature}
-                      index={index}
-                      isExpanded={expandedFeature === index}
-                      onToggle={handleFeatureToggle}
-                    />
-                  ))}
+                {features?.map((feature, index) => (
+                  <FeatureItem
+                    key={index}
+                    feature={feature}
+                    index={index}
+                    isExpanded={expandedFeature === index}
+                    onToggle={handleFeatureToggle}
+                  />
+                ))}
               </div>
             </div>
 
@@ -142,7 +141,7 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
         <div className="d-flex flex-column gap-2">
           <p className="m-0 p-0 font-md">{feature?.description}</p>
           <ul className="list-unstyled d-flex flex-column gap-1">
-            {feature?.length > 0 && feature?.content?.map((point, pointIndex) => (
+            {feature?.content?.length > 0 && feature.content.map((point, pointIndex) => (
               <li className="d-flex gap-2 font-md" key={pointIndex}>
                 <MdCircle className="font-accent mt-2" fontSize={7} /> {point}
               </li>

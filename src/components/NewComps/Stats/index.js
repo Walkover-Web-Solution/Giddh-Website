@@ -6,7 +6,7 @@ export default function Stats({ stats }) {
           {stats?.heading}
         </h2>
         <div className="row justify-content-center g-2">
-          {stats?.stats?.map((stat, index) => (
+          {Array.isArray(stats?.stats) && stats?.stats?.map((stat, index) => (
             <div key={index} className="col-12 col-sm-6 col-md-4 d-flex">
               <div
                 className="w-100 d-flex flex-column align-items-center justify-content-center
