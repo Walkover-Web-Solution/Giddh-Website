@@ -3,6 +3,7 @@ import style from "./GiddhFor.module.scss";
 import Image from "next/image";
 
 export default function GiddhFor({ compdata }) {
+  if (compdata?.content?.length === 0) return null;
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -18,7 +19,7 @@ export default function GiddhFor({ compdata }) {
         <div className="border border-white rounded d-none d-lg-block">
           <div className="">
             <div className="d-flex justify-content-between align-items-center border-bottom border-white overflow-hidden">
-              {compdata?.content?.length > 0 && compdata?.content.map((item, index) => (
+              {compdata?.content.map((item, index) => (
                 <div key={index} className="position-relative flex-fill">
                   <div
                     className={`d-flex align-items-center justify-content-center gap-2 w-100 px-3 py-3 cursor-pointer ${style.tab}`}
@@ -63,7 +64,7 @@ export default function GiddhFor({ compdata }) {
         </div>
 
         <div className="d-grid g-3 d-lg-none">
-          {compdata?.content?.length > 0 && compdata?.content.map((item, index) => (
+          {compdata?.content.map((item, index) => (
             <div
               key={index}
               className="d-flex flex-column align-items-center g-3 g-md-4 p-4"

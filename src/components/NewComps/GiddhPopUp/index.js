@@ -73,12 +73,13 @@ export default function GiddhPopUp() {
                             <div
                                 className="pt-3 pt-sm-5 align-self-center align-self-md-end align-self-lg-start"
                             >
-                                <img
+                                <Image
                                     src="/img/laptop_mockup.svg"
                                     alt="Giddh dashboard screenshot"
                                     width={600}
                                     height={400}
                                     className="w-100 h-auto"
+                                    priority
                                 />
                             </div>
                         </div>

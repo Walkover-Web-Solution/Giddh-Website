@@ -13,73 +13,50 @@ export default function ToggleFeatures({ features }) {
   }, []);
 
   return (
-    (Array.isArray(features) && features.length > 0 && (
-      <section className="py-5">
-        <div className="container">
-          <h2 className="font-sub-heading text-center garmond-font mb-3 mb-md-4">
-            <span className="font-primary">Giddh Features</span> That Make Business Easy
-          </h2>
+    <section className="py-5">
+      <div className="container">
+        <h2 className="font-sub-heading text-center garmond-font mb-3 mb-md-4">
+          <span className="font-primary">Giddh Features</span> That Make Business Easy
+        </h2>
 
-          <div className="d-flex flex-column flex-sm-row gap-4 outfit-font align-items-center justify-content-between">
-            <div className="col-12 col-sm-6 order-1 order-md-1">
-              <div id="features" className="p-2">
-                {features?.map((feature, index) => (
-                  <FeatureItem
-                    key={index}
-                    feature={feature}
-                    index={index}
-                    isExpanded={expandedFeature === index}
-                    onToggle={handleFeatureToggle}
-                  />
-                ))}
-              </div>
+        <div className="d-flex flex-column flex-sm-row gap-4 outfit-font align-items-center justify-content-between">
+          <div className="col-12 col-sm-6 order-1 order-md-1">
+            <div id="features" className="p-2">
+              {features?.map((feature, index) => (
+                <FeatureItem
+                  key={index}
+                  feature={feature}
+                  index={index}
+                  isExpanded={expandedFeature === index}
+                  onToggle={handleFeatureToggle}
+                />
+              ))}
             </div>
+          </div>
 
-            <div className="col-12 col-sm-6 order-2 order-sm-2 d-none d-sm-flex justify-content-center">
-              {features[expandedFeature]?.image ? (
-                <div className="d-flex align-items-center justify-content-center h-100">
-                  <div className="position-relative d-inline-block rounded overflow-hidden">
-                    <Image
-                      src={features[expandedFeature].image}
-                      alt={features[expandedFeature].name}
-                      height={400}
-                      width={400}
-                      className={`cursor-pointer ${style.image}`}
-                    />
+          <div className="col-12 col-sm-6 order-2 order-sm-2 d-none d-sm-flex justify-content-center">
+            {features[expandedFeature]?.image ? (
+              <div className="d-flex align-items-center justify-content-center h-100">
+                <div className="position-relative d-inline-block rounded overflow-hidden">
+                  <Image
+                    src={features[expandedFeature].image}
+                    alt={features[expandedFeature].name}
+                    height={400}
+                    width={400}
+                    className={`cursor-pointer ${style.image}`}
+                  />
 
-                    <div
-                      className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4 position-absolute top-0 left-0 right-0 bottom-0`}
-                    >
-                      <div className="text-start font-white">
-                        <h3 className="font-outfit font-white font-600 font-md text-start">
-                          {features[expandedFeature].name}
-                        </h3>
-                        <p className="font-md text-start">
-                          {features[expandedFeature].description}
-                        </p>
-                      </div>
-                      <button
-                        className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 ${style.imageButton} cursor-pointer c-fw-600 c-fs-5`}
-                      >
-                        <div>
-                          {Icon && <Icon size={18} className="font-white" />}
-                        </div>
-                        <span className="font-white">
-                          {features[expandedFeature].name}
-                        </span>
-                      </button>
+                  <div
+                    className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4 position-absolute top-0 left-0 right-0 bottom-0`}
+                  >
+                    <div className="text-start font-white">
+                      <h3 className="font-outfit font-white font-600 font-md text-start">
+                        {features[expandedFeature].name}
+                      </h3>
+                      <p className="font-md text-start">
+                        {features[expandedFeature].description}
+                      </p>
                     </div>
-                  </div>
-                </div>
-              ) : (
-                <div className="d-flex align-items-center justify-content-center h-100">
-                  <div className="d-flex flex-column align-items-center text-center p-4">
-                    <h3 className="font-outfit font-white font-600 font-md">
-                      {features[expandedFeature].name}
-                    </h3>
-                    <p className="font-md">
-                      {features[expandedFeature].description}
-                    </p>
                     <button
                       className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 ${style.imageButton} cursor-pointer c-fw-600 c-fs-5`}
                     >
@@ -92,12 +69,33 @@ export default function ToggleFeatures({ features }) {
                     </button>
                   </div>
                 </div>
-              )}
-            </div>
+              </div>
+            ) : (
+              <div className="d-flex align-items-center justify-content-center h-100">
+                <div className="d-flex flex-column align-items-center text-center p-4">
+                  <h3 className="font-outfit font-white font-600 font-md">
+                    {features[expandedFeature].name}
+                  </h3>
+                  <p className="font-md">
+                    {features[expandedFeature].description}
+                  </p>
+                  <button
+                    className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 ${style.imageButton} cursor-pointer c-fw-600 c-fs-5`}
+                  >
+                    <div>
+                      {Icon && <Icon size={18} className="font-white" />}
+                    </div>
+                    <span className="font-white">
+                      {features[expandedFeature].name}
+                    </span>
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
-      </section>
-    ))
+      </div>
+    </section>
   );
 }
 
