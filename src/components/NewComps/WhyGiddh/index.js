@@ -1,5 +1,6 @@
 import Image from "next/image";
 export default function WhyGiddh({ compdata }) {
+  if (compdata?.features?.length === 0) return null;
   return (
     <section className="bg-light-blue outfit-font">
       <div className="container py-5 d-flex flex-column gap-4">
@@ -37,13 +38,13 @@ export default function WhyGiddh({ compdata }) {
               </span>
             </div>
           </div>
-          {Array.isArray(compdata?.features) && compdata?.features.map((row, index) => (
+          {compdata.features.map((row, index) => (
             <div key={index} className="row border-bottom text-center">
               <div className="col-6 col-md-4 px-2 py-2 border-end">
                 {row?.features}
               </div>
               <div
-                className={`col-3 col-md-4 px-2 py-2 border-accent ${index === compdata?.features.length - 1 ? "  rounded-start-4" : ""
+                className={`col-3 col-md-4 px-2 py-2 border-accent ${index === compdata.features.length - 1 ? "  rounded-start-4" : ""
                   }`}
               >
                 {row?.other ? (
@@ -63,7 +64,7 @@ export default function WhyGiddh({ compdata }) {
                 )}
               </div>
               <div
-                className={`col-3 col-md-4 px-2 border-2 border-start border-accent py-2 ${index === compdata?.features.length - 1
+                className={`col-3 col-md-4 px-2 border-2 border-start border-accent py-2 ${index === compdata.features.length - 1
                   ? "border-bottom border-end border-start border-black rounded-bottom-4"
                   : ""
                   }`}

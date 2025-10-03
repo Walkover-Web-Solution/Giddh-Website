@@ -57,8 +57,7 @@ export default function SplitBanner({ compdata }) {
                   : ""
                   }`}
               >
-                {Array.isArray(trustBadgeBrands) &&
-                  trustBadgeBrands?.map((logo, index) => (
+                {trustBadgeBrands?.map((logo, index) => (
                     <a
                       key={index}
                       href={logo.href}

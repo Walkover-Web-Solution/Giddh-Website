@@ -12,7 +12,7 @@ export default function GridFeatures({ features }) {
           <p className="text-center font-md font-sub-heading font-slate-grey">{features?.subHeading}</p>
         </div>
         <div className="row g-3">
-          {features?.cards?.map((card, index) => (
+          {features.cards.map((card, index) => (
             <div
               key={index}
               className="col-12 col-md-6 align-items-center justify-content-center"

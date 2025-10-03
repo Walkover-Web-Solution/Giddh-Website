@@ -65,7 +65,7 @@ export default function Testimonials({ testimonials }) {
             ref={scrollRef}
             className={`border overflow-y-hidden border-light rounded mx-auto ${style.scrollableContainer}`}
           >
-            {testimonials?.data?.map((testimonial, index) => (
+            {testimonials.data.map((testimonial, index) => (
               <div
                 key={index}
                 className={`py-2 px-3 ${index < testimonials?.data.length - 1 ? "border-bottom" : ""
