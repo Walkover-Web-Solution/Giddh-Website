@@ -5,7 +5,7 @@ import * as MdIcons from "react-icons/md";
 import { MdCircle } from "react-icons/md";
 
 export default function ToggleFeatures({ features }) {
-  if (!features || features.length === 0) return null;
+  if (features?.length === 0) return null;
   const [expandedFeature, setExpandedFeature] = useState(0);
   const Icon = MdIcons[features[expandedFeature].icon];
   const handleFeatureToggle = useCallback((index) => {
