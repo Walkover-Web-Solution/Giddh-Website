@@ -5,7 +5,7 @@ import * as MdIcons from "react-icons/md";
 import { MdCircle } from "react-icons/md";
 
 export default function ToggleFeatures({ features }) {
-  if (features?.length === 0) return null;
+  if (!features || features.length === 0) return null;
   const [expandedFeature, setExpandedFeature] = useState(0);
   const Icon = MdIcons[features[expandedFeature].icon];
   const handleFeatureToggle = useCallback((index) => {
@@ -22,7 +22,7 @@ export default function ToggleFeatures({ features }) {
         <div className="d-flex flex-column flex-sm-row gap-4 outfit-font align-items-center justify-content-between">
           <div className="col-12 col-sm-6 order-1 order-md-1">
             <div id="features" className="p-2">
-              {features?.map((feature, index) => (
+              {features.map((feature, index) => (
                 <FeatureItem
                   key={index}
                   feature={feature}
@@ -35,7 +35,7 @@ export default function ToggleFeatures({ features }) {
           </div>
 
           <div className="col-12 col-sm-6 order-2 order-sm-2 d-none d-sm-flex justify-content-center">
-            {features[expandedFeature]?.image ? (
+            {features[expandedFeature].image ? (
               <div className="d-flex align-items-center justify-content-center h-100">
                 <div className="position-relative d-inline-block rounded overflow-hidden">
                   <Image
@@ -118,7 +118,7 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
           className={`font-primary font-600 font-md m-0 ${isExpanded ? "font-white" : ""
             }`}
         >
-          {feature?.name}
+          {feature.name}
         </h3>
       </div>
 
@@ -128,8 +128,8 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
       >
         <div className="d-block d-sm-none">
           <Image
-            src={feature?.image}
-            alt={feature?.name}
+            src={feature.image}
+            alt={feature.name}
             width={800}
             height={400}
             className={`object-fit-contain cursor-pointer w-100 h-fit ${style.image}`}
@@ -137,9 +137,9 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
         </div>
 
         <div className="d-flex flex-column gap-2">
-          <p className="m-0 p-0 font-md">{feature?.description}</p>
+          <p className="m-0 p-0 font-md">{feature.description}</p>
           <ul className="list-unstyled d-flex flex-column gap-1">
-            {feature?.content?.length > 0 && feature.content.map((point, pointIndex) => (
+            {feature.content && feature.content.length > 0 && feature.content.map((point, pointIndex) => (
               <li className="d-flex gap-2 font-md" key={pointIndex}>
                 <MdCircle className="font-accent mt-2" fontSize={7} /> {point}
               </li>

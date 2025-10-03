@@ -10,9 +10,9 @@ export default function GiddhFor({ compdata }) {
     <section className="outfit-font bg-black font-white py-5">
       <div className="container px-3 d-flex flex-column gap-3">
         <div className="text-center d-flex flex-column gap-2">
-          <h2 className="garmond-font font-sub-heading">{compdata?.heading}</h2>
+          <h2 className="garmond-font font-sub-heading">{compdata.heading}</h2>
           <p className="mb-3 mb-md-4 w-100 w-md-75 font-sm mx-auto px-3">
-            {compdata?.subheading}
+            {compdata.subheading}
           </p>
         </div>
 
@@ -39,20 +39,20 @@ export default function GiddhFor({ compdata }) {
           </div>
 
           <div className="row align-items-center g-3 g-md-4 p-4">
-            <div className={`${compdata.content[activeTab]?.image ? "col-12 col-lg-6" : "col-12"} order-1 order-lg-2`}>
-              <div className={`px-2 ${compdata?.content[activeTab]?.image ? "text-center text-lg-start" : "text-center"}`}>
+            <div className={`${compdata.content[activeTab].image ? "col-12 col-lg-6" : "col-12"} order-1 order-lg-2`}>
+              <div className={`px-2 ${compdata.content[activeTab].image ? "text-center text-lg-start" : "text-center"}`}>
                 <h3 className="mb-1 font-md font-600">
-                  {compdata?.content[activeTab]?.name}
+                  {compdata.content[activeTab].name}
                 </h3>
-                <p>{compdata?.content[activeTab]?.description}</p>
+                <p>{compdata.content[activeTab].description}</p>
               </div>
             </div>
-            {compdata.content[activeTab]?.image && (
+            {compdata.content[activeTab].image && (
               <div className="col-12 col-lg-6 order-2 order-lg-1">
                 <div className="d-flex justify-content-center">
                   <Image
-                    src={compdata?.content[activeTab]?.image}
-                    alt={compdata?.content[activeTab]?.name}
+                    src={compdata.content[activeTab].image}
+                    alt={compdata.content[activeTab].name}
                     className={`${style.image} rounded`}
                     width={400}
                     height={400}

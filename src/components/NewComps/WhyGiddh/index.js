@@ -1,5 +1,6 @@
 import Image from "next/image";
 export default function WhyGiddh({ compdata }) {
+  if (compdata?.features?.length === 0) return null;
   return (
     <section className="bg-light-blue outfit-font">
       <div className="container py-5 d-flex flex-column gap-4">
@@ -37,7 +38,7 @@ export default function WhyGiddh({ compdata }) {
               </span>
             </div>
           </div>
-          {compdata?.features?.map((row, index) => (
+          {compdata.features.map((row, index) => (
             <div key={index} className="row border-bottom text-center">
               <div className="col-6 col-md-4 px-2 py-2 border-end">
                 {row?.features}

@@ -7,8 +7,8 @@ export default function FeedbackCards({ testimonials }) {
   const scrollRef = useRef(null);
   const frameRef = useRef(null);
   const items = useMemo(() => {
-    const list = testimonials?.data || [];
-    return list.length > 0 ? list.concat(list) : [];
+    const list = testimonials.data;
+    return list.concat(list);
   }, [testimonials]);
 
 
