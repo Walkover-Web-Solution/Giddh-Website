@@ -27,7 +27,7 @@ export default function AlternateFeatures({ features }) {
                   {feature?.feature}
                 </h3>
                 <p className="font-slate-grey font-md">{feature?.description}</p>
-                {Array.isArray(feature?.more_content) && (
+                {feature?.more_content && (
                   <ul className="mb-0 font-slate-grey font-md">
                     {feature?.more_content?.map((content, index) => (
                       <li key={index}>

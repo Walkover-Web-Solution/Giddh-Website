@@ -16,8 +16,7 @@ export default function CTA({ compData, hasImage }) {
           </h2>
           <p className={`${!hasImage ? "text-center" : ""} `}>{compData?.subheading}</p>
           <div className={`${!hasImage && "d-flex justify-content-center"}`}>
-            {Array.isArray(compData?.buttons) &&
-              compData?.buttons.map((button, index) => (
+              {compData?.buttons.map((button, index) => (
                 <a key={index} href={button?.link} target="_blank">
                   <button
                     onClick={() =>
