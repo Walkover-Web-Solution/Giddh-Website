@@ -31,17 +31,14 @@ export default function PopUp() {
 
   return (
     <div
-      className={`modal fade ${showModal ? 'show' : ''}`}
+      className={`modal fade ${showModal ? ' show d-block' : ''}`}
       id="giddhPopUp"
-      tabIndex="-1"
-      aria-hidden="true"
-      style={{ display: showModal ? 'block' : 'none' }}
     >
       <div className="modal-dialog modal-dialog-centered modal-lg">
         <div className={`modal-content p-4 ${styles.bgModal}`}>
           <button
             type="button"
-            className="btn-close position-absolute top-0 end-0 m-3 "
+            className="btn-close position-absolute top-0 end-0 m-3"
             data-dismiss="modal"
             id="closeModal"
             onClick={closeModal}
@@ -89,7 +86,7 @@ export default function PopUp() {
                   alt="Giddh dashboard screenshot"
                   width={600}
                   height={400}
-                  className={`w-100 h-auto `}
+                  className="w-100 h-auto"
                   priority
                 />
               </div>

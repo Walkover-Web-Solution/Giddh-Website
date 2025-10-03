@@ -6,7 +6,7 @@ export default function SplitBanner({ compdata }) {
   return (
     <>
       <section
-        className={`py-3 outfit-font gradient ${!compdata?.header ? "padding-nav" : ""
+        className={`py-3 outfit-font gradient-primary ${!compdata?.header ? "padding-nav" : ""
           }`}
       >
         <div className="container px-4 py-5">

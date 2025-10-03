@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function StackedBanner({ compData }) {
 
   return (
-    <section className="gradient padding-nav">
+    <section className="gradient-primary padding-nav">
       <div className="container pt-5 d-flex flex-row flex-wrap gap-4 justify-content-center align-items-center">
         {compData?.image && (
           <Image

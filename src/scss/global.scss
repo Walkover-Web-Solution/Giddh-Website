@@ -142,7 +142,8 @@ body {
         color: var(--col-primary) !important;
       }
     }
-  }&.btn-tertiary {
+  }
+  &.btn-tertiary {
     background: transparent;
     color: var(--col-primary) !important;
     border: 1px solid var(--col-primary) !important;
@@ -230,7 +231,7 @@ body {
 
 // new classes
 
-.gradient {
+.gradient-primary {
   background: radial-gradient(
     50% 50% at 50% 50%,
     var(--col-soft-blue) 0%,
