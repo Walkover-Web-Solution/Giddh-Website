@@ -15,11 +15,13 @@
   font-display: swap;
   src: url("../../public/fonts/OpelSans-Bold.ttf");
   src: url("../../public/fonts/OpelSans-Bold.ttf") format("truetype"),
-    url("../../public/fonts/OpelSans-Bold.woff") format("woff");
+       url("../../public/fonts/OpelSans-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 600;
   text-rendering: optimizeLegibility;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Outfit:wght@100..900&display=swap');
 
 //====================================FONT SIZE========================================
 
@@ -105,52 +107,28 @@
   color: var(--col-baby-pink) !important;
 }
 
-//font family
 
-@font-face {
-  font-family: "Outfit";
-  font-display: swap;
-  src: url("../../public/fonts/outfit/outfit.ttf") format("truetype");
-  font-style: normal;
-  text-rendering: optimizeLegibility;
+.outfit-font{
+    font-family: 'Outfit', sans-serif;
 }
 
-@font-face {
-  font-family: "Cormorant Garamond";
-  font-display: swap;
-  src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_regular.ttf")
-    format("truetype");
-  font-style: normal;
-  font-weight: 400;
-  text-rendering: optimizeLegibility;
+.cactus-font{
+    font-family: 'Cactus Classical Serif', serif;
 }
 
-@font-face {
-  font-family: "Cormorant Garamond";
-  font-display: swap;
-  src: url("../../public/fonts/cormorant_garamond/cormorant_garamond_bold.ttf")
-    format("truetype");
-  font-style: bold;
-  font-weight: 700;
-  text-rendering: optimizeLegibility;
-}
-
-.outfit-font {
-  font-family: "Outfit", sans-serif;
-}
-
-.garmond-font {
-  font-family: "Cormorant Garamond", serif;
+.garmond-font{
+  font-family: 'Cormorant Garamond', serif;
 }
 
 // new headings
-.font-heading {
-  font-size: var(--font-heading);
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 800;
+.new-heading{
+  font-size: var(--new-heading);
 }
-.font-sub-heading {
-  font-size: var(--font-sub-heading);
+.new-sub-heading{
+  font-size: var(--new-sub-heading);
+}
+.new-base-2{
+  font-size: var(--new-base-2);
 }
 
 // new font weight

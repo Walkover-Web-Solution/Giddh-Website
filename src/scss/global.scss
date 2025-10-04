@@ -154,6 +154,7 @@ body {
       outline: var(--col-white) !important;
     }
   }
+  
 }
 
 //custom SCSS
@@ -189,9 +190,6 @@ body {
   &-light-blue {
     background-color: var(--col-extra-light-blue);
   }
-  &-soft-blue {
-    background-color: var(--col-soft-blue);
-  }
 }
 
 //Custom Classes
@@ -209,14 +207,19 @@ body {
 }
 
 .border-accent {
-  &.border-start,
-  &.border-top,
-  &.border-bottom,
+  &.border-start {
+    border-color: var(--col-primary) !important;
+  }
+  &.border-top {
+    border-color: var(--col-primary) !important;
+  }
+  &.border-bottom {
+    border-color: var(--col-primary) !important;
+  }
   &.border-end {
     border-color: var(--col-primary) !important;
   }
 }
-
 .left-0 {
   left: 0;
 }
