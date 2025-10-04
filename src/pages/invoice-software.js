@@ -1,6 +1,6 @@
 import InvoiceSoftware from "@/components/Pages/InvoiceSoftware";
 
-const invoiceSoftware = ({ pageData, pageInfo }) => {
+const invoiceSoftware = ({ pageData }) => {
     return (
         <InvoiceSoftware pageData={pageData} />
     );
