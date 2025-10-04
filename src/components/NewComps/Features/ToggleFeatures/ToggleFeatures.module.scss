@@ -1,0 +1,32 @@
+.imageButton {
+    background-color: var(--col-grey-faded);
+  }
+  .image {
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.02);
+      + .imageOverlay {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    @media screen and (max-width: 769px) {
+      height: fit-content;
+      max-width: 320px;
+    }
+  }
+  .imageOverlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(1px);
+    &:hover {
+      transition: all 0.3s ease;
+      opacity: 1;
+      visibility: visible;
+    }
+  }

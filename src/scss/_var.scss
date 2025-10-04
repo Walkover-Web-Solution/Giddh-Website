@@ -22,7 +22,7 @@
   --col-dark-light: #707070;
   --col-light: #f8f9fa;
   --col-white: #ffffff;
-  --col-blue: #4B55C2;
+  --col-blue: #4b55c2;
   --col-success: #28a745;
   --col-danger: #dc3545;
   --col-grey-deep: #6c757d;
@@ -31,7 +31,7 @@
   --col-baby-pink: #ffe5e8;
   --col-light-blue: #b9d1fd;
   --col-soft-blue: #d2d8ff;
-  --col-faded-blue: #E9ECFF;
+  --col-faded-blue: #e9ecff;
   --col-light-golden: #f9dcae;
   --col-extra-light-blue: #f5f6ff;
   --col-slate-grey: #3f4346;
@@ -57,11 +57,78 @@
   }
 }
 
-// new vars
+// font sizes
 
-:root{
-  --new-heading: 48px;
-  --new-sub-heading: 48px;
-  --new-base-2: 28px;
+@property --font-heading {
+  syntax: "<length>";
+  initial-value: 48px;
+  inherits: true;
+}
 
+@property --font-sub-heading {
+  syntax: "<length>";
+  initial-value: 36px;
+  inherits: true;
+}
+
+@property --font-xs {
+  syntax: "<length>";
+  initial-value: 12px;
+  inherits: true;
+}
+
+@property --font-sm {
+  syntax: "<length>";
+  initial-value: 14px;
+  inherits: true;
+}
+
+@property --font-rg {
+  syntax: "<length>";
+  initial-value: 16px;
+  inherits: true;
+}
+
+@property --font-md {
+  syntax: "<length>";
+  initial-value: 20px;
+  inherits: true;
+}
+
+@property --font-lg {
+  syntax: "<length>";
+  initial-value: 24px;
+  inherits: true;
+}
+
+@property --font-xl {
+  syntax: "<length>";
+  initial-value: 32px;
+  inherits: true;
+}
+
+@property --font-xxl {
+  syntax: "<length>";
+  initial-value: 36px;
+  inherits: true;
+}
+
+:root {
+  --font-heading: 48px;
+  --font-sub-heading: 36px;
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-rg: 16px;
+  --font-md: 20px;
+  --font-lg: 24px;
+  --font-xl: 32px;
+  --font-xxl: 36px;
+  @media (max-width: 768px) {
+    --font-heading: 36px;
+    --font-sub-heading: 28px;
+    --font-md: 18px;
+    --font-lg: 20px;
+    --font-xl: 24px;
+    --font-xxl: 28px;
+  }
 }

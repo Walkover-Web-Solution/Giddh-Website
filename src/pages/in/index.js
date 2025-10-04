@@ -1,9 +1,6 @@
-import Index from "@/pages/index";
-const inIndex = (path) => {
-  return (
-    <>
-      <Index path={path.path} />
-    </>
-  );
-};
-export default inIndex;
+
+import Home from "@/components/Pages/Home";
+
+export default function Index({ pageData, pageInfo }) {
+  return <Home pageData={pageData} pageInfo={pageInfo} />;
+}
