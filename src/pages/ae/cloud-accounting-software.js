@@ -1,9 +1,7 @@
-import CloudAccountingSoftware from '@/pages/cloud-accounting-software'
-const aeCloudAccountingSoftware = (path) => {
-  return (
-    <>
-        <CloudAccountingSoftware path={path.path}/>
-    </>
-  );
-};
-export default aeCloudAccountingSoftware;
+import OldCloudAccountingSoftware from "../in/cloud-accounting-software";
+
+const AeCloudAccountingSoftware = (path) => {
+  return <OldCloudAccountingSoftware path={path} />
+}
+
+export default AeCloudAccountingSoftware;

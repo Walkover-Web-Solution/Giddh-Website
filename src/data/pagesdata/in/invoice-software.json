@@ -1,0 +1,109 @@
+{
+  "stackedBanner": {
+    "heading": "India's Smartest Online Invoicing Software to Simplify Billing",
+    "subHeading": "Send professional GST-compliant invoices in seconds. Save time and boost productivity with smart, cloud-based invoicing.",
+    "image": "/img/home-page/index_banner_india.webp",
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "features": {
+    "heading": "Why Choose Giddh for Invoicing?",
+    "subHeading": "Simplify GST billing and business management with an all-in-one cloud invoicing platform built for Indian businesses.",
+    "features": [
+      {
+        "feature": "Anytime, Anywhere, and on Any Device",
+        "img": "/img/home-page/simplified-ledger-based-accounting.svg",
+        "description": "Access and manage your finances seamlessly, whether you're using your desktop, Android, or iOS device.",
+        "more_content": [
+          "Cloud-based access across devices.",
+          "Access real-time financial data.",
+          "Track sales and send invoices."
+        ]
+      },
+      {
+        "feature": "24x7 Customer Support",
+        "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
+        "description": "Get expert assistance whenever you need it.",
+        "more_content": [
+          "Support via chat, email, and phone",
+          "Quick query resolution for uninterrupted work",
+          "Dedicated onboarding support for new users"
+        ]
+      },
+      {
+        "feature": "Track Your Business Performance in Real-Time",
+        "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
+        "description": "Monitor your invoicing, payments, and financial health at a glance.",
+        "more_content": [
+          "Get instant insights on paid vs pending invoices",
+          "View sales trends and revenue breakdowns",
+          "Make faster decisions with up-to-date data"
+        ]
+      },
+      {
+        "feature": "Automatic Currency Conversion",
+        "img": "/img/home-page/automatic-currency-conversion.svg",
+        "description": "Giddh, the best multi-currency accounting software, streamlines international transactions with automatic currency conversion, ensuring accurate financial records with minimal manual effort.",
+        "more_content": [
+          "Auto-converts foreign currencies to local",
+          "Saves time by eliminating manual calculations",
+          "Ensures accurate financial data for global businesses"
+        ]
+      },
+      {
+        "feature": "Easily Secure Data in the Cloud",
+        "img": "/img/home-page/seamless-gst-compliance.svg",
+        "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
+        "more_content": [
+          "Encrypted data storage",
+          "Prevent data loss.",
+          "Top industry security standards"
+        ]
+      },
+      {
+        "feature": "Track Your Business Performance in Real-Time",
+        "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
+        "description": "Stay updated with live data and make informed decisions on the fly. With real-time insights, you'll always know how your business is performing.",
+        "more_content": [
+          "Instant Insights",
+          "Real-Time Tracking",
+          "Data-Driven Decisions"
+        ]
+      },
+      {
+        "feature": "Manage Over 100 Companies",
+        "img": "/img/home-page/manage-over-100-companies.svg",
+        "description": "Giddh supports over 100 companies under a single subscription, making it ideal for businesses with multiple entities.",
+        "more_content": [
+          "Manage financial data for all companies on one platform.",
+          "Access reports and data for all companies in one place.",
+          "No need for separate logins or subscriptions."
+        ]
+      },
+      {
+        "feature": "Unlimited User Access",
+        "img": "/img/home-page/unlimited-user-access.svg",
+        "description": "Collaborate seamlessly with your members by adding unlimited users and assigning role-based access.",
+        "more_content": [
+          "Control access with specific user permissions",
+          "Smooth collaboration across departments.",
+          "Scale user access as your team grows at no extra cost."
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore Features",
+        "link": "/testimonials"
+      }
+    ]
+  }
+}

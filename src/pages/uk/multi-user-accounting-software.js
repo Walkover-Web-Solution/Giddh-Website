@@ -1,9 +1,7 @@
-import MultiUserAccountingSoftware from '@/pages/multi-user-accounting-software'
-const ukMultiUserAccountingSoftware = (path) => {
-  return (
-    <>
-        <MultiUserAccountingSoftware path={path.path} />
-    </>
-  );
-};
-export default ukMultiUserAccountingSoftware;
+import OldMultiUserAccountingSoftware from "../in/multi-user-accounting-software";
+
+const UkMultiUserAccountingSoftware = (path) => {
+    return <OldMultiUserAccountingSoftware path={path} />
+}
+
+export default UkMultiUserAccountingSoftware;
