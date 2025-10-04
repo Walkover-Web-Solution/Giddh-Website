@@ -75,7 +75,7 @@ export default function FAQs({ faqs }) {
                         <div className="font-600">{faq.question}</div>
                       </button>
                     </h3>
-                    < div
+                    <div
                       id={"collapse" + index}
                       className={`accordion-collapse collapse ${isOpen ? "show" : ""
                         }`}

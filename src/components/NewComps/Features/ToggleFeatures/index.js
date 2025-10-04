@@ -58,7 +58,7 @@ export default function ToggleFeatures({ features }) {
                       </p>
                     </div>
                     <button
-                      className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 ${style.imageButton} cursor-pointer c-fw-600 c-fs-5`}
+                      className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 bg-grey-faded cursor-pointer c-fw-600 c-fs-5`}
                     >
                       <div>
                         {Icon && <Icon size={18} className="font-white" />}
