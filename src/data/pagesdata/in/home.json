@@ -15,7 +15,7 @@
     ]
   },
   "cta": {
-    "heading": "Smarter accounting starts here.",
+    "heading": "Smarter Accounting Starts Here.",
     "subheading": "Giddh simplifies your finances so you can focus on what matters—growing your business.",
     "buttons": [
       {
@@ -148,8 +148,8 @@
     "description": "See who’s talking about us and why businesses trust us around the globe."
   },
   "giddhIndustries": {
-    "heading": "Industries Love Giddh",
-    "description": "Industries love Giddh because it transforms the way businesses manage their finances. By automating routine accounting processes, offering instant access to data, and ensuring accuracy at every step, Giddh helps organisations across sectors save time, cut costs, and make smarter decisions for long-term growth.",
+    "heading": "Accepted By Leading Sectors",
+    "description": "From startups to enterprises, Giddh streamlines finance with automation, real-time insights, accuracy and driving growth.",
     "rowOne": [
       {
         "name": "Manufacturing",
@@ -204,7 +204,7 @@
     ]
   },
   "testimonials": {
-    "heading": "Hear how we’ve made a difference",
+    "heading": "Hear How We’ve Made a Difference",
     "subheading": " Stories that inspire us to keep delivering our best.",
     "data": [
       {
@@ -343,29 +343,54 @@
     {
       "cols": 3,
       "items": [
-        "Unlimited Users – No Extra Cost",
-        "No Voucher Screens – Just Type & Save",
-        "Built-In White Label Option"
+        {
+          "icon": "/img/benefits/unlimited-users.svg",
+          "text": "Unlimited Users – No Extra Cost"
+        },
+        {
+          "icon": "/img/benefits/easy-sync.svg",
+          "text": "Easy Synchronization with Tally"
+        },
+
+        {
+          "icon": "/img/benefits/built-in-white-label.svg",
+          "text": "Built-In White Label Option"
+        }
       ]
     },
     {
       "cols": 2,
       "items": [
-        "Easy Synchronization with Tally",
-        " One Subscription, Up to 100 Companies"
+        {
+          "icon": "/img/benefits/no-voucher.svg",
+          "text": "No Voucher Screens – Just Type & Save"
+        },
+        {
+          "icon": "/img/benefits/subscription.svg",
+          "text": "One Subscription, Up to 100 Companies"
+        }
       ]
     },
     {
       "cols": 3,
       "items": [
-        "Auto Updates. Always getting faster.",
-        "Manage Multiple Companies & Branches",
-        " Open & Public API Access"
+        {
+          "icon": "/img/benefits/auto-updates.svg",
+          "text": "Auto Updates. Always getting faster."
+        },
+        {
+          "icon": "/img/benefits/multi-companies.svg",
+          "text": "Manage Multiple Companies & Branches"
+        },
+        {
+          "icon": "/img/benefits/api-key.svg",
+          "text": "Open & Public API Access"
+        }
       ]
     }
   ],
   "ctaTwo": {
-    "heading": "Streamline your accounting with Giddh to simplify, automate, and save time today!",
+    "heading": "Streamline Your Accounting With Giddh To Simplify, Automate, And Save Time Today!",
     "subheading": "",
     "buttons": [
       {
