@@ -15,18 +15,15 @@ export default function Benefits({ benefits }) {
                   key={`${rowIndex}-${index}`}
                   className={`col-12 col-md-${12 / row?.cols || 1}`}
                 >
-                  <div
-                    className={`${styles.card} card text-center border border-dark rounded-3`}
-                  >
-                    <div className="card-body font-md font-400 d-flex flex-column gap-2 align-items-start justify-content-center">
-                      <Image
-                        src={item?.icon}
-                        alt={item?.text}
-                        width={45}
-                        height={45}
-                      />
-                      <span className="font-md">{item?.text}</span>
-                    </div>
+                  <div className={`font-md font-400 d-flex flex-column justify-content-center text-center ${styles.card} border border-dark rounded-3 gap-2`}>
+                    <Image
+                      src={item?.icon}
+                      alt={item?.text}
+                      width={45}
+                      height={45}
+                      className="mx-auto"
+                    />
+                    <span className="font-md">{item?.text}</span>
                   </div>
                 </div>
               );
