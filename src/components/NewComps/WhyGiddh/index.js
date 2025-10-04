@@ -53,6 +53,7 @@ export default function WhyGiddh({ compdata }) {
                     alt="check"
                     width={20}
                     height={20}
+                    className="text-success"
                   />
                 ) : (
                   <Image
@@ -60,6 +61,7 @@ export default function WhyGiddh({ compdata }) {
                     alt="cross"
                     width={20}
                     height={20}
+                    className="text-danger"
                   />
                 )}
               </div>
@@ -75,6 +77,7 @@ export default function WhyGiddh({ compdata }) {
                     alt="check"
                     width={20}
                     height={20}
+                    className="text-success"
                   />
                 ) : (
                   <Image
@@ -82,6 +85,7 @@ export default function WhyGiddh({ compdata }) {
                     alt="cross"
                     width={20}
                     height={20}
+                    className="text-danger"
                   />
                 )}
               </div>

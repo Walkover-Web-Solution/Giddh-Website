@@ -10,7 +10,9 @@ export default function AlternateFeatures({ features }) {
           <h2 className="text-center font-sub-heading garmond-font">
             {features?.heading}
           </h2>
-          <p className="text-center font-slate-grey font-md">{features?.subHeading}</p>
+          <p className="text-center font-slate-grey font-md">
+            {features?.subHeading}
+          </p>
         </div>
         {features?.content?.map((feature, index) => {
           const imageRight = index % 2 === 0;
@@ -20,13 +22,16 @@ export default function AlternateFeatures({ features }) {
               key={feature?.feature + "-" + index}
             >
               <div
-                className={`col-12 col-md-6 ${imageRight ? "order-md-1" : "order-md-2"
-                  }`}
+                className={`col-12 col-md-6 ${
+                  imageRight ? "order-md-1" : "order-md-2"
+                }`}
               >
-                <h3 className="garmond-font font-primary font-lg font-400">
+                <h3 className="garmond-font font-primary font-xl font-600">
                   {feature?.feature}
                 </h3>
-                <p className="font-slate-grey font-md">{feature?.description}</p>
+                <p className="font-slate-grey font-md">
+                  {feature?.description}
+                </p>
                 {feature?.more_content && (
                   <ul className="mb-0 font-slate-grey font-md">
                     {feature?.more_content?.map((content, index) => (
@@ -42,8 +47,9 @@ export default function AlternateFeatures({ features }) {
                 )}
               </div>
               <div
-                className={`col-12 col-md-6 ${imageRight ? "order-md-2" : "order-md-1"
-                  }`}
+                className={`col-12 col-md-6 ${
+                  imageRight ? "order-md-2" : "order-md-1"
+                }`}
               >
                 {feature?.img ? (
                   <div className="d-flex justify-content-center">
@@ -65,7 +71,13 @@ export default function AlternateFeatures({ features }) {
         {features?.buttons && (
           <div className="d-flex justify-content-center">
             {features?.buttons?.map((button, index) => (
-              <button key={index} className={`btn btn-primary-outline mx-auto`} onClick={() => window.location.href = button?.link}>{button?.text}</button>
+              <button
+                key={index}
+                className={`btn btn-primary-outline mx-auto`}
+                onClick={() => (window.location.href = button?.link)}
+              >
+                {button?.text}
+              </button>
             ))}
           </div>
         )}
