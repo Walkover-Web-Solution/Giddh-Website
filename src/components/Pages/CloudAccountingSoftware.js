@@ -8,7 +8,7 @@ import FAQs from "../NewComps/FAQs";
 export default function CloudAccountingSoftware({ pageData, pageInfo }) {
   return (
     <>
-      <SplitBanner compdata={pageData?.splitBanner} />
+      <SplitBanner compData={pageData?.splitBanner} />
       <GridFeatures features={pageData?.characteristics} />
       <AlternateFeatures features={pageData?.features} />
       <FeedbackCards testimonials={pageData?.testimonials} />

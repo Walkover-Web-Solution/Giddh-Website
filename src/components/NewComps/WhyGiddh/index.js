@@ -1,11 +1,11 @@
 import Image from "next/image";
-export default function WhyGiddh({ compdata }) {
-  if (compdata?.features?.length === 0) return null;
+export default function WhyGiddh({ compData }) {
+  if (compData?.features?.length === 0) return null;
   return (
     <section className="bg-light-blue outfit-font">
       <div className="container py-5 d-flex flex-column gap-4">
         <h2 className="text-center mb-4 font-primary font-sub-heading font-600">
-          {compdata?.heading}
+          {compData?.heading}
         </h2>
         <div className="bg-white border-end border-accent border-2 rounded-4 overflow-hidden">
           <div className="row font-md border-bottom font-600 font-primary text-center">
@@ -13,9 +13,7 @@ export default function WhyGiddh({ compdata }) {
               Feature
             </div>
             <div className="col-3 col-md-4 px-1 py-2 d-flex justify-content-center align-items-end ">
-              <div className="d-none d-md-block">
-                Other Accounting Software
-              </div>
+              <div className="d-none d-md-block">Other Accounting Software</div>
               <span className="d-block d-md-none">Other</span>
             </div>
             <div className="col-3 col-md-4 px-1 py-2 border-accent border-2 border-start rounded-top-4 border-top border-end d-flex flex-column align-items-center">
@@ -38,14 +36,17 @@ export default function WhyGiddh({ compdata }) {
               </span>
             </div>
           </div>
-          {compdata.features.map((row, index) => (
+          {compData.features.map((row, index) => (
             <div key={index} className="row border-bottom text-center">
               <div className="col-6 col-md-4 px-2 py-2 border-end">
                 {row?.features}
               </div>
               <div
-                className={`col-3 col-md-4 px-2 py-2 border-accent ${index === compdata.features.length - 1 ? "  rounded-start-4" : ""
-                  }`}
+                className={`col-3 col-md-4 px-2 py-2 border-accent ${
+                  index === compData.features.length - 1
+                    ? "  rounded-start-4"
+                    : ""
+                }`}
               >
                 {row?.other ? (
                   <Image
@@ -66,10 +67,11 @@ export default function WhyGiddh({ compdata }) {
                 )}
               </div>
               <div
-                className={`col-3 col-md-4 px-2 border-2 border-start border-accent py-2 ${index === compdata.features.length - 1
-                  ? "border-bottom border-end border-start border-black rounded-bottom-4"
-                  : ""
-                  }`}
+                className={`col-3 col-md-4 px-2 border-2 border-start border-accent py-2 ${
+                  index === compData.features.length - 1
+                    ? "border-bottom border-end border-start border-black rounded-bottom-4"
+                    : ""
+                }`}
               >
                 {row?.giddh ? (
                   <Image

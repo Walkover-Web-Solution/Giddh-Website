@@ -11,14 +11,14 @@ import SupportedPlatforms from "../NewComps/SupportedPlatforms";
 export default function InvoiceSoftware({ pageData, pageInfo }) {
   return (
     <>
-      <SplitBanner compdata={pageData?.splitBanner} />
+      <SplitBanner compdDta={pageData?.splitBanner} />
       <Stats stats={pageData?.stats} />
       <CTA compData={pageData?.cta} />
       <AlternateFeatures features={pageData?.features} />
       <GridFeatures features={pageData?.characteristics} />
       <FeedbackCards testimonials={pageData?.testimonials} />
       <CTA compData={pageData?.ctaTwo} />
-      <TrustBadgeScrollable compdata={pageData?.trustBadgeBrands} />
+      <TrustBadgeScrollable compData={pageData?.trustBadgeBrands} />
       <SupportedPlatforms supportedPlatforms={pageData?.supportedPlatforms} />
       <FAQs faqs={pageData?.faqs} />
     </>

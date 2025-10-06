@@ -15,10 +15,10 @@ export default function Home({ pageData }) {
       <StackedBanner compData={pageData?.stackedBanner} />
       <Stats stats={pageData?.stats} />
       <AlternateFeatures features={pageData?.features} />
-      <TrustBadgeScrollable compdata={pageData?.trustBadgeBrands} />
+      <TrustBadgeScrollable compData={pageData?.trustBadgeBrands} />
       <CTA hasImage={false} compData={pageData?.cta} />
       <FeedbackCards testimonials={pageData?.testimonials} />
-      <Giddhvscomp giddhvscomp={pageData?.giddhvscomp} />
+      <Giddhvscomp giddhVsComp={pageData?.giddhvscomp} />
       <Benefits benefits={pageData?.benefits} />
       <Industries giddhIndustries={pageData?.giddhIndustries} />
       <CTA hasImage={false} compData={pageData?.ctaTwo} />

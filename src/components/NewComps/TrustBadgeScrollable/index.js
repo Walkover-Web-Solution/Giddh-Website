@@ -3,7 +3,7 @@ import { trustBadgeBrands } from "../TrustBadge";
 import styles from "./TrustBadgeScrollable.module.scss";
 import Image from "next/image";
 
-export default function TrustBadgeScrollable({ compdata }) {
+export default function TrustBadgeScrollable({ compData }) {
   const scrollRef = useRef(null);
   const frameRef = useRef(null);
 
@@ -32,10 +32,10 @@ export default function TrustBadgeScrollable({ compdata }) {
       <div className="container text-center d-flex flex-column gap-3">
         <div className="d-flex flex-column gap-1">
           <h2 className="font-sub-heading font-primary font-400 garmond-font">
-            {compdata?.title}
+            {compData?.title}
           </h2>
           <p className="font-dark-grey garmond-font font-md">
-            {compdata?.description}
+            {compData?.description}
           </p>
         </div>
 

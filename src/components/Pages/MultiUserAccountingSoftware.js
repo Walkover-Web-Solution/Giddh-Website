@@ -8,9 +8,9 @@ import SupportedPlatforms from "../NewComps/SupportedPlatforms";
 export default function MultiUserAccountingSoftware({ pageData }) {
   return (
     <>
-      <SplitBanner compdata={pageData?.splitBanner} />
+      <SplitBanner compData={pageData?.splitBanner} />
       <GridFeatures features={pageData?.characteristics} />
-      <TrustBadgeScrollable compdata={pageData?.trustBadgeBrands} />
+      <TrustBadgeScrollable compData={pageData?.trustBadgeBrands} />
       <CTA compData={pageData?.cta} />
       <SupportedPlatforms supportedPlatforms={pageData?.supportedPlatforms} />
       <FAQs faqs={pageData?.faqs} />
