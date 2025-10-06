@@ -18,7 +18,7 @@ export default function Home({ pageData }) {
       <TrustBadgeScrollable compData={pageData?.trustBadgeBrands} />
       <CTA hasImage={false} compData={pageData?.cta} />
       <FeedbackCards testimonials={pageData?.testimonials} />
-      <GiddhVs giddhVs={pageData?.giddhvscomp} />
+      <GiddhVs giddhVs={pageData?.giddhVs} />
       <Benefits benefits={pageData?.benefits} />
       <Industries giddhIndustries={pageData?.giddhIndustries} />
       <CTA hasImage={false} compData={pageData?.ctaTwo} />
