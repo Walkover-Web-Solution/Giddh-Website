@@ -1,5 +1,4 @@
 import Image from "next/image";
-import styles from "./PopUp.module.scss";
 import { useEffect, useState } from "react";
 
 export default function PopUp() {
@@ -35,7 +34,7 @@ export default function PopUp() {
       id="giddhPopUp"
     >
       <div className="modal-dialog modal-dialog-centered modal-lg">
-        <div className={`modal-content p-4 ${styles.bgModal}`}>
+        <div className="modal-content p-4 bg-soft-blue">
           <button
             type="button"
             className="btn-close position-absolute top-0 end-0 m-3"
@@ -45,7 +44,7 @@ export default function PopUp() {
           ></button>
           <div className=" pt-5">
             <div className="d-flex align-items-start gap-2 mb-4 flex-column-reverse flex-md-row">
-              <span className="fw-bold m-0 col-primary sub-heading">
+              <span className="font-600 m-0 font-primary font-sub-heading">
                 Still stuck somewhere?
               </span>
               <div className="ms-auto">
@@ -60,7 +59,7 @@ export default function PopUp() {
             </div>
             <div className="d-flex flex-column gap-2 flex-md-row">
               <div className="col-md-6">
-                <h2 className="c-fs-3">
+                <h2 className="font-md">
                   Don’t worry, getting started with Giddh is quick and simple.
                 </h2>
 
@@ -74,7 +73,7 @@ export default function PopUp() {
                       });
                     closeModal();
                   }}
-                  className={`btn ${styles.getStarted}`}
+                  className="btn btn-primary-outline"
                 >
                   Get Started
                 </button>

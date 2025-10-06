@@ -8,10 +8,12 @@ import FAQs from "../NewComps/FAQs";
 import Footer from "../NewComps/Footer";
 import SeeGiddhInAction from "../NewComps/SeeGiddhInAction";
 import CTA from "../NewComps/CTA";
+import PopUp from "../NewComps/PopUp";
 
 export default function OnlineAccountingSoftware({ pageData }) {
   return (
     <>
+      <PopUp />
       <SplitBanner compData={pageData?.splitBanner} />
       <Stats stats={pageData?.stats} />
       <ToggleFeatures features={pageData?.toggleFeatures} />

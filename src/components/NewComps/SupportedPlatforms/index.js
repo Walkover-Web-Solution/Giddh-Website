@@ -8,7 +8,7 @@ export default function SupportedPlatforms({ supportedPlatforms }) {
                     {supportedPlatforms?.heading}
                 </h2>
                 <div className="d-flex flex-row justify-content-between align-items-center gap-4">
-                    {supportedPlatforms?.platforms?.map((platform, index) => (
+                    {supportedPlatforms.platforms.map((platform, index) => (
                         <div className="d-flex flex-column gap-3" key={index}>
                             <Image width={60} height={60} src={platform?.image} alt={platform?.name} />
                             <p className="font-white font-sm text-center">{platform?.name}</p>

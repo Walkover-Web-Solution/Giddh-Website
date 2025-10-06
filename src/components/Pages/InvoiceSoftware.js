@@ -8,10 +8,10 @@ import TrustBadgeScrollable from "../NewComps/TrustBadgeScrollable";
 import FAQs from "../NewComps/FAQs";
 import SupportedPlatforms from "../NewComps/SupportedPlatforms";
 
-export default function InvoiceSoftware({ pageData, pageInfo }) {
+export default function InvoiceSoftware({ pageData }) {
   return (
     <>
-      <SplitBanner compdDta={pageData?.splitBanner} />
+      <SplitBanner compData={pageData?.splitBanner} />
       <Stats stats={pageData?.stats} />
       <CTA compData={pageData?.cta} />
       <AlternateFeatures features={pageData?.features} />

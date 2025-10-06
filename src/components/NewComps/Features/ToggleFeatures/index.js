@@ -38,13 +38,15 @@ export default function ToggleFeatures({ features }) {
             {features[expandedFeature].image ? (
               <div className="d-flex align-items-center justify-content-center h-100">
                 <div className="position-relative d-inline-block rounded overflow-hidden">
-                  <Image
-                    src={features[expandedFeature].image}
-                    alt={features[expandedFeature].name}
-                    height={400}
-                    width={400}
-                    className={`cursor-pointer ${style.image}`}
-                  />
+                  {features[expandedFeature].image && (
+                    <Image
+                      src={features[expandedFeature].image}
+                      alt={features[expandedFeature].name}
+                      height={400}
+                      width={400}
+                      className={`cursor-pointer ${style.image}`}
+                    />
+                  )}
 
                   <div
                     className={`${style.imageOverlay} d-flex flex-column align-items-start justify-content-end p-4 position-absolute top-0 left-0 right-0 bottom-0`}
@@ -58,7 +60,7 @@ export default function ToggleFeatures({ features }) {
                       </p>
                     </div>
                     <button
-                      className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 ${style.imageButton} cursor-pointer c-fw-600 c-fs-5`}
+                      className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 bg-grey-faded cursor-pointer c-fw-600 c-fs-5`}
                     >
                       <div>
                         {Icon && <Icon size={18} className="font-white" />}
