@@ -1,7 +1,5 @@
-import MultiUserAccountingSoftware from "@/components/Pages/MultiUserAccountingSoftware";
+import MultiUserAccountingSoftwareComp from "@/components/Pages/MultiUserAccountingSoftware";
 
-export default function multiUserAccountingSoftware({ pageData }) {
-  return (
-    <MultiUserAccountingSoftware pageData={pageData} />
-  );
+export default function MultiUserAccountingSoftware({ pageData }) {
+  return <MultiUserAccountingSoftwareComp pageData={pageData} />;
 }
