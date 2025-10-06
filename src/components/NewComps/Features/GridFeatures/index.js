@@ -1,7 +1,7 @@
 import styles from "./GridFeatures.module.scss";
 
 export default function GridFeatures({ features }) {
-  if (features?.cards?.length === 0) return null;
+  if (!features?.cards?.length) return null;
   return (
     <section className="py-5">
       <div className="container d-flex flex-column gap-4">

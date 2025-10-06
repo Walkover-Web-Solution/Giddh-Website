@@ -3,7 +3,7 @@ import style from "./Testimonials.module.scss";
 import { MdReviews } from "react-icons/md";
 import Image from "next/image";
 export default function Testimonials({ testimonials }) {
-  if (testimonials?.data?.length === 0) return null;
+  if (!testimonials?.data?.length) return null;
   const scrollRef = useRef(null);
   useEffect(() => {
     const scrollContainer = scrollRef.current;

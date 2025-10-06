@@ -3,7 +3,7 @@ import style from "./GiddhFor.module.scss";
 import Image from "next/image";
 
 export default function GiddhFor({ compData }) {
-  if (compData?.content?.length === 0) return null;
+  if (!compData?.content?.length) return null;
   const [activeTab, setActiveTab] = useState(0);
 
   return (

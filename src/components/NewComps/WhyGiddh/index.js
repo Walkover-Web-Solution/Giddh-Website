@@ -1,6 +1,6 @@
 import Image from "next/image";
 export default function WhyGiddh({ compData }) {
-  if (compData?.features?.length === 0) return null;
+  if (!compData?.features?.length) return null;
   return (
     <section className="bg-light-blue outfit-font">
       <div className="container py-5 d-flex flex-column gap-4">

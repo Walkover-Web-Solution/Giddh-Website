@@ -28,6 +28,8 @@ export default function OurClient() {
     ],
   };
 
+  if (!data?.clients?.length) return null;
+
   return (
     <>
       <section className="container section_py d-flex flex-column gap-4">
@@ -36,7 +38,7 @@ export default function OurClient() {
           <p>{data?.subheading}</p>
         </div>
         <div className={`${styles.clients} d-flex flex-md-row flex-column align-items-center gap-0 justify-content-center gap-md-5 `}>
-          {data?.clients.map((client) => {
+          {data.clients.map((client) => {
             return (
               <a
               

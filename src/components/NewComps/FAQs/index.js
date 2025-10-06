@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export default function FAQs({ faqs }) {
   const [openIndex, setOpenIndex] = useState(0);
-  if (faqs?.length === 0) return null;
+  if (!faqs?.length) return null;
   const toggle = (index) => {
     setOpenIndex(index);
   };
