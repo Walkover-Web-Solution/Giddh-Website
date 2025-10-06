@@ -3,7 +3,7 @@ import style from "./Testimonials.module.scss";
 import { MdReviews } from "react-icons/md";
 import Image from "next/image";
 export default function Testimonials({ testimonials }) {
-  if (testimonials?.data?.length === 0) return null;
+  if (!testimonials?.data?.length) return null;
   const scrollRef = useRef(null);
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -68,7 +68,7 @@ export default function Testimonials({ testimonials }) {
             {testimonials.data.map((testimonial, index) => (
               <div
                 key={index}
-                className={`py-2 px-3 ${index < testimonials?.data.length - 1 ? "border-bottom" : ""
+                className={`py-2 px-3 ${index < testimonials.data.length - 1 ? "border-bottom" : ""
                   } border-col-light`}
               >
                 <div className="d-flex gap-sm-3 gap-0 flex-column flex-sm-row align-items-sm-center align-items-start">
@@ -79,8 +79,8 @@ export default function Testimonials({ testimonials }) {
                     <p className="text-white mb-0 mt-2 font-400 font-sm">
                       {testimonial.testimonial}
                     </p>
-                    <div className="d-flex align-items-center justify-content-start gap-2 c-fw-400 c-fs-5 mt-2">
-                      <div className="text-white-50 c-fs-6">
+                    <div className="d-flex align-items-center justify-content-start gap-2 font-400 font-md mt-2">
+                      <div className="font-white font-sm">
                         {testimonial.owner ? testimonial.owner + ", " : ""}
                         {testimonial.company}
                       </div>
@@ -92,13 +92,13 @@ export default function Testimonials({ testimonials }) {
           </div>
         </div>
         <div
-          className={`d-none d-md-flex story-card align-items-center px-5 mx-2 border border-light rounded justify-content-center`}
+          className="d-none d-md-flex story-card align-items-center px-5 mx-2 border border-light rounded justify-content-center"
         >
           <div className="p-4 text-center d-flex align-items-center">
-            <h2 className="text-white c-fs-1 c-fw-400">
-              <em className="c-fw-400">Stories of</em>
+            <h2 className="font-white font-lg font-400">
+              <em className="font-400">Stories of</em>
               <br />
-              <em className="c-fw-400">Growth with</em>
+              <em className="font-400">Growth with</em>
               <br />
               <Image src="/img/giddh-logo-primary.svg" alt="Giddh Logo" width={100} height={100} />
             </h2>

@@ -1,9 +1,7 @@
-import InvoiceSoftware from "@/components/Pages/InvoiceSoftware";
+import InvoiceSoftwareComp from "@/components/Pages/InvoiceSoftware";
 
-const invoiceSoftware = ({ pageData, pageInfo }) => {
+export default function InvoiceSoftware({ pageData }) {
     return (
-        <InvoiceSoftware pageData={pageData} />
+        <InvoiceSoftwareComp pageData={pageData} />
     );
-};
-
-export default invoiceSoftware;
+}

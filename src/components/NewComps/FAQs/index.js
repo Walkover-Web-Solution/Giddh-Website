@@ -4,8 +4,8 @@ import styles from "./FAQs.module.scss";
 import Head from "next/head";
 
 export default function FAQs({ faqs }) {
-  if (faqs?.length === 0) return null;
   const [openIndex, setOpenIndex] = useState(0);
+  if (!faqs?.length) return null;
   const toggle = (index) => {
     setOpenIndex(index);
   };
@@ -75,7 +75,7 @@ export default function FAQs({ faqs }) {
                         <div className="font-600">{faq.question}</div>
                       </button>
                     </h3>
-                    < div
+                    <div
                       id={"collapse" + index}
                       className={`accordion-collapse collapse ${isOpen ? "show" : ""
                         }`}
@@ -96,7 +96,7 @@ export default function FAQs({ faqs }) {
         </div>
         <div className="d-flex flex-column justify-content-between align-items-center pt-5">
           <p className="font-sub-heading garmond-font font-dark">Still have questions?</p>
-          <button className="btn btn-primary-outline" onClick={() => window.location.href = "/contact-us"}>Contact Us</button>
+          <a className="btn btn-primary-outline" href="/contact-us">Contact Us</a>
         </div>
       </section>
     </>

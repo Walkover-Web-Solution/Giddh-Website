@@ -14,14 +14,14 @@ export default function OnlineAccountingSoftware({ pageData }) {
   return (
     <>
       <PopUp />
-      <SplitBanner compdata={pageData?.splitBanner} />
+      <SplitBanner compData={pageData?.splitBanner} />
       <Stats stats={pageData?.stats} />
       <ToggleFeatures features={pageData?.toggleFeatures} />
-      <WhyGiddh compdata={pageData?.whyGiddh} />
+      <WhyGiddh compData={pageData?.whyGiddh} />
       <CTA hasImage={true} compData={pageData?.cta} />
-      <GiddhFor compdata={pageData?.giddhFor} />
+      <GiddhFor compData={pageData?.giddhFor} />
       <Testimonials testimonials={pageData?.testimonials} />
-      <SeeGiddhInAction compdata={pageData?.seeGiddhInAction} />
+      <SeeGiddhInAction compData={pageData?.seeGiddhInAction} />
       <FAQs faqs={pageData?.faqs} />
       <Footer />
     </>

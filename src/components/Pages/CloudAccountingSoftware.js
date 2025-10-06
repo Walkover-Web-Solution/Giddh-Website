@@ -5,10 +5,10 @@ import FeedbackCards from "../NewComps/FeedbackCards";
 import CTA from "../NewComps/CTA";
 import FAQs from "../NewComps/FAQs";
 
-export default function CloudAccountingSoftware({ pageData, pageInfo }) {
+export default function CloudAccountingSoftware({ pageData }) {
   return (
     <>
-      <SplitBanner compdata={pageData?.splitBanner} />
+      <SplitBanner compData={pageData?.splitBanner} />
       <GridFeatures features={pageData?.characteristics} />
       <AlternateFeatures features={pageData?.features} />
       <FeedbackCards testimonials={pageData?.testimonials} />
