@@ -6,7 +6,7 @@ import FeedbackCards from "@/components/NewComps/FeedbackCards";
 import Industries from "@/components/NewComps/Industries";
 import Benefits from "@/components/NewComps/Benefits";
 import CTA from "@/components/NewComps/CTA";
-import GiddhVsComp from "@/components/NewComps/GiddhVsComp";
+import GiddhVs from "@/components/NewComps/GiddhVs";
 import FAQs from "@/components/NewComps/FAQs";
 
 export default function Home({ pageData }) {
@@ -18,7 +18,7 @@ export default function Home({ pageData }) {
       <TrustBadgeScrollable compData={pageData?.trustBadgeBrands} />
       <CTA hasImage={false} compData={pageData?.cta} />
       <FeedbackCards testimonials={pageData?.testimonials} />
-      <GiddhVsComp giddhVsComp={pageData?.giddhvscomp} />
+      <GiddhVs giddhVs={pageData?.giddhvscomp} />
       <Benefits benefits={pageData?.benefits} />
       <Industries giddhIndustries={pageData?.giddhIndustries} />
       <CTA hasImage={false} compData={pageData?.ctaTwo} />

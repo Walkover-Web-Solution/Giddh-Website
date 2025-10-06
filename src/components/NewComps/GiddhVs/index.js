@@ -1,16 +1,16 @@
-import styles from "./GiddhVsComp.module.scss";
+import styles from "./GiddhVs.module.scss";
 
-export default function GiddhVsComp({ giddhVsComp }) {
-  if (!giddhVsComp?.content?.length) return null;
+export default function GiddhVs({ giddhVs }) {
+  if (!giddhVs?.content?.length) return null;
 
   return (
     <section className="container py-5 outfit-font">
       <div className="d-flex flex-column gap-4">
         <h1 className="text-center font-sub-heading font-400 garmond-font">
-          {giddhVsComp?.heading}
+          {giddhVs?.heading}
         </h1>
         <p className="text-center font-md font-400 w-75 mx-auto">
-          {giddhVsComp?.subheading}
+          {giddhVs?.subheading}
         </p>
         <div
           className={`text-center ${styles.giddhScrollWrapper} overflow-touch overflow-x-auto d-inline-block`}
@@ -28,7 +28,7 @@ export default function GiddhVsComp({ giddhVsComp }) {
                 <div className="col-3 col-md-3 px-3 py-2 border-end">Tally</div>
               </div>
 
-              {giddhVsComp.content.map((row, index) => (
+              {giddhVs.content.map((row, index) => (
                 <div
                   key={index}
                   className="row border-bottom c-fs-6 text-center"
