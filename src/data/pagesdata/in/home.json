@@ -44,9 +44,9 @@
   },
   "features": {
     "heading": "What Makes Giddh the Smart Accounting Choice",
-    "content": [
+    "feature": [
       {
-        "feature": "Simplified Ledger-Based Accounting",
+        "heading": "Simplified Ledger-Based Accounting",
         "img": "/img/home-page/simplified-ledger-based-accounting.svg",
         "description": "Giddh automates repetitive and manual accounting processes, saving you valuable time to focus on growing your business.",
         "more_content": [
@@ -56,7 +56,7 @@
         ]
       },
       {
-        "feature": "Anytime, Anywhere, and on Any Device",
+        "heading": "Anytime, Anywhere, and on Any Device",
         "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
         "description": "Access and manage your finances seamlessly, whether you're on your desktop, Android, or iOS device",
         "more_content": [
@@ -66,7 +66,7 @@
         ]
       },
       {
-        "feature": "Cloud Storage for Your Data Synced",
+        "heading": "Cloud Storage for Your Data Synced",
         "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
         "description": "Giddh utilizes advanced security measures to ensure your accounting data remains safe and private.",
         "more_content": [
@@ -76,7 +76,7 @@
         ]
       },
       {
-        "feature": "Seamless GST Compliance",
+        "heading": "Seamless GST Compliance",
         "img": "/img/home-page/seamless-gst-compliance.svg",
         "description": "Giddh is a GST compliant accounting software in India that simplifies tax filing with built-in GST return features. As a powerful GST filing software, it ensures accurate reports and effortless compliance",
         "more_content": [
@@ -86,7 +86,7 @@
         ]
       },
       {
-        "feature": "Automatic Currency Conversion",
+        "heading": "Automatic Currency Conversion",
         "img": "/img/home-page/automatic-currency-conversion.svg",
         "description": "Giddh, the best multi-currency accounting software, streamlines international transactions with automatic currency conversion, ensuring accurate financial records with minimal manual effort.",
         "more_content": [
@@ -96,7 +96,7 @@
         ]
       },
       {
-        "feature": "Easily Secure Data in the Cloud",
+        "heading": "Easily Secure Data in the Cloud",
         "img": "/img/home-page/seamless-gst-compliance.svg",
         "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
         "more_content": [
@@ -106,7 +106,7 @@
         ]
       },
       {
-        "feature": "Track Your Business Performance in Real-Time",
+        "heading": "Track Your Business Performance in Real-Time",
         "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
         "description": "Stay updated with live data and make informed decisions on the fly. With real-time insights, you’ll always know how your business is performing.",
         "more_content": [
@@ -116,7 +116,7 @@
         ]
       },
       {
-        "feature": "Manage Over 100 Companies",
+        "heading": "Manage Over 100 Companies",
         "img": "/img/home-page/manage-over-100-companies.svg",
         "description": "Giddh supports over 100 companies under a single subscription, making it ideal for businesses with multiple entities.",
         "more_content": [
@@ -126,7 +126,7 @@
         ]
       },
       {
-        "feature": "Unlimited User Access",
+        "heading": "Unlimited User Access",
         "img": "/img/home-page/unlimited-user-access.svg",
         "description": "Collaborate seamlessly with your members by adding unlimited users and assigning role-based access",
         "more_content": [

@@ -47,9 +47,9 @@
   "features": {
     "heading": "Why Choose Giddh for Invoicing?",
     "subHeading": "Simplify GST billing and business management with an all-in-one cloud invoicing platform built for Indian businesses.",
-    "content": [
+    "feature": [
       {
-        "feature": "Cloud Storage for Your Data Synced",
+        "heading": "Cloud Storage for Your Data Synced",
         "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
         "description": "All your financial data, invoices, and reports are securely synced in the cloud.",
         "more_content": [
@@ -59,7 +59,7 @@
         ]
       },
       {
-        "feature": "Anytime, Anywhere, and on Any Device",
+        "heading": "Anytime, Anywhere, and on Any Device",
         "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
         "description": "Access and manage your finances seamlessly, whether you're using your desktop, Android, or iOS device.",
         "more_content": [
@@ -69,7 +69,7 @@
         ]
       },
       {
-        "feature": "24x7 Customer Support",
+        "heading": "24x7 Customer Support",
         "img": "/img/home-page/24-7-customer-support.svg",
         "description": "Get expert assistance whenever you need it.",
         "more_content": [
@@ -79,7 +79,7 @@
         ]
       },
       {
-        "feature": "Track Your Business Performance in Real-Time",
+        "heading": "Track Your Business Performance in Real-Time",
         "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
         "description": "Monitor your invoicing, payments, and financial health at a glance.",
         "more_content": [
@@ -89,7 +89,7 @@
         ]
       },
       {
-        "feature": "Invoicing Solution that Saves Time",
+        "heading": "Invoicing Solution that Saves Time",
         "img": "/img/home-page/invoicing-solution-that-saves-time.svg",
         "description": "Automate repetitive billing tasks and reduce manual effort.",
         "more_content": [
@@ -99,7 +99,7 @@
         ]
       },
       {
-        "feature": "Easily Secure Data in the Cloud",
+        "heading": "Easily Secure Data in the Cloud",
         "img": "/img/home-page/seamless-gst-compliance.svg",
         "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
         "more_content": [

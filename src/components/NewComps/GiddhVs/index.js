@@ -30,7 +30,7 @@ export default function GiddhVs({ giddhVs }) {
                     width={120}
                   />
                 </div>
-                <div className="col-3 col-md-3 px-3 py-4 border-end ">
+                <div className="col-3 col-md-3 px-3 py-4 border-end">
                   <Image
                     src={"/img/home-page/quickbooks.svg"}
                     height={32}
@@ -49,7 +49,7 @@ export default function GiddhVs({ giddhVs }) {
               {giddhVs.content.map((row, index) => (
                 <div
                   key={index}
-                  className="row border-bottom c-fs-6 text-center "
+                  className="row border-bottom font-sm text-center"
                 >
                   <div className="col-3 col-md-3 px-3 py-2 border-end font-sm font-600">
                     {row?.feature}
