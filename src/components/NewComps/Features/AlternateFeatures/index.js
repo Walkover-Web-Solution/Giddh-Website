@@ -18,16 +18,16 @@ export default function AlternateFeatures({ features }) {
           const imageRight = index % 2 === 0;
           return (
             <div
-              className="row align-items-center text-start"
+              className="row align-items-center justify-content-between"
               key={feature?.feature + "-" + index}
             >
               <div
-                className={`col-12 col-md-6 ${
+                className={`col-12 col-md-7 ${
                   imageRight ? "order-md-1" : "order-md-2"
                 }`}
               >
                 <h3 className="garmond-font font-primary font-xl font-600">
-                  {feature?.feature}
+                  {feature?.heading}
                 </h3>
                 <p className="font-slate-grey font-md">
                   {feature?.description}
@@ -47,7 +47,7 @@ export default function AlternateFeatures({ features }) {
                 )}
               </div>
               <div
-                className={`col-12 col-md-6 ${
+                className={`col-12 col-md-4 ${
                   imageRight ? "order-md-2" : "order-md-1"
                 }`}
               >

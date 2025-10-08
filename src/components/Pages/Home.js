@@ -19,8 +19,8 @@ export default function Home({ pageData }) {
       <CTA hasImage={false} compData={pageData?.cta} />
       <FeedbackCards testimonials={pageData?.testimonials} />
       <GiddhVs giddhVs={pageData?.giddhVs} />
-      <Benefits benefits={pageData?.benefits} />
       <Industries giddhIndustries={pageData?.giddhIndustries} />
+      <Benefits benefits={pageData?.benefits} />
       <CTA hasImage={false} compData={pageData?.ctaTwo} />
       <FAQs faqs={pageData?.faqs} />
     </>
