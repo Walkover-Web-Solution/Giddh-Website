@@ -22,8 +22,7 @@ export default function FAQs({ faqs }) {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: allQuestionAnswer,
-  }
-
+  };
 
   return (
     <>
@@ -40,7 +39,7 @@ export default function FAQs({ faqs }) {
       <section className="container py-5">
         <div className="d-flex flex-lg-row flex-column">
           <div className="col-lg-4 col-12">
-            <h2 className="font-sub-heading font-dark garmond-font col-lg-2 col-12">
+            <h2 className="font-sub-heading font-dark garmond-font font-600 col-lg-2 col-12">
               Frequently Asked Questions
             </h2>
           </div>
@@ -50,14 +49,18 @@ export default function FAQs({ faqs }) {
                 const isOpen = openIndex === index;
                 return (
                   <div
-                    className={`accordion-item px-3 py-2 rounded-2 m-1 ${isOpen ? "bg-light" : ""
-                      }`}
+                    className={`accordion-item px-3 py-2 rounded-2 m-1 ${
+                      isOpen ? "bg-light" : ""
+                    }`}
                     key={index}
                   >
                     <h3 className="border-none" id={"heading" + index}>
                       <button
-                        className={`accordion-button ${!isOpen ? "collapsed" : ""
-                          } cursor-pointer border-none d-flex align-items-center font-deep bg-transparent gap-2 ${styles.accordionButton}`}
+                        className={`accordion-button ${
+                          !isOpen ? "collapsed" : ""
+                        } cursor-pointer border-none d-flex align-items-center font-deep bg-transparent gap-2 ${
+                          styles.accordionButton
+                        }`}
                         type="button"
                         onClick={() => toggle(index)}
                       >
@@ -67,9 +70,7 @@ export default function FAQs({ faqs }) {
                           {isOpen ? (
                             <MdRemove className="font-lg font-primary" />
                           ) : (
-                            <MdKeyboardArrowDown
-                              className="font-lg font-primary"
-                            />
+                            <MdKeyboardArrowDown className="font-lg font-primary" />
                           )}
                         </span>
                         <div className="font-600">{faq.question}</div>
@@ -77,12 +78,11 @@ export default function FAQs({ faqs }) {
                     </h3>
                     <div
                       id={"collapse" + index}
-                      className={`accordion-collapse collapse ${isOpen ? "show" : ""
-                        }`}
+                      className={`accordion-collapse collapse ${
+                        isOpen ? "show" : ""
+                      }`}
                     >
-                      <div
-                        className="font-deep"
-                      >
+                      <div className="font-deep">
                         <div className="ps-5 font-dark-light font-sm">
                           {faq.answer}
                         </div>
@@ -95,11 +95,14 @@ export default function FAQs({ faqs }) {
           </div>
         </div>
         <div className="d-flex flex-column justify-content-between align-items-center pt-5">
-          <p className="font-sub-heading garmond-font font-dark">Still have questions?</p>
-          <a className="btn btn-primary-outline" href="/contact-us">Contact Us</a>
+          <p className="font-sub-heading garmond-font font-dark">
+            Still have questions?
+          </p>
+          <a className="btn btn-primary-outline" href="/contact-us">
+            Contact Us
+          </a>
         </div>
       </section>
     </>
   );
 }
-

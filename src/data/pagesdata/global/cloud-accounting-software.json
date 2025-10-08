@@ -54,7 +54,7 @@
   },
   "features": {
     "heading": "Why Choose Giddh for Your Accounting Needs?",
-    "content": [
+    "feature": [
       {
         "heading": "Anytime, Anywhere, and on Any Device",
         "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
@@ -200,7 +200,7 @@
     ]
   },
   "cta": {
-    "heading": "Giddh cloud accounting software can optimize your business operations.",
+    "heading": "Giddh Cloud Accounting Software Can Optimize Your Business Operations.",
     "image": "/img/girl-avatar.svg",
     "buttons": [
       {

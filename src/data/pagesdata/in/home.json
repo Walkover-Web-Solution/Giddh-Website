@@ -2,7 +2,7 @@
   "stackedBanner": {
     "heading": "Powerful All-in-One Accounting Software For Your Business Growth",
     "subHeading": "Effortlessly manage accounting, taxes, invoicing, sales, inventory, and other business processes with Giddh.",
-    "image": "/img/home-page/index_banner_india.webp",
+    "image": "/img/home-page/index_banner_india.svg",
     "buttons": [
       {
         "text": "Get Started",
@@ -161,12 +161,14 @@
       },
       {
         "name": "Agri-Fintech",
-        "img": "/img/industries/agri-fintech.svg"
+        "img": "/img/industries/agri_fintech.svg"
       },
       {
         "name": "Tourism",
         "img": "/img/industries/tourism.svg"
-      },
+      }
+    ],
+    "rowTwo": [
       {
         "name": "Construction",
         "img": "/img/industries/construction.svg"
@@ -174,9 +176,7 @@
       {
         "name": "Infrastructure",
         "img": "/img/industries/infrastructure.svg"
-      }
-    ],
-    "rowTwo": [
+      },
       {
         "name": "Ayurveda",
         "img": "/img/industries/ayurveda.svg"
@@ -184,14 +184,16 @@
       {
         "name": "Jewellery",
         "img": "/img/industries/jewellery.svg"
-      },
+      }
+    ],
+    "rowThree": [
       {
         "name": "FMCG",
         "img": "/img/industries/fmcg.svg"
       },
       {
         "name": "E-commerce",
-        "img": "/img/industries/e-commerce.svg"
+        "img": "/img/industries/e_commerce.svg"
       },
       {
         "name": "Clothing",
@@ -199,7 +201,7 @@
       },
       {
         "name": "Food & Beverage",
-        "img": "/img/industries/food&beverage.svg"
+        "img": "/img/industries/food_beverages.svg"
       }
     ]
   },
