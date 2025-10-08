@@ -25,9 +25,9 @@ export default function GiddhVs({ giddhVs }) {
                 <div className="col-3 col-md-3 px-3 py-4 border-end bg-light-blue border-top border-start border-4 rounded-top-4 border-accent">
                   <Image
                     src={"/img/giddh-logo.svg"}
-                    className="font-lg"
                     height={24}
                     width={120}
+                    alt={"Giddh Logo"}
                   />
                 </div>
                 <div className="col-3 col-md-3 px-3 py-4 border-end">
@@ -35,6 +35,7 @@ export default function GiddhVs({ giddhVs }) {
                     src={"/img/home-page/quickbooks.svg"}
                     height={32}
                     width={168}
+                    alt={"Quickbooks logo"}
                   />
                 </div>
                 <div className="col-3 col-md-3 px-3 py-4 border-end">
@@ -42,6 +43,7 @@ export default function GiddhVs({ giddhVs }) {
                     src={"/img/home-page/tally.svg"}
                     height={36}
                     width={74}
+                    alt={"Tally logo"}
                   />
                 </div>
               </div>

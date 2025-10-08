@@ -2,7 +2,7 @@ import Image from "next/image";
 import { MdCircle } from "react-icons/md";
 
 export default function AlternateFeatures({ features }) {
-  if (!features?.feature?.length) return null;
+  if (!features?.content?.length) return null;
   return (
     <section className="bg-neutral py-5">
       <div className="container d-flex flex-column gap-5">
@@ -14,7 +14,7 @@ export default function AlternateFeatures({ features }) {
             {features?.subHeading}
           </p>
         </div>
-        {features?.feature?.map((feature, index) => {
+        {features?.content?.map((feature, index) => {
           const imageRight = index % 2 === 0;
           return (
             <div
