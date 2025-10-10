@@ -7,9 +7,9 @@ export default function GiddhVs({ giddhVs }) {
   return (
     <section className="container py-5 outfit-font">
       <div className="d-flex flex-column gap-4">
-        <h1 className="text-center font-sub-heading font-600 garmond-font font-primary">
+        <h2 className="text-center font-sub-heading garmond-font font-primary">
           {giddhVs?.heading}
-        </h1>
+        </h2>
         <p className="text-center font-md font-400 w-75 mx-auto">
           {giddhVs?.subheading}
         </p>

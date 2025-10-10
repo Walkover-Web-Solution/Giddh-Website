@@ -17,11 +17,12 @@ export default function Home({ pageData }) {
       <AlternateFeatures features={pageData?.features} />
       <TrustBadgeScrollable compData={pageData?.trustBadgeBrands} />
       <CTA hasImage={false} compData={pageData?.cta} />
-      <FeedbackCards testimonials={pageData?.testimonials} />
       <GiddhVs giddhVs={pageData?.giddhVs} />
+      <CTA compData={pageData?.ctaTwo} />
       <Industries giddhIndustries={pageData?.giddhIndustries} />
+      <FeedbackCards testimonials={pageData?.testimonials} />
       <Benefits benefits={pageData?.benefits} />
-      <CTA hasImage={false} compData={pageData?.ctaTwo} />
+      <CTA hasImage={false} compData={pageData?.ctaThree} />
       <FAQs faqs={pageData?.faqs} />
     </>
   );

@@ -4,7 +4,7 @@ export default function Stats({ stats }) {
   return (
     <section className="py-5 outfit-font bg-accent">
       <div className="container d-flex flex-column gap-4">
-        <h2 className="font-400 garmond-font font-sub-heading text-center font-white">
+        <h2 className="garmond-font font-sub-heading text-center font-white">
           {stats?.heading}
         </h2>
         <div className="row justify-content-center g-2">

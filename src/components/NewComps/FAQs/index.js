@@ -39,7 +39,7 @@ export default function FAQs({ faqs }) {
       <section className="container py-5">
         <div className="d-flex flex-lg-row flex-column">
           <div className="col-lg-4 col-12">
-            <h2 className="font-sub-heading font-dark garmond-font font-600 col-lg-2 col-12">
+            <h2 className="font-sub-heading font-dark garmond-font col-lg-2 col-12">
               Frequently Asked Questions
             </h2>
           </div>
@@ -93,14 +93,6 @@ export default function FAQs({ faqs }) {
               })}
             </div>
           </div>
-        </div>
-        <div className="d-flex flex-column justify-content-between align-items-center pt-5">
-          <p className="font-sub-heading garmond-font font-dark">
-            Still have questions?
-          </p>
-          <a className="btn btn-primary-outline" href="/contact-us">
-            Contact Us
-          </a>
         </div>
       </section>
     </>
