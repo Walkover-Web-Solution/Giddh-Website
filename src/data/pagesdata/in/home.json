@@ -341,6 +341,17 @@
       }
     ]
   },
+  "ctaTwo" : {
+    "heading": "We Ensure Money-back Guarantee",
+    "theme" : "light",
+        "buttons": [
+          {
+            "text": "Schedule a Demo",
+            "link": "/online-accounting-software",
+            "type": "btn-primary-outline"
+          }
+        ]
+      },
   "benefits": [
     {
       "cols": 3,
