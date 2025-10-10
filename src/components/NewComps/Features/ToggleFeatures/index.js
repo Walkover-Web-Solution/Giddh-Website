@@ -62,9 +62,7 @@ export default function ToggleFeatures({ features }) {
                         {features[expandedFeature].description}
                       </p>
                     </div>
-                    <button
-                      className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 bg-grey-faded cursor-pointer c-fw-600 c-fs-5`}
-                    >
+                    <button className="mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 bg-grey-faded cursor-pointer font-600 font-md">
                       <div>
                         {Icon && <Icon size={18} className="font-white" />}
                       </div>

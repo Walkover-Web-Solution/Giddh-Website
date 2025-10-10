@@ -28,7 +28,7 @@ export default function WhyGiddh({ compData }) {
               <span className="d-block font-dark-grey d-md-none pe-2">
                 <Image
                   src="/img/giddh-logo.svg"
-                  alt="giddh"
+                  alt="Giddh logo"
                   className="img-fluid fit-content"
                   width={50}
                   height={55}
