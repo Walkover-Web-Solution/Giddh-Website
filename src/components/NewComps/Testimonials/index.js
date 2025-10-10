@@ -50,7 +50,7 @@ export default function Testimonials({ testimonials }) {
   return (
     <section className="py-5 outfit-font bg-accent">
       <div className="d-flex flex-column text-center mx-auto px-3">
-        <h2 className="font-400 font-sub-heading font-600 font-white garmond-font">
+        <h2 className="font-sub-heading font-white garmond-font">
           {testimonials?.heading}
         </h2>
         <p
