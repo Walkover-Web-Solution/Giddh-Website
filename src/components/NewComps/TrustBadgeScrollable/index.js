@@ -31,7 +31,7 @@ export default function TrustBadgeScrollable({ compData }) {
     <section className="py-5">
       <div className="container text-center d-flex flex-column gap-3">
         <div className="d-flex flex-column gap-1">
-          <h2 className="font-sub-heading font-primary font-400 garmond-font">
+          <h2 className="font-sub-heading font-primary garmond-font">
             {compData?.title}
           </h2>
           <p className="font-dark-grey garmond-font font-md">

@@ -4,7 +4,7 @@ export default function StackedBanner({ compData }) {
   return (
     <section className="gradient-primary padding-nav">
       <div className="container pt-5 d-flex flex-row flex-wrap gap-4 justify-content-center align-items-center">
-        <h1 className="text-center font-400 heading garmond-font font-primary">
+        <h1 className="text-center font-heading garmond-font font-primary">
           {compData?.heading}
         </h1>
         <div className="col-lg-8 mx-auto">
