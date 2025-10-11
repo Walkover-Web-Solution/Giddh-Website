@@ -48,11 +48,12 @@
   },
   "cta": {
     "heading": "Get a Custom E‑Invoicing Solution Today!",
+    "theme": "light",
     "buttons": [
       {
         "text": "Start Free Trial",
         "link": "/signup",
-        "type": "btn-secondary-outline"
+        "type": "btn-primary-outline"
       }
     ]
   },
@@ -90,9 +91,27 @@
       }
     ]
   },
-  "giddhVs": {
+ "giddhVs": {
     "heading": "Still Confused About Choosing Your Digital Invoicing Software?",
     "subheading": "Compare Giddh with Zoho, Busy, and Vyapar.",
+    "columns": [
+      {
+        "key": "giddh",
+        "label": "Giddh"
+      },
+      {
+        "key": "zoho",
+        "label": "Zoho Books"
+      },
+      {
+        "key": "busy",
+        "label": "Busy"
+      },
+      {
+        "key": "vyapar",
+        "label": "Vyapar"
+      }
+    ],
     "content": [
       {
         "feature": "GST e-invoicing Support",
@@ -107,43 +126,24 @@
         "zoho": false,
         "busy": true,
         "vyapar": false
-      },
-      {
-        "feature": "Real-time Invoice Status",
-        "giddh": true,
-        "zoho": true,
-        "busy": false,
-        "vyapar": false
-      },
-      {
-        "feature": "White-label Option",
-        "giddh": true,
-        "zoho": false,
-        "busy": false,
-        "vyapar": false
-      },
-      {
-        "feature": "Free Trial",
-        "giddh": true,
-        "zoho": true,
-        "busy": true,
-        "vyapar": true
       }
+
     ]
   },
   "ctaTwo": {
     "heading": "Simplify Billing with GST E-Invoicing India",
     "subheading": "Giddh makes invoicing simple, quick, and efficient, allowing you to streamline finances with the best e-invoice software India.",
+    "theme" : "light",
     "buttons": [
       {
-        "text": "FREE Sign up",
+        "text": "Free Sign Up",
         "link": "/signup",
-        "type": "btn-secondary-outline"
+        "type": "btn-primary-outline"
       },
       {
         "text": "Book A Demo",
         "link": "/signup",
-        "type": "btn-secondary-outline"
+        "type": "btn-primary"
       }
     ]
   },

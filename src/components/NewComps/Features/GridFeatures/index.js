@@ -1,3 +1,4 @@
+import { MdCircle } from "react-icons/md";
 import styles from "./GridFeatures.module.scss";
 
 export default function GridFeatures({ features }) {
@@ -17,16 +18,29 @@ export default function GridFeatures({ features }) {
           {features.cards.map((card, index) => (
             <div
               key={index}
-              className="col-12 col-md-6 align-items-center justify-content-center"
+              className="col-12 col-md-6 align-items-center justify-content-center mx-auto"
             >
               <div
-                className={`d-flex flex-column gap-3 border rounded-4 px-4 py-2 justify-content-center border-color-primary ${
+                className={`d-flex flex-column border rounded-4 px-4 py-2 border-color-primary ${
                   styles.card
-                }  ${card.icon ? " " : "text-center"}`}
+                }  ${
+                  card.icon ? "py-4" : "text-center  justify-content-center"
+                }`}
               >
-                {card?.icon && <img width={76} height={80} src={card.icon} />}
-                <p className="m-0 font-xl font-primary">{card?.heading}</p>
+                {card?.icon && <img width={50} height={50} src={card.icon} />}
+                <p className="m-0 font-xl font-600 font-primary">
+                  {card?.heading}
+                </p>
                 <p className="font-md font-slate-grey">{card?.description}</p>
+                {card.more_content && (
+                  <ul>
+                    {card.more_content.map((content, index) => (
+                      <li key={index} className="font-sm">
+                        <MdCircle size={5} /> {content}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           ))}
