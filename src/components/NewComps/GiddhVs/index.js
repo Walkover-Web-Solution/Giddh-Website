@@ -26,24 +26,24 @@ export default function GiddhVs({ giddhVs }) {
                   <span>Feature</span>
                 </div>
 
-                {columns.map((col, index) => (
+                {columns.map((column, index) => (
                   <div
-                    key={col.key}
+                    key={column.key}
                     className={`col px-3 py-3 border-end ${
                       index === 0
                         ? "bg-light-blue border-accent border-4 border-top border-start rounded-top-4"
                         : ""
                     }`}
                   >
-                    {col.logo ? (
+                    {column.logo ? (
                       <Image
-                        src={col.logo}
+                        src={column.logo}
                         height={32}
                         width={120}
-                        alt={`${col.label} logo`}
+                        alt={`${column.label} logo`}
                       />
                     ) : (
-                      <span className="text-capitalize">{col.label}</span>
+                      <span className="text-capitalize">{column.label}</span>
                     )}
                   </div>
                 ))}
@@ -54,31 +54,35 @@ export default function GiddhVs({ giddhVs }) {
                   key={rowIndex}
                   className="row border-bottom font-sm text-center"
                 >
-                  <div className="col-3 px-3 py-2 border-end font-sm font-600">
+                  <div className="col-3 px-3 py-4 border-end font-sm font-600">
                     {row.feature}
                   </div>
 
-                  {columns.map((col, colIndex) => (
+                  {columns.map((column, colIndex) => (
                     <div
-                      key={col.key}
-                      className={`col px-3 py-2 font-sm border-end ${
+                      key={column.key}
+                      className={`col px-3 py-4 font-sm border-end ${
                         colIndex === 0
                           ? "bg-light-blue border-accent border-4 border-start"
                           : ""
                       } ${
                         rowIndex === content.length - 1 && colIndex === 0
-                          ? "rounded-bottom-4"
+                          ? "rounded-bottom-4 border-accent border-bottom"
                           : ""
                       }`}
                     >
-                      {typeof row[col.key] === "boolean" ? (
-                        row[col.key] ? (
-                          <span>✅</span>
+                      {typeof row[column.key] === "boolean" ? (
+                        row[column.key] ? (
+                          <Image src={"/img/tick.svg"} width={24} height={24} />
                         ) : (
-                          <span>❌</span>
+                          <Image
+                            src={"/img/cross.svg"}
+                            width={24}
+                            height={24}
+                          />
                         )
                       ) : (
-                        row[col.key] || "-"
+                        row[column.key] || "-"
                       )}
                     </div>
                   ))}

@@ -24,7 +24,7 @@ export default function GridFeatures({ features }) {
                 className={`d-flex flex-column border rounded-4 px-4 py-2 border-color-primary ${
                   styles.card
                 }  ${
-                  card.icon ? "py-4" : "text-center  justify-content-center"
+                  card.icon ? "py-4" : "text-center justify-content-center"
                 }`}
               >
                 {card?.icon && <img width={50} height={50} src={card.icon} />}

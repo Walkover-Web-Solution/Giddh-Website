@@ -30,7 +30,7 @@
         ]
       },
       {
-        "icon": "/img/inventory-management-software/inventory.svg",
+        "icon": "/img/inventory-management-software/custom_unit.svg",
         "heading": "Inventory Masters",
         "description": "Centralized inventory management to easily add, edit, or remove items.",
         "more_content": [
@@ -39,7 +39,7 @@
         ]
       },
       {
-        "icon": "/img/inventory-management-software/inventory.svg",
+        "icon": "/img/inventory-management-software/barcode.svg",
         "heading": "Bifurcate Inventory into Groups, Items & Variants",
         "description": "Organize your inventory for better clarity and efficiency.",
         "more_content": [
@@ -48,7 +48,7 @@
         ]
       },
       {
-        "icon": "/img/inventory-management-software/inventory.svg",
+        "icon": "/img/inventory-management-software/list.svg",
         "heading": " Real-Time Inventory Reports",
         "description": "Get up-to-date reports on your inventory, anytime.",
         "more_content": [
@@ -57,7 +57,7 @@
         ]
       },
       {
-        "icon": "/img/inventory-management-software/inventory.svg",
+        "icon": "/img/inventory-management-software/warehouse.svg",
         "heading": "Barcode Scanning",
         "description": "Speed up inventory updates with barcode scanning for enhanced accuracy.",
         "more_content": [
@@ -66,7 +66,7 @@
         ]
       },
       {
-        "icon": "/img/inventory-management-software/inventory.svg",
+        "icon": "/img/inventory-management-software/records.svg",
         "heading": "Manufacturing Management",
         "description": "Easily manage raw materials, production, and by-products.",
         "more_content": [
@@ -75,7 +75,7 @@
         ]
       },
       {
-        "icon": "/img/inventory-management-software/inventory.svg",
+        "icon": "/img/inventory-management-software/web.svg",
         "heading": "Branch & Warehouse Inventory Management",
         "description": "Manage inventory across multiple locations with ease.",
         "more_content": [
@@ -84,7 +84,7 @@
         ]
       },
       {
-        "icon": "/img/inventory-management-software/inventory.svg",
+        "icon": "/img/inventory-management-software/management.svg",
         "heading": "Branch Transfer",
         "description": "Effortlessly transfer stock between branches and warehouses.",
         "more_content": [

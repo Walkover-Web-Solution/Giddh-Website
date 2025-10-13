@@ -14,7 +14,7 @@ export default function EInvoice({ pageData }) {
       <SplitBanner compData={pageData?.splitBanner} />
       <GridFeatures features={pageData?.characteristics} />
       <CTA compData={pageData?.cta} />
-      <GridBenefits/>
+      <GridBenefits compData={pageData?.gridFeatures}/>
       <GiddhFor compData={pageData?.giddhFor} />
       <GiddhVs giddhVs={pageData?.giddhVs} />
       <CTA compData={pageData?.ctaTwo} />

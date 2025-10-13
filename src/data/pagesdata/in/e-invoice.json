@@ -91,25 +91,29 @@
       }
     ]
   },
- "giddhVs": {
+  "giddhVs": {
     "heading": "Still Confused About Choosing Your Digital Invoicing Software?",
     "subheading": "Compare Giddh with Zoho, Busy, and Vyapar.",
     "columns": [
       {
         "key": "giddh",
-        "label": "Giddh"
+        "label": "Giddh",
+        "logo": "/img/giddh-logo.svg"
       },
       {
         "key": "zoho",
-        "label": "Zoho Books"
+        "label": "Zoho Books",
+        "logo": "/img/zoho_logo.svg"
       },
       {
         "key": "busy",
-        "label": "Busy"
+        "label": "Busy",
+        "logo": "/img/busy_logo.svg"
       },
       {
         "key": "vyapar",
-        "label": "Vyapar"
+        "label": "Vyapar",
+        "logo": "/img/vyapar_logo.svg"
       }
     ],
     "content": [
@@ -126,14 +130,41 @@
         "zoho": false,
         "busy": true,
         "vyapar": false
+      },
+      {
+        "feature": "Real-time Invoice Status ",
+        "giddh": true,
+        "zoho": true,
+        "busy": false,
+        "vyapar": false
+      },
+      {
+        "feature": "Mobile App Support",
+        "giddh": true,
+        "zoho": true,
+        "busy": true,
+        "vyapar": true
+      },
+      {
+        "feature": "White-label Option",
+        "giddh": true,
+        "zoho": false,
+        "busy": false,
+        "vyapar": false
+      },
+      {
+        "feature": "Free Trial",
+        "giddh": true,
+        "zoho": true,
+        "busy": true,
+        "vyapar": true
       }
-
     ]
   },
   "ctaTwo": {
     "heading": "Simplify Billing with GST E-Invoicing India",
     "subheading": "Giddh makes invoicing simple, quick, and efficient, allowing you to streamline finances with the best e-invoice software India.",
-    "theme" : "light",
+    "theme": "light",
     "buttons": [
       {
         "text": "Free Sign Up",
@@ -147,6 +178,15 @@
       }
     ]
   },
+  "gridFeatures": [
+    ["Increased Accuracy", "Real-Time Tracking", "Reduced Risk of Tax Evasion"],
+    ["Uniqueness with IRN and QR Code for B2B"],
+    [
+      "Better Visibility and Transparency",
+      "Uniqueness with QR Code for B2C",
+      "Auto-Populated Data in GST E-Invoice"
+    ]
+  ],
   "faqs": [
     {
       "question": "What are the Key Features of E-Invoicing Software?",
