@@ -7,8 +7,6 @@ import GiddhVs from "../NewComps/GiddhVs";
 import GridBenefits from "../NewComps/GridBenefits";
 
 export default function EInvoice({ pageData }) {
- 
-  console.log("🚀 ~ EInvoice ~ pageData?.giddhVs:", pageData?.giddhVs)
   return (
     <>
       <SplitBanner compData={pageData?.splitBanner} />

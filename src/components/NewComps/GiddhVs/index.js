@@ -2,18 +2,16 @@ import Image from "next/image";
 import styles from "./GiddhVs.module.scss";
 
 export default function GiddhVs({ giddhVs }) {
-  if (!giddhVs?.content?.length || !giddhVs?.columns?.length) return null;
-
-  const { heading, subheading, content, columns } = giddhVs;
+  if (!giddhVs?.content?.length) return null;
 
   return (
     <section className="container py-5 outfit-font">
       <div className="d-flex flex-column gap-4">
         <h1 className="text-center font-sub-heading font-600 garmond-font font-primary">
-          {heading}
+          {giddhVs.heading}
         </h1>
         <p className="text-center font-md font-400 w-75 mx-auto">
-          {subheading}
+          {giddhVs.subheading}
         </p>
 
         <div
@@ -26,7 +24,7 @@ export default function GiddhVs({ giddhVs }) {
                   <span>Feature</span>
                 </div>
 
-                {columns.map((column, index) => (
+                {giddhVs.columns.map((column, index) => (
                   <div
                     key={column.key}
                     className={`col px-3 py-3 border-end ${
@@ -38,18 +36,17 @@ export default function GiddhVs({ giddhVs }) {
                     {column.logo ? (
                       <Image
                         src={column.logo}
-                        height={32}
+                        height={42}
                         width={120}
                         alt={`${column.label} logo`}
                       />
                     ) : (
-                      <span className="text-capitalize">{column.label}</span>
+                      <span>{column.label}</span>
                     )}
                   </div>
                 ))}
               </div>
-
-              {content.map((row, rowIndex) => (
+              {giddhVs.content.map((row, rowIndex) => (
                 <div
                   key={rowIndex}
                   className="row border-bottom font-sm text-center"
@@ -58,7 +55,7 @@ export default function GiddhVs({ giddhVs }) {
                     {row.feature}
                   </div>
 
-                  {columns.map((column, colIndex) => (
+                  {giddhVs.columns.map((column, colIndex) => (
                     <div
                       key={column.key}
                       className={`col px-3 py-4 font-sm border-end ${
@@ -66,7 +63,8 @@ export default function GiddhVs({ giddhVs }) {
                           ? "bg-light-blue border-accent border-4 border-start"
                           : ""
                       } ${
-                        rowIndex === content.length - 1 && colIndex === 0
+                        rowIndex === giddhVs.content.length - 1 &&
+                        colIndex === 0
                           ? "rounded-bottom-4 border-accent border-bottom"
                           : ""
                       }`}
