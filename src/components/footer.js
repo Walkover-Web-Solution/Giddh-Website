@@ -63,7 +63,7 @@ const Footer = (path) => {
                       <a href="https://giddh.com/api">API Documentation</a>
                     </li>
                     <li>
-                      <a href={link.linkPrefix + "/privacy-policy"}>
+                      <a href={link.linkPrefix + "/privacy-policy"} rel="nofollow">
                         Privacy Policy
                       </a>
                     </li>
