@@ -48,7 +48,7 @@ export default function FeedbackCards({ testimonials }) {
   }, [items.length]);
 
   return (
-    <section className="py-5 bg-light-blue">
+    <section className="py-5 bg-extra-light-blue">
       <div className="container">
         <h2 className="garmond-font text-center font-primary font-sub-heading">
           {testimonials?.heading}

@@ -35,7 +35,7 @@ export default function CTA({ compData, hasImage }) {
                         block: "center",
                       })
                   }
-                  className={`${button?.type} px-5 py-2 font-xl btn flex items-center`}
+                  className={`${button?.type} px-5 py-2 btn flex items-center`}
                 >
                   {button.text} {button.arrow && <MdArrowForward />}
                 </button>

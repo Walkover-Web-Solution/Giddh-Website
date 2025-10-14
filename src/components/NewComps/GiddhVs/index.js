@@ -22,7 +22,7 @@ export default function GiddhVs({ giddhVs }) {
                 <div className="col-3 col-md-3 px-3 py-2 border-end d-flex align-items-center justify-content-center">
                   <span className="text-center">Feature</span>
                 </div>
-                <div className="col-3 col-md-3 px-3 py-4 border-end bg-light-blue border-top border-start border-4 rounded-top-4 border-accent">
+                <div className="col-3 col-md-3 px-3 py-4 border-end bg-extra-light-blue border-accent border-top border-start border-4 rounded-top-4">
                   <Image
                     src={"/img/giddh-logo.svg"}
                     height={24}
@@ -57,7 +57,7 @@ export default function GiddhVs({ giddhVs }) {
                     {row?.feature}
                   </div>
                   <div
-                    className={`col-3 col-md-3 px-3 py-2 font-sm border-end border-start bg-light-blue border-accent border-4 ${
+                    className={`col-3 col-md-3 px-3 py-2 font-sm border-end border-start bg-extra-light-blue border-accent border-4 ${
                       index === giddhVs.content.length - 1 &&
                       "border-bottom rounded-bottom-4 "
                     }`}

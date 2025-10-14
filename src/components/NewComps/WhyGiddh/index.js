@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function WhyGiddh({ compData }) {
   if (!compData?.features?.length) return null;
   return (
-    <section className="bg-light-blue outfit-font">
+    <section className="bg-extra-light-blue outfit-font">
       <div className="container py-5 d-flex flex-column gap-4">
         <h2 className="text-center mb-4 font-primary font-sub-heading">
           {compData?.heading}
