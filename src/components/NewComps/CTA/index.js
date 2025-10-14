@@ -8,7 +8,7 @@ export default function CTA({ compData, hasImage }) {
         compData?.theme === "light"
           ? "bg-accent-light font-dark"
           : "bg-accent font-white outfit-font"
-      } py-5 ${hasImage && "pb-md-0"} text-center text-md-start`}
+      } py-5 ${hasImage ? "pb-md-0" : ""} text-center text-md-start`}
     >
       <div className={`container ${hasImage ? "d-flex" : ""}`}>
         <div className="d-flex justify-content-center flex-column">

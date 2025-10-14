@@ -183,15 +183,6 @@ body {
   max-width: var(--w-max-content);
 }
 
-.bg {
-  &-accent {
-    background-color: var(--col-primary);
-  }
-  &-light-blue {
-    background-color: var(--col-extra-light-blue);
-  }
-}
-
 //Custom Classes
 .w-fit-content {
   width: fit-content !important;
