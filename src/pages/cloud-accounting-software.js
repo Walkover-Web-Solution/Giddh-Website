@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import Faqs from "@/components/faq";
-import faqs from '../data/faqs.json';
+import faqs from "../data/faqs.json";
 
 const anywhereAnytime = (path) => {
   const [readMoreStatus, readmoreAction] = useState(false);
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
-  const [faq, setFaq]= useState([]);
+  const [faq, setFaq] = useState([]);
 
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
@@ -22,7 +22,7 @@ const anywhereAnytime = (path) => {
     uk: "Cloud Accounting Software",
   };
   useEffect(() => {
-    setFaq(faqs['cloud-accounting-software'])
+    setFaq(faqs["cloud-accounting-software"]);
   }, []);
 
   return (
@@ -32,10 +32,13 @@ const anywhereAnytime = (path) => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
-                    { isIndia && "Cloud Accounting Software for Indian Businesse" }
-                    { isAE && "VAT-Compliant Cloud Accounting in the UAE" }
-                    { (isUK || isGlobal) && "Cloud Accounting Software" }
+                <h1
+                  id="features-heading"
+                  className="heading col-primary c-fw-600 mb-4"
+                >
+                  {isIndia && "Cloud Accounting Software for Indian Businesses"}
+                  {isAE && "VAT-Compliant Cloud Accounting in the UAE"}
+                  {(isUK || isGlobal) && "Cloud Accounting Software"}
                 </h1>
                 <span className="col-grey c-fs-3 mb-5 d-inline-block">
                   Generate invoices, view reports & manage your books wherever
@@ -82,7 +85,10 @@ const anywhereAnytime = (path) => {
             </div>
           </div>
         </section>
-        <section className="container-fluid features__sub_heading_container" aria-labelledby="business-heading">
+        <section
+          className="container-fluid features__sub_heading_container"
+          aria-labelledby="business-heading"
+        >
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
@@ -107,14 +113,21 @@ const anywhereAnytime = (path) => {
                     : null}
                 </p>
 
-                <a href={link + "/signup"} className="btn-link-purple" aria-label="Start your trial for cloud accounting software">
+                <a
+                  href={link + "/signup"}
+                  className="btn-link-purple"
+                  aria-label="Start your trial for cloud accounting software"
+                >
                   Start Your Trial
                 </a>
               </div>
             </div>
           </div>
         </section>
-        <section className="container-fluid features__description_container mt-5" aria-labelledby="features-description-heading">
+        <section
+          className="container-fluid features__description_container mt-5"
+          aria-labelledby="features-description-heading"
+        >
           <div className="container">
             <h2 id="features-description-heading" className="visually-hidden">Feature Description</h2>
             <div className="row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom">
@@ -165,7 +178,10 @@ const anywhereAnytime = (path) => {
                   {isIndia ? (
                     <p>
                       With Giddh’s{" "}
-                      <a href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/" aria-label="Learn more about cloud based accounting software benefits">
+                      <a
+                        href="https://giddh.com/blog/benefits-of-cloud-based-accounting-software/"
+                        aria-label="Learn more about cloud based accounting software benefits"
+                      >
                         cloud based accounting software
                       </a>
                       , you will automatically receive OTA (on the air) updates
@@ -624,23 +640,31 @@ const anywhereAnytime = (path) => {
               <h3 className="col-primary c-fs-3 c-fw-600">
                 Why Giddh is Better Than Conventional Accounting Software
               </h3>
-            
-            { isIndia && 
-              <div className="d-flex column-gap-2 justify-content-center align-items-center">
-                <span>The two major advantages are </span>
-                <h2 className="c-fs-5 c-fw-600 mb-0">Access Your Accounting Anywhere, Anytime</h2>
-                 <span>and</span>
-                <h2 className="c-fs-5 c-fw-600 mb-0">Secure Cloud Storage for Financial Data</h2>
-             </div>
-            }
-            { isAE && 
-              <div className="d-flex column-gap-2 justify-content-center align-items-center">
-                <span>The two major advantages are </span>
-                <h2 className="c-fs-5 c-fw-600 mb-0">Streamlined Accounting for UAE Businesses</h2>
-                 <span>and</span>
-                <h2 className="c-fs-5 c-fw-600 mb-0">Cloud-Based Financial Insights on Demand</h2>
-             </div>
-            }
+
+              {isIndia && (
+                <div className="d-flex column-gap-2 justify-content-center align-items-center">
+                  <span>The two major advantages are </span>
+                  <h2 className="c-fs-5 c-fw-600 mb-0">
+                    Access Your Accounting Anywhere, Anytime
+                  </h2>
+                  <span>and</span>
+                  <h2 className="c-fs-5 c-fw-600 mb-0">
+                    Secure Cloud Storage for Financial Data
+                  </h2>
+                </div>
+              )}
+              {isAE && (
+                <div className="d-flex column-gap-2 justify-content-center align-items-center">
+                  <span>The two major advantages are </span>
+                  <h2 className="c-fs-5 c-fw-600 mb-0">
+                    Streamlined Accounting for UAE Businesses
+                  </h2>
+                  <span>and</span>
+                  <h2 className="c-fs-5 c-fw-600 mb-0">
+                    Cloud-Based Financial Insights on Demand
+                  </h2>
+                </div>
+              )}
 
               <p className="my-3">
                 Although there exist some of the oldest tallying and accounting
@@ -726,7 +750,10 @@ const anywhereAnytime = (path) => {
             </div>
           </section>
         </section>
-        <section className="container-fluid features__suggestion_container" aria-labelledby="suggestion-heading">
+        <section
+          className="container-fluid features__suggestion_container"
+          aria-labelledby="suggestion-heading"
+        >
           <div className="container">
             <div className="row">
               <div className="col-12 text-center features__sub_heading_container--pull-top">
@@ -739,13 +766,20 @@ const anywhereAnytime = (path) => {
                     height="auto"
                   />
                 </figure>
-                <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
+                <h2
+                  id="suggestion-heading"
+                  className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4"
+                >
                   People interested in{" "}
                   <span className="col-blue">Cloud Accounting Software</span>{" "}
                   also looked at
                 </h2>
                 <div className="features__suggestion_container__links">
-                  <a href={link + "/all-features"} className="col-blue" aria-label="View all features of Cloud Accounting Software">
+                  <a
+                    href={link + "/all-features"}
+                    className="col-blue"
+                    aria-label="View all features of Cloud Accounting Software"
+                  >
                     All features
                   </a>
                   <a
@@ -774,7 +808,7 @@ const anywhereAnytime = (path) => {
             </div>
           </div>
         </section>
-        
+
         <Faqs faq={faq} />
       </div>
     </>

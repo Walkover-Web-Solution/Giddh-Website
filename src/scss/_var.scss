@@ -37,6 +37,7 @@
 
 
 
+
   //Content Width
   --w-max-content: 900px;
   --nav-height: 54px;
@@ -55,4 +56,13 @@
     --c-fs-6: 12px;
     --c-fs-7: 10px;
   }
+}
+
+// new vars
+
+:root{
+  --new-heading: 48px;
+  --new-sub-heading: 48px;
+  --new-base-2: 28px;
+
 }

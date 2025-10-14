@@ -1,10 +1,16 @@
-import { MdRemove, MdAdd } from "react-icons/md";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { MdRemove, MdKeyboardArrowDown } from "react-icons/md";
 import Head from "next/head";
-import DOMPurify from 'dompurify';
+import { useEffect } from "react";
 
-const Faqs = ({ faq }) => {
+export default function FAQs({ faq }) {
+
   const [faqSchema, setFaqSchema] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const toggle = (index) => {
+    setOpenIndex(index);
+  };
 
   useEffect(() => {
     if (faq) {
@@ -23,62 +29,83 @@ const Faqs = ({ faq }) => {
       });
     }
   }, [faq]);
+
   return (
     <>
       {faqSchema && (
         <Head>
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(JSON.stringify(faqSchema)) }}
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(faqSchema),
+            }}
           />
         </Head>
       )}
-      <section className="container-fluid faqs">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 px-0">
-              <div className="accordion" id="accordionAllFeatures">
-                {/*============ Accordion #1 ===============*/}
-                <h3 className="fw-bold col-primary ps-3">FAQs</h3>
-                {faq?.map((faq, index) => (
-                  <div className="accordion-item" key={index}>
-                    <p className="accordion-header" id={"heading" + index}>
+
+      <section className={`container p-2 my-4`}>
+        <div className="d-flex flex-lg-row flex-column">
+          <div className="col-lg-4 col-12">
+            <h2 className="subheading col-dark garmond-font col-lg-2 col-12">
+              Frequently Asked Questions
+            </h2>
+          </div>
+          <div>
+            <div>
+              {faq?.map((faq, index) => {
+                const isOpen = openIndex === index;
+                return (
+                  <div
+                    className={`accordion-item px-3 py-2 rounded-2 m-1 ${isOpen ? "bg-light" : ""
+                      }`}
+                    key={index}
+                  >
+                    <h3 className="border-none" id={"heading" + index}>
                       <button
-                        className="accordion-button collapsed"
+                        className={`accordion-button ${!isOpen ? "collapsed" : ""
+                          } cursor-pointer border-none d-flex align-items-center col-deep bg-transparent gap-2 accordionButton`}
                         type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target={"#collapse" + index}
-                        aria-expanded="false"
+                        aria-expanded={isOpen}
                         aria-controls={"collapse" + index}
+                        onClick={() => toggle(index)}
                       >
-                        <span className="me-2 collapse-icon collapse-icon--open">
-                          <MdAdd />
+                        <span
+                          className={`me-2 rounded-2 d-inline-flex align-items-center justify-content-center collapseIcon`}
+                        >
+                          {isOpen ? (
+                            <MdRemove className='c-fs-3 col-primary' />
+                          ) : (
+                            <MdKeyboardArrowDown
+                              className='c-fs-3 col-primary'
+                            />
+                          )}
                         </span>
-                        <span className="me-2 collapse-icon collapse-icon--close">
-                          <MdRemove />
-                        </span>
-                        <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(faq.question) }} />
+
+                        <div className="fw-bold">{faq.question}</div>
                       </button>
-                    </p>
+                    </h3>
                     <div
                       id={"collapse" + index}
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingOne"
+                      className={`accordion-collapse collapse ${isOpen ? "show" : ""
+                        }`}
+                      aria-labelledby={"heading" + index}
                       data-bs-parent="#accordionAllFeatures"
                     >
-                      <div className="accordion-body">
-                        <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(faq.answer) }} />
+                      <div
+                        className={`col-deep`}
+                      >
+                        <div className="ps-5 col-dark-light c-fs-6">
+                          {faq.answer}
+                        </div>
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>
       </section>
     </>
   );
-};
-
-export default Faqs;
+}
