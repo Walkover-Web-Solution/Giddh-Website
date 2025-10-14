@@ -748,7 +748,7 @@ const signUp = (path) => {
                     alt="Giddh Icon"
                   />
                 </a>
-                <h1>Create an account</h1>
+                <h1>{isGlobal ? "Create an account for Sign up with GIDDH" : "Create an account for using GIDDH"}</h1>
                 <div className="entry__right_section__container__entry_with d-flex mb-4 me-4">
                   <div>
                     <span className="d-inline-block mb-4">Sign up with</span>
@@ -792,7 +792,7 @@ const signUp = (path) => {
                     alt="Giddh Icon"
                   />
                 </a>
-                <h1>Create an account</h1>
+                <h1>{isGlobal ? "Create an account for Sign up with GIDDH" : "Create an account for using GIDDH"}</h1>
                 <div className="entry__right_section__container__step_one mt-5">
                   <div className="step_status_bar d-flex justify-content-between align-items-center ps-0">
                     <div className="d-flex align-items-center">
@@ -800,9 +800,9 @@ const signUp = (path) => {
                         className={
                           "me-1 " +
                           (emailDetails &&
-                          emailDetails.isVerified &&
-                          mobileDetails &&
-                          mobileDetails.isVerified
+                            emailDetails.isVerified &&
+                            mobileDetails &&
+                            mobileDetails.isVerified
                             ? " icon-success"
                             : "")
                         }
@@ -820,7 +820,7 @@ const signUp = (path) => {
                         style={{
                           paddingRight:
                             showEmailOtp ||
-                            (emailDetails && emailDetails.isVerified)
+                              (emailDetails && emailDetails.isVerified)
                               ? "0"
                               : null,
                         }}
@@ -962,7 +962,7 @@ const signUp = (path) => {
                         style={{
                           paddingRight:
                             showMobileOtp ||
-                            (mobileDetails && mobileDetails.isVerified)
+                              (mobileDetails && mobileDetails.isVerified)
                               ? "0"
                               : null,
                         }}

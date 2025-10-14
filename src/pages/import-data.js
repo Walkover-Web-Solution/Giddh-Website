@@ -8,7 +8,13 @@ const importExeclFiles = (path) => {
   const isIndia = linkPath.isIndia
   const link = linkPath.linkPrefix;
   const [faq, setFaq]= useState([])
-  
+  const country = linkPath.country || "global";
+  const heading = {
+    global: "Quick and Easy Online Accounting with Giddh Data Import",
+    india: "Online accounting is fast and simple with Giddh data import.",
+    ae: "Seamlessly bring your old accounting data to giddh",
+    uk: "Online accounting is fast and simple with Giddh data import.",
+  };
   useEffect(() => {
     setFaq(faqs['import-data']);
   }, []);
@@ -249,8 +255,7 @@ const importExeclFiles = (path) => {
                   />
                 </figure>
                 <h2 id="suggestion-heading" className="c-fs-3 col-grey-deep c-fw-400 mb-3 mt-4">
-                  People interested in{" "}
-                  <span className="col-blue">Import Data</span> also looked at
+                 {heading[country] || heading.global}
                 </h2>
 
                 <div className="features__suggestion_container__links" role="navigation" aria-label="Suggested links">

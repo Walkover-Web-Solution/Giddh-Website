@@ -9,7 +9,13 @@ const financialReporting = (path) => {
   const isAE = linkPath.isAE;
   const link = linkPath.linkPrefix;
   const [faq, setFaq] = useState([]) 
-
+  const country = linkPath.country || "global";
+  const heading = {
+    global: "GIDDH -  Best Financial Reconciliation Solutions",
+    india: "Your all round reporting solution",
+    ae: "GIDDH -  Best Financial Reconciliation Solutions uae",
+    uk: "GIDDH - Financial Accounting Software UK",
+  };
   useEffect(() => {
     setFaq(faqs['financial-reporting']);
   }, []);
@@ -208,7 +214,7 @@ const financialReporting = (path) => {
           <div className="container">
             <div className="text-center">
               <h2 id="reporting-solution-heading" className="col-primary sub-heading c-fw-600 mb-4">
-                Your all round reporting solution
+                {heading[country] || heading.global}
               </h2>
               <p className="col-dark-light c-fs-3">
                 Giddh online accounting software produces all of the standard

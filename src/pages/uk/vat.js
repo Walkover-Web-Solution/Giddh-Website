@@ -6,9 +6,9 @@ const ukVAT = () => {
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
   const [readMoreParagraphStatus3, showMoreParagraph3] = useState(false);
-  const [faq , setFaq] = useState([]);
+  const [faq, setFaq] = useState([]);
 
-  useEffect(() =>{
+  useEffect(() => {
     setFaq(faqs['vat']);
   }, []);
 
@@ -22,7 +22,7 @@ const ukVAT = () => {
                 Automate Your VAT Calculations
               </h2>
               <h1 className="heading c-fw-600  col-primary">
-                UK VAT Compliance Software - Made Easy
+                Automate Your VAT Calculations
               </h1>
               <h2 className="c-fs-3">UK VAT Regulations Compliance</h2>
             </div>
@@ -130,7 +130,7 @@ const ukVAT = () => {
             <div className="col">
               {" "}
               <div className="filing-tax d-flex flex-column align-items-center gap-4 p-3">
-                <img src="/img/tax-images/best-support.svg" alt="support icon"  />
+                <img src="/img/tax-images/best-support.svg" alt="support icon" />
                 <div className="caption text-center">
                   <h2 className="small-heading col-primary c-fw-600">
                     Best in Class Support
@@ -162,7 +162,7 @@ const ukVAT = () => {
 
       <section className="container-fluid features__description_container mt-5">
         <div className="container">
-            <h2 className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Simplify VAT Returns and Audits</h2>
+          <h2 className="col-primary c-fs-1 c-fw-600 mb-5 pb-4 text-center">Simplify VAT Returns and Audits</h2>
           <div
             className={
               "row mb-5 pb-5 align-items-center features__description_container--row-odd border-bottom" +
