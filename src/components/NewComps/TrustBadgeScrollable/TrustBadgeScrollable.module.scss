@@ -1,0 +1,17 @@
+.logoItem {
+  height: 34px;
+}
+
+.startFade,
+.endFade {
+  width: 100px;
+  pointer-events: none;
+}
+
+.startFade {
+  background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+}
+
+.endFade {
+  background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+}

@@ -7,11 +7,19 @@ import GlobalComponents from "@/components/globalComponents";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Toastify from "@/components/toastify";
+import getPageData from "@/utils/getPageData";
+import getPageInfo from "@/utils/getPageInfo";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const rawBrowserPath = router.asPath;
   const arrayBrawserPath = rawBrowserPath.split("/");
+  const page =
+    (arrayBrawserPath[1] === "in" ||
+    arrayBrawserPath[1] === "ae" ||
+    arrayBrawserPath[1] === "uk"
+      ? arrayBrawserPath[2]
+      : arrayBrawserPath[1]) || "home";
   var browserPath = `/${arrayBrawserPath[1]}`;
   if (browserPath.includes("?")) {
     var shortedPath = browserPath.slice(0, browserPath.indexOf("?"));
@@ -36,6 +44,7 @@ export default function MyApp({ Component, pageProps }) {
     country: shortedPath ? shortedPath.replace("/", "") : "global",
     linkPrefix: shortedPath,
     baseURL: process.env.NEXT_PUBLIC_SITE_URL || "https://giddh.com",
+    page: page,
     isGlobal: isGlobal,
     isIndia: isIndia,
     isAE: isAE,
@@ -56,13 +65,18 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
+
+  const rawPath = router.asPath?.split("#")[0]?.split("?")[0];
+  const pageInfo = getPageInfo(rawPath);
+  const pageData = getPageData(pageInfo);
+
   return (
     <>
       {loginSignupPathStatus ? (
         <Navbar browserPath={rawBrowserPath} path={path} />
       ) : null}
       <Header browserPath={rawBrowserPath} path={path} />
-      <Component path={path} {...pageProps} />
+      <Component path={path} {...pageProps} pageData={pageData} pageInfo={pageInfo} />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
       <GlobalComponents path={arrayBrawserPath} />
       <Toastify />

@@ -1,9 +1,7 @@
-import InvoiceSoftware from '@/pages/invoice-software'
-const ukInvoiceSoftware = (path) => {
-  return (
-    <>
-        <InvoiceSoftware path={path.path} />
-    </>
-  );
-};
-export default ukInvoiceSoftware;
+import OldInvoiceSoftware from "../in/invoice-software";
+
+const UkInvoiceSoftware = (path) => {
+    return <OldInvoiceSoftware path={path} />
+}
+
+export default UkInvoiceSoftware;

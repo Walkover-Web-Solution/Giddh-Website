@@ -1,9 +1,7 @@
-import MultiUserAccountingSoftware from '@/pages/multi-user-accounting-software'
-const aeMultiUserAccountingSoftware = (path) => {
-  return (
-    <>
-        <MultiUserAccountingSoftware path={path.path} />
-    </>
-  );
-};
-export default aeMultiUserAccountingSoftware;
+import OldMultiUserAccountingSoftware from "../in/multi-user-accounting-software";
+
+const AeMultiUserAccountingSoftware = (path) => {
+  return <OldMultiUserAccountingSoftware path={path} />
+}
+
+export default AeMultiUserAccountingSoftware;

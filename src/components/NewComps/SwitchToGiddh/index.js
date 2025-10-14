@@ -31,6 +31,7 @@ export default function SwitchToGiddh() {
       },
     ],
   };
+  if (!data?.content?.length) return null;
   return (
     <section className="container section_py d-flex flex-column gap-1 gap-md-2">
       <div className="d-flex flex-column content-width">
@@ -42,10 +43,15 @@ export default function SwitchToGiddh() {
           <h3 className="c-fs-4 col-4">Problem</h3>
           <p className="c-fs-4">Giddh Solution</p>
         </div>
-        {data?.content.map((feature, index) => {
+        {data.content.map((feature, index) => {
           return (
-            <div className="d-flex gap-md-4 flex-column flex-md-row" key={index}>
-              <h3 className="c-fs-4 c-fw-600 col-12 col-md-4">{feature?.name}</h3>
+            <div
+              className="d-flex gap-md-4 flex-column flex-md-row"
+              key={index}
+            >
+              <h3 className="c-fs-4 c-fw-600 col-12 col-md-4">
+                {feature?.name}
+              </h3>
               <p className="c-fs-4">{feature?.description}</p>
             </div>
           );

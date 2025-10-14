@@ -1,8 +1,20 @@
-import Index from '@/pages/index';
+import FeatureGallery from "@/components/featureGallery";
+import MakeTheSwitchIndexPage from "@/components/makeTheSwitch";
+import BannerSection from "@/components/bannerSection";
+import ClientSummary from "@/components/clientSummary";
+import Faqs from "@/components/NewComps/FAQs";
+import faqData from "../../data/faqs.json";
+
 const aeIndex = (path) => {
+  const link = path.path;
+  const faq = faqData?.home
   return (
     <>
-      <Index  path={path.path}/>
+      <BannerSection path={link} />
+      <FeatureGallery path={link} />
+      <ClientSummary />
+      <MakeTheSwitchIndexPage path={link} />
+      <Faqs faqs={faq} />
     </>
   );
 };

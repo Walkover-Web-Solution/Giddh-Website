@@ -1,0 +1,131 @@
+{
+  "splitBanner": {
+    "heading": "Transform Your Business with Real-Time Collaboration in Accounting",
+    "subHeading": "Manage your finances, collaborate with members, and ensure seamless decision-making. Giddh’s multi-user accounting software for business is designed for growth and efficiency",
+    "image": "/img/multi-user-accounting-software/multi-user-accounting-software.svg",
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ],
+    "form": false
+  },
+  "characteristics": {
+    "heading": "Excellent Features of Giddh’s Cloud Multi-User Accounting Software",
+    "subHeading": "Giddh’s feature-rich accounting software is designed to help your business manage financial data across multiple users, providing you with complete control while ensuring seamless collaboration.",
+    "cards": [
+      {
+        "heading": "Mobile Access & Remote Collaboration",
+        "description": "Manage your finances anytime, anywhere, with Giddh's mobile access. Collaborate in real-time and stay on top of your accounting—no matter where you are."
+      },
+      {
+        "heading": "Security & Encryption",
+        "description": "Your data is safe with Giddh’s top-notch encryption and multi-factor authentication. Rest easy knowing your financial information is protected at all times."
+      },
+      {
+        "heading": "Team Management Features",
+        "description": "Customize access for your team with role-based permissions, ensuring the right people have the right tools. Giddh makes collaboration smooth, secure, and efficient."
+      },
+      {
+        "heading": "Effortless Ledger-Based Accounting",
+        "description": "Streamline your accounting with one-step ledger entries—saving time and ensuring accuracy. Focus on growth, while Giddh handles your bookkeeping."
+      },
+      {
+        "heading": "Manage Multiple Companies & Branches",
+        "description": "Run multiple companies and branches effortlessly under one roof. With Giddh, managing your entire business network has never been simpler."
+      },
+      {
+        "heading": "Comprehensive Business Reports in Real-Time",
+        "description": "Access up-to-the-minute reports on your business’s financial health. Stay ahead with real-time insights from your Profit/Loss, Balance Sheet, and more."
+      },
+      {
+        "heading": "Automated Multi-Currency Support",
+        "description": "Expand globally with Giddh’s automated multi-currency support. Seamlessly manage international transactions without the hassle of manual conversions."
+      },
+      {
+        "heading": "Seamless Tally Synchronization",
+        "description": "Sync your financial data seamlessly between Giddh and Tally. Say goodbye to manual errors and hello to smooth data transfers."
+      },
+      {
+        "heading": "White-Label Option",
+        "description": "Make Giddh your own with full white-label customization. Tailor the platform to reflect your brand and provide a unified experience for your clients."
+      },
+      {
+        "heading": "Manage Over 100 Companies",
+        "description": "Scale effortlessly with the ability to manage over 100 companies in one account. Giddh gives you the power to handle multiple entities with ease."
+      }
+    ]
+  },
+  "trustBadgeBrands": {
+    "title": "Trusted By Industry Leaders",
+    "description": "See who’s talking about us and why businesses trust us around the globe."
+  },
+  "cta": {
+    "heading": "Effortlessly Manage Finances and Collaborate Across Members  with Giddh",
+    "image": "/img/girl-avatar.svg",
+    "buttons": [
+      {
+        "text": "Try Giddh for Free",
+        "link": "/signup",
+        "type": "btn-tertiary"
+      }
+    ],
+    "theme": "light"
+  },
+  "supportedPlatforms": {
+    "heading": "Supported Platforms",
+    "platforms": [
+      {
+        "name": "Web",
+        "image": "/img/supported-platforms/web.svg"
+      },
+      {
+        "name": "Windows",
+        "image": "/img/supported-platforms/windows.svg"
+      },
+      {
+        "name": "MacOS",
+        "image": "/img/supported-platforms/macos.svg"
+      },
+      {
+        "name": "iOS",
+        "image": "/img/supported-platforms/ios.svg"
+      },
+      {
+        "name": "Android",
+        "image": "/img/supported-platforms/android.svg"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is multi-user accounting software?",
+      "answer": "Multi-user accounting software for business enables multiple team members to access and collaborate on financial data in real time, ensuring smooth workflows and up-to-date information across departments."
+    },
+    {
+      "question": "Can I assign specific access to team members?",
+      "answer": "Yes, Giddh allows you to assign custom access to team members based on roles. You can restrict access to specific accounting modules to maintain control and security."
+    },
+    {
+      "question": "How secure is the data shared in Giddh?",
+      "answer": "Giddh uses advanced encryption and secure cloud accounting software storage to protect your financial data. The software also offers role-based access and time-limited sharing links for added security."
+    },
+    {
+      "question": "Is Giddh compliant with GST?",
+      "answer": "Yes, Giddh is fully GST-compliant. It automatically calculates taxes and generates GST-ready reports, making tax filing easier for businesses in India."
+    },
+    {
+      "question": "How many users can Giddh support?",
+      "answer": "Giddh supports unlimited users. You can add as many team members as needed and assign appropriate access, making it scalable for businesses of all sizes."
+    },
+    {
+      "question": "Is there any accounting software that allows multiple users?",
+      "answer": "Yes, many accounting software solutions support multiple users. Giddh is a powerful, multi-user platform that enables seamless collaboration, providing customized access and real-time data sharing across teams."
+    }
+  ]
+}
