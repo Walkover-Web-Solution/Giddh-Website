@@ -24,7 +24,7 @@ export default function CTA({ compData, hasImage }) {
           </p>
           <div className={`${!hasImage && "d-flex justify-content-center"}`}>
             {compData?.buttons?.map((button, index) => (
-              <a href={button.link} target="_blank">
+              <a href={button.link}>
                 <button
                   key={index}
                   onClick={() =>
@@ -41,6 +41,19 @@ export default function CTA({ compData, hasImage }) {
                 </button>
               </a>
             ))}
+            {compData?.seeGiddhInActionButton && (
+              <button
+                onClick={() =>
+                  document.getElementById("SeeGiddhInAction")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  })
+                }
+                className={`btn-white btn flex items-center`}
+              >
+               See Giddh In Action <MdArrowForward />
+              </button>
+            )}
           </div>
         </div>
         {hasImage && (

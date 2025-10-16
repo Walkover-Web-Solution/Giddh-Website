@@ -11,7 +11,7 @@ export default function GiddhFor({ compData }) {
       <div className="container px-3 d-flex flex-column gap-3">
         <div className="text-center d-flex flex-column gap-2">
           <h2 className="garmond-font font-sub-heading">{compData.heading}</h2>
-          <p className="mb-3 mb-md-4 w-100 w-md-75 font-sm mx-auto px-3">
+          <p className="mb-3 mb-md-4 w-100 w-md-75 font-sm mx-auto px-3 d-none d-md-block">
             {compData.subheading}
           </p>
         </div>
@@ -79,8 +79,8 @@ export default function GiddhFor({ compData }) {
                 <div className="col-12 col-lg-6 order-2 order-lg-1">
                   <div className="d-flex justify-content-center">
                     <Image
-                      width={500}
-                      height={500}
+                      width={400}
+                      height={300}
                       src={item.image}
                       className={`${style.image} rounded`}
                       alt={item?.name}

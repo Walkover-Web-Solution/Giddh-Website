@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer
-      className={`d-flex align-items-center bg-light-blue`}
+      className={`d-flex align-items-center bg-extra-light-blue`}
     >
       <div className="container py-5">
         <div className="d-flex align-items-center justify-content-center">

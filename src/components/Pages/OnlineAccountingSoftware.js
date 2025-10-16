@@ -15,7 +15,7 @@ export default function OnlineAccountingSoftware({ pageData }) {
     <>
       <PopUp />
       <SplitBanner compData={pageData?.splitBanner} />
-      <Stats stats={pageData?.stats} />
+      {/* <Stats stats={pageData?.stats} /> */}
       <ToggleFeatures features={pageData?.toggleFeatures} />
       <WhyGiddh compData={pageData?.whyGiddh} />
       <CTA hasImage={true} compData={pageData?.cta} />
