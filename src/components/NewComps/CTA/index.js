@@ -8,7 +8,7 @@ export default function CTA({ compData, hasImage }) {
         compData?.theme === "light"
           ? "bg-accent-light font-dark"
           : "bg-accent font-white outfit-font"
-      } py-5 ${hasImage && "pb-md-0"} text-center text-md-start`}
+      } py-5 ${hasImage ? "pb-md-0" : ""} text-center text-md-start`}
     >
       <div className={`container ${hasImage ? "d-flex" : ""}`}>
         <div className="d-flex justify-content-center flex-column">
@@ -24,7 +24,7 @@ export default function CTA({ compData, hasImage }) {
           </p>
           <div className={`${!hasImage && "d-flex justify-content-center"}`}>
             {compData?.buttons?.map((button, index) => (
-              <a href={button.link} target="_blank">
+              <a href={button.link}>
                 <button
                   key={index}
                   onClick={() =>
@@ -35,12 +35,25 @@ export default function CTA({ compData, hasImage }) {
                         block: "center",
                       })
                   }
-                  className={`${button?.type} px-5 py-2 font-xl btn flex items-center`}
+                  className={`${button?.type} px-5 py-2 btn flex items-center`}
                 >
                   {button.text} {button.arrow && <MdArrowForward />}
                 </button>
               </a>
             ))}
+            {compData?.seeGiddhInActionButton && (
+              <button
+                onClick={() =>
+                  document.getElementById("SeeGiddhInAction")?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  })
+                }
+                className={`btn-white btn flex items-center`}
+              >
+               See Giddh In Action <MdArrowForward />
+              </button>
+            )}
           </div>
         </div>
         {hasImage && (

@@ -140,14 +140,8 @@
   "cta": {
     "heading": "Tired Of Overpriced Accounting Software With Limited Features?",
     "subheading": "Get an advanced, affordable solution with Giddh!",
-    "buttons": [
-      {
-        "text": "Switch To Giddh Now",
-        "link": "/signup",
-        "type": "btn-secondary-outline",
-        "arrow": true
-      }
-    ],
+    "seeGiddhInActionButton": true,
+
     "image": "/img/girl-avatar.svg"
   },
   "giddhFor": {

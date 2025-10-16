@@ -62,9 +62,7 @@ export default function ToggleFeatures({ features }) {
                         {features[expandedFeature].description}
                       </p>
                     </div>
-                    <button
-                      className={`mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 bg-grey-faded cursor-pointer c-fw-600 c-fs-5`}
-                    >
+                    <button className="mx-auto d-flex align-items-center justify-content-center gap-2 border border-white rounded-3 px-4 py-2 bg-grey-faded cursor-pointer font-600 font-md">
                       <div>
                         {Icon && <Icon size={18} className="font-white" />}
                       </div>
@@ -117,11 +115,11 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
       } cursor-pointer`}
     >
       <div className="d-flex align-items-center gap-2" onClick={handleToggle}>
-        <div className="border border-color-primary p-2 bg-light-blue rounded d-flex align-items-center justify-content-center">
+        <div className="border border-color-primary p-2 bg-extra-light-blue rounded d-flex align-items-center justify-content-center">
           {Icon && <Icon size={18} className="font-primary" />}
         </div>
         <h3
-          className={`font-primary font-600 font-md m-0 ${
+          className={`font-primary font-md m-0 ${
             isExpanded ? "font-white" : ""
           }`}
         >
@@ -151,7 +149,7 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
               feature.content.length > 0 &&
               feature.content.map((point, pointIndex) => (
                 <li className="d-flex gap-2 font-md" key={pointIndex}>
-                  <MdCircle className="font-accent mt-2" fontSize={7} /> {point}
+                  <MdCircle className="font-white mt-2" fontSize={7} /> {point}
                 </li>
               ))}
           </ul>

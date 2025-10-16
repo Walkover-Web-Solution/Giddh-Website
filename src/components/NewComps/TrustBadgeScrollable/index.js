@@ -44,21 +44,38 @@ export default function TrustBadgeScrollable({ compData }) {
             className="d-inline-flex align-items-center gap-4"
             ref={scrollRef}
           >
-            {trustBadgeBrands?.length > 0 && trustBadgeBrands?.map((logo, index) => (
-              <a key={index} href={logo?.href} target="_blank" rel="noreferrer">
-                <Image src={logo?.src} alt={logo?.alt} width={100} height={40} />
-              </a>
-            ))}
-            {trustBadgeBrands?.length > 0 && trustBadgeBrands?.map((logo, index) => (
-              <a
-                key={`dup-${index}`}
-                href={logo?.href}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Image src={logo?.src} alt={logo?.alt} width={100} height={40} />
-              </a>
-            ))}
+            {trustBadgeBrands?.length > 0 &&
+              trustBadgeBrands?.map((logo, index) => (
+                <a
+                  key={index}
+                  href={logo?.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    src={logo?.src}
+                    alt={logo?.alt}
+                    width={100}
+                    height={40}
+                  />
+                </a>
+              ))}
+            {trustBadgeBrands?.length > 0 &&
+              trustBadgeBrands?.map((logo, index) => (
+                <a
+                  key={`dup-${index}`}
+                  href={logo?.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={logo?.src}
+                    alt={logo?.alt}
+                    width={100}
+                    height={40}
+                  />
+                </a>
+              ))}
           </div>
           <div
             className={`${styles.startFade} position-absolute top-0 bottom-0 left-0 z-2`}

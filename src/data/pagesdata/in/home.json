@@ -57,7 +57,7 @@
       },
       {
         "heading": "Anytime, Anywhere, and on Any Device",
-        "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
+        "img": "/img/home-page/anytime_anywhere_and_on_any_device.webp",
         "description": "Access and manage your finances seamlessly, whether you're on your desktop, Android, or iOS device",
         "more_content": [
           "Cloud-based access across devices.",
@@ -341,17 +341,17 @@
       }
     ]
   },
-  "ctaTwo" : {
+  "ctaTwo": {
     "heading": "We Ensure Money-back Guarantee",
-    "theme" : "light",
-        "buttons": [
-          {
-            "text": "Schedule a Demo",
-            "link": "/online-accounting-software",
-            "type": "btn-primary-outline"
-          }
-        ]
-      },
+    "theme": "light",
+    "buttons": [
+      {
+        "text": "Schedule a Demo",
+        "link": "/online-accounting-software",
+        "type": "btn-primary-outline"
+      }
+    ]
+  },
   "benefits": [
     {
       "cols": 3,
@@ -411,19 +411,6 @@
         "type": "btn-secondary-outline"
       }
     ]
-  },
-  "pricing": {
-    "heading": "Transparent Pricing for Every Business",
-    "subheading": "Just straightforward plans to help your business grow with Giddh’s accounting software.",
-    "image": "/img/home-page/transparent-pricing-for-every-business.svg",
-    "footer": {
-      "heading": "We Ensure Money-Back Guarantee",
-      "subheading": "If you are not satisfied with Giddh’s accounting software, we will refund your money within 90 days.",
-      "button": {
-        "text": "Schedule a Demo",
-        "link": "/online-accounting-software"
-      }
-    }
   },
   "faqs": [
     {

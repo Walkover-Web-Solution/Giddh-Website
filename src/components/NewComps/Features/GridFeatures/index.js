@@ -9,7 +9,7 @@ export default function GridFeatures({ features }) {
           <h2 className="text-center font-heading font-primary">
             {features?.heading}
           </h2>
-          <p className="text-center font-md font-sub-heading font-slate-grey">
+          <p className="text-center font-md font-slate-grey">
             {features?.subHeading}
           </p>
         </div>
