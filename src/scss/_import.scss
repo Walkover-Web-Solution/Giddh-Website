@@ -1,8 +1,7 @@
+@use 'mixins' as *;
 @import 'reset';
 @import 'text';
 @import 'var';
-@import 'mixins';
-
 // SCSS Components
 @import 'scsscomps/navbar';
 @import 'scsscomps/feature-gallery';

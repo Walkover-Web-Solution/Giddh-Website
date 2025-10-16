@@ -154,7 +154,27 @@ body {
       outline: var(--col-white) !important;
     }
   }
-  
+  &.btn-white {
+    background: var(--col-white) !important;
+    color: var(--col-primary) !important;
+    outline: var(--col-primary) !important;
+    border: var(--col-primary) !important;
+    &:hover {
+      background: var(--col-primary) !important;
+      color: var(--col-white) !important;
+      outline: var(--col-white) !important;
+    }
+    &-outline {
+      background: transparent;
+      border: 1px solid var(--col-white) !important;
+      color: var(--col-white) !important;
+      outline: var(--col-white) !important;
+      &:hover {
+        background: var(--col-white);
+        color: var(--col-primary) !important;
+      }
+    }
+  }
 }
 
 //custom SCSS
@@ -181,15 +201,6 @@ body {
 
 .content-width {
   max-width: var(--w-max-content);
-}
-
-.bg {
-  &-accent {
-    background-color: var(--col-primary);
-  }
-  &-light-blue {
-    background-color: var(--col-extra-light-blue);
-  }
 }
 
 //Custom Classes

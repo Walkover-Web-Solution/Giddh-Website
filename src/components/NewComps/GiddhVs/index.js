@@ -29,7 +29,7 @@ export default function GiddhVs({ giddhVs }) {
                     key={column.key}
                     className={`col px-3 py-3 border-end ${
                       index === 0
-                        ? "bg-light-blue border-accent border-4 border-top border-start rounded-top-4"
+                        ? "bg-extra-light-blue border-accent border-4 border-top border-start rounded-top-4"
                         : ""
                     }`}
                   >
@@ -60,7 +60,7 @@ export default function GiddhVs({ giddhVs }) {
                       key={column.key}
                       className={`col px-3 py-4 font-sm border-end ${
                         colIndex === 0
-                          ? "bg-light-blue border-accent border-4 border-start"
+                          ? "bg-extra-light-blue border-accent border-4 border-start"
                           : ""
                       } ${
                         rowIndex === giddhVs.content.length - 1 &&
