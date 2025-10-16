@@ -1,0 +1,348 @@
+{
+  "splitBanner": {
+    "heading": "India’s Smartest Online Invoicing Software to Simplify Billing",
+    "subHeading": "Send professional GST-compliant invoices in seconds. Save time and boost productivity with smart, cloud-based invoicing.",
+    "image": "/img/invoice-software/invoice-software.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "stats": {
+    "heading": "Giddh Success Metrics",
+    "stats": [
+      {
+        "value": "4.8/5",
+        "label": "Average User Rating"
+      },
+      {
+        "value": "85%",
+        "label": "Improvement in Financial Visibility"
+      },
+      {
+        "value": "100%",
+        "label": "Data Security & Uptime Guarantee"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Experience Hassle-Free Invoicing With Giddh’s Online Invoicing Software.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-primary-outline"
+      }
+    ],
+    "theme": "light"
+  },
+  "features": {
+    "heading": "Why Choose Giddh for Invoicing?",
+    "subHeading": "Simplify GST billing and business management with an all-in-one cloud invoicing platform built for Indian businesses.",
+    "content": [
+      {
+        "heading": "Cloud Storage for Your Data Synced",
+        "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
+        "description": "All your financial data, invoices, and reports are securely synced in the cloud.",
+        "more_content": [
+          "Auto-sync across devices and users",
+          "No need for local backups",
+          "Easy data recovery options"
+        ]
+      },
+      {
+        "heading": "Anytime, Anywhere, and on Any Device",
+        "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
+        "description": "Access and manage your finances seamlessly, whether you're using your desktop, Android, or iOS device.",
+        "more_content": [
+          "Cloud-based access across devices.",
+          "Access real-time financial data.",
+          "Track sales and send invoices."
+        ]
+      },
+      {
+        "heading": "24x7 Customer Support",
+        "img": "/img/home-page/24-7-customer-support.svg",
+        "description": "Get expert assistance whenever you need it.",
+        "more_content": [
+          "Support via chat, email, and phone",
+          "Quick query resolution for uninterrupted work",
+          "Dedicated onboarding support for new users"
+        ]
+      },
+      {
+        "heading": "Track Your Business Performance in Real-Time",
+        "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
+        "description": "Monitor your invoicing, payments, and financial health at a glance.",
+        "more_content": [
+          "Get instant insights on paid vs pending invoices",
+          "View sales trends and revenue breakdowns",
+          "Make faster decisions with up-to-date data"
+        ]
+      },
+      {
+        "heading": "Invoicing Solution that Saves Time",
+        "img": "/img/home-page/invoicing-solution-that-saves-time.svg",
+        "description": "Automate repetitive billing tasks and reduce manual effort.",
+        "more_content": [
+          "Automate repetitive billing tasks and reduce manual effort.",
+          "Set recurring invoices to avoid repetition",
+          "Use templates to minimize manual input"
+        ]
+      },
+      {
+        "heading": "Easily Secure Data in the Cloud",
+        "img": "/img/home-page/seamless-gst-compliance.svg",
+        "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
+        "more_content": [
+          "Encrypted data storage",
+          "Prevent data loss.",
+          "Top industry security standards"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore Features",
+        "link": "/all-features"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Core Features of Giddh’s Cloud Invoicing Software India",
+    "subHeading": "Giddh is your go-to invoicing and accounting software India trusts for faster billing and more innovative financial management.",
+    "cards": [
+      {
+        "heading": "Create & Send Professional Invoices Instantly",
+        "description": "Generate invoices in seconds and maintain complete control over invoice formatting.",
+        "more_content": [
+          "Customizable invoice numbers",
+          "Lock finalized invoices."
+        ]
+      },
+      {
+        "heading": "Barcode-Enabled Billing",
+        "description": "Speed up billing by scanning products directly, reducing human errors and saving time.",
+        "more_content": ["Scan products directly.", "Eliminate manual errors."]
+      },
+      {
+        "heading": "Effortless GST Invoicing",
+        "description": "Simplify tax compliance with auto-GST application tailored for Indian businesses.",
+        "more_content": [
+          "Automatically apply correct GST based on client’s state.",
+          "Supports CGST, SGST, IGST",
+          "Built-in logic for error-free tax classification"
+        ]
+      },
+      {
+        "heading": "Taxes Made Easy",
+        "description": "Stay compliant with all applicable tax formats, including those beyond GST.",
+        "more_content": [
+          "Add TDS and TCS seamlessly",
+          "Create and manage custom tax rules",
+          "Ensure complete transparency in taxation"
+        ]
+      },
+      {
+        "heading": "Multi-Currency & International Billing",
+        "description": "Effortlessly handle global transactions with real-time currency conversion.",
+        "more_content": [
+          "Auto currency conversion.",
+          "Ideal for export-based businesses."
+        ]
+      },
+      {
+        "heading": "Send Invoices via WhatsApp, Email, SMS",
+        "description": "Deliver invoices instantly across multiple channels for better client communication.",
+        "more_content": [
+          "Faster communication.",
+          "Real-time delivery tracking."
+        ]
+      },
+      {
+        "heading": "Recurring & Automated Invoicing",
+        "description": "Automate regular billing cycles and follow-ups to ensure timely payments.",
+        "more_content": ["Set schedules.", "Auto-reminders for payments."]
+      },
+      {
+        "heading": "Invoice Import, Export, & Bulk Edit",
+        "description": "Easily manage large invoice volumes with Excel import and batch updates.",
+        "more_content": ["Excel import.", "Bulk update or delete."]
+      },
+      {
+        "heading": "Generate Multiple & Compound Invoices",
+        "description": "Create flexible invoice formats tailored to your specific transaction needs.",
+        "more_content": [
+          "Multiple invoices from recorded entries.",
+          "Create compound invoices easily.",
+          "Great for consolidated client billing."
+        ]
+      },
+      {
+        "heading": "Run Your Business with Full Automation",
+        "description": "Let automation handle repetitive tasks so you can focus on growth.",
+        "more_content": [
+          "Set recurring invoices.",
+          "Automate payment reminders.",
+          "Reduce manual follow-ups and human error."
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Hear how we’ve made a difference",
+    "subheading": " Stories that inspire us to keep delivering our best.",
+    "data": [
+      {
+        "company": "Sinead North",
+        "owner": "Christian Schiel",
+        "testimonial": "Giddh is a great solution to manage customers and invoices internationally. The multi-currency option makes it very convenient, and generating invoices is simple and quick. I can also easily manage VAT reports in the UK. The support team is patient, understands the challenges we face, and resolves them effectively."
+      },
+      {
+        "company": "Dvara e-registry",
+        "owner": "Priyanshi Priya",
+        "testimonial": "Giddh is an excellent platform for managing multiple companies seamlessly. It allows me to handle different businesses in real time, all in one place. Switching between companies is incredibly fast and effortless, making the entire process smooth and efficient."
+      },
+      {
+        "company": "Teknoworth Medical Care OPC Pvt Ltd",
+        "owner": "Imran",
+        "testimonial": "Giddh is the most reliable application for inventory management in both India and the UAE. Managing data is effortless, and the mobile app works flawlessly, ensuring smooth operations anytime, anywhere."
+      },
+      {
+        "company": "Shruti Corporation",
+        "owner": "Shruti",
+        "testimonial": "Giddh is one of the easiest ledger-based accounting systems I’ve used. Creating ledger entries is quick and effortless, making it truly ready to go. Even someone without a strong accounting background can easily manage and run their business with it."
+      },
+      {
+        "company": "PI Green Consulting Pvt Ltd",
+        "owner": null,
+        "testimonial": "The application works seamlessly, allowing multiple users to access it in real time without any limits or lags. Multi-login functionality is effortless, making collaboration smooth and efficient."
+      },
+      {
+        "company": "Synergene Global",
+        "owner": "Manish Badonia",
+        "testimonial": "The support team is excellent, and the latest version of Giddh comes packed with powerful features. Giddh can be accessed from anywhere with just an internet connection, making it highly convenient and reliable."
+      },
+      {
+        "company": "Attic India",
+        "owner": "Kuldeep",
+        "testimonial": "The inventory reports work brilliantly. Creating parent and child groups is simple and effective, allowing the inventory to be organized and bifurcated properly for better clarity."
+      },
+      {
+        "company": "Karuna Temp System Private Limited",
+        "owner": "Rohan Pavithran",
+        "testimonial": "Giddh’s estimates and proforma invoices work seamlessly. We can create proformas and easily convert them into invoices, tracking their status as paid, unpaid, or partially paid. Automated WhatsApp messages and email notifications after creating vouchers significantly reduce manual effort."
+      },
+      {
+        "company": "Dental Designs",
+        "owner": "Dr Gins Paul",
+        "testimonial": "Giddh offers multiple types of invoices, including cash and sales invoices, making billing flexible and convenient. The dashboard provides a clear summary of the business’s health on a single screen, helping us instantly understand where we stand on any given day."
+      },
+      {
+        "company": "Taurus Lifestyle",
+        "owner": "Kunal",
+        "testimonial": "The inventory module in Giddh is extremely powerful. Its variant creation feature allows multiple variants for a single item, which is very helpful for detailed inventory management. The barcode scanning feature further completes the requirements, making the process fast and efficient."
+      },
+      {
+        "company": "M/S STUDIO47",
+        "owner": null,
+        "testimonial": "Giddh provides a wide range of reports including financial statements, daybook, sales and purchase registers, inventory reports, and GST reports. Having all these reports in one place makes managing business insights simple and efficient."
+      },
+      {
+        "company": "SP Wellness",
+        "owner": null,
+        "testimonial": "Support connects positively when needed. The ledger accounting module makes it easy to create entries; I can easily manage my expenses by creating the accounts and making entries there."
+      },
+      {
+        "company": "The Medicity",
+        "owner": null,
+        "testimonial": "With Giddh, managing bank accounts is simple and hassle-free. Incomes and expenses can be tracked directly, and the built-in GST filing option makes compliance much easier. It’s truly a great all-in-one solution."
+      },
+      {
+        "company": "Mitti [Organic. Fresh. Desi]",
+        "owner": "Ankita Chadha",
+        "testimonial": "The inventory management helps in restaurant management and the branch creation helps to manage multiple branches under a single platform. It helps to see the branch profiles along with the warehouses."
+      }
+    ]
+  },
+  "trustBadgeBrands": {
+    "title": "Trusted By Industry Leaders",
+    "description": "See who’s talking about us and why businesses trust us around the globe."
+  },
+  "ctaTwo": {
+    "heading": "Start Invoicing Smarter With Giddh’s Free Cloud-Based Invoicing And Accounting Software In India.",
+    "image": "/img/girl-avatar.svg",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-tertiary"
+      }
+    ],
+    "theme": "light"
+  },
+  "clients": {},
+  "supportedPlatforms": {
+    "heading": "Supported Platforms",
+    "platforms": [
+      {
+        "name": "Web",
+        "image": "/img/supported-platforms/web.svg"
+      },
+      {
+        "name": "Windows",
+        "image": "/img/supported-platforms/windows.svg"
+      },
+      {
+        "name": "MacOS",
+        "image": "/img/supported-platforms/macos.svg"
+      },
+      {
+        "name": "iOS",
+        "image": "/img/supported-platforms/ios.svg"
+      },
+      {
+        "name": "Android",
+        "image": "/img/supported-platforms/android.svg"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Does Giddh software support recurring invoicing?",
+      "answer": "Yes, Giddh lets you create and automate recurring invoices for clients on a fixed billing cycle."
+    },
+    {
+      "question": "Are my invoices secure in the Giddh Cloud Invoicing Software?",
+      "answer": "Absolutely. Giddh utilises encrypted cloud storage with role-based access to ensure that your invoice data remains secure."
+    },
+    {
+      "question": "Are there different template options for the invoices?",
+      "answer": "Yes, Giddh offers multiple invoice templates you can customize to match your business branding."
+    },
+    {
+      "question": "Will my invoices look professional?",
+      "answer": "Yes, Giddh generates clean, branded, and GST-compliant invoices designed to look professional and client-ready."
+    },
+    {
+      "question": "How can I create estimates/proformas and convert them to invoices in Giddh?",
+      "answer": "You can create estimates or pro forma invoices in Giddh and convert them into final invoices with a single click—no data re-entry is required."
+    },
+    {
+      "question": "Which is the best free invoicing software?",
+      "answer": "Giddh is among the best free invoicing software options in India, offering GST support, automation, and cloud access at zero cost."
+    },
+    {
+      "question": "How do I calculate taxes on my invoices?",
+      "answer": "Giddh automatically applies the correct GST, TCS, or TDS based on your settings and client’s state—ensuring tax accuracy on every invoice."
+    }
+  ]
+}

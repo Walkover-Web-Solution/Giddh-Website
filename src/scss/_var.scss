@@ -2,7 +2,6 @@
   --heading: 48px;
   --sub-heading: 32px;
   --small-heading: 20px;
-
   --c-fs-1: 32px;
   --c-fs-2: 28px;
   --c-fs-3: 24px;
@@ -10,34 +9,9 @@
   --c-fs-5: 16px;
   --c-fs-6: 14px;
   --c-fs-7: 12px;
-
+  //Font Weight
   --c-fw-400: 400;
   --c-fw-600: 600;
-
-  --col-primary: #1b1f6d;
-  --col-dark: #1c1c1c;
-  --col-grey: #343a40;
-  --col-grey-faded: #767676;
-  --dark-grey: #656565;
-  --col-dark-light: #707070;
-  --col-light: #f8f9fa;
-  --col-white: #ffffff;
-  --col-blue: #4B55C2;
-  --col-success: #28a745;
-  --col-danger: #dc3545;
-  --col-grey-deep: #6c757d;
-  --col-light-gray: #e7e8ea;
-  --col-light-green: #e6fff5;
-  --col-baby-pink: #ffe5e8;
-  --col-light-blue: #b9d1fd;
-  --col-soft-blue: #d2d8ff;
-  --col-faded-blue: #E9ECFF;
-  --col-light-golden: #f9dcae;
-  --col-extra-light-blue: #F5F6FF;
-
-
-
-
   //Content Width
   --w-max-content: 900px;
   --nav-height: 54px;
@@ -56,13 +30,4 @@
     --c-fs-6: 12px;
     --c-fs-7: 10px;
   }
-}
-
-// new vars
-
-:root{
-  --new-heading: 48px;
-  --new-sub-heading: 48px;
-  --new-base-2: 28px;
-
 }

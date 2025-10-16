@@ -1,0 +1,29 @@
+import StackedBanner from "@/components/NewComps/Banner/StackedBanner";
+import Stats from "@/components/NewComps/Stats";
+import AlternateFeatures from "@/components/NewComps/Features/AlternateFeatures";
+import TrustBadgeScrollable from "@/components/NewComps/TrustBadgeScrollable";
+import FeedbackCards from "@/components/NewComps/FeedbackCards";
+import Industries from "@/components/NewComps/Industries";
+import Benefits from "@/components/NewComps/Benefits";
+import CTA from "@/components/NewComps/CTA";
+import GiddhVs from "@/components/NewComps/GiddhVs";
+import FAQs from "@/components/NewComps/FAQs";
+
+export default function Home({ pageData }) {
+  return (
+    <>
+      <StackedBanner compData={pageData?.stackedBanner} />
+      <Stats stats={pageData?.stats} />
+      <AlternateFeatures features={pageData?.features} />
+      <TrustBadgeScrollable compData={pageData?.trustBadgeBrands} />
+      <CTA hasImage={false} compData={pageData?.cta} />
+      <GiddhVs giddhVs={pageData?.giddhVs} />
+      <CTA compData={pageData?.ctaTwo} />
+      <Industries giddhIndustries={pageData?.giddhIndustries} />
+      <FeedbackCards testimonials={pageData?.testimonials} />
+      <Benefits benefits={pageData?.benefits} />
+      <CTA hasImage={false} compData={pageData?.ctaThree} />
+      <FAQs faqs={pageData?.faqs} />
+    </>
+  );
+}

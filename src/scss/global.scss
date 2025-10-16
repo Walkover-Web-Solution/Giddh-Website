@@ -112,14 +112,46 @@ body {
     &:hover {
       background: var(--col-dark);
     }
+    &-outline {
+      background: transparent;
+      border: 1px solid var(--col-primary) !important;
+      color: var(--col-primary) !important;
+      &:hover {
+        background: var(--col-primary);
+        color: var(--col-white) !important;
+      }
+    }
   }
   &.btn-secondary {
-    background: var(--col-light-blue);
+    background: var(--col-white) !important;
     color: var(--col-primary);
     outline: var(--col-primary) !important;
     border: var(--col-primary) !important;
     &:hover {
-      background: var(--col-dark);
+      background: var(--col-primary) !important;
+      color: var(--col-white) !important;
+      outline: var(--col-white) !important;
+    }
+    &-outline {
+      background: transparent;
+      border: 1px solid var(--col-white) !important;
+      color: var(--col-white) !important;
+      outline: var(--col-white) !important;
+      &:hover {
+        background: var(--col-white);
+        color: var(--col-primary) !important;
+      }
+    }
+  }
+  &.btn-tertiary {
+    background: transparent;
+    color: var(--col-primary) !important;
+    border: 1px solid var(--col-primary) !important;
+    outline: var(--col-primary) !important;
+    &:hover {
+      background: var(--col-primary);
+      color: var(--col-white) !important;
+      outline: var(--col-white) !important;
     }
   }
   
@@ -151,15 +183,6 @@ body {
   max-width: var(--w-max-content);
 }
 
-.bg {
-  &-accent {
-    background-color: var(--col-primary);
-  }
-  &-light-blue {
-    background-color: var(--col-extra-light-blue);
-  }
-}
-
 //Custom Classes
 .w-fit-content {
   width: fit-content !important;
@@ -187,5 +210,29 @@ body {
   &.border-end {
     border-color: var(--col-primary) !important;
   }
+}
+.left-0 {
+  left: 0;
+}
 
+.right-0 {
+  right: 0;
+}
+
+.overflow-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+// new classes
+
+.gradient-primary {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    var(--col-soft-blue) 0%,
+    var(--col-white) 100%
+  ) !important;
+}
+
+.padding-nav {
+  padding-top: var(--nav-height) !important;
 }

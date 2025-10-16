@@ -34,6 +34,8 @@ export const trustBadgeBrands = [
 ];
 
 export default function TrustBadge() {
+  if (!trustBadgeBrands?.length) return null;
+
   return (
     <section className="container section_py d-flex flex-column gap-4">
       <div className="d-flex flex-column text-center content-width mx-auto">
@@ -54,7 +56,7 @@ export default function TrustBadge() {
           alt="Trust Reef"
           src="img/trust-badge/wheat-frame-left.svg"
         />
-        {trustBadgeBrands?.map((logo, index) => (
+        {trustBadgeBrands.map((logo, index) => (
           <a
             key={index}
             href={logo.href}

@@ -14,7 +14,7 @@ export default function BookFreeDemoForm({
   hiddenAbsolute,
   location,
   heading,
-  verticalFileds
+  verticalFields
 }) {
   const [formData, setFormData] = useState(initialFormState);
   const [error, setError] = useState("");
@@ -71,7 +71,7 @@ export default function BookFreeDemoForm({
             formData={formData}
             handleChange={handleChange}
             error={error}
-            verticalFileds={verticalFileds}
+            verticalFields={verticalFields}
           />
           <button
             type="submit"
@@ -102,7 +102,7 @@ export default function BookFreeDemoForm({
           </div>
         ) : (
           <div
-            className={`${style.absolute_form_container} bg-light-blue p-4 d-flex gap-2 flex-column align-items-center justify-content-center rounded`}
+            className={`${style.absolute_form_container} bg-extra-light-blue p-4 d-flex gap-2 flex-column align-items-center justify-content-center rounded`}
           >
             <div className="d-flex align-items-center justify-content-center flex-column gap-3 w-100">
               <div className="d-flex justify-content-between align-items-center w-100">
@@ -146,7 +146,7 @@ export default function BookFreeDemoForm({
         ))}
 
       <div
-        className={`${style.form_container} w-100 bg-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}
+        className={`${style.form_container} w-100 bg-extra-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}
       >
         <div className="d-flex align-items-center  justify-content-center flex-column gap-3 w-100">
           <p className="col-primary c-fw-600 mb-0 c-fs-3">
@@ -161,7 +161,7 @@ export default function BookFreeDemoForm({
               formData={formData}
               handleChange={handleChange}
               error={error}
-              verticalFileds={verticalFileds}
+              verticalFields={verticalFields}
             />
             <button
               type="submit"
@@ -180,11 +180,11 @@ export default function BookFreeDemoForm({
   );
 }
 
-function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds }) {
+function FormFields({ formData, handleChange, error, isAbsolute, verticalFields }) {
   return (
     <div className="w-100 gap-4 d-flex flex-column">
       <div
-        className={`d-flex m-0 gap-4 flex-column  ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
+        className={`d-flex m-0 gap-4 flex-column  ${isAbsolute || verticalFields ? "flex-column" : "flex-md-row"
           }`}
       >
         <div className="w-100">
@@ -213,7 +213,7 @@ function FormFields({ formData, handleChange, error, isAbsolute, verticalFileds 
         </div>
       </div>
       <div
-        className={`d-flex m-0 gap-4 flex-column mb-3 ${isAbsolute || verticalFileds ? "flex-column" : "flex-md-row"
+        className={`d-flex m-0 gap-4 flex-column mb-3 ${isAbsolute || verticalFields ? "flex-column" : "flex-md-row"
           }`}
       >
         <div className="w-100">

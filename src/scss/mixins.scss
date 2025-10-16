@@ -1,0 +1,118 @@
+// Mixin for generating font-size classes with responsive values
+@mixin generate-font-classes($prefix, $sizes, $mobile-sizes: null) {
+  // Generate CSS custom properties in :root
+  :root {
+    @each $key, $value in $sizes {
+      --font-#{$key}: #{$value};
+    }
+
+    // Generate mobile media query if mobile sizes are provided
+    @if $mobile-sizes {
+      @media (max-width: 768px) {
+        @each $key, $mobile-value in $mobile-sizes {
+          --font-#{$key}: #{$mobile-value};
+        }
+      }
+    }
+  }
+
+  // Generate utility classes
+  @each $key, $value in $sizes {
+    .#{$prefix}-#{$key} {
+      @if $mobile-sizes and map-has-key($mobile-sizes, $key) {
+        font-size: var(
+          --font-#{$key}
+        ) !important; // #{$value} / #{map-get($mobile-sizes, $key)}
+      } @else {
+        font-size: var(--font-#{$key}, #{$value}) !important; // #{$value}
+      }
+    }
+  }
+}
+
+// Generate font classes using new mixin with responsive values
+@include generate-font-classes(
+  "font",
+  (
+    xs: 12px,
+    sm: 14px,
+    rg: 16px,
+    md: 20px,
+    lg: 24px,
+    xl: 32px,
+    xxl: 36px,
+    sub-heading: 36px,
+    heading: 48px,
+  ),
+  (
+    md: 18px,
+    lg: 20px,
+    xl: 24px,
+    xxl: 28px,
+    sub-heading: 28px,
+    heading: 36px,
+  )
+);
+
+// Universal color mixin for generating root variables and utility classes
+@mixin generate-color-utilities($colors) {
+  // Generate CSS custom properties in :root
+
+  :root {
+    @each $key, $value in $colors {
+      --col-#{$key}: #{$value};
+    }
+  }
+
+  // Generate font color classes with 'font-' prefix
+  @each $key, $value in $colors {
+    .font-#{$key} {
+      color: var(--col-#{$key}, #{$value}) !important; // #{$value}
+    }
+  }
+
+  // Generate background color classes with 'bg-' prefix
+  @each $key, $value in $colors {
+    .bg-#{$key} {
+      background-color: var(--col-#{$key}, #{$value}) !important; // #{$value}
+    }
+  }
+
+  // Generate border color classes with 'border-' prefix
+  @each $key, $value in $colors {
+    .border-#{$key} {
+      border-color: var(--col-#{$key}, #{$value}) !important; // #{$value}
+    }
+  }
+}
+
+// Color values map
+$color-values: (
+  primary: #1b1f6d,
+  accent: var(--col-primary),
+  dark: #1c1c1c,
+  grey: #343a40,
+  grey-faded: #767676,
+  dark-grey: #656565,
+  dark-light: #707070,
+  light: #f8f9fa,
+  white: #fff,
+  blue: #4b55c2,
+  success: #28a745,
+  danger: #dc3545,
+  grey-deep: #6c757d,
+  light-gray: #e7e8ea,
+  light-green: #e6fff5,
+  baby-pink: #ffe5e8,
+  light-blue: #b9d1fd,
+  soft-blue: #d2d8ff,
+  faded-blue: #e9ecff,
+  light-golden: #f9dcae,
+  extra-light-blue: #f5f6ff,
+  slate-grey: #3f4346,
+  accent-light: #E2E6FF,
+  dark-100: #212528,
+);
+
+// Generate all color utilities
+@include generate-color-utilities($color-values);
