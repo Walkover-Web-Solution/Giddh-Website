@@ -1,6 +1,7 @@
 import BookFreeDemoForm from "../../BookFreeDemoForm";
 import { trustBadgeBrands } from "../../TrustBadge";
 import Image from "next/image";
+import style from "./SplitBanner.module.scss";
 
 export default function SplitBanner({ compData }) {
   return (
@@ -70,6 +71,7 @@ export default function SplitBanner({ compData }) {
                   <Image
                     src={logo.src}
                     alt={logo.alt}
+                    className={`${style.icons} img-fluid`}
                     width={100}
                     height={40}
                   />
