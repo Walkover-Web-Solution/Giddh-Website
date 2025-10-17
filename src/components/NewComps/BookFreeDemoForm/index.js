@@ -87,7 +87,7 @@ export default function BookFreeDemoForm({
 
   return (
     <>
-      {!hiddenAbsolute &&
+      {/* {!hiddenAbsolute &&
         (!showAbsoluteModal ? (
           <div
             className={`${style.bookdemo_btn_cont} d-flex align-items-end justify-content-end`}
@@ -175,7 +175,7 @@ export default function BookFreeDemoForm({
             </button>
           </form>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
