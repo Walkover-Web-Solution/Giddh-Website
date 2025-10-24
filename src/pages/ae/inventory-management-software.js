@@ -1,9 +1,6 @@
-import InventoryManagementSoftware from '@/pages/inventory-management-software'
-const aeInventoryManagementSoftware = (path) => {
-  return (
-    <>
-        <InventoryManagementSoftware path={path.path} />
-    </>
-  );
+import InInventoryManagementSoftware from "../in/inventory-management-software";
+
+const AeInventoryManagementSoftware = (path) => {
+  return <InInventoryManagementSoftware path={path.path} />;
 };
-export default aeInventoryManagementSoftware;
+export default AeInventoryManagementSoftware;

@@ -1,9 +1,5 @@
-import SmallBusinessBookkeepingSoftware from '@/pages/small-business-bookkeeping-software'
-const ukSmallBusinessBookkeepingSoftware = (path) => {
-  return (
-    <>
-        <SmallBusinessBookkeepingSoftware path={path.path} />
-    </>
-  );
+import OldSmallBusinessBookkeepingSoftware from "../in/small-business-bookkeeping-software";
+const UkSmallBusinessBookkeepingSoftware = (path) => {
+  return <OldSmallBusinessBookkeepingSoftware path={path.path} />;
 };
-export default ukSmallBusinessBookkeepingSoftware;
+export default UkSmallBusinessBookkeepingSoftware;

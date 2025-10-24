@@ -284,6 +284,23 @@
   "giddhVs": {
     "heading": "The Smart Choice for Your Business Accounting",
     "subheading": "Streamline your finances with Giddh’s unique features and superior value in accounting software for businesses over the competition.",
+    "columns": [
+      {
+        "key": "giddh",
+        "label": "Giddh",
+        "logo": "/img/giddh-logo.svg"
+      },
+      {
+        "key": "quickbooks",
+        "label": "QuickBooks",
+        "logo": "/img/home-page/quickbooks.svg"
+      },
+      {
+        "key": "tally",
+        "label": "Tally",
+        "logo": "/img/home-page/tally.svg"
+      }
+    ],
     "content": [
       {
         "feature": "Multi-User Access",

@@ -1,0 +1,208 @@
+{
+  "splitBanner": {
+    "heading": "India’s Trusted E-Invoice Software to Automate GST Billing in Seconds",
+    "subHeading": "Create e-invoices instantly with Giddh’s invoice software. Auto-apply GST, send via email, WhatsApp, or SMS, and set recurring reminders.",
+    "image": "/img/e-invoice/e_invoice.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Book a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Why Giddh is the Best E-Invoicing Software for Business Management?",
+    "subHeading": "",
+    "cards": [
+      {
+        "heading": "3s Response Time With 99.9% Uptime",
+        "description": "Fast & reliable ERP e-invoice integration India "
+      },
+      {
+        "heading": "24*7 Customer Support",
+        "description": "Round-the-clock technical & advisory assistance"
+      },
+      {
+        "heading": "High-Grade Encryption",
+        "description": "Smart & secured platform user interface"
+      },
+      {
+        "heading": "Auto-push of e-invoice",
+        "description": "Automated e-invoice generation: push the e-invoice automatically to the e-invoice portal"
+      },
+      {
+        "heading": "Save Time & Error One-click ",
+        "description": "Auto Reconciliation with one-click e-invoice and GST reconciliation, e-way bills, and e-invoice register"
+      },
+      {
+        "heading": "Track e-invoice Status",
+        "description": "The e-invoice enables real-time tracking of invoices prepared by the supplier"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Get a Custom E‑Invoicing Solution Today!",
+    "theme": "light",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-primary-outline"
+      }
+    ]
+  },
+  "giddhFor": {
+    "heading": "Who Is Giddh E-Invoice Software Designed  For?",
+    "subheading": "",
+    "content": [
+      {
+        "title": "Small Businesses",
+        "name": "Small Businesses",
+        "description": "Small businesses looking to automate GST billing.",
+        "icon": "🛒",
+        "image": "/img/online-accounting-software/Retailers.svg"
+      },
+      {
+        "title": "Startups",
+        "name": "Startups & Service Providers",
+        "description": "Startups aiming for fast, affordable",
+        "icon": "🚀",
+        "image": "/img/online-accounting-software/Startups.svg"
+      },
+      {
+        "title": "Accountants",
+        "name": "Accountants & Finance Teams",
+        "description": "CA and accounting firms serving multiple clients",
+        "icon": "📊",
+        "image": "/img/online-accounting-software/Accountants.svg"
+      },
+      {
+        "title": "Enterprises",
+        "name": "Growing Enterprises",
+        "description": " Growing enterprises integrating ERP with IRN",
+        "icon": "🛍️",
+        "image": "/img/online-accounting-software/E-commerce.svg"
+      }
+    ]
+  },
+  "giddhVs": {
+    "heading": "Still Confused About Choosing Your Digital Invoicing Software?",
+    "subheading": "Compare Giddh with Zoho, Busy, and Vyapar.",
+    "columns": [
+      {
+        "key": "giddh",
+        "label": "Giddh",
+        "logo": "/img/giddh-logo.svg"
+      },
+      {
+        "key": "zoho",
+        "label": "Zoho Books",
+        "logo": "/img/zoho_logo.svg"
+      },
+      {
+        "key": "busy",
+        "label": "Busy",
+        "logo": "/img/busy_logo.png"
+      },
+      {
+        "key": "vyapar",
+        "label": "Vyapar",
+        "logo": "/img/vyapar_logo.svg"
+      }
+    ],
+    "content": [
+      {
+        "feature": "GST e-invoicing Support",
+        "giddh": true,
+        "zoho": true,
+        "busy": true,
+        "vyapar": true
+      },
+      {
+        "feature": "ERP Integration",
+        "giddh": true,
+        "zoho": false,
+        "busy": true,
+        "vyapar": false
+      },
+      {
+        "feature": "Real-time Invoice Status ",
+        "giddh": true,
+        "zoho": true,
+        "busy": false,
+        "vyapar": false
+      },
+      {
+        "feature": "Mobile App Support",
+        "giddh": true,
+        "zoho": true,
+        "busy": true,
+        "vyapar": true
+      },
+      {
+        "feature": "White-label Option",
+        "giddh": true,
+        "zoho": false,
+        "busy": false,
+        "vyapar": false
+      },
+      {
+        "feature": "Free Trial",
+        "giddh": true,
+        "zoho": true,
+        "busy": true,
+        "vyapar": true
+      }
+    ]
+  },
+  "ctaTwo": {
+    "heading": "Simplify Billing with GST E-Invoicing India",
+    "subheading": "Giddh makes invoicing simple, quick, and efficient, allowing you to streamline finances with the best e-invoice software India.",
+    "theme": "light",
+    "buttons": [
+      {
+        "text": "Free Sign Up",
+        "link": "/signup",
+        "type": "btn-primary-outline"
+      },
+      {
+        "text": "Book A Demo",
+        "link": "/signup",
+        "type": "btn-primary"
+      }
+    ]
+  },
+  "gridFeatures": [
+    ["Increased Accuracy", "Real-Time Tracking", "Reduced Risk of Tax Evasion"],
+    ["Uniqueness with IRN and QR Code for B2B"],
+    [
+      "Better Visibility and Transparency",
+      "Uniqueness with QR Code for B2C",
+      "Auto-Populated Data in GST E-Invoice"
+    ]
+  ],
+  "faqs": [
+    {
+      "question": "What are the Key Features of E-Invoicing Software?",
+      "answer": "E-invoicing software offers key features, including automated invoice creation, GST compliance, real-time IRN and QR code generation, invoice tracking, one-click reconciliation, and multi-channel invoice delivery via email, WhatsApp, or SMS. Leading e-invoice software in India also integrates with ERP systems, ensuring 99.9% uptime for reliable billing operations."
+    },
+    {
+      "question": "Which Software is Best for E-Invoices?",
+      "answer": "The best e-invoice software in India is one that ensures GST compliance, facilitates fast IRN generation, enables real-time invoice tracking, and integrates seamlessly with accounting systems. Giddh is a top choice for businesses of all sizes due to its ERP integration, auto GST application, invoice customisation, and 24/7 customer support."
+    },
+    {
+      "question": "Can I Customise My Invoices Using an E-Invoice Generator?",
+      "answer": "Yes, most e-invoice generators, including Giddh, allow you to customise invoice templates. You can add your company logo, select layout formats, include additional fields such as HSN codes or payment terms, and tailor the design to match your brand while remaining GST-compliant."
+    },
+    {
+      "question": "What is the Difference Between Invoice and E-Invoice?",
+      "answer": "An invoice is a standard document for billing customers. At the same time, an e-invoice is a digitally generated invoice that complies with GST regulations and is validated through the government’s Invoice Registration Portal (IRP). E-invoices include a unique IRN and QR code, enabling real-time tracking and automated GST reporting."
+    }
+  ]
+}

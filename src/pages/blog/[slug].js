@@ -149,7 +149,7 @@ export default function TestPage({
 
         <footer className="pt-3">
           <div className="blog-card-tags">
-            <ul className="blog-page-tags d-flex gap-3 ps-0 mb-1">
+            <ul className="blog-page-tags d-flex gap-3 ps-0 mb-1 flex-wrap">
               {tags !== "" &&
                 tags?.map((it, i) => (
                   <li key={i}>
