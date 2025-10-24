@@ -1,0 +1,334 @@
+{
+  "stackedBanner": {
+    "heading": "Choose Giddh for Smarter Accounting: A Clear Advantage Over Tally",
+    "subHeading": "Giddh vs. Tally? See why Giddh’s cloud-based accounting software is the go-to Tally alternative software for growing businesses everywhere.",
+    "image": "/img/home-page/index_banner_india.svg",
+    "buttons": [
+      {
+        "text": "Book a Free Demo",
+        "link": "/online-accounting-software"
+      },
+      {
+        "text": "Try Giddh for free",
+        "link": "/signup"
+      }
+    ]
+  },
+  "features": {
+    "heading": "Why Giddh Is the Smarter Choice for Your Business",
+    "content": [
+      {
+        "heading": "Invoicing Solution that Saves Time",
+        "img": "/img/home-page/simplified-ledger-based-accounting.svg",
+        "description": "Automate repetitive billing tasks and reduce manual effort.",
+        "more_content": [
+          "Create invoices with auto-filled data",
+          "Use templates to minimize manual input",
+          "Import and paste invoice data instantly."
+        ]
+      },
+      {
+        "heading": "Anytime, Anywhere, and on Any Device",
+        "img": "/img/home-page/anytime_anywhere_and_on_any_device.webp",
+        "description": "Access and manage your finances seamlessly, whether you're on your desktop, Android, or iOS device",
+        "more_content": [
+          "Cloud-based access across devices.",
+          "Access real-time financial data.",
+          "Track sales and send invoices."
+        ]
+      },
+      {
+        "heading": "Easily Secure Data in the Cloud",
+        "img": "/img/home-page/seamless-gst-compliance.svg",
+        "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
+        "more_content": [
+          "Encrypted data storage",
+          "Prevent data loss.",
+          "Top industry security standards"
+        ]
+      },
+
+      {
+        "heading": "24x7 Customer Support",
+        "img": "/img/home-page/automatic-currency-conversion.svg",
+        "description": "Get expert assistance whenever you need it.",
+        "more_content": [
+          "Support via chat, email, and phone",
+          "Quick query resolution for uninterrupted work",
+          "Dedicated onboarding support for new users"
+        ]
+      },
+      {
+        "heading": "Cloud Storage for Your Data Synced",
+        "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
+        "description": "Giddh utilizes advanced security measures to ensure your accounting data remains safe and private.",
+        "more_content": [
+          "Password-Protected Logins",
+          "User Access Limitations",
+          "Automatic Data Backup"
+        ]
+      },
+      {
+        "heading": "Track Your Business Performance in Real-Time",
+        "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
+        "description": "Stay updated with live data and make informed decisions on the fly. With real-time insights, you’ll always know how your business is performing.",
+        "more_content": [
+          "Instant Insights",
+          "Real-Time Tracking",
+          "Data-Driven Decisions"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore Features",
+        "link": "/all-features"
+      }
+    ]
+  },
+  "giddhVs": {
+    "heading": "Feature Comparison: Giddh vs. Tally",
+    "subheading": "Here’s how Giddh stacks up against Tally, making it clear why businesses are switching to a smarter, cloud-based accounting solution.",
+    "columns": [
+      {
+        "key": "giddh",
+        "label": "Giddh",
+        "logo": "/img/giddh-logo.svg"
+      },
+      {
+        "key": "tally",
+        "label": "Zoho Books",
+        "logo": "/img/zoho_logo.svg"
+      }
+    ],
+    "content": [
+      {
+        "feature": "Entry System",
+        "giddh": "Both Ledger and Voucher-based",
+        "tally": "Only Journal Entries"
+      },
+      {
+        "feature": "Easy search",
+        "giddh": "Provides Universal Search feature (Ctrl+G / Cmd+G)",
+        "tally": "Not Available"
+      },
+      {
+        "feature": "User friendly",
+        "giddh": "Anyone can use it easily",
+        "tally": "Required accounting knowledge and expertise"
+      },
+      {
+        "feature": "Accessibility",
+        "giddh": "From any device with an internet connection",
+        "tally": "Only from desktop"
+      },
+      {
+        "feature": "Mobile App",
+        "giddh": "For both Android and iOS",
+        "tally": "Not Available"
+      },
+      {
+        "feature": "Company sharing",
+        "giddh": "Unlimited company sharing feature is available in all plans",
+        "tally": "Not Available"
+      },
+      {
+        "feature": "Customizable Permission",
+        "giddh": "Available",
+        "tally": "Not Available"
+      },
+      {
+        "feature": "Multi-user and multiple PCs edition",
+        "giddh": "Only available in Gold plan",
+        "tally": "Available in all plans"
+      },
+      {
+        "feature": "Branch Support",
+        "giddh": "Limited as per the version",
+        "tally": "Unlimited for all plans"
+      },
+      {
+        "feature": "GSTIN Support",
+        "giddh": "Single GSTIN support in a single branch",
+        "tally": "Multiple GSTIN numbers support ina  single branch in all plans"
+      },
+      {
+        "feature": "Inventory with variant",
+        "giddh": "Need to purchase an add-on",
+        "tally": "Available in all plans"
+      },
+      {
+        "feature": "Real-time dashboard",
+        "giddh": "Available",
+        "tally": "Not Available"
+      },
+      {
+        "feature": "Single ledger sharing",
+        "giddh": "User can share a single ledger from Email and by creating a magic link",
+        "tally": "Not Available"
+      },
+      {
+        "feature": "Attachment with Bills",
+        "giddh": "Not Available",
+        "tally": "The user can add an attachment to the invoice"
+      },
+      {
+        "feature": "Real-time dashboard",
+        "giddh": "The third party provides the integration",
+        "tally": "Available"
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "Ready to simplify your accounting?",
+    "subHeading": "  With Giddh, transitioning is easy follow these three simple steps to get started",
+    "steps": [
+      {
+        "icon": "/img/tally-vs-giddh/sign_up.svg",
+        "title": "Sign Up for a Free Trial",
+        "description": "No commitment, start exploring immediately with full access to Giddh's features."
+      },
+      {
+        "icon": "/img/tally-vs-giddh/set_up_account.svg",
+        "title": "Set Up Your Account",
+        "description": "Our simple onboarding and guided setup help you get up and running in minutes, not hours."
+      },
+      {
+        "icon": "/img/tally-vs-giddh/effortless_accounting.svg",
+        "title": "Enjoy Effortless Accounting",
+        "description": "Manage your finances, track your cash flow, and generate reports with Giddh’s powerful, user-friendly tools."
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Hear how we’ve made a difference",
+    "subheading": " Stories that inspire us to keep delivering our best.",
+    "data": [
+      {
+        "company": "Sinead North",
+        "owner": "Christian Schiel",
+        "testimonial": "Giddh is a great solution to manage customers and invoices internationally. The multi-currency option makes it very convenient, and generating invoices is simple and quick. I can also easily manage VAT reports in the UK. The support team is patient, understands the challenges we face, and resolves them effectively."
+      },
+      {
+        "company": "Dvara e-registry",
+        "owner": "Priyanshi Priya",
+        "testimonial": "Giddh is an excellent platform for managing multiple companies seamlessly. It allows me to handle different businesses in real time, all in one place. Switching between companies is incredibly fast and effortless, making the entire process smooth and efficient."
+      },
+      {
+        "company": "Teknoworth Medical Care OPC Pvt Ltd",
+        "owner": "Imran",
+        "testimonial": "Giddh is the most reliable application for inventory management in both India and the UAE. Managing data is effortless, and the mobile app works flawlessly, ensuring smooth operations anytime, anywhere."
+      },
+      {
+        "company": "Shruti Corporation",
+        "owner": "Shruti",
+        "testimonial": "Giddh is one of the easiest ledger-based accounting systems I’ve used. Creating ledger entries is quick and effortless, making it truly ready to go. Even someone without a strong accounting background can easily manage and run their business with it."
+      },
+      {
+        "company": "PI Green Consulting Pvt Ltd",
+        "owner": null,
+        "testimonial": "The application works seamlessly, allowing multiple users to access it in real time without any limits or lags. Multi-login functionality is effortless, making collaboration smooth and efficient."
+      },
+      {
+        "company": "Synergene Global",
+        "owner": "Manish Badonia",
+        "testimonial": "The support team is excellent, and the latest version of Giddh comes packed with powerful features. Giddh can be accessed from anywhere with just an internet connection, making it highly convenient and reliable."
+      },
+      {
+        "company": "Attic India",
+        "owner": "Kuldeep",
+        "testimonial": "The inventory reports work brilliantly. Creating parent and child groups is simple and effective, allowing the inventory to be organized and bifurcated properly for better clarity."
+      },
+      {
+        "company": "Karuna Temp System Private Limited",
+        "owner": "Rohan Pavithran",
+        "testimonial": "Giddh’s estimates and proforma invoices work seamlessly. We can create proformas and easily convert them into invoices, tracking their status as paid, unpaid, or partially paid. Automated WhatsApp messages and email notifications after creating vouchers significantly reduce manual effort."
+      },
+      {
+        "company": "Dental Designs",
+        "owner": "Dr Gins Paul",
+        "testimonial": "Giddh offers multiple types of invoices, including cash and sales invoices, making billing flexible and convenient. The dashboard provides a clear summary of the business’s health on a single screen, helping us instantly understand where we stand on any given day."
+      },
+      {
+        "company": "Taurus Lifestyle",
+        "owner": "Kunal",
+        "testimonial": "The inventory module in Giddh is extremely powerful. Its variant creation feature allows multiple variants for a single item, which is very helpful for detailed inventory management. The barcode scanning feature further completes the requirements, making the process fast and efficient."
+      },
+      {
+        "company": "M/S STUDIO47",
+        "owner": null,
+        "testimonial": "Giddh provides a wide range of reports including financial statements, daybook, sales and purchase registers, inventory reports, and GST reports. Having all these reports in one place makes managing business insights simple and efficient."
+      },
+      {
+        "company": "SP Wellness",
+        "owner": null,
+        "testimonial": "Support connects positively when needed. The ledger accounting module makes it easy to create entries; I can easily manage my expenses by creating the accounts and making entries there."
+      },
+      {
+        "company": "The Medicity",
+        "owner": null,
+        "testimonial": "With Giddh, managing bank accounts is simple and hassle-free. Incomes and expenses can be tracked directly, and the built-in GST filing option makes compliance much easier. It’s truly a great all-in-one solution."
+      },
+      {
+        "company": "Mitti [Organic. Fresh. Desi]",
+        "owner": "Ankita Chadha",
+        "testimonial": "The inventory management helps in restaurant management and the branch creation helps to manage multiple branches under a single platform. It helps to see the branch profiles along with the warehouses."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Ready to Upgrade Your Accounting?",
+    "subHeading": "Make the Smart Choice with Giddh’s features and plan that works best for your business.",
+    "buttons": [
+      {
+        "text": "Try Giddh For Free",
+        "link": "/signup",
+        "type": "btn-secondary"
+      },
+      {
+        "text": "See All Features",
+        "link": "/all-features",
+        "type": "btn-secondary-outline"
+      }
+    ]
+  },
+  "supportedPlatforms": {
+    "heading": "Supported Platforms",
+    "platforms": [
+      {
+        "name": "Web",
+        "image": "/img/supported-platforms/web.svg"
+      },
+      {
+        "name": "Windows",
+        "image": "/img/supported-platforms/windows.svg"
+      },
+      {
+        "name": "MacOS",
+        "image": "/img/supported-platforms/macos.svg"
+      },
+      {
+        "name": "iOS",
+        "image": "/img/supported-platforms/ios.svg"
+      },
+      {
+        "name": "Android",
+        "image": "/img/supported-platforms/android.svg"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does Giddh compare to Tally in terms of pricing?",
+      "answer": "Giddh offers flexible pricing plans designed to suit businesses of all sizes. Our transparent pricing ensures you only pay for what you need, with no hidden fees."
+    },
+    {
+      "question": "Can I migrate my data from Tally to Giddh?",
+      "answer": "Absolutely! Giddh provides easy-to-follow tools and dedicated support to help you seamlessly migrate your financial data from Tally with minimal hassle."
+    },
+    {
+      "question": " Is Giddh suitable for large businesses with complex needs?",
+      "answer": "Yes! Giddh’s cloud infrastructure and powerful features make it ideal for businesses of all sizes, from small startups to large enterprises."
+    }
+  ]
+}
