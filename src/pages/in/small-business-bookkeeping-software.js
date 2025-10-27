@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Faqs from "@/components/faq";
-import faqs from "../data/faqs.json";
+import faqs from '@/data/faqs.json'
 
 const InSmallBusinessBookkeepingSoftware = (path) => {
   const linkPath = path.path;
