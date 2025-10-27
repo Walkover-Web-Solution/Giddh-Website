@@ -2,7 +2,7 @@ import Image from "next/image";
 export default function WhyGiddh({ compData }) {
   if (!compData?.features?.length) return null;
   return (
-    <section className="bg-light-blue outfit-font">
+    <section className="bg-extra-light-blue outfit-font">
       <div className="container py-5 d-flex flex-column gap-4">
         <h2 className="text-center mb-4 font-primary font-sub-heading">
           {compData?.heading}
@@ -28,7 +28,7 @@ export default function WhyGiddh({ compData }) {
               <span className="d-block font-dark-grey d-md-none pe-2">
                 <Image
                   src="/img/giddh-logo.svg"
-                  alt="giddh"
+                  alt="Giddh logo"
                   className="img-fluid fit-content"
                   width={50}
                   height={55}

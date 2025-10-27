@@ -87,7 +87,7 @@ export default function BookFreeDemoForm({
 
   return (
     <>
-      {!hiddenAbsolute &&
+      {/* {!hiddenAbsolute &&
         (!showAbsoluteModal ? (
           <div
             className={`${style.bookdemo_btn_cont} d-flex align-items-end justify-content-end`}
@@ -102,7 +102,7 @@ export default function BookFreeDemoForm({
           </div>
         ) : (
           <div
-            className={`${style.absolute_form_container} bg-light-blue p-4 d-flex gap-2 flex-column align-items-center justify-content-center rounded`}
+            className={`${style.absolute_form_container} bg-extra-light-blue p-4 d-flex gap-2 flex-column align-items-center justify-content-center rounded`}
           >
             <div className="d-flex align-items-center justify-content-center flex-column gap-3 w-100">
               <div className="d-flex justify-content-between align-items-center w-100">
@@ -146,7 +146,7 @@ export default function BookFreeDemoForm({
         ))}
 
       <div
-        className={`${style.form_container} w-100 bg-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}
+        className={`${style.form_container} w-100 bg-extra-light-blue p-lg-5 p-md-4 p-3 d-flex align-items-center justify-content-center rounded`}
       >
         <div className="d-flex align-items-center  justify-content-center flex-column gap-3 w-100">
           <p className="col-primary c-fw-600 mb-0 c-fs-3">
@@ -175,7 +175,7 @@ export default function BookFreeDemoForm({
             </button>
           </form>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
