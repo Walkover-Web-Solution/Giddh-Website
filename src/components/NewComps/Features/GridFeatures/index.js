@@ -1,4 +1,6 @@
+import { MdCircle } from "react-icons/md";
 import styles from "./GridFeatures.module.scss";
+import Image from "next/image";
 
 export default function GridFeatures({ features }) {
   if (!features?.cards?.length) return null;
@@ -9,21 +11,43 @@ export default function GridFeatures({ features }) {
           <h2 className="text-center font-heading font-primary">
             {features?.heading}
           </h2>
-          <p className="text-center font-md font-slate-grey">
-            {features?.subHeading}
-          </p>
+          {features?.subHeading && (
+            <p className="text-center font-md font-slate-grey">
+              {features.subHeading}
+            </p>
+          )}
         </div>
         <div className="row g-3">
           {features.cards.map((card, index) => (
-            <div
-              key={index}
-              className="col-12 col-md-6 align-items-center justify-content-center"
-            >
+            <div key={index} className="col-12 col-md-6">
               <div
-                className={`d-flex flex-column gap-3 border rounded-4 px-4 py-2 justify-content-center text-center border-color-primary ${styles.card}`}
+                className={`d-flex flex-column border rounded-4 px-4 py-2 border-color-primary ${
+                  styles.card
+                }  ${
+                  card?.icon ? "py-4" : "text-center justify-content-center"
+                }`}
               >
-                <p className="m-0 font-xl font-primary">{card?.heading}</p>
+                {card?.icon && (
+                  <Image
+                    width={50}
+                    height={50}
+                    src={card.icon}
+                    alt={card?.heading}
+                  />
+                )}
+                <p className="m-0 font-xl font-600 font-primary">
+                  {card?.heading}
+                </p>
                 <p className="font-md font-slate-grey">{card?.description}</p>
+                {card?.more_content?.length && (
+                  <ul>
+                    {card.more_content.map((content, index) => (
+                      <li key={index} className="font-sm">
+                        <MdCircle size={5} /> {content}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           ))}

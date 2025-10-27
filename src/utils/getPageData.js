@@ -6,6 +6,9 @@ export default function getPageData(pageInfo) {
     "multi-user-accounting-software",
     "online-accounting-software",
     "tally-vs-giddh",
+    "inventory-management-software",
+    "small-business-bookkeeping-software",
+    "e-invoice",
   ];
   if (!pagesToGetData.includes(pageInfo?.page)) return null;
   try {
