@@ -73,16 +73,22 @@ export default function GiddhVs({ giddhVs }) {
                     >
                       {typeof row[column.key] === "boolean" ? (
                         row[column.key] ? (
-                          <Image src={"/img/tick.svg"} width={24} height={24} />
+                          <Image
+                            src={"/img/tick.svg"}
+                            width={24}
+                            height={24}
+                            alt="Yes"
+                          />
                         ) : (
                           <Image
                             src={"/img/cross.svg"}
                             width={24}
                             height={24}
+                            alt="No"
                           />
                         )
                       ) : (
-                        row[column.key] || "-"
+                        row[column.key] ?? "-"
                       )}
                     </div>
                   ))}
