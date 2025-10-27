@@ -1,9 +1,6 @@
-import InventoryManagementSoftware from '@/pages/inventory-management-software'
-const ukInventoryManagementSoftware = (path) => {
-  return (
-    <>
-        <InventoryManagementSoftware path={path.path} />
-    </>
-  );
+import InInventoryManagementSoftware from "../in/inventory-management-software";
+
+const UkInventoryManagementSoftware = (path) => {
+  return <InInventoryManagementSoftware path={path.path} />;
 };
-export default ukInventoryManagementSoftware;
+export default UkInventoryManagementSoftware;

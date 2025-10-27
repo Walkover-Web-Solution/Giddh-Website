@@ -22,7 +22,11 @@ export default function CTA({ compData, hasImage }) {
           <p className={`${!hasImage ? "text-center" : ""} `}>
             {compData?.subheading}
           </p>
-          <div className={`${!hasImage && "d-flex justify-content-center"}`}>
+          <div
+            className={`${
+              !hasImage ? "d-flex flex-wrap justify-content-center gap-2" : ""
+            }`}
+          >
             {compData?.buttons?.map((button, index) => (
               <a href={button.link}>
                 <button
