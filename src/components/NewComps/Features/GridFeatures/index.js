@@ -10,9 +10,11 @@ export default function GridFeatures({ features }) {
           <h2 className="text-center font-heading font-primary">
             {features?.heading}
           </h2>
-          <p className="text-center font-md font-slate-grey">
-            {features?.subHeading}
-          </p>
+          {features?.subHeading && (
+            <p className="text-center font-md font-slate-grey">
+              {features.subHeading}
+            </p>
+          )}
         </div>
         <div className="row g-3">
           {features.cards.map((card, index) => (
