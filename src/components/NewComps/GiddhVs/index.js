@@ -22,7 +22,7 @@ export default function GiddhVs({ giddhVs }) {
           <div className={styles.giddhScrollInner}>
             <div className="bg-white border rounded overflow-hidden">
               <div className="row border-bottom font-md font-600 text-dark text-center">
-                <div className="col-3 px-2 px-md-3 py-2 border-end d-flex align-items-center justify-content-center">
+                <div className="col-3 p-2 px-md-3 border-end d-flex align-items-center justify-content-center">
                   <span>Feature</span>
                 </div>
 
