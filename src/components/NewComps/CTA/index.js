@@ -24,7 +24,7 @@ export default function CTA({ compData, hasImage }) {
           </p>
           <div
             className={`${
-              !hasImage ? "d-flex justify-content-center gap-4" : ""
+              !hasImage ? "d-flex flex-wrap justify-content-center gap-2" : ""
             }`}
           >
             {compData?.buttons?.map((button, index) => (
