@@ -21,26 +21,32 @@
     "subHeading": "",
     "cards": [
       {
+        "icon": "/img/e-invoice/3s-response-time-with-999-uptime.svg",
         "heading": "3s Response Time With 99.9% Uptime",
         "description": "Fast & reliable ERP e-invoice integration India "
       },
       {
+        "icon": "/img/e-invoice/auto-push-of-e-invoice.svg",
         "heading": "24*7 Customer Support",
         "description": "Round-the-clock technical & advisory assistance"
       },
       {
+        "icon": "/img/e-invoice/security-and-encryption.svg",
         "heading": "High-Grade Encryption",
         "description": "Smart & secured platform user interface"
       },
       {
+        "icon": "/img/e-invoice/high-grade-encryption.svg",
         "heading": "Auto-push of e-invoice",
         "description": "Automated e-invoice generation: push the e-invoice automatically to the e-invoice portal"
       },
       {
+        "icon": "/img/e-invoice/save-time-and-error-in-one-click.svg",
         "heading": "Save Time & Error One-click ",
         "description": "Auto Reconciliation with one-click e-invoice and GST reconciliation, e-way bills, and e-invoice register"
       },
       {
+        "icon": "/img/e-invoice/track-e-invoice-status.svg",
         "heading": "Track e-invoice Status",
         "description": "The e-invoice enables real-time tracking of invoices prepared by the supplier"
       }
@@ -178,15 +184,21 @@
       }
     ]
   },
-  "gridFeatures": [
-    ["Increased Accuracy", "Real-Time Tracking", "Reduced Risk of Tax Evasion"],
-    ["Uniqueness with IRN and QR Code for B2B"],
-    [
-      "Better Visibility and Transparency",
-      "Uniqueness with QR Code for B2C",
-      "Auto-Populated Data in GST E-Invoice"
-    ]
+ "gridFeatures": [
+  [
+    { "icon": "/img/e-invoice/increased-accuracy.svg", "title": "Increased Accuracy" },
+    { "icon": "/img/e-invoice/real-time-tracking.svg", "title": "Real-Time Tracking" },
+    { "icon": "/img/e-invoice/reduced-risk-of-tax-evasion.svg", "title": "Reduced Risk of Tax Evasion" }
   ],
+  [
+    { "icon": "/img/e-invoice/uniqueness-with-irn-and-qr-code-for-b2b.svg", "title": "Uniqueness with IRN and QR Code for B2B" }
+  ],
+  [
+    { "icon": "/img/e-invoice/better-visibility-and-transparency.svg", "title": "/img/e-invoice/Better Visibility and Transparency" },
+    { "icon": "/img/e-invoice/uniqueness-with-qr-code-for-b2c.svg", "title": "/img/e-invoice/Uniqueness with QR Code for B2C" },
+    { "icon": "/img/e-invoice/auto-populated-data-in-gst-e-invoice.svg", "title": "/img/e-invoice/Auto-Populated Data in GST E-Invoice" }
+  ]
+],
   "faqs": [
     {
       "question": "What are the Key Features of E-Invoicing Software?",
