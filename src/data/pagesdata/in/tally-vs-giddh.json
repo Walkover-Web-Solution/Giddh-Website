@@ -97,8 +97,8 @@
       },
       {
         "key": "tally",
-        "label": "Zoho Books",
-        "logo": "/img/zoho_logo.svg"
+        "label": "tally",
+        "logo": "/img/tally-logo.svg"
       }
     ],
     "content": [
@@ -150,7 +150,7 @@
       {
         "feature": "GSTIN Support",
         "giddh": "Single GSTIN support in a single branch",
-        "tally": "Multiple GSTIN numbers support ina  single branch in all plans"
+        "tally": "Multiple GSTIN numbers support in a single branch in all plans"
       },
       {
         "feature": "Inventory with variant",
@@ -181,7 +181,7 @@
   },
   "quickStartSection": {
     "heading": "Ready to simplify your accounting?",
-    "subHeading": "  With Giddh, transitioning is easy follow these three simple steps to get started",
+    "subHeading": "With Giddh, transitioning is easy follow these three simple steps to get started",
     "steps": [
       {
         "icon": "/img/tally-vs-giddh/sign_up.svg",
