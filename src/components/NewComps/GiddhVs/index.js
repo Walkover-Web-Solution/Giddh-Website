@@ -21,8 +21,8 @@ export default function GiddhVs({ giddhVs }) {
         >
           <div className={styles.giddhScrollInner}>
             <div className="bg-white border rounded overflow-hidden">
-              <div className="row border-bottom font-md font-600 text-dark text-center">
-                <div className="col-3 p-2 px-md-3 border-end d-flex align-items-center justify-content-center">
+              <div className="row border-bottom font-600 text-dark text-center">
+                <div className="col-3 p-2 px-md-3 font-md border-end d-flex align-items-center justify-content-center">
                   <span>Feature</span>
                 </div>
 
@@ -49,18 +49,15 @@ export default function GiddhVs({ giddhVs }) {
                 ))}
               </div>
               {giddhVs.content.map((row, rowIndex) => (
-                <div
-                  key={rowIndex}
-                  className="row border-bottom font-md text-center"
-                >
-                  <div className="col-3 px-2 px-md-3 py-4 border-end font-md font-600">
+                <div key={rowIndex} className="row border-bottom text-center">
+                  <div className="col-3 px-2 px-md-3 py-4 border-end font-600">
                     {row.feature}
                   </div>
 
                   {giddhVs.columns.map((column, colIndex) => (
                     <div
                       key={column.key}
-                      className={`col px-2 px-md-3 py-4 font-md border-end ${
+                      className={`col px-2 px-md-3 py-4 border-end ${
                         colIndex === 0
                           ? "bg-extra-light-blue border-accent border-4 border-start"
                           : ""
