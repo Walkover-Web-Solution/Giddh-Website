@@ -5,7 +5,7 @@ export default function GridBenefits({ compData }) {
 
   return (
     <section className="container py-5">
-      <div className="d-flex flex-column">
+      <div className="d-flex flex-column border border-black">
         {compData.map((row, rowIndex) => (
           <div key={rowIndex} className="row g-0 overflow-hidden">
             {row.map((item, colIndex) => (
@@ -13,16 +13,16 @@ export default function GridBenefits({ compData }) {
                 key={colIndex}
                 className="col border border-black d-flex flex-column align-items-center justify-content-center text-center p-4"
               >
-                {item.icon && (
+                {item?.icon && (
                   <Image
                     src={item.icon}
-                    alt={item.title}
                     width={60}
                     height={60}
-                    className="mb-3"
+                    className="mb-3 opacity-50"
+                    alt={item?.title}
                   />
                 )}
-                <p className="m-0 font-600">{item.title}</p>
+                <p className="m-0 font-600">{item?.title}</p>
               </div>
             ))}
           </div>
