@@ -33,7 +33,7 @@
   },
   "features": {
     "heading": "What Makes Giddh the Smart Accounting Choice",
-    "cards": [
+    "content": [
       {
         "heading": "Simplified Ledger-Based Accounting",
         "img": "/img/home-page/simplified-ledger-based-accounting.svg",
@@ -46,7 +46,7 @@
       },
       {
         "heading": "Anytime, Anywhere, and on Any Device",
-        "img": "/img/home-page/anytime-anywhere-and-on-any-device.svg",
+        "img": "/img/home-page/anytime_anywhere_and_on_any_device.webp",
         "description": "Access and manage your finances seamlessly, whether you're on your desktop, Android, or iOS device",
         "more_content": [
           "Cloud-based access across devices.",
@@ -62,6 +62,16 @@
           "Password-Protected Logins",
           "User Access Limitations",
           "Automatic Data Backup"
+        ]
+      },
+      {
+        "heading": "Seamless GST Compliance",
+        "img": "/img/home-page/seamless-gst-compliance.svg",
+        "description": "Giddh is a GST compliant accounting software in India that simplifies tax filing with built-in GST return features. As a powerful GST filing software, it ensures accurate reports and effortless compliance",
+        "more_content": [
+          "Fully automated GST filing for smooth compliance",
+          "Auto-generates GST reports in the correct format",
+          "Keeps your business compliant with evolving tax laws"
         ]
       },
       {
@@ -87,7 +97,7 @@
       {
         "heading": "Track Your Business Performance in Real-Time",
         "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
-        "description": "Stay updated with live data and make informed decisions on the fly. With real-time insights, you'll always know how your business is performing.",
+        "description": "Stay updated with live data and make informed decisions on the fly. With real-time insights, you’ll always know how your business is performing.",
         "more_content": [
           "Instant Insights",
           "Real-Time Tracking",

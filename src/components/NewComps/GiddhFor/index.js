@@ -39,9 +39,19 @@ export default function GiddhFor({ compData }) {
           </div>
 
           <div className="row align-items-center g-3 g-md-4 p-4">
-            <div className={`${compData.content[activeTab].image ? "col-12 col-lg-6" : "col-12"} order-1 order-lg-2`}>
-              <div className={`px-2 ${compData.content[activeTab].image ? "text-center text-lg-start" : "text-center"}`}>
-                <h3 className="mb-1 font-md font-600">
+            <div
+              className={`${
+                compData.content[activeTab].image ? "col-12 col-lg-6" : "col-12"
+              } order-1 order-lg-2`}
+            >
+              <div
+                className={`px-2 ${
+                  compData.content[activeTab].image
+                    ? "text-center text-lg-start"
+                    : "text-center"
+                }`}
+              >
+                <h3 className="mb-1 font-xl font-600">
                   {compData.content[activeTab].name}
                 </h3>
                 <p>{compData.content[activeTab].description}</p>
