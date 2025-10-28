@@ -13,7 +13,7 @@ const OldCloudAccountingSoftware = (path) => {
   const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
-  const link = linkPath.linkPrefix;
+  const link = linkPath.path.linkPrefix;
 
   useEffect(() => {
     setFaq(faqs["cloud-accounting-software"]);
