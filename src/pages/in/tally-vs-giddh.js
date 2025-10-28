@@ -1,11 +1,4 @@
-import TallyVsGiddh from "@/pages/tally-vs-giddh";
-
-const inTallyVsGiddh = (path) => {
-  return (
-    <>
-      <TallyVsGiddh path={path.path} />
-    </>
-  );
-};
-
-export default inTallyVsGiddh;
+import TallyVsGiddhComp from "@/components/Pages/TallyVsGiddh";
+export default function InTallyVsGiddh({ pageData }) {
+  return <TallyVsGiddhComp pageData={pageData} />;
+}
