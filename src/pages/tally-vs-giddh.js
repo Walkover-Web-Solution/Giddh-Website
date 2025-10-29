@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const tallyVsGiddh = (path) => {
+export default function TallyVsGiddh(path) {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const link = path.path;
 
@@ -120,7 +120,9 @@ const tallyVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Easy search</th>
-                      <td className="col-dark-light align-middle">Not Available</td>
+                      <td className="col-dark-light align-middle">
+                        Not Available
+                      </td>
                       <td>
                         Provides Universal Search feature (
                         <code className="text-nowrap col-dark">
@@ -141,12 +143,16 @@ const tallyVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Mobile App</th>
-                      <td className="col-dark-light align-middle">Not Available</td>
+                      <td className="col-dark-light align-middle">
+                        Not Available
+                      </td>
                       <td>For both Android and iOS</td>
                     </tr>
                     <tr>
                       <th>Company sharing</th>
-                      <td className="col-dark-light align-middle">Not Available</td>
+                      <td className="col-dark-light align-middle">
+                        Not Available
+                      </td>
                       <td>
                         Unlimited company sharing feature is available in all
                         plan
@@ -154,7 +160,9 @@ const tallyVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Customizable Permission</th>
-                      <td className="col-dark-light align-middle">Not Available</td>
+                      <td className="col-dark-light align-middle">
+                        Not Available
+                      </td>
                       <td>Available</td>
                     </tr>
                     <tr>
@@ -185,12 +193,16 @@ const tallyVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Real Time dashboard</th>
-                      <td className="col-dark-light align-middle">Not Available</td>
+                      <td className="col-dark-light align-middle">
+                        Not Available
+                      </td>
                       <td>Available</td>
                     </tr>
                     <tr>
                       <th>Single ledger sharing</th>
-                      <td className="col-dark-light align-middle">Not Available</td>
+                      <td className="col-dark-light align-middle">
+                        Not Available
+                      </td>
                       <td>
                         User can share single ledger from Email and by creating
                         magic link
@@ -198,7 +210,9 @@ const tallyVsGiddh = (path) => {
                     </tr>
                     <tr>
                       <th>Attachment with Bills</th>
-                      <td className="col-dark-light align-middle">Not Available</td>
+                      <td className="col-dark-light align-middle">
+                        Not Available
+                      </td>
                       <td>User can add attachment with the invoice</td>
                     </tr>
                     <tr>
@@ -418,5 +432,4 @@ const tallyVsGiddh = (path) => {
       </div>
     </>
   );
-};
-export default tallyVsGiddh;
+}

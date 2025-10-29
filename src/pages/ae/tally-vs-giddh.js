@@ -1,11 +1,5 @@
-import TallyVsGiddh from "@/pages/tally-vs-giddh";
+import OldTallyVsGiddh from "../tally-vs-giddh";
 
-const aeTallyVsGiddh = (path) => {
-  return (
-    <>
-      <TallyVsGiddh  path={path.path} />
-    </>
-  );
-};
-
-export default aeTallyVsGiddh;
+export default function AeTallyVsGiddh(path) {
+  return <OldTallyVsGiddh path={path.path} />;
+}

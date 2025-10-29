@@ -3,18 +3,18 @@ import CTA from "../NewComps/CTA";
 import FAQs from "../NewComps/FAQs";
 import AlternateFeatures from "../NewComps/Features/AlternateFeatures";
 import FeedbackCards from "../NewComps/FeedbackCards";
-import Stats from "../NewComps/Stats";
-import SupportedPlatforms from "../NewComps/SupportedPlatforms";
+import GiddhVs from "../NewComps/GiddhVs";
+import QuickStartSection from "../NewComps/QuickStartSection";
 
-export default function SmallBusinessBookkeepingSoftware({ pageData }) {
+export default function TallyVsGiddh({ pageData }) {
   return (
     <>
       <StackedBanner compData={pageData?.stackedBanner} />
-      <Stats stats={pageData?.stats} />
       <AlternateFeatures features={pageData?.features} />
+      <QuickStartSection compData={pageData?.quickStartSection} />
+      <GiddhVs giddhVs={pageData?.giddhVs}/>
       <FeedbackCards testimonials={pageData?.testimonials} />
       <CTA compData={pageData?.cta} />
-      <SupportedPlatforms supportedPlatforms={pageData?.supportedPlatforms} />
       <FAQs faqs={pageData?.faqs} />
     </>
   );
