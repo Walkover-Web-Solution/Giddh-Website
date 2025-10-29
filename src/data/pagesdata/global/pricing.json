@@ -1,0 +1,268 @@
+{
+  "stackedBanner": {
+    "heading": "Most Affordable Accounting Software For Your Growing Businesses",
+    "subHeading": "Automate your accounting, simplify taxes, and gain control over your finances with Giddh. No more manual errors, just smooth and efficient operations as your business grows.",
+    "image": "/img/home-page/index_banner_india.svg",
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Schedule a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "ctaOne": {
+    "heading": "Sample Image Of Pricing Page With Feature Plans",
+    "buttons": [
+      {
+        "text": "Get started with a 30-Day Free Trial",
+        "link": "/signup",
+        "type": "btn-secondary-outline"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Empower Accounting Process with Advanced Features",
+    "cards": [
+      {
+        "heading": "Smart Global Compliance",
+        "description": "Find ledgers, items, or commands instantly across the system.",
+        "more_content": [
+          "Find ledgers/items fast",
+          "Search across modules",
+          "Save time daily"
+        ]
+      },
+      {
+        "heading": "Branch Accounting",
+        "description": "Gain control over business units and inventory locations.",
+        "more_content": [
+          "Track financials by branch",
+          "Manage warehouse-wise stock",
+          "Consolidated reporting"
+        ]
+      },
+      {
+        "heading": "White-Label with Mobile App",
+        "description": "Offer your own branded solution, complete with app support.",
+        "more_content": [
+          "Add your branding",
+          "Mobile app included",
+          "Ideal for partners"
+        ]
+      },
+      {
+        "heading": "Public API Access",
+        "description": "Integrate easily with external systems using our well-documented API.",
+        "more_content": [
+          "Easy third-party sync",
+          "Secure, open API",
+          "Build custom tools"
+        ]
+      },
+      {
+        "heading": "Multi-Country Tax Compliance",
+        "description": "Handle GST and VAT compliance effortlessly across multiple regions.",
+        "more_content": [
+          "Automated Tax Calculations",
+          "Easy Cross-Border Filing",
+          "Region-Specific Reports"
+        ]
+      },
+      {
+        "heading": "Automatic Currency Conversion",
+        "description": "Automatically converts international currencies into your base currency.",
+        "more_content": [
+          "Real-time currency rates",
+          "Manual rate option",
+          "Works globally"
+        ]
+      },
+      {
+        "icon": "/img/inventory-management-software/web.svg",
+        "heading": "Branch & Warehouse Inventory Management",
+        "description": "Manage inventory across multiple locations with ease.",
+        "more_content": [
+          "Track inventory at different branches and warehouses.",
+          "Access detailed, location-specific reports."
+        ]
+      },
+      {
+        "heading": "Manage Over 100 Companies",
+        "description": "Giddh supports over 100 companies under a single subscription, with multiple entities.",
+        "more_content": [
+          "View all reports in one place",
+          "Switch companies instantly",
+          "One plan, no extra setups"
+        ]
+      },
+      {
+        "heading": "Unlimited User Access",
+        "description": "Collaborate seamlessly with your members by adding unlimited users and assigning role-based access.",
+        "more_content": [
+          "Real-time currency rates",
+          "Manual rate option",
+          "Works globally"
+        ]
+      }
+    ]
+  },
+  "whyGiddh": {
+    "heading": "Simplify Inventory Management and Boost Efficiency",
+    "cards": [
+      {
+        "heading": "Ledger-Based Accounting with One-Step Entries"
+      },
+      {
+        "heading": "Manage Multiple Companies with Ease"
+      },
+      {
+        "heading": "Comprehensive Reporting"
+      },
+      {
+        "heading": "Personalised Pricing for B2B"
+      },
+      {
+        "heading": "Multi-Branch Management"
+      },
+      {
+        "heading": "Direct Synchronisation with Tally"
+      },
+      {
+        "heading": "Comprehensive Financial Reporting"
+      },
+      {
+        "heading": "Complete Coverage for All Business Functions"
+      }
+    ]
+  },
+  "stats": {
+    "heading": "Our Commitment Backed by Data",
+    "stats": [
+      {
+        "value": "4.8/5",
+        "label": "Average User Rating"
+      },
+      {
+        "value": "85%",
+        "label": "Improvement in Financial Visibility"
+      },
+      {
+        "value": "100%",
+        "label": "Data Security & Uptime Guarantee"
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Hear How We’ve Made a Difference",
+    "subheading": " Stories that inspire us to keep delivering our best.",
+    "data": [
+      {
+        "company": "Sinead North",
+        "owner": "Christian Schiel",
+        "testimonial": "Giddh is a great solution to manage customers and invoices internationally. The multi-currency option makes it very convenient, and generating invoices is simple and quick. I can also easily manage VAT reports in the UK. The support team is patient, understands the challenges we face, and resolves them effectively."
+      },
+      {
+        "company": "Dvara e-registry",
+        "owner": "Priyanshi Priya",
+        "testimonial": "Giddh is an excellent platform for managing multiple companies seamlessly. It allows me to handle different businesses in real time, all in one place. Switching between companies is incredibly fast and effortless, making the entire process smooth and efficient."
+      },
+      {
+        "company": "Teknoworth Medical Care OPC Pvt Ltd",
+        "owner": "Imran",
+        "testimonial": "Giddh is the most reliable application for inventory management in both India and the UAE. Managing data is effortless, and the mobile app works flawlessly, ensuring smooth operations anytime, anywhere."
+      },
+      {
+        "company": "Shruti Corporation",
+        "owner": "Shruti",
+        "testimonial": "Giddh is one of the easiest ledger-based accounting systems I’ve used. Creating ledger entries is quick and effortless, making it truly ready to go. Even someone without a strong accounting background can easily manage and run their business with it."
+      },
+      {
+        "company": "PI Green Consulting Pvt Ltd",
+        "owner": null,
+        "testimonial": "The application works seamlessly, allowing multiple users to access it in real time without any limits or lags. Multi-login functionality is effortless, making collaboration smooth and efficient."
+      },
+      {
+        "company": "Synergene Global",
+        "owner": "Manish Badonia",
+        "testimonial": "The support team is excellent, and the latest version of Giddh comes packed with powerful features. Giddh can be accessed from anywhere with just an internet connection, making it highly convenient and reliable."
+      },
+      {
+        "company": "Attic India",
+        "owner": "Kuldeep",
+        "testimonial": "The inventory reports work brilliantly. Creating parent and child groups is simple and effective, allowing the inventory to be organized and bifurcated properly for better clarity."
+      },
+      {
+        "company": "KARUNA TEMP SYSTEM PRIVATE LIMITED",
+        "owner": "Rohan Pavithran",
+        "testimonial": "Giddh’s estimates and proforma invoices work seamlessly. We can create proformas and easily convert them into invoices, tracking their status as paid, unpaid, or partially paid. Automated WhatsApp messages and email notifications after creating vouchers significantly reduce manual effort."
+      },
+      {
+        "company": "Dental Designs",
+        "owner": "Dr Gins Paul",
+        "testimonial": "Giddh offers multiple types of invoices, including cash and sales invoices, making billing flexible and convenient. The dashboard provides a clear summary of the business’s health on a single screen, helping us instantly understand where we stand on any given day."
+      },
+      {
+        "company": "Taurus Lifestyle",
+        "owner": "Kunal",
+        "testimonial": "The inventory module in Giddh is extremely powerful. Its variant creation feature allows multiple variants for a single item, which is very helpful for detailed inventory management. The barcode scanning feature further completes the requirements, making the process fast and efficient."
+      },
+      {
+        "company": "M/S STUDIO47",
+        "owner": null,
+        "testimonial": "Giddh provides a wide range of reports including financial statements, daybook, sales and purchase registers, inventory reports, and GST reports. Having all these reports in one place makes managing business insights simple and efficient."
+      },
+      {
+        "company": "SP Wellness",
+        "owner": null,
+        "testimonial": "Support connects positively when needed. The ledger accounting module makes it easy to create entries; I can easily manage my expenses by creating the accounts and making entries there."
+      },
+      {
+        "company": "The Medicity",
+        "owner": null,
+        "testimonial": "With Giddh, managing bank accounts is simple and hassle-free. Incomes and expenses can be tracked directly, and the built-in GST filing option makes compliance much easier. It’s truly a great all-in-one solution."
+      },
+      {
+        "company": "Mitti [Organic. Fresh. Desi]",
+        "owner": "Ankita Chadha",
+        "testimonial": "The inventory management helps in restaurant management and the branch creation helps to manage multiple branches under a single platform. It helps to see the branch profiles along with the warehouses."
+      }
+    ]
+  },
+  "ctaTwo": {
+    "subheading": "Join thousands of businesses that trust Giddh for seamless accounting, inventory control, and growth—all at an affordable business accounting software price.",
+    "image": "/img/girl-avatar.svg",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-secondary-outline"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How much does accounting software cost?",
+      "answer": "The cost of accounting software varies based on features and plan type. Giddh offers flexible pricing, starting with affordable plans tailored to your business needs. Explore our best accounting software pricing page for detailed information on our options."
+    },
+    {
+      "question": " What is the cheapest accounting software?",
+      "answer": "Giddh offers one of the most cost-effective accounting software pricing solutions for startups and small businesses, providing essential features at an affordable rate. Check our cloud accounting software pricing page to find the best option for your business."
+    },
+    {
+      "question": " How many invoices can I create in a year?",
+      "answer": "With Giddh, you can create unlimited invoices depending on your plan. Each plan offers flexibility for B2B invoicing, allowing you to scale as your business grows."
+    },
+    {
+      "question": " How can I find the perfect plan for my business?",
+      "answer": "Choosing the right plan depends on your business size and needs. Explore our multi-user accounting software pricing plans to support inventory, reporting, and team collaboration."
+    },
+    {
+      "question": "Can I pay the subscription on an annual basis?",
+      "answer": "Yes, Giddh offers both annual and monthly billing options. Choose the payment structure that best suits your budget and save more with our yearly payment discounts."
+    }
+  ]
+}

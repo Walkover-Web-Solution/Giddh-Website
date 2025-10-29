@@ -1,8 +1,9 @@
-import Pricing from "@/pages/pricing"
+import OldPricing from "../in/pricing";
+
 const aePricing = (path) => {
   return (
     <>
-     <Pricing path={path.path} />
+      <OldPricing path={path.path} />
     </>
   );
 };

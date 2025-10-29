@@ -9,6 +9,7 @@ export default function getPageData(pageInfo) {
     "inventory-management-software",
     "small-business-bookkeeping-software",
     "e-invoice",
+    "pricing"
   ];
   if (!pagesToGetData.includes(pageInfo?.page)) return null;
   try {
