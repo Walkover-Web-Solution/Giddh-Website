@@ -60,7 +60,7 @@
       },
       {
         "heading": "Anytime, Anywhere, and on Any Device",
-       "img": "/img/home-page/anytime_anywhere_and_on_any_device.webp",
+        "img": "/img/home-page/anytime_anywhere_and_on_any_device.webp",
         "description": "Access and manage your finances seamlessly, whether you're using your desktop, Android, or iOS device.",
         "more_content": [
           "Cloud-based access across devices.",
@@ -130,7 +130,10 @@
       {
         "heading": "Barcode-Enabled Billing",
         "description": "Speed up billing by scanning products directly, reducing human errors and saving time.",
-        "more_content": ["Scan products directly.", "Eliminate manual errors."]
+        "more_content": [
+          "Scan products directly.",
+          "Eliminate manual errors."
+        ]
       },
       {
         "heading": "Effortless GST Invoicing",
@@ -169,12 +172,18 @@
       {
         "heading": "Recurring & Automated Invoicing",
         "description": "Automate regular billing cycles and follow-ups to ensure timely payments.",
-        "more_content": ["Set schedules.", "Auto-reminders for payments."]
+        "more_content": [
+          "Set schedules.",
+          "Auto-reminders for payments."
+        ]
       },
       {
         "heading": "Invoice Import, Export, & Bulk Edit",
         "description": "Easily manage large invoice volumes with Excel import and batch updates.",
-        "more_content": ["Excel import.", "Bulk update or delete."]
+        "more_content": [
+          "Excel import.",
+          "Bulk update or delete."
+        ]
       },
       {
         "heading": "Generate Multiple & Compound Invoices",
