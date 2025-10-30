@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import PricingData from "../data/pricingData.json";
+import PricingData from "../../data/pricingData.json";
 import {
   MdDone,
   MdClose,
