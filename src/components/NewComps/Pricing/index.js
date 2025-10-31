@@ -7,42 +7,11 @@ import {
   MdKeyboardArrowUp,
 } from "react-icons/md";
 
-export default function Pricing({ pageInfo }) {
-  const [plans, setPlans] = useState([]);
+export default function Pricing({ pricingPlans }) {
   const [isYearly, setIsYearly] = useState(true);
-  const [pricingData, setPricingData] = useState([]);
   const [showAll, setShowAll] = useState(false); // 👈 new state for toggling rows
 
-  const country = pageInfo.country;
-
-  useEffect(() => {
-    const fetchData = async (region) => {
-      try {
-        const response = await fetch(
-          `https://api.giddh.com/v2/subscription/plans/all?regionCode=${region}`
-        );
-        if (!response.ok)
-          throw new Error(`HTTP error! status: ${response.status}`);
-        const jsonData = await response.json();
-        setPlans(jsonData.body);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    fetchData(getRegionByCountry(country));
-    if (PricingData) {
-      setPricingData(PricingData[country]);
-    }
-  }, [country]);
-
-  const getRegionByCountry = (country = "") => {
-    const regionMap = {
-      in: "IND",
-      ae: "ARE",
-      uk: "GBR",
-    };
-    return regionMap[country.toLowerCase()] || "GLB";
-  };
+  const plans = pricingPlans;
 
   const handlePlanToggle = (event) => {
     setIsYearly(event.target.id === "yearly");
@@ -51,7 +20,7 @@ export default function Pricing({ pageInfo }) {
   const getPlanDetails = (plan) => (
     <div className="d-flex flex-column text-start">
       <p className="m-0 font-xs">{plan.name}</p>
-      <p className="m-0 font-lg">
+      <p className="m-0 font-lg"> 
         {getCurrencySymbol(plan)} {getAmount(plan, true)}
       </p>
       <span className="font-xs m-0">
@@ -92,7 +61,7 @@ export default function Pricing({ pageInfo }) {
     (!isYearly && plan?.monthlyAmount === 0 && !plan?.monthlyDiscount);
 
   // limit table rows shown
-  const visibleData = showAll ? pricingData : pricingData.slice(0, 5);
+  const visibleData = showAll ? plans : plans.slice(0, 5);
 
   return (
     <section className="py-5 container">
@@ -135,7 +104,7 @@ export default function Pricing({ pageInfo }) {
         <table className="table w-100 align-middle text-center">
           <thead>
             <tr>
-              <th className="text-start  align-baseline ps-4 pt-4 border-end border-start border-top                                                             ">
+              <th className="text-start  align-baseline ps-4 pt-4 border-end border-start border-top">
                 <p className="m-0 fw-semibold">
                   Select a plan that best suits your needs
                 </p>
@@ -168,7 +137,7 @@ export default function Pricing({ pageInfo }) {
         </table>
       </div>
 
-      {pricingData.length > 5 && (
+      {plans.length > 5 && (
         <div className="text-end font-sm font-600 font-primary mt-3">
           <p
             role="button"
