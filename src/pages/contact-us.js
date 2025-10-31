@@ -1,48 +1,51 @@
 import { MdEmail, MdCall, MdWhatsapp } from "react-icons/md";
 import { useState } from "react";
 import { createSlider } from "@typeform/embed";
-import Head from 'next/head';
-import Jsondata from '../data/schema/organizationSchema.json';
-import { getSchemaForLinkPath } from '../../public/js/utils';
+import Head from "next/head";
+import Jsondata from "../data/schema/organizationSchema.json";
+import { getSchemaForLinkPath } from "../../public/js/utils";
 
 const contactUs = (path) => {
   const [utm, setUtm] = useState(null);
   const linkPath = path.path;
   const isUK = linkPath.isUK;
-  const selectedSchema = getSchemaForLinkPath(linkPath, Jsondata.organizationSchema);
+  const selectedSchema = getSchemaForLinkPath(
+    linkPath,
+    Jsondata.organizationSchema
+  );
 
-   const openTypeForm = () => {
+  const openTypeForm = () => {
     const utmParams = new URLSearchParams({
       utm_source: getLocalStorage("utm_source"),
       utm_medium: getLocalStorage("utm_medium"),
       utm_campaign: getLocalStorage("utm_campaign"),
     }).toString();
     setUtm(utmParams);
-     const slider = createSlider("https://form.typeform.com/to/uOtrQ4tb", {
-       position: "right", // Specify position ('left', 'center', 'right')
-       opacity: 83, // Background overlay opacity
-       iframeProps: {
-         title: "Accounting Software Company Contact Form", // Accessible iframe title
-       },
-       transitiveSearchParams: true, // Pass search params to Typeform
-       medium: "snippet", // Set the medium for analytics/tracking
-       hidden: {
-         utm: utm, // Pass the UTM parameters as hidden fields
-       },
-     });
-     slider.open(); // Opens the slider
-   };
+    const slider = createSlider("https://form.typeform.com/to/uOtrQ4tb", {
+      position: "right", // Specify position ('left', 'center', 'right')
+      opacity: 83, // Background overlay opacity
+      iframeProps: {
+        title: "Accounting Software Company Contact Form", // Accessible iframe title
+      },
+      transitiveSearchParams: true, // Pass search params to Typeform
+      medium: "snippet", // Set the medium for analytics/tracking
+      hidden: {
+        utm: utm, // Pass the UTM parameters as hidden fields
+      },
+    });
+    slider.open(); // Opens the slider
+  };
 
   return (
     <>
-    {selectedSchema && (
+      {selectedSchema && (
         <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(selectedSchema) }}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(selectedSchema) }}
           />
-      </Head>
-    )}
+        </Head>
+      )}
       <div className="contact_us">
         <section className="container-fluid contact_us__banner">
           <div className="container">
@@ -85,10 +88,14 @@ const contactUs = (path) => {
                     <div className="d-flex align-items-center column-gap-3 mb-3">
                       <MdEmail />
                       <a
-                        href="mailto:sales@giddh.com"
+                        href={
+                          isUK
+                            ? "mailto:hello@giddh.com"
+                            : "mailto:sales@giddh.com"
+                        }
                         className="contact-details__wapper--email"
                       >
-                       sales@giddh.com
+                        {isUK ? "hello@giddh.com" : "sales@giddh.com"}
                       </a>
                     </div>
                     <div className="d-flex align-items-center column-gap-3 mb-3">
@@ -109,9 +116,7 @@ const contactUs = (path) => {
                       </div>
                     )}
                   </address>
-                  <button
-                    onClick={() => openCalendly()}
-                  >
+                  <button onClick={() => openCalendly()}>
                     Schedule a meeting
                   </button>
                   <button onClick={openTypeForm} className="mt-0 mt-lg-2">
@@ -146,9 +151,7 @@ const contactUs = (path) => {
                         <a href="tel:+918818888768"> +91 88188 88768</a>
                       </div>
                     </address>
-                    <button
-                      onClick={() => openCalendly()}
-                    >
+                    <button onClick={() => openCalendly()}>
                       Schedule a meeting
                     </button>
                   </div>

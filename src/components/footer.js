@@ -206,7 +206,7 @@ const Footer = (path) => {
                       <ul className="footer-list list-unstyled class">
                         <li>
                           { isUK ? "Sales/Support: " : "Sales: " }
-                          <a href="mailto:hello@giddh.com" className="cf_email">
+                          <a href={isUK ? "mailto:hello@giddh.com" : "mailto:sales@giddh.com"} className="cf_email">
                             { isUK ? "hello@giddh.com" : "sales@giddh.com" }
                           </a>
                         </li>
