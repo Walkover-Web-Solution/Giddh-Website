@@ -85,12 +85,10 @@ const contactUs = (path) => {
                     <div className="d-flex align-items-center column-gap-3 mb-3">
                       <MdEmail />
                       <a
-                        href={`mailto:${
-                          isUK ? "hello@giddh.com" : "support@giddh.com"
-                        }`}
+                        href={`mailto:hello@giddh.com`}
                         className="contact-details__wapper--email"
                       >
-                        {isUK ? "hello@giddh.com" : "support@giddh.com"}
+                       hello@giddh.com
                       </a>
                     </div>
                     <div className="d-flex align-items-center column-gap-3 mb-3">
@@ -130,10 +128,10 @@ const contactUs = (path) => {
                       <div className="d-flex align-items-center column-gap-3 mb-3">
                         <MdEmail />
                         <a
-                          href="mailto:support@giddh.com"
+                          href="mailto:hello@giddh.com"
                           className="contact-details__wapper--email"
                         >
-                          support@giddh.com
+                          hello@giddh.com
                         </a>
                       </div>
                       <div className="d-flex align-items-center column-gap-3 mb-3">
