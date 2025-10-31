@@ -6,12 +6,12 @@ import FeedbackCards from "../NewComps/FeedbackCards";
 import Stats from "../NewComps/Stats";
 import PricingComp from "../NewComps/Pricing";
 
-export default function Pricing({ pageData , pageInfo }) {
+export default function Pricing({ pageData , pageInfo  , pricingPlans}) {
 
   return (
     <>
       <StackedBanner compData={pageData?.stackedBanner} />
-      <PricingComp pageInfo={pageInfo} />
+      <PricingComp pageInfo={pageInfo}  pricingPlans={pricingPlans}/>
       <CTA compData={pageData?.ctaOne} />
       <GridFeatures features={pageData?.characteristics} />
       <GridFeatures features={pageData?.whyGiddh} />

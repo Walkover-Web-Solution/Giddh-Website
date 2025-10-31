@@ -12,7 +12,7 @@ export default function Pricing({ pricingPlans }) {
   const [showAll, setShowAll] = useState(false); // 👈 new state for toggling rows
 
   const plans = pricingPlans;
-
+  console.log(pricingPlans);
   const handlePlanToggle = (event) => {
     setIsYearly(event.target.id === "yearly");
   };
@@ -20,7 +20,7 @@ export default function Pricing({ pricingPlans }) {
   const getPlanDetails = (plan) => (
     <div className="d-flex flex-column text-start">
       <p className="m-0 font-xs">{plan.name}</p>
-      <p className="m-0 font-lg"> 
+      <p className="m-0 font-lg">
         {getCurrencySymbol(plan)} {getAmount(plan, true)}
       </p>
       <span className="font-xs m-0">
@@ -61,8 +61,8 @@ export default function Pricing({ pricingPlans }) {
     (!isYearly && plan?.monthlyAmount === 0 && !plan?.monthlyDiscount);
 
   // limit table rows shown
-  const visibleData = showAll ? plans : plans.slice(0, 5);
-
+  // const visibleData = showAll ? plans : plans.slice(0, 5);
+  console.log(plans.yearly);
   return (
     <section className="py-5 container">
       <div>
@@ -112,32 +112,31 @@ export default function Pricing({ pricingPlans }) {
                   *All prices are exclusive of GST
                 </span>
               </th>
-              {plans.map((plan, index) => (
-                <th key={index} className="p-4 border-end border-top">
-                  {getPlanDetails(plan)}
-                </th>
-              ))}
+              {isYearly ??
+                PricingData?.map((plan, index) => (
+                  <th key={index} className="p-4 border-end border-top">
+                    {getPlanDetails(plan)}
+                  </th>
+                ))}
             </tr>
           </thead>
-
           <tbody>
-            {visibleData?.map((feature, index) => (
-              <tr key={index}>
-                <td className="text-start fw-medium ps-4 border-end border-start">
-                  {feature.title}
+            {isYearly ?? PricingData?.map}
+            <tr key={index}>
+              <td className="text-start fw-medium ps-4 border-end border-start">
+                {feature.title}
+              </td>
+              {plans.map((plan, planIndex) => (
+                <td key={planIndex} className="ps-4 text-start border-end">
+                  {getPlanInfoByFeature(plan, feature)}
                 </td>
-                {plans.map((plan, planIndex) => (
-                  <td key={planIndex} className="ps-4 text-start border-end">
-                    {getPlanInfoByFeature(plan, feature)}
-                  </td>
-                ))}
-              </tr>
-            ))}
+              ))}
+            </tr>
           </tbody>
         </table>
       </div>
 
-      {plans.length > 5 && (
+      {/* {plans.length > 5 && (
         <div className="text-end font-sm font-600 font-primary mt-3">
           <p
             role="button"
@@ -157,7 +156,7 @@ export default function Pricing({ pricingPlans }) {
             )}
           </p>
         </div>
-      )}
+      )} */}
     </section>
   );
 }
