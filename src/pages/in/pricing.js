@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import PricingData from "../../data/pricingData.json";
+import PricingData from "@/data/pricingData.json";
+
 import {
   MdDone,
   MdClose,
@@ -63,6 +64,7 @@ const InPricing = (path) => {
 
     fetchData(getRegionByLink());
     if (PricingData) {
+      console.log(country)
       setPricingData(PricingData[country]);
     }
   }, [PricingData]);

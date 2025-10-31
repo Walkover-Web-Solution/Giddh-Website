@@ -69,6 +69,7 @@ export default function MyApp({ Component, pageProps }) {
   const rawPath = router.asPath?.split("#")[0]?.split("?")[0];
   const pageInfo = getPageInfo(rawPath);
   const pageData = getPageData(pageInfo);
+  console.log(pageInfo , "appppp")
 
   return (
     <>
