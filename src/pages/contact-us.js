@@ -85,10 +85,10 @@ const contactUs = (path) => {
                     <div className="d-flex align-items-center column-gap-3 mb-3">
                       <MdEmail />
                       <a
-                        href="mailto:hello@giddh.com"
+                        href="mailto:sales@giddh.com"
                         className="contact-details__wapper--email"
                       >
-                       hello@giddh.com
+                       sales@giddh.com
                       </a>
                     </div>
                     <div className="d-flex align-items-center column-gap-3 mb-3">
