@@ -28,19 +28,21 @@ function handlePlans(jsonData) {
     .map((plan) => {
       const filteredPlan = {};
       if (plan.hasOwnProperty("yearlyAmountAfterDiscount"))
-        filteredPlan.yearlyAmountAfterDiscount = plan.yearlyAmountAfterDiscount || null;
+        filteredPlan.yearlyAmountAfterDiscount =
+          plan.yearlyAmountAfterDiscount || null;
       if (plan.hasOwnProperty("yearlyDiscountAmount"))
         filteredPlan.yearlyDiscountAmount = plan.yearlyDiscountAmount || null;
       if (plan.hasOwnProperty("name")) filteredPlan.name = plan.name;
-      if (plan.hasOwnProperty("currency")) filteredPlan.currency = plan.currency;
+      if (plan.hasOwnProperty("currency"))
+        filteredPlan.currency = plan.currency;
       if (plan.hasOwnProperty("billsAllowed"))
-        filteredPlan.yearlyBillsAllowed = plan.yearlyBillsAllowed || null;
+        filteredPlan.billsAllowed = plan.billsAllowed || null;
       if (plan.hasOwnProperty("yearlyAmount"))
         filteredPlan.yearlyAmount = plan.yearlyAmount || null;
-      if (plan.hasOwnProperty("yearlyInvoicesAllowed"))
-        filteredPlan.yearlyInvoicesAllowed = plan.yearlyInvoicesAllowed || null;
+      if (plan.hasOwnProperty("invoicesAllowed"))
+        filteredPlan.invoicesAllowed = plan.invoicesAllowed || null;
       if (plan.hasOwnProperty("companiesLimit"))
-        filteredPlan.yearlyCompaniesLimit = plan.yearlyCompaniesLimit || null;
+        filteredPlan.companiesLimit = plan.companiesLimit || null;
       if (plan.hasOwnProperty("restrictedModules"))
         filteredPlan.restrictedModules = plan.restrictedModules || null;
       return filteredPlan;
@@ -65,17 +67,20 @@ function handlePlans(jsonData) {
     .map((plan) => {
       const filteredPlan = {};
       if (plan.hasOwnProperty("monthlyAmountAfterDiscount"))
-        filteredPlan.monthlyAmountAfterDiscount = plan.monthlyAmountAfterDiscount || null;
+        filteredPlan.monthlyAmountAfterDiscount =
+          plan.monthlyAmountAfterDiscount || null;
       if (plan.hasOwnProperty("monthlyDiscountAmount"))
         filteredPlan.monthlyDiscountAmount = plan.monthlyDiscountAmount || null;
       if (plan.hasOwnProperty("name")) filteredPlan.name = plan.name;
-      if (plan.hasOwnProperty("currency")) filteredPlan.currency = plan.currency;
+      if (plan.hasOwnProperty("currency"))
+        filteredPlan.currency = plan.currency;
       if (plan.hasOwnProperty("monthlyBillsAllowed"))
         filteredPlan.monthlyBillsAllowed = plan.monthlyBillsAllowed || null;
       if (plan.hasOwnProperty("monthlyAmount"))
         filteredPlan.monthlyAmount = plan.monthlyAmount || null;
       if (plan.hasOwnProperty("monthlyInvoicesAllowed"))
-        filteredPlan.monthlyInvoicesAllowed = plan.monthlyInvoicesAllowed || null;
+        filteredPlan.monthlyInvoicesAllowed =
+          plan.monthlyInvoicesAllowed || null;
       if (plan.hasOwnProperty("monthlyCompaniesLimit"))
         filteredPlan.monthlyCompaniesLimit = plan.monthlyCompaniesLimit || null;
       if (plan.hasOwnProperty("restrictedModules"))

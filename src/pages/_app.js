@@ -69,7 +69,6 @@ export default function MyApp({ Component, pageProps }) {
   const rawPath = router.asPath?.split("#")[0]?.split("?")[0];
   const pageInfo = getPageInfo(rawPath);
   const pageData = getPageData(pageInfo);
-  console.log(pageInfo , "appppp")
 
   return (
     <>
@@ -77,7 +76,12 @@ export default function MyApp({ Component, pageProps }) {
         <Navbar browserPath={rawBrowserPath} path={path} />
       ) : null}
       <Header browserPath={rawBrowserPath} path={path} />
-      <Component path={path} {...pageProps} pageData={pageData} pageInfo={pageInfo} />
+      <Component
+        path={path}
+        {...pageProps}
+        pageData={pageData}
+        pageInfo={pageInfo}
+      />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
       <GlobalComponents path={arrayBrawserPath} />
       <Toastify />
