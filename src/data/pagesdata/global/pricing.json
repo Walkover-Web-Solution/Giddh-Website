@@ -81,7 +81,6 @@
         ]
       },
       {
-        "icon": "/img/inventory-management-software/web.svg",
         "heading": "Branch & Warehouse Inventory Management",
         "description": "Manage inventory across multiple locations with ease.",
         "more_content": [
@@ -113,28 +112,28 @@
     "heading": "Simplify Inventory Management and Boost Efficiency",
     "cards": [
       {
-        "heading": "Ledger-Based Accounting with One-Step Entries"
+        "description": "Ledger-Based Accounting with One-Step Entries"
       },
       {
-        "heading": "Manage Multiple Companies with Ease"
+        "description": "Manage Multiple Companies with Ease"
       },
       {
-        "heading": "Comprehensive Reporting"
+        "description": "Comprehensive Reporting"
       },
       {
-        "heading": "Personalised Pricing for B2B"
+        "description": "Personalised Pricing for B2B"
       },
       {
-        "heading": "Multi-Branch Management"
+        "description": "Multi-Branch Management"
       },
       {
-        "heading": "Direct Synchronisation with Tally"
+        "description": "Direct Synchronisation with Tally"
       },
       {
-        "heading": "Comprehensive Financial Reporting"
+        "description": "Comprehensive Financial Reporting"
       },
       {
-        "heading": "Complete Coverage for All Business Functions"
+        "description": "Complete Coverage for All Business Functions"
       }
     ]
   },

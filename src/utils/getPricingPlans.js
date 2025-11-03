@@ -52,7 +52,6 @@ function handlePlans(jsonData) {
       const amountB = b.yearlyAmount || 0;
       return amountA - amountB;
     });
-  console.log("⚡️ ~ :19 ~ handlePlans ~ yearly:", yearly);
 
   const monthlyPlans =
     plans?.filter(

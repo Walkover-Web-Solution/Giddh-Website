@@ -12,7 +12,7 @@ export default function Pricing({ pageData, pageInfo, pricingPlans }) {
 }
 
 export async function getServerSideProps() {
-  const pricingPlans = (await getPricingPlans("IND")) || [];
+  const pricingPlans = (await getPricingPlans("GLB")) || [];
   return {
     props: {
       pricingPlans: pricingPlans,
