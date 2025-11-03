@@ -8,7 +8,6 @@ import {
 } from "react-icons/md";
 
 export default function Pricing({ pricingPlans, pageInfo }) {
-  console.log(pricingPlans);
   const [isYearly, setIsYearly] = useState(true);
   const [showReadMore, setShowReadMore] = useState(false);
 
@@ -24,31 +23,34 @@ export default function Pricing({ pricingPlans, pageInfo }) {
       </div>
 
       {pricingPlans.yearly.length > 0 && pricingPlans.monthly.length > 0 && (
-        <div className="btn-group py-2" role="group">
+        <div
+          className="toggle-button btn-group"
+          role="group"
+          aria-label="Toggle to get monthly or yearly wise plan"
+        >
           <input
             type="radio"
             className="btn-check"
-            name="planDuration"
-            id="yearly"
+            name="plan-duration"
+            id="month"
             autoComplete="off"
-            checked={isYearly}
             onChange={handlePlanToggle}
           />
-          <label className="btn btn-outline-primary" htmlFor="yearly">
-            Yearly
+          <label className="btn btn-outline-primary" htmlFor="month">
+            Month
           </label>
 
           <input
             type="radio"
             className="btn-check"
-            name="planDuration"
-            id="monthly"
+            name="plan-duration"
+            id="year"
             autoComplete="off"
-            checked={!isYearly}
+            defaultChecked
             onChange={handlePlanToggle}
           />
-          <label className="btn btn-outline-primary" htmlFor="monthly">
-            Monthly
+          <label className="btn btn-outline-primary" htmlFor="year">
+            Year
           </label>
         </div>
       )}
@@ -97,7 +99,6 @@ function PricingTable({
   const getCurrencySymbol = (plan) => plan?.currency?.symbol;
 
   const getPlanDetails = (plan) => {
-    console.log(plan);
     return (
       <div className="d-flex flex-column text-start">
         <p className="m-0 font-xs">{plan.name}</p>
@@ -114,7 +115,9 @@ function PricingTable({
   const getPlanInfoByFeature = (plan, feature) => {
     if (!plan || !feature) return null;
 
-    if (feature.specificContent && !isFreePlan(plan)) {
+    if (Object.hasOwn(feature, "yearly")) {
+      return plan[tableType === "yearly" ? feature?.yearly : feature?.monthly];
+    } else if (feature.specificContent && !isFreePlan(plan)) {
       return (
         <span dangerouslySetInnerHTML={{ __html: feature.specificContent }} />
       );

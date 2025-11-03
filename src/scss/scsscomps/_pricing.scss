@@ -68,14 +68,14 @@
       min-width: 80px;
     }
     .btn-check:checked + .btn {
-      --bs-btn-active-bg: var(--col-primary);
-      --bs-btn-active-color: var(--col-white);
-      --bs-btn-active-border-color: var(--col-primary);
+      --bs-btn-active-bg: var(--col-primary) !important;
+      --bs-btn-active-color: var(--col-white) !important;
+      --bs-btn-active-border-color: var(--col-primary) !important;
     }
     & > .btn {
-      --button-color: var(--col-primary);
-      --bs-btn-color: var(--col-primary);
-      --bs-btn-border-color: var(--col-primary);
+      --button-color: var(--col-primary) !important;
+      --bs-btn-color: var(--col-primary) !important;
+      --bs-btn-border-color: var(--col-primary) !important;
     }
   }
 
