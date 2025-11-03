@@ -8,7 +8,9 @@ import {
 } from "react-icons/md";
 
 export default function Pricing({ pricingPlans, pageInfo }) {
+  console.log(pricingPlans);
   const [isYearly, setIsYearly] = useState(true);
+  const [showReadMore, setShowReadMore] = useState(false);
 
   const handlePlanToggle = (event) => {
     setIsYearly(event.target.id === "yearly");
@@ -51,49 +53,63 @@ export default function Pricing({ pricingPlans, pageInfo }) {
         </div>
       )}
 
-      <div>
-        {isYearly ? (
-          <PricingTable
-            pricingPlans={pricingPlans?.yearly}
-            pageInfo={pageInfo}
-            isYearly={true}
-          />
-        ) : (
-          <PricingTable
-            pricingPlans={pricingPlans?.monthly}
-            pageInfo={pageInfo}
-            isYearly={false}
-          />
-        )}
-      </div>
+      <PricingTable
+        pricingPlans={pricingPlans?.yearly}
+        showTable={isYearly}
+        pageInfo={pageInfo}
+        tableType="yearly"
+        showReadMore={showReadMore}
+      />
+
+      <PricingTable
+        pricingPlans={pricingPlans?.monthly}
+        showTable={!isYearly}
+        pageInfo={pageInfo}
+        tableType="monthly"
+        showReadMore={showReadMore}
+      />
+      <button
+        className="btn btn-primary"
+        onClick={() => setShowReadMore(!showReadMore)}
+      >
+        Read More
+      </button>
     </section>
   );
 }
 
-function PricingTable({ pricingPlans, pageInfo, isYearly }) {
+function PricingTable({
+  pricingPlans,
+  pageInfo,
+  tableType,
+  showTable,
+  showReadMore,
+}) {
   const features = pricingData[pageInfo?.country] || [];
 
   const getAmount = (plan, afterDiscount = false) => {
-    const prefix = isYearly ? "yearly" : "monthly";
     const key = afterDiscount
-      ? `${prefix}AmountAfterDiscount`
-      : `${prefix}Amount`;
+      ? `${tableType}AmountAfterDiscount`
+      : `${tableType}Amount`;
     return +(plan?.[key] ?? 0);
   };
 
   const getCurrencySymbol = (plan) => plan?.currency?.symbol;
 
-  const getPlanDetails = (plan) => (
-    <div className="d-flex flex-column text-start">
-      <p className="m-0 font-xs">{plan.name}</p>
-      <p className="m-0 font-lg">
-        {getCurrencySymbol(plan)} {getAmount(plan)}
-      </p>
-      <span className="font-xs m-0">
-        {isYearly ? "per annum" : "per month"}
-      </span>
-    </div>
-  );
+  const getPlanDetails = (plan) => {
+    console.log(plan);
+    return (
+      <div className="d-flex flex-column text-start">
+        <p className="m-0 font-xs">{plan.name}</p>
+        <p className="m-0 font-lg">
+          {`${getCurrencySymbol(plan)}${getAmount(plan)}`}
+        </p>
+        <span className="font-xs m-0">
+          {tableType === "yearly" ? "per annum" : "per month"}
+        </span>
+      </div>
+    );
+  };
 
   const getPlanInfoByFeature = (plan, feature) => {
     if (!plan || !feature) return null;
@@ -111,12 +127,20 @@ function PricingTable({ pricingPlans, pageInfo, isYearly }) {
   };
 
   const isFreePlan = (plan) =>
-    (isYearly && plan?.yearlyAmount === 0 && !plan?.yearlyDiscount) ||
-    (!isYearly && plan?.monthlyAmount === 0 && !plan?.monthlyDiscount);
+    (tableType === "yearly" &&
+      plan?.yearlyAmount === 0 &&
+      !plan?.yearlyDiscount) ||
+    (tableType === "monthly" &&
+      plan?.monthlyAmount === 0 &&
+      !plan?.monthlyDiscount);
 
   return (
     <div>
-      <table className="table w-100 align-middle text-center">
+      <table
+        className={`table w-100 align-middle text-center ${
+          showTable ? "" : "d-none"
+        }`}
+      >
         <thead>
           <tr>
             <th className="text-start ps-4 border-start border-end border-top">
@@ -136,8 +160,11 @@ function PricingTable({ pricingPlans, pageInfo, isYearly }) {
         </thead>
 
         <tbody>
-          {features?.map((feature, i) => (
-            <tr key={i}>
+          {features?.map((feature, index) => (
+            <tr
+              key={index}
+              className={index > 4 && !showReadMore ? "d-none" : ""}
+            >
               <td className="text-start ps-4 border-start border-end">
                 {feature.title}
               </td>
