@@ -1,9 +1,10 @@
-import ImportData from "@/pages/import-data";
-const inImportData = (path) => {
+import ImportData from "@/components/Pages/ImportData";
+
+export default function InImportData({ pageData }) {
+  console.log(pageData);
   return (
     <>
-      <ImportData path={path.path} />
+      <ImportData pageData={pageData} />
     </>
   );
-};
-export default inImportData;
+}

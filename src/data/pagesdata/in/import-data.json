@@ -1,0 +1,215 @@
+{
+  "splitBanner": {
+    "heading": "Transform Your Business with Real-Time Collaboration in Accounting",
+    "subHeading": "Manage your finances, collaborate with members, and ensure seamless decision-making. Giddh’s multi-user accounting software for business is designed for growth and efficiency",
+    "lottie": "/img/import-data/import-Hero.json",
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ],
+    "form": false
+  },
+  "instructions": {
+    "heading": "Seamless Data Import in Four Easy Steps",
+    "subHeading": "",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Export your data",
+        "lottie": "/img/import-data/export-your-data.json",
+        "description": "From Tally, Excel, QuickBooks, or any system in CSV or XML format."
+      },
+      {
+        "id": 2,
+        "title": "Download the Giddh template",
+        "lottie": "/img/import-data/download-the-Giddh-template.json",
+        "description": "Pre-formatted Excel sheets designed to match Giddh’s data structure."
+      },
+      {
+        "id": 3,
+        "title": "Upload & auto-map",
+        "lottie": "/img/import-data/upload-&-auto-map.json",
+        "description": "Smart mapping automatically detects and matches your fields."
+      },
+      {
+        "id": 4,
+        "title": "Verify & finalise",
+        "lottie": "/img/import-data/verify-&-finalise.json",
+        "description": "Preview your entries before import. Undo or re-import anytime."
+      }
+    ],
+    "footer": "No technical skills required — import confidently in minutes.",
+    "buttons": [
+      {
+        "text": "Start Free Migration",
+        "link": "/signup"
+      }
+    ]
+  },
+  "features": {
+    "heading": "Powerful Features for Effortless Data Import",
+    "subHeading": "Whether switching from legacy systems or upgrading your workflow, every feature works to make migration stress-free.",
+    "content": [
+      {
+        "title": "Smart Field Mapping",
+        "description": "Automatically matches columns from your files to Giddh’s accounting fields — no manual setup required."
+      },
+      {
+        "title": "Bulk Data Upload",
+        "description": "Import thousands of entries at once, including ledgers, invoices, vouchers, and contacts."
+      },
+      {
+        "title": "Real-Time Validation",
+        "description": "Instantly detects missing fields, duplicates, or incorrect formats before import completes."
+      },
+      {
+        "title": "Multi-Currency Compatibility",
+        "description": "Import transactions in multiple currencies without conversion errors or mismatched values."
+      },
+      {
+        "title": "API Integration for Developers",
+        "description": "Seamlessly connect your ERP or CRM for automated, scheduled imports."
+      },
+      {
+        "title": "Multi-User Support",
+        "description": "Allow multiple team members to collaborate on imports simultaneously — assign roles, review uploads, and track changes with complete transparency."
+      },
+      {
+        "title": "Dedicated Migration Support",
+        "description": "Get one-on-one help from Giddh’s migration experts — from data prep to validation."
+      },
+      {
+        "title": "White-Label Option",
+        "description": "Perfect for accounting firms, SaaS platforms, and resellers seeking a customisable, branded migration solution."
+      },
+      {
+        "title": "Custom Template Support",
+        "description": "Use Giddh’s ready-made templates or upload your own formats for faster data alignment."
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Trusted by 1000+ Businesses Across India",
+    "data": [
+      {
+        "company": "Sinead North",
+        "owner": "Christian Schiel",
+        "testimonial": "Giddh is a great solution to manage customers and invoices internationally. The multi-currency option makes it very convenient, and generating invoices is simple and quick. I can also easily manage VAT reports in the UK. The support team is patient, understands the challenges we face, and resolves them effectively."
+      },
+      {
+        "company": "Dvara e-registry",
+        "owner": "Priyanshi Priya",
+        "testimonial": "Giddh is an excellent platform for managing multiple companies seamlessly. It allows me to handle different businesses in real time, all in one place. Switching between companies is incredibly fast and effortless, making the entire process smooth and efficient."
+      },
+      {
+        "company": "Teknoworth Medical Care OPC Pvt Ltd",
+        "owner": "Imran",
+        "testimonial": "Giddh is the most reliable application for inventory management in both India and the UAE. Managing data is effortless, and the mobile app works flawlessly, ensuring smooth operations anytime, anywhere."
+      },
+      {
+        "company": "Shruti Corporation",
+        "owner": "Shruti",
+        "testimonial": "Giddh is one of the easiest ledger-based accounting systems I’ve used. Creating ledger entries is quick and effortless, making it truly ready to go. Even someone without a strong accounting background can easily manage and run their business with it."
+      },
+      {
+        "company": "PI Green Consulting Pvt Ltd",
+        "owner": null,
+        "testimonial": "The application works seamlessly, allowing multiple users to access it in real time without any limits or lags. Multi-login functionality is effortless, making collaboration smooth and efficient."
+      },
+      {
+        "company": "Synergene Global",
+        "owner": "Manish Badonia",
+        "testimonial": "The support team is excellent, and the latest version of Giddh comes packed with powerful features. Giddh can be accessed from anywhere with just an internet connection, making it highly convenient and reliable."
+      },
+      {
+        "company": "Attic India",
+        "owner": "Kuldeep",
+        "testimonial": "The inventory reports work brilliantly. Creating parent and child groups is simple and effective, allowing the inventory to be organized and bifurcated properly for better clarity."
+      },
+      {
+        "company": "KARUNA TEMP SYSTEM PRIVATE LIMITED",
+        "owner": "Rohan Pavithran",
+        "testimonial": "Giddh’s estimates and proforma invoices work seamlessly. We can create proformas and easily convert them into invoices, tracking their status as paid, unpaid, or partially paid. Automated WhatsApp messages and email notifications after creating vouchers significantly reduce manual effort."
+      },
+      {
+        "company": "Dental Designs",
+        "owner": "Dr Gins Paul",
+        "testimonial": "Giddh offers multiple types of invoices, including cash and sales invoices, making billing flexible and convenient. The dashboard provides a clear summary of the business’s health on a single screen, helping us instantly understand where we stand on any given day."
+      },
+      {
+        "company": "Taurus Lifestyle",
+        "owner": "Kunal",
+        "testimonial": "The inventory module in Giddh is extremely powerful. Its variant creation feature allows multiple variants for a single item, which is very helpful for detailed inventory management. The barcode scanning feature further completes the requirements, making the process fast and efficient."
+      },
+      {
+        "company": "M/S STUDIO47",
+        "owner": null,
+        "testimonial": "Giddh provides a wide range of reports including financial statements, daybook, sales and purchase registers, inventory reports, and GST reports. Having all these reports in one place makes managing business insights simple and efficient."
+      },
+      {
+        "company": "SP Wellness",
+        "owner": null,
+        "testimonial": "Support connects positively when needed. The ledger accounting module makes it easy to create entries; I can easily manage my expenses by creating the accounts and making entries there."
+      },
+      {
+        "company": "The Medicity",
+        "owner": null,
+        "testimonial": "With Giddh, managing bank accounts is simple and hassle-free. Incomes and expenses can be tracked directly, and the built-in GST filing option makes compliance much easier. It’s truly a great all-in-one solution."
+      },
+      {
+        "company": "Mitti [Organic. Fresh. Desi]",
+        "owner": "Ankita Chadha",
+        "testimonial": "The inventory management helps in restaurant management and the branch creation helps to manage multiple branches under a single platform. It helps to see the branch profiles along with the warehouses."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "Can I undo an import if I make a mistake?",
+      "answer": "Yes. Giddh lets you rollback and restore your data anytime."
+    },
+    {
+      "question": "Do you provide help during migration?",
+      "answer": "Absolutely. Our migration experts guide you through every step."
+    },
+    {
+      "question": "Will my data remain private?",
+      "answer": "Yes. Every file is encrypted and stored securely following strict compliance standards."
+    },
+    {
+      "question": "How long does import take?",
+      "answer": "Most migrations complete within minutes, depending on file size."
+    },
+    {
+      "question": "Download Your Free Migration Checklist",
+      "answer": "Ensure your data is clean and ready for a smooth transition. Get a step-by-step checklist to prepare your files before import."
+    },
+    {
+      "question": "Ready to Move to Giddh?",
+      "answer": "Start your free data import today and experience effortless accounting migration.No downtime. No data loss. Just fast, accurate transition to smarter bookkeeping."
+    }
+  ],
+  "cta": {
+    "heading": "Ready to Move to Giddh?",
+    "subheading": "Start your free data import today and experience effortless accounting migration.No downtime. No data loss. Just fast, accurate transition to smarter bookkeeping.",
+    "buttons": [
+      {
+        "text": "Start Free Migration",
+        "link": "/signup",
+        "type": "btn-primary"
+      },
+      {
+        "text": "Talk to a Specialist",
+        "link": "/online-accounting-software",
+        "type": "btn-primary-outline"
+      }
+    ],
+    "theme": "light"
+  }
+}
