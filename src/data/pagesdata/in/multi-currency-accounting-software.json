@@ -102,6 +102,41 @@
       }
     ]
   },
+  "gridFeatures": {
+    "heading" : "What Sets Giddh Apart",
+    "features" :
+    [
+    [
+      {
+        "title": "Manage Multiple Companies & Branches"
+      },
+      {
+        "title": "Auto Updates. Always getting faster."
+      },
+      {
+        "title": "Open & Public API Access"
+      }
+    ],
+    [
+      {
+        "title": "One Subscription, Up to 100 Companies"
+      },
+      {
+        "title": "Unlimited Users – No Extra Cost"
+      }
+    ],
+    [
+      {
+        "title": "Easy Synchronization with Tally"
+      },
+      {
+        "title": "Built-In White Label Option"
+      },
+      {
+        "title": "No Voucher Screens – Just Type & Save"
+      }
+    ]
+  ]},
   "faqs": [
     {
       "question": "What type of businesses can benefit from Giddh’s multi-currency software?",
@@ -122,7 +157,7 @@
   ],
 
   "cta": {
-    "heading": "Ready to Manage Your Multi-Currency Accounting with Ease?",
+    "heading": "Ready to Take Control of Your Global Accounting?",
     "buttons": [
       {
         "text": "Start Free Trial",
