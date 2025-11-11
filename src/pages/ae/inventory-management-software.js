@@ -1,6 +1,6 @@
-import InInventoryManagementSoftware from "../in/inventory-management-software";
+import OldInventoryManagementSoftware from "../uk/inventory-management-software";
 
 const AeInventoryManagementSoftware = (path) => {
-  return <InInventoryManagementSoftware path={path.path} />;
+  return <OldInventoryManagementSoftware path={path.path} />;
 };
 export default AeInventoryManagementSoftware;
