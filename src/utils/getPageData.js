@@ -9,7 +9,8 @@ export default function getPageData(pageInfo) {
     "inventory-management-software",
     "small-business-bookkeeping-software",
     "e-invoice",
-    "conect-bank-reconcile"
+    "conect-bank-reconcile",
+    "import-data",
   ];
   if (!pagesToGetData.includes(pageInfo?.page)) return null;
   try {
