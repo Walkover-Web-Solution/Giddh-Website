@@ -12,6 +12,9 @@ export default async function getPricingPlans(region) {
 }
 
 function handlePlans(jsonData) {
+  if (!jsonData?.length) {
+    return { yearly: [], monthly: [] };
+  }
   const plans = jsonData;
 
   // Create two arrays for yearly and monthly plans

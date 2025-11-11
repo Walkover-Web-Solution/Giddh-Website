@@ -32,7 +32,7 @@
         },
         {
             "title": "Desktop/Mobile App",
-            "isAvailableForAll": "true",
+            "isAvailableForAll": true,
             "description": null,
             "link": null,
             "isExpanded": false
