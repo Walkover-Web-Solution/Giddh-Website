@@ -180,7 +180,15 @@
 /app/api/user-location / 301
 /app/login / 301
 /app/signup / 301
+/#!/about /about 301
+/#!/terms /terms 301
+/#!/pricing /pricing 301
 /audit-under-gst / 301
+/blog/why-accounting-software-is-not-a-threat-but-your-best-business-decision-today?source=---------58------------------ /blog/why-accounting-software-is-good-for-business 301
+/blog/invoice-2-0-is-here-and-heres-why-youll-love-it?source=user_profile---------6---------------------------- /blog/invoice-2-0-is-here-and-heres-why-youll-love-it 301
+/blog/how-accounts-software-has-made-accounting-a-cakewalk-for-the-non-commerce-startup-guy?source=post_internal_links---------2---------------------------- /blog/accounting-software-for-non-commerce-startups 301
+/blog/gst-compliance-with-giddh-enabling-easy-taxation?source=rss----7b9877a432a6--taxation /blog/gst-compliance-with-giddh-enabling-easy-taxation 301
+/blog/why-accounting-software-is-not-a-threat-but-your-best-business-decision-today?source=post_page--------------------------- /blog/why-accounting-software-is-good-for-business 301
 /baby-names/meaning-knowledge/ /baby-names 301
 /basic-accounting-in-hindi-pdf-download / 301
 /basic-accounting-terms-pdf-in-hindi / 301
