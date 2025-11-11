@@ -1,6 +1,6 @@
 import OldCloudAccountingSoftware from "../uk/cloud-accounting-software";
 
-const AeCloudAccountingSoftware = (path) => {
+const AeCloudAccountingSoftware = ({ path }) => {
   return <OldCloudAccountingSoftware path={path} />;
 };
 
