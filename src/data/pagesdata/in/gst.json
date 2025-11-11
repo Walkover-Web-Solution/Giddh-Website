@@ -1,0 +1,170 @@
+{
+  "splitBanner": {
+    "heading": "Effortless GST Compliance Software for Your Business",
+    "subHeading": "Automate GST filing, tax calculation, and reporting with 100% accuracy. Save time, avoid penalties, and stay compliant effortlessly.",
+    "image": "/img/gst/gst_banner_img.svg",
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ],
+    "form": false
+  },
+  "features": {
+    "heading": "All-in-One GST-Compliant Accounting Software",
+    "content": [
+      {
+        "heading": "Seamless GST Filing",
+        "img": "/img/gst/seamless_gst_filing.svg",
+        "description": "Simplify filing with Giddh by submitting GSTR-1, GSTR-3B, and GSTR-9 directly from the platform. Pre-filled forms reduce manual effort.",
+        "more_content": [
+          "File GST returns without leaving Giddh.",
+          "Pre-filled forms for faster submission.",
+          "Maintain records of filed returns for audits."
+        ]
+      },
+      {
+        "heading": "Multi-State & Multi-GSTIN Support",
+        "img": "/img/gst/multi_state_and_multi_gstin_support.svg",
+        "description": "Manage multiple GST numbers efficiently and handle both interstate and intrastate transactions with ease and clarity.",
+        "more_content": [
+          "Manage multiple GSTINs under one account.",
+          "Track interstate and intrastate transactions efficiently.",
+          "Automate tax calculations for different states."
+        ]
+      },
+      {
+        "heading": "Collaborative Accounting",
+        "img": "/img/gst/collaborative_accounting.svg",
+        "description": "Empower your team and accountant with role-based access and real-time data sharing for smooth collaboration.",
+        "more_content": [
+          "Assign roles and permissions to team members.",
+          "Share financial data securely in real-time.",
+          "Collaborate with accountants for accurate reporting."
+        ]
+      },
+      {
+        "heading": "Automated GST Calculations",
+        "img": "/img/gst/automated_gst_calculations.svg",
+        "description": "Automatically calculates GST across all invoices and bills, reducing errors and saving time. Supports multiple tax rates and GSTINs for flexible accounting and taxation.",
+        "more_content": [
+          "Auto-calculate GST for sales and purchase transactions",
+          "Handle multiple tax rates and exemptions.",
+          "Support multiple GSTINs across business locations."
+        ]
+      },
+      {
+        "heading": "GST Return Filing",
+        "img": "/img/gst/gst_return_filing.svg",
+        "description": "File GSTR-1, GSTR-3B, and GSTR-9 directly from Giddh with pre-filled forms, error detection, and timely reminders.",
+        "more_content": [
+          "Direct submission to the GST portal.",
+          "Pre-filled forms for faster filing.",
+          "Compliance alerts and due-date reminders."
+        ]
+      },
+      {
+        "heading": "Create GST-Compliant Invoices",
+        "img": "/img/gst/create_gst_compliant_invoices.svg",
+        "description": "Automatically capture essential details, such as GSTIN, HSN/SAC codes, and apply the correct tax rates based on the place of supply.",
+        "more_content": [
+          "Customized invoice templates to match brand identity.",
+          "Auto-fill GSTIN, HSN/SAC codes, and tax rates.",
+          "Handles interstate and intrastate transactions seamlessly."
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore Features",
+        "link": "/all-features"
+      }
+    ]
+  },
+
+  "characteristics": {
+    "heading": "Advantages of Filing GSTR with Giddh",
+    "cards": [
+      {
+        "heading": "Direct Filing",
+        "description": "Upload invoices, let Giddh prepare your GST return automatically, and file directly on the GST portal—no manual effort required."
+      },
+      {
+        "heading": "100% Accurate",
+        "description": "Catch errors before submission with our intuitive error detection system. Achieve flawless GST returns every time."
+      },
+      {
+        "heading": "Timely Notifications",
+        "description": "Stay on top of deadlines. Receive instant alerts to avoid last-minute stress and penalties."
+      },
+      {
+        "heading": "Highly Collaborative",
+        "description": "Work seamlessly with your team and CA—grant role-based access to view relevant GST data instantly."
+      },
+      {
+        "heading": "Secure & Reliable",
+        "description": "Protect your data with 2-factor authentication, OTP verification, and industry-leading security standards."
+      },
+      {
+        "heading": "Best-in-Class Support",
+        "description": "Our friendly, knowledgeable support team is ready to assist you with any accounting or GST filing queries."
+      }
+    ]
+  },
+  "trustBadgeBrands": {
+    "title": "Trusted By Industry Leaders",
+    "description": "See who’s talking about us and why businesses trust us around the globe."
+  },
+  "ctaOne": {
+    "heading": "Effortless GST Filing for Every Business",
+    "subHeading": "Automate Calculations, File Gstr-1, 3b, and 9 In Minutes, and Get Compliance Alerts Before Deadlines.",
+    "buttons": [
+      {
+        "text": "Try Giddh for Free",
+        "link": "/signup",
+        "type": "btn-tertiary"
+      }
+    ],
+    "theme": "light"
+  },
+  "faqs": [
+    {
+      "question": "What is GST?",
+      "answer": "Value-added tax levied on goods and services, collected by businesses and remitted to the government."
+    },
+    {
+      "question": "What is a GST Number?",
+      "answer": "A unique tax identification number assigned to registered businesses."
+    },
+    {
+      "question": "How do I register for GST?",
+      "answer": "You can register online via the government portal; Giddh simplifies the process for you."
+    },
+    {
+      "question": "How does Giddh simplify GST filing?",
+      "answer": "Giddh auto-calculates tax, generates reports, and allows direct GST filing with ease."
+    },
+    {
+      "question": "Is Giddh secure?",
+      "answer": "Yes, Giddh ensures data security with 2-factor authentication and OTP verification."
+    }
+  ],
+
+  "ctaTwo": {
+    "heading": "Take Charge of Your GST Compliance Today",
+    "subHeading": "Accurate, Timely, And Collaborative Gst Filing With Giddh – Your All-In-One Gst Compliance Software.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-tertiary"
+      }
+    ],
+    "theme": "light"
+  }
+}
