@@ -76,7 +76,12 @@ export default function MyApp({ Component, pageProps }) {
         <Navbar browserPath={rawBrowserPath} path={path} />
       ) : null}
       <Header browserPath={rawBrowserPath} path={path} />
-      <Component path={path} {...pageProps} pageData={pageData} pageInfo={pageInfo} />
+      <Component
+        path={path}
+        {...pageProps}
+        pageData={pageData}
+        pageInfo={pageInfo}
+      />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
       <GlobalComponents path={arrayBrawserPath} />
       <Toastify />

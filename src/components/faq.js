@@ -4,7 +4,6 @@ import Head from "next/head";
 import { useEffect } from "react";
 
 export default function FAQs({ faq }) {
-
   const [faqSchema, setFaqSchema] = useState(null);
   const [openIndex, setOpenIndex] = useState(0);
 
@@ -56,14 +55,16 @@ export default function FAQs({ faq }) {
                 const isOpen = openIndex === index;
                 return (
                   <div
-                    className={`accordion-item px-3 py-2 rounded-2 m-1 ${isOpen ? "bg-light" : ""
-                      }`}
+                    className={`accordion-item px-3 py-2 rounded-2 m-1 ${
+                      isOpen ? "bg-light" : ""
+                    }`}
                     key={index}
                   >
                     <h3 className="border-none" id={"heading" + index}>
                       <button
-                        className={`accordion-button ${!isOpen ? "collapsed" : ""
-                          } cursor-pointer border-none d-flex align-items-center col-deep bg-transparent gap-2 accordionButton`}
+                        className={`accordion-button ${
+                          !isOpen ? "collapsed" : ""
+                        } cursor-pointer border-none d-flex align-items-center col-deep bg-transparent gap-2 accordionButton`}
                         type="button"
                         aria-expanded={isOpen}
                         aria-controls={"collapse" + index}
@@ -73,11 +74,9 @@ export default function FAQs({ faq }) {
                           className={`me-2 rounded-2 d-inline-flex align-items-center justify-content-center collapseIcon`}
                         >
                           {isOpen ? (
-                            <MdRemove className='c-fs-3 col-primary' />
+                            <MdRemove className="c-fs-3 col-primary" />
                           ) : (
-                            <MdKeyboardArrowDown
-                              className='c-fs-3 col-primary'
-                            />
+                            <MdKeyboardArrowDown className="c-fs-3 col-primary" />
                           )}
                         </span>
 
@@ -86,17 +85,19 @@ export default function FAQs({ faq }) {
                     </h3>
                     <div
                       id={"collapse" + index}
-                      className={`accordion-collapse collapse ${isOpen ? "show" : ""
-                        }`}
+                      className={`accordion-collapse collapse ${
+                        isOpen ? "show" : ""
+                      }`}
                       aria-labelledby={"heading" + index}
                       data-bs-parent="#accordionAllFeatures"
                     >
-                      <div
-                        className={`col-deep`}
-                      >
-                        <div className="ps-5 col-dark-light c-fs-6">
-                          {faq.answer}
-                        </div>
+                      <div className={`col-deep`}>
+                        <div
+                          className="ps-5 col-dark-light c-fs-6"
+                          dangerouslySetInnerHTML={{
+                            __html: String(faq?.answer || ""),
+                          }}
+                        />
                       </div>
                     </div>
                   </div>
