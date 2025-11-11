@@ -1,0 +1,293 @@
+{
+  "stackedBanner": {
+    "heading": "Automate Your Bank Reconciliation Software in India in Just a Few Clicks",
+    "subHeading": "Save hours on manual reconciliation with Giddh’s bank integration and real-time updates.",
+    "image": "/img/home-page/index_banner_india.svg",
+    "buttons": [
+      {
+        "text": "See Giddh in Action",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Key Features That Simplify Bank Reconciliation",
+    "cards": [
+      {
+        "heading": "Seamless Bank Integration",
+        "description": "Giddh effortlessly connects with your bank accounts, streamlining the process of fetching transaction data.",
+        "more_content": [
+          "Auto-syncs transactions from linked bank accounts.",
+          "Supports multiple banks, including international ones."
+        ]
+      },
+      {
+        "heading": "One-click Reconciliation",
+        "description": "With just one click, Giddh automatically matches transactions, streamlining the reconciliation process and saving you hours each week.",
+        "more_content": [
+          "Auto-matches bank transactions with records.",
+          "One-click reconciliation for accuracy."
+        ]
+      },
+      {
+        "heading": "Multi-account Support",
+        "description": "Giddh allows you to link and manage multiple accounts in one platform, whether for checking, savings, credit cards, or business accounts.",
+        "more_content": [
+          "Manage all accounts from one dashboard.",
+          "Supports bank accounts, credit cards, and loans."
+        ]
+      },
+      {
+        "heading": "Multi-currency Support",
+        "description": "Designed for global businesses, Giddh offers robust multi-currency support, allowing you to manage and reconcile foreign transactions with ease.",
+        "more_content": [
+          "Supports 100+ currencies.",
+          "Auto-converts foreign transactions for reconciliation."
+        ]
+      },
+      {
+        "heading": "Data Import & Export",
+        "description": "Easily import bank statements and export reconciled data to other accounting software or spreadsheets for further processing.",
+        "more_content": [
+          "Import CSV, Excel, or bank feeds.",
+          "Export data to accounting software."
+        ]
+      },
+      {
+        "heading": "Audit Trail & Transaction History",
+        "description": "Giddh maintains a detailed audit trail for all transactions, providing a transparent and easily traceable history of all actions taken within the platform.",
+        "more_content": [
+          "Tracks all reconciliations and changes.",
+          "Provides clear audit trails for compliance."
+        ]
+      },
+      {
+        "heading": "Customisable Settings",
+        "description": "Adapt Giddh’s functionality to your specific business needs with flexible settings for categorising transactions, defining reconciliation rules, and more.",
+        "more_content": [
+          "Customise transaction categories and labels.",
+          "Set up personalised reconciliation rules."
+        ]
+      },
+      {
+        "heading": "Mobile Access",
+        "description": "With Giddh’s mobile apps, you can manage your bank reconciliations anytime, anywhere, directly from your smartphone or tablet.",
+        "more_content": [
+          "Manage reconciliations on the go.",
+          "Available on Android and iOS."
+        ]
+      }
+    ]
+  },
+  "giddhVs": {
+    "heading": "The Smart Choice for Your Business Accounting",
+    "subheading": "Streamline your finances with Giddh’s unique features and superior value in accounting software for businesses over the competition.",
+    "columns": [
+      {
+        "key": "giddh",
+        "label": "Giddh",
+        "logo": "/img/giddh-logo.svg"
+      },
+      {
+        "key": "quickbooks",
+        "label": "QuickBooks",
+        "logo": "/img/home-page/quickbooks.svg"
+      },
+      {
+        "key": "sage",
+        "label": "Sage",
+        "logo": "/img/home-page/sage.svg"
+      }
+    ],
+    "content": [
+      {
+        "feature": "Automatic Bank Syncing",
+        "giddh": true,
+        "quickbooks": true,
+        "sage": true
+      },
+      {
+        "feature": "One-click Reconciliation",
+        "giddh": true,
+        "quickbooks": false,
+        "sage": false
+      },
+      {
+        "feature": "Multi-account Support",
+        "giddh": true,
+        "quickbooks": true,
+        "sage": false
+      },
+      {
+        "feature": "Multi-currency Support",
+        "giddh": true,
+        "quickbooks": true,
+        "sage": true
+      },
+      {
+        "feature": "Bank-grade Encryption",
+        "giddh": true,
+        "quickbooks": false,
+        "sage": false
+      },
+      {
+        "feature": "Pricing (affordability)",
+        "giddh": true,
+        "quickbooks": true,
+        "sage": true
+      }
+    ]
+  },
+
+  "ctaOne": {
+    "heading": "See Giddh In Action With A Personalised Demo!",
+    "subheading": "Schedule A One-On-One Demo With Our Experts To Learn How Giddh Can Streamline Your Best Bank Reconciliation Software Process And Boost Your Efficiency.",
+    "buttons": [
+      {
+        "text": "Book A Demo",
+        "link": "/signup",
+        "type": "btn-secondary-outline"
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Hear How We've Made a Difference",
+    "subheading": "Stories that inspire us to keep delivering our best.",
+    "data": [
+      {
+        "company": "Sinead North",
+        "owner": "Christian Schiel",
+        "testimonial": "Giddh is a great solution to manage customers and invoices internationally. The multi-currency option makes it very convenient, and generating invoices is simple and quick. I can also easily manage VAT reports in the UK. The support team is patient, understands the challenges we face, and resolves them effectively."
+      },
+      {
+        "company": "Dvara e-registry",
+        "owner": "Priyanshi Priya",
+        "testimonial": "Giddh is an excellent platform for managing multiple companies seamlessly. It allows me to handle different businesses in real time, all in one place. Switching between companies is incredibly fast and effortless, making the entire process smooth and efficient."
+      },
+      {
+        "company": "Teknoworth Medical Care OPC Pvt Ltd",
+        "owner": "Imran",
+        "testimonial": "Giddh is the most reliable application for inventory management in both India and the UAE. Managing data is effortless, and the mobile app works flawlessly, ensuring smooth operations anytime, anywhere."
+      },
+      {
+        "company": "Shruti Corporation",
+        "owner": "Shruti",
+        "testimonial": "Giddh is one of the easiest ledger-based accounting systems I've used. Creating ledger entries is quick and effortless, making it truly ready to go. Even someone without a strong accounting background can easily manage and run their business with it."
+      },
+      {
+        "company": "PI Green Consulting Pvt Ltd",
+        "owner": null,
+        "testimonial": "The application works seamlessly, allowing multiple users to access it in real time without any limits or lags. Multi-login functionality is effortless, making collaboration smooth and efficient."
+      },
+      {
+        "company": "Synergene Global",
+        "owner": "Manish Badonia",
+        "testimonial": "The support team is excellent, and the latest version of Giddh comes packed with powerful features. Giddh can be accessed from anywhere with just an internet connection, making it highly convenient and reliable."
+      },
+      {
+        "company": "Attic India",
+        "owner": "Kuldeep",
+        "testimonial": "The inventory reports work brilliantly. Creating parent and child groups is simple and effective, allowing the inventory to be organized and bifurcated properly for better clarity."
+      },
+      {
+        "company": "Karuna Temp System Private Limited",
+        "owner": "Rohan Pavithran",
+        "testimonial": "Giddh's estimates and proforma invoices work seamlessly. We can create proformas and easily convert them into invoices, tracking their status as paid, unpaid, or partially paid. Automated WhatsApp messages and email notifications after creating vouchers significantly reduce manual effort."
+      },
+      {
+        "company": "Dental Designs",
+        "owner": "Dr Gins Paul",
+        "testimonial": "Giddh offers multiple types of invoices, including cash and sales invoices, making billing flexible and convenient. The dashboard provides a clear summary of the business's health on a single screen, helping us instantly understand where we stand on any given day."
+      },
+      {
+        "company": "Taurus Lifestyle",
+        "owner": "Kunal",
+        "testimonial": "The inventory module in Giddh is extremely powerful. Its variant creation feature allows multiple variants for a single item, which is very helpful for detailed inventory management. The barcode scanning feature further completes the requirements, making the process fast and efficient."
+      },
+      {
+        "company": "M/S STUDIO47",
+        "owner": null,
+        "testimonial": "Giddh provides a wide range of reports including financial statements, daybook, sales and purchase registers, inventory reports, and GST reports. Having all these reports in one place makes managing business insights simple and efficient."
+      },
+      {
+        "company": "SP Wellness",
+        "owner": null,
+        "testimonial": "Support connects positively when needed. The ledger accounting module makes it easy to create entries; I can easily manage my expenses by creating the accounts and making entries there."
+      },
+      {
+        "company": "The Medicity",
+        "owner": null,
+        "testimonial": "With Giddh, managing bank accounts is simple and hassle-free. Incomes and expenses can be tracked directly, and the built-in GST filing option makes compliance much easier. It's truly a great all-in-one solution."
+      },
+      {
+        "company": "Mitti [Organic. Fresh. Desi]",
+        "owner": "Ankita Chadha",
+        "testimonial": "The inventory management helps in restaurant management and the branch creation helps to manage multiple branches under a single platform. It helps to see the branch profiles along with the warehouses."
+      }
+    ]
+  },
+
+  "ctaTwo": {
+    "heading": "Experience Effortless Bank Reconciliation Today!",
+    "subheading": "Sign Up Now To Enjoy Full Access To Giddh’s Powerful, Automated Reconciliation Tools. No Credit Card Required—Get Started In Minutes!",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-primary-outline"
+      }
+    ],
+    "theme": "light"
+  },
+  "supportedPlatforms": {
+    "heading": "Supported Platforms",
+    "platforms": [
+      {
+        "name": "Web",
+        "image": "/img/supported-platforms/web.svg"
+      },
+      {
+        "name": "Windows",
+        "image": "/img/supported-platforms/windows.svg"
+      },
+      {
+        "name": "MacOS",
+        "image": "/img/supported-platforms/macos.svg"
+      },
+      {
+        "name": "iOS",
+        "image": "/img/supported-platforms/ios.svg"
+      },
+      {
+        "name": "Android",
+        "image": "/img/supported-platforms/android.svg"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does Giddh integrate with my bank account?",
+      "answer": "Giddh integrates securely with your bank account through API technology, ensuring your data is synced automatically."
+    },
+    {
+      "question": "Is Giddh secure? How does it protect my financial data?",
+      "answer": "Yes, Giddh uses bank-grade encryption and follows strict security protocols to keep your data safe."
+    },
+    {
+      "question": "Can I reconcile multiple accounts?",
+      "answer": "Yes, Giddh supports multiple accounts, including bank accounts, credit cards, and more."
+    },
+    {
+      "question": "Does Giddh support multi-currency transactions?",
+      "answer": "Yes, Giddh supports multi-currency transactions, making it ideal for businesses with international operations."
+    },
+    {
+      "question": "What happens after the free trial ends?",
+      "answer": "After your free trial, you can choose to continue with a paid plan, or let us know if you need more time to decide."
+    }
+  ]
+}
