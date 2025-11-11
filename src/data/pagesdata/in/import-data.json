@@ -1,7 +1,7 @@
 {
   "splitBanner": {
-    "heading": "Transform Your Business with Real-Time Collaboration in Accounting",
-    "subHeading": "Manage your finances, collaborate with members, and ensure seamless decision-making. Giddh’s multi-user accounting software for business is designed for growth and efficiency",
+    "heading": "Import Your Accounting Data to Giddh in Minutes — Fast, Secure & Error-Free",
+    "subHeading": "Move accounting data across systems effortlessly, with no data loss, no wasted time. Giddh makes migration simple, accurate, and fully secure.",
     "lottie": "/img/import-data/import-Hero.json",
     "buttons": [
       {
@@ -47,7 +47,7 @@
     "footer": "No technical skills required — import confidently in minutes.",
     "buttons": [
       {
-        "text": "Start Free Migration",
+        "text": "Start Import Now",
         "link": "/signup"
       }
     ]
