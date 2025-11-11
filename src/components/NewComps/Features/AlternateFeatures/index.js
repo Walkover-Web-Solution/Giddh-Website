@@ -33,7 +33,7 @@ export default function AlternateFeatures({ features }) {
                   {feature?.description}
                 </p>
                 {feature?.more_content && (
-                  <ul className="mb-0 font-slate-grey font-md">
+                  <ul className="mb-0 font-slate-grey font-sm">
                     {feature?.more_content?.map((content, index) => (
                       <li key={index}>
                         <MdCircle
