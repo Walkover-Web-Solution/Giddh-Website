@@ -1,6 +1,5 @@
 import { useState } from "react";
 import LottiePlayer from "../LottiePlayer";
-import styles from "./Instruction.module.scss";
 
 export default function Instructions({ compData }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -67,9 +66,7 @@ export default function Instructions({ compData }) {
           </div>
           <div>
             {compData?.steps?.[selectedIndex]?.lottie && (
-              <div
-                className={`d-flex align-items-center justify-content-center ${styles.lottie_animation}`}
-              >
+              <div className="d-flex align-items-center justify-content-center">
                 <LottiePlayer lottie={compData.steps[selectedIndex].lottie} />
               </div>
             )}

@@ -12,7 +12,7 @@ export default function EssentialFeatures({ compData }) {
       </div>
 
       <div className="row g-4">
-        {compData?.content?.map((feature, index) => (
+        {compData.content.map((feature, index) => (
           <div key={index} className="col-12 col-md-6 col-lg-4">
             <div className="p-2">
               <h3 className="font-600 font-md mb-0">{feature.title}</h3>
@@ -22,7 +22,7 @@ export default function EssentialFeatures({ compData }) {
         ))}
       </div>
 
-      {compData?.buttons && (
+      {compData?.buttons?.length && (
         <div className="d-flex justify-content-center">
           {compData?.buttons?.map((button, index) => (
             <a href={button.link}>

@@ -30,7 +30,7 @@ export default function LottiePlayer({ lottie }) {
   if (animationData) {
     return (
       <div
-        className={`d-flex align-items-center justify-content-center ${styles.lottie_animation}`}
+        className={`d-flex align-items-center justify-content-center w-100 h-auto ${styles.lottie_animation}`}
       >
         <Lottie options={animationData} />
       </div>
