@@ -11,6 +11,8 @@ export default function getPageData(pageInfo) {
     "e-invoice",
     "conect-bank-reconcile",
     "import-data",
+    "gst",
+    "multi-currency-accounting-software",
   ];
   if (!pagesToGetData.includes(pageInfo?.page)) return null;
   try {
