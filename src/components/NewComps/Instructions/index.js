@@ -10,7 +10,7 @@ export default function Instructions({ compData }) {
       <div className="d-flex flex-column align-items-center">
         <h2 className="font-heading font-primary">{compData?.heading}</h2>
         {compData?.subHeading && (
-          <p className="sub-heading">{compData?.heading}</p>
+          <p className="sub-heading">{compData?.subHeading}</p>
         )}
       </div>
       <div>
@@ -20,7 +20,7 @@ export default function Instructions({ compData }) {
               {compData?.steps?.map((step, index) => (
                 <div key={step.id}>
                   <div
-                    type="button"
+                    role="button"
                     onClick={() => setSelectedIndex(index)}
                     onKeyDown={(e) => {
                       if (e.key === "Enter" || e.key === " ") {
@@ -67,7 +67,9 @@ export default function Instructions({ compData }) {
           </div>
           <div>
             {compData?.steps?.[selectedIndex]?.lottie && (
-              <div className={styles.lottie_animation}>
+              <div
+                className={`d-flex align-items-center justify-content-center ${styles.lottie_animation}`}
+              >
                 <LottiePlayer lottie={compData.steps[selectedIndex].lottie} />
               </div>
             )}

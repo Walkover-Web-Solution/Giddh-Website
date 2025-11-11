@@ -191,14 +191,6 @@
     {
       "question": "How long does import take?",
       "answer": "Most migrations complete within minutes, depending on file size."
-    },
-    {
-      "question": "Download Your Free Migration Checklist",
-      "answer": "Ensure your data is clean and ready for a smooth transition. Get a step-by-step checklist to prepare your files before import."
-    },
-    {
-      "question": "Ready to Move to Giddh?",
-      "answer": "Start your free data import today and experience effortless accounting migration.No downtime. No data loss. Just fast, accurate transition to smarter bookkeeping."
     }
   ],
   "cta": {

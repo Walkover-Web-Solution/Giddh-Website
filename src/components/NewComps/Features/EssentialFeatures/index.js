@@ -25,13 +25,11 @@ export default function EssentialFeatures({ compData }) {
       {compData?.buttons && (
         <div className="d-flex justify-content-center">
           {compData?.buttons?.map((button, index) => (
-            <button
-              key={index}
-              className="btn btn-primary-outline mx-auto"
-              onClick={() => (window.location.href = button?.link)}
-            >
-              {button?.text}
-            </button>
+            <a href={button.link}>
+              <button key={index} className="btn btn-primary-outline mx-auto">
+                {button?.text}
+              </button>
+            </a>
           ))}
         </div>
       )}
