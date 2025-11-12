@@ -81,7 +81,7 @@
     ],
     "buttons": [
       {
-        "text": "Explore Features",
+        "text": "Explore All Features",
         "link": "/all-features"
       }
     ]
@@ -122,7 +122,7 @@
   },
   "ctaOne": {
     "heading": "Effortless GST Filing for Every Business",
-    "subHeading": "Automate Calculations, File Gstr-1, 3b, and 9 In Minutes, and Get Compliance Alerts Before Deadlines.",
+    "subheading": "Automate Calculations, File Gstr-1, 3b, and 9 In Minutes, and Get Compliance Alerts Before Deadlines.",
     "buttons": [
       {
         "text": "Try Giddh for Free",
@@ -157,7 +157,7 @@
 
   "ctaTwo": {
     "heading": "Take Charge of Your GST Compliance Today",
-    "subHeading": "Accurate, Timely, And Collaborative Gst Filing With Giddh – Your All-In-One Gst Compliance Software.",
+    "subheading": "Accurate, Timely, And Collaborative Gst Filing With Giddh – Your All-In-One Gst Compliance Software.",
     "buttons": [
       {
         "text": "Start Free Trial",
