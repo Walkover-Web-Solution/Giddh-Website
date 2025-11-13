@@ -25,8 +25,8 @@ export default function EssentialFeatures({ compData }) {
       {compData?.buttons?.length && (
         <div className="d-flex justify-content-center">
           {compData.buttons.map((button, index) => (
-            <a href={button.link}>
-              <button key={index} className="btn btn-primary-outline mx-auto">
+            <a key={index} href={button.link}>
+              <button className="btn btn-primary-outline mx-auto">
                 {button?.text}
               </button>
             </a>

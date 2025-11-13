@@ -1,0 +1,147 @@
+{
+  "splitBanner": {
+    "heading": "Migrate from Tally to Giddh with Ease and Accuracy",
+    "subHeading": "Effortlessly transfer your accounting data to Giddh and unlock a seamless, real-time, cloud migration process.",
+    "image": "/img/tally-to-giddh-migration/tally-to-giddh-migration-hero-image.svg",
+    "buttons": [
+      {
+        "text": "Schedule a Demo",
+        "link": "/online-accounting-software"
+      }
+    ],
+    "form": false
+  },
+  "features": {
+    "heading": "What is the Tally to Giddh migration?",
+    "subHeading": "The Tally to Giddh migration tool makes migrating your accounting data effortless and seamless. This tool simplifies the process, allowing you to transfer your data quickly and securely with no technical expertise required.",
+    "content": [
+      {
+        "title": "One-Click Migration",
+        "description": "Transfer all your Tally accounting data with just a single click—no complex steps required."
+      },
+      {
+        "title": "Easy-to-Use Interface",
+        "description": "User-friendly interface that guides you through the entire process, ensuring a smooth migration"
+      },
+      {
+        "title": "Supports All Tally Data Types",
+        "description": "Migrates all essential Tally data, including ledgers, vouchers, balances, and more."
+      },
+      {
+        "title": "Zero Data Loss",
+        "description": "Ensures no data is lost during the migration process, maintaining the integrity of your financial records."
+      },
+      {
+        "title": "Seamless Integration with Giddh",
+        "description": "Automatically integrates your Tally data into the Giddh platform, where you can enjoy the benefits of cloud accounting software India."
+      },
+      {
+        "title": "No Technical Expertise Required",
+        "description": "No need for IT staff or technical knowledge—anyone can use the utility with ease."
+      },
+      {
+        "title": "Secure and Encrypted Migration",
+        "description": "Your data is encrypted and securely transferred to Giddh, ensuring your financial information is always protected."
+      },
+      {
+        "title": "Real-Time Support",
+        "description": "Access our customer support team anytime for assistance with the migration process or to address any questions."
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore Features",
+        "link": "/all-features"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Learn More About How Giddh Can Transform Your Accounting",
+    "subheading": "Discover The Full Range Of Giddh Features That Can Streamline Your Business Processes.",
+    "buttons": [
+      {
+        "text": "Start Free Migration",
+        "link": "/signup",
+        "type": "btn-primary"
+      },
+      {
+        "text": "Talk to a Specialist",
+        "link": "/online-accounting-software",
+        "type": "btn-primary-outline"
+      }
+    ],
+    "theme": "light"
+  },
+  "quickStartSection": {
+    "heading": "How Giddh's Tally Migration Works",
+    "steps": [
+      {
+        "icon": "/img/tally-to-giddh-migration/download_the_migration_tool.svg",
+        "title": " Download the Migration Tool",
+        "description": "Download the Tally to Giddh migration tool from our website."
+      },
+      {
+        "icon": "/img/tally-to-giddh-migration/connect_your_tally_account.svg",
+        "title": "Connect Your Tally Account",
+        "description": "Easily connect your Tally account by following our simple, step-by-step instructions."
+      },
+      {
+        "icon": "/img/tally-to-giddh-migration/start_migration.svg",
+        "title": "Start Migration",
+        "description": "Initiate the migration process, and Giddh will automatically transfer your Tally data, ensuring zero data loss."
+      },
+      {
+        "icon": "/img/tally-to-giddh-migration/enjoy_real_time_accounting.svg",
+        "title": "Enjoy Real-Time Accounting",
+        "description": "Once the migration is complete, access your data on the cloud and enjoy all the powerful features Giddh has to offer."
+      }
+    ]
+  },
+  "supportedPlatforms": {
+    "heading": "Supported Platforms",
+    "platforms": [
+      {
+        "name": "Web",
+        "image": "/img/supported-platforms/web.svg"
+      },
+      {
+        "name": "Windows",
+        "image": "/img/supported-platforms/windows.svg"
+      },
+      {
+        "name": "MacOS",
+        "image": "/img/supported-platforms/macos.svg"
+      },
+      {
+        "name": "iOS",
+        "image": "/img/supported-platforms/ios.svg"
+      },
+      {
+        "name": "Android",
+        "image": "/img/supported-platforms/android.svg"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How long will the migration take",
+      "answer": "The migration process typically takes a few minutes, depending on the amount of data you are transferring."
+    },
+    {
+      "question": "Is my data secure during the migration?",
+      "answer": "Yes, Giddh uses the latest encryption and secure protocols to ensure your data is safe during the entire process."
+    },
+    {
+      "question": "Can I continue using Tally while migrating?",
+      "answer": "Yes, Giddh’s migration tool works seamlessly alongside Tally, allowing you to continue working without interruptions."
+    },
+    {
+      "question": "What are the benefits of inventory management?",
+      "answer": " Inventory management helps optimize supply and demand, reduce costs, improve cash flow, ensure accurate stock levels, and provide valuable insights for strategic decision-making."
+    },
+    {
+      "question": " Is there customer support available during the migration?",
+      "answer": "Yes! Giddh offers 24/7 support to guide you through every step of the migration."
+    }
+  ]
+}
