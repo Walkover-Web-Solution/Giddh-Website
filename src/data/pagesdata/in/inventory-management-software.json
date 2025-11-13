@@ -1,7 +1,7 @@
 {
   "stackedBanner": {
-    "heading": "The Best Inventory Management Software for Growing Businesses in India",
-    "subHeading": "Stay on top with Giddh’s real-time tracking, smart reporting, and seamless integration to keep your stock levels perfect and meet customer demand.",
+    "heading": "Best Inventory Management Software for Businesses in India",
+    "subHeading": "Streamline Your Inventory Tracking, Save Time, And Make Better Business Decisions With Giddh’s Intuitive And Efficient Inventory Management Solution.",
     "image": "/img/home-page/index_banner_global.webp",
     "buttons": [
       {
@@ -18,69 +18,60 @@
     "title": "Businesses are already switching to smarter invoicing with Giddh."
   },
   "characteristics": {
-    "heading": "Simplify Inventory Management and Boost Efficiency",
+    "heading": "Powerful Features to Supercharge Your Inventory Management",
     "cards": [
       {
         "icon": "/img/inventory-management-software/inventory.svg",
-        "heading": "Record Inventory for Products & Services",
-        "description": "Efficiently manage both physical products and services with Giddh’s flexible inventory system.",
+        "heading": "Record Inventory for Products and Services",
+        "description": "Inventory management isn’t limited to products alone—service-oriented businesses benefit too.",
         "more_content": [
-          "Track stock levels for both products and services.",
-          "Simplify management of service-related inventory."
+          "Maintain inventory for goods and services on a single platform.",
+          "Reduce errors in service-based billing."
         ]
       },
       {
         "icon": "/img/inventory-management-software/custom_unit.svg",
         "heading": "Inventory Masters",
-        "description": "Centralized inventory management to easily add, edit, or remove items.",
+        "description": "Giddh provides a centralized hub—your “inventory masters”—to view, manage, and organize all inventory.",
         "more_content": [
-          "View all inventory in one place.",
-          "Manage your inventory with ease and accuracy."
+          "Create, edit, or remove inventory items with ease.",
+          "Access a consolidated inventory dashboard."
         ]
       },
       {
         "icon": "/img/inventory-management-software/barcode.svg",
-        "heading": "Bifurcate Inventory into Groups, Items & Variants",
-        "description": "Organize your inventory for better clarity and efficiency.",
+        "heading": "Categorize Inventory for Better Control and Clarity",
+        "description": "Extensive inventories can feel overwhelming. Giddh helps you categorize for clarity and efficiency.",
         "more_content": [
-          "Categorize products into Groups.",
-          "Track Items and their Variants (size, color, etc.)."
+          "Group items for organized stock management.",
+          "Track variants such as size, color, or design."
         ]
       },
       {
         "icon": "/img/inventory-management-software/list.svg",
-        "heading": " Real-Time Inventory Reports",
-        "description": "Get up-to-date reports on your inventory, anytime.",
+        "heading": "Barcode Scanning",
+        "description": "Enhance accuracy and save time with barcode-enabled inventory management.",
         "more_content": [
-          "Access real-time stock data and transaction-specific reports.",
-          "Simplify decision-making with clear, actionable insights."
+          "Instantly add items to invoices and bills.",
+          "Eliminate manual data entry errors."
         ]
       },
       {
         "icon": "/img/inventory-management-software/warehouse.svg",
-        "heading": "Barcode Scanning",
-        "description": "Speed up inventory updates with barcode scanning for enhanced accuracy.",
+        "heading": "Branch & Warehouse Inventory ",
+        "description": "Expand confidently with powerful multi-location tracking.",
         "more_content": [
-          "Quickly add items to invoices and bills.",
-          "Search and manage inventory efficiently with barcode integration."
+          "Manage stock across multiple warehouses or branches.",
+          "Get branch-specific and company-wide inventory reports."
         ]
       },
       {
         "icon": "/img/inventory-management-software/records.svg",
-        "heading": "Manufacturing Management",
-        "description": "Easily manage raw materials, production, and by-products.",
+        "heading": "Manufacturing Support",
+        "description": "Complex manufacturing processes become simpler with Giddh.",
         "more_content": [
-          "Track manufacturing expenses and inventory balances.",
-          "Streamline production and inventory processes."
-        ]
-      },
-      {
-        "icon": "/img/inventory-management-software/web.svg",
-        "heading": "Branch & Warehouse Inventory Management",
-        "description": "Manage inventory across multiple locations with ease.",
-        "more_content": [
-          "Track inventory at different branches and warehouses.",
-          "Access detailed, location-specific reports."
+          "Track raw materials, finished goods, and by-products.",
+          "Manage production-related expenses seamlessly."
         ]
       },
       {
@@ -104,8 +95,7 @@
     ]
   },
   "testimonials": {
-    "heading": "Hear How We've Made a Difference",
-    "subheading": " Stories that inspire us to keep delivering our best.",
+    "heading": "More Businesses Choose Giddh for Smarter Inventory Management",
     "data": [
       {
         "company": "Sinead North",
@@ -180,41 +170,33 @@
     ]
   },
   "cta": {
-    "heading": "Take Control of Your Inventory",
-    "subHeading": "Experience seamless tracking, reporting, and barcode scanning with Giddh",
-    "theme": "light",
+    "heading": "Master Your Inventory Effortlessly",
+    "subHeading": "Track, Manage, And Optimize Your Stock In Real Time. Giddh Makes Inventory Management Simple And Stress-Free.",
     "buttons": [
       {
         "text": "Start Your Free Trial",
         "link": "/signup",
         "type": "btn-primary-outline"
       }
-    ]
+    ],
+    "theme": "light"
   },
   "faqs": [
     {
-      "question": "What does inventory management software do?",
-      "answer": "Inventory management software allows businesses to track their stock levels, optimize inventory movements, manage warehouses, and streamline the entire supply chain process from procurement to sales."
+      "question": "What is inventory management software?",
+      "answer": "Inventory management software helps businesses track and manage stock, sales, and deliveries efficiently."
     },
     {
-      "question": "What makes Giddh different from other inventory management software in the market?",
-      "answer": "Giddh stands out with its real-time inventory tracking, barcode scanning, customizable units/groups, seamless inventory accounting integration, and powerful multi-location management features—all tailored for Indian businesses."
+      "question": "Can I manage my inventory across multiple locations?",
+      "answer": "Yes, Giddh supports multi-currency transactions for businesses operating internationally."
     },
     {
-      "question": "Why do we need an inventory management system?",
-      "answer": "An inventory management system ensures accurate stock tracking, reduces errors, helps avoid stockouts, and enables better decision-making through detailed reports."
+      "question": "Is Giddh suitable for small businesses?",
+      "answer": "Absolutely! Giddh is designed for SMEs, offering simple pricing, easy onboarding, and zero hidden costs."
     },
     {
-      "question": "What are the benefits of inventory management?",
-      "answer": " Inventory management helps optimize supply and demand, reduce costs, improve cash flow, ensure accurate stock levels, and provide valuable insights for strategic decision-making."
-    },
-    {
-      "question": "Can I manage inventory in Giddh?",
-      "answer": "Yes, Giddh is designed to manage inventory for all types of businesses, whether you're a retailer, manufacturer, or distributor, and whether you operate across multiple locations or a single warehouse."
-    },
-    {
-      "question": "Can I manage inventory in a different group or category?",
-      "answer": " Yes, Giddh’s flexible system allows you to create custom groups and categories to suit your specific business needs. You can categorize products as required for better organization and reporting."
+      "question": "Can I integrate Giddh with my existing e-commerce platform?",
+      "answer": "Yes, Giddh integrates smoothly with Shopify, WooCommerce, and other popular platforms."
     }
   ]
 }
