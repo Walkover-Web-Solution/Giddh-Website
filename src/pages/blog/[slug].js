@@ -17,18 +17,7 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 import { useCallback } from "react";
 import getBlogSchema from "@/utils/getBlogSchema";
 
-const slugToPostContent = ((postContents) => {
-  let hash = {};
-  let fullPath = {};
-  postContents.map((data) => {
-    fullPath = data.fullPath;
-  });
-  postContents?.forEach((it) => (hash[it.slug] = it));
-
-  return hash;
-})(fetchPostContent());
-
-export default function TestPage({
+export default function BlogPage({
   source,
   title,
   date,
@@ -81,6 +70,7 @@ export default function TestPage({
     <>
       <Head>
         {(seoTitle || title) && <title>{seoTitle ? seoTitle : title}</title>}
+
         {(seoDescription || description) && (
           <meta
             name="description"
@@ -90,16 +80,15 @@ export default function TestPage({
 
         {seoKeywords && <meta name="keywords" content={seoKeywords}></meta>}
 
-        <meta
-          property="og:title"
-          content={seoTitle ? seoTitle : title}
-          key="title"
-        />
-        <meta
-          property="og:description"
-          content={seoDescription ? seoDescription : description}
-          key="title"
-        />
+        {(seoTitle || title) && (
+          <meta property="og:title" content={seoTitle ? seoTitle : title} />
+        )}
+        {(seoDescription || description) && (
+          <meta
+            property="og:description"
+            content={seoDescription ? seoDescription : description}
+          />
+        )}
 
         {scripts &&
           typeof scripts === "string" &&
@@ -170,71 +159,110 @@ export default function TestPage({
   );
 }
 
+const slugToPostContent = (() => {
+  const postContents = fetchPostContent();
+
+  const map = {};
+
+  postContents.forEach((post) => {
+    map[post.slug] = {
+      slug: post.slug,
+      fullPath: post.fullPath,
+      staticPath: post.staticPath,
+      ...post,
+    };
+  });
+
+  return map;
+})();
+
 export async function getStaticPaths() {
-  const paths = fetchPostContent().map((it) => "/blog/" + it.staticPath);
+  const posts = fetchPostContent();
+
+  const paths = posts.map((post) => ({
+    params: { slug: post.staticPath },
+  }));
 
   return {
     paths,
     fallback: false,
   };
 }
-export async function getStaticProps(slug) {
-  const slugData = slug.params.slug;
-  const source = fs.readFileSync(slugToPostContent[slugData]?.fullPath, "utf8");
-  const matterResult = matter(source, {
+
+export async function getStaticProps({ params }) {
+  console.log("Debug - params:", params);
+  const slug = params.slug;
+
+  // HARD CHECK: Fail the build if slug is missing
+  if (!slugToPostContent[slug]) {
+    throw new Error(`MDX file not found for slug: ${slug}`);
+  }
+
+  const filePath = slugToPostContent[slug].fullPath;
+
+  // Read MDX source
+  const raw = fs.readFileSync(filePath, "utf8");
+
+  // Parse frontmatter
+  const matterResult = matter(raw, {
     engines: {
       yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }),
     },
   });
 
-  const title = matterResult?.data?.title;
-  const seoTitle = matterResult?.data?.seoTitle;
-  const seoDescription = matterResult?.data?.seoDescription;
-  const seoKeywords = matterResult?.data?.seoKeywords;
-  const author = matterResult?.data?.author;
-  const description = matterResult?.data?.description;
-  const content = matterResult?.content;
-  var date = new Date(matterResult?.data?.date);
-  date = format(date, "LLLL d, yyyy");
-  const tags = matterResult?.data?.tag;
-  const html = matterResult?.data?.html;
-  const scripts = matterResult?.data?.scripts;
+  const data = matterResult.data;
+
+  // ❗ FIX: Do NOT convert missing fields into empty strings.
+  const title = data.title ?? null;
+  const seoTitle = data.seoTitle ?? null;
+  const seoDescription = data.seoDescription ?? null;
+  const seoKeywords = data.seoKeywords ?? null;
+  const description = data.description ?? null;
+  const author = data.author ?? null;
+  const tags = data.tag ?? [];
+  const scripts = data.scripts ?? null;
+
+  // Date formatting
+  const date = data.date ? format(new Date(data.date), "LLLL d, yyyy") : null;
+
+  // HTML override
   let htmlContent = null;
-  if (html) {
-    htmlContent = require("fs").readFileSync(
-      `src/data/htmlblogs/${html}.html`,
+  if (data.html) {
+    htmlContent = fs.readFileSync(
+      `src/data/htmlblogs/${data.html}.html`,
       "utf8"
     );
   }
-  const url = matterResult?.data?.slug;
-  const mdxSource = await serialize(content);
-  const noSchema = matterResult?.data?.noSchema;
-  const coverImage = matterResult?.data?.coverImage;
-  const schema = getBlogSchema({
+
+  // Blog schema
+  const blogSchema = getBlogSchema({
     data: {
-      noSchema,
+      noSchema: data.noSchema,
       title,
       description,
       author,
-      date: matterResult?.data?.date,
-      url,
-      coverImage,
+      date: data.date,
+      url: data.slug,
+      coverImage: data.coverImage,
     },
   });
+
+  const mdxSource = await serialize(matterResult.content);
+
   return {
     props: {
       source: mdxSource,
-      date: date || "",
-      title: title || "",
-      author: author || "",
-      tags: tags || "",
-      description: description || "",
-      seoTitle: seoTitle || "",
-      seoKeywords: seoKeywords || "",
-      seoDescription: seoDescription || "",
-      html: htmlContent || "",
-      scripts: scripts || "",
-      blogSchema: schema || "",
+      title,
+      seoTitle,
+      description,
+      seoDescription,
+      seoKeywords,
+      author,
+      date,
+      tags,
+      html: htmlContent,
+      scripts,
+      blogSchema,
     },
   };
 }
