@@ -30,6 +30,7 @@ export default function BlogPage({
   html,
   scripts,
   blogSchema,
+  coverImage,
 }) {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -89,6 +90,7 @@ export default function BlogPage({
             content={seoDescription ? seoDescription : description}
           />
         )}
+        {coverImage && <meta property="og:image" content={coverImage} />}
 
         {scripts &&
           typeof scripts === "string" &&
@@ -221,6 +223,7 @@ export async function getStaticProps({ params }) {
   const author = data.author ?? null;
   const tags = data.tag ?? [];
   const scripts = data.scripts ?? null;
+  const coverImage = data.coverImage ?? null;
 
   // Date formatting
   const date = data.date ? format(new Date(data.date), "LLLL d, yyyy") : null;
@@ -263,6 +266,7 @@ export async function getStaticProps({ params }) {
       html: htmlContent,
       scripts,
       blogSchema,
+      coverImage,
     },
   };
 }
