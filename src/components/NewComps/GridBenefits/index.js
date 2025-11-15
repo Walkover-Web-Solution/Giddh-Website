@@ -1,12 +1,13 @@
 import Image from "next/image";
 
 export default function GridBenefits({ compData }) {
-  if (!compData?.length) return null;
+  if (!compData?.features?.length) return null;
 
   return (
-    <section className="container py-5">
+    <section className="container py-5 d-flex flex-column gap-4">
+      <h2 className="text-center sub-heading">{compData?.heading}</h2>
       <div className="d-flex flex-column border border-black">
-        {compData.map((row, rowIndex) => (
+        {compData.features.map((row, rowIndex) => (
           <div key={rowIndex} className="row g-0 overflow-hidden">
             {row.map((item, colIndex) => (
               <div

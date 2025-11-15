@@ -1,0 +1,175 @@
+{
+  "splitBanner": {
+    "heading": "Expand Globally with the Best Multi-Currency Accounting Software",
+    "subHeading": "Manage payments, invoices, and reports across 100+ currencies and take your business worldwide.",
+    "image": "/img/multi-currency-accounting-software/multi_currency_accounting_software_banner_img.svg",
+    "buttons": [
+      {
+        "text": "Schedule a Demo",
+        "link": "/online-accounting-software"
+      }
+    ],
+    "form": false
+  },
+  "features": {
+    "heading": "Explore Game-Changing Features with Giddh’s Multi-Currency Accounting Software",
+    "content": [
+      {
+        "heading": "Automatic Currency Conversion",
+        "img": "/img/multi-currency-accounting-software/automatic_currency_conversion.svg",
+        "description": "Eliminate Confusion with Automatic Conversion, minimize rate mismatches, and accounting errors. Giddh instantly converts international currencies into your base currency, while still allowing you to set manual rates if needed.",
+        "more_content": [
+          "Real-time automatic conversion with updated rates.",
+          "Option to override with your own exchange rate.",
+          "Ensures accuracy in global transactions."
+        ]
+      },
+      {
+        "heading": "Customisable Invoice & Payment Management",
+        "img": "/img/multi-currency-accounting-software/customisable_invoice_and_payment_management.svg",
+        "description": "Send professional invoices in your customer’s preferred currency and record payments seamlessly in your base currency. Cross-border transactions become stress-free and transparent.",
+        "more_content": [
+          "Send invoices in multiple currencies with ease.",
+          "Accept international payments smoothly.",
+          "Automatic syncing to your business currency."
+        ]
+      },
+      {
+        "heading": "Currency Assignment to Business Accounts",
+        "img": "/img/multi-currency-accounting-software/currency_assignment_to_business_accounts.svg",
+        "description": "Set preferred foreign currencies for different business accounts and streamline financial management.",
+        "more_content": [
+          "Assign default currency for foreign customer accounts.",
+          "Simplify management of multiple regions.",
+          "Automate reporting for international accounts."
+        ]
+      },
+      {
+        "heading": "Dynamic & Detailed Business Reporting",
+        "img": "/img/multi-currency-accounting-software/dynamic_and_detailed_business_reporting.svg",
+        "description": "Get complete visibility of your financial health with dynamic reports automatically generated in your base currency. Stay on top of your trial balance, profit and loss statement (P&L), and balance sheet with ease.",
+        "more_content": [
+          "Auto-generate trial balance, P&L, and balance sheets.",
+          "Reports are always aligned with your company’s base currency.",
+          "Clear view of international transactions and cash flow."
+        ]
+      },
+      {
+        "heading": "Eliminate Confusion with Automatic Currency Conversion",
+        "img": "/img/multi-currency-accounting-software/eliminate_confusion_with_automatic_currency_conversion.svg",
+        "description": "Giddh automatically converts international currencies into your base currency, while still allowing you to enter your own rates for precise control.",
+        "more_content": [
+          "Real-time automatic currency conversion.",
+          "Option to set custom exchange rates manually.",
+          "Reduces errors in cross-border transactions."
+        ]
+      },
+      {
+        "heading": "Keep Your International Customers Smiling",
+        "img": "/img/multi-currency-accounting-software/keep_your_international_customers_smiling.svg",
+        "description": "Easily accept payments from international customers and send invoices in their local currency—while your books remain updated in your business currency.",
+        "more_content": [
+          "Send invoices in your client’s preferred currency.",
+          "Track payments in your base currency.",
+          "Simplify global invoicing and eliminate confusion."
+        ]
+      },
+      {
+        "heading": "Set Preferred Currency to Business Accounts",
+        "img": "/img/multi-currency-accounting-software/set_preferred_currency_to_business_accounts.svg",
+        "description": "Get complete control by assigning default currencies to foreign customer accounts. Every invoice, payment, and report for that account is automatically generated in the set currency.",
+        "more_content": [
+          "Assign default foreign currencies per account.",
+          "Automate reporting for multi-region customers.",
+          "Reduce manual effort in financial tracking."
+        ]
+      },
+      {
+        "heading": "Drive Growth with Dynamic Financial Visibility",
+        "img": "/img/multi-currency-accounting-software/drive_growth_with_dynamic_financial_visibility.svg",
+        "description": "Gain complete financial visibility with dynamic reports created in your base currency. Whether it's a trial balance, P&L, or balance sheet—get a clear picture of your business's health across regions.",
+        "more_content": [
+          "Auto-generate trial balance, profit & loss, and balance sheets.",
+          "Reports are always aligned with your company’s base currency.",
+          "Clear insights into international cash flow."
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore Features",
+        "link": "/all-features"
+      }
+    ]
+  },
+  "gridFeatures": {
+    "heading" : "What Sets Giddh Apart",
+    "features" :
+    [
+    [
+      {
+        "title": "Manage Multiple Companies & Branches"
+      },
+      {
+        "title": "Auto Updates. Always getting faster."
+      },
+      {
+        "title": "Open & Public API Access"
+      }
+    ],
+    [
+      {
+        "title": "One Subscription, Up to 100 Companies"
+      },
+      {
+        "title": "Unlimited Users – No Extra Cost"
+      }
+    ],
+    [
+      {
+        "title": "Easy Synchronization with Tally"
+      },
+      {
+        "title": "Built-In White Label Option"
+      },
+      {
+        "title": "No Voucher Screens – Just Type & Save"
+      }
+    ]
+  ]},
+  "faqs": [
+    {
+      "question": "What type of businesses can benefit from Giddh’s multi-currency software?",
+      "answer": "Whether you’re a startup, SME, or large enterprise, Giddh’s multi-currency accounting software is designed to scale with your business needs."
+    },
+    {
+      "question": "Are the exchange rates updated in real-time?",
+      "answer": "Yes! Giddh pulls real-time exchange rates, ensuring you always have accurate data for your financial reporting."
+    },
+    {
+      "question": "Can I set multiple default currencies for different regions?",
+      "answer": "Absolutely! Giddh enables you to assign default currencies for various customers or regions, streamlining financial management."
+    },
+    {
+      "question": "Does Giddh support tax compliance in different countries?",
+      "answer": "Yes, Giddh helps ensure that your multi-currency transactions remain compliant with local tax regulations, regardless of where you’re doing business."
+    }
+  ],
+
+  "cta": {
+    "heading": "Ready to Take Control of Your Global Accounting?",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-tertiary"
+      },
+      {
+        "text": "Book a Demo",
+        "link": "/online-accounting-software",
+        "type": "btn-tertiary"
+      }
+    ],
+    "theme": "light"
+  }
+}

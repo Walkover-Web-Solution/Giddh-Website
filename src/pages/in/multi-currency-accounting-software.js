@@ -1,9 +1,4 @@
-import MultiCurrencyAccountingSoftware from "@/pages/multi-currency-accounting-software";
-const inMultiCurrencyAccountingSoftware = (path) => {
-  return (
-    <>
-      <MultiCurrencyAccountingSoftware path={path.path} />
-    </>
-  );
-};
-export default inMultiCurrencyAccountingSoftware;
+import MultiCurrencyAccountingSoftwareComp from "@/components/Pages/MultiCurrencyAccountingSoftware";
+export default function InMultiCurrencyAccountingSoftware({ pageData }) {
+  return <MultiCurrencyAccountingSoftwareComp pageData={pageData} />;
+}
