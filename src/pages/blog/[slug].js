@@ -192,7 +192,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log("Debug - params:", params);
   const slug = params.slug;
 
   // HARD CHECK: Fail the build if slug is missing
