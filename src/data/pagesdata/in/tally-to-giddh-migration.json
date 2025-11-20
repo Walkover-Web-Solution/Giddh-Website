@@ -124,7 +124,7 @@
   },
   "faqs": [
     {
-      "question": "How long will the migration take",
+      "question": "How long will the migration take?",
       "answer": "The migration process typically takes a few minutes, depending on the amount of data you are transferring."
     },
     {
@@ -140,7 +140,7 @@
       "answer": " Inventory management helps optimize supply and demand, reduce costs, improve cash flow, ensure accurate stock levels, and provide valuable insights for strategic decision-making."
     },
     {
-      "question": " Is there customer support available during the migration?",
+      "question": "Is there customer support available during the migration?",
       "answer": "Yes! Giddh offers 24/7 support to guide you through every step of the migration."
     }
   ]
