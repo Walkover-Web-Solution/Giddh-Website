@@ -7,7 +7,7 @@ import LottiePlayer from "../../LottiePlayer";
 export default function SplitBanner({ compData }) {
   return (
     <section
-      className={`py-3 outfit-font ${
+      className={`outfit-font ${
         compData?.lottie ? "" : "gradient-primary"
       } ${!compData?.header ? "padding-nav" : ""}`}
     >
