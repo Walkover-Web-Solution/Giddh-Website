@@ -15,6 +15,7 @@ export default function SupportedPlatforms({ supportedPlatforms }) {
                 height={60}
                 src={platform?.image}
                 alt={platform?.name}
+                loading="lazy"
               />
               <p className="font-white font-sm text-center">{platform?.name}</p>
             </div>

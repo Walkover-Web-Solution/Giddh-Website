@@ -57,6 +57,7 @@ export default function TrustBadgeScrollable({ compData }) {
                     alt={logo?.alt}
                     width={100}
                     height={40}
+                    loading="lazy"
                   />
                 </a>
               ))}
@@ -73,6 +74,7 @@ export default function TrustBadgeScrollable({ compData }) {
                     alt={logo?.alt}
                     width={100}
                     height={40}
+                    loading="lazy"
                   />
                 </a>
               ))}

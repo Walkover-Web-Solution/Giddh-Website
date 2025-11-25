@@ -14,6 +14,7 @@ export default function Industries({ giddhIndustries }) {
               width={53}
               height={60}
               className="mx-auto"
+              loading="lazy"
             />
             <div className="font-600 font-grey font-md font-white">
               {item?.name}

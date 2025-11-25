@@ -100,7 +100,7 @@ export default function Testimonials({ testimonials }) {
               <br />
               <em className="font-400">Growth with</em>
               <br />
-              <Image src="/img/giddh-logo-primary.svg" alt="Giddh Logo" width={100} height={100} />
+              <Image src="/img/giddh-logo-primary.svg" alt="Giddh Logo" width={100} height={100} loading="lazy"/>
             </h2>
           </div>
         </div>
