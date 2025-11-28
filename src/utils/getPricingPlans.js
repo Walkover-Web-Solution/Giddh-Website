@@ -8,6 +8,7 @@ export default async function getPricingPlans(region) {
     return handlePlans(jsonData?.body);
   } catch (err) {
     console.error(err);
+    return { yearly: [], monthly: [] };
   }
 }
 
@@ -32,22 +33,22 @@ function handlePlans(jsonData) {
       const filteredPlan = {};
       if (plan.hasOwnProperty("yearlyAmountAfterDiscount"))
         filteredPlan.yearlyAmountAfterDiscount =
-          plan.yearlyAmountAfterDiscount || null;
+          plan.yearlyAmountAfterDiscount ?? null;
       if (plan.hasOwnProperty("yearlyDiscountAmount"))
-        filteredPlan.yearlyDiscountAmount = plan.yearlyDiscountAmount || null;
+        filteredPlan.yearlyDiscountAmount = plan.yearlyDiscountAmount ?? null;
       if (plan.hasOwnProperty("name")) filteredPlan.name = plan.name;
       if (plan.hasOwnProperty("currency"))
         filteredPlan.currency = plan.currency;
       if (plan.hasOwnProperty("billsAllowed"))
-        filteredPlan.billsAllowed = plan.billsAllowed || null;
+        filteredPlan.billsAllowed = plan.billsAllowed ?? null;
       if (plan.hasOwnProperty("yearlyAmount"))
-        filteredPlan.yearlyAmount = plan.yearlyAmount || null;
+        filteredPlan.yearlyAmount = plan.yearlyAmount ?? null;
       if (plan.hasOwnProperty("invoicesAllowed"))
-        filteredPlan.invoicesAllowed = plan.invoicesAllowed || null;
+        filteredPlan.invoicesAllowed = plan.invoicesAllowed ?? null;
       if (plan.hasOwnProperty("companiesLimit"))
-        filteredPlan.companiesLimit = plan.companiesLimit || null;
+        filteredPlan.companiesLimit = plan.companiesLimit ?? null;
       if (plan.hasOwnProperty("restrictedModules"))
-        filteredPlan.restrictedModules = plan.restrictedModules || null;
+        filteredPlan.restrictedModules = plan.restrictedModules ?? null;
       return filteredPlan;
     })
     .sort((a, b) => {
