@@ -32,6 +32,7 @@ export default function GridFeatures({ features }) {
                     src={card.icon}
                     alt={card?.heading}
                     className="align-self-center"
+                    loading="lazy"    
                   />
                 )}
                 <p className="m-0 font-xl font-600 font-primary">

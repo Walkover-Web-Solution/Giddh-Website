@@ -24,7 +24,7 @@ export default function CTA({ compData, hasImage }) {
           </p>
           <div
             className={`${
-              !hasImage ? "d-flex flex-wrap justify-content-center gap-2" : ""
+              !hasImage ? "d-flex flex-wrap justify-content-center gap-4" : ""
             }`}
           >
             {compData?.buttons?.map((button, index) => (
@@ -66,8 +66,8 @@ export default function CTA({ compData, hasImage }) {
             alt="Person holding laptop"
             width={320}
             height={320}
-            priority
             className="w-75 d-none d-md-block"
+            loading="lazy"
           />
         )}
       </div>

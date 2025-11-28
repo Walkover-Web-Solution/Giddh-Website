@@ -19,6 +19,7 @@ export default function QuickStartSection({ compData }) {
                 height={80}
                 className="align-self-center"
                 alt={step.title}
+                loading="lazy"
               />
             )}
             <p className="m-0 ps-2 font-600">

@@ -29,6 +29,7 @@ export default function Benefits({ benefits }) {
                           width={45}
                           height={45}
                           className="mx-auto"
+                          loading="lazy"
                         />
                         <span className="font-md">{item?.text}</span>
                       </div>
