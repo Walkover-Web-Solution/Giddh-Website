@@ -11,40 +11,40 @@
     ],
     "form": false
   },
-  "features": {
+  "characteristics": {
     "heading": "What is the Tally to Giddh migration?",
     "subHeading": "The Tally to Giddh migration tool makes migrating your accounting data effortless and seamless. This tool simplifies the process, allowing you to transfer your data quickly and securely with no technical expertise required.",
-    "content": [
+    "cards": [
       {
-        "title": "One-Click Migration",
+        "heading": "One-Click Migration",
         "description": "Transfer all your Tally accounting data with just a single click—no complex steps required."
       },
       {
-        "title": "Easy-to-Use Interface",
+        "heading": "Easy-to-Use Interface",
         "description": "User-friendly interface that guides you through the entire process, ensuring a smooth migration"
       },
       {
-        "title": "Supports All Tally Data Types",
+        "heading": "Supports All Tally Data Types",
         "description": "Migrates all essential Tally data, including ledgers, vouchers, balances, and more."
       },
       {
-        "title": "Zero Data Loss",
+        "heading": "Zero Data Loss",
         "description": "Ensures no data is lost during the migration process, maintaining the integrity of your financial records."
       },
       {
-        "title": "Seamless Integration with Giddh",
+        "heading": "Seamless Integration with Giddh",
         "description": "Automatically integrates your Tally data into the Giddh platform, where you can enjoy the benefits of cloud accounting software India."
       },
       {
-        "title": "No Technical Expertise Required",
+        "heading": "No Technical Expertise Required",
         "description": "No need for IT staff or technical knowledge—anyone can use the utility with ease."
       },
       {
-        "title": "Secure and Encrypted Migration",
+        "heading": "Secure and Encrypted Migration",
         "description": "Your data is encrypted and securely transferred to Giddh, ensuring your financial information is always protected."
       },
       {
-        "title": "Real-Time Support",
+        "heading": "Real-Time Support",
         "description": "Access our customer support team anytime for assistance with the migration process or to address any questions."
       }
     ],
@@ -55,6 +55,7 @@
       }
     ]
   },
+
   "cta": {
     "heading": "Learn More About How Giddh Can Transform Your Accounting",
     "subheading": "Discover The Full Range Of Giddh Features That Can Streamline Your Business Processes.",
@@ -124,7 +125,7 @@
   },
   "faqs": [
     {
-      "question": "How long will the migration take",
+      "question": "How long will the migration take?",
       "answer": "The migration process typically takes a few minutes, depending on the amount of data you are transferring."
     },
     {
@@ -140,7 +141,7 @@
       "answer": " Inventory management helps optimize supply and demand, reduce costs, improve cash flow, ensure accurate stock levels, and provide valuable insights for strategic decision-making."
     },
     {
-      "question": " Is there customer support available during the migration?",
+      "question": "Is there customer support available during the migration?",
       "answer": "Yes! Giddh offers 24/7 support to guide you through every step of the migration."
     }
   ]
