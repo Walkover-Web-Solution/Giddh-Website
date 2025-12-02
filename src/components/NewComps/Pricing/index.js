@@ -8,6 +8,8 @@ import {
 } from "react-icons/md";
 import styles from "./Pricing.module.scss";
 
+const INITIAL_FEATURES_VISIBLE = 5;
+
 export default function Pricing({ pricingPlans, pageInfo }) {
   const [isYearly, setIsYearly] = useState(true);
   const [showReadMore, setShowReadMore] = useState(false);
@@ -44,6 +46,7 @@ export default function Pricing({ pricingPlans, pageInfo }) {
                 name="plan-duration"
                 id="month"
                 autoComplete="off"
+                checked={!isYearly}
                 onChange={handlePlanToggle}
               />
               <label className="btn btn-outline-primary" htmlFor="month">
@@ -56,7 +59,7 @@ export default function Pricing({ pricingPlans, pageInfo }) {
                 name="plan-duration"
                 id="year"
                 autoComplete="off"
-                defaultChecked
+                checked={isYearly}
                 onChange={handlePlanToggle}
               />
               <label className="btn btn-outline-primary" htmlFor="year">
@@ -85,14 +88,16 @@ export default function Pricing({ pricingPlans, pageInfo }) {
         <button
           className="btn font-600 font-primary"
           onClick={() => setShowReadMore(!showReadMore)}
+          aria-expanded={showReadMore}
+          aria-label={showReadMore ? "Show less features" : "Show more features"}
         >
           {showReadMore ? (
             <>
-              <MdKeyboardArrowUp /> Show Less
+              <MdKeyboardArrowUp aria-hidden="true" /> Show Less
             </>
           ) : (
             <>
-              <MdKeyboardArrowDown /> Read More
+              <MdKeyboardArrowDown aria-hidden="true" /> Read More
             </>
           )}
         </button>
@@ -150,6 +155,22 @@ function PricingTable({
   };
 
   /**
+   * Sanitizes HTML content using DOMPurify (client-side only).
+   * Falls back to original content during SSR.
+   * @param {string} html - HTML string to sanitize
+   * @returns {string} Sanitized HTML string
+   */
+  const sanitizeHTML = (html) => {
+    if (typeof window === "undefined") {
+      // SSR: Return original content (you may want to add basic sanitization here)
+      return html;
+    }
+    // Client-side: Use DOMPurify
+    const DOMPurify = require("dompurify");
+    return DOMPurify.sanitize(html);
+  };
+
+  /**
    * Provides data for a given plan-feature combination in the pricing table.
    * @param {Object} plan - The plan object being evaluated.
    * @param {Object} feature - The feature descriptor object which contains feature-related metadata.
@@ -162,13 +183,18 @@ function PricingTable({
       return plan[tableType === "yearly" ? feature?.yearly : feature?.monthly];
     } else if (feature.specificContent && !isFreePlan(plan)) {
       return (
-        <span dangerouslySetInnerHTML={{ __html: feature.specificContent }} />
+        <span
+          dangerouslySetInnerHTML={{
+            __html: sanitizeHTML(feature.specificContent),
+          }}
+        />
       );
     } else if (feature.isAvailableForAll) {
       return <MdDone />;
     } else if (isFreePlan(plan)) {
       return <MdClose />;
     }
+    // Default: feature is available for paid plans
     return <MdDone />;
   };
 
@@ -201,7 +227,7 @@ function PricingTable({
               <p className="m-0 font-600">
                 Select a plan that best suits your needs
               </p>
-              {pageInfo?.country == "india" && (
+              {pageInfo?.country === "india" && (
                 <span className="font-sm">
                   *All prices are exclusive of GST
                 </span>
@@ -209,7 +235,7 @@ function PricingTable({
             </th>
             {pricingPlans?.map((plan, index) => (
               <th
-                key={index}
+                key={plan?.id || plan?.name || `plan-${tableType}-${index}`}
                 className={`p-4 border-end border-top ${styles.tableColumn}`}
               >
                 {getPlanDetails(plan)}
@@ -221,14 +247,25 @@ function PricingTable({
         <tbody>
           {features?.map((feature, index) => (
             <tr
-              key={index}
-              className={index > 4 && !showReadMore ? "d-none" : ""}
+              key={feature?.id || feature?.title || `feature-${index}`}
+              className={
+                index >= INITIAL_FEATURES_VISIBLE && !showReadMore
+                  ? "d-none"
+                  : ""
+              }
             >
               <td className="text-start ps-4 border-start border-end">
                 {feature.title}
               </td>
-              {pricingPlans?.map((plan, index) => (
-                <td key={index} className="text-start ps-4 border-end">
+              {pricingPlans?.map((plan, planIndex) => (
+                <td
+                  key={
+                    plan?.id ||
+                    plan?.name ||
+                    `plan-${tableType}-${planIndex}-feature-${index}`
+                  }
+                  className="text-start ps-4 border-end"
+                >
                   {getPlanInfoByFeature(plan, feature)}
                 </td>
               ))}

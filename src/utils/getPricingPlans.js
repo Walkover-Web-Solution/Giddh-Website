@@ -1,103 +1,97 @@
+/**
+ * Fetches pricing plans from the API for a given region.
+ * @param {string} region - The region code (e.g., "GLB", "IND", "ARE", "GBR")
+ * @returns {Promise<{yearly: Array, monthly: Array}>} Object containing yearly and monthly plans
+ */
 export default async function getPricingPlans(region) {
+  if (!region || typeof region !== "string") {
+    console.warn("Invalid region parameter:", region);
+    return { yearly: [], monthly: [] };
+  }
+
   try {
     const response = await fetch(
       `https://api.giddh.com/v2/subscription/plans/all?regionCode=${region}`
     );
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const jsonData = await response.json();
     return handlePlans(jsonData?.body);
   } catch (err) {
-    console.error(err);
+    console.error(`Error fetching pricing plans for region ${region}:`, err);
     return { yearly: [], monthly: [] };
   }
 }
 
+/**
+ * Processes and filters pricing plans into yearly and monthly arrays.
+ * @param {Array} jsonData - Array of plan objects from the API
+ * @returns {{yearly: Array, monthly: Array}} Filtered and sorted plans
+ */
 function handlePlans(jsonData) {
-  if (!jsonData?.length) {
+  if (!Array.isArray(jsonData) || jsonData.length === 0) {
     return { yearly: [], monthly: [] };
   }
-  const plans = jsonData;
 
-  // Create two arrays for yearly and monthly plans
-  const yearlyPlans =
-    plans?.filter(
-      (plan) =>
-        plan?.hasOwnProperty("yearlyAmount") &&
-        plan?.yearlyAmount !== null &&
-        plan?.yearlyAmount !== undefined
-    ) || [];
+  // Define allowed properties for each plan type
+  const yearlyProperties = [
+    "yearlyAmountAfterDiscount",
+    "yearlyDiscountAmount",
+    "name",
+    "currency",
+    "billsAllowed",
+    "yearlyAmount",
+    "invoicesAllowed",
+    "companiesLimit",
+    "restrictedModules",
+  ];
 
-  // Filter yearly plans to only include specified keys
-  const yearly = yearlyPlans
+  const monthlyProperties = [
+    "monthlyAmountAfterDiscount",
+    "monthlyDiscountAmount",
+    "name",
+    "currency",
+    "monthlyBillsAllowed",
+    "monthlyAmount",
+    "monthlyInvoicesAllowed",
+    "monthlyCompaniesLimit",
+    "restrictedModules",
+  ];
+
+  const yearly = filterAndSortPlans(jsonData, "yearlyAmount", yearlyProperties);
+
+  const monthly = filterAndSortPlans(
+    jsonData,
+    "monthlyAmount",
+    monthlyProperties
+  );
+
+  return { yearly, monthly };
+}
+
+/**
+ * Filters plans by amount property, extracts allowed properties, and sorts by amount.
+ * @param {Array} plans - Array of plan objects
+ * @param {string} amountKey - Key to filter and sort by (e.g., 'yearlyAmount')
+ * @param {Array<string>} allowedProperties - Properties to include in filtered plan
+ * @returns {Array} Filtered and sorted plans
+ */
+function filterAndSortPlans(plans, amountKey, allowedProperties) {
+  return plans
+    .filter((plan) => plan?.[amountKey] != null)
     .map((plan) => {
       const filteredPlan = {};
-      if (plan.hasOwnProperty("yearlyAmountAfterDiscount"))
-        filteredPlan.yearlyAmountAfterDiscount =
-          plan.yearlyAmountAfterDiscount ?? null;
-      if (plan.hasOwnProperty("yearlyDiscountAmount"))
-        filteredPlan.yearlyDiscountAmount = plan.yearlyDiscountAmount ?? null;
-      if (plan.hasOwnProperty("name")) filteredPlan.name = plan.name;
-      if (plan.hasOwnProperty("currency"))
-        filteredPlan.currency = plan.currency;
-      if (plan.hasOwnProperty("billsAllowed"))
-        filteredPlan.billsAllowed = plan.billsAllowed ?? null;
-      if (plan.hasOwnProperty("yearlyAmount"))
-        filteredPlan.yearlyAmount = plan.yearlyAmount ?? null;
-      if (plan.hasOwnProperty("invoicesAllowed"))
-        filteredPlan.invoicesAllowed = plan.invoicesAllowed ?? null;
-      if (plan.hasOwnProperty("companiesLimit"))
-        filteredPlan.companiesLimit = plan.companiesLimit ?? null;
-      if (plan.hasOwnProperty("restrictedModules"))
-        filteredPlan.restrictedModules = plan.restrictedModules ?? null;
+      allowedProperties.forEach((prop) => {
+        if (prop in plan) {
+          filteredPlan[prop] = plan[prop] ?? null;
+        }
+      });
       return filteredPlan;
     })
     .sort((a, b) => {
-      const amountA = a.yearlyAmount || 0;
-      const amountB = b.yearlyAmount || 0;
+      const amountA = Number(a[amountKey]) || 0;
+      const amountB = Number(b[amountKey]) || 0;
       return amountA - amountB;
     });
-
-  const monthlyPlans =
-    plans?.filter(
-      (plan) =>
-        plan?.hasOwnProperty("monthlyAmount") &&
-        plan?.monthlyAmount !== null &&
-        plan?.monthlyAmount !== undefined
-    ) || [];
-
-  // Filter monthly plans to only include specified keys
-  const monthly = monthlyPlans
-    .map((plan) => {
-      const filteredPlan = {};
-      if (plan.hasOwnProperty("monthlyAmountAfterDiscount"))
-        filteredPlan.monthlyAmountAfterDiscount =
-          plan.monthlyAmountAfterDiscount || null;
-      if (plan.hasOwnProperty("monthlyDiscountAmount"))
-        filteredPlan.monthlyDiscountAmount = plan.monthlyDiscountAmount || null;
-      if (plan.hasOwnProperty("name")) filteredPlan.name = plan.name;
-      if (plan.hasOwnProperty("currency"))
-        filteredPlan.currency = plan.currency;
-      if (plan.hasOwnProperty("monthlyBillsAllowed"))
-        filteredPlan.monthlyBillsAllowed = plan.monthlyBillsAllowed || null;
-      if (plan.hasOwnProperty("monthlyAmount"))
-        filteredPlan.monthlyAmount = plan.monthlyAmount || null;
-      if (plan.hasOwnProperty("monthlyInvoicesAllowed"))
-        filteredPlan.monthlyInvoicesAllowed =
-          plan.monthlyInvoicesAllowed || null;
-      if (plan.hasOwnProperty("monthlyCompaniesLimit"))
-        filteredPlan.monthlyCompaniesLimit = plan.monthlyCompaniesLimit || null;
-      if (plan.hasOwnProperty("restrictedModules"))
-        filteredPlan.restrictedModules = plan.restrictedModules || null;
-      return filteredPlan;
-    })
-    .sort((a, b) => {
-      const amountA = a.monthlyAmount || 0;
-      const amountB = b.monthlyAmount || 0;
-      return amountA - amountB;
-    });
-
-  return {
-    yearly: yearly || [],
-    monthly: monthly || [],
-  };
 }
