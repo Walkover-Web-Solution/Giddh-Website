@@ -13,6 +13,7 @@ export default function getPageData(pageInfo) {
     "import-data",
     "gst",
     "multi-currency-accounting-software",
+    "tally-to-giddh-migration"
   ];
   if (!pagesToGetData.includes(pageInfo?.page)) return null;
   try {
