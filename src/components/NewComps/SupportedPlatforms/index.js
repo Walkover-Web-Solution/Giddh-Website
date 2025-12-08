@@ -7,7 +7,7 @@ export default function SupportedPlatforms({ supportedPlatforms }) {
         <h2 className="font-sub-heading garmond-font text-center font-white">
           {supportedPlatforms?.heading}
         </h2>
-        <div className="d-flex flex-row justify-content-between align-items-center gap-4">
+        <div className="d-flex flex-row flex-wrap justify-content-around align-items-center gap-4">
           {supportedPlatforms.platforms.map((platform, index) => (
             <div className="d-flex flex-column gap-3" key={index}>
               <Image
