@@ -64,7 +64,6 @@ const InPricing = (path) => {
 
     fetchData(getRegionByLink());
     if (PricingData) {
-      console.log(country);
       setPricingData(PricingData[country]);
     }
   }, [PricingData]);
