@@ -28,7 +28,7 @@ export default function Pricing({ pricingPlans, pageInfo }) {
 
   return (
     <section className="py-5 container">
-      <div className="d-flex flex-column align-items-center">
+      <div className="d-flex flex-column align-items-center text-center">
         <h2 className="m-0">Find A Plan That's Right For You</h2>
         <p>Risk-Free. 90-Day Money Back Guarantee.</p>
       </div>
