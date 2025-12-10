@@ -19,7 +19,6 @@ export default function SplitBanner({ compData }) {
               alt="Giddh Logo"
               width={120}
               height={24}
-              loading="lazy"
             />
             <button
               onClick={() =>
@@ -93,7 +92,6 @@ export default function SplitBanner({ compData }) {
                 width={600}
                 height={700}
                 className="img-fluid"
-                loading="lazy"
                 priority
               />
             </div>
