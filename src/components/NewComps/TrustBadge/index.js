@@ -39,7 +39,7 @@ export default function TrustBadge() {
   return (
     <section className="container section_py d-flex flex-column gap-4">
       <div className="d-flex flex-column text-center content-width mx-auto">
-        <h2 className="sub-heading c-fw-600 col-primary ">
+        <h2 className="sub-heading font-600 font-primary ">
           Giddh: Finest Business Accounting Software for SMBs
         </h2>
         <p>

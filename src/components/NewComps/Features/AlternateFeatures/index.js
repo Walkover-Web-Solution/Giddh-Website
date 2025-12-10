@@ -55,10 +55,12 @@ export default function AlternateFeatures({ features }) {
                   <div className="d-flex justify-content-center">
                     <Image
                       src={feature?.img}
-                      alt={feature?.feature}
+                      alt={feature?.heading}
                       width={550}
                       height={550}
                       className="img-fluid rounded"
+                      loading="lazy"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
                 ) : (

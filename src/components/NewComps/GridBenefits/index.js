@@ -21,6 +21,7 @@ export default function GridBenefits({ compData }) {
                     height={60}
                     className="mb-3 opacity-50"
                     alt={item?.title}
+                    loading="lazy"
                   />
                 )}
                 <p className="m-0 font-600">{item?.title}</p>

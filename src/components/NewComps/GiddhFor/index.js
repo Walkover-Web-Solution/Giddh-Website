@@ -66,6 +66,7 @@ export default function GiddhFor({ compData }) {
                     className={`${style.image} rounded`}
                     width={400}
                     height={400}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -94,6 +95,7 @@ export default function GiddhFor({ compData }) {
                       src={item.image}
                       className={`${style.image} rounded`}
                       alt={item?.name}
+                      loading="lazy"
                     />
                   </div>
                 </div>

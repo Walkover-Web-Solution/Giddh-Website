@@ -47,6 +47,7 @@ export default function ToggleFeatures({ features }) {
                       alt={features[expandedFeature].name}
                       height={400}
                       width={400}
+                      loading="lazy"
                       className={`cursor-pointer ${style.image}`}
                     />
                   )}
@@ -139,6 +140,7 @@ const FeatureItem = memo(({ feature, index, isExpanded, onToggle }) => {
             width={800}
             height={400}
             className={`object-fit-contain cursor-pointer w-100 h-fit ${style.image}`}
+            loading="lazy"
           />
         </div>
 
