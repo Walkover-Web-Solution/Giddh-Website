@@ -45,7 +45,7 @@ const pricing = (path) => {
     const fetchData = async (region) => {
       try {
         const response = await fetch(
-          `https://api.giddh.com/v2/subscription/plans/all?regionCode=${region}`
+          `https://apitest.giddh.com/v2/subscription/plans/all?regionCode=${region}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -206,6 +206,38 @@ const pricing = (path) => {
     }
     return false;
   };
+ /**
+ * Calculates discount percentage or returns "Free" for 100% discount.
+ *
+ * @param {object} plan
+ * @param {boolean} isYearPlan
+ * @returns {number | "Free" | null}
+ */
+const getDiscountPercentage = (plan, isYearPlan) => {
+  if (!plan) return null;
+
+  const original = isYearPlan ? plan.yearlyAmount : plan.monthlyAmount;
+  const discounted = isYearPlan
+    ? plan.yearlyAmountAfterDiscount
+    : plan.monthlyAmountAfterDiscount;
+
+  if (
+    original == null ||
+    discounted == null || 
+    original <= 0 ||
+    original <= discounted
+  ) {
+    return null;
+  }
+
+  if (discounted === 0) return "Free";
+
+  const percentage = Math.round(((original - discounted) / original) * 100);
+
+  if (percentage >= 100) return "Free";
+
+  return percentage; 
+};
 
   /**
    * Return Plan details as html
@@ -215,6 +247,9 @@ const pricing = (path) => {
    * @return {*}
    */
   const getPlanDetails = (plan, isMobile = false) => {
+    const discount = getDiscountPercentage(plan, isYearPlan);
+    const discountLabel = discount == null ? null : discount === "Free" ? "Free" : `${discount}%`;
+
     return (
       <>
         {/* Plan Name */}
@@ -251,7 +286,7 @@ const pricing = (path) => {
                   </s>
                 </p>
               </>
-            )}
+             )}
 
             {/* Plan Description */}
             <p
@@ -265,7 +300,7 @@ const pricing = (path) => {
             {((isYearPlan && plan?.yearlyDiscount?.duration) ||
               (!isYearPlan && plan?.monthlyDiscount?.duration)) && (
               <p className="c-fw-400 c-fs-5 col-primary mb-1 white-space-no-wrap">
-                Free to <wbr />
+                {discountLabel} for <wbr />
                 {isYearPlan
                   ? `${plan?.yearlyDiscount?.duration} year`
                   : `${plan?.monthlyDiscount?.duration} month`}
