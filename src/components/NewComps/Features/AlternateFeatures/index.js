@@ -10,7 +10,7 @@ export default function AlternateFeatures({ features }) {
           <h2 className="text-center font-sub-heading garmond-font">
             {features?.heading}
           </h2>
-          <p className="text-center font-slate-grey font-md">
+          <p className="text-center outfit-font font-slate-grey font-md">
             {features?.subHeading}
           </p>
         </div>

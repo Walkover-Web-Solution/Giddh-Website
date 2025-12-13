@@ -6,8 +6,8 @@ export default function QuickStartSection({ compData }) {
   return (
     <section className="container py-5 d-flex flex-column gap-3">
       <div>
-        <h2 className="m-0">{compData?.heading}</h2>
-        <p className="m-0">{compData?.subHeading}</p>
+        <h2 className="m-0 garmond-font">{compData?.heading}</h2>
+        <p className="m-0 outfit-font">{compData?.subHeading}</p>
       </div>
       <div className="d-flex flex-column flex-md-row gap-4 py-2">
         {compData.steps.map((step, index) => (

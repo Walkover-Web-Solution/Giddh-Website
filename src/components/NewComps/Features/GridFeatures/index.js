@@ -8,11 +8,11 @@ export default function GridFeatures({ features }) {
     <section className="py-5">
       <div className="container d-flex flex-column gap-4">
         <div className="d-flex flex-column gap-4">
-          <h2 className="text-center font-heading font-primary">
+          <h2 className="text-center garmond-font font-heading font-primary">
             {features?.heading}
           </h2>
           {features?.subHeading && (
-            <p className="text-center font-md font-slate-grey">
+            <p className="text-center outfit-font font-md font-slate-grey">
               {features.subHeading}
             </p>
           )}
