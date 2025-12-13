@@ -7,9 +7,9 @@ export default function Instructions({ compData }) {
   return (
     <section className="py-5 container d-flex flex-column gap-4">
       <div className="d-flex flex-column align-items-center">
-        <h2 className="font-heading font-primary">{compData?.heading}</h2>
+        <h2 className="font-heading garmond-font font-primary">{compData?.heading}</h2>
         {compData?.subHeading && (
-          <p className="sub-heading">{compData?.subHeading}</p>
+          <p className="sub-heading outfit-font">{compData?.subHeading}</p>
         )}
       </div>
       <div>
