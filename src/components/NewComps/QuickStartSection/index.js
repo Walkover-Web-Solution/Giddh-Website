@@ -4,14 +4,14 @@ import { MdArrowForward } from "react-icons/md";
 export default function QuickStartSection({ compData }) {
   if (compData?.steps?.length < 0) return null;
   return (
-    <section className="container py-5 d-flex flex-column gap-3">
-      <div>
+    <section className="container py-5 d-flex flex-column gap-3 outfit-font">
+      <div className="d-flex flex-column align-items-center text-center">
         <h2 className="m-0 garmond-font">{compData?.heading}</h2>
-        <p className="m-0 outfit-font">{compData?.subHeading}</p>
+        <p className="m-0">{compData?.subHeading}</p>
       </div>
       <div className="d-flex flex-column flex-md-row gap-4 py-2">
         {compData.steps.map((step, index) => (
-          <div key={index} className="border p-4 col d-flex flex-column gap-2">
+          <div key={index} className="border p-4 col d-flex flex-column gap-2 rounded-2">
             {step?.icon && (
               <Image
                 src={step.icon}
