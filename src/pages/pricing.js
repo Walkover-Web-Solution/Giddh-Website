@@ -206,38 +206,80 @@ const pricing = (path) => {
     }
     return false;
   };
- /**
- * Calculates discount percentage or returns "Free" for 100% discount.
- *
- * @param {object} plan
- * @param {boolean} isYearPlan
- * @returns {number | "Free" | null}
- */
-const getDiscountPercentage = (plan, isYearPlan) => {
-  if (!plan) return null;
 
-  const original = isYearPlan ? plan.yearlyAmount : plan.monthlyAmount;
-  const discounted = isYearPlan
-    ? plan.yearlyAmountAfterDiscount
-    : plan.monthlyAmountAfterDiscount;
+  /**
+   * Builds pricing context for a plan based on selected duration (yearly/monthly).
+   * @param {object} plan
+   * @param {boolean} isYearPlan
+   * @returns {{
+   *   amountAfterDiscount: number,
+   *   discountAmount: number,
+   *   discount: object | null,
+   *   durationUnit: 'year' | 'month'
+   * }}
+   */
+  const getPlanPricingContext = (plan, isYearPlan) => ({
+    amountAfterDiscount: isYearPlan
+      ? plan.yearlyAmountAfterDiscount
+      : plan.monthlyAmountAfterDiscount,
 
-  if (
-    original == null ||
-    discounted == null || 
-    original <= 0 ||
-    original <= discounted
-  ) {
+    discountAmount: isYearPlan
+      ? plan.yearlyDiscountAmount
+      : plan.monthlyDiscountAmount,
+
+    discount: isYearPlan ? plan.yearlyDiscount : plan.monthlyDiscount,
+
+    durationUnit: isYearPlan ? "year" : "month",
+  });
+
+  /**
+   * Checks if a plan is temporarily free for a limited duration.
+   * @param {number} amountAfterDiscount
+   * @param {object | null} discount
+   * @returns {boolean}
+   */
+  const isFreeForDuration = (amountAfterDiscount, discount) =>
+    amountAfterDiscount === 0 && Boolean(discount);
+
+  /**
+   * Checks if a plan has a valid discount but still requires payment.
+   * @param {number} discountAmount
+   * @param {number} amountAfterDiscount
+   * @returns {boolean}
+   */
+  const isSaveForDuration = (discountAmount, amountAfterDiscount) =>
+    Number(discountAmount) > 0 && Number(amountAfterDiscount) === 0;
+
+  /**
+   * Returns the pricing message shown below the plan price.
+   * @param {object} plan
+   * @param {boolean} isYearPlan
+   * @returns {string | null}
+   */
+  const getPricingMessage = (plan, isYearPlan) => {
+    if (!plan) return null;
+
+    const { amountAfterDiscount, discountAmount, discount, durationUnit } =
+      getPlanPricingContext(plan, isYearPlan);
+
+    const duration = discount?.duration;
+    if (!duration) return null;
+
+    // Case 1: Plan is free for a limited duration
+    if (isFreeForDuration(amountAfterDiscount, discount)) {
+      return `Free to ${duration} ${durationUnit}${duration > 1 ? "s" : ""}`;
+    }
+
+    // Case 2: Plan has a discount but is still paid
+    if (isSaveForDuration(discountAmount, amountAfterDiscount)) {
+      return `Save ${getCurrencyCodeOrSymbol(
+        plan,
+        "SYMBOL"
+      )}${discountAmount} for ${duration} ${durationUnit}${duration > 1 ? "s" : ""}`;
+    }
+
     return null;
-  }
-
-  if (discounted === 0) return "Free";
-
-  const percentage = Math.round(((original - discounted) / original) * 100);
-
-  if (percentage >= 100) return "Free";
-
-  return percentage; 
-};
+  };
 
   /**
    * Return Plan details as html
@@ -247,9 +289,7 @@ const getDiscountPercentage = (plan, isYearPlan) => {
    * @return {*}
    */
   const getPlanDetails = (plan, isMobile = false) => {
-    const discount = getDiscountPercentage(plan, isYearPlan);
-    const discountLabel = discount == null ? null : discount === "Free" ? "Free" : `${discount}%`;
-
+    const pricingMessage = getPricingMessage(plan, isYearPlan);
     return (
       <>
         {/* Plan Name */}
@@ -297,13 +337,9 @@ const getDiscountPercentage = (plan, isYearPlan) => {
             </p>
 
             {/* Free Plan with duration message */}
-            {((isYearPlan && plan?.yearlyDiscount?.duration) ||
-              (!isYearPlan && plan?.monthlyDiscount?.duration)) && (
+            {pricingMessage && (
               <p className="c-fw-400 c-fs-5 col-primary mb-1 white-space-no-wrap">
-                {discountLabel} for <wbr />
-                {isYearPlan
-                  ? `${plan?.yearlyDiscount?.duration} year`
-                  : `${plan?.monthlyDiscount?.duration} month`}
+                {pricingMessage}
               </p>
             )}
           </>
