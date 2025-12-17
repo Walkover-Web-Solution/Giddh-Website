@@ -1,3 +1,4 @@
+import Schema from "@/components/NewComps/Schema";
 import AllFeatures from "@/pages/all-features";
 
 const inAllFeatures = (path) => {
@@ -77,6 +78,7 @@ const inAllFeatures = (path) => {
   ];
   return (
     <>
+      <Schema schema={schema} />
       <AllFeatures path={path.path} />
     </>
   );

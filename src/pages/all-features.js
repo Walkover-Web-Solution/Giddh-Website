@@ -10,8 +10,6 @@ const allFeatures = (path) => {
 
   const directoryPath = "/img/feature-gallery-icons";
 
-  
-
   //Global Features
     let globalFeatures = [
       {

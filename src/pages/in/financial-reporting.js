@@ -1,3 +1,4 @@
+import Schema from "@/components/NewComps/Schema";
 import FinancialReporting from "@/pages/financial-reporting";
 const inFinancialReporting = (path) => {
   const schema = [
@@ -22,6 +23,7 @@ const inFinancialReporting = (path) => {
   ];
   return (
     <>
+      <Schema schema={schema} />
       <FinancialReporting path={path.path} />
     </>
   );
