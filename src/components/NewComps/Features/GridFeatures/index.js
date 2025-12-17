@@ -21,9 +21,9 @@ export default function GridFeatures({ features }) {
           {features.cards.map((card, index) => (
             <div key={index} className="col-12 col-md-6">
               <div
-                className={`d-flex flex-column border rounded-4 px-4 py-2 text-center justify-content-center border-color-primary ${
+                className={`d-flex flex-column border rounded-4 px-2 py-2 text-center justify-content-center border-color-primary ${
                   styles.card
-                }  ${card?.icon ? "py-4" : ""}`}
+                }  ${card?.icon ? "py-2" : ""}`}
               >
                 {card?.icon && (
                   <Image
@@ -34,7 +34,7 @@ export default function GridFeatures({ features }) {
                     className="align-self-center"
                   />
                 )}
-                <p className="m-0 font-xl font-600 font-primary">
+                <p className="m-0 font-lg font-600 font-primary">
                   {card?.heading}
                 </p>
                 <p className="font-md font-slate-grey">{card?.description}</p>
