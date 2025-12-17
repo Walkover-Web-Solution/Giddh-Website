@@ -222,7 +222,7 @@ const pricing = (path) => {
     amountAfterDiscount: isYearPlan
       ? plan.yearlyAmountAfterDiscount
       : plan.monthlyAmountAfterDiscount,
-
+    amount: isYearPlan ? plan.yearlyAmount : plan.monthlyAmount,
     discountAmount: isYearPlan
       ? plan.yearlyDiscountAmount
       : plan.monthlyDiscountAmount,
@@ -236,10 +236,11 @@ const pricing = (path) => {
    * Checks if a plan is temporarily free for a limited duration.
    * @param {number} amountAfterDiscount
    * @param {object | null} discount
+   * @param {number} amount
    * @returns {boolean}
    */
-  const isFreeForDuration = (amountAfterDiscount, discount) =>
-    amountAfterDiscount === 0 && Boolean(discount);
+  const isFreeForDuration = (amount, amountAfterDiscount, discount) =>
+    Boolean(discount) && (amount === 0 || amountAfterDiscount === 0);
 
   /**
    * Checks if a plan has a valid discount but still requires payment.
@@ -248,7 +249,7 @@ const pricing = (path) => {
    * @returns {boolean}
    */
   const isSaveForDuration = (discountAmount, amountAfterDiscount) =>
-    Number(discountAmount) > 0 && Number(amountAfterDiscount) === 0;
+    Number(discountAmount) > 0 && Number(amountAfterDiscount) > 0;
 
   /**
    * Returns the pricing message shown below the plan price.
@@ -259,14 +260,19 @@ const pricing = (path) => {
   const getPricingMessage = (plan, isYearPlan) => {
     if (!plan) return null;
 
-    const { amountAfterDiscount, discountAmount, discount, durationUnit } =
-      getPlanPricingContext(plan, isYearPlan);
+    const {
+      amountAfterDiscount,
+      discountAmount,
+      amount,
+      discount,
+      durationUnit,
+    } = getPlanPricingContext(plan, isYearPlan);
 
     const duration = discount?.duration;
     if (!duration) return null;
 
     // Case 1: Plan is free for a limited duration
-    if (isFreeForDuration(amountAfterDiscount, discount)) {
+    if (isFreeForDuration(amountAfterDiscount, discount, amount)) {
       return `Free to ${duration} ${durationUnit}${duration > 1 ? "s" : ""}`;
     }
 
@@ -275,7 +281,9 @@ const pricing = (path) => {
       return `Save ${getCurrencyCodeOrSymbol(
         plan,
         "SYMBOL"
-      )}${discountAmount} for ${duration} ${durationUnit}${duration > 1 ? "s" : ""}`;
+      )}${discountAmount} for ${duration} ${durationUnit}${
+        duration > 1 ? "s" : ""
+      }`;
     }
 
     return null;
@@ -326,7 +334,7 @@ const pricing = (path) => {
                   </s>
                 </p>
               </>
-             )}
+            )}
 
             {/* Plan Description */}
             <p
