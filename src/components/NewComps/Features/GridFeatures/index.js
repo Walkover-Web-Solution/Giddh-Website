@@ -5,10 +5,10 @@ import Image from "next/image";
 export default function GridFeatures({ features }) {
   if (!features?.cards?.length) return null;
   return (
-    <section className="py-5">
+    <section className="py-5 outfit-font">
       <div className="container d-flex flex-column gap-4">
         <div className="d-flex flex-column gap-4">
-          <h2 className="text-center sub-heading font-primary">
+          <h2 className="text-center garmond-font font-heading font-primary">
             {features?.heading}
           </h2>
           {features?.subHeading && (
@@ -41,7 +41,7 @@ export default function GridFeatures({ features }) {
                 {card?.more_content?.length && (
                   <ul>
                     {card.more_content.map((content, index) => (
-                      <li key={index} className="font-sm">
+                      <li key={index}>
                         <MdCircle size={5} /> {content}
                       </li>
                     ))}
