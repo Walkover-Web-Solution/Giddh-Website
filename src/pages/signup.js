@@ -1122,23 +1122,19 @@ const signUp = (path) => {
                               {connectedChannels && (
                                 <div className="col-dark mt-3 c-fs-6 d-flex resend-text">
                                   Resend on{" "}
-                                  <ul>
-                                    {connectedChannels.map((item, index) => (
-                                      <li key={item.value}>
-                                        <span
-                                          className="col-primary c-fw-600"
-                                          onClick={() =>
-                                            retrySendOtp(item.value)
-                                          }
-                                        >
-                                          {" "}
-                                          {item.name}{" "}
-                                        </span>
-                                        {connectedChannels.length >
-                                          index + 1 && <span> or </span>}
-                                      </li>
-                                    ))}
-                                  </ul>
+                                  {connectedChannels.map((item, index) => (
+                                    <span key={item.value}>
+                                      <span
+                                        className="col-primary c-fw-600 ms-1 cursor-pointer "
+                                        onClick={() => retrySendOtp(item.value)}
+                                      >
+                                        {" "}
+                                        {item.name}{" "}
+                                      </span>
+                                      {connectedChannels.length > index + 1 &&
+                                        "or"}
+                                    </span>
+                                  ))}
                                 </div>
                               )}
                             </div>
@@ -1146,14 +1142,30 @@ const signUp = (path) => {
                         )}
                     </div>
                   </div>
+
                   <div className="mb-4">
                     <p className="c-fs-6 mb-1 content-width">
                       I agree to receive OTP and Alerts SMS from Giddh at the
                       phone number provided. Message and Data rates may apply.
                       Message frequency varies. Reply HELP for help and STOP to
                       opt-out. View our{" "}
-                      <a className="text-wrap-nowrap" href="https://giddh.com/terms" target="_blank" rel="noopener noreferrer">Terms and Service</a>{" "}
-                      and <a className="text-wrap-nowrap" href="https://giddh.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                      <a
+                        className="text-wrap-nowrap"
+                        href="https://giddh.com/terms"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Terms and Service
+                      </a>{" "}
+                      and{" "}
+                      <a
+                        className="text-wrap-nowrap"
+                        href="https://giddh.com/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Privacy Policy
+                      </a>
                       .
                     </p>
                     <div class="d-flex align-items-center gap-2">
