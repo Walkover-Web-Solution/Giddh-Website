@@ -56,11 +56,9 @@ const signUp = (path) => {
       isVerified: true,
       signupVia: "google",
     });
+    setShowEmailOtp(false);
     updateCurrentStep(2);
-    setTimeout(() => {
-      document.getElementById("email").value = response.email;
-      setShowEmailOtp(false);
-    });
+    setInputValue("email", response.email);
   }
 
   async function initiateSignup() {
@@ -146,6 +144,20 @@ const signUp = (path) => {
     }
   }
 
+  function setInputValue(fieldId, value) {
+    const sanitizedValue = value ?? "";
+    const tryAssignValue = (retries = 10) => {
+      const targetInput = document.getElementById(fieldId);
+      if (targetInput) {
+        targetInput.value = sanitizedValue;
+      } else if (retries > 0) {
+        setTimeout(() => tryAssignValue(retries - 1), 50);
+      }
+    };
+
+    tryAssignValue();
+  }
+
   function initOtpSignup() {
     var userData = getLocalStorage("userData");
     if (userData) {
@@ -156,11 +168,9 @@ const signUp = (path) => {
           isVerified: true,
           signupVia: userData.signupVia,
         });
+        setShowEmailOtp(false);
         updateCurrentStep(2);
-        setTimeout(() => {
-          document.getElementById("email").value = userData.user.email;
-          setShowEmailOtp(false);
-        });
+        setInputValue("email", userData.user.email);
       } else if (userData.user.mobileNo) {
         setMobileDetails({
           mobileNo: userData.user.mobileNo,
@@ -169,10 +179,8 @@ const signUp = (path) => {
           signupVia: userData.signupVia,
         });
         updateCurrentStep(2);
-        setTimeout(() => {
-          document.getElementById("mobileNo").value = userData.user.mobileNo;
-          setShowMobileOtp(false);
-        });
+        setShowMobileOtp(false);
+        setInputValue("mobileNo", userData.user.mobileNo);
       }
     }
 
@@ -203,10 +211,8 @@ const signUp = (path) => {
     setShowMobileOtp(false);
     updateCurrentStep(2);
 
-    setTimeout(() => {
-      document.getElementById("email").value = "";
-      document.getElementById("mobileNo").value = "";
-    });
+    setInputValue("email", "");
+    setInputValue("mobileNo", "");
   }
 
   function setShowEmailOtpSection(showOtp) {
@@ -484,15 +490,6 @@ const signUp = (path) => {
     setCurrentStep(step);
     setTimeout(() => {
       loadTelLibrary();
-      const input = document.getElementById("mobileNo");
-      if (input) {
-        input.addEventListener("countrychange", (event) => {
-          displayEnterNumber();
-        });
-        return () => {
-          input.removeEventListener("countrychange", displayEnterNumber());
-        };
-      }
     });
   }
 
@@ -515,6 +512,10 @@ const signUp = (path) => {
   }
 
   function displayEnterNumber() {
+    if (!intlRef) {
+      return;
+    }
+
     if (intlRef.getSelectedCountryData()?.dialCode) {
       setDisplayMobileNumber();
     } else {
@@ -526,6 +527,10 @@ const signUp = (path) => {
   }
 
   function setDisplayMobileNumber() {
+    if (!intlRef) {
+      return;
+    }
+
     let number = intlRef.getNumber();
     let displayMobileNumber = number.includes("+")
       ? number
@@ -569,65 +574,82 @@ const signUp = (path) => {
     });
   }
 
-  function loadTelLibrary() {
-    const input = document.querySelector("#mobileNo");
-    if (input) {
-      var intl = window.intlTelInput(input, {
-        nationalMode: true,
-        utilsScript:
-          "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-        autoHideDialCode: false,
-        separateDialCode: false,
-        initialCountry: "auto",
-        geoIpLookup: (success, failure) => {
-          let countryCode = "in";
-          const fetchIPApi = fetch("https://api.db-ip.com/v2/free/self");
-          fetchIPApi.then(
-            (res) => {
-              if (res?.ipAddress) {
-                const fetchCountryByIpApi = fetch(
-                  "http://ip-api.com/json/" + `${res.ipAddress}`
-                );
-                fetchCountryByIpApi.then(
-                  (fetchCountryByIpApiRes) => {
-                    if (fetchCountryByIpApiRes?.countryCode) {
-                      return success(fetchCountryByIpApiRes.countryCode);
-                    } else {
-                      return success(countryCode);
-                    }
-                  },
-                  (fetchCountryByIpApiErr) => {
-                    const fetchCountryByIpInfoApi = fetch(
-                      "https://ipinfo.io/" + `${res?.ipAddress}`
-                    );
+  function loadTelLibrary(retries = 20) {
+    const input = document.getElementById("mobileNo");
+    const isIntlAvailable =
+      typeof window !== "undefined" &&
+      typeof window.intlTelInput === "function";
 
-                    fetchCountryByIpInfoApi.then(
-                      (fetchCountryByIpInfoApiRes) => {
-                        if (fetchCountryByIpInfoApiRes?.country) {
-                          return success(fetchCountryByIpInfoApiRes.country);
-                        } else {
-                          return success(countryCode);
-                        }
-                      },
-                      (fetchCountryByIpInfoApiErr) => {
+    if (!input || !isIntlAvailable) {
+      if (retries > 0) {
+        setTimeout(() => loadTelLibrary(retries - 1), 100);
+      }
+      return;
+    }
+
+    if (input.dataset.intlTelInitialized === "true") {
+      return;
+    }
+
+    const intl = window.intlTelInput(input, {
+      nationalMode: true,
+      utilsScript:
+        "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+      autoHideDialCode: false,
+      separateDialCode: false,
+      initialCountry: "auto",
+      geoIpLookup: (success, failure) => {
+        let countryCode = "in";
+        const fetchIPApi = fetch("https://api.db-ip.com/v2/free/self");
+        fetchIPApi.then(
+          (res) => {
+            if (res?.ipAddress) {
+              const fetchCountryByIpApi = fetch(
+                "http://ip-api.com/json/" + `${res.ipAddress}`
+              );
+              fetchCountryByIpApi.then(
+                (fetchCountryByIpApiRes) => {
+                  if (fetchCountryByIpApiRes?.countryCode) {
+                    return success(fetchCountryByIpApiRes.countryCode);
+                  } else {
+                    return success(countryCode);
+                  }
+                },
+                (fetchCountryByIpApiErr) => {
+                  const fetchCountryByIpInfoApi = fetch(
+                    "https://ipinfo.io/" + `${res?.ipAddress}`
+                  );
+
+                  fetchCountryByIpInfoApi.then(
+                    (fetchCountryByIpInfoApiRes) => {
+                      if (fetchCountryByIpInfoApiRes?.country) {
+                        return success(fetchCountryByIpInfoApiRes.country);
+                      } else {
                         return success(countryCode);
                       }
-                    );
-                  }
-                );
-              } else {
-                return success(countryCode);
-              }
-            },
-            (err) => {
+                    },
+                    (fetchCountryByIpInfoApiErr) => {
+                      return success(countryCode);
+                    }
+                  );
+                }
+              );
+            } else {
               return success(countryCode);
             }
-          );
-        },
-      });
-      intlRef = intl;
-      setIntl(intl);
-    }
+          },
+          (err) => {
+            return success(countryCode);
+          }
+        );
+      },
+    });
+
+    input.dataset.intlTelInitialized = "true";
+    intlRef = intl;
+    setIntl(intl);
+    displayEnterNumber();
+    input.addEventListener("countrychange", displayEnterNumber);
   }
 
   function otpVerifyCallback(response) {
