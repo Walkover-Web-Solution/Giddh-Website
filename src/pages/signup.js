@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { toast } from "react-toastify";
 import GoogleLogin from "@/components/googleLogin";
+import Head from "next/head";
 const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
   ssr: false,
 });
@@ -48,6 +49,18 @@ const signUp = (path) => {
     setGiddhRegion(region.toLowerCase());
     initOtpSignup();
   }, []);
+
+  useEffect(() => {
+    if (showEmailOtp) {
+      initiateOtpFieldsAutoMove(".email-otp-field");
+    }
+  }, [showEmailOtp]);
+
+  useEffect(() => {
+    if (showMobileOtp) {
+      initiateOtpFieldsAutoMove(".mobile-otp-field");
+    }
+  }, [showMobileOtp]);
 
   function googleApiSuccessCallback(response) {
     setEmailDetails({
@@ -309,7 +322,6 @@ const signUp = (path) => {
       requestId: data.message,
     });
     setShowEmailOtpSection(true);
-    initiateOtpFieldsAutoMove(".email-otp-field");
   }
 
   function mobileOtpSentCallback(data) {
@@ -325,7 +337,6 @@ const signUp = (path) => {
       requestId: data.message,
     });
     setShowMobileOtpSection(true);
-    initiateOtpFieldsAutoMove(".mobile-otp-field");
   }
 
   function emailOtpFailedCallback(error) {
@@ -548,6 +559,10 @@ const signUp = (path) => {
       const charInputs = document.querySelectorAll(selector);
 
       charInputs.forEach((input, index) => {
+        if (input.dataset.listenersAttached === "true") {
+          return;
+        }
+
         input.addEventListener("input", (e) => {
           const value = e.target.value;
 
@@ -570,6 +585,8 @@ const signUp = (path) => {
             charInputs[index - 1].focus();
           }
         });
+
+        input.dataset.listenersAttached = "true";
       });
     });
   }
@@ -664,11 +681,13 @@ const signUp = (path) => {
 
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
-      ></link>
-      <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
+        ></link>
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+      </Head>
       <section className="entry signup d-flex">
         <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
           <a href={link == "" ? "/" : link}>
@@ -961,14 +980,12 @@ const signUp = (path) => {
                                   )}
                                 </button>
                               </div>
-                              <a href="#" className="col-dark mt-3 c-fs-6">
-                                <span
-                                  className="col-primary c-fw-600"
-                                  onClick={() => retrySendOtp(3)}
-                                >
-                                  Resend
-                                </span>
-                              </a>
+                              <span
+                                className="col-primary c-fw-600 mt-3 c-fs-6"
+                                onClick={() => retrySendOtp(3)}
+                              >
+                                Resend
+                              </span>
                             </div>
                           </div>
                         )}
@@ -1103,10 +1120,7 @@ const signUp = (path) => {
                                 </button>
                               </div>
                               {connectedChannels && (
-                                <a
-                                  href="#"
-                                  className="col-dark mt-3 c-fs-6 d-flex resend-text"
-                                >
+                                <div className="col-dark mt-3 c-fs-6 d-flex resend-text">
                                   Resend on{" "}
                                   <ul>
                                     {connectedChannels.map((item, index) => (
@@ -1125,7 +1139,7 @@ const signUp = (path) => {
                                       </li>
                                     ))}
                                   </ul>
-                                </a>
+                                </div>
                               )}
                             </div>
                           </div>
@@ -1133,9 +1147,14 @@ const signUp = (path) => {
                     </div>
                   </div>
                   <div className="mb-4">
-                    <p className="d-flex c-fs-5 m-0">
-                      I hereby authorise to send notifications via SMS, Email,
-                      RCS and others as per Terms of Service | Privacy Policy *
+                    <p className="c-fs-6 mb-1 content-width">
+                      I agree to receive OTP and Alerts SMS from Giddh at the
+                      phone number provided. Message and Data rates may apply.
+                      Message frequency varies. Reply HELP for help and STOP to
+                      opt-out. View our{" "}
+                      <a className="text-wrap-nowrap" href="https://giddh.com/terms" target="_blank" rel="noopener noreferrer">Terms and Service</a>{" "}
+                      and <a className="text-wrap-nowrap" href="https://giddh.com/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                      .
                     </p>
                     <div class="d-flex align-items-center gap-2">
                       <input
