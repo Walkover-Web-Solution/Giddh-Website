@@ -558,6 +558,37 @@ const signUp = (path) => {
     setTimeout(function () {
       const charInputs = document.querySelectorAll(selector);
 
+      // Add paste handler to the first input field
+      if (charInputs.length > 0 && !charInputs[0].dataset.pasteHandlerAttached) {
+        charInputs[0].addEventListener("paste", (e) => {
+          e.preventDefault();
+          const pastedData = e.clipboardData.getData("text").trim();
+          
+          // Only process if we have data and it looks like a numeric code
+          if (pastedData && /^\d+$/.test(pastedData)) {
+            // Distribute the pasted characters across input fields
+            const pastedChars = pastedData.split('');
+            
+            // Fill as many inputs as we have characters (up to the max number of inputs)
+            for (let i = 0; i < Math.min(pastedChars.length, charInputs.length); i++) {
+              charInputs[i].value = pastedChars[i];
+            }
+            
+            // Focus on the next empty field or the verify button if all fields are filled
+            if (pastedChars.length < charInputs.length) {
+              charInputs[pastedChars.length].focus();
+            } else {
+              if (selector === ".email-otp-field") {
+                document.getElementById("verify-email-button").focus();
+              } else if (selector === ".mobile-otp-field") {
+                document.getElementById("verify-mobile-button").focus();
+              }
+            }
+          }
+        });
+        charInputs[0].dataset.pasteHandlerAttached = "true";
+      }
+
       charInputs.forEach((input, index) => {
         if (input.dataset.listenersAttached === "true") {
           return;
@@ -570,9 +601,9 @@ const signUp = (path) => {
             if (index < charInputs.length - 1) {
               charInputs[index + 1].focus();
             } else {
-              if (selector == ".email-otp-field") {
+              if (selector === ".email-otp-field") {
                 document.getElementById("verify-email-button").focus();
-              } else if (selector == ".mobile-otp-field") {
+              } else if (selector === ".mobile-otp-field") {
                 document.getElementById("verify-mobile-button").focus();
               }
             }
@@ -583,6 +614,37 @@ const signUp = (path) => {
           if (e.key === "Backspace" && input.value.length === 0 && index > 0) {
             e.preventDefault(); // Prevent the browser's default backspace behavior
             charInputs[index - 1].focus();
+          }
+        });
+
+        // Add paste handler to all fields (not just the first)
+        input.addEventListener("paste", (e) => {
+          // Let the first input handle the paste event
+          if (index === 0) return;
+          
+          e.preventDefault();
+          const pastedData = e.clipboardData.getData("text").trim();
+          
+          // Only process if we have data and it looks like a numeric code
+          if (pastedData && /^\d+$/.test(pastedData)) {
+            // Distribute the pasted characters across input fields starting from current position
+            const pastedChars = pastedData.split('');
+            
+            // Fill as many inputs as we have characters (up to the max number of inputs)
+            for (let i = 0; i < Math.min(pastedChars.length, charInputs.length - index); i++) {
+              charInputs[index + i].value = pastedChars[i];
+            }
+            
+            // Focus on the next empty field or the verify button if all fields are filled
+            if (pastedChars.length < charInputs.length - index) {
+              charInputs[index + pastedChars.length].focus();
+            } else {
+              if (selector === ".email-otp-field") {
+                document.getElementById("verify-email-button").focus();
+              } else if (selector === ".mobile-otp-field") {
+                document.getElementById("verify-mobile-button").focus();
+              }
+            }
           }
         });
 
