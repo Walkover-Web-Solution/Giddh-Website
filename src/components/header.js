@@ -109,6 +109,9 @@ export default function Header(props) {
             content={metaData.ogDescription || metaData.description}
           />
         )}
+        {metaData?.ogImage && (
+          <meta property="og:image" content={metaData.ogImage || ""} />
+        )}
         {metaData?.title && <meta property="og:type" content="website" />}
       </Head>
     </>
