@@ -419,7 +419,7 @@ const pricing = (path) => {
       <section className="container-fluid pricing_main_section">
         <div className="container">
           <div className="row mt-2 mt-lg-5">
-            <div className="col-12">
+            <div className="col-12 ">
               <h1 className="pricing-heading col-primary c-fw-600 ms-4 text-center">
                 Powerful Accounting Software. <wbr />
                 Affordable Pricing.
@@ -495,124 +495,126 @@ const pricing = (path) => {
 
                   {/* Pricing Table Large Device */}
                   {!isMobile && (
-                    <table className="pricing-table w-100">
-                      <thead>
-                        <tr>
-                          <th>
-                            <figure className="mb-0">
-                              <img
-                                width="70"
-                                src="/img/guarantee-96.webp"
-                                alt="90 Days guarantee logo"
-                              />
-                            </figure>
-                          </th>
-                          {plans?.map((plan, i) => (
-                            <th
-                              key={i}
-                              width={`${(100 - 40) / plans?.length}%`}
-                              className={`text-center bg-${i}`}
-                            >
-                              {getPlanDetails(plan)}
+                    <div className="overflow-x-scroll col-12">
+                      <table className="pricing-table w-100 overflow-x-scroll">
+                        <thead>
+                          <tr>
+                            <th>
+                              <figure className="mb-0">
+                                <img
+                                  width="70"
+                                  src="/img/guarantee-96.webp"
+                                  alt="90 Days guarantee logo"
+                                />
+                              </figure>
                             </th>
-                          ))}
-                        </tr>
-                        <tr className="vertical-align-top">
-                          <th className="pt-0">
-                            <p className="c-fw-600 mb-0">Benefits</p>
-                          </th>
-                          {plans?.map((plan, i) => (
-                            <th
-                              key={i}
-                              width={`${(100 - 40) / plans?.length}%`}
-                              className={`text-center pt-0 bg-${i}`}
-                            >
-                              <a
-                                href={link + "/signup"}
-                                className="benefits-link"
+                            {plans?.map((plan, i) => (
+                              <th
+                                key={i}
+                                width={`${(100 - 40) / plans?.length}%`}
+                                className={`text-center pricing-table-column bg-${i}`}
                               >
-                                Try Now
-                              </a>
-                            </th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {pricingData?.map((feature, i) => (
-                          <tr key={i}>
-                            <td>
-                              <div>
-                                <div
-                                  className={
-                                    "cursor-pointer " + (true ? "pt-2" : "")
-                                  }
-                                  onClick={() => toggleFeatureExpansion(i)}
-                                >
-                                  <span>
-                                    {feature.title}
-                                    {feature.description !== null && (
-                                      <>
-                                        {feature.isExpanded ? (
-                                          <MdKeyboardArrowUp />
-                                        ) : (
-                                          <MdKeyboardArrowDown />
-                                        )}
-                                        {feature.isExpanded && (
-                                          <p className="c-fw-400">
-                                            <span
-                                              dangerouslySetInnerHTML={{
-                                                __html: feature?.description,
-                                              }}
-                                            />
-                                            {feature.link && (
-                                              <a
-                                                href={feature.link}
-                                                target="_blank"
-                                              >
-                                                {" "}
-                                                more
-                                              </a>
-                                            )}
-                                          </p>
-                                        )}
-                                      </>
-                                    )}
-                                  </span>
-                                </div>
-                              </div>
-                            </td>
-                            {plans?.map((plan, index) => (
-                              <td
-                                key={index}
-                                className={`text-center bg-${index}`}
-                              >
-                                {getPlanInfoByFeature(plan, feature)}
-                              </td>
+                                {getPlanDetails(plan)}
+                              </th>
                             ))}
                           </tr>
-                        ))}
-                      </tbody>
-                      <tfoot>
-                        <tr>
-                          <td className="py-0">
-                            <a
-                              className="col-primary c-fw-600"
-                              href={link + "/all-features"}
-                            >
-                              Check all features
-                            </a>
-                          </td>
-                          <td colSpan="100%" className="p-0">
-                            <p
-                              style={{ backgroundColor: "#edf3ff" }}
-                              className={"c-fs-6 c-fw-400 text-end py-1 pe-2"}
-                            >
-                              {getExtraAddOns()}
-                            </p>
-                          </td>
-                        </tr>
-                      </tfoot>
-                    </table>
+                          <tr className="vertical-align-top">
+                            <th className="pt-0">
+                              <p className="c-fw-600 mb-0">Benefits</p>
+                            </th>
+                            {plans?.map((plan, i) => (
+                              <th
+                                key={i}
+                                width={`${(100 - 40) / plans?.length}%`}
+                                className={`text-center pt-0 bg-${i}`}
+                              >
+                                <a
+                                  href={link + "/signup"}
+                                  className="benefits-link"
+                                >
+                                  Try Now
+                                </a>
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {pricingData?.map((feature, i) => (
+                            <tr key={i}>
+                              <td>
+                                <div>
+                                  <div
+                                    className={
+                                      "cursor-pointer " + (true ? "pt-2" : "")
+                                    }
+                                    onClick={() => toggleFeatureExpansion(i)}
+                                  >
+                                    <span>
+                                      {feature.title}
+                                      {feature.description !== null && (
+                                        <>
+                                          {feature.isExpanded ? (
+                                            <MdKeyboardArrowUp />
+                                          ) : (
+                                            <MdKeyboardArrowDown />
+                                          )}
+                                          {feature.isExpanded && (
+                                            <p className="c-fw-400">
+                                              <span
+                                                dangerouslySetInnerHTML={{
+                                                  __html: feature?.description,
+                                                }}
+                                              />
+                                              {feature.link && (
+                                                <a
+                                                  href={feature.link}
+                                                  target="_blank"
+                                                >
+                                                  {" "}
+                                                  more
+                                                </a>
+                                              )}
+                                            </p>
+                                          )}
+                                        </>
+                                      )}
+                                    </span>
+                                  </div>
+                                </div>
+                              </td>
+                              {plans?.map((plan, index) => (
+                                <td
+                                  key={index}
+                                  className={`text-center bg-${index}`}
+                                >
+                                  {getPlanInfoByFeature(plan, feature)}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                        <tfoot>
+                          <tr>
+                            <td className="py-0">
+                              <a
+                                className="col-primary c-fw-600"
+                                href={link + "/all-features"}
+                              >
+                                Check all features
+                              </a>
+                            </td>
+                            <td colSpan="100%" className="p-0">
+                              <p
+                                style={{ backgroundColor: "#edf3ff" }}
+                                className={"c-fs-6 c-fw-400 text-end py-1 pe-2"}
+                              >
+                                {getExtraAddOns()}
+                              </p>
+                            </td>
+                          </tr>
+                        </tfoot>
+                      </table>
+                    </div>
                   )}
 
                   {/* Pricing Table Small Device */}
