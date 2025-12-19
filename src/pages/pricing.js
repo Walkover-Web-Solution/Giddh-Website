@@ -45,7 +45,7 @@ const pricing = (path) => {
     const fetchData = async (region) => {
       try {
         const response = await fetch(
-          `https://api.giddh.com/v2/subscription/plans/all?regionCode=${region}`
+          `${process.env.NEXT_PUBLIC_API_URL}/v2/subscription/plans/all?regionCode=${region}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -208,6 +208,88 @@ const pricing = (path) => {
   };
 
   /**
+   * Builds pricing context for a plan based on selected duration (yearly/monthly).
+   * @param {object} plan
+   * @param {boolean} isYearPlan
+   * @returns {{
+   *   amountAfterDiscount: number,
+   *   discountAmount: number,
+   *   discount: object | null,
+   *   durationUnit: 'year' | 'month'
+   * }}
+   */
+  const getPlanPricingContext = (plan, isYearPlan) => ({
+    amountAfterDiscount: isYearPlan
+      ? plan.yearlyAmountAfterDiscount
+      : plan.monthlyAmountAfterDiscount,
+    amount: isYearPlan ? plan.yearlyAmount : plan.monthlyAmount,
+    discountAmount: isYearPlan
+      ? plan.yearlyDiscountAmount
+      : plan.monthlyDiscountAmount,
+
+    discount: isYearPlan ? plan.yearlyDiscount : plan.monthlyDiscount,
+
+    durationUnit: isYearPlan ? "year" : "month",
+  });
+
+  /**
+   * Checks if a plan is temporarily free for a limited duration.
+   * @param {number} amountAfterDiscount
+   * @param {object | null} discount
+   * @param {number} amount
+   * @returns {boolean}
+   */
+  const isFreeForDuration = (amount, amountAfterDiscount, discount) =>
+    Boolean(discount) && (amount === 0 || amountAfterDiscount === 0);
+
+  /**
+   * Checks if a plan has a valid discount but still requires payment.
+   * @param {number} discountAmount
+   * @param {number} amountAfterDiscount
+   * @returns {boolean}
+   */
+  const isSaveForDuration = (discountAmount, amountAfterDiscount) =>
+    Number(discountAmount) > 0 && Number(amountAfterDiscount) > 0;
+
+  /**
+   * Returns the pricing message shown below the plan price.
+   * @param {object} plan
+   * @param {boolean} isYearPlan
+   * @returns {string | null}
+   */
+  const getPricingMessage = (plan, isYearPlan) => {
+    if (!plan) return null;
+
+    const {
+      amountAfterDiscount,
+      discountAmount,
+      amount,
+      discount,
+      durationUnit,
+    } = getPlanPricingContext(plan, isYearPlan);
+
+    const duration = discount?.duration;
+    if (!duration) return null;
+
+    // Case 1: Plan is free for a limited duration
+    if (isFreeForDuration(amountAfterDiscount, discount, amount)) {
+      return `Free to ${duration} ${durationUnit}${duration > 1 ? "s" : ""}`;
+    }
+
+    // Case 2: Plan has a discount but is still paid
+    if (isSaveForDuration(discountAmount, amountAfterDiscount)) {
+      return `Save ${getCurrencyCodeOrSymbol(
+        plan,
+        "SYMBOL"
+      )}${discountAmount} for ${duration} ${durationUnit}${
+        duration > 1 ? "s" : ""
+      }`;
+    }
+
+    return null;
+  };
+
+  /**
    * Return Plan details as html
    *
    * @param {*} plan
@@ -215,6 +297,7 @@ const pricing = (path) => {
    * @return {*}
    */
   const getPlanDetails = (plan, isMobile = false) => {
+    const pricingMessage = getPricingMessage(plan, isYearPlan);
     return (
       <>
         {/* Plan Name */}
@@ -262,13 +345,9 @@ const pricing = (path) => {
             </p>
 
             {/* Free Plan with duration message */}
-            {((isYearPlan && plan?.yearlyDiscount?.duration) ||
-              (!isYearPlan && plan?.monthlyDiscount?.duration)) && (
+            {pricingMessage && (
               <p className="c-fw-400 c-fs-5 col-primary mb-1 white-space-no-wrap">
-                Free to <wbr />
-                {isYearPlan
-                  ? `${plan?.yearlyDiscount?.duration} year`
-                  : `${plan?.monthlyDiscount?.duration} month`}
+                {pricingMessage}
               </p>
             )}
           </>
