@@ -512,7 +512,7 @@ const pricing = (path) => {
                               <th
                                 key={i}
                                 width={`${(100 - 40) / plans?.length}%`}
-                                className={`text-center bg-${i}`}
+                                className={`text-center pricing-table-column bg-${i}`}
                               >
                                 {getPlanDetails(plan)}
                               </th>
