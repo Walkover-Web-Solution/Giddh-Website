@@ -7,6 +7,7 @@ import {
   MdKeyboardArrowUp,
 } from "react-icons/md";
 import CustomLoader from "@/components/customLoader";
+import contvertToLocal from "@/utils/convertToLocal";
 
 const pricing = (path) => {
   const [readMoreStatus, readmoreAction] = useState(false);
@@ -281,7 +282,7 @@ const pricing = (path) => {
       return `Save ${getCurrencyCodeOrSymbol(
         plan,
         "SYMBOL"
-      )}${discountAmount} for ${duration} ${durationUnit}${
+      )}${contvertToLocal(discountAmount)} for ${duration} ${durationUnit}${
         duration > 1 ? "s" : ""
       }`;
     }
@@ -314,7 +315,7 @@ const pricing = (path) => {
         {getAmount(plan) > 0 && (
           <>
             <p className="c-fs-3 mb-1">
-              {getCurrencyCodeOrSymbol(plan)}
+              {getCurrencyCodeOrSymbol(plan , "SYMBOL")}
               &nbsp;
               {getAmount(plan, true)}
               <span className="c-fs-6">{isYearPlan ? "/year" : "/month"}</span>
