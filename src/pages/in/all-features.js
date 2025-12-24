@@ -2,7 +2,7 @@ import Schema from "@/components/NewComps/Schema";
 import AllFeatures from "@/pages/all-features";
 
 const inAllFeatures = (path) => {
-  let schema = [
+  const schema = [
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",

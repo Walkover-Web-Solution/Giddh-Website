@@ -287,7 +287,7 @@
       "answer": "After your free trial, you can choose to continue with a paid plan, or let us know if you need more time to decide."
     }
   ],
-  "schema": [
+  "schemas": [
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
