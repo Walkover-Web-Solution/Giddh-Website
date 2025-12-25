@@ -238,9 +238,9 @@ const Footer = (path) => {
               </div>
               <p className="mt-3 mb-1">Address</p>
               <address className="m-0">
-                  Captain C.S. Nayudu Arcade<br></br>
-                  401 Old Palasia Road, <br></br>
-                  Indore, Madhya Pradesh
+                  5th Floor, Wing B, LIC Tower, <br></br>
+                  28-29-30, PU - 03, Scheme No. 54, <br></br>
+                  Indore, Madhya Pradesh, 452011.
               </address>
             </div>
           </div>
