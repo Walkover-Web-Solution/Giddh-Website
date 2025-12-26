@@ -4,7 +4,7 @@ import { MdCircle } from "react-icons/md";
 export default function AlternateFeatures({ features }) {
   if (!features?.content?.length) return null;
   return (
-    <section className="bg-neutral py-5">
+    <section className="bg-neutral py-5 outfit-font">
       <div className="container d-flex flex-column gap-5">
         <div className="d-flex flex-column g-2">
           <h2 className="text-center font-sub-heading garmond-font">
@@ -33,9 +33,9 @@ export default function AlternateFeatures({ features }) {
                   {feature?.description}
                 </p>
                 {feature?.more_content && (
-                  <ul className="mb-0 font-slate-grey font-sm">
+                  <ul className="mb-0 font-slate-grey">
                     {feature?.more_content?.map((content, index) => (
-                      <li key={index}>
+                      <li key={index} className="font-slate-grey">
                         <MdCircle
                           fontSize={5}
                           className="align-self-center mx-1"
