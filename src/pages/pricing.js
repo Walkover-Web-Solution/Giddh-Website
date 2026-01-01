@@ -282,9 +282,8 @@ const pricing = (path) => {
       return `Save ${getCurrencyCodeOrSymbol(
         plan,
         "SYMBOL"
-      )}${contvertToLocal(discountAmount)} for ${duration} ${durationUnit}${
-        duration > 1 ? "s" : ""
-      }`;
+      )}${contvertToLocal(discountAmount)} for ${duration} ${durationUnit}${duration > 1 ? "s" : ""
+        }`;
     }
 
     return null;
@@ -303,9 +302,8 @@ const pricing = (path) => {
       <>
         {/* Plan Name */}
         <p
-          className={`${
-            isMobile ? "c-fs-3" : "c-fs-5"
-          } c-fw-600 mb-1 text-capitalize`}
+          className={`${isMobile ? "c-fs-3" : "c-fs-5"
+            } c-fw-600 mb-1 text-capitalize`}
           aria-label="Subscription Plan Name"
         >
           {plan.name}
@@ -315,16 +313,15 @@ const pricing = (path) => {
         {getAmount(plan) > 0 && (
           <>
             <p className="c-fs-3 mb-1">
-              {getCurrencyCodeOrSymbol(plan , "SYMBOL")}
+              {getCurrencyCodeOrSymbol(plan, "SYMBOL")}
               &nbsp;
               {getAmount(plan, true)}
               <span className="c-fs-6">{isYearPlan ? "/year" : "/month"}</span>
             </p>
 
             {/* Plan Discount with strike though */}
-            {(plan.yearlyDiscountAmount > 0 ||
-              plan.monthlyDiscountAmount > 0) && (
-              <>
+            {((isYearPlan && plan.yearlyDiscountAmount > 0) ||
+              (!isYearPlan && plan.monthlyDiscountAmount > 0)) && (
                 <p className="my-1 line-height-24">
                   <s>
                     &nbsp;
@@ -334,8 +331,8 @@ const pricing = (path) => {
                     &nbsp;
                   </s>
                 </p>
-              </>
-            )}
+              )}
+
 
             {/* Plan Description */}
             <p
