@@ -19,7 +19,7 @@ export default function CTA({ compData, hasImage }) {
           >
             {compData?.heading}
           </h2>
-          <p className={`${!hasImage ? "text-center" : ""} `}>
+          <p className={`${!hasImage ? "text-center" : ""} outfit-font`}>
             {compData?.subheading}
           </p>
           <div
