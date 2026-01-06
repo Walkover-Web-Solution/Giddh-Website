@@ -10,6 +10,25 @@ const initialFormState = {
   business: "",
 };
 
+
+function getUtmParamsFromCookies() {
+  if (typeof window === "undefined" || typeof window.getCookie !== "function") {
+    return {};
+  }
+  
+  const paramsToGet = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "gclid", "fbclid"];
+  const utmParams = {};
+  
+  for (let index = 0; index < paramsToGet.length; index++) {
+    const paramName = paramsToGet[index];
+    const paramValue = window.getCookie(paramName);
+    utmParams[paramName] = paramValue || "";
+  }
+  
+  return utmParams;
+}
+
+
 export default function BookFreeDemoForm({
   hiddenAbsolute,
   location,
@@ -35,7 +54,13 @@ export default function BookFreeDemoForm({
       e.preventDefault();
       setSubmitting(true);
       setError("");
-      const dataToStore = { input: { ...formData } };
+      const utmParams = getUtmParamsFromCookies();
+      const dataToStore = { 
+        input: { 
+          ...formData,
+          ...utmParams
+        } 
+      };      
       try {
         const data = await sendDataInSegmento(dataToStore);
         if (data?.status === "success") {
@@ -209,13 +234,20 @@ async function sendDataInSegmento(data) {
     },
     body: JSON.stringify(data),
   };
-
   try {
     const response = await fetch(
       process.env.NEXT_PUBLIC_MSG91_PHONEBOOK_URL,
       options
     );
-    return await response.json();
+  
+    const text = await response.text(); // 👈 CHANGE 1
+  
+    if (!text) {
+      // API returned no body (very common)
+      return { status: "success" };
+    }
+  
+    return JSON.parse(text); // 👈 CHANGE 2
   } catch (err) {
     console.error(err);
     return { status: "error", message: err.message };
