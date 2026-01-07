@@ -6,9 +6,7 @@ function setCookie(cname, cvalue, exdays) {
   try {
     let host = window.location.hostname;
     if (host && host !== "localhost" && host !== "127.0.0.1") {
-      let parts = host.split(".");
-      let baseDomain = parts.length >= 2 ? parts.slice(-2).join(".") : host;
-      cookieDomain = ";domain=" + baseDomain;
+      cookieDomain = ";domain=" + host;
     }
   } catch (e) {
     cookieDomain = "";
@@ -44,9 +42,7 @@ function deleteUtmCookies() {
   try {
     let host = window.location.hostname;
     if (host && host !== "localhost" && host !== "127.0.0.1") {
-      let parts = host.split(".");
-      let baseDomain = parts.length >= 2 ? parts.slice(-2).join(".") : host;
-      cookieDomain = " Domain=" + baseDomain + ";";
+      cookieDomain = " Domain=" + host + ";";
     }
   } catch (e) {
     cookieDomain = "";
