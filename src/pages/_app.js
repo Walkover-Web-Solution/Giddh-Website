@@ -6,11 +6,14 @@ import Footer from "@/components/footer";
 import GlobalComponents from "@/components/globalComponents";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import Toastify from "@/components/toastify";
 import getPageData from "@/utils/getPageData";
 import getPageInfo from "@/utils/getPageInfo";
+import { pageview } from "@/utils/gtag";
 
 export default function MyApp({ Component, pageProps }) {
+  const GA_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
   const router = useRouter();
   const rawBrowserPath = router.asPath;
   const arrayBrawserPath = rawBrowserPath.split("/");
@@ -66,12 +69,44 @@ export default function MyApp({ Component, pageProps }) {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
 
+  useEffect(() => {
+    if (!GA_ID) return;
+
+    const handleRouteChange = (url) => {
+      pageview(url);
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [GA_ID, router.events]);
+
   const rawPath = router.asPath?.split("#")[0]?.split("?")[0];
   const pageInfo = getPageInfo(rawPath);
   const pageData = getPageData(pageInfo);
 
   return (
     <>
+      {GA_ID ? (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="ga-init" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}', {
+                page_path: window.location.pathname,
+              });
+            `}
+          </Script>
+        </>
+      ) : null}
       {loginSignupPathStatus ? (
         <Navbar browserPath={rawBrowserPath} path={path} />
       ) : null}
