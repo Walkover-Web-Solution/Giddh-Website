@@ -6,7 +6,6 @@ import FeedbackCards from "../NewComps/FeedbackCards";
 import GiddhVs from "../NewComps/GiddhVs";
 import QuickStartSection from "../NewComps/QuickStartSection";
 import SupportedPlatforms from "../NewComps/SupportedPlatforms";
-import Testimonials from "../NewComps/Testimonials";
 
 export default function ZohoVsGiddh({ pageData }) {
   return (
