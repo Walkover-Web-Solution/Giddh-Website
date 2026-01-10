@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MdCircle } from "react-icons/md";
+import { handleAnchorClick } from "@/utils/gtag";
 
 export default function AlternateFeatures({ features }) {
   if (!features?.content?.length) return null;
@@ -71,13 +72,15 @@ export default function AlternateFeatures({ features }) {
         {features?.buttons && (
           <div className="d-flex justify-content-center">
             {features?.buttons?.map((button, index) => (
-              <button
+              <a
                 key={index}
-                className={`btn btn-primary-outline mx-auto`}
-                onClick={() => (window.location.href = button?.link)}
+                href={button?.link}
+                onClick={handleAnchorClick(button, "alternate_features", index)}
               >
-                {button?.text}
-              </button>
+                <button className={`btn btn-primary-outline mx-auto`}>
+                  {button?.text}
+                </button>
+              </a>
             ))}
           </div>
         )}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LottiePlayer from "../LottiePlayer";
+import { handleAnchorClick } from "@/utils/gtag";
 
 export default function Instructions({ compData }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -51,7 +52,12 @@ export default function Instructions({ compData }) {
             {compData?.buttons?.length && (
               <div className="container d-flex flex-column flex-md-row">
                 {compData.buttons.map((button, index) => (
-                  <a key={index} href={button.link} target="_blank">
+                  <a
+                    key={index}
+                    href={button.link}
+                    target="_blank"
+                    onClick={handleAnchorClick(button, "instructions", index)}
+                  >
                     <button
                       className={`btn ${
                         index === 0 ? "btn-primary" : "btn-primary-outline"

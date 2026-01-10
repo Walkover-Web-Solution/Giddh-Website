@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { handleAnchorClick } from "@/utils/gtag";
 
 export default function StackedBanner({ compData }) {
   return (
@@ -13,7 +14,12 @@ export default function StackedBanner({ compData }) {
         {compData?.buttons?.length && (
           <div className="container d-flex gap-2 gap-md-4 justify-content-center align-items-center flex-column flex-md-row">
             {compData.buttons.map((button, index) => (
-              <a key={index} href={button.link} target="_blank">
+              <a
+                key={index}
+                href={button.link}
+                target="_blank"
+                onClick={handleAnchorClick(button, "stacked_banner", index)}
+              >
                 <button
                   className={`btn ${
                     index === 0 ? "btn-primary" : "btn-primary-outline"

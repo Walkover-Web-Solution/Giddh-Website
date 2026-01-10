@@ -1,3 +1,5 @@
+import { handleAnchorClick } from "@/utils/gtag";
+
 export default function EssentialFeatures({ compData }) {
   if (!compData?.content?.length) return null;
   return (
@@ -25,7 +27,11 @@ export default function EssentialFeatures({ compData }) {
       {compData?.buttons?.length && (
         <div className="d-flex justify-content-center">
           {compData.buttons.map((button, index) => (
-            <a key={index} href={button.link}>
+            <a
+              key={index}
+              href={button.link}
+              onClick={handleAnchorClick(button, "essential_features", index)}
+            >
               <button className="btn btn-primary-outline mx-auto">
                 {button?.text}
               </button>

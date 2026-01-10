@@ -1,7 +1,30 @@
 import Image from "next/image";
 import { MdArrowForward } from "react-icons/md";
+import { handleAnchorClick, trackButtonClick } from "@/utils/gtag";
 
 export default function CTA({ compData, hasImage }) {
+  // Scroll handler for buttons that need to scroll
+  const handleScrollToSection = () => {
+    document
+      .getElementById("SeeGiddhInAction")
+      ?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+  };
+
+  const handleSeeGiddhInActionClick = () => {
+    // Track button click in GA4
+    trackButtonClick({
+      button_name: "See Giddh In Action",
+      button_location: "cta_section",
+      button_type: "btn-white",
+    });
+    
+    // Existing scroll behavior
+    handleScrollToSection();
+  };
+
   return (
     <section
       className={`${
@@ -28,17 +51,12 @@ export default function CTA({ compData, hasImage }) {
             }`}
           >
             {compData?.buttons?.map((button, index) => (
-              <a href={button.link}>
+              <a
+                key={index}
+                href={button.link}
+                onClick={handleAnchorClick(button, "cta_section", index, handleScrollToSection)}
+              >
                 <button
-                  key={index}
-                  onClick={() =>
-                    document
-                      .getElementById("SeeGiddhInAction")
-                      ?.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                      })
-                  }
                   className={`${button?.type} px-5 py-2 btn flex items-center`}
                 >
                   {button.text} {button.arrow && <MdArrowForward />}
@@ -47,12 +65,7 @@ export default function CTA({ compData, hasImage }) {
             ))}
             {compData?.seeGiddhInActionButton && (
               <button
-                onClick={() =>
-                  document.getElementById("SeeGiddhInAction")?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "center",
-                  })
-                }
+                onClick={handleSeeGiddhInActionClick}
                 className={`btn-white btn flex items-center`}
               >
                See Giddh In Action <MdArrowForward />

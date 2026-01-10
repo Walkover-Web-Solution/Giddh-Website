@@ -2,6 +2,7 @@ import { useState, useCallback } from "react";
 import { useRouter } from "next/router";
 import style from "./BookFreeDemoForm.module.scss";
 import { MdChevronRight, MdClose } from "react-icons/md";
+import { trackFormSubmit } from "@/utils/gtag";
 
 const initialFormState = {
   name: "",
@@ -64,6 +65,18 @@ export default function BookFreeDemoForm({
       try {
         const data = await sendDataInSegmento(dataToStore);
         if (data?.status === "success") {
+          // Track form submission in GA4
+          trackFormSubmit({
+            form_name: "Book Free Demo Form",
+            form_location: location || "default",
+            form_data: {
+              has_name: !!formData.name,
+              has_email: !!formData.email,
+              has_phone: !!formData.phone,
+              has_business: !!formData.business,
+            },
+          });
+          
           setFormData(initialFormState);
           router.push("/thank-you");
         } else {

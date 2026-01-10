@@ -6,6 +6,7 @@ import Footer from "@/components/footer";
 import GlobalComponents from "@/components/globalComponents";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Script from "next/script";
 import Toastify from "@/components/toastify";
 import getPageData from "@/utils/getPageData";
 import getPageInfo from "@/utils/getPageInfo";
@@ -53,6 +54,7 @@ export default function MyApp({ Component, pageProps }) {
 
   let currentPathArray = rawBrowserPath.split("/");
   let loginSignupPath = currentPathArray[currentPathArray.length - 1];
+  const gTagId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID;
   let loginSignupPathStatus =
     loginSignupPath === "login" ||
     loginSignupPath === "signup" ||
@@ -66,12 +68,38 @@ export default function MyApp({ Component, pageProps }) {
     require("bootstrap/dist/js/bootstrap.bundle.min.js");
   }, []);
 
+  // Track page views on route change
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.gtag) {
+      const url = router.asPath?.split("?")[0] || window.location.pathname;
+      window.gtag("config", gTagId, {
+        page_path: url,
+      });
+    }
+  }, [router.asPath, gTagId]);
+
   const rawPath = router.asPath?.split("#")[0]?.split("?")[0];
   const pageInfo = getPageInfo(rawPath);
   const pageData = getPageData(pageInfo);
 
   return (
     <>
+      {/* Google Analytics 4 (GA4) */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${gTagId}`}
+        strategy="afterInteractive"
+      />
+      <Script id="ga-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${gTagId}', {
+            page_path: window.location.pathname,
+          });
+        `}
+      </Script>
+
       {loginSignupPathStatus ? (
         <Navbar browserPath={rawBrowserPath} path={path} />
       ) : null}
