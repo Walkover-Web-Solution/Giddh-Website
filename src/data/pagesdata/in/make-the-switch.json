@@ -1,0 +1,213 @@
+{
+  "splitBanner": {
+    "heading": "Get Hassle-Free Cloud Migration Accounting Software India for Smooth Transition",
+    "subHeading": "Switch from traditional accounting to Giddh’s cloud-based accounting software and simplify your financial management with a smooth migration to the cloud.",
+    "image": "/img/make-the-switch/make-the-switch-banner-img.svg",
+    "buttons": [
+      {
+        "text": "Start Free Migration",
+        "link": "/signup"
+      },
+      {
+        "text": "Watch Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "ctaOne": {
+    "heading": "Talk to Cloud Migration Experts",
+    "subHeading": "Get clear answers on data safety, GST compliance, and onboarding.",
+    "buttons": [
+      {
+        "text": "Talk to an Expert",
+        "link": "/signup",
+        "type": "btn-secondary-outline"
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "How Easy Is the Switch?",
+    "subHeading": "Switching to cloud accounting with Giddh is straightforward. Here's how we make it simple:",
+    "steps": [
+      {
+        "icon": "/img/make-the-switch/calender.svg",
+        "title": "Schedule a Free Consultation",
+        "description": "Our experts will evaluate your current setup and provide a tailored migration plan that meets your needs."
+      },
+      {
+        "icon": "/img/make-the-switch/file.svg",
+        "title": "Seamless Data Transfer",
+        "description": "We ensure your financial data, transactions, and accounting history are securely transferred from your old software to Giddh’s cloud platform."
+      },
+      {
+        "icon": "/img/make-the-switch/cloud.svg",
+        "title": "Cloud Setup",
+        "description": "Our team configures Giddh’s cloud accounting software to meet your business requirements and ensures everything is set up correctly."
+      },
+      {
+        "icon": "/img/make-the-switch/support_agent.svg",
+        "title": " Ongoing Support",
+        "description": "After migration, our support team is available around the clock to help you with any queries or concerns as you get comfortable with the platform."
+      }
+    ]
+  },
+  "features": {
+    "heading": "Features That Elevate Your Financial Workflow",
+    "subHeading": "Streamline your financial management and dedicate more time to business growth. Giddh offers a comprehensive set of features to make your accounting process effortless and efficient.",
+    "cards": [
+      {
+        "heading": "Real-time financial dashboards",
+        "description": "Live numbers for quicker decisions with instant visibility into cash flow, profits, dues, and growth trends."
+      },
+      {
+        "heading": "GST-ready reports",
+        "description": "Auto-prepared GSTR summaries, error-free tax data, and smooth filing support for Indian compliance."
+      },
+      {
+        "heading": "Bank reconciliation",
+        "description": "Fast bank matching with automated sync, fewer manual checks, and consistently cleaner books."
+      },
+      {
+        "heading": "Smart invoicing + payment tracking",
+        "description": "Create invoices quickly, share instantly, send reminders, and track payments with complete clarity."
+      },
+      {
+        "heading": "Multicurrency support",
+        "description": "Effortless operations for branches, warehouses, or overseas clients with unified, accurate reports."
+      },
+      {
+        "heading": "Unlimited cloud storage",
+        "description": "Long-term data retention, quick access from anywhere, and zero storage limitations."
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Trusted by 1000+ Businesses Across India",
+    "data": [
+      {
+        "company": "Sinead North",
+        "owner": "Christian Schiel",
+        "testimonial": "Giddh is a great solution to manage customers and invoices internationally. The multi-currency option makes it very convenient, and generating invoices is simple and quick. I can also easily manage VAT reports in the UK. The support team is patient, understands the challenges we face, and resolves them effectively."
+      },
+      {
+        "company": "Dvara e-registry",
+        "owner": "Priyanshi Priya",
+        "testimonial": "Giddh is an excellent platform for managing multiple companies seamlessly. It allows me to handle different businesses in real time, all in one place. Switching between companies is incredibly fast and effortless, making the entire process smooth and efficient."
+      },
+      {
+        "company": "Teknoworth Medical Care OPC Pvt Ltd",
+        "owner": "Imran",
+        "testimonial": "Giddh is the most reliable application for inventory management in both India and the UAE. Managing data is effortless, and the mobile app works flawlessly, ensuring smooth operations anytime, anywhere."
+      },
+      {
+        "company": "Shruti Corporation",
+        "owner": "Shruti",
+        "testimonial": "Giddh is one of the easiest ledger-based accounting systems I’ve used. Creating ledger entries is quick and effortless, making it truly ready to go. Even someone without a strong accounting background can easily manage and run their business with it."
+      },
+      {
+        "company": "PI Green Consulting Pvt Ltd",
+        "owner": null,
+        "testimonial": "The application works seamlessly, allowing multiple users to access it in real time without any limits or lags. Multi-login functionality is effortless, making collaboration smooth and efficient."
+      },
+      {
+        "company": "Synergene Global",
+        "owner": "Manish Badonia",
+        "testimonial": "The support team is excellent, and the latest version of Giddh comes packed with powerful features. Giddh can be accessed from anywhere with just an internet connection, making it highly convenient and reliable."
+      },
+      {
+        "company": "Attic India",
+        "owner": "Kuldeep",
+        "testimonial": "The inventory reports work brilliantly. Creating parent and child groups is simple and effective, allowing the inventory to be organized and bifurcated properly for better clarity."
+      },
+      {
+        "company": "KARUNA TEMP SYSTEM PRIVATE LIMITED",
+        "owner": "Rohan Pavithran",
+        "testimonial": "Giddh’s estimates and proforma invoices work seamlessly. We can create proformas and easily convert them into invoices, tracking their status as paid, unpaid, or partially paid. Automated WhatsApp messages and email notifications after creating vouchers significantly reduce manual effort."
+      },
+      {
+        "company": "Dental Designs",
+        "owner": "Dr Gins Paul",
+        "testimonial": "Giddh offers multiple types of invoices, including cash and sales invoices, making billing flexible and convenient. The dashboard provides a clear summary of the business’s health on a single screen, helping us instantly understand where we stand on any given day."
+      },
+      {
+        "company": "Taurus Lifestyle",
+        "owner": "Kunal",
+        "testimonial": "The inventory module in Giddh is extremely powerful. Its variant creation feature allows multiple variants for a single item, which is very helpful for detailed inventory management. The barcode scanning feature further completes the requirements, making the process fast and efficient."
+      },
+      {
+        "company": "M/S STUDIO47",
+        "owner": null,
+        "testimonial": "Giddh provides a wide range of reports including financial statements, daybook, sales and purchase registers, inventory reports, and GST reports. Having all these reports in one place makes managing business insights simple and efficient."
+      },
+      {
+        "company": "SP Wellness",
+        "owner": null,
+        "testimonial": "Support connects positively when needed. The ledger accounting module makes it easy to create entries; I can easily manage my expenses by creating the accounts and making entries there."
+      },
+      {
+        "company": "The Medicity",
+        "owner": null,
+        "testimonial": "With Giddh, managing bank accounts is simple and hassle-free. Incomes and expenses can be tracked directly, and the built-in GST filing option makes compliance much easier. It’s truly a great all-in-one solution."
+      },
+      {
+        "company": "Mitti [Organic. Fresh. Desi]",
+        "owner": "Ankita Chadha",
+        "testimonial": "The inventory management helps in restaurant management and the branch creation helps to manage multiple branches under a single platform. It helps to see the branch profiles along with the warehouses."
+      }
+    ]
+  },
+  "ctaTwo": {
+    "heading": "Start Cloud Accounting Without Delay",
+    "subHeading": "Instant Access To Cloud Accounting With Zero Setup Hassles.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-secondary-outline"
+      }
+    ]
+  },
+  "supportedPlatforms": {
+    "heading": "Supported Platforms",
+    "platforms": [
+      {
+        "name": "Web",
+        "image": "/img/supported-platforms/web.svg"
+      },
+      {
+        "name": "Windows",
+        "image": "/img/supported-platforms/windows.svg"
+      },
+      {
+        "name": "MacOS",
+        "image": "/img/supported-platforms/macos.svg"
+      },
+      {
+        "name": "iOS",
+        "image": "/img/supported-platforms/ios.svg"
+      },
+      {
+        "name": "Android",
+        "image": "/img/supported-platforms/android.svg"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How long does migration take?",
+      "answer": "Migration completes within 24–72 hours for most SMEs. Timeline depends on data volume and business complexity. The migration team will share the exact estimate after the audit."
+    },
+    {
+      "question": "Will existing reports and ledgers stay intact?",
+      "answer": "All ledgers, vouchers, invoices, contacts, and balances transfer cleanly. Data structure, accuracy, and historical records are preserved."
+    },
+    {
+      "question": "Any downtime during migration?",
+      "answer": "Zero downtime during transition. Daily accounting operations continue without disruption or access issues."
+    },
+    {
+      "question": "Does Giddh support Tally data migration?",
+      "answer": "Support for Tally, Busy, Zoho, Marg, Excel sheets, and CSV formats. Complete guided onboarding for a smooth transition."
+    }
+  ]
+}
