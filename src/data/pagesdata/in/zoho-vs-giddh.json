@@ -1,0 +1,322 @@
+{
+  "splitBanner": {
+    "heading": "Giddh vs Zoho Comparison – Best Accounting Software for Indian Businesses",
+    "subHeading": "Choosing the right accounting software directly impacts compliance, cash flow, and business visibility.",
+    "image": "",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Book a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "features": {
+    "heading": "Why Giddh Makes Smarter Business Sense",
+    "subHeading": "Flexible, scalable accounting for every stage of growth. From startups to multi-branch enterprises, Giddh scales effortlessly with your business—delivering structured accounting and real-time financial clarity at every step.",
+    "content": [
+      {
+        "heading": "Time-Saving Smart Invoicing",
+        "img": "/img/zoho-vs-giddh/simplified-ledger-based-accounting.svg",
+        "description": "Automate repetitive billing tasks and reduce manual effort.",
+        "more_content": [
+          "Auto-filled invoice data",
+          "Ready-made invoice templates",
+          "Instant Excel import & copy-paste support"
+        ]
+      },
+      {
+        "heading": "Anytime, Anywhere, and on Any Device",
+        "img": "/img/home-page/anytime_anywhere_and_on_any_device.webp",
+        "description": "Access and manage your finances seamlessly, whether you're on your desktop, Android, or iOS device",
+        "more_content": [
+          "Cloud access across desktop, Android & iOS",
+          "Real-time financial tracking",
+          "Send invoices and track sales instantly"
+        ]
+      },
+      {
+        "heading": "Secure Cloud-Based Data Protection",
+        "img": "/img/zoho-vs-giddh/secure-cloud-based-data-protection.svg",
+        "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
+        "more_content": [
+          "Encrypted cloud storage",
+          "Automatic backups",
+          "Industry-standard data security"
+        ]
+      },
+      {
+        "heading": "24×7 Expert Customer Support",
+        "img": "/img/zoho-vs-giddh/24×7-expert-customer-support.svg",
+        "description": "Get expert assistance whenever you need it.",
+        "more_content": [
+          "Chat, email & phone support",
+          "Fast query resolution",
+          "Dedicated onboarding guidance"
+        ]
+      },
+      {
+        "heading": "Automatically Synced Cloud Storage",
+        "img": "/img/zoho-vs-giddh/automatically-synced-cloud-storage.svg",
+        "description": "All your financial data, invoices, and reports are securely synced in the cloud ",
+        "more_content": [
+          "Auto-sync across devices",
+          "No manual backups required",
+          "Easy data recovery"
+        ]
+      },
+      {
+        "heading": "Real-Time Business Performance Tracking",
+        "img": "/img/zoho-vs-giddh/real-time-business-performance-tracking.svg",
+        "description": "Instant visibility into your financial health.",
+        "more_content": [
+          "Paid vs pending invoice tracking",
+          "Sales performance trends",
+          "Smart decision-making with live data"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore Features",
+        "link": "/all-features"
+      }
+    ]
+  },
+  "giddhVs": {
+    "heading": "Feature Comparison: Giddh vs Zoho Books",
+    "columns": [
+      {
+        "key": "giddh",
+        "label": "Giddh",
+        "logo": "/img/giddh-logo.svg"
+      },
+      {
+        "key": "zoho",
+        "label": "Zoho Books",
+        "logo": "/img/zoho_logo.svg"
+      }
+    ],
+    "content": [
+      {
+        "feature": "Entry System",
+        "giddh": true ,
+        "zoho": true
+      },
+      {
+        "feature": "Easy Search",
+        "giddh": true,
+        "zoho": false
+      },
+      {
+        "feature": "User Friendly",
+        "giddh": true,
+        "zoho": true
+      },
+      {
+        "feature": "Accessibility",
+        "giddh": true,
+        "zoho": true
+      },
+      {
+        "feature": "Mobile App",
+        "giddh": true,
+        "zoho": false
+      },
+      {
+        "feature": "Company Sharing",
+        "giddh": true,
+        "zoho": true
+      },
+      {
+        "feature": "Customizable Permission",
+        "giddh": true,
+        "zoho": true
+      },
+      {
+        "feature": "Multi-user & Multiple PCs",
+        "giddh": true,
+        "zoho": true
+      },
+      {
+        "feature": "Branch Support",
+        "giddh": true,
+        "zoho": true
+      },
+      {
+        "feature": "GSTIN Support",
+        "giddh": true,
+        "zoho": true
+      },
+      {
+        "feature": "Inventory with Variant",
+        "giddh": true,
+        "zoho": true
+      },
+      {
+        "feature": "Real-time Dashboard",
+        "giddh": true,
+        "zoho": true
+      },
+      {
+        "feature": "Single Ledger Sharing",
+        "giddh": true,
+        "zoho": true
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "Getting Started with Giddh Is Quick and Easy",
+    "subHeading": "Move to smarter accounting in just three simple steps:",
+    "steps": [
+      {
+        "title": "Start Your Free Trial",
+        "description": "No obligations. Get immediate access to all essential features."
+      },
+      {
+        "title": "Complete Your Setup",
+        "description": "Fast onboarding with step-by-step guidance and expert support."
+      },
+      {
+        "title": "Run Your Accounting with Ease",
+        "description": "Track cash flow, create invoices, manage GST, and view real-time reports effortlessly."
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Trusted by 1000+ Businesses Across India",
+    "data": [
+      {
+        "company": "Sinead North",
+        "owner": "Christian Schiel",
+        "testimonial": "Giddh is a great solution to manage customers and invoices internationally. The multi-currency option makes it very convenient, and generating invoices is simple and quick. I can also easily manage VAT reports in the UK. The support team is patient, understands the challenges we face, and resolves them effectively."
+      },
+      {
+        "company": "Dvara e-registry",
+        "owner": "Priyanshi Priya",
+        "testimonial": "Giddh is an excellent platform for managing multiple companies seamlessly. It allows me to handle different businesses in real time, all in one place. Switching between companies is incredibly fast and effortless, making the entire process smooth and efficient."
+      },
+      {
+        "company": "Teknoworth Medical Care OPC Pvt Ltd",
+        "owner": "Imran",
+        "testimonial": "Giddh is the most reliable application for inventory management in both India and the UAE. Managing data is effortless, and the mobile app works flawlessly, ensuring smooth operations anytime, anywhere."
+      },
+      {
+        "company": "Shruti Corporation",
+        "owner": "Shruti",
+        "testimonial": "Giddh is one of the easiest ledger-based accounting systems I’ve used. Creating ledger entries is quick and effortless, making it truly ready to go. Even someone without a strong accounting background can easily manage and run their business with it."
+      },
+      {
+        "company": "PI Green Consulting Pvt Ltd",
+        "owner": null,
+        "testimonial": "The application works seamlessly, allowing multiple users to access it in real time without any limits or lags. Multi-login functionality is effortless, making collaboration smooth and efficient."
+      },
+      {
+        "company": "Synergene Global",
+        "owner": "Manish Badonia",
+        "testimonial": "The support team is excellent, and the latest version of Giddh comes packed with powerful features. Giddh can be accessed from anywhere with just an internet connection, making it highly convenient and reliable."
+      },
+      {
+        "company": "Attic India",
+        "owner": "Kuldeep",
+        "testimonial": "The inventory reports work brilliantly. Creating parent and child groups is simple and effective, allowing the inventory to be organized and bifurcated properly for better clarity."
+      },
+      {
+        "company": "KARUNA TEMP SYSTEM PRIVATE LIMITED",
+        "owner": "Rohan Pavithran",
+        "testimonial": "Giddh’s estimates and proforma invoices work seamlessly. We can create proformas and easily convert them into invoices, tracking their status as paid, unpaid, or partially paid. Automated WhatsApp messages and email notifications after creating vouchers significantly reduce manual effort."
+      },
+      {
+        "company": "Dental Designs",
+        "owner": "Dr Gins Paul",
+        "testimonial": "Giddh offers multiple types of invoices, including cash and sales invoices, making billing flexible and convenient. The dashboard provides a clear summary of the business’s health on a single screen, helping us instantly understand where we stand on any given day."
+      },
+      {
+        "company": "Taurus Lifestyle",
+        "owner": "Kunal",
+        "testimonial": "The inventory module in Giddh is extremely powerful. Its variant creation feature allows multiple variants for a single item, which is very helpful for detailed inventory management. The barcode scanning feature further completes the requirements, making the process fast and efficient."
+      },
+      {
+        "company": "M/S STUDIO47",
+        "owner": null,
+        "testimonial": "Giddh provides a wide range of reports including financial statements, daybook, sales and purchase registers, inventory reports, and GST reports. Having all these reports in one place makes managing business insights simple and efficient."
+      },
+      {
+        "company": "SP Wellness",
+        "owner": null,
+        "testimonial": "Support connects positively when needed. The ledger accounting module makes it easy to create entries; I can easily manage my expenses by creating the accounts and making entries there."
+      },
+      {
+        "company": "The Medicity",
+        "owner": null,
+        "testimonial": "With Giddh, managing bank accounts is simple and hassle-free. Incomes and expenses can be tracked directly, and the built-in GST filing option makes compliance much easier. It’s truly a great all-in-one solution."
+      },
+      {
+        "company": "Mitti [Organic. Fresh. Desi]",
+        "owner": "Ankita Chadha",
+        "testimonial": "The inventory management helps in restaurant management and the branch creation helps to manage multiple branches under a single platform. It helps to see the branch profiles along with the warehouses."
+      }
+    ]
+  },
+  "cta": {  
+    "heading": "Start Free. See the Difference.",
+    "subHeading": "Explore complete accounting, GST, inventory, and reports—no setup cost.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-secondary-outline"
+      }
+    ]
+  },
+  "supportedPlatforms": {
+    "heading": "Supported Platforms",
+    "platforms": [
+      {
+        "name": "Web",
+        "image": "/img/supported-platforms/web.svg"
+      },
+      {
+        "name": "Windows",
+        "image": "/img/supported-platforms/windows.svg"
+      },
+      {
+        "name": "MacOS",
+        "image": "/img/supported-platforms/macos.svg"
+      },
+      {
+        "name": "iOS",
+        "image": "/img/supported-platforms/ios.svg"
+      },
+      {
+        "name": "Android",
+        "image": "/img/supported-platforms/android.svg"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How easy is it to migrate from Zoho Books to Giddh?",
+      "answer": "Giddh supports Excel imports and API-based migration with guided onboarding—ensuring a smooth, zero-downtime transition"
+    },
+    {
+      "question": "Does Giddh support GST and multi-GSTIN?",
+      "answer": "Yes, Giddh offers full GST compliance, including multi-GSTIN support, filing-ready reports, and audit-trail visibility."
+    },
+    {
+      "question": "Can I manage multiple companies and branches?",
+      "answer": "Absolutely. Giddh allows unlimited company and branch setups across all plans with real-time consolidated reporting"
+    },
+    {
+      "question": "Is Giddh accessible on mobile devices?",
+      "answer": "Yes, Giddh works on desktop, Android, and iOS devices with cloud-based access to real-time financial data."
+    },
+    {
+      "question": "Does Giddh offer inventory and warehouse management?",
+      "answer": "Yes, inventory management with item variants, stock tracking, and multi-warehouse support is built into all plans."
+    }
+  ]
+}
