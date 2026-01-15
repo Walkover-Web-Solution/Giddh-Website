@@ -11,6 +11,11 @@ const Footer = (path) => {
   const [windowsApp, setWindowsApp] = useState("");
   const [macApp, setMacApp] = useState("");
 
+  // Helper function to get bucket name based on environment
+  const getBucketName = () => {
+    return process.env.NEXT_PUBLIC_S3_BUCKET_NAME || "giddh-app-builds";
+  };
+
   useEffect(() => {
     getAppVersion("win");
     getAppVersion("mac");
@@ -18,9 +23,9 @@ const Footer = (path) => {
     //To get latest version of giddh app
     async function getAppVersion(os) {
       let forWhichOS = os === "win" ? "" : "-mac";
-
+      
       const res = await fetch(
-        `https://s3-ap-south-1.amazonaws.com/giddh-app-builds/latest${forWhichOS}.yml`,
+        `https://s3-ap-south-1.amazonaws.com/${getBucketName()}/latest${forWhichOS}.yml`,
         { cache: "no-store" }
       )
         .then((res) => res.blob())
@@ -149,7 +154,7 @@ const Footer = (path) => {
                     <li>
                       <a
                         className="download-icon "
-                        href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh Setup ${windowsApp}.exe`}
+                        href={`https://s3-ap-south-1.amazonaws.com/${getBucketName()}/giddh Setup ${windowsApp}.exe`}
                       >
                         <img
                           src="/img/window-icon.svg"
@@ -160,7 +165,7 @@ const Footer = (path) => {
                     <li>
                       <a
                         className="download-icon rounded-circle"
-                        href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-${macApp}.dmg`}
+                        href={`https://s3-ap-south-1.amazonaws.com/${getBucketName()}/giddh-${macApp}.dmg`}
                       >
                         <img
                           src="/img/mac_icon.svg"
