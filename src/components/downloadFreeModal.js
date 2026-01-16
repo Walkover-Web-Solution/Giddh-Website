@@ -1,37 +1,14 @@
 import { MdClose } from "react-icons/md";
 import { useEffect, useState } from "react";
+import { getBucketName, getS3BaseUrl, getAppVersion } from "../utils/s3Config";
 
 const downloadFreeModal = () => {
   const [windowsApp, setWindowsApp] = useState("");
   const [macApp, setMacApp] = useState("");
 
   useEffect(() => {
-    getAppVersion("win");
-    getAppVersion("mac");
-
-    //To get latest version of giddh app
-    async function getAppVersion(os) {
-      let forWhichOS = os === "win" ? "" : "-mac";
-
-      const res = await fetch(
-        `https://s3-ap-south-1.amazonaws.com/giddh-app-builds/latest${forWhichOS}.yml`,
-        { cache: "no-store" }
-      )
-        .then((res) => res.blob())
-        .then((blob) => blob.text())
-        .then((res) => {
-          if (res && typeof res === "string") {
-            let version = res.split("files")[0];
-            let versNum = version.split(" ")[1].trim();
-            if (os === "win") {
-              setWindowsApp(versNum);
-            } else {
-              setMacApp(versNum);
-            }
-          }
-        })
-        .catch((err) => console.log("yaml err:", err));
-    }
+    getAppVersion("win", setWindowsApp, setMacApp);
+    getAppVersion("mac", setWindowsApp, setMacApp);
   }, []);
   return (
     <>
@@ -66,7 +43,7 @@ const downloadFreeModal = () => {
               <p className="c-fs-6">
                 Download not starting? Try{" "}
                 <a
-                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh Setup ${windowsApp}.exe`}
+                  href={`${getS3BaseUrl()}/${getBucketName()}/giddh Setup ${windowsApp}.exe`}
                   className="text-primary"
                 >
                   Direct download link
@@ -82,14 +59,14 @@ const downloadFreeModal = () => {
               </figure>
               <div className="d-flex justify-content-center align-items-center column-gap-2 mt-4 mb-2">
                 <a
-                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-${macApp}.dmg`}
+                  href={`${getS3BaseUrl()}/${getBucketName()}/giddh-${macApp}.dmg`}
                   className="download-free-modal__btn_link"
                 >
                   <img src="/img/mac_icon.svg" alt="Mac-Apple-Icon" />
                   Download <span> for mac</span> 
                 </a>
                 <a
-                  href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh Setup ${windowsApp}.exe`}
+                  href={`${getS3BaseUrl()}/${getBucketName()}/giddh Setup ${windowsApp}.exe`}
                   className="download-free-modal__btn_link"
                 >
                   <img
