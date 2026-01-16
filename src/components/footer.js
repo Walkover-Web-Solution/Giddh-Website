@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { getBucketName, getS3BaseUrl, getAppVersion } from "../utils/s3Config";
 
 const Footer = (path) => {
   const link = path.path;
@@ -11,38 +12,9 @@ const Footer = (path) => {
   const [windowsApp, setWindowsApp] = useState("");
   const [macApp, setMacApp] = useState("");
 
-  // Helper function to get bucket name based on environment
-  const getBucketName = () => {
-    return process.env.NEXT_PUBLIC_S3_BUCKET_NAME || "giddh-app-builds";
-  };
-
   useEffect(() => {
-    getAppVersion("win");
-    getAppVersion("mac");
-
-    //To get latest version of giddh app
-    async function getAppVersion(os) {
-      let forWhichOS = os === "win" ? "" : "-mac";
-      
-      const res = await fetch(
-        `https://s3-ap-south-1.amazonaws.com/${getBucketName()}/latest${forWhichOS}.yml`,
-        { cache: "no-store" }
-      )
-        .then((res) => res.blob())
-        .then((blob) => blob.text())
-        .then((res) => {
-          if (res && typeof res === "string") {
-            let version = res.split("files")[0];
-            let versNum = version.split(" ")[1].trim();
-            if (os === "win") {
-              setWindowsApp(versNum);
-            } else {
-              setMacApp(versNum);
-            }
-          }
-        })
-        .catch((err) => console.log("yaml err:", err));
-    }
+    getAppVersion("win", setWindowsApp, setMacApp);
+    getAppVersion("mac", setWindowsApp, setMacApp);
   }, []);
 
   return (
@@ -154,7 +126,7 @@ const Footer = (path) => {
                     <li>
                       <a
                         className="download-icon "
-                        href={`https://s3-ap-south-1.amazonaws.com/${getBucketName()}/giddh Setup ${windowsApp}.exe`}
+                        href={`${getS3BaseUrl()}/${getBucketName()}/giddh Setup ${windowsApp}.exe`}
                       >
                         <img
                           src="/img/window-icon.svg"
@@ -165,7 +137,7 @@ const Footer = (path) => {
                     <li>
                       <a
                         className="download-icon rounded-circle"
-                        href={`https://s3-ap-south-1.amazonaws.com/${getBucketName()}/giddh-${macApp}.dmg`}
+                        href={`${getS3BaseUrl()}/${getBucketName()}/giddh-${macApp}.dmg`}
                       >
                         <img
                           src="/img/mac_icon.svg"
