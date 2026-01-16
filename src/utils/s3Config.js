@@ -5,7 +5,7 @@
  * @returns {string} The S3 bucket name
  */
 export const getBucketName = () => {
-  return process.env.NEXT_PUBLIC_S3_BUCKET_NAME || "giddh-app-builds";
+  return process.env.NEXT_PUBLIC_S3_BUCKET_NAME;
 };
 
 /**
@@ -13,7 +13,7 @@ export const getBucketName = () => {
  * @returns {string} The S3 base URL
  */
 export const getS3BaseUrl = () => {
-  return process.env.NEXT_PUBLIC_S3_BASE_URL || "https://s3-ap-south-1.amazonaws.com";
+  return process.env.NEXT_PUBLIC_S3_BASE_URL;
 };
 
 /**
