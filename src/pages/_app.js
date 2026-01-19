@@ -84,7 +84,6 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      {/* Google Analytics 4 (GA4) */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${gTagId}`}
         strategy="afterInteractive"
@@ -99,7 +98,7 @@ export default function MyApp({ Component, pageProps }) {
           });
         `}
       </Script>
-
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE84P2QQ7K"></script>
       {loginSignupPathStatus ? (
         <Navbar browserPath={rawBrowserPath} path={path} />
       ) : null}
