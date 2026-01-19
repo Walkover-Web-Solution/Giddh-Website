@@ -5,6 +5,15 @@ import style from "./SplitBanner.module.scss";
 import LottiePlayer from "../../LottiePlayer";
 
 export default function SplitBanner({ compData }) {
+  console.log('🔍 SplitBanner rendered with compData:', compData);
+  console.log('🔍 SplitBanner image path:', compData?.image);
+  console.log('🔍 Will render image?', !compData?.form && compData?.image);
+  
+  if (!compData) {
+    console.warn('⚠️ SplitBanner: compData is null/undefined');
+    return null;
+  }
+  
   return (
     <section
       className={`outfit-font ${
@@ -86,13 +95,22 @@ export default function SplitBanner({ compData }) {
           )}
           {!compData?.form && compData?.image && (
             <div className="col-lg-6 col-md-6 col-12 text-center">
-              <Image
-                src={compData?.image}
-                alt={compData?.heading}
-                width={600}
-                height={700}
-                className="img-fluid"
-              />
+              {compData?.image?.toLowerCase().endsWith('.svg') ? (
+                <img
+                  src={compData?.image}
+                  alt={compData?.heading || 'Banner image'}
+                  className="img-fluid"
+                  style={{ maxWidth: '100%', height: 'auto' }}
+                />
+              ) : (
+                <Image
+                  src={compData?.image}
+                  alt={compData?.heading}
+                  width={600}
+                  height={700}
+                  className="img-fluid"
+                />
+              )}
             </div>
           )}
           {compData?.lottie && (
