@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getBucketName, getS3BaseUrl, getAppVersion } from "../utils/s3Config";
+import { getDownloadUrl, getAppVersion } from "../utils/s3Config";
 
 const Footer = (path) => {
   const link = path.path;
@@ -126,7 +126,7 @@ const Footer = (path) => {
                     <li>
                       <a
                         className="download-icon "
-                        href={`${getS3BaseUrl()}/${getBucketName()}/giddh Setup ${windowsApp}.exe`}
+                        href={getDownloadUrl("win")}
                       >
                         <img
                           src="/img/window-icon.svg"
@@ -137,7 +137,7 @@ const Footer = (path) => {
                     <li>
                       <a
                         className="download-icon rounded-circle"
-                        href={`${getS3BaseUrl()}/${getBucketName()}/giddh-${macApp}.dmg`}
+                        href={getDownloadUrl("mac")}
                       >
                         <img
                           src="/img/mac_icon.svg"
