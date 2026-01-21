@@ -1,6 +1,6 @@
 import { MdClose } from "react-icons/md";
 import { useEffect, useState } from "react";
-import { getBucketName, getS3BaseUrl, getAppVersion } from "../utils/s3Config";
+import { getDownloadUrl, getAppVersion } from "../utils/s3Config";
 
 const downloadFreeModal = () => {
   const [windowsApp, setWindowsApp] = useState("");
@@ -43,7 +43,7 @@ const downloadFreeModal = () => {
               <p className="c-fs-6">
                 Download not starting? Try{" "}
                 <a
-                  href={`${getS3BaseUrl()}/${getBucketName()}/giddh Setup ${windowsApp}.exe`}
+                  href={getDownloadUrl("win")}
                   className="text-primary"
                 >
                   Direct download link
@@ -59,14 +59,14 @@ const downloadFreeModal = () => {
               </figure>
               <div className="d-flex justify-content-center align-items-center column-gap-2 mt-4 mb-2">
                 <a
-                  href={`${getS3BaseUrl()}/${getBucketName()}/giddh-${macApp}.dmg`}
+                  href={getDownloadUrl("mac")}
                   className="download-free-modal__btn_link"
                 >
                   <img src="/img/mac_icon.svg" alt="Mac-Apple-Icon" />
                   Download <span> for mac</span> 
                 </a>
                 <a
-                  href={`${getS3BaseUrl()}/${getBucketName()}/giddh Setup ${windowsApp}.exe`}
+                  href={getDownloadUrl("win")}
                   className="download-free-modal__btn_link"
                 >
                   <img
