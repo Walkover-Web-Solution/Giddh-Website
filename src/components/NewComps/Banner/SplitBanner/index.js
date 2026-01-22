@@ -5,10 +5,6 @@ import style from "./SplitBanner.module.scss";
 import LottiePlayer from "../../LottiePlayer";
 
 export default function SplitBanner({ compData }) {
-  console.log('🔍 SplitBanner rendered with compData:', compData);
-  console.log('🔍 SplitBanner image path:', compData?.image);
-  console.log('🔍 Will render image?', !compData?.form && compData?.image);
-  
   if (!compData) {
     console.warn('⚠️ SplitBanner: compData is null/undefined');
     return null;
