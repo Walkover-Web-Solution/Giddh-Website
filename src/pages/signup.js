@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { toast } from "react-toastify";
 import GoogleLogin from "@/components/googleLogin";
+import Head from "next/head";
 const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
   ssr: false,
 });
@@ -49,6 +50,18 @@ const signUp = (path) => {
     initOtpSignup();
   }, []);
 
+  useEffect(() => {
+    if (showEmailOtp) {
+      initiateOtpFieldsAutoMove(".email-otp-field");
+    }
+  }, [showEmailOtp]);
+
+  useEffect(() => {
+    if (showMobileOtp) {
+      initiateOtpFieldsAutoMove(".mobile-otp-field");
+    }
+  }, [showMobileOtp]);
+
   function googleApiSuccessCallback(response) {
     setEmailDetails({
       email: response.email,
@@ -56,11 +69,9 @@ const signUp = (path) => {
       isVerified: true,
       signupVia: "google",
     });
+    setShowEmailOtp(false);
     updateCurrentStep(2);
-    setTimeout(() => {
-      document.getElementById("email").value = response.email;
-      setShowEmailOtp(false);
-    });
+    setInputValue("email", response.email);
   }
 
   async function initiateSignup() {
@@ -146,6 +157,20 @@ const signUp = (path) => {
     }
   }
 
+  function setInputValue(fieldId, value) {
+    const sanitizedValue = value ?? "";
+    const tryAssignValue = (retries = 10) => {
+      const targetInput = document.getElementById(fieldId);
+      if (targetInput) {
+        targetInput.value = sanitizedValue;
+      } else if (retries > 0) {
+        setTimeout(() => tryAssignValue(retries - 1), 50);
+      }
+    };
+
+    tryAssignValue();
+  }
+
   function initOtpSignup() {
     var userData = getLocalStorage("userData");
     if (userData) {
@@ -156,11 +181,9 @@ const signUp = (path) => {
           isVerified: true,
           signupVia: userData.signupVia,
         });
+        setShowEmailOtp(false);
         updateCurrentStep(2);
-        setTimeout(() => {
-          document.getElementById("email").value = userData.user.email;
-          setShowEmailOtp(false);
-        });
+        setInputValue("email", userData.user.email);
       } else if (userData.user.mobileNo) {
         setMobileDetails({
           mobileNo: userData.user.mobileNo,
@@ -169,10 +192,8 @@ const signUp = (path) => {
           signupVia: userData.signupVia,
         });
         updateCurrentStep(2);
-        setTimeout(() => {
-          document.getElementById("mobileNo").value = userData.user.mobileNo;
-          setShowMobileOtp(false);
-        });
+        setShowMobileOtp(false);
+        setInputValue("mobileNo", userData.user.mobileNo);
       }
     }
 
@@ -203,10 +224,8 @@ const signUp = (path) => {
     setShowMobileOtp(false);
     updateCurrentStep(2);
 
-    setTimeout(() => {
-      document.getElementById("email").value = "";
-      document.getElementById("mobileNo").value = "";
-    });
+    setInputValue("email", "");
+    setInputValue("mobileNo", "");
   }
 
   function setShowEmailOtpSection(showOtp) {
@@ -303,7 +322,6 @@ const signUp = (path) => {
       requestId: data.message,
     });
     setShowEmailOtpSection(true);
-    initiateOtpFieldsAutoMove(".email-otp-field");
   }
 
   function mobileOtpSentCallback(data) {
@@ -319,7 +337,6 @@ const signUp = (path) => {
       requestId: data.message,
     });
     setShowMobileOtpSection(true);
-    initiateOtpFieldsAutoMove(".mobile-otp-field");
   }
 
   function emailOtpFailedCallback(error) {
@@ -484,15 +501,6 @@ const signUp = (path) => {
     setCurrentStep(step);
     setTimeout(() => {
       loadTelLibrary();
-      const input = document.getElementById("mobileNo");
-      if (input) {
-        input.addEventListener("countrychange", (event) => {
-          displayEnterNumber();
-        });
-        return () => {
-          input.removeEventListener("countrychange", displayEnterNumber());
-        };
-      }
     });
   }
 
@@ -515,6 +523,10 @@ const signUp = (path) => {
   }
 
   function displayEnterNumber() {
+    if (!intlRef) {
+      return;
+    }
+
     if (intlRef.getSelectedCountryData()?.dialCode) {
       setDisplayMobileNumber();
     } else {
@@ -526,6 +538,10 @@ const signUp = (path) => {
   }
 
   function setDisplayMobileNumber() {
+    if (!intlRef) {
+      return;
+    }
+
     let number = intlRef.getNumber();
     let displayMobileNumber = number.includes("+")
       ? number
@@ -542,7 +558,42 @@ const signUp = (path) => {
     setTimeout(function () {
       const charInputs = document.querySelectorAll(selector);
 
+      // Add paste handler to the first input field
+      if (charInputs.length > 0 && !charInputs[0].dataset.pasteHandlerAttached) {
+        charInputs[0].addEventListener("paste", (e) => {
+          e.preventDefault();
+          const pastedData = e.clipboardData.getData("text").trim();
+          
+          // Only process if we have data and it looks like a numeric code
+          if (pastedData && /^\d+$/.test(pastedData)) {
+            // Distribute the pasted characters across input fields
+            const pastedChars = pastedData.split('');
+            
+            // Fill as many inputs as we have characters (up to the max number of inputs)
+            for (let i = 0; i < Math.min(pastedChars.length, charInputs.length); i++) {
+              charInputs[i].value = pastedChars[i];
+            }
+            
+            // Focus on the next empty field or the verify button if all fields are filled
+            if (pastedChars.length < charInputs.length) {
+              charInputs[pastedChars.length].focus();
+            } else {
+              if (selector === ".email-otp-field") {
+                document.getElementById("verify-email-button").focus();
+              } else if (selector === ".mobile-otp-field") {
+                document.getElementById("verify-mobile-button").focus();
+              }
+            }
+          }
+        });
+        charInputs[0].dataset.pasteHandlerAttached = "true";
+      }
+
       charInputs.forEach((input, index) => {
+        if (input.dataset.listenersAttached === "true") {
+          return;
+        }
+
         input.addEventListener("input", (e) => {
           const value = e.target.value;
 
@@ -550,9 +601,9 @@ const signUp = (path) => {
             if (index < charInputs.length - 1) {
               charInputs[index + 1].focus();
             } else {
-              if (selector == ".email-otp-field") {
+              if (selector === ".email-otp-field") {
                 document.getElementById("verify-email-button").focus();
-              } else if (selector == ".mobile-otp-field") {
+              } else if (selector === ".mobile-otp-field") {
                 document.getElementById("verify-mobile-button").focus();
               }
             }
@@ -565,69 +616,119 @@ const signUp = (path) => {
             charInputs[index - 1].focus();
           }
         });
+
+        // Add paste handler to all fields (not just the first)
+        input.addEventListener("paste", (e) => {
+          // Let the first input handle the paste event
+          if (index === 0) return;
+          
+          e.preventDefault();
+          const pastedData = e.clipboardData.getData("text").trim();
+          
+          // Only process if we have data and it looks like a numeric code
+          if (pastedData && /^\d+$/.test(pastedData)) {
+            // Distribute the pasted characters across input fields starting from current position
+            const pastedChars = pastedData.split('');
+            
+            // Fill as many inputs as we have characters (up to the max number of inputs)
+            for (let i = 0; i < Math.min(pastedChars.length, charInputs.length - index); i++) {
+              charInputs[index + i].value = pastedChars[i];
+            }
+            
+            // Focus on the next empty field or the verify button if all fields are filled
+            if (pastedChars.length < charInputs.length - index) {
+              charInputs[index + pastedChars.length].focus();
+            } else {
+              if (selector === ".email-otp-field") {
+                document.getElementById("verify-email-button").focus();
+              } else if (selector === ".mobile-otp-field") {
+                document.getElementById("verify-mobile-button").focus();
+              }
+            }
+          }
+        });
+
+        input.dataset.listenersAttached = "true";
       });
     });
   }
 
-  function loadTelLibrary() {
-    const input = document.querySelector("#mobileNo");
-    if (input) {
-      var intl = window.intlTelInput(input, {
-        nationalMode: true,
-        utilsScript:
-          "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
-        autoHideDialCode: false,
-        separateDialCode: false,
-        initialCountry: "auto",
-        geoIpLookup: (success, failure) => {
-          let countryCode = "in";
-          const fetchIPApi = fetch("https://api.db-ip.com/v2/free/self");
-          fetchIPApi.then(
-            (res) => {
-              if (res?.ipAddress) {
-                const fetchCountryByIpApi = fetch(
-                  "http://ip-api.com/json/" + `${res.ipAddress}`
-                );
-                fetchCountryByIpApi.then(
-                  (fetchCountryByIpApiRes) => {
-                    if (fetchCountryByIpApiRes?.countryCode) {
-                      return success(fetchCountryByIpApiRes.countryCode);
-                    } else {
-                      return success(countryCode);
-                    }
-                  },
-                  (fetchCountryByIpApiErr) => {
-                    const fetchCountryByIpInfoApi = fetch(
-                      "https://ipinfo.io/" + `${res?.ipAddress}`
-                    );
+  function loadTelLibrary(retries = 20) {
+    const input = document.getElementById("mobileNo");
+    const isIntlAvailable =
+      typeof window !== "undefined" &&
+      typeof window.intlTelInput === "function";
 
-                    fetchCountryByIpInfoApi.then(
-                      (fetchCountryByIpInfoApiRes) => {
-                        if (fetchCountryByIpInfoApiRes?.country) {
-                          return success(fetchCountryByIpInfoApiRes.country);
-                        } else {
-                          return success(countryCode);
-                        }
-                      },
-                      (fetchCountryByIpInfoApiErr) => {
+    if (!input || !isIntlAvailable) {
+      if (retries > 0) {
+        setTimeout(() => loadTelLibrary(retries - 1), 100);
+      }
+      return;
+    }
+
+    if (input.dataset.intlTelInitialized === "true") {
+      return;
+    }
+
+    const intl = window.intlTelInput(input, {
+      nationalMode: true,
+      utilsScript:
+        "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+      autoHideDialCode: false,
+      separateDialCode: false,
+      initialCountry: "auto",
+      geoIpLookup: (success, failure) => {
+        let countryCode = "in";
+        const fetchIPApi = fetch("https://api.db-ip.com/v2/free/self");
+        fetchIPApi.then(
+          (res) => {
+            if (res?.ipAddress) {
+              const fetchCountryByIpApi = fetch(
+                "http://ip-api.com/json/" + `${res.ipAddress}`
+              );
+              fetchCountryByIpApi.then(
+                (fetchCountryByIpApiRes) => {
+                  if (fetchCountryByIpApiRes?.countryCode) {
+                    return success(fetchCountryByIpApiRes.countryCode);
+                  } else {
+                    return success(countryCode);
+                  }
+                },
+                (fetchCountryByIpApiErr) => {
+                  const fetchCountryByIpInfoApi = fetch(
+                    "https://ipinfo.io/" + `${res?.ipAddress}`
+                  );
+
+                  fetchCountryByIpInfoApi.then(
+                    (fetchCountryByIpInfoApiRes) => {
+                      if (fetchCountryByIpInfoApiRes?.country) {
+                        return success(fetchCountryByIpInfoApiRes.country);
+                      } else {
                         return success(countryCode);
                       }
-                    );
-                  }
-                );
-              } else {
-                return success(countryCode);
-              }
-            },
-            (err) => {
+                    },
+                    (fetchCountryByIpInfoApiErr) => {
+                      return success(countryCode);
+                    }
+                  );
+                }
+              );
+            } else {
               return success(countryCode);
             }
-          );
-        },
-      });
-      intlRef = intl;
-      setIntl(intl);
-    }
+          },
+          (err) => {
+            return success(countryCode);
+          }
+        );
+      },
+    });
+
+    input.dataset.intlTelInitialized = "true";
+    intlRef = intl;
+    setIntl(intl);
+    displayEnterNumber();
+    input.addEventListener("countrychange", displayEnterNumber);
   }
 
   function otpVerifyCallback(response) {
@@ -642,11 +743,13 @@ const signUp = (path) => {
 
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
-      ></link>
-      <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
+        ></link>
+        <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+      </Head>
       <section className="entry signup d-flex">
         <div className="entry__left_section col-xl-3 col-lg-4 col-md-5">
           <a href={link == "" ? "/" : link}>
@@ -939,14 +1042,12 @@ const signUp = (path) => {
                                   )}
                                 </button>
                               </div>
-                              <a href="#" className="col-dark mt-3 c-fs-6">
-                                <span
-                                  className="col-primary c-fw-600"
-                                  onClick={() => retrySendOtp(3)}
-                                >
-                                  Resend
-                                </span>
-                              </a>
+                              <span
+                                className="col-primary c-fw-600 mt-3 c-fs-6"
+                                onClick={() => retrySendOtp(3)}
+                              >
+                                Resend
+                              </span>
                             </div>
                           </div>
                         )}
@@ -1081,39 +1182,53 @@ const signUp = (path) => {
                                 </button>
                               </div>
                               {connectedChannels && (
-                                <a
-                                  href="#"
-                                  className="col-dark mt-3 c-fs-6 d-flex resend-text"
-                                >
+                                <div className="col-dark mt-3 c-fs-6 d-flex resend-text">
                                   Resend on{" "}
-                                  <ul>
-                                    {connectedChannels.map((item, index) => (
-                                      <li key={item.value}>
-                                        <span
-                                          className="col-primary c-fw-600"
-                                          onClick={() =>
-                                            retrySendOtp(item.value)
-                                          }
-                                        >
-                                          {" "}
-                                          {item.name}{" "}
-                                        </span>
-                                        {connectedChannels.length >
-                                          index + 1 && <span> or </span>}
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </a>
+                                  {connectedChannels.map((item, index) => (
+                                    <span key={item.value}>
+                                      <span
+                                        className="col-primary c-fw-600 ms-1 cursor-pointer "
+                                        onClick={() => retrySendOtp(item.value)}
+                                      >
+                                        {" "}
+                                        {item.name}{" "}
+                                      </span>
+                                      {connectedChannels.length > index + 1 &&
+                                        "or"}
+                                    </span>
+                                  ))}
+                                </div>
                               )}
                             </div>
                           </div>
                         )}
                     </div>
                   </div>
+
                   <div className="mb-4">
-                    <p className="d-flex c-fs-5 m-0">
-                      I hereby authorise to send notifications via SMS, Email,
-                      RCS and others as per Terms of Service | Privacy Policy *
+                    <p className="c-fs-6 mb-1 content-width">
+                      I agree to receive OTP and Alerts SMS from Giddh at the
+                      phone number provided. Message and Data rates may apply.
+                      Message frequency varies. Reply HELP for help and STOP to
+                      opt-out. View our{" "}
+                      <a
+                        className="text-wrap-nowrap"
+                        href="https://giddh.com/terms"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Terms and Service
+                      </a>{" "}
+                      and{" "}
+                      <a
+                        className="text-wrap-nowrap"
+                        href="https://giddh.com/privacy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Privacy Policy
+                      </a>
+                      .
                     </p>
                     <div class="d-flex align-items-center gap-2">
                       <input
