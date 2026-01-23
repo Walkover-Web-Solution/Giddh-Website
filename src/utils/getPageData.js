@@ -1,5 +1,4 @@
 export default function getPageData(pageInfo) {
-  console.log('📄 getPageData called with pageInfo:', pageInfo);
   const pagesToGetData = [
     "home",
     "cloud-accounting-software",
