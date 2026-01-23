@@ -6,7 +6,6 @@ import LottiePlayer from "../../LottiePlayer";
 
 export default function SplitBanner({ compData }) {
   if (!compData) {
-    console.warn('⚠️ SplitBanner: compData is null/undefined');
     return null;
   }
   
@@ -91,22 +90,13 @@ export default function SplitBanner({ compData }) {
           )}
           {!compData?.form && compData?.image && (
             <div className="col-lg-6 col-md-6 col-12 text-center">
-              {compData?.image?.toLowerCase().endsWith('.svg') ? (
-                <img
-                  src={compData?.image}
-                  alt={compData?.heading || 'Banner image'}
-                  className="img-fluid"
-                  style={{ maxWidth: '100%', height: 'auto' }}
-                />
-              ) : (
-                <Image
-                  src={compData?.image}
-                  alt={compData?.heading}
-                  width={600}
-                  height={700}
-                  className="img-fluid"
-                />
-              )}
+           <Image
+                src={compData?.image}
+                alt={compData?.heading}
+                width={600}
+                height={700}
+                className="img-fluid"
+              />
             </div>
           )}
           {compData?.lottie && (

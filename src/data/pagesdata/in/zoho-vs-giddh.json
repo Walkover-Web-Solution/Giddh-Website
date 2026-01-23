@@ -109,7 +109,7 @@
       {
         "feature": "Easy Search",
         "giddh": true,
-        "zoho": false
+        "zoho": true
       },
       {
         "feature": "User Friendly",
@@ -124,7 +124,7 @@
       {
         "feature": "Mobile App",
         "giddh": true,
-        "zoho": false
+        "zoho": true
       },
       {
         "feature": "Company Sharing",
@@ -164,7 +164,7 @@
       {
         "feature": "Single Ledger Sharing",
         "giddh": true,
-        "zoho": true
+        "zoho": false
       }
     ]
   },

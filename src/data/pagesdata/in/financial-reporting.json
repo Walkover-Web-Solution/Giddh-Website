@@ -56,7 +56,7 @@
     ]
   },
   "giddhVs": {
-    "heading": "Feature Comparison: Giddh vs Zoho Books",
+    "heading": "Competitor Comparison",
     "columns": [
       {
         "key": "giddh",
@@ -71,7 +71,7 @@
       {
         "key": "freshBooks",
         "label": "Fresh Books",
-        "logo": "/img/vyapar_logo.svg"
+        "logo": "/img/freshbooks_logo.svg"
       }
     ],
     "content": [
@@ -84,7 +84,7 @@
       {
         "feature": "GST Compliant",
         "giddh": true,
-        "zoho": false,
+        "zoho": true,
         "freshBooks": false
       },
       {
