@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { getDownloadUrl, getAppVersion } from "../utils/s3Config";
 
 const Footer = (path) => {
   const link = path.path;
@@ -13,8 +12,32 @@ const Footer = (path) => {
   const [macApp, setMacApp] = useState("");
 
   useEffect(() => {
-    getAppVersion("win", setWindowsApp, setMacApp);
-    getAppVersion("mac", setWindowsApp, setMacApp);
+    getAppVersion("win");
+    getAppVersion("mac");
+
+    //To get latest version of giddh app
+    async function getAppVersion(os) {
+      let forWhichOS = os === "win" ? "" : "-mac";
+
+      const res = await fetch(
+        `https://s3-ap-south-1.amazonaws.com/giddh-app-builds/latest${forWhichOS}.yml`,
+        { cache: "no-store" }
+      )
+        .then((res) => res.blob())
+        .then((blob) => blob.text())
+        .then((res) => {
+          if (res && typeof res === "string") {
+            let version = res.split("files")[0];
+            let versNum = version.split(" ")[1].trim();
+            if (os === "win") {
+              setWindowsApp(versNum);
+            } else {
+              setMacApp(versNum);
+            }
+          }
+        })
+        .catch((err) => console.log("yaml err:", err));
+    }
   }, []);
 
   return (
@@ -126,7 +149,7 @@ const Footer = (path) => {
                     <li>
                       <a
                         className="download-icon "
-                        href={getDownloadUrl("win")}
+                        href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh Setup ${windowsApp}.exe`}
                       >
                         <img
                           src="/img/window-icon.svg"
@@ -137,7 +160,7 @@ const Footer = (path) => {
                     <li>
                       <a
                         className="download-icon rounded-circle"
-                        href={getDownloadUrl("mac")}
+                        href={`https://s3-ap-south-1.amazonaws.com/giddh-app-builds/giddh-${macApp}.dmg`}
                       >
                         <img
                           src="/img/mac_icon.svg"

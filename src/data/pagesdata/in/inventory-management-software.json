@@ -198,23 +198,5 @@
       "question": "Can I integrate Giddh with my existing e-commerce platform?",
       "answer": "Yes, Giddh integrates smoothly with Shopify, WooCommerce, and other popular platforms."
     }
-  ],
-  "schema": [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": "WebPage",
-      "description": "Modern inventory management software for the modern entrepreneur, no stress, no hassles, no hidden costs. Managing inventory is a priority for any growing business. Inventory management feature helps you to track your stock movements accurately so you can get back to doing the thing you are best at: Grow and Earn!",
-      "name": "Inventory Management Software",
-      "url": "https://giddh.com/in/inventory-management-software"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "Service",
-      "description": "Modern inventory management software for the modern entrepreneur, no stress, no hassles, no hidden costs. Managing inventory is a priority for any growing business. Inventory management feature helps you to track your stock movements accurately so you can get back to doing the thing you are best at: Grow and Earn!",
-      "url": "https://giddh.com/in/inventory-management-software",
-      "name": "Inventory Management Software"
-    }
   ]
 }

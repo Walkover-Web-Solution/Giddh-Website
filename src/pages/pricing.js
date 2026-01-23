@@ -7,7 +7,6 @@ import {
   MdKeyboardArrowUp,
 } from "react-icons/md";
 import CustomLoader from "@/components/customLoader";
-import contvertToLocal from "@/utils/convertToLocal";
 
 const pricing = (path) => {
   const [readMoreStatus, readmoreAction] = useState(false);
@@ -282,8 +281,9 @@ const pricing = (path) => {
       return `Save ${getCurrencyCodeOrSymbol(
         plan,
         "SYMBOL"
-      )}${contvertToLocal(discountAmount)} for ${duration} ${durationUnit}${duration > 1 ? "s" : ""
-        }`;
+      )}${discountAmount} for ${duration} ${durationUnit}${
+        duration > 1 ? "s" : ""
+      }`;
     }
 
     return null;
@@ -302,8 +302,9 @@ const pricing = (path) => {
       <>
         {/* Plan Name */}
         <p
-          className={`${isMobile ? "c-fs-3" : "c-fs-5"
-            } c-fw-600 mb-1 text-capitalize`}
+          className={`${
+            isMobile ? "c-fs-3" : "c-fs-5"
+          } c-fw-600 mb-1 text-capitalize`}
           aria-label="Subscription Plan Name"
         >
           {plan.name}
@@ -313,15 +314,16 @@ const pricing = (path) => {
         {getAmount(plan) > 0 && (
           <>
             <p className="c-fs-3 mb-1">
-              {getCurrencyCodeOrSymbol(plan, "SYMBOL")}
+              {getCurrencyCodeOrSymbol(plan)}
               &nbsp;
               {getAmount(plan, true)}
               <span className="c-fs-6">{isYearPlan ? "/year" : "/month"}</span>
             </p>
 
             {/* Plan Discount with strike though */}
-            {((isYearPlan && plan.yearlyDiscountAmount > 0) ||
-              (!isYearPlan && plan.monthlyDiscountAmount > 0)) && (
+            {(plan.yearlyDiscountAmount > 0 ||
+              plan.monthlyDiscountAmount > 0) && (
+              <>
                 <p className="my-1 line-height-24">
                   <s>
                     &nbsp;
@@ -331,8 +333,8 @@ const pricing = (path) => {
                     &nbsp;
                   </s>
                 </p>
-              )}
-
+              </>
+            )}
 
             {/* Plan Description */}
             <p
@@ -417,7 +419,7 @@ const pricing = (path) => {
       <section className="container-fluid pricing_main_section">
         <div className="container">
           <div className="row mt-2 mt-lg-5">
-            <div className="col-12">
+            <div className="col-12 ">
               <h1 className="pricing-heading col-primary c-fw-600 ms-4 text-center">
                 Powerful Accounting Software. <wbr />
                 Affordable Pricing.
@@ -494,7 +496,7 @@ const pricing = (path) => {
                   {/* Pricing Table Large Device */}
                   {!isMobile && (
                     <div className="overflow-x-scroll col-12">
-                      <table className="pricing-table w-100">
+                      <table className="pricing-table w-100 overflow-x-scroll">
                         <thead>
                           <tr>
                             <th>

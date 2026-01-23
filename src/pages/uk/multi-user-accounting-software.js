@@ -1,6 +1,6 @@
 import OldMultiUserAccountingSoftware from "../multi-user-accounting-software";
 
-const UkMultiUserAccountingSoftware = ({ path }) => {
+const UkMultiUserAccountingSoftware = (path) => {
   return <OldMultiUserAccountingSoftware path={path} />;
 };
 
