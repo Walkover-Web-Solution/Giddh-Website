@@ -128,7 +128,7 @@
       "answer": "Yes, many accounting software solutions support multiple users. Giddh is a powerful, multi-user platform that enables seamless collaboration, providing customized access and real-time data sharing across teams."
     }
   ],
-  "schema": [
+  "schemas": [
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",

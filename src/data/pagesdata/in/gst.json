@@ -165,7 +165,7 @@
     ],
     "theme": "light"
   },
-  "schema": [
+  "schemas": [
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",

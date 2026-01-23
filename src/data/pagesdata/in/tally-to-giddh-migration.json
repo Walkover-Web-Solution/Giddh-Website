@@ -145,7 +145,7 @@
       "answer": "Yes! Giddh offers 24/7 support to guide you through every step of the migration."
     }
   ],
-  "schema": [
+  "schemas": [
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
