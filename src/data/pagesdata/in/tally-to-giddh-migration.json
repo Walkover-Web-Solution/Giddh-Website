@@ -144,23 +144,5 @@
       "question": "Is there customer support available during the migration?",
       "answer": "Yes! Giddh offers 24/7 support to guide you through every step of the migration."
     }
-  ],
-  "schema": [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": "WebPage",
-      "description": "Discover how to migrate seamlessly from Tally to Giddh and unlock cloud-based accounting with analytics, automation and real-time financial reports.",
-      "name": "Tally to Giddh Migration",
-      "url": "https://giddh.com/in/tally-to-giddh-migration"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "Service",
-      "description": "Discover how to migrate seamlessly from Tally to Giddh and unlock cloud-based accounting with analytics, automation and real-time financial reports.",
-      "url": "https://giddh.com/in/tally-to-giddh-migration",
-      "name": "Tally to Giddh Migration"
-    }
   ]
 }

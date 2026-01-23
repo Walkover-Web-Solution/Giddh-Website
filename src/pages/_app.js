@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 import Toastify from "@/components/toastify";
 import getPageData from "@/utils/getPageData";
 import getPageInfo from "@/utils/getPageInfo";
-import Schema from "@/components/NewComps/Schema";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -80,7 +79,6 @@ export default function MyApp({ Component, pageProps }) {
       <Component path={path} {...pageProps} pageData={pageData} pageInfo={pageInfo} />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
       <GlobalComponents path={arrayBrawserPath} />
-      <Schema schema={pageData?.schema} />
       <Toastify />
     </>
   );

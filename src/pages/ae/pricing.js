@@ -1,10 +1,9 @@
 import Pricing from "@/pages/pricing"
-
-const ukPricing = (path) => {
+const aePricing = (path) => {
   return (
     <>
-      <Pricing path={path.path} />
+     <Pricing path={path.path} />
     </>
   );
 };
-export default ukPricing;
+export default aePricing;

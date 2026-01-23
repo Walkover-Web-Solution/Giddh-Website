@@ -5,16 +5,14 @@ export default function GridBenefits({ compData }) {
 
   return (
     <section className="container py-5 d-flex flex-column gap-4">
-      <h2 className="text-center garmond-font sub-heading">
-        {compData?.heading}
-      </h2>
-      <div className="d-flex flex-column border border-slate-grey">
+      <h2 className="text-center sub-heading">{compData?.heading}</h2>
+      <div className="d-flex flex-column border border-black">
         {compData.features.map((row, rowIndex) => (
           <div key={rowIndex} className="row g-0 overflow-hidden">
             {row.map((item, colIndex) => (
               <div
                 key={colIndex}
-                className="col border border-slate-grey d-flex flex-column align-items-center justify-content-center text-center p-4"
+                className="col border border-black d-flex flex-column align-items-center justify-content-center text-center p-4"
               >
                 {item?.icon && (
                   <Image

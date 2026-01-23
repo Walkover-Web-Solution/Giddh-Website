@@ -141,6 +141,7 @@
       }
     ]
   },
+
   "ctaOne": {
     "heading": "See Giddh In Action With A Personalised Demo!",
     "subheading": "Schedule A One-On-One Demo With Our Experts To Learn How Giddh Can Streamline Your Best Bank Reconciliation Software Process And Boost Your Efficiency.",
@@ -228,6 +229,7 @@
       }
     ]
   },
+
   "ctaTwo": {
     "heading": "Experience Effortless Bank Reconciliation Today!",
     "subheading": "Sign Up Now To Enjoy Full Access To Giddh’s Powerful, Automated Reconciliation Tools. No Credit Card Required—Get Started In Minutes!",
@@ -285,70 +287,6 @@
     {
       "question": "What happens after the free trial ends?",
       "answer": "After your free trial, you can choose to continue with a paid plan, or let us know if you need more time to decide."
-    }
-  ],
-  "schemas": [
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How does Giddh integrate with my bank account?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Giddh integrates securely with your bank account through API technology, ensuring your data is synced automatically."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is Giddh secure? How does it protect my financial data?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Giddh uses bank-grade encryption and follows strict security protocols to keep your data safe."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I reconcile multiple accounts?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Giddh supports multiple accounts, including bank accounts, credit cards, and more."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Giddh support multi-currency transactions?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, Giddh supports multi-currency transactions, making it ideal for businesses with international operations."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens after the free trial ends?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "After your free trial, you can choose to continue with a paid plan, or let us know if you need more time to decide."
-          }
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": "WebPage",
-      "description": "Once your bank account connects to Giddh, you get an overview of the most important asset of your business – cash.",
-      "name": "Bank Reconciliation Software",
-      "url": "https://giddh.com/in/bank-reconciliation-software"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "Service",
-      "description": "Once your bank account connects to Giddh, you get an overview of the most important asset of your business – cash.",
-      "url": "https://giddh.com/in/bank-reconciliation-software",
-      "name": "Bank Reconciliation Software"
     }
   ]
 }
