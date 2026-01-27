@@ -172,12 +172,22 @@ const slugToPostContent = (() => {
   const map = {};
 
   postContents.forEach((post) => {
-    map[post.slug] = {
+    // Index by staticPath (filename-based) since that's what's used in URLs
+    map[post.staticPath] = {
       slug: post.slug,
       fullPath: post.fullPath,
       staticPath: post.staticPath,
       ...post,
     };
+    // Also index by slug (frontmatter-based) for backward compatibility
+    if (post.slug && post.slug !== post.staticPath) {
+      map[post.slug] = {
+        slug: post.slug,
+        fullPath: post.fullPath,
+        staticPath: post.staticPath,
+        ...post,
+      };
+    }
   });
 
   return map;
