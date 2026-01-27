@@ -110,9 +110,7 @@ export default function Header(props) {
           />
         )}
         {metaData?.title && <meta property="og:type" content="website" />}
-      {metaData?.image && (
-        <meta property="og:image" content={metaData.image || "/img/giddh-home-page.png"}/>
-      )}
+        <meta property="og:image" content={metaData?.image || "/img/giddh-home-page.png"}/>
       </Head>
     </>
   );
