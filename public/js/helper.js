@@ -2,38 +2,61 @@ function setCookie(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
   var expires = "expires=" + d.toGMTString();
+  var cookieDomain = "";
+  try {
+    let host = window.location.hostname;
+    if (host && host !== "localhost" && host !== "127.0.0.1") {
+      cookieDomain = ";domain=" + host;
+    }
+  } catch (e) {
+    cookieDomain = "";
+  }
   document.cookie =
-    cname + "=" + cvalue + ";domain=giddh.com;" + expires + ";path=/";
+    cname + "=" + encodeURIComponent(String(cvalue ?? "")) + cookieDomain + ";" + expires + ";path=/";
 }
 
 function getCookie(cname) {
   var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(";");
-  var value = "";
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i];
+  let ca = document.cookie.split(";");
+  let value = "";                    
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
     while (c.charAt(0) == " ") {
       c = c.substring(1);
     }
     if (c.indexOf(name) == 0) {
       value = c.substring(name.length, c.length);
+      try {
+        value = decodeURIComponent(value);
+      } catch (e) {
+        // If decoding fails, use raw value
+      }
+      break;
     }
   }
   return value;
 }
 
 function deleteUtmCookies() {
+  var cookieDomain = "";
+  try {
+    let host = window.location.hostname;
+    if (host && host !== "localhost" && host !== "127.0.0.1") {
+      cookieDomain = " Domain=" + host + ";";
+    }
+  } catch (e) {
+    cookieDomain = "";
+  }
   document.cookie =
-    "utm_source=; Path=/; Domain=giddh.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    "utm_source=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
   document.cookie =
-    "utm_medium=; Path=/; Domain=giddh.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    "utm_medium=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
   document.cookie =
-    "utm_campaign=; Path=/; Domain=giddh.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    "utm_campaign=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
   document.cookie =
-    "utm_term=; Path=/; Domain=giddh.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    "utm_term=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
   document.cookie =
-    "utm_content=; Path=/; Domain=giddh.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    "utm_content=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 }
 
 function removeGiddhSession() {
@@ -112,7 +135,33 @@ function setUtmParamInLocalStorage() {
   }
 }
 
+function setUtmParamsInCookies() {
+  if (typeof window === "undefined" || !window.location) {
+    return;
+  }
+  const paramsToSave = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "gclid", "fbclid"];
+  const searchParams = new URLSearchParams(window.location.search);
+  
+  let hasAnyParam = false;
+  for (let index = 0; index < paramsToSave.length; index++) {
+    if (searchParams.has(paramsToSave[index])) {
+      hasAnyParam = true;
+      break;
+    }
+  }
+  if (hasAnyParam) {
+    for (let index = 0; index < paramsToSave.length; index++) {
+      const paramName = paramsToSave[index];
+      const allValues = searchParams.getAll(paramName);
+      const paramValue = allValues.length > 0 ? allValues[0] : "";
+      const valueToSave = paramValue ? paramValue.trim() : "";
+      setCookie(paramName, valueToSave, 30);
+    }
+  }
+}
+
 setUtmParamInLocalStorage();
+setUtmParamsInCookies();
 
 function formatMobileNumber(number) {
   number = String(number).replace("+", "");
