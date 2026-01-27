@@ -13,14 +13,19 @@ export default function getPageData(pageInfo) {
     "import-data",
     "gst",
     "multi-currency-accounting-software",
-    "tally-to-giddh-migration"
+    "tally-to-giddh-migration",
+    "make-the-switch",
+    "zoho-vs-giddh",
+    "financial-reporting"
   ];
-  if (!pagesToGetData.includes(pageInfo?.page)) return null;
+  if (!pagesToGetData.includes(pageInfo?.page)) {
+    return null;
+  }
   try {
-    const pageData = require(`@/data/pagesdata/${pageInfo?.country}/${pageInfo?.page}.json`);
+    const filePath = `@/data/pagesdata/${pageInfo?.country}/${pageInfo?.page}.json`;
+    const pageData = require(filePath);
     return pageData || null;
   } catch (error) {
-    console.error(`Error loading page data: ${error.message}`);
     return null;
   }
 }

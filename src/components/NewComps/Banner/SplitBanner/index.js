@@ -5,6 +5,10 @@ import style from "./SplitBanner.module.scss";
 import LottiePlayer from "../../LottiePlayer";
 
 export default function SplitBanner({ compData }) {
+  if (!compData) {
+    return null;
+  }
+  
   return (
     <section
       className={`outfit-font ${
@@ -86,7 +90,7 @@ export default function SplitBanner({ compData }) {
           )}
           {!compData?.form && compData?.image && (
             <div className="col-lg-6 col-md-6 col-12 text-center">
-              <Image
+           <Image
                 src={compData?.image}
                 alt={compData?.heading}
                 width={600}

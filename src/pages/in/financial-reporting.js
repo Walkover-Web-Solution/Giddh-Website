@@ -1,9 +1,5 @@
-import FinancialReporting from "@/pages/financial-reporting";
-const inFinancialReporting = (path) => {
-  return (
-    <>
-      <FinancialReporting path={path.path} />
-    </>
-  );
-};
-export default inFinancialReporting;
+import FinancialReporting from "@/components/Pages/FinancialReporting";
+
+export default function inFinancialReporting({ pageData }) {
+  return <FinancialReporting pageData={pageData} />;
+}
