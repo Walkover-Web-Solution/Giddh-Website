@@ -42,7 +42,7 @@ export default function PopUp() {
             id="closeModal"
             onClick={closeModal}
           ></button>
-          <div className=" pt-5">
+          <div className="pt-5"> 
             <div className="d-flex align-items-start gap-2 mb-4 flex-column-reverse flex-md-row">
               <span className="font-600 m-0 font-primary font-sub-heading">
                 Still stuck somewhere?
@@ -53,7 +53,6 @@ export default function PopUp() {
                   alt="Giddh Logo"
                   width={120}
                   height={36}
-                  priority
                 />
               </div>
             </div>
@@ -86,7 +85,6 @@ export default function PopUp() {
                   width={600}
                   height={400}
                   className="w-100 h-auto"
-                  priority
                 />
               </div>
             </div>

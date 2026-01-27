@@ -11,6 +11,7 @@ export default function Footer() {
             alt="Giddh Logo"
             width={180}
             height={36}
+            loading="lazy"
           />
         </div>
       </div>

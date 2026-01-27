@@ -32,6 +32,7 @@ export default function StackedBanner({ compData }) {
             className="img-fluid align-self-center rounded-2 pb-5"
             src={compData?.image}
             alt={compData?.heading}
+            priority
           />
         )}
       </div>

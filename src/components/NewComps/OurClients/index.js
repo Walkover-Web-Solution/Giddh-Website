@@ -54,6 +54,7 @@ export default function OurClient() {
                   alt={client?.name}
                   width="360"
                   height="360"
+                  loading="lazy"
                 />
               </a>
             );

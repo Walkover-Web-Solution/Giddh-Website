@@ -41,6 +41,7 @@ export default function GiddhVs({ giddhVs }) {
                         height={42}
                         width={100}
                         alt={`${column?.label} logo`}
+                        loading="lazy"
                       />
                     ) : (
                       <span>{column?.label}</span>
@@ -75,6 +76,7 @@ export default function GiddhVs({ giddhVs }) {
                             width={24}
                             height={24}
                             alt="Yes"
+                            loading="lazy"
                           />
                         ) : (
                           <Image
@@ -82,6 +84,7 @@ export default function GiddhVs({ giddhVs }) {
                             width={24}
                             height={24}
                             alt="No"
+                            loading="lazy"
                           />
                         )
                       ) : (

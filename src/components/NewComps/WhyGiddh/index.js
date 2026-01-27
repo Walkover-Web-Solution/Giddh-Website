@@ -23,6 +23,7 @@ export default function WhyGiddh({ compData }) {
                 className="d-none d-md-block img-fluid fit-content"
                 width={120}
                 height={50}
+                loading="lazy"
               />
               <span className="d-none d-md-block ">Accounting Software</span>{" "}
               <span className="d-block font-dark-grey d-md-none pe-2">
@@ -32,6 +33,7 @@ export default function WhyGiddh({ compData }) {
                   className="img-fluid fit-content"
                   width={50}
                   height={55}
+                  loading="lazy"
                 />
               </span>
             </div>
@@ -55,6 +57,7 @@ export default function WhyGiddh({ compData }) {
                     width={20}
                     height={20}
                     className="text-success"
+                    loading="lazy"
                   />
                 ) : (
                   <Image
@@ -63,6 +66,7 @@ export default function WhyGiddh({ compData }) {
                     width={20}
                     height={20}
                     className="text-danger"
+                    loading="lazy"
                   />
                 )}
               </div>
@@ -80,6 +84,7 @@ export default function WhyGiddh({ compData }) {
                     width={20}
                     height={20}
                     className="text-success"
+                    loading="lazy"
                   />
                 ) : (
                   <Image
@@ -88,6 +93,7 @@ export default function WhyGiddh({ compData }) {
                     width={20}
                     height={20}
                     className="text-danger"
+                    loading="lazy"
                   />
                 )}
               </div>
