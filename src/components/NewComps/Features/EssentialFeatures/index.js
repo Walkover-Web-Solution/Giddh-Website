@@ -3,11 +3,11 @@ export default function EssentialFeatures({ compData }) {
   return (
     <section className="py-5 container d-flex flex-column gap-5">
       <div className="d-flex flex-column align-items-center text-center gap-3">
-        <h2 className="font-primary m-0 font-sub-heading">
+        <h2 className="font-primary garmond-font m-0 font-sub-heading">
           {compData?.heading}
         </h2>
         {compData?.subHeading && (
-          <p className="font-md m-0">{compData.subHeading}</p>
+          <p className="font-md m-0 outfit-font">{compData.subHeading}</p>
         )}
       </div>
 

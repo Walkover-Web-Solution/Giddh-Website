@@ -53,7 +53,7 @@ export default function FeedbackCards({ testimonials }) {
         <h2 className="garmond-font text-center font-primary font-sub-heading">
           {testimonials?.heading}
         </h2>
-        <p className="font-400 font-primary garmond-font font-md text-center">
+        <p className="font-400 font-primary outfit-font font-md text-center">
           {testimonials?.subheading}
         </p>
         <div

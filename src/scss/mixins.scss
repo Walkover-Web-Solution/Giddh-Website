@@ -3,7 +3,7 @@
   // Generate CSS custom properties in :root
   :root {
     @each $key, $value in $sizes {
-      --font-#{$key}: #{$value};
+      --font-#{"" + $key}: #{$value};
     }
 
     // Generate mobile media query if mobile sizes are provided
@@ -18,7 +18,7 @@
 
   // Generate utility classes
   @each $key, $value in $sizes {
-    .#{$prefix}-#{$key} {
+    .#{"" + $prefix}-#{"" + $key} {
       @if $mobile-sizes and map-has-key($mobile-sizes, $key) {
         font-size: var(
           --font-#{$key}
@@ -60,28 +60,28 @@
 
   :root {
     @each $key, $value in $colors {
-      --col-#{$key}: #{$value};
+      --col-#{"" + $key}: #{$value};
     }
   }
 
   // Generate font color classes with 'font-' prefix
   @each $key, $value in $colors {
-    .font-#{$key} {
-      color: var(--col-#{$key}, #{$value}) !important; // #{$value}
+    .font-#{"" + $key} {
+      color: var(--col-#{"" + $key}, #{$value}) !important; // #{$value}
     }
   }
 
   // Generate background color classes with 'bg-' prefix
   @each $key, $value in $colors {
-    .bg-#{$key} {
-      background-color: var(--col-#{$key}, #{$value}) !important; // #{$value}
+    .bg-#{"" + $key} {
+      background-color: var(--col-#{"" + $key}, #{$value}) !important; // #{$value}
     }
   }
 
   // Generate border color classes with 'border-' prefix
   @each $key, $value in $colors {
-    .border-#{$key} {
-      border-color: var(--col-#{$key}, #{$value}) !important; // #{$value}
+    .border-#{"" + $key} {
+      border-color: var(--col-#{"" + $key}, #{$value}) !important; // #{$value}
     }
   }
 }

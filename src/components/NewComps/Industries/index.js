@@ -29,7 +29,7 @@ export default function Industries({ giddhIndustries }) {
         <h2 className="garmond-font text-center font-sub-heading">
           {giddhIndustries?.heading}
         </h2>
-        <p className="text-center font-md mb-5 w-md-75 w-100 mx-auto pb-3">
+        <p className="text-center outfit-font font-md mb-5 w-md-75 w-100 mx-auto pb-3">
           {giddhIndustries?.description}
         </p>
         <div className="d-flex flex-column gap-4">

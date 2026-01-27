@@ -35,7 +35,7 @@ export default function SwitchToGiddh() {
   return (
     <section className="container section_py d-flex flex-column gap-1 gap-md-2">
       <div className="d-flex flex-column content-width">
-        <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
+        <h2 className="sub-heading c-fw-600 col-primary garmond-font">{data?.heading}</h2>
         <p className="c-fs-2 col-primary">{data?.subheading}</p>
       </div>
       <div className="d-flex flex-column gap-1 gap-md-2 ">

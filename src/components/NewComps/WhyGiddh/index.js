@@ -4,7 +4,7 @@ export default function WhyGiddh({ compData }) {
   return (
     <section className="bg-extra-light-blue outfit-font">
       <div className="container py-5 d-flex flex-column gap-4">
-        <h2 className="text-center mb-4 font-primary font-sub-heading">
+        <h2 className="text-center mb-4 font-primary font-sub-heading garmond-font">
           {compData?.heading}
         </h2>
         <div className="bg-white border-end border-accent border-2 rounded-4 overflow-hidden">

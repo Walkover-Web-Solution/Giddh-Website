@@ -8,7 +8,7 @@ export default function StackedBanner({ compData }) {
           {compData?.heading}
         </h1>
         <div className="col-lg-8 mx-auto">
-          <p className="text-center font-grey-deep">{compData?.subHeading}</p>
+          <p className="text-center font-grey-deep outfit-font">{compData?.subHeading}</p>
         </div>
         {compData?.buttons?.length && (
           <div className="container d-flex gap-2 gap-md-4 justify-content-center align-items-center flex-column flex-md-row">
