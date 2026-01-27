@@ -103,40 +103,40 @@
     ]
   },
   "gridFeatures": {
-    "heading" : "What Sets Giddh Apart",
-    "features" :
-    [
-    [
-      {
-        "title": "Manage Multiple Companies & Branches"
-      },
-      {
-        "title": "Auto Updates. Always getting faster."
-      },
-      {
-        "title": "Open & Public API Access"
-      }
-    ],
-    [
-      {
-        "title": "One Subscription, Up to 100 Companies"
-      },
-      {
-        "title": "Unlimited Users – No Extra Cost"
-      }
-    ],
-    [
-      {
-        "title": "Easy Synchronization with Tally"
-      },
-      {
-        "title": "Built-In White Label Option"
-      },
-      {
-        "title": "No Voucher Screens – Just Type & Save"
-      }
+    "heading": "What Sets Giddh Apart",
+    "features": [
+      [
+        {
+          "title": "Manage Multiple Companies & Branches"
+        },
+        {
+          "title": "Auto Updates. Always getting faster."
+        },
+        {
+          "title": "Open & Public API Access"
+        }
+      ],
+      [
+        {
+          "title": "One Subscription, Up to 100 Companies"
+        },
+        {
+          "title": "Unlimited Users – No Extra Cost"
+        }
+      ],
+      [
+        {
+          "title": "Easy Synchronization with Tally"
+        },
+        {
+          "title": "Built-In White Label Option"
+        },
+        {
+          "title": "No Voucher Screens – Just Type & Save"
+        }
+      ]
     ]
-  ]},
+  },
   "faqs": [
     {
       "question": "What type of businesses can benefit from Giddh’s multi-currency software?",
@@ -155,7 +155,6 @@
       "answer": "Yes, Giddh helps ensure that your multi-currency transactions remain compliant with local tax regulations, regardless of where you’re doing business."
     }
   ],
-
   "cta": {
     "heading": "Ready to Take Control of Your Global Accounting?",
     "buttons": [
@@ -171,5 +170,61 @@
       }
     ],
     "theme": "light"
-  }
+  },
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What type of businesses can benefit from Giddh’s multi-currency software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Whether you’re a startup, SME, or large enterprise, Giddh’s multi-currency accounting software is designed to scale with your business needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the exchange rates updated in real-time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Giddh pulls real-time exchange rates, ensuring you always have accurate data for your financial reporting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I set multiple default currencies for different regions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! Giddh enables you to assign default currencies for various customers or regions, streamlining financial management."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Giddh support tax compliance in different countries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Giddh helps ensure that your multi-currency transactions remain compliant with local tax regulations, regardless of where you’re doing business."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Multi currency accounting software makes it easy to manage your accounting in more than 100 currencies for your fast & growing business. Giddh makes managing multi-currency payments, invoicing and accounts easy.",
+      "name": "Multi-Currency Accounting Software",
+      "url": "https://giddh.com/in/multi-currency-accounting-software"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Multi currency accounting software makes it easy to manage your accounting in more than 100 currencies for your fast & growing business. Giddh makes managing multi-currency payments, invoicing and accounts easy.",
+      "url": "https://giddh.com/in/multi-currency-accounting-software",
+      "name": "Multi-Currency Accounting Software"
+    }
+  ]
 }

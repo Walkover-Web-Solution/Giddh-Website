@@ -58,7 +58,7 @@ export default function PopUp() {
             </div>
             <div className="d-flex flex-column gap-2 flex-md-row">
               <div className="col-md-6">
-                <h2 className="font-md">
+                <h2 className="font-md garmond-font">
                   Don’t worry, getting started with Giddh is quick and simple.
                 </h2>
 
