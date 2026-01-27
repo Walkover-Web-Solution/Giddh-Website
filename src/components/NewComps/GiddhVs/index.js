@@ -11,7 +11,7 @@ export default function GiddhVs({ giddhVs }) {
           <h2 className="text-center font-sub-heading garmond-font font-primary">
             {giddhVs.heading}
           </h2>
-          <p className="text-center outfit-font font-md w-75 mx-auto">
+          <p className="text-center font-md w-75 mx-auto">
             {giddhVs.subheading}
           </p>
         </div>

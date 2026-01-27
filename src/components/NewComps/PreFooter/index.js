@@ -11,10 +11,10 @@ export default function PreFooter() {
     <section className="bg-accent section_py outfit-font">
       <div className="container d-flex flex-column gap-3 align-items-center justify-content-center">
         <div className="d-flex flex-column content-width">
-          <h2 className="sub-heading c-fw-600 garmond-font col-white text-center">
+        <h2 className="sub-heading c-fw-600 col-white text-center">
             {data?.heading}
           </h2>
-          <p className="col-white outfit-font text-center">{data?.subheading}</p>
+          <p className="col-white text-center">{data?.subheading}</p>
         </div>
         <Link href={"/signup"}>
           <button

@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function GridFeatures({ features }) {
   if (!features?.cards?.length) return null;
   return (
-    <section className="py-5 outfit-font">
+    <section className="py-5">
       <div className="container d-flex flex-column gap-4">
         <div className="d-flex flex-column gap-4">
           <h2 className="text-center font-heading font-primary">
