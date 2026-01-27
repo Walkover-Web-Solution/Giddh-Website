@@ -34,7 +34,7 @@ export default function OurClient() {
     <>
       <section className="container section_py d-flex flex-column gap-4">
         <div className="d-flex flex-column text-center content-width mx-auto">
-          <h2 className="sub-heading c-fw-600 col-primary">{data?.heading}</h2>
+          <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
           <p>{data?.subheading}</p>
         </div>
         <div className={`${styles.clients} d-flex flex-md-row flex-column align-items-center gap-0 justify-content-center gap-md-5 `}>
