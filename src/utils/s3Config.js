@@ -32,7 +32,7 @@ export const getDownloadUrl = (os) => {
   if (os === "win") {
     return `${baseUrl}/${bucketName}/test/windows/latest/giddh-test-setup.exe`;
   } else if (os === "mac") {
-    return `${baseUrl}/${bucketName}/test/mac/latest/giddh-test.dmg`;
+    return `${baseUrl}/${bucketName}/test/mac/latest/giddh-test-setup.dmg`;
   }
   
   return "";
