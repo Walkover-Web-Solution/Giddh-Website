@@ -64,7 +64,8 @@ export const getAppVersion = async (os, setWindowsApp, setMacApp) => {
   }
   
   const osPath = os === "win" ? "windows" : "mac";
-  const yamlUrl = `${baseUrl}/${bucketName}/test/${osPath}/latest/latest.yml`;
+  const fileName = `latest${osPath === "mac" ? "-mac" : ""}.yml`;
+  const yamlUrl = `${baseUrl}/${bucketName}/test/${osPath}/latest/${fileName}`;
   
   try {
     const response = await fetch(yamlUrl, { cache: "no-store" });
