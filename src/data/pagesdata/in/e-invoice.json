@@ -239,5 +239,61 @@
       "question": "What is the Difference Between Invoice and E-Invoice?",
       "answer": "An invoice is a standard document for billing customers. At the same time, an e-invoice is a digitally generated invoice that complies with GST regulations and is validated through the government’s Invoice Registration Portal (IRP). E-invoices include a unique IRN and QR code, enabling real-time tracking and automated GST reporting."
     }
+  ],
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the Key Features of E-Invoicing Software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "E-invoicing software offers key features, including automated invoice creation, GST compliance, real-time IRN and QR code generation, invoice tracking, one-click reconciliation, and multi-channel invoice delivery via email, WhatsApp, or SMS. Leading e-invoice software in India also integrates with ERP systems, ensuring 99.9% uptime for reliable billing operations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which Software is Best for E-Invoices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best e-invoice software in India is one that ensures GST compliance, facilitates fast IRN generation, enables real-time invoice tracking, and integrates seamlessly with accounting systems. Giddh is a top choice for businesses of all sizes due to its ERP integration, auto GST application, invoice customisation, and 24/7 customer support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I Customise My Invoices Using an E-Invoice Generator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, most e-invoice generators, including Giddh, allow you to customise invoice templates. You can add your company logo, select layout formats, include additional fields such as HSN codes or payment terms, and tailor the design to match your brand while remaining GST-compliant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Difference Between Invoice and E-Invoice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An invoice is a standard document for billing customers. At the same time, an e-invoice is a digitally generated invoice that complies with GST regulations and is validated through the government’s Invoice Registration Portal (IRP). E-invoices include a unique IRN and QR code, enabling real-time tracking and automated GST reporting."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Now E-Invoice is mandatory from 1st August 2023 for the business whose turnover is INR 5 crore+. GIDDH is supporting e-invoice from 1st April 2021",
+      "name": "E-Invoice",
+      "url": "https://giddh.com/in/e-invoice"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Create e-invoices instantly with Giddh’s invoice software. Auto-apply GST, send via email, WhatsApp, or SMS, and set recurring reminders.",
+      "url": "https://giddh.com/in/e-invoice",
+      "name": "E-Invoice"
+    }
   ]
 }

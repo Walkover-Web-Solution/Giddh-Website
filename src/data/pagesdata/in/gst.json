@@ -86,7 +86,6 @@
       }
     ]
   },
-
   "characteristics": {
     "heading": "Advantages of Filing GSTR with Giddh",
     "cards": [
@@ -154,7 +153,6 @@
       "answer": "Yes, Giddh ensures data security with 2-factor authentication and OTP verification."
     }
   ],
-
   "ctaTwo": {
     "heading": "Take Charge of Your GST Compliance Today",
     "subheading": "Accurate, Timely, And Collaborative Gst Filing With Giddh – Your All-In-One Gst Compliance Software.",
@@ -166,5 +164,69 @@
       }
     ],
     "theme": "light"
-  }
+  },
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is GST?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Value-added tax levied on goods and services, collected by businesses and remitted to the government."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a GST Number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A unique tax identification number assigned to registered businesses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I register for GST?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can register online via the government portal; Giddh simplifies the process for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Giddh simplify GST filing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Giddh auto-calculates tax, generates reports, and allows direct GST filing with ease."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Giddh secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Giddh ensures data security with 2-factor authentication and OTP verification."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Simplify GST filing and accounting with Giddh's GST software. Automate returns, ensure compliance, and manage finances seamlessly. Start your free trial today!",
+      "name": "GST Software",
+      "url": "https://giddh.com/in/gst"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Simplify GST filing and accounting with Giddh's GST software. Automate returns, ensure compliance, and manage finances seamlessly. Start your free trial today!",
+      "url": "https://giddh.com/in/gst",
+      "name": "GST Software"
+    }
+  ]
 }

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { MdRemove, MdKeyboardArrowDown } from "react-icons/md";
 import styles from "./FAQs.module.scss";
-import Head from "next/head";
 
 export default function FAQs({ faqs }) {
   const [openIndex, setOpenIndex] = useState(0);
@@ -9,33 +8,8 @@ export default function FAQs({ faqs }) {
   const toggle = (index) => {
     setOpenIndex(index);
   };
-
-  const allQuestionAnswer = faqs.map((faq) => ({
-    "@type": "Question",
-    name: faq.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: faq.answer,
-    },
-  }));
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: allQuestionAnswer,
-  };
-
   return (
     <>
-      {faqSchema && (
-        <Head>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify(faqSchema),
-            }}
-          />
-        </Head>
-      )}
       <section className="container py-5">
         <div className="d-flex flex-lg-row flex-column">
           <div className="col-lg-4 col-12">
