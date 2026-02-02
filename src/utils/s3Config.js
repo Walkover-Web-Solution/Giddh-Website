@@ -9,6 +9,14 @@ export const getBucketName = () => {
 }
 
 /**
+ * Get the current environment name
+ * @returns {string} The environment name from NEXT_PUBLIC_APP_ENV
+ */
+export const getEnvName = () => {
+  return process.env.NEXT_PUBLIC_APP_ENV
+}
+
+/**
  * Get the S3 base URL based on environment
  * @returns {string} The S3 base URL
  */
@@ -24,15 +32,16 @@ export const getS3BaseUrl = () => {
 export const getDownloadUrl = (os) => {
   const baseUrl = getS3BaseUrl();
   const bucketName = getBucketName();
+  const envName = getEnvName();
   
   if (!baseUrl || !bucketName) {
     return "";
   }
   
   if (os === "win") {
-    return `${baseUrl}/${bucketName}/test/windows/latest/giddh-test-setup.exe`;
+    return `${baseUrl}/${bucketName}/${envName}/windows/latest/giddh-test-setup.exe`;
   } else if (os === "mac") {
-    return `${baseUrl}/${bucketName}/test/mac/latest/giddh-test-setup.dmg`;
+    return `${baseUrl}/${bucketName}/${envName}/mac/latest/giddh-test-setup.dmg`;
   }
   
   return "";
@@ -52,6 +61,7 @@ export const getAppVersion = async (os, setWindowsApp, setMacApp) => {
   
   const baseUrl = getS3BaseUrl();
   const bucketName = getBucketName();
+  const envName = getEnvName();
   
   if (!baseUrl || !bucketName) {
     const defaultVersion = "latest";
@@ -65,7 +75,7 @@ export const getAppVersion = async (os, setWindowsApp, setMacApp) => {
   
   const osPath = os === "win" ? "windows" : "mac";
   const fileName = `latest${osPath === "mac" ? "-mac" : ""}.yml`;
-  const yamlUrl = `${baseUrl}/${bucketName}/test/${osPath}/latest/${fileName}`;
+  const yamlUrl = `${baseUrl}/${bucketName}/${envName}/test/${osPath}/latest/${fileName}`;
   
   try {
     const response = await fetch(yamlUrl, { cache: "no-store" });
