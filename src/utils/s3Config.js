@@ -33,15 +33,17 @@ export const getDownloadUrl = (os) => {
   const baseUrl = getS3BaseUrl();
   const bucketName = getBucketName();
   const envName = getEnvName();
+  const appName = envName === "test" ? "giddh-test-setup" : "giddh-setup";
+  
   
   if (!baseUrl || !bucketName) {
     return "";
   }
   
   if (os === "win") {
-    return `${baseUrl}/${bucketName}/${envName}/windows/latest/giddh-test-setup.exe`;
+    return `${baseUrl}/${bucketName}/${envName}/windows/latest/${appName}.exe`;
   } else if (os === "mac") {
-    return `${baseUrl}/${bucketName}/${envName}/mac/latest/giddh-test-setup.dmg`;
+    return `${baseUrl}/${bucketName}/${envName}/mac/latest/${appName}.dmg`;
   }
   
   return "";
