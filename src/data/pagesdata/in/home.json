@@ -467,7 +467,7 @@
       "answer": "Yes, Giddh seamlessly integrates with Shopify, enabling smooth online inventory management and real-time data synchronization between the platforms for efficient financial tracking and reporting."
     }
   ],
-  "schema": [
+  "schemas": [
     {
       "@context": "https://schema.org/",
       "@type": "WebSite",

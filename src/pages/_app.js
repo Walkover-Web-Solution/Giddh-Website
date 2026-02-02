@@ -80,7 +80,7 @@ export default function MyApp({ Component, pageProps }) {
       <Component path={path} {...pageProps} pageData={pageData} pageInfo={pageInfo} />
       {loginSignupPathStatus ? <Footer path={path} /> : null}
       <GlobalComponents path={arrayBrawserPath} />
-      <Schema schema={pageData?.schema} />
+      <Schema schemas={pageData?.schemas} faqs={pageData?.faqs} />
       <Toastify />
     </>
   );

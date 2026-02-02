@@ -1,4 +1,4 @@
-import Head from "next/head";
+  import Head from "next/head";
 import Data from "@/data/metadata.json";
 import { useEffect, useState } from "react";
 import hrefLangTag from "@/data/hrefLangTag.json";
@@ -110,6 +110,7 @@ export default function Header(props) {
           />
         )}
         {metaData?.title && <meta property="og:type" content="website" />}
+        <meta property="og:image" content={metaData?.image || "/img/giddh_dashboard.webp"}/>
       </Head>
     </>
   );
