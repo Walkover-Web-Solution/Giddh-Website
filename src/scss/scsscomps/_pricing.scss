@@ -22,23 +22,27 @@
         }
 
         &.bg {
-          &-0 {
-            --column-background: transparent;
-          }
-          &-1 {
-            --column-background: var(--col-white);
-          }
-          &-2 {
-            --column-background: var(--col-light-green);
-          }
-          &-3 {
-            --column-background: var(--col-baby-pink);
-          }
-          &-4 {
-            --column-background: var(--col-light-blue);
-          }
-          &-5 {
-            --column-background: var(--col-light-golden);
+          // Define colors array
+          $bg-colors: transparent var(--col-white) var(--col-light-green) var(--col-baby-pink) var(--col-light-blue) var(--col-light-golden);
+          
+          // Generate classes using @for loop and modulo
+          @for $i from 0 through 15 {
+            &-#{$i} {
+              $index: $i % 6;
+              @if $index == 0 {
+                --column-background: transparent;
+              } @else if $index == 1 {
+                --column-background: var(--col-white);
+              } @else if $index == 2 {
+                --column-background: var(--col-light-green);
+              } @else if $index == 3 {
+                --column-background: var(--col-baby-pink);
+              } @else if $index == 4 {
+                --column-background: var(--col-light-blue);
+              } @else {
+                --column-background: var(--col-light-golden);
+              }
+            }
           }
         }
       }
@@ -52,12 +56,12 @@
 
     tbody {
       tr {
-          border-top: 1px solid #dee2e6;
-          font-weight: 600;
-          height: 60px;
-          @media screen and (max-width: 992px) {
-            height: 40px;
-            font-weight: 400;
+        border-top: 1px solid #dee2e6;
+        font-weight: 600;
+        height: 60px;
+        @media screen and (max-width: 992px) {
+          height: 40px;
+          font-weight: 400;
         }
       }
     }
