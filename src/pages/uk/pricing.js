@@ -1,9 +1,9 @@
-import OldPricing from "../in/pricing";
+import Pricing  from "@/pages/pricing";
 
 const ukPricing = (path) => {
   return (
     <>
-      <OldPricing path={path.path} />
+      <Pricing path={path.path} />
     </>
   );
 };
