@@ -281,8 +281,9 @@ const pricing = (path) => {
       return `Save ${getCurrencyCodeOrSymbol(
         plan,
         "SYMBOL"
-      )}${discountAmount} for ${duration} ${durationUnit}${duration > 1 ? "s" : ""
-        }`;
+      )}${discountAmount} for ${duration} ${durationUnit}${
+        duration > 1 ? "s" : ""
+      }`;
     }
 
     return null;
@@ -303,7 +304,7 @@ const pricing = (path) => {
         <p
           className={`${
             isMobile ? "c-fs-3" : "c-fs-5"
-            } c-fw-600 mb-1 text-capitalize`}
+          } c-fw-600 mb-1 text-capitalize`}
           aria-label="Subscription Plan Name"
         >
           {plan.name}
@@ -322,7 +323,7 @@ const pricing = (path) => {
             {/* Plan Discount with strike though */}
             {(plan.yearlyDiscountAmount > 0 ||
               plan.monthlyDiscountAmount > 0) &&  (
-                <>
+              <>
                 <p className="my-1 line-height-24">
                   <s>
                     &nbsp;
@@ -334,7 +335,6 @@ const pricing = (path) => {
                 </p>
                 </>
               )}
-
 
             {/* Plan Description */}
             <p
