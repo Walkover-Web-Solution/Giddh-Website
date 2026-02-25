@@ -1,4 +1,5 @@
 import Pricing from "@/pages/pricing"
+
 const aePricing = (path) => {
   return (
     <>
@@ -7,3 +8,4 @@ const aePricing = (path) => {
   );
 };
 export default aePricing;
+
