@@ -5,6 +5,9 @@ import style from "./SplitBanner.module.scss";
 import LottiePlayer from "../../LottiePlayer";
 
 export default function SplitBanner({ compData }) {
+  if (!compData) {
+    return null;
+  }
   return (
     <section
       className={`outfit-font ${
