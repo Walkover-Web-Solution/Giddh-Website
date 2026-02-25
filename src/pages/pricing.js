@@ -322,7 +322,7 @@ const pricing = (path) => {
 
             {/* Plan Discount with strike though */}
             {(plan.yearlyDiscountAmount > 0 ||
-              plan.monthlyDiscountAmount > 0) &&  (
+              plan.monthlyDiscountAmount > 0) && (
               <>
                 <p className="my-1 line-height-24">
                   <s>
@@ -333,8 +333,8 @@ const pricing = (path) => {
                     &nbsp;
                   </s>
                 </p>
-                </>
-              )}
+              </>
+            )}
 
             {/* Plan Description */}
             <p

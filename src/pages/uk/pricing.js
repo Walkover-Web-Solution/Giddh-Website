@@ -1,4 +1,4 @@
-import Pricing  from "@/pages/pricing";
+import Pricing from "@/pages/pricing"
 
 const ukPricing = (path) => {
   return (
@@ -7,5 +7,4 @@ const ukPricing = (path) => {
     </>
   );
 };
-
 export default ukPricing;
