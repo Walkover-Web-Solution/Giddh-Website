@@ -2,7 +2,7 @@ import Schema from "@/components/NewComps/Schema";
 import AllFeatures from "@/pages/all-features";
 
 const inAllFeatures = (path) => {
-  const schema = [
+  const schemas = [
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -78,7 +78,7 @@ const inAllFeatures = (path) => {
   ];
   return (
     <>
-      <Schema schema={schema} />
+      <Schema schemas={schemas} />
       <AllFeatures path={path.path} />
     </>
   );

@@ -199,7 +199,7 @@
       "answer": "Yes, Giddh integrates smoothly with Shopify, WooCommerce, and other popular platforms."
     }
   ],
-  "schema": [
+  "schemas": [
     {
       "@context": "https://schema.org",
       "@type": "WebPage",

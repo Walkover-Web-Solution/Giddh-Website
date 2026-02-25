@@ -353,7 +353,7 @@
       "answer": "Giddh automatically applies the correct GST, TCS, or TDS based on your settings and client’s state—ensuring tax accuracy on every invoice."
     }
   ],
-  "schema": [
+  "schemas": [
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",

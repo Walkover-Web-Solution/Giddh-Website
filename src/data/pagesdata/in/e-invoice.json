@@ -240,7 +240,7 @@
       "answer": "An invoice is a standard document for billing customers. At the same time, an e-invoice is a digitally generated invoice that complies with GST regulations and is validated through the government’s Invoice Registration Portal (IRP). E-invoices include a unique IRN and QR code, enabling real-time tracking and automated GST reporting."
     }
   ],
-  "schema": [
+  "schemas": [
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
