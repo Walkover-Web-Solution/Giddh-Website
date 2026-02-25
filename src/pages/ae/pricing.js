@@ -1,4 +1,5 @@
 import Pricing from "@/pages/pricing"
+
 const aePricing = (path) => {
   return (
     <>
