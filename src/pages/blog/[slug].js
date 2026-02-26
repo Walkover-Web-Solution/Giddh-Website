@@ -93,7 +93,9 @@ export default function BlogPage({
         <meta
           property="og:image"
           content={
-            coverImage ? coverImage : "/img/home-page/index_banner_india.svg"
+            coverImage
+              ? `${process.env.NEXT_PUBLIC_SITE_URL}${coverImage}`
+              : `${process.env.NEXT_PUBLIC_SITE_URL}/img/home-page/index_banner_india.svg`
           }
         />
         {scripts &&
