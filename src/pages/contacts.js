@@ -1,8 +1,9 @@
 const contacts = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
-  const isIndia = linkPath.isIndia
+  const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
   
   return (

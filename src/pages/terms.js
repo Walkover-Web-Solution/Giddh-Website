@@ -5,6 +5,7 @@ const terms = (path) => {
   const isAE = path.path.isAE;
   const isUK = path.path.isUK;
   const isIndia = path.path.isIndia;
+  const isGlobal = path.path.isGlobal;
   return (
     <>
       <section className="container-fluid privacy" aria-labelledby="terms-heading">

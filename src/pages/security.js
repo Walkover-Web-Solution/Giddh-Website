@@ -1,8 +1,10 @@
 const security = (path) => {
   const linkPath = path.path;
     
-  const isIndia = linkPath.isIndia
+  const isIndia = linkPath.isIndia;
   const isGlobal = linkPath.isGlobal;
+  const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
     return (
       <>

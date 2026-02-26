@@ -1,8 +1,9 @@
 const makeTheSwitch = (path) => {
   const linkPath = path.path;    
   const isGlobal = linkPath.isGlobal;
-  const isIndia = linkPath.isIndia
+  const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   return (
     <>
       <div className="make_the_switch">

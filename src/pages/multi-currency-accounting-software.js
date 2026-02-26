@@ -4,9 +4,10 @@ import faqs from '../data/faqs.json';
 
 const multiCurrencyAccountingSoftware = (path) => {
   const linkPath = path.path;
-  const isGlobal = linkPath.isGlobal; 
-  const isIndia = linkPath.isIndia
+  const isGlobal = linkPath.isGlobal;
+  const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
   const [faq, setFaq] = useState([]);
 

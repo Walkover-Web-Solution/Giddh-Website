@@ -11,6 +11,7 @@ const contactUs = (path) => {
   const isUK = linkPath.isUK;
   const isAE = linkPath.isAE;
   const isIndia = linkPath.isIndia;
+  const isGlobal = linkPath.isGlobal;
   const selectedSchema = getSchemaForLinkPath(
     linkPath,
     Jsondata.organizationSchema
