@@ -92,8 +92,8 @@ const InvoiceSoftware = (path) => {
           <div className='row'>
             <div className='col-lg-7 order-lg-0 order-1'>
               <h1 className='heading col-primary c-fw-600 mb-4' role="heading" aria-level="1">
-                {isAE && "UAE-Specific Invoice Software for Business Efficiency"}
-                {isUK && "Streamline Billing with Our UK Invoice Software"}
+                {isAE && "Create and manage invoices easily with Giddh invoice software in the UAE. Streamline billing, track payments, and improve cash flow efficiently."}
+                {isUK && "Generate and manage invoices efficiently with Giddh invoice software in the UK. Track payments, send reminders, and streamline billing seamlessly."}
                 {(isIndia || isGlobal) && "Invoicing Software in India "}
               </h1>
               <p className='col-grey c-fs-3 mb-5'>

@@ -21,8 +21,11 @@ const financialReporting = (path) => {
           <div className="container features__heading_container">
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
-                <h1 id="financial-reporting-heading" className="heading col-primary c-fw-600 mb-4">
-                  Make sense of your numbers by automatic Financial Reports
+                <h1 id="financial-reporting-heading" className="heading col-primary c-fw-600 mb-4">  
+                  {isAE && "Create financial reports for your UAE business with Giddh. Monitor performance, analyze data, and make informed decisions easily."}
+                  {isUK && "Simplify financial reporting in the UK with Giddh. Generate, analyze, and track reports for better business decision-making."}
+                  {isIndia && "Generate accurate financial reports in India with Giddh. Track performance, analyze data, and gain insights for informed decisions."}
+                  {isGlobal && "Make sense of your numbers by automatic Financial Reports"}
                 </h1>
                 <p className="col-grey c-fs-3 mb-5">
                   Financial reports will help in evaluating the strengths and

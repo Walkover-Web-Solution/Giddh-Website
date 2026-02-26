@@ -10,7 +10,10 @@ const affiliate = (path) => {
           <section className="affiliate__top_section" aria-labelledby="affiliate-top-heading">
             <div className="container">
               <h1 id="affiliate-top-heading" className="text-center heading col-primary mb-4">
-                Why Join Us?
+               {isAE && "Sign up for Giddh affiliate program in the UAE. Refer businesses, promote accounting solutions, and earn rewards easily."}
+               {isUK && "Become a Giddh affiliate in the UK. Promote accounting software, earn commissions, and grow your network effectively."}
+               {isGlobal && "Why Join Us?"}
+               {isIndia && "Join Giddh’s affiliate program in India. Promote our accounting software and earn commissions by referring businesses to Giddh."}
               </h1>
               <div className="d-flex flex-column justify-content-center col-12">
                 <section className="container col-12 col-lg-10 col-md-12 col-sm-12 d-grid gap-3 gap-sm-0">

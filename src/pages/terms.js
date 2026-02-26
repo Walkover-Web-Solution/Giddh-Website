@@ -2,6 +2,9 @@ import { usePathname } from "next/navigation";
 
 const terms = (path) => {
   const link = path.path.linkPrefix;
+  const isAE = path.path.isAE;
+  const isUK = path.path.isUK;
+  const isIndia = path.path.isIndia;
   return (
     <>
       <section className="container-fluid privacy" aria-labelledby="terms-heading">
@@ -9,7 +12,11 @@ const terms = (path) => {
           <div className="row">
             <div className="col-12">
               <h1 id="terms-heading" className="sub-heading c-fw-600 mb-4 text-center col-primary" >
-                Please pay attention
+                
+                {isAE && "Review Giddh’s Terms of Service in the UAE. Learn about account rules, usage policies, and rights while using our software."}
+                {isUK && "Understand Giddh’s Terms of Service in the UK. Review account policies, usage rules, and your rights while using our platform."}
+                {isIndia && "Read Giddh’s Terms of Service in India. Understand usage policies, account rules, and your rights while using our accounting software."}
+                {isGlobal && "Please pay attention"}
               </h1>
               <p className="mb-4 c-fs-5">
                 Giddh is an{" "}

@@ -22,7 +22,9 @@ const MultiUserAccountingSoftware = (path) => {
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
                 <h1 className="heading col-primary c-fw-600 mb-4">
-                  Work better together by sharing business insights
+                  {isAE && "Use Giddh multi-user accounting software in the UAE. Collaborate with your team, manage accounts, and control access seamlessly."}
+                  {isUK && "Enable team collaboration with Giddh multi-user accounting software in the UK. Manage accounts, roles, and permissions efficiently."}
+                  {isGlobal && "Work better together by sharing business insights"}
                 </h1>
                 <p className="col-grey c-fs-3 mb-5">
                   Allow external accountants & internal team members across
