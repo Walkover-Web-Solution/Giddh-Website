@@ -46,14 +46,19 @@ export function fetchPostContent() {
   return postCache;
 }
 
+function isPublished(post) {
+  if (!post.date) return true;
+  return new Date(post.date) <= new Date();
+}
+
 export function countPosts(tag) {
   return fetchPostContent().filter(
-    (it) => !tag || (it.tag && it.tag.includes(tag))
+    (it) => isPublished(it) && (!tag || (it.tag && it.tag.includes(tag)))
   ).length;
 }
 
 export function listPostContent(page, limit, tag) {
   return fetchPostContent()
-    .filter((it) => !tag || (it.tag && it.tag.includes(tag)))
+    .filter((it) => isPublished(it) && (!tag || (it.tag && it.tag.includes(tag))))
     .slice((page - 1) * limit, page * limit);
 }
