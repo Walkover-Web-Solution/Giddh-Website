@@ -1,11 +1,5 @@
-import ZohoVsGiddh from "@/pages/zoho-vs-giddh";
+import ZohoVsGiddh from "@/components/Pages/ZohoVsGiddh";
 
-const inZohoVsGiddh = (path) => {
-  return (
-    <>
-      <ZohoVsGiddh path={path.path} />
-    </>
-  );
-};
-
-export default inZohoVsGiddh;
+export default function inZohoVsGiddh({ pageData }) {
+  return <ZohoVsGiddh pageData={pageData} />;
+}
