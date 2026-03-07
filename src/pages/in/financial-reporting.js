@@ -1,6 +1,6 @@
 import Schema from "@/components/NewComps/Schema";
-import FinancialReporting from "@/pages/financial-reporting";
-const inFinancialReporting = (path) => {
+import FinancialReporting from "@/components/Pages/FinancialReporting";
+export default function inFinancialReporting({ pageData }) {
   const schema = [
     {
       "@context": "https://schema.org",
@@ -24,8 +24,8 @@ const inFinancialReporting = (path) => {
   return (
     <>
       <Schema schema={schema} />
-      <FinancialReporting path={path.path} />
+      <FinancialReporting pageData={pageData} />
     </>
   );
-};
-export default inFinancialReporting;
+}
+
