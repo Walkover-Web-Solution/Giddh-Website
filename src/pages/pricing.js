@@ -9,6 +9,7 @@ import {
 import CustomLoader from "@/components/customLoader";
 
 const pricing = (path) => {
+ 
   const [readMoreStatus, readmoreAction] = useState(false);
   const [readMoreParagraphStatus1, showMoreParagraph1] = useState(false);
   const [readMoreParagraphStatus2, showMoreParagraph2] = useState(false);
@@ -27,6 +28,10 @@ const pricing = (path) => {
   const linkPath = path?.path;
   const link = linkPath?.linkPrefix;
   const country = path?.path?.country || "global";
+  const isGlobal = linkPath.isGlobal;
+  const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
+  const isIndia = linkPath.isIndia;
 
   useEffect(() => {
     // Function to update the state based on screen width
@@ -421,8 +426,10 @@ const pricing = (path) => {
           <div className="row mt-2 mt-lg-5">
             <div className="col-12 ">
               <h1 className="pricing-heading col-primary c-fw-600 ms-4 text-center">
-                Powerful Accounting Software. <wbr />
-                Affordable Pricing.
+                {isAE && "Check Giddh pricing in the UAE. Compare plans and select the best accounting software features for your business needs."}
+                {isUK && "View Giddh pricing in the UK. Compare plans and pick the right accounting software solution for your business requirements."}
+                {isIndia && "Explore Giddh pricing in India. Compare plans and features to choose the best accounting software package for your business."}
+                {isGlobal && "Powerful Accounting Software. Affordable Pricing."}
               </h1>
               <h2 className="sub-heading c-fw-600 ms-4 mt-4 mb-md-4 mb-3 text-center">
                 No features sacrifices

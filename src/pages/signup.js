@@ -851,7 +851,12 @@ const signUp = (path) => {
                     alt="Giddh Icon"
                   />
                 </a>
-                <h1>Create an account</h1>
+                <h1>
+                  {isAE && "Sign up for Giddh in the UAE and simplify your accounting. Access cloud tools for invoicing, VAT, and financial management."}
+                  {isUK && "Create your Giddh account in the UK. Sign up to manage accounting, invoices, and VAT efficiently for your business."}
+                  {isGlobal && "Sign up for Giddh and start managing your business finances efficiently. Create your account and access cloud accounting tools instantly."}
+                  {isIndia && "Create your Giddh account in India. Sign up to manage GST, invoicing, and accounting seamlessly for your business."}
+                </h1>
                 <div className="entry__right_section__container__entry_with d-flex mb-4 me-4">
                   <div>
                     <span className="d-inline-block mb-4">Sign up with</span>

@@ -10,11 +10,15 @@ const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
 });
 
 const logIn = (path) => {
+  const linkPath = path.path;
+  const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
+  const isGlobal = linkPath.isGlobal;
+  const isIndia = linkPath.isIndia;
   const [authLoginInProgress, setAuthLoginInProgress] = useState(false);
   const [showVerificationModal, setShowVerificationModal] = useState(false);
   const [userResponse, setUserResponse] = useState(null);
   const link = path.path.linkPrefix;
-  const isUK = path.path.isUK;
   let region = link ? link.replace("/", "") : "gl";
   if (region) {
     region = region.toUpperCase();
@@ -180,7 +184,12 @@ const logIn = (path) => {
                 alt="Giddh Icon"
               />
             </a>
-            <h1>Welcome back!</h1>
+            <h1>
+              {isAE && "Sign in to your Giddh account in the UAE. Access cloud accounting tools, invoices, VAT, and reports safely for your business."}
+              {isUK && "Login to your Giddh account in the UK. Access accounting software features, invoices, and VAT reports securely for smooth business operations."}
+              {isGlobal && "Welcome back!"}
+              {isIndia && "Login to your Giddh account in India. Access accounting tools, invoices, GST, and reports securely to manage your business finances."}
+            </h1>
             <div className="entry__right_section__container__entry_with mb-4">
               <h2 className="d-inline-block mb-4 c-fw-400 c-fs-5">Login with</h2>
 

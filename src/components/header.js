@@ -109,8 +109,16 @@ export default function Header(props) {
             content={metaData.ogDescription || metaData.description}
           />
         )}
+          <meta
+          property="og:image"
+          content={
+            metaData?.ogImage
+              ? `${process.env.NEXT_PUBLIC_SITE_URL}${metaData.ogImage}`
+              : `${process.env.NEXT_PUBLIC_SITE_URL}/img/home-page/index_banner_global.webp`
+          }
+        />
+        {metaData?.canonical && <link rel="canonical" href={ `${process.env.NEXT_PUBLIC_SITE_URL}${metaData.canonical}`} />}
         {metaData?.title && <meta property="og:type" content="website" />}
-        <meta property="og:image" content={metaData?.image || "/img/giddh_dashboard.webp"}/>
       </Head>
     </>
   );

@@ -1,8 +1,10 @@
 const security = (path) => {
   const linkPath = path.path;
     
-  const isIndia = linkPath.isIndia
+  const isIndia = linkPath.isIndia;
   const isGlobal = linkPath.isGlobal;
+  const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
     return (
       <>
@@ -14,8 +16,11 @@ const security = (path) => {
                           <p className="text-center col-white">
                           Still managing your accounts offline?</p>
                           <h1 className="text-center col-white c-fs-4 c-fw-400" role="heading">
-                          Go online with Giddh. It gives you high level data security with<br/>
-                          its unmatched data encryption algorithm.
+                            {isAE && "Secure your UAE business data with Giddh. Learn how encryption, access control, and backups keep your accounting information safe."}
+                            {isUK && "Protect your UK business finances with Giddh. Ensure data security through encryption, role-based access, and secure storage."}
+                            {isIndia && "Learn how Giddh ensures security in India. Protect your financial data with advanced encryption, secure access, and reliable backups."}
+                            {isGlobal && "Go online with Giddh. It gives you high level data security with its unmatched data encryption algorithm."}
+                          
                           </h1>
                         </div>
                         <div className="security__banner">

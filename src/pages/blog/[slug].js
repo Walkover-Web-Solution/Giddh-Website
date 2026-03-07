@@ -90,8 +90,14 @@ export default function BlogPage({
             content={seoDescription ? seoDescription : description}
           />
         )}
-        {coverImage && <meta property="og:image" content={coverImage} />}
-
+        <meta
+          property="og:image"
+          content={
+            coverImage
+              ? `${process.env.NEXT_PUBLIC_SITE_URL}${coverImage}`
+              : `${process.env.NEXT_PUBLIC_SITE_URL}/img/home-page/index_banner_india.svg`
+          }
+        />
         {scripts &&
           typeof scripts === "string" &&
           extractScripts(scripts).map((script, idx) => (
