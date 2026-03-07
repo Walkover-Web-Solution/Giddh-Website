@@ -7,7 +7,7 @@ export default function Benefits({ benefits }) {
   return (
     <section className="py-5">
       <div className="container">
-        <h2 className="font-sub-heading text-center mb-5">
+        <h2 className="font-sub-heading garmond-font text-center mb-5">
           What sets Giddh apart!
         </h2>
 
@@ -29,6 +29,7 @@ export default function Benefits({ benefits }) {
                           width={45}
                           height={45}
                           className="mx-auto"
+                          loading="lazy"
                         />
                         <span className="font-md">{item?.text}</span>
                       </div>

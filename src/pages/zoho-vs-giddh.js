@@ -4,7 +4,10 @@ const zohoVsGiddh = (path) => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const link = path.path
   const linkUrl = link.linkPrefix;
-
+  const isAE = link.isAE;
+  const isUK = link.isUK;
+  const isIndia = link.isIndia;
+  const isGlobal = link.isGlobal;
   useEffect(() => {
     let screenWidth = window.matchMedia("(max-width: 767px)");
     showTable(screenWidth);
@@ -27,7 +30,10 @@ const zohoVsGiddh = (path) => {
               <div className="col-lg-6 col-md-12 order-0 justify-content-center">
                 <div className="banner-content">
                   <h1 className="banner-content__title">
-                    Zoho Books <span className="col-dark">vs</span> GIDDH
+                   {isAE && "Compare Zoho vs Giddh in the UAE. Learn differences, advantages, and features to select the right accounting solution for your business."}
+                   {isUK && "Compare Zoho vs Giddh in the UK. Explore features, benefits, and differences to decide the best accounting software for your business."}
+                   {isGlobal && "Zoho Books vs GIDDH"}
+                   {isIndia && "Compare Zoho vs Giddh in India. Discover key differences, features, and benefits to choose the best accounting software for your business."}
                   </h1>
                 </div>
                 <p className="col-light banner-content__description">

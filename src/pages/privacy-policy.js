@@ -1,5 +1,9 @@
 const privacyPolicy = (path) => {
   const link = path.path.linkPrefix;
+  const isAE = path.path.isAE;
+  const isUK = path.path.isUK;
+  const isIndia = path.path.isIndia;
+  const isGlobal = path.path.isGlobal;
   return (
     <>
       <section className="container-fluid privacy" aria-labelledby="privacy-policy-heading">
@@ -7,7 +11,10 @@ const privacyPolicy = (path) => {
           <div className="row">
             <div className="col-12">
               <h1 id="privacy-policy-heading" className="sub-heading c-fw-600 mb-4 text-center col-dark">
-                Your privacy is respected.
+                {isAE && "Review Giddh’s Privacy Policy in the UAE. Understand how your personal and business information is collected, used, and safeguarded."}
+                {isUK && "Learn about Giddh’s Privacy Policy in the UK. See how we protect, use, and manage your personal and financial data securely."}
+                {isGlobal && "Your privacy is respected."}
+                {isIndia && "Read Giddh’s Privacy Policy in India. Learn how we collect, use, and protect your personal and financial data securely."}
               </h1>
               <p className="mb-4 c-fs-5">
                 We value our relationship with you and place the highest

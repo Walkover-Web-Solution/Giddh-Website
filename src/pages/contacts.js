@@ -1,8 +1,9 @@
 const contacts = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
-  const isIndia = linkPath.isIndia
+  const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
   
   return (
@@ -13,7 +14,10 @@ const contacts = (path) => {
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
                 <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
-                  Elevate productivity by accessing your business contacts.
+                  {isAE && "Manage your UAE business contacts with Giddh. Keep client and vendor details updated for efficient accounting and communication."}
+                  {isUK && "Organize your UK business contacts with Giddh. Add and manage clients, vendors, and other stakeholders effectively."}
+                  {isIndia && "Manage your contacts efficiently with Giddh in India. Add, edit, and organize client and vendor information seamlessly."}
+                 {isGlobal && "Elevate productivity by accessing your business contacts."}  
                 </h1>
                 <h2 className="col-grey c-fs-3 mb-5 lh-base">
                   All the information you have stored about your customers –

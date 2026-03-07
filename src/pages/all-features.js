@@ -7,6 +7,7 @@ const allFeatures = (path) => {
   const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
 
   const directoryPath = "/img/feature-gallery-icons";
 
@@ -610,7 +611,10 @@ const allFeatures = (path) => {
             <div className="row align-items-center">
               <div className="col-lg-7 order-lg-0 order-1">
                 <h1 id="features-heading" className="heading col-primary fw-bold mb-5">
-                  Explore the Game-Changing Accounting features
+                  {isAE && "Discover all features of Giddh accounting software in the UAE. Manage finances, invoicing, VAT, inventory, and reporting from one platform."}
+                  {isUK && "Explore all features of Giddh accounting software in the UK. Simplify accounting, invoicing, VAT, inventory, and financial management online."}
+                  {isIndia && "Explore all features of Giddh accounting software. Learn how to manage finances, invoicing, GST, inventory, and more from one platform."}
+                  {isGlobal && "Explore the Game-Changing Accounting features"}
                 </h1>
                 <div className="features__heading_container__links">
                   <a

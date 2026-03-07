@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 const UkInventoryManagementSoftware = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
-  const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
   const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
@@ -26,7 +25,9 @@ const UkInventoryManagementSoftware = (path) => {
                   id="features-heading"
                   className="heading col-primary c-fw-600 mb-4"
                 >
-                  Enhance Efficiency: Simplify Inventory Management.
+                  {isAE && "Manage your UAE inventory efficiently with Giddh. Track stock, manage items, and streamline inventory processes seamlessly."}
+                  {isUK && "Simplify inventory management in the UK with Giddh. Track products, manage stock, and optimize your business operations effectively."}
+                  {isGlobal && "Enhance Efficiency: Simplify Inventory Management."}
                 </h1>
                 <h2 className="col-grey c-fs-3 mb-5">
                   Streamline your inventory management in Giddh while gaining

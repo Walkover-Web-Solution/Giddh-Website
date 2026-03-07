@@ -31,8 +31,9 @@ const UkCloudAccountingSoftware = (path) => {
                   className="heading col-primary c-fw-600 mb-4"
                 >
                   {isIndia && "Cloud Accounting Software for Indian Businesses"}
-                  {isAE && "VAT-Compliant Cloud Accounting in the UAE"}
-                  {(isUK || isGlobal) && "Cloud Accounting Software"}
+                  {isAE && "Manage your UAE business finances with Giddh cloud accounting software. Simplify invoicing, VAT, reporting, and financial management online."}
+                  {isGlobal && "Cloud Accounting Software"}
+                  {isUK && "Manage your UK business finances with Giddh cloud accounting software. Simplify VAT, invoicing, reporting, and accounting tasks online."}
                 </h1>
                 <span className="col-grey c-fs-3 mb-5 d-inline-block">
                   Generate invoices, view reports & manage your books wherever

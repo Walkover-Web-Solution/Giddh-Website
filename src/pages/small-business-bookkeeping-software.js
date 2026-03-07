@@ -29,9 +29,9 @@ const SmallBusinessBookkeepingSoftware = (path) => {
                   id="dashboard-heading"
                   className="col-primary sub-heading c-fw-600 mb-4"
                 >
-                  {(isGlobal || isIndia) &&
-                    "Small business bookkeeping software"}
-                  {(isUK || isAE) && "Free small business bookkeeping software"}
+                  {isAE && "Simplify bookkeeping for small businesses in the UAE with Giddh. Manage accounts, invoices, and reports efficiently in one platform."}
+                  {isUK && "Use Giddh small business bookkeeping software in the UK. Track finances, invoices, and reports easily for smooth business operations."}
+                  {isGlobal && "Small business bookkeeping software"}
                 </h1>
                 <p className="col-grey c-fs-5 mb-5">
                   {isGlobal &&

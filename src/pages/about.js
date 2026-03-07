@@ -2,11 +2,15 @@ import { useState } from "react";
 
 
 const about = (path) => {
+  const linkPath = path.path;
+  const isGlobal = linkPath.isGlobal;
+  const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
+  const isIndia = linkPath.isIndia;
   const [currentMenu, setCurrentMenu] = useState(0);
   const setCurrent = (index) => {
     setCurrentMenu(index);
   };
-  let isIndia = path.path.isIndia;
   return (
     <>
       <div className="about" id="top">
@@ -64,7 +68,7 @@ const about = (path) => {
           <div className="container p-3">
             <div className="row flex-lg-nowrap flex-md-wrap align-items-center justify-content-between my-5">
               <div className="col-lg-6 col-md-12">
-                <h3 className="heading col-white text-center border-end">
+                <h3 className="sub-heading col-white ms-4 text-center border-end">
                   <span
                     style={{
                       display: currentMenu === 0 ? "inline" : "none",
@@ -72,7 +76,10 @@ const about = (path) => {
                     role="heading" 
                     aria-level="4"
                   >
-                    About Us
+                    {isAE && "Discover Giddh in the UAE. Learn about our mission, vision, and how we simplify accounting, VAT, and financial management for businesses."}
+                    {isUK && "Discover Giddh in the UK. Learn about our mission, vision, and how we simplify accounting, VAT, and financial management for businesses."}
+                    {isGlobal && "About Us"}
+                    {isIndia && "Learn about Giddh in India. Discover our mission, vision, and how we help businesses simplify accounting, GST, and financial management."}
                   </span>
                   <span
                     style={{

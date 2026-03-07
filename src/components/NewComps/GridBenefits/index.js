@@ -12,7 +12,7 @@ export default function GridBenefits({ compData }) {
             {row.map((item, colIndex) => (
               <div
                 key={colIndex}
-                className="col border border-black d-flex flex-column align-items-center justify-content-center text-center p-4"
+                className="col border border-slate-grey d-flex flex-column align-items-center justify-content-center text-center p-4"
               >
                 {item?.icon && (
                   <Image
@@ -21,6 +21,7 @@ export default function GridBenefits({ compData }) {
                     height={60}
                     className="mb-3 opacity-50"
                     alt={item?.title}
+                    loading="lazy"
                   />
                 )}
                 <p className="m-0 font-600">{item?.title}</p>

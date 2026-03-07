@@ -5,7 +5,9 @@ import faqs from '../data/faqs.json';
 const importExeclFiles = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
-  const isIndia = linkPath.isIndia
+  const isIndia = linkPath.isIndia;
+  const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
   const [faq, setFaq]= useState([])
   
@@ -21,7 +23,9 @@ const importExeclFiles = (path) => {
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
                 <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
-                  Seamlessly bring your old accounting data to giddh
+                  {isAE && "Import accounting data into Giddh in the UAE. Transfer transactions, accounts, and reports smoothly for efficient management."}
+                  {isUK && "Import your accounting data into Giddh in the UK. Move transactions, accounts, and reports seamlessly for accurate bookkeeping."}
+                  {isGlobal && "Seamlessly bring your old accounting data to giddh"}
                 </h1>
                 <p className="col-grey c-fs-3 mb-5">
                   Switching to online accounting is fast and simple with Giddh

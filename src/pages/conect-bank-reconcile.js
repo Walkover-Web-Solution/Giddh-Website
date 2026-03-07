@@ -6,6 +6,8 @@ const conectBankReconcile = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
+  const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
   const [faq, setFaq] = useState([])
 
@@ -20,9 +22,10 @@ const conectBankReconcile = (path) => {
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
                 <h1 id="features-heading" className="heading col-primary c-fw-600 mb-4">
-                  {isIndia
-                    ? "Monitor your transactions by connecting bank accounts"
-                    : "Bank Reconciliation Made Easy"}
+                  {isAE && "Connect your UAE bank with Giddh and reconcile transactions automatically. Simplify accounting and ensure accurate financial records."}
+                  {isUK && "Connect your UK bank with Giddh and reconcile transactions effortlessly. Streamline accounting and maintain accurate financial data."}
+                  {isGlobal && "Bank Reconciliation Made Easy"}
+                  {isIndia && "Monitor your transactions by connecting bank accounts"}
                 </h1>
                 <p className="col-grey c-fs-3 mb-5">
                   {isIndia

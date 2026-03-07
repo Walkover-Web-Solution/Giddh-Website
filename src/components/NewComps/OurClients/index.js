@@ -34,8 +34,8 @@ export default function OurClient() {
     <>
       <section className="container section_py d-flex flex-column gap-4">
         <div className="d-flex flex-column text-center content-width mx-auto">
-          <h2 className="sub-heading c-fw-600 col-primary ">{data?.heading}</h2>
-          <p>{data?.subheading}</p>
+          <h2 className="sub-heading garmond-font c-fw-600 col-primary ">{data?.heading}</h2>
+          <p className="outfit-font">{data?.subheading}</p>
         </div>
         <div className={`${styles.clients} d-flex flex-md-row flex-column align-items-center gap-0 justify-content-center gap-md-5 `}>
           {data.clients.map((client) => {
@@ -54,6 +54,7 @@ export default function OurClient() {
                   alt={client?.name}
                   width="360"
                   height="360"
+                  loading="lazy"
                 />
               </a>
             );
