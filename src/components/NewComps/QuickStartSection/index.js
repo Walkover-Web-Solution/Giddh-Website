@@ -2,7 +2,7 @@ import Image from "next/image";
 import { MdArrowForward } from "react-icons/md";
 
 export default function QuickStartSection({ compData }) {
-  if (compData?.steps?.length < 0) return null;
+  if (!compData?.steps?.length) return null;
   return (
     <section className="container py-5 d-flex flex-column gap-3 outfit-font">
       <div className="d-flex flex-column align-items-center text-center">

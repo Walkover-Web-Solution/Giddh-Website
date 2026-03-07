@@ -66,7 +66,6 @@ export default function CTA({ compData, hasImage }) {
             alt="Person holding laptop"
             width={320}
             height={320}
-            priority
             className="w-75 d-none d-md-block"
             loading="lazy"
           />
