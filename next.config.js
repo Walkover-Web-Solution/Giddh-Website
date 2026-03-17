@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    sassOptions: {
+        silenceDeprecations: ['import'],
+    },
     // Opt into Turbopack explicitly so Next.js 16 stops warning when a webpack
     // config is present. Empty object means "accept defaults".
     turbopack: {},
