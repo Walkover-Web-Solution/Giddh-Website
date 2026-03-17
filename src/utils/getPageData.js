@@ -26,8 +26,7 @@ export default function getPageData(pageInfo) {
     const filePath = `@/data/pagesdata/${pageInfo?.country}/${pageInfo?.page}.json`;
     const pageData = require(filePath);
     return pageData || null;
-  } catch (error) {
-    console.error(`Error loading page data: ${error.message}`);
+  } catch {
     return null;
   }
 }
