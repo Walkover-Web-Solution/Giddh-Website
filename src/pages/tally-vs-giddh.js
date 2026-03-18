@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 export default function TallyVsGiddh(path) {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const link = path.path;
+  const isAE = link.isAE;
+  const isUK = link.isUK;
+  const isGlobal = link.isGlobal;
 
   useEffect(() => {
     let screenWidth = window.matchMedia("(max-width: 767px)");
@@ -27,7 +30,9 @@ export default function TallyVsGiddh(path) {
               <div className="col-lg-6 col-md-12 order-0 justify-content-center">
                 <div className="banner-content">
                   <h1 className="banner-content__title">
-                    Tally <span className="col-dark">vs</span> GIDDH
+                    {isAE && "Compare Tally vs Giddh in the UAE. Learn key differences, features, and benefits to select the right accounting software for your business."}
+                    {isUK && "Compare Tally vs Giddh in the UK. Discover differences, features, and advantages to choose the best accounting solution for your business."}
+                    {isGlobal && "Tally vs GIDDH"}
                   </h1>
                 </div>
                 <p className="col-light banner-content__description">

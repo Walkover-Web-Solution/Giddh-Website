@@ -95,6 +95,7 @@ export default function SplitBanner({ compData }) {
                 width={600}
                 height={700}
                 className="img-fluid"
+                priority
               />
             </div>
           )}

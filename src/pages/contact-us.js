@@ -9,6 +9,9 @@ const contactUs = (path) => {
   const [utm, setUtm] = useState(null);
   const linkPath = path.path;
   const isUK = linkPath.isUK;
+  const isAE = linkPath.isAE;
+  const isIndia = linkPath.isIndia;
+  const isGlobal = linkPath.isGlobal;
   const selectedSchema = getSchemaForLinkPath(
     linkPath,
     Jsondata.organizationSchema
@@ -51,7 +54,12 @@ const contactUs = (path) => {
           <div className="container">
             <div className="row">
               <div className="col-12 contact_us__banner__content">
-                <h1 className="col-white mb-3">Ideas/Questions?</h1>
+                <h1 className="col-white mb-3">
+                  {isAE && "Get in touch with Giddh in the UAE. Contact our support team for help with accounting, VAT, invoices, and software assistance."}
+                  {isUK && "Contact Giddh in the UK for support. Get help with accounting, VAT, invoicing, or software setup from our expert team."}
+                  {isIndia && "Contact Giddh support in India for any queries. Get assistance with accounting, GST, invoicing, or software setup from our expert team."}
+                  {isGlobal && "Reach out to Giddh support. Get assistance with accounting, invoicing, GST/VAT, and software setup for your business."}
+                </h1>
                 <p className="col-white c-fs-1">
                   Someone will always be there to answer them!
                 </p>

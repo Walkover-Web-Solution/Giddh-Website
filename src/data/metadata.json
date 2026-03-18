@@ -1,10 +1,12 @@
 {
   "/in": {
+    "canonical": "/in",
     "title": "Top Accounting & Cloud Software in India for Businesses",
-    "description": "Discover the best online and cloud accounting software in India for businesses. Automate financial tasks, ensure GST compliance, and boost efficiency. Try now!",
+    "description": "Manage your business finances efficiently with Giddh accounting software. Simplify GST, invoicing, reporting, and more for your company.",
     "keywords": "accounting software in india (1000,75), online accounting software in india (260,24), cloud accounting software in  india(210,19)"
   },
   "/in/pricing": {
+    "canonical": "/in/pricing",
     "title": "Giddh Accounting Software Pricing Plans",
     "description": "View Giddh’s transparent pricing. Choose a plan based on your business size and accounting needs.",
     "ogTitle": "Giddh Accounting Software Pricing Plans",
@@ -17,38 +19,46 @@
     "keywords": "online accounting transition , cloud accounting software for SME , cloud migration accounting software India"
   },
   "/in/all-features": {
+    "canonical": "/in/all-features",
     "title": "Full-Featured Online Accounting Software",
-    "description": "Discover top features of Giddh accounting software—streamline invoicing, manage users, and ensure GST compliance.",
+    "description": "Explore all features of Giddh accounting software. Manage GST, invoicing, inventory, reports, and payroll from one secure platform.",
     "ogTitle": "Full-Featured Online Accounting Software",
+    "ogImage" : "/all-features-banner-image.svg",
     "ogDescription": "Discover top features of Giddh accounting software—streamline invoicing, manage users, and ensure GST compliance.",
     "keywords": "Best Online Accounting Software"
   },
   "/in/gst": {
+    "canonical": "/in/gst",
     "title": "GST Compliance Software India",
-    "description": "Streamline tax operations using Giddh’s GST compliance software. Ensure 100% accuracy and faster filing every time!",
+    "ogImage": "/img/gst/gst_banner_img.svg",
+    "description": "Simplify GST compliance with Giddh. Learn how to calculate, file, and manage GST effortlessly for accurate Indian tax reporting.",
     "keywords": "gst compliance software , gst compliant accounting software , GST Compliance Software India"
   },
   "/in/conect-bank-reconcile": {
-    "title": "Financial Reconciliation Software India",
-    "description": "Streamline your finances in India with Giddh’s efficient bank reconciliation software and automatic updates. ",
+    "canonical": "/in/conect-bank-reconcile",
+    "title": "Best Bank Reconciliation Software in India | Giddh",
+    "description": "Reconcile your bank transactions automatically with Giddh’s Bank Reconciliation Software. Simplify accounting and ensure financial accuracy.",
     "ogTitle": "Financial Reconciliation Software India",
     "ogDescription": "Streamline your finances in India with Giddh’s efficient bank reconciliation software and automatic updates. ",
     "keywords": "Best Financial Reconciliation Solutions "
   },
   "/in/multi-currency-accounting-software": {
+    "canonical": "/in/multi-currency-accounting-software",
     "title": "Best Multi Currency Accounting Software",
-    "description": "Stay accurate in every currency with Giddh’s multi currency accounting software. Perfect for global traders and exporters!",
-    "keywords": "best multi‑currency accounting software, Multi Currency Accounting Multi currency , accounting software"
+    "description": "Handle multiple currencies effortlessly with Giddh’s multi-currency accounting software. Manage transactions, reports, and conversions with ease.",
+    "keywords": "best multi‑currency accounting software, Multi Currency Accounting Multi currency , accounting software",
+    "ogImage": "/img/multi-currency-accounting-software/multi_currency_accounting_software_banner_img.svg"
   },
   "/in/e-invoice": {
+    "canonical": "/in/e-invoice",
     "title": "Best E-Invoice Software for Businesses",
-    "description": "Giddh’s e-invoice software simplifies tax compliance. Create, validate, and share invoices digitally in seconds!",
-    "keywords": "einvoice software India "
+    "ogImage" : "/img/e-invoice/e_invoice.svg",
+    "description": "Giddh’s e-invoice software simplifies tax compliance. Create, validate, and share invoices digitally in seconds!"
   },
   "/in/invoice-software": {
     "title": "Free Online Invoicing Software for Small Business",
-    "description": "Online invoicing software that simplifies billing and boosts efficiency. Create GST-ready invoices with Giddh today!",
-    "keywords": "invoicing software india,(480,57) cloud based invoice software,(20,18) invoice online software(1600,72)"
+    "ogImage" : "/img/invoice-software/invoice-software.svg",
+    "description": "Online invoicing software that simplifies billing and boosts efficiency. Create GST-ready invoices with Giddh today!"
   },
   "/in/financial-reporting": {
     "title": "Financial Reporting Software for Business Growth",
@@ -57,8 +67,9 @@
   },
   "/in/multi-user-accounting-software": {
     "title": "Multi-User Accounting with Bank Sync",
-    "description": "Giddh’s multi-user accounting software allows seamless collaboration across business departments. ",
+    "description": "Collaborate seamlessly with Giddh’s multi-user accounting software. Manage accounts, control access, and work with your team efficiently.",
     "ogTitle": "Multi-User Accounting with Bank Sync",
+    "ogImage": "/img/multi-user-accounting-software/multi-user-accounting-software.svg",
     "ogDescription": "Giddh’s multi-user accounting software allows seamless collaboration across business departments. ",
     "keywords": "bank account linking software India"
   },
@@ -66,6 +77,7 @@
     "title": "GST-Compliant Invoicing Software India",
     "description": "Get expert support from Giddh’s team to assist with accounting and business management needs in India",
     "ogTitle": "GST-Compliant Invoicing Software India",
+    "ogImage" : "/img/feature-gallery-icons/contact.svg",
     "ogDescription": "Get expert support from Giddh’s team to assist with accounting and business management needs in India",
     "keywords": "invoicing software India"
   },
@@ -73,20 +85,25 @@
     "title": "Bookkeeping Software for Small Businesses",
     "description": "Simplify bookkeeping with Giddh. Track income, expenses, and automate financial records with cloud access.",
     "ogTitle": "Bookkeeping Software for Small Businesses",
+    "ogImage" : "/img/home-page/index_banner_global.webp",
     "ogDescription": "Simplify bookkeeping with Giddh. Track income, expenses, and automate financial records with cloud access.",
     "keywords": "small business bookkeeping software"
   },
   "/in/import-data": {
+    "canonical": "/in/import-data",
     "title": "Import Accounting Data Easily with Giddh",
-    "description": "Import all your accounting data from spreadsheets or other software securely with Giddh in just a few clicks.",
+    "description": "Import data to Giddh accounting software easily. Transfer ledgers, balances, and transactions securely from your existing systems.",
     "ogTitle": "Import Accounting Data Easily with Giddh",
+    "ogImage": "/img/import-data/import-Hero.json",
     "ogDescription": "Import all your accounting data from spreadsheets or other software securely with Giddh in just a few clicks.",
     "keywords": "best import accounting data software"
   },
   "/in/inventory-management-software": {
+    "canonical": "/in/inventory-management-software",
     "title": "Giddh Inventory Management Software",
-    "description": "Efficiently manage inventory with Giddh software, streamlining operations and boosting profits",
+    "description": "Track stock and manage inventory efficiently with Giddh inventory management software. Automate purchases, sales, and reports.",
     "ogTitle": "Giddh Inventory Management Software",
+    "ogImage" : "/img/home-page/index_banner_global.webp" ,
     "ogDescription": "Efficiently manage inventory with Giddh software, streamlining operations and boosting profits",
     "keywords": "inventory management software"
   },
@@ -94,15 +111,18 @@
     "title": "Unlimited User Accounting Software",
     "description": "Protect your business’s financial data with Giddh’s advanced encryption and security protocols",
     "ogTitle": "Unlimited User Accounting Software",
+    "ogImage" : "/img/security.webp",
     "ogDescription": "Protect your business’s financial data with Giddh’s advanced encryption and security protocols",
     "keywords": "unlimited user accounting software"
   },
   "/in/cloud-accounting-software": {
-    "title": "Best Cloud Accounting Software in India – Giddh",
-    "description": "Discover Giddh's cloud accounting software for Indian businesses. Automate invoicing, GST compliance, and financial reporting. Start your free trial today!",
-    "keywords": "cloud accounting, cloud accounting platforms, best cloud based accounting software india "
+    "title": "Best Cloud Accounting Software for Businesses In India",
+    "description": "Cloud accounting software in India that brings control, clarity, and collaboration to your finances. Get started with Giddh now!",
+    "ogImage" : "/img/cloud-accounting-software/cloud-accounting-software.svg",
+    "keywords": "cloud accounting software,best cloud accounting software , best cloud-based accounting software"
   },
   "/in/about": {
+    "canonical": "/in/about",
     "title": "About Giddh – India’s Cloud Accounting Company",
     "description": "Learn about Giddh’s journey, vision, and innovations that help Indian businesses move to the cloud.",
     "ogTitle": "About Giddh – India’s Cloud Accounting Company",
@@ -117,7 +137,7 @@
   },
   "/in/privacy-policy": {
     "title": "Privacy Policy - Online Accounting Software in India - Giddh",
-    "description": "Secure your data with Giddh's comprehensive Privacy Policy for online accounting in India. Trustworthy solutions to protect your financial information.",
+    "description": "Read Giddh accounting software privacy policy. Learn how we collect, use, and protect your financial and personal information.",
     "ogTitle": "Online Accounting: Giddh Privacy Policy",
     "ogDescription": "Your privacy is our priority. Review Giddh's comprehensive privacy policy to understand how we protect your data and ensure your information remains confidential."
   },
@@ -129,23 +149,22 @@
   },
   "/in/affiliate": {
     "title": "Giddh Affiliate Program: Start Earning",
-    "description": "Ditch outdated accounting. Giddh offers a modern cloud-based alternative to Tally with GST, invoicing & reports.",
+    "description": "Join the Giddh affiliate program. Promote our accounting software and earn commissions for every successful business referral.",
     "ogTitle": "Giddh Affiliate Program: Start Earning",
+    "ogImage" : "/img/affilate/earn.webp",
     "ogDescription": "Ditch outdated accounting. Giddh offers a modern cloud-based alternative to Tally with GST, invoicing & reports.",
     "keywords": "cloud based accounting software in india"
   },
   "/in/terms": {
-    "title": "Terms & Policies",
-    "description": "Read Giddh's terms of service, privacy policies, and user agreement for using our accounting platform.",
+    "title": "Terms & Conditions for Using Our Platform | Giddh",
+    "description": "Read Giddh accounting software terms and conditions. Understand usage policies, data rights, and account guidelines clearly.",
     "ogTitle": "Terms & Policies",
     "ogDescription": "Read Giddh's terms of service, privacy policies, and user agreement for using our accounting platform.",
     "keywords": "Giddh - an online accounting Terms"
   },
   "/in/contact-us": {
     "title": "Contact Us | Get in touch with Giddh's support team in India",
-    "description": "Get in touch with Giddh expert support team in India. We're here to assist you with any inquiries, assistance, or support for accounting & business management.",
-    "ogTitle": "Contact us - Giddh - India",
-    "ogDescription": "Get in touch with Giddh's support team in India. Reach out for inquiries, assistance, and support to streamline your accounting and business management."
+    "description": "Contact Giddh support for any queries. Get assistance with accounting, GST, invoicing, or software setup from our expert team."
   },
   "/in/login": {
     "title": "Login | Enter Giddh Accounting Software Platform",
@@ -157,6 +176,7 @@
     "title": "Signup | Join Us for Superior Accounting",
     "description": "Create your Giddh account today and experience seamless accounting. Sign up to simplify business finances, track transactions, and boost efficiency.",
     "ogTitle": "Signup | Join Us for Superior Accounting",
+    "ogImage" : "/img/giddh-logo.svg",
     "ogDescription": "Create your Giddh account today and experience seamless accounting. Sign up to simplify business finances, track transactions, and boost efficiency."
   },
   "/in/zoho-vs-giddh": {
@@ -165,14 +185,15 @@
     "keywords": "Giddh vs Zoho comparison , accounting software comparison India ,best Zoho Books competitors"
   },
   "/in/tally-vs-giddh": {
-    "title": "Best Tally Alternative – Giddh Software",
-    "description": "Compare Tally and Giddh, two leading accounting software options, and choose the best solution for your business’s financial needs",
-    "ogTitle": "Best Tally Alternative – Giddh Software",
-    "ogDescription": "Compare Tally and Giddh, two leading accounting software options, and choose the best solution for your business’s financial needs"
+   "title": "Best Tally Alternative Software India",
+    "description": "Looking for a Tally alternative software? Try Giddh for smarter, cloud-based accounting built for modern businesses!",
+    "ogImage" : "/img/home-page/index_banner_india.svg",
+    "keywords": "Tally alternative software"
   },
   "/in/tally-to-giddh-migration": {
-    "title": "Tally to Giddh Migration Made Simple & Fast",
-    "description": "Fast, accurate, and secure Tally to Giddh migration. Get started today and experience cloud-based accounting made easy!",
+    "canonical": "/in/tally-to-giddh-migration",
+    "title": "Migrate from Tally to Giddh Effortlessly | Giddh",
+    "description": "Effortlessly migrate your accounting data from Tally to Giddh. Import ledgers, balances, and entries easily with guided templates and support.",
     "keywords": "Tally sync with accounting software"
   },
   "/in/bank-integration": {
@@ -187,9 +208,7 @@
   },
   "/ae/make-the-switch": {
     "title": "Cloud Migration Accounting Software",
-    "description": "Make the switch to Giddh’s cloud accounting software and migrate your data easily with our seamless cloud migration tools.",
-    "ogTitle": "Cloud Migration Accounting Software",
-    "ogDescription": "Make the switch to Giddh’s cloud accounting software and migrate your data easily with our seamless cloud migration tools.",
+    "description": "Switch to Giddh in the UAE easily. Learn how to migrate your accounting data and enjoy streamlined financial management instantly.",
     "keywords": "cloud migration accounting software "
   },
   "/ae/conect-bank-reconcile": {
@@ -315,7 +334,7 @@
     "keywords": "GIDDH-Financial Management software"
   },
   "/ae/contact-us": {
-    "title": "Contact us - Best Online Accounting Software | Online Bookkeeping Software",
+    "title": "Contact Our Accounting Experts in UAE | Giddh",
     "description": "Get in touch with Giddh's support team in the UAE for assistance, inquiries, and expert help with your online accounting and bookkeeping needs.",
     "ogTitle": "Contact us - Best Online Accounting Software | Online Bookkeeping Software",
     "ogDescription": "Get in touch with Giddh's support team in the UAE for assistance, inquiries, and expert help with your online accounting and bookkeeping needs."
@@ -341,9 +360,7 @@
   },
   "/ae/tally-vs-giddh": {
     "title": "\tCloud Migration Accounting Software",
-    "description": "Make the switch to Giddh’s cloud accounting software and migrate your data easily with our seamless cloud migration tools.",
-    "ogTitle": "\tCloud Migration Accounting Software",
-    "ogDescription": "Make the switch to Giddh’s cloud accounting software and migrate your data easily with our seamless cloud migration tools.",
+    "description": "Compare Tally vs Giddh in the UAE. Discover key differences, features, and benefits to choose the best accounting software for your business.",
     "keywords": "cloud migration accounting software "
   },
   "/uk": {
@@ -566,6 +583,7 @@
     "keywords": "multi-user accounting software for business"
   },
   "/contacts": {
+    "canonical": "/contacts",
     "title": "\tGIDDH - Financial Management Software",
     "description": "Discover Giddh’s terms in the UAE, ensuring compliance and effective financial management ",
     "ogTitle": "\tGIDDH - Financial Management Software",
@@ -573,6 +591,7 @@
     "keywords": "GIDDH-Financial Management software"
   },
   "/small-business-bookkeeping-software": {
+    "canonical": "/small-business-bookkeeping-software",
     "title": "Free Bookkeeping Software for Small Businesses",
     "description": " Simplify bookkeeping with free software designed for small businesses. Manage accounts effortlessly and focus on growing your business.",
     "ogTitle": "Free Bookkeeping Software for Small Businesses",
@@ -593,6 +612,7 @@
     "keywords": "inventory management software"
   },
   "/security": {
+    "canonical": "/security",
     "title": "Unlimited User Accounting Software",
     "description": "Protect your business’s financial data with Giddh’s secure online accounting software and encryption technology",
     "ogTitle": "Unlimited User Accounting Software",
@@ -600,6 +620,7 @@
     "keywords": "unlimited user accounting software"
   },
   "/cloud-accounting-software": {
+    "canonical": "/cloud-accounting-software",
     "title": "Cloud Accounting Software for SMEs",
     "description": "Manage your business finances efficiently with Giddh’s cloud accounting software. Generate invoices, track reports, and much more",
     "ogTitle": "Cloud Accounting Software for SMEs",
@@ -619,12 +640,14 @@
     "keywords": "best accounting software for businesses"
   },
   "/privacy-policy": {
+    "canonical": "/privacy-policy",
     "title": "Giddh Online Accounting Software | Privacy Policy",
     "description": "Check out the Privacy Policy of Giddh Online Accounting Software and Start your Free Trial.",
     "ogTitle": "Giddh Online Accounting Software | Privacy Policy",
     "ogDescription": "Check out the Privacy Policy of Giddh Online Accounting Software and Start your Free Trial."
   },
   "/affiliate": {
+    "canonical": "/affiliate",
     "title": "Accounting Software Affiliate Program",
     "description": "Join Giddh’s affiliate program to sell GST-ready cloud-based accounting software for small businesses at the best price",
     "ogTitle": "Accounting Software Affiliate Program",
@@ -632,6 +655,7 @@
     "keywords": "Accounting software"
   },
   "/terms": {
+    "canonical": "/terms",
     "title": "GIDDH - e-Invoice and GST Reconciliation",
     "description": "Review the terms and conditions for using Giddh, a platform that simplifies accounting and financial management. ",
     "ogTitle": "GIDDH - e-Invoice and GST Reconciliation",
@@ -663,20 +687,23 @@
     "ogDescription": "Sign up for Giddh today and simplify your business accounting, manage finances seamlessly, and enhance efficiency with our online bookkeeping software."
   },
   "/zoho-vs-giddh": {
+    "canonical": "/zoho-vs-giddh",
     "title": "Zoho books Alternative Accounting Software. Zoho vs Giddh",
     "description": "Zoho Books and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses.",
     "ogTitle": "Zoho books Alternative Accounting Software. Zoho vs Giddh",
     "ogDescription": "Zoho Books and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses."
   },
   "/tally-vs-giddh": {
+    "canonical": "/tally-vs-giddh",
     "title": "Tally Alternative Accounting Software. Tally vs Giddh",
     "description": "Tally and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses.",
     "ogTitle": "Tally Alternative Accounting Software. Tally vs Giddh",
     "ogDescription": "Tally and Giddh are two accounting software options with powerful features that can cater to the needs of most businesses."
   },
   "/blog": {
-    "title": "All You Need to Know About Online Accounting Software by Giddh",
-    "description": "Get all the information about the online accounting, bookkeeping, GST, etc., under one roof",
+    "canonical": "/blog",
+    "title": "Latest Accounting Tips, Guides & Resources | Giddh",
+    "description": "Read the Giddh blog for expert insights on accounting software, GST, e-invoicing, and financial management best practices.",
     "ogTitle": "All You Need to Know About Online Accounting Software by Giddh",
     "ogDescription": "Get all the information about the online accounting, bookkeeping, GST, etc., under one roof"
   },

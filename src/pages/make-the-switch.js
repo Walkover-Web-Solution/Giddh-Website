@@ -1,8 +1,9 @@
 const makeTheSwitch = (path) => {
   const linkPath = path.path;    
   const isGlobal = linkPath.isGlobal;
-  const isIndia = linkPath.isIndia
+  const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   return (
     <>
       <div className="make_the_switch">
@@ -12,7 +13,11 @@ const makeTheSwitch = (path) => {
               <div className="col-md-6 col-sm-12">
                 <div className="switch-section__content">
                   <h1 id="switch-heading" className="heading col-primary c-fw-600">
-                    Make the switch
+                    {isAE && "Make the switch to Giddh in the UAE. Migrate your accounting data and simplify bookkeeping, VAT, and financial management efficiently."}
+                    {isUK && "Switch to Giddh in the UK easily. Migrate your accounting data and enjoy streamlined bookkeeping, VAT, and financial management."}
+                    {isIndia && "Switch to Giddh in India easily. Migrate your accounting data and enjoy seamless financial management for your business."}
+                    {isGlobal && "Make the switch to Giddh and simplify your accounting. Migrate your data, manage invoices, and stay compliant with VAT and GST."}
+               
                   </h1>
                   <p className="col-dark-light c-fs-2">
                     The Right Accounting Software can change the shape of your

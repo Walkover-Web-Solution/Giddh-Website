@@ -4,9 +4,10 @@ import faqs from '../data/faqs.json';
 
 const multiCurrencyAccountingSoftware = (path) => {
   const linkPath = path.path;
-  const isGlobal = linkPath.isGlobal; 
-  const isIndia = linkPath.isIndia
+  const isGlobal = linkPath.isGlobal;
+  const isIndia = linkPath.isIndia;
   const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   const link = linkPath.linkPrefix;
   const [faq, setFaq] = useState([]);
 
@@ -22,7 +23,9 @@ const multiCurrencyAccountingSoftware = (path) => {
             <div className="row">
               <div className="col-lg-7 order-lg-0 order-1">
                 <h1 id="multiCurrencyHeading" className="heading col-primary c-fw-600 mb-4">
-                  Serve International Customers with Multi-Currency Accounting
+                  {isAE && "Simplify multi-currency accounting for your UAE business with Giddh. Manage transactions, reports, and conversions efficiently in one platform."}
+                  {isUK && "Handle multiple currencies with ease using Giddh multi-currency accounting software in the UK. Manage transactions, reporting, and conversions seamlessly."}
+                  {isGlobal && " Serve International Customers with Multi-Currency Accounting"}
                 </h1>
                 <p className="col-grey c-fs-3 mb-5">
                   Multi-currency accounting enables you to serve overseas
