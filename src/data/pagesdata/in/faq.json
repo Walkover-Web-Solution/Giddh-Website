@@ -1,0 +1,107 @@
+{
+  "searchBanner": {
+    "heading": "Frequently Asked Questions About Giddh",
+    "subHeading": "Everything you need to know about GST accounting, features, pricing, and security.",
+    "searchPlaceholder": "Search for answers...",
+    "buttons": [
+      { "text": "Start Free Trial", "link": "/signup" },
+      { "text": "See Giddh In Action", "link": "/online-accounting-software" }
+    ]
+  },
+  "productOverviewFaqs": {
+    "heading": "Product Overview",
+    "questions": [
+      { "question": "What is Giddh?", "answer": "Giddh is a comprehensive cloud-based accounting and GST compliance software designed for businesses of all sizes in India. It simplifies financial management by automating GST calculations, invoice generation, inventory management, and financial reporting." },
+      { "question": "Who is Giddh suitable for?", "answer": "Giddh is suitable for startups, small and medium businesses, freelancers, and chartered accountants who need a simple yet powerful accounting solution." },
+      { "question": "Is Giddh suitable for small businesses?", "answer": "Yes, Giddh is specifically designed with small businesses in mind, offering an intuitive interface and affordable pricing plans." },
+      { "question": "Can CAs use Giddh for multiple clients?", "answer": "Yes, Giddh offers multi-company management features that allow CAs to manage multiple client accounts from a single dashboard." },
+      { "question": "Is Giddh cloud-based?", "answer": "Yes, Giddh is fully cloud-based. You can access your accounting data anytime, anywhere from any device with an internet connection." },
+      { "question": "How is Giddh different from Tally?", "answer": "Unlike Tally, Giddh is cloud-based, requires no installation, and offers real-time collaboration, automatic GST filing, and seamless bank integrations." }
+    ]
+  },
+  "featuresFaqs": {
+    "heading": "Features & Functionality",
+    "questions": [
+      { "question": "Does Giddh support GST billing?", "answer": "Yes, Giddh fully supports GST billing with automatic tax calculations, HSN/SAC code mapping, and compliant invoice generation." },
+      { "question": "Can I generate GST reports in Giddh?", "answer": "Yes, Giddh generates all essential GST reports including GSTR-1, GSTR-3B, and GST summary reports for seamless filing." },
+      { "question": "Does Giddh support multi-company accounting?", "answer": "Yes, you can manage multiple companies under a single Giddh account and switch between them effortlessly." },
+      { "question": "Can I manage inventory in Giddh?", "answer": "Yes, Giddh offers built-in inventory management with stock tracking, warehouse management, and inventory valuation." },
+      { "question": "Does Giddh support bank reconciliation?", "answer": "Yes, Giddh supports automatic bank reconciliation by connecting your bank accounts and matching transactions." },
+      { "question": "Can I create purchase and sales invoices?", "answer": "Yes, Giddh allows you to create professional purchase and sales invoices with customizable templates." },
+      { "question": "Does Giddh support recurring invoices?", "answer": "Yes, you can set up recurring invoices in Giddh for regular billing cycles, saving time on repetitive tasks." },
+      { "question": "Can I track expenses and income?", "answer": "Yes, Giddh provides comprehensive expense and income tracking with categorization and real-time reporting." },
+      { "question": "Does Giddh provide financial reports like P&L and balance sheet?", "answer": "Yes, Giddh automatically generates Profit & Loss statements, Balance Sheets, Trial Balance, and other essential financial reports." }
+    ]
+  },
+  "gstComplianceFaqs": {
+    "heading": "GST & Compliance",
+    "questions": [
+      { "question": "Is Giddh GST compliant?", "answer": "Yes, Giddh is fully GST compliant and supports all GST filing requirements for Indian businesses." },
+      { "question": "Does Giddh support GSTR-1 and GSTR-3B filing?", "answer": "Yes, Giddh supports GSTR-1 and GSTR-3B filing with automated report generation and direct filing capabilities." },
+      { "question": "Can I export GST reports for filing?", "answer": "Yes, you can export GST reports in the required formats for easy filing through the GST portal." },
+      { "question": "Does Giddh auto-calculate GST?", "answer": "Yes, Giddh automatically calculates CGST, SGST, and IGST based on the transaction type and location." },
+      { "question": "Can I handle multi-state GST in Giddh?", "answer": "Yes, Giddh supports multi-state GST with automatic inter-state and intra-state tax calculations." },
+      { "question": "Does Giddh support e-invoicing?", "answer": "Yes, Giddh supports e-invoicing as per government regulations, allowing you to generate IRN and QR codes." },
+      { "question": "Does Giddh support e-way bills?", "answer": "Yes, Giddh supports e-way bill generation for the seamless movement of goods across states." }
+    ]
+  },
+  "pricingFaqs": {
+    "heading": "Pricing & Subscription",
+    "questions": [
+      { "question": "Is Giddh free?", "answer": "Giddh offers a free trial to explore all features. After the trial, you can choose from affordable pricing plans." },
+      { "question": "What plans does Giddh offer?", "answer": "Giddh offers flexible plans tailored for freelancers, small businesses, and enterprises. Visit our pricing page for details." },
+      { "question": "Can I upgrade or downgrade anytime?", "answer": "Yes, you can upgrade or downgrade your plan at any time based on your business needs." },
+      { "question": "Is there a free trial?", "answer": "Yes, Giddh offers a free trial so you can explore all features before committing to a paid plan." },
+      { "question": "Are there hidden charges?", "answer": "No, Giddh has transparent pricing with no hidden charges. You only pay for the plan you choose." },
+      { "question": "Do I need to pay annually?", "answer": "Giddh offers both monthly and annual billing options. Annual plans come with additional savings." }
+    ]
+  },
+  "securityFaqs": {
+    "heading": "Security & Data Protection",
+    "questions": [
+      { "question": "How secure is Giddh?", "answer": "Giddh uses industry-standard encryption, secure cloud infrastructure, and regular security audits to protect your data." },
+      { "question": "Is my data safe on Giddh?", "answer": "Absolutely. Your data is encrypted at rest and in transit, with strict access controls and compliance measures." },
+      { "question": "Where is my data stored?", "answer": "Your data is stored on secure, enterprise-grade cloud servers with redundancy and high availability." },
+      { "question": "Does Giddh offer data backup?", "answer": "Yes, Giddh automatically backs up your data regularly, ensuring you never lose your financial records." },
+      { "question": "Is data encrypted?", "answer": "Yes, all data in Giddh is encrypted using AES-256 encryption both at rest and during transmission." },
+      { "question": "What happens if I stop my subscription?", "answer": "Your data remains safe and accessible for a grace period. You can export your data at any time before or after cancellation." }
+    ]
+  },
+  "integrationsFaqs": {
+    "heading": "Integrations & Compatibility",
+    "questions": [
+      { "question": "Does Giddh integrate with payment gateways?", "answer": "Yes, Giddh integrates with popular payment gateways for seamless payment tracking and reconciliation." },
+      { "question": "Can I connect my bank account?", "answer": "Yes, Giddh supports direct bank connections for automatic transaction imports and reconciliation." },
+      { "question": "Does Giddh integrate with CRM tools?", "answer": "Yes, Giddh integrates with popular CRM tools to streamline your sales and accounting workflows." },
+      { "question": "Is Giddh accessible on mobile?", "answer": "Yes, Giddh is fully responsive and accessible from any mobile browser." },
+      { "question": "Does Giddh have a mobile app?", "answer": "Yes, Giddh offers mobile apps for both Android and iOS for on-the-go accounting." }
+    ]
+  },
+  "migrationFaqs": {
+    "heading": "Migration & Onboarding",
+    "questions": [
+      { "question": "Can I migrate from Tally to Giddh?", "answer": "Yes, Giddh provides a seamless Tally-to-Giddh migration tool that imports your existing data quickly and accurately." },
+      { "question": "Does Giddh provide onboarding support?", "answer": "Yes, Giddh offers dedicated onboarding support to help you get started smoothly." },
+      { "question": "Is training provided?", "answer": "Yes, Giddh provides training resources including video tutorials, documentation, and live support." },
+      { "question": "How long does implementation take?", "answer": "Giddh is cloud-based, so there's no installation needed. You can start using it within minutes of signing up." },
+      { "question": "Can I import Excel data?", "answer": "Yes, Giddh supports importing data from Excel and CSV files for quick data migration." }
+    ]
+  },
+  "cta": {
+    "heading": "Simplify Your Accounting with Giddh",
+    "subheading": "Join thousands of businesses managing GST, invoicing, and finances effortlessly.",
+    "buttons": [
+      { "text": "Start Free Trial", "link": "/signup", "type": "btn-secondary-outline" }
+    ]
+  },
+  "supportFaqs": {
+    "heading": "Support & Help",
+    "questions": [
+      { "question": "How can I contact Giddh support?", "answer": "You can reach Giddh support via email, live chat, or phone. Visit our contact page for details." },
+      { "question": "What are support hours?", "answer": "Giddh support is available during business hours on weekdays, with email support available around the clock." },
+      { "question": "Do you offer live chat?", "answer": "Yes, Giddh offers live chat support for quick assistance during business hours." },
+      { "question": "Do you provide dedicated account managers?", "answer": "Yes, enterprise plan customers get a dedicated account manager for personalized support." },
+      { "question": "Is documentation available?", "answer": "Yes, Giddh provides comprehensive documentation, FAQs, and video guides to help you use the platform effectively." }
+    ]
+  }
+}

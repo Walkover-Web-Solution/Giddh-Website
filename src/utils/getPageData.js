@@ -16,7 +16,8 @@ export default function getPageData(pageInfo) {
     "tally-to-giddh-migration",,
     "make-the-switch",
     "zoho-vs-giddh",
-    "financial-reporting"
+    "financial-reporting",
+    "faq"
   ];
   if (!pagesToGetData.includes(pageInfo?.page)) {
     return null;
