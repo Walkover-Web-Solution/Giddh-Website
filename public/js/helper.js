@@ -63,10 +63,24 @@ function removeGiddhSession() {
   setCookie("giddh_session_id", "", -1);
 }
 
+function removeGiddhRegionSession(region) {
+  setCookie(getRegionSessionCookieName(region), "", -1);
+}
+
 function setGiddhSession(sessionId) {
   removeLocalStorage("session");
   setCookie("giddh_session_id", sessionId, 30);
 }
+
+function getRegionSessionCookieName(region) {
+  var regionMap = { UK: "giddh_session_id_uk", AE: "giddh_session_id_ae", IN: "giddh_session_id" };
+  return regionMap[(region || "").toUpperCase()] || "giddh_session_id";
+}
+
+function setGiddhRegionSession(sessionId, region) {
+  setCookie(getRegionSessionCookieName(region), sessionId, 30);
+}
+
 function setGiddhRegion(region) {
   setCookie("giddh_region", region, 30);
 }
