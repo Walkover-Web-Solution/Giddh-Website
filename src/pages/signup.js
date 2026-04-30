@@ -110,7 +110,7 @@ const signUp = (path) => {
                 "success",
                 "top-center"
               );
-              setGiddhSession(response.body.session.id);
+              setGiddhRegionSession(response.body.session.id, region);
 
               var utmParams =
                 "&utm_source=" +
@@ -732,7 +732,7 @@ const signUp = (path) => {
   }
 
   function otpVerifyCallback(response) {
-    setGiddhSession(response.session.id);
+    setGiddhRegionSession(response.session.id, region);
     window.location =
       process.env.NEXT_PUBLIC_APP_URL +
       "/token-verify?request=" +
