@@ -73,8 +73,11 @@ function setGiddhSession(sessionId) {
 }
 
 function getRegionSessionCookieName(region) {
-  var regionMap = { UK: "giddh_session_id_uk", AE: "giddh_session_id_ae", IN: "giddh_session_id" };
-  return regionMap[(region || "").toUpperCase()] || "giddh_session_id";
+  // For UK region, use the UK-specific cookie name
+  region = region?.toUpperCase() === "UK" ? "UK" : "IN";
+
+  var regionMap = { UK: "giddh_session_id_uk", IN: "giddh_session_id" };
+  return regionMap[(region)];
 }
 
 function setGiddhRegionSession(sessionId, region) {
