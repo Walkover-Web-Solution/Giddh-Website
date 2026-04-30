@@ -24,6 +24,11 @@ const v2Login = (path) => {
   const [userResponse, setUserResponse] = useState(null);
   const [link, setLink] = useState(process.env.NEXT_PUBLIC_SITE_URL);
   const isUK = path.path.isUK;
+  const linkPrefix = path.path.linkPrefix;
+  let region = linkPrefix ? linkPrefix.replace("/", "") : "gl";
+  if (region) {
+    region = region.toUpperCase();
+  }
 
   useEffect(() => {
     setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
