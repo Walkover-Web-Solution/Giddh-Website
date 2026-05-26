@@ -13,10 +13,11 @@ export default function getPageData(pageInfo) {
     "import-data",
     "gst",
     "multi-currency-accounting-software",
-    "tally-to-giddh-migration",,
+    "tally-to-giddh-migration",
     "make-the-switch",
     "zoho-vs-giddh",
-    "financial-reporting"
+    "financial-reporting",
+    "affiliate"
   ];
   if (!pagesToGetData.includes(pageInfo?.page)) {
     return null;

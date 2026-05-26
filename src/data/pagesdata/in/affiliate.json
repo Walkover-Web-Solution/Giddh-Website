@@ -1,0 +1,109 @@
+{
+  "splitBanner": {
+    "heading": "Join Giddh's Partnership Program & Grow Your Revenue.",
+    "subHeading": "Refer businesses to our trusted accounting software to your network. Earn 50% on first sale, 30% on renewal, and 20% on third payment—with full tracking and support.",
+    "image": "/img/hand-shake.svg",
+    "hideTrustBadges": true,
+    "form": false
+  },
+  "features": {
+    "heading": "Why Partner With Us?",
+    "content": [
+      {
+        "heading": "Grow Your Revenue",
+        "description": "Earn 50% on first payment, 30% on renewals, and 20% on subsequent payments. No caps on your earnings.",
+        "img": "/img/pricing/cort_icon.svg"
+      },
+      {
+        "heading": "Software Businesses Actually Need",
+        "description": "Handles GST, invoicing, inventory, and financial reports. Solves real business problems.",
+        "img": "/img/gst/create_gst_compliant_invoices.svg"
+      },
+      {
+        "heading": "Complete Partner Support",
+        "description": "You connect us with businesses. We take care of demos, onboarding, training, and ongoing support.",
+        "img": "/img/make-the-switch/support_agent.svg"
+      },
+      {
+        "heading": "Zero Upfront Cost",
+        "description": "No joining fees. No monthly charges. Start earning in minutes.",
+        "img": "/img/benefits/no-voucher.svg"
+      }
+    ]
+  },
+  "paymentNotice": {
+    "heading": "Commission Payout Terms",
+    "text": "The Partner's revenue share/payment shall be processed and released by GIDDH on a quarterly basis, subject to successful receipt of payment from the referred clients."
+  },
+  "resources": {
+    "heading": "We Help you With Resources",
+    "cards": [
+      {
+        "heading": "Dashboard To Track Your Success",
+        "description": "Track shares, clicks, enrollments, and conversions from your own affiliate dashboard.",
+        "icon": "/img/feature-gallery-icons/feature-multiple-reports.svg"
+      },
+      {
+        "heading": "Dedicated Affiliate Manager",
+        "description": "A dedicated manager helps you promote Giddh, answer questions, and improve conversions.",
+        "icon": "/img/make-the-switch/support_agent.svg"
+      },
+      {
+        "heading": "Exclusive Affiliate Newsletter",
+        "description": "Get partner-only updates on product news, promotions, and GST-ready accounting software.",
+        "icon": "/img/feature-gallery-icons/feature-invoice-on-email-whatsapp-and-sms.svg"
+      },
+      {
+        "heading": "Marketing Assets & Collateral",
+        "description": "Use ready-made banners, emails, and sales templates to convert prospects faster.",
+        "icon": "/img/feature-gallery-icons/feature-share-invoice.svg"
+      }
+    ]
+  },
+  "instructions": {
+    "heading": "Get Started in 4 Simple Steps",
+    "steps": [
+      {
+        "id": 1,
+        "title": "Reach Out to Us",
+        "image": "/img/make-the-switch/calender.svg",
+        "description": "Contact our team via email or phone. Tell us about yourself and your network."
+      },
+      {
+        "id": 2,
+        "title": "See Giddh in Action",
+        "image": "/img/features-banner.svg",
+        "description": "Join a personalized demo session. See the software in action and learn how it solves business accounting problems."
+      },
+      {
+        "id": 3,
+        "title": "Finalize Partnership Terms",
+        "image": "/img/make-the-switch/file.svg",
+        "description": "Get a simple MOU that explains how commissions work, when you get paid, and what support we provide. E-sign and you're done."
+      },
+      {
+        "id": 4,
+        "title": "Begin Your Partnership Journey",
+        "image": "/img/make-the-switch/cloud.svg",
+        "description": "Receive your unique partner link with UTM tracking and access to your dashboard. Share it with businesses. Track referrals, conversions, and earnings in real-time."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Your next income stream is one click away.",
+    "subheading": "Not sure? Let's talk. No pressure, just answers.",
+    "theme": "light",
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "/signup",
+        "type": "btn-primary-outline"
+      },
+      {
+        "text": "Contact Us",
+        "link": "/contact-us",
+        "type": "btn-primary-outline"
+      }
+    ]
+  }
+}
