@@ -63,10 +63,27 @@ function removeGiddhSession() {
   setCookie("giddh_session_id", "", -1);
 }
 
+function removeGiddhRegionSession(region) {
+  setCookie(getRegionSessionCookieName(region), "", -1);
+}
+
 function setGiddhSession(sessionId) {
   removeLocalStorage("session");
   setCookie("giddh_session_id", sessionId, 30);
 }
+
+function getRegionSessionCookieName(region) {
+  // For UK region, use the UK-specific cookie name
+  region = region?.toUpperCase() === "UK" ? "UK" : "IN";
+
+  var regionMap = { UK: "giddh_session_id_uk", IN: "giddh_session_id" };
+  return regionMap[(region)];
+}
+
+function setGiddhRegionSession(sessionId, region) {
+  setCookie(getRegionSessionCookieName(region), sessionId, 30);
+}
+
 function setGiddhRegion(region) {
   setCookie("giddh_region", region, 30);
 }

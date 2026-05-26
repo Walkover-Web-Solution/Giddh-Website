@@ -70,6 +70,16 @@ export default function Instructions({ compData }) {
                 <LottiePlayer lottie={compData.steps[selectedIndex].lottie} />
               </div>
             )}
+            {compData?.steps?.[selectedIndex]?.image && (
+              <div className="d-flex align-items-center justify-content-center">
+                <img 
+                  src={compData.steps[selectedIndex].image} 
+                  alt={compData.steps[selectedIndex].title}
+                  className="img-fluid"
+                  style={{ maxWidth: '500px' }}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>

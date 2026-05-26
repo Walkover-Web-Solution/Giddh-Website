@@ -59,6 +59,11 @@ export default function CTA({ compData, hasImage }) {
               </button>
             )}
           </div>
+          {compData?.footer && (
+            <p className={`${!hasImage ? "text-center" : ""} outfit-font mt-3`}>
+              {compData?.footer}
+            </p>
+          )}
         </div>
         {hasImage && (
           <Image

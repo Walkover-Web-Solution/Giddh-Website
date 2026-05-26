@@ -24,11 +24,17 @@ const v2Login = (path) => {
   const [userResponse, setUserResponse] = useState(null);
   const [link, setLink] = useState(process.env.NEXT_PUBLIC_SITE_URL);
   const isUK = path.path.isUK;
+  const linkPrefix = path.path.linkPrefix;
+  let region = linkPrefix ? linkPrefix.replace("/", "") : "gl";
+  if (region) {
+    region = region.toUpperCase();
+  }
 
   useEffect(() => {
     setLink(getCurrentSiteCountryUrl(process.env.NEXT_PUBLIC_SITE_URL));
-    if (getCookie("giddh_session_id")) {
-      validateUserSession(getCookie("giddh_session_id"));
+    const regionSessionCookie = getRegionSessionCookieName(region);
+    if (getCookie(regionSessionCookie)) {
+      validateUserSession(getCookie(regionSessionCookie));
     }
   }, []);
 
@@ -52,7 +58,7 @@ const v2Login = (path) => {
             "/token-verify?request=" +
             response.body.session.id;
         } else {
-          removeGiddhSession();
+          removeGiddhRegionSession(region);
         }
       });
   }
@@ -77,7 +83,7 @@ const v2Login = (path) => {
             setUserResponse(response.body);
             setShowVerificationModal(true);
           } else {
-            setGiddhSession(response.body.session.id);
+            setGiddhRegionSession(response.body.session.id, region);
               window.location = process.env.NEXT_PUBLIC_APP_URL + "/token-verify?token=" + result.accessToken;
           }
         } else {
@@ -112,7 +118,7 @@ const v2Login = (path) => {
               setUserResponse(response.body);
               setShowVerificationModal(true);
             } else {
-              setGiddhSession(response.body.session.id);
+              setGiddhRegionSession(response.body.session.id, region);
              window.location =
                process.env.NEXT_PUBLIC_APP_URL +
                "/token-verify?request=" +
@@ -153,7 +159,7 @@ const v2Login = (path) => {
             setUserResponse(response.body);
             setShowVerificationModal(true);
           } else {
-            setGiddhSession(response.body.session.id);
+            setGiddhRegionSession(response.body.session.id, region);
             window.location =
               process.env.NEXT_PUBLIC_APP_URL +
               "/token-verify?request=" +
@@ -168,7 +174,7 @@ const v2Login = (path) => {
   }
 
   function otpVerifyCallback(response) {
-    setGiddhSession(response.session.id);
+    setGiddhRegionSession(response.session.id, region);
         window.location =
           process.env.NEXT_PUBLIC_APP_URL +
           "/token-verify?request=" +
