@@ -11,12 +11,12 @@
     "content": [
       {
         "heading": "Grow Your Revenue",
-        "description": "Earn 50% on first payment, 30% on renewals, and 20% on subsequent payments. No caps on your earnings.",
+        "description": "Unlock a high-value recurring income stream with transparent payouts at every stage of the customer lifecycle.",
         "img": "/img/pricing/cort_icon.svg"
       },
       {
-        "heading": "Software Businesses Actually Need",
-        "description": "Handles VAT, invoicing, inventory, and financial reports. Solves real business problems.",
+        "heading": "Designed for Finance Professionals and Businesses",
+        "description": "Perfect for Chartered Accountants, Tax Consultants, bookkeepers, and business advisors. Giddh handles invoicing, inventory, VAT compliance, and financial reporting to solve real business needs.",
         "img": "/img/feature-gallery-icons/multi-currency-invoice-uk.svg"
       },
       {
@@ -31,16 +31,12 @@
       }
     ]
   },
-  "paymentNotice": {
-    "heading": "Commission Payout Terms",
-    "text": "The Partner's revenue share/payment shall be processed and released by GIDDH on a quarterly basis, subject to successful receipt of payment from the referred clients."
-  },
   "resources": {
     "heading": "We Help you With Resources",
     "cards": [
       {
-        "heading": "Dashboard To Track Your Success",
-        "description": "Track shares, clicks, enrollments, and conversions from your own affiliate dashboard.",
+        "heading": "Commission Payout Terms",
+        "description": "The Partner's revenue share/payment shall be processed and released by GIDDH on a quarterly basis, subject to successful receipt of payment from the referred clients.",
         "icon": "/img/feature-gallery-icons/feature-multiple-reports.svg"
       },
       {
@@ -60,35 +56,97 @@
       }
     ]
   },
-  "instructions": {
-    "heading": "Get Started in 4 Simple Steps",
-    "steps": [
+  "whyGiddh": {
+    "heading": "Why Giddh Is The Best Choice For Your Business?",
+    "features": [
       {
-        "id": 1,
-        "title": "Reach Out to Us",
-        "image": "/img/make-the-switch/calender.svg",
-        "description": "Contact our team via email or phone. Tell us about yourself and your network."
+        "features": "Multi-Company Access",
+        "other": false,
+        "giddh": true
       },
       {
-        "id": 2,
-        "title": "See Giddh in Action",
-        "image": "/img/features-banner.svg",
-        "description": "Join a personalized demo session. See the software in action and learn how it solves business accounting problems."
+        "features": "Unlimited User Access",
+        "other": false,
+        "giddh": true
       },
       {
-        "id": 3,
-        "title": "Finalize Partnership Terms",
-        "image": "/img/make-the-switch/file.svg",
-        "description": "Get a simple MOU that explains how commissions work, when you get paid, and what support we provide. E-sign and you're done."
+        "features": "Ledger-Based Accounting",
+        "other": false,
+        "giddh": true
       },
       {
-        "id": 4,
-        "title": "Begin Your Partnership Journey",
-        "image": "/img/make-the-switch/cloud.svg",
-        "description": "Receive your unique partner link with UTM tracking and access to your dashboard. Share it with businesses. Track referrals, conversions, and earnings in real-time."
+        "features": "White-Label Option",
+        "other": false,
+        "giddh": true
+      },
+      {
+        "features": "GST Compliance",
+        "other": true,
+        "giddh": true
+      },
+      {
+        "features": "Multi-Currency Accounting",
+        "other": false,
+        "giddh": true
+      },
+      {
+        "features": "Inventory Management",
+        "other": true,
+        "giddh": true
       }
     ]
   },
+  "stepper": {
+    "heading": "Get Started in 4 Simple Steps",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Reach Out to Us",
+        "description": "Contact our team via email or phone. Tell us about yourself and your network."
+      },
+      {
+        "number": "02",
+        "title": "See Giddh in Action",
+        "description": "Join a personalized demo session. See the software in action and learn how it solves business accounting problems."
+      },
+      {
+        "number": "03",
+        "title": "Finalize Partnership Terms",
+        "description": "Get a simple MOU that explains how commissions work, when you get paid, and what support we provide. E-sign and you're done."
+      },
+      {
+        "number": "04",
+        "title": "Begin Your Partnership Journey",
+        "description": "Receive your unique partner link with UTM tracking and access to your dashboard. Share it with businesses."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does the Giddh Partnership Program work?",
+      "answer": "Join the program, refer businesses to Giddh, and earn commissions whenever your referrals purchase a plan. Our team handles demos, onboarding, and customer support."
+    },
+    {
+      "question": "What commission do partners earn?",
+      "answer": "Partners earn 50% on the first payment, 30% on renewals, and 20% on the third payment. There are no limits on how much you can earn."
+    },
+    {
+      "question": "Is there any cost to join the program?",
+      "answer": "No. The Giddh Partnership Program is completely free to join with no setup fees or hidden charges."
+    },
+    {
+      "question": "Who handles product demos and customer onboarding?",
+      "answer": "The Giddh team takes care of product demos, onboarding, training, and ongoing support for referred customers."
+    },
+    {
+      "question": "When are commissions paid?",
+      "answer": "Commissions are processed quarterly after successful payment is received from the referred customer."
+    },
+    {
+      "question": "What kind of support will I receive as a partner?",
+      "answer": "You'll receive marketing materials, partner updates, and dedicated support from our affiliate team to help you generate more referrals and conversions."
+    }
+  ],
   "cta": {
     "heading": "Your next income stream is one click away.",
     "subheading": "Not sure? Let's talk. No pressure, just answers.",
@@ -105,5 +163,23 @@
         "type": "btn-primary-outline"
       }
     ]
-  }
+  },
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Join Giddh's partnership program, refer businesses to trusted accounting software, and earn recurring commissions with full onboarding and support.",
+      "name": "Giddh Partnership Program",
+      "url": "https://giddh.com/uk/affiliate"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Join Giddh's partnership program, refer businesses to trusted accounting software, and earn recurring commissions with full onboarding and support.",
+      "url": "https://giddh.com/uk/affiliate",
+      "name": "Giddh Partnership Program"
+    }
+  ]
 }
