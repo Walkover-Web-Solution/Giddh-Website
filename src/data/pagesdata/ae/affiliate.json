@@ -37,22 +37,22 @@
       {
         "heading": "Commission Payout Terms",
         "description": "The Partner's revenue share/payment shall be processed and released by GIDDH on a quarterly basis, subject to successful receipt of payment from the referred clients.",
-        "icon": "/img/feature-gallery-icons/feature-multiple-reports.svg"
+        "icon": "/img/partnership/terms.webp"
       },
       {
         "heading": "Dedicated Affiliate Manager",
         "description": "A dedicated manager helps you promote Giddh, answer questions, and improve conversions.",
-        "icon": "/img/make-the-switch/support_agent.svg"
+        "icon": "/img/partnership/manager.webp"
       },
       {
         "heading": "Exclusive Affiliate Newsletter",
         "description": "Get partner-only updates on product news, promotions, and VAT-ready accounting software.",
-        "icon": "/img/feature-gallery-icons/feature-invoice-on-email-whatsapp-and-sms.svg"
+        "icon": "/img/partnership/newsletter.webp"
       },
       {
         "heading": "Marketing Assets & Collateral",
         "description": "Use ready-made banners, emails, and sales templates to convert prospects faster.",
-        "icon": "/img/feature-gallery-icons/feature-share-invoice.svg"
+        "icon": "/img/partnership/collateral.webp"
       }
     ]
   },
@@ -97,27 +97,22 @@
     ]
   },
   "stepper": {
-    "heading": "Get Started in 4 Simple Steps",
+    "heading": "Get Started in 3 Simple Steps",
     "steps": [
       {
         "number": "01",
         "title": "Reach Out to Us",
-        "description": "Contact our team via email or phone. Tell us about yourself and your network."
+        "description": "Contact our team via email or phone. Tell us about yourself and your network. (Optional : Request a live demo to see Giddh in action.)"
       },
       {
         "number": "02",
-        "title": "See Giddh in Action",
-        "description": "Join a personalized demo session. See the software in action and learn how it solves business accounting problems."
-      },
-      {
-        "number": "03",
         "title": "Finalize Partnership Terms",
         "description": "Get a simple MOU that explains how commissions work, when you get paid, and what support we provide. E-sign and you're done."
       },
       {
-        "number": "04",
+        "number": "03",
         "title": "Begin Your Partnership Journey",
-        "description": "Receive your unique partner link with UTM tracking and access to your dashboard. Share it with businesses."
+        "description": "Receive your unique partner link with UTM tracking and access to your dashboard. Share it with businesses. Track referrals, conversions, and earnings in real-time."
       }
     ]
   },
