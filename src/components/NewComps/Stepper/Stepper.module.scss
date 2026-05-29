@@ -1,48 +1,9 @@
-.section {
-  background-color: var(--col-extra-light-blue, #f5f6ff);
-}
-
-.desktopTrack {
-  align-items: center;
-  width: 100%;
-}
-
-.connector {
-  flex: 1;
-  min-width: 2rem;
-  height: 2px;
-  background-color: var(--col-light-gray, #e7e8ea);
-}
-
-.badge {
-  flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background-color: var(--col-primary);
-  color: var(--col-white);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card {
-  border: 1px solid #eceef8;
-  background: var(--col-white);
-  border-radius: 12px;
-}
-
-.mobileTrack {
-  width: 100%;
-  margin-bottom: 1.5rem;
-}
-
-.mobileConnector {
-  flex: 1;
-  min-width: 0;
-  height: 2px;
-  background-color: var(--col-light-gray, #e7e8ea);
+.trackLine {
+  position: absolute;
+  padding: 0 2 rem;
+  top: var(--badge-radius, 36px);
+  left: calc((100% / var(--step-count, 3)) / 2 + var(--badge-radius, 36px));
+  width: calc(100% - (100% / var(--step-count, 3)) - var(--badge-radius, 36px));
+  border-top: 3px dotted var(--col-soft-blue);
+  z-index: 0;
 }
