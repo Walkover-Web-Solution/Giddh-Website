@@ -5,6 +5,6 @@
   top: var(--badge-radius, 36px);
   left: calc((100% / var(--step-count, 3)) / 2 + var(--badge-radius, 36px));
   width: calc(100% - (100% / var(--step-count, 3)) - var(--badge-radius, 36px));
-  border-top: 2px dotted var(--col-soft-blue);
+  border-top: 3px dotted var(--col-soft-blue);
   z-index: 0;
 }

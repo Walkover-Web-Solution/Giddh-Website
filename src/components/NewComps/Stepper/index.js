@@ -1,5 +1,7 @@
 import styles from "./Stepper.module.scss";
 
+const dottedBorder = "3px dotted var(--col-soft-blue)";
+
 export default function Stepper({ compData }) {
   if (!compData?.steps?.length) return null;
 
@@ -45,7 +47,7 @@ export default function Stepper({ compData }) {
 
                 <article
                   className="w-100 flex-grow-1 bg-white text-center rounded-4 p-4 px-md-4 py-md-5"
-                  style={{ border: "2px dotted var(--col-soft-blue)" }}
+                  style={{ border: dottedBorder }}
                 >
                   <h3 className="garmond-font mb-0 font-primary font-lg fw-semibold">
                     {step.title}
@@ -54,7 +56,7 @@ export default function Stepper({ compData }) {
                     className="mx-auto my-4"
                     style={{
                       width: "75%",
-                      borderTop: "2px dotted var(--col-soft-blue)",
+                      borderTop: dottedBorder,
                     }}
                     aria-hidden="true"
                   />
