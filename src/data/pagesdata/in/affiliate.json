@@ -2,7 +2,7 @@
   "splitBanner": {
     "heading": "Join Giddh's Partnership Program & Grow Your Revenue.",
     "subHeading": "Refer businesses to our trusted accounting software to your network. Earn 50% on first sale, 30% on renewal, and 20% on third payment—with full tracking and support.",
-    "image": "/img/hand-shake.svg",
+    "image": "/img/partnership/hero-section.svg",
     "hideTrustBadges": true,
     "form": false
   },
@@ -12,22 +12,22 @@
       {
         "heading": "Grow Your Revenue",
         "description": "Unlock a high-value recurring income stream with transparent payouts at every stage of the customer lifecycle.",
-        "img": "/img/pricing/cort_icon.svg"
+        "img": "/img/partnership/graph.svg"
       },
       {
         "heading": "Designed for Finance Professionals and Businesses",
         "description": "Perfect for Chartered Accountants, Tax Consultants, bookkeepers, and business advisors. Giddh handles invoicing, inventory, GST compliance, and financial reporting to solve real business needs.",
-        "img": "/img/gst/create_gst_compliant_invoices.svg"
+        "img": "/img/partnership/bussinesses.svg"
       },
       {
         "heading": "Complete Partner Support",
         "description": "You connect us with businesses. We take care of demos, onboarding, training, and ongoing support.",
-        "img": "/img/make-the-switch/support_agent.svg"
+        "img": "/img/partnership/support.svg"
       },
       {
         "heading": "Zero Upfront Cost",
         "description": "No joining fees. No monthly charges. Start earning in minutes.",
-        "img": "/img/benefits/no-voucher.svg"
+        "img": "/img/partnership/zero-cost.svg"
       }
     ]
   },
