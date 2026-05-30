@@ -1,7 +1,7 @@
 {
   "splitBanner": {
     "heading": "Join Giddh's Partnership Program & Grow Your Revenue.",
-    "subHeading": "Refer businesses to our trusted accounting software to your network. Earn 50% on first sale, 30% on renewal, and 20% on third payment—with full tracking and support.",
+    "subHeading": "Refer businesses in your network and earn on every successful client referral — 50% on the first payment, 30% on renewals, and 20% on the third payment. Includes complete tracking and dedicated support.",
     "image": "/img/partnership/hero-section.svg",
     "hideTrustBadges": true,
     "form": false
@@ -11,50 +11,50 @@
     "content": [
       {
         "heading": "Grow Your Revenue",
-        "description": "Unlock a high-value recurring income stream with transparent payouts at every stage of the customer lifecycle.",
+        "description": "Your network can become a reliable revenue stream with payouts that grow as your clients do.",
+        "more_content": [
+          "Earn on every successful referral",
+          "Keep earning when clients renew",
+          "Build long-term income from lasting client relationships"
+        ],
         "img": "/img/partnership/graph.svg"
       },
       {
         "heading": "Designed for Finance Professionals and Businesses",
         "description": "Perfect for Chartered Accountants, Tax Consultants, bookkeepers, and business advisors. Giddh handles invoicing, inventory, VAT compliance, and financial reporting to solve real business needs.",
+        "more_content": [
+          "Ideal for CAs, tax consultants, and bookkeepers",
+          "Built for business advisors and finance professionals",
+          "Invoicing, inventory, VAT compliance, and reporting"
+        ],
         "img": "/img/partnership/bussinesses.svg"
       },
       {
         "heading": "Complete Partner Support",
-        "description": "You connect us with businesses. We take care of demos, onboarding, training, and ongoing support.",
+        "description": "Our support team guides you through every step of the partnership, so you're never on your own.",
+        "more_content": [
+          "Dedicated support at every stage",
+          "Help from signup to your first referral",
+          "Guidance whenever you need it"
+        ],
         "img": "/img/partnership/support.svg"
       },
       {
         "heading": "Zero Upfront Cost",
-        "description": "No joining fees. No monthly charges. Start earning in minutes.",
+        "description": "No joining fees. No hidden charges. Start earning in minutes.",
+        "more_content": [
+          "Completely free to join the partnership program",
+          "No upfront investment or commitment required",
+          "Open to finance professionals and businesses"
+        ],
         "img": "/img/partnership/zero-cost.svg"
       }
     ]
   },
-  "resources": {
-    "heading": "We Help you With Resources",
-    "cards": [
-      {
-        "heading": "Commission Payout Terms",
-        "description": "The Partner's revenue share/payment shall be processed and released by GIDDH on a quarterly basis, subject to successful receipt of payment from the referred clients.",
-        "icon": "/img/partnership/terms.webp"
-      },
-      {
-        "heading": "Dedicated Affiliate Manager",
-        "description": "A dedicated manager helps you promote Giddh, answer questions, and improve conversions.",
-        "icon": "/img/partnership/manager.webp"
-      },
-      {
-        "heading": "Exclusive Affiliate Newsletter",
-        "description": "Get partner-only updates on product news, promotions, and VAT-ready accounting software.",
-        "icon": "/img/partnership/newsletter.webp"
-      },
-      {
-        "heading": "Marketing Assets & Collateral",
-        "description": "Use ready-made banners, emails, and sales templates to convert prospects faster.",
-        "icon": "/img/partnership/collateral.webp"
-      }
-    ]
+  "commissionPayoutTerms": {
+    "heading": "Commission Payout Terms",
+    "description": "The Partner's revenue share/payment shall be processed and released by GIDDH on a quarterly basis, subject to successful receipt of payment from the referred clients.",
+    "icon": "/img/partnership/terms.webp"
   },
   "whyGiddh": {
     "heading": "Why Giddh Is The Best Choice For Your Business?",
@@ -116,6 +116,23 @@
       }
     ]
   },
+  "cta": {
+    "heading": "Your next income stream is one click away.",
+    "subheading": "Not sure? Let's talk. No pressure, just answers.",
+    "theme": "light",
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "/signup",
+        "type": "btn-primary"
+      },
+      {
+        "text": "Contact Us",
+        "link": "/uk/contact-us",
+        "type": "btn-primary-outline"
+      }
+    ]
+  },
   "faqs": [
     {
       "question": "How does the Giddh Partnership Program work?",
@@ -136,29 +153,8 @@
     {
       "question": "When are commissions paid?",
       "answer": "Commissions are processed quarterly after successful payment is received from the referred customer."
-    },
-    {
-      "question": "What kind of support will I receive as a partner?",
-      "answer": "You'll receive marketing materials, partner updates, and dedicated support from our affiliate team to help you generate more referrals and conversions."
     }
   ],
-  "cta": {
-    "heading": "Your next income stream is one click away.",
-    "subheading": "Not sure? Let's talk. No pressure, just answers.",
-    "theme": "light",
-    "buttons": [
-      {
-        "text": "Get Started",
-        "link": "/signup",
-        "type": "btn-primary-outline"
-      },
-      {
-        "text": "Contact Us",
-        "link": "/contact-us",
-        "type": "btn-primary-outline"
-      }
-    ]
-  },
   "schemas": [
     {
       "@context": "https://schema.org",
