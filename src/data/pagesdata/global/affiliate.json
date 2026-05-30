@@ -12,21 +12,41 @@
       {
         "heading": "Grow Your Revenue",
         "description": "Your network can become a reliable revenue stream with payouts that grow as your clients do.",
+        "more_content": [
+          "Earn on every successful referral",
+          "Keep earning when clients renew",
+          "Build long-term income from lasting client relationships"
+        ],
         "img": "/img/partnership/graph.svg"
       },
       {
         "heading": "Designed for Finance Professionals and Businesses",
-        "description": "Perfect for Chartered Accountants, Tax Consultants, bookkeepers, and business advisors. Giddh handles invoicing, inventory, tax compliance, and financial reporting to solve real business needs.",
+        "description": "Giddh handles invoicing, inventory, tax compliance, and financial reporting to solve real business problems.",
+        "more_content": [
+          "Ideal for CAs, tax consultants, and bookkeepers",
+          "Built for business advisors and finance professionals",
+          "Invoicing, inventory, tax compliance, and reporting"
+        ],
         "img": "/img/partnership/bussinesses.svg"
       },
       {
         "heading": "Complete Partner Support",
         "description": "Our support team guides you through every step of the partnership, so you're never on your own.",
+        "more_content": [
+          "Dedicated support at every stage",
+          "Help from signup to your first referral",
+          "Guidance whenever you need it"
+        ],
         "img": "/img/partnership/support.svg"
       },
       {
         "heading": "Zero Upfront Cost",
         "description": "No joining fees. No hidden charges. Start earning in minutes.",
+        "more_content": [
+          "Completely free to join the partnership program",
+          "No upfront investment or commitment required",
+          "Open to finance professionals and businesses"
+        ],
         "img": "/img/partnership/zero-cost.svg"
       }
     ]
