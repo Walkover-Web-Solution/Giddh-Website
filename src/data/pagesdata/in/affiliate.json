@@ -10,32 +10,32 @@
     "heading": "Why Partner With Us?",
     "content": [
       {
-        "heading": "Grow Your Revenue",
-        "description": "Your network can become a reliable revenue stream with payouts that grow as your clients do.",
+        "heading": "Build Recurring Revenue with GIDDH",
+        "description": "Help businesses move to cloud accounting while building a recurring revenue stream for your firm.",
         "more_content": [
-          "Earn on every successful referral",
-          "Keep earning when clients renew",
-          "Build long-term income from lasting client relationships"
+          "Earn recurring revenue on client subscriptions",
+          "Quarterly revenue share payouts",
+          "Dedicated onboarding and partner support"
         ],
         "img": "/img/partnership/graph.svg"
       },
       {
-        "heading": "Designed for Finance Professionals and Businesses",
-        "description": "Perfect for Chartered Accountants, Tax Consultants, bookkeepers, and business advisors. Giddh handles invoicing, inventory, GST compliance, and financial reporting to solve real business needs.",
+        "heading": "Built for Modern Accounting Professionals",
+        "description": "Designed for Chartered Accountants, consultants, bookkeepers, and finance professionals managing multiple businesses and clients.",
         "more_content": [
-          "Ideal for CAs, tax consultants, and bookkeepers",
-          "Built for business advisors and finance professionals",
-          "Invoicing, inventory, GST compliance, and reporting"
+          "Simplified accounting and GST workflows",
+          "Multi-client and multi-company management",
+          "Real-time business reporting and insights"
         ],
         "img": "/img/partnership/bussinesses.svg"
       },
       {
-        "heading": "Complete Partner Support",
-        "description": "Our support team guides you through every step of the partnership, so you're never on your own.",
+        "heading": "Dedicated Partner Support",
+        "description": "Our team works closely with you throughout the partnership journey — from onboarding to client conversion.",
         "more_content": [
-          "Dedicated support at every stage",
-          "Help from signup to your first referral",
-          "Guidance whenever you need it"
+          "Personalized onboarding assistance",
+          "Demo and sales support for referred clients",
+          "Transparent lead tracking process"
         ],
         "img": "/img/partnership/support.svg"
       },
@@ -97,22 +97,28 @@
     ]
   },
   "stepper": {
-    "heading": "Get Started in 3 Simple Steps",
+    "heading": "Become a GIDDH Partner in 4 Simple Steps",
+    "subHeading": "Refer businesses to GIDDH and earn recurring revenue with dedicated onboarding and support.",
     "steps": [
       {
-        "number": "01",
-        "title": "Reach Out to Us",
-        "description": "Contact our team via email or phone. Tell us about yourself and your network. (Optional : Request a live demo to see Giddh in action.)"
+        "number": "1",
+        "title": "Connect with GIDDH",
+        "description": "Get in touch with our partnership team and explore the benefits of becoming a GIDDH Partner."
       },
       {
-        "number": "02",
-        "title": "Finalize Partnership Terms",
-        "description": "Get a simple MOU that explains how commissions work, when you get paid, and what support we provide. E-sign and you're done."
+        "number": "2",
+        "title": "Sign the Partnership MoU",
+        "description": "Review and finalize the partnership terms along with the revenue sharing model."
       },
       {
-        "number": "03",
-        "title": "Begin Your Partnership Journey",
-        "description": "Receive your unique partner link with UTM tracking and access to your dashboard. Share it with businesses. Track referrals, conversions, and earnings in real-time."
+        "number": "3",
+        "title": "Refer Clients Using Your Unique Link",
+        "description": "Share your unique referral/signup link with businesses and clients."
+      },
+      {
+        "number": "4",
+        "title": "Earn Quarterly Revenue Share",
+        "description": "Earn recurring revenue on successful client onboarding and renewals."
       }
     ]
   },
