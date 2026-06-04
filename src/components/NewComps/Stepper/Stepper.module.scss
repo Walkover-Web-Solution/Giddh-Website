@@ -3,7 +3,7 @@
   top: var(--badge-radius, 36px);
   left: calc((100% / var(--step-count, 3)) / 2 + var(--badge-radius, 36px));
   width: calc(100% - (100% / var(--step-count, 3)) - var(--badge-radius, 36px));
-  border-top: 3px dotted var(--col-soft-blue);
+  border-top: 3px dotted;
   z-index: 0;
 }
 
@@ -12,6 +12,6 @@
   top: var(--badge-radius, 36px);
   left: calc(25% + var(--badge-radius, 36px));
   width: calc(50% - var(--badge-radius, 36px));
-  border-top: 3px dotted var(--col-soft-blue);
+  border-top: 3px dotted;
   z-index: 0;
 }
