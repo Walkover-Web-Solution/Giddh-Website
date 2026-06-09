@@ -13,7 +13,7 @@ export default function FAQs({ faqs }) {
       <section className="container py-5">
         <div className="d-flex flex-lg-column flex-column ">
         
-            <h2 className="font-sub-heading font-dark garmond-font px-2">
+            <h2 className="font-sub-heading font-dark garmond-font px-2 text-center">
               Frequently Asked Questions
             </h2>
           

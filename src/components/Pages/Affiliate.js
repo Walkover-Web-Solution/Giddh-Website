@@ -10,12 +10,10 @@ export default function Affiliate({ pageData }) {
   return (
     <>
       <SplitBanner compData={pageData?.splitBanner} />
-      <AlternateFeatures features={pageData?.features} />
-      <Stepper compData={pageData?.stepper} />
       {pageData?.commissionPayoutTerms && (
-        <section className="py-5 outfit-font">
+        <section className="py-2 outfit-font">
           <div className="container">
-            <div className="d-flex flex-column border rounded-4 px-3 py-4 text-center justify-content-center border-color-primary">
+            <div className="d-flex flex-column rounded-4 px-3 py-4 text-center justify-content-center">
               {pageData?.commissionPayoutTerms?.icon && (
                 <Image
                   width={80}
@@ -36,6 +34,9 @@ export default function Affiliate({ pageData }) {
           </div>
         </section>
       )}
+      <AlternateFeatures features={pageData?.features} />
+      <Stepper compData={pageData?.stepper} />
+     
       <CTA compData={pageData?.cta} />
       <FAQs faqs={pageData?.faqs} />
     </>

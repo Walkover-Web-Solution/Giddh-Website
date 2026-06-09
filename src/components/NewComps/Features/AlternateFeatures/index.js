@@ -7,12 +7,14 @@ export default function AlternateFeatures({ features, imgFluid = true }) {
     <section className="bg-neutral py-5 outfit-font">
       <div className="container d-flex flex-column gap-5">
         <div className="d-flex flex-column g-2">
-          <h2 className="text-center font-sub-heading garmond-font">
+          <h2 className={`text-center font-sub-heading garmond-font col-primary ${features?.subHeading ? "" : "mb-0"}`}>
             {features?.heading}
           </h2>
-          <p className="text-center font-slate-grey font-md">
-            {features?.subHeading}
-          </p>
+          {features?.subHeading && (
+            <p className="text-center font-slate-grey font-md">
+              {features?.subHeading}
+            </p>
+          )}
         </div>
         {features?.content?.map((feature, index) => {
           const imageRight = index % 2 === 0;
