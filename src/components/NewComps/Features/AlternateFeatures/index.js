@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MdCircle } from "react-icons/md";
 
-export default function AlternateFeatures({ features }) {
+export default function AlternateFeatures({ features, imgFluid = true }) {
   if (!features?.content?.length) return null;
   return (
     <section className="bg-neutral py-5 outfit-font">
@@ -58,7 +58,7 @@ export default function AlternateFeatures({ features }) {
                       alt={feature?.heading}
                       width={550}
                       height={550}
-                      className="img-fluid rounded"
+                      className="rounded img-fluid h-auto"
                       loading="lazy"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />

@@ -36,7 +36,6 @@ export default function Affiliate({ pageData }) {
           </div>
         </section>
       )}
-      <WhyGiddh compData={pageData?.whyGiddh} />
       <CTA compData={pageData?.cta} />
       <FAQs faqs={pageData?.faqs} />
     </>

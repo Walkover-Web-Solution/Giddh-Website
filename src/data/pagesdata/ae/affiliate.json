@@ -56,46 +56,6 @@
     "description": "The Partner's revenue share/payment shall be processed and released by GIDDH on a quarterly basis, subject to successful receipt of payment from the referred clients.",
     "icon": "/img/partnership/terms.webp"
   },
-  "whyGiddh": {
-    "heading": "Why Giddh Is The Best Choice For Your Business?",
-    "features": [
-      {
-        "features": "Multi-Company Access",
-        "other": false,
-        "giddh": true
-      },
-      {
-        "features": "Unlimited User Access",
-        "other": false,
-        "giddh": true
-      },
-      {
-        "features": "Ledger-Based Accounting",
-        "other": false,
-        "giddh": true
-      },
-      {
-        "features": "White-Label Option",
-        "other": false,
-        "giddh": true
-      },
-      {
-        "features": "GST Compliance",
-        "other": true,
-        "giddh": true
-      },
-      {
-        "features": "Multi-Currency Accounting",
-        "other": false,
-        "giddh": true
-      },
-      {
-        "features": "Inventory Management",
-        "other": true,
-        "giddh": true
-      }
-    ]
-  },
   "stepper": {
     "heading": "Become a GIDDH Partner in 4 Simple Steps",
     "subHeading": "Refer businesses to GIDDH and earn recurring revenue with dedicated onboarding and support.",
