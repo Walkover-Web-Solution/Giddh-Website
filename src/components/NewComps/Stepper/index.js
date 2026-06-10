@@ -21,7 +21,7 @@ export default function Stepper({ compData }) {
   return (
     <section className="py-5 outfit-font bg-white">
       <div className="container">
-        <header className="text-center pb-4 pb-md-5">
+        <header className="text-center">
           <h2 className="font-heading garmond-font font-primary">
             {compData?.heading}
           </h2>
@@ -51,7 +51,7 @@ export default function Stepper({ compData }) {
               </div>
             ))}
 
-            <div className="row g-4 d-none d-lg-flex">
+            <div className="row g-4 d-none d-lg-flex my-5">
               {compData?.steps?.map((step, index) =>
                 renderStep(step, index, "col-12 col-md-6 col-lg-3")
               )}
