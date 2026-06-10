@@ -1,6 +1,6 @@
 import styles from "./Stepper.module.scss";
 
-const dottedBorder = "3px dotted";
+const dottedBorder = "3px dotted var(--col-blue-light)";
 
 export default function Stepper({ compData }) {
   if (!compData?.steps?.length) return null;
@@ -19,7 +19,7 @@ export default function Stepper({ compData }) {
         </div>
 
         <article
-          className="w-100 flex-grow-1 bg-white text-center rounded-4 px-4 px-md-4 py-md-5"
+          className="w-100 flex-grow-1 bg-white text-center rounded-4 px-4 px-md-4 pt-4 pt-md-4 pb-2"
           style={{ border: dottedBorder }}
         >
           <h3 className="garmond-font mb-0 font-primary font-lg fw-semibold">

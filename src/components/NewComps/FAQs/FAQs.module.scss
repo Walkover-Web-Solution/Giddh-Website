@@ -1,19 +1,3 @@
-.faqItem {
-  width: 100%;
-  min-width: 0;
-}
-
-.faqAnswer {
-  width: 100%;
-  min-width: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.accordionButton {
-  width: 100%;
-}
-
 .accordionButton::after {
   display: none;
 }

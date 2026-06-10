@@ -13,7 +13,7 @@ export default function FAQs({ faqs }) {
       <section className="container py-5">
         <div className="d-flex flex-lg-column flex-column ">
         
-            <h2 className="font-sub-heading font-dark garmond-font px-2">
+            <h2 className="font-sub-heading font-dark garmond-font px-2 text-center">
               Frequently Asked Questions
             </h2>
           
@@ -23,16 +23,16 @@ export default function FAQs({ faqs }) {
                 const isOpen = openIndex === index;
                 return (
                   <div
-                    className={`accordion-item px-3 py-2 rounded-2 m-1 w-100 ${
+                    className={`accordion-item px-3 py-2 rounded-2 m-1 w-100 min-w-0 ${
                       isOpen ? "bg-light" : ""
-                    } ${styles.faqItem}`}
+                    }`}
                     key={index}
                   >
                     <h3 className="border-none" id={"heading" + index}>
                       <button
                         className={`accordion-button ${
                           !isOpen ? "collapsed" : ""
-                        } cursor-pointer border-none d-flex align-items-center font-deep bg-transparent gap-2 ${
+                        } cursor-pointer border-none d-flex align-items-center font-deep bg-transparent gap-2 w-100 ${
                           styles.accordionButton
                         }`}
                         type="button"
@@ -59,7 +59,7 @@ export default function FAQs({ faqs }) {
                       }`}
                     >
                       <div
-                        className={`ps-5 pb-2 pe-2 font-dark-light font-sm ${styles.faqAnswer}`}
+                        className="ps-5 pb-2 pe-2 font-dark-light font-sm w-100 min-w-0 text-break"
                       >
                         {faq.answer}
                       </div>
