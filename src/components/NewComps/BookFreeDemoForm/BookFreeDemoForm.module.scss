@@ -16,6 +16,22 @@
   color: var(--col-grey-faded);
 }
 
+.phoneRow {
+  :global(.iti) {
+    width: 100%;
+  }
+
+  :global(.btn) {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 88px;
+    padding: 0 16px;
+    white-space: nowrap;
+  }
+}
+
 .bookdemo_btn_cont {
   position: fixed;
   bottom: 10px;

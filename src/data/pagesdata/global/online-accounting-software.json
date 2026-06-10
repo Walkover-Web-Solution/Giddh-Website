@@ -1,6 +1,6 @@
 {
   "splitBanner": {
-    "heading": "Smart, Simple & All-in-One Accounting for Growing Businesses",
+    "heading": "Stop Managing Business Accounting in Excel. Switch to Giddh.",
     "subHeading": "Giddh brings everything together on a secure, cloud platform built for growing businesses. Simplifies accounting with GST-ready billing, smart inventory sync, and real-time financial insights.",
     "form": true,
     "header": true,
@@ -81,19 +81,22 @@
     }
   ],
   "stats": {
-    "heading": "Our Commitment Backed by Data",
     "stats": [
       {
-        "value": "4.8/5",
-        "label": "Average User Rating"
+        "value": "10K+",
+        "label": "Businesses Onboarded"
       },
       {
-        "value": "85%",
-        "label": "Improvement in Financial Visibility"
+        "value": "₹500Cr+",
+        "label": "Invoices Processed"
       },
       {
-        "value": "100%",
-        "label": "Data Security & Uptime Guarantee"
+        "value": "3 Countries",
+        "label": "India, UAE & UK"
+      },
+      {
+        "value": "99.9%",
+        "label": "Uptime Guaranteed"
       }
     ]
   },
