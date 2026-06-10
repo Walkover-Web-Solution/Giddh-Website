@@ -12,6 +12,95 @@
   }
 }
 
+.bannerForm {
+  max-width: 480px !important;
+  box-shadow: 0 8px 32px rgba(27, 31, 109, 0.08);
+}
+
+.bannerInput {
+  height: 48px;
+}
+
+.bannerPhoneIti {
+  :global(.iti) {
+    display: block;
+    width: 100%;
+    position: relative;
+    background-color: #f8f9fa;
+    border: 1px solid var(--col-light-gray);
+    border-radius: 10px;
+  }
+
+  :global(.iti__flag-container) {
+    z-index: 3;
+  }
+
+  :global(.iti input),
+  :global(.iti .form-control) {
+    width: 100%;
+    height: 46px;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.bannerPhoneWrap :global(.iti__country-list) {
+  position: absolute;
+  left: 0;
+  width: 260px !important;
+  max-width: calc(100vw - 48px) !important;
+  min-width: 100%;
+  max-height: 200px;
+  margin-top: 4px;
+  padding: 4px 0;
+  overflow-y: auto;
+  z-index: 1060;
+  background-color: var(--col-white);
+  border: 1px solid var(--col-light-gray);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(27, 31, 109, 0.1);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.bannerPhoneWrap :global(.iti__country) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.bannerPhoneWrap :global(.iti__country.iti__highlight) {
+  background-color: var(--col-faded-blue);
+}
+
+.bannerPhoneWrap :global(.iti__flag-box) {
+  flex-shrink: 0;
+}
+
+.bannerPhoneWrap :global(.iti__country-name) {
+  flex: 1;
+  color: var(--col-dark);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bannerPhoneWrap :global(.iti__dial-code) {
+  color: var(--col-grey-deep);
+  font-size: 12px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
 .formPlaceholder::placeholder {
   color: var(--col-grey-faded);
 }

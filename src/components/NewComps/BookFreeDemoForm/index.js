@@ -42,6 +42,17 @@ export default function BookFreeDemoForm({
   useEffect(() => {
     initOtpWidget(() => setResendChannels(getResendChannels()));
     setupPhoneInput(phoneInputRef, intlRef);
+
+    return () => {
+      if (intlRef.current?.destroy) {
+        intlRef.current.destroy();
+        intlRef.current = null;
+      }
+      const input = phoneInputRef.current;
+      if (input) {
+        delete input.dataset.intlTelInitialized;
+      }
+    };
   }, []);
 
   const getMobileNo = () =>
@@ -215,6 +226,7 @@ export default function BookFreeDemoForm({
         formData={formData}
         handleChange={handleChange}
         error={error}
+        location={location}
         verticalFields={verticalFields}
         formId={formId}
         phoneInputRef={phoneInputRef}
@@ -234,7 +246,11 @@ export default function BookFreeDemoForm({
         type="submit"
         className={`btn ${
           submitting || !mobileVerified ? "btn-disabled" : "btn-primary"
-        } w-100 d-flex align-items-center justify-content-center px-3 py-2 rounded`}
+        } w-100 d-flex align-items-center justify-content-center ${
+          location === "banner"
+            ? "rounded-3 py-3 px-4 c-fw-600 c-fs-5 mt-1"
+            : "px-3 py-2 rounded"
+        }`}
         disabled={submitting || !mobileVerified}
       >
         {submitLabel}
@@ -245,11 +261,19 @@ export default function BookFreeDemoForm({
   if (location === "banner") {
     return (
       <div
-        className={`outfit-font card col-lg-5 col-md-6 col-12 p-4 gap-4 rounded ${style.form_container} d-flex flex-column align-items-center justify-content-center`}
+        className={`outfit-font col-lg-5 col-md-6 col-12 w-100 ${style.bannerForm} d-flex flex-column bg-white rounded-4 p-4 overflow-visible`}
       >
-        <span className="col-primary c-fw-600 c-fs-3 mb-4">
-          Upgrade Your Accounting with Giddh
-        </span>
+        <div className="d-flex gap-3 mb-4">
+          <div className="border-start border-4 border-primary rounded flex-shrink-0 align-self-stretch" />
+          <div>
+            <h2 className="font-md font-600 font-primary m-0 lh-sm">
+              Experience Premium Accounting
+            </h2>
+            <p className="font-sm font-grey-deep mt-2 mb-0 lh-base">
+              Fill in your details below to activate your demo.
+            </p>
+          </div>
+        </div>
         {form}
       </div>
     );

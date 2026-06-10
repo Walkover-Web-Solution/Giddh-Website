@@ -1,4 +1,4 @@
-export function setupPhoneInput(inputRef, intlRef) {
+export function setupPhoneInput(inputRef, intlRef, options = {}) {
   const input = inputRef.current;
   if (!input || input.dataset.intlTelInitialized === "true") {
     return;
@@ -9,12 +9,18 @@ export function setupPhoneInput(inputRef, intlRef) {
       return;
     }
 
-    intlRef.current = window.intlTelInput(input, {
+    const config = {
       nationalMode: true,
       utilsScript:
         "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
       initialCountry: "in",
-    });
+    };
+
+    if (options.dropdownContainer) {
+      config.dropdownContainer = options.dropdownContainer;
+    }
+
+    intlRef.current = window.intlTelInput(input, config);
     input.dataset.intlTelInitialized = "true";
   };
 
