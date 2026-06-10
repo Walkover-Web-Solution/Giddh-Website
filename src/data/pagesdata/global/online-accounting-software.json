@@ -119,37 +119,27 @@
 
     "image": "/img/girl-avatar.svg"
   },
-  "giddhFor": {
-    "heading": "Who Can Grow with Giddh?",
-    "subheading": "Giddh provides your business with clarity, control, and hassle-free compliance, making it ideal for product sellers, service providers, and multi-client operations.",
-    "content": [
+  "getStarted": {
+    "badge": "START TODAY",
+    "heading": "Ready to simplify your business accounting?",
+    "subheading": "Join thousands of smart businesses automating their invoices, tracking GST returns, and gaining instant visibility with Giddh.",
+    "highlights": [
+      "GST Compliant Invoicing in 60 Secs",
+      "Multi-Company & Dynamic Permission Rules",
+      "Instant Financial Audits & Custom Reports",
+      "Seamless Import from Tally & Microsoft Excel"
+    ],
+    "buttons": [
       {
-        "title": "Retailers",
-        "name": "Retailers & Traders",
-        "description": "Get real-time control of sales, inventory, and finances for smooth growth.",
-        "icon": "🛒",
-        "image": "/img/online-accounting-software/Retailers.svg"
+        "text": "Start 14-Day Free Trial",
+        "link": "/signup",
+        "type": "btn-primary",
+        "arrow": true
       },
       {
-        "title": "Startups",
-        "name": "Startups & Service Providers",
-        "description": "Manage cash flow, track expenses, and scale smarter with real-time financial insights.",
-        "icon": "🚀",
-        "image": "/img/online-accounting-software/Startups.svg"
-      },
-      {
-        "title": "Accountants",
-        "name": "Accountants & Finance Teams",
-        "description": " Handle multiple clients, automate reports, and ensure accurate compliance with ease.",
-        "icon": "📊",
-        "image": "/img/online-accounting-software/Accountants.svg"
-      },
-      {
-        "title": "E-commerce",
-        "name": "Shopify & E-commerce Brands",
-        "description": "Sync sales, manage stock, and track payments seamlessly across all online platforms.",
-        "icon": "🛍️",
-        "image": "/img/online-accounting-software/E-commerce.svg"
+        "text": "View Pricing Plans",
+        "link": "/pricing",
+        "type": "btn-white"
       }
     ]
   },

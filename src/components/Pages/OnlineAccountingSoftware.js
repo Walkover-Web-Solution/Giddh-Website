@@ -2,7 +2,7 @@ import SplitBanner from "../NewComps/Banner/SplitBanner";
 import BentoFeatures from "../NewComps/Features/BentoFeatures";
 import Stats from "../NewComps/Stats";
 import WhyGiddh from "../NewComps/WhyGiddh";
-import GiddhFor from "../NewComps/GiddhFor";
+import GetStarted from "../NewComps/GetStarted";
 import SpotlightTestimonials from "../NewComps/Testimonials/SpotlightTestimonials";
 import FAQs from "../NewComps/FAQs";
 import Footer from "../NewComps/Footer";
@@ -86,9 +86,9 @@ export default function OnlineAccountingSoftware({ pageData }) {
       <SplitBanner compData={pageData?.splitBanner} />
       <Stats stats={pageData?.stats} />
       <BentoFeatures features={pageData?.features} />
+      <GetStarted compData={pageData?.getStarted} />
       <WhyGiddh compData={pageData?.whyGiddh} />
       <CTA hasImage={true} compData={pageData?.cta} />
-      <GiddhFor compData={pageData?.giddhFor} />
       <SpotlightTestimonials testimonials={pageData?.testimonials} />
       <SeeGiddhInAction compData={pageData?.seeGiddhInAction} />
       <FAQs faqs={pageData?.faqs} />
