@@ -1,0 +1,142 @@
+{
+  "splitBanner": {
+    "heading": "Join Giddh's Partnership Program & Grow Your Revenue.",
+    "subHeading": "Refer businesses in your network and earn on every successful client referral — 50% on the first payment, 30% on renewals, and 20% on the third payment. Includes complete tracking and dedicated support.",
+    "image": "/img/partnership/hero-section.svg",
+    "hideTrustBadges": true,
+    "form": false
+  },
+  "features": {
+    "heading": "Why Partner With Us?",
+    "content": [
+      {
+        "heading": "Build Recurring Revenue with GIDDH",
+        "description": "Help businesses move to cloud accounting while building a recurring revenue stream for your firm.",
+        "more_content": [
+          "Earn recurring revenue on client subscriptions",
+          "Quarterly revenue share payouts",
+          "Dedicated onboarding and partner support"
+        ],
+        "img": "/img/partnership/graph.svg"
+      },
+      {
+        "heading": "Built for Modern Accounting Professionals",
+        "description": "Designed for Chartered Accountants, consultants, bookkeepers, and finance professionals managing multiple businesses and clients.",
+        "more_content": [
+          "Simplified accounting and GST workflows",
+          "Multi-client and multi-company management",
+          "Real-time business reporting and insights"
+        ],
+        "img": "/img/partnership/bussinesses.svg"
+      },
+      {
+        "heading": "Dedicated Partner Support",
+        "description": "Our team works closely with you throughout the partnership journey — from onboarding to client conversion.",
+        "more_content": [
+          "Personalized onboarding assistance",
+          "Demo and sales support for referred clients",
+          "Transparent lead tracking process"
+        ],
+        "img": "/img/partnership/support.svg"
+      },
+      {
+        "heading": "Zero Upfront Cost",
+        "description": "No joining fees. No hidden charges. Start earning in minutes.",
+        "more_content": [
+          "Completely free to join the partnership program",
+          "No upfront investment or commitment required",
+          "Open to finance professionals and businesses"
+        ],
+        "img": "/img/partnership/zero-cost.svg"
+      }
+    ]
+  },
+  "commissionPayoutTerms": {
+    "heading": "Commission Payout Terms",
+    "description": "The Partner's revenue share/payment shall be processed and released by GIDDH on a quarterly basis, subject to successful receipt of payment from the referred clients.",
+    "icon": "/img/partnership/terms.webp"
+  },
+  "stepper": {
+    "heading": "Become a Giddh Referral Partner & Earn in 4 Steps",
+    "subHeading": "Refer businesses to GIDDH and earn recurring revenue with dedicated onboarding and support.",
+    "steps": [
+      {
+        "number": "1",
+        "title": "Connect with GIDDH",
+        "description": "Connect with our partnership team and explore GIDDH Partner benefits."
+      },
+      {
+        "number": "2",
+        "title": "Sign the Partnership MoU",
+        "description": "Review and finalize the partnership terms along with the revenue sharing model."
+      },
+      {
+        "number": "3",
+        "title": "Refer Clients Using Your Unique Link",
+        "description": "Share your unique referral/signup link with businesses and clients."
+      },
+      {
+        "number": "4",
+        "title": "Earn Quarterly Revenue Share",
+        "description": "Earn recurring revenue on successful client onboarding and renewals."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Your next income stream is one click away.",
+    "subheading": "Let's talk. No pressure, just answers.",
+    "theme": "light",
+    "buttons": [
+      {
+        "text": "Get Started",
+        "link": "/signup",
+        "type": "btn-primary"
+      },
+      {
+        "text": "Contact Us",
+        "link": "/in/contact-us",
+        "type": "btn-primary-outline"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How does the Giddh Partnership Program work?",
+      "answer": "Join the program, refer businesses to Giddh, and earn commissions whenever your referrals purchase a plan. Our team handles demos, onboarding, and customer support."
+    },
+    {
+      "question": "What commission do partners earn?",
+      "answer": "• 50% of the amount received upon successful onboarding of the client\n• 30% on the second-year renewal\n• 20% on the third consecutive year renewal for the same client"
+    },
+    {
+      "question": "Is there any cost to join the program?",
+      "answer": "No. The Giddh Partnership Program is completely free to join with no setup fees or hidden charges."
+    },
+    {
+      "question": "Who handles product demos and customer onboarding?",
+      "answer": "The Giddh team takes care of product demos, onboarding, training, and ongoing support for referred customers."
+    },
+    {
+      "question": "When are commissions paid?",
+      "answer": "Commissions are processed quarterly after successful payment is received from the referred customer."
+    }
+  ],
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Join Giddh's partnership program, refer businesses to trusted accounting software, and earn recurring commissions with full onboarding and support.",
+      "name": "Giddh Partnership Program",
+      "url": "https://giddh.com/in/affiliate"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Join Giddh's partnership program, refer businesses to trusted accounting software, and earn recurring commissions with full onboarding and support.",
+      "url": "https://giddh.com/in/affiliate",
+      "name": "Giddh Partnership Program"
+    }
+  ]
+}

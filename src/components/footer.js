@@ -54,7 +54,7 @@ const Footer = (path) => {
                     </li> */}
                     <li>
                       <a href={link.linkPrefix + "/affiliate"}>
-                        Affiliate With Us
+                       Affiliate With Us
                       </a>
                     </li>
                     <li>

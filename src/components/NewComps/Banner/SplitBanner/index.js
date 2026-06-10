@@ -65,7 +65,8 @@ export default function SplitBanner({ compData }) {
                   : ""
               }`}
             >
-              {trustBadgeBrands?.map((logo, index) => (
+              {!compData?.hideTrustBadges &&
+                trustBadgeBrands?.map((logo, index) => (
                 <a
                   key={index}
                   href={logo.href}

@@ -1,18 +1,20 @@
 import Image from "next/image";
 import { MdCircle } from "react-icons/md";
 
-export default function AlternateFeatures({ features }) {
+export default function AlternateFeatures({ features, imgFluid = true }) {
   if (!features?.content?.length) return null;
   return (
     <section className="bg-neutral py-5 outfit-font">
       <div className="container d-flex flex-column gap-5">
         <div className="d-flex flex-column g-2">
-          <h2 className="text-center font-sub-heading garmond-font">
+          <h2 className={`text-center font-sub-heading garmond-font col-primary ${features?.subHeading ? "" : "mb-0"}`}>
             {features?.heading}
           </h2>
-          <p className="text-center font-slate-grey font-md">
-            {features?.subHeading}
-          </p>
+          {features?.subHeading && (
+            <p className="text-center font-slate-grey font-md">
+              {features?.subHeading}
+            </p>
+          )}
         </div>
         {features?.content?.map((feature, index) => {
           const imageRight = index % 2 === 0;
@@ -58,7 +60,7 @@ export default function AlternateFeatures({ features }) {
                       alt={feature?.heading}
                       width={550}
                       height={550}
-                      className="img-fluid rounded"
+                      className="rounded img-fluid h-auto"
                       loading="lazy"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />

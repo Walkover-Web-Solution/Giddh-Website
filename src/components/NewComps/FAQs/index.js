@@ -11,19 +11,19 @@ export default function FAQs({ faqs }) {
   return (
     <>
       <section className="container py-5">
-        <div className="d-flex flex-lg-row flex-column">
-          <div className="col-lg-4 col-12">
-            <h2 className="font-sub-heading font-dark garmond-font col-lg-2 col-12">
+        <div className="d-flex flex-lg-column flex-column ">
+        
+            <h2 className="font-sub-heading font-dark garmond-font px-2 text-center">
               Frequently Asked Questions
             </h2>
-          </div>
-          <div>
-            <div id="accordionAllFeatures">
+          
+          <div className="w-100 align-self-stretch">
+            <div className="py-4 w-100" id="accordionAllFeatures">
               {faqs?.map((faq, index) => {
                 const isOpen = openIndex === index;
                 return (
                   <div
-                    className={`accordion-item px-3 py-2 rounded-2 m-1 ${
+                    className={`accordion-item px-3 py-2 rounded-2 m-1 w-100 min-w-0 ${
                       isOpen ? "bg-light" : ""
                     }`}
                     key={index}
@@ -32,7 +32,7 @@ export default function FAQs({ faqs }) {
                       <button
                         className={`accordion-button ${
                           !isOpen ? "collapsed" : ""
-                        } cursor-pointer border-none d-flex align-items-center font-deep bg-transparent gap-2 ${
+                        } cursor-pointer border-none d-flex align-items-center font-deep bg-transparent gap-2 w-100 ${
                           styles.accordionButton
                         }`}
                         type="button"
@@ -47,19 +47,21 @@ export default function FAQs({ faqs }) {
                             <MdKeyboardArrowDown className="font-lg font-primary" />
                           )}
                         </span>
-                        <div className="font-600">{faq.question}</div>
+                        <div className="font-600 text-start flex-grow-1 min-w-0">
+                          {faq.question}
+                        </div>
                       </button>
                     </h3>
                     <div
                       id={"collapse" + index}
-                      className={`accordion-collapse collapse ${
+                      className={`accordion-collapse collapse w-100 ${
                         isOpen ? "show" : ""
                       }`}
                     >
-                      <div className="font-deep">
-                        <div className="ps-5 font-dark-light font-sm">
-                          {faq.answer}
-                        </div>
+                      <div
+                        className="ps-5 pb-2 pe-2 font-dark-light font-sm w-100 min-w-0 text-break"
+                      >
+                        {faq.answer}
                       </div>
                     </div>
                   </div>
