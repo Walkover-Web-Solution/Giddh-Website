@@ -119,6 +119,17 @@ export default function useEmailOtpVerification({
     resetEmailOtpFields();
   }, [resetEmailOtpFields]);
 
+  const resetEmailVerification = useCallback(() => {
+    setShowEmailOtp(false);
+    setEmailDetails(null);
+    resetEmailOtpFields();
+
+    const emailInput = document.getElementById(emailInputId);
+    if (emailInput) {
+      emailInput.value = "";
+    }
+  }, [emailInputId, resetEmailOtpFields]);
+
   const retrySendOtp = useCallback(() => {
     if (!emailDetails?.requestId) return;
 
@@ -193,6 +204,7 @@ export default function useEmailOtpVerification({
     verifyEmailOtp,
     retrySendOtp,
     changeEmail,
+    resetEmailVerification,
     showToaster,
   };
 }
