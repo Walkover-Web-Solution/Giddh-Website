@@ -1,0 +1,93 @@
+.formCard {
+  max-width: 480px;
+  box-shadow: 0 8px 32px rgba(27, 31, 109, 0.08);
+}
+
+.formInput {
+  height: 48px;
+  border-radius: 12px !important;
+
+  &::placeholder {
+    color: var(--col-grey-faded);
+  }
+
+  &:focus {
+    border-color: var(--col-primary) !important;
+    box-shadow: 0 0 0 3px rgba(27, 31, 109, 0.08) !important;
+  }
+}
+
+.otpBtn,
+.verifyBtn {
+  height: 48px;
+  border-radius: 12px;
+}
+
+.otpBtn {
+  min-width: 108px;
+}
+
+.verifyBtn {
+  min-width: 72px;
+}
+
+.submitBtn {
+  height: 52px;
+  border-radius: 12px;
+}
+
+.otpInput {
+  width: 48px;
+}
+
+.phoneField {
+  :global(.iti) {
+    width: 100%;
+    display: block;
+  }
+
+  :global(.iti .form-control) {
+    height: 48px;
+    border-radius: 12px !important;
+
+    &:focus {
+      border-color: var(--col-primary) !important;
+      box-shadow: 0 0 0 3px rgba(27, 31, 109, 0.08) !important;
+    }
+  }
+
+  :global(.iti--separate-dial-code .iti__selected-dial-code) {
+    font-size: 14px;
+    color: var(--col-slate-grey);
+  }
+
+  :global(.iti__dropdown-content) {
+    min-width: 320px !important;
+    width: 320px !important;
+    max-width: none !important;
+  }
+
+  :global(.iti__country-list) {
+    min-width: 320px !important;
+    width: 100% !important;
+    max-width: none !important;
+    white-space: nowrap;
+  }
+
+  :global(.iti__country) {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+  }
+
+  :global(.iti__country-name) {
+    flex: 1;
+    margin-left: 8px;
+    color: var(--col-slate-grey);
+  }
+
+  :global(.iti__dial-code) {
+    margin-left: 8px;
+    color: var(--col-grey-faded);
+  }
+}
