@@ -1,4 +1,5 @@
 import BookFreeDemoForm from "../../BookFreeDemoForm";
+import AffiliateForm from "../../AffiliateForm";
 import { trustBadgeBrands } from "../../TrustBadge";
 import Image from "next/image";
 import style from "./SplitBanner.module.scss";
@@ -38,14 +39,20 @@ export default function SplitBanner({ compData }) {
         )}
         <div
           className={`row align-items-center ${
-            !compData?.form && !compData?.image && !compData?.lottie
+            !compData?.form &&
+            !compData?.affiliateForm &&
+            !compData?.image &&
+            !compData?.lottie
               ? "justify-content-center"
               : "justify-content-between"
           } garmond-font`}
         >
           <div
             className={`col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 d-flex flex-column gap-2 ${
-              !compData?.form && !compData?.image && !compData?.lottie
+              !compData?.form &&
+              !compData?.affiliateForm &&
+              !compData?.image &&
+              !compData?.lottie
                 ? "pe-0 text-center col-lg-8 mx-auto"
                 : "pe-3"
             }`}
@@ -60,7 +67,10 @@ export default function SplitBanner({ compData }) {
             <p className="font-grey outfit-font">{compData?.subHeading}</p>
             <div
               className={`d-flex flex-wrap align-items-center gap-4 ${
-                !compData?.form && !compData?.image && !compData?.lottie
+                !compData?.form &&
+                !compData?.affiliateForm &&
+                !compData?.image &&
+                !compData?.lottie
                   ? "justify-content-center"
                   : ""
               }`}
@@ -88,7 +98,12 @@ export default function SplitBanner({ compData }) {
           {compData?.form && (
             <BookFreeDemoForm hiddenAbsolute={false} location="banner" />
           )}
-          {!compData?.form && compData?.image && (
+          {compData?.affiliateForm && (
+            <div className="col-lg-6 col-md-6 col-12 d-flex justify-content-center justify-content-lg-end">
+              <AffiliateForm />
+            </div>
+          )}
+          {!compData?.form && !compData?.affiliateForm && compData?.image && (
             <div className="col-lg-6 col-md-6 col-12 text-center">
               <Image
                 src={compData?.image}
