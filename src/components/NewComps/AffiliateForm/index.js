@@ -100,20 +100,27 @@ export default function AffiliateForm() {
       <form
         className="w-100 d-flex flex-column gap-4"
         onSubmit={handleSubmit}
+        aria-label="Affiliate registration"
       >
         <div>
-          <label className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block">
+          <label
+            id="affiliate-full-name-label"
+            className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
+          >
             Full Name <span className="font-danger">*</span>
           </label>
           <div className="position-relative">
             <MdPerson
-              className={`position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded ${style.inputIcon}`}
+              className="position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded font-md z-2 pe-none"
+              aria-hidden="true"
             />
             <input
               type="text"
               name="fullName"
-              className={`form-control ps-5 ${style.formInput}`}
+              className={`form-control border border-light-gray ${style.formInput} ps-5`}
               placeholder="Alice Johnson"
+              aria-labelledby="affiliate-full-name-label"
+              aria-required="true"
               required
             />
           </div>
@@ -122,20 +129,26 @@ export default function AffiliateForm() {
         <div>
           {!showEmailOtp && !isEmailVerified && (
             <>
-              <label className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block">
+              <label
+                id="affiliate-email-label"
+                className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
+              >
                 Work Email <span className="font-danger">*</span>
               </label>
               <div className="d-flex align-items-stretch gap-2">
                 <div className="position-relative flex-grow-1">
                   <MdEmail
-                    className={`position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded ${style.inputIcon}`}
+                    className="position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded font-md z-2 pe-none"
+                    aria-hidden="true"
                   />
                   <input
                     type="email"
                     id="affiliateEmail"
-                    className={`form-control ps-5 ${style.formInput}`}
+                    className={`form-control border border-light-gray ${style.formInput} ps-5`}
                     placeholder="partner1@example.com"
                     autoComplete="off"
+                    aria-labelledby="affiliate-email-label"
+                    aria-required="true"
                     required
                   />
                 </div>
@@ -144,11 +157,16 @@ export default function AffiliateForm() {
                   className={`btn bg-faded-blue font-primary font-600 font-sm border-0 white-space-no-wrap ${style.otpBtn}`}
                   onClick={sendEmailOtp}
                   disabled={emailGetOtpInProgress}
+                  aria-label={
+                    emailGetOtpInProgress ? "Sending OTP" : "Send OTP"
+                  }
+                  aria-busy={emailGetOtpInProgress}
                 >
                   {emailGetOtpInProgress ? (
                     <div
                       className="spinner-border spinner-border-sm font-primary"
                       role="status"
+                      aria-label="Sending OTP"
                     />
                   ) : (
                     "Send OTP"
@@ -160,18 +178,26 @@ export default function AffiliateForm() {
 
           {showEmailOtp && !isEmailVerified && (
             <>
-              <label className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block">
+              <label
+                id="affiliate-otp-label"
+                className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
+              >
                 Enter OTP <span className="font-danger">*</span>
               </label>
-              <div className="d-flex flex-wrap align-items-center gap-2">
+              <div
+                className="d-flex flex-wrap align-items-center gap-2"
+                role="group"
+                aria-labelledby="affiliate-otp-label"
+              >
                 {[1, 2, 3, 4].map((field) => (
                   <input
                     key={field}
                     type="tel"
-                    className={`form-control affiliate-email-otp-field ${style.formInput} ${style.otpInput}`}
+                    className={`form-control border border-light-gray ${style.formInput} affiliate-email-otp-field text-center p-0 ${style.otpInput}`}
                     placeholder="*"
                     maxLength="1"
                     autoFocus={field === 1}
+                    aria-label={`OTP digit ${field}`}
                   />
                 ))}
                 <button
@@ -180,11 +206,16 @@ export default function AffiliateForm() {
                   className={`btn btn-primary font-600 font-sm ${style.verifyBtn}`}
                   onClick={verifyEmailOtp}
                   disabled={emailVerifyOtpInProgress}
+                  aria-label={
+                    emailVerifyOtpInProgress ? "Verifying OTP" : "Verify OTP"
+                  }
+                  aria-busy={emailVerifyOtpInProgress}
                 >
                   {emailVerifyOtpInProgress ? (
                     <div
                       className="spinner-border spinner-border-sm"
                       role="status"
+                      aria-label="Verifying OTP"
                     />
                   ) : (
                     "Verify"
@@ -197,6 +228,7 @@ export default function AffiliateForm() {
                   className="btn btn-link font-primary font-600 font-xs p-0"
                   onClick={retrySendOtp}
                   disabled={emailGetOtpInProgress}
+                  aria-label="Resend OTP"
                 >
                   Resend
                 </button>
@@ -205,6 +237,7 @@ export default function AffiliateForm() {
                   className="btn btn-link font-primary font-600 font-xs p-0"
                   onClick={changeEmail}
                   disabled={emailGetOtpInProgress}
+                  aria-label="Change email address"
                 >
                   Change Email
                 </button>
@@ -219,24 +252,31 @@ export default function AffiliateForm() {
 
           {isEmailVerified && (
             <>
-              <label className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block">
+              <label
+                id="affiliate-email-verified-label"
+                className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
+              >
                 Work Email <span className="font-danger">*</span>
               </label>
               <div className="position-relative">
                 <MdEmail
-                  className={`position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded ${style.inputIcon}`}
+                  className="position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded font-md z-2 pe-none"
+                  aria-hidden="true"
                 />
                 <input
                   type="email"
                   id="affiliateEmail"
-                  className={`form-control ps-5 pe-5 ${style.formInput}`}
+                  className={`form-control border border-light-gray ${style.formInput} ps-5 pe-5`}
                   defaultValue={emailDetails?.email || ""}
                   autoComplete="off"
+                  aria-labelledby="affiliate-email-verified-label"
+                  aria-readonly="true"
                   disabled
                   required
                 />
                 <MdCheckCircle
-                  className={`position-absolute top-50 translate-middle-y font-success ${style.verifiedIcon}`}
+                  className="position-absolute top-50 end-0 translate-middle-y me-3 font-success font-lg z-2"
+                  aria-hidden="true"
                 />
               </div>
             </>
@@ -244,23 +284,29 @@ export default function AffiliateForm() {
         </div>
 
         <div>
-          <label className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block">
+          <label
+            id="affiliate-password-label"
+            className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
+          >
             Password <span className="font-danger">*</span>
           </label>
           <div className="position-relative">
             <MdLock
-              className={`position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded ${style.inputIcon}`}
+              className="position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded font-md z-2 pe-none"
+              aria-hidden="true"
             />
             <input
               type={showPassword ? "text" : "password"}
               name="password"
-              className={`form-control ps-5 pe-5 ${style.formInput}`}
+              className={`form-control border border-light-gray ${style.formInput} ps-5 pe-5`}
               placeholder="Enter password"
+              aria-labelledby="affiliate-password-label"
+              aria-required="true"
               required
             />
             <button
               type="button"
-              className={`position-absolute top-50 end-0 translate-middle-y me-3 border-0 bg-transparent p-0 font-grey-faded ${style.toggleIcon}`}
+              className="position-absolute top-50 end-0 translate-middle-y me-3 border-0 bg-transparent p-0 font-grey-faded font-md z-2 cursor-pointer"
               onClick={() => setShowPassword((prev) => !prev)}
               aria-label={showPassword ? "Hide password" : "Show password"}
             >
@@ -270,7 +316,10 @@ export default function AffiliateForm() {
         </div>
 
         <div>
-          <label className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block">
+          <label
+            id="affiliate-phone-label"
+            className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
+          >
             Phone Number{" "}
             <span className="font-grey-faded font-400 text-uppercase">
               (Optional)
@@ -280,9 +329,10 @@ export default function AffiliateForm() {
             <input
               type="tel"
               id="affiliateMobileNo"
-              className={`form-control w-100 ${style.formInput}`}
+              className={`form-control border border-light-gray ${style.formInput} w-100`}
               placeholder="98********"
               autoComplete="off"
+              aria-labelledby="affiliate-phone-label"
             />
           </div>
         </div>
@@ -291,9 +341,17 @@ export default function AffiliateForm() {
           type="submit"
           className={`btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 font-600 mt-1 ${style.submitBtn}`}
           disabled={submitting}
+          aria-label={
+            submitting ? "Submitting registration" : "Complete registration"
+          }
+          aria-busy={submitting}
         >
           {submitting ? (
-            <div className="spinner-border spinner-border-sm" role="status" />
+            <div
+              className="spinner-border spinner-border-sm"
+              role="status"
+              aria-label="Submitting registration"
+            />
           ) : (
             <>
               Complete Registration <MdArrowForward />
