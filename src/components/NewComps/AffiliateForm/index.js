@@ -33,6 +33,7 @@ export default function AffiliateForm() {
     verifyEmailOtp,
     retrySendOtp,
     changeEmail,
+    resetEmailVerification,
     showToaster,
   } = useEmailOtpVerification();
   const { getFormattedPhone } = useIntlTelInput("affiliateMobileNo");
@@ -79,11 +80,9 @@ export default function AffiliateForm() {
     setSubmitting(true);
 
     try {
-      const response = await submitAffiliateRegistration(payload);
-      showToaster(
-        response?.message || "Registration submitted successfully.",
-        "success"
-      );
+      await submitAffiliateRegistration(payload);
+      showToaster("You have registered successfully!", "success");
+      resetEmailVerification();
       e.target.reset();
     } catch (error) {
       showToaster(error.message, "error");
