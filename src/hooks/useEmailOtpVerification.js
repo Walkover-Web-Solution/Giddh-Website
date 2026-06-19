@@ -5,6 +5,20 @@ import { bindOtpInputs } from "@/utils/bindOtpInputs";
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const EMAIL_OTP_CHANNEL = 3;
 
+function pollOtpWidget(onReady, attempts = 25) {
+  const widgetData =
+    typeof window.getWidgetData === "function" ? window.getWidgetData() : null;
+
+  if (widgetData?.processes && typeof window.sendOtp === "function") {
+    onReady();
+    return;
+  }
+  if (attempts <= 0) {
+    return;
+  }
+  setTimeout(() => pollOtpWidget(onReady, attempts - 1), 200);
+}
+
 export default function useEmailOtpVerification({
   emailInputId = "affiliateEmail",
   otpFieldSelector = ".affiliate-email-otp-field",
@@ -15,11 +29,21 @@ export default function useEmailOtpVerification({
   const [emailGetOtpInProgress, setEmailGetOtpInProgress] = useState(false);
   const [emailVerifyOtpInProgress, setEmailVerifyOtpInProgress] =
     useState(false);
+  const [otpWidgetReady, setOtpWidgetReady] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    addOtpWidgetScript(true, false, () => {});
+    const markWidgetReady = () => {
+      pollOtpWidget(() => setOtpWidgetReady(true));
+    };
+
+    if (typeof window.sendOtp === "function") {
+      markWidgetReady();
+      return;
+    }
+
+    addOtpWidgetScript(true, false, markWidgetReady);
   }, []);
 
   useEffect(() => {
@@ -51,6 +75,13 @@ export default function useEmailOtpVerification({
       return;
     }
 
+    if (
+      typeof window.sendOtp !== "function" ||
+      !otpWidgetReady
+    ) {
+      return;
+    }
+
     setEmailGetOtpInProgress(true);
 
     window.sendOtp(
@@ -76,7 +107,7 @@ export default function useEmailOtpVerification({
         );
       }
     );
-  }, [getEmailValue, showToaster]);
+  }, [getEmailValue, otpWidgetReady, showToaster]);
 
   const changeEmail = useCallback(() => {
     setShowEmailOtp(false);

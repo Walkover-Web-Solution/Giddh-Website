@@ -113,16 +113,42 @@ function addOtpWidgetScript(
     callbackFunction
   );
 
-  let scriptTag = document.createElement("script");
-  scriptTag.src = "https://verify.msg91.com/otp-provider.js";
-  scriptTag.type = "text/javascript";
-  scriptTag.defer = true;
-  scriptTag.onload = () => {
+  const scriptSrc = "https://verify.msg91.com/otp-provider.js";
+
+  function runInitSendOTP() {
+    if (exposeMethods && typeof window.sendOtp === "function") {
+      if (widgetLoadCallbackFunction) {
+        widgetLoadCallbackFunction();
+      }
+      return;
+    }
+
     initSendOTP(configuration);
     if (widgetLoadCallbackFunction) {
       widgetLoadCallbackFunction();
     }
-  };
+  }
+
+  if (typeof window.initSendOTP === "function") {
+    runInitSendOTP();
+    return;
+  }
+
+  const existingScript = document.querySelector(`script[src="${scriptSrc}"]`);
+  if (existingScript) {
+    if (typeof window.initSendOTP === "function") {
+      runInitSendOTP();
+    } else {
+      existingScript.addEventListener("load", runInitSendOTP, { once: true });
+    }
+    return;
+  }
+
+  let scriptTag = document.createElement("script");
+  scriptTag.src = scriptSrc;
+  scriptTag.type = "text/javascript";
+  scriptTag.defer = true;
+  scriptTag.onload = runInitSendOTP;
   document.body.appendChild(scriptTag);
 }
 
