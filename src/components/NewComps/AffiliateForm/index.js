@@ -117,7 +117,7 @@ export default function AffiliateForm() {
               type="text"
               name="fullName"
               className={`form-control border border-light-gray ${style.formInput} ps-5`}
-              placeholder="Alice Johnson"
+              placeholder="John Smith"
               aria-labelledby="affiliate-full-name-label"
               aria-required="true"
               required
@@ -144,7 +144,7 @@ export default function AffiliateForm() {
                     type="email"
                     id="affiliateEmail"
                     className={`form-control border border-light-gray ${style.formInput} ps-5`}
-                    placeholder="partner1@example.com"
+                    placeholder="john@company.com"
                     autoComplete="off"
                     aria-labelledby="affiliate-email-label"
                     aria-required="true"
@@ -298,7 +298,7 @@ export default function AffiliateForm() {
               type={showPassword ? "text" : "password"}
               name="password"
               className={`form-control border border-light-gray ${style.formInput} ps-5 pe-5`}
-              placeholder="Enter password"
+              placeholder="Create a password"
               aria-labelledby="affiliate-password-label"
               aria-required="true"
               required
@@ -329,7 +329,7 @@ export default function AffiliateForm() {
               type="tel"
               id="affiliateMobileNo"
               className={`form-control border border-light-gray ${style.formInput} w-100`}
-              placeholder="98********"
+              placeholder="9876543210"
               autoComplete="off"
               aria-labelledby="affiliate-phone-label"
             />
