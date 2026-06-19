@@ -123,6 +123,8 @@ const signUp = (path) => {
                 getLocalStorage("utm_term") +
                 "&utm_content=" +
                 getLocalStorage("utm_content") +
+                "&ref=" +
+                getLocalStorage("ref") +
                 "";
               window.location =
                 process.env.NEXT_PUBLIC_APP_URL +
