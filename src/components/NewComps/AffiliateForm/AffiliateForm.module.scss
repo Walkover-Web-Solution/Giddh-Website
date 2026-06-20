@@ -15,6 +15,10 @@
     border-color: var(--col-primary) !important;
     box-shadow: 0 0 0 3px rgba(27, 31, 109, 0.08) !important;
   }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px var(--col-white) inset !important;
+  }
 }
 
 .otpBtn,
@@ -25,6 +29,10 @@
 
 .otpBtn {
   min-width: 108px;
+
+  @media (max-width: 575.98px) {
+    width: 100%;
+  }
 }
 
 .verifyBtn {

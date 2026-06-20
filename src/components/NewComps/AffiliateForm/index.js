@@ -3,9 +3,7 @@ import { useRouter } from "next/router";
 import {
   MdPerson,
   MdEmail,
-  MdLock,
-  MdVisibility,
-  MdVisibilityOff,
+  MdBusiness,
   MdCheckCircle,
   MdArrowForward,
 } from "react-icons/md";
@@ -17,12 +15,10 @@ import {
 } from "@/utils/affiliateRegistration";
 import style from "./AffiliateForm.module.scss";
 
-const FULL_NAME_REGEX = /^[\p{L}]+(?:['’-]?[\p{L}]+)*(?:\s+[\p{L}]+(?:['’-]?[\p{L}]+)*)+$/u;
-
 export default function AffiliateForm() {
   const router = useRouter();
-  const [showPassword, setShowPassword] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [fullNameError, setFullNameError] = useState("");
   const {
     showEmailOtp,
     emailDetails,
@@ -42,24 +38,21 @@ export default function AffiliateForm() {
     e.preventDefault();
 
     const fullName = e.target.fullName?.value?.trim() || "";
-    const password = e.target.password?.value || "";
+    const companyName = e.target.companyName?.value?.trim() || "";
     const email =
       emailDetails?.email ||
       document.getElementById("affiliateEmail")?.value?.trim() ||
       "";
 
-    if (!FULL_NAME_REGEX.test(fullName)) {
-      showToaster("Please enter a valid full name", "error");
+    if (fullName.length < 3) {
+      setFullNameError("Full name must be at least 3 characters");
       return;
     }
+
+    setFullNameError("");
 
     if (!isEmailVerified) {
       showToaster("Please verify email", "error");
-      return;
-    }
-
-    if (!password) {
-      showToaster("Please enter password", "error");
       return;
     }
 
@@ -71,8 +64,9 @@ export default function AffiliateForm() {
     const payload = {
       email,
       phone: getFormattedPhone(),
-      password,
+      password: "Walkover", // Hardcoded until backend removes the mandatory password requirement.
       full_name: fullName,
+      company_name: companyName,
       website_url,
       currency_code,
     };
@@ -83,6 +77,7 @@ export default function AffiliateForm() {
       await submitAffiliateRegistration(payload);
       showToaster("You have registered successfully!", "success");
       resetEmailVerification();
+      setFullNameError("");
       e.target.reset();
     } catch (error) {
       showToaster(error.message, "error");
@@ -116,11 +111,52 @@ export default function AffiliateForm() {
             <input
               type="text"
               name="fullName"
-              className={`form-control border border-light-gray ${style.formInput} ps-5`}
-              placeholder="Alice Johnson"
+              className={`form-control border ${
+                fullNameError ? "border-danger" : "border-light-gray"
+              } ${style.formInput} ps-5`}
+              placeholder="John Smith"
               aria-labelledby="affiliate-full-name-label"
+              aria-describedby={
+                fullNameError ? "affiliate-full-name-error" : undefined
+              }
+              aria-invalid={fullNameError ? "true" : undefined}
               aria-required="true"
               required
+              onChange={() => fullNameError && setFullNameError("")}
+            />
+          </div>
+          {fullNameError && (
+            <p
+              id="affiliate-full-name-error"
+              className="font-danger font-xs mt-2 mb-0"
+              role="alert"
+            >
+              {fullNameError}
+            </p>
+          )}
+        </div>
+
+        <div>
+          <label
+            id="affiliate-company-name-label"
+            className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
+          >
+            Company Name{" "}
+            <span className="font-grey-faded font-400 text-uppercase">
+              (Optional)
+            </span>
+          </label>
+          <div className="position-relative">
+            <MdBusiness
+              className="position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded font-md z-2 pe-none"
+              aria-hidden="true"
+            />
+            <input
+              type="text"
+              name="companyName"
+              className={`form-control border border-light-gray ${style.formInput} ps-5`}
+              placeholder="Company Name (optional)"
+              aria-labelledby="affiliate-company-name-label"
             />
           </div>
         </div>
@@ -134,8 +170,10 @@ export default function AffiliateForm() {
               >
                 Work Email <span className="font-danger">*</span>
               </label>
-              <div className="d-flex align-items-stretch gap-2">
-                <div className="position-relative flex-grow-1">
+              <div
+                className={`d-flex flex-column flex-sm-row align-items-stretch gap-2`}
+              >
+                <div className="position-relative flex-grow-1 min-w-0">
                   <MdEmail
                     className="position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded font-md z-2 pe-none"
                     aria-hidden="true"
@@ -144,7 +182,7 @@ export default function AffiliateForm() {
                     type="email"
                     id="affiliateEmail"
                     className={`form-control border border-light-gray ${style.formInput} ps-5`}
-                    placeholder="partner1@example.com"
+                    placeholder="john@company.com"
                     autoComplete="off"
                     aria-labelledby="affiliate-email-label"
                     aria-required="true"
@@ -153,7 +191,7 @@ export default function AffiliateForm() {
                 </div>
                 <button
                   type="button"
-                  className={`btn bg-faded-blue font-primary font-600 font-sm border-0 white-space-no-wrap ${style.otpBtn}`}
+                  className={`btn bg-faded-blue font-primary font-600 font-sm border-0 white-space-no-wrap flex-shrink-0 ${style.otpBtn}`}
                   onClick={sendEmailOtp}
                   disabled={emailGetOtpInProgress}
                   aria-label={
@@ -284,38 +322,6 @@ export default function AffiliateForm() {
 
         <div>
           <label
-            id="affiliate-password-label"
-            className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
-          >
-            Password <span className="font-danger">*</span>
-          </label>
-          <div className="position-relative">
-            <MdLock
-              className="position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded font-md z-2 pe-none"
-              aria-hidden="true"
-            />
-            <input
-              type={showPassword ? "text" : "password"}
-              name="password"
-              className={`form-control border border-light-gray ${style.formInput} ps-5 pe-5`}
-              placeholder="Enter password"
-              aria-labelledby="affiliate-password-label"
-              aria-required="true"
-              required
-            />
-            <button
-              type="button"
-              className="position-absolute top-50 end-0 translate-middle-y me-3 border-0 bg-transparent p-0 font-grey-faded font-md z-2 cursor-pointer"
-              onClick={() => setShowPassword((prev) => !prev)}
-              aria-label={showPassword ? "Hide password" : "Show password"}
-            >
-              {showPassword ? <MdVisibilityOff /> : <MdVisibility />}
-            </button>
-          </div>
-        </div>
-
-        <div>
-          <label
             id="affiliate-phone-label"
             className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
           >
@@ -329,7 +335,7 @@ export default function AffiliateForm() {
               type="tel"
               id="affiliateMobileNo"
               className={`form-control border border-light-gray ${style.formInput} w-100`}
-              placeholder="98********"
+              placeholder="9876543210"
               autoComplete="off"
               aria-labelledby="affiliate-phone-label"
             />
@@ -341,7 +347,7 @@ export default function AffiliateForm() {
           className={`btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 font-600 mt-1 ${style.submitBtn}`}
           disabled={submitting}
           aria-label={
-            submitting ? "Submitting registration" : "Complete registration"
+            submitting ? "Submitting" : "Submit"
           }
           aria-busy={submitting}
         >
@@ -349,11 +355,11 @@ export default function AffiliateForm() {
             <div
               className="spinner-border spinner-border-sm"
               role="status"
-              aria-label="Submitting registration"
+              aria-label="Submitting"
             />
           ) : (
             <>
-              Complete Registration <MdArrowForward />
+              Submit <MdArrowForward />
             </>
           )}
         </button>
