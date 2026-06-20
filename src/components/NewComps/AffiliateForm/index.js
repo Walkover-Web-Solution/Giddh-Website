@@ -18,6 +18,7 @@ import style from "./AffiliateForm.module.scss";
 export default function AffiliateForm() {
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
+  const [fullNameError, setFullNameError] = useState("");
   const {
     showEmailOtp,
     emailDetails,
@@ -44,9 +45,11 @@ export default function AffiliateForm() {
       "";
 
     if (fullName.length < 3) {
-      showToaster("Full name must be at least 3 characters", "error");
+      setFullNameError("Full name must be at least 3 characters");
       return;
     }
+
+    setFullNameError("");
 
     if (!isEmailVerified) {
       showToaster("Please verify email", "error");
@@ -61,7 +64,7 @@ export default function AffiliateForm() {
     const payload = {
       email,
       phone: getFormattedPhone(),
-      password: "Walkover",
+      password: "Walkover", // Hardcoded until backend removes the mandatory password requirement.
       full_name: fullName,
       company_name: companyName,
       website_url,
@@ -74,6 +77,7 @@ export default function AffiliateForm() {
       await submitAffiliateRegistration(payload);
       showToaster("You have registered successfully!", "success");
       resetEmailVerification();
+      setFullNameError("");
       e.target.reset();
     } catch (error) {
       showToaster(error.message, "error");
@@ -107,13 +111,29 @@ export default function AffiliateForm() {
             <input
               type="text"
               name="fullName"
-              className={`form-control border border-light-gray ${style.formInput} ps-5`}
+              className={`form-control border ${
+                fullNameError ? "border-danger" : "border-light-gray"
+              } ${style.formInput} ps-5`}
               placeholder="John Smith"
               aria-labelledby="affiliate-full-name-label"
+              aria-describedby={
+                fullNameError ? "affiliate-full-name-error" : undefined
+              }
+              aria-invalid={fullNameError ? "true" : undefined}
               aria-required="true"
               required
+              onChange={() => fullNameError && setFullNameError("")}
             />
           </div>
+          {fullNameError && (
+            <p
+              id="affiliate-full-name-error"
+              className="font-danger font-xs mt-2 mb-0"
+              role="alert"
+            >
+              {fullNameError}
+            </p>
+          )}
         </div>
 
         <div>
