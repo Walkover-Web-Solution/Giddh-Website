@@ -15,9 +15,6 @@ import {
 } from "@/utils/affiliateRegistration";
 import style from "./AffiliateForm.module.scss";
 
-// TODO: set to false before merge — forces post–Send OTP UI for layout review
-const FORCE_OTP_UI_PREVIEW = true;
-
 export default function AffiliateForm() {
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
@@ -36,11 +33,6 @@ export default function AffiliateForm() {
     showToaster,
   } = useEmailOtpVerification();
   const { getFormattedPhone } = useIntlTelInput("affiliateMobileNo");
-
-  const showOtpStep = FORCE_OTP_UI_PREVIEW || showEmailOtp;
-  const showEmailStep = !FORCE_OTP_UI_PREVIEW && !showEmailOtp && !isEmailVerified;
-  const showVerifiedEmailStep =
-    !FORCE_OTP_UI_PREVIEW && isEmailVerified;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -167,7 +159,7 @@ export default function AffiliateForm() {
         </div>
 
         <div>
-          {showEmailStep && (
+          {!showEmailOtp && !isEmailVerified && (
             <>
               <label
                 id="affiliate-email-label"
@@ -218,7 +210,7 @@ export default function AffiliateForm() {
             </>
           )}
 
-          {showOtpStep && !isEmailVerified && (
+          {showEmailOtp && !isEmailVerified && (
             <>
               <label
                 id="affiliate-otp-label"
@@ -289,15 +281,12 @@ export default function AffiliateForm() {
               <input
                 type="hidden"
                 id="affiliateEmail"
-                defaultValue={
-                  emailDetails?.email ||
-                  (FORCE_OTP_UI_PREVIEW ? "john@company.com" : "")
-                }
+                defaultValue={emailDetails?.email || ""}
               />
             </>
           )}
 
-          {showVerifiedEmailStep && (
+          {isEmailVerified && (
             <>
               <label
                 id="affiliate-email-verified-label"
