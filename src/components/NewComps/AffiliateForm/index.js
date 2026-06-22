@@ -64,7 +64,6 @@ export default function AffiliateForm() {
     const payload = {
       email,
       phone: getFormattedPhone(),
-      password: "Walkover", // Hardcoded until backend removes the mandatory password requirement.
       full_name: fullName,
       company_name: companyName,
       website_url,
@@ -141,10 +140,7 @@ export default function AffiliateForm() {
             id="affiliate-company-name-label"
             className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
           >
-            Company Name{" "}
-            <span className="font-grey-faded font-400 text-uppercase">
-              (Optional)
-            </span>
+            Company Name
           </label>
           <div className="position-relative">
             <MdBusiness
@@ -221,26 +217,48 @@ export default function AffiliateForm() {
               >
                 Enter OTP <span className="font-danger">*</span>
               </label>
-              <div
-                className="d-flex flex-wrap align-items-center gap-2"
-                role="group"
-                aria-labelledby="affiliate-otp-label"
-              >
-                {[1, 2, 3, 4].map((field) => (
-                  <input
-                    key={field}
-                    type="tel"
-                    className={`form-control border border-light-gray ${style.formInput} affiliate-email-otp-field text-center p-0 ${style.otpInput}`}
-                    placeholder="*"
-                    maxLength="1"
-                    autoFocus={field === 1}
-                    aria-label={`OTP digit ${field}`}
-                  />
-                ))}
+              <div className="d-flex flex-column flex-sm-row flex-sm-wrap align-items-start align-items-sm-center gap-2">
+                <div
+                  className="d-flex flex-wrap align-items-center justify-content-start gap-2 order-1"
+                  role="group"
+                  aria-labelledby="affiliate-otp-label"
+                >
+                  {[1, 2, 3, 4].map((field) => (
+                    <input
+                      key={field}
+                      type="tel"
+                      className={`form-control border border-light-gray ${style.formInput} affiliate-email-otp-field text-center p-0 ${style.otpInput}`}
+                      placeholder="*"
+                      maxLength="1"
+                      autoFocus={field === 1}
+                      aria-label={`OTP digit ${field}`}
+                    />
+                  ))}
+                </div>
+                <div className="d-flex align-items-center justify-content-between w-100 order-2 order-sm-3">
+                  <button
+                    type="button"
+                    className={`btn btn-link font-primary font-600 font-xs p-0 ${style.otpActionLink}`}
+                    onClick={retrySendOtp}
+                    disabled={emailGetOtpInProgress}
+                    aria-label="Resend OTP"
+                  >
+                    Resend
+                  </button>
+                  <button
+                    type="button"
+                    className={`btn btn-link font-primary font-600 font-xs p-0 ${style.otpActionLink}`}
+                    onClick={changeEmail}
+                    disabled={emailGetOtpInProgress}
+                    aria-label="Change email address"
+                  >
+                    Change Email
+                  </button>
+                </div>
                 <button
                   type="button"
                   id="affiliate-verify-email-button"
-                  className={`btn btn-primary font-600 font-sm ${style.verifyBtn}`}
+                  className={`btn btn-primary font-600 font-sm order-3 order-sm-2 flex-shrink-0 ${style.verifyBtn}`}
                   onClick={verifyEmailOtp}
                   disabled={emailVerifyOtpInProgress}
                   aria-label={
@@ -257,26 +275,6 @@ export default function AffiliateForm() {
                   ) : (
                     "Verify"
                   )}
-                </button>
-              </div>
-              <div className="d-flex align-items-center justify-content-between mt-2">
-                <button
-                  type="button"
-                  className="btn btn-link font-primary font-600 font-xs p-0"
-                  onClick={retrySendOtp}
-                  disabled={emailGetOtpInProgress}
-                  aria-label="Resend OTP"
-                >
-                  Resend
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-link font-primary font-600 font-xs p-0"
-                  onClick={changeEmail}
-                  disabled={emailGetOtpInProgress}
-                  aria-label="Change email address"
-                >
-                  Change Email
                 </button>
               </div>
               <input
