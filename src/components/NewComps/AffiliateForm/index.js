@@ -64,7 +64,6 @@ export default function AffiliateForm() {
     const payload = {
       email,
       phone: getFormattedPhone(),
-      password: "Walkover", // Hardcoded until backend removes the mandatory password requirement.
       full_name: fullName,
       company_name: companyName,
       website_url,
