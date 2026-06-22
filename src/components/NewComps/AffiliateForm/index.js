@@ -18,6 +18,7 @@ import style from "./AffiliateForm.module.scss";
 export default function AffiliateForm() {
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
+  const [fullNameError, setFullNameError] = useState("");
   const {
     showEmailOtp,
     emailDetails,
@@ -44,9 +45,11 @@ export default function AffiliateForm() {
       "";
 
     if (fullName.length < 3) {
-      showToaster("Full name must be at least 3 characters", "error");
+      setFullNameError("Full name must be at least 3 characters");
       return;
     }
+
+    setFullNameError("");
 
     if (!isEmailVerified) {
       showToaster("Please verify email", "error");
@@ -61,7 +64,7 @@ export default function AffiliateForm() {
     const payload = {
       email,
       phone: getFormattedPhone(),
-      password: "Walkover",
+      password: "Walkover", // Hardcoded until backend removes the mandatory password requirement.
       full_name: fullName,
       company_name: companyName,
       website_url,
@@ -74,6 +77,7 @@ export default function AffiliateForm() {
       await submitAffiliateRegistration(payload);
       showToaster("You have registered successfully!", "success");
       resetEmailVerification();
+      setFullNameError("");
       e.target.reset();
     } catch (error) {
       showToaster(error.message, "error");
@@ -107,13 +111,29 @@ export default function AffiliateForm() {
             <input
               type="text"
               name="fullName"
-              className={`form-control border border-light-gray ${style.formInput} ps-5`}
+              className={`form-control border ${
+                fullNameError ? "border-danger" : "border-light-gray"
+              } ${style.formInput} ps-5`}
               placeholder="John Smith"
               aria-labelledby="affiliate-full-name-label"
+              aria-describedby={
+                fullNameError ? "affiliate-full-name-error" : undefined
+              }
+              aria-invalid={fullNameError ? "true" : undefined}
               aria-required="true"
               required
+              onChange={() => fullNameError && setFullNameError("")}
             />
           </div>
+          {fullNameError && (
+            <p
+              id="affiliate-full-name-error"
+              className="font-danger font-xs mt-2 mb-0"
+              role="alert"
+            >
+              {fullNameError}
+            </p>
+          )}
         </div>
 
         <div>
@@ -121,10 +141,7 @@ export default function AffiliateForm() {
             id="affiliate-company-name-label"
             className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
           >
-            Company Name{" "}
-            <span className="font-grey-faded font-400 text-uppercase">
-              (Optional)
-            </span>
+            Company Name
           </label>
           <div className="position-relative">
             <MdBusiness
@@ -201,26 +218,48 @@ export default function AffiliateForm() {
               >
                 Enter OTP <span className="font-danger">*</span>
               </label>
-              <div
-                className="d-flex flex-wrap align-items-center gap-2"
-                role="group"
-                aria-labelledby="affiliate-otp-label"
-              >
-                {[1, 2, 3, 4].map((field) => (
-                  <input
-                    key={field}
-                    type="tel"
-                    className={`form-control border border-light-gray ${style.formInput} affiliate-email-otp-field text-center p-0 ${style.otpInput}`}
-                    placeholder="*"
-                    maxLength="1"
-                    autoFocus={field === 1}
-                    aria-label={`OTP digit ${field}`}
-                  />
-                ))}
+              <div className="d-flex flex-column flex-sm-row flex-sm-wrap align-items-start align-items-sm-center gap-2">
+                <div
+                  className="d-flex flex-wrap align-items-center justify-content-start gap-2 order-1"
+                  role="group"
+                  aria-labelledby="affiliate-otp-label"
+                >
+                  {[1, 2, 3, 4].map((field) => (
+                    <input
+                      key={field}
+                      type="tel"
+                      className={`form-control border border-light-gray ${style.formInput} affiliate-email-otp-field text-center p-0 ${style.otpInput}`}
+                      placeholder="*"
+                      maxLength="1"
+                      autoFocus={field === 1}
+                      aria-label={`OTP digit ${field}`}
+                    />
+                  ))}
+                </div>
+                <div className="d-flex align-items-center justify-content-between w-100 order-2 order-sm-3">
+                  <button
+                    type="button"
+                    className={`btn btn-link font-primary font-600 font-xs p-0 ${style.otpActionLink}`}
+                    onClick={retrySendOtp}
+                    disabled={emailGetOtpInProgress}
+                    aria-label="Resend OTP"
+                  >
+                    Resend
+                  </button>
+                  <button
+                    type="button"
+                    className={`btn btn-link font-primary font-600 font-xs p-0 ${style.otpActionLink}`}
+                    onClick={changeEmail}
+                    disabled={emailGetOtpInProgress}
+                    aria-label="Change email address"
+                  >
+                    Change Email
+                  </button>
+                </div>
                 <button
                   type="button"
                   id="affiliate-verify-email-button"
-                  className={`btn btn-primary font-600 font-sm ${style.verifyBtn}`}
+                  className={`btn btn-primary font-600 font-sm order-3 order-sm-2 flex-shrink-0 ${style.verifyBtn}`}
                   onClick={verifyEmailOtp}
                   disabled={emailVerifyOtpInProgress}
                   aria-label={
@@ -237,26 +276,6 @@ export default function AffiliateForm() {
                   ) : (
                     "Verify"
                   )}
-                </button>
-              </div>
-              <div className="d-flex align-items-center justify-content-between mt-2">
-                <button
-                  type="button"
-                  className="btn btn-link font-primary font-600 font-xs p-0"
-                  onClick={retrySendOtp}
-                  disabled={emailGetOtpInProgress}
-                  aria-label="Resend OTP"
-                >
-                  Resend
-                </button>
-                <button
-                  type="button"
-                  className="btn btn-link font-primary font-600 font-xs p-0"
-                  onClick={changeEmail}
-                  disabled={emailGetOtpInProgress}
-                  aria-label="Change email address"
-                >
-                  Change Email
                 </button>
               </div>
               <input
