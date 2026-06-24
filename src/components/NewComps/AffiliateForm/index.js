@@ -53,7 +53,7 @@ export default function AffiliateForm() {
 
     const { website_url, currency_code } = getAffiliateRegionMeta(
       window.location.pathname,
-      process.env.NEXT_PUBLIC_SITE_URL
+      window.location.origin
     );
 
     const payload = {
