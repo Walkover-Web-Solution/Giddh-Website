@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
 import {
   MdPerson,
   MdEmail,
@@ -16,7 +15,6 @@ import {
 import style from "./AffiliateForm.module.scss";
 
 export default function AffiliateForm() {
-  const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
   const [fullNameError, setFullNameError] = useState("");
   const {
@@ -39,13 +37,10 @@ export default function AffiliateForm() {
 
     const fullName = e.target.fullName?.value?.trim() || "";
     const companyName = e.target.companyName?.value?.trim() || "";
-    const email =
-      emailDetails?.email ||
-      document.getElementById("affiliateEmail")?.value?.trim() ||
-      "";
+    const email = emailDetails?.email || "";
 
-    if (fullName.length < 3) {
-      setFullNameError("Full name must be at least 3 characters");
+    if (!fullName) {
+      setFullNameError("Full name is required");
       return;
     }
 
@@ -57,8 +52,8 @@ export default function AffiliateForm() {
     }
 
     const { website_url, currency_code } = getAffiliateRegionMeta(
-      router.asPath,
-      window.location.origin
+      window.location.pathname,
+      process.env.NEXT_PUBLIC_SITE_URL
     );
 
     const payload = {
@@ -114,6 +109,7 @@ export default function AffiliateForm() {
                 fullNameError ? "border-danger" : "border-light-gray"
               } ${style.formInput} ps-5`}
               placeholder="John Smith"
+              maxLength={100}
               aria-labelledby="affiliate-full-name-label"
               aria-describedby={
                 fullNameError ? "affiliate-full-name-error" : undefined
@@ -152,6 +148,7 @@ export default function AffiliateForm() {
               name="companyName"
               className={`form-control border border-light-gray ${style.formInput} ps-5`}
               placeholder="Company Name (optional)"
+              maxLength={255}
               aria-labelledby="affiliate-company-name-label"
             />
           </div>
@@ -164,7 +161,7 @@ export default function AffiliateForm() {
                 id="affiliate-email-label"
                 className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
               >
-                Work Email <span className="font-danger">*</span>
+                Email <span className="font-danger">*</span>
               </label>
               <div
                 className={`d-flex flex-column flex-sm-row align-items-stretch gap-2`}
@@ -211,6 +208,28 @@ export default function AffiliateForm() {
 
           {showEmailOtp && !isEmailVerified && (
             <>
+              <label
+                id="affiliate-email-otp-label"
+                className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
+              >
+                Email <span className="font-danger">*</span>
+              </label>
+              <div className="position-relative mb-3">
+                <MdEmail
+                  className="position-absolute top-50 start-0 translate-middle-y ms-3 font-grey-faded font-md z-2 pe-none"
+                  aria-hidden="true"
+                />
+                <input
+                  type="email"
+                  id="affiliateEmail"
+                  className={`form-control border border-light-gray ${style.formInput} ps-5`}
+                  defaultValue={emailDetails?.email || ""}
+                  autoComplete="off"
+                  aria-labelledby="affiliate-email-otp-label"
+                  disabled
+                  required
+                />
+              </div>
               <label
                 id="affiliate-otp-label"
                 className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
@@ -277,11 +296,6 @@ export default function AffiliateForm() {
                   )}
                 </button>
               </div>
-              <input
-                type="hidden"
-                id="affiliateEmail"
-                defaultValue={emailDetails?.email || ""}
-              />
             </>
           )}
 
@@ -291,7 +305,7 @@ export default function AffiliateForm() {
                 id="affiliate-email-verified-label"
                 className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
               >
-                Work Email <span className="font-danger">*</span>
+                Email <span className="font-danger">*</span>
               </label>
               <div className="position-relative">
                 <MdEmail
@@ -313,6 +327,16 @@ export default function AffiliateForm() {
                   className="position-absolute top-50 end-0 translate-middle-y me-3 font-success font-lg z-2"
                   aria-hidden="true"
                 />
+              </div>
+              <div className="d-flex justify-content-end mt-2">
+                <button
+                  type="button"
+                  className={`btn btn-link font-primary font-600 font-xs p-0 ${style.otpActionLink}`}
+                  onClick={changeEmail}
+                  aria-label="Change email address"
+                >
+                  Change Email
+                </button>
               </div>
             </>
           )}
