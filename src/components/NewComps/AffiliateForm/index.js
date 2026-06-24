@@ -161,7 +161,7 @@ export default function AffiliateForm() {
                 id="affiliate-email-label"
                 className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
               >
-                Work Email <span className="font-danger">*</span>
+                Email <span className="font-danger">*</span>
               </label>
               <div
                 className={`d-flex flex-column flex-sm-row align-items-stretch gap-2`}
@@ -212,7 +212,7 @@ export default function AffiliateForm() {
                 id="affiliate-email-otp-label"
                 className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
               >
-                Work Email <span className="font-danger">*</span>
+                Email <span className="font-danger">*</span>
               </label>
               <div className="position-relative mb-3">
                 <MdEmail
@@ -305,7 +305,7 @@ export default function AffiliateForm() {
                 id="affiliate-email-verified-label"
                 className="font-xs font-600 font-slate-grey text-uppercase mb-2 d-block"
               >
-                Work Email <span className="font-danger">*</span>
+                Email <span className="font-danger">*</span>
               </label>
               <div className="position-relative">
                 <MdEmail
