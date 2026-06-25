@@ -7,9 +7,8 @@ const REGION_CURRENCY_MAP = {
 };
 
 const AFFILIATE_REGISTER_URL = "https://flow.sokt.io/func/scripG05f2j6";
-const DEFAULT_SITE_ORIGIN = "https://giddh.com";
 
-export function getAffiliateRegionMeta(pathname, origin = DEFAULT_SITE_ORIGIN) {
+export function getAffiliateRegionMeta(pathname, origin) {
   const country = getPageInfo(pathname).country;
 
   return {
