@@ -86,17 +86,24 @@
     color: var(--col-slate-grey);
   }
 
+  :global(.iti__flag-container) {
+    padding: 0;
+    border-radius: 11px 0 0 11px;
+    overflow: hidden;
+  }
+
   :global(.iti__dropdown-content) {
     min-width: 320px !important;
     width: 320px !important;
     max-width: none !important;
+    overflow-x: hidden;
   }
 
   :global(.iti__country-list) {
     min-width: 320px !important;
     width: 100% !important;
     max-width: none !important;
-    white-space: nowrap;
+    overflow-x: hidden;
   }
 
   :global(.iti__country) {
@@ -107,6 +114,7 @@
 
   :global(.iti__country-name) {
     flex: 1;
+    min-width: 0;
     margin-left: 8px;
     color: var(--col-slate-grey);
   }
