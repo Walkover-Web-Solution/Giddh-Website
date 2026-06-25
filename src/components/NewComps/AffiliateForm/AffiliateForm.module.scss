@@ -88,6 +88,9 @@
 
   :global(.iti__flag-container) {
     padding: 0;
+  }
+
+  :global(.iti--separate-dial-code .iti__selected-flag) {
     border-radius: 11px 0 0 11px;
     overflow: hidden;
   }
@@ -104,6 +107,13 @@
     width: 100% !important;
     max-width: none !important;
     overflow-x: hidden;
+    z-index: 10;
+  }
+
+  :global(.iti__country-list--dropup) {
+    bottom: auto !important;
+    top: 100% !important;
+    margin-bottom: 0 !important;
   }
 
   :global(.iti__country) {
