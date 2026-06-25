@@ -40,35 +40,13 @@ function loadIntlTelAssets() {
 }
 
 function geoIpLookup(success) {
-  const fallback = () => success("in");
-
   fetch("https://api.db-ip.com/v2/free/self")
     .then((res) => res.json())
     .then((data) => {
-      if (!data?.ipAddress) {
-        fallback();
-        return;
-      }
-
-      fetch("http://ip-api.com/json/" + data.ipAddress)
-        .then((res) => res.json())
-        .then((countryData) => {
-          if (countryData?.countryCode) {
-            success(countryData.countryCode);
-            return;
-          }
-          fallback();
-        })
-        .catch(() => {
-          fetch("https://ipinfo.io/" + data.ipAddress)
-            .then((res) => res.json())
-            .then((infoData) => {
-              success(infoData?.country || "in");
-            })
-            .catch(fallback);
-        });
+      const countryCode = data?.countryCode?.toLowerCase();
+      success(countryCode || "in");
     })
-    .catch(fallback);
+    .catch(() => success("in"));
 }
 
 export default function useIntlTelInput(inputId) {
