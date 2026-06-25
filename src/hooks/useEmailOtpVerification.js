@@ -15,11 +15,11 @@ function loadOtpWidgetScript() {
   }
 }
 
-// OTP script loads in the background — wait for it before sending.
-async function waitForSendOtp() {
+// Wait until MSG91's sendOtp is available (script loads async).
+async function waitForSendOtp(attempts = 25) {
   loadOtpWidgetScript();
 
-  for (let attempt = 0; attempt < 30; attempt += 1) {
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
     if (typeof window.sendOtp === "function") {
       return;
     }
@@ -30,6 +30,7 @@ async function waitForSendOtp() {
     "OTP service is unavailable. Please refresh the page and try again."
   );
 }
+
 export default function useEmailOtpVerification({
   emailInputId = "affiliateEmail",
   otpFieldSelector = ".affiliate-email-otp-field",
@@ -43,8 +44,6 @@ export default function useEmailOtpVerification({
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (typeof window.sendOtp === "function") return;
-
     loadOtpWidgetScript();
   }, []);
 
