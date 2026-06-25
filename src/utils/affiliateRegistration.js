@@ -1,26 +1,23 @@
+import getPageInfo from "./getPageInfo";
+
 const REGION_CURRENCY_MAP = {
   in: "INR",
   ae: "AED",
   uk: "GBP",
 };
 
-const REGION_PATHS = ["in", "ae", "uk"];
 const AFFILIATE_REGISTER_URL = "https://flow.sokt.io/func/scripG05f2j6";
 
-export function getAffiliateRegionMeta(pathname, origin = "https://giddh.com") {
-  const region = pathname.split("/").filter(Boolean)[0];
-  const isRegionPath = REGION_PATHS.includes(region);
+export function getAffiliateRegionMeta(pathname, origin) {
+  const country = getPageInfo(pathname).country;
 
   return {
-    website_url: isRegionPath ? `${origin}/${region}/` : `${origin}/`,
-    currency_code: isRegionPath ? REGION_CURRENCY_MAP[region] : "GBP",
+    website_url: `${origin}${pathname}`,
+    currency_code:
+      country !== "global" && REGION_CURRENCY_MAP[country]
+        ? REGION_CURRENCY_MAP[country]
+        : "USD",
   };
-}
-
-export function formatAffiliatePhone(number) {
-  return String(number || "")
-    .replace("+", "")
-    .trim();
 }
 
 function getApiMessage(data) {
