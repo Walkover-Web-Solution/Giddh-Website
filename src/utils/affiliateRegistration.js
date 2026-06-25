@@ -9,12 +9,10 @@ const REGION_CURRENCY_MAP = {
 const AFFILIATE_REGISTER_URL = "https://flow.sokt.io/func/scripG05f2j6";
 
 export function getAffiliateRegionMeta(pathname, origin) {
-  const siteOrigin =
-    origin ?? (typeof window !== "undefined" ? window.location.origin : "");
   const country = getPageInfo(pathname).country;
 
   return {
-    website_url: `${siteOrigin}${pathname}`,
+    website_url: `${origin}${pathname}`,
     currency_code:
       country !== "global" && REGION_CURRENCY_MAP[country]
         ? REGION_CURRENCY_MAP[country]
