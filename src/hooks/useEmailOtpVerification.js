@@ -5,18 +5,30 @@ import { bindOtpInputs } from "@/utils/bindOtpInputs";
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 const EMAIL_OTP_CHANNEL = 3;
 
-function pollOtpWidget(onReady, attempts = 25) {
-  const widgetData =
-    typeof window.getWidgetData === "function" ? window.getWidgetData() : null;
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
-  if (widgetData?.processes && typeof window.sendOtp === "function") {
-    onReady();
-    return;
+function loadOtpWidgetScript() {
+  if (typeof window.addOtpWidgetScript === "function") {
+    window.addOtpWidgetScript(true, false, () => {});
   }
-  if (attempts <= 0) {
-    return;
+}
+
+// Wait until MSG91's sendOtp is available (script loads async).
+async function waitForSendOtp(attempts = 25) {
+  loadOtpWidgetScript();
+
+  for (let attempt = 0; attempt < attempts; attempt += 1) {
+    if (typeof window.sendOtp === "function") {
+      return;
+    }
+    await sleep(200);
   }
-  setTimeout(() => pollOtpWidget(onReady, attempts - 1), 200);
+
+  throw new Error(
+    "OTP service is unavailable. Please refresh the page and try again."
+  );
 }
 
 export default function useEmailOtpVerification({
@@ -29,21 +41,10 @@ export default function useEmailOtpVerification({
   const [emailGetOtpInProgress, setEmailGetOtpInProgress] = useState(false);
   const [emailVerifyOtpInProgress, setEmailVerifyOtpInProgress] =
     useState(false);
-  const [otpWidgetReady, setOtpWidgetReady] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-
-    const markWidgetReady = () => {
-      pollOtpWidget(() => setOtpWidgetReady(true));
-    };
-
-    if (typeof window.sendOtp === "function") {
-      markWidgetReady();
-      return;
-    }
-
-    addOtpWidgetScript(true, false, markWidgetReady);
+    loadOtpWidgetScript();
   }, []);
 
   useEffect(() => {
@@ -67,7 +68,7 @@ export default function useEmailOtpVerification({
     });
   }, [otpFieldSelector]);
 
-  const sendEmailOtp = useCallback(() => {
+  const sendEmailOtp = useCallback(async () => {
     const email = getEmailValue();
 
     if (!email || !EMAIL_REGEX.test(email)) {
@@ -75,14 +76,15 @@ export default function useEmailOtpVerification({
       return;
     }
 
-    if (
-      typeof window.sendOtp !== "function" ||
-      !otpWidgetReady
-    ) {
+    setEmailGetOtpInProgress(true);
+
+    try {
+      await waitForSendOtp();
+    } catch (error) {
+      setEmailGetOtpInProgress(false);
+      showToaster(error.message, "error");
       return;
     }
-
-    setEmailGetOtpInProgress(true);
 
     window.sendOtp(
       email,
@@ -107,7 +109,7 @@ export default function useEmailOtpVerification({
         );
       }
     );
-  }, [getEmailValue, otpWidgetReady, showToaster]);
+  }, [getEmailValue, showToaster]);
 
   const changeEmail = useCallback(() => {
     setShowEmailOtp(false);

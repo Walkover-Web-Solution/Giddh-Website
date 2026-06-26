@@ -88,6 +88,9 @@
 
   :global(.iti__flag-container) {
     padding: 0;
+  }
+
+  :global(.iti--separate-dial-code .iti__selected-flag) {
     border-radius: 11px 0 0 11px;
     overflow: hidden;
   }
@@ -104,6 +107,20 @@
     width: 100% !important;
     max-width: none !important;
     overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 10;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  :global(.iti__country-list--dropup) {
+    bottom: auto !important;
+    top: 100% !important;
+    margin-bottom: 0 !important;
   }
 
   :global(.iti__country) {
@@ -117,10 +134,14 @@
     min-width: 0;
     margin-left: 8px;
     color: var(--col-slate-grey);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   :global(.iti__dial-code) {
     margin-left: 8px;
     color: var(--col-grey-faded);
+    flex-shrink: 0;
   }
 }
