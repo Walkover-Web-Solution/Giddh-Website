@@ -2,7 +2,7 @@
   "splitBanner": {
     "heading": "Join Giddh's Partnership Program & Grow Your Revenue.",
     "subHeading": "Refer businesses in your network and earn on every successful client referral — 50% on the first payment, 30% on renewals, and 20% on the third payment. Includes complete tracking and dedicated support.",
-    "image": "/img/partnership/hero-section.svg",
+    "affiliateForm": true,
     "hideTrustBadges": true,
     "form": false
   },

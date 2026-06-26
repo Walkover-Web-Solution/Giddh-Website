@@ -139,28 +139,28 @@
       },
       {
         "feature": "Multi-user and multiple PCs edition",
-        "giddh": "Only available in Gold plan",
-        "tally": "Available in all plans"
+        "giddh": "Available in all plans",
+        "tally": "Only available in Gold plan"
       },
       {
         "feature": "Branch Support",
-        "giddh": "Limited as per the version",
-        "tally": "Unlimited for all plans"
+        "giddh": "Unlimited for all plans",
+        "tally": "Limited as per the version"
       },
       {
         "feature": "GSTIN Support",
-        "giddh": "Single GSTIN support in a single branch",
-        "tally": "Multiple GSTIN numbers support in a single branch in all plans"
+        "giddh": "Multiple GSTIN numbers support in a single branch in all plans",
+        "tally": "Single GSTIN support in a single branch"
       },
       {
         "feature": "Inventory with variant",
-        "giddh": "Need to purchase an add-on",
-        "tally": "Available in all plans"
+        "giddh": "Available in all plans",
+        "tally": "Need to purchase an add-on"
       },
       {
         "feature": "Real-time dashboard",
-        "giddh": "Available",
-        "tally": "Not Available"
+        "giddh": "Not Available",
+        "tally": "Available"
       },
       {
         "feature": "Single ledger sharing",
@@ -169,13 +169,13 @@
       },
       {
         "feature": "Attachment with Bills",
-        "giddh": "Not Available",
-        "tally": "The user can add an attachment to the invoice"
+        "giddh": "The user can add an attachment to the invoice",
+        "tally": "Not Available"
       },
       {
-        "feature": "Real-time dashboard",
-        "giddh": "The third party provides the integration",
-        "tally": "Available"
+        "feature": "Shopify integration",
+        "giddh": "Available",
+        "tally": "The third party provides the integration"
       }
     ]
   },

@@ -1,0 +1,147 @@
+.formCard {
+  max-width: 480px;
+  box-shadow: 0 8px 32px rgba(27, 31, 109, 0.08);
+}
+
+.formInput {
+  height: 48px;
+  border-radius: 12px !important;
+
+  &::placeholder {
+    color: var(--col-grey-faded);
+  }
+
+  &:focus {
+    border-color: var(--col-primary) !important;
+    box-shadow: 0 0 0 3px rgba(27, 31, 109, 0.08) !important;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px var(--col-white) inset !important;
+  }
+}
+
+.otpBtn,
+.verifyBtn {
+  height: 48px;
+  border-radius: 12px;
+}
+
+.otpBtn {
+  min-width: 108px;
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
+
+.verifyBtn {
+  min-width: 72px;
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}
+
+.submitBtn {
+  height: 52px;
+  border-radius: 12px;
+}
+
+.otpInput {
+  width: 48px;
+}
+
+.otpActionLink {
+  text-decoration: none !important;
+  cursor: pointer;
+
+  &:hover:not(:disabled) {
+    text-decoration: underline !important;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.phoneField {
+  :global(.iti) {
+    width: 100%;
+    display: block;
+  }
+
+  :global(.iti .form-control) {
+    height: 48px;
+    border-radius: 12px !important;
+
+    &:focus {
+      border-color: var(--col-primary) !important;
+      box-shadow: 0 0 0 3px rgba(27, 31, 109, 0.08) !important;
+    }
+  }
+
+  :global(.iti--separate-dial-code .iti__selected-dial-code) {
+    font-size: 14px;
+    color: var(--col-slate-grey);
+  }
+
+  :global(.iti__flag-container) {
+    padding: 0;
+  }
+
+  :global(.iti--separate-dial-code .iti__selected-flag) {
+    border-radius: 11px 0 0 11px;
+    overflow: hidden;
+  }
+
+  :global(.iti__dropdown-content) {
+    min-width: 320px !important;
+    width: 320px !important;
+    max-width: none !important;
+    overflow-x: hidden;
+  }
+
+  :global(.iti__country-list) {
+    min-width: 320px !important;
+    width: 100% !important;
+    max-width: none !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 10;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  :global(.iti__country-list--dropup) {
+    bottom: auto !important;
+    top: 100% !important;
+    margin-bottom: 0 !important;
+  }
+
+  :global(.iti__country) {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+  }
+
+  :global(.iti__country-name) {
+    flex: 1;
+    min-width: 0;
+    margin-left: 8px;
+    color: var(--col-slate-grey);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  :global(.iti__dial-code) {
+    margin-left: 8px;
+    color: var(--col-grey-faded);
+    flex-shrink: 0;
+  }
+}
