@@ -3,6 +3,7 @@ import BentoFeatures from "../NewComps/Features/BentoFeatures";
 import Stats from "../NewComps/Stats";
 import WhyGiddh from "../NewComps/WhyGiddh";
 import GetStarted from "../NewComps/GetStarted";
+import GiddhFor from "../NewComps/GiddhFor";
 import SpotlightTestimonials from "../NewComps/Testimonials/SpotlightTestimonials";
 import FAQs from "../NewComps/FAQs";
 import Footer from "../NewComps/Footer";
@@ -88,9 +89,9 @@ export default function OnlineAccountingSoftware({ pageData }) {
       <BentoFeatures features={pageData?.features} />
       <GetStarted compData={pageData?.getStarted} />
       <WhyGiddh compData={pageData?.whyGiddh} />
-      <CTA hasImage={true} compData={pageData?.cta} />
+      <GiddhFor compData={pageData?.giddhFor} />
       <SpotlightTestimonials testimonials={pageData?.testimonials} />
-      <SeeGiddhInAction compData={pageData?.seeGiddhInAction} />
+      <CTA hasImage={true} compData={pageData?.cta} />
       <FAQs faqs={pageData?.faqs} />
       <Footer />
     </>

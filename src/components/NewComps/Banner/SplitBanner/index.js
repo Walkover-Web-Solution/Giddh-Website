@@ -59,8 +59,14 @@ export default function SplitBanner({ compData }) {
           >
             {compData?.tagline && (
               <span className="font-md outfit-font">
-                {" "}
-                BUILD FOR <span className="font-primary"> SMBs</span>
+                {typeof compData.tagline === "string" ? (
+                  compData.tagline
+                ) : (
+                  <>
+                    {" "}
+                    BUILD FOR <span className="font-primary"> SMBs</span>
+                  </>
+                )}
               </span>
             )}
             <h1 className="font-heading font-primary">{compData?.heading}</h1>
@@ -96,7 +102,10 @@ export default function SplitBanner({ compData }) {
           </div>
 
           {compData?.form && (
-            <BookFreeDemoForm hiddenAbsolute={false} location="banner" />
+            <BookFreeDemoForm
+              hiddenAbsolute={false}
+              location="banner"
+            />
           )}
           {compData?.affiliateForm && (
             <div className="col-lg-6 col-md-6 col-12 d-flex justify-content-center justify-content-lg-end">

@@ -17,6 +17,43 @@ const initialFormState = {
 
 const initialOtpState = ["", "", "", ""];
 
+function formatMobileNumber(number) {
+  return String(number).replace("+", "").trim();
+}
+
+function waitForOtpService() {
+  if (
+    typeof window !== "undefined" &&
+    typeof window.sendOtp === "function" &&
+    typeof window.verifyOtp === "function"
+  ) {
+    return Promise.resolve();
+  }
+
+  return new Promise((resolve, reject) => {
+    initOtpWidget(() => {
+      if (
+        typeof window.sendOtp === "function" &&
+        typeof window.verifyOtp === "function"
+      ) {
+        resolve();
+        return;
+      }
+
+      reject(
+        new Error(
+          "OTP service is unavailable. Please refresh the page and try again."
+        )
+      );
+    });
+  });
+}
+
+function showToast(message, type) {
+  toast.dismiss();
+  toast(message, { type, position: "top-center" });
+}
+
 export default function BookFreeDemoForm({
   hiddenAbsolute,
   location,
@@ -38,6 +75,7 @@ export default function BookFreeDemoForm({
   const intlRef = useRef(null);
   const formId = useId().replace(/:/g, "");
   const router = useRouter();
+  const isBanner = location === "banner";
 
   useEffect(() => {
     initOtpWidget(() => setResendChannels(getResendChannels()));
@@ -55,8 +93,22 @@ export default function BookFreeDemoForm({
     };
   }, []);
 
-  const getMobileNo = () =>
-    formatMobileNumber(intlRef.current?.getNumber?.() || "");
+  const getMobileNo = useCallback(() => {
+    return formatMobileNumber(intlRef.current?.getNumber?.() || "");
+  }, []);
+
+  const isValidMobile = useCallback(() => {
+    const intl = intlRef.current;
+    if (!intl) {
+      return false;
+    }
+
+    if (typeof intl.isValidNumber === "function") {
+      return intl.isValidNumber();
+    }
+
+    return getMobileNo().length >= 10;
+  }, [getMobileNo]);
 
   const resetMobileVerification = useCallback(() => {
     setShowMobileOtp(false);
@@ -74,42 +126,50 @@ export default function BookFreeDemoForm({
     setFormData((prev) => ({ ...prev, [name]: value }));
   }, []);
 
-  const sendMobileOtp = useCallback(() => {
-    const mobileNo = getMobileNo();
-    if (!mobileNo) {
-      toast("Please enter valid mobile number!", {
-        type: "error",
-        position: "top-center",
-      });
+  const sendMobileOtp = useCallback(async () => {
+    if (!isValidMobile()) {
+      showToast("Please enter valid mobile number!", "error");
       return;
     }
 
+    const mobileNo = getMobileNo();
     setGetOtpInProgress(true);
+
+    try {
+      await waitForOtpService();
+    } catch (otpError) {
+      setGetOtpInProgress(false);
+      showToast(otpError.message, "error");
+      return;
+    }
+
     window.sendOtp(
       mobileNo,
       (data) => {
         setGetOtpInProgress(false);
-        toast("OTP sent successfully.", {
-          type: "success",
-          position: "top-center",
-        });
+        showToast("OTP sent successfully.", "success");
         setRequestId(data.message);
         setShowMobileOtp(true);
         setOtp(initialOtpState);
       },
       (error) => {
         setGetOtpInProgress(false);
-        toast(error.message, { type: "error", position: "top-center" });
+        showToast(error.message, "error");
         setShowMobileOtp(false);
         setRequestId("");
       }
     );
-  }, []);
+  }, [getMobileNo, isValidMobile]);
 
   const verifyMobileOtp = useCallback(() => {
     const otpValue = otp.join("");
     if (!otpValue) {
-      toast("Please enter OTP!", { type: "error", position: "top-center" });
+      showToast("Please enter OTP!", "error");
+      return;
+    }
+
+    if (!requestId) {
+      showToast("Please send OTP first!", "error");
       return;
     }
 
@@ -118,38 +178,38 @@ export default function BookFreeDemoForm({
       otpValue,
       () => {
         setVerifyOtpInProgress(false);
-        toast("OTP verified successfully.", {
-          type: "success",
-          position: "top-center",
-        });
+        showToast("OTP verified successfully.", "success");
         setFormData((prev) => ({ ...prev, phone: getMobileNo() }));
         setMobileVerified(true);
         setShowMobileOtp(false);
       },
       (error) => {
         setVerifyOtpInProgress(false);
-        toast(error.message, { type: "error", position: "top-center" });
+        showToast(error.message, "error");
+        setOtp(initialOtpState);
       },
       requestId
     );
-  }, [otp, requestId]);
+  }, [getMobileNo, otp, requestId]);
 
   const resendMobileOtp = useCallback(
     (channel) => {
+      if (!requestId) {
+        showToast("Please send OTP first!", "error");
+        return;
+      }
+
       setGetOtpInProgress(true);
       setOtp(initialOtpState);
       window.retryOtp(
         channel,
         () => {
           setGetOtpInProgress(false);
-          toast("OTP resent successfully.", {
-            type: "success",
-            position: "top-center",
-          });
+          showToast("OTP resent successfully.", "success");
         },
         (error) => {
           setGetOtpInProgress(false);
-          toast(error.message, { type: "error", position: "top-center" });
+          showToast(error.message, "error");
         },
         requestId
       );
@@ -159,6 +219,27 @@ export default function BookFreeDemoForm({
 
   const handleOtpChange = useCallback(
     (index, value) => {
+      if (value.length > 1) {
+        const digits = value.replace(/\D/g, "").slice(0, 4);
+        if (!digits) {
+          return;
+        }
+
+        setOtp((prev) => {
+          const next = [...prev];
+          digits.split("").forEach((digit, digitIndex) => {
+            if (index + digitIndex < next.length) {
+              next[index + digitIndex] = digit;
+            }
+          });
+          return next;
+        });
+
+        const nextFocusIndex = Math.min(index + digits.length, 3);
+        document.getElementById(`${formId}-otp-${nextFocusIndex}`)?.focus();
+        return;
+      }
+
       if (value && !/^\d$/.test(value)) {
         return;
       }
@@ -182,6 +263,7 @@ export default function BookFreeDemoForm({
 
       if (!mobileVerified) {
         setError("Please verify your mobile number");
+        showToast("Please verify your mobile number", "error");
         return;
       }
 
@@ -247,7 +329,7 @@ export default function BookFreeDemoForm({
         className={`btn ${
           submitting || !mobileVerified ? "btn-disabled" : "btn-primary"
         } w-100 d-flex align-items-center justify-content-center ${
-          location === "banner"
+          isBanner
             ? "rounded-3 py-3 px-4 c-fw-600 c-fs-5 mt-1"
             : "px-3 py-2 rounded"
         }`}
@@ -258,7 +340,7 @@ export default function BookFreeDemoForm({
     </form>
   );
 
-  if (location === "banner") {
+  if (isBanner) {
     return (
       <div
         className={`outfit-font col-lg-5 col-md-6 col-12 w-100 ${style.bannerForm} d-flex flex-column bg-white rounded-4 p-4 overflow-visible`}
