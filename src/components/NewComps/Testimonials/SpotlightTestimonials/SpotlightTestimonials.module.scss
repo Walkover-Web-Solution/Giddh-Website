@@ -1,0 +1,78 @@
+.section {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #f8f9fa 0%,
+    var(--col-white) 100%
+  );
+}
+
+.marqueeWrapper {
+  height: 680px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &::before {
+    top: 0;
+    background: linear-gradient(to bottom, var(--col-white), transparent);
+  }
+
+  &::after {
+    bottom: 0;
+    background: linear-gradient(to top, var(--col-white), transparent);
+  }
+
+  &:hover .trackUp,
+  &:hover .trackDown {
+    animation-play-state: paused;
+  }
+
+  @media (max-width: 991px) {
+    height: 520px;
+  }
+}
+
+.trackUp {
+  animation: scrollUp 36s linear infinite;
+}
+
+.trackDown {
+  animation: scrollDown 40s linear infinite;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.06);
+    border-color: rgba(27, 31, 109, 0.2) !important;
+  }
+}

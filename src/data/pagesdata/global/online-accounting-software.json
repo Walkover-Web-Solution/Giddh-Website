@@ -1,179 +1,259 @@
 {
   "splitBanner": {
-    "heading": "Smart, Simple & All-in-One Accounting for Growing Businesses",
-    "subHeading": "Giddh brings everything together on a secure, cloud platform built for growing businesses. Simplifies accounting with GST-ready billing, smart inventory sync, and real-time financial insights.",
+    "tagline": "Trusted by Growing Businesses",
+    "heading": "Spend Less Time Managing Accounts. More Time Growing Revenue. Switch to GIDDH",
     "form": true,
-    "header": true,
-    "tagline": true
+    "header": true
   },
-  "toggleFeatures": [
-    {
-      "name": "Effortless Ledger Management",
-      "icon": "MdCalculate",
-      "image": "/img/online-accounting-software/features/effortless_ledger_management.svg",
-      "description": "Giddh accounting software for small businesses that saves you time, reduces errors, and fuels growth",
-      "content": [
-        "Automated Ledger Management",
-        "Real-time Account Balances",
-        "Quick, One-Step Journal Entries",
-        "Multi-Device Support"
-      ]
-    },
-    {
-      "name": "Simplify GST Compliance",
-      "icon": "MdRequestPage",
-      "image": "/img/online-accounting-software/features/simplify_gst_compliance.svg",
-      "description": "Giddh is India's best software for GST, enabling users to stay updated and ensure full compliance with automated tax calculations.",
-      "content": [
-        "Easy GST Billing Software",
-        "Automatic Tax Calculations & Filing",
-        "Direct GST Portal Integration",
-        "Reconcile Transactions Effortlessly"
-      ]
-    },
-    {
-      "name": "Streamline Billing & Invoicing",
-      "icon": "MdReceiptLong",
-      "image": "/img/online-accounting-software/features/streamline_billing_invoicing.svg",
-      "description": "Stay compliant and boost business growth with the best software for billing and invoicing.",
-      "content": [
-        "Instant Invoice Creation",
-        "Automatic GST Rate Application",
-        "Comprehensive Taxation Transparency",
-        "Share Invoices via Email, WhatsApp, or SMS"
-      ]
-    },
-    {
-      "name": "Inventory Management Software",
-      "icon": "MdProductionQuantityLimits",
-      "image": "/img/online-accounting-software/features/inventory_management_software.webp",
-      "description": "Stay ahead with the best software for inventory management, featuring real-time tracking and easy organization.",
-      "content": [
-        "Barcode Scanning",
-        "Manufacturing & By-Products",
-        "Multi-Branch Control",
-        "Seamless Stock Transfers"
-      ]
-    },
-    {
-      "name": "Multi-Currency Accounting Solution",
-      "icon": "MdCurrencyBitcoin",
-      "image": "/img/online-accounting-software/features/multi_currency_accounting_solution.webp",
-      "description": "Manage international transactions with ease and expand your business worldwide",
-      "content": [
-        "Auto Currency Conversion",
-        "Global Invoicing",
-        "Default Currency Setup",
-        "Clear Financial Reports"
-      ]
-    },
-    {
-      "name": "Cloud-Based Bookkeeping Software",
-      "icon": "MdCloudDone",
-      "image": "/img/online-accounting-software/features/cloud_based_bookkeeping_software.svg",
-      "description": "Giddh simplifies cloud bookkeeping software for small businesses, offering easy account management, accurate reports, and more.",
-      "content": [
-        "Real-Time Updates",
-        "Inventory & Warehouse Management",
-        "Instant Financial Snapshots",
-        "Smart Billing Management"
-      ]
-    }
-  ],
-  "stats": {
-    "heading": "Our Commitment Backed by Data",
-    "stats": [
+  "features": {
+    "heading": "Why Businesses Choose Giddh",
+    "items": [
       {
-        "value": "4.8/5",
-        "label": "Average User Rating"
+        "name": "Unlimited Users",
+        "icon": "MdGroups",
+        "description": "Add your entire team without extra user charges and control access with role-based permissions.",
+        "tags": [
+          { "label": "Unlimited Access", "arrow": true, "href": "/multi-user-accounting-software" },
+          { "label": "Role Permissions", "arrow": true, "href": "/multi-user-accounting-software" },
+          { "label": "Team Collaboration", "arrow": true, "href": "/multi-user-accounting-software" }
+        ]
       },
       {
-        "value": "85%",
-        "label": "Improvement in Financial Visibility"
+        "name": "Multi-Company Management",
+        "icon": "MdBusiness",
+        "description": "Manage up to 100 companies from a single account and switch between them with ease.",
+        "tags": [
+          { "label": "Multi-Company", "arrow": true, "href": "/all-features" },
+          { "label": "Quick Switch", "arrow": true, "href": "/all-features" },
+          { "label": "100 Companies", "arrow": true, "href": "/all-features" }
+        ]
+      },
+      {
+        "name": "Cloud-Based Accounting",
+        "icon": "MdCloud",
+        "description": "Access your books anytime, anywhere from desktop, tablet, or mobile devices.",
+        "tags": [
+          { "label": "Multi-Device", "arrow": true, "href": "/cloud-accounting-software" },
+          { "label": "Anywhere Access", "arrow": true, "href": "/cloud-accounting-software" },
+          { "label": "Real-Time Sync", "arrow": true, "href": "/cloud-accounting-software" }
+        ]
+      },
+      {
+        "name": "GST & Invoicing",
+        "icon": "MdReceiptLong",
+        "description": "Create GST invoices, e-invoices, and e-way bills while staying compliant with tax regulations.",
+        "tags": [
+          { "label": "Instant Invoices", "arrow": true, "href": "/invoice-software" },
+          { "label": "GST Rates", "arrow": true, "href": "/in/gst" },
+          { "label": "E-Invoice", "arrow": true, "href": "/in/e-invoice" },
+          { "label": "E-Way Bill", "arrow": true, "href": "/in/gst" }
+        ]
+      },
+      {
+        "name": "Inventory Management",
+        "icon": "MdProductionQuantityLimits",
+        "description": "Manage items, variants, warehouses, manufacturing, and branch transfers with complete inventory control.",
+        "tags": [
+          { "label": "Barcode Scan", "arrow": true, "href": "/inventory-management-software" },
+          { "label": "Manufacturing", "arrow": true, "href": "/inventory-management-software" },
+          { "label": "Multi-Branch", "arrow": true, "href": "/inventory-management-software" },
+          { "label": "Stock Transfers", "arrow": true, "href": "/inventory-management-software" }
+        ]
+      },
+      {
+        "name": "Real-Time Insights",
+        "icon": "MdInsights",
+        "description": "Make informed decisions with real-time dashboards, financial reports, and business insights.",
+        "tags": [
+          { "label": "Real-time P&L", "arrow": true, "href": "/financial-reporting" },
+          { "label": "Dashboards", "arrow": true, "href": "/financial-reporting" },
+          { "label": "Custom Reports", "arrow": true, "href": "/financial-reporting" },
+          { "label": "Financial Reports", "arrow": true, "href": "/financial-reporting" }
+        ]
+      }
+    ]
+  },
+  "stats": {
+    "stats": [
+      {
+        "value": "10K+",
+        "label": "Businesses Onboarded"
+      },
+      {
+        "value": "Unlimited",
+        "label": "Users"
+      },
+      {
+        "value": "3 Countries",
+        "label": "India, UAE & UK"
       },
       {
         "value": "100%",
-        "label": "Data Security & Uptime Guarantee"
+        "label": "Uptime"
       }
     ]
   },
   "whyGiddh": {
-    "heading": "Why Giddh Is The Best Choice For Your Business?",
+    "variant": "comparison",
+    "heading": "Why Businesses Switch to Giddh",
+    "columns": {
+      "challenge": "Common Challenge",
+      "traditional": "Traditional Software",
+      "giddh": "Giddh"
+    },
     "features": [
       {
-        "features": "Multi-Company Access",
-        "other": false,
-        "giddh": true
+        "challenge": "Need more users",
+        "traditional": "Extra charges per user",
+        "giddh": "Unlimited users"
       },
       {
-        "features": "Unlimited User Access",
-        "other": false,
-        "giddh": true
+        "challenge": "Managing multiple companies",
+        "traditional": "Limited or expensive",
+        "giddh": "Create up to 100 companies"
       },
       {
-        "features": "Ledger-Based Accounting",
-        "other": false,
-        "giddh": true
+        "challenge": "Working remotely",
+        "traditional": "Desktop dependent",
+        "giddh": "Cloud-based"
       },
       {
-        "features": "White-Label Option",
-        "other": false,
-        "giddh": true
+        "challenge": "Team collaboration",
+        "traditional": "Difficult",
+        "giddh": "Real-time collaboration"
       },
       {
-        "features": "GST Compliance",
-        "other": true,
-        "giddh": true
+        "challenge": "Branch management",
+        "traditional": "Complex setup",
+        "giddh": "Unlimited branches"
       },
       {
-        "features": "Multi-Currency Accounting",
-        "other": false,
-        "giddh": true
-      },
-      {
-        "features": "Inventory Management",
-        "other": true,
-        "giddh": true
+        "challenge": "Access from mobile",
+        "traditional": "Limited",
+        "giddh": "Android & iOS apps"
       }
     ]
   },
   "cta": {
     "heading": "Tired Of Overpriced Accounting Software With Limited Features?",
     "subheading": "Get an advanced, affordable solution with Giddh!",
-    "seeGiddhInActionButton": true,
-
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-white",
+        "arrow": true
+      }
+    ],
     "image": "/img/girl-avatar.svg"
   },
+  "getStarted": {
+    "badge": "START TODAY",
+    "heading": "Ready to Switch to Smarter Accounting?",
+    "subheading": "Join thousands of smart businesses automating their invoices, tracking GST returns, and gaining instant visibility with Giddh.",
+    "highlights": [
+      "GST Compliant Invoicing in 60 Secs",
+      "Multi-Company & Dynamic Permission Rules",
+      "Instant Financial Audits & Custom Reports",
+      "Seamless Import from Tally & Microsoft Excel"
+    ],
+    "buttons": [
+      {
+        "text": "Start 15 days Free Trial",
+        "link": "/signup",
+        "type": "btn-primary",
+        "arrow": true
+      },
+      {
+        "text": "View Pricing Plans",
+        "link": "/pricing",
+        "type": "btn-white"
+      }
+    ]
+  },
   "giddhFor": {
-    "heading": "Who Can Grow with Giddh?",
-    "subheading": "Giddh provides your business with clarity, control, and hassle-free compliance, making it ideal for product sellers, service providers, and multi-client operations.",
+    "badge": "BUILT FOR HOW YOU ACTUALLY WORK",
+    "heading": "Whoever you are, Giddh already fits",
+    "subheading": "Four very different businesses. One accounting platform that adapts to each — not the other way around.",
     "content": [
       {
-        "title": "Retailers",
-        "name": "Retailers & Traders",
+        "title": "Retailers & Traders",
+        "tabIcon": "MdStorefront",
+        "label": "For retailers & traders",
+        "labelIcon": "MdStorefront",
+        "heading": "Retailers & Traders",
         "description": "Get real-time control of sales, inventory, and finances for smooth growth.",
-        "icon": "🛒",
+        "highlights": [
+          "Inventory Tracking",
+          "GST Billing",
+          "Barcode Scanning",
+          "Multi-Store",
+          "Sales Reports"
+        ],
+        "cta": {
+          "text": "See how retailers use Giddh",
+          "href": "/inventory-management-software"
+        },
         "image": "/img/online-accounting-software/Retailers.svg"
       },
       {
         "title": "Startups",
-        "name": "Startups & Service Providers",
-        "description": "Manage cash flow, track expenses, and scale smarter with real-time financial insights.",
-        "icon": "🚀",
+        "tabIcon": "MdRocketLaunch",
+        "label": "For startups",
+        "labelIcon": "MdRocketLaunch",
+        "heading": "Scale smarter without losing control of your finances",
+        "description": "Manage cash flow, track expenses, and make faster decisions with real-time financial insights from day one.",
+        "highlights": [
+          "Cash Flow Tracking",
+          "Expense Management",
+          "Financial Reports",
+          "Multi-User Access",
+          "Cloud Accounting"
+        ],
+        "cta": {
+          "text": "See how startups use Giddh",
+          "href": "/cloud-accounting-software"
+        },
         "image": "/img/online-accounting-software/Startups.svg"
       },
       {
-        "title": "Accountants",
-        "name": "Accountants & Finance Teams",
-        "description": " Handle multiple clients, automate reports, and ensure accurate compliance with ease.",
-        "icon": "📊",
+        "title": "Accountants & CA Firms",
+        "tabIcon": "MdAccountBalance",
+        "label": "For accountants & CA firms",
+        "labelIcon": "MdAccountBalance",
+        "heading": "Manage every client from one powerful dashboard",
+        "description": "Handle multiple clients, automate reports, and ensure accurate compliance with ease — all from a single platform.",
+        "highlights": [
+          "Multi-Client Access",
+          "White-Label Option",
+          "GST Reports",
+          "Ledger Management",
+          "Audit Trails"
+        ],
+        "cta": {
+          "text": "See how accountants use Giddh",
+          "href": "/multi-user-accounting-software"
+        },
         "image": "/img/online-accounting-software/Accountants.svg"
       },
       {
         "title": "E-commerce",
-        "name": "Shopify & E-commerce Brands",
-        "description": "Sync sales, manage stock, and track payments seamlessly across all online platforms.",
-        "icon": "🛍️",
+        "tabIcon": "MdShoppingCart",
+        "label": "For e-commerce brands",
+        "labelIcon": "MdShoppingCart",
+        "heading": "Sync sales, stock and payments across every channel",
+        "description": "Connect your online store, manage inventory in real time, and track payments seamlessly across all platforms.",
+        "highlights": [
+          "Order Tracking",
+          "Inventory Sync",
+          "Payment Reconciliation",
+          "Multi-Channel Sales",
+          "Sales Reports"
+        ],
+        "cta": {
+          "text": "See how e-commerce brands use Giddh",
+          "href": "/inventory-management-software"
+        },
         "image": "/img/online-accounting-software/E-commerce.svg"
       }
     ]
@@ -253,11 +333,6 @@
         "testimonial": "The inventory management helps in restaurant management and the branch creation helps to manage multiple branches under a single platform. It helps to see the branch profiles along with the warehouses."
       }
     ]
-  },
-  "seeGiddhInAction": {
-    "heading": " Giddh For All Your Accounting Needs",
-    "subheading": "Manage 100 companies, unlimited users, real-time reports, GST & VAT compliance, and more—streamline accounting and inventory in one platform.",
-    "form": true
   },
   "faqs": [
     {
