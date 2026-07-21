@@ -14,7 +14,7 @@ export default function PopUp() {
         backdrop.className = "modal-backdrop fade show";
         document.body.appendChild(backdrop);
       }
-    }, 20000);
+    }, 120000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -45,7 +45,7 @@ export default function PopUp() {
           <div className="pt-5">
             <div className="d-flex align-items-start gap-2 mb-4 flex-column-reverse flex-md-row">
               <span className="font-600 m-0 font-primary font-sub-heading">
-                Still stuck somewhere?
+              Explore more?
               </span>
               <div className="ms-auto">
                 <Image

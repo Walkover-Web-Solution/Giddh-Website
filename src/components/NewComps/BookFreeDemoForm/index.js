@@ -348,10 +348,7 @@ export default function BookFreeDemoForm({
         <div className="d-flex gap-3 mb-4">
           <div className="border-start border-4 border-primary rounded flex-shrink-0 align-self-stretch" />
           <div>
-            <h2 className="font-md font-600 font-primary m-0 lh-sm">
-              Experience Premium Accounting
-            </h2>
-            <p className="font-sm font-grey-deep mt-2 mb-0 lh-base">
+            <p className="font-sm font-grey-deep m-0 lh-base">
               Fill in your details below to activate your demo.
             </p>
           </div>

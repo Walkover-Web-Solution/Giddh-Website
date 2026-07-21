@@ -26,7 +26,17 @@ export function getResendChannels() {
     return [];
   }
 
-  return widgetData.processes
-    .filter((process) => process.channel.value != "3")
-    .map((process) => process.channel);
+  const seen = new Set();
+  const channels = [];
+
+  widgetData.processes.forEach((process) => {
+    const channel = process.channel;
+    if (!channel || channel.value == "3" || seen.has(channel.value)) {
+      return;
+    }
+    seen.add(channel.value);
+    channels.push(channel);
+  });
+
+  return channels;
 }
