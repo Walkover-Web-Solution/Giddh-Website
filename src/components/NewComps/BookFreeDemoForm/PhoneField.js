@@ -2,6 +2,93 @@ import { useState, useEffect } from "react";
 import style from "./BookFreeDemoForm.module.scss";
 import { MdCheckCircle } from "react-icons/md";
 
+function OtpBlock({
+  formId,
+  otp,
+  getOtpInProgress,
+  verifyOtpInProgress,
+  uniqueChannels,
+  verifyMobileOtp,
+  resendMobileOtp,
+  handleOtpChange,
+  isBanner,
+}) {
+  return (
+    <div className="d-flex flex-column gap-2 w-100 mt-3">
+      <div className="d-flex gap-2 w-100 align-items-center">
+        {otp.map((digit, index) => (
+          <input
+            key={index}
+            id={`${formId}-otp-${index}`}
+            type="tel"
+            className={`form-control ${
+              isBanner ? style.bannerInput : "form-control-lg"
+            } text-center flex-fill ${
+              isBanner
+                ? "bg-light border border-light-gray rounded-3 font-sm"
+                : ""
+            }`}
+            placeholder="*"
+            maxLength="1"
+            value={digit}
+            onChange={(event) => handleOtpChange(index, event.target.value)}
+            autoFocus={index === 0}
+          />
+        ))}
+        <button
+          type="button"
+          className={`btn btn-primary-outline flex-shrink-0 rounded-3 ${
+            isBanner ? `c-fw-600 ${style.bannerActionBtn}` : ""
+          }`}
+          onClick={verifyMobileOtp}
+          disabled={verifyOtpInProgress}
+        >
+          {verifyOtpInProgress ? (
+            <div
+              className="spinner-border spinner-border-sm col-primary"
+              role="status"
+            />
+          ) : (
+            "Verify"
+          )}
+        </button>
+      </div>
+      {uniqueChannels.length > 0 && (
+        <div className="col-dark c-fs-6 d-flex flex-wrap align-items-center">
+          Resend on
+          {uniqueChannels.map((channel, index) => (
+            <span
+              key={channel.value}
+              className="d-inline-flex align-items-center"
+            >
+              <button
+                type="button"
+                className="btn btn-link col-primary c-fw-600 p-0 ms-1 text-decoration-underline"
+                onClick={() => resendMobileOtp(channel.value)}
+                disabled={getOtpInProgress || verifyOtpInProgress}
+              >
+                {channel.name}
+              </button>
+              {uniqueChannels.length > index + 1 && (
+                <span className="ms-1">or</span>
+              )}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function getUniqueChannels(resendChannels) {
+  const seen = new Set();
+  return (resendChannels || []).filter((channel) => {
+    if (!channel?.value || seen.has(channel.value)) return false;
+    seen.add(channel.value);
+    return true;
+  });
+}
+
 export default function PhoneField({
   formId,
   phoneInputRef,
@@ -17,12 +104,15 @@ export default function PhoneField({
   resetMobileVerification,
   handleOtpChange,
   location,
+  inlineOtp = true,
+  otpOnly = false,
 }) {
   const isBanner = location === "banner";
   const [hasPhoneValue, setHasPhoneValue] = useState(false);
+  const uniqueChannels = getUniqueChannels(resendChannels);
 
   useEffect(() => {
-    if (!isBanner) return;
+    if (!isBanner || otpOnly) return;
     const input = phoneInputRef.current;
     if (!input) return;
 
@@ -30,7 +120,24 @@ export default function PhoneField({
     update();
     input.addEventListener("input", update);
     return () => input.removeEventListener("input", update);
-  }, [isBanner, showMobileOtp, mobileVerified, phoneInputRef]);
+  }, [isBanner, otpOnly, showMobileOtp, mobileVerified, phoneInputRef]);
+
+  if (otpOnly) {
+    if (!showMobileOtp || mobileVerified) return null;
+    return (
+      <OtpBlock
+        formId={formId}
+        otp={otp}
+        getOtpInProgress={getOtpInProgress}
+        verifyOtpInProgress={verifyOtpInProgress}
+        uniqueChannels={uniqueChannels}
+        verifyMobileOtp={verifyMobileOtp}
+        resendMobileOtp={resendMobileOtp}
+        handleOtpChange={handleOtpChange}
+        isBanner={isBanner}
+      />
+    );
+  }
 
   const verifyButton = !showMobileOtp && !mobileVerified && (
     <button
@@ -65,7 +172,7 @@ export default function PhoneField({
     hasPhoneValue && !showMobileOtp && !mobileVerified ? (
       <button
         type="button"
-        className="btn btn-sm btn-primary-outline d-inline-flex align-items-center justify-content-center align-self-end ms-auto mt-1 c-fw-600 c-fs-7"
+        className={`btn btn-primary-outline d-inline-flex align-items-center justify-content-center flex-shrink-0 rounded-3 c-fw-600 c-fs-7 px-3 ${style.bannerActionBtn}`}
         onClick={sendMobileOtp}
         disabled={getOtpInProgress}
       >
@@ -84,11 +191,11 @@ export default function PhoneField({
     showMobileOtp && !mobileVerified ? (
       <button
         type="button"
-        className="btn btn-sm btn-primary-outline d-inline-flex align-items-center justify-content-center align-self-end ms-auto mt-1 c-fw-600 c-fs-7"
+        className={`btn btn-primary-outline d-inline-flex align-items-center justify-content-center flex-shrink-0 rounded-3 c-fw-600 c-fs-7 px-3 ${style.bannerActionBtn}`}
         onClick={resetMobileVerification}
         disabled={getOtpInProgress}
       >
-        Change number
+        Change
       </button>
     ) : null;
 
@@ -97,7 +204,7 @@ export default function PhoneField({
       <div
         className={
           isBanner
-            ? `d-flex flex-column align-items-stretch w-100 position-relative ${style.bannerPhoneIti}`
+            ? `d-flex align-items-stretch gap-2 w-100 position-relative ${style.bannerPhoneIti}`
             : `d-flex align-items-stretch gap-2 w-100 ${style.phoneRow}`
         }
       >
@@ -129,59 +236,18 @@ export default function PhoneField({
         {isBanner && bannerChangeChip}
       </div>
 
-      {showMobileOtp && !mobileVerified && (
-        <div className="d-flex flex-column gap-2 mt-3 w-100">
-          <div className="d-flex gap-2 w-100">
-            {otp.map((digit, index) => (
-              <input
-                key={index}
-                id={`${formId}-otp-${index}`}
-                type="tel"
-                className={`form-control ${
-                  isBanner ? "" : "form-control-lg"
-                } text-center flex-fill`}
-                placeholder="*"
-                maxLength="1"
-                value={digit}
-                onChange={(event) => handleOtpChange(index, event.target.value)}
-                autoFocus={index === 0}
-              />
-            ))}
-            <button
-              type="button"
-              className="btn btn-primary-outline flex-shrink-0"
-              onClick={verifyMobileOtp}
-              disabled={verifyOtpInProgress}
-            >
-              {verifyOtpInProgress ? (
-                <div
-                  className="spinner-border spinner-border-sm col-primary"
-                  role="status"
-                />
-              ) : (
-                "Verify"
-              )}
-            </button>
-          </div>
-          {resendChannels.length > 0 && (
-            <div className="col-dark c-fs-6 d-flex flex-wrap">
-              Resend on
-              {resendChannels.map((channel, index) => (
-                <span key={channel.value}>
-                  <button
-                    type="button"
-                    className="btn btn-link col-primary c-fw-600 p-0 ms-1"
-                    onClick={() => resendMobileOtp(channel.value)}
-                    disabled={getOtpInProgress || verifyOtpInProgress}
-                  >
-                    {channel.name}
-                  </button>
-                  {resendChannels.length > index + 1 && " or"}
-                </span>
-              ))}
-            </div>
-          )}
-        </div>
+      {inlineOtp && showMobileOtp && !mobileVerified && (
+        <OtpBlock
+          formId={formId}
+          otp={otp}
+          getOtpInProgress={getOtpInProgress}
+          verifyOtpInProgress={verifyOtpInProgress}
+          uniqueChannels={uniqueChannels}
+          verifyMobileOtp={verifyMobileOtp}
+          resendMobileOtp={resendMobileOtp}
+          handleOtpChange={handleOtpChange}
+          isBanner={isBanner}
+        />
       )}
     </div>
   );

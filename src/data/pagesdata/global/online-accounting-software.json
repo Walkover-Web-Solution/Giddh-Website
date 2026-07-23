@@ -67,7 +67,6 @@
         "tags": [
           { "label": "Real-time P&L", "arrow": true, "href": "/financial-reporting" },
           { "label": "Dashboards", "arrow": true, "href": "/financial-reporting" },
-          { "label": "Custom Reports", "arrow": true, "href": "/financial-reporting" },
           { "label": "Financial Reports", "arrow": true, "href": "/financial-reporting" }
         ]
       }
@@ -80,12 +79,12 @@
         "label": "Businesses Onboarded"
       },
       {
-        "value": "Unlimited",
-        "label": "Users"
+        "value": "4.5/5",
+        "label": "User Rating"
       },
       {
-        "value": "3 Countries",
-        "label": "India, UAE & UK"
+        "value": "3",
+        "label": "Countries"
       },
       {
         "value": "100%",
@@ -103,31 +102,37 @@
     },
     "features": [
       {
+        "emoji": "👥",
         "challenge": "Need more users",
         "traditional": "Extra charges per user",
         "giddh": "Unlimited users"
       },
       {
+        "emoji": "🏢",
         "challenge": "Managing multiple companies",
         "traditional": "Limited or expensive",
         "giddh": "Create up to 100 companies"
       },
       {
+        "emoji": "💻",
         "challenge": "Working remotely",
         "traditional": "Desktop dependent",
         "giddh": "Cloud-based"
       },
       {
+        "emoji": "🤝",
         "challenge": "Team collaboration",
         "traditional": "Difficult",
         "giddh": "Real-time collaboration"
       },
       {
+        "emoji": "🏬",
         "challenge": "Branch management",
         "traditional": "Complex setup",
         "giddh": "Unlimited branches"
       },
       {
+        "emoji": "📱",
         "challenge": "Access from mobile",
         "traditional": "Limited",
         "giddh": "Android & iOS apps"
@@ -150,7 +155,7 @@
   "getStarted": {
     "badge": "START TODAY",
     "heading": "Ready to Switch to Smarter Accounting?",
-    "subheading": "Join thousands of smart businesses automating their invoices, tracking GST returns, and gaining instant visibility with Giddh.",
+    "subheading": "Join thousands of smart businesses managing invoicing, tracking GST, and gaining real-time financial visibility with GIDDH.",
     "highlights": [
       "GST Compliant Invoicing in 60 Secs",
       "Multi-Company & Dynamic Permission Rules",
@@ -336,32 +341,28 @@
   },
   "faqs": [
     {
-      "question": "Is Giddh the Right Accounting Solution for My Business?",
-      "answer": "Giddh is ideal for cloud-based accounting software for startups, small to medium-sized businesses (with a revenue of ₹1 lakh to ₹10 crore), accounting firms, B2B service providers, and manufacturers. Whether you need multi-branch accounting, inventory tracking, or GST & VAT compliance, Giddh streamlines your financial management, helping you scale efficiently and stay compliant across India, UAE, and the UK"
+      "question": "Is my business data secure with Giddh?",
+      "answer": "Yes. Giddh stores your data securely on cloud infrastructure and uses encrypted connections (SSL) to protect data transferred between users and the platform. Your financial data remains your property, and access is restricted only to users you authorize. Giddh also supports role-based access controls, helping businesses manage who can view and manage sensitive information."
     },
     {
-      "question": "How secure is my financial data on Giddh?",
-      "answer": "Giddh takes data security seriously. We implement IP security, encryption, and secure access controls to ensure that your financial data is protected from unauthorized access. With regular backups and secure cloud infrastructure, your sensitive business data is safe and always available when you need it."
+      "question": "Can I import my existing data into Giddh?",
+      "answer": "Yes. Giddh supports easy data import and export in Excel, CSV, and PDF formats, making it simple to migrate and manage your business records."
     },
     {
-      "question": "Can Giddh integrate with other tools and platforms I use?",
-      "answer": "Absolutely! Giddh offers an Open API for customer integration, allowing seamless connections with platforms like Shopify, payment gateways, and other business tools. This flexibility ensures that Giddh fits perfectly into your existing tech stack, streamlining your operations."
+      "question": "Is Giddh available on both desktop and mobile?",
+      "answer": "Yes. Giddh works on web, desktop (Windows & Mac), and mobile apps for Android and iOS, so you can access it from any device."
     },
     {
-      "question": "Can Giddh assist my business in complying with GST and VAT regulations?",
-      "answer": "Yes! Giddh, a GST accounting software for billing, simplifies GST & VAT compliance for enterprises operating in India, UAE, and the UK. With Giddh, you can directly integrate GST billing software for small businesses, making it effortless to stay compliant with regional tax regulations and facilitating seamless filing and reconciliation."
+      "question": "Does Giddh charge for additional users?",
+      "answer": "No. Giddh doesn’t charge extra for adding more users. You can add your entire team and collaborate easily without any additional cost, and you can also set custom permissions based on user roles for better control."
     },
     {
-      "question": "Can Giddh handle the accounting needs of accounting firms and chartered accountants?",
-      "answer": "Yes! Giddh offers white-label solutions, making it easy for accounting firms to manage multiple clients and handle complex accounting tasks, such as ledger entries and tax compliance, all within one platform. Simplify your client management and focus on delivering value."
+      "question": "Can I manage multiple branches and warehouses in Giddh?",
+      "answer": "Yes. Giddh lets you manage unlimited branches and warehouses, so you can easily track different locations. You can also transfer data between branches whenever required to keep everything updated."
     },
     {
-      "question": "Is Giddh suitable for businesses with multiple branches or warehouses?",
-      "answer": "Yes! Giddh's multi-branch and warehouse management capabilities enable you to manage operations efficiently across various locations. Whether you're tracking an inventory management system for small business or generating location-specific reports, Giddh provides a unified solution to handle all your business functions under one subscription."
-    },
-    {
-      "question": "How does Giddh simplify inventory management for my business?",
-      "answer": "Giddh's real-time inventory management software, along with features like barcode integration, helps you manage products and services efficiently. Whether you're tracking stock in different locations or syncing data with platforms like Shopify, Giddh ensures accurate and timely inventory management."
+      "question": "Can I sync data from Tally to Giddh?",
+      "answer": "Yes. You can sync your data from Tally to Giddh, which helps you move your accounting records easily without having to enter everything manually again."
     }
   ]
 }

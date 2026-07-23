@@ -24,17 +24,9 @@ export default function SplitBanner({ compData }) {
               width={120}
               height={24}
             />
-            <button
-              onClick={() =>
-                document.getElementById("SeeGiddhInAction")?.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                })
-              }
-              className="btn btn-primary-outline"
-            >
+            <a href="/signup" className="btn btn-primary-outline">
               Get Started
-            </button>
+            </a>
           </div>
         )}
         <div
