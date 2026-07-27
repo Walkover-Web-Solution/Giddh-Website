@@ -343,7 +343,7 @@ export default function BookFreeDemoForm({
   if (isBanner) {
     return (
       <div
-        className={`outfit-font col-lg-5 col-md-6 col-12 w-100 ${style.bannerForm} d-flex flex-column bg-white rounded-4 p-4 overflow-visible`}
+        className={`outfit-font col-lg-5 col-12 w-100 mx-auto ${style.bannerForm} d-flex flex-column bg-white rounded-4 p-4 overflow-visible`}
       >
         <div className="d-flex gap-3 mb-4">
           <div className="border-start border-4 border-primary rounded flex-shrink-0 align-self-stretch" />

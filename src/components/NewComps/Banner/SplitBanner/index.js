@@ -40,17 +40,21 @@ export default function SplitBanner({ compData }) {
           } garmond-font`}
         >
           <div
-            className={`col-lg-6 col-md-6 col-12 mb-4 mb-lg-0 d-flex flex-column gap-2 ${
+            className={`col-lg-6 col-12 mb-4 mb-lg-0 d-flex flex-column gap-2 ${
               !compData?.form &&
               !compData?.affiliateForm &&
               !compData?.image &&
               !compData?.lottie
                 ? "pe-0 text-center col-lg-8 mx-auto"
-                : "pe-3"
+                : "pe-lg-3 text-center text-lg-start align-items-center align-items-lg-start"
             }`}
           >
             {compData?.tagline && (
-              <span className="font-md outfit-font">
+              <span
+                className={`font-md outfit-font w-100 ${
+                  compData?.taglineClassName || ""
+                }`}
+              >
                 {typeof compData.tagline === "string" ? (
                   compData.tagline
                 ) : (
@@ -61,16 +65,32 @@ export default function SplitBanner({ compData }) {
                 )}
               </span>
             )}
-            <h1 className="font-heading font-primary">{compData?.heading}</h1>
-            <p className="font-grey outfit-font">{compData?.subHeading}</p>
+            <h1
+              className={`font-heading w-100 ${
+                compData?.headingHighlight ? "text-dark" : "font-primary"
+              }`}
+            >
+              {compData?.headingHighlight ? (
+                <>
+                  {compData?.headingPrefix}{" "}
+                  <span className="font-primary">
+                    {compData?.headingHighlight}
+                  </span>
+                  {compData?.headingSuffix ? ` ${compData.headingSuffix}` : ""}
+                </>
+              ) : (
+                compData?.heading
+              )}
+            </h1>
+            <p className="font-grey outfit-font w-100">{compData?.subHeading}</p>
             <div
-              className={`d-flex flex-wrap align-items-center gap-4 ${
+              className={`d-flex flex-wrap align-items-center gap-4 w-100 ${
                 !compData?.form &&
                 !compData?.affiliateForm &&
                 !compData?.image &&
                 !compData?.lottie
                   ? "justify-content-center"
-                  : ""
+                  : "justify-content-center justify-content-lg-start"
               }`}
             >
               {!compData?.hideTrustBadges &&
