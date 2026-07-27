@@ -1,7 +1,9 @@
 {
   "splitBanner": {
     "tagline": "Trusted by Growing Businesses",
-    "heading": "Spend Less Time Managing Accounts. More Time Growing Revenue. Switch to GIDDH",
+    "taglineClassName": "text-secondary",
+    "headingPrefix": "Spend less time managing accounts. More time growing",
+    "headingHighlight": "revenue.",
     "form": true,
     "header": true
   },
@@ -84,7 +86,7 @@
       },
       {
         "value": "3",
-        "label": "Countries"
+        "label": "Countries India, UK and UAE"
       },
       {
         "value": "100%",
