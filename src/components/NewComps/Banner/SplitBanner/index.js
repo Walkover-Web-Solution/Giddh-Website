@@ -40,7 +40,7 @@ export default function SplitBanner({ compData }) {
           } garmond-font`}
         >
           <div
-            className={`col-lg-6 col-12 mb-4 mb-lg-0 d-flex flex-column gap-2 ${
+            className={`col-lg-6 col-12 mb-4 mb-lg-0 d-flex flex-column gap-4 ${
               !compData?.form &&
               !compData?.affiliateForm &&
               !compData?.image &&
@@ -50,20 +50,28 @@ export default function SplitBanner({ compData }) {
             }`}
           >
             {compData?.tagline && (
-              <span
-                className={`font-md outfit-font w-100 ${
-                  compData?.taglineClassName || ""
-                }`}
-              >
-                {typeof compData.tagline === "string" ? (
-                  compData.tagline
-                ) : (
-                  <>
-                    {" "}
-                    BUILD FOR <span className="font-primary"> SMBs</span>
-                  </>
-                )}
-              </span>
+              <div className="w-100 d-flex flex-column align-items-center align-items-lg-start gap-2">
+                <span
+                  className={`outfit-font ${
+                    compData?.taglineClassName || "font-md"
+                  }`}
+                >
+                  {typeof compData.tagline === "string" ? (
+                    compData.tagline
+                  ) : (
+                    <>
+                      {" "}
+                      BUILD FOR <span className="font-primary"> SMBs</span>
+                    </>
+                  )}
+                </span>
+                <span
+                  className="border-bottom border-3 border-primary d-inline-block px-4 lh-1"
+                  aria-hidden="true"
+                >
+                  &nbsp;
+                </span>
+              </div>
             )}
             <h1
               className={`font-heading w-100 ${
@@ -82,35 +90,48 @@ export default function SplitBanner({ compData }) {
                 compData?.heading
               )}
             </h1>
-            <p className="font-grey outfit-font w-100">{compData?.subHeading}</p>
-            <div
-              className={`d-flex flex-wrap align-items-center gap-4 w-100 ${
-                !compData?.form &&
-                !compData?.affiliateForm &&
-                !compData?.image &&
-                !compData?.lottie
-                  ? "justify-content-center"
-                  : "justify-content-center justify-content-lg-start"
-              }`}
-            >
-              {!compData?.hideTrustBadges &&
-                trustBadgeBrands?.map((logo, index) => (
-                <a
-                  key={index}
-                  href={logo.href}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    className={`${style.icons} img-fluid`}
-                    width={100}
-                    height={40}
-                  />
-                </a>
-              ))}
-            </div>
+            {compData?.subHeading && (
+              <p className="font-grey outfit-font w-100 mb-0">
+                {compData.subHeading}
+              </p>
+            )}
+            {compData?.ctaText && (
+              <a
+                href={compData?.ctaHref || "/signup"}
+                className="font-primary fst-italic outfit-font font-xl text-decoration-none"
+              >
+                {compData.ctaText}
+              </a>
+            )}
+            {!compData?.hideTrustBadges && (
+              <div
+                className={`d-flex flex-wrap align-items-center gap-4 w-100 ${
+                  !compData?.form &&
+                  !compData?.affiliateForm &&
+                  !compData?.image &&
+                  !compData?.lottie
+                    ? "justify-content-center"
+                    : "justify-content-center justify-content-lg-start"
+                }`}
+              >
+                {trustBadgeBrands?.map((logo, index) => (
+                  <a
+                    key={index}
+                    href={logo.href}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <Image
+                      src={logo.src}
+                      alt={logo.alt}
+                      className={`${style.icons} img-fluid`}
+                      width={100}
+                      height={40}
+                    />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
 
           {compData?.form && (

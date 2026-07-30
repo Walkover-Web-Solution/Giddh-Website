@@ -1,9 +1,13 @@
 {
   "splitBanner": {
-    "tagline": "Trusted by Growing Businesses",
-    "taglineClassName": "text-secondary",
+    "tagline": "TRUSTED BY GROWING BUSINESSES",
+    "taglineClassName": "font-sm font-grey-deep text-uppercase",
     "headingPrefix": "Spend less time managing accounts. More time growing",
     "headingHighlight": "revenue.",
+    "subHeading": "Cloud accounting, GST-ready invoicing, banking, and inventory — all in one place.",
+    "ctaText": "Switch to GIDDH.",
+    "ctaHref": "/signup",
+    "hideTrustBadges": true,
     "form": true,
     "header": true
   },
