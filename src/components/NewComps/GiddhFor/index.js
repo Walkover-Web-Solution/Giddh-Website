@@ -8,21 +8,26 @@ export default function GiddhFor({ compData }) {
   if (!compData?.content?.length) return null;
   const [activeTab, setActiveTab] = useState(0);
   const activeItem = compData.content[activeTab];
-  const LabelIcon = MdIcons[activeItem.labelIcon];
+  const LabelIcon = activeItem.labelIcon ? MdIcons[activeItem.labelIcon] : null;
+  const activeHeading = activeItem.heading || activeItem.title || activeItem.name;
 
   return (
     <section className="py-5 outfit-font bg-white">
       <div className="container px-3 d-flex flex-column gap-4 gap-md-5">
         <div className="text-center d-flex flex-column align-items-center gap-3">
-          <span className="rounded-pill px-2 py-1 bg-faded-blue font-primary c-fs-7 c-fw-600 text-uppercase">
-            {compData.badge}
-          </span>
+          {compData.badge && (
+            <span className="rounded-pill px-2 py-1 bg-faded-blue font-primary c-fs-7 c-fw-600 text-uppercase">
+              {compData.badge}
+            </span>
+          )}
           <h2 className="garmond-font font-sub-heading font-primary m-0 col-lg-8">
             {compData.heading}
           </h2>
-          <p className="font-grey-deep font-sm m-0 col-lg-7 px-2">
-            {compData.subheading}
-          </p>
+          {compData.subheading && (
+            <p className="font-grey-deep font-sm m-0 col-lg-7 px-2">
+              {compData.subheading}
+            </p>
+          )}
         </div>
 
         <div
@@ -30,7 +35,7 @@ export default function GiddhFor({ compData }) {
           role="tablist"
         >
           {compData.content.map((item, index) => {
-            const TabIcon = MdIcons[item.tabIcon];
+            const TabIcon = item.tabIcon ? MdIcons[item.tabIcon] : null;
 
             return (
               <button
@@ -45,12 +50,14 @@ export default function GiddhFor({ compData }) {
                 }`}
                 onClick={() => setActiveTab(index)}
               >
-                <TabIcon
-                  size={18}
-                  className={
-                    activeTab === index ? "font-white" : "font-primary"
-                  }
-                />
+                {TabIcon && (
+                  <TabIcon
+                    size={18}
+                    className={
+                      activeTab === index ? "font-white" : "font-primary"
+                    }
+                  />
+                )}
                 <span>{item.title}</span>
               </button>
             );
@@ -60,20 +67,26 @@ export default function GiddhFor({ compData }) {
         <div className="row align-items-center g-4 g-lg-5">
           <div className="col-12 col-lg-6 order-2 order-lg-1">
             <div className="d-flex flex-column gap-3 px-lg-2">
-              <div className="d-flex align-items-center gap-2">
-                <div
-                  className="d-flex align-items-center justify-content-center bg-faded-blue rounded-2 flex-shrink-0"
-                  style={{ width: 32, height: 32, minWidth: 32 }}
-                >
-                  <LabelIcon size={16} className="font-primary" />
+              {(LabelIcon || activeItem.label) && (
+                <div className="d-flex align-items-center gap-2">
+                  {LabelIcon && (
+                    <div
+                      className="d-flex align-items-center justify-content-center bg-faded-blue rounded-2 flex-shrink-0"
+                      style={{ width: 32, height: 32, minWidth: 32 }}
+                    >
+                      <LabelIcon size={16} className="font-primary" />
+                    </div>
+                  )}
+                  {activeItem.label && (
+                    <span className="font-primary font-sm font-600 m-0">
+                      {activeItem.label}
+                    </span>
+                  )}
                 </div>
-                <span className="font-primary font-sm font-600 m-0">
-                  {activeItem.label}
-                </span>
-              </div>
+              )}
 
               <h3 className="garmond-font font-primary font-xl font-600 m-0">
-                {activeItem.heading}
+                {activeHeading}
               </h3>
 
               <p className="font-grey-deep font-sm m-0">
@@ -81,7 +94,7 @@ export default function GiddhFor({ compData }) {
               </p>
 
               <div className="d-flex flex-wrap gap-2 pt-1">
-                {activeItem.highlights.map((highlight) => (
+                {(activeItem.highlights ?? []).map((highlight) => (
                   <span
                     key={highlight}
                     className="bg-extra-light-blue rounded-2 py-2 px-3 d-inline-flex align-items-center gap-2 font-sm font-dark-light"
@@ -92,28 +105,32 @@ export default function GiddhFor({ compData }) {
                 ))}
               </div>
 
-              <Link
-                href={activeItem.cta.href}
-                className="font-primary font-sm font-600 d-inline-flex align-items-center gap-1 mt-1 text-decoration-none"
-              >
-                {activeItem.cta.text}
-                <MdArrowForward size={16} />
-              </Link>
+              {activeItem.cta?.href && (
+                <Link
+                  href={activeItem.cta.href}
+                  className="font-primary font-sm font-600 d-inline-flex align-items-center gap-1 mt-1 text-decoration-none"
+                >
+                  {activeItem.cta.text}
+                  <MdArrowForward size={16} />
+                </Link>
+              )}
             </div>
           </div>
 
           <div className="col-12 col-lg-6 order-1 order-lg-2">
-            <div className="d-flex justify-content-center justify-content-lg-end">
-              <Image
-                src={activeItem.image}
-                alt={activeItem.heading}
-                className="img-fluid w-100"
-                style={{ maxWidth: "clamp(220px, 90%, 360px)" }}
-                width={360}
-                height={360}
-                loading="lazy"
-              />
-            </div>
+            {activeItem.image && (
+              <div className="d-flex justify-content-center justify-content-lg-end">
+                <Image
+                  src={activeItem.image}
+                  alt={activeHeading || ""}
+                  className="img-fluid w-100"
+                  style={{ maxWidth: "clamp(220px, 90%, 360px)" }}
+                  width={360}
+                  height={360}
+                  loading="lazy"
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
