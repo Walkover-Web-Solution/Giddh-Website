@@ -14,7 +14,7 @@ export default function PopUp() {
         backdrop.className = "modal-backdrop fade show";
         document.body.appendChild(backdrop);
       }
-    }, 20000);
+    }, 120000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -33,62 +33,45 @@ export default function PopUp() {
       className={`modal fade ${showModal ? ' show d-block' : ''}`}
       id="giddhPopUp"
     >
-      <div className="modal-dialog modal-dialog-centered modal-lg">
-        <div className="modal-content p-4 bg-soft-blue">
-          <button
-            type="button"
-            className="btn-close position-absolute top-0 end-0 m-3"
-            data-dismiss="modal"
-            id="closeModal"
-            onClick={closeModal}
-          ></button>
-          <div className="pt-5">
-            <div className="d-flex align-items-start gap-2 mb-4 flex-column-reverse flex-md-row">
-              <span className="font-600 m-0 font-primary font-sub-heading">
-                Still stuck somewhere?
-              </span>
-              <div className="ms-auto">
-                <Image
-                  src="/img/giddh-logo.svg"
-                  alt="Giddh Logo"
-                  width={120}
-                  height={36}
-                />
-              </div>
-            </div>
-            <div className="d-flex flex-column gap-2 flex-md-row">
-              <div className="col-md-6">
-                <h2 className="font-md garmond-font">
-                  Don’t worry, getting started with Giddh is quick and simple.
-                </h2>
-
-                <button
-                  onClick={() => {
-                    document
-                      .getElementById("SeeGiddhInAction")
-                      ?.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center",
-                      });
-                    closeModal();
-                  }}
-                  className="btn btn-primary-outline"
-                >
-                  Get Started
-                </button>
-              </div>
-
-              <div className="pt-3 pt-sm-5 align-self-center align-self-md-end align-self-lg-start">
-                <Image
-                  src="/img/laptop_mockup.svg"
-                  alt="Giddh dashboard screenshot"
-                  width={600}
-                  height={400}
-                  className="w-100 h-auto"
-                  priority
-                />
-              </div>
-            </div>
+      <div className="modal-dialog modal-dialog-centered">
+        <div className="modal-content p-3 bg-soft-blue">
+          <div className="d-flex align-items-center justify-content-between mb-3">
+            <Image
+              src="/img/giddh-logo.svg"
+              alt="Giddh Logo"
+              width={100}
+              height={30}
+            />
+            <button
+              type="button"
+              className="btn-close"
+              data-dismiss="modal"
+              id="closeModal"
+              onClick={closeModal}
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="text-center d-flex flex-column align-items-center gap-2">
+            <span className="font-600 m-0 font-primary font-xl">
+              Explore more?
+            </span>
+            <h2 className="font-md garmond-font mb-0">
+              Don’t worry, getting started with Giddh is quick and simple.
+            </h2>
+            <button
+              onClick={() => {
+                document
+                  .getElementById("SeeGiddhInAction")
+                  ?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
+                closeModal();
+              }}
+              className="btn btn-primary-outline mt-1"
+            >
+              Get Started
+            </button>
           </div>
         </div>
       </div>

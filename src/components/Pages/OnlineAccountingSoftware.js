@@ -1,9 +1,10 @@
 import SplitBanner from "../NewComps/Banner/SplitBanner";
-import ToggleFeatures from "../NewComps/Features/ToggleFeatures";
+import BentoFeatures from "../NewComps/Features/BentoFeatures";
 import Stats from "../NewComps/Stats";
 import WhyGiddh from "../NewComps/WhyGiddh";
+import GetStarted from "../NewComps/GetStarted";
 import GiddhFor from "../NewComps/GiddhFor";
-import Testimonials from "../NewComps/Testimonials";
+import SpotlightTestimonials from "../NewComps/Testimonials/SpotlightTestimonials";
 import FAQs from "../NewComps/FAQs";
 import Footer from "../NewComps/Footer";
 import SeeGiddhInAction from "../NewComps/SeeGiddhInAction";
@@ -84,13 +85,13 @@ export default function OnlineAccountingSoftware({ pageData }) {
     <>
       <PopUp />
       <SplitBanner compData={pageData?.splitBanner} />
-      {/* <Stats stats={pageData?.stats} /> */}
-      <ToggleFeatures features={pageData?.toggleFeatures} />
+      <Stats stats={pageData?.stats} />
+      <BentoFeatures features={pageData?.features} />
+      <GetStarted compData={pageData?.getStarted} />
       <WhyGiddh compData={pageData?.whyGiddh} />
-      <CTA hasImage={true} compData={pageData?.cta} />
       <GiddhFor compData={pageData?.giddhFor} />
-      <Testimonials testimonials={pageData?.testimonials} />
-      <SeeGiddhInAction compData={pageData?.seeGiddhInAction} />
+      <SpotlightTestimonials testimonials={pageData?.testimonials} />
+      <CTA hasImage={true} compData={pageData?.cta} />
       <FAQs faqs={pageData?.faqs} />
       <Footer />
     </>
