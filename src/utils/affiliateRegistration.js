@@ -6,7 +6,7 @@ const REGION_CURRENCY_MAP = {
   uk: "GBP",
 };
 
-const AFFILIATE_REGISTER_URL = "https://flow.sokt.io/func/scripG05f2j6";
+const AFFILIATE_REGISTER_URL = process.env.NEXT_PUBLIC_API_URL + "/verify-and-send";
 
 export function getAffiliateRegionMeta(pathname, origin) {
   const country = getPageInfo(pathname).country;
