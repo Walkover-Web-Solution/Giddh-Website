@@ -107,9 +107,8 @@ export default function AffiliateForm() {
             <input
               type="text"
               name="fullName"
-              className={`form-control border ${
-                fullNameError ? "border-danger" : "border-light-gray"
-              } ${style.formInput} ps-5`}
+              className={`form-control border ${fullNameError ? "border-danger" : "border-light-gray"
+                } ${style.formInput} ps-5`}
               placeholder="John Smith"
               maxLength={100}
               aria-labelledby="affiliate-full-name-label"
