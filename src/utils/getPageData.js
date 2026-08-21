@@ -5,6 +5,7 @@ export default function getPageData(pageInfo) {
     "invoice-software",
     "multi-user-accounting-software",
     "online-accounting-software",
+    "icai-ready",
     "tally-vs-giddh",
     "inventory-management-software",
     "small-business-bookkeeping-software",

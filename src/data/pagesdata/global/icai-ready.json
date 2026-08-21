@@ -1,0 +1,298 @@
+{
+  "splitBanner": {
+    "tagline": "ICAI Guidance Note · Non-Corporate Entities",
+    "taglineClassName": "font-sm font-grey-deep text-uppercase",
+    "headingPrefix": "Your Accounting.",
+    "headingHighlight": "ICAI-Ready.",
+    "subHeading": "Manage accounting, invoicing, GST and financial reporting in one platform — with financial statements aligned to ICAI's Guidance Note formats.",
+    "ctaText": "Start Free Trial",
+    "ctaHref": "/signup",
+    "hideTrustBadges": true,
+    "form": true,
+    "header": true
+  },
+  "benefits": {
+    "content": [
+      {
+        "title": "Complete Accounting",
+        "icon": "MdMenu",
+        "description": "Manage your books, invoices, GST and reports in one place."
+      },
+      {
+        "title": "ICAI-Ready Reporting",
+        "icon": "MdCheck",
+        "description": "Financial statements aligned with the required reporting structure."
+      },
+      {
+        "title": "Cloud-Based",
+        "icon": "MdCloud",
+        "description": "Access your accounting data anytime, anywhere."
+      },
+      {
+        "title": "Built for Indian Businesses",
+        "icon": "MdPublic",
+        "description": "Designed around Indian accounting and taxation workflows."
+      }
+    ]
+  },
+  "icaiProof": {
+    "question": "Worried about adapting to the new reporting format?",
+    "heading": "Stay Ready for the New Financial Reporting Requirements",
+    "description": "GIDDH supports financial statements aligned with the illustrative formats introduced under ICAI's Guidance Note for Non-Corporate Entities.",
+    "panels": [
+      {
+        "title": "Balance Sheet",
+        "period": "FY Apr 2026 – Mar 2027",
+        "headers": [
+          "Particular",
+          "As Of Mar 31, 2027",
+          "As Of Mar 31, 2026"
+        ],
+        "rows": [
+          {
+            "label": "I  Equity and Liabilities",
+            "type": "group"
+          },
+          {
+            "label": "Owners' Funds",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Non Current Liabilities",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Current Liabilities",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Total Liabilities",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "total"
+          },
+          {
+            "label": "II  Assets",
+            "type": "group"
+          },
+          {
+            "label": "Fixed Assets",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Non Current Assets",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Current Assets",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Total Assets",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "total"
+          }
+        ]
+      },
+      {
+        "title": "Statement of Profit & Loss",
+        "period": "FY Apr 2026 – Mar 2027",
+        "headers": [
+          "Account",
+          "01 Apr 2026–31 Mar 2027",
+          "01 Apr 2025–31 Mar 2026"
+        ],
+        "rows": [
+          {
+            "label": "Revenue",
+            "type": "group"
+          },
+          {
+            "label": "Revenue From Operations",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Other Income",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Less: Cost Of Goods Sold",
+            "type": "group"
+          },
+          {
+            "label": "Total Cost Of Goods Sold",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Gross Profit",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "subtotal"
+          },
+          {
+            "label": "Less: Operating Expenses",
+            "type": "group"
+          },
+          {
+            "label": "Operating Cost",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Total Operating Expenses",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Operating Profit/Loss (EBIT)",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "subtotal"
+          },
+          {
+            "label": "Less: Other Expenses",
+            "type": "group"
+          },
+          {
+            "label": "Indirect Expenses",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Total Other Expenses",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "indent"
+          },
+          {
+            "label": "Income Before Taxes (EBT)",
+            "current": "0.00",
+            "previous": "0.00",
+            "type": "subtotal"
+          }
+        ]
+      }
+    ],
+    "cta": {
+      "text": "See how GIDDH handles your financial reporting → Book a Demo",
+      "href": "/icai-ready"
+    }
+  },
+  "features": {
+    "sectionId": "platform",
+    "badge": "One Platform",
+    "heading": "Everything your accounting needs, in one place",
+    "subHeading": "GIDDH isn't built around a single requirement — it's a complete platform for how Indian businesses and CA firms actually work.",
+    "content": [
+      {
+        "title": "Invoicing",
+        "description": "Create and send GST-compliant invoices in minutes."
+      },
+      {
+        "title": "GST",
+        "description": "Stay on top of returns and filings without the manual work."
+      },
+      {
+        "title": "Banking",
+        "description": "Connect your accounts and see your cash position in real time."
+      },
+      {
+        "title": "Bank Reconciliation",
+        "description": "Match transactions automatically instead of line by line."
+      },
+      {
+        "title": "Financial Reports",
+        "description": "Generate the statements you need without rebuilding your books."
+      },
+      {
+        "title": "Ledger & Accounting",
+        "description": "Keep every account and entry organised and searchable."
+      },
+      {
+        "title": "Multi-user Access",
+        "description": "Bring your accountant or team into the same platform."
+      },
+      {
+        "title": "Cloud Accounting",
+        "description": "Access your accounting data whenever you need it."
+      }
+    ]
+  },
+  "audience": {
+    "badge": "Who It's For",
+    "heading": "Built for how you actually work",
+    "cards": [
+      {
+        "title": "For Every Business",
+        "items": [
+          "Companies",
+          "Proprietorships",
+          "Partnership firms",
+          "LLPs",
+          "Growing businesses"
+        ]
+      },
+      {
+        "title": "For CA & Accounting Firms",
+        "items": [
+          "Manage multiple clients",
+          "Centralize accounting workflows",
+          "Generate financial reports efficiently"
+        ]
+      }
+    ]
+  },
+  "whySwitch": {
+    "heading": "Everything you need to manage accounting. One platform.",
+    "items": [
+      {
+        "title": "AI & Smart Automation",
+        "description": "Automate repetitive bookkeeping, smart invoice processing, and financial predictions with intelligent workflows."
+      },
+      {
+        "title": "Enterprise-Grade Security",
+        "description": "Protected with AWS cloud infrastructure, advanced data encryption, IP access controls, and role-based permissions."
+      }
+    ]
+  },
+  "cta": {
+    "theme": "light",
+    "heading": "Ready to simplify your accounting?",
+    "subheading": "Manage accounting, GST, invoicing and financial reporting with GIDDH.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-primary",
+        "arrow": true
+      },
+      {
+        "text": "Book a Demo",
+        "link": "/icai-ready",
+        "type": "btn-primary-outline"
+      }
+    ]
+  }
+}

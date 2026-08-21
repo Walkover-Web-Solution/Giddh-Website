@@ -58,6 +58,7 @@ export default function MyApp({ Component, pageProps }) {
     loginSignupPath === "login" ||
     loginSignupPath === "signup" ||
     loginSignupPath === "online-accounting-software" ||
+    loginSignupPath === "icai-ready" ||
     loginSignupPath === "thank-you" ||
     loginSignupPath === "googleauth"
       ? false
