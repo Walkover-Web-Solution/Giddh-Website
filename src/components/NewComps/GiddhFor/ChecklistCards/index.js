@@ -1,6 +1,7 @@
 import { MdCheck } from "react-icons/md";
+import styles from "./ChecklistCards.module.scss";
 
-export default function IcaiAudience({ compData }) {
+export default function ChecklistCards({ compData }) {
   if (!compData?.cards?.length) return null;
 
   return (
@@ -24,8 +25,7 @@ export default function IcaiAudience({ compData }) {
             <div key={index} className="col-12 col-md-6">
               <div className="bg-white border rounded-4 p-4 p-md-5 h-100 position-relative overflow-hidden">
                 <div
-                  className="bg-accent position-absolute top-0 start-0 w-100"
-                  style={{ height: 4 }}
+                  className={`bg-accent position-absolute top-0 start-0 w-100 ${styles.topBar}`}
                 />
                 <h3 className="garmond-font font-primary font-xl font-600 mb-3 pt-1">
                   {card?.title}
@@ -37,8 +37,7 @@ export default function IcaiAudience({ compData }) {
                       className="d-flex align-items-center gap-2 font-sm"
                     >
                       <span
-                        className="d-flex align-items-center justify-content-center bg-faded-blue rounded-4 flex-shrink-0"
-                        style={{ width: 20, height: 20, minWidth: 20 }}
+                        className={`d-flex align-items-center justify-content-center bg-faded-blue rounded-4 flex-shrink-0 ${styles.iconWrapper}`}
                       >
                         <MdCheck size={12} className="font-primary" />
                       </span>

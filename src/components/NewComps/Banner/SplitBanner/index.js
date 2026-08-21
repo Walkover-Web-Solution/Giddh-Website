@@ -81,7 +81,11 @@ export default function SplitBanner({ compData }) {
               {compData?.headingHighlight ? (
                 <>
                   {compData?.headingPrefix}{" "}
-                  <span className="font-primary">
+                  <span
+                    className={`font-primary ${
+                      compData?.highlightBlock ? "d-block" : ""
+                    }`}
+                  >
                     {compData?.headingHighlight}
                   </span>
                   {compData?.headingSuffix ? ` ${compData.headingSuffix}` : ""}

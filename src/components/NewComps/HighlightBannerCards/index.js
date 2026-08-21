@@ -1,6 +1,7 @@
 import { MdCheck } from "react-icons/md";
+import styles from "./HighlightBannerCards.module.scss";
 
-export default function WhySwitch({ compData }) {
+export default function HighlightBannerCards({ compData }) {
   if (!compData?.items?.length) return null;
 
   return (
@@ -16,8 +17,7 @@ export default function WhySwitch({ compData }) {
             <div key={index} className="col-12 col-md-6">
               <div className="rounded-4 p-4 h-100 bg-white bg-opacity-10">
                 <span
-                  className="d-inline-flex align-items-center justify-content-center rounded-4 bg-white bg-opacity-25 mb-2"
-                  style={{ width: 20, height: 20 }}
+                  className={`d-inline-flex align-items-center justify-content-center rounded-4 bg-white bg-opacity-25 mb-2 ${styles.checkBadge}`}
                 >
                   <MdCheck size={14} className="font-white" />
                 </span>

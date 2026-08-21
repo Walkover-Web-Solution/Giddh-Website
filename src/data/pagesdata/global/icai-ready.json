@@ -8,10 +8,11 @@
     "ctaText": "Start Free Trial",
     "ctaHref": "/signup",
     "hideTrustBadges": true,
+    "highlightBlock": true,
     "form": true,
     "header": true
   },
-  "benefits": {
+  "iconCardFeaturesOne": {
     "content": [
       {
         "title": "Complete Accounting",
@@ -35,7 +36,7 @@
       }
     ]
   },
-  "icaiProof": {
+  "financialReportsTable": {
     "question": "Worried about adapting to the new reporting format?",
     "heading": "Stay Ready for the New Financial Reporting Requirements",
     "description": "GIDDH supports financial statements aligned with the illustrative formats introduced under ICAI's Guidance Note for Non-Corporate Entities.",
@@ -200,7 +201,7 @@
       "href": "/icai-ready"
     }
   },
-  "features": {
+  "iconCardFeaturesTwo": {
     "sectionId": "platform",
     "badge": "One Platform",
     "heading": "Everything your accounting needs, in one place",
@@ -240,7 +241,7 @@
       }
     ]
   },
-  "audience": {
+  "checklistCards": {
     "badge": "Who It's For",
     "heading": "Built for how you actually work",
     "cards": [
@@ -264,7 +265,7 @@
       }
     ]
   },
-  "whySwitch": {
+  "highlightBannerCards": {
     "heading": "Everything you need to manage accounting. One platform.",
     "items": [
       {
@@ -278,7 +279,7 @@
     ]
   },
   "cta": {
-    "theme": "light",
+    "theme": "white",
     "heading": "Ready to simplify your accounting?",
     "subheading": "Manage accounting, GST, invoicing and financial reporting with GIDDH.",
     "buttons": [

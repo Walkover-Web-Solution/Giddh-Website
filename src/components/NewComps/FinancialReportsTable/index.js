@@ -1,4 +1,6 @@
-export default function IcaiProof({ compData }) {
+import Link from "next/link";
+
+export default function FinancialReportsTable({ compData }) {
   if (!compData?.panels?.length) return null;
 
   return (
@@ -53,10 +55,10 @@ export default function IcaiProof({ compData }) {
                         >
                           <td
                             className={`text-start ${row?.type === "group" ||
-                                row?.type === "total" ||
-                                row?.type === "subtotal"
-                                ? "font-600 font-dark"
-                                : ""
+                              row?.type === "total" ||
+                              row?.type === "subtotal"
+                              ? "font-600 font-dark"
+                              : ""
                               } ${row?.type === "indent" ? "ps-4" : ""} ${row?.type === "total" ? "border-top" : ""
                               }`}
                           >
@@ -64,16 +66,16 @@ export default function IcaiProof({ compData }) {
                           </td>
                           <td
                             className={`text-end ${row?.type === "total" || row?.type === "subtotal"
-                                ? "font-600 font-dark"
-                                : ""
+                              ? "font-600 font-dark"
+                              : ""
                               } ${row?.type === "total" ? "border-top" : ""}`}
                           >
                             {row?.current}
                           </td>
                           <td
                             className={`text-end ${row?.type === "total" || row?.type === "subtotal"
-                                ? "font-600 font-dark"
-                                : ""
+                              ? "font-600 font-dark"
+                              : ""
                               } ${row?.type === "total" ? "border-top" : ""}`}
                           >
                             {row?.previous}
@@ -96,21 +98,12 @@ export default function IcaiProof({ compData }) {
 
         {compData?.cta?.href && (
           <div className="text-center">
-            <a
+            <Link
               href={compData.cta.href}
-              onClick={(e) => {
-                if (
-                  compData.cta.href === "/icai-ready" ||
-                  compData.cta.href === "#"
-                ) {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }
-              }}
               className="font-primary font-sm font-600 text-decoration-none"
             >
               {compData.cta.text}
-            </a>
+            </Link>
           </div>
         )}
       </div>
