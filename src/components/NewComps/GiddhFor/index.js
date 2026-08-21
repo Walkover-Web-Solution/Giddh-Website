@@ -38,11 +38,10 @@ export default function GiddhFor({ compData }) {
                 type="button"
                 role="tab"
                 aria-selected={activeTab === index}
-                className={`d-flex align-items-center justify-content-center gap-2 flex-fill border-0 rounded-2 py-2 px-3 text-nowrap cursor-pointer font-sm font-600 ${
-                  activeTab === index
+                className={`d-flex align-items-center justify-content-center gap-2 flex-fill border-0 rounded-2 py-2 px-3 text-nowrap cursor-pointer font-sm font-600 ${activeTab === index
                     ? "bg-accent font-white"
                     : "bg-transparent font-grey-deep"
-                }`}
+                  }`}
                 onClick={() => setActiveTab(index)}
               >
                 <TabIcon

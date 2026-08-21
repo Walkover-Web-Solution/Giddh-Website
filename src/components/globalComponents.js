@@ -22,6 +22,8 @@ const globalComponents = ({ path }) => {
   }, []);
   if (path && path[1] === "online-accounting-software") {
     return null;
+  } else if (path && path[1] === "icai-ready") {
+    return null;
   } else {
     return (
       <>
