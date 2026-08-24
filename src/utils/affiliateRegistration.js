@@ -6,7 +6,7 @@ const REGION_CURRENCY_MAP = {
   uk: "GBP",
 };
 
-const AFFILIATE_REGISTER_URL = "https://flow.sokt.io/func/scripG05f2j6";
+const AFFILIATE_REGISTER_URL = process.env.NEXT_PUBLIC_API_URL + "/verify-and-send";
 
 export function getAffiliateRegionMeta(pathname, origin) {
   const country = getPageInfo(pathname).country;
@@ -21,7 +21,9 @@ export function getAffiliateRegionMeta(pathname, origin) {
 }
 
 function getApiMessage(data) {
-  return data?.message || data?.error || data?.data?.message || null;
+  return (
+    data?.body || data?.message || data?.error || data?.data?.message || null
+  );
 }
 
 export async function submitAffiliateRegistration(payload) {
@@ -34,7 +36,10 @@ export async function submitAffiliateRegistration(payload) {
   const data = await response.json().catch(() => null);
   const apiMessage = getApiMessage(data);
 
-  if (!response.ok || !data?.data?.success) {
+  const success =
+    data?.status === "success" || data?.data?.success || response.ok;
+
+  if (!success) {
     throw new Error(apiMessage || "Registration failed. Please try again.");
   }
 

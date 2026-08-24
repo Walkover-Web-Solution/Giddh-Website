@@ -38,6 +38,7 @@ export default function AffiliateForm() {
     const fullName = e.target.fullName?.value?.trim() || "";
     const companyName = e.target.companyName?.value?.trim() || "";
     const email = emailDetails?.email || "";
+    const accessToken = emailDetails?.accessToken || "";
 
     if (!fullName) {
       setFullNameError("Full name is required");
@@ -63,6 +64,7 @@ export default function AffiliateForm() {
       company_name: companyName,
       website_url,
       currency_code,
+      "access-token": accessToken
     };
 
     setSubmitting(true);
