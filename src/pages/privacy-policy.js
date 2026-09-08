@@ -125,6 +125,62 @@ const privacyPolicy = (path) => {
                 after You stop paying for the Service or at Your request.
               </p>
               <h3 className="mb-4 c-fs-3 c-fw-400">
+                Data Subject Rights and Data Right Details
+              </h3>
+              <p className="mb-4 c-fs-5">
+                We respect your rights over your personal data. Depending on your
+                location and applicable law, you may have the following rights
+                regarding your personal data:
+              </p>
+              <ol className="d-flex flex-column gap-3 mb-4 c-fs-5">
+                <li>
+                  <b>Right to Access:</b> You have right to request confirmation
+                  of whether we process your data, and receive a copy along with
+                  details of the purpose, categories of data, and any third
+                  parties it's shared with.
+                </li>
+                <li>
+                  <b>Right to Correction:</b> You have right to request
+                  correction of any inaccurate, incomplete, or outdated personal
+                  data we hold about you.
+                </li>
+                <li>
+                  <b>Right to Erasure (&ldquo;Right to be Forgotten&rdquo;):</b> You have
+                  right to request deletion of your personal data, subject to
+                  legal exceptions.
+                </li>
+                <li>
+                  <b>Right to Withdraw Consent:</b> You have the right to
+                  withdraw consent at any time where processing is based on
+                  consent. This won't affect the lawfulness of processing done
+                  before withdrawal.
+                </li>
+                <li>
+                  <b>Right to Grievance Redressal:</b> You have right to raise
+                  concerns via our designated contact (see Contact Us).
+                  Unresolved issues may be escalated to the Data Protection
+                  Board of India, where applicable.
+                </li>
+                <li>
+                  <b>Right to Nominate:</b> You have right to nominate another
+                  individual to exercise your data rights on your behalf in case
+                  of death or incapacity. Contact us at{" "}
+                  <a href="mailto:hello@giddh.com">hello@giddh.com</a> to
+                  register a nominee.
+                </li>
+                <li>
+                  <b>Right to Object / Restrict Processing:</b> You have the
+                  right to object to certain processing (such as for direct
+                  marketing) or request that it be restricted, where applicable
+                  under law.
+                </li>
+                <li>
+                  <b>Right to Data Portability:</b> You have the right to be
+                  provided with a copy of your Personal Data in a structured,
+                  machine readable and commonly used format.
+                </li>
+              </ol>
+              <h3 className="mb-4 c-fs-3 c-fw-400">
                 Your browser stores no information that will identify You or
                 Your Organization
               </h3>
