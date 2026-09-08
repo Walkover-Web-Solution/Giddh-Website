@@ -156,10 +156,11 @@ const privacyPolicy = (path) => {
                   before withdrawal.
                 </li>
                 <li className="mb-2">
-                  <b>Right to Grievance Redressal:</b> You have right to raise
-                  concerns via our designated contact (see Contact Us).
-                  Unresolved issues may be escalated to the Data Protection
-                  Board of India, where applicable.
+                  <b>Right to Grievance Redressal:</b> You have the right to
+                  raise concerns regarding the processing of your personal data
+                  via our designated contact (see Contact Us). We will make
+                  reasonable efforts to address and resolve your concerns in a
+                  timely manner.
                 </li>
                 <li className="mb-2">
                   <b>Right to Nominate:</b> You have right to nominate another
