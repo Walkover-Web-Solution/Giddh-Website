@@ -11,9 +11,8 @@ export default function SplitBanner({ compData }) {
   }
   return (
     <section
-      className={`outfit-font ${
-        compData?.lottie ? "" : "gradient-primary"
-      } ${!compData?.header ? "padding-nav" : ""}`}
+      className={`outfit-font ${compData?.lottie ? "" : "gradient-primary"
+        } ${!compData?.header ? "padding-nav" : ""}`}
     >
       <div className="container px-4 py-5">
         {compData?.header && (
@@ -30,31 +29,28 @@ export default function SplitBanner({ compData }) {
           </div>
         )}
         <div
-          className={`row align-items-center ${
-            !compData?.form &&
-            !compData?.affiliateForm &&
-            !compData?.image &&
-            !compData?.lottie
-              ? "justify-content-center"
-              : "justify-content-between"
-          } garmond-font`}
-        >
-          <div
-            className={`col-lg-6 col-12 mb-4 mb-lg-0 d-flex flex-column gap-4 ${
-              !compData?.form &&
+          className={`row align-items-center ${!compData?.form &&
               !compData?.affiliateForm &&
               !compData?.image &&
               !compData?.lottie
+              ? "justify-content-center"
+              : "justify-content-between"
+            } garmond-font`}
+        >
+          <div
+            className={`col-lg-6 col-12 mb-4 mb-lg-0 d-flex flex-column gap-4 ${!compData?.form &&
+                !compData?.affiliateForm &&
+                !compData?.image &&
+                !compData?.lottie
                 ? "pe-0 text-center col-lg-8 mx-auto"
                 : "pe-lg-3 text-center text-lg-start align-items-center align-items-lg-start"
-            }`}
+              }`}
           >
             {compData?.tagline && (
               <div className="w-100 d-flex flex-column align-items-center align-items-lg-start gap-2">
                 <span
-                  className={`outfit-font ${
-                    compData?.taglineClassName || "font-md"
-                  }`}
+                  className={`outfit-font ${compData?.taglineClassName || "font-md"
+                    }`}
                 >
                   {typeof compData.tagline === "string" ? (
                     compData.tagline
@@ -74,14 +70,16 @@ export default function SplitBanner({ compData }) {
               </div>
             )}
             <h1
-              className={`font-heading w-100 ${
-                compData?.headingHighlight ? "text-dark" : "font-primary"
-              }`}
+              className={`font-heading w-100 ${compData?.headingHighlight ? "text-dark" : "font-primary"
+                }`}
             >
               {compData?.headingHighlight ? (
                 <>
                   {compData?.headingPrefix}{" "}
-                  <span className="font-primary">
+                  <span
+                    className={`font-primary ${compData?.highlightBlock ? "d-block" : ""
+                      }`}
+                  >
                     {compData?.headingHighlight}
                   </span>
                   {compData?.headingSuffix ? ` ${compData.headingSuffix}` : ""}
@@ -105,14 +103,13 @@ export default function SplitBanner({ compData }) {
             )}
             {!compData?.hideTrustBadges && (
               <div
-                className={`d-flex flex-wrap align-items-center gap-4 w-100 ${
-                  !compData?.form &&
-                  !compData?.affiliateForm &&
-                  !compData?.image &&
-                  !compData?.lottie
+                className={`d-flex flex-wrap align-items-center gap-4 w-100 ${!compData?.form &&
+                    !compData?.affiliateForm &&
+                    !compData?.image &&
+                    !compData?.lottie
                     ? "justify-content-center"
                     : "justify-content-center justify-content-lg-start"
-                }`}
+                  }`}
               >
                 {trustBadgeBrands?.map((logo, index) => (
                   <a

@@ -5,7 +5,9 @@ export default function CTA({ compData, hasImage }) {
   return (
     <section
       className={`${
-        compData?.theme === "light"
+        compData?.theme === "white"
+          ? "bg-white font-dark outfit-font"
+          : compData?.theme === "light"
           ? "bg-accent-light font-dark"
           : "bg-accent font-white outfit-font"
       } py-5 ${hasImage ? "pb-md-0" : ""} text-center text-md-start`}
@@ -28,9 +30,8 @@ export default function CTA({ compData, hasImage }) {
             }`}
           >
             {compData?.buttons?.map((button, index) => (
-              <a href={button.link}>
+              <a key={index} href={button.link}>
                 <button
-                  key={index}
                   onClick={() =>
                     document
                       .getElementById("SeeGiddhInAction")
