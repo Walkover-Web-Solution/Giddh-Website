@@ -30,7 +30,7 @@ const globalComponents = ({ path }) => {
         <div
           className="back-to-top"
           style={{
-            display: scrollStatus ? "flex" : "none",
+            display: scrollStatus ? "block" : "none",
             animation: scrollStatus ? "fade-in 200ms ease-in" : null,
           }}
           onClick={() => {

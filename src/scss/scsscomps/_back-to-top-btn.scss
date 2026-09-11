@@ -10,14 +10,14 @@ $size : 48px;
     border-radius: 50%;
     background-color: var(--col-primary);
     color: var(--col-white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    line-height: $size;
     box-shadow: 0px 0px 15px 8px rgba(255, 255, 255, 0.4);
     cursor: pointer;
 
     svg {
-        font-size: 28px;
+        font-size: 42px;
+        margin-top: -2px;
     }
 
     &:hover {
