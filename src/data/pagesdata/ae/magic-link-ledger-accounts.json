@@ -1,0 +1,299 @@
+{
+  "splitBanner": {
+    "heading": "Magic Link in Ledger Accounts",
+    "subHeading": "Quickly share ledger statements with customers or vendors. Generate a unique link with one click. The recipient can view ledger details without a separate login or requesting statements manually.",
+    "image": "/img/feature-gallery-icons/share-banner.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Magic Link in Ledger Accounts",
+    "subHeading": "Giddh provides a Magic Link feature in ledger accounts that allows users to quickly share ledger statements with customers or vendors.",
+    "cards": [
+      {
+        "heading": "Share ledger statements quickly",
+        "description": "Quickly share ledger statements with customers or vendors using Magic Link in ledger accounts.",
+        "more_content": [
+          "Works on ledger accounts",
+          "Share with customers or vendors",
+          "Faster than manual sharing"
+        ]
+      },
+      {
+        "heading": "Generate link with one click",
+        "description": "With a single click, generate a unique link for a ledger account and share it directly with the respective customer or vendor.",
+        "more_content": [
+          "Single click to generate",
+          "Unique link per ledger",
+          "Share directly with recipient"
+        ]
+      },
+      {
+        "heading": "No separate login required",
+        "description": "The recipient can access and view their ledger details without requiring a separate login or manually requesting statements.",
+        "more_content": [
+          "View ledger through the link",
+          "No separate login needed",
+          "No manual statement requests"
+        ]
+      },
+      {
+        "heading": "Quick access to transaction records",
+        "description": "Helps businesses provide quick access to transaction records whenever required.",
+        "more_content": [
+          "Latest ledger information",
+          "Transaction records available",
+          "Share when needed"
+        ]
+      },
+      {
+        "heading": "Simplified account sharing",
+        "description": "Simplifies the process of sharing account information with customers and vendors.",
+        "more_content": [
+          "Less back-and-forth",
+          "No repeated downloads",
+          "Easier statement sharing"
+        ]
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "How Magic Link in Ledger Accounts works",
+    "subHeading": "Generate, share, view.",
+    "steps": [
+      {
+        "icon": "/img/make-the-switch/file.svg",
+        "title": "Open ledger account",
+        "description": "Go to the ledger account you want to share with a customer or vendor."
+      },
+      {
+        "icon": "/img/make-the-switch/cloud.svg",
+        "title": "Generate Magic Link",
+        "description": "With a single click, generate a unique link for the ledger account."
+      },
+      {
+        "icon": "/img/make-the-switch/calender.svg",
+        "title": "Share with customer or vendor",
+        "description": "Share the link directly with the respective customer or vendor."
+      },
+      {
+        "icon": "/img/make-the-switch/support_agent.svg",
+        "title": "Recipient views ledger",
+        "description": "The recipient opens the link and views the latest ledger information instantly."
+      }
+    ]
+  },
+  "features": {
+    "heading": "Magic Link in Ledger Accounts",
+    "subHeading": "Generate a unique link for a ledger account. Share it with customers or vendors. They view ledger details without a separate login.",
+    "content": [
+      {
+        "heading": "Share ledger statements with customers or vendors",
+        "img": "/img/feature-gallery-icons/share-collaborate.svg",
+        "description": "Giddh provides a Magic Link feature in ledger accounts that allows users to quickly share ledger statements with customers or vendors.",
+        "more_content": [
+          "Magic Link in ledger accounts",
+          "Share with customers",
+          "Share with vendors"
+        ]
+      },
+      {
+        "heading": "Generate and share a unique link",
+        "img": "/img/feature-gallery-icons/share-invoice.svg",
+        "description": "With a single click, users can generate a unique link for a ledger account and share it directly with the respective customer or vendor. Using this link, the recipient can access and view their ledger details without requiring a separate login or manually requesting statements.",
+        "more_content": [
+          "Single click to generate link",
+          "Unique link for each ledger account",
+          "No separate login for recipient",
+          "No manual statement requests"
+        ]
+      },
+      {
+        "heading": "Quick access to account information",
+        "img": "/img/feature-gallery-icons/reports.svg",
+        "description": "This feature simplifies the process of sharing account information and helps businesses provide quick access to transaction records whenever required.",
+        "more_content": [
+          "Simplified account sharing",
+          "Quick access to transaction records",
+          "Share information when required"
+        ]
+      },
+      {
+        "heading": "Example: customer account statement request",
+        "img": "/img/feature-gallery-icons/share-cash.svg",
+        "description": "A customer requests their account statement to verify outstanding dues and past transactions. Instead of downloading and emailing a ledger statement every time, the business can generate a Magic Link and share it with the customer. The customer can then open the link and view the latest ledger information instantly.",
+        "more_content": [
+          "Customer requests account statement",
+          "Generate Magic Link instead of emailing PDF",
+          "Customer views latest ledger information",
+          "Verify outstanding dues and past transactions"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup"
+      }
+    ]
+  },
+  "useCases": {
+    "heading": "When to use Magic Link in Ledger Accounts",
+    "subHeading": "When a customer or vendor needs to view their ledger without you sending statements manually.",
+    "content": [
+      {
+        "title": "Customer statement requests",
+        "description": "When a customer asks for their account statement to verify outstanding dues and past transactions."
+      },
+      {
+        "title": "Vendor ledger sharing",
+        "description": "When you need to share a vendor's ledger details quickly."
+      },
+      {
+        "title": "Avoid repeated downloads and emails",
+        "description": "When you want to stop downloading and emailing ledger statements every time."
+      },
+      {
+        "title": "Instant ledger access",
+        "description": "When the recipient should view the latest ledger information through a shared link."
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore All Features",
+        "link": "/all-features"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Generate a Magic Link. Share ledger details instantly.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-primary-outline"
+      }
+    ],
+    "theme": "light"
+  },
+  "faqs": [
+    {
+      "question": "What is Magic Link in Ledger Accounts?",
+      "answer": "Giddh provides a Magic Link feature in ledger accounts that allows users to quickly share ledger statements with customers or vendors."
+    },
+    {
+      "question": "How do I share a ledger using Magic Link?",
+      "answer": "With a single click, generate a unique link for a ledger account and share it directly with the respective customer or vendor."
+    },
+    {
+      "question": "Does the recipient need to log in?",
+      "answer": "No. Using the link, the recipient can access and view their ledger details without requiring a separate login or manually requesting statements."
+    },
+    {
+      "question": "Who can I share a Magic Link with?",
+      "answer": "You can share ledger statements with customers or vendors using Magic Link in ledger accounts."
+    },
+    {
+      "question": "Why use Magic Link instead of emailing statements?",
+      "answer": "It simplifies the process of sharing account information and helps businesses provide quick access to transaction records whenever required."
+    },
+    {
+      "question": "What can the recipient view through the link?",
+      "answer": "The recipient can open the link and view the latest ledger information, including details needed to verify outstanding dues and past transactions."
+    }
+  ],
+  "ctaTwo": {
+    "heading": "Try Magic Link in Ledger Accounts in Giddh",
+    "image": "/img/girl-avatar.svg",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-tertiary"
+      }
+    ],
+    "theme": "light"
+  },
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Magic Link in Ledger Accounts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Giddh provides a Magic Link feature in ledger accounts that allows users to quickly share ledger statements with customers or vendors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I share a ledger using Magic Link?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "With a single click, generate a unique link for a ledger account and share it directly with the respective customer or vendor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the recipient need to log in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Using the link, the recipient can access and view their ledger details without requiring a separate login or manually requesting statements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who can I share a Magic Link with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can share ledger statements with customers or vendors using Magic Link in ledger accounts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why use Magic Link instead of emailing statements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It simplifies the process of sharing account information and helps businesses provide quick access to transaction records whenever required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can the recipient view through the link?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The recipient can open the link and view the latest ledger information, including details needed to verify outstanding dues and past transactions."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Share ledger statements with customers or vendors using Magic Link in Giddh. Generate a unique link with one click for instant ledger access.",
+      "name": "Magic Link in Ledger Accounts UAE",
+      "url": "https://giddh.com/ae/magic-link-ledger-accounts"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Magic Link in ledger accounts in Giddh. Generate a unique link and share ledger details with customers or vendors without separate login.",
+      "url": "https://giddh.com/ae/magic-link-ledger-accounts",
+      "name": "Magic Link in Ledger Accounts UAE"
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "splitBanner": {
+    "heading": "Triggers in Giddh",
+    "subHeading": "Automate customer communication through Email and WhatsApp based on predefined schedules. Create triggers for when to send, who receives, and what message to include.",
+    "image": "/img/feature-gallery-icons/feature-invoice-on-email-whatsapp-and-sms.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Triggers",
+    "subHeading": "Giddh provides a Triggers feature that allows users to automate communication with their customers through Email and WhatsApp based on predefined schedules.",
+    "cards": [
+      {
+        "heading": "Automate Email and WhatsApp",
+        "description": "Automate communication with customers through Email and WhatsApp based on predefined schedules.",
+        "more_content": [
+          "Email communication",
+          "WhatsApp communication",
+          "Predefined schedules"
+        ]
+      },
+      {
+        "heading": "Define when to send",
+        "description": "Create triggers by defining when a message should be sent based on a specific date, time, or event requirement.",
+        "more_content": [
+          "Specific date or time",
+          "Event-based triggers",
+          "Timely communication without manual follow-ups"
+        ]
+      },
+      {
+        "heading": "Define who receives it",
+        "description": "Choose who should receive the message when creating a trigger.",
+        "more_content": [
+          "Select recipients",
+          "Customer-specific communication",
+          "Targeted messages"
+        ]
+      },
+      {
+        "heading": "Define message content",
+        "description": "Set what content should be included in the communication when creating a trigger.",
+        "more_content": [
+          "Custom message content",
+          "Email or WhatsApp channel",
+          "Configured once, sent automatically"
+        ]
+      },
+      {
+        "heading": "WhatsApp integration",
+        "description": "For WhatsApp communication, a WhatsApp integration is required. Once integrated, create and schedule WhatsApp messages directly through Giddh.",
+        "more_content": [
+          "WhatsApp integration required",
+          "Schedule WhatsApp messages in Giddh",
+          "Automated WhatsApp communication"
+        ]
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "How Triggers works",
+    "subHeading": "Create, configure, schedule, send.",
+    "steps": [
+      {
+        "icon": "/img/make-the-switch/file.svg",
+        "title": "Create a trigger",
+        "description": "Define when a message should be sent, who should receive it, and what content to include."
+      },
+      {
+        "icon": "/img/make-the-switch/cloud.svg",
+        "title": "Select Email or WhatsApp",
+        "description": "Choose the communication channel. For WhatsApp, integration is required."
+      },
+      {
+        "icon": "/img/make-the-switch/calender.svg",
+        "title": "Set the schedule",
+        "description": "Configure the trigger based on a specific date, time, or event requirement."
+      },
+      {
+        "icon": "/img/make-the-switch/support_agent.svg",
+        "title": "Giddh sends automatically",
+        "description": "Giddh automatically sends the message to the respective customers at the configured time."
+      }
+    ]
+  },
+  "features": {
+    "heading": "Triggers in Giddh",
+    "subHeading": "Automate customer communication through Email and WhatsApp. Set schedules for reminders, follow-ups, and notifications.",
+    "content": [
+      {
+        "heading": "Automate customer communication",
+        "img": "/img/feature-gallery-icons/feature-invoice-on-email-whatsapp-and-sms.svg",
+        "description": "Giddh provides a Triggers feature that allows users to automate communication with their customers through Email and WhatsApp based on predefined schedules.",
+        "more_content": [
+          "Email and WhatsApp communication",
+          "Predefined schedules",
+          "Automated customer messages"
+        ]
+      },
+      {
+        "heading": "Create and configure triggers",
+        "img": "/img/make-the-switch/calender.svg",
+        "description": "Users can create triggers by defining when a message should be sent, who should receive it, and what content should be included in the communication. Triggers can be configured based on a specific date, time, or event requirement, ensuring timely communication without manual follow-ups.",
+        "more_content": [
+          "When to send the message",
+          "Who should receive it",
+          "What content to include",
+          "Date, time, or event-based schedule"
+        ]
+      },
+      {
+        "heading": "WhatsApp integration",
+        "img": "/img/feature-gallery-icons/share-collaborate.svg",
+        "description": "For WhatsApp communication, a WhatsApp integration is required. Once integrated, users can create and schedule WhatsApp messages directly through Giddh.",
+        "more_content": [
+          "WhatsApp integration",
+          "Create WhatsApp messages in Giddh",
+          "Schedule WhatsApp messages",
+          "Send without manual follow-ups"
+        ]
+      },
+      {
+        "heading": "Example: payment reminder before due date",
+        "img": "/img/home-page/invoicing-solution-that-saves-time.svg",
+        "description": "A business wants to send a payment reminder to customers three days before an invoice due date. The user can create a trigger, select the communication channel (Email or WhatsApp), define the message content, and set the schedule. Giddh will then automatically send the reminder to the respective customers at the configured time.",
+        "more_content": [
+          "Payment reminder three days before due date",
+          "Select Email or WhatsApp",
+          "Define message content and schedule",
+          "Sent automatically to respective customers"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup"
+      }
+    ]
+  },
+  "useCases": {
+    "heading": "When to use Triggers",
+    "subHeading": "When you need automated customer communication at the right time.",
+    "content": [
+      {
+        "title": "Automated reminders",
+        "description": "Send automated reminders to customers without manual follow-ups."
+      },
+      {
+        "title": "Payment follow-ups",
+        "description": "Send payment reminders before or after invoice due dates."
+      },
+      {
+        "title": "Invoice notifications",
+        "description": "Notify customers about invoices through Email or WhatsApp."
+      },
+      {
+        "title": "Scheduled business communication",
+        "description": "Send other important business communications to customers at the configured time."
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore Recurring Invoices",
+        "link": "/recurring-invoices"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Set triggers once. Giddh sends Email and WhatsApp messages on schedule.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-primary-outline"
+      }
+    ],
+    "theme": "light"
+  },
+  "faqs": [
+    {
+      "question": "What is the Triggers feature in Giddh?",
+      "answer": "Giddh provides a Triggers feature that allows users to automate communication with their customers through Email and WhatsApp based on predefined schedules."
+    },
+    {
+      "question": "What can I configure when creating a trigger?",
+      "answer": "You can define when a message should be sent, who should receive it, and what content should be included. Triggers can be configured based on a specific date, time, or event requirement."
+    },
+    {
+      "question": "What communication channels are supported?",
+      "answer": "Triggers support Email and WhatsApp communication."
+    },
+    {
+      "question": "What is required for WhatsApp triggers?",
+      "answer": "For WhatsApp communication, a WhatsApp integration is required. Once integrated, users can create and schedule WhatsApp messages directly through Giddh."
+    },
+    {
+      "question": "What is Triggers useful for?",
+      "answer": "It is especially useful for sending automated reminders, payment follow-ups, invoice notifications, and other important business communications to customers at the right time."
+    },
+    {
+      "question": "Can Triggers send payment reminders automatically?",
+      "answer": "Yes. For example, you can create a trigger to send a payment reminder three days before an invoice due date. Giddh will automatically send the reminder to the respective customers at the configured time."
+    }
+  ],
+  "ctaTwo": {
+    "heading": "Try Triggers in Giddh",
+    "image": "/img/girl-avatar.svg",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-tertiary"
+      }
+    ],
+    "theme": "light"
+  },
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Triggers feature in Giddh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Giddh provides a Triggers feature that allows users to automate communication with their customers through Email and WhatsApp based on predefined schedules."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can I configure when creating a trigger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can define when a message should be sent, who should receive it, and what content should be included. Triggers can be configured based on a specific date, time, or event requirement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What communication channels are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Triggers support Email and WhatsApp communication."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is required for WhatsApp triggers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For WhatsApp communication, a WhatsApp integration is required. Once integrated, users can create and schedule WhatsApp messages directly through Giddh."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Triggers useful for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is especially useful for sending automated reminders, payment follow-ups, invoice notifications, and other important business communications to customers at the right time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Triggers send payment reminders automatically?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. For example, you can create a trigger to send a payment reminder three days before an invoice due date. Giddh will automatically send the reminder to the respective customers at the configured time."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Automate customer communication with Triggers in Giddh. Send scheduled Email and WhatsApp messages for reminders, payment follow-ups, and invoice notifications.",
+      "name": "Triggers UK",
+      "url": "https://giddh.com/uk/triggers"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Triggers in Giddh. Automate Email and WhatsApp communication with customers based on predefined schedules.",
+      "url": "https://giddh.com/uk/triggers",
+      "name": "Triggers UK"
+    }
+  ]
+}

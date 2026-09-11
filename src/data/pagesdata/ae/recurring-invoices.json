@@ -1,0 +1,334 @@
+{
+  "splitBanner": {
+    "heading": "Recurring Invoices and Recurring Bills in Giddh",
+    "subHeading": "Set up a schedule once. Giddh will create the same invoice or bill daily, weekly, monthly, or on a fixed date every month — without you creating it manually each time.",
+    "image": "/img/home-page/invoicing-solution-that-saves-time.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "What does Recurring Invoice and Bill do?",
+    "subHeading": "For bills you raise or pay on a fixed cycle — maintenance fees, rent, subscriptions, supplier payments.",
+    "cards": [
+      {
+        "heading": "Recurring Invoices and Recurring Bills",
+        "description": "Giddh can create invoices and bills automatically at regular intervals.",
+        "more_content": [
+          "Same invoice or bill on a fixed schedule",
+          "Works for daily, weekly, or monthly cycles",
+          "Also works on a specific date every month"
+        ]
+      },
+      {
+        "heading": "Set frequency, start date, and duration",
+        "description": "While creating an invoice or bill, you define how often it should repeat and when it should start and end.",
+        "more_content": [
+          "Pick frequency and start date",
+          "Choose the day or date for generation",
+          "Set duration or choose Never to keep it running"
+        ]
+      },
+      {
+        "heading": "Schedule table before you confirm",
+        "description": "Giddh shows the dates on which invoices or bills will be created based on your settings.",
+        "more_content": [
+          "Review upcoming dates in a schedule table",
+          "Check the cycle before you save",
+          "Avoid wrong billing dates"
+        ]
+      },
+      {
+        "heading": "Less manual work",
+        "description": "You do not need to create the same document again and again.",
+        "more_content": [
+          "Saves time on repeat entries",
+          "Fewer missed due dates",
+          "Same details carried on each cycle"
+        ]
+      },
+      {
+        "heading": "Manage active recurring entries",
+        "description": "View, stop, resume, or delete recurring invoices from the Customer section.",
+        "more_content": [
+          "Open Customer > Recurring Invoices",
+          "Use the three dots to stop, resume, or delete",
+          "See all active recurring schedules"
+        ]
+      },
+      {
+        "heading": "Works for invoices and bills both",
+        "description": "Set recurring schedules for customer invoices and supplier bills in the same way.",
+        "more_content": [
+          "Recurring invoices for customers",
+          "Recurring bills for suppliers",
+          "One setup for each repeat transaction"
+        ]
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "How to create a Recurring Invoice",
+    "subHeading": "Steps as in Giddh.",
+    "steps": [
+      {
+        "icon": "/img/make-the-switch/file.svg",
+        "title": "Open Recurring Invoice",
+        "description": "Press Ctrl + G (Windows) or Cmd + G (Mac). Search Recurring Invoice and open it."
+      },
+      {
+        "icon": "/img/make-the-switch/calender.svg",
+        "title": "Create new Recurring",
+        "description": "Click Create new Recurring. Select the customer and enter invoice details and line items."
+      },
+      {
+        "icon": "/img/make-the-switch/cloud.svg",
+        "title": "Set recurrence",
+        "description": "Choose start date, repeat option, end date or Never, and check the schedule table."
+      },
+      {
+        "icon": "/img/make-the-switch/support_agent.svg",
+        "title": "Generate Recurring Invoice",
+        "description": "Click Generate Recurring Invoice. Giddh will create invoices on the scheduled dates."
+      }
+    ]
+  },
+  "features": {
+    "heading": "How recurring invoices and bills work",
+    "subHeading": "Set the schedule once. Giddh creates the document on each due date.",
+    "content": [
+      {
+        "heading": "When to use recurring invoices and bills",
+        "img": "/img/home-page/invoicing-solution-that-saves-time.svg",
+        "description": "Many businesses need to create the same invoice or bill repeatedly — daily, weekly, monthly, or on a specific date every month. Instead of creating it manually each time, you set up a recurring schedule in Giddh.",
+        "more_content": [
+          "Define frequency, start date, and duration",
+          "Pick the day or date for generation",
+          "Giddh creates the invoice or bill on schedule",
+          "Helps avoid missing due dates"
+        ]
+      },
+      {
+        "heading": "Set repeat options",
+        "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
+        "description": "In recurring settings, select the start date. Under Repeat, choose how often the invoice should be generated — every week on a specific day, every month on a specific date, every month on a specific weekday, or a custom daily, weekly, or monthly frequency.",
+        "more_content": [
+          "Every week on a specific day",
+          "Every month on a specific date",
+          "Every month on a specific weekday",
+          "Custom daily, weekly, or monthly frequency"
+        ]
+      },
+      {
+        "heading": "End date or Never",
+        "img": "/img/home-page/seamless-gst-compliance.svg",
+        "description": "You can set an end date if the invoices should stop after a certain date. If the cycle should continue, choose Never. Giddh shows a schedule table with the dates on which invoices will be created.",
+        "more_content": [
+          "Set end date to stop automatically",
+          "Choose Never for ongoing billing",
+          "Schedule table shows all upcoming dates",
+          "Review before clicking Generate Recurring Invoice"
+        ]
+      },
+      {
+        "heading": "Example: monthly maintenance fee",
+        "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
+        "description": "A company charges a client a fixed monthly fee on the 5th of every month. Instead of creating the same invoice every month, create a recurring invoice, set frequency to Monthly, select the 5th day, and define the duration. Giddh generates the invoice on the scheduled dates.",
+        "more_content": [
+          "Set once for repeat monthly billing",
+          "No manual invoice each month",
+          "Manage from Customer > Recurring Invoices",
+          "Stop, resume, or delete from the three dots menu"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup"
+      }
+    ]
+  },
+  "useCases": {
+    "heading": "Common uses",
+    "subHeading": "Any repeat invoice or bill you already create on a fixed cycle.",
+    "content": [
+      {
+        "title": "Monthly maintenance or AMC",
+        "description": "Fixed fee on the same date every month, like a monthly maintenance charge on the 5th."
+      },
+      {
+        "title": "Rent and regular supplier bills",
+        "description": "Recurring bills for rent, utilities, or other payments to the same supplier."
+      },
+      {
+        "title": "Subscriptions and retainers",
+        "description": "Invoices that go out every week or month for the same customer."
+      },
+      {
+        "title": "Weekly or daily billing",
+        "description": "Businesses that bill on a custom daily or weekly frequency."
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Read help guide: Recurring Invoice",
+        "link": "https://giddh.com/help/create-and-manage-invoices/recurring-invoice-in-giddh"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Create the same invoice every month? Set it as recurring in Giddh.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-primary-outline"
+      }
+    ],
+    "theme": "light"
+  },
+  "faqs": [
+    {
+      "question": "What are recurring invoices in Giddh?",
+      "answer": "Recurring invoices are created automatically on a schedule you set — daily, weekly, monthly, or on a specific date every month. You set it up once instead of creating the same invoice manually each time."
+    },
+    {
+      "question": "Does Giddh support recurring bills?",
+      "answer": "Yes. Giddh supports both Recurring Invoices and Recurring Bills with the same schedule options."
+    },
+    {
+      "question": "How do I open recurring invoice in Giddh?",
+      "answer": "Press Ctrl + G (Windows) or Cmd + G (Mac), search Recurring Invoice, and open the section. Or go to Customer > Recurring Invoices to manage active entries."
+    },
+    {
+      "question": "What repeat options are available?",
+      "answer": "You can choose every week on a specific day, every month on a specific date, every month on a specific weekday, or a custom daily, weekly, or monthly frequency."
+    },
+    {
+      "question": "Can I set an end date?",
+      "answer": "Yes. Set an end date if billing should stop. Choose Never if it should continue without an end date."
+    },
+    {
+      "question": "How do I see upcoming invoice dates?",
+      "answer": "Giddh shows a schedule table with the dates on which invoices will be created based on your recurrence settings."
+    },
+    {
+      "question": "How do I stop a recurring invoice?",
+      "answer": "Go to Customer > Recurring Invoices. Click the three dots next to the entry and choose stop, resume, or delete."
+    },
+    {
+      "question": "Where is the help guide for recurring bills?",
+      "answer": "Giddh has help articles for recurring invoices and recurring bills at giddh.com/help."
+    }
+  ],
+  "ctaTwo": {
+    "heading": "Try recurring invoices and bills in Giddh",
+    "image": "/img/girl-avatar.svg",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-tertiary"
+      }
+    ],
+    "theme": "light"
+  },
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are recurring invoices in Giddh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recurring invoices are created automatically on a schedule you set — daily, weekly, monthly, or on a specific date every month. You set it up once instead of creating the same invoice manually each time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Giddh support recurring bills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Giddh supports both Recurring Invoices and Recurring Bills with the same schedule options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I open recurring invoice in Giddh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Press Ctrl + G (Windows) or Cmd + G (Mac), search Recurring Invoice, and open the section. Or go to Customer > Recurring Invoices to manage active entries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What repeat options are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can choose every week on a specific day, every month on a specific date, every month on a specific weekday, or a custom daily, weekly, or monthly frequency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I set an end date?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Set an end date if billing should stop. Choose Never if it should continue without an end date."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I see upcoming invoice dates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Giddh shows a schedule table with the dates on which invoices will be created based on your recurrence settings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I stop a recurring invoice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Go to Customer > Recurring Invoices. Click the three dots next to the entry and choose stop, resume, or delete."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the help guide for recurring bills?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Giddh has help articles for recurring invoices and recurring bills at giddh.com/help."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Set up recurring invoices and bills in Giddh. Choose daily, weekly, or monthly schedules and let Giddh create documents on fixed dates.",
+      "name": "Recurring Invoice and Bill Software UAE",
+      "url": "https://giddh.com/ae/recurring-invoices"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Recurring invoices and recurring bills in Giddh for UAE businesses. Set frequency, start date, duration, and view the schedule table before confirming.",
+      "url": "https://giddh.com/ae/recurring-invoices",
+      "name": "Recurring Invoicing Software UAE"
+    }
+  ]
+}

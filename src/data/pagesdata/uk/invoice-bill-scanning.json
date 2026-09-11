@@ -1,0 +1,301 @@
+{
+  "splitBanner": {
+    "heading": "Invoice and Bill Scanning in Giddh",
+    "subHeading": "Upload an invoice or bill document and create accounting entries quickly. Giddh extracts party details, invoice number, date, amount, and tax fields from the file. You review, edit if needed, and save.",
+    "image": "/img/feature-gallery-icons/barcode-scanning.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Invoice and Bill Scanning",
+    "subHeading": "Giddh now supports Invoice and Bill Scanning for creating accounting entries by uploading invoice or bill documents.",
+    "cards": [
+      {
+        "heading": "Upload invoice or bill documents",
+        "description": "Quickly create accounting entries by uploading invoice or bill documents instead of typing all details manually.",
+        "more_content": [
+          "Works for invoices and bills",
+          "PDF or image format",
+          "Faster than manual entry"
+        ]
+      },
+      {
+        "heading": "Automatic data extraction",
+        "description": "Upload an invoice or bill and the system automatically extracts relevant information from the document.",
+        "more_content": [
+          "Party information",
+          "Invoice number and invoice date",
+          "Amount and tax details",
+          "Other relevant fields from the document"
+        ]
+      },
+      {
+        "heading": "Review and save",
+        "description": "Review the extracted information, make any necessary changes, and then save the transaction.",
+        "more_content": [
+          "Check fields before saving",
+          "Edit anything that needs correction",
+          "Save when the entry is correct"
+        ]
+      },
+      {
+        "heading": "Less manual data entry",
+        "description": "This reduces manual data entry and minimizes the chances of human error while recording transactions.",
+        "more_content": [
+          "Less typing from paper or PDF bills",
+          "Improves efficiency in daily accounting",
+          "Fewer mistakes on amounts and dates"
+        ]
+      },
+      {
+        "heading": "Vendor purchase bills",
+        "description": "Upload a purchase bill in PDF or image format from a vendor. Giddh extracts the available information for you to verify and save.",
+        "more_content": [
+          "Common for supplier bills",
+          "No need to enter all details by hand",
+          "Verify and save the entry quickly"
+        ]
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "How Invoice and Bill Scanning works",
+    "subHeading": "Upload, extract, review, save.",
+    "steps": [
+      {
+        "icon": "/img/make-the-switch/file.svg",
+        "title": "Upload invoice or bill",
+        "description": "Upload the invoice or bill document in PDF or image format."
+      },
+      {
+        "icon": "/img/make-the-switch/cloud.svg",
+        "title": "Giddh extracts the details",
+        "description": "The system automatically extracts party information, invoice number, invoice date, amount, tax details, and other relevant fields."
+      },
+      {
+        "icon": "/img/make-the-switch/calender.svg",
+        "title": "Review and edit",
+        "description": "Review the extracted information and make any necessary changes."
+      },
+      {
+        "icon": "/img/make-the-switch/support_agent.svg",
+        "title": "Save the transaction",
+        "description": "Save the entry once the details are correct."
+      }
+    ]
+  },
+  "features": {
+    "heading": "Invoice and Bill Scanning in Giddh",
+    "subHeading": "Create accounting entries by uploading documents. Giddh extracts the details. You review and save.",
+    "content": [
+      {
+        "heading": "Create accounting entries by uploading documents",
+        "img": "/img/feature-gallery-icons/import-data.svg",
+        "description": "Giddh now supports Invoice and Bill Scanning, allowing users to quickly create accounting entries by uploading invoice or bill documents.",
+        "more_content": [
+          "Upload invoice or bill files",
+          "Create entries without typing everything manually",
+          "Works inside Giddh"
+        ]
+      },
+      {
+        "heading": "Automatic extraction from the document",
+        "img": "/img/feature-gallery-icons/barcode-scanning.svg",
+        "description": "Instead of manually entering all the details, users can upload an invoice or bill, and the system will automatically extract relevant information from the document. Based on the scanned data, Giddh can identify and populate details such as party information, invoice number, invoice date, amount, tax details, and other relevant fields.",
+        "more_content": [
+          "Party information",
+          "Invoice number and invoice date",
+          "Amount and tax details",
+          "Other relevant fields from the scan"
+        ]
+      },
+      {
+        "heading": "Review, edit, and save the transaction",
+        "img": "/img/home-page/invoicing-solution-that-saves-time.svg",
+        "description": "Users can review the extracted information, make any necessary changes, and then save the transaction. This significantly reduces manual data entry, improves efficiency, and minimizes the chances of human error while recording transactions.",
+        "more_content": [
+          "Review before saving",
+          "Edit any field if needed",
+          "Less manual data entry",
+          "Fewer errors while recording transactions"
+        ]
+      },
+      {
+        "heading": "Example: purchase bill from a vendor",
+        "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
+        "description": "A business receives a purchase bill in PDF or image format from a vendor. Instead of manually entering all the details, the user can upload the document and Giddh will automatically extract the available information, allowing the user to verify and save the entry quickly.",
+        "more_content": [
+          "Upload PDF or image bill from vendor",
+          "Giddh extracts available information",
+          "Verify the details",
+          "Save the entry quickly"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup"
+      }
+    ]
+  },
+  "useCases": {
+    "heading": "When to use Invoice and Bill Scanning",
+    "subHeading": "When you receive invoices or bills as files and want to avoid typing every field.",
+    "content": [
+      {
+        "title": "Purchase bills from vendors",
+        "description": "Upload a purchase bill in PDF or image format instead of entering all details manually."
+      },
+      {
+        "title": "Sales invoices",
+        "description": "Upload invoice documents and let Giddh extract party, date, amount, and tax details."
+      },
+      {
+        "title": "Bills with tax details",
+        "description": "Tax details from the document are populated from the scanned data."
+      },
+      {
+        "title": "Daily voucher entry",
+        "description": "Useful when accounts teams need to record many bills with less typing."
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore All Features",
+        "link": "/all-features"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Upload the bill. Giddh extracts the details. You verify and save.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-primary-outline"
+      }
+    ],
+    "theme": "light"
+  },
+  "faqs": [
+    {
+      "question": "What is Invoice and Bill Scanning in Giddh?",
+      "answer": "Giddh supports Invoice and Bill Scanning so you can create accounting entries by uploading invoice or bill documents. The system extracts relevant information from the document instead of you entering all details manually."
+    },
+    {
+      "question": "What details does Giddh extract from a scanned document?",
+      "answer": "Based on the scanned data, Giddh can identify and populate party information, invoice number, invoice date, amount, tax details, and other relevant fields."
+    },
+    {
+      "question": "Can I edit the extracted data before saving?",
+      "answer": "Yes. You can review the extracted information, make any necessary changes, and then save the transaction."
+    },
+    {
+      "question": "Does it work for purchase bills from vendors?",
+      "answer": "Yes. Upload a purchase bill in PDF or image format from a vendor. Giddh extracts the available information and you can verify and save the entry quickly."
+    },
+    {
+      "question": "What file formats are supported?",
+      "answer": "You can upload invoice or bill documents in PDF or image format."
+    },
+    {
+      "question": "How does scanning help reduce errors?",
+      "answer": "It reduces manual data entry and minimizes the chances of human error while recording transactions."
+    }
+  ],
+  "ctaTwo": {
+    "heading": "Try Invoice and Bill Scanning in Giddh",
+    "image": "/img/girl-avatar.svg",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-tertiary"
+      }
+    ],
+    "theme": "light"
+  },
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Invoice and Bill Scanning in Giddh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Giddh supports Invoice and Bill Scanning so you can create accounting entries by uploading invoice or bill documents. The system extracts relevant information from the document instead of you entering all details manually."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What details does Giddh extract from a scanned document?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Based on the scanned data, Giddh can identify and populate party information, invoice number, invoice date, amount, tax details, and other relevant fields."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I edit the extracted data before saving?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can review the extracted information, make any necessary changes, and then save the transaction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work for purchase bills from vendors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Upload a purchase bill in PDF or image format from a vendor. Giddh extracts the available information and you can verify and save the entry quickly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What file formats are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can upload invoice or bill documents in PDF or image format."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does scanning help reduce errors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It reduces manual data entry and minimizes the chances of human error while recording transactions."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Giddh Invoice and Bill Scanning lets you upload documents, auto-extract party, date, amount, and tax details, review, and save accounting entries.",
+      "name": "Invoice and Bill Scanning UK",
+      "url": "https://giddh.com/uk/invoice-bill-scanning"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Upload invoice or bill documents in Giddh. Auto-extract details, review, and save transactions with less manual data entry.",
+      "url": "https://giddh.com/uk/invoice-bill-scanning",
+      "name": "Invoice Bill Scanning UK"
+    }
+  ]
+}
