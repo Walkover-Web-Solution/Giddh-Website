@@ -3,7 +3,7 @@ import CaSignup from "@/pages/ca-signup";
 const ukCaSignup = (path) => {
   return (
     <>
-      <CaSignup path={path?.path} />
+      <CaSignup path={path.path} />
     </>
   );
 };
