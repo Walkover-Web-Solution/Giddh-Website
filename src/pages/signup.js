@@ -15,11 +15,13 @@ const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
 var intlRef;
 
 const signUp = (path) => {
+  const isCA = Boolean(path?.isCA);
   const [currentStep, setCurrentStep] = useState(1);
   const [showEmailOtp, setShowEmailOtp] = useState(false);
   const [showMobileOtp, setShowMobileOtp] = useState(false);
   const [emailDetails, setEmailDetails] = useState(null);
   const [mobileDetails, setMobileDetails] = useState(null);
+  const [mrnNumber, setMrnNumber] = useState(null);
   const [connectedChannels, setConnectedChannels] = useState(null);
   const [intl, setIntl] = useState(null);
   const [emailGetOtpInProgress, setEmailGetOtpInProgress] = useState(false);
@@ -75,6 +77,11 @@ const signUp = (path) => {
   }
 
   async function initiateSignup() {
+    if (isCA && (!mrnNumber || !mrnNumber.trim())) {
+      showToaster("Please enter MRN number", "error", "top-center");
+      return;
+    }
+
     if (emailDetails.isVerified && mobileDetails.isVerified) {
       setSignupInProgress(true);
       await fetch(
@@ -94,6 +101,7 @@ const signUp = (path) => {
             emailIdAuthType: emailDetails.signupVia,
             mobileNo: mobileDetails.mobileNo,
             mobileNoAccessToken: mobileDetails.accessToken,
+            ...(isCA && mrnNumber ? { mrnNumber: mrnNumber.trim() } : {}),
           }),
         }
       )
@@ -565,17 +573,17 @@ const signUp = (path) => {
         charInputs[0].addEventListener("paste", (e) => {
           e.preventDefault();
           const pastedData = e.clipboardData.getData("text").trim();
-          
+
           // Only process if we have data and it looks like a numeric code
           if (pastedData && /^\d+$/.test(pastedData)) {
             // Distribute the pasted characters across input fields
             const pastedChars = pastedData.split('');
-            
+
             // Fill as many inputs as we have characters (up to the max number of inputs)
             for (let i = 0; i < Math.min(pastedChars.length, charInputs.length); i++) {
               charInputs[i].value = pastedChars[i];
             }
-            
+
             // Focus on the next empty field or the verify button if all fields are filled
             if (pastedChars.length < charInputs.length) {
               charInputs[pastedChars.length].focus();
@@ -623,20 +631,20 @@ const signUp = (path) => {
         input.addEventListener("paste", (e) => {
           // Let the first input handle the paste event
           if (index === 0) return;
-          
+
           e.preventDefault();
           const pastedData = e.clipboardData.getData("text").trim();
-          
+
           // Only process if we have data and it looks like a numeric code
           if (pastedData && /^\d+$/.test(pastedData)) {
             // Distribute the pasted characters across input fields starting from current position
             const pastedChars = pastedData.split('');
-            
+
             // Fill as many inputs as we have characters (up to the max number of inputs)
             for (let i = 0; i < Math.min(pastedChars.length, charInputs.length - index); i++) {
               charInputs[index + i].value = pastedChars[i];
             }
-            
+
             // Focus on the next empty field or the verify button if all fields are filled
             if (pastedChars.length < charInputs.length - index) {
               charInputs[index + pastedChars.length].focus();
@@ -910,9 +918,9 @@ const signUp = (path) => {
                         className={
                           "me-1 " +
                           (emailDetails &&
-                          emailDetails.isVerified &&
-                          mobileDetails &&
-                          mobileDetails.isVerified
+                            emailDetails.isVerified &&
+                            mobileDetails &&
+                            mobileDetails.isVerified
                             ? " icon-success"
                             : "")
                         }
@@ -920,6 +928,32 @@ const signUp = (path) => {
                       Verify email & mobile number
                     </div>
                   </div>
+
+                  {isCA && (
+                    <div className="row mx-0 px-0 step_input_wrapper mt-4">
+                      <label htmlFor="mrnNumber" className="mb-2 ps-0 font-600">
+                        Membership Registration Number (MRN) <span className="text-danger">*</span>
+                      </label>
+                      <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
+                        <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12">
+                          <div className="d-flex step_input_wrapper__mobile_veiw">
+                            <input
+                              type="text"
+                              className="form-control"
+                              id="mrnNumber"
+                              name="mrnNumber"
+                              placeholder="Enter MRN number"
+                              autoComplete="off"
+                              required
+                              value={mrnNumber}
+                              onChange={(e) => setMrnNumber(e.target.value)}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="row mx-0 px-0 step_input_wrapper mt-4">
                     <label htmlFor="email" className="mb-3 ps-0">
                       Verify email
@@ -930,7 +964,7 @@ const signUp = (path) => {
                         style={{
                           paddingRight:
                             showEmailOtp ||
-                            (emailDetails && emailDetails.isVerified)
+                              (emailDetails && emailDetails.isVerified)
                               ? "0"
                               : null,
                         }}
@@ -1070,7 +1104,7 @@ const signUp = (path) => {
                         style={{
                           paddingRight:
                             showMobileOtp ||
-                            (mobileDetails && mobileDetails.isVerified)
+                              (mobileDetails && mobileDetails.isVerified)
                               ? "0"
                               : null,
                         }}
