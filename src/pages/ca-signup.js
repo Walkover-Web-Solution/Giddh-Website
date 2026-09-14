@@ -9,7 +9,6 @@ import dynamic from "next/dynamic";
 import { toast } from "react-toastify";
 import GoogleLogin from "@/components/googleLogin";
 import Head from "next/head";
-
 const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
   ssr: false,
 });
@@ -22,7 +21,6 @@ const caSignUp = (path) => {
   const [emailDetails, setEmailDetails] = useState(null);
   const [mobileDetails, setMobileDetails] = useState(null);
   const [mrnNumber, setMrnNumber] = useState("");
-  const [mrnError, setMrnError] = useState("");
   const [connectedChannels, setConnectedChannels] = useState(null);
   const [intl, setIntl] = useState(null);
   const [emailGetOtpInProgress, setEmailGetOtpInProgress] = useState(false);
@@ -35,12 +33,12 @@ const caSignUp = (path) => {
   const [termsAgree, setTermsAgree] = useState(false);
   const [showVerificationModal, setShowVerificationModal] = useState(false);
   const [userResponse, setUserResponse] = useState(null);
-  const link = path?.path?.linkPrefix ?? "";
-  const linkPath = path?.path ?? {};
-  const isIndia = linkPath?.isIndia;
-  const isGlobal = linkPath?.isGlobal;
-  const isAE = linkPath?.isAE;
-  const isUK = linkPath?.isUK;
+  const link = path.path.linkPrefix;
+  const linkPath = path.path;
+  const isIndia = linkPath.isIndia;
+  const isGlobal = linkPath.isGlobal;
+  const isAE = linkPath.isAE;
+  const isUK = linkPath.isUK;
   const [mobileNo, setMobileNo] = useState(null);
 
   let region = link ? link.replace("/", "") : "gl";
@@ -49,9 +47,7 @@ const caSignUp = (path) => {
   }
 
   useEffect(() => {
-    if (typeof setGiddhRegion === "function") {
-      setGiddhRegion(region.toLowerCase());
-    }
+    setGiddhRegion(region.toLowerCase());
     initOtpSignup();
   }, []);
 
@@ -81,13 +77,11 @@ const caSignUp = (path) => {
 
   async function initiateSignup() {
     if (!mrnNumber || !mrnNumber.trim()) {
-      setMrnError("MRN (Membership Registration Number) is required");
-      showToaster("Please enter MRN Number", "error", "top-center");
+      showToaster("Please enter MRN number", "error", "top-center");
       return;
     }
-    setMrnError("");
 
-    if (emailDetails?.isVerified && mobileDetails?.isVerified) {
+    if (emailDetails.isVerified && mobileDetails.isVerified) {
       setSignupInProgress(true);
       await fetch(
         (isUK
@@ -119,27 +113,25 @@ const caSignUp = (path) => {
               setShowVerificationModal(true);
             } else {
               showToaster(
-                "Your CA account has been created successfully.",
+                "Your account has been created successfully.",
                 "success",
                 "top-center"
               );
-              if (typeof setGiddhRegionSession === "function") {
-                setGiddhRegionSession(response.body.session.id, region);
-              }
+              setGiddhRegionSession(response.body.session.id, region);
 
               var utmParams =
                 "&utm_source=" +
-                (typeof getLocalStorage === "function" ? getLocalStorage("utm_source") : "") +
+                getLocalStorage("utm_source") +
                 "&utm_medium=" +
-                (typeof getLocalStorage === "function" ? getLocalStorage("utm_medium") : "") +
+                getLocalStorage("utm_medium") +
                 "&utm_campaign=" +
-                (typeof getLocalStorage === "function" ? getLocalStorage("utm_campaign") : "") +
+                getLocalStorage("utm_campaign") +
                 "&utm_term=" +
-                (typeof getLocalStorage === "function" ? getLocalStorage("utm_term") : "") +
+                getLocalStorage("utm_term") +
                 "&utm_content=" +
-                (typeof getLocalStorage === "function" ? getLocalStorage("utm_content") : "") +
+                getLocalStorage("utm_content") +
                 "&ref=" +
-                (typeof getLocalStorage === "function" ? getLocalStorage("ref") : "") +
+                getLocalStorage("ref") +
                 "";
               window.location =
                 process.env.NEXT_PUBLIC_APP_URL +
@@ -155,10 +147,10 @@ const caSignUp = (path) => {
           }
         })
         .catch((err) => signupErrorCallback(err));
-    } else if (!emailDetails?.isVerified && !mobileDetails?.isVerified) {
+    } else if (!emailDetails.isVerified && !mobileDetails.isVerified) {
       if (
-        document.getElementById("email")?.value &&
-        document.getElementById("mobileNo")?.value
+        document.getElementById("email").value &&
+        document.getElementById("mobileNo").value
       ) {
         sendEmailOtp();
         setTimeout(() => {
@@ -167,9 +159,9 @@ const caSignUp = (path) => {
       } else {
         showToaster("Please verify email and mobile", "error", "top-center");
       }
-    } else if (!emailDetails?.isVerified && mobileDetails?.isVerified) {
+    } else if (!emailDetails.isVerified && mobileDetails.isVerified) {
       showToaster("Please verify email", "error", "top-center");
-    } else if (emailDetails?.isVerified && !mobileDetails?.isVerified) {
+    } else if (emailDetails.isVerified && !mobileDetails.isVerified) {
       showToaster("Please verify mobile", "error", "top-center");
     }
   }
@@ -189,9 +181,9 @@ const caSignUp = (path) => {
   }
 
   function initOtpSignup() {
-    var userData = typeof getLocalStorage === "function" ? getLocalStorage("userData") : null;
+    var userData = getLocalStorage("userData");
     if (userData) {
-      if (userData.user?.email) {
+      if (userData.user.email) {
         setEmailDetails({
           email: userData.user.email,
           accessToken: userData.accessToken,
@@ -201,7 +193,7 @@ const caSignUp = (path) => {
         setShowEmailOtp(false);
         updateCurrentStep(2);
         setInputValue("email", userData.user.email);
-      } else if (userData.user?.mobileNo) {
+      } else if (userData.user.mobileNo) {
         setMobileDetails({
           mobileNo: userData.user.mobileNo,
           accessToken: userData.accessToken,
@@ -214,19 +206,15 @@ const caSignUp = (path) => {
       }
     }
 
-    if (typeof addOtpWidgetScript === "function") {
-      addOtpWidgetScript(true, false, () => {
-        setTimeout(() => {
-          getWidgetData();
-        }, 2000);
-      });
-    }
+    addOtpWidgetScript(true, false, () => {
+      setTimeout(() => {
+        getWidgetData();
+      }, 2000);
+    });
   }
 
   function resetEverything() {
-    if (typeof removeLocalStorage === "function") {
-      removeLocalStorage("userData");
-    }
+    removeLocalStorage("userData");
     setEmailDetails({
       email: "",
       accessToken: "",
@@ -242,7 +230,6 @@ const caSignUp = (path) => {
       requestId: "",
     });
     setMrnNumber("");
-    setMrnError("");
     setShowEmailOtp(false);
     setShowMobileOtp(false);
     updateCurrentStep(2);
@@ -255,13 +242,10 @@ const caSignUp = (path) => {
     setShowEmailOtp(showOtp);
 
     if (!showOtp) {
-      setEmailDetails({
-        email: "",
-        accessToken: "",
-        isVerified: false,
-        signupVia: "",
-        requestId: "",
-      });
+      emailDetails.email = "";
+      emailDetails.isVerified = false;
+      emailDetails.requestId = "";
+      setEmailDetails(emailDetails);
     }
   }
 
@@ -269,40 +253,36 @@ const caSignUp = (path) => {
     setShowMobileOtp(showOtp);
 
     if (!showOtp) {
-      setMobileDetails({
-        mobileNo: "",
-        accessToken: "",
-        isVerified: false,
-        signupVia: "",
-        requestId: "",
-      });
+      mobileDetails.mobileNo = "";
+      mobileDetails.isVerified = false;
+      mobileDetails.requestId = "";
+      setMobileDetails(mobileDetails);
     }
   }
 
   function getWidgetData() {
-    if (typeof window !== "undefined" && typeof window.getWidgetData === "function") {
-      var widgetData = window.getWidgetData();
-      if (widgetData && widgetData.processes) {
-        var channels = [];
-        widgetData.processes.forEach((process) => {
-          if (process.channel?.value != "3") {
-            if (!channels[process.channel?.value]) {
-              channels[process.channel?.value] = [];
-            }
-            channels[process.channel?.value] = process.channel;
+    var widgetData = window.getWidgetData();
+    if (widgetData && widgetData.processes) {
+      var channels = [];
+      widgetData.processes.forEach((process) => {
+        if (process.channel.value != "3") {
+          if (!channels[process.channel.value]) {
+            channels[process.channel.value] = [];
           }
-        });
-        setConnectedChannels(channels);
-      }
+          channels[process.channel.value] = process.channel;
+        }
+      });
+      setConnectedChannels(channels);
     }
   }
 
   function sendEmailOtp() {
-    const emailInput = document.getElementById("email");
     if (
-      !emailInput?.value ||
-      !emailInput.value.trim() ||
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(emailInput.value)
+      !document.getElementById("email").value ||
+      !document.getElementById("email").value.trim() ||
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+        document.getElementById("email").value
+      )
     ) {
       showToaster("Please enter valid email!", "error", "top-center");
       return;
@@ -310,56 +290,42 @@ const caSignUp = (path) => {
 
     setEmailGetOtpInProgress(true);
 
-    if (typeof window !== "undefined" && typeof window.sendOtp === "function") {
-      window.sendOtp(
-        emailInput.value,
-        (data) => {
-          emailOtpSentCallback(data);
-        },
-        (error) => {
-          emailOtpFailedCallback(error);
-        }
-      );
-    } else {
-      setEmailGetOtpInProgress(false);
-      showToaster("OTP service unavailable, please refresh.", "error", "top-center");
-    }
+    window.sendOtp(
+      document.getElementById("email").value,
+      (data) => {
+        emailOtpSentCallback(data);
+      },
+      (error) => {
+        emailOtpFailedCallback(error);
+      }
+    );
   }
 
   function sendMobileOtp() {
-    if (!intl) {
-      showToaster("Please enter valid mobile number!", "error", "top-center");
-      return;
-    }
-    var formattedNum = typeof formatMobileNumber === "function" ? formatMobileNumber(intl.getNumber()) : intl.getNumber();
-    if (!formattedNum) {
+    var mobileNo = formatMobileNumber(intl.getNumber());
+    if (!mobileNo || !mobileNo) {
       showToaster("Please enter valid mobile number!", "error", "top-center");
       return;
     }
 
     setMobileGetOtpInProgress(true);
 
-    if (typeof window !== "undefined" && typeof window.sendOtp === "function") {
-      window.sendOtp(
-        formattedNum,
-        (data) => {
-          mobileOtpSentCallback(data);
-        },
-        (error) => {
-          mobileOtpFailedCallback(error);
-        }
-      );
-    } else {
-      setMobileGetOtpInProgress(false);
-      showToaster("OTP service unavailable, please refresh.", "error", "top-center");
-    }
+    window.sendOtp(
+      mobileNo,
+      (data) => {
+        mobileOtpSentCallback(data);
+      },
+      (error) => {
+        mobileOtpFailedCallback(error);
+      }
+    );
   }
 
   function emailOtpSentCallback(data) {
     setEmailGetOtpInProgress(false);
     showToaster("OTP sent successfully.", "success", "top-center");
     setEmailDetails({
-      email: document.getElementById("email")?.value || "",
+      email: document.getElementById("email").value,
       accessToken: "",
       isVerified: false,
       signupVia: "giddh",
@@ -371,10 +337,10 @@ const caSignUp = (path) => {
   function mobileOtpSentCallback(data) {
     setMobileGetOtpInProgress(false);
     showToaster("OTP sent successfully.", "success", "top-center");
-    var formattedNum = typeof formatMobileNumber === "function" ? formatMobileNumber(intl?.getNumber()) : intl?.getNumber();
+    var mobileNo = formatMobileNumber(intl.getNumber());
 
     setMobileDetails({
-      mobileNo: formattedNum,
+      mobileNo: mobileNo,
       accessToken: "",
       isVerified: false,
       signupVia: "giddh",
@@ -385,20 +351,24 @@ const caSignUp = (path) => {
 
   function emailOtpFailedCallback(error) {
     setEmailGetOtpInProgress(false);
-    showToaster(error?.message || "Failed to send OTP", "error", "top-center");
+    showToaster(error.message, "error", "top-center");
     setShowEmailOtpSection(false);
-    setEmailDetails((prev) => ({ ...(prev || {}), requestId: "" }));
+    emailDetails.requestId = "";
+    setEmailDetails(emailDetails);
   }
 
   function mobileOtpFailedCallback(error) {
     setMobileGetOtpInProgress(false);
-    showToaster(error?.message || "Failed to send OTP", "error", "top-center");
+    showToaster(error.message, "error", "top-center");
     setShowMobileOtpSection(false);
-    setMobileDetails((prev) => ({ ...(prev || {}), requestId: "" }));
+    mobileDetails.requestId = "";
+    setMobileDetails(mobileDetails);
   }
 
   function resetEmailOtp() {
-    setEmailDetails((prev) => ({ ...(prev || {}), isVerified: false, accessToken: "" }));
+    emailDetails.isVerified = false;
+    emailDetails.accessToken = "";
+    setEmailDetails(emailDetails);
 
     document.querySelectorAll(".email-otp-field").forEach((field) => {
       field.value = "";
@@ -406,7 +376,9 @@ const caSignUp = (path) => {
   }
 
   function resetMobileOtp() {
-    setMobileDetails((prev) => ({ ...(prev || {}), isVerified: false, accessToken: "" }));
+    mobileDetails.isVerified = false;
+    mobileDetails.accessToken = "";
+    setMobileDetails(mobileDetails);
 
     document.querySelectorAll(".mobile-otp-field").forEach((field) => {
       field.value = "";
@@ -418,24 +390,22 @@ const caSignUp = (path) => {
     if (channel == 3) {
       resetEmailOtp();
       setEmailGetOtpInProgress(true);
-      requestId = emailDetails?.requestId;
+      requestId = emailDetails.requestId;
     } else {
       resetMobileOtp();
       setMobileGetOtpInProgress(true);
-      requestId = mobileDetails?.requestId;
+      requestId = mobileDetails.requestId;
     }
-    if (typeof window !== "undefined" && typeof window.retryOtp === "function") {
-      window.retryOtp(
-        channel,
-        () => {
-          retrySendOtpSuccessCallback(channel);
-        },
-        (error) => {
-          retrySendOtpErrorCallback(channel, error);
-        },
-        requestId
-      );
-    }
+    window.retryOtp(
+      channel,
+      (data) => {
+        retrySendOtpSuccessCallback(channel);
+      },
+      (error) => {
+        retrySendOtpErrorCallback(channel, error);
+      },
+      requestId
+    );
   }
 
   function retrySendOtpSuccessCallback(channel) {
@@ -449,7 +419,7 @@ const caSignUp = (path) => {
   }
 
   function retrySendOtpErrorCallback(channel, error) {
-    showToaster(error?.message || "Failed to resend OTP", "error", "top-center");
+    showToaster(error.message, "error", "top-center");
 
     if (channel == 3) {
       setEmailGetOtpInProgress(false);
@@ -473,7 +443,7 @@ const caSignUp = (path) => {
       }
 
       setEmailVerifyOtpInProgress(true);
-      requestId = emailDetails?.requestId;
+      requestId = emailDetails.requestId;
     } else {
       document.querySelectorAll(".mobile-otp-field").forEach(function (field) {
         otp += field.value;
@@ -485,21 +455,19 @@ const caSignUp = (path) => {
       }
 
       setMobileVerifyOtpInProgress(true);
-      requestId = mobileDetails?.requestId;
+      requestId = mobileDetails.requestId;
     }
 
-    if (typeof window !== "undefined" && typeof window.verifyOtp === "function") {
-      window.verifyOtp(
-        otp,
-        (data) => {
-          verifyOtpSuccessCallback(type, data);
-        },
-        (error) => {
-          verifyOtpErrorCallback(type, error);
-        },
-        requestId
-      );
-    }
+    window.verifyOtp(
+      otp,
+      (data) => {
+        verifyOtpSuccessCallback(type, data);
+      },
+      (error) => {
+        verifyOtpErrorCallback(type, error);
+      },
+      requestId
+    );
   }
 
   function verifyOtpSuccessCallback(type, data) {
@@ -507,44 +475,36 @@ const caSignUp = (path) => {
 
     if (type == "email") {
       setEmailVerifyOtpInProgress(false);
-      setEmailDetails((prev) => ({
-        ...(prev || {}),
-        isVerified: true,
-        accessToken: data.message,
-      }));
+      emailDetails.isVerified = true;
+      emailDetails.accessToken = data.message;
+      setEmailDetails(emailDetails);
     } else {
       setMobileVerifyOtpInProgress(false);
-      setMobileDetails((prev) => ({
-        ...(prev || {}),
-        isVerified: true,
-        accessToken: data.message,
-      }));
+      mobileDetails.isVerified = true;
+      mobileDetails.accessToken = data.message;
+      setMobileDetails(mobileDetails);
     }
   }
 
   function verifyOtpErrorCallback(type, error) {
-    showToaster(error?.message || "Invalid OTP", "error", "top-center");
+    showToaster(error.message, "error", "top-center");
 
     if (type == "email") {
       setEmailVerifyOtpInProgress(false);
-      setEmailDetails((prev) => ({
-        ...(prev || {}),
-        isVerified: false,
-        accessToken: "",
-      }));
+      emailDetails.isVerified = false;
+      emailDetails.accessToken = "";
+      setEmailDetails(emailDetails);
     } else {
       setMobileVerifyOtpInProgress(false);
-      setMobileDetails((prev) => ({
-        ...(prev || {}),
-        isVerified: false,
-        accessToken: "",
-      }));
+      mobileDetails.isVerified = false;
+      mobileDetails.accessToken = "";
+      setMobileDetails(mobileDetails);
     }
   }
 
   function signupErrorCallback(error) {
     setSignupInProgress(false);
-    showToaster(error?.message || String(error), "error", "top-center");
+    showToaster(error, "error", "top-center");
   }
 
   function updateCurrentStep(step) {
@@ -608,24 +568,30 @@ const caSignUp = (path) => {
     setTimeout(function () {
       const charInputs = document.querySelectorAll(selector);
 
+      // Add paste handler to the first input field
       if (charInputs.length > 0 && !charInputs[0].dataset.pasteHandlerAttached) {
         charInputs[0].addEventListener("paste", (e) => {
           e.preventDefault();
           const pastedData = e.clipboardData.getData("text").trim();
-          
+
+          // Only process if we have data and it looks like a numeric code
           if (pastedData && /^\d+$/.test(pastedData)) {
+            // Distribute the pasted characters across input fields
             const pastedChars = pastedData.split('');
+
+            // Fill as many inputs as we have characters (up to the max number of inputs)
             for (let i = 0; i < Math.min(pastedChars.length, charInputs.length); i++) {
               charInputs[i].value = pastedChars[i];
             }
-            
+
+            // Focus on the next empty field or the verify button if all fields are filled
             if (pastedChars.length < charInputs.length) {
               charInputs[pastedChars.length].focus();
             } else {
               if (selector === ".email-otp-field") {
-                document.getElementById("verify-email-button")?.focus();
+                document.getElementById("verify-email-button").focus();
               } else if (selector === ".mobile-otp-field") {
-                document.getElementById("verify-mobile-button")?.focus();
+                document.getElementById("verify-mobile-button").focus();
               }
             }
           }
@@ -646,9 +612,9 @@ const caSignUp = (path) => {
               charInputs[index + 1].focus();
             } else {
               if (selector === ".email-otp-field") {
-                document.getElementById("verify-email-button")?.focus();
+                document.getElementById("verify-email-button").focus();
               } else if (selector === ".mobile-otp-field") {
-                document.getElementById("verify-mobile-button")?.focus();
+                document.getElementById("verify-mobile-button").focus();
               }
             }
           }
@@ -656,29 +622,37 @@ const caSignUp = (path) => {
 
         input.addEventListener("keydown", (e) => {
           if (e.key === "Backspace" && input.value.length === 0 && index > 0) {
-            e.preventDefault();
+            e.preventDefault(); // Prevent the browser's default backspace behavior
             charInputs[index - 1].focus();
           }
         });
 
+        // Add paste handler to all fields (not just the first)
         input.addEventListener("paste", (e) => {
+          // Let the first input handle the paste event
           if (index === 0) return;
+
           e.preventDefault();
           const pastedData = e.clipboardData.getData("text").trim();
-          
+
+          // Only process if we have data and it looks like a numeric code
           if (pastedData && /^\d+$/.test(pastedData)) {
+            // Distribute the pasted characters across input fields starting from current position
             const pastedChars = pastedData.split('');
+
+            // Fill as many inputs as we have characters (up to the max number of inputs)
             for (let i = 0; i < Math.min(pastedChars.length, charInputs.length - index); i++) {
               charInputs[index + i].value = pastedChars[i];
             }
-            
+
+            // Focus on the next empty field or the verify button if all fields are filled
             if (pastedChars.length < charInputs.length - index) {
               charInputs[index + pastedChars.length].focus();
             } else {
               if (selector === ".email-otp-field") {
-                document.getElementById("verify-email-button")?.focus();
+                document.getElementById("verify-email-button").focus();
               } else if (selector === ".mobile-otp-field") {
-                document.getElementById("verify-mobile-button")?.focus();
+                document.getElementById("verify-mobile-button").focus();
               }
             }
           }
@@ -730,7 +704,7 @@ const caSignUp = (path) => {
                     return success(countryCode);
                   }
                 },
-                () => {
+                (fetchCountryByIpApiErr) => {
                   const fetchCountryByIpInfoApi = fetch(
                     "https://ipinfo.io/" + `${res?.ipAddress}`
                   );
@@ -743,7 +717,7 @@ const caSignUp = (path) => {
                         return success(countryCode);
                       }
                     },
-                    () => {
+                    (fetchCountryByIpInfoApiErr) => {
                       return success(countryCode);
                     }
                   );
@@ -753,7 +727,7 @@ const caSignUp = (path) => {
               return success(countryCode);
             }
           },
-          () => {
+          (err) => {
             return success(countryCode);
           }
         );
@@ -768,9 +742,7 @@ const caSignUp = (path) => {
   }
 
   function otpVerifyCallback(response) {
-    if (typeof setGiddhRegionSession === "function") {
-      setGiddhRegionSession(response.session.id, region);
-    }
+    setGiddhRegionSession(response.session.id, region);
     window.location =
       process.env.NEXT_PUBLIC_APP_URL +
       "/token-verify?request=" +
@@ -782,11 +754,6 @@ const caSignUp = (path) => {
   return (
     <>
       <Head>
-        <title>CA Partner Sign Up - Giddh Accounting Software</title>
-        <meta
-          name="description"
-          content="Join Giddh as a CA Partner. Streamline your accounting practice, manage multiple client books, and automate tax audits with Giddh."
-        />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
@@ -805,44 +772,76 @@ const caSignUp = (path) => {
           <div className="entry__left_section__details pe-5">
             <div className="container">
               <h2 className="c-fs-3 line-height-36 mb-4">
-                Empower Your CA Practice with GIDDH
+                {isGlobal && "Experience Easy Accounting with GIDDH"}
+                {isIndia && "Join GIDDH for Simplified Accounting Solutions"}
+                {isAE && "Join GIDDH: Effortless Accounting Software"}
+                {isUK && "GIDDH: Simplified Accounting at Your Fingertips"}
               </h2>
-              <p>Key Benefits for Chartered Accountants:</p>
+              <p>Features:</p>
               <ul className="ps-0 my-4">
                 <li className="d-flex align-items-center">
                   <MdDone />
-                  Centralized Multi-Client Management
+                  {isGlobal && "Basic Ledger Accounting Made Easy"}
+                  {isIndia && "Easy Steps for Basic Ledger Accounting"}
+                  {isAE && "Basic Ledger Accounting Simplified"}
+                  {isUK && "Master Basic Ledger Accounting"}
                 </li>
                 <li className="d-flex align-items-center">
                   <MdDone />
-                  1-Click GST, VAT & Tax Audit Reports
+                  {isGlobal && "Efficiently Manage Branches & Warehouses"}
+                  {isIndia && "Simplify Branches & Warehouses Management"}
+                  {isAE && "Centralized Control for Branches & Warehouses"}
+                  {isUK && "Optimize Branches & Warehouses Operations"}
                 </li>
                 <li className="d-flex align-items-center">
                   <MdDone />
-                  Seamless Data Import from Tally & Zoho
+                  {isGlobal && "Streamlined Inventory Management Solutions"}
+                  {isIndia && "Simplify Your Inventory Management Process"}
+                  {isAE && "Inventory Management Made Streamlined"}
+                  {isUK && "Seamless and Streamlined Inventory Management"}
                 </li>
                 <li className="d-flex align-items-center">
                   <MdDone />
-                  Real-time Client Collaboration & Access
+                  {isGlobal && "Easy Tax Reports Anywhere"}
+                  {isIndia && "GST Reporting Anytime, Anywhere"}
+                  {isAE && "VAT Reports on the Go"}
+                  {isUK && "Fast VAT Reports on the Go"}
                 </li>
                 <li className="d-flex align-items-center">
                   <MdDone />
-                  Free Portal Access for Practicing CAs
+                  {isGlobal && "Native iOS & Android App Support"}
+                  {isIndia && "Full Support for iOS & Android Apps"}
+                  {isAE && "iOS & Android Apps Fully Supported"}
+                  {isUK && "iOS & Android Native App Compatibility"}
                 </li>
                 <li className="d-flex align-items-center">
                   <MdDone />
-                  Support for Unlimited Client Companies
+                  {isGlobal && "Support for Unlimited Users"}
+                  {isIndia && "Unlimited User Access Support"}
+                  {isAE && "Unlimited Users, Full Support"}
+                  {isUK && "Comprehensive Support for Unlimited Users"}
                 </li>
                 <li className="d-flex align-items-center">
                   <MdDone />
-                  Native iOS & Android Mobile Access
+                  {isGlobal && "Simplified for Small Business Accounting"}
+                  {isIndia && "Easy Accounting for Small Businesses"}
+                  {isAE && "Small Business Accounting Made Easy"}
+                  {isUK && "Streamlined Accounting for Small Businesses"}
                 </li>
                 <li className="d-flex align-items-center">
                   <MdDone />
-                  Automated Multi-Currency Accounting
+                  {isGlobal && "Support for Multi-Currency Accounting"}
+                  {isIndia && "Seamless Multi-Currency Accounting"}
+                  {isAE && "Multi-Currency Accounting Solutions"}
+                  {isUK && "Efficient Multi-Currency Accounting"}
                 </li>
               </ul>
-              <p>Trusted by 5,000+ CAs and Accounting Practices Worldwide</p>
+              <p>
+                {isGlobal && "Trusted Globally by 5,000+ Businesses"}
+                {isIndia && "Trusted by 5,000+ Businesses Worldwide"}
+                {isAE && "Join 5,000+ Trusted Businesses Worldwide"}
+                {isUK && "Trusted by Over 5,000 Global Businesses"}
+              </p>
             </div>
           </div>
         </div>
@@ -863,7 +862,10 @@ const caSignUp = (path) => {
                   />
                 </a>
                 <h1>
-                  Join Giddh as a CA Partner to manage client accounting, automated audits, and taxes seamlessly.
+                  {isAE && "Sign up for Giddh in the UAE and simplify your accounting. Access cloud tools for invoicing, VAT, and financial management."}
+                  {isUK && "Create your Giddh account in the UK. Sign up to manage accounting, invoices, and VAT efficiently for your business."}
+                  {isGlobal && "Sign up for Giddh and start managing your business finances efficiently. Create your account and access cloud accounting tools instantly."}
+                  {isIndia && "Create your Giddh account in India. Sign up to manage GST, invoicing, and accounting seamlessly for your business."}
                 </h1>
                 <div className="entry__right_section__container__entry_with d-flex mb-4 me-4">
                   <div>
@@ -908,19 +910,22 @@ const caSignUp = (path) => {
                     alt="Giddh Icon"
                   />
                 </a>
-                <h1>Create your CA Partner Account</h1>
+                <h1>Create an account</h1>
                 <div className="entry__right_section__container__step_one mt-5">
                   <div className="step_status_bar d-flex justify-content-between align-items-center ps-0">
                     <div className="d-flex align-items-center">
                       <MdCheckCircle
                         className={
                           "me-1 " +
-                          (emailDetails?.isVerified && mobileDetails?.isVerified
+                          (emailDetails &&
+                            emailDetails.isVerified &&
+                            mobileDetails &&
+                            mobileDetails.isVerified
                             ? " icon-success"
                             : "")
                         }
                       />{" "}
-                      Verify details & MRN number
+                      Verify email & mobile number
                     </div>
                   </div>
 
@@ -931,38 +936,34 @@ const caSignUp = (path) => {
                     </label>
                     <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                       <div className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12">
-                        <input
-                          type="text"
-                          className={`form-control ${mrnError ? "is-invalid" : ""}`}
-                          id="mrnNumber"
-                          name="mrnNumber"
-                          placeholder="e.g. 123456"
-                          value={mrnNumber}
-                          maxLength={30}
-                          autoComplete="off"
-                          onChange={(e) => {
-                            setMrnNumber(e.target.value);
-                            if (mrnError) setMrnError("");
-                          }}
-                        />
-                        {mrnError && (
-                          <div className="text-danger c-fs-6 mt-1">{mrnError}</div>
-                        )}
+                        <div className="d-flex step_input_wrapper__mobile_veiw">
+                          <input
+                            type="text"
+                            className="form-control"
+                            id="mrnNumber"
+                            name="mrnNumber"
+                            placeholder="Enter MRN number"
+                            autoComplete="off"
+                            required
+                            value={mrnNumber}
+                            onChange={(e) => setMrnNumber(e.target.value)}
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Email Field & OTP */}
                   <div className="row mx-0 px-0 step_input_wrapper mt-4">
                     <label htmlFor="email" className="mb-3 ps-0">
-                      Verify email <span className="text-danger">*</span>
+                      Verify email
                     </label>
                     <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                       <div
                         className="step_input_wrapper__left col-xxl-6 col-xl-7 col-lg-12"
                         style={{
                           paddingRight:
-                            showEmailOtp || (emailDetails && emailDetails.isVerified)
+                            showEmailOtp ||
+                              (emailDetails && emailDetails.isVerified)
                               ? "0"
                               : null,
                         }}
@@ -973,7 +974,7 @@ const caSignUp = (path) => {
                             className="form-control"
                             id="email"
                             name="email"
-                            placeholder="ca.partner@firm.com"
+                            placeholder="email@walkover.in"
                             autoComplete="off"
                             onKeyDown={onKeyDownEmail}
                             disabled={
@@ -1082,7 +1083,7 @@ const caSignUp = (path) => {
                                 </button>
                               </div>
                               <span
-                                className="col-primary c-fw-600 mt-3 c-fs-6 cursor-pointer"
+                                className="col-primary c-fw-600 mt-3 c-fs-6"
                                 onClick={() => retrySendOtp(3)}
                               >
                                 Resend
@@ -1092,11 +1093,9 @@ const caSignUp = (path) => {
                         )}
                     </div>
                   </div>
-
-                  {/* Mobile Field & OTP */}
                   <div className="row mx-0 px-0 step_input_wrapper mb-3">
-                    <label htmlFor="mobileNo" className="mb-3 ps-0">
-                      Verify Mobile number <span className="text-danger">*</span>
+                    <label htmlFor="contact" className="mb-3 ps-0">
+                      Verify Mobile number
                     </label>
                     <div className="step_input_wrapper--fixed-height d-flex flex-wrap p-0">
                       <div
@@ -1104,7 +1103,7 @@ const caSignUp = (path) => {
                         style={{
                           paddingRight:
                             showMobileOtp ||
-                            (mobileDetails && mobileDetails.isVerified)
+                              (mobileDetails && mobileDetails.isVerified)
                               ? "0"
                               : null,
                         }}
@@ -1228,7 +1227,7 @@ const caSignUp = (path) => {
                                   {connectedChannels.map((item, index) => (
                                     <span key={item.value}>
                                       <span
-                                        className="col-primary c-fw-600 ms-1 cursor-pointer"
+                                        className="col-primary c-fw-600 ms-1 cursor-pointer "
                                         onClick={() => retrySendOtp(item.value)}
                                       >
                                         {" "}
@@ -1246,7 +1245,6 @@ const caSignUp = (path) => {
                     </div>
                   </div>
 
-                  {/* Terms Checkbox */}
                   <div className="mb-4">
                     <p className="c-fs-6 mb-1 content-width">
                       I agree to receive OTP and Alerts SMS from Giddh at the
@@ -1272,12 +1270,12 @@ const caSignUp = (path) => {
                       </a>
                       .
                     </p>
-                    <div className="d-flex align-items-center gap-2">
+                    <div class="d-flex align-items-center gap-2">
                       <input
                         className="form-check-input m-0"
                         type="checkbox"
                         id="agreeCheckBox"
-                        checked={termsAgree}
+                        value={termsAgree}
                         onChange={() => setTermsAgree(!termsAgree)}
                       />
                       <label
@@ -1288,14 +1286,13 @@ const caSignUp = (path) => {
                       </label>
                     </div>
                   </div>
-
-                  {/* Submit & Back Buttons */}
                   <div className="row">
                     <div>
                       <button
                         className="me-3 btn back_btn"
                         onClick={() => updateCurrentStep(1)}
                       >
+                        {" "}
                         <MdKeyboardArrowLeft />
                         Back
                       </button>
@@ -1335,5 +1332,4 @@ const caSignUp = (path) => {
     </>
   );
 };
-
 export default caSignUp;
