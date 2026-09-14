@@ -21,7 +21,7 @@ const signUp = (path) => {
   const [showMobileOtp, setShowMobileOtp] = useState(false);
   const [emailDetails, setEmailDetails] = useState(null);
   const [mobileDetails, setMobileDetails] = useState(null);
-  const [mrnNumber, setMrnNumber] = useState("");
+  const [mrnNumber, setMrnNumber] = useState(null);
   const [connectedChannels, setConnectedChannels] = useState(null);
   const [intl, setIntl] = useState(null);
   const [emailGetOtpInProgress, setEmailGetOtpInProgress] = useState(false);
@@ -573,17 +573,17 @@ const signUp = (path) => {
         charInputs[0].addEventListener("paste", (e) => {
           e.preventDefault();
           const pastedData = e.clipboardData.getData("text").trim();
-          
+
           // Only process if we have data and it looks like a numeric code
           if (pastedData && /^\d+$/.test(pastedData)) {
             // Distribute the pasted characters across input fields
             const pastedChars = pastedData.split('');
-            
+
             // Fill as many inputs as we have characters (up to the max number of inputs)
             for (let i = 0; i < Math.min(pastedChars.length, charInputs.length); i++) {
               charInputs[i].value = pastedChars[i];
             }
-            
+
             // Focus on the next empty field or the verify button if all fields are filled
             if (pastedChars.length < charInputs.length) {
               charInputs[pastedChars.length].focus();
@@ -631,20 +631,20 @@ const signUp = (path) => {
         input.addEventListener("paste", (e) => {
           // Let the first input handle the paste event
           if (index === 0) return;
-          
+
           e.preventDefault();
           const pastedData = e.clipboardData.getData("text").trim();
-          
+
           // Only process if we have data and it looks like a numeric code
           if (pastedData && /^\d+$/.test(pastedData)) {
             // Distribute the pasted characters across input fields starting from current position
             const pastedChars = pastedData.split('');
-            
+
             // Fill as many inputs as we have characters (up to the max number of inputs)
             for (let i = 0; i < Math.min(pastedChars.length, charInputs.length - index); i++) {
               charInputs[index + i].value = pastedChars[i];
             }
-            
+
             // Focus on the next empty field or the verify button if all fields are filled
             if (pastedChars.length < charInputs.length - index) {
               charInputs[index + pastedChars.length].focus();
@@ -918,9 +918,9 @@ const signUp = (path) => {
                         className={
                           "me-1 " +
                           (emailDetails &&
-                          emailDetails.isVerified &&
-                          mobileDetails &&
-                          mobileDetails.isVerified
+                            emailDetails.isVerified &&
+                            mobileDetails &&
+                            mobileDetails.isVerified
                             ? " icon-success"
                             : "")
                         }
@@ -964,7 +964,7 @@ const signUp = (path) => {
                         style={{
                           paddingRight:
                             showEmailOtp ||
-                            (emailDetails && emailDetails.isVerified)
+                              (emailDetails && emailDetails.isVerified)
                               ? "0"
                               : null,
                         }}
@@ -1104,7 +1104,7 @@ const signUp = (path) => {
                         style={{
                           paddingRight:
                             showMobileOtp ||
-                            (mobileDetails && mobileDetails.isVerified)
+                              (mobileDetails && mobileDetails.isVerified)
                               ? "0"
                               : null,
                         }}
