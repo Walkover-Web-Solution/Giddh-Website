@@ -1,7 +1,7 @@
 {
   "splitBanner": {
-    "heading": "India’s Smartest Online Invoicing Software to Simplify Billing",
-    "subHeading": "Send professional GST-compliant invoices in seconds. Save time and boost productivity with smart, cloud-based invoicing.",
+    "heading": "Free Online Invoicing Software for GST Billing in India",
+    "subHeading": "Create GST invoices in Giddh. Use Place of Supply for correct tax, check Stock History while billing, and copy from previous vouchers when creating invoices or bills.",
     "image": "/img/invoice-software/invoice-software.svg",
     "form": false,
     "header": false,
@@ -34,7 +34,7 @@
     ]
   },
   "cta": {
-    "heading": "Experience Hassle-Free Invoicing With Giddh’s Online Invoicing Software.",
+    "heading": "Smarter Invoicing Starts Here. Try Giddh Free.",
     "buttons": [
       {
         "text": "Start Free Trial",
@@ -46,36 +46,36 @@
   },
   "features": {
     "heading": "Why Choose Giddh for Invoicing?",
-    "subHeading": "Simplify GST billing and business management with an all-in-one cloud invoicing platform built for Indian businesses.",
+    "subHeading": "Cloud invoicing for Indian businesses. Place of Supply, Stock History, and Copy from Previous Voucher are now part of the invoice module.",
     "content": [
       {
-        "heading": "Cloud Storage for Your Data Synced",
+        "heading": "Cloud Storage — Your Invoices, Always in Sync",
         "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
-        "description": "All your financial data, invoices, and reports are securely synced in the cloud.",
+        "description": "All invoices, payments, and reports stay securely synced in the cloud — across devices and team members.",
         "more_content": [
-          "Auto-sync across devices and users",
-          "No need for local backups",
-          "Easy data recovery options"
+          "Auto-sync across desktop, web, and mobile",
+          "No local backups needed",
+          "Easy data recovery anytime"
         ]
       },
       {
-        "heading": "Anytime, Anywhere, and on Any Device",
+        "heading": "Bill Anytime, From Any Device",
         "img": "/img/home-page/anytime_anywhere_and_on_any_device.webp",
-        "description": "Access and manage your finances seamlessly, whether you're using your desktop, Android, or iOS device.",
+        "description": "Create and send invoices from your office, on the go, or from home — on web, Android, or iOS.",
         "more_content": [
-          "Cloud-based access across devices.",
-          "Access real-time financial data.",
-          "Track sales and send invoices."
+          "Real-time access to sales and payment data",
+          "Send invoices via WhatsApp, email, or SMS",
+          "Track paid and pending invoices on the go"
         ]
       },
       {
-        "heading": "24x7 Customer Support",
+        "heading": "24x7 Support When You Need It",
         "img": "/img/home-page/24-7-customer-support.svg",
-        "description": "Get expert assistance whenever you need it.",
+        "description": "Our support team is available around the clock to help with invoicing, GST, and setup.",
         "more_content": [
-          "Support via chat, email, and phone",
-          "Quick query resolution for uninterrupted work",
-          "Dedicated onboarding support for new users"
+          "Chat, email, and phone support",
+          "Quick help for billing and tax queries",
+          "Dedicated onboarding for new users"
         ]
       },
       {
@@ -100,119 +100,163 @@
       {
         "heading": "Easily Secure Data in the Cloud",
         "img": "/img/home-page/seamless-gst-compliance.svg",
-        "description": "Ensures your financial data is securely stored and protected in the cloud with backup features.",
+        "description": "Your financial data is securely stored and protected in the cloud with backup features.",
         "more_content": [
           "Encrypted data storage",
-          "Prevent data loss.",
+          "Prevent data loss",
           "Top industry security standards"
+        ]
+      },
+      {
+        "heading": "Place of Supply",
+        "img": "/img/gst/create_gst_compliant_invoices.svg",
+        "description": "A new Place of Supply field has been added in the invoice module for more accurate GST calculations. Earlier, GST was calculated based on the shipping address on the invoice. Now, GST is determined by the Place of Supply you select.",
+        "more_content": [
+          "Choose the state or location for GST calculation on your own",
+          "Works separately from billing and shipping address",
+          "Useful when billing address, shipping address, and place of supply are all different",
+          "CGST, SGST, or IGST is applied based on the place of supply you pick"
+        ]
+      },
+      {
+        "heading": "Stock History",
+        "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
+        "description": "While creating a voucher, you can see customer-wise item history without leaving the screen. Select a customer, add an item, and a Stock History icon appears next to that item.",
+        "more_content": [
+          "View previous prices, quantities, and voucher details",
+          "History is shown for that item with that specific customer",
+          "Helps you check past rates before finalising the bill",
+          "Useful for repeat orders with the same customer"
+        ]
+      },
+      {
+        "heading": "Copy from Previous Voucher",
+        "img": "/img/home-page/invoicing-solution-that-saves-time.svg",
+        "description": "This feature helps you reuse previous vouchers while creating invoices and bills. After you select a customer or supplier, you can view related voucher history, preview details, and copy information into the current voucher.",
+        "more_content": [
+          "View vouchers for the selected customer or supplier",
+          "See the latest vouchers created across the company",
+          "Preview voucher details before copying",
+          "View up to 10 recent vouchers instead of 5"
         ]
       }
     ],
     "buttons": [
       {
-        "text": "Explore Features",
+        "text": "Explore All Features",
         "link": "/all-features"
       }
     ]
   },
   "characteristics": {
-    "heading": "Core Features of Giddh’s Cloud Invoicing Software India",
-    "subHeading": "Giddh is your go-to invoicing and accounting software India trusts for faster billing and more innovative financial management.",
+    "heading": "Core Features of Giddh's Cloud Invoicing Software India",
+    "subHeading": "Invoicing and accounting software for India. Includes Place of Supply, Stock History, and Copy from Previous Voucher.",
     "cards": [
       {
-        "heading": "Create & Send Professional Invoices Instantly",
-        "description": "Generate invoices in seconds and maintain complete control over invoice formatting.",
+        "heading": "Create & Send Professional Invoices",
+        "description": "Generate branded, GST-ready invoices in seconds with full control over formatting.",
         "more_content": [
           "Customizable invoice numbers",
-          "Lock finalized invoices."
-        ]
-      },
-      {
-        "heading": "Barcode-Enabled Billing",
-        "description": "Speed up billing by scanning products directly, reducing human errors and saving time.",
-        "more_content": [
-          "Scan products directly.",
-          "Eliminate manual errors."
+          "Lock finalized invoices",
+          "Multiple invoice templates"
         ]
       },
       {
         "heading": "Effortless GST Invoicing",
-        "description": "Simplify tax compliance with auto-GST application tailored for Indian businesses.",
+        "description": "Auto-apply the right GST based on Place of Supply and transaction type.",
         "more_content": [
-          "Automatically apply correct GST based on client’s state.",
-          "Supports CGST, SGST, IGST",
-          "Built-in logic for error-free tax classification"
+          "CGST, SGST, and IGST support",
+          "TDS and TCS on invoices",
+          "Built-in tax classification logic"
         ]
       },
       {
-        "heading": "Taxes Made Easy",
-        "description": "Stay compliant with all applicable tax formats, including those beyond GST.",
+        "heading": "Barcode-Enabled Billing",
+        "description": "Scan products at checkout to bill faster and reduce manual entry errors.",
         "more_content": [
-          "Add TDS and TCS seamlessly",
-          "Create and manage custom tax rules",
-          "Ensure complete transparency in taxation"
+          "Scan items directly into invoices",
+          "Faster counter billing",
+          "Fewer data entry mistakes"
         ]
       },
       {
         "heading": "Multi-Currency & International Billing",
-        "description": "Effortlessly handle global transactions with real-time currency conversion.",
+        "description": "Bill overseas clients with real-time currency conversion built in.",
         "more_content": [
-          "Auto currency conversion.",
-          "Ideal for export-based businesses."
-        ]
-      },
-      {
-        "heading": "Send Invoices via WhatsApp, Email, SMS",
-        "description": "Deliver invoices instantly across multiple channels for better client communication.",
-        "more_content": [
-          "Faster communication.",
-          "Real-time delivery tracking."
+          "Auto currency conversion",
+          "Ideal for export businesses",
+          "Multi-currency reports"
         ]
       },
       {
         "heading": "Recurring & Automated Invoicing",
-        "description": "Automate regular billing cycles and follow-ups to ensure timely payments.",
+        "description": "Set up repeat billing cycles and payment reminders so you never miss a due date.",
         "more_content": [
-          "Set schedules.",
-          "Auto-reminders for payments."
+          "Schedule recurring invoices",
+          "Auto payment reminders",
+          "Track subscription billing easily"
         ]
       },
       {
-        "heading": "Invoice Import, Export, & Bulk Edit",
-        "description": "Easily manage large invoice volumes with Excel import and batch updates.",
+        "heading": "Invoice Import, Export & Bulk Edit",
+        "description": "Manage high invoice volumes with Excel import and batch updates.",
         "more_content": [
-          "Excel import.",
-          "Bulk update or delete."
+          "Bulk import from Excel",
+          "Bulk update or delete",
+          "Export for reporting"
         ]
       },
       {
-        "heading": "Generate Multiple & Compound Invoices",
-        "description": "Create flexible invoice formats tailored to your specific transaction needs.",
+        "heading": "Send via WhatsApp, Email & SMS",
+        "description": "Deliver invoices instantly on the channel your customers prefer.",
         "more_content": [
-          "Multiple invoices from recorded entries.",
-          "Create compound invoices easily.",
-          "Great for consolidated client billing."
+          "One-click sharing",
+          "Faster payment collection",
+          "Professional client communication"
         ]
       },
       {
-        "heading": "Run Your Business with Full Automation",
-        "description": "Let automation handle repetitive tasks so you can focus on growth.",
+        "heading": "Place of Supply",
+        "description": "Pick the state or location used for GST calculation. It is separate from billing and shipping address.",
         "more_content": [
-          "Set recurring invoices.",
-          "Automate payment reminders.",
-          "Reduce manual follow-ups and human error."
+          "GST was earlier based on shipping address",
+          "Now based on Place of Supply you select",
+          "Supports CGST, SGST, and IGST"
+        ]
+      },
+      {
+        "heading": "Stock History",
+        "description": "See past prices and quantities for an item sold to a specific customer, inside the voucher screen.",
+        "more_content": [
+          "Stock History icon on the item line",
+          "Customer-wise and item-wise history",
+          "Shows previous voucher details"
+        ]
+      },
+      {
+        "heading": "Copy from Previous Voucher",
+        "description": "Copy data from past invoices or bills. Preview up to 10 recent vouchers before you copy.",
+        "more_content": [
+          "Works for selected customer or supplier",
+          "Preview before copying",
+          "Less repeat data entry"
         ]
       }
     ]
   },
   "testimonials": {
-    "heading": "Hear how we’ve made a difference",
-    "subheading": " Stories that inspire us to keep delivering our best.",
+    "heading": "Hear How We've Made a Difference",
+    "subheading": "Stories that inspire us to keep delivering our best.",
     "data": [
       {
-        "company": "Sinead North",
-        "owner": "Christian Schiel",
-        "testimonial": "Giddh is a great solution to manage customers and invoices internationally. The multi-currency option makes it very convenient, and generating invoices is simple and quick. I can also easily manage VAT reports in the UK. The support team is patient, understands the challenges we face, and resolves them effectively."
+        "company": "Karuna Temp System Private Limited",
+        "owner": "Rohan Pavithran",
+        "testimonial": "Giddh's estimates and proforma invoices work seamlessly. We can create proformas and easily convert them into invoices, tracking their status as paid, unpaid, or partially paid. Automated WhatsApp messages and email notifications after creating vouchers significantly reduce manual effort."
+      },
+      {
+        "company": "Dental Designs",
+        "owner": "Dr Gins Paul",
+        "testimonial": "Giddh offers multiple types of invoices, including cash and sales invoices, making billing flexible and convenient. The dashboard provides a clear summary of the business's health on a single screen, helping us instantly understand where we stand on any given day."
       },
       {
         "company": "Dvara e-registry",
@@ -220,14 +264,29 @@
         "testimonial": "Giddh is an excellent platform for managing multiple companies seamlessly. It allows me to handle different businesses in real time, all in one place. Switching between companies is incredibly fast and effortless, making the entire process smooth and efficient."
       },
       {
+        "company": "Shruti Corporation",
+        "owner": "Shruti",
+        "testimonial": "Giddh is one of the easiest ledger-based accounting systems I've used. Creating ledger entries is quick and effortless, making it truly ready to go. Even someone without a strong accounting background can easily manage and run their business with it."
+      },
+      {
+        "company": "The Medicity",
+        "owner": null,
+        "testimonial": "With Giddh, managing bank accounts is simple and hassle-free. Incomes and expenses can be tracked directly, and the built-in GST filing option makes compliance much easier. It's truly a great all-in-one solution."
+      },
+      {
+        "company": "M/S STUDIO47",
+        "owner": null,
+        "testimonial": "Giddh provides a wide range of reports including financial statements, daybook, sales and purchase registers, inventory reports, and GST reports. Having all these reports in one place makes managing business insights simple and efficient."
+      },
+      {
+        "company": "Sinead North",
+        "owner": "Christian Schiel",
+        "testimonial": "Giddh is a great solution to manage customers and invoices internationally. The multi-currency option makes it very convenient, and generating invoices is simple and quick. I can also easily manage VAT reports in the UK. The support team is patient, understands the challenges we face, and resolves them effectively."
+      },
+      {
         "company": "Teknoworth Medical Care OPC Pvt Ltd",
         "owner": "Imran",
         "testimonial": "Giddh is the most reliable application for inventory management in both India and the UAE. Managing data is effortless, and the mobile app works flawlessly, ensuring smooth operations anytime, anywhere."
-      },
-      {
-        "company": "Shruti Corporation",
-        "owner": "Shruti",
-        "testimonial": "Giddh is one of the easiest ledger-based accounting systems I’ve used. Creating ledger entries is quick and effortless, making it truly ready to go. Even someone without a strong accounting background can easily manage and run their business with it."
       },
       {
         "company": "PI Green Consulting Pvt Ltd",
@@ -245,34 +304,14 @@
         "testimonial": "The inventory reports work brilliantly. Creating parent and child groups is simple and effective, allowing the inventory to be organized and bifurcated properly for better clarity."
       },
       {
-        "company": "Karuna Temp System Private Limited",
-        "owner": "Rohan Pavithran",
-        "testimonial": "Giddh’s estimates and proforma invoices work seamlessly. We can create proformas and easily convert them into invoices, tracking their status as paid, unpaid, or partially paid. Automated WhatsApp messages and email notifications after creating vouchers significantly reduce manual effort."
-      },
-      {
-        "company": "Dental Designs",
-        "owner": "Dr Gins Paul",
-        "testimonial": "Giddh offers multiple types of invoices, including cash and sales invoices, making billing flexible and convenient. The dashboard provides a clear summary of the business’s health on a single screen, helping us instantly understand where we stand on any given day."
-      },
-      {
         "company": "Taurus Lifestyle",
         "owner": "Kunal",
         "testimonial": "The inventory module in Giddh is extremely powerful. Its variant creation feature allows multiple variants for a single item, which is very helpful for detailed inventory management. The barcode scanning feature further completes the requirements, making the process fast and efficient."
       },
       {
-        "company": "M/S STUDIO47",
-        "owner": null,
-        "testimonial": "Giddh provides a wide range of reports including financial statements, daybook, sales and purchase registers, inventory reports, and GST reports. Having all these reports in one place makes managing business insights simple and efficient."
-      },
-      {
         "company": "SP Wellness",
         "owner": null,
         "testimonial": "Support connects positively when needed. The ledger accounting module makes it easy to create entries; I can easily manage my expenses by creating the accounts and making entries there."
-      },
-      {
-        "company": "The Medicity",
-        "owner": null,
-        "testimonial": "With Giddh, managing bank accounts is simple and hassle-free. Incomes and expenses can be tracked directly, and the built-in GST filing option makes compliance much easier. It’s truly a great all-in-one solution."
       },
       {
         "company": "Mitti [Organic. Fresh. Desi]",
@@ -283,10 +322,10 @@
   },
   "trustBadgeBrands": {
     "title": "Trusted By Industry Leaders",
-    "description": "See who’s talking about us and why businesses trust us around the globe."
+    "description": "See who's talking about us and why businesses across India trust Giddh for invoicing and accounting."
   },
   "ctaTwo": {
-    "heading": "Start Invoicing Smarter With Giddh’s Free Cloud-Based Invoicing And Accounting Software In India.",
+    "heading": "Start Invoicing Smarter With Giddh — Free Cloud Invoicing Software for India",
     "image": "/img/girl-avatar.svg",
     "buttons": [
       {
@@ -325,32 +364,44 @@
   },
   "faqs": [
     {
-      "question": "Does Giddh software support recurring invoicing?",
-      "answer": "Yes, Giddh lets you create and automate recurring invoices for clients on a fixed billing cycle."
+      "question": "What is Place of Supply in Giddh?",
+      "answer": "Place of Supply is a new field in the invoice module. You select which state or location should be used for GST calculation. It works separately from the billing and shipping address."
     },
     {
-      "question": "Are my invoices secure in the Giddh Cloud Invoicing Software?",
-      "answer": "Absolutely. Giddh utilises encrypted cloud storage with role-based access to ensure that your invoice data remains secure."
+      "question": "How does Stock History work?",
+      "answer": "While creating a voucher, select a customer and add an item. Click the Stock History icon next to the item to see previous prices, quantities, and voucher details for that item with that customer."
     },
     {
-      "question": "Are there different template options for the invoices?",
-      "answer": "Yes, Giddh offers multiple invoice templates you can customize to match your business branding."
+      "question": "What is Copy from Previous Voucher?",
+      "answer": "After selecting a customer or supplier, you can view related voucher history, preview details, and copy information into the current invoice or bill. You can see up to 10 recent vouchers instead of 5."
     },
     {
-      "question": "Will my invoices look professional?",
-      "answer": "Yes, Giddh generates clean, branded, and GST-compliant invoices designed to look professional and client-ready."
+      "question": "How does Giddh calculate GST on invoices?",
+      "answer": "Giddh applies CGST, SGST, or IGST based on the Place of Supply you select, along with your tax settings. It also supports TDS and TCS on invoices for complete tax compliance."
     },
     {
-      "question": "How can I create estimates/proformas and convert them to invoices in Giddh?",
-      "answer": "You can create estimates or pro forma invoices in Giddh and convert them into final invoices with a single click—no data re-entry is required."
+      "question": "Does Giddh support recurring invoicing?",
+      "answer": "Yes. You can create and automate recurring invoices for clients on a fixed billing cycle, with payment reminders to help you get paid on time."
     },
     {
-      "question": "Which is the best free invoicing software?",
-      "answer": "Giddh is among the best free invoicing software options in India, offering GST support, automation, and cloud access at zero cost."
+      "question": "Are my invoices secure in Giddh cloud invoicing software?",
+      "answer": "Yes. Giddh uses encrypted cloud storage with role-based access controls to keep your invoice and financial data safe."
     },
     {
-      "question": "How do I calculate taxes on my invoices?",
-      "answer": "Giddh automatically applies the correct GST, TCS, or TDS based on your settings and client’s state—ensuring tax accuracy on every invoice."
+      "question": "Can I customize invoice templates in Giddh?",
+      "answer": "Yes. Giddh offers multiple invoice templates that you can customize to match your business branding."
+    },
+    {
+      "question": "How do I create estimates and convert them to invoices?",
+      "answer": "Create an estimate or proforma invoice in Giddh and convert it to a final invoice with one click — no need to re-enter the data."
+    },
+    {
+      "question": "Which is the best free invoicing software in India?",
+      "answer": "Giddh is among the best free invoicing software options in India, offering GST compliance, Place of Supply control, Stock History, voucher copying, and cloud access at no cost."
+    },
+    {
+      "question": "Can I send invoices via WhatsApp from Giddh?",
+      "answer": "Yes. You can send invoices directly via WhatsApp, email, or SMS from Giddh — so your customers receive bills on the channel they prefer."
     }
   ],
   "schemas": [
@@ -360,58 +411,82 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Does Giddh software support recurring invoicing?",
+          "name": "What is Place of Supply in Giddh?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, Giddh lets you create and automate recurring invoices for clients on a fixed billing cycle."
+            "text": "Place of Supply is a new field in the invoice module. You select which state or location should be used for GST calculation. It works separately from the billing and shipping address."
           }
         },
         {
           "@type": "Question",
-          "name": "Are my invoices secure in the Giddh Cloud Invoicing Software?",
+          "name": "How does Stock History work?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Absolutely. Giddh utilises encrypted cloud storage with role-based access to ensure that your invoice data remains secure."
+            "text": "While creating a voucher, select a customer and add an item. Click the Stock History icon next to the item to see previous prices, quantities, and voucher details for that item with that customer."
           }
         },
         {
           "@type": "Question",
-          "name": "Are there different template options for the invoices?",
+          "name": "What is Copy from Previous Voucher?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, Giddh offers multiple invoice templates you can customize to match your business branding."
+            "text": "After selecting a customer or supplier, you can view related voucher history, preview details, and copy information into the current invoice or bill. You can see up to 10 recent vouchers instead of 5."
           }
         },
         {
           "@type": "Question",
-          "name": "Will my invoices look professional?",
+          "name": "How does Giddh calculate GST on invoices?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes, Giddh generates clean, branded, and GST-compliant invoices designed to look professional and client-ready."
+            "text": "Giddh applies CGST, SGST, or IGST based on the Place of Supply you select, along with your tax settings. It also supports TDS and TCS on invoices for complete tax compliance."
           }
         },
         {
           "@type": "Question",
-          "name": "How can I create estimates/proformas and convert them to invoices in Giddh?",
+          "name": "Does Giddh support recurring invoicing?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can create estimates or pro forma invoices in Giddh and convert them into final invoices with a single click—no data re-entry is required."
+            "text": "Yes. You can create and automate recurring invoices for clients on a fixed billing cycle, with payment reminders to help you get paid on time."
           }
         },
         {
           "@type": "Question",
-          "name": "Which is the best free invoicing software?",
+          "name": "Are my invoices secure in Giddh cloud invoicing software?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Giddh is among the best free invoicing software options in India, offering GST support, automation, and cloud access at zero cost."
+            "text": "Yes. Giddh uses encrypted cloud storage with role-based access controls to keep your invoice and financial data safe."
           }
         },
         {
           "@type": "Question",
-          "name": "How do I calculate taxes on my invoices?",
+          "name": "Can I customize invoice templates in Giddh?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Giddh automatically applies the correct GST, TCS, or TDS based on your settings and client’s state—ensuring tax accuracy on every invoice."
+            "text": "Yes. Giddh offers multiple invoice templates that you can customize to match your business branding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I create estimates and convert them to invoices?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Create an estimate or proforma invoice in Giddh and convert it to a final invoice with one click — no need to re-enter the data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which is the best free invoicing software in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Giddh is among the best free invoicing software options in India, offering GST compliance, Place of Supply control, Stock History, voucher copying, and cloud access at no cost."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I send invoices via WhatsApp from Giddh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can send invoices directly via WhatsApp, email, or SMS from Giddh — so your customers receive bills on the channel they prefer."
           }
         }
       ]
@@ -420,17 +495,17 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "@id": "WebPage",
-      "description": "Discover Giddh's cloud-based invoicing software in India. Automate billing, GST compliance, and financial reporting. Start your free trial today",
-      "name": "Invoicing Software",
+      "description": "Giddh's free online invoicing software for India. Create GST-compliant invoices with Place of Supply, Stock History, and Copy from Previous Voucher. Start your free trial today.",
+      "name": "Free Online Invoicing Software for Small Business",
       "url": "https://giddh.com/in/invoice-software"
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
       "@id": "Service",
-      "description": "Discover Giddh's cloud-based invoicing software in India. Automate billing, GST compliance, and financial reporting. Start your free trial today",
+      "description": "Cloud invoicing software for Indian businesses. GST billing with Place of Supply control, customer-wise Stock History, and one-click voucher copying.",
       "url": "https://giddh.com/in/invoice-software",
-      "name": "Invoicing Software"
+      "name": "Online Invoicing Software India"
     }
   ]
 }
