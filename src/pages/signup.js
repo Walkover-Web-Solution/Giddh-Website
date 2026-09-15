@@ -78,12 +78,19 @@ const signUp = (path) => {
 
   function getSourceParam() {
     var sourceData = getLocalStorage("source");
+    var sourceObj = {};
+
     if (sourceData) {
-      return typeof sourceData === "object"
-        ? JSON.stringify(sourceData)
-        : sourceData;
-    }
-    if (typeof window !== "undefined" && window.location.search) {
+      if (typeof sourceData === "object") {
+        sourceObj = { ...sourceData };
+      } else {
+        try {
+          sourceObj = JSON.parse(sourceData);
+        } catch (e) {
+          sourceObj = { source: sourceData };
+        }
+      }
+    } else if (typeof window !== "undefined" && window.location.search) {
       const searchParams = new URLSearchParams(window.location.search);
       const standardKeys = [
         "utm_source",
@@ -92,17 +99,20 @@ const signUp = (path) => {
         "utm_term",
         "utm_content",
         "ref",
-        "region",
       ];
-      const extraParams = {};
       searchParams.forEach((value, key) => {
         if (!standardKeys.includes(key) && value) {
-          extraParams[key] = value;
+          sourceObj[key] = value;
         }
       });
-      if (Object.keys(extraParams).length > 0) {
-        return JSON.stringify(extraParams);
-      }
+    }
+
+    if (isCA && mrnNumber && mrnNumber.trim()) {
+      sourceObj.mrnNumber = mrnNumber.trim();
+    }
+
+    if (Object.keys(sourceObj).length > 0) {
+      return JSON.stringify(sourceObj);
     }
     return "";
   }
