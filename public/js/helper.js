@@ -18,7 +18,7 @@ function setCookie(cname, cvalue, exdays) {
 function getCookie(cname) {
   var name = cname + "=";
   let ca = document.cookie.split(";");
-  let value = "";                    
+  let value = "";
   for (let i = 0; i < ca.length; i++) {
     let c = ca[i];
     while (c.charAt(0) == " ") {
@@ -171,9 +171,26 @@ function setUtmParamInLocalStorage() {
   var querystring = self.split("?");
   if (querystring.length > 1) {
     var pairs = querystring[1].split("&");
+    var standardKeys = [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "ref",
+    ];
+    var extraParams = {};
     for (i in pairs) {
       var keyval = pairs[i].split("=");
-      setLocalStorage(keyval[0], decodeURIComponent(keyval[1]));
+      var key = keyval[0];
+      var val = decodeURIComponent(keyval[1]);
+      setLocalStorage(key, val);
+      if (standardKeys.indexOf(key) === -1 && val) {
+        extraParams[key] = val;
+      }
+    }
+    if (Object.keys(extraParams).length > 0) {
+      setLocalStorage("source", extraParams);
     }
   }
 }
@@ -184,7 +201,7 @@ function setUtmParamsInCookies() {
   }
   const paramsToSave = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "gclid", "fbclid"];
   const searchParams = new URLSearchParams(window.location.search);
-  
+
   let hasAnyParam = false;
   for (let index = 0; index < paramsToSave.length; index++) {
     if (searchParams.has(paramsToSave[index])) {
@@ -248,11 +265,11 @@ function appendScript(src, isAsync = false, type = 'text/javascript') {
     (script) => script.src === src
   );
   if (!isScriptExists) {
-      const script = document.createElement("script");
-      script.src = src;
-      script.type = type;
-      script.async = isAsync;
-      document.body.appendChild(script);
+    const script = document.createElement("script");
+    script.src = src;
+    script.type = type;
+    script.async = isAsync;
+    document.body.appendChild(script);
   }
 }
 
