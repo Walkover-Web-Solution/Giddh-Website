@@ -183,7 +183,7 @@ function setUtmParamInLocalStorage() {
     for (i in pairs) {
       var keyval = pairs[i].split("=");
       var key = keyval[0];
-      var val = decodeURIComponent(keyval[1] || "");
+      var val = decodeURIComponent(keyval[1]);
       setLocalStorage(key, val);
       if (standardKeys.indexOf(key) === -1 && val) {
         extraParams[key] = val;
