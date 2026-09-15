@@ -76,6 +76,37 @@ const signUp = (path) => {
     setInputValue("email", response.email);
   }
 
+  function getSourceParam() {
+    var sourceData = getLocalStorage("source");
+    if (sourceData) {
+      return typeof sourceData === "object"
+        ? JSON.stringify(sourceData)
+        : sourceData;
+    }
+    if (typeof window !== "undefined" && window.location.search) {
+      const searchParams = new URLSearchParams(window.location.search);
+      const standardKeys = [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_term",
+        "utm_content",
+        "ref",
+        "region",
+      ];
+      const extraParams = {};
+      searchParams.forEach((value, key) => {
+        if (!standardKeys.includes(key) && value) {
+          extraParams[key] = value;
+        }
+      });
+      if (Object.keys(extraParams).length > 0) {
+        return JSON.stringify(extraParams);
+      }
+    }
+    return "";
+  }
+
   async function initiateSignup() {
     if (isCA && (!mrnNumber || !mrnNumber.trim())) {
       showToaster("Please enter MRN number", "error", "top-center");
@@ -133,6 +164,8 @@ const signUp = (path) => {
                 getLocalStorage("utm_content") +
                 "&ref=" +
                 getLocalStorage("ref") +
+                "&source=" +
+                getSourceParam() +
                 "";
               window.location =
                 process.env.NEXT_PUBLIC_APP_URL +
