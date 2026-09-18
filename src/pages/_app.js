@@ -17,8 +17,8 @@ export default function MyApp({ Component, pageProps }) {
   const arrayBrawserPath = rawBrowserPath.split("/");
   const page =
     (arrayBrawserPath[1] === "in" ||
-    arrayBrawserPath[1] === "ae" ||
-    arrayBrawserPath[1] === "uk"
+      arrayBrawserPath[1] === "ae" ||
+      arrayBrawserPath[1] === "uk"
       ? arrayBrawserPath[2]
       : arrayBrawserPath[1]) || "home";
   var browserPath = `/${arrayBrawserPath[1]}`;
@@ -53,14 +53,14 @@ export default function MyApp({ Component, pageProps }) {
   };
 
   let currentPathArray = rawBrowserPath.split("/");
-  let loginSignupPath = currentPathArray[currentPathArray.length - 1];
+  let loginSignupPath = currentPathArray[currentPathArray.length - 1]?.split("?")[0];
   let loginSignupPathStatus =
     loginSignupPath === "login" ||
-    loginSignupPath === "signup" ||
-    loginSignupPath === "ca-signup" ||
-    loginSignupPath === "online-accounting-software" ||
-    loginSignupPath === "thank-you" ||
-    loginSignupPath === "googleauth"
+      loginSignupPath === "signup" ||
+      loginSignupPath === "ca-signup" ||
+      loginSignupPath === "online-accounting-software" ||
+      loginSignupPath === "thank-you" ||
+      loginSignupPath === "googleauth"
       ? false
       : true;
 
