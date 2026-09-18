@@ -1,0 +1,300 @@
+{
+  "splitBanner": {
+    "heading": "Customer Portal in Giddh",
+    "subHeading": "Share a dedicated portal with your customers for better transparency and communication. Customers can view transactions, invoices, PDFs, and payment status. Customers can pay online directly from the portal.",
+    "image": "/img/feature-gallery-icons/share-invoice.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Your Free Trial",
+        "link": "/signup"
+      },
+      {
+        "text": "Request a Demo",
+        "link": "/online-accounting-software"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Customer Portal",
+    "subHeading": "Giddh provides a Customer Portal feature that allows businesses to share a dedicated portal with their customers for better transparency and communication.",
+    "cards": [
+      {
+        "heading": "Dedicated customer portal",
+        "description": "Share a dedicated portal with customers for better transparency and communication.",
+        "more_content": [
+          "Central place for customer billing",
+          "Secure portal access",
+          "Better communication with customers"
+        ]
+      },
+      {
+        "heading": "Enable portal while creating customer",
+        "description": "While creating a customer, add the customer's email ID and enable access to the customer portal.",
+        "more_content": [
+          "Add customer email ID",
+          "Enable customer portal access",
+          "Set up during customer creation"
+        ]
+      },
+      {
+        "heading": "Unique link for each customer",
+        "description": "Giddh generates a unique link that can be shared with the customer to access their secure portal.",
+        "more_content": [
+          "Unique link per customer",
+          "Share link with the customer",
+          "Secure portal access"
+        ]
+      },
+      {
+        "heading": "View transactions and invoices",
+        "description": "Customers can view all transactions and invoices associated with their business relationship.",
+        "more_content": [
+          "View invoice PDFs",
+          "Invoice status: paid, unpaid, or partially paid",
+          "Comments added to invoices"
+        ]
+      },
+      {
+        "heading": "Pay from the portal",
+        "description": "If Giddh is integrated with a payment gateway, customers can pay from the portal. Payment entries are recorded automatically in Giddh.",
+        "more_content": [
+          "Pay directly from the portal",
+          "Payment recorded automatically",
+          "Accounting records stay up to date"
+        ]
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "How Customer Portal works",
+    "subHeading": "Enable, share, view, pay.",
+    "steps": [
+      {
+        "icon": "/img/make-the-switch/file.svg",
+        "title": "Create customer and enable portal",
+        "description": "Add the customer's email ID and enable access to the customer portal while creating the customer."
+      },
+      {
+        "icon": "/img/make-the-switch/cloud.svg",
+        "title": "Share the unique link",
+        "description": "Giddh generates a unique link that you can share with the customer."
+      },
+      {
+        "icon": "/img/make-the-switch/calender.svg",
+        "title": "Customer views invoices",
+        "description": "Customers view transactions, invoice PDFs, status, and comments in the secure portal."
+      },
+      {
+        "icon": "/img/make-the-switch/support_agent.svg",
+        "title": "Pay from the portal",
+        "description": "With payment integration, customers can pay from the portal and the payment entry is recorded in Giddh."
+      }
+    ]
+  },
+  "features": {
+    "heading": "Customer Portal in Giddh",
+    "subHeading": "Share a portal with customers. They view invoices and pay online. Payments sync into your books.",
+    "content": [
+      {
+        "heading": "Share a dedicated portal with customers",
+        "img": "/img/feature-gallery-icons/share-collaborate.svg",
+        "description": "Giddh provides a Customer Portal feature that allows businesses to share a dedicated portal with their customers for better transparency and communication.",
+        "more_content": [
+          "Dedicated portal for each customer",
+          "Better transparency",
+          "Better communication with customers"
+        ]
+      },
+      {
+        "heading": "Enable portal access and share unique link",
+        "img": "/img/feature-gallery-icons/share-invoice.svg",
+        "description": "While creating a customer, users can add the customer's email ID and enable access to the customer portal. Giddh then generates a unique link that can be shared with the customer. Using this link, customers can access a secure portal where they can view all the transactions and invoices associated with their business relationship.",
+        "more_content": [
+          "Add customer email ID",
+          "Enable customer portal access",
+          "Unique link shared with customer",
+          "View transactions and invoices"
+        ]
+      },
+      {
+        "heading": "View invoice PDFs, status, and comments",
+        "img": "/img/feature-gallery-icons/create-and-send-professional-invoices-with-cloud-based.svg",
+        "description": "Within the portal, customers can view invoice PDFs, invoice statuses (paid, unpaid, or partially paid), and any comments added to the invoices. This provides customers with a centralized place to track all their billing information without having to request updates separately.",
+        "more_content": [
+          "View invoice PDFs",
+          "Paid, unpaid, or partially paid status",
+          "Comments on invoices",
+          "Centralized billing information"
+        ]
+      },
+      {
+        "heading": "Pay from the portal from the portal",
+        "img": "/img/bulk-payment-card-icon.svg",
+        "description": "Additionally, if Giddh is integrated with a payment gateway, customers can make payments directly from the customer portal itself. Once the payment is successfully completed, the corresponding payment entry is automatically recorded in Giddh, reducing manual intervention and keeping the accounting records up to date.",
+        "more_content": [
+          "Payment integration",
+          "Pay directly from the portal",
+          "Payment entry recorded automatically",
+          "Accounting records stay up to date"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup"
+      }
+    ]
+  },
+  "useCases": {
+    "heading": "When to use Customer Portal",
+    "subHeading": "When you want customers to view their billing details and pay online without back-and-forth.",
+    "content": [
+      {
+        "title": "Share billing with customers",
+        "description": "When customers need a centralized place to view their transactions and invoices."
+      },
+      {
+        "title": "Invoice status visibility",
+        "description": "When customers should see whether invoices are paid, unpaid, or partially paid."
+      },
+      {
+        "title": "Reduce follow-up requests",
+        "description": "When customers often ask for invoice copies or payment updates separately."
+      },
+      {
+        "title": "Online payments from the portal",
+        "description": "When you want customers to pay from the portal with automatic payment recording in Giddh."
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Explore Invoice Software",
+        "link": "/invoice-software"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Give customers a portal to view invoices and pay online.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-primary-outline"
+      }
+    ],
+    "theme": "light"
+  },
+  "faqs": [
+    {
+      "question": "What is the Customer Portal in Giddh?",
+      "answer": "Giddh provides a Customer Portal feature that allows businesses to share a dedicated portal with their customers for better transparency and communication."
+    },
+    {
+      "question": "How do I enable the customer portal?",
+      "answer": "While creating a customer, add the customer's email ID and enable access to the customer portal. Giddh then generates a unique link that can be shared with the customer."
+    },
+    {
+      "question": "What can customers see in the portal?",
+      "answer": "Customers can view all transactions and invoices associated with their business relationship, including invoice PDFs, invoice statuses (paid, unpaid, or partially paid), and comments added to the invoices."
+    },
+    {
+      "question": "Why use the Customer Portal?",
+      "answer": "It gives customers a centralized place to track all their billing information without having to request updates separately."
+    },
+    {
+      "question": "Can customers pay from the portal?",
+      "answer": "Yes. If Giddh is integrated with a payment gateway, customers can make payments directly from the customer portal. Once payment is completed, the corresponding payment entry is automatically recorded in Giddh."
+    },
+    {
+      "question": "Does payment from the portal update my books?",
+      "answer": "Yes. Once the payment is successfully completed, the corresponding payment entry is automatically recorded in Giddh, reducing manual intervention and keeping the accounting records up to date."
+    }
+  ],
+  "ctaTwo": {
+    "heading": "Try Customer Portal in Giddh",
+    "image": "/img/girl-avatar.svg",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-tertiary"
+      }
+    ],
+    "theme": "light"
+  },
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Customer Portal in Giddh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Giddh provides a Customer Portal feature that allows businesses to share a dedicated portal with their customers for better transparency and communication."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I enable the customer portal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While creating a customer, add the customer's email ID and enable access to the customer portal. Giddh then generates a unique link that can be shared with the customer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can customers see in the portal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Customers can view all transactions and invoices associated with their business relationship, including invoice PDFs, invoice statuses (paid, unpaid, or partially paid), and comments added to the invoices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why use the Customer Portal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It gives customers a centralized place to track all their billing information without having to request updates separately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can customers pay from the portal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If Giddh is integrated with a payment gateway, customers can make payments directly from the customer portal. Once payment is completed, the corresponding payment entry is automatically recorded in Giddh."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does payment from the portal update my books?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Once the payment is successfully completed, the corresponding payment entry is automatically recorded in Giddh, reducing manual intervention and keeping the accounting records up to date."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Share a Customer Portal in Giddh. Customers view invoices, PDFs, payment status, and pay online with automatic payment recording.",
+      "name": "Customer Portal UAE",
+      "url": "https://giddh.com/ae/customer-portal"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Customer Portal in Giddh. Share a secure portal with customers to view invoices and pay online with Payment integration.",
+      "url": "https://giddh.com/ae/customer-portal",
+      "name": "Customer Portal UAE"
+    }
+  ]
+}

@@ -5,7 +5,9 @@ function setCookie(cname, cvalue, exdays) {
   var cookieDomain = "";
   try {
     let host = window.location.hostname;
-    if (host && host !== "localhost" && host !== "127.0.0.1") {
+    if (host && host.includes("giddh.com")) {
+      cookieDomain = ";domain=.giddh.com";
+    } else if (host && host !== "localhost" && host !== "127.0.0.1") {
       cookieDomain = ";domain=" + host;
     }
   } catch (e) {
@@ -18,7 +20,7 @@ function setCookie(cname, cvalue, exdays) {
 function getCookie(cname) {
   var name = cname + "=";
   let ca = document.cookie.split(";");
-  let value = "";                    
+  let value = "";
   for (let i = 0; i < ca.length; i++) {
     let c = ca[i];
     while (c.charAt(0) == " ") {
@@ -41,7 +43,9 @@ function deleteUtmCookies() {
   var cookieDomain = "";
   try {
     let host = window.location.hostname;
-    if (host && host !== "localhost" && host !== "127.0.0.1") {
+    if (host && host.includes("giddh.com")) {
+      cookieDomain = " Domain=.giddh.com;";
+    } else if (host && host !== "localhost" && host !== "127.0.0.1") {
       cookieDomain = " Domain=" + host + ";";
     }
   } catch (e) {
@@ -57,6 +61,12 @@ function deleteUtmCookies() {
     "utm_term=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
   document.cookie =
     "utm_content=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie =
+    "ref=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie =
+    "region=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie =
+    "giddh_query=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 }
 
 function removeGiddhSession() {
@@ -171,9 +181,36 @@ function setUtmParamInLocalStorage() {
   var querystring = self.split("?");
   if (querystring.length > 1) {
     var pairs = querystring[1].split("&");
+    var standardKeys = [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "ref",
+      "region",
+    ];
+    var extraParams = {};
+    var giddhQuery = {};
     for (i in pairs) {
       var keyval = pairs[i].split("=");
-      setLocalStorage(keyval[0], decodeURIComponent(keyval[1]));
+      var key = keyval[0];
+      var val = decodeURIComponent(keyval[1]);
+      if (standardKeys.indexOf(key) !== -1) {
+        setLocalStorage(key, val);
+        if (val) {
+          giddhQuery[key] = val;
+        }
+      } else if (val) {
+        extraParams[key] = val;
+      }
+    }
+    if (Object.keys(extraParams).length > 0) {
+      setLocalStorage("source", extraParams);
+      giddhQuery["source"] = extraParams;
+    }
+    if (Object.keys(giddhQuery).length > 0) {
+      setCookie("giddh_query", JSON.stringify(giddhQuery), 30);
     }
   }
 }
@@ -182,9 +219,19 @@ function setUtmParamsInCookies() {
   if (typeof window === "undefined" || !window.location) {
     return;
   }
-  const paramsToSave = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "gclid", "fbclid"];
+  const paramsToSave = [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "ref",
+    "region",
+    "gclid",
+    "fbclid",
+  ];
   const searchParams = new URLSearchParams(window.location.search);
-  
+
   let hasAnyParam = false;
   for (let index = 0; index < paramsToSave.length; index++) {
     if (searchParams.has(paramsToSave[index])) {
@@ -248,11 +295,11 @@ function appendScript(src, isAsync = false, type = 'text/javascript') {
     (script) => script.src === src
   );
   if (!isScriptExists) {
-      const script = document.createElement("script");
-      script.src = src;
-      script.type = type;
-      script.async = isAsync;
-      document.body.appendChild(script);
+    const script = document.createElement("script");
+    script.src = src;
+    script.type = type;
+    script.async = isAsync;
+    document.body.appendChild(script);
   }
 }
 
