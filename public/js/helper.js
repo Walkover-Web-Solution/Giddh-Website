@@ -5,7 +5,9 @@ function setCookie(cname, cvalue, exdays) {
   var cookieDomain = "";
   try {
     let host = window.location.hostname;
-    if (host && host !== "localhost" && host !== "127.0.0.1") {
+    if (host && host.includes("giddh.com")) {
+      cookieDomain = ";domain=.giddh.com";
+    } else if (host && host !== "localhost" && host !== "127.0.0.1") {
       cookieDomain = ";domain=" + host;
     }
   } catch (e) {
@@ -41,7 +43,9 @@ function deleteUtmCookies() {
   var cookieDomain = "";
   try {
     let host = window.location.hostname;
-    if (host && host !== "localhost" && host !== "127.0.0.1") {
+    if (host && host.includes("giddh.com")) {
+      cookieDomain = " Domain=.giddh.com;";
+    } else if (host && host !== "localhost" && host !== "127.0.0.1") {
       cookieDomain = " Domain=" + host + ";";
     }
   } catch (e) {
@@ -57,6 +61,12 @@ function deleteUtmCookies() {
     "utm_term=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
   document.cookie =
     "utm_content=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie =
+    "ref=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie =
+    "region=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie =
+    "giddh_query=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 }
 
 function removeGiddhSession() {
@@ -178,19 +188,29 @@ function setUtmParamInLocalStorage() {
       "utm_term",
       "utm_content",
       "ref",
+      "region",
     ];
     var extraParams = {};
+    var giddhQuery = {};
     for (i in pairs) {
       var keyval = pairs[i].split("=");
       var key = keyval[0];
       var val = decodeURIComponent(keyval[1]);
-      setLocalStorage(key, val);
-      if (standardKeys.indexOf(key) === -1 && val) {
+      if (standardKeys.indexOf(key) !== -1) {
+        setLocalStorage(key, val);
+        if (val) {
+          giddhQuery[key] = val;
+        }
+      } else if (val) {
         extraParams[key] = val;
       }
     }
     if (Object.keys(extraParams).length > 0) {
       setLocalStorage("source", extraParams);
+      giddhQuery["source"] = extraParams;
+    }
+    if (Object.keys(giddhQuery).length > 0) {
+      setCookie("giddh_query", JSON.stringify(giddhQuery), 30);
     }
   }
 }
@@ -199,7 +219,17 @@ function setUtmParamsInCookies() {
   if (typeof window === "undefined" || !window.location) {
     return;
   }
-  const paramsToSave = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "gclid", "fbclid"];
+  const paramsToSave = [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "ref",
+    "region",
+    "gclid",
+    "fbclid",
+  ];
   const searchParams = new URLSearchParams(window.location.search);
 
   let hasAnyParam = false;

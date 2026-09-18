@@ -8,6 +8,9 @@ export function getUtmParamsFromCookies() {
     "utm_medium",
     "utm_campaign",
     "utm_term",
+    "utm_content",
+    "ref",
+    "region",
     "gclid",
     "fbclid",
   ];
