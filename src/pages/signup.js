@@ -99,6 +99,7 @@ const signUp = (path) => {
         "utm_term",
         "utm_content",
         "ref",
+        "region",
       ];
       searchParams.forEach((value, key) => {
         if (!standardKeys.includes(key) && value) {
