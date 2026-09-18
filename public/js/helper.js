@@ -62,6 +62,10 @@ function deleteUtmCookies() {
   document.cookie =
     "utm_content=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
   document.cookie =
+    "ref=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie =
+    "region=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+  document.cookie =
     "giddh_query=; Path=/" + cookieDomain + " Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 }
 
@@ -215,7 +219,17 @@ function setUtmParamsInCookies() {
   if (typeof window === "undefined" || !window.location) {
     return;
   }
-  const paramsToSave = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "gclid", "fbclid"];
+  const paramsToSave = [
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "ref",
+    "region",
+    "gclid",
+    "fbclid",
+  ];
   const searchParams = new URLSearchParams(window.location.search);
 
   let hasAnyParam = false;
