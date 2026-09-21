@@ -983,45 +983,6 @@ export default function CharteredAccountantSignup({ path }) {
               </div>
 
               <div className="col-lg-5 col-12" id="signup-card">
-                <style jsx global>{`
-                  .iti {
-                    width: 100% !important;
-                    display: block !important;
-                  }
-                  .iti__country-list {
-                    z-index: 1050 !important;
-                  }
-                  #signup-card .form-control::placeholder {
-                    color: #b4bfcd !important;
-                    font-weight: 400 !important;
-                    opacity: 1 !important;
-                  }
-                  #signup-card .form-control:focus {
-                    border-color: var(--col-primary) !important;
-                    box-shadow: 0 0 0 3px rgba(30, 117, 186, 0.12) !important;
-                  }
-                  #signup-card .btn-primary {
-                    background-color: var(--col-primary) !important;
-                    border-color: var(--col-primary) !important;
-                    color: #ffffff !important;
-                  }
-                  #signup-card .btn-primary:hover,
-                  #signup-card .btn-primary:focus {
-                    background-color: var(--col-primary) !important;
-                    border-color: var(--col-primary) !important;
-                    opacity: 0.92;
-                  }
-                  #signup-card .btn-outline-primary {
-                    color: var(--col-primary) !important;
-                    border-color: var(--col-primary) !important;
-                  }
-                  #signup-card .btn-outline-primary:hover,
-                  #signup-card .btn-outline-primary:focus {
-                    background-color: var(--col-primary) !important;
-                    border-color: var(--col-primary) !important;
-                    color: #ffffff !important;
-                  }
-                `}</style>
                 <div
                   className="p-4 p-md-4 rounded-4 bg-white"
                   style={{
