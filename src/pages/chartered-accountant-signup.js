@@ -967,6 +967,10 @@ export default function CharteredAccountantSignup({ path }) {
                     <MdCheckCircle className="text-success fs-5 flex-shrink-0" />
                     <span className="font-sm font-600">Real-Time Reports & Audit Trail</span>
                   </div>
+                  <div className="col-sm-6 d-flex align-items-center gap-2">
+                    <MdCheckCircle className="text-success fs-5 flex-shrink-0" />
+                    <span className="font-sm font-600">Comparative Financial Analysis</span>
+                  </div>
                 </div>
 
                 <div className="mt-4 pt-3 border-top d-flex align-items-center gap-2 text-muted font-sm">
@@ -979,21 +983,62 @@ export default function CharteredAccountantSignup({ path }) {
               </div>
 
               <div className="col-lg-5 col-12" id="signup-card">
+                <style jsx global>{`
+                  .iti {
+                    width: 100% !important;
+                    display: block !important;
+                  }
+                  .iti__country-list {
+                    z-index: 1050 !important;
+                  }
+                  #signup-card .form-control::placeholder {
+                    color: #b4bfcd !important;
+                    font-weight: 400 !important;
+                    opacity: 1 !important;
+                  }
+                  #signup-card .form-control:focus {
+                    border-color: var(--col-primary) !important;
+                    box-shadow: 0 0 0 3px rgba(30, 117, 186, 0.12) !important;
+                  }
+                  #signup-card .btn-primary {
+                    background-color: var(--col-primary) !important;
+                    border-color: var(--col-primary) !important;
+                    color: #ffffff !important;
+                  }
+                  #signup-card .btn-primary:hover,
+                  #signup-card .btn-primary:focus {
+                    background-color: var(--col-primary) !important;
+                    border-color: var(--col-primary) !important;
+                    opacity: 0.92;
+                  }
+                  #signup-card .btn-outline-primary {
+                    color: var(--col-primary) !important;
+                    border-color: var(--col-primary) !important;
+                  }
+                  #signup-card .btn-outline-primary:hover,
+                  #signup-card .btn-outline-primary:focus {
+                    background-color: var(--col-primary) !important;
+                    border-color: var(--col-primary) !important;
+                    color: #ffffff !important;
+                  }
+                `}</style>
                 <div
-                  className="p-4 p-md-5 rounded-4 bg-white"
+                  className="p-4 p-md-4 rounded-4 bg-white"
                   style={{
-                    boxShadow: "0 12px 36px rgba(16, 24, 40, 0.08), 0 2px 8px rgba(16, 24, 40, 0.04)",
-                    border: "1px solid #edf2f7",
+                    boxShadow: "0 16px 36px -12px rgba(16, 24, 40, 0.08), 0 1px 3px rgba(16, 24, 40, 0.05)",
+                    border: "1px solid #e2e8f0",
+                    paddingTop: "28px",
+                    paddingBottom: "28px",
                   }}
                 >
                   {currentStep === 1 && (
                     <div>
-                      <div className="mb-4">
-                        <h2 className="h4 font-700 mb-1" style={{ color: "#1a202c", letterSpacing: "-0.3px" }}>
+                      <div className="mb-3 pb-2 border-bottom">
+                        <h2 className="h5 font-700 mb-1" style={{ color: "#1e293b", letterSpacing: "-0.3px" }}>
                           Create your CA Account
                         </h2>
-                        <p className="text-muted font-sm mb-0">
-                          Get started free with unlimited client management.
+                        <p className="text-muted font-sm mb-0" style={{ fontSize: "13px" }}>
+                          Get started with unlimited client management.
                         </p>
                       </div>
 
@@ -1002,11 +1047,11 @@ export default function CharteredAccountantSignup({ path }) {
                           type="button"
                           className="w-100 py-2 px-3 d-flex align-items-center justify-content-center gap-2 border rounded-3 bg-white font-600 transition"
                           style={{
-                            height: "48px",
-                            fontSize: "15px",
-                            color: "#374151",
-                            borderColor: "#d1d5db",
-                            boxShadow: "0 1px 2px rgba(0, 0, 0, 0.05)",
+                            height: "46px",
+                            fontSize: "14.5px",
+                            color: "#334155",
+                            borderColor: "#cbd5e1",
+                            boxShadow: "0 1px 2px rgba(0, 0, 0, 0.04)",
                             cursor: "pointer",
                           }}
                           onClick={initGoogleSignup}
@@ -1016,18 +1061,18 @@ export default function CharteredAccountantSignup({ path }) {
                             <div className="spinner-border spinner-border-sm text-primary" role="status" />
                           ) : (
                             <>
-                              <Image src="/img/google-logo.svg" width={20} height={20} alt="Google" />
+                              <Image src="/img/google-logo.svg" width={18} height={18} alt="Google" />
                               <span>Continue with Google</span>
                             </>
                           )}
                         </button>
                       </div>
 
-                      <div className="position-relative my-4 text-center">
-                        <hr style={{ borderColor: "#e5e7eb", margin: 0 }} />
+                      <div className="position-relative my-3 text-center">
+                        <hr style={{ borderColor: "#e2e8f0", margin: 0 }} />
                         <span
                           className="position-absolute top-50 start-50 translate-middle bg-white px-3 font-sm text-muted"
-                          style={{ fontSize: "13px" }}
+                          style={{ fontSize: "12.5px" }}
                         >
                           or sign up with email
                         </span>
@@ -1036,7 +1081,7 @@ export default function CharteredAccountantSignup({ path }) {
                       <button
                         type="button"
                         className="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 font-600 rounded-3 shadow-sm mb-3"
-                        style={{ height: "48px", fontSize: "15px" }}
+                        style={{ height: "46px", fontSize: "14.5px" }}
                         onClick={() => resetEverything()}
                       >
                         <span>Continue with Email</span>
@@ -1044,7 +1089,7 @@ export default function CharteredAccountantSignup({ path }) {
                       </button>
 
                       <div className="pt-3 border-top text-center">
-                        <p className="font-sm text-muted mb-0">
+                        <p className="font-sm text-muted mb-0" style={{ fontSize: "13px" }}>
                           Already have an account?{" "}
                           <a href={link + "/login"} className="text-primary font-600 text-decoration-none">
                             Sign In
@@ -1056,32 +1101,20 @@ export default function CharteredAccountantSignup({ path }) {
 
                   {currentStep === 2 && (
                     <div>
-                      <div className="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
-                        <div>
-                          <h2 className="h5 font-700 mb-0" style={{ color: "#1a202c" }}>
-                            Practice Details
-                          </h2>
-                          <span className="text-muted font-xs" style={{ fontSize: "12px" }}>
-                            Fill in your credentials to activate your account
-                          </span>
-                        </div>
-                        <span
-                          className="px-2 py-1 rounded"
-                          style={{ backgroundColor: "#e2f0ff", color: "#1e75ba", fontSize: "11px", fontWeight: "700" }}
-                        >
-                          STEP 2 OF 2
-                        </span>
+                      <div className="mb-3 pb-2 border-bottom">
+                        <h2 className="h5 font-700 mb-0" style={{ color: "#1e293b", letterSpacing: "-0.3px" }}>
+                          Create your CA account
+                        </h2>
                       </div>
 
-                      <div className="mb-3">
-                        <label htmlFor="mrnNumber" className="form-label font-sm font-600 mb-1 d-flex justify-content-between">
-                          <span>Membership Registration Number (MRN) <span className="text-danger">*</span></span>
-                          <span className="text-muted" style={{ fontSize: "11px" }}>ICAI / Member No.</span>
+                      <div className="mb-3 pb-1">
+                        <label htmlFor="mrnNumber" className="form-label font-600 mb-1 d-block" style={{ color: "#334155", fontSize: "13px" }}>
+                          Membership Registration Number (MRN) <span className="text-danger">*</span>
                         </label>
                         <input
                           type="text"
                           className="form-control rounded-3"
-                          style={{ height: "44px", fontSize: "14px", borderColor: "#cbd5e1" }}
+                          style={{ height: "46px", fontSize: "14px", borderColor: "#cbd5e1" }}
                           id="mrnNumber"
                           name="mrnNumber"
                           placeholder="e.g. 123456"
@@ -1092,31 +1125,41 @@ export default function CharteredAccountantSignup({ path }) {
                         />
                       </div>
 
-                      <div className="mb-3">
-                        <label htmlFor="email" className="form-label font-sm font-600 mb-1">
+                      <div className="mb-3 pb-1">
+                        <label htmlFor="email" className="form-label font-600 mb-1 d-block" style={{ color: "#334155", fontSize: "13px" }}>
                           Email Address <span className="text-danger">*</span>
                         </label>
                         <div className="d-flex gap-2">
-                          <input
-                            type="email"
-                            className="form-control rounded-3"
-                            style={{ height: "44px", fontSize: "14px", borderColor: "#cbd5e1" }}
-                            id="email"
-                            name="email"
-                            placeholder="ca.name@firm.com"
-                            autoComplete="off"
-                            onKeyDown={onKeyDownEmail}
-                            disabled={showEmailOtp || (emailDetails && emailDetails.isVerified)}
-                            autoFocus={!showEmailOtp && (!emailDetails || !emailDetails.isVerified)}
-                          />
+                          <div className="flex-grow-1" style={{ minWidth: 0 }}>
+                            <input
+                              type="email"
+                              className="form-control rounded-3 w-100"
+                              style={{
+                                height: "46px",
+                                fontSize: "14px",
+                                borderColor: emailDetails?.isVerified ? "#10b981" : "#cbd5e1",
+                                backgroundColor: emailDetails?.isVerified ? "#f8fafc" : "#ffffff",
+                              }}
+                              id="email"
+                              name="email"
+                              placeholder="ca.name@firm.com"
+                              autoComplete="off"
+                              onKeyDown={onKeyDownEmail}
+                              disabled={showEmailOtp || (emailDetails && emailDetails.isVerified)}
+                              autoFocus={!showEmailOtp && (!emailDetails || !emailDetails.isVerified)}
+                            />
+                          </div>
                           {emailDetails?.isVerified ? (
-                            <span className="d-flex align-items-center text-success font-600 font-sm px-2 text-nowrap">
-                              <MdCheckCircle className="fs-5 me-1" /> Verified
-                            </span>
+                            <div
+                              className="d-flex align-items-center justify-content-center text-success font-600 font-sm px-3 rounded-3 text-nowrap"
+                              style={{ height: "46px", backgroundColor: "#f0fdf4", border: "1px solid #bbf7d0", fontSize: "13.5px" }}
+                            >
+                              <MdCheckCircle className="fs-5 me-1 text-success" /> Verified
+                            </div>
                           ) : !showEmailOtp ? (
                             <button
                               className="btn btn-outline-primary font-sm text-nowrap px-3 font-600 rounded-3"
-                              style={{ height: "44px" }}
+                              style={{ height: "46px", minWidth: "90px" }}
                               onClick={sendEmailOtp}
                               disabled={emailGetOtpInProgress}
                               type="button"
@@ -1125,8 +1168,8 @@ export default function CharteredAccountantSignup({ path }) {
                             </button>
                           ) : (
                             <button
-                              className="btn btn-outline-secondary font-sm text-nowrap px-2 rounded-3"
-                              style={{ height: "44px" }}
+                              className="btn btn-outline-secondary font-sm text-nowrap px-3 rounded-3"
+                              style={{ height: "46px" }}
                               onClick={() => setShowEmailOtpSection(false)}
                               disabled={emailGetOtpInProgress}
                               type="button"
@@ -1140,10 +1183,10 @@ export default function CharteredAccountantSignup({ path }) {
                           <div className="mt-2 p-3 bg-light rounded-3 border">
                             <div className="font-sm text-muted mb-2 font-500">Enter 4-digit code sent to your email:</div>
                             <div className="d-flex gap-2 align-items-center">
-                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "18px", fontWeight: "600" }} maxLength="1" id="emailOtpField1" autoFocus={true} />
-                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "18px", fontWeight: "600" }} maxLength="1" id="emailOtpField2" />
-                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "18px", fontWeight: "600" }} maxLength="1" id="emailOtpField3" />
-                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "18px", fontWeight: "600" }} maxLength="1" id="emailOtpField4" />
+                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="emailOtpField1" autoFocus={true} />
+                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="emailOtpField2" />
+                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="emailOtpField3" />
+                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="emailOtpField4" />
                               <button
                                 id="verify-email-button"
                                 className="btn btn-primary font-sm px-3 rounded-2 font-600"
@@ -1164,16 +1207,21 @@ export default function CharteredAccountantSignup({ path }) {
                         )}
                       </div>
 
-                      <div className="mb-3">
-                        <label htmlFor="mobileNo" className="form-label font-sm font-600 mb-1">
+                      <div className="mb-3 pb-1">
+                        <label htmlFor="mobileNo" className="form-label font-600 mb-1 d-block" style={{ color: "#334155", fontSize: "13px" }}>
                           Mobile Number <span className="text-danger">*</span>
                         </label>
-                        <div className="d-flex gap-2 position-relative">
-                          <div className="flex-grow-1">
+                        <div className="d-flex gap-2">
+                          <div className="flex-grow-1" style={{ minWidth: 0 }}>
                             <input
                               type="tel"
-                              className="form-control rounded-3"
-                              style={{ height: "44px", fontSize: "14px", borderColor: "#cbd5e1" }}
+                              className="form-control rounded-3 w-100"
+                              style={{
+                                height: "46px",
+                                fontSize: "14px",
+                                borderColor: mobileDetails?.isVerified ? "#10b981" : "#cbd5e1",
+                                backgroundColor: mobileDetails?.isVerified ? "#f8fafc" : "#ffffff",
+                              }}
                               id="mobileNo"
                               placeholder="Enter mobile number"
                               autoComplete="off"
@@ -1183,13 +1231,16 @@ export default function CharteredAccountantSignup({ path }) {
                             />
                           </div>
                           {mobileDetails?.isVerified ? (
-                            <span className="d-flex align-items-center text-success font-600 font-sm px-2 text-nowrap">
-                              <MdCheckCircle className="fs-5 me-1" /> Verified
-                            </span>
+                            <div
+                              className="d-flex align-items-center justify-content-center text-success font-600 font-sm px-3 rounded-3 text-nowrap"
+                              style={{ height: "46px", backgroundColor: "#f0fdf4", border: "1px solid #bbf7d0", fontSize: "13.5px" }}
+                            >
+                              <MdCheckCircle className="fs-5 me-1 text-success" /> Verified
+                            </div>
                           ) : !showMobileOtp ? (
                             <button
                               className="btn btn-outline-primary font-sm text-nowrap px-3 font-600 rounded-3"
-                              style={{ height: "44px" }}
+                              style={{ height: "46px", minWidth: "90px" }}
                               onClick={sendMobileOtp}
                               disabled={mobileGetOtpInProgress}
                               type="button"
@@ -1198,8 +1249,8 @@ export default function CharteredAccountantSignup({ path }) {
                             </button>
                           ) : (
                             <button
-                              className="btn btn-outline-secondary font-sm text-nowrap px-2 rounded-3"
-                              style={{ height: "44px" }}
+                              className="btn btn-outline-secondary font-sm text-nowrap px-3 rounded-3"
+                              style={{ height: "46px" }}
                               onClick={() => setShowMobileOtpSection(false)}
                               disabled={mobileGetOtpInProgress}
                               type="button"
@@ -1213,10 +1264,10 @@ export default function CharteredAccountantSignup({ path }) {
                           <div className="mt-2 p-3 bg-light rounded-3 border">
                             <div className="font-sm text-muted mb-2 font-500">Enter 4-digit code sent via SMS:</div>
                             <div className="d-flex gap-2 align-items-center">
-                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "18px", fontWeight: "600" }} maxLength="1" id="mobileOtpField1" autoFocus={true} />
-                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "18px", fontWeight: "600" }} maxLength="1" id="mobileOtpField2" />
-                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "18px", fontWeight: "600" }} maxLength="1" id="mobileOtpField3" />
-                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "18px", fontWeight: "600" }} maxLength="1" id="mobileOtpField4" />
+                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="mobileOtpField1" autoFocus={true} />
+                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="mobileOtpField2" />
+                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="mobileOtpField3" />
+                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="mobileOtpField4" />
                               <button
                                 id="verify-mobile-button"
                                 className="btn btn-primary font-sm px-3 rounded-2 font-600"
@@ -1249,7 +1300,11 @@ export default function CharteredAccountantSignup({ path }) {
                         )}
                       </div>
 
-                      <div className="mb-4">
+                      <p className="mb-2.5" style={{ fontSize: "12px", color: "#94a3b8" }}>
+                        Your data will be stored in INDIA data center.
+                      </p>
+
+                      <div className="mb-3">
                         <div className="form-check d-flex align-items-start gap-2">
                           <input
                             className="form-check-input mt-1"
@@ -1267,21 +1322,27 @@ export default function CharteredAccountantSignup({ path }) {
                         </div>
                       </div>
 
-                      <div className="d-flex justify-content-between align-items-center gap-2 pt-3 border-top">
+                      <div className="d-flex justify-content-between align-items-center gap-2 pt-3 mt-2 border-top">
                         <button
-                          className="btn btn-outline-secondary font-sm px-3 py-2 d-flex align-items-center gap-1 rounded-3 font-600"
+                          className="btn btn-outline-secondary font-sm px-3 d-flex align-items-center justify-content-center gap-1 rounded-3 font-600"
+                          style={{ height: "46px", minWidth: "90px", borderColor: "#cbd5e1", color: "#475569" }}
                           onClick={() => updateCurrentStep(1)}
                           type="button"
                         >
-                          <MdKeyboardArrowLeft /> Back
+                          <MdKeyboardArrowLeft className="fs-5" /> Back
                         </button>
                         <button
-                          className="btn btn-primary px-4 py-2 font-600 rounded-3 shadow-sm"
+                          className="btn btn-primary flex-grow-1 font-600 rounded-3 shadow-sm d-flex align-items-center justify-content-center"
+                          style={{ height: "46px", fontSize: "14.5px" }}
                           onClick={() => initiateSignup()}
                           disabled={signupInProgress || !termsAgree}
                           type="button"
                         >
-                          {signupInProgress ? "Creating Account..." : "Complete CA Registration"}
+                          {signupInProgress ? (
+                            <div className="spinner-border spinner-border-sm text-white" role="status" />
+                          ) : (
+                            "Complete CA Registration"
+                          )}
                         </button>
                       </div>
                     </div>
