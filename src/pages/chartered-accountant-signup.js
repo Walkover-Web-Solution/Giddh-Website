@@ -1,6 +1,6 @@
 import Signup from "@/pages/signup";
 
-const caSignup = (path) => {
+const charteredAccountantSignup = (path) => {
   return (
     <>
       <Signup path={path.path} isCA={true} />
@@ -8,4 +8,4 @@ const caSignup = (path) => {
   );
 };
 
-export default caSignup;
+export default charteredAccountantSignup;
