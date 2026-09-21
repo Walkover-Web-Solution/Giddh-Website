@@ -143,7 +143,6 @@ const signUp = (path) => {
             emailIdAuthType: emailDetails.signupVia,
             mobileNo: mobileDetails.mobileNo,
             mobileNoAccessToken: mobileDetails.accessToken,
-            ...(isCA && mrnNumber ? { mrnNumber: mrnNumber.trim() } : {}),
           }),
         }
       )
