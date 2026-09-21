@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 import Footer from "@/components/NewComps/Footer";
 import Stats from "@/components/NewComps/Stats";
 import {
-  MdDone,
   MdCheckCircle,
   MdOutlineSecurity,
   MdOutlineSpeed,
@@ -16,7 +15,6 @@ import {
   MdOutlineDashboard,
   MdArrowForward,
   MdKeyboardArrowLeft,
-  MdKeyboardArrowDown,
 } from "react-icons/md";
 
 const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
@@ -26,9 +24,6 @@ const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
 var intlRef;
 
 export default function CharteredAccountantSignup({ path }) {
-  const [openFaq, setOpenFaq] = useState(null);
-
-  // Signup Flow State
   const [currentStep, setCurrentStep] = useState(1);
   const [showEmailOtp, setShowEmailOtp] = useState(false);
   const [showMobileOtp, setShowMobileOtp] = useState(false);
@@ -50,9 +45,6 @@ export default function CharteredAccountantSignup({ path }) {
 
   const linkPath = path?.path || path || {};
   const link = linkPath?.linkPrefix || "";
-  const isIndia = Boolean(linkPath?.isIndia);
-  const isGlobal = Boolean(linkPath?.isGlobal);
-  const isAE = Boolean(linkPath?.isAE);
   const isUK = Boolean(linkPath?.isUK);
 
   let region = link ? link.replace("/", "") : "gl";
@@ -66,7 +58,6 @@ export default function CharteredAccountantSignup({ path }) {
     }
     initOtpSignup();
 
-    // Google Login message listener
     const handleGoogleMessage = (event) => {
       if (event.data && event.data.origin === "giddh" && event.data.accessToken) {
         getGoogleUserDetails(event.data.accessToken);
@@ -90,11 +81,6 @@ export default function CharteredAccountantSignup({ path }) {
     }
   }, [showMobileOtp]);
 
-  const toggleFaq = (index) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
-
-  // Google OAuth Handlers
   function initGoogleSignup() {
     const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
     const GOOGLE_REDIRECT_URI = (process.env.NEXT_PUBLIC_SITE_URL || "https://giddh.com") + "/googleauth";
@@ -889,54 +875,7 @@ export default function CharteredAccountantSignup({ path }) {
     },
   ];
 
-  const steps = [
-    {
-      number: "01",
-      title: "Register with your MRN",
-      description:
-        "Sign up and set up your verified Chartered Accountant practice profile in just a couple of minutes.",
-    },
-    {
-      number: "02",
-      title: "Onboard Your Clients",
-      description:
-        "Easily create new client organizations or import existing books from Tally, Excel, and other software.",
-    },
-    {
-      number: "03",
-      title: "Review, Reconcile & File",
-      description:
-        "Access real-time financials, automate bank reconciliation, and file compliance returns with complete accuracy.",
-    },
-  ];
 
-  const faqs = [
-    {
-      question: "Can I manage multiple client accounts from a single login?",
-      answer:
-        "Yes! Giddh provides a centralized Practice Portal for Chartered Accountants. You and your team can effortlessly switch between all your client organizations from one single dashboard.",
-    },
-    {
-      question: "How does role-based access for articles and staff work?",
-      answer:
-        "You have complete control over permissions. You can assign specific client companies, branches, or modules (such as view-only, entry creation, or reporting) to your staff members and article assistants without sharing admin credentials.",
-    },
-    {
-      question: "Can we migrate existing client data from Tally or Excel?",
-      answer:
-        "Yes. Giddh supports seamless data import from Tally, Excel, and other popular accounting software. Our dedicated onboarding team also assists CAs in smooth client migration.",
-    },
-    {
-      question: "How does Giddh simplify GST and tax compliance?",
-      answer:
-        "Giddh automatically generates GSTR-1, GSTR-3B, and provides real-time GSTR-2B reconciliation. You can also generate e-Invoices and e-Way bills directly with automated tax calculations.",
-    },
-    {
-      question: "Is client financial data secure on Giddh?",
-      answer:
-        "Absolutely. Giddh employs bank-grade 256-bit encryption, strict access controls, automated daily backups, and immutable audit trails to ensure 100% data safety and confidentiality.",
-    },
-  ];
 
   return (
     <>
@@ -955,7 +894,6 @@ export default function CharteredAccountantSignup({ path }) {
       </Head>
 
       <div className="outfit-font bg-white">
-        {/* HERO SECTION WITH EMBEDDED SIGNUP FORM */}
         <section
           className="py-5"
           style={{
@@ -964,7 +902,6 @@ export default function CharteredAccountantSignup({ path }) {
         >
           <div className="container py-lg-4">
             <div className="row align-items-center justify-content-between g-5">
-              {/* LEFT VALUE PROPOSITION */}
               <div className="col-lg-6 col-12">
                 <div className="mb-4">
                   <a href={link === "" ? "/" : link}>
@@ -1041,7 +978,6 @@ export default function CharteredAccountantSignup({ path }) {
                 </div>
               </div>
 
-              {/* RIGHT EMBEDDED SIGNUP COMPONENT */}
               <div className="col-lg-5 col-12" id="signup-card">
                 <div
                   className="p-4 p-md-5 rounded-4 bg-white"
@@ -1050,7 +986,6 @@ export default function CharteredAccountantSignup({ path }) {
                     border: "1px solid #edf2f7",
                   }}
                 >
-                  {/* STEP 1: GOOGLE OR EMAIL AUTH */}
                   {currentStep === 1 && (
                     <div>
                       <div className="mb-4">
@@ -1062,7 +997,6 @@ export default function CharteredAccountantSignup({ path }) {
                         </p>
                       </div>
 
-                      {/* MODERN GOOGLE BUTTON */}
                       <div className="mb-3">
                         <button
                           type="button"
@@ -1089,7 +1023,6 @@ export default function CharteredAccountantSignup({ path }) {
                         </button>
                       </div>
 
-                      {/* DIVIDER */}
                       <div className="position-relative my-4 text-center">
                         <hr style={{ borderColor: "#e5e7eb", margin: 0 }} />
                         <span
@@ -1100,7 +1033,6 @@ export default function CharteredAccountantSignup({ path }) {
                         </span>
                       </div>
 
-                      {/* EMAIL BUTTON */}
                       <button
                         type="button"
                         className="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 font-600 rounded-3 shadow-sm mb-3"
@@ -1122,7 +1054,6 @@ export default function CharteredAccountantSignup({ path }) {
                     </div>
                   )}
 
-                  {/* STEP 2: MRN, EMAIL & MOBILE OTP */}
                   {currentStep === 2 && (
                     <div>
                       <div className="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom">
@@ -1142,7 +1073,6 @@ export default function CharteredAccountantSignup({ path }) {
                         </span>
                       </div>
 
-                      {/* MRN FIELD */}
                       <div className="mb-3">
                         <label htmlFor="mrnNumber" className="form-label font-sm font-600 mb-1 d-flex justify-content-between">
                           <span>Membership Registration Number (MRN) <span className="text-danger">*</span></span>
@@ -1162,7 +1092,6 @@ export default function CharteredAccountantSignup({ path }) {
                         />
                       </div>
 
-                      {/* EMAIL VERIFICATION */}
                       <div className="mb-3">
                         <label htmlFor="email" className="form-label font-sm font-600 mb-1">
                           Email Address <span className="text-danger">*</span>
@@ -1207,7 +1136,6 @@ export default function CharteredAccountantSignup({ path }) {
                           )}
                         </div>
 
-                        {/* EMAIL OTP INPUTS */}
                         {showEmailOtp && (!emailDetails || !emailDetails.isVerified) && (
                           <div className="mt-2 p-3 bg-light rounded-3 border">
                             <div className="font-sm text-muted mb-2 font-500">Enter 4-digit code sent to your email:</div>
@@ -1236,7 +1164,6 @@ export default function CharteredAccountantSignup({ path }) {
                         )}
                       </div>
 
-                      {/* MOBILE VERIFICATION */}
                       <div className="mb-3">
                         <label htmlFor="mobileNo" className="form-label font-sm font-600 mb-1">
                           Mobile Number <span className="text-danger">*</span>
@@ -1282,7 +1209,6 @@ export default function CharteredAccountantSignup({ path }) {
                           )}
                         </div>
 
-                        {/* MOBILE OTP INPUTS */}
                         {showMobileOtp && (!mobileDetails || !mobileDetails.isVerified) && (
                           <div className="mt-2 p-3 bg-light rounded-3 border">
                             <div className="font-sm text-muted mb-2 font-500">Enter 4-digit code sent via SMS:</div>
@@ -1323,7 +1249,6 @@ export default function CharteredAccountantSignup({ path }) {
                         )}
                       </div>
 
-                      {/* TERMS & PRIVACY CONSENT */}
                       <div className="mb-4">
                         <div className="form-check d-flex align-items-start gap-2">
                           <input
@@ -1342,7 +1267,6 @@ export default function CharteredAccountantSignup({ path }) {
                         </div>
                       </div>
 
-                      {/* ACTION BUTTONS */}
                       <div className="d-flex justify-content-between align-items-center gap-2 pt-3 border-top">
                         <button
                           className="btn btn-outline-secondary font-sm px-3 py-2 d-flex align-items-center gap-1 rounded-3 font-600"
@@ -1368,10 +1292,8 @@ export default function CharteredAccountantSignup({ path }) {
           </div>
         </section>
 
-        {/* OUR COMMITMENT BACKED BY DATA (STANDARD GIDDH COMPONENT) */}
         <Stats stats={statsData} />
 
-        {/* CORE PRACTICE CAPABILITIES */}
         <section className="py-5">
           <div className="container py-lg-4">
             <div className="text-center max-w-700 mx-auto mb-5">
@@ -1416,7 +1338,6 @@ export default function CharteredAccountantSignup({ path }) {
           </div>
         </section>
 
-        {/* TWO-WAY AUTH MODAL */}
         {showVerificationModal && (
           <OtpVerifyModal
             userResponse={userResponse}
@@ -1429,7 +1350,6 @@ export default function CharteredAccountantSignup({ path }) {
           />
         )}
 
-        {/* FOOTER */}
         <Footer />
       </div>
     </>
