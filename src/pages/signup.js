@@ -110,6 +110,15 @@ const signUp = (path) => {
 
     if (isCA && mrnNumber && mrnNumber.trim()) {
       sourceObj.mrnNumber = mrnNumber.trim();
+      setLocalStorage("source", sourceObj);
+      var giddhQuery = getCookie("giddh_query")
+        ? JSON.parse(getCookie("giddh_query"))
+        : {};
+      giddhQuery.source = {
+        ...giddhQuery.source,
+        mrnNumber: mrnNumber.trim(),
+      };
+      setCookie("giddh_query", JSON.stringify(giddhQuery), 30);
     }
 
     if (Object.keys(sourceObj).length > 0) {
