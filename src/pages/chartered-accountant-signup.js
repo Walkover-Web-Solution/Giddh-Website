@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import { toast } from "react-toastify";
+import GoogleLogin from "@/components/googleLogin";
 import Footer from "@/components/NewComps/Footer";
 import Stats from "@/components/NewComps/Stats";
 import {
@@ -16,6 +16,22 @@ import {
   MdArrowForward,
   MdKeyboardArrowLeft,
 } from "react-icons/md";
+
+import {
+  showToaster,
+  setInputValue,
+  formatMobileNumber,
+  initiateOtpFieldsAutoMove,
+  getOtpFromFields,
+  clearOtpFields,
+  getWidgetChannels,
+  handleDisplayMobileNumber,
+  handleOtpVerifyRedirect,
+  handleKeyDownEnter,
+  handleSignupError,
+  handleStepUpdate,
+  getSourceParam,
+} from "@/utils/signupHelpers";
 
 const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
   ssr: false,
@@ -36,7 +52,6 @@ export default function CharteredAccountantSignup({ path }) {
   const [emailVerifyOtpInProgress, setEmailVerifyOtpInProgress] = useState(false);
   const [mobileGetOtpInProgress, setMobileGetOtpInProgress] = useState(false);
   const [mobileVerifyOtpInProgress, setMobileVerifyOtpInProgress] = useState(false);
-  const [googleApiInProgress, setGoogleApiInProgress] = useState(false);
   const [signupInProgress, setSignupInProgress] = useState(false);
   const [termsAgree, setTermsAgree] = useState(false);
   const [showVerificationModal, setShowVerificationModal] = useState(false);
@@ -57,16 +72,6 @@ export default function CharteredAccountantSignup({ path }) {
       setGiddhRegion(region.toLowerCase());
     }
     initOtpSignup();
-
-    const handleGoogleMessage = (event) => {
-      if (event.data && event.data.origin === "giddh" && event.data.accessToken) {
-        getGoogleUserDetails(event.data.accessToken);
-      }
-    };
-    window.addEventListener("message", handleGoogleMessage);
-    return () => {
-      window.removeEventListener("message", handleGoogleMessage);
-    };
   }, []);
 
   useEffect(() => {
@@ -81,52 +86,6 @@ export default function CharteredAccountantSignup({ path }) {
     }
   }, [showMobileOtp]);
 
-  function initGoogleSignup() {
-    const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
-    const GOOGLE_REDIRECT_URI = (process.env.NEXT_PUBLIC_SITE_URL || "https://giddh.com") + "/googleauth";
-    const width = 600;
-    const height = 500;
-    const left = screen.width / 2 - width / 2;
-    const top = screen.height / 2 - height / 2;
-    window.open(
-      "https://accounts.google.com/o/oauth2/auth?response_type=token&client_id=" +
-      GOOGLE_CLIENT_ID +
-      "&redirect_uri=" +
-      GOOGLE_REDIRECT_URI +
-      "&state&scope=email%20profile&approval_prompt=force",
-      "Giddh - Google Login",
-      "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" +
-      width +
-      ", height=" +
-      height +
-      ", top=" +
-      top +
-      ", left=" +
-      left
-    );
-  }
-
-  async function getGoogleUserDetails(accessToken) {
-    setGoogleApiInProgress(true);
-    try {
-      const res = await fetch("https://www.googleapis.com/oauth2/v1/userinfo?alt=json", {
-        method: "GET",
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          authorization: "Bearer " + accessToken,
-        },
-      });
-      const data = await res.json();
-      data.accessToken = accessToken;
-      setGoogleApiInProgress(false);
-      googleApiSuccessCallback(data);
-    } catch (err) {
-      setGoogleApiInProgress(false);
-      showToaster("Google authentication failed. Please try again.", "error", "top-center");
-    }
-  }
 
   function googleApiSuccessCallback(response) {
     setEmailDetails({
@@ -140,37 +99,10 @@ export default function CharteredAccountantSignup({ path }) {
     setInputValue("email", response.email);
   }
 
-  function getSourceParam() {
-    var sourceData = typeof getLocalStorage === "function" ? getLocalStorage("source") : null;
-    var sourceObj = {};
 
-    if (sourceData) {
-      if (typeof sourceData === "object") {
-        sourceObj = { ...sourceData };
-      } else {
-        try {
-          sourceObj = JSON.parse(sourceData);
-        } catch (e) {
-          sourceObj = { source: sourceData };
-        }
-      }
-    } else if (typeof window !== "undefined" && window.location.search) {
-      const searchParams = new URLSearchParams(window.location.search);
-      const standardKeys = [
-        "utm_source",
-        "utm_medium",
-        "utm_campaign",
-        "utm_term",
-        "utm_content",
-        "ref",
-        "region",
-      ];
-      searchParams.forEach((value, key) => {
-        if (!standardKeys.includes(key) && value) {
-          sourceObj[key] = value;
-        }
-      });
-    }
+  function getCaSourceParam() {
+    var sourceStr = getSourceParam();
+    var sourceObj = sourceStr ? JSON.parse(sourceStr) : {};
 
     if (mrnNumber && mrnNumber.trim()) {
       sourceObj.mrnNumber = mrnNumber.trim();
@@ -255,7 +187,7 @@ export default function CharteredAccountantSignup({ path }) {
                 "&ref=" +
                 (typeof getLocalStorage === "function" ? getLocalStorage("ref") || "" : "") +
                 "&source=" +
-                getSourceParam() +
+                getCaSourceParam() +
                 "";
               window.location =
                 process.env.NEXT_PUBLIC_APP_URL +
@@ -290,18 +222,6 @@ export default function CharteredAccountantSignup({ path }) {
     }
   }
 
-  function setInputValue(fieldId, value) {
-    const sanitizedValue = value ?? "";
-    const tryAssignValue = (retries = 10) => {
-      const targetInput = document.getElementById(fieldId);
-      if (targetInput) {
-        targetInput.value = sanitizedValue;
-      } else if (retries > 0) {
-        setTimeout(() => tryAssignValue(retries - 1), 50);
-      }
-    };
-    tryAssignValue();
-  }
 
   function initOtpSignup() {
     var userData = typeof getLocalStorage === "function" ? getLocalStorage("userData") : null;
@@ -389,29 +309,19 @@ export default function CharteredAccountantSignup({ path }) {
   }
 
   function getWidgetData() {
-    if (typeof window !== "undefined" && typeof window.getWidgetData === "function") {
-      var widgetData = window.getWidgetData();
-      if (widgetData && widgetData.processes) {
-        var channels = [];
-        widgetData.processes.forEach((process) => {
-          if (process.channel?.value != "3") {
-            if (!channels[process.channel.value]) {
-              channels[process.channel.value] = [];
-            }
-            channels[process.channel.value] = process.channel;
-          }
-        });
-        setConnectedChannels(channels);
-      }
+    var channels = getWidgetChannels();
+    if (channels) {
+      setConnectedChannels(channels);
     }
   }
 
   function sendEmailOtp() {
-    const emailInput = document.getElementById("email");
     if (
-      !emailInput?.value ||
-      !emailInput.value.trim() ||
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(emailInput.value)
+      !document.getElementById("email").value ||
+      !document.getElementById("email").value.trim() ||
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+        document.getElementById("email").value
+      )
     ) {
       showToaster("Please enter valid email!", "error", "top-center");
       return;
@@ -419,58 +329,40 @@ export default function CharteredAccountantSignup({ path }) {
 
     setEmailGetOtpInProgress(true);
 
-    if (typeof window.sendOtp === "function") {
-      window.sendOtp(
-        emailInput.value,
-        (data) => {
-          emailOtpSentCallback(data);
-        },
-        (error) => {
-          emailOtpFailedCallback(error);
-        }
-      );
-    } else {
-      setEmailGetOtpInProgress(false);
-      showToaster("OTP service is initializing. Please try again in a few seconds.", "error", "top-center");
-    }
+    window.sendOtp(
+      document.getElementById("email").value,
+      (data) => {
+        emailOtpSentCallback(data);
+      },
+      (error) => {
+        emailOtpFailedCallback(error);
+      }
+    );
   }
 
   function sendMobileOtp() {
-    if (!intl) {
-      showToaster("Please enter valid mobile number!", "error", "top-center");
-      return;
-    }
-    var currentMobileNo = formatMobileNumber(intl.getNumber());
-    if (!currentMobileNo) {
+    var mobileNo = formatMobileNumber(intl.getNumber());
+    if (!mobileNo || !mobileNo) {
       showToaster("Please enter valid mobile number!", "error", "top-center");
       return;
     }
 
     setMobileGetOtpInProgress(true);
 
-    if (typeof window.sendOtp === "function") {
-      window.sendOtp(
-        currentMobileNo,
-        (data) => {
-          mobileOtpSentCallback(data);
-        },
-        (error) => {
-          mobileOtpFailedCallback(error);
-        }
-      );
-    } else {
-      setMobileGetOtpInProgress(false);
-      showToaster("OTP service is initializing. Please try again in a few seconds.", "error", "top-center");
-    }
-  }
-
-  function formatMobileNumber(number) {
-    return String(number).replace("+", "").trim();
+    window.sendOtp(
+      mobileNo,
+      (data) => {
+        mobileOtpSentCallback(data);
+      },
+      (error) => {
+        mobileOtpFailedCallback(error);
+      }
+    );
   }
 
   function emailOtpSentCallback(data) {
     setEmailGetOtpInProgress(false);
-    showToaster("OTP sent successfully to your email.", "success", "top-center");
+    showToaster("OTP sent successfully.", "success", "top-center");
     setEmailDetails({
       email: document.getElementById("email").value,
       accessToken: "",
@@ -483,11 +375,11 @@ export default function CharteredAccountantSignup({ path }) {
 
   function mobileOtpSentCallback(data) {
     setMobileGetOtpInProgress(false);
-    showToaster("OTP sent successfully to your mobile.", "success", "top-center");
-    var currentMobileNo = formatMobileNumber(intl.getNumber());
+    showToaster("OTP sent successfully.", "success", "top-center");
+    var mobileNo = formatMobileNumber(intl.getNumber());
 
     setMobileDetails({
-      mobileNo: currentMobileNo,
+      mobileNo: mobileNo,
       accessToken: "",
       isVerified: false,
       signupVia: "giddh",
@@ -498,30 +390,32 @@ export default function CharteredAccountantSignup({ path }) {
 
   function emailOtpFailedCallback(error) {
     setEmailGetOtpInProgress(false);
-    showToaster(error?.message || "Failed to send OTP", "error", "top-center");
+    showToaster(error.message, "error", "top-center");
     setShowEmailOtpSection(false);
-    setEmailDetails((prev) => ({ ...prev, requestId: "" }));
+    emailDetails.requestId = "";
+    setEmailDetails(emailDetails);
   }
 
   function mobileOtpFailedCallback(error) {
     setMobileGetOtpInProgress(false);
-    showToaster(error?.message || "Failed to send OTP", "error", "top-center");
+    showToaster(error.message, "error", "top-center");
     setShowMobileOtpSection(false);
-    setMobileDetails((prev) => ({ ...prev, requestId: "" }));
+    mobileDetails.requestId = "";
+    setMobileDetails(mobileDetails);
   }
 
   function resetEmailOtp() {
-    setEmailDetails((prev) => ({ ...prev, isVerified: false, accessToken: "" }));
-    document.querySelectorAll(".email-otp-field").forEach((field) => {
-      field.value = "";
-    });
+    emailDetails.isVerified = false;
+    emailDetails.accessToken = "";
+    setEmailDetails(emailDetails);
+    clearOtpFields(".email-otp-field");
   }
 
   function resetMobileOtp() {
-    setMobileDetails((prev) => ({ ...prev, isVerified: false, accessToken: "" }));
-    document.querySelectorAll(".mobile-otp-field").forEach((field) => {
-      field.value = "";
-    });
+    mobileDetails.isVerified = false;
+    mobileDetails.accessToken = "";
+    setMobileDetails(mobileDetails);
+    clearOtpFields(".mobile-otp-field");
   }
 
   function retrySendOtp(channel) {
@@ -529,28 +423,27 @@ export default function CharteredAccountantSignup({ path }) {
     if (channel == 3) {
       resetEmailOtp();
       setEmailGetOtpInProgress(true);
-      requestId = emailDetails?.requestId;
+      requestId = emailDetails.requestId;
     } else {
       resetMobileOtp();
       setMobileGetOtpInProgress(true);
-      requestId = mobileDetails?.requestId;
+      requestId = mobileDetails.requestId;
     }
-    if (typeof window.retryOtp === "function") {
-      window.retryOtp(
-        channel,
-        (data) => {
-          retrySendOtpSuccessCallback(channel);
-        },
-        (error) => {
-          retrySendOtpErrorCallback(channel, error);
-        },
-        requestId
-      );
-    }
+    window.retryOtp(
+      channel,
+      (data) => {
+        retrySendOtpSuccessCallback(channel);
+      },
+      (error) => {
+        retrySendOtpErrorCallback(channel, error);
+      },
+      requestId
+    );
   }
 
   function retrySendOtpSuccessCallback(channel) {
     showToaster("OTP resent successfully.", "success", "top-center");
+
     if (channel == 3) {
       setEmailGetOtpInProgress(false);
     } else {
@@ -559,7 +452,8 @@ export default function CharteredAccountantSignup({ path }) {
   }
 
   function retrySendOtpErrorCallback(channel, error) {
-    showToaster(error?.message || "Failed to resend OTP", "error", "top-center");
+    showToaster(error.message, "error", "top-center");
+
     if (channel == 3) {
       setEmailGetOtpInProgress(false);
     } else {
@@ -568,93 +462,89 @@ export default function CharteredAccountantSignup({ path }) {
   }
 
   function verifyOtp(type) {
-    var otpVal = "";
+    var otp = "";
     var requestId = "";
 
     if (type == "email") {
-      document.querySelectorAll(".email-otp-field").forEach(function (field) {
-        otpVal += field.value;
-      });
+      otp = getOtpFromFields(".email-otp-field");
 
-      if (!otpVal) {
+      if (!otp) {
         showToaster("Please enter OTP!", "error", "top-center");
         return;
       }
 
       setEmailVerifyOtpInProgress(true);
-      requestId = emailDetails?.requestId;
+      requestId = emailDetails.requestId;
     } else {
-      document.querySelectorAll(".mobile-otp-field").forEach(function (field) {
-        otpVal += field.value;
-      });
+      otp = getOtpFromFields(".mobile-otp-field");
 
-      if (!otpVal) {
+      if (!otp) {
         showToaster("Please enter OTP!", "error", "top-center");
         return;
       }
 
       setMobileVerifyOtpInProgress(true);
-      requestId = mobileDetails?.requestId;
+      requestId = mobileDetails.requestId;
     }
 
-    if (typeof window.verifyOtp === "function") {
-      window.verifyOtp(
-        otpVal,
-        (data) => {
-          verifyOtpSuccessCallback(type, data);
-        },
-        (error) => {
-          verifyOtpErrorCallback(type, error);
-        },
-        requestId
-      );
-    }
+    window.verifyOtp(
+      otp,
+      (data) => {
+        verifyOtpSuccessCallback(type, data);
+      },
+      (error) => {
+        verifyOtpErrorCallback(type, error);
+      },
+      requestId
+    );
   }
 
   function verifyOtpSuccessCallback(type, data) {
     showToaster("OTP verified successfully.", "success", "top-center");
+
     if (type == "email") {
       setEmailVerifyOtpInProgress(false);
-      setEmailDetails((prev) => ({ ...prev, isVerified: true, accessToken: data.message }));
+      emailDetails.isVerified = true;
+      emailDetails.accessToken = data.message;
+      setEmailDetails(emailDetails);
     } else {
       setMobileVerifyOtpInProgress(false);
-      setMobileDetails((prev) => ({ ...prev, isVerified: true, accessToken: data.message }));
+      mobileDetails.isVerified = true;
+      mobileDetails.accessToken = data.message;
+      setMobileDetails(mobileDetails);
     }
   }
 
   function verifyOtpErrorCallback(type, error) {
-    showToaster(error?.message || "OTP Verification failed", "error", "top-center");
+    showToaster(error.message, "error", "top-center");
+
     if (type == "email") {
       setEmailVerifyOtpInProgress(false);
-      setEmailDetails((prev) => ({ ...prev, isVerified: false, accessToken: "" }));
+      emailDetails.isVerified = false;
+      emailDetails.accessToken = "";
+      setEmailDetails(emailDetails);
     } else {
       setMobileVerifyOtpInProgress(false);
-      setMobileDetails((prev) => ({ ...prev, isVerified: false, accessToken: "" }));
+      mobileDetails.isVerified = false;
+      mobileDetails.accessToken = "";
+      setMobileDetails(mobileDetails);
     }
   }
 
   function signupErrorCallback(error) {
-    setSignupInProgress(false);
-    showToaster(error?.message || "Error creating account", "error", "top-center");
+    handleSignupError(error, setSignupInProgress);
   }
 
   function updateCurrentStep(step) {
-    setCurrentStep(step);
-    setTimeout(() => {
-      loadTelLibrary();
-    });
+    handleStepUpdate(step, setCurrentStep, loadTelLibrary);
   }
 
   function onKeyDownEmail(event) {
-    if (event.keyCode === 13) {
-      sendEmailOtp();
-    }
+    handleKeyDownEnter(event, sendEmailOtp);
   }
 
   function onKeyDownMobile(event) {
-    if (event.keyCode === 13) {
-      sendMobileOtp();
-    }
+    handleKeyDownEnter(event, sendMobileOtp);
   }
 
   function inputMobile(event) {
@@ -664,113 +554,7 @@ export default function CharteredAccountantSignup({ path }) {
   }
 
   function displayEnterNumber() {
-    if (!intlRef) {
-      return;
-    }
-    if (intlRef.getSelectedCountryData()?.dialCode) {
-      setDisplayMobileNumber();
-    } else {
-      intlRef.setCountry("in");
-      setTimeout(() => {
-        setDisplayMobileNumber();
-      }, 100);
-    }
-  }
-
-  function setDisplayMobileNumber() {
-    if (!intlRef) {
-      return;
-    }
-    let number = intlRef.getNumber();
-    let displayMobileNumber = number.includes("+")
-      ? number
-      : `+${intlRef.getSelectedCountryData()?.dialCode}${intlRef.getNumber()}`;
-    setMobileNo(displayMobileNumber);
-  }
-
-  function showToaster(message, type, position) {
-    toast.dismiss();
-    toast(message, { type: type, position: position });
-  }
-
-  function initiateOtpFieldsAutoMove(selector) {
-    setTimeout(function () {
-      const charInputs = document.querySelectorAll(selector);
-
-      if (charInputs.length > 0 && !charInputs[0].dataset.pasteHandlerAttached) {
-        charInputs[0].addEventListener("paste", (e) => {
-          e.preventDefault();
-          const pastedData = e.clipboardData.getData("text").trim();
-          if (pastedData && /^\d+$/.test(pastedData)) {
-            const pastedChars = pastedData.split("");
-            for (let i = 0; i < Math.min(pastedChars.length, charInputs.length); i++) {
-              charInputs[i].value = pastedChars[i];
-            }
-            if (pastedChars.length < charInputs.length) {
-              charInputs[pastedChars.length].focus();
-            } else {
-              if (selector === ".email-otp-field") {
-                document.getElementById("verify-email-button")?.focus();
-              } else if (selector === ".mobile-otp-field") {
-                document.getElementById("verify-mobile-button")?.focus();
-              }
-            }
-          }
-        });
-        charInputs[0].dataset.pasteHandlerAttached = "true";
-      }
-
-      charInputs.forEach((input, index) => {
-        if (input.dataset.listenersAttached === "true") {
-          return;
-        }
-
-        input.addEventListener("input", (e) => {
-          const value = e.target.value;
-          if (value.length > 0) {
-            if (index < charInputs.length - 1) {
-              charInputs[index + 1].focus();
-            } else {
-              if (selector === ".email-otp-field") {
-                document.getElementById("verify-email-button")?.focus();
-              } else if (selector === ".mobile-otp-field") {
-                document.getElementById("verify-mobile-button")?.focus();
-              }
-            }
-          }
-        });
-
-        input.addEventListener("keydown", (e) => {
-          if (e.key === "Backspace" && input.value.length === 0 && index > 0) {
-            e.preventDefault();
-            charInputs[index - 1].focus();
-          }
-        });
-
-        input.addEventListener("paste", (e) => {
-          if (index === 0) return;
-          e.preventDefault();
-          const pastedData = e.clipboardData.getData("text").trim();
-          if (pastedData && /^\d+$/.test(pastedData)) {
-            const pastedChars = pastedData.split("");
-            for (let i = 0; i < Math.min(pastedChars.length, charInputs.length - index); i++) {
-              charInputs[index + i].value = pastedChars[i];
-            }
-            if (pastedChars.length < charInputs.length - index) {
-              charInputs[index + pastedChars.length].focus();
-            } else {
-              if (selector === ".email-otp-field") {
-                document.getElementById("verify-email-button")?.focus();
-              } else if (selector === ".mobile-otp-field") {
-                document.getElementById("verify-mobile-button")?.focus();
-              }
-            }
-          }
-        });
-
-        input.dataset.listenersAttached = "true";
-      });
-    });
+    handleDisplayMobileNumber(intlRef, setMobileNo);
   }
 
   function loadTelLibrary(retries = 20) {
@@ -807,15 +591,7 @@ export default function CharteredAccountantSignup({ path }) {
   }
 
   function otpVerifyCallback(response) {
-    if (typeof setGiddhRegionSession === "function") {
-      setGiddhRegionSession(response.session.id, region);
-    }
-    window.location =
-      process.env.NEXT_PUBLIC_APP_URL +
-      "/token-verify?request=" +
-      response.session.id +
-      "&region=" +
-      region;
+    handleOtpVerifyRedirect(response, region);
   }
 
   const statsData = {
@@ -894,12 +670,7 @@ export default function CharteredAccountantSignup({ path }) {
       </Head>
 
       <div className="outfit-font bg-white">
-        <section
-          className="py-5"
-          style={{
-            background: "linear-gradient(180deg, #f8fbfe 0%, #ffffff 100%)",
-          }}
-        >
+        <section className="py-5 bg-light">
           <div className="container py-lg-4">
             <div className="row align-items-center justify-content-between g-5">
               <div className="col-lg-6 col-12">
@@ -915,36 +686,16 @@ export default function CharteredAccountantSignup({ path }) {
                   </a>
                 </div>
                 <div className="d-inline-flex align-items-center mb-3">
-                  <span
-                    className="px-3 py-1 rounded-pill"
-                    style={{
-                      backgroundColor: "#e2f0ff",
-                      color: "#1e75ba",
-                      fontSize: "13px",
-                      fontWeight: "700",
-                      letterSpacing: "0.5px",
-                    }}
-                  >
+                  <span className="badge rounded-pill bg-white col-primary border c-fs-7 font-600 py-2 px-3">
                     GIDDH FOR CHARTERED ACCOUNTANTS
                   </span>
                 </div>
 
-                <h1
-                  className="garmond-font mb-4"
-                  style={{
-                    fontSize: "calc(1.8rem + 1.2vw)",
-                    lineHeight: "1.2",
-                    color: "#1c2a38",
-                    fontWeight: "700",
-                  }}
-                >
+                <h1 className="garmond-font heading col-dark mb-4">
                   Empower Your Practice with Giddh for Chartered Accountants
                 </h1>
 
-                <p
-                  className="lead text-secondary mb-4"
-                  style={{ fontSize: "1.1rem", lineHeight: "1.6" }}
-                >
+                <p className="lead text-secondary mb-4 c-fs-5">
                   Manage multiple clients from a single dashboard, automate bookkeeping,
                   streamline GST compliance, and collaborate in real-time with your
                   team and clients.
@@ -983,66 +734,34 @@ export default function CharteredAccountantSignup({ path }) {
               </div>
 
               <div className="col-lg-5 col-12" id="signup-card">
-                <div
-                  className="p-4 p-md-4 rounded-4 bg-white"
-                  style={{
-                    boxShadow: "0 16px 36px -12px rgba(16, 24, 40, 0.08), 0 1px 3px rgba(16, 24, 40, 0.05)",
-                    border: "1px solid #e2e8f0",
-                    paddingTop: "28px",
-                    paddingBottom: "28px",
-                  }}
-                >
+                <div className="card border rounded-4 p-4 p-lg-4 shadow-sm bg-white">
                   {currentStep === 1 && (
                     <div>
                       <div className="mb-3 pb-2 border-bottom">
-                        <h2 className="h5 font-700 mb-1" style={{ color: "#1e293b", letterSpacing: "-0.3px" }}>
+                        <h2 className="h4 font-600 col-dark mb-1">
                           Create your CA Account
                         </h2>
-                        <p className="text-muted font-sm mb-0" style={{ fontSize: "13px" }}>
+                        <p className="text-muted c-fs-6 mb-0">
                           Get started with unlimited client management.
                         </p>
                       </div>
 
-                      <div className="mb-3">
-                        <button
-                          type="button"
-                          className="w-100 py-2 px-3 d-flex align-items-center justify-content-center gap-2 border rounded-3 bg-white font-600 transition"
-                          style={{
-                            height: "46px",
-                            fontSize: "14.5px",
-                            color: "#334155",
-                            borderColor: "#cbd5e1",
-                            boxShadow: "0 1px 2px rgba(0, 0, 0, 0.04)",
-                            cursor: "pointer",
-                          }}
-                          onClick={initGoogleSignup}
-                          disabled={googleApiInProgress}
-                        >
-                          {googleApiInProgress ? (
-                            <div className="spinner-border spinner-border-sm text-primary" role="status" />
-                          ) : (
-                            <>
-                              <Image src="/img/google-logo.svg" width={18} height={18} alt="Google" />
-                              <span>Continue with Google</span>
-                            </>
-                          )}
-                        </button>
+                      <div className="google-btn-wrapper mb-3">
+                        <GoogleLogin
+                          googleApiSuccessCallback={googleApiSuccessCallback}
+                        />
                       </div>
 
                       <div className="position-relative my-3 text-center">
-                        <hr style={{ borderColor: "#e2e8f0", margin: 0 }} />
-                        <span
-                          className="position-absolute top-50 start-50 translate-middle bg-white px-3 font-sm text-muted"
-                          style={{ fontSize: "12.5px" }}
-                        >
+                        <hr className="m-0" />
+                        <span className="position-absolute top-50 start-50 translate-middle bg-white px-3 c-fs-7 text-muted">
                           or sign up with email
                         </span>
                       </div>
 
                       <button
                         type="button"
-                        className="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 font-600 rounded-3 shadow-sm mb-3"
-                        style={{ height: "46px", fontSize: "14.5px" }}
+                        className="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 shadow-sm mb-3 py-2 font-600"
                         onClick={() => resetEverything()}
                       >
                         <span>Continue with Email</span>
@@ -1050,7 +769,7 @@ export default function CharteredAccountantSignup({ path }) {
                       </button>
 
                       <div className="pt-3 border-top text-center">
-                        <p className="font-sm text-muted mb-0" style={{ fontSize: "13px" }}>
+                        <p className="c-fs-6 text-muted mb-0">
                           Already have an account?{" "}
                           <a href={link + "/login"} className="text-primary font-600 text-decoration-none">
                             Sign In
@@ -1063,19 +782,18 @@ export default function CharteredAccountantSignup({ path }) {
                   {currentStep === 2 && (
                     <div>
                       <div className="mb-3 pb-2 border-bottom">
-                        <h2 className="h5 font-700 mb-0" style={{ color: "#1e293b", letterSpacing: "-0.3px" }}>
+                        <h2 className="h5 font-600 col-dark mb-0">
                           Create your CA account
                         </h2>
                       </div>
 
                       <div className="mb-3 pb-1">
-                        <label htmlFor="mrnNumber" className="form-label font-600 mb-1 d-block" style={{ color: "#334155", fontSize: "13px" }}>
+                        <label htmlFor="mrnNumber" className="form-label c-fs-6 font-600 col-dark mb-1">
                           Membership Registration Number (MRN) <span className="text-danger">*</span>
                         </label>
                         <input
                           type="text"
-                          className="form-control rounded-3"
-                          style={{ height: "46px", fontSize: "14px", borderColor: "#cbd5e1" }}
+                          className="form-control"
                           id="mrnNumber"
                           name="mrnNumber"
                           placeholder="e.g. 123456"
@@ -1087,20 +805,14 @@ export default function CharteredAccountantSignup({ path }) {
                       </div>
 
                       <div className="mb-3 pb-1">
-                        <label htmlFor="email" className="form-label font-600 mb-1 d-block" style={{ color: "#334155", fontSize: "13px" }}>
+                        <label htmlFor="email" className="form-label c-fs-6 font-600 col-dark mb-1">
                           Email Address <span className="text-danger">*</span>
                         </label>
                         <div className="d-flex gap-2">
-                          <div className="flex-grow-1" style={{ minWidth: 0 }}>
+                          <div className="flex-grow-1 min-w-0">
                             <input
                               type="email"
-                              className="form-control rounded-3 w-100"
-                              style={{
-                                height: "46px",
-                                fontSize: "14px",
-                                borderColor: emailDetails?.isVerified ? "#10b981" : "#cbd5e1",
-                                backgroundColor: emailDetails?.isVerified ? "#f8fafc" : "#ffffff",
-                              }}
+                              className={`form-control w-100 ${emailDetails?.isVerified ? "border-success bg-light" : ""}`}
                               id="email"
                               name="email"
                               placeholder="ca.name@firm.com"
@@ -1111,16 +823,12 @@ export default function CharteredAccountantSignup({ path }) {
                             />
                           </div>
                           {emailDetails?.isVerified ? (
-                            <div
-                              className="d-flex align-items-center justify-content-center text-success font-600 font-sm px-3 rounded-3 text-nowrap"
-                              style={{ height: "46px", backgroundColor: "#f0fdf4", border: "1px solid #bbf7d0", fontSize: "13.5px" }}
-                            >
-                              <MdCheckCircle className="fs-5 me-1 text-success" /> Verified
+                            <div className="badge bg-light col-success border border-success c-fs-6 font-600 px-3 d-flex align-items-center justify-content-center">
+                              <MdCheckCircle className="fs-5 me-1 col-success" /> Verified
                             </div>
                           ) : !showEmailOtp ? (
                             <button
-                              className="btn btn-outline-primary font-sm text-nowrap px-3 font-600 rounded-3"
-                              style={{ height: "46px", minWidth: "90px" }}
+                              className="btn btn-outline-primary c-fs-6 font-600 px-3"
                               onClick={sendEmailOtp}
                               disabled={emailGetOtpInProgress}
                               type="button"
@@ -1129,8 +837,7 @@ export default function CharteredAccountantSignup({ path }) {
                             </button>
                           ) : (
                             <button
-                              className="btn btn-outline-secondary font-sm text-nowrap px-3 rounded-3"
-                              style={{ height: "46px" }}
+                              className="btn btn-outline-secondary c-fs-6 font-600 px-3"
                               onClick={() => setShowEmailOtpSection(false)}
                               disabled={emailGetOtpInProgress}
                               type="button"
@@ -1144,14 +851,13 @@ export default function CharteredAccountantSignup({ path }) {
                           <div className="mt-2 p-3 bg-light rounded-3 border">
                             <div className="font-sm text-muted mb-2 font-500">Enter 4-digit code sent to your email:</div>
                             <div className="d-flex gap-2 align-items-center">
-                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="emailOtpField1" autoFocus={true} />
-                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="emailOtpField2" />
-                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="emailOtpField3" />
-                              <input type="tel" className="form-control text-center email-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="emailOtpField4" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField1" autoFocus={true} />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField2" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField3" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField4" />
                               <button
                                 id="verify-email-button"
-                                className="btn btn-primary font-sm px-3 rounded-2 font-600"
-                                style={{ height: "42px" }}
+                                className="btn btn-primary c-fs-6 font-600 px-3"
                                 onClick={() => verifyOtp("email")}
                                 disabled={emailVerifyOtpInProgress}
                                 type="button"
@@ -1160,7 +866,7 @@ export default function CharteredAccountantSignup({ path }) {
                               </button>
                             </div>
                             <div className="mt-2 font-sm">
-                              <span className="text-primary font-600" onClick={() => retrySendOtp(3)} style={{ cursor: "pointer" }}>
+                              <span className="text-primary font-600 cursor-pointer" onClick={() => retrySendOtp(3)}>
                                 Resend OTP
                               </span>
                             </div>
@@ -1169,20 +875,14 @@ export default function CharteredAccountantSignup({ path }) {
                       </div>
 
                       <div className="mb-3 pb-1">
-                        <label htmlFor="mobileNo" className="form-label font-600 mb-1 d-block" style={{ color: "#334155", fontSize: "13px" }}>
+                        <label htmlFor="mobileNo" className="form-label c-fs-6 font-600 col-dark mb-1">
                           Mobile Number <span className="text-danger">*</span>
                         </label>
                         <div className="d-flex gap-2">
-                          <div className="flex-grow-1" style={{ minWidth: 0 }}>
+                          <div className="flex-grow-1 min-w-0">
                             <input
                               type="tel"
-                              className="form-control rounded-3 w-100"
-                              style={{
-                                height: "46px",
-                                fontSize: "14px",
-                                borderColor: mobileDetails?.isVerified ? "#10b981" : "#cbd5e1",
-                                backgroundColor: mobileDetails?.isVerified ? "#f8fafc" : "#ffffff",
-                              }}
+                              className={`form-control w-100 ${mobileDetails?.isVerified ? "border-success bg-light" : ""}`}
                               id="mobileNo"
                               placeholder="Enter mobile number"
                               autoComplete="off"
@@ -1192,16 +892,12 @@ export default function CharteredAccountantSignup({ path }) {
                             />
                           </div>
                           {mobileDetails?.isVerified ? (
-                            <div
-                              className="d-flex align-items-center justify-content-center text-success font-600 font-sm px-3 rounded-3 text-nowrap"
-                              style={{ height: "46px", backgroundColor: "#f0fdf4", border: "1px solid #bbf7d0", fontSize: "13.5px" }}
-                            >
-                              <MdCheckCircle className="fs-5 me-1 text-success" /> Verified
+                            <div className="badge bg-light col-success border border-success c-fs-6 font-600 px-3 d-flex align-items-center justify-content-center">
+                              <MdCheckCircle className="fs-5 me-1 col-success" /> Verified
                             </div>
                           ) : !showMobileOtp ? (
                             <button
-                              className="btn btn-outline-primary font-sm text-nowrap px-3 font-600 rounded-3"
-                              style={{ height: "46px", minWidth: "90px" }}
+                              className="btn btn-outline-primary c-fs-6 font-600 px-3"
                               onClick={sendMobileOtp}
                               disabled={mobileGetOtpInProgress}
                               type="button"
@@ -1210,8 +906,7 @@ export default function CharteredAccountantSignup({ path }) {
                             </button>
                           ) : (
                             <button
-                              className="btn btn-outline-secondary font-sm text-nowrap px-3 rounded-3"
-                              style={{ height: "46px" }}
+                              className="btn btn-outline-secondary c-fs-6 font-600 px-3"
                               onClick={() => setShowMobileOtpSection(false)}
                               disabled={mobileGetOtpInProgress}
                               type="button"
@@ -1225,14 +920,13 @@ export default function CharteredAccountantSignup({ path }) {
                           <div className="mt-2 p-3 bg-light rounded-3 border">
                             <div className="font-sm text-muted mb-2 font-500">Enter 4-digit code sent via SMS:</div>
                             <div className="d-flex gap-2 align-items-center">
-                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="mobileOtpField1" autoFocus={true} />
-                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="mobileOtpField2" />
-                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="mobileOtpField3" />
-                              <input type="tel" className="form-control text-center mobile-otp-field rounded-2 bg-white" style={{ width: "42px", height: "42px", fontSize: "17px", fontWeight: "600" }} maxLength="1" id="mobileOtpField4" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField1" autoFocus={true} />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField2" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField3" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField4" />
                               <button
                                 id="verify-mobile-button"
-                                className="btn btn-primary font-sm px-3 rounded-2 font-600"
-                                style={{ height: "42px" }}
+                                className="btn btn-primary c-fs-6 font-600 px-3"
                                 onClick={() => verifyOtp("mobile")}
                                 disabled={mobileVerifyOtpInProgress}
                                 type="button"
@@ -1243,16 +937,15 @@ export default function CharteredAccountantSignup({ path }) {
                             {connectedChannels && (
                               <div className="mt-2 font-sm text-muted">
                                 Resend on{" "}
-                                {connectedChannels.map((item, idx) => (
+                                {connectedChannels.map((item, index) => (
                                   <span key={item.value}>
                                     <span
-                                      className="text-primary font-600"
+                                      className="text-primary font-600 cursor-pointer"
                                       onClick={() => retrySendOtp(item.value)}
-                                      style={{ cursor: "pointer" }}
                                     >
                                       {item.name}
                                     </span>
-                                    {connectedChannels.length > idx + 1 && " or "}
+                                    {connectedChannels.length > index + 1 && " or "}
                                   </span>
                                 ))}
                               </div>
@@ -1261,7 +954,7 @@ export default function CharteredAccountantSignup({ path }) {
                         )}
                       </div>
 
-                      <p className="mb-2.5" style={{ fontSize: "12px", color: "#94a3b8" }}>
+                      <p className="c-fs-7 text-muted mb-2">
                         Your data will be stored in INDIA data center.
                       </p>
 
@@ -1274,7 +967,7 @@ export default function CharteredAccountantSignup({ path }) {
                             checked={termsAgree}
                             onChange={() => setTermsAgree(!termsAgree)}
                           />
-                          <label className="form-check-label font-xs text-muted" htmlFor="agreeCheckBox" style={{ fontSize: "12px", lineHeight: "1.4" }}>
+                          <label className="form-check-label c-fs-7 text-muted line-height-24" htmlFor="agreeCheckBox">
                             I agree to receive verification OTP & Alerts and accept the{" "}
                             <a href="https://giddh.com/terms" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-primary">Terms of Service</a>
                             {" "}and{" "}
@@ -1285,16 +978,14 @@ export default function CharteredAccountantSignup({ path }) {
 
                       <div className="d-flex justify-content-between align-items-center gap-2 pt-3 mt-2 border-top">
                         <button
-                          className="btn btn-outline-secondary font-sm px-3 d-flex align-items-center justify-content-center gap-1 rounded-3 font-600"
-                          style={{ height: "46px", minWidth: "90px", borderColor: "#cbd5e1", color: "#475569" }}
+                          className="btn btn-outline-secondary c-fs-6 font-600 px-3 d-flex align-items-center justify-content-center gap-1"
                           onClick={() => updateCurrentStep(1)}
                           type="button"
                         >
                           <MdKeyboardArrowLeft className="fs-5" /> Back
                         </button>
                         <button
-                          className="btn btn-primary flex-grow-1 font-600 rounded-3 shadow-sm d-flex align-items-center justify-content-center"
-                          style={{ height: "46px", fontSize: "14.5px" }}
+                          className="btn btn-primary flex-grow-1 shadow-sm d-flex align-items-center justify-content-center py-2 font-600"
                           onClick={() => initiateSignup()}
                           disabled={signupInProgress || !termsAgree}
                           type="button"
@@ -1319,21 +1010,13 @@ export default function CharteredAccountantSignup({ path }) {
         <section className="py-5">
           <div className="container py-lg-4">
             <div className="text-center max-w-700 mx-auto mb-5">
-              <span
-                className="px-3 py-1 rounded-pill"
-                style={{
-                  backgroundColor: "#e2f0ff",
-                  color: "#1e75ba",
-                  fontSize: "12px",
-                  fontWeight: "700",
-                }}
-              >
+              <span className="badge rounded-pill bg-light col-primary border c-fs-7 font-600 py-2 px-3">
                 CORE CAPABILITIES
               </span>
-              <h2 className="garmond-font h1 mt-3 mb-3" style={{ color: "#1c2a38" }}>
+              <h2 className="garmond-font h1 mt-3 mb-3 text-dark">
                 Everything You Need to Manage Client Accounting
               </h2>
-              <p className="text-secondary lead font-sm" style={{ fontSize: "1.05rem" }}>
+              <p className="text-secondary lead font-sm">
                 Streamline bookkeeping, simplify GST compliance, and collaborate seamlessly
                 with your clients and team on Giddh.
               </p>
@@ -1342,15 +1025,12 @@ export default function CharteredAccountantSignup({ path }) {
             <div className="row g-4">
               {caFeatures.map((feature, index) => (
                 <div className="col-md-6 col-lg-4" key={index}>
-                  <div
-                    className="p-4 rounded-4 h-100 border bg-white shadow-sm d-flex flex-column transition"
-                    style={{ borderColor: "#edf2f7" }}
-                  >
+                  <div className="card border rounded-4 p-4 h-100 bg-white shadow-sm">
                     <div>{feature.icon}</div>
-                    <h3 className="h5 font-600 mb-2" style={{ color: "#1c2a38" }}>
+                    <h3 className="h5 font-600 mb-2 text-dark">
                       {feature.title}
                     </h3>
-                    <p className="text-secondary font-sm mb-0" style={{ lineHeight: "1.6" }}>
+                    <p className="text-secondary font-sm mb-0">
                       {feature.description}
                     </p>
                   </div>
