@@ -453,4 +453,37 @@ $font-weight-500: var(--c-fw-600);
     }
   }
 }
+// ================================= CA SIGN-UP SPECIFIC STYLES ====================
+.ca-signup {
+  &__google_wrapper {
+    button {
+      width: 100%;
+      height: 48px;
+      font-size: $font-size-14;
+      font-weight: $font-weight-500;
+      color: $dark-grey;
+      border: 1px solid $light-silver;
+      border-radius: 6px;
+      background-color: $color-white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 0 !important;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        border-color: $light-slaty;
+        background-color: rgba(0, 0, 0, 0.02);
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
 // ================================= SIGN-UP PAGE SCSS CODE======================END=============================
+

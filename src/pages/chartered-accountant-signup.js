@@ -1,3 +1,10 @@
+import Head from "next/head";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+import GoogleLogin from "@/components/googleLogin";
+import Footer from "@/components/NewComps/Footer";
+import Stats from "@/components/NewComps/Stats";
 import {
   MdCheckCircle,
   MdOutlineSecurity,
@@ -9,47 +16,27 @@ import {
   MdArrowForward,
   MdKeyboardArrowLeft,
 } from "react-icons/md";
-import { useState, useEffect } from "react";
-import dynamic from "next/dynamic";
-import { toast } from "react-toastify";
-import GoogleLogin from "@/components/googleLogin";
-import Head from "next/head";
-import Image from "next/image";
-import Footer from "@/components/NewComps/Footer";
-import Stats from "@/components/NewComps/Stats";
 
 import {
   showToaster,
   setInputValue,
-  initiateOtpFieldsAutoMove,
   formatMobileNumber,
+  initiateOtpFieldsAutoMove,
   getOtpFromFields,
   clearOtpFields,
   getWidgetChannels,
   handleDisplayMobileNumber,
   handleOtpVerifyRedirect,
-  getSourceParam as getSourceParamHelper,
-  executeRetryOtp,
-  handleGoogleApiSuccess,
-  handleMobileOtpSent,
-  handleSignupError,
   handleKeyDownEnter,
-  handleInitOtpSignup,
-  handleResetEverything,
-  handleSetShowOtpSection,
-  handleSendEmailOtp,
-  handleSendMobileOtp,
-  handleEmailOtpSent,
-  handleOtpFailed,
-  handleResetOtp,
-  handleVerifyOtp,
-  handleVerifyOtpSuccess,
-  handleVerifyOtpError,
-  handleLoadTelLibrary,
+  handleSignupError,
+  handleStepUpdate,
+  getSourceParam,
 } from "@/utils/signupHelpers";
+
 const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
   ssr: false,
 });
+
 var intlRef;
 
 export default function CharteredAccountantSignup({ path }) {
@@ -99,17 +86,29 @@ export default function CharteredAccountantSignup({ path }) {
     }
   }, [showMobileOtp]);
 
+
   function googleApiSuccessCallback(response) {
-    handleGoogleApiSuccess({
-      response,
-      setEmailDetails,
-      setShowEmailOtp,
-      updateCurrentStep,
+    setEmailDetails({
+      email: response.email,
+      accessToken: response.accessToken,
+      isVerified: true,
+      signupVia: "google",
     });
+    setShowEmailOtp(false);
+    updateCurrentStep(2);
+    setInputValue("email", response.email);
   }
 
-  function getSourceParam() {
+
+  function getCaSourceParam() {
+    var sourceStr = getSourceParam();
+    var sourceObj = sourceStr ? JSON.parse(sourceStr) : {};
+
     if (mrnNumber && mrnNumber.trim()) {
+      sourceObj.mrnNumber = mrnNumber.trim();
+      if (typeof setLocalStorage === "function") {
+        setLocalStorage("source", sourceObj);
+      }
       var giddhQuery =
         typeof getCookie === "function" && getCookie("giddh_query")
           ? JSON.parse(getCookie("giddh_query"))
@@ -121,9 +120,12 @@ export default function CharteredAccountantSignup({ path }) {
       if (typeof setCookie === "function") {
         setCookie("giddh_query", JSON.stringify(giddhQuery), 30);
       }
-      return getSourceParamHelper({ mrnNumber: mrnNumber.trim() });
     }
-    return getSourceParamHelper();
+
+    if (Object.keys(sourceObj).length > 0) {
+      return JSON.stringify(sourceObj);
+    }
+    return "";
   }
 
   async function initiateSignup() {
@@ -185,7 +187,7 @@ export default function CharteredAccountantSignup({ path }) {
                 "&ref=" +
                 (typeof getLocalStorage === "function" ? getLocalStorage("ref") || "" : "") +
                 "&source=" +
-                getSourceParam() +
+                getCaSourceParam() +
                 "";
               window.location =
                 process.env.NEXT_PUBLIC_APP_URL +
@@ -222,42 +224,88 @@ export default function CharteredAccountantSignup({ path }) {
 
 
   function initOtpSignup() {
-    handleInitOtpSignup({
-      setEmailDetails,
-      setMobileDetails,
-      setShowEmailOtp,
-      setShowMobileOtp,
-      updateCurrentStep,
-      getWidgetData,
-    });
+    var userData = typeof getLocalStorage === "function" ? getLocalStorage("userData") : null;
+    if (userData) {
+      if (userData.user?.email) {
+        setEmailDetails({
+          email: userData.user.email,
+          accessToken: userData.accessToken,
+          isVerified: true,
+          signupVia: userData.signupVia,
+        });
+        setShowEmailOtp(false);
+        updateCurrentStep(2);
+        setInputValue("email", userData.user.email);
+      } else if (userData.user?.mobileNo) {
+        setMobileDetails({
+          mobileNo: userData.user.mobileNo,
+          accessToken: userData.accessToken,
+          isVerified: true,
+          signupVia: userData.signupVia,
+        });
+        updateCurrentStep(2);
+        setShowMobileOtp(false);
+        setInputValue("mobileNo", userData.user.mobileNo);
+      }
+    }
+
+    if (typeof addOtpWidgetScript === "function") {
+      addOtpWidgetScript(true, false, () => {
+        setTimeout(() => {
+          getWidgetData();
+        }, 2000);
+      });
+    }
   }
 
   function resetEverything() {
-    handleResetEverything({
-      setEmailDetails,
-      setMobileDetails,
-      setShowEmailOtp,
-      setShowMobileOtp,
-      updateCurrentStep,
+    if (typeof removeLocalStorage === "function") {
+      removeLocalStorage("userData");
+    }
+    setEmailDetails({
+      email: "",
+      accessToken: "",
+      isVerified: false,
+      signupVia: "",
+      requestId: "",
     });
+    setMobileDetails({
+      mobileNo: "",
+      accessToken: "",
+      isVerified: false,
+      signupVia: "",
+      requestId: "",
+    });
+    setShowEmailOtp(false);
+    setShowMobileOtp(false);
+    updateCurrentStep(2);
+
+    setInputValue("email", "");
+    setInputValue("mobileNo", "");
   }
 
   function setShowEmailOtpSection(showOtp) {
-    handleSetShowOtpSection({
-      type: "email",
-      showOtp,
-      setShowEmailOtp,
-      setEmailDetails,
-    });
+    setShowEmailOtp(showOtp);
+    if (!showOtp) {
+      setEmailDetails((prev) => ({
+        ...prev,
+        email: "",
+        isVerified: false,
+        requestId: "",
+      }));
+    }
   }
 
   function setShowMobileOtpSection(showOtp) {
-    handleSetShowOtpSection({
-      type: "mobile",
-      showOtp,
-      setShowMobileOtp,
-      setMobileDetails,
-    });
+    setShowMobileOtp(showOtp);
+    if (!showOtp) {
+      setMobileDetails((prev) => ({
+        ...prev,
+        mobileNo: "",
+        isVerified: false,
+        requestId: "",
+      }));
+    }
   }
 
   function getWidgetData() {
@@ -268,123 +316,219 @@ export default function CharteredAccountantSignup({ path }) {
   }
 
   function sendEmailOtp() {
-    handleSendEmailOtp({
-      emailInputId: "email",
-      setEmailGetOtpInProgress,
-      onSuccess: emailOtpSentCallback,
-      onError: emailOtpFailedCallback,
-    });
+    if (
+      !document.getElementById("email").value ||
+      !document.getElementById("email").value.trim() ||
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+        document.getElementById("email").value
+      )
+    ) {
+      showToaster("Please enter valid email!", "error", "top-center");
+      return;
+    }
+
+    setEmailGetOtpInProgress(true);
+
+    window.sendOtp(
+      document.getElementById("email").value,
+      (data) => {
+        emailOtpSentCallback(data);
+      },
+      (error) => {
+        emailOtpFailedCallback(error);
+      }
+    );
   }
 
   function sendMobileOtp() {
-    handleSendMobileOtp({
-      intl,
-      setMobileGetOtpInProgress,
-      onSuccess: mobileOtpSentCallback,
-      onError: mobileOtpFailedCallback,
-    });
+    var mobileNo = formatMobileNumber(intl.getNumber());
+    if (!mobileNo || !mobileNo) {
+      showToaster("Please enter valid mobile number!", "error", "top-center");
+      return;
+    }
+
+    setMobileGetOtpInProgress(true);
+
+    window.sendOtp(
+      mobileNo,
+      (data) => {
+        mobileOtpSentCallback(data);
+      },
+      (error) => {
+        mobileOtpFailedCallback(error);
+      }
+    );
   }
 
   function emailOtpSentCallback(data) {
-    handleEmailOtpSent({
-      data,
-      emailInputId: "email",
-      setEmailGetOtpInProgress,
-      setEmailDetails,
-      setShowEmailOtpSection,
-      successMessage: "OTP sent successfully.",
+    setEmailGetOtpInProgress(false);
+    showToaster("OTP sent successfully.", "success", "top-center");
+    setEmailDetails({
+      email: document.getElementById("email").value,
+      accessToken: "",
+      isVerified: false,
+      signupVia: "giddh",
+      requestId: data.message,
     });
+    setShowEmailOtpSection(true);
   }
 
   function mobileOtpSentCallback(data) {
-    handleMobileOtpSent({
-      data,
-      intl,
-      setMobileGetOtpInProgress,
-      setMobileDetails,
-      setShowMobileOtpSection,
-      successMessage: "OTP sent successfully.",
+    setMobileGetOtpInProgress(false);
+    showToaster("OTP sent successfully.", "success", "top-center");
+    var mobileNo = formatMobileNumber(intl.getNumber());
+
+    setMobileDetails({
+      mobileNo: mobileNo,
+      accessToken: "",
+      isVerified: false,
+      signupVia: "giddh",
+      requestId: data.message,
     });
+    setShowMobileOtpSection(true);
   }
 
   function emailOtpFailedCallback(error) {
-    handleOtpFailed({
-      type: "email",
-      error,
-      setEmailGetOtpInProgress,
-      setShowEmailOtpSection,
-      setEmailDetails,
-    });
+    setEmailGetOtpInProgress(false);
+    showToaster(error.message, "error", "top-center");
+    setShowEmailOtpSection(false);
+    emailDetails.requestId = "";
+    setEmailDetails(emailDetails);
   }
 
   function mobileOtpFailedCallback(error) {
-    handleOtpFailed({
-      type: "mobile",
-      error,
-      setMobileGetOtpInProgress,
-      setShowMobileOtpSection,
-      setMobileDetails,
-    });
+    setMobileGetOtpInProgress(false);
+    showToaster(error.message, "error", "top-center");
+    setShowMobileOtpSection(false);
+    mobileDetails.requestId = "";
+    setMobileDetails(mobileDetails);
   }
 
   function resetEmailOtp() {
-    handleResetOtp({
-      type: "email",
-      setEmailDetails,
-    });
+    emailDetails.isVerified = false;
+    emailDetails.accessToken = "";
+    setEmailDetails(emailDetails);
+    clearOtpFields(".email-otp-field");
   }
 
   function resetMobileOtp() {
-    handleResetOtp({
-      type: "mobile",
-      setMobileDetails,
-    });
+    mobileDetails.isVerified = false;
+    mobileDetails.accessToken = "";
+    setMobileDetails(mobileDetails);
+    clearOtpFields(".mobile-otp-field");
   }
 
   function retrySendOtp(channel) {
-    executeRetryOtp({
+    var requestId = "";
+    if (channel == 3) {
+      resetEmailOtp();
+      setEmailGetOtpInProgress(true);
+      requestId = emailDetails.requestId;
+    } else {
+      resetMobileOtp();
+      setMobileGetOtpInProgress(true);
+      requestId = mobileDetails.requestId;
+    }
+    window.retryOtp(
       channel,
-      emailDetails,
-      mobileDetails,
-      resetEmailOtp,
-      resetMobileOtp,
-      setEmailGetOtpInProgress,
-      setMobileGetOtpInProgress,
-    });
+      (data) => {
+        retrySendOtpSuccessCallback(channel);
+      },
+      (error) => {
+        retrySendOtpErrorCallback(channel, error);
+      },
+      requestId
+    );
+  }
+
+  function retrySendOtpSuccessCallback(channel) {
+    showToaster("OTP resent successfully.", "success", "top-center");
+
+    if (channel == 3) {
+      setEmailGetOtpInProgress(false);
+    } else {
+      setMobileGetOtpInProgress(false);
+    }
+  }
+
+  function retrySendOtpErrorCallback(channel, error) {
+    showToaster(error.message, "error", "top-center");
+
+    if (channel == 3) {
+      setEmailGetOtpInProgress(false);
+    } else {
+      setMobileGetOtpInProgress(false);
+    }
   }
 
   function verifyOtp(type) {
-    handleVerifyOtp({
-      type,
-      emailDetails,
-      mobileDetails,
-      setEmailVerifyOtpInProgress,
-      setMobileVerifyOtpInProgress,
-      onSuccess: (data) => verifyOtpSuccessCallback(type, data),
-      onError: (error) => verifyOtpErrorCallback(type, error),
-    });
+    var otp = "";
+    var requestId = "";
+
+    if (type == "email") {
+      otp = getOtpFromFields(".email-otp-field");
+
+      if (!otp) {
+        showToaster("Please enter OTP!", "error", "top-center");
+        return;
+      }
+
+      setEmailVerifyOtpInProgress(true);
+      requestId = emailDetails.requestId;
+    } else {
+      otp = getOtpFromFields(".mobile-otp-field");
+
+      if (!otp) {
+        showToaster("Please enter OTP!", "error", "top-center");
+        return;
+      }
+
+      setMobileVerifyOtpInProgress(true);
+      requestId = mobileDetails.requestId;
+    }
+
+    window.verifyOtp(
+      otp,
+      (data) => {
+        verifyOtpSuccessCallback(type, data);
+      },
+      (error) => {
+        verifyOtpErrorCallback(type, error);
+      },
+      requestId
+    );
   }
 
   function verifyOtpSuccessCallback(type, data) {
-    handleVerifyOtpSuccess({
-      type,
-      data,
-      setEmailVerifyOtpInProgress,
-      setMobileVerifyOtpInProgress,
-      setEmailDetails,
-      setMobileDetails,
-    });
+    showToaster("OTP verified successfully.", "success", "top-center");
+
+    if (type == "email") {
+      setEmailVerifyOtpInProgress(false);
+      emailDetails.isVerified = true;
+      emailDetails.accessToken = data.message;
+      setEmailDetails(emailDetails);
+    } else {
+      setMobileVerifyOtpInProgress(false);
+      mobileDetails.isVerified = true;
+      mobileDetails.accessToken = data.message;
+      setMobileDetails(mobileDetails);
+    }
   }
 
   function verifyOtpErrorCallback(type, error) {
-    handleVerifyOtpError({
-      type,
-      error,
-      setEmailVerifyOtpInProgress,
-      setMobileVerifyOtpInProgress,
-      setEmailDetails,
-      setMobileDetails,
-    });
+    showToaster(error.message, "error", "top-center");
+
+    if (type == "email") {
+      setEmailVerifyOtpInProgress(false);
+      emailDetails.isVerified = false;
+      emailDetails.accessToken = "";
+      setEmailDetails(emailDetails);
+    } else {
+      setMobileVerifyOtpInProgress(false);
+      mobileDetails.isVerified = false;
+      mobileDetails.accessToken = "";
+      setMobileDetails(mobileDetails);
+    }
   }
 
   function signupErrorCallback(error) {
@@ -392,10 +536,7 @@ export default function CharteredAccountantSignup({ path }) {
   }
 
   function updateCurrentStep(step) {
-    setCurrentStep(step);
-    setTimeout(() => {
-      loadTelLibrary();
-    });
+    handleStepUpdate(step, setCurrentStep, loadTelLibrary);
   }
 
   function onKeyDownEmail(event) {
@@ -416,17 +557,37 @@ export default function CharteredAccountantSignup({ path }) {
     handleDisplayMobileNumber(intlRef, setMobileNo);
   }
 
-
   function loadTelLibrary(retries = 20) {
-    handleLoadTelLibrary({
-      inputSelector: "mobileNo",
-      setIntl,
-      setIntlRef: (instance) => {
-        intlRef = instance;
-      },
-      onCountryChange: () => displayEnterNumber(),
-      retries,
+    const input = document.getElementById("mobileNo");
+    const isIntlAvailable =
+      typeof window !== "undefined" &&
+      typeof window.intlTelInput === "function";
+
+    if (!input || !isIntlAvailable) {
+      if (retries > 0) {
+        setTimeout(() => loadTelLibrary(retries - 1), 100);
+      }
+      return;
+    }
+
+    if (input.dataset.intlTelInitialized === "true") {
+      return;
+    }
+
+    const intlInstance = window.intlTelInput(input, {
+      nationalMode: true,
+      utilsScript:
+        "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+      autoHideDialCode: false,
+      separateDialCode: false,
+      initialCountry: "in",
     });
+
+    input.dataset.intlTelInitialized = "true";
+    intlRef = intlInstance;
+    setIntl(intlInstance);
+    displayEnterNumber();
+    input.addEventListener("countrychange", displayEnterNumber);
   }
 
   function otpVerifyCallback(response) {
@@ -509,7 +670,7 @@ export default function CharteredAccountantSignup({ path }) {
       </Head>
 
       <div className="outfit-font bg-white">
-        <section className="py-5 ca-signup__hero">
+        <section className="py-5 bg-light">
           <div className="container py-lg-4">
             <div className="row align-items-center justify-content-between g-5">
               <div className="col-lg-6 col-12">
@@ -525,16 +686,16 @@ export default function CharteredAccountantSignup({ path }) {
                   </a>
                 </div>
                 <div className="d-inline-flex align-items-center mb-3">
-                  <span className="ca-signup__badge">
+                  <span className="badge rounded-pill bg-white col-primary border c-fs-7 font-600 py-2 px-3">
                     GIDDH FOR CHARTERED ACCOUNTANTS
                   </span>
                 </div>
 
-                <h1 className="garmond-font mb-4 ca-signup__heading">
+                <h1 className="garmond-font heading col-dark mb-4">
                   Empower Your Practice with Giddh for Chartered Accountants
                 </h1>
 
-                <p className="lead text-secondary mb-4 ca-signup__subheading">
+                <p className="lead text-secondary mb-4 c-fs-5">
                   Manage multiple clients from a single dashboard, automate bookkeeping,
                   streamline GST compliance, and collaborate in real-time with your
                   team and clients.
@@ -573,10 +734,10 @@ export default function CharteredAccountantSignup({ path }) {
               </div>
 
               <div className="col-lg-5 col-12" id="signup-card">
-                <div className="ca-signup__card">
+                <div className="card border rounded-4 p-4 p-lg-4 shadow-sm bg-white">
                   {currentStep === 1 && (
                     <div>
-                      <div className="mb-4 pb-2 border-bottom">
+                      <div className="mb-3 pb-2 border-bottom">
                         <h2 className="h4 font-600 col-dark mb-1">
                           Create your CA Account
                         </h2>
@@ -600,7 +761,7 @@ export default function CharteredAccountantSignup({ path }) {
 
                       <button
                         type="button"
-                        className="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 shadow-sm mb-4 py-2 font-600 ca-signup__email_btn"
+                        className="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 shadow-sm mb-3 py-2 font-600"
                         onClick={() => resetEverything()}
                       >
                         <span>Continue with Email</span>
@@ -621,7 +782,7 @@ export default function CharteredAccountantSignup({ path }) {
                   {currentStep === 2 && (
                     <div>
                       <div className="mb-3 pb-2 border-bottom">
-                        <h2 className="h5 ca-signup__card_title mb-0">
+                        <h2 className="h5 font-600 col-dark mb-0">
                           Create your CA account
                         </h2>
                       </div>
@@ -632,7 +793,7 @@ export default function CharteredAccountantSignup({ path }) {
                         </label>
                         <input
                           type="text"
-                          className="form-control ca-signup__input"
+                          className="form-control"
                           id="mrnNumber"
                           name="mrnNumber"
                           placeholder="e.g. 123456"
@@ -651,7 +812,7 @@ export default function CharteredAccountantSignup({ path }) {
                           <div className="flex-grow-1 min-w-0">
                             <input
                               type="email"
-                              className={`form-control ca-signup__input w-100 ${emailDetails?.isVerified ? "ca-signup__input--verified" : ""}`}
+                              className={`form-control w-100 ${emailDetails?.isVerified ? "border-success bg-light" : ""}`}
                               id="email"
                               name="email"
                               placeholder="ca.name@firm.com"
@@ -662,8 +823,8 @@ export default function CharteredAccountantSignup({ path }) {
                             />
                           </div>
                           {emailDetails?.isVerified ? (
-                            <div className="ca-signup__verified_badge">
-                              <MdCheckCircle className="fs-5 me-1 text-success" /> Verified
+                            <div className="badge bg-light col-success border border-success c-fs-6 font-600 px-3 d-flex align-items-center justify-content-center">
+                              <MdCheckCircle className="fs-5 me-1 col-success" /> Verified
                             </div>
                           ) : !showEmailOtp ? (
                             <button
@@ -687,13 +848,13 @@ export default function CharteredAccountantSignup({ path }) {
                         </div>
 
                         {showEmailOtp && (!emailDetails || !emailDetails.isVerified) && (
-                          <div className="ca-signup__otp_box">
+                          <div className="mt-2 p-3 bg-light rounded-3 border">
                             <div className="font-sm text-muted mb-2 font-500">Enter 4-digit code sent to your email:</div>
                             <div className="d-flex gap-2 align-items-center">
-                              <input type="tel" className="form-control ca-signup__otp_field email-otp-field" maxLength="1" id="emailOtpField1" autoFocus={true} />
-                              <input type="tel" className="form-control ca-signup__otp_field email-otp-field" maxLength="1" id="emailOtpField2" />
-                              <input type="tel" className="form-control ca-signup__otp_field email-otp-field" maxLength="1" id="emailOtpField3" />
-                              <input type="tel" className="form-control ca-signup__otp_field email-otp-field" maxLength="1" id="emailOtpField4" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField1" autoFocus={true} />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField2" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField3" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField4" />
                               <button
                                 id="verify-email-button"
                                 className="btn btn-primary c-fs-6 font-600 px-3"
@@ -721,7 +882,7 @@ export default function CharteredAccountantSignup({ path }) {
                           <div className="flex-grow-1 min-w-0">
                             <input
                               type="tel"
-                              className={`form-control ca-signup__input w-100 ${mobileDetails?.isVerified ? "ca-signup__input--verified" : ""}`}
+                              className={`form-control w-100 ${mobileDetails?.isVerified ? "border-success bg-light" : ""}`}
                               id="mobileNo"
                               placeholder="Enter mobile number"
                               autoComplete="off"
@@ -731,8 +892,8 @@ export default function CharteredAccountantSignup({ path }) {
                             />
                           </div>
                           {mobileDetails?.isVerified ? (
-                            <div className="ca-signup__verified_badge">
-                              <MdCheckCircle className="fs-5 me-1 text-success" /> Verified
+                            <div className="badge bg-light col-success border border-success c-fs-6 font-600 px-3 d-flex align-items-center justify-content-center">
+                              <MdCheckCircle className="fs-5 me-1 col-success" /> Verified
                             </div>
                           ) : !showMobileOtp ? (
                             <button
@@ -756,13 +917,13 @@ export default function CharteredAccountantSignup({ path }) {
                         </div>
 
                         {showMobileOtp && (!mobileDetails || !mobileDetails.isVerified) && (
-                          <div className="ca-signup__otp_box">
+                          <div className="mt-2 p-3 bg-light rounded-3 border">
                             <div className="font-sm text-muted mb-2 font-500">Enter 4-digit code sent via SMS:</div>
                             <div className="d-flex gap-2 align-items-center">
-                              <input type="tel" className="form-control ca-signup__otp_field mobile-otp-field" maxLength="1" id="mobileOtpField1" autoFocus={true} />
-                              <input type="tel" className="form-control ca-signup__otp_field mobile-otp-field" maxLength="1" id="mobileOtpField2" />
-                              <input type="tel" className="form-control ca-signup__otp_field mobile-otp-field" maxLength="1" id="mobileOtpField3" />
-                              <input type="tel" className="form-control ca-signup__otp_field mobile-otp-field" maxLength="1" id="mobileOtpField4" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField1" autoFocus={true} />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField2" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField3" />
+                              <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField4" />
                               <button
                                 id="verify-mobile-button"
                                 className="btn btn-primary c-fs-6 font-600 px-3"
@@ -849,7 +1010,7 @@ export default function CharteredAccountantSignup({ path }) {
         <section className="py-5">
           <div className="container py-lg-4">
             <div className="text-center max-w-700 mx-auto mb-5">
-              <span className="ca-signup__badge ca-signup__badge--small">
+              <span className="badge rounded-pill bg-light col-primary border c-fs-7 font-600 py-2 px-3">
                 CORE CAPABILITIES
               </span>
               <h2 className="garmond-font h1 mt-3 mb-3 text-dark">
@@ -864,7 +1025,7 @@ export default function CharteredAccountantSignup({ path }) {
             <div className="row g-4">
               {caFeatures.map((feature, index) => (
                 <div className="col-md-6 col-lg-4" key={index}>
-                  <div className="ca-signup__feature_card">
+                  <div className="card border rounded-4 p-4 h-100 bg-white shadow-sm">
                     <div>{feature.icon}</div>
                     <h3 className="h5 font-600 mb-2 text-dark">
                       {feature.title}
@@ -878,7 +1039,6 @@ export default function CharteredAccountantSignup({ path }) {
             </div>
           </div>
         </section>
-
 
         {showVerificationModal && (
           <OtpVerifyModal

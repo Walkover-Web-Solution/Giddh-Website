@@ -6,37 +6,23 @@ import {
 } from "react-icons/md";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import { toast } from "react-toastify";
 import GoogleLogin from "@/components/googleLogin";
 import Head from "next/head";
 import {
   showToaster,
   setInputValue,
-  initiateOtpFieldsAutoMove,
   formatMobileNumber,
+  initiateOtpFieldsAutoMove,
   getOtpFromFields,
   clearOtpFields,
   getWidgetChannels,
   handleDisplayMobileNumber,
   handleOtpVerifyRedirect,
-  getSourceParam,
-  executeRetryOtp,
-  handleGoogleApiSuccess,
-  handleMobileOtpSent,
-  handleSignupError,
+  geoIpLookupHandler,
   handleKeyDownEnter,
-  handleInitOtpSignup,
-  handleResetEverything,
-  handleSetShowOtpSection,
-  handleSendEmailOtp,
-  handleSendMobileOtp,
-  handleEmailOtpSent,
-  handleOtpFailed,
-  handleResetOtp,
-  handleVerifyOtp,
-  handleVerifyOtpSuccess,
-  handleVerifyOtpError,
-  handleLoadTelLibrary,
+  handleSignupError,
+  handleStepUpdate,
+  getSourceParam,
 } from "@/utils/signupHelpers";
 const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
   ssr: false,
@@ -92,12 +78,15 @@ const signUp = (path) => {
   }, [showMobileOtp]);
 
   function googleApiSuccessCallback(response) {
-    handleGoogleApiSuccess({
-      response,
-      setEmailDetails,
-      setShowEmailOtp,
-      updateCurrentStep,
+    setEmailDetails({
+      email: response.email,
+      accessToken: response.accessToken,
+      isVerified: true,
+      signupVia: "google",
     });
+    setShowEmailOtp(false);
+    updateCurrentStep(2);
+    setInputValue("email", response.email);
   }
 
 
@@ -188,45 +177,83 @@ const signUp = (path) => {
       showToaster("Please verify mobile", "error", "top-center");
     }
   }
-
-
   function initOtpSignup() {
-    handleInitOtpSignup({
-      setEmailDetails,
-      setMobileDetails,
-      setShowEmailOtp,
-      setShowMobileOtp,
-      updateCurrentStep,
-      getWidgetData,
+    var userData = getLocalStorage("userData");
+    if (userData) {
+      if (userData.user.email) {
+        setEmailDetails({
+          email: userData.user.email,
+          accessToken: userData.accessToken,
+          isVerified: true,
+          signupVia: userData.signupVia,
+        });
+        setShowEmailOtp(false);
+        updateCurrentStep(2);
+        setInputValue("email", userData.user.email);
+      } else if (userData.user.mobileNo) {
+        setMobileDetails({
+          mobileNo: userData.user.mobileNo,
+          accessToken: userData.accessToken,
+          isVerified: true,
+          signupVia: userData.signupVia,
+        });
+        updateCurrentStep(2);
+        setShowMobileOtp(false);
+        setInputValue("mobileNo", userData.user.mobileNo);
+      }
+    }
+
+    addOtpWidgetScript(true, false, () => {
+      setTimeout(() => {
+        getWidgetData();
+      }, 2000);
     });
   }
 
   function resetEverything() {
-    handleResetEverything({
-      setEmailDetails,
-      setMobileDetails,
-      setShowEmailOtp,
-      setShowMobileOtp,
-      updateCurrentStep,
+    removeLocalStorage("userData");
+    setEmailDetails({
+      email: "",
+      accessToken: "",
+      isVerified: false,
+      signupVia: "",
+      requestId: "",
     });
+    setMobileDetails({
+      mobileNo: "",
+      accessToken: "",
+      isVerified: false,
+      signupVia: "",
+      requestId: "",
+    });
+    setShowEmailOtp(false);
+    setShowMobileOtp(false);
+    updateCurrentStep(2);
+
+    setInputValue("email", "");
+    setInputValue("mobileNo", "");
   }
 
   function setShowEmailOtpSection(showOtp) {
-    handleSetShowOtpSection({
-      type: "email",
-      showOtp,
-      setShowEmailOtp,
-      setEmailDetails,
-    });
+    setShowEmailOtp(showOtp);
+
+    if (!showOtp) {
+      emailDetails.email = "";
+      emailDetails.isVerified = false;
+      emailDetails.requestId = "";
+      setEmailDetails(emailDetails);
+    }
   }
 
   function setShowMobileOtpSection(showOtp) {
-    handleSetShowOtpSection({
-      type: "mobile",
-      showOtp,
-      setShowMobileOtp,
-      setMobileDetails,
-    });
+    setShowMobileOtp(showOtp);
+
+    if (!showOtp) {
+      mobileDetails.mobileNo = "";
+      mobileDetails.isVerified = false;
+      mobileDetails.requestId = "";
+      setMobileDetails(mobileDetails);
+    }
   }
 
   function getWidgetData() {
@@ -237,123 +264,219 @@ const signUp = (path) => {
   }
 
   function sendEmailOtp() {
-    handleSendEmailOtp({
-      emailInputId: "email",
-      setEmailGetOtpInProgress,
-      onSuccess: emailOtpSentCallback,
-      onError: emailOtpFailedCallback,
-    });
+    if (
+      !document.getElementById("email").value ||
+      !document.getElementById("email").value.trim() ||
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(
+        document.getElementById("email").value
+      )
+    ) {
+      showToaster("Please enter valid email!", "error", "top-center");
+      return;
+    }
+
+    setEmailGetOtpInProgress(true);
+
+    window.sendOtp(
+      document.getElementById("email").value,
+      (data) => {
+        emailOtpSentCallback(data);
+      },
+      (error) => {
+        emailOtpFailedCallback(error);
+      }
+    );
   }
 
   function sendMobileOtp() {
-    handleSendMobileOtp({
-      intl,
-      setMobileGetOtpInProgress,
-      onSuccess: mobileOtpSentCallback,
-      onError: mobileOtpFailedCallback,
-    });
+    var mobileNo = formatMobileNumber(intl.getNumber());
+    if (!mobileNo || !mobileNo) {
+      showToaster("Please enter valid mobile number!", "error", "top-center");
+      return;
+    }
+
+    setMobileGetOtpInProgress(true);
+
+    window.sendOtp(
+      mobileNo,
+      (data) => {
+        mobileOtpSentCallback(data);
+      },
+      (error) => {
+        mobileOtpFailedCallback(error);
+      }
+    );
   }
 
   function emailOtpSentCallback(data) {
-    handleEmailOtpSent({
-      data,
-      emailInputId: "email",
-      setEmailGetOtpInProgress,
-      setEmailDetails,
-      setShowEmailOtpSection,
-      successMessage: "OTP sent successfully.",
+    setEmailGetOtpInProgress(false);
+    showToaster("OTP sent successfully.", "success", "top-center");
+    setEmailDetails({
+      email: document.getElementById("email").value,
+      accessToken: "",
+      isVerified: false,
+      signupVia: "giddh",
+      requestId: data.message,
     });
+    setShowEmailOtpSection(true);
   }
 
   function mobileOtpSentCallback(data) {
-    handleMobileOtpSent({
-      data,
-      intl,
-      setMobileGetOtpInProgress,
-      setMobileDetails,
-      setShowMobileOtpSection,
-      successMessage: "OTP sent successfully.",
+    setMobileGetOtpInProgress(false);
+    showToaster("OTP sent successfully.", "success", "top-center");
+    var mobileNo = formatMobileNumber(intl.getNumber());
+
+    setMobileDetails({
+      mobileNo: mobileNo,
+      accessToken: "",
+      isVerified: false,
+      signupVia: "giddh",
+      requestId: data.message,
     });
+    setShowMobileOtpSection(true);
   }
 
   function emailOtpFailedCallback(error) {
-    handleOtpFailed({
-      type: "email",
-      error,
-      setEmailGetOtpInProgress,
-      setShowEmailOtpSection,
-      setEmailDetails,
-    });
+    setEmailGetOtpInProgress(false);
+    showToaster(error.message, "error", "top-center");
+    setShowEmailOtpSection(false);
+    emailDetails.requestId = "";
+    setEmailDetails(emailDetails);
   }
 
   function mobileOtpFailedCallback(error) {
-    handleOtpFailed({
-      type: "mobile",
-      error,
-      setMobileGetOtpInProgress,
-      setShowMobileOtpSection,
-      setMobileDetails,
-    });
+    setMobileGetOtpInProgress(false);
+    showToaster(error.message, "error", "top-center");
+    setShowMobileOtpSection(false);
+    mobileDetails.requestId = "";
+    setMobileDetails(mobileDetails);
   }
 
   function resetEmailOtp() {
-    handleResetOtp({
-      type: "email",
-      setEmailDetails,
-    });
+    emailDetails.isVerified = false;
+    emailDetails.accessToken = "";
+    setEmailDetails(emailDetails);
+    clearOtpFields(".email-otp-field");
   }
 
   function resetMobileOtp() {
-    handleResetOtp({
-      type: "mobile",
-      setMobileDetails,
-    });
+    mobileDetails.isVerified = false;
+    mobileDetails.accessToken = "";
+    setMobileDetails(mobileDetails);
+    clearOtpFields(".mobile-otp-field");
   }
 
   function retrySendOtp(channel) {
-    executeRetryOtp({
+    var requestId = "";
+    if (channel == 3) {
+      resetEmailOtp();
+      setEmailGetOtpInProgress(true);
+      requestId = emailDetails.requestId;
+    } else {
+      resetMobileOtp();
+      setMobileGetOtpInProgress(true);
+      requestId = mobileDetails.requestId;
+    }
+    window.retryOtp(
       channel,
-      emailDetails,
-      mobileDetails,
-      resetEmailOtp,
-      resetMobileOtp,
-      setEmailGetOtpInProgress,
-      setMobileGetOtpInProgress,
-    });
+      (data) => {
+        retrySendOtpSuccessCallback(channel);
+      },
+      (error) => {
+        retrySendOtpErrorCallback(channel, error);
+      },
+      requestId
+    );
+  }
+
+  function retrySendOtpSuccessCallback(channel) {
+    showToaster("OTP resent successfully.", "success", "top-center");
+
+    if (channel == 3) {
+      setEmailGetOtpInProgress(false);
+    } else {
+      setMobileGetOtpInProgress(false);
+    }
+  }
+
+  function retrySendOtpErrorCallback(channel, error) {
+    showToaster(error.message, "error", "top-center");
+
+    if (channel == 3) {
+      setEmailGetOtpInProgress(false);
+    } else {
+      setMobileGetOtpInProgress(false);
+    }
   }
 
   function verifyOtp(type) {
-    handleVerifyOtp({
-      type,
-      emailDetails,
-      mobileDetails,
-      setEmailVerifyOtpInProgress,
-      setMobileVerifyOtpInProgress,
-      onSuccess: (data) => verifyOtpSuccessCallback(type, data),
-      onError: (error) => verifyOtpErrorCallback(type, error),
-    });
+    var otp = "";
+    var requestId = "";
+
+    if (type == "email") {
+      otp = getOtpFromFields(".email-otp-field");
+
+      if (!otp) {
+        showToaster("Please enter OTP!", "error", "top-center");
+        return;
+      }
+
+      setEmailVerifyOtpInProgress(true);
+      requestId = emailDetails.requestId;
+    } else {
+      otp = getOtpFromFields(".mobile-otp-field");
+
+      if (!otp) {
+        showToaster("Please enter OTP!", "error", "top-center");
+        return;
+      }
+
+      setMobileVerifyOtpInProgress(true);
+      requestId = mobileDetails.requestId;
+    }
+
+    window.verifyOtp(
+      otp,
+      (data) => {
+        verifyOtpSuccessCallback(type, data);
+      },
+      (error) => {
+        verifyOtpErrorCallback(type, error);
+      },
+      requestId
+    );
   }
 
   function verifyOtpSuccessCallback(type, data) {
-    handleVerifyOtpSuccess({
-      type,
-      data,
-      setEmailVerifyOtpInProgress,
-      setMobileVerifyOtpInProgress,
-      setEmailDetails,
-      setMobileDetails,
-    });
+    showToaster("OTP verified successfully.", "success", "top-center");
+
+    if (type == "email") {
+      setEmailVerifyOtpInProgress(false);
+      emailDetails.isVerified = true;
+      emailDetails.accessToken = data.message;
+      setEmailDetails(emailDetails);
+    } else {
+      setMobileVerifyOtpInProgress(false);
+      mobileDetails.isVerified = true;
+      mobileDetails.accessToken = data.message;
+      setMobileDetails(mobileDetails);
+    }
   }
 
   function verifyOtpErrorCallback(type, error) {
-    handleVerifyOtpError({
-      type,
-      error,
-      setEmailVerifyOtpInProgress,
-      setMobileVerifyOtpInProgress,
-      setEmailDetails,
-      setMobileDetails,
-    });
+    showToaster(error.message, "error", "top-center");
+
+    if (type == "email") {
+      setEmailVerifyOtpInProgress(false);
+      emailDetails.isVerified = false;
+      emailDetails.accessToken = "";
+      setEmailDetails(emailDetails);
+    } else {
+      setMobileVerifyOtpInProgress(false);
+      mobileDetails.isVerified = false;
+      mobileDetails.accessToken = "";
+      setMobileDetails(mobileDetails);
+    }
   }
 
   function signupErrorCallback(error) {
@@ -361,10 +484,7 @@ const signUp = (path) => {
   }
 
   function updateCurrentStep(step) {
-    setCurrentStep(step);
-    setTimeout(() => {
-      loadTelLibrary();
-    });
+    handleStepUpdate(step, setCurrentStep, loadTelLibrary);
   }
 
   function onKeyDownEmail(event) {
@@ -385,17 +505,38 @@ const signUp = (path) => {
     handleDisplayMobileNumber(intlRef, setMobileNo);
   }
 
-
   function loadTelLibrary(retries = 20) {
-    handleLoadTelLibrary({
-      inputSelector: "mobileNo",
-      setIntl,
-      setIntlRef: (instance) => {
-        intlRef = instance;
-      },
-      onCountryChange: () => displayEnterNumber(),
-      retries,
+    const input = document.getElementById("mobileNo");
+    const isIntlAvailable =
+      typeof window !== "undefined" &&
+      typeof window.intlTelInput === "function";
+
+    if (!input || !isIntlAvailable) {
+      if (retries > 0) {
+        setTimeout(() => loadTelLibrary(retries - 1), 100);
+      }
+      return;
+    }
+
+    if (input.dataset.intlTelInitialized === "true") {
+      return;
+    }
+
+    const intl = window.intlTelInput(input, {
+      nationalMode: true,
+      utilsScript:
+        "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+      autoHideDialCode: false,
+      separateDialCode: false,
+      initialCountry: "auto",
+      geoIpLookup: geoIpLookupHandler,
     });
+
+    input.dataset.intlTelInitialized = "true";
+    intlRef = intl;
+    setIntl(intl);
+    displayEnterNumber();
+    input.addEventListener("countrychange", displayEnterNumber);
   }
 
   function otpVerifyCallback(response) {
