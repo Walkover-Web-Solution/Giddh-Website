@@ -746,7 +746,7 @@ export default function CharteredAccountantSignup({ path }) {
                         </p>
                       </div>
 
-                      <div className="ca-signup__google_wrapper mb-3">
+                      <div className="google-btn-wrapper mb-3">
                         <GoogleLogin
                           googleApiSuccessCallback={googleApiSuccessCallback}
                         />
