@@ -287,24 +287,29 @@ export default function CharteredAccountantSignup({ path }) {
   function setShowEmailOtpSection(showOtp) {
     setShowEmailOtp(showOtp);
     if (!showOtp) {
-      setEmailDetails((prev) => ({
-        ...prev,
+      setEmailDetails({
         email: "",
+        accessToken: "",
         isVerified: false,
+        signupVia: "",
         requestId: "",
-      }));
+      });
+      setInputValue("email", "");
     }
   }
 
   function setShowMobileOtpSection(showOtp) {
     setShowMobileOtp(showOtp);
     if (!showOtp) {
-      setMobileDetails((prev) => ({
-        ...prev,
+      setMobileDetails({
         mobileNo: "",
+        accessToken: "",
         isVerified: false,
+        signupVia: "",
         requestId: "",
-      }));
+      });
+      setInputValue("mobileNo", "");
+      setMobileNo("");
     }
   }
 
@@ -823,8 +828,17 @@ export default function CharteredAccountantSignup({ path }) {
                             />
                           </div>
                           {emailDetails?.isVerified ? (
-                            <div className="badge bg-light col-success border border-success c-fs-6 font-600 px-3 d-flex align-items-center justify-content-center">
-                              <MdCheckCircle className="fs-5 me-1 col-success" /> Verified
+                            <div className="d-flex align-items-center gap-2">
+                              <div className="badge bg-light col-success border border-success c-fs-6 font-600 px-2 py-2 d-flex align-items-center justify-content-center">
+                                <MdCheckCircle className="fs-5 me-1 col-success" /> Verified
+                              </div>
+                              <button
+                                className="btn btn-outline-secondary c-fs-6 font-600 px-3"
+                                onClick={() => setShowEmailOtpSection(false)}
+                                type="button"
+                              >
+                                Change
+                              </button>
                             </div>
                           ) : !showEmailOtp ? (
                             <button
@@ -833,7 +847,7 @@ export default function CharteredAccountantSignup({ path }) {
                               disabled={emailGetOtpInProgress}
                               type="button"
                             >
-                              {emailGetOtpInProgress ? "Sending..." : "Verify"}
+                              {emailGetOtpInProgress ? "Sending..." : "Verify Email"}
                             </button>
                           ) : (
                             <button
@@ -842,7 +856,7 @@ export default function CharteredAccountantSignup({ path }) {
                               disabled={emailGetOtpInProgress}
                               type="button"
                             >
-                              Change
+                              Change Email
                             </button>
                           )}
                         </div>
@@ -892,8 +906,17 @@ export default function CharteredAccountantSignup({ path }) {
                             />
                           </div>
                           {mobileDetails?.isVerified ? (
-                            <div className="badge bg-light col-success border border-success c-fs-6 font-600 px-3 d-flex align-items-center justify-content-center">
-                              <MdCheckCircle className="fs-5 me-1 col-success" /> Verified
+                            <div className="d-flex align-items-center gap-2">
+                              <div className="badge bg-light col-success border border-success c-fs-6 font-600 px-2 py-2 d-flex align-items-center justify-content-center">
+                                <MdCheckCircle className="fs-5 me-1 col-success" /> Verified
+                              </div>
+                              <button
+                                className="btn btn-outline-secondary c-fs-6 font-600 px-3"
+                                onClick={() => setShowMobileOtpSection(false)}
+                                type="button"
+                              >
+                                Change
+                              </button>
                             </div>
                           ) : !showMobileOtp ? (
                             <button
@@ -902,7 +925,7 @@ export default function CharteredAccountantSignup({ path }) {
                               disabled={mobileGetOtpInProgress}
                               type="button"
                             >
-                              {mobileGetOtpInProgress ? "Sending..." : "Verify"}
+                              {mobileGetOtpInProgress ? "Sending..." : "Verify number"}
                             </button>
                           ) : (
                             <button
@@ -911,7 +934,7 @@ export default function CharteredAccountantSignup({ path }) {
                               disabled={mobileGetOtpInProgress}
                               type="button"
                             >
-                              Change
+                              Change Mobile
                             </button>
                           )}
                         </div>
