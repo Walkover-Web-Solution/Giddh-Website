@@ -689,8 +689,6 @@ export default function CharteredAccountantSignup({ path }) {
     },
   ];
 
-
-
   return (
     <>
       <Head>
@@ -724,16 +722,16 @@ export default function CharteredAccountantSignup({ path }) {
                   </a>
                 </div>
                 <div className="d-inline-flex align-items-center mb-3">
-                  <span className="badge rounded-pill bg-white col-primary border c-fs-7 font-600 py-2 px-3">
+                  <span className="badge rounded-pill bg-white font-primary border font-xs font-600 py-2 px-3">
                     GIDDH FOR CHARTERED ACCOUNTANTS
                   </span>
                 </div>
 
-                <h1 className="garmond-font heading col-dark mb-4">
+                <h1 className="font-heading font-dark mb-4">
                   Empower Your Practice with Giddh for Chartered Accountants
                 </h1>
 
-                <p className="lead text-secondary mb-4 c-fs-5">
+                <p className="font-md font-slate-grey mb-4">
                   Manage multiple clients from a single dashboard, automate bookkeeping,
                   streamline GST compliance, and collaborate in real-time with your
                   team and clients.
@@ -741,28 +739,28 @@ export default function CharteredAccountantSignup({ path }) {
 
                 <div className="row g-3 mb-4">
                   <div className="col-sm-6 d-flex align-items-center gap-2">
-                    <MdCheckCircle className="text-success fs-5 flex-shrink-0" />
-                    <span className="font-sm font-600">Multi-Company Management</span>
+                    <MdCheckCircle className="font-success fs-5 flex-shrink-0" />
+                    <span className="font-sm font-600 font-dark">Multi-Company Management</span>
                   </div>
                   <div className="col-sm-6 d-flex align-items-center gap-2">
-                    <MdCheckCircle className="text-success fs-5 flex-shrink-0" />
-                    <span className="font-sm font-600">GST Return Filing & Invoicing</span>
+                    <MdCheckCircle className="font-success fs-5 flex-shrink-0" />
+                    <span className="font-sm font-600 font-dark">GST Return Filing & Invoicing</span>
                   </div>
                   <div className="col-sm-6 d-flex align-items-center gap-2">
-                    <MdCheckCircle className="text-success fs-5 flex-shrink-0" />
-                    <span className="font-sm font-600">Bank Sync & Reconciliation</span>
+                    <MdCheckCircle className="font-success fs-5 flex-shrink-0" />
+                    <span className="font-sm font-600 font-dark">Bank Sync & Reconciliation</span>
                   </div>
                   <div className="col-sm-6 d-flex align-items-center gap-2">
-                    <MdCheckCircle className="text-success fs-5 flex-shrink-0" />
-                    <span className="font-sm font-600">Real-Time Reports & Audit Trail</span>
+                    <MdCheckCircle className="font-success fs-5 flex-shrink-0" />
+                    <span className="font-sm font-600 font-dark">Real-Time Reports & Audit Trail</span>
                   </div>
                   <div className="col-sm-6 d-flex align-items-center gap-2">
-                    <MdCheckCircle className="text-success fs-5 flex-shrink-0" />
-                    <span className="font-sm font-600">Comparative Financial Analysis</span>
+                    <MdCheckCircle className="font-success fs-5 flex-shrink-0" />
+                    <span className="font-sm font-600 font-dark">Comparative Financial Analysis</span>
                   </div>
                 </div>
 
-                <div className="mt-4 pt-3 border-top d-flex align-items-center gap-2 text-muted font-sm">
+                <div className="mt-4 pt-3 border-top d-flex align-items-center gap-2 font-slate-grey font-sm">
                   <span>🔒 Bank-grade 256-bit encryption</span>
                   <span>•</span>
                   <span>Unlimited client organizations</span>
@@ -776,10 +774,10 @@ export default function CharteredAccountantSignup({ path }) {
                   {currentStep === 1 && (
                     <div>
                       <div className="mb-3 pb-2 border-bottom">
-                        <h2 className="h4 font-600 col-dark mb-1">
+                        <h2 className="font-lg font-600 font-dark mb-1">
                           Create your CA Account
                         </h2>
-                        <p className="text-muted c-fs-6 mb-0">
+                        <p className="font-slate-grey font-sm mb-0">
                           Get started with unlimited client management.
                         </p>
                       </div>
@@ -792,14 +790,14 @@ export default function CharteredAccountantSignup({ path }) {
 
                       <div className="position-relative my-3 text-center">
                         <hr className="m-0" />
-                        <span className="position-absolute top-50 start-50 translate-middle bg-white px-3 c-fs-7 text-muted">
+                        <span className="position-absolute top-50 start-50 translate-middle bg-white px-3 font-xs font-slate-grey">
                           or sign up with email
                         </span>
                       </div>
 
                       <button
                         type="button"
-                        className="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 shadow-sm mb-3 py-2 font-600"
+                        className="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 shadow-sm mb-3 py-2 font-600 font-sm"
                         onClick={() => resetEverything()}
                       >
                         <span>Continue with Email</span>
@@ -807,9 +805,9 @@ export default function CharteredAccountantSignup({ path }) {
                       </button>
 
                       <div className="pt-3 border-top text-center">
-                        <p className="c-fs-6 text-muted mb-0">
+                        <p className="font-sm font-slate-grey mb-0">
                           Already have an account?{" "}
-                          <a href={link + "/login"} className="text-primary font-600 text-decoration-none">
+                          <a href={link + "/login"} className="font-primary font-600 text-decoration-none">
                             Sign In
                           </a>
                         </p>
@@ -820,18 +818,18 @@ export default function CharteredAccountantSignup({ path }) {
                   {currentStep === 2 && (
                     <div>
                       <div className="mb-3 pb-2 border-bottom">
-                        <h2 className="h5 font-600 col-dark mb-0">
+                        <h2 className="font-lg font-600 font-dark mb-0">
                           Create your CA account
                         </h2>
                       </div>
 
                       <div className="mb-3 pb-1">
-                        <label htmlFor="mrnNumber" className="form-label c-fs-6 font-600 col-dark mb-1">
-                          Membership Registration Number (MRN) <span className="text-danger">*</span>
+                        <label htmlFor="mrnNumber" className="form-label font-sm font-600 font-dark mb-1">
+                          Membership Registration Number (MRN) <span className="font-danger">*</span>
                         </label>
                         <input
                           type="text"
-                          className="form-control"
+                          className="form-control font-sm"
                           id="mrnNumber"
                           name="mrnNumber"
                           placeholder="e.g. 123456"
@@ -843,14 +841,14 @@ export default function CharteredAccountantSignup({ path }) {
                       </div>
 
                       <div className="mb-3 pb-1">
-                        <label htmlFor="email" className="form-label c-fs-6 font-600 col-dark mb-1">
-                          Email Address <span className="text-danger">*</span>
+                        <label htmlFor="email" className="form-label font-sm font-600 font-dark mb-1">
+                          Email Address <span className="font-danger">*</span>
                         </label>
                         <div className="d-flex gap-2">
                           <div className="flex-grow-1 min-w-0">
                             <input
                               type="email"
-                              className={`form-control w-100 ${emailDetails?.isVerified ? "border-success bg-light" : ""}`}
+                              className={`form-control font-sm w-100 ${emailDetails?.isVerified ? "border-success bg-light" : ""}`}
                               id="email"
                               name="email"
                               placeholder="ca.name@firm.com"
@@ -862,11 +860,11 @@ export default function CharteredAccountantSignup({ path }) {
                           </div>
                           {emailDetails?.isVerified ? (
                             <div className="d-flex align-items-center gap-2">
-                              <div className="badge bg-light col-success border border-success c-fs-6 font-600 px-2 py-2 d-flex align-items-center justify-content-center">
-                                <MdCheckCircle className="fs-5 me-1 col-success" /> Verified
+                              <div className="badge bg-light font-success border border-success font-sm font-600 px-2 py-2 d-flex align-items-center justify-content-center">
+                                <MdCheckCircle className="fs-5 me-1 font-success" /> Verified
                               </div>
                               <button
-                                className="btn btn-outline-secondary c-fs-6 font-600 px-3"
+                                className="btn btn-outline-secondary font-sm font-600 px-3"
                                 onClick={() => setShowEmailOtpSection(false)}
                                 type="button"
                               >
@@ -875,7 +873,7 @@ export default function CharteredAccountantSignup({ path }) {
                             </div>
                           ) : !showEmailOtp ? (
                             <button
-                              className="btn btn-outline-primary c-fs-6 font-600 px-3"
+                              className="btn btn-primary-outline font-sm font-600 px-3"
                               onClick={sendEmailOtp}
                               disabled={emailGetOtpInProgress}
                               type="button"
@@ -884,7 +882,7 @@ export default function CharteredAccountantSignup({ path }) {
                             </button>
                           ) : (
                             <button
-                              className="btn btn-outline-secondary c-fs-6 font-600 px-3"
+                              className="btn btn-outline-secondary font-sm font-600 px-3"
                               onClick={() => setShowEmailOtpSection(false)}
                               disabled={emailGetOtpInProgress}
                               type="button"
@@ -896,7 +894,7 @@ export default function CharteredAccountantSignup({ path }) {
 
                         {showEmailOtp && (!emailDetails || !emailDetails.isVerified) && (
                           <div className="mt-2 p-3 bg-light rounded-3 border">
-                            <div className="font-sm text-muted mb-2 font-500">Enter 4-digit code sent to your email:</div>
+                            <div className="font-sm font-slate-grey mb-2 font-500">Enter 4-digit code sent to your email:</div>
                             <div className="d-flex gap-2 align-items-center">
                               <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField1" autoFocus={true} />
                               <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField2" />
@@ -904,7 +902,7 @@ export default function CharteredAccountantSignup({ path }) {
                               <input type="tel" className="form-control text-center font-600 p-0 otp_input email-otp-field" maxLength="1" id="emailOtpField4" />
                               <button
                                 id="verify-email-button"
-                                className="btn btn-primary c-fs-6 font-600 px-3"
+                                className="btn btn-primary font-sm font-600 px-3"
                                 onClick={() => verifyOtp("email")}
                                 disabled={emailVerifyOtpInProgress}
                                 type="button"
@@ -913,7 +911,7 @@ export default function CharteredAccountantSignup({ path }) {
                               </button>
                             </div>
                             <div className="mt-2 font-sm">
-                              <span className="text-primary font-600 cursor-pointer" onClick={() => retrySendOtp(3)}>
+                              <span className="font-primary font-600 cursor-pointer" onClick={() => retrySendOtp(3)}>
                                 Resend OTP
                               </span>
                             </div>
@@ -922,14 +920,14 @@ export default function CharteredAccountantSignup({ path }) {
                       </div>
 
                       <div className="mb-3 pb-1">
-                        <label htmlFor="mobileNo" className="form-label c-fs-6 font-600 col-dark mb-1">
-                          Mobile Number <span className="text-danger">*</span>
+                        <label htmlFor="mobileNo" className="form-label font-sm font-600 font-dark mb-1">
+                          Mobile Number <span className="font-danger">*</span>
                         </label>
                         <div className="d-flex gap-2">
                           <div className="flex-grow-1 min-w-0">
                             <input
                               type="tel"
-                              className={`form-control w-100 ${mobileDetails?.isVerified ? "border-success bg-light" : ""}`}
+                              className={`form-control font-sm w-100 ${mobileDetails?.isVerified ? "border-success bg-light" : ""}`}
                               id="mobileNo"
                               placeholder="Enter mobile number"
                               autoComplete="off"
@@ -940,11 +938,11 @@ export default function CharteredAccountantSignup({ path }) {
                           </div>
                           {mobileDetails?.isVerified ? (
                             <div className="d-flex align-items-center gap-2">
-                              <div className="badge bg-light col-success border border-success c-fs-6 font-600 px-2 py-2 d-flex align-items-center justify-content-center">
-                                <MdCheckCircle className="fs-5 me-1 col-success" /> Verified
+                              <div className="badge bg-light font-success border border-success font-sm font-600 px-2 py-2 d-flex align-items-center justify-content-center">
+                                <MdCheckCircle className="fs-5 me-1 font-success" /> Verified
                               </div>
                               <button
-                                className="btn btn-outline-secondary c-fs-6 font-600 px-3"
+                                className="btn btn-outline-secondary font-sm font-600 px-3"
                                 onClick={() => setShowMobileOtpSection(false)}
                                 type="button"
                               >
@@ -953,7 +951,7 @@ export default function CharteredAccountantSignup({ path }) {
                             </div>
                           ) : !showMobileOtp ? (
                             <button
-                              className="btn btn-outline-primary c-fs-6 font-600 px-3"
+                              className="btn btn-primary-outline font-sm font-600 px-3"
                               onClick={sendMobileOtp}
                               disabled={mobileGetOtpInProgress}
                               type="button"
@@ -962,7 +960,7 @@ export default function CharteredAccountantSignup({ path }) {
                             </button>
                           ) : (
                             <button
-                              className="btn btn-outline-secondary c-fs-6 font-600 px-3"
+                              className="btn btn-outline-secondary font-sm font-600 px-3"
                               onClick={() => setShowMobileOtpSection(false)}
                               disabled={mobileGetOtpInProgress}
                               type="button"
@@ -974,7 +972,7 @@ export default function CharteredAccountantSignup({ path }) {
 
                         {showMobileOtp && (!mobileDetails || !mobileDetails.isVerified) && (
                           <div className="mt-2 p-3 bg-light rounded-3 border">
-                            <div className="font-sm text-muted mb-2 font-500">Enter 4-digit code sent via SMS:</div>
+                            <div className="font-sm font-slate-grey mb-2 font-500">Enter 4-digit code sent via SMS:</div>
                             <div className="d-flex gap-2 align-items-center">
                               <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField1" autoFocus={true} />
                               <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField2" />
@@ -982,7 +980,7 @@ export default function CharteredAccountantSignup({ path }) {
                               <input type="tel" className="form-control text-center font-600 p-0 otp_input mobile-otp-field" maxLength="1" id="mobileOtpField4" />
                               <button
                                 id="verify-mobile-button"
-                                className="btn btn-primary c-fs-6 font-600 px-3"
+                                className="btn btn-primary font-sm font-600 px-3"
                                 onClick={() => verifyOtp("mobile")}
                                 disabled={mobileVerifyOtpInProgress}
                                 type="button"
@@ -991,12 +989,12 @@ export default function CharteredAccountantSignup({ path }) {
                               </button>
                             </div>
                             {connectedChannels && (
-                              <div className="mt-2 font-sm text-muted">
+                              <div className="mt-2 font-sm font-slate-grey">
                                 Resend on{" "}
                                 {connectedChannels.map((item, index) => (
                                   <span key={item.value}>
                                     <span
-                                      className="text-primary font-600 cursor-pointer"
+                                      className="font-primary font-600 cursor-pointer"
                                       onClick={() => retrySendOtp(item.value)}
                                     >
                                       {item.name}
@@ -1010,7 +1008,7 @@ export default function CharteredAccountantSignup({ path }) {
                         )}
                       </div>
 
-                      <p className="c-fs-7 text-muted mb-2">
+                      <p className="font-xs font-slate-grey mb-2">
                         Your data will be stored in INDIA data center.
                       </p>
 
@@ -1023,25 +1021,25 @@ export default function CharteredAccountantSignup({ path }) {
                             checked={termsAgree}
                             onChange={() => setTermsAgree(!termsAgree)}
                           />
-                          <label className="form-check-label c-fs-7 text-muted line-height-24" htmlFor="agreeCheckBox">
+                          <label className="form-check-label font-xs font-slate-grey line-height-24" htmlFor="agreeCheckBox">
                             I agree to receive verification OTP & Alerts and accept the{" "}
-                            <a href="https://giddh.com/terms" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-primary">Terms of Service</a>
+                            <a href="https://giddh.com/terms" target="_blank" rel="noopener noreferrer" className="text-decoration-none font-primary">Terms of Service</a>
                             {" "}and{" "}
-                            <a href="https://giddh.com/privacy" target="_blank" rel="noopener noreferrer" className="text-decoration-none text-primary">Privacy Policy</a>.
+                            <a href="https://giddh.com/privacy" target="_blank" rel="noopener noreferrer" className="text-decoration-none font-primary">Privacy Policy</a>.
                           </label>
                         </div>
                       </div>
 
                       <div className="d-flex justify-content-between align-items-center gap-2 pt-3 mt-2 border-top">
                         <button
-                          className="btn btn-outline-secondary c-fs-6 font-600 px-3 d-flex align-items-center justify-content-center gap-1"
+                          className="btn btn-outline-secondary font-sm font-600 px-3 d-flex align-items-center justify-content-center gap-1"
                           onClick={() => handleBack()}
                           type="button"
                         >
                           <MdKeyboardArrowLeft className="fs-5" /> Back
                         </button>
                         <button
-                          className="btn btn-primary flex-grow-1 shadow-sm d-flex align-items-center justify-content-center py-2 font-600"
+                          className="btn btn-primary flex-grow-1 shadow-sm d-flex align-items-center justify-content-center py-2 font-600 font-sm"
                           onClick={() => initiateSignup()}
                           disabled={signupInProgress || !termsAgree}
                           type="button"
@@ -1066,13 +1064,13 @@ export default function CharteredAccountantSignup({ path }) {
         <section className="py-5">
           <div className="container py-lg-4">
             <div className="text-center max-w-700 mx-auto mb-5">
-              <span className="badge rounded-pill bg-light col-primary border c-fs-7 font-600 py-2 px-3">
+              <span className="badge rounded-pill bg-light font-primary border font-xs font-600 py-2 px-3">
                 CORE CAPABILITIES
               </span>
-              <h2 className="garmond-font h1 mt-3 mb-3 text-dark">
+              <h2 className="font-heading mt-3 mb-3 font-dark">
                 Everything You Need to Manage Client Accounting
               </h2>
-              <p className="text-secondary lead font-sm">
+              <p className="font-slate-grey font-md">
                 Streamline bookkeeping, simplify GST compliance, and collaborate seamlessly
                 with your clients and team on Giddh.
               </p>
@@ -1083,10 +1081,10 @@ export default function CharteredAccountantSignup({ path }) {
                 <div className="col-md-6 col-lg-4" key={index}>
                   <div className="card border rounded-4 p-4 h-100 bg-white shadow-sm">
                     <div>{feature.icon}</div>
-                    <h3 className="h5 font-600 mb-2 text-dark">
+                    <h3 className="font-md font-600 mb-2 font-dark">
                       {feature.title}
                     </h3>
-                    <p className="text-secondary font-sm mb-0">
+                    <p className="font-slate-grey font-sm mb-0">
                       {feature.description}
                     </p>
                   </div>
