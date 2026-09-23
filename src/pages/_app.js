@@ -53,7 +53,7 @@ export default function MyApp({ Component, pageProps }) {
   };
 
   let currentPathArray = rawBrowserPath.split("/");
-  let loginSignupPath = currentPathArray[currentPathArray.length - 1];
+  let loginSignupPath = currentPathArray[currentPathArray.length - 1].split("?")[0];
   let loginSignupPathStatus =
     loginSignupPath === "login" ||
       loginSignupPath === "signup" ||

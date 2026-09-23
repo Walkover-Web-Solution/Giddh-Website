@@ -88,6 +88,8 @@ export default function CharteredAccountantSignup({ path }) {
 
 
   function googleApiSuccessCallback(response) {
+    setMrnNumber("");
+    setTermsAgree(false);
     setEmailDetails({
       email: response.email,
       accessToken: response.accessToken,
@@ -95,8 +97,11 @@ export default function CharteredAccountantSignup({ path }) {
       signupVia: "google",
     });
     setShowEmailOtp(false);
+    setShowMobileOtp(false);
     updateCurrentStep(2);
     setInputValue("email", response.email);
+    setInputValue("mobileNo", "");
+    setInputValue("mrnNumber", "");
   }
 
 
@@ -262,6 +267,8 @@ export default function CharteredAccountantSignup({ path }) {
     if (typeof removeLocalStorage === "function") {
       removeLocalStorage("userData");
     }
+    setMrnNumber("");
+    setTermsAgree(false);
     setEmailDetails({
       email: "",
       accessToken: "",
@@ -282,6 +289,32 @@ export default function CharteredAccountantSignup({ path }) {
 
     setInputValue("email", "");
     setInputValue("mobileNo", "");
+    setInputValue("mrnNumber", "");
+  }
+
+  function handleBack() {
+    setMrnNumber("");
+    setTermsAgree(false);
+    setEmailDetails({
+      email: "",
+      accessToken: "",
+      isVerified: false,
+      signupVia: "",
+      requestId: "",
+    });
+    setMobileDetails({
+      mobileNo: "",
+      accessToken: "",
+      isVerified: false,
+      signupVia: "",
+      requestId: "",
+    });
+    setShowEmailOtp(false);
+    setShowMobileOtp(false);
+    setInputValue("email", "");
+    setInputValue("mobileNo", "");
+    setInputValue("mrnNumber", "");
+    updateCurrentStep(1);
   }
 
   function setShowEmailOtpSection(showOtp) {
@@ -1002,7 +1035,7 @@ export default function CharteredAccountantSignup({ path }) {
                       <div className="d-flex justify-content-between align-items-center gap-2 pt-3 mt-2 border-top">
                         <button
                           className="btn btn-outline-secondary c-fs-6 font-600 px-3 d-flex align-items-center justify-content-center gap-1"
-                          onClick={() => updateCurrentStep(1)}
+                          onClick={() => handleBack()}
                           type="button"
                         >
                           <MdKeyboardArrowLeft className="fs-5" /> Back
