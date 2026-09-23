@@ -6,9 +6,24 @@ import {
 } from "react-icons/md";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import { toast } from "react-toastify";
 import GoogleLogin from "@/components/googleLogin";
 import Head from "next/head";
+import {
+  showToaster,
+  setInputValue,
+  formatMobileNumber,
+  initiateOtpFieldsAutoMove,
+  getOtpFromFields,
+  clearOtpFields,
+  getWidgetChannels,
+  handleDisplayMobileNumber,
+  handleOtpVerifyRedirect,
+  geoIpLookupHandler,
+  handleKeyDownEnter,
+  handleSignupError,
+  handleStepUpdate,
+  getSourceParam,
+} from "@/utils/signupHelpers";
 const OtpVerifyModal = dynamic(() => import("@/components/otpVerifyModal"), {
   ssr: false,
 });
@@ -74,7 +89,9 @@ const signUp = (path) => {
     setInputValue("email", response.email);
   }
 
+
   async function initiateSignup() {
+
     if (emailDetails.isVerified && mobileDetails.isVerified) {
       setSignupInProgress(true);
       await fetch(
@@ -125,6 +142,8 @@ const signUp = (path) => {
                 getLocalStorage("utm_content") +
                 "&ref=" +
                 getLocalStorage("ref") +
+                "&source=" +
+                getSourceParam() +
                 "";
               window.location =
                 process.env.NEXT_PUBLIC_APP_URL +
@@ -158,21 +177,6 @@ const signUp = (path) => {
       showToaster("Please verify mobile", "error", "top-center");
     }
   }
-
-  function setInputValue(fieldId, value) {
-    const sanitizedValue = value ?? "";
-    const tryAssignValue = (retries = 10) => {
-      const targetInput = document.getElementById(fieldId);
-      if (targetInput) {
-        targetInput.value = sanitizedValue;
-      } else if (retries > 0) {
-        setTimeout(() => tryAssignValue(retries - 1), 50);
-      }
-    };
-
-    tryAssignValue();
-  }
-
   function initOtpSignup() {
     var userData = getLocalStorage("userData");
     if (userData) {
@@ -253,17 +257,8 @@ const signUp = (path) => {
   }
 
   function getWidgetData() {
-    var widgetData = window.getWidgetData();
-    if (widgetData && widgetData.processes) {
-      var channels = [];
-      widgetData.processes.forEach((process) => {
-        if (process.channel.value != "3") {
-          if (!channels[process.channel.value]) {
-            channels[process.channel.value] = [];
-          }
-          channels[process.channel.value] = process.channel;
-        }
-      });
+    var channels = getWidgetChannels();
+    if (channels) {
       setConnectedChannels(channels);
     }
   }
@@ -361,20 +356,14 @@ const signUp = (path) => {
     emailDetails.isVerified = false;
     emailDetails.accessToken = "";
     setEmailDetails(emailDetails);
-
-    document.querySelectorAll(".email-otp-field").forEach((field) => {
-      field.value = "";
-    });
+    clearOtpFields(".email-otp-field");
   }
 
   function resetMobileOtp() {
     mobileDetails.isVerified = false;
     mobileDetails.accessToken = "";
     setMobileDetails(mobileDetails);
-
-    document.querySelectorAll(".mobile-otp-field").forEach((field) => {
-      field.value = "";
-    });
+    clearOtpFields(".mobile-otp-field");
   }
 
   function retrySendOtp(channel) {
@@ -425,9 +414,7 @@ const signUp = (path) => {
     var requestId = "";
 
     if (type == "email") {
-      document.querySelectorAll(".email-otp-field").forEach(function (field) {
-        otp += field.value;
-      });
+      otp = getOtpFromFields(".email-otp-field");
 
       if (!otp) {
         showToaster("Please enter OTP!", "error", "top-center");
@@ -437,9 +424,7 @@ const signUp = (path) => {
       setEmailVerifyOtpInProgress(true);
       requestId = emailDetails.requestId;
     } else {
-      document.querySelectorAll(".mobile-otp-field").forEach(function (field) {
-        otp += field.value;
-      });
+      otp = getOtpFromFields(".mobile-otp-field");
 
       if (!otp) {
         showToaster("Please enter OTP!", "error", "top-center");
@@ -495,27 +480,19 @@ const signUp = (path) => {
   }
 
   function signupErrorCallback(error) {
-    setSignupInProgress(false);
-    showToaster(error, "error", "top-center");
+    handleSignupError(error, setSignupInProgress);
   }
 
   function updateCurrentStep(step) {
-    setCurrentStep(step);
-    setTimeout(() => {
-      loadTelLibrary();
-    });
+    handleStepUpdate(step, setCurrentStep, loadTelLibrary);
   }
 
   function onKeyDownEmail(event) {
-    if (event.keyCode === 13) {
-      sendEmailOtp();
-    }
+    handleKeyDownEnter(event, sendEmailOtp);
   }
 
   function onKeyDownMobile(event) {
-    if (event.keyCode === 13) {
-      sendMobileOtp();
-    }
+    handleKeyDownEnter(event, sendMobileOtp);
   }
 
   function inputMobile(event) {
@@ -525,134 +502,7 @@ const signUp = (path) => {
   }
 
   function displayEnterNumber() {
-    if (!intlRef) {
-      return;
-    }
-
-    if (intlRef.getSelectedCountryData()?.dialCode) {
-      setDisplayMobileNumber();
-    } else {
-      intlRef.setCountry("in");
-      setTimeout(() => {
-        setDisplayMobileNumber();
-      }, 100);
-    }
-  }
-
-  function setDisplayMobileNumber() {
-    if (!intlRef) {
-      return;
-    }
-
-    let number = intlRef.getNumber();
-    let displayMobileNumber = number.includes("+")
-      ? number
-      : `+${intlRef.getSelectedCountryData()?.dialCode}${intlRef.getNumber()}`;
-    setMobileNo(displayMobileNumber);
-  }
-
-  function showToaster(message, type, position) {
-    toast.dismiss();
-    toast(message, { type: type, position: position });
-  }
-
-  function initiateOtpFieldsAutoMove(selector) {
-    setTimeout(function () {
-      const charInputs = document.querySelectorAll(selector);
-
-      // Add paste handler to the first input field
-      if (charInputs.length > 0 && !charInputs[0].dataset.pasteHandlerAttached) {
-        charInputs[0].addEventListener("paste", (e) => {
-          e.preventDefault();
-          const pastedData = e.clipboardData.getData("text").trim();
-          
-          // Only process if we have data and it looks like a numeric code
-          if (pastedData && /^\d+$/.test(pastedData)) {
-            // Distribute the pasted characters across input fields
-            const pastedChars = pastedData.split('');
-            
-            // Fill as many inputs as we have characters (up to the max number of inputs)
-            for (let i = 0; i < Math.min(pastedChars.length, charInputs.length); i++) {
-              charInputs[i].value = pastedChars[i];
-            }
-            
-            // Focus on the next empty field or the verify button if all fields are filled
-            if (pastedChars.length < charInputs.length) {
-              charInputs[pastedChars.length].focus();
-            } else {
-              if (selector === ".email-otp-field") {
-                document.getElementById("verify-email-button").focus();
-              } else if (selector === ".mobile-otp-field") {
-                document.getElementById("verify-mobile-button").focus();
-              }
-            }
-          }
-        });
-        charInputs[0].dataset.pasteHandlerAttached = "true";
-      }
-
-      charInputs.forEach((input, index) => {
-        if (input.dataset.listenersAttached === "true") {
-          return;
-        }
-
-        input.addEventListener("input", (e) => {
-          const value = e.target.value;
-
-          if (value.length > 0) {
-            if (index < charInputs.length - 1) {
-              charInputs[index + 1].focus();
-            } else {
-              if (selector === ".email-otp-field") {
-                document.getElementById("verify-email-button").focus();
-              } else if (selector === ".mobile-otp-field") {
-                document.getElementById("verify-mobile-button").focus();
-              }
-            }
-          }
-        });
-
-        input.addEventListener("keydown", (e) => {
-          if (e.key === "Backspace" && input.value.length === 0 && index > 0) {
-            e.preventDefault(); // Prevent the browser's default backspace behavior
-            charInputs[index - 1].focus();
-          }
-        });
-
-        // Add paste handler to all fields (not just the first)
-        input.addEventListener("paste", (e) => {
-          // Let the first input handle the paste event
-          if (index === 0) return;
-          
-          e.preventDefault();
-          const pastedData = e.clipboardData.getData("text").trim();
-          
-          // Only process if we have data and it looks like a numeric code
-          if (pastedData && /^\d+$/.test(pastedData)) {
-            // Distribute the pasted characters across input fields starting from current position
-            const pastedChars = pastedData.split('');
-            
-            // Fill as many inputs as we have characters (up to the max number of inputs)
-            for (let i = 0; i < Math.min(pastedChars.length, charInputs.length - index); i++) {
-              charInputs[index + i].value = pastedChars[i];
-            }
-            
-            // Focus on the next empty field or the verify button if all fields are filled
-            if (pastedChars.length < charInputs.length - index) {
-              charInputs[index + pastedChars.length].focus();
-            } else {
-              if (selector === ".email-otp-field") {
-                document.getElementById("verify-email-button").focus();
-              } else if (selector === ".mobile-otp-field") {
-                document.getElementById("verify-mobile-button").focus();
-              }
-            }
-          }
-        });
-
-        input.dataset.listenersAttached = "true";
-      });
-    });
+    handleDisplayMobileNumber(intlRef, setMobileNo);
   }
 
   function loadTelLibrary(retries = 20) {
@@ -679,51 +529,7 @@ const signUp = (path) => {
       autoHideDialCode: false,
       separateDialCode: false,
       initialCountry: "auto",
-      geoIpLookup: (success, failure) => {
-        let countryCode = "in";
-        const fetchIPApi = fetch("https://api.db-ip.com/v2/free/self");
-        fetchIPApi.then(
-          (res) => {
-            if (res?.ipAddress) {
-              const fetchCountryByIpApi = fetch(
-                "http://ip-api.com/json/" + `${res.ipAddress}`
-              );
-              fetchCountryByIpApi.then(
-                (fetchCountryByIpApiRes) => {
-                  if (fetchCountryByIpApiRes?.countryCode) {
-                    return success(fetchCountryByIpApiRes.countryCode);
-                  } else {
-                    return success(countryCode);
-                  }
-                },
-                (fetchCountryByIpApiErr) => {
-                  const fetchCountryByIpInfoApi = fetch(
-                    "https://ipinfo.io/" + `${res?.ipAddress}`
-                  );
-
-                  fetchCountryByIpInfoApi.then(
-                    (fetchCountryByIpInfoApiRes) => {
-                      if (fetchCountryByIpInfoApiRes?.country) {
-                        return success(fetchCountryByIpInfoApiRes.country);
-                      } else {
-                        return success(countryCode);
-                      }
-                    },
-                    (fetchCountryByIpInfoApiErr) => {
-                      return success(countryCode);
-                    }
-                  );
-                }
-              );
-            } else {
-              return success(countryCode);
-            }
-          },
-          (err) => {
-            return success(countryCode);
-          }
-        );
-      },
+      geoIpLookup: geoIpLookupHandler,
     });
 
     input.dataset.intlTelInitialized = "true";
@@ -734,13 +540,7 @@ const signUp = (path) => {
   }
 
   function otpVerifyCallback(response) {
-    setGiddhRegionSession(response.session.id, region);
-    window.location =
-      process.env.NEXT_PUBLIC_APP_URL +
-      "/token-verify?request=" +
-      response.session.id +
-      "&region=" +
-      region;
+    handleOtpVerifyRedirect(response, region);
   }
 
   return (
@@ -910,9 +710,9 @@ const signUp = (path) => {
                         className={
                           "me-1 " +
                           (emailDetails &&
-                          emailDetails.isVerified &&
-                          mobileDetails &&
-                          mobileDetails.isVerified
+                            emailDetails.isVerified &&
+                            mobileDetails &&
+                            mobileDetails.isVerified
                             ? " icon-success"
                             : "")
                         }
@@ -920,6 +720,9 @@ const signUp = (path) => {
                       Verify email & mobile number
                     </div>
                   </div>
+
+
+
                   <div className="row mx-0 px-0 step_input_wrapper mt-4">
                     <label htmlFor="email" className="mb-3 ps-0">
                       Verify email
@@ -930,7 +733,7 @@ const signUp = (path) => {
                         style={{
                           paddingRight:
                             showEmailOtp ||
-                            (emailDetails && emailDetails.isVerified)
+                              (emailDetails && emailDetails.isVerified)
                               ? "0"
                               : null,
                         }}
@@ -1070,7 +873,7 @@ const signUp = (path) => {
                         style={{
                           paddingRight:
                             showMobileOtp ||
-                            (mobileDetails && mobileDetails.isVerified)
+                              (mobileDetails && mobileDetails.isVerified)
                               ? "0"
                               : null,
                         }}
