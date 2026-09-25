@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import GoogleLogin from "@/components/googleLogin";
 import Footer from "@/components/NewComps/Footer";
 import Stats from "@/components/NewComps/Stats";
+import homeData from "@/data/pagesdata/in/home.json";
 import {
   MdCheckCircle,
   MdOutlineSecurity,
@@ -632,6 +633,7 @@ export default function CharteredAccountantSignup({ path }) {
     handleOtpVerifyRedirect(response, region);
   }
 
+<<<<<<< HEAD
   const statsData = {
     heading: "Our Commitment Backed by Data",
     stats: [
@@ -650,6 +652,8 @@ export default function CharteredAccountantSignup({ path }) {
     ],
   };
 
+=======
+>>>>>>> d93c5b3bfca6ef7cb425980d86dbbfe1de52a812
   const caFeatures = [
     {
       icon: <MdOutlineDashboard className="font-primary fs-2 mb-3" />,
@@ -1059,7 +1063,11 @@ export default function CharteredAccountantSignup({ path }) {
           </div>
         </section>
 
+<<<<<<< HEAD
         <Stats stats={statsData} />
+=======
+        <Stats stats={homeData?.stats} />
+>>>>>>> d93c5b3bfca6ef7cb425980d86dbbfe1de52a812
 
         <section className="py-5">
           <div className="container py-lg-4">
