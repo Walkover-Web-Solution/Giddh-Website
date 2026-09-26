@@ -633,27 +633,6 @@ export default function CharteredAccountantSignup({ path }) {
     handleOtpVerifyRedirect(response, region);
   }
 
-<<<<<<< HEAD
-  const statsData = {
-    heading: "Our Commitment Backed by Data",
-    stats: [
-      {
-        value: "4.8/5",
-        label: "Average User Rating",
-      },
-      {
-        value: "85%",
-        label: "Improvement in Financial Visibility",
-      },
-      {
-        value: "100%",
-        label: "Data Security & Uptime Guarantee",
-      },
-    ],
-  };
-
-=======
->>>>>>> d93c5b3bfca6ef7cb425980d86dbbfe1de52a812
   const caFeatures = [
     {
       icon: <MdOutlineDashboard className="font-primary fs-2 mb-3" />,
@@ -1063,11 +1042,7 @@ export default function CharteredAccountantSignup({ path }) {
           </div>
         </section>
 
-<<<<<<< HEAD
-        <Stats stats={statsData} />
-=======
         <Stats stats={homeData?.stats} />
->>>>>>> d93c5b3bfca6ef7cb425980d86dbbfe1de52a812
 
         <section className="py-5">
           <div className="container py-lg-4">
