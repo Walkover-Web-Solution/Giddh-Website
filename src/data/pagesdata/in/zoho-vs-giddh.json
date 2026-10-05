@@ -103,68 +103,53 @@
       "content": [
         {
           "feature": "Entry System",
-          "giddh": true ,
-          "zoho": true
+          "giddh": "Ledger + Voucher-based + Journal",
+          "zoho": "Voucher-based + Journal"
         },
         {
-          "feature": "Easy Search",
-          "giddh": true,
-          "zoho": true
+          "feature": "Starting Price",
+          "giddh": "₹400/month",
+          "zoho": "₹899/month"
         },
         {
-          "feature": "User Friendly",
-          "giddh": true,
-          "zoho": true
+          "feature": "Users",
+          "giddh": "Unlimited on all paid plans",
+          "zoho": "Capped by plan (3–25 users); extra users cost more"
         },
         {
-          "feature": "Accessibility",
-          "giddh": true,
-          "zoho": true
+          "feature": "Multi-Currency",
+          "giddh": "Available in all plans including the free plan",
+          "zoho": "Paid plan only"
         },
         {
-          "feature": "Mobile App",
-          "giddh": true,
-          "zoho": true
+          "feature": "Inventory",
+          "giddh": "Included in all plans",
+          "zoho": "Basic only — advanced costs extra"
         },
         {
-          "feature": "Company Sharing",
-          "giddh": true,
-          "zoho": true
+          "feature": "Shopify Integration",
+          "giddh": "Included, no extra cost",
+          "zoho": "Only on the costliest plan"
         },
         {
-          "feature": "Customizable Permission",
-          "giddh": true,
-          "zoho": true
-        },
-        {
-          "feature": "Multi-user & Multiple PCs",
-          "giddh": true,
-          "zoho": true
-        },
-        {
-          "feature": "Branch Support",
-          "giddh": true,
-          "zoho": true
-        },
-        {
-          "feature": "GSTIN Support",
-          "giddh": true,
-          "zoho": true
-        },
-        {
-          "feature": "Inventory with Variant",
-          "giddh": true,
-          "zoho": true
-        },
-        {
-          "feature": "Real-time Dashboard",
-          "giddh": true,
-          "zoho": true
+          "feature": "WhatsApp Automation",
+          "giddh": "Automatic, no setup needed",
+          "zoho": "Requires manual workflow configuration"
         },
         {
           "feature": "Single Ledger Sharing",
           "giddh": true,
           "zoho": false
+        },
+        {
+          "feature": "GST Compliance",
+          "giddh": true,
+          "zoho": true
+        },
+        {
+          "feature": "Multi-Branch/GSTIN Support",
+          "giddh": "Unlimited, all plans",
+          "zoho": "Limited, paid plans only"
         }
       ]
     },
