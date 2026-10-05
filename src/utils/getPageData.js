@@ -17,7 +17,14 @@ export default function getPageData(pageInfo) {
     "make-the-switch",
     "zoho-vs-giddh",
     "financial-reporting",
-    "affiliate"
+    "affiliate",
+    "recurring-invoices",
+    "invoice-bill-scanning",
+    "email-to-bank-sync",
+    "salesperson-feature-report",
+    "customer-portal",
+    "magic-link-ledger-accounts",
+    "triggers"
   ];
   if (!pagesToGetData.includes(pageInfo?.page)) {
     return null;
