@@ -56,9 +56,9 @@
     "description": "Giddh’s e-invoice software simplifies tax compliance. Create, validate, and share invoices digitally in seconds!"
   },
   "/in/invoice-software": {
-    "title": "Free Online Invoicing Software for Small Business",
+    "title": "GST Invoicing Software Built for Faster Billing",
     "ogImage" : "/img/invoice-software/invoice-software.svg",
-    "description": "Create GST-ready invoices with Place of Supply, Stock History, and Copy from Previous Voucher. Free cloud invoicing software for Indian businesses."
+    "description": "Create GST-compliant invoices, send them instantly, track payments, and manage your entire billing process from one place with Giddh."
   },
   "/in/recurring-invoices": {
     "title": "Recurring Invoice & Bill Software for Indian Businesses",
