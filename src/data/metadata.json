@@ -78,7 +78,7 @@
   "/in/salesperson-feature-report": {
     "title": "Salesperson Feature and Report for Indian Businesses",
     "ogImage": "/img/feature-gallery-icons/reports.svg",
-    "description": "Assign a salesperson on invoices and bills in Giddh. Track sales by person and analyse performance daily, weekly, monthly, or yearly."
+    "description": "Assign salespeople to invoices and bills, then see how much each person has sold over a selected period."
   },
   "/in/customer-portal": {
     "title": "Customer Portal Software for Indian Businesses",
@@ -285,7 +285,7 @@
   "/ae/salesperson-feature-report": {
     "title": "Salesperson Feature and Report UAE",
     "ogImage": "/img/feature-gallery-icons/reports.svg",
-    "description": "Assign a salesperson on invoices and bills in Giddh. Track sales by person and analyse performance daily, weekly, monthly, or yearly."
+    "description": "Assign salespeople to invoices and bills, then see how much each person has sold over a selected period."
   },
   "/ae/customer-portal": {
     "title": "Customer Portal Software UAE",
@@ -497,7 +497,7 @@
   "/uk/salesperson-feature-report": {
     "title": "Salesperson Feature and Report UK",
     "ogImage": "/img/feature-gallery-icons/reports.svg",
-    "description": "Assign a salesperson on invoices and bills in Giddh. Track sales by person and analyse performance daily, weekly, monthly, or yearly."
+    "description": "Assign salespeople to invoices and bills, then see how much each person has sold over a selected period."
   },
   "/uk/customer-portal": {
     "title": "Customer Portal Software UK",
@@ -691,7 +691,7 @@
   "/salesperson-feature-report": {
     "title": "Salesperson Feature and Report",
     "ogImage": "/img/feature-gallery-icons/reports.svg",
-    "description": "Assign a salesperson on invoices and bills in Giddh. Track sales by person and analyse performance daily, weekly, monthly, or yearly."
+    "description": "Assign salespeople to invoices and bills, then see how much each person has sold over a selected period."
   },
   "/customer-portal": {
     "title": "Customer Portal Software",

@@ -1,217 +1,135 @@
 {
   "splitBanner": {
-    "heading": "Salesperson Feature and Report in Giddh",
-    "subHeading": "Assign a salesperson while creating invoices and bills. Track transactions by the person responsible for the sale. Use the Salesperson Report to analyse sales performance by day, week, month, or year.",
+    "heading": "Track Sales by Salesperson",
+    "subHeading": "Assign salespeople to invoices and bills, then see how much each person has sold over a selected period.",
     "image": "/img/feature-gallery-icons/reports.svg",
     "form": false,
     "header": false,
     "buttons": [
       {
-        "text": "Start Your Free Trial",
+        "text": "Start Free Trial",
         "link": "/signup"
-      },
-      {
-        "text": "Request a Demo",
-        "link": "/online-accounting-software"
       }
     ]
   },
   "characteristics": {
-    "heading": "Salesperson Feature and Report",
-    "subHeading": "Giddh provides a Salesperson feature that allows users to assign a salesperson while creating invoices and bills.",
+    "heading": "Know Who Is Driving Your Sales",
+    "subHeading": "Giddh links transactions to salespeople and gives you a clear view of their sales performance.",
     "cards": [
       {
-        "heading": "Assign salesperson on invoices and bills",
-        "description": "Assign a salesperson while creating invoices and bills to track transactions based on the individual responsible for generating the sale.",
-        "more_content": [
-          "Works on invoices and bills",
-          "Linked to each transaction",
-          "Track sales by person"
-        ]
+        "heading": "Hard to track individuals",
+        "description": "When multiple salespeople handle transactions, it's difficult to track individual sales manually."
       },
       {
-        "heading": "Select salesperson during creation",
-        "description": "Select the relevant salesperson during invoice or bill creation so every transaction is associated with a specific person.",
-        "more_content": [
-          "Choose salesperson on the voucher",
-          "Transaction linked to one person",
-          "Accurate sales records"
-        ]
+        "heading": "Performance gets buried",
+        "description": "Sales performance can get buried within overall business sales."
       },
       {
-        "heading": "Monitor individual performance",
-        "description": "Makes it easier to monitor individual performance and maintain accurate sales records.",
-        "more_content": [
-          "See who generated each sale",
-          "Maintain sales records by person",
-          "Track individual contribution"
-        ]
-      },
-      {
-        "heading": "Salesperson Report",
-        "description": "Giddh also provides a Salesperson Report to analyse sales performance over different time periods.",
-        "more_content": [
-          "Analyse sales by salesperson",
-          "View performance in one report",
-          "Based on assigned transactions"
-        ]
-      },
-      {
-        "heading": "Daily, weekly, monthly, or yearly",
-        "description": "The report helps identify how much sales each salesperson has generated during the selected period.",
-        "more_content": [
-          "Daily view",
-          "Weekly view",
-          "Monthly and yearly view"
-        ]
-      }
-    ]
-  },
-  "quickStartSection": {
-    "heading": "How Salesperson Feature and Report works",
-    "subHeading": "Assign, record, analyse.",
-    "steps": [
-      {
-        "icon": "/img/make-the-switch/file.svg",
-        "title": "Create invoice or bill",
-        "description": "Start creating an invoice or bill in Giddh."
-      },
-      {
-        "icon": "/img/make-the-switch/cloud.svg",
-        "title": "Select salesperson",
-        "description": "Select the relevant salesperson during invoice or bill creation."
-      },
-      {
-        "icon": "/img/make-the-switch/calender.svg",
-        "title": "Save the transaction",
-        "description": "Save the transaction with the salesperson assigned to it."
-      },
-      {
-        "icon": "/img/make-the-switch/support_agent.svg",
-        "title": "View Salesperson Report",
-        "description": "Analyse how much sales each salesperson has generated for the selected period."
+        "heading": "Harder team reviews",
+        "description": "Without salesperson-wise data, it's harder to identify top performers and review team performance."
       }
     ]
   },
   "features": {
-    "heading": "Salesperson Feature and Report in Giddh",
-    "subHeading": "Assign salesperson on invoices and bills. Track sales by person. Analyse performance in the Salesperson Report.",
+    "heading": "Get a Clearer View of Sales Performance",
     "content": [
       {
-        "heading": "Assign salesperson while creating invoices and bills",
+        "heading": "Assign Salespeople",
         "img": "/img/feature-gallery-icons/create-and-send-professional-invoices-with-cloud-based.svg",
-        "description": "Giddh provides a Salesperson feature that allows users to assign a salesperson while creating invoices and bills. This helps businesses track transactions based on the individual responsible for generating the sale.",
-        "more_content": [
-          "Assign salesperson on invoices",
-          "Assign salesperson on bills",
-          "Track transactions by salesperson"
-        ]
+        "description": "Link a salesperson to every invoice or bill."
       },
       {
-        "heading": "Associate transactions with a salesperson",
+        "heading": "Track Individual Sales",
         "img": "/img/feature-gallery-icons/feature-unlimited-user-access.svg",
-        "description": "Users can select the relevant salesperson during invoice or bill creation, ensuring that every transaction is properly associated with a specific person. This makes it easier to monitor individual performance and maintain accurate sales records.",
-        "more_content": [
-          "Select salesperson during creation",
-          "Every transaction linked to a person",
-          "Monitor individual performance",
-          "Maintain accurate sales records"
-        ]
+        "description": "See sales generated by each salesperson."
       },
       {
-        "heading": "Salesperson Report by time period",
+        "heading": "Compare Performance",
         "img": "/img/feature-gallery-icons/reports.svg",
-        "description": "Giddh also provides a Salesperson Report, which allows users to analyse sales performance over different time periods, such as daily, weekly, monthly, or yearly. The report helps businesses identify how much sales each salesperson has generated during the selected period.",
-        "more_content": [
-          "Daily, weekly, monthly, or yearly periods",
-          "Sales by each salesperson",
-          "Analyse performance over time"
-        ]
-      }
-    ],
-    "buttons": [
+        "description": "Review salesperson-wise sales for different periods."
+      },
       {
-        "text": "Start Free Trial",
-        "link": "/signup"
+        "heading": "Make Better Decisions",
+        "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
+        "description": "Use sales data to understand performance and improve team results."
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "Assign. Track. Analyse.",
+    "steps": [
+      {
+        "icon": "/img/make-the-switch/file.svg",
+        "title": "Create Invoice or Bill",
+        "description": "Add the transaction details as usual."
+      },
+      {
+        "icon": "/img/make-the-switch/calender.svg",
+        "title": "Select Salesperson",
+        "description": "Assign the salesperson responsible for the transaction."
+      },
+      {
+        "icon": "/img/make-the-switch/cloud.svg",
+        "title": "Save Transaction",
+        "description": "The transaction is linked to the selected salesperson."
+      },
+      {
+        "icon": "/img/make-the-switch/support_agent.svg",
+        "title": "View Report",
+        "description": "Check salesperson-wise sales for daily, weekly, monthly, or yearly periods."
       }
     ]
   },
   "useCases": {
-    "heading": "When to use Salesperson Feature and Report",
-    "subHeading": "When you need to track sales by person and review their performance.",
+    "heading": "Know Who Is Driving Your Sales",
+    "subHeading": "Real-world situations where salesperson tracking helps.",
     "content": [
       {
-        "title": "Sales teams",
-        "description": "When multiple people generate sales and you need to track who is responsible for each invoice or bill."
+        "title": "Multiple Salespeople",
+        "description": "Track which salesperson is responsible for each transaction."
       },
       {
-        "title": "Individual performance tracking",
-        "description": "When you want to monitor how much each salesperson has sold."
+        "title": "Performance Reviews",
+        "description": "Compare individual sales over a selected period."
       },
       {
-        "title": "Accurate sales records",
-        "description": "When every transaction should be associated with the salesperson who generated it."
+        "title": "Monthly Sales Reviews",
+        "description": "Get salesperson-wise numbers for regular team reviews."
       },
       {
-        "title": "Period-wise sales analysis",
-        "description": "When you need to analyse salesperson performance daily, weekly, monthly, or yearly."
-      }
-    ],
-    "buttons": [
-      {
-        "text": "Explore Financial Reporting",
-        "link": "/financial-reporting"
+        "title": "Team Accountability",
+        "description": "Keep every transaction linked to the person handling the sale."
       }
     ]
-  },
-  "cta": {
-    "heading": "Assign salesperson on invoices and bills. Analyse their sales in the report.",
-    "buttons": [
-      {
-        "text": "Start Free Trial",
-        "link": "/signup",
-        "type": "btn-primary-outline"
-      }
-    ],
-    "theme": "light"
   },
   "faqs": [
     {
       "question": "What is the Salesperson feature in Giddh?",
-      "answer": "Giddh provides a Salesperson feature that allows users to assign a salesperson while creating invoices and bills. This helps businesses track transactions based on the individual responsible for generating the sale."
+      "answer": "It allows you to assign salespeople to invoices and bills and track their sales through the Salesperson Report."
     },
     {
-      "question": "When do I assign a salesperson?",
-      "answer": "You can select the relevant salesperson during invoice or bill creation, so every transaction is properly associated with a specific person."
-    },
-    {
-      "question": "Why assign a salesperson to a transaction?",
-      "answer": "It makes it easier to monitor individual performance and maintain accurate sales records."
-    },
-    {
-      "question": "What is the Salesperson Report?",
-      "answer": "Giddh provides a Salesperson Report that allows users to analyse sales performance over different time periods, such as daily, weekly, monthly, or yearly."
+      "question": "Can I assign a salesperson to both invoices and bills?",
+      "answer": "Yes, salespeople can be assigned to both invoices and bills."
     },
     {
       "question": "What does the Salesperson Report show?",
-      "answer": "The report helps businesses identify how much sales each salesperson has generated during the selected period."
+      "answer": "It shows sales performance based on the salesperson assigned to transactions."
     },
     {
-      "question": "Does this work on both invoices and bills?",
-      "answer": "Yes. You can assign a salesperson while creating invoices and bills in Giddh."
+      "question": "Can I view sales for different time periods?",
+      "answer": "Yes. You can view salesperson-wise sales for daily, weekly, monthly, or yearly periods."
     }
   ],
-  "ctaTwo": {
-    "heading": "Try Salesperson Feature and Report in Giddh",
-    "image": "/img/girl-avatar.svg",
+  "cta": {
+    "heading": "Know Who's Driving Your Sales",
+    "subheading": "Assign salespeople to transactions and track their performance in Giddh.",
     "buttons": [
       {
         "text": "Start Free Trial",
         "link": "/signup",
-        "type": "btn-tertiary"
+        "type": "btn-white"
       }
-    ],
-    "theme": "light"
+    ]
   },
   "schemas": [
     {
@@ -223,31 +141,15 @@
           "name": "What is the Salesperson feature in Giddh?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Giddh provides a Salesperson feature that allows users to assign a salesperson while creating invoices and bills. This helps businesses track transactions based on the individual responsible for generating the sale."
+            "text": "It allows you to assign salespeople to invoices and bills and track their sales through the Salesperson Report."
           }
         },
         {
           "@type": "Question",
-          "name": "When do I assign a salesperson?",
+          "name": "Can I assign a salesperson to both invoices and bills?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "You can select the relevant salesperson during invoice or bill creation, so every transaction is properly associated with a specific person."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why assign a salesperson to a transaction?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It makes it easier to monitor individual performance and maintain accurate sales records."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Salesperson Report?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Giddh provides a Salesperson Report that allows users to analyse sales performance over different time periods, such as daily, weekly, monthly, or yearly."
+            "text": "Yes, salespeople can be assigned to both invoices and bills."
           }
         },
         {
@@ -255,15 +157,15 @@
           "name": "What does the Salesperson Report show?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The report helps businesses identify how much sales each salesperson has generated during the selected period."
+            "text": "It shows sales performance based on the salesperson assigned to transactions."
           }
         },
         {
           "@type": "Question",
-          "name": "Does this work on both invoices and bills?",
+          "name": "Can I view sales for different time periods?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. You can assign a salesperson while creating invoices and bills in Giddh."
+            "text": "Yes. You can view salesperson-wise sales for daily, weekly, monthly, or yearly periods."
           }
         }
       ]
@@ -272,7 +174,7 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "@id": "WebPage",
-      "description": "Assign a salesperson on invoices and bills in Giddh. Track sales by person and analyse performance with the Salesperson Report.",
+      "description": "Track sales by salesperson in Giddh. Assign salespeople to invoices and bills, then analyse performance by day, week, month, or year.",
       "name": "Salesperson Feature and Report",
       "url": "https://giddh.com/salesperson-feature-report"
     },
@@ -280,7 +182,7 @@
       "@context": "https://schema.org",
       "@type": "Service",
       "@id": "Service",
-      "description": "Salesperson feature and report in Giddh. Assign salesperson on invoices and bills and analyse sales by day, week, month, or year.",
+      "description": "Assign salespeople to invoices and bills in Giddh and track salesperson-wise sales in the Salesperson Report.",
       "url": "https://giddh.com/salesperson-feature-report",
       "name": "Salesperson Feature and Report"
     }
