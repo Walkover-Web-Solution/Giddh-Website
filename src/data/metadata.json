@@ -73,7 +73,7 @@
   "/in/email-to-bank-sync": {
     "title": "Email to Bank Sync Software for Indian Businesses",
     "ogImage": "/img/bank-banner.svg",
-    "description": "Automatically sync bank statements from email into Giddh. Map transactions and reconcile faster — no manual download or upload."
+    "description": "Stop downloading and uploading bank statements manually. Automatically bring statements received by email into Giddh, map transactions, and reconcile them faster."
   },
   "/in/salesperson-feature-report": {
     "title": "Salesperson Feature and Report for Indian Businesses",
@@ -280,7 +280,7 @@
   "/ae/email-to-bank-sync": {
     "title": "Email to Bank Sync Software UAE",
     "ogImage": "/img/bank-banner.svg",
-    "description": "Automatically sync bank statements from email into Giddh for UAE businesses. Map transactions and reconcile faster."
+    "description": "Stop downloading and uploading bank statements manually. Automatically bring statements received by email into Giddh, map transactions, and reconcile them faster."
   },
   "/ae/salesperson-feature-report": {
     "title": "Salesperson Feature and Report UAE",
@@ -492,7 +492,7 @@
   "/uk/email-to-bank-sync": {
     "title": "Email to Bank Sync Software UK",
     "ogImage": "/img/bank-banner.svg",
-    "description": "Automatically sync bank statements from email into Giddh for UK businesses. Map transactions and reconcile faster."
+    "description": "Stop downloading and uploading bank statements manually. Automatically bring statements received by email into Giddh, map transactions, and reconcile them faster."
   },
   "/uk/salesperson-feature-report": {
     "title": "Salesperson Feature and Report UK",
@@ -686,7 +686,7 @@
   "/email-to-bank-sync": {
     "title": "Email to Bank Sync Software",
     "ogImage": "/img/bank-banner.svg",
-    "description": "Automatically sync bank statements from email into Giddh. Map transactions to accounts and reconcile faster with less manual effort."
+    "description": "Stop downloading and uploading bank statements manually. Automatically bring statements received by email into Giddh, map transactions, and reconcile them faster."
   },
   "/salesperson-feature-report": {
     "title": "Salesperson Feature and Report",
