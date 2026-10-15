@@ -88,7 +88,7 @@
   "/in/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts for Indian Businesses",
     "ogImage": "/img/feature-gallery-icons/share-banner.svg",
-    "description": "Share ledger statements with customers or vendors using Magic Link in Giddh. Generate a unique link with one click for instant ledger access."
+    "description": "Generate a Magic Link from any ledger and share it with customers or vendors. They can view their latest ledger details without logging into Giddh."
   },
   "/in/triggers": {
     "title": "Triggers for Automated Customer Communication",
@@ -295,7 +295,7 @@
   "/ae/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts UAE",
     "ogImage": "/img/feature-gallery-icons/share-banner.svg",
-    "description": "Share ledger statements with customers or vendors using Magic Link in Giddh. Generate a unique link with one click for instant ledger access."
+    "description": "Generate a Magic Link from any ledger and share it with customers or vendors. They can view their latest ledger details without logging into Giddh."
   },
   "/ae/triggers": {
     "title": "Triggers for Automated Customer Communication UAE",
@@ -507,7 +507,7 @@
   "/uk/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts UK",
     "ogImage": "/img/feature-gallery-icons/share-banner.svg",
-    "description": "Share ledger statements with customers or vendors using Magic Link in Giddh. Generate a unique link with one click for instant ledger access."
+    "description": "Generate a Magic Link from any ledger and share it with customers or vendors. They can view their latest ledger details without logging into Giddh."
   },
   "/uk/triggers": {
     "title": "Triggers for Automated Customer Communication UK",
@@ -701,7 +701,7 @@
   "/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts",
     "ogImage": "/img/feature-gallery-icons/share-banner.svg",
-    "description": "Share ledger statements with customers or vendors using Magic Link in Giddh. Generate a unique link with one click for instant ledger access."
+    "description": "Generate a Magic Link from any ledger and share it with customers or vendors. They can view their latest ledger details without logging into Giddh."
   },
   "/triggers": {
     "title": "Triggers for Automated Customer Communication",
