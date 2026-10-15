@@ -83,7 +83,7 @@
   "/in/customer-portal": {
     "title": "Customer Portal Software for Indian Businesses",
     "ogImage": "/img/feature-gallery-icons/share-invoice.svg",
-    "description": "Share a Customer Portal in Giddh. Customers view invoices, PDFs, payment status, and pay through Razorpay with automatic payment recording."
+    "description": "Stop answering repeated requests for invoice copies and payment status. Give every customer a dedicated portal to view billing and pay online. Pay through Razorpay from the portal."
   },
   "/in/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts for Indian Businesses",
@@ -290,7 +290,7 @@
   "/ae/customer-portal": {
     "title": "Customer Portal Software UAE",
     "ogImage": "/img/feature-gallery-icons/share-invoice.svg",
-    "description": "Share a Customer Portal in Giddh. Customers view invoices, PDFs, payment status, and pay online with automatic payment recording."
+    "description": "Stop answering repeated requests for invoice copies and payment status. Give every customer a dedicated portal to view billing and pay online."
   },
   "/ae/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts UAE",
@@ -502,7 +502,7 @@
   "/uk/customer-portal": {
     "title": "Customer Portal Software UK",
     "ogImage": "/img/feature-gallery-icons/share-invoice.svg",
-    "description": "Share a Customer Portal in Giddh. Customers view invoices, PDFs, payment status, and pay online with automatic payment recording."
+    "description": "Stop answering repeated requests for invoice copies and payment status. Give every customer a dedicated portal to view billing and pay online."
   },
   "/uk/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts UK",
@@ -696,7 +696,7 @@
   "/customer-portal": {
     "title": "Customer Portal Software",
     "ogImage": "/img/feature-gallery-icons/share-invoice.svg",
-    "description": "Share a Customer Portal in Giddh. Customers view invoices, PDFs, payment status, and pay online with automatic payment recording."
+    "description": "Stop answering repeated requests for invoice copies and payment status. Give every customer a dedicated portal to view billing and pay online."
   },
   "/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts",
