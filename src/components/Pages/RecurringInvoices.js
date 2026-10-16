@@ -11,12 +11,11 @@ export default function RecurringInvoices({ pageData }) {
     <>
       <SplitBanner compData={pageData?.splitBanner} />
       <GridFeatures features={pageData?.characteristics} />
-      <QuickStartSection compData={pageData?.quickStartSection} />
       <AlternateFeatures features={pageData?.features} />
+      <QuickStartSection compData={pageData?.quickStartSection} />
       <EssentialFeatures compData={pageData?.useCases} />
-      <CTA compData={pageData?.cta} />
       <FAQs faqs={pageData?.faqs} />
-      <CTA compData={pageData?.ctaTwo} />
+      <CTA compData={pageData?.cta} />
     </>
   );
 }
