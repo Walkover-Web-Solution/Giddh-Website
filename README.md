@@ -1,3 +1,5 @@
+> AI agents and new engineers: start at [AGENTS.md](AGENTS.md). Full docs are in [docs/](docs/README.md).
+
 # Next-commands
 
 # start project
@@ -17,14 +19,12 @@ npm run start
 
 # public - Static files. (Example -  images , icons etc.)
 
-# app - for APIs
-
 # src - source files
 
 # pages - for main pages
 # components - for components.
 # scss - for all styling Use SCSS
-# data - for all data files. Ex. JSON files.
+# data - for all data files. Ex. JSON files. (src/data; page copy in src/data/pagesdata)
 
 
 ################################
