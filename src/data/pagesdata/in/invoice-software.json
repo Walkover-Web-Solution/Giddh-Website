@@ -1,246 +1,159 @@
 {
   "splitBanner": {
-    "heading": "Free Online Invoicing Software for GST Billing in India",
-    "subHeading": "Create GST invoices in Giddh. Use Place of Supply for correct tax, check Stock History while billing, and copy from previous vouchers when creating invoices or bills.",
+    "heading": "GST Invoicing Software Built for Faster Billing",
+    "subHeading": "Create GST-compliant invoices, send them instantly, track payments, and manage your entire billing process from one place.",
     "image": "/img/invoice-software/invoice-software.svg",
     "form": false,
     "header": false,
     "buttons": [
       {
-        "text": "Start Your Free Trial",
-        "link": "/signup"
-      },
-      {
-        "text": "Request a Demo",
-        "link": "/online-accounting-software"
-      }
-    ]
-  },
-  "stats": {
-    "heading": "Giddh Success Metrics",
-    "stats": [
-      {
-        "value": "4.8/5",
-        "label": "Average User Rating"
-      },
-      {
-        "value": "85%",
-        "label": "Improvement in Financial Visibility"
-      },
-      {
-        "value": "100%",
-        "label": "Data Security & Uptime Guarantee"
-      }
-    ]
-  },
-  "cta": {
-    "heading": "Smarter Invoicing Starts Here. Try Giddh Free.",
-    "buttons": [
-      {
         "text": "Start Free Trial",
-        "link": "/signup",
-        "type": "btn-primary-outline"
-      }
-    ],
-    "theme": "light"
-  },
-  "features": {
-    "heading": "Why Choose Giddh for Invoicing?",
-    "subHeading": "Cloud invoicing for Indian businesses. Place of Supply, Stock History, and Copy from Previous Voucher are now part of the invoice module.",
-    "content": [
-      {
-        "heading": "Cloud Storage — Your Invoices, Always in Sync",
-        "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
-        "description": "All invoices, payments, and reports stay securely synced in the cloud — across devices and team members.",
-        "more_content": [
-          "Auto-sync across desktop, web, and mobile",
-          "No local backups needed",
-          "Easy data recovery anytime"
-        ]
-      },
-      {
-        "heading": "Bill Anytime, From Any Device",
-        "img": "/img/home-page/anytime_anywhere_and_on_any_device.webp",
-        "description": "Create and send invoices from your office, on the go, or from home — on web, Android, or iOS.",
-        "more_content": [
-          "Real-time access to sales and payment data",
-          "Send invoices via WhatsApp, email, or SMS",
-          "Track paid and pending invoices on the go"
-        ]
-      },
-      {
-        "heading": "24x7 Support When You Need It",
-        "img": "/img/home-page/24-7-customer-support.svg",
-        "description": "Our support team is available around the clock to help with invoicing, GST, and setup.",
-        "more_content": [
-          "Chat, email, and phone support",
-          "Quick help for billing and tax queries",
-          "Dedicated onboarding for new users"
-        ]
-      },
-      {
-        "heading": "Track Your Business Performance in Real-Time",
-        "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
-        "description": "Monitor your invoicing, payments, and financial health at a glance.",
-        "more_content": [
-          "Get instant insights on paid vs pending invoices",
-          "View sales trends and revenue breakdowns",
-          "Make faster decisions with up-to-date data"
-        ]
-      },
-      {
-        "heading": "Invoicing Solution that Saves Time",
-        "img": "/img/home-page/invoicing-solution-that-saves-time.svg",
-        "description": "Automate repetitive billing tasks and reduce manual effort.",
-        "more_content": [
-          "Set recurring invoices to avoid repetition",
-          "Use templates to minimize manual input"
-        ]
-      },
-      {
-        "heading": "Easily Secure Data in the Cloud",
-        "img": "/img/home-page/seamless-gst-compliance.svg",
-        "description": "Your financial data is securely stored and protected in the cloud with backup features.",
-        "more_content": [
-          "Encrypted data storage",
-          "Prevent data loss",
-          "Top industry security standards"
-        ]
-      },
-      {
-        "heading": "Place of Supply",
-        "img": "/img/gst/create_gst_compliant_invoices.svg",
-        "description": "A new Place of Supply field has been added in the invoice module for more accurate GST calculations. Earlier, GST was calculated based on the shipping address on the invoice. Now, GST is determined by the Place of Supply you select.",
-        "more_content": [
-          "Choose the state or location for GST calculation on your own",
-          "Works separately from billing and shipping address",
-          "Useful when billing address, shipping address, and place of supply are all different",
-          "CGST, SGST, or IGST is applied based on the place of supply you pick"
-        ]
-      },
-      {
-        "heading": "Stock History",
-        "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
-        "description": "While creating a voucher, you can see customer-wise item history without leaving the screen. Select a customer, add an item, and a Stock History icon appears next to that item.",
-        "more_content": [
-          "View previous prices, quantities, and voucher details",
-          "History is shown for that item with that specific customer",
-          "Helps you check past rates before finalising the bill",
-          "Useful for repeat orders with the same customer"
-        ]
-      },
-      {
-        "heading": "Copy from Previous Voucher",
-        "img": "/img/home-page/invoicing-solution-that-saves-time.svg",
-        "description": "This feature helps you reuse previous vouchers while creating invoices and bills. After you select a customer or supplier, you can view related voucher history, preview details, and copy information into the current voucher.",
-        "more_content": [
-          "View vouchers for the selected customer or supplier",
-          "See the latest vouchers created across the company",
-          "Preview voucher details before copying",
-          "View up to 10 recent vouchers instead of 5"
-        ]
-      }
-    ],
-    "buttons": [
-      {
-        "text": "Explore All Features",
-        "link": "/all-features"
+        "link": "/signup"
       }
     ]
   },
   "characteristics": {
-    "heading": "Core Features of Giddh's Cloud Invoicing Software India",
-    "subHeading": "Invoicing and accounting software for India. Includes Place of Supply, Stock History, and Copy from Previous Voucher.",
+    "heading": "Billing Shouldn't Take Up Your Day",
+    "subHeading": "Giddh brings invoicing, GST, payment tracking, and automation together in one place.",
     "cards": [
       {
-        "heading": "Create & Send Professional Invoices",
-        "description": "Generate branded, GST-ready invoices in seconds with full control over formatting.",
-        "more_content": [
-          "Customizable invoice numbers",
-          "Lock finalized invoices",
-          "Multiple invoice templates"
-        ]
+        "heading": "Manual invoicing slows you down",
+        "description": "Creating invoices manually takes time, especially for repeat billing."
       },
       {
-        "heading": "Effortless GST Invoicing",
-        "description": "Auto-apply the right GST based on Place of Supply and transaction type.",
-        "more_content": [
-          "CGST, SGST, and IGST support",
-          "TDS and TCS on invoices",
-          "Built-in tax classification logic"
-        ]
+        "heading": "Payment follow-ups get messy",
+        "description": "Tracking payments and following up on unpaid invoices can get messy."
       },
       {
-        "heading": "Barcode-Enabled Billing",
-        "description": "Scan products at checkout to bill faster and reduce manual entry errors.",
-        "more_content": [
-          "Scan items directly into invoices",
-          "Faster counter billing",
-          "Fewer data entry mistakes"
-        ]
+        "heading": "Too many tools, one workflow",
+        "description": "Switching between tools for invoicing, GST, payment tracking, and customer communication slows your workflow."
+      }
+    ]
+  },
+  "features": {
+    "heading": "Everything You Need to Invoice Smarter",
+    "subHeading": "Create, stay GST-ready, get paid, and automate — without juggling tools.",
+    "content": [
+      {
+        "heading": "Create Faster",
+        "img": "/img/home-page/invoicing-solution-that-saves-time.svg",
+        "description": "Create professional, GST-ready invoices with customizable templates and invoice numbers."
       },
       {
-        "heading": "Multi-Currency & International Billing",
-        "description": "Bill overseas clients with real-time currency conversion built in.",
-        "more_content": [
-          "Auto currency conversion",
-          "Ideal for export businesses",
-          "Multi-currency reports"
-        ]
+        "heading": "Stay GST-Ready",
+        "img": "/img/gst/create_gst_compliant_invoices.svg",
+        "description": "Apply CGST, SGST, or IGST based on your Place of Supply, with support for TDS and TCS."
       },
       {
-        "heading": "Recurring & Automated Invoicing",
-        "description": "Set up repeat billing cycles and payment reminders so you never miss a due date.",
-        "more_content": [
-          "Schedule recurring invoices",
-          "Auto payment reminders",
-          "Track subscription billing easily"
-        ]
+        "heading": "Get Paid Faster",
+        "img": "/img/home-page/anytime_anywhere_and_on_any_device.webp",
+        "description": "Send invoices through WhatsApp, email, or SMS and track paid and pending invoices."
       },
       {
-        "heading": "Invoice Import, Export & Bulk Edit",
-        "description": "Manage high invoice volumes with Excel import and batch updates.",
-        "more_content": [
-          "Bulk import from Excel",
-          "Bulk update or delete",
-          "Export for reporting"
-        ]
+        "heading": "Automate Billing",
+        "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
+        "description": "Set recurring invoices and payment reminders to reduce repetitive work."
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "Create. Send. Track. Get Paid.",
+    "steps": [
+      {
+        "icon": "/img/make-the-switch/file.svg",
+        "title": "Create Invoice",
+        "description": "Add your customer, items, taxes, and payment details."
       },
       {
-        "heading": "Send via WhatsApp, Email & SMS",
-        "description": "Deliver invoices instantly on the channel your customers prefer.",
-        "more_content": [
-          "One-click sharing",
-          "Faster payment collection",
-          "Professional client communication"
-        ]
+        "icon": "/img/make-the-switch/calender.svg",
+        "title": "Review & Customize",
+        "description": "Apply your invoice format, number, Place of Supply, and other billing details."
       },
       {
-        "heading": "Place of Supply",
-        "description": "Pick the state or location used for GST calculation. It is separate from billing and shipping address.",
-        "more_content": [
-          "GST was earlier based on shipping address",
-          "Now based on Place of Supply you select",
-          "Supports CGST, SGST, and IGST"
-        ]
+        "icon": "/img/make-the-switch/cloud.svg",
+        "title": "Send",
+        "description": "Share the invoice instantly via WhatsApp, email, or SMS."
+      },
+      {
+        "icon": "/img/make-the-switch/support_agent.svg",
+        "title": "Track Payment",
+        "description": "Monitor paid and pending invoices and follow up when needed."
+      }
+    ]
+  },
+  "useCases": {
+    "heading": "Built for Different Billing Needs",
+    "subHeading": "Whether you bill once a month or hundreds of times a day.",
+    "content": [
+      {
+        "title": "GST Billing",
+        "description": "Create accurate GST invoices with the right tax based on Place of Supply."
+      },
+      {
+        "title": "Repeat Customers",
+        "description": "Copy previous invoice details or automate recurring invoices to reduce repeat data entry."
+      },
+      {
+        "title": "High-Volume Billing",
+        "description": "Import, export, or bulk-update invoices when you're managing large volumes."
+      },
+      {
+        "title": "International Billing",
+        "description": "Create multi-currency invoices with currency conversion for overseas customers."
+      }
+    ]
+  },
+  "coreFeatures": {
+    "heading": "Powerful Tools for Everyday Invoicing",
+    "subHeading": "Everything you need for day-to-day GST invoicing.",
+    "cards": [
+      {
+        "heading": "GST Invoicing",
+        "description": "CGST, SGST, IGST, TDS & TCS"
+      },
+      {
+        "heading": "Custom Invoice Templates",
+        "description": "Create invoices that match your business"
+      },
+      {
+        "heading": "Barcode Billing",
+        "description": "Scan products while creating invoices"
+      },
+      {
+        "heading": "Multi-Currency",
+        "description": "Bill international customers with currency conversion"
+      },
+      {
+        "heading": "Recurring Invoices",
+        "description": "Automate repeat billing"
+      },
+      {
+        "heading": "Payment Reminders",
+        "description": "Follow up automatically"
+      },
+      {
+        "heading": "Bulk Import & Export",
+        "description": "Manage invoices using Excel"
+      },
+      {
+        "heading": "Bulk Update",
+        "description": "Update multiple invoices at once"
+      },
+      {
+        "heading": "Invoice Locking",
+        "description": "Prevent unauthorized changes"
+      },
+      {
+        "heading": "WhatsApp, Email & SMS",
+        "description": "Send invoices through your preferred channel"
       },
       {
         "heading": "Stock History",
-        "description": "See past prices and quantities for an item sold to a specific customer, inside the voucher screen.",
-        "more_content": [
-          "Stock History icon on the item line",
-          "Customer-wise and item-wise history",
-          "Shows previous voucher details"
-        ]
+        "description": "Check previous customer-wise item pricing while billing"
       },
       {
-        "heading": "Copy from Previous Voucher",
-        "description": "Copy data from past invoices or bills. Preview up to 10 recent vouchers before you copy.",
-        "more_content": [
-          "Works for selected customer or supplier",
-          "Preview before copying",
-          "Less repeat data entry"
-        ]
+        "heading": "Copy Previous Voucher",
+        "description": "Reuse previous invoice or bill details"
       }
     ]
   },
@@ -320,90 +233,39 @@
       }
     ]
   },
-  "trustBadgeBrands": {
-    "title": "Trusted By Industry Leaders",
-    "description": "See who's talking about us and why businesses across India trust Giddh for invoicing and accounting."
-  },
-  "ctaTwo": {
-    "heading": "Start Invoicing Smarter With Giddh — Free Cloud Invoicing Software for India",
-    "image": "/img/girl-avatar.svg",
+  "faqs": [
+    {
+      "question": "Is Giddh GST-compliant?",
+      "answer": "Yes. Giddh supports GST invoicing with CGST, SGST, IGST, TDS, and TCS. GST calculation can be based on the Place of Supply selected on the invoice."
+    },
+    {
+      "question": "Can I send invoices through WhatsApp?",
+      "answer": "Yes. You can send invoices through WhatsApp, email, or SMS directly from Giddh."
+    },
+    {
+      "question": "Can I create recurring invoices?",
+      "answer": "Yes. You can schedule recurring invoices for customers and automate repeat billing."
+    },
+    {
+      "question": "Can I import invoices from Excel?",
+      "answer": "Yes. Giddh supports invoice import and export, along with bulk updates."
+    },
+    {
+      "question": "Can I create invoices for international customers?",
+      "answer": "Yes. Giddh supports multi-currency invoicing and currency conversion for international billing."
+    }
+  ],
+  "cta": {
+    "heading": "Create Your Next Invoice in Minutes",
+    "subheading": "Create, send, and track your invoices with Giddh.",
     "buttons": [
       {
         "text": "Start Free Trial",
         "link": "/signup",
-        "type": "btn-tertiary"
-      }
-    ],
-    "theme": "light"
-  },
-  "clients": {},
-  "supportedPlatforms": {
-    "heading": "Supported Platforms",
-    "platforms": [
-      {
-        "name": "Web",
-        "image": "/img/supported-platforms/web.svg"
-      },
-      {
-        "name": "Windows",
-        "image": "/img/supported-platforms/windows.svg"
-      },
-      {
-        "name": "MacOS",
-        "image": "/img/supported-platforms/macos.svg"
-      },
-      {
-        "name": "iOS",
-        "image": "/img/supported-platforms/ios.svg"
-      },
-      {
-        "name": "Android",
-        "image": "/img/supported-platforms/android.svg"
+        "type": "btn-white"
       }
     ]
   },
-  "faqs": [
-    {
-      "question": "What is Place of Supply in Giddh?",
-      "answer": "Place of Supply is a new field in the invoice module. You select which state or location should be used for GST calculation. It works separately from the billing and shipping address."
-    },
-    {
-      "question": "How does Stock History work?",
-      "answer": "While creating a voucher, select a customer and add an item. Click the Stock History icon next to the item to see previous prices, quantities, and voucher details for that item with that customer."
-    },
-    {
-      "question": "What is Copy from Previous Voucher?",
-      "answer": "After selecting a customer or supplier, you can view related voucher history, preview details, and copy information into the current invoice or bill. You can see up to 10 recent vouchers instead of 5."
-    },
-    {
-      "question": "How does Giddh calculate GST on invoices?",
-      "answer": "Giddh applies CGST, SGST, or IGST based on the Place of Supply you select, along with your tax settings. It also supports TDS and TCS on invoices for complete tax compliance."
-    },
-    {
-      "question": "Does Giddh support recurring invoicing?",
-      "answer": "Yes. You can create and automate recurring invoices for clients on a fixed billing cycle, with payment reminders to help you get paid on time."
-    },
-    {
-      "question": "Are my invoices secure in Giddh cloud invoicing software?",
-      "answer": "Yes. Giddh uses encrypted cloud storage with role-based access controls to keep your invoice and financial data safe."
-    },
-    {
-      "question": "Can I customize invoice templates in Giddh?",
-      "answer": "Yes. Giddh offers multiple invoice templates that you can customize to match your business branding."
-    },
-    {
-      "question": "How do I create estimates and convert them to invoices?",
-      "answer": "Create an estimate or proforma invoice in Giddh and convert it to a final invoice with one click — no need to re-enter the data."
-    },
-    {
-      "question": "Which is the best free invoicing software in India?",
-      "answer": "Giddh is among the best free invoicing software options in India, offering GST compliance, Place of Supply control, Stock History, voucher copying, and cloud access at no cost."
-    },
-    {
-      "question": "Can I send invoices via WhatsApp from Giddh?",
-      "answer": "Yes. You can send invoices directly via WhatsApp, email, or SMS from Giddh — so your customers receive bills on the channel they prefer."
-    }
-  ],
   "schemas": [
     {
       "@context": "https://schema.org",
@@ -411,82 +273,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What is Place of Supply in Giddh?",
+          "name": "Is Giddh GST-compliant?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Place of Supply is a new field in the invoice module. You select which state or location should be used for GST calculation. It works separately from the billing and shipping address."
+            "text": "Yes. Giddh supports GST invoicing with CGST, SGST, IGST, TDS, and TCS. GST calculation can be based on the Place of Supply selected on the invoice."
           }
         },
         {
           "@type": "Question",
-          "name": "How does Stock History work?",
+          "name": "Can I send invoices through WhatsApp?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "While creating a voucher, select a customer and add an item. Click the Stock History icon next to the item to see previous prices, quantities, and voucher details for that item with that customer."
+            "text": "Yes. You can send invoices through WhatsApp, email, or SMS directly from Giddh."
           }
         },
         {
           "@type": "Question",
-          "name": "What is Copy from Previous Voucher?",
+          "name": "Can I create recurring invoices?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "After selecting a customer or supplier, you can view related voucher history, preview details, and copy information into the current invoice or bill. You can see up to 10 recent vouchers instead of 5."
+            "text": "Yes. You can schedule recurring invoices for customers and automate repeat billing."
           }
         },
         {
           "@type": "Question",
-          "name": "How does Giddh calculate GST on invoices?",
+          "name": "Can I import invoices from Excel?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Giddh applies CGST, SGST, or IGST based on the Place of Supply you select, along with your tax settings. It also supports TDS and TCS on invoices for complete tax compliance."
+            "text": "Yes. Giddh supports invoice import and export, along with bulk updates."
           }
         },
         {
           "@type": "Question",
-          "name": "Does Giddh support recurring invoicing?",
+          "name": "Can I create invoices for international customers?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. You can create and automate recurring invoices for clients on a fixed billing cycle, with payment reminders to help you get paid on time."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are my invoices secure in Giddh cloud invoicing software?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Giddh uses encrypted cloud storage with role-based access controls to keep your invoice and financial data safe."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I customize invoice templates in Giddh?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Giddh offers multiple invoice templates that you can customize to match your business branding."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I create estimates and convert them to invoices?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Create an estimate or proforma invoice in Giddh and convert it to a final invoice with one click — no need to re-enter the data."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which is the best free invoicing software in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Giddh is among the best free invoicing software options in India, offering GST compliance, Place of Supply control, Stock History, voucher copying, and cloud access at no cost."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I send invoices via WhatsApp from Giddh?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. You can send invoices directly via WhatsApp, email, or SMS from Giddh — so your customers receive bills on the channel they prefer."
+            "text": "Yes. Giddh supports multi-currency invoicing and currency conversion for international billing."
           }
         }
       ]
@@ -495,15 +317,15 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "@id": "WebPage",
-      "description": "Giddh's free online invoicing software for India. Create GST-compliant invoices with Place of Supply, Stock History, and Copy from Previous Voucher. Start your free trial today.",
-      "name": "Free Online Invoicing Software for Small Business",
+      "description": "GST invoicing software for faster billing in India. Create GST-compliant invoices, send them instantly, track payments, and manage billing from one place.",
+      "name": "GST Invoicing Software Built for Faster Billing",
       "url": "https://giddh.com/in/invoice-software"
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
       "@id": "Service",
-      "description": "Cloud invoicing software for Indian businesses. GST billing with Place of Supply control, customer-wise Stock History, and one-click voucher copying.",
+      "description": "Cloud GST invoicing software for Indian businesses. Create, send, track, and automate invoices with Place of Supply, recurring billing, and multi-currency support.",
       "url": "https://giddh.com/in/invoice-software",
       "name": "Online Invoicing Software India"
     }

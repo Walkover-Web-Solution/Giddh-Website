@@ -23,7 +23,7 @@
     "title": "Full-Featured Online Accounting Software",
     "description": "Explore all features of Giddh accounting software. Manage GST, invoicing, inventory, reports, and payroll from one secure platform.",
     "ogTitle": "Full-Featured Online Accounting Software",
-    "ogImage" : "/all-features-banner-image.svg",
+    "ogImage": "/all-features-banner-image.svg",
     "ogDescription": "Discover top features of Giddh accounting software—streamline invoicing, manage users, and ensure GST compliance.",
     "keywords": "Best Online Accounting Software"
   },
@@ -52,48 +52,48 @@
   "/in/e-invoice": {
     "canonical": "/in/e-invoice",
     "title": "Best E-Invoice Software for Businesses",
-    "ogImage" : "/img/e-invoice/e_invoice.svg",
+    "ogImage": "/img/e-invoice/e_invoice.svg",
     "description": "Giddh’s e-invoice software simplifies tax compliance. Create, validate, and share invoices digitally in seconds!"
   },
   "/in/invoice-software": {
-    "title": "Free Online Invoicing Software for Small Business",
-    "ogImage" : "/img/invoice-software/invoice-software.svg",
-    "description": "Create GST-ready invoices with Place of Supply, Stock History, and Copy from Previous Voucher. Free cloud invoicing software for Indian businesses."
+    "title": "GST Invoicing Software Built for Faster Billing",
+    "ogImage": "/img/invoice-software/invoice-software.svg",
+    "description": "Create GST-compliant invoices, send them instantly, track payments, and manage your entire billing process from one place with Giddh."
   },
   "/in/recurring-invoices": {
     "title": "Recurring Invoice & Bill Software for Indian Businesses",
     "ogImage": "/img/home-page/invoicing-solution-that-saves-time.svg",
-    "description": "Automate recurring invoices and bills in Giddh. Set daily, weekly, or monthly schedules, preview upcoming dates, and manage billing cycles easily."
+    "description": "Same invoice every month? Set it once. Automate recurring invoices and bills in Giddh—daily, weekly, monthly, or on a specific date."
   },
   "/in/invoice-bill-scanning": {
     "title": "Invoice & Bill Scanning Software for Indian Businesses",
     "ogImage": "/img/feature-gallery-icons/barcode-scanning.svg",
-    "description": "Upload invoices and bills in Giddh to auto-extract party, date, amount, and GST details. Reduce manual entry and record transactions faster."
+    "description": "Upload a PDF or image, let Giddh extract the details, review them, and save the accounting entry — without entering everything manually."
   },
   "/in/email-to-bank-sync": {
     "title": "Email to Bank Sync Software for Indian Businesses",
     "ogImage": "/img/bank-banner.svg",
-    "description": "Automatically sync bank statements from email into Giddh. Map transactions and reconcile faster — no manual download or upload."
+    "description": "Stop downloading and uploading bank statements manually. Automatically bring statements received by email into Giddh, map transactions, and reconcile them faster."
   },
   "/in/salesperson-feature-report": {
     "title": "Salesperson Feature and Report for Indian Businesses",
     "ogImage": "/img/feature-gallery-icons/reports.svg",
-    "description": "Assign a salesperson on invoices and bills in Giddh. Track sales by person and analyse performance daily, weekly, monthly, or yearly."
+    "description": "Assign salespeople to invoices and bills, then see how much each person has sold over a selected period."
   },
   "/in/customer-portal": {
     "title": "Customer Portal Software for Indian Businesses",
     "ogImage": "/img/feature-gallery-icons/share-invoice.svg",
-    "description": "Share a Customer Portal in Giddh. Customers view invoices, PDFs, payment status, and pay through Razorpay with automatic payment recording."
+    "description": "Stop answering repeated requests for invoice copies and payment status. Give every customer a dedicated portal to view billing and pay online. Pay through Razorpay from the portal."
   },
   "/in/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts for Indian Businesses",
     "ogImage": "/img/feature-gallery-icons/share-banner.svg",
-    "description": "Share ledger statements with customers or vendors using Magic Link in Giddh. Generate a unique link with one click for instant ledger access."
+    "description": "Generate a Magic Link from any ledger and share it with customers or vendors. They can view their latest ledger details without logging into Giddh."
   },
   "/in/triggers": {
     "title": "Triggers for Automated Customer Communication",
     "ogImage": "/img/feature-gallery-icons/feature-invoice-on-email-whatsapp-and-sms.svg",
-    "description": "Automate Email and WhatsApp communication with Triggers in Giddh. Send reminders, payment follow-ups, and invoice notifications on schedule."
+    "description": "Schedule Email and WhatsApp messages based on dates, times, or events—so important customer communication goes out automatically."
   },
   "/in/financial-reporting": {
     "title": "Financial Reporting Software for Business Growth",
@@ -112,7 +112,7 @@
     "title": "GST-Compliant Invoicing Software India",
     "description": "Get expert support from Giddh’s team to assist with accounting and business management needs in India",
     "ogTitle": "GST-Compliant Invoicing Software India",
-    "ogImage" : "/img/feature-gallery-icons/contact.svg",
+    "ogImage": "/img/feature-gallery-icons/contact.svg",
     "ogDescription": "Get expert support from Giddh’s team to assist with accounting and business management needs in India",
     "keywords": "invoicing software India"
   },
@@ -120,7 +120,7 @@
     "title": "Bookkeeping Software for Small Businesses",
     "description": "Simplify bookkeeping with Giddh. Track income, expenses, and automate financial records with cloud access.",
     "ogTitle": "Bookkeeping Software for Small Businesses",
-    "ogImage" : "/img/home-page/index_banner_global.webp",
+    "ogImage": "/img/home-page/index_banner_global.webp",
     "ogDescription": "Simplify bookkeeping with Giddh. Track income, expenses, and automate financial records with cloud access.",
     "keywords": "small business bookkeeping software"
   },
@@ -138,7 +138,7 @@
     "title": "Giddh Inventory Management Software",
     "description": "Track stock and manage inventory efficiently with Giddh inventory management software. Automate purchases, sales, and reports.",
     "ogTitle": "Giddh Inventory Management Software",
-    "ogImage" : "/img/home-page/index_banner_global.webp" ,
+    "ogImage": "/img/home-page/index_banner_global.webp",
     "ogDescription": "Efficiently manage inventory with Giddh software, streamlining operations and boosting profits",
     "keywords": "inventory management software"
   },
@@ -146,14 +146,14 @@
     "title": "Unlimited User Accounting Software",
     "description": "Protect your business’s financial data with Giddh’s advanced encryption and security protocols",
     "ogTitle": "Unlimited User Accounting Software",
-    "ogImage" : "/img/security.webp",
+    "ogImage": "/img/security.webp",
     "ogDescription": "Protect your business’s financial data with Giddh’s advanced encryption and security protocols",
     "keywords": "unlimited user accounting software"
   },
   "/in/cloud-accounting-software": {
     "title": "Best Cloud Accounting Software for Businesses In India",
     "description": "Cloud accounting software in India that brings control, clarity, and collaboration to your finances. Get started with Giddh now!",
-    "ogImage" : "/img/cloud-accounting-software/cloud-accounting-software.svg",
+    "ogImage": "/img/cloud-accounting-software/cloud-accounting-software.svg",
     "keywords": "cloud accounting software,best cloud accounting software , best cloud-based accounting software"
   },
   "/in/about": {
@@ -186,7 +186,7 @@
     "title": "Giddh Affiliate Program: Start Earning",
     "description": "Join the Giddh affiliate program. Promote our accounting software and earn commissions for every successful business referral.",
     "ogTitle": "Giddh Affiliate Program: Start Earning",
-    "ogImage" : "/img/affilate/earn.webp",
+    "ogImage": "/img/affilate/earn.webp",
     "ogDescription": "Ditch outdated accounting. Giddh offers a modern cloud-based alternative to Tally with GST, invoicing & reports.",
     "keywords": "cloud based accounting software in india"
   },
@@ -211,7 +211,7 @@
     "title": "Signup | Join Us for Superior Accounting",
     "description": "Create your Giddh account today and experience seamless accounting. Sign up to simplify business finances, track transactions, and boost efficiency.",
     "ogTitle": "Signup | Join Us for Superior Accounting",
-    "ogImage" : "/img/giddh-logo.svg",
+    "ogImage": "/img/giddh-logo.svg",
     "ogDescription": "Create your Giddh account today and experience seamless accounting. Sign up to simplify business finances, track transactions, and boost efficiency."
   },
   "/in/zoho-vs-giddh": {
@@ -220,9 +220,9 @@
     "keywords": "Giddh vs Zoho comparison , accounting software comparison India ,best Zoho Books competitors"
   },
   "/in/tally-vs-giddh": {
-   "title": "Best Tally Alternative Software India",
+    "title": "Best Tally Alternative Software India",
     "description": "Looking for a Tally alternative software? Try Giddh for smarter, cloud-based accounting built for modern businesses!",
-    "ogImage" : "/img/home-page/index_banner_india.svg",
+    "ogImage": "/img/home-page/index_banner_india.svg",
     "keywords": "Tally alternative software"
   },
   "/in/tally-to-giddh-migration": {
@@ -270,37 +270,37 @@
   "/ae/recurring-invoices": {
     "title": "Recurring Invoice & Bill Software UAE",
     "ogImage": "/img/home-page/invoicing-solution-that-saves-time.svg",
-    "description": "Automate recurring invoices and bills in Giddh for UAE businesses. Set schedules, preview dates, and manage billing cycles easily."
+    "description": "Same invoice every month? Set it once. Automate recurring invoices and bills in Giddh for UAE businesses."
   },
   "/ae/invoice-bill-scanning": {
     "title": "Invoice & Bill Scanning Software UAE",
     "ogImage": "/img/feature-gallery-icons/barcode-scanning.svg",
-    "description": "Upload invoices and bills in Giddh to auto-extract party, date, amount, and VAT details. Reduce manual entry for UAE businesses."
+    "description": "Upload a PDF or image, let Giddh extract the details, review them, and save the accounting entry — without entering everything manually."
   },
   "/ae/email-to-bank-sync": {
     "title": "Email to Bank Sync Software UAE",
     "ogImage": "/img/bank-banner.svg",
-    "description": "Automatically sync bank statements from email into Giddh for UAE businesses. Map transactions and reconcile faster."
+    "description": "Stop downloading and uploading bank statements manually. Automatically bring statements received by email into Giddh, map transactions, and reconcile them faster."
   },
   "/ae/salesperson-feature-report": {
     "title": "Salesperson Feature and Report UAE",
     "ogImage": "/img/feature-gallery-icons/reports.svg",
-    "description": "Assign a salesperson on invoices and bills in Giddh. Track sales by person and analyse performance daily, weekly, monthly, or yearly."
+    "description": "Assign salespeople to invoices and bills, then see how much each person has sold over a selected period."
   },
   "/ae/customer-portal": {
     "title": "Customer Portal Software UAE",
     "ogImage": "/img/feature-gallery-icons/share-invoice.svg",
-    "description": "Share a Customer Portal in Giddh. Customers view invoices, PDFs, payment status, and pay online with automatic payment recording."
+    "description": "Stop answering repeated requests for invoice copies and payment status. Give every customer a dedicated portal to view billing and pay online."
   },
   "/ae/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts UAE",
     "ogImage": "/img/feature-gallery-icons/share-banner.svg",
-    "description": "Share ledger statements with customers or vendors using Magic Link in Giddh. Generate a unique link with one click for instant ledger access."
+    "description": "Generate a Magic Link from any ledger and share it with customers or vendors. They can view their latest ledger details without logging into Giddh."
   },
   "/ae/triggers": {
     "title": "Triggers for Automated Customer Communication UAE",
     "ogImage": "/img/feature-gallery-icons/feature-invoice-on-email-whatsapp-and-sms.svg",
-    "description": "Automate Email and WhatsApp communication with Triggers in Giddh. Send reminders, payment follow-ups, and invoice notifications on schedule."
+    "description": "Schedule Email and WhatsApp messages based on dates, times, or events—so important customer communication goes out automatically."
   },
   "/ae/financial-reporting": {
     "title": "Financial Forecasting Software UAE",
@@ -482,37 +482,37 @@
   "/uk/recurring-invoices": {
     "title": "Recurring Invoice & Bill Software UK",
     "ogImage": "/img/home-page/invoicing-solution-that-saves-time.svg",
-    "description": "Automate recurring invoices and bills in Giddh for UK businesses. Set schedules, preview dates, and manage billing cycles easily."
+    "description": "Same invoice every month? Set it once. Automate recurring invoices and bills in Giddh for UK businesses."
   },
   "/uk/invoice-bill-scanning": {
     "title": "Invoice & Bill Scanning Software UK",
     "ogImage": "/img/feature-gallery-icons/barcode-scanning.svg",
-    "description": "Upload invoices and bills in Giddh to auto-extract party, date, amount, and VAT details. Reduce manual entry for UK businesses."
+    "description": "Upload a PDF or image, let Giddh extract the details, review them, and save the accounting entry — without entering everything manually."
   },
   "/uk/email-to-bank-sync": {
     "title": "Email to Bank Sync Software UK",
     "ogImage": "/img/bank-banner.svg",
-    "description": "Automatically sync bank statements from email into Giddh for UK businesses. Map transactions and reconcile faster."
+    "description": "Stop downloading and uploading bank statements manually. Automatically bring statements received by email into Giddh, map transactions, and reconcile them faster."
   },
   "/uk/salesperson-feature-report": {
     "title": "Salesperson Feature and Report UK",
     "ogImage": "/img/feature-gallery-icons/reports.svg",
-    "description": "Assign a salesperson on invoices and bills in Giddh. Track sales by person and analyse performance daily, weekly, monthly, or yearly."
+    "description": "Assign salespeople to invoices and bills, then see how much each person has sold over a selected period."
   },
   "/uk/customer-portal": {
     "title": "Customer Portal Software UK",
     "ogImage": "/img/feature-gallery-icons/share-invoice.svg",
-    "description": "Share a Customer Portal in Giddh. Customers view invoices, PDFs, payment status, and pay online with automatic payment recording."
+    "description": "Stop answering repeated requests for invoice copies and payment status. Give every customer a dedicated portal to view billing and pay online."
   },
   "/uk/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts UK",
     "ogImage": "/img/feature-gallery-icons/share-banner.svg",
-    "description": "Share ledger statements with customers or vendors using Magic Link in Giddh. Generate a unique link with one click for instant ledger access."
+    "description": "Generate a Magic Link from any ledger and share it with customers or vendors. They can view their latest ledger details without logging into Giddh."
   },
   "/uk/triggers": {
     "title": "Triggers for Automated Customer Communication UK",
     "ogImage": "/img/feature-gallery-icons/feature-invoice-on-email-whatsapp-and-sms.svg",
-    "description": "Automate Email and WhatsApp communication with Triggers in Giddh. Send reminders, payment follow-ups, and invoice notifications on schedule."
+    "description": "Schedule Email and WhatsApp messages based on dates, times, or events—so important customer communication goes out automatically."
   },
   "/uk/financial-reporting": {
     "title": "Financial Reporting Software for UK Firms",
@@ -676,37 +676,37 @@
   "/recurring-invoices": {
     "title": "Recurring Invoice & Bill Software",
     "ogImage": "/img/home-page/invoicing-solution-that-saves-time.svg",
-    "description": "Automate recurring invoices and bills with Giddh. Set daily, weekly, or monthly schedules, preview upcoming dates, and manage billing cycles easily."
+    "description": "Same invoice every month? Set it once. Automate recurring invoices and bills with Giddh—daily, weekly, monthly, or on a specific date."
   },
   "/invoice-bill-scanning": {
     "title": "Invoice & Bill Scanning Software",
     "ogImage": "/img/feature-gallery-icons/barcode-scanning.svg",
-    "description": "Upload invoices and bills in Giddh to auto-extract party, date, amount, and tax details. Reduce manual data entry and save transactions faster."
+    "description": "Upload a PDF or image, let Giddh extract the details, review them, and save the accounting entry — without entering everything manually."
   },
   "/email-to-bank-sync": {
     "title": "Email to Bank Sync Software",
     "ogImage": "/img/bank-banner.svg",
-    "description": "Automatically sync bank statements from email into Giddh. Map transactions to accounts and reconcile faster with less manual effort."
+    "description": "Stop downloading and uploading bank statements manually. Automatically bring statements received by email into Giddh, map transactions, and reconcile them faster."
   },
   "/salesperson-feature-report": {
     "title": "Salesperson Feature and Report",
     "ogImage": "/img/feature-gallery-icons/reports.svg",
-    "description": "Assign a salesperson on invoices and bills in Giddh. Track sales by person and analyse performance daily, weekly, monthly, or yearly."
+    "description": "Assign salespeople to invoices and bills, then see how much each person has sold over a selected period."
   },
   "/customer-portal": {
     "title": "Customer Portal Software",
     "ogImage": "/img/feature-gallery-icons/share-invoice.svg",
-    "description": "Share a Customer Portal in Giddh. Customers view invoices, PDFs, payment status, and pay online with automatic payment recording."
+    "description": "Stop answering repeated requests for invoice copies and payment status. Give every customer a dedicated portal to view billing and pay online."
   },
   "/magic-link-ledger-accounts": {
     "title": "Magic Link in Ledger Accounts",
     "ogImage": "/img/feature-gallery-icons/share-banner.svg",
-    "description": "Share ledger statements with customers or vendors using Magic Link in Giddh. Generate a unique link with one click for instant ledger access."
+    "description": "Generate a Magic Link from any ledger and share it with customers or vendors. They can view their latest ledger details without logging into Giddh."
   },
   "/triggers": {
     "title": "Triggers for Automated Customer Communication",
     "ogImage": "/img/feature-gallery-icons/feature-invoice-on-email-whatsapp-and-sms.svg",
-    "description": "Automate Email and WhatsApp communication with Triggers in Giddh. Send reminders, payment follow-ups, and invoice notifications on schedule."
+    "description": "Schedule Email and WhatsApp messages based on dates, times, or events—so important customer communication goes out automatically."
   },
   "/financial-reporting": {
     "title": "Cloud Financial Reporting for Businesses",
