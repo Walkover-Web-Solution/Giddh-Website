@@ -47,7 +47,7 @@ Without any env vars the site still builds and renders, with these known degrada
 > [!WARNING]
 > Every variable the code reads is `NEXT_PUBLIC_*`. Next inlines each one into the **client JS bundle at build time**, so anyone can read it in the browser. Never put a real secret in a `NEXT_PUBLIC_` var. `NEXT_PUBLIC_MSG91_AUTH_KEY` is sent as a `tokenAuth` header from the browser today (`src/utils/segmento.js:sendDataInSegmento`). It's client-exposed by design, but whether that key is scoped safely is open ([OPEN_QUESTIONS.md](OPEN_QUESTIONS.md)). Because values are inlined at build, changing one on Netlify needs a **rebuild**, not just a redeploy of the old build. <!-- verify:ignore -->
 
-All 11 variables are client-exposed. No variable has a server-only reader. "Required" means a core path breaks without it.
+All 13 variables are client-exposed. No variable has a server-only reader. "Required" means a core path breaks without it.
 
 | Var | Required | Default | Read in | Purpose / effect if missing |
 |---|---|---|---|---|
@@ -67,8 +67,13 @@ All 11 variables are client-exposed. No variable has a server-only reader. "Requ
 | **Desktop downloads** | | | | |
 | `NEXT_PUBLIC_S3_BASE_URL` | no | — | `src/utils/s3Config.js:getS3BaseUrl` | Base URL for installer downloads (`src/components/downloadFreeModal.js`, `src/components/footer.js`). Unset → `getDownloadUrl` returns `""` and `getAppVersion` shows `latest`. |
 | `NEXT_PUBLIC_S3_BUCKET_NAME` | no | — | `src/utils/s3Config.js:getBucketName` | Bucket path segment. Same fallback as `NEXT_PUBLIC_S3_BASE_URL`. |
+| **Experiments** | | | | |
+| `NEXT_PUBLIC_MW_EVENTS_URL` | no | `""` (recording off) | `src/utils/experiments.js` (`MW_EVENTS`) | Append-only events URL for browser A/B recording. Unset → `mwSend` returns without a request. `mwVariant` still returns a local variant. The repo has no env example file. Set this in the Netlify environment and in the local env file from the setup section, then rebuild. |
+| `NEXT_PUBLIC_MW_KEY` | no | `""` (recording off) | `src/utils/experiments.js` (`MW_KEY`) | Publishable key sent in the event body. It can only append events. Inlined into the client bundle, so it must not be a secret. Unset → nothing is sent. Set it in the same place as `NEXT_PUBLIC_MW_EVENTS_URL`. |
 
 Read env vars as the literal `process.env.NEXT_PUBLIC_X`. Next only inlines literal property access, so `process.env[name]` is `undefined` in the browser. <!-- verify:ignore -->
+
+`src/pages/_app.js:MyApp` assigns `mwVariant` and `mwSend` onto `window` in the browser, and any page can import them from `src/utils/experiments.js`. `mwVariant(experiment, variants)` hashes the experiment name with the `mw_visitor` localStorage id and returns a variant immediately. On any error it returns the first variant. `mwSend` posts `{ event, experiment, variant, goal }` and returns without waiting, retrying or reading the response. No page calls either function, so no page changes and no event is sent. Do not call `mwVariant` during prerender: there is no `localStorage`, so that call mints a throwaway id and can bake one variant into the HTML. A later experiment reads the variant in the browser during render and leaves the prerendered markup on the control.
 
 > [!TODO]
 > Where the values live isn't recorded in the repo. *Inference:* they're set in the Netlify site environment, with different values for the `web` test site and the `main` production site. `.env.production` was tracked until PR #536 (see ADR-012). Needs a human to confirm where the values are kept and who can change them. <!-- verify:ignore -->
@@ -115,6 +120,7 @@ Every form on the site talks to **real backends**:
 - Book-a-demo leads: the MSG91 Segmento phonebook.
 - Affiliate registration: `/verify-and-send`.
 - Analytics: GTM and the amplifyapp tracker in `src/pages/_document.js`.
+- Experiment recording: `src/utils/experiments.js`. Leave `NEXT_PUBLIC_MW_EVENTS_URL` and `NEXT_PUBLIC_MW_KEY` unset. `mwSend` then returns without a request. No page calls it.
 
 - **Never submit a real form from an agent against production values.** It creates real users, sends real OTP SMS and email, creates CRM leads, or takes payment.
 - Without env vars these calls fail harmlessly (relative `undefined/...` URLs), which is the safe default for UI-only work.

@@ -24,6 +24,7 @@ Recovered from git history (2,017 commits, 2023-07-18 → 2026-09-26). Commit me
 | 2026-02-02 | [ADR-011: Desktop-app download URLs centralised in `s3Config`](#adr-011-desktop-app-download-urls-centralised-in-s3config) | Accepted | Downloads | Test vs prod buckets |
 | 2025-03-05 | [ADR-012: `web` staging branch; no committed env or lockfile](#adr-012-web-staging-branch-no-committed-env-or-lockfile) | Accepted | Delivery | Netlify test site before prod |
 | 2026-10-24 | [ADR-013: AI-readiness prep: docs set and evidence-based cleanup](#adr-013-ai-readiness-prep-docs-set-and-evidence-based-cleanup) | Accepted | Repo-wide | Agents need verified docs; dead code removed only with 7-point evidence |
+| 2026-10-29 | [ADR-014: Browser-side experiment recording, no new backend](#adr-014-browser-side-experiment-recording-no-new-backend) | Accepted | Analytics | Record A/B exposure and conversion in the browser. No experiment is running |
 
 ---
 
@@ -278,6 +279,22 @@ The repo had only a short `README.md`, no tests and no working lint, so agents a
 ### Superseded / Rejected Alternatives
 1. **Deleting the ~61 MB of unreferenced public assets:** deferred. External hot-links can't be ruled out from the repo ([OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) Q-005).
 2. **Fixing the defects found (payment v1, UK OTP API, schema prop, …):** deferred. They change behaviour, so each needs its own PR (Q-018 to Q-030).
+
+---
+
+## ADR-014: Browser-side experiment recording, no new backend
+### Status
+Accepted, 2026-10-29.
+### Context & Problem Statement
+The marketing site may later test copy or calls to action. The site has no backend, and adding one is a non-goal ([VISION.md](VISION.md)). No experiment is defined yet, and no page should change until one is.
+### Decision & Implementation
+One module, `src/utils/experiments.js`, assigns a variant locally from the experiment name and a `mw_visitor` localStorage id, and can send an exposure or conversion with `mwSend`. The URL and publishable key are `NEXT_PUBLIC_MW_EVENTS_URL` and `NEXT_PUBLIC_MW_KEY`. If either is unset, nothing is sent. `src/pages/_app.js:MyApp` copies `mwVariant` and `mwSend` onto `window` so every page can call them. No page calls them.
+### Consequences & Trade-offs
+- **Positive:** a later experiment can record without an API route, and a down or slow collector cannot block the page.
+- **Negative / Constraints:** the key is in the client bundle and must stay publishable. A `mwVariant` call during prerender has no `localStorage` and must not be baked into HTML. Events for an experiment that is not running are refused by the collector. Starting an experiment is an owner action outside this repo.
+### Superseded / Rejected Alternatives
+1. **A Next.js API route that proxies events:** rejected. This site adds no backend.
+2. **Starting an experiment in this change:** rejected. The owner defines experiments, and this change must not change what any page shows.
 
 ---
 

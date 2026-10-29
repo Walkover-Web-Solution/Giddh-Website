@@ -10,8 +10,15 @@ import Toastify from "@/components/toastify";
 import getPageData from "@/utils/getPageData";
 import getPageInfo from "@/utils/getPageInfo";
 import Schema from "@/components/NewComps/Schema";
+import { mwSend, mwVariant } from "@/utils/experiments";
 
 export default function MyApp({ Component, pageProps }) {
+  // Available to every page. Nothing here reads a variant or sends an event.
+  if (typeof window !== "undefined") {
+    window.mwVariant = mwVariant;
+    window.mwSend = mwSend;
+  }
+
   const router = useRouter();
   const rawBrowserPath = router.asPath;
   const arrayBrawserPath = rawBrowserPath.split("/");
