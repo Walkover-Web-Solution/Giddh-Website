@@ -1,0 +1,232 @@
+{
+  "splitBanner": {
+    "heading": "Sync Bank Statements from Email to Giddh",
+    "subHeading": "Stop downloading and uploading bank statements manually. Automatically bring statements received by email into Giddh, map transactions, and reconcile them faster.",
+    "image": "/img/bank-banner.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Still Handling Bank Statements Manually?",
+    "subHeading": "Downloading statements from your email, saving files, uploading them to your accounting software, and then reconciling transactions takes unnecessary time. Email to Bank Sync simplifies this process by bringing your bank statements directly into Giddh.",
+    "cards": [
+      {
+        "heading": "Skip manual downloads",
+        "description": "No need to save bank statements before uploading them."
+      },
+      {
+        "heading": "Sync statements automatically",
+        "description": "Bring statements received by email into Giddh."
+      },
+      {
+        "heading": "Map transactions easily",
+        "description": "Assign transactions to the right accounts."
+      },
+      {
+        "heading": "Reconcile faster",
+        "description": "Review and reconcile your bank transactions with less manual effort."
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "How Email to Bank Sync works",
+    "steps": [
+      {
+        "icon": "/img/make-the-switch/file.svg",
+        "title": "Connect",
+        "description": "Configure your bank email in Giddh."
+      },
+      {
+        "icon": "/img/make-the-switch/cloud.svg",
+        "title": "Sync",
+        "description": "Statements received by email are automatically brought into Giddh."
+      },
+      {
+        "icon": "/img/make-the-switch/calender.svg",
+        "title": "Map",
+        "description": "Map transactions to the right accounts."
+      },
+      {
+        "icon": "/img/make-the-switch/support_agent.svg",
+        "title": "Reconcile",
+        "description": "Review and reconcile your transactions."
+      }
+    ]
+  },
+  "features": {
+    "heading": "From Bank Email to Reconciled Books",
+    "subHeading": "See how your bank statement moves from email to Giddh — without the manual file handling.",
+    "content": [
+      {
+        "heading": "Statement Received",
+        "img": "/img/bank-connect.svg",
+        "description": "Your bank statement arrives in your email."
+      },
+      {
+        "heading": "Statement Synced",
+        "img": "/img/bank-account.svg",
+        "description": "The statement is automatically brought into Giddh."
+      },
+      {
+        "heading": "Transactions Mapped",
+        "img": "/img/feature-gallery-icons/feature-bank-reconciliation.svg",
+        "description": "Map transactions to the right accounts in your books."
+      },
+      {
+        "heading": "Reconciliation",
+        "img": "/img/bank-overview.svg",
+        "description": "Review and reconcile your transactions faster."
+      }
+    ]
+  },
+  "giddhVs": {
+    "heading": "From Manual Uploads to Automatic Syncing",
+    "subheading": "",
+    "columns": [
+      {
+        "key": "withGiddh",
+        "label": "With Giddh"
+      },
+      {
+        "key": "without",
+        "label": "Without Email to Bank Sync"
+      }
+    ],
+    "content": [
+      {
+        "feature": "Get the statement",
+        "without": "Download the statement",
+        "withGiddh": "Statement is synced from email"
+      },
+      {
+        "feature": "Handle the file",
+        "without": "Save the file",
+        "withGiddh": "No manual file handling"
+      },
+      {
+        "feature": "Bring into accounting",
+        "without": "Upload it to accounting software",
+        "withGiddh": "Statement is available in Giddh"
+      },
+      {
+        "feature": "Map transactions",
+        "without": "Map transactions",
+        "withGiddh": "Map transactions in Giddh"
+      },
+      {
+        "feature": "Reconcile",
+        "without": "Reconcile manually",
+        "withGiddh": "Reconcile faster"
+      }
+    ]
+  },
+  "useCases": {
+    "heading": "Built for Businesses That Receive Bank Statements by Email",
+    "subHeading": "Email to Bank Sync is useful for businesses and accountants who regularly receive bank statements through email and want to reduce manual reconciliation work.",
+    "content": [
+      {
+        "title": "Businesses managing regular bank statements",
+        "description": "Receive bank statements by email and keep them in sync with Giddh."
+      },
+      {
+        "title": "Accountants handling multiple bank accounts",
+        "description": "Reduce repetitive statement handling across accounts."
+      },
+      {
+        "title": "Teams looking to simplify bank reconciliation",
+        "description": "Map transactions and reconcile with less manual effort."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Spend Less Time Handling Bank Statements",
+    "subheading": "Bring emailed bank statements into Giddh and simplify your reconciliation workflow.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-white"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is Email to Bank Sync?",
+      "answer": "Email to Bank Sync automatically brings bank statements received through email into Giddh, so you can process, map, and reconcile transactions without manually downloading and uploading statements."
+    },
+    {
+      "question": "Do I need to download bank statements manually?",
+      "answer": "No. Once the bank email integration is configured, relevant statements can be synced into Giddh automatically."
+    },
+    {
+      "question": "What can I do after a statement is synced?",
+      "answer": "You can review the statement, map transactions to the appropriate accounts, and reconcile them in Giddh."
+    },
+    {
+      "question": "Is Email to Bank Sync the same as direct bank integration?",
+      "answer": "No. Email to Bank Sync is designed for bank statements received through email. It provides a simple way to bring those statements into Giddh for processing and reconciliation."
+    }
+  ],
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Email to Bank Sync?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Email to Bank Sync automatically brings bank statements received through email into Giddh, so you can process, map, and reconcile transactions without manually downloading and uploading statements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to download bank statements manually?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Once the bank email integration is configured, relevant statements can be synced into Giddh automatically."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can I do after a statement is synced?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can review the statement, map transactions to the appropriate accounts, and reconcile them in Giddh."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Email to Bank Sync the same as direct bank integration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Email to Bank Sync is designed for bank statements received through email. It provides a simple way to bring those statements into Giddh for processing and reconciliation."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Sync bank statements from email to Giddh. Stop downloading and uploading statements manually — map transactions and reconcile faster.",
+      "name": "Email to Bank Sync Software India",
+      "url": "https://giddh.com/in/email-to-bank-sync"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Email to Bank Sync in Giddh for India businesses brings emailed bank statements into the application so you can map transactions and reconcile with less manual effort.",
+      "url": "https://giddh.com/in/email-to-bank-sync",
+      "name": "Email to Bank Sync India"
+    }
+  ]
+}

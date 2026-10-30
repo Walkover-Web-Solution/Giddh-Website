@@ -1,0 +1,232 @@
+{
+  "splitBanner": {
+    "heading": "Give Customers One Place to View Invoices & Pay Online",
+    "subHeading": "Stop answering repeated requests for invoice copies, payment status, and transaction details. Give every customer a dedicated portal to view their billing information and make payments online.",
+    "image": "/img/feature-gallery-icons/share-invoice.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Tired of Sending Invoices and Payment Updates Manually?",
+    "subHeading": "Customers often ask for invoice copies, payment status, transaction details, and outstanding billing information. Instead of handling these requests one by one, give customers access to their own portal.",
+    "cards": [
+      {
+        "heading": "View invoices",
+        "description": "Access invoice details and PDF copies anytime."
+      },
+      {
+        "heading": "Track payment status",
+        "description": "See whether invoices are paid, unpaid, or partially paid."
+      },
+      {
+        "heading": "View transactions",
+        "description": "Keep track of their billing activity in one place."
+      },
+      {
+        "heading": "Pay online",
+        "description": "Make payments directly from the portal when Razorpay is integrated."
+      }
+    ]
+  },
+  "features": {
+    "heading": "From Invoice Sharing to Online Payment",
+    "subHeading": "One portal. Everything your customer needs to manage billing.",
+    "content": [
+      {
+        "heading": "Create & Enable",
+        "img": "/img/feature-gallery-icons/share-collaborate.svg",
+        "description": "Add the customer's email ID and enable Customer Portal access while creating the customer."
+      },
+      {
+        "heading": "Share the Portal",
+        "img": "/img/feature-gallery-icons/share-invoice.svg",
+        "description": "Giddh generates a unique link that you can share directly with the customer."
+      },
+      {
+        "heading": "Customer Views Billing",
+        "img": "/img/feature-gallery-icons/create-and-send-professional-invoices-with-cloud-based.svg",
+        "description": "Customers can view invoices, transaction details, PDFs, payment status, and comments."
+      },
+      {
+        "heading": "Customer Pays Online",
+        "img": "/img/bulk-payment-card-icon.svg",
+        "description": "With Razorpay integration, customers can pay directly from the portal and the payment is automatically recorded in Giddh."
+      }
+    ]
+  },
+  "benefits": {
+    "heading": "Make Customer Billing Easier",
+    "cards": [
+      {
+        "heading": "Reduce Follow-Ups",
+        "description": "Customers can check invoices and payment status themselves instead of contacting your team."
+      },
+      {
+        "heading": "Centralize Billing Information",
+        "description": "Keep invoices, transactions, PDFs, and payment status accessible from one place."
+      },
+      {
+        "heading": "Get Paid Online",
+        "description": "Let customers pay directly through the portal when Razorpay is connected."
+      },
+      {
+        "heading": "Keep Books Updated",
+        "description": "Payments made through the portal are automatically recorded in Giddh."
+      }
+    ]
+  },
+  "giddhVs": {
+    "heading": "From Back-and-Forth to Self-Service",
+    "subheading": "",
+    "columns": [
+      {
+        "key": "withGiddh",
+        "label": "With Giddh"
+      },
+      {
+        "key": "without",
+        "label": "Without Customer Portal"
+      }
+    ],
+    "content": [
+      {
+        "feature": "Invoice access",
+        "without": "Customer asks for invoice",
+        "withGiddh": "Customer views invoice online"
+      },
+      {
+        "feature": "Invoice PDF",
+        "without": "Team sends invoice PDF",
+        "withGiddh": "PDF is available in the portal"
+      },
+      {
+        "feature": "Payment status",
+        "without": "Customer asks about payment status",
+        "withGiddh": "Customer checks status themselves"
+      },
+      {
+        "feature": "Making payment",
+        "without": "Payment is made separately",
+        "withGiddh": "Customer can pay from the portal"
+      },
+      {
+        "feature": "Bookkeeping",
+        "without": "Team updates payment manually",
+        "withGiddh": "Payment entry is recorded automatically"
+      }
+    ]
+  },
+  "useCases": {
+    "heading": "Built for Businesses That Deal With Frequent Customer Billing Requests",
+    "subHeading": "Customer Portal is especially useful when:",
+    "content": [
+      {
+        "title": "Customers frequently request invoice copies",
+        "description": "Let them access invoices and PDFs from their portal anytime."
+      },
+      {
+        "title": "Customers need regular payment-status updates",
+        "description": "They can check paid, unpaid, or partially paid status themselves."
+      },
+      {
+        "title": "You want to offer online payment options",
+        "description": "Customers can pay from the portal when Razorpay is integrated."
+      },
+      {
+        "title": "Your team spends time on billing queries",
+        "description": "Reduce back-and-forth on invoice copies and payment updates."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Give Your Customers a Simpler Way to Manage Their Bills",
+    "subheading": "Let customers view invoices, track payments, and pay online — while keeping your books updated in Giddh.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-white"
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is Customer Portal in Giddh?",
+      "answer": "Customer Portal gives each customer a dedicated space to view their invoices, transactions, payment status, and other billing information."
+    },
+    {
+      "question": "How do I enable Customer Portal?",
+      "answer": "Add the customer's email ID while creating the customer and enable Customer Portal access. Giddh then generates a unique link that you can share with the customer."
+    },
+    {
+      "question": "What can customers see in the portal?",
+      "answer": "Customers can view their transactions, invoice PDFs, invoice status, and comments associated with their invoices."
+    },
+    {
+      "question": "Can customers pay from the portal?",
+      "answer": "Yes. If Razorpay is integrated with Giddh, customers can pay directly from the portal. Successful payments are automatically recorded in Giddh."
+    }
+  ],
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Customer Portal in Giddh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Customer Portal gives each customer a dedicated space to view their invoices, transactions, payment status, and other billing information."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I enable Customer Portal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add the customer's email ID while creating the customer and enable Customer Portal access. Giddh then generates a unique link that you can share with the customer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What can customers see in the portal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Customers can view their transactions, invoice PDFs, invoice status, and comments associated with their invoices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can customers pay from the portal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If Razorpay is integrated with Giddh, customers can pay directly from the portal. Successful payments are automatically recorded in Giddh."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Give customers one place to view invoices and pay online through Razorpay. Share a Customer Portal in Giddh for billing transparency and self-service payments.",
+      "name": "Customer Portal Software India",
+      "url": "https://giddh.com/in/customer-portal"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Customer Portal in Giddh for Indian businesses. Customers view invoices, track payment status, and pay online with Razorpay while payments are recorded automatically.",
+      "url": "https://giddh.com/in/customer-portal",
+      "name": "Customer Portal India"
+    }
+  ]
+}

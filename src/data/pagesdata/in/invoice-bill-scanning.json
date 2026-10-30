@@ -1,0 +1,171 @@
+{
+  "splitBanner": {
+    "heading": "Turn Invoices & Bills Into Accounting Entries",
+    "subHeading": "Upload a PDF or image, let Giddh extract the details, review them, and save the entry — without entering everything manually.",
+    "image": "/img/feature-gallery-icons/barcode-scanning.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Stop Typing Every Invoice and Bill Manually",
+    "subHeading": "Upload the document and let Giddh extract the details for you.",
+    "cards": [
+      {
+        "heading": "Manual entry takes time",
+        "description": "Manually entering invoice details takes time, especially when processing multiple bills."
+      },
+      {
+        "heading": "More typing, more mistakes",
+        "description": "Re-entering amounts, dates, tax details, and party information increases the chance of mistakes."
+      },
+      {
+        "heading": "Unnecessary conversion work",
+        "description": "Converting paper or PDF bills into accounting entries adds unnecessary work."
+      }
+    ]
+  },
+  "quickStartSection": {
+    "heading": "From Bill to Entry in 4 Simple Steps",
+    "steps": [
+      {
+        "icon": "/img/make-the-switch/file.svg",
+        "title": "Upload",
+        "description": "Upload your invoice or bill as a PDF or image."
+      },
+      {
+        "icon": "/img/make-the-switch/cloud.svg",
+        "title": "Extract",
+        "description": "Giddh extracts available details such as party, date, amount, and tax information."
+      },
+      {
+        "icon": "/img/make-the-switch/calender.svg",
+        "title": "Review",
+        "description": "Check the extracted details and edit them if needed."
+      },
+      {
+        "icon": "/img/make-the-switch/support_agent.svg",
+        "title": "Save",
+        "description": "Save the verified information as an accounting entry."
+      }
+    ]
+  },
+  "features": {
+    "heading": "Example: Recording a Vendor Bill",
+    "content": [
+      {
+        "heading": "Upload instead of typing every field",
+        "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
+        "description": "Received a purchase bill from a vendor? Upload it instead of entering every detail manually. Giddh extracts the available information, you verify it, and save the entry."
+      }
+    ]
+  },
+  "useCases": {
+    "heading": "Make Everyday Data Entry Faster",
+    "subHeading": "When Invoice & Bill Scanning helps most.",
+    "content": [
+      {
+        "title": "Lots of Vendor Bills",
+        "description": "Upload purchase bills instead of entering every field manually."
+      },
+      {
+        "title": "Invoices Received as PDFs",
+        "description": "Turn digital invoices into accounting entries without retyping the details."
+      },
+      {
+        "title": "High-Volume Daily Entries",
+        "description": "Save time when recording multiple bills and invoices every day."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What details can Giddh extract from an invoice or bill?",
+      "answer": "Giddh extracts available information such as party details, invoice number, date, amount, and tax details."
+    },
+    {
+      "question": "Can I edit the extracted information?",
+      "answer": "Yes. You can review and edit the extracted details before saving the accounting entry."
+    },
+    {
+      "question": "What documents can I upload?",
+      "answer": "You can upload invoices and bills in supported PDF or image formats."
+    },
+    {
+      "question": "Do I need to verify the extracted details?",
+      "answer": "Yes. You can review the extracted information and make any required changes before saving."
+    }
+  ],
+  "cta": {
+    "heading": "Stop Entering Bills Manually",
+    "subheading": "Upload the bill. Giddh extracts the details. You verify and save.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-white"
+      }
+    ]
+  },
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What details can Giddh extract from an invoice or bill?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Giddh extracts available information such as party details, invoice number, date, amount, and tax details."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I edit the extracted information?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can review and edit the extracted details before saving the accounting entry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents can I upload?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can upload invoices and bills in supported PDF or image formats."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to verify the extracted details?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can review the extracted information and make any required changes before saving."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Turn invoices and bills into accounting entries. Upload a PDF or image, let Giddh extract the details, review them, and save.",
+      "name": "Invoice & Bill Scanning Software India",
+      "url": "https://giddh.com/in/invoice-bill-scanning"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Upload invoice or bill documents in Giddh for India businesses. Extract party, date, amount, and tax details, review, and save accounting entries.",
+      "url": "https://giddh.com/in/invoice-bill-scanning",
+      "name": "Invoice Bill Scanning India"
+    }
+  ]
+}

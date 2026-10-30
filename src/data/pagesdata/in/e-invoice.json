@@ -64,35 +64,88 @@
     ]
   },
   "giddhFor": {
-    "heading": "Who Is Giddh E-Invoice Software Designed  For?",
-    "subheading": "",
+    "badge": "BUILT FOR EVERY BUSINESS",
+    "heading": "Who Is Giddh E-Invoice Software Designed For?",
+    "subheading": "From small shops to growing enterprises — automate GST e-invoicing with a platform that fits your workflow.",
     "content": [
       {
         "title": "Small Businesses",
-        "name": "Small Businesses",
+        "tabIcon": "MdStorefront",
+        "label": "For small businesses",
+        "labelIcon": "MdStorefront",
+        "heading": "Automate GST billing without the complexity",
         "description": "Small businesses looking to automate GST billing.",
-        "icon": "🛒",
+        "highlights": [
+          "GST E-Invoicing",
+          "Instant Invoices",
+          "Email & WhatsApp",
+          "Recurring Reminders",
+          "GST Compliance"
+        ],
+        "cta": {
+          "text": "See how small businesses use Giddh",
+          "href": "/in/e-invoice"
+        },
         "image": "/img/online-accounting-software/Retailers.svg"
       },
       {
         "title": "Startups",
-        "name": "Startups & Service Providers",
-        "description": "Startups aiming for fast, affordable",
-        "icon": "🚀",
+        "tabIcon": "MdRocketLaunch",
+        "label": "For startups",
+        "labelIcon": "MdRocketLaunch",
+        "heading": "Fast, affordable e-invoicing from day one",
+        "description": "Startups aiming for fast, affordable GST billing automation.",
+        "highlights": [
+          "Quick Setup",
+          "E-Invoice Generation",
+          "GST Auto-Apply",
+          "Cloud Access",
+          "Free Trial"
+        ],
+        "cta": {
+          "text": "See how startups use Giddh",
+          "href": "/signup"
+        },
         "image": "/img/online-accounting-software/Startups.svg"
       },
       {
         "title": "Accountants",
-        "name": "Accountants & Finance Teams",
-        "description": "CA and accounting firms serving multiple clients",
-        "icon": "📊",
+        "tabIcon": "MdAccountBalance",
+        "label": "For accountants & CA firms",
+        "labelIcon": "MdAccountBalance",
+        "heading": "Manage e-invoicing for every client in one place",
+        "description": "CA and accounting firms serving multiple clients.",
+        "highlights": [
+          "Multi-Client Access",
+          "GST Reports",
+          "E-Invoice Register",
+          "Audit Trails",
+          "White-Label Option"
+        ],
+        "cta": {
+          "text": "See how accountants use Giddh",
+          "href": "/multi-user-accounting-software"
+        },
         "image": "/img/online-accounting-software/Accountants.svg"
       },
       {
         "title": "Enterprises",
-        "name": "Growing Enterprises",
-        "description": " Growing enterprises integrating ERP with IRN",
-        "icon": "🛍️",
+        "tabIcon": "MdBusiness",
+        "label": "For growing enterprises",
+        "labelIcon": "MdBusiness",
+        "heading": "Integrate ERP with IRN seamlessly",
+        "description": "Growing enterprises integrating ERP with IRN.",
+        "highlights": [
+          "ERP Integration",
+          "IRN Generation",
+          "Real-Time Tracking",
+          "E-Way Bills",
+          "99.9% Uptime"
+        ],
+        "cta": {
+          "text": "See how enterprises use Giddh",
+          "href": "/in/e-invoice"
+        },
         "image": "/img/online-accounting-software/E-commerce.svg"
       }
     ]
