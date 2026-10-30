@@ -16,6 +16,7 @@
     "docs/DESIGN.md",
     "docs/CONTRACTS.md",
     "docs/DEVELOPMENT.md",
+    "docs/CONFIGURATION.md",
     "docs/DECISIONS.md",
     "docs/OPEN_QUESTIONS.md"
   ],
@@ -29,6 +30,7 @@
     "docs/DESIGN.md": "DESIGN.md + ui-components.md",
     "docs/CONTRACTS.md": "CONTRACTS.md",
     "docs/DEVELOPMENT.md": "DEVELOPMENT.md + environment.md",
+    "docs/CONFIGURATION.md": "CONFIGURATION.md",
     "docs/RECIPES.md": "recipes.md",
     "docs/DECISIONS.md": "DECISIONS.md",
     "docs/OPEN_QUESTIONS.md": "OPEN_QUESTIONS.md"

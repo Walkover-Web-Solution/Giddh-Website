@@ -1,11 +1,11 @@
 ---
 covers: ["src/pages/_app.js", "src/pages/_document.js", "src/utils/getPageInfo.js", "src/utils/getPageData.js", "src/components/**", "src/data/pagesdata/**", "next.config.js", "jsconfig.json"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: fa3d74c4
+verified_on: 2026-10-30
 ---
 # Architecture & Mental Model
 
-A Next.js 16 pages-router site in plain JavaScript (React 19, Bootstrap 5 + SCSS). There is no API client, global store or server code of its own. Almost every route is prerendered to static HTML at build time; the exceptions are the blog index and tag pages, which use `getServerSideProps`. Locale is the first URL segment (`/in`, `/ae`, `/uk`, or none for global). Per-page copy comes from either JSON in `src/data/pagesdata/` or hand-written JSX. Forms and pricing call the Giddh API and third parties straight from the browser with `fetch`. Purpose and non-goals are in [VISION.md](VISION.md), and the reasons behind these choices are in [DECISIONS.md](DECISIONS.md).
+A Next.js 16 pages-router site in plain JavaScript (React 19, Bootstrap 5 + SCSS). There is no API client, global store or server code of its own. Almost every route is prerendered to static HTML at build time; the exceptions are the blog index and tag pages, which use `getServerSideProps`. Locale is the first URL segment (`/in`, `/ae`, `/uk`, or none for global). Per-page copy comes from either JSON in `src/data/pagesdata/` or hand-written JSX. Forms and pricing call the Giddh API and third parties straight from the browser with `fetch`. Purpose and non-goals are in [VISION.md](VISION.md), the reasons behind these choices are in [DECISIONS.md](DECISIONS.md), and every env var and hard-coded setting is in [CONFIGURATION.md](CONFIGURATION.md).
 
 ## System Overview & Mental Model
 
@@ -66,6 +66,7 @@ A locale is a folder: `src/pages/` (global), `src/pages/in/`, `src/pages/ae/` an
 - **Re-export of a shared composition:** `src/pages/ae/triggers.js` renders `src/components/Pages/Triggers.js`.
 - **Wrapper around another page file:** `src/pages/ae/pricing.js` renders `src/pages/pricing.js` with `path={path.path}`. `src/pages/uk/pricing.js` renders `src/pages/in/pricing.js`, which renders `src/pages/pricing.js` again. `src/pages/ae/cloud-accounting-software.js` renders `src/pages/uk/cloud-accounting-software.js`.
 - **A page of its own:** for example `src/pages/ae/index.js` and `src/pages/uk/index.js`, built from `src/components/bannerSection.js`, `src/components/featureGallery.js`, `src/components/clientSummary.js`, `src/components/makeTheSwitch.js` and FAQs from `src/data/faqs.json`; `src/pages/ae/vat.js`, `src/pages/uk/vat.js`, `src/pages/uk/inventory-management-software.js`; and the India-only pages `src/pages/in/bank-integration.js`, `src/pages/in/gst.js` and `src/pages/in/e-invoice.js`.
+- **Split for one slug:** `src/pages/in/invoice-software.js` renders `src/components/Pages/InvoiceSoftware.js` from `src/data/pagesdata/in/invoice-software.json`. `src/pages/invoice-software.js`, `src/pages/ae/invoice-software.js` and `src/pages/uk/invoice-software.js` still render the legacy page. There is no `invoice-software.json` under `global`, `ae` or `uk`, so `getPageData` returns `null` on those three routes and the legacy page ignores it.
 
 `pageData` is chosen by **URL, not by page file**. A locale file that wraps a global page still gets that locale's JSON: `/ae/affiliate` loads `src/data/pagesdata/ae/affiliate.json` even though `src/pages/ae/affiliate.js` only re-exports `src/pages/affiliate.js`.
 

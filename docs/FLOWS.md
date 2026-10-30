@@ -1,11 +1,13 @@
 ---
 covers: ["src/pages/signup.js", "src/pages/chartered-accountant-signup.js", "src/pages/login.js", "src/pages/v2/login.js", "src/pages/googleauth.js", "src/pages/pricing.js", "src/pages/payment.js", "src/pages/thank-you.js", "src/components/otp*.js", "src/components/googleLogin.js", "src/components/loginWithPassword.js", "src/components/NewComps/BookFreeDemoForm/**", "src/components/NewComps/AffiliateForm/**", "src/hooks/**", "src/utils/**"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: fa3d74c4
+verified_on: 2026-10-30
 ---
 # User Flows & Critical Journeys
 
-Every interactive flow on the site is a funnel step that ends in a full-page redirect: to the Giddh app (`NEXT_PUBLIC_APP_URL` + `/token-verify`) for signup and login, or to `/thank-you` for the demo form. There is no client store, no route guard and no shared API client. Each page holds its state in `useState`, calls `fetch` directly, and reports errors with react-toastify toasts. Endpoint shapes live in [CONTRACTS.md](CONTRACTS.md). The module map and the `path` / `pageData` pipeline live in [ARCHITECTURE.md](ARCHITECTURE.md). Product intent lives in [VISION.md](VISION.md).
+Every interactive flow on the site is a funnel step that ends in a full-page redirect: to the Giddh app (`NEXT_PUBLIC_APP_URL` + `/token-verify`) for signup and login, or to `/thank-you` for the demo form. There is no client store, no route guard and no shared API client. Each page holds its state in `useState`, calls `fetch` directly, and reports errors with react-toastify toasts. Endpoint shapes live in [CONTRACTS.md](CONTRACTS.md). The module map and the `path` / `pageData` pipeline live in [ARCHITECTURE.md](ARCHITECTURE.md). Env vars, the hard-coded MSG91 widget credentials, and cookie names live in [CONFIGURATION.md](CONFIGURATION.md). Product intent lives in [VISION.md](VISION.md).
+
+Rechecked at `fa3d74c4`: the API base switch and the chrome-hiding slug list match the shared plumbing below. `src/components/otpVerifyModal.js` still reads `props.path.isUK`, while `src/pages/signup.js` and `src/pages/login.js` still pass their whole props object as `path`. `src/pages/chartered-accountant-signup.js` destructures `{ path }`, so only that page passes the object the modal expects.
 
 Shared plumbing every flow below relies on:
 
