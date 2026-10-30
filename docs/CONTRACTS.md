@@ -1,11 +1,11 @@
 ---
 covers: ["src/utils/**", "src/hooks/**", "src/pages/**/login.js", "src/pages/**/signup.js", "src/pages/chartered-accountant-signup.js", "src/pages/pricing.js", "src/pages/payment.js", "src/components/otp*.js", "src/components/googleLogin.js", "src/components/loginWithPassword.js", "src/components/NewComps/BookFreeDemoForm/**", "src/components/NewComps/AffiliateForm/**", "src/data/pagesdata/**", "_posts/**", "public/admin/config.yml", "public/js/**", "src/pages/_document.js"]
-verified_at: fa3d74c4
-verified_on: 2026-10-30
+verified_at: 207fbc59
+verified_on: 2026-10-24
 ---
 # Contracts & Data Schemas
 
-This file lists every network call, cookie, storage key, analytics hook and content JSON shape the website depends on. The repo has no TypeScript, no API client module and no shared types. Each `fetch` is written inline in the page or component that uses it, so the authoritative contract is the request the code builds and the response fields it reads. Both are cited below. Env var names appear here only as references; their meaning and defaults live in [CONFIGURATION.md](CONFIGURATION.md) and [DEVELOPMENT.md](DEVELOPMENT.md). Journeys and step order are in [FLOWS.md](FLOWS.md), and the `pageData` pipeline is in [ARCHITECTURE.md](ARCHITECTURE.md).
+This file lists every network call, cookie, storage key, analytics hook and content JSON shape the website depends on. The repo has no TypeScript, no API client module and no shared types. Each `fetch` is written inline in the page or component that uses it, so the authoritative contract is the request the code builds and the response fields it reads. Both are cited below. Env var names appear here only as references; their meaning and defaults live in [DEVELOPMENT.md](DEVELOPMENT.md). Journeys and step order are in [FLOWS.md](FLOWS.md), and the `pageData` pipeline is in [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## Authoritative Type Definitions
 
@@ -131,7 +131,7 @@ All cookies are written by `public/js/helper.js:setCookie` (30 days, domain rule
 
 ## Content Data Contracts
 
-**pageData.** `src/utils/getPageData.js:getPageData` loads `src/data/pagesdata/{country}/{page}.json` only for the page slugs in its allow-list, and returns `null` when the file is missing. `src/pages/_app.js` passes the result as the `pageData` prop and also feeds `schemas` and `faqs` to `src/components/NewComps/Schema/index.js`. That component adds an FAQPage JSON-LD built from `faqs` when no `schemas[]` entry has that type. Section keys are free-form, but each one maps to a NewComp prop. Most common, counted across 52 JSON files at `fa3d74c4`: `faqs` (52 files), `cta` (48), `features` (46), `splitBanner` (44), `schemas` (42), `characteristics` (38), `useCases` (29), `quickStartSection` (21), `testimonials` (15), `giddhVs` (15), `benefits` (14), `ctaTwo` (7). `benefits` and `giddhVs` became common in the PR #828 feature-page rewrite. A trimmed real shape, from `src/data/pagesdata/global/home.json` and `src/data/pagesdata/uk/triggers.json`:
+**pageData.** `src/utils/getPageData.js:getPageData` loads `src/data/pagesdata/{country}/{page}.json` only for the page slugs in its allow-list, and returns `null` when the file is missing. `src/pages/_app.js` passes the result as the `pageData` prop and also feeds `schemas` and `faqs` to `src/components/NewComps/Schema/index.js`. That component adds an FAQPage JSON-LD built from `faqs` when no `schemas[]` entry has that type. Section keys are free-form, but each one maps to a NewComp prop. Most common: `faqs` (52 files), `cta` (48), `features` (46), `splitBanner` (44), `schemas` (42), `characteristics` (38), `ctaTwo`, `quickStartSection`, `useCases`, `testimonials`. A trimmed real shape, from `src/data/pagesdata/global/home.json` and `src/data/pagesdata/uk/triggers.json`:
 
 ```json
 {

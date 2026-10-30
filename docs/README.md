@@ -1,6 +1,6 @@
 ---
-verified_at: fa3d74c4
-verified_on: 2026-10-30
+verified_at: 207fbc59
+verified_on: 2026-10-24
 ---
 # Docs index
 
@@ -10,7 +10,6 @@ Written for AI coding agents and new engineers; start at [../AGENTS.md](../AGENT
 |---|---|
 | [VISION.md](VISION.md) | Before accepting any feature request: purpose, ICP, non-goals, how to judge requests |
 | [ARCHITECTURE.md](ARCHITECTURE.md) | First, for any code change: locale model, page systems, `pageData`, where a change goes |
-| [CONFIGURATION.md](CONFIGURATION.md) | Any setting or env var: names, where they are read, what happens if unset. No values |
 | [FLOWS.md](FLOWS.md) | Touching signup, login, demo, pricing / payment, affiliate, blog or the locale switch |
 | [CONTRACTS.md](CONTRACTS.md) | Calling the Giddh API or a third party; cookies, analytics, page JSON or MDX shapes |
 | [DESIGN.md](DESIGN.md) | Styling, choosing a section component, or changing SEO (meta, hreflang, JSON-LD, sitemap) |
