@@ -1,7 +1,7 @@
 ---
 covers: ["package.json", "next.config.js", "jsconfig.json", ".prettierrc", ".gitignore", "public/_redirects", "public/_headers", "public/admin/**"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: fa3d74c4
+verified_on: 2026-10-30
 ---
 # Development & Verification Guide
 
@@ -43,6 +43,8 @@ Without any env vars the site still builds and renders, with these known degrada
 - The CookieYes banner logs errors on localhost. CookieYes isn't referenced in repo code. *Inference:* it loads through GTM `GTM-K2L9QG` in `src/pages/_document.js`.
 
 ## Environment Variables Reference
+
+The same eleven names, plus every hard-coded setting, are in [CONFIGURATION.md](CONFIGURATION.md). This table stays here because `scripts/vendor/ai-docs/verify_docs.py` requires each env var the code reads to appear in this file.
 
 > [!WARNING]
 > Every variable the code reads is `NEXT_PUBLIC_*`. Next inlines each one into the **client JS bundle at build time**, so anyone can read it in the browser. Never put a real secret in a `NEXT_PUBLIC_` var. `NEXT_PUBLIC_MSG91_AUTH_KEY` is sent as a `tokenAuth` header from the browser today (`src/utils/segmento.js:sendDataInSegmento`). It's client-exposed by design, but whether that key is scoped safely is open ([OPEN_QUESTIONS.md](OPEN_QUESTIONS.md)). Because values are inlined at build, changing one on Netlify needs a **rebuild**, not just a redeploy of the old build. <!-- verify:ignore -->
@@ -151,7 +153,7 @@ Every form on the site talks to **real backends**:
    Rules for each tag are in [DESIGN.md](DESIGN.md).
 5. **URLs:** if you renamed or removed a URL, add a `301` in `public/_redirects` (see [RECIPES.md](RECIPES.md#rename-or-remove-a-url)). A missing redirect has happened before: `ca-signup` (see [DECISIONS.md](DECISIONS.md#lessons-learned--incident-log)).
 6. **New pages** need entries in `src/data/metadata.json` and `src/data/hrefLangTag.json`, plus `public/sitemap.xml` (see [RECIPES.md](RECIPES.md)).
-7. **Docs in the same change:** update the owning `docs/*.md` (env vars here, endpoints in [CONTRACTS.md](CONTRACTS.md), flows in [FLOWS.md](FLOWS.md), components in [DESIGN.md](DESIGN.md)), then run the doc verifier with `--docs <changed docs>` and get 0 errors.
+7. **Docs in the same change:** update the owning `docs/*.md` (env vars here and in [CONFIGURATION.md](CONFIGURATION.md), endpoints in [CONTRACTS.md](CONTRACTS.md), flows in [FLOWS.md](FLOWS.md), components in [DESIGN.md](DESIGN.md)), then run the doc verifier with `--docs <changed docs>` and get 0 errors.
 
 ## PR Workflow & Deployment Pipeline
 

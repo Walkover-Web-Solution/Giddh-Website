@@ -1,7 +1,7 @@
 ---
 covers: ["src/pages/**", "src/components/Pages/**", "src/components/NewComps/**", "src/data/**", "_posts/**", "public/_redirects"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: fa3d74c4
+verified_on: 2026-10-30
 ---
 # Recipes
 
@@ -138,7 +138,7 @@ Example commit: `5d5f050a` "feat: Refactored S3 configuration into centralized u
 
 1. Name it `NEXT_PUBLIC_<NAME>` if the browser needs it. Every current reader runs client-side. A var without the prefix is visible only in `getStaticProps` and `getServerSideProps` (for example `src/pages/blog/[slug].js`).
 2. Read it as a literal `process.env.NEXT_PUBLIC_<NAME>`. Prefer a small getter in a `src/utils/` module (the `src/utils/s3Config.js` pattern) over scattering reads. Handle the unset case explicitly, as `getDownloadUrl` does by returning `""`.
-3. Add a row to the env table in [DEVELOPMENT.md](DEVELOPMENT.md#environment-variables-reference): required, default, where it's read, and the effect if missing.
+3. Add a row to the env table in [DEVELOPMENT.md](DEVELOPMENT.md#environment-variables-reference) and the same row in [CONFIGURATION.md](CONFIGURATION.md#environment-variables): required, default, where it's read, and the effect if missing. The doc check reads the DEVELOPMENT table; CONFIGURATION is the full inventory, including settings that are not env vars.
 4. Ask a human to set it in the Netlify environment for both the `web` test site and `main` production. A rebuild is needed, because values are inlined at build time.
 5. Never put a secret in a `NEXT_PUBLIC_` var. If the value must stay secret, it needs a backend endpoint. This site adds no backend of its own ([VISION.md](VISION.md)), so record the need in [CONTRACTS.md](CONTRACTS.md) instead. <!-- verify:ignore -->
 6. Check it works: build once without the var and confirm the page degrades rather than crashing. Then build with it set in `.env.local`. <!-- verify:ignore -->

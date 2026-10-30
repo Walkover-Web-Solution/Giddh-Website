@@ -1,7 +1,7 @@
 ---
 covers: ["*"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: fa3d74c4
+verified_on: 2026-10-30
 ---
 # Product Vision & Strategic Direction
 
@@ -18,14 +18,14 @@ Sources used: the user's confirmation on 2026-10-24 (approved direction), `READM
   - Pages stay static and SEO-first: marketing content is never rendered client-only.
   - Release flow: `<clickup-id>-web` → `web` (Netlify test site) → `main` (production giddh.com). See [DEVELOPMENT.md](DEVELOPMENT.md).
   - The only company-level purpose statement in the sources is in `src/pages/about.js`, as stated on the site: "provide technologies to organizations that enables them to take data driven financial decisions in the quickest way possible."
-- **Current Implementation** (at `d66a2a8f`):
+- **Current Implementation** (page counts rechecked at `fa3d74c4`; they match the earlier count at `d66a2a8f`):
   - Four locale trees: global (`src/pages/`, 37 top-level page files besides `_app`/`_document`/`404`), `src/pages/in/` (35), `src/pages/ae/` (32) and `src/pages/uk/` (32).
   - India-only pages: `src/pages/in/gst.js`, `src/pages/in/e-invoice.js`, `src/pages/in/bank-integration.js` and `src/pages/in/tally-to-giddh-migration.js`. UAE and UK only: `src/pages/ae/vat.js` and `src/pages/uk/vat.js`.
   - Global-only funnel pages: `src/pages/chartered-accountant-signup.js`, `src/pages/online-accounting-software.js` (demo landing page), `src/pages/thank-you.js`, `src/pages/payment.js` (Razorpay checkout) and `src/pages/googleauth.js`.
   - Also live: the MDX blog (`_posts/blog/`, 253 posts, Decap CMS), the affiliate program (`src/pages/affiliate.js`) and comparison and switching pages (`src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`).
   - Mechanics are documented in [ARCHITECTURE.md](ARCHITECTURE.md) and [FLOWS.md](FLOWS.md).
 - **Proposals & Roadmaps** (unmerged remote branches; none is approved):
-  - `origin/86d3e3xxz-web` (2026-10-15) rewrites the UK/UAE JSON for the feature pages (triggers, customer portal, magic link, email-to-bank sync and others). <!-- verify:ignore -->
+  - The feature-page JSON rewrite previously listed here as unmerged is on `web`: PR #828 (`63cb6ea0`, 2026-10-28). It is current code, not a proposal. See [Q-010](OPEN_QUESTIONS.md#active-questions-table).
   - `origin/86d241cne-main` (2026-03-19) adds an FAQ page in every locale. <!-- verify:ignore -->
   - `origin/86d0zqj36-main` (2026-04-30) is named "Removed AE region support" and maps login regions to UK and IN only. The separate AE session cookie is already gone on `web` (PRs #767 / #768, [DECISIONS.md ADR-008](DECISIONS.md#adr-008-per-region-session-cookies-uk-vs-in)); the branch would go further and drop AE from login region mapping. That conflicts with the UAE being in the ICP, so it must not be merged without confirmation. <!-- verify:ignore -->
 - **Unknowns & Ambiguities:** see [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md).
