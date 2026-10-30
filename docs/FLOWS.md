@@ -15,6 +15,7 @@ Shared plumbing every flow below relies on:
 - **Region code.** It comes from `path.linkPrefix` (`/in` → `IN`, empty → `GL`). It is sent as `&region=` to `/token-verify` and stored in the `giddh_region` cookie.
 - **MSG91 OTP widget.** `public/js/helper.js:addOtpWidgetScript` injects the MSG91 otp-provider.js script from verify.msg91.com. That exposes `window.sendOtp`, `window.verifyOtp`, `window.retryOtp` and `window.getWidgetData`. The widget id and token are hard-coded in `getOtpwidgetConfiguration` (the same for every environment), so every OTP test sends a real SMS or email.
 - **Chrome.** `src/pages/_app.js` hides Navbar and Footer when the last path segment is `login`, `signup`, `chartered-accountant-signup`, `online-accounting-software`, `thank-you` or `googleauth`.
+- **Experiment recording is not in these journeys.** `src/pages/_app.js:MyApp` copies `mwVariant` and `mwSend` from `src/utils/experiments.js` onto `window`, but no page calls them. Signup, login, demo, pricing, payment and affiliate success do not send an exposure or a conversion. The request shape is in [CONTRACTS.md](CONTRACTS.md#analytics--telemetry-event-contracts).
 
 ## Core User Journeys Map
 
