@@ -1,7 +1,7 @@
 ---
 covers: ["*"]
-verified_at: fa3d74c4
-verified_on: 2026-10-30
+verified_at: 207fbc59
+verified_on: 2026-10-24
 ---
 # Architectural & Design Decisions (ADRs)
 
@@ -24,7 +24,6 @@ Recovered from git history (2,017 commits, 2023-07-18 → 2026-09-26). Commit me
 | 2026-02-02 | [ADR-011: Desktop-app download URLs centralised in `s3Config`](#adr-011-desktop-app-download-urls-centralised-in-s3config) | Accepted | Downloads | Test vs prod buckets |
 | 2025-03-05 | [ADR-012: `web` staging branch; no committed env or lockfile](#adr-012-web-staging-branch-no-committed-env-or-lockfile) | Accepted | Delivery | Netlify test site before prod |
 | 2026-10-24 | [ADR-013: AI-readiness prep: docs set and evidence-based cleanup](#adr-013-ai-readiness-prep-docs-set-and-evidence-based-cleanup) | Accepted | Repo-wide | Agents need verified docs; dead code removed only with 7-point evidence |
-| 2026-10-30 | [ADR-014: Settings inventory in CONFIGURATION.md](#adr-014-settings-inventory-in-configurationmd) | Accepted | Configuration | Env vars and literals had no single list |
 
 ---
 
@@ -122,7 +121,6 @@ Before this, each locale's page file carried its own hard-coded JSX. Duplicating
 - PR #559 put this on main and PR #564 reverted it the same day (`e6b68a67`, 2025-09-26). PR #561 "Build change" (`2606b0ad`) renamed `pageData` to `pagesdata`. PR #573 (`397277c0`, 2025-10-16) re-landed it together with the landing pages.
 - PR #740 (`302e51ec`, 2026-03-05, branch `86d18fkty-test-clean`, `c44d6d83`) moved make-the-switch, zoho-vs-giddh and financial-reporting to JSON.
 - `7ddc3964` (2025-09-26) added the `pagesToGetData` allowlist so that static pages skip the lookup.
-- PR #828 (`63cb6ea0`, merged 2026-10-28 from `86d3e3xxz-web`) rewrote the JSON and the section order for the feature pages and for `src/components/Pages/InvoiceSoftware.js`. Several compositions dropped `quickStartSection` and `ctaTwo` and started passing `benefits` and `giddhVs`. AE and UK home pages were not converted. See [Q-010](OPEN_QUESTIONS.md#active-questions-table).
 ### Consequences & Trade-offs
 - **Positive:** Locale variants share one component. Content edits only touch JSON.
 - **Negative / Constraints:** A new JSON page must also be added to `pagesToGetData`, or it gets `pageData = null` with no error. Since `02dd10f2` the `catch` block swallows load errors. Since `c44d6d83` the code calls `require` with a variable (`require(filePath)`) rather than a literal.
@@ -143,7 +141,7 @@ The pricing page is hand-written JSX. It fetches plans from the Giddh API in the
 - `2cfe67c3` (2025-12-19) "pricing discount issue clean". Then `290dba4b` (2025-12-20) "syncing web with old pricing", merged as PR #673 "discount pricing issue" (`82fd292a`), deleted the rewrite.
 ### Consequences & Trade-offs
 - **Positive:** Restored the known-good discount display.
-- **Negative / Constraints:** Pricing is rendered in the browser, so plan prices are not in the static HTML. That conflicts with the SEO-first rule in [VISION.md](VISION.md). The DOMPurify dependency from that rewrite is not in `package.json` now. ADR-013 records the removal (`9ebe342f`).
+- **Negative / Constraints:** Pricing is rendered in the browser, so plan prices are not in the static HTML. That conflicts with the SEO-first rule in [VISION.md](VISION.md). `dompurify` is still listed in `package.json` but nothing in `src/` imports it.
 ### Superseded / Rejected Alternatives
 1. **NewComps/JSON pricing page (PR #645):** rolled back because of the discount bug. The bug itself is not described in any commit.
 
@@ -280,23 +278,6 @@ The repo had only a short `README.md`, no tests and no working lint, so agents a
 ### Superseded / Rejected Alternatives
 1. **Deleting the ~61 MB of unreferenced public assets:** deferred. External hot-links can't be ruled out from the repo ([OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) Q-005).
 2. **Fixing the defects found (payment v1, UK OTP API, schema prop, …):** deferred. They change behaviour, so each needs its own PR (Q-018 to Q-030).
-
----
-
-## ADR-014: Settings inventory in CONFIGURATION.md
-### Status
-Accepted, 2026-10-30.
-### Context & Problem Statement
-Env vars were described only inside [DEVELOPMENT.md](DEVELOPMENT.md). Hard-coded settings (the MSG91 widget literals, the GTM id, Decap, `next.config.js`, cookie names, `pagesToGetData`) had no single list. The repo still has no env example file.
-### Decision & Implementation
-[CONFIGURATION.md](CONFIGURATION.md) lists every setting the code reads, with no deployed values and without the MSG91 literals. [DEVELOPMENT.md](DEVELOPMENT.md) keeps the setup steps and the env table. `scripts/vendor/ai-docs/verify_docs.py` looks for env var names in DEVELOPMENT.md, not in CONFIGURATION.md, so a new variable has to be named in both ([RECIPES.md](RECIPES.md#add-an-environment-variable)).
-### Supporting Evidence & Past Incidents
-- At `fa3d74c4`, `process.env` is read in eleven places. Every name starts with NEXT_PUBLIC_, and every reader also runs in the browser. `src/utils/msg91Otp.js` does not read `NEXT_PUBLIC_MSG91_AUTH_KEY`. The OTP widget id and token are literals in `public/js/helper.js` `getOtpwidgetConfiguration`.
-### Consequences & Trade-offs
-- **Positive:** An agent can see which settings move with a rebuild and which move only with a code edit.
-- **Negative / Constraints:** Two docs name the env vars. Forgetting CONFIGURATION.md leaves the inventory stale even when DEVELOPMENT.md is updated.
-### Superseded / Rejected Alternatives
-1. **Moving the env table out of DEVELOPMENT.md:** rejected for this change. The coverage check would warn on every variable.
 
 ---
 
