@@ -161,4 +161,5 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-02 · Cursor cloud agent · Moved "Reviewed up to commit" to `26494e62` (adds the `status:check` script to `package.json`) · none
 - 2026-11-02 · Cursor cloud agent · Created STATUS.md, `npm run status:check` and the PR workflow; scored the repo against docs/VISION.md at `2024df86` · initial scores, no ✅ (nothing proven with real users)
