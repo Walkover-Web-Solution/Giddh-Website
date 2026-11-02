@@ -24,6 +24,7 @@ Recovered from git history (2,017 commits, 2023-07-18 → 2026-09-26). Commit me
 | 2026-02-02 | [ADR-011: Desktop-app download URLs centralised in `s3Config`](#adr-011-desktop-app-download-urls-centralised-in-s3config) | Accepted | Downloads | Test vs prod buckets |
 | 2025-03-05 | [ADR-012: `web` staging branch; no committed env or lockfile](#adr-012-web-staging-branch-no-committed-env-or-lockfile) | Accepted | Delivery | Netlify test site before prod |
 | 2026-10-24 | [ADR-013: AI-readiness prep: docs set and evidence-based cleanup](#adr-013-ai-readiness-prep-docs-set-and-evidence-based-cleanup) | Accepted | Repo-wide | Agents need verified docs; dead code removed only with 7-point evidence |
+| 2026-11-02 | [ADR-014: STATUS.md scorecard enforced by a PR check](#adr-014-statusmd-scorecard-enforced-by-a-pr-check) | Accepted | Delivery | Plan progress visible in the repo; drift fails the PR |
 
 ---
 
@@ -278,6 +279,19 @@ The repo had only a short `README.md`, no tests and no working lint, so agents a
 ### Superseded / Rejected Alternatives
 1. **Deleting the ~61 MB of unreferenced public assets:** deferred. External hot-links can't be ruled out from the repo ([OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) Q-005).
 2. **Fixing the defects found (payment v1, UK OTP API, schema prop, …):** deferred. They change behaviour, so each needs its own PR (Q-018 to Q-030).
+
+## ADR-014: STATUS.md scorecard enforced by a PR check
+### Status
+Accepted, 2026-11-02 (requested by the team; scored against `docs/VISION.md` until a dedicated plan doc is named).
+### Context & Problem Statement
+Nothing recorded which parts of the plan were built, proven, blocked or dropped, and `web` and production have diverged (Q-031), so "is X done?" needed a fresh code read every time.
+### Decision & Implementation
+- `STATUS.md` at the root scores every plan item (✅ works for real people, 🟡 built not proven, ⛔ blocked, ⬜ not started, 🙈 hidden, ❌ dropped) and records a "Reviewed up to commit" hash.
+- `scripts/status-check.mjs` (`npm run status:check`) fails when code paths changed against the base branch but `STATUS.md` did not, unless a commit message says `[no status]`, and lists code commits since the reviewed hash. Its `CODE_PATHS` leave out `_posts/` and CMS media, because Decap CMS commits those to `main` unattended.
+- `.github/workflows/status-check.yml` runs it on every PR with full history. It is the repo's first CI workflow and does not build.
+### Consequences & Trade-offs
+- **Positive:** plan progress is visible in the repo and drifts loudly.
+- **Negative / Constraints:** every code PR carries a STATUS.md edit or a `[no status]` commit; `main` → `web` merge-backs of hotfixes will need one too.
 
 ---
 
