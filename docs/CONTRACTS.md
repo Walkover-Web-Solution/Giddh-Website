@@ -72,6 +72,7 @@ The values are concatenated without `encodeURIComponent`, so `source` is raw JSO
 | script + modal | `https://checkout.razorpay.com/v1/checkout.js` <!-- verify:ignore --> | `src/pages/payment.js:payInvoice` | `NEXT_PUBLIC_RAZORPAY_KEY` | options `{ key, amount (v2: body.amount; v1: amount*100), currency (v2: body.currency.code; v1: "INR"), name, description, handler }` |
 | GET | `https://api.db-ip.com/v2/free/self` <!-- verify:ignore --> | `src/hooks/useIntlTelInput.js` (`geoIpLookup`), `src/utils/signupHelpers.js:geoIpLookupHandler` | public | reads `countryCode`, defaulting to `in`. `geoIpLookupHandler` never calls `.json()`, so signup always falls back to `in`. Its `http://ip-api.com` / `ipinfo.io` fallbacks never run |
 | embed | Typeform `uOtrQ4tb`, Calendly popup, Trustpilot widget | `src/components/bannerSection.js`, `public/js/helper.js:openCalendly`, `src/components/navbar.js` | public | Typeform hidden field `utm` reads React state that is set in the same call (stale, `null` on the first open) |
+| POST | `NEXT_PUBLIC_MW_EVENTS_URL` (experiment events; unset sends nothing) | `src/utils/experiments.js:mwSend` | body field `key` is `NEXT_PUBLIC_MW_KEY` (publishable, append-only, inlined in the client bundle). No cookies (`credentials` omitted). `navigator.sendBeacon`, else `fetch` with `keepalive` and `AbortSignal.timeout` of 3 seconds. A failure sets `mwOff` and is not retried. The response is never read | `{ key, visitor_id, event, experiment, variant, goal }`. `event` is `exposure` or `conversion`. No page calls `mwSend` yet |
 
 ## Authentication & Authorization Assumptions
 
@@ -114,6 +115,7 @@ All cookies are written by `public/js/helper.js:setCookie` (30 days, domain rule
 | localStorage | `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `ref`, `region` | JSON-encoded string (`setLocalStorage`) | `public/js/helper.js:setUtmParamInLocalStorage`; read by signup, CA signup, `src/components/bannerSection.js`, `src/pages/contact-us.js` |
 | localStorage | `source` | JSON object of non-UTM query params (CA signup adds `mrnNumber`) | helper.js; `src/utils/signupHelpers.js:getSourceParam` |
 | localStorage | `userData` | `{ user: { email \| mobileNo }, accessToken, signupVia }` | read and removed by signup and CA signup (`initOtpSignup`, `resetEverything`). No writer in this repo |
+| localStorage | `mw_visitor` | 32 hex characters | `src/utils/experiments.js:mwVisitor`, on the first `mwVariant` or `mwSend` call. No page calls either, so this key is not written today |
 
 `public/js/helper.js:deleteUtmCookies` exists, but nothing calls it. No sessionStorage, IndexedDB or query cache is used.
 
@@ -125,6 +127,8 @@ All cookies are written by `public/js/helper.js:setCookie` (30 days, domain rule
 | amplifyapp tracker | `src/pages/_document.js` async `tracker.js` from `main.d2f49esifpcbwh.amplifyapp.com` <!-- verify:ignore --> | none passed by the site |
 | demo lead ("Segmento") | `src/components/NewComps/BookFreeDemoForm/index.js` submit → `src/utils/segmento.js:sendDataInSegmento` | `input.{name,email,phone,business}` plus the nine UTM cookies |
 | attribution handoff | `token-verify` redirect after signup | UTM, `ref` and `source` query params (see [handoff](#handoff-to-the-giddh-app-token-verify)) |
+| experiment exposure | a future page, after it has rendered the variant from `mwVariant` | `mwSend` body field `event` is `exposure`, plus `experiment`, `variant`, `visitor_id` and `key`. Not sent today |
+| experiment conversion | a future page, after the goal action | `mwSend` body field `event` is `conversion`, plus `experiment`, `variant`, `goal`, `visitor_id` and `key`. Not sent today |
 
 > [!TODO]
 > No CookieYes code is in the repo, though `docs/OPEN_QUESTIONS.md` notes CookieYes running in the browser. It is presumably injected by the GTM container (inference). Confirm which consent banner and analytics tags GTM loads and what events they fire.
