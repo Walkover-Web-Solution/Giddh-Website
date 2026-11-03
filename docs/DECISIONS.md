@@ -295,6 +295,22 @@ Nothing recorded which parts of the plan were built, proven, blocked or dropped,
 
 ---
 
+## ADR-014: Browser-side experiment recording, no new backend
+### Status
+Accepted, 2026-10-29.
+### Context & Problem Statement
+The marketing site may later test copy or calls to action. The site has no backend, and adding one is a non-goal ([VISION.md](VISION.md)). No experiment is defined yet, and no page should change until one is.
+### Decision & Implementation
+One module, `src/utils/experiments.js`, assigns a variant locally from the experiment name and a `mw_visitor` localStorage id, and can send an exposure or conversion with `mwSend`. The URL and publishable key are `NEXT_PUBLIC_MW_EVENTS_URL` and `NEXT_PUBLIC_MW_KEY`. If either is unset, nothing is sent. `src/pages/_app.js:MyApp` copies `mwVariant` and `mwSend` onto `window` so every page can call them. No page calls them.
+### Consequences & Trade-offs
+- **Positive:** a later experiment can record without an API route, and a down or slow collector cannot block the page.
+- **Negative / Constraints:** the key is in the client bundle and must stay publishable. A `mwVariant` call during prerender has no `localStorage` and must not be baked into HTML. Events for an experiment that is not running are refused by the collector. Starting an experiment is an owner action outside this repo.
+### Superseded / Rejected Alternatives
+1. **A Next.js API route that proxies events:** rejected. This site adds no backend.
+2. **Starting an experiment in this change:** rejected. The owner defines experiments, and this change must not change what any page shows.
+
+---
+
 ## Lessons Learned & Incident Log
 
 - **Incident / Bug:** Signup and login regressions keep coming back.
