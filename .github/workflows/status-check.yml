@@ -1,0 +1,20 @@
+name: Status check
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  status-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # The script uses only Node built-ins and git, so no `npm install` is needed.
+      - run: npm run status:check

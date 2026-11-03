@@ -106,8 +106,9 @@ Not every route is static: `/blog` and `/blog/tags/[[...slug]]` use `getServerSi
 | Linting & Formatting | `npm run lint` is **broken** | It runs `next lint`, which Next 16 removed. It fails with "Invalid project directory provided, no such directory: .../lint". There's no ESLint config either. `.prettierrc` sets only `singleQuote: false`, and Prettier isn't a dependency, so formatting is editor-only. Don't treat lint as a check. |
 | Unit / Component Tests | none | No test runner or test files. |
 | End-to-End Tests | none | No Playwright or Cypress. |
+| Status tracker | `npm run status:check` | Fails when code paths (`CODE_PATHS` in `scripts/status-check.mjs`: `src/`, `public/js/`, `public/admin/`, `public/_redirects`, `public/_headers`, `public/sitemap.xml`, root config) changed against the base branch (`STATUS_BASE_BRANCH`, else `GITHUB_BASE_REF`, else `web`) but `STATUS.md` didn't, unless a commit message contains `[no status]`. Locally it also counts uncommitted files. Always lists code commits since the STATUS.md "Reviewed up to commit" hash. |
 
-The only automated gate is `npm run build`, run by you and by Netlify. There's no CI workflow: no `.github/workflows/` or similar. <!-- verify:ignore -->
+The only build gate is `npm run build`, run by you and by Netlify. The one CI workflow, `.github/workflows/status-check.yml`, runs `npm run status:check` on every PR (`fetch-depth: 0`, no install, no build). <!-- verify:ignore -->
 
 > [!WARNING]
 > Don't reformat files you aren't changing. The codebase mixes 2- and 4-space indentation, and a whole-file reformat buries your real change. It also makes the before/after HTML comparison below harder to read.
@@ -157,7 +158,7 @@ Every form on the site talks to **real backends**:
    Rules for each tag are in [DESIGN.md](DESIGN.md).
 5. **URLs:** if you renamed or removed a URL, add a `301` in `public/_redirects` (see [RECIPES.md](RECIPES.md#rename-or-remove-a-url)). A missing redirect has happened before: `ca-signup` (see [DECISIONS.md](DECISIONS.md#lessons-learned--incident-log)).
 6. **New pages** need entries in `src/data/metadata.json` and `src/data/hrefLangTag.json`, plus `public/sitemap.xml` (see [RECIPES.md](RECIPES.md)).
-7. **Docs in the same change:** update the owning `docs/*.md` (env vars here, endpoints in [CONTRACTS.md](CONTRACTS.md), flows in [FLOWS.md](FLOWS.md), components in [DESIGN.md](DESIGN.md)), then run the doc verifier with `--docs <changed docs>` and get 0 errors.
+7. **Docs in the same change:** update [STATUS.md](../STATUS.md) (row, change-log line, reviewed hash) and run `npm run status:check`; update the owning `docs/*.md` (env vars here, endpoints in [CONTRACTS.md](CONTRACTS.md), flows in [FLOWS.md](FLOWS.md), components in [DESIGN.md](DESIGN.md)), then run the doc verifier with `--docs <changed docs>` and get 0 errors.
 
 ## PR Workflow & Deployment Pipeline
 
@@ -178,7 +179,7 @@ graph LR
 1. **Branch creation:** branch from `web`, named after the ClickUp task: `git checkout -b <clickup-id>-web web`. Recent examples: PRs #816–#824 and #827, all from `86d4ab4uh-web`.
 2. **Pre-PR self-verification:** complete the checklist above. Keep `git status` clean: no lockfile, no `.env*`, no `.next/`. <!-- verify:ignore -->
 3. **Pull request:** open it against `web`. Commit and PR titles in history are free-form, often `Name | area | summary`. No conventional-commit rule is enforced.
-4. **Test environment (`web`):** Netlify deploys `web` to a test site. That's the only pre-production check, since there's no CI.
+4. **Test environment (`web`):** Netlify deploys `web` to a test site. That's the only pre-production check of the built site; the PR workflow only checks STATUS.md.
 5. **Production (`main`):** `web` is promoted to `main`. *Inference:* Netlify builds `main` for giddh.com.
 6. **Hotfixes:** `<clickup-id>-main` branches merge straight into `main`, for example PR #825 from `86d4cfrzf-main`. `main` is then merged back into `web`, as the "Merge branch 'main' of …Giddh-Website into web" commits (`7db9e002`, `fada178f`) or a PR of the same `-main` branch into `web` (PR #826, `e91e4f63`) show.
 7. **Blog posts from Decap CMS:** `public/admin/config.yml` uses `backend: git-gateway`, `branch: main` and `publish_mode: editorial_workflow`. Posts edited at `/admin` (behind Netlify Identity, `public/admin/index.html`) are committed to **`main` first**. They reach `web` only when `main` is merged back.

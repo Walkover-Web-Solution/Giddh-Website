@@ -18,6 +18,7 @@ The accounting product itself is **not** in this repo.
 | Tests / type check | none exist |
 | Verify the docs | `python3 scripts/vendor/ai-docs/verify_docs.py .` (0 errors expected) |
 | Docs affected by your diff | `python3 scripts/vendor/ai-docs/affected_docs.py .` |
+| Status tracker gate | `npm run status:check` (also runs on every PR; see [STATUS.md](STATUS.md)) |
 
 Without local env values, canonical tags render `undefined/...` and pricing plans don't load. That's expected;
 see [DEVELOPMENT.md](docs/DEVELOPMENT.md#environment-variables-reference). <!-- verify:ignore -->
@@ -50,6 +51,7 @@ see [DEVELOPMENT.md](docs/DEVELOPMENT.md#environment-variables-reference). <!-- 
 12. **Remove code only with evidence.** Clear all seven checks first: runtime registration, dynamic imports, routing (every file in `src/pages/` is a route), flags, CSS refs, build / static config, external consumers. Files in `public/` may be hot-linked from outside, so unreferenced does not mean unused ([Q-005](docs/OPEN_QUESTIONS.md#active-questions-table)).
 13. **Blog posts must build.** One bad MDX file in `_posts/blog/` fails the whole build. The front-matter `slug` must equal the filename. If Decap CMS is still used ([Q-014](docs/OPEN_QUESTIONS.md#active-questions-table)), it commits posts to `main`, not `web`.
 14. **Don't fix "obvious" bugs in passing.** The defects in [OPEN_QUESTIONS.md](docs/OPEN_QUESTIONS.md) (Q-018 to Q-030) change behaviour; each needs its own PR and a human decision.
+15. **Keep [STATUS.md](STATUS.md) current.** Every change to a feature, screen, rule, table or decision updates STATUS.md in the same change: the affected row, a change-log line (newest first: date · who · what · status effect) and the "Reviewed up to commit" hash. If `npm run status:check` lists code commits since that hash that STATUS.md doesn't reflect, update it for the teammates who didn't. Built but unchecked is 🟡, never ✅. A change with no status effect may say `[no status]` in a commit message instead.
 
 ## Where Things Are
 
@@ -67,7 +69,7 @@ see [DEVELOPMENT.md](docs/DEVELOPMENT.md#environment-variables-reference). <!-- 
 - **Branch:** `<clickup-task-id>-web`, cut from `web`. Open the PR against `web`.
 - **Pipeline (user-confirmed):** PR → `web` (Netlify test site) → promote `web` → `main` (production giddh.com). Hotfixes use `<id>-main` branches into `main`, and `main` is then merged back into `web`.
 - `web` hasn't been promoted since 2026-02-25 and is 142 commits ahead of `main` ([Q-031](docs/OPEN_QUESTIONS.md#active-questions-table)). Don't assume production matches `web`.
-- No CI exists, so your local checks are the only gate. Merging and deploying follow the team's existing approvals; never push to `main` yourself. Details: [DEVELOPMENT.md](docs/DEVELOPMENT.md#pr-workflow--deployment-pipeline).
+- The only CI is `.github/workflows/status-check.yml` (the STATUS.md gate, on every PR); it doesn't build, so your local checks are still the real gate. Merging and deploying follow the team's existing approvals; never push to `main` yourself. Details: [DEVELOPMENT.md](docs/DEVELOPMENT.md#pr-workflow--deployment-pipeline).
 
 ## Verification & Knowledge Maintenance Expectations
 
