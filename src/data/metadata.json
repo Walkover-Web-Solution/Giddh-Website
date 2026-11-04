@@ -197,6 +197,12 @@
     "ogDescription": "Read Giddh's terms of service, privacy policies, and user agreement for using our accounting platform.",
     "keywords": "Giddh - an online accounting Terms"
   },
+  "/in/nda-policy": {
+    "title": "NDA Policy - Online Accounting Software in India - Giddh",
+    "description": "Read Giddh’s Non-Disclosure Agreement. Understand how we protect your business and financial data and your obligations when using Giddh.",
+    "ogTitle": "Giddh NDA Policy",
+    "ogDescription": "Read Giddh’s Non-Disclosure Agreement covering mutual confidentiality for Customer Data and Giddh Information."
+  },
   "/in/contact-us": {
     "title": "Contact Us | Get in touch with Giddh's support team in India",
     "description": "Contact Giddh support for any queries. Get assistance with accounting, GST, invoicing, or software setup from our expert team."
@@ -403,6 +409,12 @@
     "ogDescription": "Discover Giddh’s terms in the UAE, ensuring compliance and effective financial management ",
     "keywords": "GIDDH-Financial Management software"
   },
+  "/ae/nda-policy": {
+    "title": "Giddh NDA Policy | UAE",
+    "description": "Read Giddh’s Non-Disclosure Agreement for UAE users. Learn how confidential business and financial data is protected.",
+    "ogTitle": "Giddh NDA Policy | UAE",
+    "ogDescription": "Read Giddh’s Non-Disclosure Agreement covering mutual confidentiality for Customer Data and Giddh Information."
+  },
   "/ae/contact-us": {
     "title": "Contact Our Accounting Experts in UAE | Giddh",
     "description": "Get in touch with Giddh's support team in the UAE for assistance, inquiries, and expert help with your online accounting and bookkeeping needs.",
@@ -601,6 +613,12 @@
     "ogTitle": "Giddh | Online Accounting Made Easy",
     "ogDescription": "Explore Giddh's accounting tools built for modern businesses. Simplify invoicing, GST, reports & more.",
     "keywords": "Online accounting"
+  },
+  "/uk/nda-policy": {
+    "title": "Giddh NDA Policy | UK",
+    "description": "Read Giddh’s Non-Disclosure Agreement for UK users. Learn how confidential business and financial data is protected.",
+    "ogTitle": "Giddh NDA Policy | UK",
+    "ogDescription": "Read Giddh’s Non-Disclosure Agreement covering mutual confidentiality for Customer Data and Giddh Information."
   },
   "/uk/contact-us": {
     "title": "Contact us - Giddh - UK",
@@ -801,6 +819,13 @@
     "ogTitle": "GIDDH - e-Invoice and GST Reconciliation",
     "ogDescription": "Review the terms and conditions for using Giddh, a platform that simplifies accounting and financial management. ",
     "keywords": "GIDDH-e-invoice and GST reconciliation"
+  },
+  "/nda-policy": {
+    "canonical": "/nda-policy",
+    "title": "Giddh Online Accounting Software | NDA Policy",
+    "description": "Read Giddh’s Non-Disclosure Agreement. Understand how we protect your business and financial data and your obligations when using Giddh.",
+    "ogTitle": "Giddh Online Accounting Software | NDA Policy",
+    "ogDescription": "Read Giddh’s Non-Disclosure Agreement covering mutual confidentiality for Customer Data and Giddh Information."
   },
   "/contact-us": {
     "title": "Contact us - Giddh",

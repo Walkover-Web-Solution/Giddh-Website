@@ -44,6 +44,11 @@ const Footer = (path) => {
                         Privacy Policy
                       </a>
                     </li>
+                    <li>
+                      <a href={link.linkPrefix + "/nda-policy"}>
+                        NDA Policy
+                      </a>
+                    </li>
                     {/* <li>
                       <a
                         target="_blank"
