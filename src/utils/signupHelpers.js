@@ -179,6 +179,18 @@ export function handleDisplayMobileNumber(intlRef, setMobileNo) {
   }
 }
 
+/**
+ * Partner callback from website (?redirect_url=).
+ * Only needed on Google login → /token-verify?token=... so signup-with-google can send it.
+ */
+export function getRedirectUrlFromQuery() {
+  if (typeof window === "undefined" || !window.location?.search) {
+    return "";
+  }
+  const params = new URLSearchParams(window.location.search);
+  return (params.get("redirect_url") || "").trim();
+}
+
 export function handleOtpVerifyRedirect(response, region) {
   if (typeof setGiddhRegionSession === "function") {
     setGiddhRegionSession(response.session.id, region);
