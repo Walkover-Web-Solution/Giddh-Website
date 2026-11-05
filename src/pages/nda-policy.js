@@ -161,10 +161,6 @@ const ndaPolicy = (path) => {
       <p>
         By ticking “I agree” or clicking “Sign up” or “Sign in”, you confirm that you have read, understood and agree to this Non-Disclosure Agreement, the Terms of Service and the Privacy Policy.
       </p>
-
-      <p>
-        © Walkover Technologies Pvt Ltd. Giddh is a product of Walkover Technologies Pvt Ltd.
-      </p>
     </section>
   );
 };
