@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getDownloadUrl, getAppVersion } from "../utils/s3Config";
+import { getDownloadUrl, getAppVersion, isTestWebsite } from "../utils/s3Config";
 
 const Footer = (path) => {
   const link = path.path;
@@ -11,11 +11,31 @@ const Footer = (path) => {
 
   const [windowsApp, setWindowsApp] = useState("");
   const [macApp, setMacApp] = useState("");
+  const [prodPreviewWindowsApp, setProdPreviewWindowsApp] = useState("");
+  const [prodPreviewMacApp, setProdPreviewMacApp] = useState("");
+  const showProdPreview = isTestWebsite();
 
   useEffect(() => {
     getAppVersion("win", setWindowsApp, setMacApp);
     getAppVersion("mac", setWindowsApp, setMacApp);
-  }, []);
+
+    if (showProdPreview) {
+      getAppVersion(
+        "win",
+        setProdPreviewWindowsApp,
+        setProdPreviewMacApp,
+        "preview",
+        "prod"
+      );
+      getAppVersion(
+        "mac",
+        setProdPreviewWindowsApp,
+        setProdPreviewMacApp,
+        "preview",
+        "prod"
+      );
+    }
+  }, [showProdPreview]);
 
   return (
     <div className="footer py-5">
@@ -147,6 +167,36 @@ const Footer = (path) => {
                     </li>
                   </ul>
                 </div>
+
+                {showProdPreview && (
+                  <div>
+                    <p>Desktop Apps (Prod Preview)</p>
+                    <ul className="list-unstyled d-flex gap-3">
+                      <li>
+                        <a
+                          className="download-icon "
+                          href={getDownloadUrl("win", "preview", "prod")}
+                        >
+                          <img
+                            src="/img/window-icon.svg"
+                            alt="Download Windows Giddh prod preview App icon"
+                          />
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          className="download-icon rounded-circle"
+                          href={getDownloadUrl("mac", "preview", "prod")}
+                        >
+                          <img
+                            src="/img/mac_icon.svg"
+                            alt="Download Mac Giddh prod preview App icon"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
 

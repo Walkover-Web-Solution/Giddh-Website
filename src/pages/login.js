@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { toast } from "react-toastify";
 import GoogleLogin from "@/components/googleLogin";
+import { getRedirectUrlFromQuery } from "@/utils/signupHelpers";
 const OtpLogin = dynamic(() => import("@/components/otpLogin"), {
   ssr: false,
 });
@@ -80,12 +81,16 @@ const logIn = (path) => {
             setShowVerificationModal(true);
           } else {
             setGiddhRegionSession(response.body.session.id, region);
+            const redirectUrl = getRedirectUrlFromQuery();
             window.location =
               process.env.NEXT_PUBLIC_APP_URL +
               "/token-verify?token=" +
               result.accessToken +
               "&region=" +
-              region;
+              region +
+              (redirectUrl
+                ? "&redirect_url=" + encodeURIComponent(redirectUrl)
+                : "");
           }
         } else {
           showToaster(response.message, "error");
