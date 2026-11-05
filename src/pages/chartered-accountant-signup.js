@@ -1007,8 +1007,10 @@ export default function CharteredAccountantSignup({ path }) {
                           <label className="form-check-label font-xs font-slate-grey line-height-24" htmlFor="agreeCheckBox">
                             I agree to receive verification OTP & Alerts and accept the{" "}
                             <a href="https://giddh.com/terms" target="_blank" rel="noopener noreferrer" className="text-decoration-none font-primary">Terms of Service</a>
+                            ,{" "}
+                            <a href="https://giddh.com/privacy" target="_blank" rel="noopener noreferrer" className="text-decoration-none font-primary">Privacy Policy</a>
                             {" "}and{" "}
-                            <a href="https://giddh.com/privacy" target="_blank" rel="noopener noreferrer" className="text-decoration-none font-primary">Privacy Policy</a>.
+                            <a href="https://giddh.com/nda-policy" target="_blank" rel="noopener noreferrer" className="text-decoration-none font-primary">NDA Policy</a>.
                           </label>
                         </div>
                       </div>

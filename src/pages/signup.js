@@ -1028,8 +1028,8 @@ const signUp = (path) => {
                         rel="noopener noreferrer"
                       >
                         Terms and Service
-                      </a>{" "}
-                      and{" "}
+                      </a>
+                      ,{" "}
                       <a
                         className="text-wrap-nowrap"
                         href="https://giddh.com/privacy"
@@ -1037,6 +1037,15 @@ const signUp = (path) => {
                         rel="noopener noreferrer"
                       >
                         Privacy Policy
+                      </a>{" "}
+                      and{" "}
+                      <a
+                        className="text-wrap-nowrap"
+                        href="https://giddh.com/nda-policy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        NDA Policy
                       </a>
                       .
                     </p>
