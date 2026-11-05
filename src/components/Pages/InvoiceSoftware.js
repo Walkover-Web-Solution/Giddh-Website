@@ -1,26 +1,24 @@
 import SplitBanner from "../NewComps/Banner/SplitBanner";
-import AlternateFeatures from "../NewComps/Features/AlternateFeatures";
-import Stats from "../NewComps/Stats";
-import CTA from "../NewComps/CTA";
 import GridFeatures from "../NewComps/Features/GridFeatures";
+import AlternateFeatures from "../NewComps/Features/AlternateFeatures";
+import QuickStartSection from "../NewComps/QuickStartSection";
+import EssentialFeatures from "../NewComps/Features/EssentialFeatures";
 import FeedbackCards from "../NewComps/FeedbackCards";
-import TrustBadgeScrollable from "../NewComps/TrustBadgeScrollable";
 import FAQs from "../NewComps/FAQs";
-import SupportedPlatforms from "../NewComps/SupportedPlatforms";
+import CTA from "../NewComps/CTA";
 
 export default function InvoiceSoftware({ pageData }) {
   return (
     <>
       <SplitBanner compData={pageData?.splitBanner} />
-      <Stats stats={pageData?.stats} />
-      <CTA compData={pageData?.cta} />
-      <AlternateFeatures features={pageData?.features} />
       <GridFeatures features={pageData?.characteristics} />
+      <AlternateFeatures features={pageData?.features} />
+      <QuickStartSection compData={pageData?.quickStartSection} />
+      <EssentialFeatures compData={pageData?.useCases} />
+      <GridFeatures features={pageData?.coreFeatures} />
       <FeedbackCards testimonials={pageData?.testimonials} />
-      <CTA compData={pageData?.ctaTwo} />
-      <TrustBadgeScrollable compData={pageData?.trustBadgeBrands} />
-      <SupportedPlatforms supportedPlatforms={pageData?.supportedPlatforms} />
       <FAQs faqs={pageData?.faqs} />
+      <CTA compData={pageData?.cta} />
     </>
   );
 }

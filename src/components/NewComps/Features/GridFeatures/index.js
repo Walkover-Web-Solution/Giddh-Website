@@ -17,11 +17,11 @@ export default function GridFeatures({ features }) {
             </p>
           )}
         </div>
-        <div className="row g-3">
+        <div className="row g-3 justify-content-center">
           {features.cards.map((card, index) => (
             <div key={index} className="col-12 col-md-6">
               <div
-                className={`d-flex flex-column border rounded-4 px-2 py-2 text-center justify-content-center border-color-primary ${
+                className={`d-flex flex-column border rounded-4 px-3 pt-4 pb-3 text-center border-color-primary ${
                   styles.card
                 }  ${card?.icon ? "py-2" : ""}`}
               >
@@ -40,7 +40,7 @@ export default function GridFeatures({ features }) {
                 </p>
                 <p className="font-md font-slate-grey">{card?.description}</p>
                 {card?.more_content?.length && (
-                  <ul>
+                  <ul className="mt-auto">
                     {card.more_content.map((content, index) => (
                       <li key={index}>
                         <MdCircle size={5} /> {content}

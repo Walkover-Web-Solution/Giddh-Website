@@ -7,7 +7,6 @@ import GiddhFor from "../NewComps/GiddhFor";
 import SpotlightTestimonials from "../NewComps/Testimonials/SpotlightTestimonials";
 import FAQs from "../NewComps/FAQs";
 import Footer from "../NewComps/Footer";
-import SeeGiddhInAction from "../NewComps/SeeGiddhInAction";
 import CTA from "../NewComps/CTA";
 import PopUp from "../NewComps/PopUp";
 import { useEffect } from "react";

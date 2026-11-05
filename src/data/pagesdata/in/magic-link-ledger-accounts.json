@@ -1,0 +1,174 @@
+{
+  "splitBanner": {
+    "heading": "Share Ledger Details Instantly with a Magic Link",
+    "subHeading": "Generate a Magic Link from any ledger and share it with customers or vendors. They can view their latest ledger details without logging into Giddh.",
+    "image": "/img/feature-gallery-icons/share-banner.svg",
+    "form": false,
+    "header": false,
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup"
+      }
+    ]
+  },
+  "characteristics": {
+    "heading": "Stop the Back-and-Forth on Ledger Statements",
+    "subHeading": "Share ledger details instantly instead of downloading and emailing statements again and again.",
+    "cards": [
+      {
+        "heading": "Frequent statement requests",
+        "description": "Customers and vendors frequently ask for their latest ledger statements."
+      },
+      {
+        "heading": "Repeated download and email",
+        "description": "Downloading, exporting, and emailing statements repeatedly takes time."
+      },
+      {
+        "heading": "Unnecessary back-and-forth",
+        "description": "Sharing statements manually creates unnecessary back-and-forth."
+      }
+    ]
+  },
+  "benefits": {
+    "heading": "Key Benefits",
+    "cards": [
+      {
+        "heading": "Instant Sharing",
+        "description": "Generate and share a ledger link in seconds."
+      },
+      {
+        "heading": "No Downloads",
+        "description": "Skip exporting and emailing ledger statements."
+      },
+      {
+        "heading": "No Login Required",
+        "description": "Recipients can access the ledger through the shared link."
+      },
+      {
+        "heading": "Easy Access",
+        "description": "Customers and vendors can view their ledger details whenever needed."
+      }
+    ]
+  },
+  "features": {
+    "heading": "How Magic Link Works",
+    "subHeading": "Select, generate, share, and view — with minimal steps.",
+    "content": [
+      {
+        "heading": "Select Ledger",
+        "img": "/img/feature-gallery-icons/share-collaborate.svg",
+        "description": "Choose the ledger you want to share."
+      },
+      {
+        "heading": "Generate Magic Link",
+        "img": "/img/feature-gallery-icons/share-invoice.svg",
+        "description": "Create a unique shareable link instantly."
+      },
+      {
+        "heading": "Share",
+        "img": "/img/feature-gallery-icons/reports.svg",
+        "description": "Send the link to your customer or vendor."
+      },
+      {
+        "heading": "View",
+        "img": "/img/feature-gallery-icons/share-cash.svg",
+        "description": "They can open the link and view the ledger without logging into Giddh."
+      }
+    ]
+  },
+  "useCases": {
+    "heading": "Real-World Use Cases",
+    "content": [
+      {
+        "title": "Customer asks for their ledger",
+        "description": "Share the link instead of downloading and emailing a statement."
+      },
+      {
+        "title": "Vendor needs account details",
+        "description": "Give vendors quick access to their ledger."
+      },
+      {
+        "title": "Regular statement requests",
+        "description": "Avoid repeating the same download-and-send process."
+      },
+      {
+        "title": "Faster account communication",
+        "description": "Share ledger information whenever it's needed."
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is Magic Link in Giddh?",
+      "answer": "Magic Link lets you generate a shareable link for a ledger that customers or vendors can access without logging into Giddh."
+    },
+    {
+      "question": "Does the recipient need a Giddh account?",
+      "answer": "No. They can view the ledger through the shared Magic Link without a Giddh login."
+    },
+    {
+      "question": "Who can I share a Magic Link with?",
+      "answer": "You can share it with customers or vendors who need access to their ledger details."
+    }
+  ],
+  "cta": {
+    "heading": "Share Ledgers Without the Back-and-Forth",
+    "subheading": "Generate a Magic Link and give customers and vendors instant access to their ledger details.",
+    "buttons": [
+      {
+        "text": "Start Free Trial",
+        "link": "/signup",
+        "type": "btn-white"
+      }
+    ]
+  },
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Magic Link in Giddh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Magic Link lets you generate a shareable link for a ledger that customers or vendors can access without logging into Giddh."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the recipient need a Giddh account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. They can view the ledger through the shared Magic Link without a Giddh login."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who can I share a Magic Link with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can share it with customers or vendors who need access to their ledger details."
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "description": "Share ledger details instantly with a Magic Link. Generate a link from any ledger so customers or vendors can view it without logging into Giddh.",
+      "name": "Magic Link in Ledger Accounts India",
+      "url": "https://giddh.com/in/magic-link-ledger-accounts"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "Service",
+      "description": "Magic Link in Giddh ledger accounts for India businesses. Generate a shareable link for customers or vendors to view ledger details without a Giddh login.",
+      "url": "https://giddh.com/in/magic-link-ledger-accounts",
+      "name": "Magic Link in Ledger Accounts India"
+    }
+  ]
+}

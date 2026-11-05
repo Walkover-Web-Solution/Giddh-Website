@@ -1,0 +1,45 @@
+{
+  "skill": "create-ai-docs",
+  "skill_version": "2.0.0",
+  "created": "2026-10-24",
+  "last_run": {
+    "mode": "prepare",
+    "commit": "207fbc59",
+    "date": "2026-10-24",
+    "base_branch": "web"
+  },
+  "canonical_docs": [
+    "AGENTS.md",
+    "docs/VISION.md",
+    "docs/ARCHITECTURE.md",
+    "docs/FLOWS.md",
+    "docs/DESIGN.md",
+    "docs/CONTRACTS.md",
+    "docs/DEVELOPMENT.md",
+    "docs/DECISIONS.md",
+    "docs/OPEN_QUESTIONS.md"
+  ],
+  "docs": {
+    "AGENTS.md": "AGENTS.md",
+    "CLAUDE.md": "(adapter: @AGENTS.md)",
+    "docs/README.md": "docs-README.md",
+    "docs/VISION.md": "VISION.md",
+    "docs/ARCHITECTURE.md": "ARCHITECTURE.md",
+    "docs/FLOWS.md": "FLOWS.md",
+    "docs/DESIGN.md": "DESIGN.md + ui-components.md",
+    "docs/CONTRACTS.md": "CONTRACTS.md",
+    "docs/DEVELOPMENT.md": "DEVELOPMENT.md + environment.md",
+    "docs/RECIPES.md": "recipes.md",
+    "docs/DECISIONS.md": "DECISIONS.md",
+    "docs/OPEN_QUESTIONS.md": "OPEN_QUESTIONS.md"
+  },
+  "skipped_templates": {
+    "docs/00-24 numbered guides, docs/AGENTS.md, docs/ARCHITECTURE.md (docs/ variant)": "Each concern already has one home in the canonical set; a second copy would drift.",
+    "api/, data-model.md, database/": "No backend or database in this repo; the Giddh API calls are in CONTRACTS.md.",
+    "modules/, ui/, ui-routes.md, ui-state.md, ui-design-system.md, integration.md, current-infrastructure/": "About 25k lines; architecture, design and contracts fit their canonical docs under 450 lines.",
+    "conventions.md, glossary.md": "Conventions live in DESIGN.md and AGENTS.md rules; no domain glossary beyond GST/VAT terms already covered.",
+    "flow.md": "Journeys kept together in FLOWS.md (under 450 lines).",
+    "plans/, brainstorms/": "Written per change, never generated."
+  },
+  "superseded": []
+}
