@@ -52,9 +52,12 @@ export default function MyApp({ Component, pageProps }) {
     isUK: isUK,
   };
 
-  let currentPathArray = rawBrowserPath.split("/");
-  let loginSignupPath = currentPathArray[currentPathArray.length - 1].split("?")[0];
-  let loginSignupPathStatus =
+  // Strip query/hash first — redirect_url values can contain "/" (e.g. https://...)
+  // and would break last-segment detection if we split asPath by "/" before that.
+  const pathWithoutQuery = rawBrowserPath.split("?")[0].split("#")[0];
+  const currentPathArray = pathWithoutQuery.split("/");
+  const loginSignupPath = currentPathArray[currentPathArray.length - 1] || "";
+  const loginSignupPathStatus =
     loginSignupPath === "login" ||
       loginSignupPath === "signup" ||
       loginSignupPath === "chartered-accountant-signup" ||
