@@ -61,27 +61,39 @@ const logIn = (path) => {
   }
 
   async function initiateLogin(result) {
-    await fetch(
+    const redirectUrl = getRedirectUrlFromQuery();
+    const googleLoginUrl =
       (isUK
         ? process.env.NEXT_PUBLIC_UK_API_URL
-        : process.env.NEXT_PUBLIC_API_URL) + "/v2/google-login",
-      {
-        method: "GET",
-        mode: "cors",
-        cache: "no-store",
-        headers: { "access-token": result.accessToken },
-      }
-    )
+        : process.env.NEXT_PUBLIC_API_URL) +
+      "/v2/google-login" +
+      (redirectUrl
+        ? "?redirect_url=" + encodeURIComponent(redirectUrl)
+        : "");
+
+    await fetch(googleLoginUrl, {
+      method: "GET",
+      mode: "cors",
+      cache: "no-store",
+      headers: { "access-token": result.accessToken },
+    })
       .then((res) => res.json())
       .then((response) => {
         if (response.status === "success") {
+          const oauthRedirectUrl =
+            response.body?.redirectUrl || response.body?.redirect_url;
+          // Async Google callback loses the user gesture, so window.open is
+          // often blocked — navigate the current tab for OAuth partner return.
+          if (oauthRedirectUrl) {
+            window.location.href = oauthRedirectUrl;
+            return;
+          }
           if (response.body.statusCode === "AUTHENTICATE_TWO_WAY") {
             showToaster(response.body.text, "success");
             setUserResponse(response.body);
             setShowVerificationModal(true);
           } else {
             setGiddhRegionSession(response.body.session.id, region);
-            const redirectUrl = getRedirectUrlFromQuery();
             window.location =
               process.env.NEXT_PUBLIC_APP_URL +
               "/token-verify?token=" +
@@ -102,10 +114,15 @@ const logIn = (path) => {
   async function sendOtpLoginCallbackToParent(data) {
     if (data.type == "success") {
       setAuthLoginInProgress(true);
+      const redirectUrl = getRedirectUrlFromQuery();
       await fetch(
         (isUK
           ? process.env.NEXT_PUBLIC_UK_API_URL
-          : process.env.NEXT_PUBLIC_API_URL) + "/v2/auth-login",
+          : process.env.NEXT_PUBLIC_API_URL) +
+          "/v2/auth-login" +
+          (redirectUrl
+            ? "?redirect_url=" + encodeURIComponent(redirectUrl)
+            : ""),
         {
           method: "POST",
           mode: "cors",
@@ -119,6 +136,12 @@ const logIn = (path) => {
         .then((res) => res.json())
         .then((response) => {
           if (response.status == "success") {
+            const oauthRedirectUrl =
+              response.body?.redirectUrl || response.body?.redirect_url;
+            if (oauthRedirectUrl) {
+              window.location.href = oauthRedirectUrl;
+              return;
+            }
             if (response.body.statusCode === "AUTHENTICATE_TWO_WAY") {
               setAuthLoginInProgress(false);
               setUserResponse(response.body);
