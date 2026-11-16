@@ -1,7 +1,7 @@
 ---
 covers: ["src/pages/**", "src/components/Pages/**", "src/components/NewComps/**", "src/data/**", "_posts/**", "public/_redirects"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Recipes
 
