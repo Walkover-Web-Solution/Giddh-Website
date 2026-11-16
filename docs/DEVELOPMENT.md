@@ -1,7 +1,7 @@
 ---
 covers: ["package.json", "next.config.js", "jsconfig.json", ".prettierrc", ".gitignore", "public/_redirects", "public/_headers", "public/admin/**"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Development & Verification Guide
 
@@ -86,11 +86,11 @@ Read env vars as the literal `process.env.NEXT_PUBLIC_X`. Next only inlines lite
 ## Build & Preview Verification
 
 ```bash
-npm run build      # next build (Turbopack); ~402 prerendered pages
+npm run build      # next build (Turbopack); ~406 prerendered pages
 npm run start      # next start -p 8080, serves the production build
 ```
 Expected build output:
-- 402 static pages.
+- 406 static pages.
 - One Sass deprecation warning: `map-has-key` in `src/scss/mixins.scss` (pre-existing; ignore it, but don't add new ones).
 - Locally, possibly a warning about a `package-lock.json` outside the repo (machine-specific).
 
@@ -192,7 +192,7 @@ graph LR
 
 ### Netlify files in `public/`
 - `public/_redirects`: about 2,000 Netlify rules, all `<from> <to> 301`. Netlify uses the first matching rule, and 6 source paths already appear twice (for example `/blog/which-accounting-software-is-best-in-india-for-gst`). Some sources are full URLs like `http://shopify.giddh.com/*`. The file has **no trailing newline**, so `echo ... >> public/_redirects` glues your rule onto the last line. Edit it with an editor, or add a newline first.
-- `public/_headers`: `X-Frame-Options: DENY` and `Content-Security-Policy: frame-ancestors 'none'` on `/*`. The reason for doing this in Netlify rather than `next.config.js` is in [DECISIONS.md ADR-004](DECISIONS.md#adr-004-anti-framing-headers-in-netlify-_headers). It means the site can't be iframed anywhere.
+- `public/_headers`: on `/*`, Netlify sends `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin` and a **site-wide** `Content-Security-Policy` (default-src, script-src, style-src, connect-src, frame-src and others) that allowlists GTM, MSG91, hCaptcha, Razorpay, Google OAuth, Typeform, Calendly, Trustpilot, the amplifyapp tracker and other third parties the site already loads. `frame-ancestors 'none'` still blocks clickjacking. History and the Calendly allowlist fix are in [DECISIONS.md ADR-004](DECISIONS.md#adr-004-anti-framing-headers-in-netlify-_headers) and [ADR-015](DECISIONS.md#adr-015-site-wide-content-security-policy-in-netlify-_headers). Editing CSP requires checking every embedded script or iframe on the touched pages; demo booking broke once until `assets.calendly.com` was allowed (PR #845).
 - `public/admin/`: the Decap CMS UI (`index.html` loads `netlify-cms@^2.0.0` from unpkg plus the Netlify Identity widget) and `config.yml`. It's served at `/admin` and marked `noindex`.
 
 Root `config.js` holds only `posts_per_page` (25), read through `src/components/blogs/lib/config.js` by `src/pages/blog/index.js`, `src/pages/blog/page/[page].js` and `src/pages/blog/tags/[[...slug]].js`. Its blog-template leftovers (`base_url`, `site_title`, …) were removed in `207fbc59`. Site URLs come from env vars, not this file. <!-- verify:ignore -->

@@ -1,7 +1,7 @@
 ---
 covers: ["src/scss/**", "src/components/NewComps/**", "src/components/*.js", "src/components/header.js", "src/components/NewComps/Schema/**", "src/data/metadata.json", "src/data/hrefLangTag.json", "src/data/faqs.json", "src/data/schema/**", "public/fonts/**", "public/sitemap.xml", "public/robots.txt"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Design System & UI Standards
 

@@ -1,7 +1,7 @@
 ---
 covers: ["*"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Architectural & Design Decisions (ADRs)
 
@@ -25,6 +25,8 @@ Recovered from git history (2,017 commits, 2023-07-18 → 2026-09-26). Commit me
 | 2025-03-05 | [ADR-012: `web` staging branch; no committed env or lockfile](#adr-012-web-staging-branch-no-committed-env-or-lockfile) | Accepted | Delivery | Netlify test site before prod |
 | 2026-10-24 | [ADR-013: AI-readiness prep: docs set and evidence-based cleanup](#adr-013-ai-readiness-prep-docs-set-and-evidence-based-cleanup) | Accepted | Repo-wide | Agents need verified docs; dead code removed only with 7-point evidence |
 | 2026-11-02 | [ADR-014: STATUS.md scorecard enforced by a PR check](#adr-014-statusmd-scorecard-enforced-by-a-pr-check) | Accepted | Delivery | Plan progress visible in the repo; drift fails the PR |
+| 2026-11-03 | [ADR-015: Site-wide Content-Security-Policy in Netlify `_headers`](#adr-015-site-wide-content-security-policy-in-netlify-_headers) | Accepted | Security | Third-party embeds need an explicit CSP allowlist on Netlify |
+| 2026-10-29 | [ADR-016: Browser-side experiment recording, no new backend](#adr-016-browser-side-experiment-recording-no-new-backend) | Accepted | Analytics | Record A/B without API routes |
 
 ---
 
@@ -100,7 +102,7 @@ Other sites must not be able to frame giddh.com (clickjacking).
   4. `32b22d22` (2024-04-16): the Netlify `_headers` file, which was kept.
 ### Consequences & Trade-offs
 - **Positive:** The headers apply to every route at the CDN.
-- **Negative / Constraints:** No other CSP directives exist. Adding embeds or third-party scripts needs no CSP change today.
+- **Negative / Constraints:** Superseded for site-wide policy by [ADR-015](#adr-015-site-wide-content-security-policy-in-netlify-_headers) (2026-11). `frame-ancestors 'none'` remains part of the full CSP.
 ### Superseded / Rejected Alternatives
 1. **Meta tag CSP:** browsers ignore `frame-ancestors` in a meta tag. That is general knowledge, not recorded in the commit.
 2. **`next.config.js` headers():** replaced the next day. *Inference:* the headers did not reach the deployed Netlify site.
@@ -295,7 +297,23 @@ Nothing recorded which parts of the plan were built, proven, blocked or dropped,
 
 ---
 
-## ADR-014: Browser-side experiment recording, no new backend
+## ADR-015: Site-wide Content-Security-Policy in Netlify `_headers`
+### Status
+Accepted, 2026-11-03 (PRs #842 `2e569247`, #845 `5eae310e`, merged via `14zkq6bd32y-main`).
+### Context & Problem Statement
+ADR-004 blocked clickjacking with `frame-ancestors` only. The team wanted broader XSS hardening without adding headers in `next.config.js` (see ADR-004 rejected alternatives).
+### Decision & Implementation
+`public/_headers` applies one long `Content-Security-Policy` on `/*`, plus `X-Content-Type-Options: nosniff` and `Referrer-Policy: strict-origin-when-cross-origin`, alongside the existing `X-Frame-Options: DENY`. Directives allowlist every third party already loaded on marketing pages (GTM, MSG91, hCaptcha, Razorpay, Google, Calendly, Typeform, Trustpilot, CDNs, the amplifyapp tracker, and others). Calendly was added after the first deploy broke demo booking.
+### Consequences & Trade-offs
+- **Positive:** Policy is enforced at the Netlify CDN for all routes, including static assets.
+- **Negative / Constraints:** Every new script, style, connect or iframe origin needs an explicit CSP entry. Test Calendly, OTP widgets, Razorpay, Google login and embedded forms after any CSP edit.
+### Superseded / Rejected Alternatives
+1. **`next.config.js` headers():** still not used on Netlify for this (ADR-004).
+2. **Minimal CSP (frame-ancestors only):** replaced by the site-wide policy.
+
+---
+
+## ADR-016: Browser-side experiment recording, no new backend
 ### Status
 Accepted, 2026-10-29.
 ### Context & Problem Statement

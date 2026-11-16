@@ -1,7 +1,7 @@
 ---
 covers: ["src/pages/**", "src/components/Pages/**", "src/components/NewComps/**", "src/data/**", "_posts/**", "public/_redirects"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Recipes
 
@@ -52,6 +52,15 @@ Example commit: `66a7f148` (for example `src/pages/ae/triggers.js` with `src/dat
 
 > [!WARNING]
 > Region also changes behaviour. On `/uk/*`, auth calls go to `NEXT_PUBLIC_UK_API_URL` (`path.isUK`, see [DEVELOPMENT.md](DEVELOPMENT.md#environment-variables-reference)). If your page has a signup or login form, test it on `/uk` too.
+
+## Add a legal or policy page (static JSX)
+Example: `src/pages/nda-policy.js` (2026-10, PR #835), with `src/pages/in/nda-policy.js`, `src/pages/ae/nda-policy.js` and `src/pages/uk/nda-policy.js` re-exporting the shared component. Same pattern as `src/pages/privacy-policy.js`.
+
+1. Put the full legal copy in one shared `src/pages/<slug>.js` component (inline JSX, `src/scss` utility classes).
+2. Add thin locale wrappers that import the shared default export.
+3. Add `src/data/metadata.json` keys for `/nda-policy`, `/in/nda-policy`, `/ae/nda-policy` and `/uk/nda-policy`, and list the slug under each locale in `src/data/hrefLangTag.json`.
+4. Link from the footer (`src/components/footer.js`) and any forms that reference the policy.
+5. Add sitemap URLs by hand. No `pagesToGetData` entry is needed.
 
 ## Add a NewComps section
 Example commit: `1464d742` "Fix : Did Changes in Affiliate page". It added `src/components/NewComps/Stepper/index.js` with `Stepper.module.scss`, used it in `src/components/Pages/Affiliate.js`, and added a `stepper` key to all four `affiliate.json` files.

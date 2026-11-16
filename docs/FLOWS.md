@@ -1,7 +1,7 @@
 ---
 covers: ["src/pages/signup.js", "src/pages/chartered-accountant-signup.js", "src/pages/login.js", "src/pages/v2/login.js", "src/pages/googleauth.js", "src/pages/pricing.js", "src/pages/payment.js", "src/pages/thank-you.js", "src/components/otp*.js", "src/components/googleLogin.js", "src/components/loginWithPassword.js", "src/components/NewComps/BookFreeDemoForm/**", "src/components/NewComps/AffiliateForm/**", "src/hooks/**", "src/utils/**"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # User Flows & Critical Journeys
 
@@ -140,8 +140,8 @@ sequenceDiagram
 2. **State & Validation:**
    - `useEffect` → `setGiddhRegion` and `validateUserSession(getCookie(getRegionSessionCookieName(region)))`.
    - The OTP login uses the widget in non-exposed mode (`addOtpWidgetScript(false, initiateLogin, false)`). MSG91 renders its own UI and calls back with an access token.
-3. **API Dispatch:** `GET /v2/user`, `GET /v2/google-login`, `POST /v2/auth-login` (see [CONTRACTS.md](CONTRACTS.md)).
-4. **Response & Persistence:** the session id goes into the region cookie, then the browser goes to `/token-verify`. Google login sends `?token=<Google access token>`, not a Giddh session id.
+3. **API Dispatch:** `GET /v2/user`, `GET /v2/google-login`, `POST /v2/auth-login` (see [CONTRACTS.md](CONTRACTS.md)). When the login URL has `?redirect_url=`, `src/utils/signupHelpers.js:getRedirectUrlFromQuery` reads it and the login handlers append the same value as a query param on `/v2/google-login` and `/v2/auth-login`, and on Google success as `&redirect_url=` on the `/token-verify` redirect.
+4. **Response & Persistence:** the session id goes into the region cookie, then the browser goes to `/token-verify`. Google login sends `?token=<Google access token>`, not a Giddh session id. If the API returns `body.redirectUrl` or `body.redirect_url`, the site assigns `window.location.href` to that URL instead (partner OAuth return; full-page navigation because the Google callback is async and popups are often blocked).
 
 ### 3. Alternative Paths & Conditional Branches
 

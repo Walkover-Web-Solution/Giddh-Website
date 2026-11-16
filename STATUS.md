@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-02 · **Reviewed up to commit:** `26494e62`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-16 · **Reviewed up to commit:** `ad5219f6`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -50,8 +50,8 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 
 | Item | Status | Notes |
 |---|---|---|
-| Global locale tree (37 page files) | 🟡 | Count matches the plan at `2024df86`. |
-| `in` / `ae` / `uk` locale trees (35 / 32 / 32) | 🟡 | Counts match the plan. |
+| Global locale tree (38 page files) | 🟡 | +1 `nda-policy` since the plan text (`ad5219f6`). |
+| `in` / `ae` / `uk` locale trees (36 / 33 / 33) | 🟡 | +1 `nda-policy` per locale. |
 | India-only pages: GST, e-invoice, bank integration, Tally migration | 🟡 | `src/pages/in/gst.js`, `src/pages/in/e-invoice.js`, `src/pages/in/bank-integration.js`, `src/pages/in/tally-to-giddh-migration.js`. |
 | UAE and UK VAT pages | 🟡 | `src/pages/ae/vat.js`, `src/pages/uk/vat.js`. |
 | CA signup | 🟡 | `src/pages/chartered-accountant-signup.js`; MRN gap [Q-029](docs/OPEN_QUESTIONS.md#active-questions-table); old `/ca-signup` URLs have no 301 ([Q-004](docs/OPEN_QUESTIONS.md#active-questions-table)). |
@@ -67,7 +67,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 
 | Item | Status | Notes |
 |---|---|---|
-| UK/UAE feature-page JSON rewrite (`origin/86d3e3xxz-web`) | 🟡 | The plan calls it unmerged, but it was merged into `web` by PR #828 (`63cb6ea0`, 2026-10-28). The plan text is out of date here. |
+| UK/UAE feature-page JSON rewrite (`origin/86d3e3xxz-web`) | 🟡 | Merged into `web` by PR #828 (`63cb6ea0`, 2026-10-28); plan text updated in docs refresh 2026-11-16. |
 | FAQ page in every locale (`origin/86d241cne-main`) | ⬜ | Not merged into `web`; not approved. |
 | Remove AE region support (`origin/86d0zqj36-main`) | ⛔ | Not merged; conflicts with UAE being in the ICP. Needs a human decision ([Q-002](docs/OPEN_QUESTIONS.md#active-questions-table)). |
 
@@ -129,7 +129,7 @@ The repo has no automated tests or working lint. These are the checks that exist
 
 | Check | Status | Notes |
 |---|---|---|
-| `npm run build` | 🟡 | Passes at `2024df86`: 402 static pages, one Sass `map-has-key` warning (run 2026-11-02, no env vars). |
+| `npm run build` | 🟡 | Passes at `ad5219f6`: 406 static pages, one Sass `map-has-key` warning (run 2026-11-16, no env vars). |
 | `python3 scripts/vendor/ai-docs/verify_docs.py .` | 🟡 | 0 errors, 5 warnings (all the gitignored `package-lock.json`). |
 | `npm run status:check` | 🟡 | Runs on every PR via `.github/workflows/status-check.yml`; not yet seen on a real PR. |
 | Browser check of touched pages and locale variants | ⬜ | Manual, per change; see [DEVELOPMENT.md](docs/DEVELOPMENT.md#how-an-agent-checks-its-work-verification-checklist). |
@@ -139,7 +139,6 @@ The repo has no automated tests or working lint. These are the checks that exist
 ## Open questions
 
 - **Which document is "the plan"?** This scorecard was requested against a plan doc that was never named. No plan, roadmap or spec exists in the repo, so `docs/VISION.md` stands in. Name the real plan and re-score against it.
-- **Plan drift:** `docs/VISION.md` still lists `origin/86d3e3xxz-web` as unmerged; it was merged in PR #828. That fix belongs in VISION.md's own refresh.
 - **Can anything become ✅?** That needs evidence from production (giddh.com analytics or Netlify logs) and a `web` → `main` promotion ([Q-031](docs/OPEN_QUESTIONS.md#active-questions-table)).
 - All other unknowns live in [docs/OPEN_QUESTIONS.md](docs/OPEN_QUESTIONS.md#active-questions-table).
 
@@ -152,6 +151,10 @@ Built in the repo but not named in the plan.
 | Windows app error-codes page | 🟡 | `src/pages/windows-app-error-codes.js`, global only. |
 | Salesperson report feature page | 🟡 | `src/pages/salesperson-feature-report.js` plus locale variants. |
 | Security page | 🟡 | `src/pages/security.js` plus locale variants. |
+| NDA policy (all locales) | 🟡 | `src/pages/nda-policy.js` and `in`/`ae`/`uk` wrappers; linked from footer and signup forms. |
+| Site-wide CSP (`public/_headers`) | 🟡 | PRs #842 / #845 ([ADR-015](docs/DECISIONS.md#adr-015-site-wide-content-security-policy-in-netlify-_headers)); not exercised on every third party locally. |
+| Login partner `redirect_url` | 🟡 | `src/pages/login.js`, `src/pages/v2/login.js`, `src/utils/signupHelpers.js:getRedirectUrlFromQuery`; live partner flow not submitted from agents. |
+| Footer prod preview installers | 🟡 | `src/components/footer.js` when `NEXT_PUBLIC_APP_ENV=test` fetches preview builds from prod S3 ([ARCHITECTURE.md](docs/ARCHITECTURE.md)). |
 | Desktop-app downloads from S3 | 🟡 | `src/utils/s3Config.js` ([ADR-011](docs/DECISIONS.md#adr-011-desktop-app-download-urls-centralised-in-s3config)). |
 | `/v2/login` duplicate login page | 🙈 | `src/pages/v2/login.js`, noindexed and not linked from the site ([Q-006](docs/OPEN_QUESTIONS.md#active-questions-table)). |
 | AI docs set and doc verifier | 🟡 | `docs/`, `scripts/vendor/ai-docs/`. A configuration inventory (`docs/CONFIGURATION.md`, PR #831) was added and then reverted on 2026-10-30 (`2024df86`). |
@@ -161,5 +164,6 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-16 · Cursor cloud agent · Weekly docs refresh: VISION proposals, CSP ADR-015, 406-page build, coverage map in docs/README · doc-only `[no status]` on code drift already recorded above
 - 2026-11-02 · Cursor cloud agent · Moved "Reviewed up to commit" to `26494e62` (adds the `status:check` script to `package.json`) · none
 - 2026-11-02 · Cursor cloud agent · Created STATUS.md, `npm run status:check` and the PR workflow; scored the repo against docs/VISION.md at `2024df86` · initial scores, no ✅ (nothing proven with real users)

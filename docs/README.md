@@ -1,6 +1,6 @@
 ---
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Docs index
 
@@ -17,6 +17,42 @@ Written for AI coding agents and new engineers; start at [../AGENTS.md](../AGENT
 | [DEVELOPMENT.md](DEVELOPMENT.md) | Setting up, verifying your work, opening a PR, deploying |
 | [DECISIONS.md](DECISIONS.md) | Before reversing an established pattern |
 | [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) | Something looks wrong: it may be a known, undecided issue |
+
+## Docs maintenance (for weekly agent runs)
+
+| Field | Value |
+|---|---|
+| Last reviewed revision | `ad5219f6` (`web`, 2026-11-16) |
+| Previous reviewed revision | `207fbc59` (2026-10-24 ai-docs prep) |
+| Commits between them | 40 (feature JSON merge, NDA policy, CSP headers, login `redirect_url`, footer preview installers, STATUS tracker, experiment helpers) |
+
+### Coverage map
+
+Status is **verified** when `python3 scripts/vendor/ai-docs/verify_docs.py .` reports 0 errors at the reviewed revision. **Partial** means accurate but with open `[!TODO]` or human-only gaps. **N/A** means out of repo scope.
+
+| Topic | Authoritative location | Status |
+|---|---|---|
+| Product purpose, ICP, non-goals | [VISION.md](VISION.md) | partial (success metrics unconfirmed) |
+| Feature journeys / funnels | [FLOWS.md](FLOWS.md) | verified |
+| Architecture & module map | [ARCHITECTURE.md](ARCHITECTURE.md) | verified |
+| API & third-party contracts | [CONTRACTS.md](CONTRACTS.md) | verified |
+| UI, SEO, a11y | [DESIGN.md](DESIGN.md) | partial (`lang`, `NEXT_PUBLIC_SITE_URL` on Netlify) |
+| Setup, env, PR flow | [DEVELOPMENT.md](DEVELOPMENT.md) | partial (Netlify Node pin, env ownership) |
+| How-to recipes | [RECIPES.md](RECIPES.md) | verified |
+| ADRs | [DECISIONS.md](DECISIONS.md) | verified |
+| Known defects & questions | [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md) | verified |
+| Plan scorecard | [../STATUS.md](../STATUS.md) | partial (nothing proven with real users) |
+| Agent entry & rules | [../AGENTS.md](../AGENTS.md) | verified |
+| Backend / database | — | N/A (Giddh app, not this repo) |
+| Lint / unit tests | — | N/A (none working; build is the gate) |
+| Measurement KPIs | — | missing (attribution wired, metrics unnamed) |
+
+### Unfinished for the next run
+
+- Confirm success metrics and IN vs AE vs UK priority ([VISION.md](VISION.md#strategic-priorities--success-measures)).
+- Pin Netlify Node version and record where env values live ([DEVELOPMENT.md](DEVELOPMENT.md#prerequisites--runtime-environment)).
+- Reconcile `web` vs `main` promotion status after the next promote ([Q-031](OPEN_QUESTIONS.md#active-questions-table)).
+- Owner for amplifyapp tracker and CookieYes via GTM ([ARCHITECTURE.md](ARCHITECTURE.md#external-systems--dependencies)).
 
 ## Needs a human
 
