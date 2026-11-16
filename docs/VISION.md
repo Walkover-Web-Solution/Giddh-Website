@@ -1,7 +1,7 @@
 ---
 covers: ["*"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Product Vision & Strategic Direction
 
@@ -18,10 +18,10 @@ Sources used: the user's confirmation on 2026-10-24 (approved direction), `READM
   - Pages stay static and SEO-first: marketing content is never rendered client-only.
   - Release flow: `<clickup-id>-web` → `web` (Netlify test site) → `main` (production giddh.com). See [DEVELOPMENT.md](DEVELOPMENT.md).
   - The only company-level purpose statement in the sources is in `src/pages/about.js`, as stated on the site: "provide technologies to organizations that enables them to take data driven financial decisions in the quickest way possible."
-- **Current Implementation** (at `d66a2a8f`):
+- **Current Implementation** (at `ad5219f6`, verified 2026-11-16):
   - Four locale trees: global (`src/pages/`, 37 top-level page files besides `_app`/`_document`/`404`), `src/pages/in/` (35), `src/pages/ae/` (32) and `src/pages/uk/` (32).
   - India-only pages: `src/pages/in/gst.js`, `src/pages/in/e-invoice.js`, `src/pages/in/bank-integration.js` and `src/pages/in/tally-to-giddh-migration.js`. UAE and UK only: `src/pages/ae/vat.js` and `src/pages/uk/vat.js`.
-  - Global-only funnel pages: `src/pages/chartered-accountant-signup.js`, `src/pages/online-accounting-software.js` (demo landing page), `src/pages/thank-you.js`, `src/pages/payment.js` (Razorpay checkout) and `src/pages/googleauth.js`.
+  - Global-only funnel pages: `src/pages/chartered-accountant-signup.js`, `src/pages/online-accounting-software.js` (demo landing page), `src/pages/thank-you.js`, `src/pages/payment.js` (Razorpay checkout) and `src/pages/googleauth.js`. Legal: `src/pages/nda-policy.js` (and locale twins) added 2026-11 (`a44dab46`).
   - Also live: the MDX blog (`_posts/blog/`, 253 posts, Decap CMS), the affiliate program (`src/pages/affiliate.js`) and comparison and switching pages (`src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`).
   - Mechanics are documented in [ARCHITECTURE.md](ARCHITECTURE.md) and [FLOWS.md](FLOWS.md).
 - **Proposals & Roadmaps** (unmerged remote branches; none is approved):

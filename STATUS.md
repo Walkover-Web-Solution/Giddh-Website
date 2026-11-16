@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-02 · **Reviewed up to commit:** `26494e62`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-16 · **Reviewed up to commit:** `ad5219f6`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -129,7 +129,7 @@ The repo has no automated tests or working lint. These are the checks that exist
 
 | Check | Status | Notes |
 |---|---|---|
-| `npm run build` | 🟡 | Passes at `2024df86`: 402 static pages, one Sass `map-has-key` warning (run 2026-11-02, no env vars). |
+| `npm run build` | 🟡 | Passes at `ad5219f6`: 406 static pages, one Sass `map-has-key` warning (docs maintenance run 2026-11-16, no env vars). |
 | `python3 scripts/vendor/ai-docs/verify_docs.py .` | 🟡 | 0 errors, 5 warnings (all the gitignored `package-lock.json`). |
 | `npm run status:check` | 🟡 | Runs on every PR via `.github/workflows/status-check.yml`; not yet seen on a real PR. |
 | Browser check of touched pages and locale variants | ⬜ | Manual, per change; see [DEVELOPMENT.md](docs/DEVELOPMENT.md#how-an-agent-checks-its-work-verification-checklist). |
@@ -161,5 +161,6 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-16 · Cursor cloud agent · Weekly docs maintenance: build count 406 pages, CSP/NDA/login redirect docs; reviewed hash `ad5219f6` · `npm run build` row only
 - 2026-11-02 · Cursor cloud agent · Moved "Reviewed up to commit" to `26494e62` (adds the `status:check` script to `package.json`) · none
 - 2026-11-02 · Cursor cloud agent · Created STATUS.md, `npm run status:check` and the PR workflow; scored the repo against docs/VISION.md at `2024df86` · initial scores, no ✅ (nothing proven with real users)

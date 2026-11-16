@@ -1,7 +1,7 @@
 ---
 covers: ["src/utils/**", "src/hooks/**", "src/pages/**/login.js", "src/pages/**/signup.js", "src/pages/chartered-accountant-signup.js", "src/pages/pricing.js", "src/pages/payment.js", "src/components/otp*.js", "src/components/googleLogin.js", "src/components/loginWithPassword.js", "src/components/NewComps/BookFreeDemoForm/**", "src/components/NewComps/AffiliateForm/**", "src/data/pagesdata/**", "_posts/**", "public/admin/config.yml", "public/js/**", "src/pages/_document.js"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Contracts & Data Schemas
 
@@ -53,12 +53,15 @@ Every successful auth path sets the region session cookie (see [persistence](#pe
 | Query param | Value | Set by |
 |---|---|---|
 | `request` | `body.session.id` | OTP login, session revalidation, password login, 2FA verify (`src/utils/signupHelpers.js:handleOtpVerifyRedirect`), signup, CA signup |
-| `token` | the Google OAuth access token, not the session id | Google login in `src/pages/login.js:initiateLogin` and `src/pages/v2/login.js:initiateLogin` |
+| `token` | the Google OAuth access token, not the session id | Google login in `src/pages/login.js:initiateLogin` and `src/pages/v2/login.js:initiateLogin`. When the login URL carried `?redirect_url=`, the same value is appended here (`a44dab46` / `db4fca85`). |
+| `redirect_url` | full URL from the login page query (`src/utils/signupHelpers.js:getRedirectUrlFromQuery`) | Google login token handoff only (see partner OAuth below) |
 | `region` | `GL` / `IN` / `AE` / `UK` (upper-cased locale prefix, `GL` for global) | `/login`, `/signup`, CA signup. Omitted by every `src/pages/v2/login.js` redirect |
 | `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `ref` | the `localStorage` values written by `public/js/helper.js:setUtmParamInLocalStorage` | signup and CA signup only |
 | `source` | JSON string of the non-UTM query params, from `src/utils/signupHelpers.js:getSourceParam`. CA signup adds `mrnNumber` (`src/pages/chartered-accountant-signup.js:getCaSourceParam`) | signup and CA signup only |
 
 The values are concatenated without `encodeURIComponent`, so `source` is raw JSON inside the URL. The CA membership number (MRN) never goes to `/v2/register`. It reaches the app only through `source` and the `giddh_query` cookie.
+
+**Partner OAuth return.** When the login page URL includes `?redirect_url=<url>`, `src/pages/login.js` and `src/pages/v2/login.js` forward it to `GET /v2/google-login` and `POST /v2/auth-login` as a query param. If the API responds with `body.redirectUrl` or `body.redirect_url`, the site navigates the **current tab** to that URL instead of `token-verify` (popup blockers made `window.open` unreliable after async Google login). OTP/password success still uses `token-verify` and may append `&redirect_url=` for Google token handoff. `_app.js` strips the query before parsing the path so encoded URLs in `redirect_url` do not break locale detection.
 
 ### Third-party endpoints
 
@@ -68,7 +71,7 @@ The values are concatenated without `encodeURIComponent`, so `source` is raw JSO
 | GET | `https://www.googleapis.com/oauth2/v1/userinfo` <!-- verify:ignore --> | `src/components/googleLogin.js:getGoogleUserDetails` | `authorization: Bearer <token>` | reads `email`; adds `accessToken` and calls `googleApiSuccessCallback` |
 | script | `https://verify.msg91.com/otp-provider.js` <!-- verify:ignore --> | `public/js/helper.js:addOtpWidgetScript` | widget id and token hard-coded in `public/js/helper.js:getOtpwidgetConfiguration` | Exposes `window.initSendOTP`, `sendOtp(id, ok, fail)`, `verifyOtp(otp, ok, fail, requestId)`, `retryOtp(channel, ok, fail, requestId)` and `getWidgetData()`. `data.message` is the `requestId` after a send and the access token after a verify. Channel `3` is email (`EMAIL_OTP_CHANNEL` in `src/hooks/useEmailOtpVerification.js`) |
 | POST | `NEXT_PUBLIC_MSG91_PHONEBOOK_URL` (demo leads) | `src/utils/segmento.js:sendDataInSegmento` | header `tokenAuth: NEXT_PUBLIC_MSG91_AUTH_KEY` (shipped in the client bundle) | body `{ input: { name, email, phone, business, utm_source, utm_medium, utm_campaign, utm_term, utm_content, ref, region, gclid, fbclid } }` from `src/components/NewComps/BookFreeDemoForm/index.js`. An empty body counts as `{status:"success"}` whatever the HTTP status |
-| GET | `NEXT_PUBLIC_S3_BASE_URL/NEXT_PUBLIC_S3_BUCKET_NAME/NEXT_PUBLIC_APP_ENV/{windows\|mac}/latest/latest[-mac].yml` <!-- verify:ignore --> | `src/utils/s3Config.js:getAppVersion` | public | regex `version:` → label; falls back to `"latest"`. Download links come from `src/utils/s3Config.js:getDownloadUrl` (`giddh-setup` or `giddh-test-setup` `.exe`/`.dmg`). Read only, nothing is uploaded |
+| GET | `NEXT_PUBLIC_S3_BASE_URL/NEXT_PUBLIC_S3_BUCKET_NAME/<env>/{windows\|mac}/{latest\|preview}/latest[-mac].yml` <!-- verify:ignore --> | `src/utils/s3Config.js:getAppVersion` | public | regex `version:` → label; falls back to `"latest"`. `channel` defaults to `latest`; footer passes `preview` with `appEnv: "prod"` when `isTestWebsite()` is true. Download links come from `getDownloadUrl` (`giddh-setup` or `giddh-test-setup` `.exe`/`.dmg`). Read only, nothing is uploaded |
 | script + modal | `https://checkout.razorpay.com/v1/checkout.js` <!-- verify:ignore --> | `src/pages/payment.js:payInvoice` | `NEXT_PUBLIC_RAZORPAY_KEY` | options `{ key, amount (v2: body.amount; v1: amount*100), currency (v2: body.currency.code; v1: "INR"), name, description, handler }` |
 | GET | `https://api.db-ip.com/v2/free/self` <!-- verify:ignore --> | `src/hooks/useIntlTelInput.js` (`geoIpLookup`), `src/utils/signupHelpers.js:geoIpLookupHandler` | public | reads `countryCode`, defaulting to `in`. `geoIpLookupHandler` never calls `.json()`, so signup always falls back to `in`. Its `http://ip-api.com` / `ipinfo.io` fallbacks never run |
 | embed | Typeform `uOtrQ4tb`, Calendly popup, Trustpilot widget | `src/components/bannerSection.js`, `public/js/helper.js:openCalendly`, `src/components/navbar.js` | public | Typeform hidden field `utm` reads React state that is set in the same call (stale, `null` on the first open) |

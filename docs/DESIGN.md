@@ -1,7 +1,7 @@
 ---
 covers: ["src/scss/**", "src/components/NewComps/**", "src/components/*.js", "src/components/header.js", "src/components/NewComps/Schema/**", "src/data/metadata.json", "src/data/hrefLangTag.json", "src/data/faqs.json", "src/data/schema/**", "public/fonts/**", "public/sitemap.xml", "public/robots.txt"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Design System & UI Standards
 
@@ -254,7 +254,7 @@ Observed in the 139 prerendered non-blog pages of the local build. *Inference:* 
 
 - `public/sitemap.xml` is **hand-maintained and stale** ([Q-009](OPEN_QUESTIONS.md#active-questions-table)):
   - It was committed once (`ad04b9d1`, 2025-06-27) with 638 URLs, all with the same `lastmod` of 2025-06-22.
-  - At `250f50f8` it misses 39 page routes, including `/`, every `customer-portal`, `email-to-bank-sync`, `triggers`, `recurring-invoices` and `invoice-bill-scanning` variant, `/in/tally-to-giddh-migration` and `/chartered-accountant-signup`.
+  - At `ad5219f6` it misses 43 page routes, including `/`, every `customer-portal`, `email-to-bank-sync`, `triggers`, `recurring-invoices` and `invoice-bill-scanning` variant, `/nda-policy` in all locales, `/in/tally-to-giddh-migration` and `/chartered-accountant-signup`.
   - It misses 169 of the 253 MDX posts.
   - It still lists old WordPress-era blog slugs and `/api/*` docs URLs that have no page here.
   - Add every new public page by hand until generation is decided.

@@ -1,7 +1,7 @@
 ---
 covers: ["*"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Architectural & Design Decisions (ADRs)
 
@@ -25,6 +25,8 @@ Recovered from git history (2,017 commits, 2023-07-18 → 2026-09-26). Commit me
 | 2025-03-05 | [ADR-012: `web` staging branch; no committed env or lockfile](#adr-012-web-staging-branch-no-committed-env-or-lockfile) | Accepted | Delivery | Netlify test site before prod |
 | 2026-10-24 | [ADR-013: AI-readiness prep: docs set and evidence-based cleanup](#adr-013-ai-readiness-prep-docs-set-and-evidence-based-cleanup) | Accepted | Repo-wide | Agents need verified docs; dead code removed only with 7-point evidence |
 | 2026-11-02 | [ADR-014: STATUS.md scorecard enforced by a PR check](#adr-014-statusmd-scorecard-enforced-by-a-pr-check) | Accepted | Delivery | Plan progress visible in the repo; drift fails the PR |
+| 2026-10-29 | [ADR-015: Browser-side experiment recording, no new backend](#adr-015-browser-side-experiment-recording-no-new-backend) | Accepted | Analytics | Optional copy tests without API routes |
+| 2026-11-14 | [ADR-016: Site-wide Content-Security-Policy in Netlify `_headers`](#adr-016-site-wide-content-security-policy-in-netlify-_headers) | Accepted | Security | Lock down script and frame sources while keeping GTM, payments and demos working |
 
 ---
 
@@ -87,11 +89,11 @@ Posts are `_posts/blog/*.mdx` files with frontmatter. `src/components/blogs/lib/
 
 ## ADR-004: Anti-framing headers in Netlify `_headers`
 ### Status
-Accepted
+Accepted (clickjacking baseline). Site-wide CSP extensions are [ADR-016](#adr-016-site-wide-content-security-policy-in-netlify-_headers).
 ### Context & Problem Statement
 Other sites must not be able to frame giddh.com (clickjacking).
 ### Decision & Implementation
-`public/_headers` sends `X-Frame-Options: DENY` and `Content-Security-Policy: frame-ancestors 'none'` for `/*`.
+Deliver security headers from `public/_headers` on Netlify, not from `next.config.js` or meta tags. The file always includes `X-Frame-Options: DENY` and `frame-ancestors 'none'` in CSP.
 ### Supporting Evidence & Past Incidents
 - PR #365 (`e3b84741`, 2024-04-16, "Add content security policy"). It went through four attempts in five days:
   1. `9fbbb070` (2024-04-12): a meta tag in `src/components/header.js`.
@@ -100,7 +102,7 @@ Other sites must not be able to frame giddh.com (clickjacking).
   4. `32b22d22` (2024-04-16): the Netlify `_headers` file, which was kept.
 ### Consequences & Trade-offs
 - **Positive:** The headers apply to every route at the CDN.
-- **Negative / Constraints:** No other CSP directives exist. Adding embeds or third-party scripts needs no CSP change today.
+- **Negative / Constraints:** New third-party scripts or iframes require editing `public/_headers` and checking the page in a browser (see ADR-016).
 ### Superseded / Rejected Alternatives
 1. **Meta tag CSP:** browsers ignore `frame-ancestors` in a meta tag. That is general knowledge, not recorded in the commit.
 2. **`next.config.js` headers():** replaced the next day. *Inference:* the headers did not reach the deployed Netlify site.
@@ -221,7 +223,7 @@ Titles, descriptions and keywords live in one map, `src/data/metadata.json`, key
 - `public/sitemap.xml` is a static file committed once in `ad04b9d1` (2025-06-27) and never changed since.
 ### Consequences & Trade-offs
 - **Positive:** One file to audit for meta tags.
-- **Negative / Constraints:** The sitemap is stale. It is missing `triggers`, `customer-portal`, `chartered-accountant-signup` and `tally-to-giddh-migration`, and lists 187 `/blog/` URLs, while 169 of the 253 MDX posts have no matching URL (many listed URLs are old slugs).
+- **Negative / Constraints:** The sitemap is stale. It is missing `triggers`, `customer-portal`, `chartered-accountant-signup`, `nda-policy` (all locales) and `tally-to-giddh-migration`, and lists 187 `/blog/` URLs, while 169 of the 253 MDX posts have no matching URL (many listed URLs are old slugs).
 ### Superseded / Rejected Alternatives
 > [!TODO]
 > No commit records why the sitemap is hand-maintained rather than generated at build time. Needs a human.
@@ -234,7 +236,7 @@ Accepted
 ### Context & Problem Statement
 Download links for the Electron desktop app were hard-coded S3 URLs in `src/components/downloadFreeModal.js` and `src/components/footer.js`.
 ### Decision & Implementation
-`src/utils/s3Config.js` (`getDownloadUrl`, `getAppVersion`) picks the bucket and environment name from env config and falls back to a default version.
+`src/utils/s3Config.js` (`getDownloadUrl`, `getAppVersion`, `isTestWebsite`) picks the bucket and environment name from env config and falls back to a default version. On the test host (`NEXT_PUBLIC_APP_ENV === "test"`, e.g. web.giddh.com), `src/components/footer.js` also fetches **prod preview** builds from the `preview` channel under the `prod` S3 path so QA can install production-candidate desktop apps without changing env.
 ### Supporting Evidence & Past Incidents
 - `0e6bba84` (2026-01-16), merged in PR #720 (`6169c92a`, 2026-02-02, "Setup Auto Electron Build Github action for Test and Production"). Then `e5df4e87`/`aa052f76` (2026-01-21) "centralized test environment path".
 ### Consequences & Trade-offs
@@ -257,7 +259,7 @@ Feature branches named `<clickup-id>-web` open PRs into `web`, which is then pro
 - `.env.production` was tracked until `61ca0644`, merged in PR #536 (`d382d95c`, 2025-09-11). It held only `NEXT_PUBLIC_*` names, and the values remain in git history. <!-- verify:ignore -->
 ### Consequences & Trade-offs
 - **Positive:** There is a review step on the test site before production.
-- **Negative / Constraints:** Dependency versions are not reproducible, because builds resolve `^` ranges fresh each time. `web` is 142 commits ahead of `main`, so cherry-picks between the two are common (e.g. `4a8d1975` "cherry pick").
+- **Negative / Constraints:** Dependency versions are not reproducible, because builds resolve `^` ranges fresh each time. `web` is 180 commits ahead of `main` (2026-11-16), so cherry-picks between the two are common (e.g. `4a8d1975` "cherry pick").
 ### Superseded / Rejected Alternatives
 1. **PRs straight to `main`** (2023 to early 2025): replaced by the `web` staging flow.
 
@@ -272,7 +274,7 @@ The repo had only a short `README.md`, no tests and no working lint, so agents a
 - Added `AGENTS.md` (entry point), `CLAUDE.md` (`@AGENTS.md`) and this `docs/` set. `docs/.ai-docs.json` records the verified commit.
 - Removed only code that cleared all seven evidence checks (runtime registration, dynamic imports, routing, flags, CSS refs, build/static config, external consumers): `8b45872d` (unused NewComps sections, `gstIndexPage.js`, `getMdIcons.js`), `408523df` (3 dead SCSS partials), `9ebe342f` (`dompurify`, `path`), `5ece024c` (WordPress server artefacts, `vercel.svg`), `250f50f8` (dead commented imports), `207fbc59` (`config.js` template keys). <!-- verify:ignore -->
 ### Supporting Evidence & Past Incidents
-- After each step: `npm run build` passed with the baseline's warnings, the 402-page list was identical, and 0 of 402 prerendered HTML files differed once chunk hashes were normalised. The method is in [DEVELOPMENT.md](DEVELOPMENT.md#how-an-agent-checks-its-work-verification-checklist). The SSR routes `/blog` and `/blog/tags/*` were checked in the browser.
+- After each step: `npm run build` passed with the baseline's warnings, the static page count matched the baseline, and 0 prerendered HTML files differed once chunk hashes were normalised (402 pages at `207fbc59`; 406 at `ad5219f6`). The method is in [DEVELOPMENT.md](DEVELOPMENT.md#how-an-agent-checks-its-work-verification-checklist). The SSR routes `/blog` and `/blog/tags/*` were checked in the browser.
 ### Consequences & Trade-offs
 - **Positive:** less code to misread. Docs are tied to a commit and checkable.
 - **Negative / Constraints:** docs must be updated in the same change as the code they describe.
@@ -295,7 +297,7 @@ Nothing recorded which parts of the plan were built, proven, blocked or dropped,
 
 ---
 
-## ADR-014: Browser-side experiment recording, no new backend
+## ADR-015: Browser-side experiment recording, no new backend
 ### Status
 Accepted, 2026-10-29.
 ### Context & Problem Statement
@@ -308,6 +310,19 @@ One module, `src/utils/experiments.js`, assigns a variant locally from the exper
 ### Superseded / Rejected Alternatives
 1. **A Next.js API route that proxies events:** rejected. This site adds no backend.
 2. **Starting an experiment in this change:** rejected. The owner defines experiments, and this change must not change what any page shows.
+
+---
+
+## ADR-016: Site-wide Content-Security-Policy in Netlify `_headers`
+### Status
+Accepted, 2026-11-14 (`2e569247`, Calendly allowlist fix `5eae310e`).
+### Context & Problem Statement
+Beyond clickjacking (ADR-004), the team wanted baseline XSS and injection mitigations without adding Next.js API routes or server middleware.
+### Decision & Implementation
+Extend `public/_headers` with `X-Content-Type-Options`, `Referrer-Policy` and a full `Content-Security-Policy` for `/*`, whitelisting the third parties the marketing site already loads (GTM/GA, MSG91, hCaptcha, Razorpay, Typeform, Calendly, Trustpilot, Google OAuth, CDNs and the amplifyapp tracker). `frame-ancestors 'none'` remains. Changes ship in the same PR as any new script or iframe host.
+### Consequences & Trade-offs
+- **Positive:** One file, CDN-wide, matches how ADR-004 survived on Netlify.
+- **Negative / Constraints:** A blocked third party fails quietly in the browser console until `_headers` is updated. Local `npm run start` does not apply Netlify headers — verify on a Netlify deploy preview.
 
 ---
 

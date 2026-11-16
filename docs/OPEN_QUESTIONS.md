@@ -1,7 +1,7 @@
 ---
 covers: ["*"]
-verified_at: 207fbc59
-verified_on: 2026-10-24
+verified_at: ad5219f6
+verified_on: 2026-11-16
 ---
 # Open Questions & Known Ambiguities
 
@@ -22,7 +22,7 @@ and delete the row.
 | Q-006 | Is `/v2/login` still used? | `src/pages/v2/login.js` | Noindexed, not in the sitemap, no in-site link, and 183 of its 217 lines duplicate `src/pages/login.js`. It also omits `&region=` on token-verify | Ask the app or desktop team whether they link to it |
 | Q-007 | Dangling "See Giddh in Action" scroll target | `src/components/NewComps/CTA/index.js`, `src/components/NewComps/PopUp/index.js` | Both call `getElementById("SeeGiddhInAction")`. That section was removed from pages in `6c48b1c8` and deleted as dead code in `8b45872d`, so the buttons do nothing on scroll | Product decides the new target (the demo form?) |
 | Q-008 | Wrong SEO copy in metadata | `src/data/metadata.json`, `src/data/hrefLangTag.json` | "GST" appears in AE / UK descriptions. `/uk/inventory-management-software` and `/uk/privacy-policy` have wrong titles. `/online-accounting-software` has a placeholder description. `/in/help` and `/in/walkover` have entries but no pages. hreflang lists `tallyplusgiddh` (now a 301) and omits `tally-to-giddh-migration` | Marketing approves corrected copy. Changes must keep SEO intent ([DESIGN.md](DESIGN.md)) |
-| Q-009 | `public/sitemap.xml` is stale | `public/sitemap.xml` | Committed once (`ad04b9d1`, 2025-06-27). Against HEAD it misses 39 routes (including `/`, triggers, customer-portal, chartered-accountant-signup, tally-to-giddh-migration) and 169 of 253 blog posts | Decide: generate at build time, or keep editing it by hand per page |
+| Q-009 | `public/sitemap.xml` is stale | `public/sitemap.xml` | Committed once (`ad04b9d1`, 2025-06-27). Against `ad5219f6` it misses 43 page routes (including `/`, triggers, customer-portal, chartered-accountant-signup, tally-to-giddh-migration, and `/nda-policy` in all four locales) and 169 of 253 blog posts | Decide: generate at build time, or keep editing it by hand per page |
 | Q-010 | Two UI generations: should AE / UK move to the JSON pipeline? | `src/pages/ae/index.js`, `src/pages/uk/index.js`, `src/components/bannerSection.js` | Global and IN pages mostly use `src/components/Pages/*` + `src/data/pagesdata/**`. AE / UK home, pricing, about etc. still use legacy components (`bannerSection.js`, `featureGallery.js`, `clientSummary.js`, `makeTheSwitch.js`). A UK / UAE JSON rewrite sits unmerged in `origin/86d3e3xxz-web` | Product decision. Migration is a redesign-scale change, outside prep work |
 | Q-011 | No committed lockfile | `.gitignore` | `package-lock.json` is gitignored, so Netlify installs float within `^` ranges (e.g. `next ^16.0.8` built as 16.4.3 locally) | Decide whether to commit a lockfile |
 | Q-012 | `npm run lint` is broken | `package.json` | The script is `next lint`, which Next 16 removed. There is no ESLint config, so the repo has no lint check at all | Decide: add ESLint flat config + `eslint .`, or drop the script |
@@ -43,7 +43,7 @@ and delete the row.
 | Q-028 | `lang="en"` for every locale; FAQ schema only on the client | `src/pages/_document.js`, `src/components/faq.js` | All locales share `lang="en"` (no `en-IN` / `en-GB`). The legacy `faq.js` injects its FAQPage JSON-LD in `useEffect`, so it's missing from the static HTML | SEO owner decides |
 | Q-029 | CA membership number never reaches the backend | `src/pages/chartered-accountant-signup.js` | The MRN travels only in the redirect `source` param and the `giddh_query` cookie, not in the `/v2/register` body | Backend / product confirms where the MRN should be stored |
 | Q-030 | localStorage `userData` has no writer | `src/pages/signup.js` | Signup reads `userData` from localStorage, but nothing in the repo writes it | Find the writer (the app?) or remove the read |
-| Q-031 | `web` has not been promoted to `main` since February | git history | The user-confirmed flow is `web` → `main`, but the last such PR was #737 (`b7eb090b`, 2026-02-25). Since then `main` has been fed by `<id>-main` branches, and `web` is 142 commits ahead (e.g. `66a7f148`, the `/triggers` and `/customer-portal` pages, is not on `origin/main`) | Release owner decides when to promote, and whether direct `-main` hotfixes are the norm |
+| Q-031 | `web` has not been promoted to `main` since February | git history | The user-confirmed flow is `web` → `main`, but the last such PR was #737 (`b7eb090b`, 2026-02-25). Since then `main` has been fed by `<id>-main` branches, and `web` is 180 commits ahead of `origin/main` as of 2026-11-16 (e.g. `66a7f148`, the `/triggers` and `/customer-portal` pages, is not on `origin/main`) | Release owner decides when to promote, and whether direct `-main` hotfixes are the norm |
 | Q-032 | `public/_redirects` editing traps | `public/_redirects` | 6 source paths appear twice (Netlify uses the first match), and the file has no trailing newline, so appending with `echo >>` corrupts the last rule | Deduplicate and add a trailing newline in a dedicated redirects PR, checked on a Netlify deploy preview |
 | Q-017 | Why locale folders instead of Next i18n, and `_headers` instead of `next.config.js` headers? | `src/pages/{in,ae,uk}/`, `public/_headers` | No commit records the reason ([DECISIONS.md](DECISIONS.md)) | Ask the original authors. Record the answer as an ADR |
 

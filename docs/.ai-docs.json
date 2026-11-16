@@ -3,10 +3,11 @@
   "skill_version": "2.0.0",
   "created": "2026-10-24",
   "last_run": {
-    "mode": "prepare",
-    "commit": "207fbc59",
-    "date": "2026-10-24",
-    "base_branch": "web"
+    "mode": "maintenance",
+    "commit": "ad5219f6",
+    "date": "2026-11-16",
+    "base_branch": "web",
+    "request_id": "req_148bc158"
   },
   "canonical_docs": [
     "AGENTS.md",
@@ -33,6 +34,32 @@
     "docs/DECISIONS.md": "DECISIONS.md",
     "docs/OPEN_QUESTIONS.md": "OPEN_QUESTIONS.md"
   },
+  "coverage_map": {
+    "product_vision_icp": { "location": "docs/VISION.md", "status": "verified", "at": "ad5219f6" },
+    "architecture_locale_pages": { "location": "docs/ARCHITECTURE.md", "status": "verified", "at": "ad5219f6" },
+    "user_flows_auth_funnel": { "location": "docs/FLOWS.md", "status": "verified", "at": "ad5219f6" },
+    "api_contracts_handoff": { "location": "docs/CONTRACTS.md", "status": "verified", "at": "ad5219f6" },
+    "design_seo_a11y": { "location": "docs/DESIGN.md", "status": "partial", "note": "sitemap stale Q-009; metadata mistakes Q-008" },
+    "dev_setup_pr_deploy": { "location": "docs/DEVELOPMENT.md", "status": "verified", "at": "ad5219f6" },
+    "recipes_how_to_change": { "location": "docs/RECIPES.md", "status": "verified", "at": "207fbc59", "note": "no material recipe drift since last run" },
+    "decisions_adrs": { "location": "docs/DECISIONS.md", "status": "verified", "at": "ad5219f6" },
+    "open_questions": { "location": "docs/OPEN_QUESTIONS.md", "status": "verified", "at": "ad5219f6" },
+    "plan_status_tracker": { "location": "STATUS.md", "status": "verified", "at": "ad5219f6" },
+    "backend_api_in_repo": { "location": "n/a", "status": "not_applicable", "reason": "marketing site only; Giddh API in CONTRACTS.md" },
+    "cli_sdk": { "location": "n/a", "status": "not_applicable", "reason": "no CLI in repo" },
+    "infra_as_code": { "location": "n/a", "status": "not_applicable", "reason": "Netlify headers/redirects in public/; no Terraform" },
+    "automated_tests": { "location": "n/a", "status": "missing", "reason": "no test suite; build + verify_docs.py only" },
+    "lint_typecheck": { "location": "docs/OPEN_QUESTIONS.md Q-012", "status": "missing", "reason": "next lint removed in Next 16" },
+    "experiments_ab": { "location": "docs/DECISIONS.md ADR-015", "status": "partial", "note": "helpers wired; no live experiment" },
+    "security_csp_headers": { "location": "public/_headers + ADR-016", "status": "verified", "at": "ad5219f6" }
+  },
+  "unfinished_work": [
+    "Q-008 metadata/hreflang copy errors need marketing approval",
+    "Q-009 decide sitemap generation vs hand maintenance",
+    "Q-031 web→main promotion cadence and 180-commit divergence",
+    "Success metrics and IN/AE/UK priority order still TODO in VISION.md",
+    "AE/UK home pages still on legacy components (Q-010)"
+  ],
   "skipped_templates": {
     "docs/00-24 numbered guides, docs/AGENTS.md, docs/ARCHITECTURE.md (docs/ variant)": "Each concern already has one home in the canonical set; a second copy would drift.",
     "api/, data-model.md, database/": "No backend or database in this repo; the Giddh API calls are in CONTRACTS.md.",
