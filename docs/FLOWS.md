@@ -140,8 +140,8 @@ sequenceDiagram
 2. **State & Validation:**
    - `useEffect` → `setGiddhRegion` and `validateUserSession(getCookie(getRegionSessionCookieName(region)))`.
    - The OTP login uses the widget in non-exposed mode (`addOtpWidgetScript(false, initiateLogin, false)`). MSG91 renders its own UI and calls back with an access token.
-3. **API Dispatch:** `GET /v2/user`, `GET /v2/google-login`, `POST /v2/auth-login` (see [CONTRACTS.md](CONTRACTS.md)). When the page URL has `?redirect_url=`, those calls include the same query param.
-4. **Response & Persistence:** the session id goes into the region cookie, then the browser goes to `/token-verify`. Google login sends `?token=<Google access token>` (plus `&redirect_url=` when present), not a Giddh session id. If the API returns `body.redirectUrl` / `body.redirect_url`, the browser navigates there instead — used for partner OAuth returns.
+3. **API Dispatch:** `GET /v2/user`, `GET /v2/google-login`, `POST /v2/auth-login` (see [CONTRACTS.md](CONTRACTS.md)). When the login URL has `?redirect_url=`, `src/utils/signupHelpers.js:getRedirectUrlFromQuery` reads it and the login handlers append the same value as a query param on `/v2/google-login` and `/v2/auth-login`, and on Google success as `&redirect_url=` on the `/token-verify` redirect.
+4. **Response & Persistence:** the session id goes into the region cookie, then the browser goes to `/token-verify`. Google login sends `?token=<Google access token>`, not a Giddh session id. If the API returns `body.redirectUrl` or `body.redirect_url`, the site assigns `window.location.href` to that URL instead (partner OAuth return; full-page navigation because the Google callback is async and popups are often blocked).
 
 ### 3. Alternative Paths & Conditional Branches
 
@@ -153,7 +153,6 @@ sequenceDiagram
   - The logo link comes from `getCurrentSiteCountryUrl`.
   It gets `noindex` only from a client effect in `src/components/header.js`. The old URL `/v2/login-with-password` 301s to `/v2/login` (`public/_redirects`).
 - **Branch C (`/googleauth`):** `src/pages/googleauth.js` is the OAuth redirect target (`NEXT_PUBLIC_SITE_URL/googleauth`, client `NEXT_PUBLIC_GOOGLE_CLIENT_ID`). It parses `access_token` from the hash, posts it to `window.opener` and closes itself. `src/components/googleLogin.js:getGoogleUserDetails` then calls Google userinfo and hands `{ email, accessToken, … }` to the page. Signup uses the same component.
-- **Branch D (partner return):** `?redirect_url=` on `/login` or `/v2/login`. After Google or OTP login, if the API response includes `redirectUrl` / `redirect_url`, assign `window.location.href` to it (full-page navigation). Otherwise the usual `token-verify` redirect runs, optionally preserving `redirect_url` on the Google token path.
 
 ### 4. Permissions, Roles & Guard Rails
 

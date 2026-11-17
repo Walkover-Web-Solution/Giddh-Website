@@ -86,11 +86,11 @@ Read env vars as the literal `process.env.NEXT_PUBLIC_X`. Next only inlines lite
 ## Build & Preview Verification
 
 ```bash
-npm run build      # next build (Turbopack); 406 static pages at ad5219f6
+npm run build      # next build (Turbopack); ~406 prerendered pages
 npm run start      # next start -p 8080, serves the production build
 ```
 Expected build output:
-- 406 static pages (verified `ad5219f6`, 2026-11-16).
+- 406 static pages.
 - One Sass deprecation warning: `map-has-key` in `src/scss/mixins.scss` (pre-existing; ignore it, but don't add new ones).
 - Locally, possibly a warning about a `package-lock.json` outside the repo (machine-specific).
 
@@ -135,7 +135,7 @@ Every form on the site talks to **real backends**:
 
 1. **Pre-flight baseline:** run `npm install && npm run build` on the untouched branch and keep the result (page count, warnings). Capture the prerendered HTML if you're refactoring (step 3).
 2. **Build after the change:** `npm run build` must pass with the same page count, or the count plus the pages you deliberately added. The only warning should be the existing `mixins.scss` one. An MDX error in any post fails the whole build (`src/pages/blog/[slug].js:getStaticProps` throws on a missing slug).
-3. **Refactors must produce identical HTML.** This is how the 2026-10 cleanup was verified (0 of 402 files differed at `207fbc59`; see [DECISIONS.md ADR-013](DECISIONS.md#adr-013-ai-readiness-prep-docs-set-and-evidence-based-cleanup)):
+3. **Refactors must produce identical HTML.** This is how the 2026-10 cleanup was verified (0 of 402 files differed; see [DECISIONS.md ADR-013](DECISIONS.md#adr-013-ai-readiness-prep-docs-set-and-evidence-based-cleanup)):
    ```bash
    # before the change (after `npm run build`)
    mkdir -p /tmp/html-before && (cd .next/server/pages && find . -name '*.html' | cpio -pdm /tmp/html-before)
@@ -185,14 +185,14 @@ graph LR
 7. **Blog posts from Decap CMS:** `public/admin/config.yml` uses `backend: git-gateway`, `branch: main` and `publish_mode: editorial_workflow`. Posts edited at `/admin` (behind Netlify Identity, `public/admin/index.html`) are committed to **`main` first**. They reach `web` only when `main` is merged back.
 
 > [!WARNING]
-> `web` and `main` have diverged. `web` is 180 commits ahead of `main` (counted 2026-11-16). The last `web` → `main` PR in history is #737 (`b7eb090b`, 2026-02-25), and most later `main` changes came through `<id>-main` branches. Some features merged into `web` are not on production. For example, `66a7f148` (`src/pages/triggers.js` and related pages) is not an ancestor of `origin/main`. Before assuming production matches `web`, check with `git merge-base --is-ancestor <sha> origin/main`.
+> `web` and `main` have diverged. `web` is 142 commits ahead of `main`. The last `web` → `main` PR in history is #737 (`b7eb090b`, 2026-02-25), and most later `main` changes came through `<id>-main` branches. Some features merged into `web` are not on production. For example, `66a7f148` (`src/pages/triggers.js` and related pages) is not an ancestor of `origin/main`. Before assuming production matches `web`, check with `git merge-base --is-ancestor <sha> origin/main`.
 
 > [!TODO]
 > The approval rules, who promotes `web` → `main`, and how often aren't in the repo (no CODEOWNERS, no branch protection config). The Netlify site names and URLs of the test and production deploys also need a human.
 
 ### Netlify files in `public/`
 - `public/_redirects`: about 2,000 Netlify rules, all `<from> <to> 301`. Netlify uses the first matching rule, and 6 source paths already appear twice (for example `/blog/which-accounting-software-is-best-in-india-for-gst`). Some sources are full URLs like `http://shopify.giddh.com/*`. The file has **no trailing newline**, so `echo ... >> public/_redirects` glues your rule onto the last line. Edit it with an editor, or add a newline first.
-- `public/_headers`: security headers on `/*` — `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin`, and a site-wide `Content-Security-Policy` (scripts, styles, frames, `connect-src`, `form-action`, `frame-ancestors 'none'`, and `upgrade-insecure-requests`). Third parties allowed in CSP include GTM/GA, MSG91, hCaptcha, Razorpay, Typeform, Calendly, Trustpilot, Google OAuth and the amplifyapp tracker. Netlify still delivers these, not `next.config.js` ([DECISIONS.md ADR-004](DECISIONS.md#adr-004-anti-framing-headers-in-netlify-_headers), [ADR-016](DECISIONS.md#adr-016-site-wide-content-security-policy-in-netlify-_headers)). When you add a new script host or iframe embed, extend this file and re-check the affected page in the browser.
+- `public/_headers`: on `/*`, Netlify sends `X-Frame-Options: DENY`, `X-Content-Type-Options: nosniff`, `Referrer-Policy: strict-origin-when-cross-origin` and a **site-wide** `Content-Security-Policy` (default-src, script-src, style-src, connect-src, frame-src and others) that allowlists GTM, MSG91, hCaptcha, Razorpay, Google OAuth, Typeform, Calendly, Trustpilot, the amplifyapp tracker and other third parties the site already loads. `frame-ancestors 'none'` still blocks clickjacking. History and the Calendly allowlist fix are in [DECISIONS.md ADR-004](DECISIONS.md#adr-004-anti-framing-headers-in-netlify-_headers) and [ADR-015](DECISIONS.md#adr-015-site-wide-content-security-policy-in-netlify-_headers). Editing CSP requires checking every embedded script or iframe on the touched pages; demo booking broke once until `assets.calendly.com` was allowed (PR #845).
 - `public/admin/`: the Decap CMS UI (`index.html` loads `netlify-cms@^2.0.0` from unpkg plus the Netlify Identity widget) and `config.yml`. It's served at `/admin` and marked `noindex`.
 
 Root `config.js` holds only `posts_per_page` (25), read through `src/components/blogs/lib/config.js` by `src/pages/blog/index.js`, `src/pages/blog/page/[page].js` and `src/pages/blog/tags/[[...slug]].js`. Its blog-template leftovers (`base_url`, `site_title`, …) were removed in `207fbc59`. Site URLs come from env vars, not this file. <!-- verify:ignore -->

@@ -12,7 +12,7 @@ The accounting product itself is **not** in this repo.
 |---|---|
 | Install dependencies | `npm install` (no lockfile is committed, see [Q-011](docs/OPEN_QUESTIONS.md#active-questions-table)) |
 | Run dev server | `npm run dev` (port 8080) |
-| Build for production | `npm run build` (406 static pages at `ad5219f6`; one existing Sass deprecation warning) |
+| Build for production | `npm run build` (406 static pages; one existing Sass deprecation warning) |
 | Preview production build | `npm run start` (port 8080) |
 | Lint | none working: `npm run lint` fails because Next 16 removed `next lint` ([Q-012](docs/OPEN_QUESTIONS.md#active-questions-table)) |
 | Tests / type check | none exist |
@@ -83,3 +83,4 @@ The docs middleware records its last successful run, coverage map and open gaps 
 - **Live forms:** never submit signup, login, OTP, demo, affiliate or payment forms against production from an agent. No sandbox exists yet.
 - **Judging a request:** follow [VISION.md](docs/VISION.md#how-future-agents-must-evaluate-requests). Improve unclear requests, explain conflicts with the non-goals, and recommend declining those. If the user changes direction on purpose, record it in VISION.md. Never fabricate an integration.
 - **Docs move with the code:** update the owning doc in the same change (env vars → DEVELOPMENT, endpoints → CONTRACTS, journeys → FLOWS, components / SEO → DESIGN, decisions → DECISIONS, unknowns → OPEN_QUESTIONS). Then run `python3 scripts/vendor/ai-docs/verify_docs.py .` and get 0 errors.
+- **Weekly docs maintenance:** the reviewed revision, coverage map and carry-over work for agent runs live in [docs/README.md#docs-maintenance-for-weekly-agent-runs](docs/README.md#docs-maintenance-for-weekly-agent-runs). Update that section when you refresh the doc set.
