@@ -236,7 +236,7 @@ Accepted
 ### Context & Problem Statement
 Download links for the Electron desktop app were hard-coded S3 URLs in `src/components/downloadFreeModal.js` and `src/components/footer.js`.
 ### Decision & Implementation
-`src/utils/s3Config.js` (`getDownloadUrl`, `getAppVersion`) picks the bucket and environment name from env config and falls back to a default version.
+`src/utils/s3Config.js` (`getDownloadUrl`, `getAppVersion`, `isTestWebsite`) picks the bucket and environment name from env config and falls back to a default version. On the test host (`NEXT_PUBLIC_APP_ENV === "test"`), `src/components/footer.js` also surfaces **prod preview** desktop builds from the `preview` channel under the `prod` S3 path.
 ### Supporting Evidence & Past Incidents
 - `0e6bba84` (2026-01-16), merged in PR #720 (`6169c92a`, 2026-02-02, "Setup Auto Electron Build Github action for Test and Production"). Then `e5df4e87`/`aa052f76` (2026-01-21) "centralized test environment path".
 ### Consequences & Trade-offs

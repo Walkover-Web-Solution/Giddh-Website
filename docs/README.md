@@ -6,6 +6,8 @@ verified_on: 2026-11-16
 
 Written for AI coding agents and new engineers; start at [../AGENTS.md](../AGENTS.md). Every claim was checked against the code at the commit in each doc's frontmatter. Run `python3 scripts/vendor/ai-docs/verify_docs.py .` to check them again, and `python3 scripts/vendor/ai-docs/affected_docs.py .` to see which docs your change may have outdated.
 
+**Weekly maintenance state:** reviewed revision `ad5219f6` (2026-11-16), coverage map and unfinished items in [.ai-docs.json](.ai-docs.json).
+
 | Doc | Read it when |
 |---|---|
 | [VISION.md](VISION.md) | Before accepting any feature request: purpose, ICP, non-goals, how to judge requests |

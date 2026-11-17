@@ -12,7 +12,7 @@ The accounting product itself is **not** in this repo.
 |---|---|
 | Install dependencies | `npm install` (no lockfile is committed, see [Q-011](docs/OPEN_QUESTIONS.md#active-questions-table)) |
 | Run dev server | `npm run dev` (port 8080) |
-| Build for production | `npm run build` (about 406 static pages; one existing Sass deprecation warning) |
+| Build for production | `npm run build` (406 static pages; one existing Sass deprecation warning) |
 | Preview production build | `npm run start` (port 8080) |
 | Lint | none working: `npm run lint` fails because Next 16 removed `next lint` ([Q-012](docs/OPEN_QUESTIONS.md#active-questions-table)) |
 | Tests / type check | none exist |
@@ -68,8 +68,12 @@ see [DEVELOPMENT.md](docs/DEVELOPMENT.md#environment-variables-reference). <!-- 
 
 - **Branch:** `<clickup-task-id>-web`, cut from `web`. Open the PR against `web`.
 - **Pipeline (user-confirmed):** PR → `web` (Netlify test site) → promote `web` → `main` (production giddh.com). Hotfixes use `<id>-main` branches into `main`, and `main` is then merged back into `web`.
-- `web` hasn't been promoted since 2026-02-25 and is 142 commits ahead of `main` ([Q-031](docs/OPEN_QUESTIONS.md#active-questions-table)). Don't assume production matches `web`.
+- `web` hasn't been promoted since 2026-02-25 and is 180 commits ahead of `main` ([Q-031](docs/OPEN_QUESTIONS.md#active-questions-table)). Don't assume production matches `web`.
 - The only CI is `.github/workflows/status-check.yml` (the STATUS.md gate, on every PR); it doesn't build, so your local checks are still the real gate. Merging and deploying follow the team's existing approvals; never push to `main` yourself. Details: [DEVELOPMENT.md](docs/DEVELOPMENT.md#pr-workflow--deployment-pipeline).
+
+## Documentation Maintenance (weekly)
+
+The docs middleware records its last successful run, coverage map and open gaps in [docs/.ai-docs.json](docs/.ai-docs.json). After substantive doc edits, bump each touched file's YAML frontmatter commit date to the revision you verified against, update `last_run` in `.ai-docs.json`, and run `python3 scripts/vendor/ai-docs/verify_docs.py .` (0 errors).
 
 ## Verification & Knowledge Maintenance Expectations
 

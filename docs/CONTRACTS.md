@@ -53,13 +53,15 @@ Every successful auth path sets the region session cookie (see [persistence](#pe
 | Query param | Value | Set by |
 |---|---|---|
 | `request` | `body.session.id` | OTP login, session revalidation, password login, 2FA verify (`src/utils/signupHelpers.js:handleOtpVerifyRedirect`), signup, CA signup |
-| `token` | the Google OAuth access token, not the session id | Google login in `src/pages/login.js:initiateLogin` and `src/pages/v2/login.js:initiateLogin` |
-| `redirect_url` | partner return URL from `?redirect_url=` on the login page | Google login success path only (`&redirect_url=` on `/token-verify`). OTP login does not append it today |
+| `token` | the Google OAuth access token, not the session id | Google login in `src/pages/login.js:initiateLogin` and `src/pages/v2/login.js:initiateLogin`. When the login URL carried `?redirect_url=`, the same value is appended here (`&redirect_url=` on `/token-verify`; OTP login does not append it today). |
+| `redirect_url` | partner return URL from `?redirect_url=` on the login page (`src/utils/signupHelpers.js:getRedirectUrlFromQuery`) | Google login success path only (see partner OAuth below) |
 | `region` | `GL` / `IN` / `AE` / `UK` (upper-cased locale prefix, `GL` for global) | `/login`, `/signup`, CA signup. Omitted by every `src/pages/v2/login.js` redirect |
 | `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `ref` | the `localStorage` values written by `public/js/helper.js:setUtmParamInLocalStorage` | signup and CA signup only |
 | `source` | JSON string of the non-UTM query params, from `src/utils/signupHelpers.js:getSourceParam`. CA signup adds `mrnNumber` (`src/pages/chartered-accountant-signup.js:getCaSourceParam`) | signup and CA signup only |
 
 The values are concatenated without `encodeURIComponent`, so `source` is raw JSON inside the URL. The CA membership number (MRN) never goes to `/v2/register`. It reaches the app only through `source` and the `giddh_query` cookie.
+
+**Partner OAuth return.** When the login page URL includes `?redirect_url=<url>`, `src/pages/login.js` and `src/pages/v2/login.js` forward it to `GET /v2/google-login` and `POST /v2/auth-login` as a query param. If the API responds with `body.redirectUrl` or `body.redirect_url`, the site navigates the **current tab** to that URL instead of `token-verify` (popup blockers made `window.open` unreliable after async Google login). OTP/password success still uses `token-verify` and may append `&redirect_url=` for Google token handoff. `_app.js` strips the query before parsing the path so encoded URLs in `redirect_url` do not break locale detection.
 
 ### Third-party endpoints
 
