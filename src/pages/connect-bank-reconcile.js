@@ -2,7 +2,7 @@ import { useEffect, useState} from "react";
 import Faqs from "@/components/faq";
 import faqs from '../data/faqs.json';
 
-const conectBankReconcile = (path) => {
+const connectBankReconcile = (path) => {
   const linkPath = path.path;
   const isGlobal = linkPath.isGlobal;
   const isIndia = linkPath.isIndia
@@ -12,7 +12,7 @@ const conectBankReconcile = (path) => {
   const [faq, setFaq] = useState([])
 
   useEffect(() => {
-    setFaq(faqs['conect-bank-reconcile']);
+    setFaq(faqs['connect-bank-reconcile']);
   }, []);
   return (
     <>
@@ -241,4 +241,4 @@ const conectBankReconcile = (path) => {
     </>
   );
 };
-export default conectBankReconcile;
+export default connectBankReconcile;
