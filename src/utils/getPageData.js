@@ -17,7 +17,8 @@ export default function getPageData(pageInfo) {
     "make-the-switch",
     "zoho-vs-giddh",
     "financial-reporting",
-    "affiliate"
+    "affiliate",
+    "giddh-partner-certificate"
   ];
   if (!pagesToGetData.includes(pageInfo?.page)) {
     return null;
