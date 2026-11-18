@@ -135,7 +135,7 @@ How `getPageData` resolves (`src/utils/getPageData.js:getPageData`):
 | Razorpay | Paying a Giddh invoice | `checkout.razorpay.com/v1/checkout.js` + `NEXT_PUBLIC_RAZORPAY_KEY` | `src/pages/payment.js` | <!-- verify:ignore -->
 | AWS S3 | Desktop app installers and the version YAML | Public URLs built from `NEXT_PUBLIC_S3_BASE_URL`, `NEXT_PUBLIC_S3_BUCKET_NAME`, `NEXT_PUBLIC_APP_ENV` | `src/utils/s3Config.js` ← `src/components/footer.js`, `src/components/downloadFreeModal.js` |
 | Typeform | "Contact sales" slider form | `@typeform/embed` `createSlider` | `src/pages/contact-us.js`, `src/components/bannerSection.js` |
-| Calendly | "Book a demo" popup | Script and CSS injected on click | `public/js/helper.js:openCalendly` ← `src/pages/import-data.js`, `src/pages/invoice-software.js`, `src/pages/conect-bank-reconcile.js` and others |
+| Calendly | "Book a demo" popup | Script and CSS injected on click | `public/js/helper.js:openCalendly` ← `src/pages/import-data.js`, `src/pages/invoice-software.js`, `src/pages/connect-bank-reconcile.js` and others |
 | Google Tag Manager | Tag container (`GTM-K2L9QG`) | `dataLayer` | `src/pages/_document.js` |
 | Amplify-hosted tracker | Unknown third-party tracker | `<script async>` | `src/pages/_document.js` |
 | Experiment events | Browser A/B exposure and conversion. No experiment is running, and no page sends one | `sendBeacon` or `fetch`, fire-and-forget. See [CONTRACTS.md](CONTRACTS.md) | `src/utils/experiments.js:mwSend`. `src/pages/_app.js:MyApp` copies `mwVariant` and `mwSend` onto `window` |
