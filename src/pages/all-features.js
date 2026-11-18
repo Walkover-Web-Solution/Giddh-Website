@@ -74,7 +74,7 @@ const allFeatures = (path) => {
         image: "/feature-bank-reconciliation.svg",
         description:
           "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
-        link: "https://giddh.com/uk/conect-bank-reconcile",
+        link: "https://giddh.com/uk/connect-bank-reconcile",
         hasMoreContent: false,
       },
       {
@@ -241,7 +241,7 @@ const allFeatures = (path) => {
       image: "/feature-bank-reconciliation.svg",
       description:
         "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
-      link: "https://giddh.com/in/conect-bank-reconcile",
+      link: "https://giddh.com/in/connect-bank-reconcile",
       hasMoreContent: false,
     },
     {
@@ -399,7 +399,7 @@ const allFeatures = (path) => {
       image: "/feature-bank-reconciliation.svg",
       description:
         "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
-      link: "https://giddh.com/ae/conect-bank-reconcile",
+      link: "https://giddh.com/ae/connect-bank-reconcile",
       hasMoreContent: false,
     },
     {
@@ -530,7 +530,7 @@ const allFeatures = (path) => {
       image: "/feature-bank-reconciliation.svg",
       description:
         "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
-      link: "https://giddh.com/uk/conect-bank-reconcile",
+      link: "https://giddh.com/uk/connect-bank-reconcile",
       hasMoreContent: false,
     },
     {
