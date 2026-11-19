@@ -227,13 +227,11 @@ export default function ApplyOverlay({
 
         <div className={styles.applyGrid}>
           <div className={styles.applyCopy}>
-            <p className="font-xs font-600 font-grey-deep text-uppercase mb-0">
-              Get Started
-            </p>
+            <p className="font-xs font-600 font-grey-deep m-0">Get Started</p>
             <h2 className={styles.applyTitle}>
               Start now — it takes 30 seconds.
             </h2>
-            <p className="font-sm font-slate-grey mb-0 lh-lg">
+            <p className="font-sm font-slate-grey m-0 lh-lg">
               Verify your mobile, tell us who you are, then go straight through
               Module 1, 2, and 3 right here. Pass with {MODULE_PASS_PERCENT}% or
               higher on each module to get your certificate instantly.
@@ -272,7 +270,7 @@ export default function ApplyOverlay({
                   <span>{isLoading ? "Sending..." : "Send OTP"}</span>
                   {!isLoading && <MdArrowForward size={16} aria-hidden="true" />}
                 </button>
-                <p className="font-xs font-grey-deep mb-0">
+                <p className="font-xs font-grey-deep m-0">
                   Progress is saved on the server for this mobile number.
                 </p>
               </form>
@@ -299,11 +297,11 @@ export default function ApplyOverlay({
                     required
                   />
                 </div>
-                <p className="font-xs font-grey-deep mb-0">
+                <p className="font-xs font-grey-deep m-0">
                   Sent to +{countryCode} {mobile}.
                 </p>
                 {uniqueChannels.length > 0 && (
-                  <p className="font-xs font-grey-deep mb-0">
+                  <p className="font-xs font-grey-deep m-0">
                     Resend on{" "}
                     {uniqueChannels.map((channel, index) => (
                       <span key={channel.value}>
@@ -428,7 +426,7 @@ export default function ApplyOverlay({
                   </span>
                   {!isLoading && <MdArrowForward size={16} aria-hidden="true" />}
                 </button>
-                <p className="font-xs font-grey-deep mb-0">
+                <p className="font-xs font-grey-deep m-0">
                   No cost to enroll. By submitting, you agree to be contacted
                   about the GIDDH Certification and Partnership Program.
                 </p>

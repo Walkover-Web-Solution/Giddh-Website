@@ -62,29 +62,22 @@ export default function HeroSection({ compData, onStart }) {
                 <span className="font-primary d-block">
                   {compData?.headingPrimary}
                 </span>
-                {(compData?.headingAccentLines || []).length > 0
-                  ? compData.headingAccentLines.map((line, index) => (
-                      <span
-                        key={index}
-                        className="font-blue opacity-75 d-block"
-                      >
-                        {line}
-                      </span>
-                    ))
-                  : compData?.headingAccent && (
-                      <span className="font-blue opacity-75 d-block">
-                        {compData?.headingAccent}
-                      </span>
-                    )}
+                {compData?.headingAccent && (
+                  <span
+                    className={`font-blue opacity-75 d-block ${styles.heroTitleAccent}`}
+                  >
+                    {compData?.headingAccent}
+                  </span>
+                )}
               </h1>
 
               {compData?.description && (
-                <p className="font-rg font-slate-grey mb-0 col-lg-10 lh-lg">
+                <p className="font-rg font-slate-grey m-0 col-lg-10 lh-lg">
                   {compData?.description}
                 </p>
               )}
 
-              <div className="d-flex flex-wrap align-items-center gap-4 pt-2">
+              <div className="d-flex flex-wrap align-items-center gap-4">
                 {compData?.primaryCta?.text && (
                   <button
                     type="button"
@@ -99,7 +92,7 @@ export default function HeroSection({ compData, onStart }) {
                 {compData?.secondaryCta?.text && (
                   <button
                     type="button"
-                    className="bg-transparent border-0 border-bottom border-primary p-0 pb-1 font-sm font-600 font-primary d-inline-flex align-items-center gap-2 cursor-pointer"
+                    className="bg-transparent border-0 border-bottom border-primary p-0 font-sm font-600 font-primary d-inline-flex align-items-center gap-2 cursor-pointer"
                     onClick={() =>
                       compData?.media?.videoUrl
                         ? setIsModalOpen(true)
@@ -112,14 +105,17 @@ export default function HeroSection({ compData, onStart }) {
                 )}
               </div>
 
-              {(compData?.stats || []).length > 0 && (
-                <div className="row g-3 pt-4 mt-3 border-top border-light-gray col-lg-11">
-                  {(compData?.stats || []).map((item, index) => (
-                    <div key={index} className="col-6 col-sm-3">
+              {compData?.stats?.length > 0 && (
+                <div className="row g-3 col-lg-11">
+                  {compData.stats.map((item, index) => (
+                    <div
+                      key={index}
+                      className="col-6 col-sm-3 d-flex flex-column gap-2"
+                    >
                       <div className="font-lg font-600 font-primary lh-1">
                         {item?.value}
                       </div>
-                      <div className="font-xs font-grey-deep mt-2">
+                      <div className="font-xs font-grey-deep">
                         {item?.label}
                       </div>
                     </div>
@@ -139,11 +135,7 @@ export default function HeroSection({ compData, onStart }) {
                   {compData?.media?.image && (
                     <Image
                       src={compData?.media?.image}
-                      alt={
-                        compData?.media?.imageAlt ||
-                        compData?.headingPrimary ||
-                        ""
-                      }
+                      alt={compData?.media?.imageAlt}
                       fill
                       sizes="(max-width: 992px) 100vw, 480px"
                       className="object-fit-cover"
@@ -154,7 +146,9 @@ export default function HeroSection({ compData, onStart }) {
                   <div className={`position-absolute top-0 bottom-0 start-0 end-0 pe-none ${styles.mediaOverlay}`} />
 
                   {compData?.media?.topLabel && (
-                    <span className="position-absolute top-0 start-0 m-4 font-xs font-600 font-white text-uppercase opacity-75 z-1">
+                    <span
+                      className={`position-absolute font-xs font-600 font-white opacity-75 z-1 ${styles.mediaTopLabel}`}
+                    >
                       {compData?.media?.topLabel}
                     </span>
                   )}
@@ -162,7 +156,7 @@ export default function HeroSection({ compData, onStart }) {
                   <button
                     type="button"
                     className={`position-absolute top-50 start-50 translate-middle border-0 rounded-circle d-inline-flex align-items-center justify-content-center cursor-pointer z-2 ${styles.playButton}`}
-                    aria-label={compData?.media?.playAriaLabel || "Play overview"}
+                    aria-label={compData?.media?.playAriaLabel}
                     onClick={() =>
                       compData?.media?.videoUrl
                         ? setIsModalOpen(true)
@@ -177,18 +171,18 @@ export default function HeroSection({ compData, onStart }) {
                       className={`position-absolute bottom-0 start-0 end-0 d-flex align-items-end justify-content-between gap-3 z-1 ${styles.mediaCaption}`}
                     >
                       <div>
-                        <p className="font-md font-600 font-white mb-0 lh-sm">
+                        <p className="font-md font-600 font-white m-0 lh-sm">
                           {compData?.media?.captionTitle}
                         </p>
                         {compData?.media?.captionAccent && (
-                          <p className="font-md font-600 font-light-blue mb-0 lh-sm">
+                          <p className="font-md font-600 font-light-blue m-0 lh-sm">
                             {compData?.media?.captionAccent}
                           </p>
                         )}
                       </div>
 
                       {compData?.media?.duration && (
-                        <div className="d-flex align-items-center gap-2 flex-shrink-0 pb-1">
+                        <div className="d-flex align-items-center gap-2">
                           <span className="font-xs font-white opacity-75">
                             {compData?.media?.duration}
                           </span>
@@ -208,17 +202,17 @@ export default function HeroSection({ compData, onStart }) {
                   >
                     <MdAutoAwesome
                       size={15}
-                      className="font-blue opacity-75 flex-shrink-0 mt-1"
+                      className="font-blue opacity-75"
                       aria-hidden="true"
                     />
-                    <div className="lh-sm">
-                      <div className="font-xs font-600 font-primary">
+                    <div className="lh-sm d-flex flex-column gap-1">
+                      <span className="font-xs font-600 font-primary">
                         {compData?.media?.topBadge?.title}
-                      </div>
+                      </span>
                       {compData?.media?.topBadge?.subtitle && (
-                        <div className="font-xs font-600 font-primary">
+                        <span className="font-xs font-600 font-primary">
                           {compData?.media?.topBadge?.subtitle}
-                        </div>
+                        </span>
                       )}
                     </div>
                   </div>
@@ -230,17 +224,17 @@ export default function HeroSection({ compData, onStart }) {
                   >
                     <MdCheckCircleOutline
                       size={15}
-                      className="font-blue opacity-75 flex-shrink-0 mt-1"
+                      className="font-blue opacity-75"
                       aria-hidden="true"
                     />
-                    <div className="lh-sm">
-                      <div className="font-xs font-grey-deep">
+                    <div className="lh-sm d-flex flex-column gap-1">
+                      <span className="font-xs font-grey-deep">
                         {compData?.media?.bottomBadge?.title}
-                      </div>
+                      </span>
                       {compData?.media?.bottomBadge?.subtitle && (
-                        <div className="font-xs font-600 font-primary">
+                        <span className="font-xs font-600 font-primary">
                           {compData?.media?.bottomBadge?.subtitle}
-                        </div>
+                        </span>
                       )}
                     </div>
                   </div>
@@ -251,19 +245,14 @@ export default function HeroSection({ compData, onStart }) {
         </div>
       </div>
 
-      {(compData?.highlightsStrip || []).length > 0 && (
-        <div className="bg-extra-light-blue border-top border-bottom border-light-gray py-3">
-          <div className="container px-4">
-            <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between gap-3">
-              {(compData?.highlightsStrip || []).map((item, index) => (
-                <span
-                  key={index}
-                  className="font-xs font-600 font-grey-deep text-uppercase"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
+      {compData?.highlightsStrip?.length > 0 && (
+        <div className="bg-extra-light-blue py-3">
+          <div className="container px-4 d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between gap-3">
+            {compData.highlightsStrip.map((item, index) => (
+              <span key={index} className="font-xs font-600 font-grey-deep">
+                {item}
+              </span>
+            ))}
           </div>
         </div>
       )}
@@ -273,7 +262,7 @@ export default function HeroSection({ compData, onStart }) {
           className="modal fade show d-block bg-dark bg-opacity-75"
           role="dialog"
           aria-modal="true"
-          aria-label={compData?.media?.captionTitle || "Course overview"}
+          aria-label={compData?.media?.captionTitle}
           onClick={() => setIsModalOpen(false)}
         >
           <div

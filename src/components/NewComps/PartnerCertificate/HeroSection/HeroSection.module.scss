@@ -34,6 +34,12 @@
   letter-spacing: -0.03em;
 }
 
+.heroTitleAccent {
+  font-size: 0.72em;
+  white-space: nowrap;
+  line-height: 1.1;
+}
+
 .mediaStage {
   max-width: 470px;
   padding: 20px 18px 20px 24px;
@@ -90,6 +96,11 @@
   &:hover {
     background-color: var(--col-primary);
   }
+}
+
+.mediaTopLabel {
+  top: 24px;
+  left: 24px;
 }
 
 .mediaCaption {

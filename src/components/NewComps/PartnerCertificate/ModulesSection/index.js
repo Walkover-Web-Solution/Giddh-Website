@@ -28,11 +28,11 @@ export default function ModulesSection({ compData }) {
 
   return (
     <section id="modules" className="py-5 bg-extra-light-blue outfit-font">
-      <div className="container px-4 py-lg-4">
-        <div className="row align-items-end justify-content-between g-4 mb-5 pb-lg-2">
-          <div className="col-12 col-lg-5">
+      <div className="container px-4 py-lg-4 d-flex flex-column gap-5">
+        <div className="row align-items-end justify-content-between g-4">
+          <div className="col-12 col-lg-5 d-flex flex-column gap-3">
             {compData?.eyebrow && (
-              <p className="font-xs font-600 font-grey-deep text-uppercase mb-3">
+              <p className="font-xs font-600 font-grey-deep m-0">
                 {compData?.eyebrow}
               </p>
             )}
@@ -50,7 +50,7 @@ export default function ModulesSection({ compData }) {
 
           {compData?.description && (
             <div className="col-12 col-lg-6">
-              <p className="font-sm font-slate-grey mb-0 lh-lg">
+              <p className="font-sm font-slate-grey m-0 lh-lg">
                 {compData?.description}
               </p>
             </div>
@@ -58,10 +58,9 @@ export default function ModulesSection({ compData }) {
         </div>
 
         <div className="d-flex flex-column">
-          {(compData?.modules || []).map((moduleItem, index) => {
+          {compData.modules.map((moduleItem, index) => {
             const isExpanded = expandedIndex === index;
-            const IconComponent =
-              MODULE_ICONS[moduleItem?.iconKey] || MdPlayCircleOutline;
+            const IconComponent = MODULE_ICONS[moduleItem?.iconKey];
 
             return (
               <div
@@ -77,26 +76,28 @@ export default function ModulesSection({ compData }) {
                   aria-controls={`partner-module-panel-${index}`}
                   onClick={() => handleToggle(index)}
                 >
-                  <div className="d-flex align-items-start align-items-md-center gap-3 gap-md-4 flex-grow-1 min-w-0">
-                    <span className="font-xs font-600 font-grey-deep flex-shrink-0 pt-1 pt-md-0">
-                      {moduleItem?.number || String(index + 1).padStart(2, "0")}
+                  <div className="d-flex align-items-start align-items-md-center gap-3 gap-md-4 flex-grow-1">
+                    <span className="font-xs font-600 font-grey-deep">
+                      {moduleItem?.number}
                     </span>
 
-                    <span
-                      className="rounded-circle d-inline-flex align-items-center justify-content-center flex-shrink-0 bg-white border border-light-gray p-2"
-                      aria-hidden="true"
-                    >
-                      <IconComponent
-                        size={20}
-                        className="font-blue opacity-75"
-                      />
-                    </span>
+                    {IconComponent && (
+                      <span
+                        className="rounded-circle d-inline-flex align-items-center justify-content-center bg-white border border-light-gray p-2"
+                        aria-hidden="true"
+                      >
+                        <IconComponent
+                          size={20}
+                          className="font-blue opacity-75"
+                        />
+                      </span>
+                    )}
 
-                    <div className="flex-grow-1 min-w-0">
-                      <h3 className="font-rg font-600 font-primary mb-1">
+                    <div className="flex-grow-1 d-flex flex-column gap-1">
+                      <h3 className="font-rg font-600 font-primary m-0">
                         {moduleItem?.title}
                       </h3>
-                      <p className="font-sm font-slate-grey mb-1">
+                      <p className="font-sm font-slate-grey m-0">
                         {moduleItem?.summary}
                       </p>
                       {moduleItem?.meta && (
@@ -108,7 +109,7 @@ export default function ModulesSection({ compData }) {
                   </div>
 
                   <span
-                    className="d-inline-flex align-items-center justify-content-center flex-shrink-0 font-grey-deep"
+                    className="d-inline-flex align-items-center justify-content-center font-grey-deep"
                     aria-hidden="true"
                   >
                     {isExpanded ? (
@@ -119,20 +120,20 @@ export default function ModulesSection({ compData }) {
                   </span>
                 </button>
 
-                {isExpanded && (moduleItem?.topics || []).length > 0 && (
+                {isExpanded && moduleItem?.topics?.length > 0 && (
                   <div
                     id={`partner-module-panel-${index}`}
-                    className="pb-4 px-3 ps-md-5 ms-md-5"
+                    className="px-3 py-3"
                   >
-                    <ul className="list-unstyled row g-2 mb-0">
-                      {(moduleItem?.topics || []).map((topic, topicIndex) => (
+                    <ul className="list-unstyled row g-2 m-0">
+                      {moduleItem.topics.map((topic, topicIndex) => (
                         <li
                           key={topicIndex}
                           className="col-12 col-md-6 d-flex align-items-start gap-2 font-sm font-slate-grey"
                         >
                           <MdCheckCircleOutline
                             size={16}
-                            className="font-blue opacity-75 flex-shrink-0 mt-1"
+                            className="font-blue opacity-75"
                             aria-hidden="true"
                           />
                           <span>{topic}</span>
