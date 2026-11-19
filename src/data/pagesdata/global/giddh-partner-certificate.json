@@ -2,10 +2,7 @@
   "heroSection": {
     "eyebrow": "Free certification · Self-paced",
     "headingPrimary": "Become",
-    "headingAccentLines": [
-      "GIDDH",
-      "Certified."
-    ],
+    "headingAccent": "GIDDH Certified.",
     "description": "A short, practical course for accountants, bookkeepers, and resellers who want to sell, implement, and support GIDDH with confidence — and unlock GIDDH's partner revenue share.",
     "primaryCta": {
       "text": "Start the course",

@@ -256,12 +256,10 @@ export default function ExamOverlay({
         {phase === "quiz" && (
           <>
             <div className={styles.examHeader}>
-              <div>
-                <p className="font-xs font-600 font-grey-deep text-uppercase mb-0">
-                  Module {moduleIndex + 1} of {modules.length} —{" "}
-                  {currentModule.title}
-                </p>
-              </div>
+              <p className="font-xs font-600 font-grey-deep m-0">
+                Module {moduleIndex + 1} of {modules.length} —{" "}
+                {currentModule.title}
+              </p>
               <div className="d-flex align-items-center gap-3">
                 {!showInstructions && (
                   <span className={styles.timerChip}>
@@ -300,13 +298,13 @@ export default function ExamOverlay({
             )}
 
             {showInstructions && (
-              <div className="border border-light-gray rounded-3 p-4 mt-3 bg-extra-light-blue">
-                <h3 className="font-sm font-600 font-primary mb-3">
+              <div className="border border-light-gray rounded-3 p-4 bg-extra-light-blue d-flex flex-column gap-3">
+                <h3 className="font-sm font-600 font-primary m-0">
                   Test instructions
                 </h3>
-                <ul className="mb-4 ps-3">
+                <ul className="m-0 ps-3 d-flex flex-column gap-2">
                   {INSTRUCTIONS.map((item) => (
-                    <li key={item} className="font-sm font-slate-grey mb-2">
+                    <li key={item} className="font-sm font-slate-grey">
                       {item}
                     </li>
                   ))}
@@ -415,18 +413,16 @@ export default function ExamOverlay({
                   } — ${nextModule.title}.`
                 : `You need at least ${MODULE_PASS_PERCENT}% to continue. Retake this module to qualify.`}
             </p>
-            <div className="mt-4">
-              <button
-                type="button"
-                className={`btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600 ${styles.successBtn}`}
-                onClick={handleContinueModule}
-              >
-                {currentScore?.passed
-                  ? `Continue to Module ${moduleIndex + 2}`
-                  : "Retake this module"}
-                <MdArrowForward size={16} aria-hidden="true" />
-              </button>
-            </div>
+            <button
+              type="button"
+              className={`btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600 ${styles.successBtn}`}
+              onClick={handleContinueModule}
+            >
+              {currentScore?.passed
+                ? `Continue to Module ${moduleIndex + 2}`
+                : "Retake this module"}
+              <MdArrowForward size={16} aria-hidden="true" />
+            </button>
           </div>
         )}
 
@@ -500,9 +496,9 @@ export default function ExamOverlay({
 
         {tabWarning && (
           <div className={`${styles.overlayRoot} ${styles.tabWarningRoot}`}>
-            <div className={`${styles.panel} p-4`}>
-              <h3 className="font-sm font-600 mb-2">Tab switch detected</h3>
-              <p className="font-sm font-slate-grey">
+            <div className={`${styles.panel} p-4 d-flex flex-column gap-3`}>
+              <h3 className="font-sm font-600 m-0">Tab switch detected</h3>
+              <p className="font-sm font-slate-grey m-0">
                 Tab switching is not allowed. This attempt will be discarded.
               </p>
               <button

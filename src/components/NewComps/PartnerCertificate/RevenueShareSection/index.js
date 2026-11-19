@@ -16,7 +16,7 @@ export default function RevenueShareSection({ compData }) {
         <div className="row align-items-start justify-content-between g-5">
           <div className="col-12 col-lg-5 d-flex flex-column align-items-start gap-3">
             {compData?.eyebrow && (
-              <p className="font-xs font-600 font-grey-deep text-uppercase mb-0">
+              <p className="font-xs font-600 font-grey-deep m-0">
                 {compData?.eyebrow}
               </p>
             )}
@@ -31,14 +31,14 @@ export default function RevenueShareSection({ compData }) {
               )}
             </h2>
             {compData?.description && (
-              <p className="font-sm font-slate-grey mb-2 lh-lg">
+              <p className="font-sm font-slate-grey m-0 lh-lg">
                 {compData?.description}
               </p>
             )}
             {compData?.link?.text && compData?.link?.href && (
               <Link
                 href={compData?.link?.href}
-                className="font-sm font-600 font-primary text-decoration-none border-bottom border-primary d-inline-flex align-items-center gap-2 pb-1"
+                className="font-sm font-600 font-primary text-decoration-none border-bottom border-primary d-inline-flex align-items-center gap-2"
               >
                 <span>{compData?.link?.text}</span>
                 <MdArrowOutward size={15} aria-hidden="true" />
@@ -47,19 +47,19 @@ export default function RevenueShareSection({ compData }) {
           </div>
 
           <div className="col-12 col-lg-6">
-            <div className="row g-5 pb-4 border-bottom border-light-gray">
-              {(compData?.metrics || []).map((metric, index) => (
+            <div className="row g-5 border-bottom border-light-gray">
+              {compData.metrics.map((metric, index) => (
                 <div key={index} className="col-6">
-                  <div className="h-100">
+                  <div className="h-100 d-flex flex-column gap-2">
                     <div className="font-xxl font-600 font-primary lh-1">
                       {metric?.value}
                     </div>
                     {metric?.unit && (
-                      <div className="font-xs font-600 font-blue opacity-75 mt-1">
+                      <div className="font-xs font-600 font-blue opacity-75">
                         {metric?.unit}
                       </div>
                     )}
-                    <p className="font-xs font-grey-deep mt-2 mb-0">
+                    <p className="font-xs font-grey-deep m-0">
                       {metric?.label}
                     </p>
                   </div>
