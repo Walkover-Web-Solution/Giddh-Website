@@ -4,30 +4,6 @@ import {
   QUESTIONS_PER_MODULE,
 } from "./constants";
 
-const COURSE_MODULES = [
-  {
-    id: "walkthrough",
-    number: "01",
-    title: "Product Walkthrough",
-    summary:
-      "Company setup, vouchers, inventory, banking, and day-to-day Giddh workflows.",
-  },
-  {
-    id: "compliance",
-    number: "02",
-    title: "Compliance Essentials – GST",
-    summary:
-      "GST, e-invoice, e-way bill, place of supply, and tax reporting essentials.",
-  },
-  {
-    id: "exam",
-    number: "03",
-    title: "Certification Exam",
-    summary:
-      "Practical scenarios across reporting, portals, automation, and best practices.",
-  },
-];
-
 const OPTION_KEYS = ["A", "B", "C", "D"];
 
 function shuffle(list) {
@@ -39,14 +15,15 @@ function shuffle(list) {
   return next;
 }
 
-export function buildExamModules(questionsPerModule = QUESTIONS_PER_MODULE) {
+export function buildExamModules() {
   const all = questionsData.questions;
-  const chunkSize = Math.ceil(all.length / COURSE_MODULES.length);
+  const modules = questionsData.modules;
+  const chunkSize = Math.ceil(all.length / modules.length);
 
-  return COURSE_MODULES.map((moduleItem, moduleIndex) => {
+  return modules.map((moduleItem, moduleIndex) => {
     const start = moduleIndex * chunkSize;
     const pool = all.slice(start, start + chunkSize);
-    const selected = shuffle(pool).slice(0, questionsPerModule);
+    const selected = shuffle(pool).slice(0, QUESTIONS_PER_MODULE);
 
     return {
       ...moduleItem,

@@ -1,41 +1,27 @@
-import {
-  callGiddhCertApi,
-  isValidMobile,
-  normalizeMobile,
-} from "@/utils/giddhCert/serverApi";
+import { callGiddhCertApi } from "@/utils/giddhCert/serverApi";
 import { getSessionFromRequest } from "@/utils/giddhCert/session";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ ok: false, message: "Method not allowed" });
+    return res.status(405).json({ ok: false });
   }
 
   const session = getSessionFromRequest(req);
-  const mobile = normalizeMobile(req.body?.mobile || session?.mobile);
-  const countryCode = String(
-    req.body?.countryCode || session?.countryCode || "91"
-  ).replace(/\D/g, "");
+  if (!session) {
+    return res.status(401).json({ ok: false });
+  }
 
+  const { mobile, countryCode } = session;
   const score = Number(req.body?.score);
   const percentage = Number(req.body?.percentage);
   const totalQuestions = Number(req.body?.totalQuestions);
-
-  if (!isValidMobile(mobile)) {
-    return res.status(401).json({
-      ok: false,
-      message: "Session expired. Please verify mobile again.",
-    });
-  }
 
   if (
     !Number.isFinite(score) ||
     !Number.isFinite(percentage) ||
     !Number.isFinite(totalQuestions)
   ) {
-    return res.status(400).json({
-      ok: false,
-      message: "score, percentage, and totalQuestions are required.",
-    });
+    return res.status(400).json({ ok: false });
   }
 
   try {
@@ -45,7 +31,7 @@ export default async function handler(req, res) {
     });
 
     if (!ok || data?.status !== "success") {
-      return res.status(status || 500).json({
+      return res.status(status).json({
         ok: false,
         message: data?.message,
         data,
@@ -70,9 +56,7 @@ export default async function handler(req, res) {
         score: lastAttempt.percentage,
         issuedAt: lastAttempt.completedAt,
         validUntil: lastAttempt.validUntil,
-        downloadUrl: `/api/giddh-cert/download?countryCode=${encodeURIComponent(
-          countryCode
-        )}&mobile=${encodeURIComponent(mobile)}`,
+        downloadUrl: "/api/giddh-cert/download",
       },
     });
   } catch (error) {

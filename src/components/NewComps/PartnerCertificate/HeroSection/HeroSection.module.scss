@@ -31,11 +31,11 @@
 .heroTitle {
   font-size: clamp(46px, 5.2vw, 72px);
   line-height: 1.02;
-  letter-spacing: -0.03em;
+  letter-spacing: -2px;
 }
 
 .heroTitleAccent {
-  font-size: 0.72em;
+  font-size: clamp(33px, 3.7vw, 52px);
   white-space: nowrap;
   line-height: 1.1;
 }

@@ -48,8 +48,6 @@ export function submitResult(payload) {
   });
 }
 
-export function getDownloadUrl(countryCode, mobile) {
-  return `/api/giddh-cert/download?countryCode=${encodeURIComponent(
-    countryCode
-  )}&mobile=${encodeURIComponent(mobile)}`;
+export function getDownloadUrl() {
+  return "/api/giddh-cert/download";
 }

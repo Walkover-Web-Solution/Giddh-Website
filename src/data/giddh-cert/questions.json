@@ -1,6 +1,26 @@
 {
   "course": "Giddh Certificate Course",
   "totalQuestions": 200,
+  "modules": [
+    {
+      "id": "walkthrough",
+      "number": "01",
+      "title": "Product Walkthrough",
+      "summary": "Company setup, vouchers, inventory, banking, and day-to-day Giddh workflows."
+    },
+    {
+      "id": "compliance",
+      "number": "02",
+      "title": "Compliance Essentials – GST",
+      "summary": "GST, e-invoice, e-way bill, place of supply, and tax reporting essentials."
+    },
+    {
+      "id": "exam",
+      "number": "03",
+      "title": "Certification Exam",
+      "summary": "Practical scenarios across reporting, portals, automation, and best practices."
+    }
+  ],
   "questions": [
     {
       "id": 1,

@@ -1,6 +1,4 @@
-import {
-  normalizeMobile,
-} from "./serverApi";
+import { normalizeMobile } from "./serverApi";
 import { SESSION_COOKIE, SESSION_DAYS } from "./constants";
 
 function parseCookies(cookieHeader) {
@@ -13,14 +11,27 @@ function parseCookies(cookieHeader) {
 }
 
 export function getSessionFromRequest(req) {
-  const cookies = parseCookies(req.headers.cookie || "");
+  const cookieHeader = req.headers.cookie;
+  if (!cookieHeader) {
+    return null;
+  }
+
+  const cookies = parseCookies(cookieHeader);
   const raw = cookies[SESSION_COOKIE];
-  if (!raw) return null;
+  if (!raw) {
+    return null;
+  }
+
   try {
     const parsed = JSON.parse(raw);
     const mobile = normalizeMobile(parsed.mobile);
     const countryCode = String(parsed.countryCode).replace(/\D/g, "");
-    if (!mobile || mobile.length !== 10) return null;
+    if (!mobile) {
+      return null;
+    }
+    if (mobile.length !== 10) {
+      return null;
+    }
     return { mobile, countryCode };
   } catch {
     return null;

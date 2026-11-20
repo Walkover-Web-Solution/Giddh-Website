@@ -25,17 +25,14 @@ function resolveResumeScreen(body) {
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ ok: false, message: "Method not allowed" });
+    return res.status(405).json({ ok: false });
   }
 
   const mobile = normalizeMobile(req.body?.mobile);
-  const countryCode = String(req.body?.countryCode || "91").replace(/\D/g, "");
+  const countryCode = String(req.body?.countryCode).replace(/\D/g, "");
 
   if (!isValidMobile(mobile)) {
-    return res.status(400).json({
-      ok: false,
-      message: "Please enter a valid 10-digit mobile number.",
-    });
+    return res.status(400).json({ ok: false });
   }
 
   try {
@@ -44,8 +41,16 @@ export default async function handler(req, res) {
       body: { countryCode, mobile },
     });
 
-    if (!ok || data?.status !== "success") {
-      return res.status(status || 500).json({
+    if (!ok) {
+      return res.status(status).json({
+        ok: false,
+        message: data?.message,
+        data,
+      });
+    }
+
+    if (data?.status !== "success") {
+      return res.status(status).json({
         ok: false,
         message: data?.message,
         data,
@@ -58,6 +63,7 @@ export default async function handler(req, res) {
 
     return res.status(200).json({
       ok: true,
+      message: data?.message,
       resumeScreen: resolveResumeScreen(body),
       learner: {
         mobile,

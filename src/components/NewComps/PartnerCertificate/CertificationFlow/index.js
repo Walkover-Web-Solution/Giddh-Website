@@ -1,8 +1,8 @@
 import { useCallback, useState } from "react";
 
-import { getDownloadUrl } from "@/utils/giddhCert/clientApi";
 import { MODULE_PASS_PERCENT } from "@/utils/giddhCert/constants";
 import { buildExamModules } from "@/utils/giddhCert/course";
+import { getDownloadUrl } from "@/utils/giddhCert/clientApi";
 import { showToaster } from "@/utils/signupHelpers";
 
 import ApplyOverlay from "./ApplyOverlay";
@@ -11,13 +11,14 @@ import ExamOverlay from "./ExamOverlay";
 export default function CertificationFlow({
   isApplyOpen,
   setIsApplyOpen,
+  applyOverlay,
+  examOverlay,
 }) {
   const [flowPhase, setFlowPhase] = useState("mobile");
   const [mobile, setMobile] = useState("");
   const countryCode = "91";
   const [learner, setLearner] = useState(null);
   const [isExamOpen, setIsExamOpen] = useState(false);
-  const [certificate, setCertificate] = useState(null);
   const [examKey, setExamKey] = useState(0);
   const [modules, setModules] = useState([]);
   const [examInitialResult, setExamInitialResult] = useState(null);
@@ -28,7 +29,7 @@ export default function CertificationFlow({
   };
 
   const openExam = useCallback(() => {
-    setExamInitialResult(null);
+    setExamInitialResult({ phase: "quiz" });
     setModules(buildExamModules());
     setExamKey((prev) => prev + 1);
     setIsApplyOpen(false);
@@ -38,7 +39,6 @@ export default function CertificationFlow({
   const openCertifiedResult = useCallback(
     (nextLearner) => {
       const lastAttempt = nextLearner?.lastAttempt;
-      const resumeModules = buildExamModules();
       const percentage = Number(lastAttempt?.percentage);
       const totalQuestions = Number(lastAttempt?.totalQuestions);
       const score = Number(lastAttempt?.score);
@@ -47,15 +47,11 @@ export default function CertificationFlow({
         score: lastAttempt?.percentage,
         issuedAt: lastAttempt?.completedAt,
         validUntil: lastAttempt?.validUntil,
-        downloadUrl: getDownloadUrl(
-          nextLearner?.countryCode,
-          nextLearner?.mobile
-        ),
+        downloadUrl: getDownloadUrl(),
       };
 
       setLearner(nextLearner);
-      setCertificate(certPayload);
-      setModules(resumeModules);
+      setModules(buildExamModules());
       setExamInitialResult({
         phase: "result",
         certificate: certPayload,
@@ -73,16 +69,12 @@ export default function CertificationFlow({
     [setIsApplyOpen]
   );
 
-  const openCertificatePdf = useCallback((certPayload, learnerPayload) => {
-    const nextLearner = learnerPayload || learner;
-    const downloadUrl =
-      certPayload?.downloadUrl ||
-      getDownloadUrl(nextLearner?.countryCode, nextLearner?.mobile);
-
+  const openCertificatePdf = (certPayload) => {
+    const downloadUrl = certPayload?.downloadUrl;
     if (typeof window !== "undefined" && downloadUrl) {
       window.open(downloadUrl, "_blank", "noopener,noreferrer");
     }
-  }, [learner]);
+  };
 
   const handleVerified = (data) => {
     const nextLearner = data?.learner;
@@ -94,13 +86,9 @@ export default function CertificationFlow({
     }
 
     if (data?.resumeScreen === "blocked") {
-      showToaster(
-        `Retake available after ${new Date(
-          nextLearner?.nextAttemptAt
-        ).toLocaleString("en-IN")}.`,
-        "info",
-        "top-center"
-      );
+      if (data?.message) {
+        showToaster(data.message, "info", "top-center");
+      }
       return;
     }
 
@@ -121,11 +109,8 @@ export default function CertificationFlow({
     if (resultData?.learner) {
       setLearner(resultData.learner);
     }
-    if (resultData?.certificate) {
-      setCertificate(resultData.certificate);
-    }
     if (openCertOnly) {
-      openCertificatePdf(resultData?.certificate || certificate, resultData?.learner || learner);
+      openCertificatePdf(resultData?.certificate);
     }
   };
 
@@ -146,6 +131,7 @@ export default function CertificationFlow({
         countryCode={countryCode}
         onVerified={handleVerified}
         onRegistered={handleRegistered}
+        compData={applyOverlay}
       />
 
       <ExamOverlay
@@ -156,6 +142,7 @@ export default function CertificationFlow({
         learner={learner}
         onCompleted={handleExamCompleted}
         initialResult={examInitialResult}
+        compData={examOverlay}
       />
     </>
   );

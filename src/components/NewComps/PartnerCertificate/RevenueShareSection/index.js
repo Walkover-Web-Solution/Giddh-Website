@@ -12,7 +12,7 @@ export default function RevenueShareSection({ compData }) {
       id="revenue-share"
       className="py-5 bg-white border-top border-light-gray outfit-font"
     >
-      <div className="container px-4 py-lg-4">
+      <div className="container px-4">
         <div className="row align-items-start justify-content-between g-5">
           <div className="col-12 col-lg-5 d-flex flex-column align-items-start gap-3">
             {compData?.eyebrow && (
@@ -51,14 +51,16 @@ export default function RevenueShareSection({ compData }) {
               {compData.metrics.map((metric, index) => (
                 <div key={index} className="col-6">
                   <div className="h-100 d-flex flex-column gap-2">
-                    <div className="font-xxl font-600 font-primary lh-1">
-                      {metric?.value}
+                    <div className="d-flex align-items-start gap-1 lh-1">
+                      <span className="font-xxl font-600 font-primary">
+                        {metric?.value}
+                      </span>
+                      {metric?.unit && (
+                        <span className="font-xs font-600 font-blue opacity-75">
+                          {metric?.unit}
+                        </span>
+                      )}
                     </div>
-                    {metric?.unit && (
-                      <div className="font-xs font-600 font-blue opacity-75">
-                        {metric?.unit}
-                      </div>
-                    )}
                     <p className="font-xs font-grey-deep m-0">
                       {metric?.label}
                     </p>

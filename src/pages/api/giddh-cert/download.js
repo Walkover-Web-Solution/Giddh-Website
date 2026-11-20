@@ -1,52 +1,42 @@
-import {
-  callGiddhCertApi,
-  isValidMobile,
-  normalizeMobile,
-} from "@/utils/giddhCert/serverApi";
+import { callGiddhCertApi } from "@/utils/giddhCert/serverApi";
 import { getSessionFromRequest } from "@/utils/giddhCert/session";
 
 export default async function handler(req, res) {
   if (req.method !== "GET") {
-    return res.status(405).json({ ok: false, message: "Method not allowed" });
+    return res.status(405).json({ ok: false });
   }
 
   const session = getSessionFromRequest(req);
-  const mobile = normalizeMobile(req.query?.mobile || session?.mobile);
-  const countryCode = String(
-    req.query?.countryCode || session?.countryCode || "91"
-  ).replace(/\D/g, "");
-
-  if (!isValidMobile(mobile)) {
-    return res.status(401).json({
-      ok: false,
-      message: "Session expired. Please verify mobile again.",
-    });
+  if (!session) {
+    return res.status(401).json({ ok: false });
   }
 
-  try {
-    const result = await callGiddhCertApi("/download", {
-      method: "GET",
-      body: { countryCode, mobile },
-    });
+  const { mobile, countryCode } = session;
 
-    if (!result.ok) {
-      return res.status(result.status || 404).json({
+  try {
+    const { ok, status, data, buffer, contentType } = await callGiddhCertApi(
+      "/download",
+      { method: "GET", body: { countryCode, mobile } }
+    );
+
+    if (!ok) {
+      return res.status(status).json({
         ok: false,
-        message: result.data?.message,
-        data: result.data,
+        message: data?.message,
+        data,
       });
     }
 
-    if (result.buffer) {
-      res.setHeader("Content-Type", result.contentType);
+    if (buffer) {
+      res.setHeader("Content-Type", contentType);
       res.setHeader(
         "Content-Disposition",
         `inline; filename="giddh-certificate-${mobile}.pdf"`
       );
-      return res.status(200).send(result.buffer);
+      return res.status(200).send(buffer);
     }
 
-    return res.status(200).json({ ok: true, data: result.data });
+    return res.status(200).json({ ok: true, data });
   } catch (error) {
     return res.status(500).json({
       ok: false,

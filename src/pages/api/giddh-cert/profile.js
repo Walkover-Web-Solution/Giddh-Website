@@ -1,38 +1,24 @@
-import {
-  callGiddhCertApi,
-  isValidMobile,
-  normalizeMobile,
-} from "@/utils/giddhCert/serverApi";
+import { callGiddhCertApi } from "@/utils/giddhCert/serverApi";
 import { getSessionFromRequest } from "@/utils/giddhCert/session";
 
 export default async function handler(req, res) {
   if (req.method !== "POST") {
-    return res.status(405).json({ ok: false, message: "Method not allowed" });
+    return res.status(405).json({ ok: false });
   }
 
   const session = getSessionFromRequest(req);
-  const mobile = normalizeMobile(req.body?.mobile || session?.mobile);
-  const countryCode = String(
-    req.body?.countryCode || session?.countryCode || "91"
-  ).replace(/\D/g, "");
-
-  const name = String(req.body?.name || "").trim();
-  const email = String(req.body?.email || "").trim();
-  const designation = String(req.body?.designation || "").trim();
-  const city = String(req.body?.city || "").trim();
-
-  if (!isValidMobile(mobile)) {
-    return res.status(401).json({
-      ok: false,
-      message: "Session expired. Please verify mobile again.",
-    });
+  if (!session) {
+    return res.status(401).json({ ok: false });
   }
 
+  const { mobile, countryCode } = session;
+  const name = req.body?.name?.trim();
+  const email = req.body?.email?.trim();
+  const designation = req.body?.designation?.trim();
+  const city = req.body?.city?.trim();
+
   if (!name || !email || !designation || !city) {
-    return res.status(400).json({
-      ok: false,
-      message: "Name, email, profession, and city are required.",
-    });
+    return res.status(400).json({ ok: false });
   }
 
   try {
@@ -42,7 +28,7 @@ export default async function handler(req, res) {
     });
 
     if (!ok || data?.status !== "success") {
-      return res.status(status || 500).json({
+      return res.status(status).json({
         ok: false,
         message: data?.message,
         data,
