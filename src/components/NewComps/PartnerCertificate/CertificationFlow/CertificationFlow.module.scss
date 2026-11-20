@@ -1,6 +1,6 @@
 .progressTrack {
   display: grid;
-  grid-template-columns: repeat(var(--segments, 5), minmax(0, 1fr));
+  grid-template-columns: repeat(var(--segments), minmax(0, 1fr));
   gap: 6px;
 }
 

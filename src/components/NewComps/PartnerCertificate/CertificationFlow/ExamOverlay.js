@@ -14,9 +14,9 @@ import { showToaster } from "@/utils/signupHelpers";
 
 import styles from "./CertificationFlow.module.scss";
 
-function formatCopy(template, values = {}) {
+function formatCopy(template, values) {
   if (!template) {
-    return "";
+    return template;
   }
   return Object.keys(values).reduce(
     (text, key) => text.replaceAll(`{${key}}`, String(values[key])),
@@ -275,7 +275,7 @@ export default function ExamOverlay({
         <div className="modal-content border-0 rounded-3 p-4 p-md-5 outfit-font position-relative">
           <button
             type="button"
-            className="btn border-0 bg-transparent position-absolute top-0 end-0 m-3 p-1 font-primary"
+            className="btn border-0 bg-transparent position-absolute top-0 end-0 p-3 font-primary"
             aria-label={compData?.closeAriaLabel}
             onClick={() => onClose({ discarded: true })}
           >

@@ -195,6 +195,7 @@
     "helperText": "100% free · Mobile OTP · 3 modules · Certificate valid 6 months"
   },
   "applyOverlay": {
+    "countryCode": "91",
     "closeAriaLabel": "Close",
     "eyebrow": "Get Started",
     "heading": "Start now — it takes 30 seconds.",
