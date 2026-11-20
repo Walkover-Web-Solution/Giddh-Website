@@ -1,6 +1,10 @@
 # Status
 
+<<<<<<< HEAD
 **Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-20 · **Reviewed up to commit:** `85903766`
+=======
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-18 · **Reviewed up to commit:** `ad5219f6`
+>>>>>>> origin/web
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -32,7 +36,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | 1. Acquire chartered accountants | 🟡 | `src/pages/chartered-accountant-signup.js` collects the MRN, but it never reaches `/v2/register` ([Q-029](docs/OPEN_QUESTIONS.md#active-questions-table)). Global only, no locale variants. |
 | 2. Partner-led growth (affiliates) | 🟡 | `src/pages/affiliate.js` plus `in`/`ae`/`uk` variants and `src/data/pagesdata/*/affiliate.json`. Live form not exercised (no sandbox). |
 | 3. Organic search | 🟡 | 253 MDX posts in `_posts/blog/`, about 2,000 rules in `public/_redirects`. Sitemap stale ([Q-009](docs/OPEN_QUESTIONS.md#active-questions-table)), metadata errors ([Q-008](docs/OPEN_QUESTIONS.md#active-questions-table)). |
-| 4. Feature landing pages and comparisons | 🟡 | 25 page types in `src/components/Pages/`; comparison pages `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`. Several feature pages are on `web` only, not production (Q-031). |
+| 4. Feature landing pages and comparisons | 🟡 | 25 page types in `src/components/Pages/`; comparison pages `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`. Bank reconcile slug corrected to `/connect-bank-reconcile` (all locales) with 301s from `/conect-bank-reconcile`. Several feature pages are on `web` only, not production (Q-031). |
 
 ## Scope items
 
@@ -164,8 +168,9 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
-- 2026-11-20 · Cursor agent · GridFeatures: optional `compact` prop skips 240px card min-height; enabled only on RecurringInvoices · automation features row note only
+2026-11-20 · Cursor agent · GridFeatures: optional `compact` prop skips 240px card min-height; enabled only on RecurringInvoices · automation features row note only
 - 2026-11-18 · Cursor agent · Recurring invoices Key Benefits: added 3 `more_content` bullets per feature in global/`in`/`ae`/`uk` JSON (uses existing AlternateFeatures support) · automation features row note only
+- 2026-11-18 · Cursor agent · Renamed bank reconcile URL from `/conect-bank-reconcile` to `/connect-bank-reconcile` (pages, SEO, sitemap, links) and added 301s · Feature landing pages notes updated
 - 2026-11-16 · Cursor cloud agent · Weekly docs maintenance (merged PR #847 / #848): 406-page build, CSP ADR-015, partner `redirect_url`, coverage map · doc-only `[no status]`
 - 2026-11-02 · Cursor cloud agent · Moved "Reviewed up to commit" to `26494e62` (adds the `status:check` script to `package.json`) · none
 - 2026-11-02 · Cursor cloud agent · Created STATUS.md, `npm run status:check` and the PR workflow; scored the repo against docs/VISION.md at `2024df86` · initial scores, no ✅ (nothing proven with real users)

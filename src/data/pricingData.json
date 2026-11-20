@@ -101,7 +101,7 @@
     {
       "title": "Bank Reconciliation",
       "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
-      "link": "/conect-bank-reconcile",
+      "link": "/connect-bank-reconcile",
       "isExpanded": false
     },
     {
@@ -262,7 +262,7 @@
     {
       "title": "Bank Reconciliation",
       "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
-      "link": "/ae/conect-bank-reconcile",
+      "link": "/ae/connect-bank-reconcile",
       "isExpanded": false
     },
     {
@@ -440,7 +440,7 @@
       "title": "Bank Reconciliation",
       "isAvailableForAll": "true",
       "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
-      "link": "/uk/conect-bank-reconcile",
+      "link": "/uk/connect-bank-reconcile",
       "isExpanded": false
     },
     {
@@ -624,7 +624,7 @@
       "title": "Bank Reconciliation",
       "isAvailableForAll": "true",
       "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account and",
-      "link": "/in/conect-bank-reconcile",
+      "link": "/in/connect-bank-reconcile",
       "isExpanded": false
     },
     {

@@ -53,7 +53,7 @@
       "name": "Bank reconciliation",
       "image": "/feature-bank-reconciliation.svg",
       "description": "Connect your bank account in Giddh, and with just one click, we will compare and match the transactions of your books with your bank account.",
-      "link": "https://giddh.com/uk/conect-bank-reconcile",
+      "link": "https://giddh.com/uk/connect-bank-reconcile",
       "hasMoreContent": false
     },
     {
@@ -307,7 +307,7 @@
       "uk": true,
       "ae": true,
       "menuItem": "Bank Reconciliation",
-      "url": "/conect-bank-reconcile"
+      "url": "/connect-bank-reconcile"
     },
     {
       "global": false,
@@ -315,7 +315,7 @@
       "uk": false,
       "ae": false,
       "menuItem": "Bank Reconcile",
-      "url": "/conect-bank-reconcile"
+      "url": "/connect-bank-reconcile"
     },
     {
       "global": true,
