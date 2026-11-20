@@ -303,7 +303,7 @@ Accepted, 2026-11-03 (PRs #842 `2e569247`, #845 `5eae310e`, merged via `14zkq6bd
 ### Context & Problem Statement
 ADR-004 blocked clickjacking with `frame-ancestors` only. The team wanted broader XSS hardening without adding headers in `next.config.js` (see ADR-004 rejected alternatives).
 ### Decision & Implementation
-`public/_headers` applies one long `Content-Security-Policy` on `/*`, plus `X-Content-Type-Options: nosniff` and `Referrer-Policy: strict-origin-when-cross-origin`, alongside the existing `X-Frame-Options: DENY`. Directives allowlist every third party already loaded on marketing pages (GTM, MSG91, hCaptcha, Razorpay, Google, Calendly, Typeform, Trustpilot, CDNs, the amplifyapp tracker, and others). Calendly was added after the first deploy broke demo booking.
+`public/_headers` applies one long `Content-Security-Policy` on `/*`, plus `X-Content-Type-Options: nosniff` and `Referrer-Policy: strict-origin-when-cross-origin`, alongside the existing `X-Frame-Options: DENY`. Directives allowlist every third party already loaded on marketing pages (GTM, MSG91, hCaptcha, Razorpay, Google, Calendly, Embarko contact form, Trustpilot, CDNs, the amplifyapp tracker, and others). Calendly was added after the first deploy broke demo booking.
 ### Consequences & Trade-offs
 - **Positive:** Policy is enforced at the Netlify CDN for all routes, including static assets.
 - **Negative / Constraints:** Every new script, style, connect or iframe origin needs an explicit CSP entry. Test Calendly, OTP widgets, Razorpay, Google login and embedded forms after any CSP edit.
