@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-16 · **Reviewed up to commit:** `ad5219f6`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-20 · **Reviewed up to commit:** `85903766`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -90,7 +90,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | VAT compliance (UAE, UK) | 🟡 | `src/pages/ae/vat.js`, `src/pages/uk/vat.js`. |
 | Migration from Tally / Zoho | 🟡 | `src/data/pagesdata/in/make-the-switch.json`, `src/data/pagesdata/in/tally-to-giddh-migration.json`. |
 | Multi-currency | 🟡 | `src/pages/multi-currency-accounting-software.js` plus three locale variants. |
-| Automation features (bill scanning, email-to-bank sync, recurring invoices, triggers, customer portal, magic links) | 🟡 | Page JSON in `src/data/pagesdata/global/`; each page has `in`/`ae`/`uk` variants. |
+| Automation features (bill scanning, email-to-bank sync, recurring invoices, triggers, customer portal, magic links) | 🟡 | Page JSON in `src/data/pagesdata/global/`; each page has `in`/`ae`/`uk` variants. Recurring invoices Key Benefits use `more_content` bullets; GridFeatures `compact` drops the 240px card min-height on that page only. |
 | CA multi-company dashboard | 🟡 | Claimed on `src/pages/chartered-accountant-signup.js`; the feature itself lives in the Giddh app. |
 | Multi-user access | 🟡 | `src/pages/multi-user-accounting-software.js` plus three locale variants. |
 
@@ -164,6 +164,8 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-20 · Cursor agent · GridFeatures: optional `compact` prop skips 240px card min-height; enabled only on RecurringInvoices · automation features row note only
+- 2026-11-18 · Cursor agent · Recurring invoices Key Benefits: added 3 `more_content` bullets per feature in global/`in`/`ae`/`uk` JSON (uses existing AlternateFeatures support) · automation features row note only
 - 2026-11-16 · Cursor cloud agent · Weekly docs maintenance (merged PR #847 / #848): 406-page build, CSP ADR-015, partner `redirect_url`, coverage map · doc-only `[no status]`
 - 2026-11-02 · Cursor cloud agent · Moved "Reviewed up to commit" to `26494e62` (adds the `status:check` script to `package.json`) · none
 - 2026-11-02 · Cursor cloud agent · Created STATUS.md, `npm run status:check` and the PR workflow; scored the repo against docs/VISION.md at `2024df86` · initial scores, no ✅ (nothing proven with real users)

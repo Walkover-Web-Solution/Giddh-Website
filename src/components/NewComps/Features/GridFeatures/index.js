@@ -2,7 +2,7 @@ import { MdCircle } from "react-icons/md";
 import styles from "./GridFeatures.module.scss";
 import Image from "next/image";
 
-export default function GridFeatures({ features }) {
+export default function GridFeatures({ features, compact = false }) {
   if (!features?.cards?.length) return null;
   return (
     <section className="py-5 outfit-font">
@@ -22,7 +22,7 @@ export default function GridFeatures({ features }) {
             <div key={index} className="col-12 col-md-6">
               <div
                 className={`d-flex flex-column border rounded-4 px-3 pt-4 pb-3 text-center border-color-primary ${
-                  styles.card
+                  compact ? "" : styles.card
                 }  ${card?.icon ? "py-2" : ""}`}
               >
                 {card?.icon && (
