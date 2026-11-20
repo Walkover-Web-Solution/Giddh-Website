@@ -169,9 +169,6 @@ The **routes** count is how many of the 142 files in `src/pages/` render the com
   - Hero CTAs stack (`flex-column flex-md-row` in `StackedBanner`).
   - Marquee and scrolling strips (`TrustBadgeScrollable`, `SpotlightTestimonials`).
 
-> [!WARNING]
-> `src/scss/scsscomps/_typeform.scss` contains `@media (max-width: 480px) and (min-width: 481px)`. That query can never match, so its rules are dead.
-
 ## Accessibility (A11y) Standards
 
 Observed in the 139 prerendered non-blog pages of the local build. *Inference:* there is no a11y tooling or test in the repo.
