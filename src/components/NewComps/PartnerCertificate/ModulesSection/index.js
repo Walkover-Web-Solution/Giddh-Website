@@ -28,7 +28,7 @@ export default function ModulesSection({ compData }) {
 
   return (
     <section id="modules" className="py-5 bg-extra-light-blue outfit-font">
-      <div className="container px-4 py-lg-4 d-flex flex-column gap-5">
+      <div className="container px-4 d-flex flex-column gap-5">
         <div className="row align-items-end justify-content-between g-4">
           <div className="col-12 col-lg-5 d-flex flex-column gap-3">
             {compData?.eyebrow && (

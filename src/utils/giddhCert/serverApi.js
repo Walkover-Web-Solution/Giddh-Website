@@ -1,13 +1,12 @@
-import { CERT_API_BASE, CERT_ORIGIN } from "./constants";
-
 export async function callGiddhCertApi(path, { method = "GET", body } = {}) {
+  const base = `${process.env.NEXT_PUBLIC_API_URL}/public/giddh-cert`;
   const url =
     method === "GET" && body && !String(path).includes("?")
-      ? `${CERT_API_BASE}${path}?${new URLSearchParams(body).toString()}`
-      : `${CERT_API_BASE}${path}`;
+      ? `${base}${path}?${new URLSearchParams(body).toString()}`
+      : `${base}${path}`;
 
   const headers = {
-    Origin: CERT_ORIGIN,
+    Origin: process.env.NEXT_PUBLIC_SITE_URL,
   };
 
   if (method !== "GET") {

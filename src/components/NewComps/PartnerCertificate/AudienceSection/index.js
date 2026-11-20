@@ -4,8 +4,8 @@ export default function AudienceSection({ compData }) {
   }
 
   return (
-    <section id="who-its-for" className="py-5 bg-white outfit-font">
-      <div className="container px-4 py-lg-4 d-flex flex-column gap-5">
+    <section id="audience" className="py-5 bg-white outfit-font">
+      <div className="container px-4 d-flex flex-column gap-5">
         <div className="d-flex flex-column gap-3">
           {compData?.eyebrow && (
             <p className="font-xs font-600 font-grey-deep m-0">

@@ -32,6 +32,8 @@ export default function PartnerCertificate({ pageData }) {
       <CertificationFlow
         isApplyOpen={isApplyOpen}
         setIsApplyOpen={setIsApplyOpen}
+        applyOverlay={pageData?.applyOverlay}
+        examOverlay={pageData?.examOverlay}
       />
     </>
   );

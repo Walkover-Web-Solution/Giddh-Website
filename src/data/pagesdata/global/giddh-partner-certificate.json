@@ -35,6 +35,7 @@
       "imageAlt": "GIDDH partner certification workspace preview",
       "topLabel": "GIDDH CERTIFIED",
       "playAriaLabel": "View GIDDH certification curriculum",
+      "closeVideoAriaLabel": "Close video",
       "captionTitle": "Learn the platform.",
       "captionAccent": "Own the outcome.",
       "duration": "00:30",
@@ -181,7 +182,6 @@
       },
       {
         "value": "₹0",
-        "unit": "",
         "label": "Cost to enroll"
       }
     ]
@@ -193,6 +193,87 @@
     "description": "Verify your mobile number, complete a short profile, and start the free GIDDH certification assessment. Pass with 70%+ to earn your certificate.",
     "buttonText": "Start certification",
     "helperText": "100% free · Mobile OTP · 3 modules · Certificate valid 6 months"
+  },
+  "applyOverlay": {
+    "closeAriaLabel": "Close",
+    "eyebrow": "Get Started",
+    "heading": "Start now — it takes 30 seconds.",
+    "description": "Verify your mobile, tell us who you are, then go straight through Module 1, 2, and 3 right here. Pass with 70% or higher on each module to get your certificate instantly.",
+    "mobile": {
+      "label": "Mobile number",
+      "placeholder": "10-digit mobile number",
+      "submitText": "Send OTP",
+      "loadingText": "Sending...",
+      "helperText": "Progress is saved on the server for this mobile number."
+    },
+    "otp": {
+      "label": "Enter OTP",
+      "placeholder": "Enter OTP",
+      "sentPrefix": "Sent to",
+      "resendPrefix": "Resend on",
+      "resendSeparator": " or ",
+      "submitText": "Verify & Continue",
+      "loadingText": "Verifying...",
+      "changeMobileText": "Change mobile number"
+    },
+    "registration": {
+      "nameLabel": "Full name *",
+      "namePlaceholder": "Your full name",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "you@example.com",
+      "professionLabel": "I am a...",
+      "professionPlaceholder": "Choose one",
+      "cityLabel": "City *",
+      "cityPlaceholder": "Your city",
+      "submitText": "Start the course",
+      "loadingText": "Saving...",
+      "helperText": "No cost to enroll. By submitting, you agree to be contacted about the GIDDH Certification and Partnership Program.",
+      "professions": [
+        "Chartered Accountant",
+        "Bookkeeper",
+        "Consultant",
+        "Reseller Owner",
+        "Reseller / Partner",
+        "Other"
+      ]
+    }
+  },
+  "examOverlay": {
+    "closeAriaLabel": "Close exam",
+    "moduleHeader": "Module {current} of {total} — {title}",
+    "instructionsLinkText": "Instructions",
+    "instructionsTitle": "Test instructions",
+    "instructions": [
+      "Tab switching is not allowed during the test.",
+      "Certificate validity is 6 months from the issued date.",
+      "If you exit or leave the test midway, the ongoing attempt is discarded and you must start again.",
+      "After submitting results, retakes are allowed once every month.",
+      "Each module requires at least 70% to pass."
+    ],
+    "startModuleText": "Start module",
+    "questionMeta": "Question {current} of {total}",
+    "feedbackCorrect": "Correct.",
+    "feedbackWrong": "Not quite.",
+    "correctAnswerPrefix": "Correct answer:",
+    "nextText": "Next",
+    "finishText": "Finish",
+    "gatePassedTitle": "Module {current} complete — {correct}/{total} correct",
+    "gateFailedTitle": "Module {current} score — {correct}/{total} correct",
+    "gatePassedSub": "Up next: Module {next} of {total} — {title}.",
+    "gateFailedSub": "You need at least 70% to continue. Retake this module to qualify.",
+    "continueModuleText": "Continue to Module {next}",
+    "retakeModuleText": "Retake this module",
+    "resultPassedTitle": "You're GIDDH Certified",
+    "resultFailedTitle": "Assessment complete",
+    "resultScore": "Overall {percent}% · {score}/{total} correct",
+    "resultPassedSub": "You passed every module with at least 70%. Open your certificate when ready.",
+    "resultFailedSub": "Each module needs at least 70%. Retake a failed module to qualify.",
+    "moduleCardLabel": "Module {current}",
+    "viewCertificateText": "View certificate",
+    "retakeFailedText": "Retake failed module",
+    "tabWarningTitle": "Tab switch detected",
+    "tabWarningBody": "Tab switching is not allowed. This attempt will be discarded.",
+    "tabWarningButtonText": "Close attempt"
   },
   "faqs": [
     {

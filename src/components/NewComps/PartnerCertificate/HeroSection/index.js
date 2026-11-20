@@ -44,7 +44,7 @@ export default function HeroSection({ compData, onStart }) {
     <section className={`outfit-font padding-nav ${styles.heroWrapper}`}>
       <div className={styles.heroGridBackdrop}>
         <div className="container px-4 py-5">
-          <div className="row align-items-center justify-content-between g-5 py-lg-4">
+          <div className="row align-items-center justify-content-between g-5">
             <div className="col-12 col-lg-6 d-flex flex-column gap-4">
               {compData?.eyebrow && (
                 <div className="d-inline-flex align-items-center gap-2">
@@ -147,7 +147,7 @@ export default function HeroSection({ compData, onStart }) {
 
                   {compData?.media?.topLabel && (
                     <span
-                      className={`position-absolute font-xs font-600 font-white opacity-75 z-1 ${styles.mediaTopLabel}`}
+                      className={`position-absolute font-xs font-600 font-white opacity-75 ${styles.mediaTopLabel}`}
                     >
                       {compData?.media?.topLabel}
                     </span>
@@ -155,7 +155,7 @@ export default function HeroSection({ compData, onStart }) {
 
                   <button
                     type="button"
-                    className={`position-absolute top-50 start-50 translate-middle border-0 rounded-circle d-inline-flex align-items-center justify-content-center cursor-pointer z-2 ${styles.playButton}`}
+                    className={`position-absolute top-50 start-50 translate-middle border-0 rounded-circle d-inline-flex align-items-center justify-content-center cursor-pointer ${styles.playButton}`}
                     aria-label={compData?.media?.playAriaLabel}
                     onClick={() =>
                       compData?.media?.videoUrl
@@ -168,7 +168,7 @@ export default function HeroSection({ compData, onStart }) {
 
                   {compData?.media?.captionTitle && (
                     <div
-                      className={`position-absolute bottom-0 start-0 end-0 d-flex align-items-end justify-content-between gap-3 z-1 ${styles.mediaCaption}`}
+                      className={`position-absolute bottom-0 start-0 end-0 d-flex align-items-end justify-content-between gap-3 ${styles.mediaCaption}`}
                     >
                       <div>
                         <p className="font-md font-600 font-white m-0 lh-sm">
@@ -198,7 +198,7 @@ export default function HeroSection({ compData, onStart }) {
 
                 {compData?.media?.topBadge?.title && (
                   <div
-                    className={`position-absolute bg-white rounded-1 border border-light-gray px-3 py-2 d-flex align-items-start gap-2 shadow-sm z-3 ${styles.floatingTopBadge}`}
+                    className={`position-absolute bg-white rounded-1 border border-light-gray px-3 py-2 d-flex align-items-start gap-2 shadow-sm ${styles.floatingTopBadge}`}
                   >
                     <MdAutoAwesome
                       size={15}
@@ -220,7 +220,7 @@ export default function HeroSection({ compData, onStart }) {
 
                 {compData?.media?.bottomBadge?.title && (
                   <div
-                    className={`position-absolute bg-white rounded-1 border border-light-gray px-3 py-2 d-flex align-items-start gap-2 shadow-sm z-3 ${styles.floatingBottomBadge}`}
+                    className={`position-absolute bg-white rounded-1 border border-light-gray px-3 py-2 d-flex align-items-start gap-2 shadow-sm ${styles.floatingBottomBadge}`}
                   >
                     <MdCheckCircleOutline
                       size={15}
@@ -277,7 +277,7 @@ export default function HeroSection({ compData, onStart }) {
                 <button
                   type="button"
                   className="btn border-0 bg-transparent p-1 font-primary"
-                  aria-label="Close video"
+                  aria-label={compData?.media?.closeVideoAriaLabel}
                   onClick={() => setIsModalOpen(false)}
                 >
                   <MdClose size={22} />
