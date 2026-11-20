@@ -41,22 +41,42 @@
       {
         "heading": "Set It Once",
         "img": "/img/home-page/invoicing-solution-that-saves-time.svg",
-        "description": "Create a recurring schedule once instead of recreating the same invoice or bill."
+        "description": "Create a recurring schedule once instead of recreating the same invoice or bill.",
+        "more_content": [
+          "Save the customer, items, and amounts once",
+          "Reuse the same template for every billing cycle",
+          "No more manual copy-paste each month"
+        ]
       },
       {
         "heading": "Flexible Schedules",
         "img": "/img/home-page/cloud-storage-for-your-data-synced.svg",
-        "description": "Choose daily, weekly, monthly, or a specific date every month."
+        "description": "Choose daily, weekly, monthly, or a specific date every month.",
+        "more_content": [
+          "Daily, weekly, or monthly frequencies",
+          "Pick a fixed date each month",
+          "Match your real billing cycle"
+        ]
       },
       {
         "heading": "Know What's Coming",
         "img": "/img/home-page/seamless-gst-compliance.svg",
-        "description": "Preview upcoming invoice dates in the schedule before confirming."
+        "description": "Preview upcoming invoice dates in the schedule before confirming.",
+        "more_content": [
+          "See the next invoice dates before you confirm",
+          "Catch schedule mistakes early",
+          "Plan cash flow with upcoming bills in view"
+        ]
       },
       {
         "heading": "Full Control",
         "img": "/img/home-page/track-your-business-performance-in-real-time.svg",
-        "description": "Set an end date or keep the schedule running, and stop, resume, or delete it whenever needed."
+        "description": "Set an end date or keep the schedule running, and stop, resume, or delete it whenever needed.",
+        "more_content": [
+          "Stop, resume, or delete anytime",
+          "Set an end date or keep it open-ended",
+          "Stay in control of every active schedule"
+        ]
       }
     ]
   },

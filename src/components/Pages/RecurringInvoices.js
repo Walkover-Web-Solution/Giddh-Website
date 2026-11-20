@@ -10,7 +10,7 @@ export default function RecurringInvoices({ pageData }) {
   return (
     <>
       <SplitBanner compData={pageData?.splitBanner} />
-      <GridFeatures features={pageData?.characteristics} />
+      <GridFeatures features={pageData?.characteristics} compact />
       <AlternateFeatures features={pageData?.features} />
       <QuickStartSection compData={pageData?.quickStartSection} />
       <EssentialFeatures compData={pageData?.useCases} />
