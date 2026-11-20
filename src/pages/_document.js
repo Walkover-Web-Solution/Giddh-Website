@@ -14,6 +14,7 @@ export default function Document() {
           }}
         />
          <script src="/js/helper.js" />
+         <script src="https://giddh-contact.embarko.app/embed.js" defer />
         <script
           src="https://main.d2f49esifpcbwh.amplifyapp.com/tracker.js"
           async
