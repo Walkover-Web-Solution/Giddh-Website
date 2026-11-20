@@ -16,7 +16,7 @@ export default function CertificationFlow({
 }) {
   const [flowPhase, setFlowPhase] = useState("mobile");
   const [mobile, setMobile] = useState("");
-  const countryCode = "91";
+  const countryCode = applyOverlay?.countryCode;
   const [learner, setLearner] = useState(null);
   const [isExamOpen, setIsExamOpen] = useState(false);
   const [examKey, setExamKey] = useState(0);
