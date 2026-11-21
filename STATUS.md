@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-21 · **Reviewed up to commit:** `6a8e2262`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-21 · **Reviewed up to commit:** `40310be5`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
