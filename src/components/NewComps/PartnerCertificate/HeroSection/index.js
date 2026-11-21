@@ -136,9 +136,9 @@ export default function HeroSection({ compData, onStart }) {
                     <Image
                       src={compData?.media?.image}
                       alt={compData?.media?.imageAlt}
-                      fill
-                      sizes="(max-width: 992px) 100vw, 480px"
-                      className="object-fit-cover"
+                      width={470}
+                      height={480}
+                      className={`w-100 h-100 object-fit-cover ${styles.mediaImage}`}
                       priority
                     />
                   )}

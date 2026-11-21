@@ -17,3 +17,8 @@
 .progressSegCurrent {
   background: color-mix(in srgb, var(--col-success) 55%, var(--col-light-gray));
 }
+
+.statusIcon {
+  width: 48px;
+  height: 48px;
+}
