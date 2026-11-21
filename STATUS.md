@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-18 · **Reviewed up to commit:** `ad5219f6`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-20 · **Reviewed up to commit:** `24e4afc8`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -13,7 +13,7 @@ A living scorecard of the repo against its plan. Every status below rests on cod
 | Area | ✅ | 🟡 | ⛔ | ⬜ | 🙈 | ❌ |
 |---|---|---|---|---|---|---|
 | Approved direction | 0 | 4 | 1 | 0 | 0 | 0 |
-| Current implementation | 0 | 12 | 0 | 0 | 0 | 0 |
+| Current implementation | 0 | 13 | 0 | 0 | 0 | 0 |
 | Proposals & roadmaps | 0 | 1 | 1 | 1 | 0 | 0 |
 | Audience (ICP) | 0 | 5 | 0 | 0 | 0 | 0 |
 | Value proposition | 0 | 8 | 0 | 0 | 0 | 0 |
@@ -60,6 +60,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | Invoice payment (Razorpay) | 🟡 | `src/pages/payment.js`; v1-invoice defect [Q-022](docs/OPEN_QUESTIONS.md#active-questions-table). |
 | Google login callback | 🟡 | `src/pages/googleauth.js`; origin check gap [Q-020](docs/OPEN_QUESTIONS.md#active-questions-table). |
 | MDX blog with Decap CMS | 🟡 | 253 posts in `_posts/blog/`; CMS use unconfirmed ([Q-014](docs/OPEN_QUESTIONS.md#active-questions-table)); image field and JSON-LD issues ([Q-025](docs/OPEN_QUESTIONS.md#active-questions-table), [Q-027](docs/OPEN_QUESTIONS.md#active-questions-table)). |
+| Contact Us / Contact Sales / Support popup (Embarko) | 🟡 | `src/pages/contact-us.js`, `src/components/bannerSection.js`, `embed.js` in `src/pages/_document.js`; replaces Typeform. Built, submit on desktop and mobile not yet verified live. |
 | Affiliate program | 🟡 | `src/pages/affiliate.js` and locale variants. |
 | Comparison and switching pages | 🟡 | `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`. |
 
@@ -164,6 +165,7 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-20 · Claude agent · Replaced Typeform with the Embarko contact app (Sales / Support `data-giddh-contact` buttons, CSP updated, `@typeform/embed` and `_typeform.scss` removed) · new row, 🟡
 - 2026-11-18 · Cursor agent · Renamed bank reconcile URL from `/conect-bank-reconcile` to `/connect-bank-reconcile` (pages, SEO, sitemap, links) and added 301s · Feature landing pages notes updated
 - 2026-11-16 · Cursor cloud agent · Weekly docs maintenance (merged PR #847 / #848): 406-page build, CSP ADR-015, partner `redirect_url`, coverage map · doc-only `[no status]`
 - 2026-11-02 · Cursor cloud agent · Moved "Reviewed up to commit" to `26494e62` (adds the `status:check` script to `package.json`) · none

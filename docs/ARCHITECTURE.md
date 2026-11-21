@@ -134,7 +134,7 @@ How `getPageData` resolves (`src/utils/getPageData.js:getPageData`):
 | Google OAuth | Sign up / log in with Google | Implicit-flow popup to `accounts.google.com`, then `googleapis.com/oauth2/v1/userinfo` | `src/components/googleLogin.js` (`NEXT_PUBLIC_GOOGLE_CLIENT_ID`), `src/pages/googleauth.js` |
 | Razorpay | Paying a Giddh invoice | `checkout.razorpay.com/v1/checkout.js` + `NEXT_PUBLIC_RAZORPAY_KEY` | `src/pages/payment.js` | <!-- verify:ignore -->
 | AWS S3 | Desktop app installers and the version YAML | Public URLs built from `NEXT_PUBLIC_S3_BASE_URL`, `NEXT_PUBLIC_S3_BUCKET_NAME`, `NEXT_PUBLIC_APP_ENV` | `src/utils/s3Config.js` ← `src/components/footer.js`, `src/components/downloadFreeModal.js` |
-| Typeform | "Contact sales" slider form | `@typeform/embed` `createSlider` | `src/pages/contact-us.js`, `src/components/bannerSection.js` |
+| Embarko contact app | "Contact Sales" / "Contact Support" popup | `embed.js` loaded in `_document.js`, buttons with `data-giddh-contact data-purpose` | `src/pages/contact-us.js`, `src/components/bannerSection.js` |
 | Calendly | "Book a demo" popup | Script and CSS injected on click | `public/js/helper.js:openCalendly` ← `src/pages/import-data.js`, `src/pages/invoice-software.js`, `src/pages/connect-bank-reconcile.js` and others |
 | Google Tag Manager | Tag container (`GTM-K2L9QG`) | `dataLayer` | `src/pages/_document.js` |
 | Amplify-hosted tracker | Unknown third-party tracker | `<script async>` | `src/pages/_document.js` |
