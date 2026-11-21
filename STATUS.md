@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-18 · **Reviewed up to commit:** `ad5219f6`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-18 · **Reviewed up to commit:** `24e4afc8`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -164,6 +164,7 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-20 · Claude agent · Replaced Typeform with the Embarko `giddh-contact` popup (`embed.js`, `data-giddh-contact`) on `/contact-us` (Sales and Support buttons) and the legacy banner; CSP updated; `@typeform/embed` removed · 🟡 built; not exercised against live Embarko or a production build
 - 2026-11-18 · Cursor agent · Renamed bank reconcile URL from `/conect-bank-reconcile` to `/connect-bank-reconcile` (pages, SEO, sitemap, links) and added 301s · Feature landing pages notes updated
 - 2026-11-16 · Cursor cloud agent · Weekly docs maintenance (merged PR #847 / #848): 406-page build, CSP ADR-015, partner `redirect_url`, coverage map · doc-only `[no status]`
 - 2026-11-02 · Cursor cloud agent · Moved "Reviewed up to commit" to `26494e62` (adds the `status:check` script to `package.json`) · none
