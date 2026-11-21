@@ -78,6 +78,11 @@
   }
 }
 
+.mediaImage {
+  position: absolute;
+  inset: 0;
+}
+
 .mediaOverlay {
   background: linear-gradient(
     to bottom,

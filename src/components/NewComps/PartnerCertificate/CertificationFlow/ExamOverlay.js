@@ -414,12 +414,11 @@ export default function ExamOverlay({
           {phase === "gate" && (
             <div className="d-flex flex-column align-items-center gap-3 text-center">
               <div
-                className={`rounded-circle d-inline-flex align-items-center justify-content-center ${
+                className={`${styles.statusIcon} rounded-circle d-inline-flex align-items-center justify-content-center ${
                   currentScore?.passed
                     ? "bg-light-green font-success"
                     : "bg-baby-pink font-danger"
                 }`}
-                style={{ width: 48, height: 48 }}
               >
                 {currentScore?.passed ? (
                   <MdCheck size={24} />
@@ -466,12 +465,11 @@ export default function ExamOverlay({
           {phase === "result" && (
             <div className="d-flex flex-column align-items-center gap-3 text-center">
               <div
-                className={`rounded-circle d-inline-flex align-items-center justify-content-center ${
+                className={`${styles.statusIcon} rounded-circle d-inline-flex align-items-center justify-content-center ${
                   allPassed
                     ? "bg-light-green font-success"
                     : "bg-baby-pink font-danger"
                 }`}
-                style={{ width: 48, height: 48 }}
               >
                 {allPassed ? (
                   <MdEmojiEvents size={24} />
