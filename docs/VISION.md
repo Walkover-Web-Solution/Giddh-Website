@@ -26,7 +26,7 @@ Sources used: the user's confirmation on 2026-10-24 (approved direction), `READM
   - JSON feature landing pages on `web` (merged PR #828, `63cb6ea0`, 2026-10-28): triggers, customer portal, magic-link-ledger-accounts, email-to-bank-sync, recurring-invoices, invoice-bill-scanning, salesperson-feature-report (global plus locale routes; copy in `src/data/pagesdata/`).
   - Also live: the MDX blog (`_posts/blog/`, 253 posts, Decap CMS), the affiliate program (`src/pages/affiliate.js`) and comparison and switching pages (`src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`).
   - Netlify `public/_headers` sends a site-wide Content-Security-Policy and related security headers (PRs #842 / #845, 2026-11); see [DECISIONS.md ADR-015](DECISIONS.md#adr-015-site-wide-content-security-policy-in-netlify-_headers).
-  - Contact Us and AE/UK home “Request a demo” / “Contact sales” open the Embarko contact app (`giddh-contact.embarko.app` via hosted `embed.js` in `src/pages/_document.js`), replacing the former Typeform slider (2026-11). <!-- verify:ignore -->
+  - Contact Us and AE/UK home “Request a demo” / “Contact sales” open the Embarko contact app (`giddh-contact.embarko.app` via `src/components/GiddhContactEmbed.js` on those routes), replacing the former Typeform slider (2026-11). <!-- verify:ignore -->
   - Mechanics are documented in [ARCHITECTURE.md](ARCHITECTURE.md) and [FLOWS.md](FLOWS.md).
 - **Proposals & Roadmaps** (unmerged remote branches; none is approved):
   - `origin/86d241cne-main` (2026-03-19) adds an FAQ page in every locale. <!-- verify:ignore -->

@@ -164,6 +164,7 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-21 · Cursor agent · PR #861 review: lazy-load Embarko on contact routes, UTM bridge (`giddh-contact-bridge.js`), Support button spacing · [no status]
 - 2026-11-21 · Cursor agent · Replaced Typeform contact slider with Embarko `giddh-contact.embarko.app` on Contact Us and AE/UK home banner · [no status]
 - 2026-11-18 · Cursor agent · Renamed bank reconcile URL from `/conect-bank-reconcile` to `/connect-bank-reconcile` (pages, SEO, sitemap, links) and added 301s · Feature landing pages notes updated
 - 2026-11-16 · Cursor cloud agent · Weekly docs maintenance (merged PR #847 / #848): 406-page build, CSP ADR-015, partner `redirect_url`, coverage map · doc-only `[no status]`

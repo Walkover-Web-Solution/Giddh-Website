@@ -1,5 +1,6 @@
 import { MdEmail, MdCall, MdWhatsapp } from "react-icons/md";
 import Head from "next/head";
+import GiddhContactEmbed from "@/components/GiddhContactEmbed";
 import Jsondata from "../data/schema/organizationSchema.json";
 import { getSchemaForLinkPath } from "../../public/js/utils";
 
@@ -16,6 +17,7 @@ const contactUs = (path) => {
 
   return (
     <>
+      <GiddhContactEmbed />
       {selectedSchema && (
         <Head>
           <script
@@ -142,7 +144,12 @@ const contactUs = (path) => {
                     <button type="button" onClick={() => openCalendly()}>
                       Schedule a meeting
                     </button>
-                    <button type="button" data-giddh-contact data-purpose="Support">
+                    <button
+                      type="button"
+                      data-giddh-contact
+                      data-purpose="Support"
+                      className="mt-0 mt-lg-2"
+                    >
                       Contact Support
                     </button>
                   </div>

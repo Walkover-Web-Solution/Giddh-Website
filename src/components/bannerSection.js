@@ -1,4 +1,5 @@
 import Head from "next/head";
+import GiddhContactEmbed from "@/components/GiddhContactEmbed";
 import Jsondata from "../data/schema/organizationSchema.json";
 import { getSchemaForLinkPath } from "../../public/js/utils";
 import Link from "next/link";
@@ -12,6 +13,7 @@ const bannerSection = (path) => {
 
   return (
     <>
+      <GiddhContactEmbed />
       {selectedSchema && (
         <Head>
           <script
