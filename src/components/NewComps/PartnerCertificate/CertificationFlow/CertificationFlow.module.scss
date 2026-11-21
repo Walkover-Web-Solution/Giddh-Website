@@ -1,0 +1,24 @@
+.progressTrack {
+  display: grid;
+  grid-template-columns: repeat(var(--segments), minmax(0, 1fr));
+  gap: 6px;
+}
+
+.progressSeg {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--col-light-gray);
+}
+
+.progressSegDone {
+  background: var(--col-success);
+}
+
+.progressSegCurrent {
+  background: color-mix(in srgb, var(--col-success) 55%, var(--col-light-gray));
+}
+
+.statusIcon {
+  width: 48px;
+  height: 48px;
+}

@@ -24,7 +24,8 @@ export default function getPageData(pageInfo) {
     "salesperson-feature-report",
     "customer-portal",
     "magic-link-ledger-accounts",
-    "triggers"
+    "triggers",
+    "giddh-partner-certificate"
   ];
   if (!pagesToGetData.includes(pageInfo?.page)) {
     return null;
