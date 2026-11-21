@@ -1,12 +1,10 @@
 import { MdEmail, MdCall, MdWhatsapp } from "react-icons/md";
-import { useState } from "react";
-import { createSlider } from "@typeform/embed";
 import Head from "next/head";
+import GiddhContactEmbed from "@/components/GiddhContactEmbed";
 import Jsondata from "../data/schema/organizationSchema.json";
 import { getSchemaForLinkPath } from "../../public/js/utils";
 
 const contactUs = (path) => {
-  const [utm, setUtm] = useState(null);
   const linkPath = path.path;
   const isUK = linkPath.isUK;
   const isAE = linkPath.isAE;
@@ -17,30 +15,9 @@ const contactUs = (path) => {
     Jsondata.organizationSchema
   );
 
-  const openTypeForm = () => {
-    const utmParams = new URLSearchParams({
-      utm_source: getLocalStorage("utm_source"),
-      utm_medium: getLocalStorage("utm_medium"),
-      utm_campaign: getLocalStorage("utm_campaign"),
-    }).toString();
-    setUtm(utmParams);
-    const slider = createSlider("https://form.typeform.com/to/uOtrQ4tb", {
-      position: "right", // Specify position ('left', 'center', 'right')
-      opacity: 83, // Background overlay opacity
-      iframeProps: {
-        title: "Accounting Software Company Contact Form", // Accessible iframe title
-      },
-      transitiveSearchParams: true, // Pass search params to Typeform
-      medium: "snippet", // Set the medium for analytics/tracking
-      hidden: {
-        utm: utm, // Pass the UTM parameters as hidden fields
-      },
-    });
-    slider.open(); // Opens the slider
-  };
-
   return (
     <>
+      <GiddhContactEmbed />
       {selectedSchema && (
         <Head>
           <script
@@ -124,10 +101,15 @@ const contactUs = (path) => {
                       </div>
                     )}
                   </address>
-                  <button onClick={() => openCalendly()}>
+                  <button type="button" onClick={() => openCalendly()}>
                     Schedule a meeting
                   </button>
-                  <button onClick={openTypeForm} className="mt-0 mt-lg-2">
+                  <button
+                    type="button"
+                    data-giddh-contact
+                    data-purpose="Sales"
+                    className="mt-0 mt-lg-2"
+                  >
                     Contact Sales
                   </button>
                 </div>
@@ -159,8 +141,16 @@ const contactUs = (path) => {
                         <a href="tel:+918818888768"> +91 88188 88768</a>
                       </div>
                     </address>
-                    <button onClick={() => openCalendly()}>
+                    <button type="button" onClick={() => openCalendly()}>
                       Schedule a meeting
+                    </button>
+                    <button
+                      type="button"
+                      data-giddh-contact
+                      data-purpose="Support"
+                      className="mt-0 mt-lg-2"
+                    >
+                      Contact Support
                     </button>
                   </div>
                 </div>

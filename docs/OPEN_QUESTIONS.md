@@ -46,6 +46,7 @@ and delete the row.
 | Q-031 | `web` has not been promoted to `main` since February | git history | The user-confirmed flow is `web` → `main`, but the last such PR was #737 (`b7eb090b`, 2026-02-25). Since then `main` has been fed by `<id>-main` branches, and `web` is 180 commits ahead of `origin/main` as of 2026-11-16 (e.g. `66a7f148`, the `/triggers` and `/customer-portal` pages, is not on `origin/main`) | Release owner decides when to promote, and whether direct `-main` hotfixes are the norm |
 | Q-032 | `public/_redirects` editing traps | `public/_redirects` | 6 source paths appear twice (Netlify uses the first match), and the file has no trailing newline, so appending with `echo >>` corrupts the last rule | Deduplicate and add a trailing newline in a dedicated redirects PR, checked on a Netlify deploy preview |
 | Q-017 | Why locale folders instead of Next i18n, and `_headers` instead of `next.config.js` headers? | `src/pages/{in,ae,uk}/`, `public/_headers` | No commit records the reason ([DECISIONS.md](DECISIONS.md)) | Ask the original authors. Record the answer as an ADR |
+| Q-033 | Should Embarko `embed.js` read persisted UTMs natively? | `public/js/giddh-contact-bridge.js`, `src/components/GiddhContactEmbed.js` | The hosted embed only forwards `utm_*` on the current URL. The site bridges with `history.replaceState` + `getLocalStorage` until Embarko supports `open({ utm })` or `data-utm-*` | Embarko adds first-class UTM/localStorage support; then remove the bridge |
 
 ---
 
