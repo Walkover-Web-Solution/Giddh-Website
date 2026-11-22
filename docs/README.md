@@ -1,12 +1,12 @@
 ---
-verified_at: ad5219f6
-verified_on: 2026-11-16
+verified_at: 9b1c5d11
+verified_on: 2026-11-22
 ---
 # Docs index
 
 Written for AI coding agents and new engineers; start at [../AGENTS.md](../AGENTS.md). Every claim was checked against the code at the commit in each doc's frontmatter. Run `python3 scripts/vendor/ai-docs/verify_docs.py .` to check them again, and `python3 scripts/vendor/ai-docs/affected_docs.py .` to see which docs your change may have outdated.
 
-**Weekly maintenance state:** reviewed revision `ad5219f6` (2026-11-16), coverage map and unfinished items in [.ai-docs.json](.ai-docs.json).
+**Weekly maintenance state:** reviewed revision `9b1c5d11` (2026-11-22), coverage map and unfinished items in [.ai-docs.json](.ai-docs.json).
 
 | Doc | Read it when |
 |---|---|
@@ -24,9 +24,9 @@ Written for AI coding agents and new engineers; start at [../AGENTS.md](../AGENT
 
 | Field | Value |
 |---|---|
-| Last reviewed revision | `ad5219f6` (`web`, 2026-11-16) |
-| Previous reviewed revision | `207fbc59` (2026-10-24 ai-docs prep) |
-| Commits between them | 40 (feature JSON merge, NDA policy, CSP headers, login `redirect_url`, footer preview installers, STATUS tracker, experiment helpers) |
+| Last reviewed revision | `9b1c5d11` (`web`, 2026-11-22) |
+| Previous reviewed revision | `ad5219f6` (2026-11-16 weekly maintenance) |
+| Commits between them | 20 (Embarko contact replaces Typeform, Giddh Partner Certificate + API BFF, bank-reconcile URL fix, STATUS bumps) |
 
 ### Coverage map
 
@@ -34,7 +34,7 @@ Status is **verified** when `python3 scripts/vendor/ai-docs/verify_docs.py .` re
 
 | Topic | Authoritative location | Status |
 |---|---|---|
-| Product purpose, ICP, non-goals | [VISION.md](VISION.md) | partial (success metrics unconfirmed) |
+| Product purpose, ICP, non-goals | [VISION.md](VISION.md) | partial (success metrics unconfirmed; Q-034 API-route exception) |
 | Feature journeys / funnels | [FLOWS.md](FLOWS.md) | verified |
 | Architecture & module map | [ARCHITECTURE.md](ARCHITECTURE.md) | verified |
 | API & third-party contracts | [CONTRACTS.md](CONTRACTS.md) | verified |
@@ -51,8 +51,10 @@ Status is **verified** when `python3 scripts/vendor/ai-docs/verify_docs.py .` re
 
 ### Unfinished for the next run
 
+- Confirm whether `src/pages/api/giddh-cert/*` is an approved BFF pattern ([Q-034](OPEN_QUESTIONS.md#active-questions-table)).
 - Confirm success metrics and IN vs AE vs UK priority ([VISION.md](VISION.md#strategic-priorities--success-measures)).
 - Pin Netlify Node version and record where env values live ([DEVELOPMENT.md](DEVELOPMENT.md#prerequisites--runtime-environment)).
+- Add `/giddh-partner-certificate` to `public/sitemap.xml` or automate sitemap generation ([Q-009](OPEN_QUESTIONS.md#active-questions-table)).
 - Reconcile `web` vs `main` promotion status after the next promote ([Q-031](OPEN_QUESTIONS.md#active-questions-table)).
 - Owner for amplifyapp tracker and CookieYes via GTM ([ARCHITECTURE.md](ARCHITECTURE.md#external-systems--dependencies)).
 

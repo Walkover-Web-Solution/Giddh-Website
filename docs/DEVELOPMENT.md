@@ -1,7 +1,7 @@
 ---
 covers: ["package.json", "next.config.js", "jsconfig.json", ".prettierrc", ".gitignore", "public/_redirects", "public/_headers", "public/admin/**"]
-verified_at: ad5219f6
-verified_on: 2026-11-16
+verified_at: 9b1c5d11
+verified_on: 2026-11-22
 ---
 # Development & Verification Guide
 
@@ -53,7 +53,7 @@ All 13 variables are client-exposed. No variable has a server-only reader. "Requ
 |---|---|---|---|---|
 | **Core URLs** | | | | |
 | `NEXT_PUBLIC_SITE_URL` | yes | `https://giddh.com`, but only in `src/pages/_app.js:MyApp` (`path.baseURL`) | `src/components/header.js:Header` (canonical, `og:image`), `src/pages/blog/[slug].js:BlogPage` (`og:image`), `src/utils/getBlogSchema.js:getBlogSchema` and `generateBlogSchema`, `src/components/googleLogin.js` (redirect URI), `src/pages/v2/login.js` | Public origin of the site. Only `path.baseURL` (the navbar country switcher in `src/components/navbar.js`) has a fallback. Everywhere else, unset renders `undefined/...` canonicals and OG images. The hand-written entries in `src/data/blogSchema.json` are matched by `${NEXT_PUBLIC_SITE_URL}/blog/<slug>` against URLs written as `https://giddh.com/blog/...`, so any other value silently falls back to the generated schema. |
-| `NEXT_PUBLIC_API_URL` | yes | — | `src/pages/signup.js`, `src/pages/login.js`, `src/pages/v2/login.js`, `src/pages/chartered-accountant-signup.js`, `src/components/otpVerifyModal.js`, `src/pages/pricing.js`, `src/pages/payment.js`, `src/utils/affiliateRegistration.js:AFFILIATE_REGISTER_URL` | Giddh API base URL for every non-UK call. Unset → requests hit `undefined/...` on the site's own origin and return 404: no pricing plans, login, signup, OTP, invoice payment or affiliate registration. Endpoints are in [CONTRACTS.md](CONTRACTS.md). |
+| `NEXT_PUBLIC_API_URL` | yes | — | Browser: `src/pages/signup.js`, `src/pages/login.js`, `src/pages/v2/login.js`, `src/pages/chartered-accountant-signup.js`, `src/components/otpVerifyModal.js`, `src/pages/pricing.js`, `src/pages/payment.js`, `src/utils/affiliateRegistration.js:AFFILIATE_REGISTER_URL`. **Server (Netlify):** `src/utils/giddhCert/serverApi.js` for `/api/giddh-cert/*` → `/public/giddh-cert/*` | Giddh API base URL for every non-UK call. Unset → browser requests hit `undefined/...` and return 404; partner-certificate API routes also fail at runtime. Endpoints are in [CONTRACTS.md](CONTRACTS.md). |
 | `NEXT_PUBLIC_UK_API_URL` | yes for `/uk` | — | the same auth files as above, used when `path.isUK` | Giddh API base for UK-region auth (register, OTP, login). `pricing.js`, `payment.js` and `affiliateRegistration.js` always use `NEXT_PUBLIC_API_URL`, even on `/uk`. |
 | `NEXT_PUBLIC_APP_URL` | yes | — | `src/utils/signupHelpers.js:handleOtpVerifyRedirect`, `src/pages/signup.js`, `src/pages/login.js`, `src/pages/v2/login.js`, `src/pages/chartered-accountant-signup.js` | The Giddh web app that users are sent to after login or signup (`/token-verify?...`). Unset → the browser navigates to a relative `undefined/token-verify...` and gets a 404. |
 | `NEXT_PUBLIC_APP_ENV` | no | — | `src/utils/s3Config.js:getEnvName` | Path segment in desktop-app download URLs. The value `test` switches the installer name to `giddh-test-setup`. Unset → the URL contains `/undefined/`. |
@@ -86,11 +86,11 @@ Read env vars as the literal `process.env.NEXT_PUBLIC_X`. Next only inlines lite
 ## Build & Preview Verification
 
 ```bash
-npm run build      # next build (Turbopack); ~406 prerendered pages
+npm run build      # next build (Turbopack); ~407 prerendered routes
 npm run start      # next start -p 8080, serves the production build
 ```
 Expected build output:
-- 406 static pages.
+- 407 prerendered routes (403 static/SSG marketing and blog pages, two dynamic blog listing routes, four `ƒ /api/giddh-cert/*` handlers).
 - One Sass deprecation warning: `map-has-key` in `src/scss/mixins.scss` (pre-existing; ignore it, but don't add new ones).
 - Locally, possibly a warning about a `package-lock.json` outside the repo (machine-specific).
 

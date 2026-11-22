@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-21 · **Reviewed up to commit:** `40310be5`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-22 · **Reviewed up to commit:** `9b1c5d11`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -32,7 +32,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | 1. Acquire chartered accountants | 🟡 | `src/pages/chartered-accountant-signup.js` collects the MRN, but it never reaches `/v2/register` ([Q-029](docs/OPEN_QUESTIONS.md#active-questions-table)). Global only, no locale variants. |
 | 2. Partner-led growth (affiliates) | 🟡 | `src/pages/affiliate.js` plus `in`/`ae`/`uk` variants and `src/data/pagesdata/*/affiliate.json`. Live form not exercised (no sandbox). |
 | 3. Organic search | 🟡 | 253 MDX posts in `_posts/blog/`, about 2,000 rules in `public/_redirects`. Sitemap stale ([Q-009](docs/OPEN_QUESTIONS.md#active-questions-table)), metadata errors ([Q-008](docs/OPEN_QUESTIONS.md#active-questions-table)). |
-| 4. Feature landing pages and comparisons | 🟡 | 25 page types in `src/components/Pages/`; comparison pages `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`. Bank reconcile slug corrected to `/connect-bank-reconcile` (all locales) with 301s from `/conect-bank-reconcile`. Several feature pages are on `web` only, not production (Q-031). |
+| 4. Feature landing pages and comparisons | 🟡 | 26 page types in `src/components/Pages/` (includes `PartnerCertificate.js`); comparison pages `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`. Bank reconcile slug `/connect-bank-reconcile` (all locales) with 301s from `/conect-bank-reconcile`. Several feature pages are on `web` only, not production (Q-031). |
 
 ## Scope items
 
@@ -42,7 +42,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 |---|---|---|
 | ICP: SMBs in India, UAE, UK plus chartered accountants | 🟡 | Locale trees `src/pages/in/` (35 pages), `src/pages/ae/` (32), `src/pages/uk/` (32) and a CA landing page exist. |
 | No accounting product logic in this repo | 🟡 | Held as far as found: pages describe features and hand off to `NEXT_PUBLIC_APP_URL`. Not audited line by line. |
-| No backend or API routes of its own | 🟡 | Held: `src/pages/api/` does not exist. |
+| No backend or API routes of its own | ⛔ | Breached: four `src/pages/api/giddh-cert/*` BFF handlers for partner certificate (2026-11). Pending decision [Q-034](docs/OPEN_QUESTIONS.md#active-questions-table). |
 | Pages static and SEO-first | ⛔ | Breached by browser-fetched pricing in `src/pages/pricing.js` (`useEffect` fetch of `/v2/subscription/plans/all`), blocked on a decision ([Q-003](docs/OPEN_QUESTIONS.md#active-questions-table)). Also [Q-028](docs/OPEN_QUESTIONS.md#active-questions-table), [Q-021](docs/OPEN_QUESTIONS.md#active-questions-table). |
 | Release flow `<id>-web` → `web` → `main` | 🟡 | Followed for PRs into `web`, but `web` has not been promoted since 2026-02-25 ([Q-031](docs/OPEN_QUESTIONS.md#active-questions-table)). A PR status check now runs (`.github/workflows/status-check.yml`). |
 
@@ -50,7 +50,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 
 | Item | Status | Notes |
 |---|---|---|
-| Global locale tree (38 page files) | 🟡 | +1 `nda-policy` since the plan text (`ad5219f6`). |
+| Global locale tree (39 page files) | 🟡 | +`giddh-partner-certificate`, +`nda-policy` since early plan text. |
 | `in` / `ae` / `uk` locale trees (36 / 33 / 33) | 🟡 | +1 `nda-policy` per locale. |
 | India-only pages: GST, e-invoice, bank integration, Tally migration | 🟡 | `src/pages/in/gst.js`, `src/pages/in/e-invoice.js`, `src/pages/in/bank-integration.js`, `src/pages/in/tally-to-giddh-migration.js`. |
 | UAE and UK VAT pages | 🟡 | `src/pages/ae/vat.js`, `src/pages/uk/vat.js`. |
@@ -62,6 +62,8 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | MDX blog with Decap CMS | 🟡 | 253 posts in `_posts/blog/`; CMS use unconfirmed ([Q-014](docs/OPEN_QUESTIONS.md#active-questions-table)); image field and JSON-LD issues ([Q-025](docs/OPEN_QUESTIONS.md#active-questions-table), [Q-027](docs/OPEN_QUESTIONS.md#active-questions-table)). |
 | Affiliate program | 🟡 | `src/pages/affiliate.js` and locale variants. |
 | Comparison and switching pages | 🟡 | `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`. |
+| Giddh Partner Certificate (`/giddh-partner-certificate`) | 🟡 | Global only; exam + four API BFF routes. Live form not exercised (no sandbox). [Q-034](docs/OPEN_QUESTIONS.md#active-questions-table). |
+| Embarko contact (replaces Typeform on Contact Us + AE/UK home) | 🟡 | `src/components/GiddhContactEmbed.js`, `public/js/giddh-contact-bridge.js`. Not submitted against production. |
 
 ### Proposals & roadmaps
 
@@ -117,7 +119,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | Item | Status | Notes |
 |---|---|---|
 | No accounting logic | 🟡 | Held (see Approved direction). |
-| No new backend or API routes | 🟡 | Held: no `src/pages/api/`. |
+| No new backend or API routes | ⛔ | Breached by `src/pages/api/giddh-cert/*` ([Q-034](docs/OPEN_QUESTIONS.md#active-questions-table)). |
 | No client-only marketing content | 🟡 | Held except the known pricing and FAQ-schema cases above. |
 | No mock endpoints or fake form success | 🟡 | None found in the files reviewed for this scorecard; not exhaustively audited. |
 | No GST copy on UAE / UK pages | ⛔ | Breached in metadata ([Q-008](docs/OPEN_QUESTIONS.md#active-questions-table)). |
@@ -129,8 +131,8 @@ The repo has no automated tests or working lint. These are the checks that exist
 
 | Check | Status | Notes |
 |---|---|---|
-| `npm run build` | 🟡 | Passes at `ad5219f6`: 406 static pages, one Sass `map-has-key` warning (run 2026-11-16, no env vars). |
-| `python3 scripts/vendor/ai-docs/verify_docs.py .` | 🟡 | 0 errors, 5 warnings (all the gitignored `package-lock.json`). |
+| `npm run build` | 🟡 | Passes at `9b1c5d11`: 407 prerendered routes, one Sass `map-has-key` warning (run 2026-11-22, no env vars). |
+| `python3 scripts/vendor/ai-docs/verify_docs.py .` | 🟡 | 0 errors; warnings for gitignored `package-lock.json` refs and external Embarko embed URL (run 2026-11-22). |
 | `npm run status:check` | 🟡 | Runs on every PR via `.github/workflows/status-check.yml`; not yet seen on a real PR. |
 | Browser check of touched pages and locale variants | ⬜ | Manual, per change; see [DEVELOPMENT.md](docs/DEVELOPMENT.md#how-an-agent-checks-its-work-verification-checklist). |
 | Live form submissions (signup, OTP, demo, affiliate, payment) | ⛔ | No sandbox or test credentials exist; agents must not submit against production. |
@@ -164,6 +166,8 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-22 · Cursor cloud agent · Weekly docs maintenance at `9b1c5d11`: partner certificate BFF, 407-route build, Q-034 · Approved direction / non-goals API-route rows, implementation rows, build check · doc-only `[no status]`
+- 2026-11-21 · Pallavi / team · PR #851: Giddh Partner Certificate page + `src/pages/api/giddh-cert/*` · New implementation row; API non-goal ⛔ (Q-034)
 - 2026-11-21 · Cursor agent · PR #861 review: lazy-load Embarko on contact routes, UTM bridge (`giddh-contact-bridge.js`), Support button spacing · [no status]
 - 2026-11-21 · Cursor agent · Replaced Typeform contact slider with Embarko `giddh-contact.embarko.app` on Contact Us and AE/UK home banner · [no status]
 - 2026-11-18 · Cursor agent · Renamed bank reconcile URL from `/conect-bank-reconcile` to `/connect-bank-reconcile` (pages, SEO, sitemap, links) and added 301s · Feature landing pages notes updated
