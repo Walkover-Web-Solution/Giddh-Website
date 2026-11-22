@@ -1,7 +1,7 @@
 ---
 covers: ["*"]
-verified_at: ad5219f6
-verified_on: 2026-11-16
+verified_at: 9b1c5d11
+verified_on: 2026-11-22
 ---
 # Product Vision & Strategic Direction
 
@@ -18,15 +18,16 @@ Sources used: the user's confirmation on 2026-10-24 (approved direction), `READM
   - Pages stay static and SEO-first: marketing content is never rendered client-only.
   - Release flow: `<clickup-id>-web` → `web` (Netlify test site) → `main` (production giddh.com). See [DEVELOPMENT.md](DEVELOPMENT.md).
   - The only company-level purpose statement in the sources is in `src/pages/about.js`, as stated on the site: "provide technologies to organizations that enables them to take data driven financial decisions in the quickest way possible."
-- **Current Implementation** (at `ad5219f6`):
-  - Four locale trees: global (`src/pages/`, 38 top-level page files besides `_app`/`_document`/`404`), `src/pages/in/` (36), `src/pages/ae/` (33) and `src/pages/uk/` (33). `npm run build` prerenders 406 pages (2026-11-16).
+- **Current Implementation** (at `9b1c5d11`):
+  - Four locale trees: global (`src/pages/`, 39 top-level page files besides `_app`/`_document`/`404`), `src/pages/in/` (36), `src/pages/ae/` (33) and `src/pages/uk/` (33). `npm run build` prerenders 407 pages (2026-11-22).
   - India-only pages: `src/pages/in/gst.js`, `src/pages/in/e-invoice.js`, `src/pages/in/bank-integration.js` and `src/pages/in/tally-to-giddh-migration.js`. UAE and UK only: `src/pages/ae/vat.js` and `src/pages/uk/vat.js`.
   - Global-only funnel pages: `src/pages/chartered-accountant-signup.js`, `src/pages/online-accounting-software.js` (demo landing page), `src/pages/thank-you.js`, `src/pages/payment.js` (Razorpay checkout) and `src/pages/googleauth.js`.
   - Policy pages in every locale: `nda-policy` (`src/pages/nda-policy.js` plus `in`/`ae`/`uk` wrappers, added 2026-10), alongside existing `privacy-policy` and `terms`.
   - JSON feature landing pages on `web` (merged PR #828, `63cb6ea0`, 2026-10-28): triggers, customer portal, magic-link-ledger-accounts, email-to-bank-sync, recurring-invoices, invoice-bill-scanning, salesperson-feature-report (global plus locale routes; copy in `src/data/pagesdata/`).
   - Also live: the MDX blog (`_posts/blog/`, 253 posts, Decap CMS), the affiliate program (`src/pages/affiliate.js`) and comparison and switching pages (`src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`).
   - Netlify `public/_headers` sends a site-wide Content-Security-Policy and related security headers (PRs #842 / #845, 2026-11); see [DECISIONS.md ADR-015](DECISIONS.md#adr-015-site-wide-content-security-policy-in-netlify-_headers).
-  - Contact Us and AE/UK home “Request a demo” / “Contact sales” open the Embarko contact app (`giddh-contact.embarko.app` via `src/components/GiddhContactEmbed.js` on those routes), replacing the former Typeform slider (2026-11). <!-- verify:ignore -->
+  - Contact Us and AE/UK home “Request a demo” / “Contact sales” open the Embarko contact app (`giddh-contact.embarko.app` via `src/components/GiddhContactEmbed.js` on those routes), replacing the former Typeform slider (PR #861, 2026-11). <!-- verify:ignore -->
+  - GIDDH Partner Certificate (`/giddh-partner-certificate`, global only, PR #851 / `ba8e8474`, 2026-11): JSON marketing page plus an in-browser course (questions in `src/data/giddh-cert/questions.json`), MSG91 mobile OTP, and thin Next.js API proxies under `src/pages/api/giddh-cert/` to `NEXT_PUBLIC_API_URL/public/giddh-cert/*`. See [FLOWS.md](FLOWS.md) and [CONTRACTS.md](CONTRACTS.md#giddh-partner-certificate-nextjs-api-proxies).
   - Mechanics are documented in [ARCHITECTURE.md](ARCHITECTURE.md) and [FLOWS.md](FLOWS.md).
 - **Proposals & Roadmaps** (unmerged remote branches; none is approved):
   - `origin/86d241cne-main` (2026-03-19) adds an FAQ page in every locale. <!-- verify:ignore -->
@@ -84,7 +85,7 @@ Everything in this table is what the site says about itself, not confirmed compa
 
 - **Explicit Non-Goal:**
   - No accounting or product logic: no ledgers, GST calculation or invoicing engines in this repo.
-  - No new backend or API routes: the repo has no `api/` folder, and that must not change, even though `README.md` mentions "app - for APIs", a leftover. <!-- verify:ignore -->
+  - No new backend or API routes: agents must not add `src/pages/api/` routes except the existing Giddh-cert proxies ([Q-034](OPEN_QUESTIONS.md#active-questions-table)). `README.md` still mentions "app - for APIs" as a leftover. <!-- verify:ignore -->
   - No client-only rendering of marketing content.
 - **Anti-Patterns:**
   - Hardcoding numbers that belong to the API, such as prices or plans.

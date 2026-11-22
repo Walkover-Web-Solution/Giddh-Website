@@ -1,7 +1,7 @@
 ---
-covers: ["src/pages/signup.js", "src/pages/chartered-accountant-signup.js", "src/pages/login.js", "src/pages/v2/login.js", "src/pages/googleauth.js", "src/pages/pricing.js", "src/pages/payment.js", "src/pages/thank-you.js", "src/components/otp*.js", "src/components/googleLogin.js", "src/components/loginWithPassword.js", "src/components/NewComps/BookFreeDemoForm/**", "src/components/NewComps/AffiliateForm/**", "src/hooks/**", "src/utils/**"]
-verified_at: ad5219f6
-verified_on: 2026-11-16
+covers: ["src/pages/signup.js", "src/pages/chartered-accountant-signup.js", "src/pages/login.js", "src/pages/v2/login.js", "src/pages/googleauth.js", "src/pages/pricing.js", "src/pages/payment.js", "src/pages/thank-you.js", "src/pages/giddh-partner-certificate.js", "src/pages/contact-us.js", "src/pages/api/giddh-cert/**", "src/components/otp*.js", "src/components/googleLogin.js", "src/components/loginWithPassword.js", "src/components/bannerSection.js", "src/components/GiddhContactEmbed.js", "src/components/NewComps/BookFreeDemoForm/**", "src/components/NewComps/AffiliateForm/**", "src/components/NewComps/PartnerCertificate/**", "src/hooks/**", "src/utils/**", "public/js/giddh-contact-bridge.js"]
+verified_at: 9b1c5d11
+verified_on: 2026-11-22
 ---
 # User Flows & Critical Journeys
 
@@ -28,6 +28,8 @@ Shared plumbing every flow below relies on:
 | Pricing | `/pricing` (+ locale variants) | Visitor picks a plan → `/signup` or Calendly | `src/pages/pricing.js` |
 | Invoice payment | `/payment?token=…&voucherVersion=1\|2` (link from a Giddh invoice) | Razorpay payment recorded on the invoice | `src/pages/payment.js:payInvoice` |
 | Affiliate registration | `/affiliate` (+ locale variants) | Affiliate request submitted (toast, no redirect) | `src/components/NewComps/AffiliateForm/index.js:AffiliateForm` |
+| GIDDH Partner Certificate | `/giddh-partner-certificate` | Learner verified by mobile OTP, passes modules, certificate PDF from Giddh API | `src/components/NewComps/PartnerCertificate/CertificationFlow/index.js` |
+| Contact / sales (Embarko) | `/contact-us`, AE/UK home banners (`data-giddh-contact`) | Embarko contact popup opens with Sales or Support purpose | `src/components/GiddhContactEmbed.js`, `public/js/giddh-contact-bridge.js` |
 | Blog reading | `/blog`, `/blog/tags/<tag>`, `/blog/<slug>` | Post read | `src/pages/blog/[slug].js` |
 | Locale switch | Navbar country dropdown | Locale home page | `src/components/navbar.js` |
 
@@ -309,6 +311,47 @@ sequenceDiagram
 
 > [!NOTE]
 > `src/utils/s3Config.js` is not part of this flow and does no uploads. It builds desktop-app download URLs and reads the app version from the S3 `latest.yml` / `latest-mac.yml` <!-- verify:ignore --> for `src/components/footer.js` and `src/components/downloadFreeModal.js`.
+
+---
+
+## Detailed Journey: GIDDH Partner Certificate (brief)
+
+### 1. Happy Path Sequence
+
+`/giddh-partner-certificate` → marketing sections from `src/data/pagesdata/global/giddh-partner-certificate.json` → "Start the course" → `CertificationFlow` overlay → Indian mobile + MSG91 OTP → `POST /api/giddh-cert/verify-otp` (sets `giddh_cert_session`) → registration form → `POST /api/giddh-cert/profile` → module quizzes from `src/data/giddh-cert/questions.json` → `POST /api/giddh-cert/result` → certificate view → `GET /api/giddh-cert/download` opens the PDF. No redirect to the Giddh app.
+
+### 2. Step-by-Step Path & Code Connections
+
+1. **Route:** global only (`src/pages/giddh-partner-certificate.js` → `src/components/Pages/PartnerCertificate.js`). Navbar/footer stay visible.
+2. **OTP:** same MSG91 widget as signup (`src/utils/msg91Otp.js:initOtpWidget`). After `window.verifyOtp`, `src/utils/giddhCert/clientApi.js:startSession` calls the Next proxy, not the Giddh API directly.
+3. **Resume logic:** `verify-otp` returns `resumeScreen` (`certificate`, `test`, `registration`, or `blocked` with `nextAttemptAt`) so returning learners skip steps.
+4. **Exam:** questions never leave the browser until submit; pass threshold 70% per module and overall (`src/utils/giddhCert/constants.js`).
+
+### 3. Failure Modes
+
+| Failure | UI |
+|---|---|
+| Invalid Indian mobile | Inline validation before OTP send |
+| `canAttempt === false` | Toast with server `message`; overlay stays closed |
+| Missing session on profile/result | 401 from proxy → toast |
+| API/network error | Toast via `showToaster` |
+
+> [!NOTE]
+> This is the only funnel that depends on `src/pages/api/giddh-cert/*`. Agents must not add similar proxies without updating [VISION.md](VISION.md) and [Q-034](OPEN_QUESTIONS.md#active-questions-table).
+
+---
+
+## Detailed Journey: Contact / sales via Embarko (brief)
+
+### 1. Happy Path Sequence
+
+User opens `/contact-us` or clicks a CTA on AE/UK legacy home (`src/components/bannerSection.js`) with `data-giddh-contact` and `data-purpose` (`Sales` or `Support`) → `https://giddh-contact.embarko.app/embed.js` (lazy-loaded via `GiddhContactEmbed`) opens the popup → optional UTM merge in `public/js/giddh-contact-bridge.js` before open.
+
+### 2. Code Connections
+
+- Scripts load with `next/script` `strategy="lazyOnload"` (not on every page; only where `GiddhContactEmbed` mounts).
+- UTM bridge patches `window.GiddhContact.open` to copy missing `utm_*` from `getLocalStorage` into `location.search` briefly (`history.replaceState`), matching attribution behaviour the old Typeform slider had ([Q-033](OPEN_QUESTIONS.md#active-questions-table)).
+- Contract: [CONTRACTS.md](CONTRACTS.md) embed row.
 
 ---
 

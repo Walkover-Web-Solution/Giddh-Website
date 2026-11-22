@@ -1,7 +1,7 @@
 ---
 covers: ["package.json", "next.config.js", "jsconfig.json", ".prettierrc", ".gitignore", "public/_redirects", "public/_headers", "public/admin/**"]
-verified_at: ad5219f6
-verified_on: 2026-11-16
+verified_at: 9b1c5d11
+verified_on: 2026-11-22
 ---
 # Development & Verification Guide
 
@@ -86,11 +86,11 @@ Read env vars as the literal `process.env.NEXT_PUBLIC_X`. Next only inlines lite
 ## Build & Preview Verification
 
 ```bash
-npm run build      # next build (Turbopack); ~406 prerendered pages
+npm run build      # next build (Turbopack); ~407 prerendered pages
 npm run start      # next start -p 8080, serves the production build
 ```
 Expected build output:
-- 406 static pages.
+- 407 static pages.
 - One Sass deprecation warning: `map-has-key` in `src/scss/mixins.scss` (pre-existing; ignore it, but don't add new ones).
 - Locally, possibly a warning about a `package-lock.json` outside the repo (machine-specific).
 
