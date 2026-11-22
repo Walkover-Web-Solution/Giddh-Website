@@ -1,11 +1,11 @@
 ---
-covers: ["src/utils/**", "src/hooks/**", "src/pages/**/login.js", "src/pages/**/signup.js", "src/pages/chartered-accountant-signup.js", "src/pages/pricing.js", "src/pages/payment.js", "src/components/otp*.js", "src/components/googleLogin.js", "src/components/loginWithPassword.js", "src/components/NewComps/BookFreeDemoForm/**", "src/components/NewComps/AffiliateForm/**", "src/data/pagesdata/**", "_posts/**", "public/admin/config.yml", "public/js/**", "src/pages/_document.js"]
-verified_at: ad5219f6
-verified_on: 2026-11-16
+covers: ["src/utils/**", "src/utils/giddhCert/**", "src/hooks/**", "src/pages/**/login.js", "src/pages/**/signup.js", "src/pages/chartered-accountant-signup.js", "src/pages/giddh-partner-certificate.js", "src/pages/api/giddh-cert/**", "src/pages/pricing.js", "src/pages/payment.js", "src/components/otp*.js", "src/components/googleLogin.js", "src/components/loginWithPassword.js", "src/components/NewComps/BookFreeDemoForm/**", "src/components/NewComps/AffiliateForm/**", "src/components/NewComps/PartnerCertificate/**", "src/data/pagesdata/**", "src/data/giddh-cert/**", "_posts/**", "public/admin/config.yml", "public/js/**", "src/pages/_document.js"]
+verified_at: 9b1c5d11
+verified_on: 2026-11-22
 ---
 # Contracts & Data Schemas
 
-This file lists every network call, cookie, storage key, analytics hook and content JSON shape the website depends on. The repo has no TypeScript, no API client module and no shared types. Each `fetch` is written inline in the page or component that uses it, so the authoritative contract is the request the code builds and the response fields it reads. Both are cited below. Env var names appear here only as references; their meaning and defaults live in [DEVELOPMENT.md](DEVELOPMENT.md). Journeys and step order are in [FLOWS.md](FLOWS.md), and the `pageData` pipeline is in [ARCHITECTURE.md](ARCHITECTURE.md).
+This file lists every network call, cookie, storage key, analytics hook and content JSON shape the website depends on. The repo has no TypeScript, no API client module and no shared types. Each `fetch` is written inline in the page or component that uses it (or in the four `src/pages/api/giddh-cert/*` handlers), so the authoritative contract is the request the code builds and the response fields it reads. Both are cited below. Env var names appear here only as references; their meaning and defaults live in [DEVELOPMENT.md](DEVELOPMENT.md). Journeys and step order are in [FLOWS.md](FLOWS.md), and the `pageData` pipeline is in [ARCHITECTURE.md](ARCHITECTURE.md).
 
 ## Authoritative Type Definitions
 
@@ -23,9 +23,22 @@ No TS types exist. The table names where each JSON shape is defined de facto.
 
 ## Backend API Endpoints & Contracts
 
-All calls run in the browser, client-side (`mode: "cors"`, `cache: "no-store"` on the auth calls). None send cookies or credentials. The site has no Next.js API routes of its own.
+Most Giddh calls run in the browser (`mode: "cors"`, `cache: "no-store"` on the auth calls). None send cookies or credentials except the partner-certificate flow below. The partner-certificate page also uses four Next.js API routes as a BFF.
 
-### Giddh API
+### Next.js API routes (Giddh Partner Certificate BFF)
+
+`src/pages/giddh-partner-certificate.js` (global only) renders `src/components/Pages/PartnerCertificate.js`. The in-page exam calls same-origin `/api/giddh-cert/*`, which proxy to `${NEXT_PUBLIC_API_URL}/public/giddh-cert/*` with server-side `fetch` (`src/utils/giddhCert/serverApi.js:callGiddhCertApi`). The BFF adds an httpOnly `giddh_cert_session` cookie (7 days, `SameSite=Lax`, `Secure` in production) holding `{ mobile, countryCode }` after OTP and `POST /check` succeed. Whether this pattern is an approved exception to the "no API routes" non-goal is open ([Q-034](OPEN_QUESTIONS.md#active-questions-table)).
+
+| Method | Site route | Upstream | Handler | Request body (JSON) | Success response |
+|---|---|---|---|---|---|
+| POST | `/api/giddh-cert/verify-otp` | `POST /public/giddh-cert/check` | `src/pages/api/giddh-cert/verify-otp.js` | `{ mobile, countryCode }` — Indian mobile validated `^[6-9]\d{9}$` | Sets session cookie; `{ ok: true, resumeScreen, learner: { mobile, countryCode, profile, canAttempt, nextAttemptAt, lastAttempt } }`. `resumeScreen` is `registration` \| `test` \| `certificate` \| `blocked` |
+| POST | `/api/giddh-cert/profile` | `POST /public/giddh-cert/profile` | `src/pages/api/giddh-cert/profile.js` | `{ name, email, designation, city }` (session mobile) | `{ ok: true, learner: { … } }` |
+| POST | `/api/giddh-cert/result` | `POST /public/giddh-cert/result` | `src/pages/api/giddh-cert/result.js` | `{ score, percentage, totalQuestions }` | `{ ok: true, learner, certificate: { learnerName, score, issuedAt, validUntil, downloadUrl: "/api/giddh-cert/download" } }` |
+| GET | `/api/giddh-cert/download` | `GET /public/giddh-cert/download?countryCode=&mobile=` | `src/pages/api/giddh-cert/download.js` | session cookie | PDF bytes (`Content-Disposition: inline`) or JSON error |
+
+**Client wrapper:** `src/utils/giddhCert/clientApi.js` posts to the three JSON routes with `credentials: "same-origin"`. **Exam content:** questions are static in `src/data/giddh-cert/questions.json` (`src/utils/giddhCert/course.js:buildExamModules`). Pass threshold: `MODULE_PASS_PERCENT` 70% (`src/utils/giddhCert/constants.js`). **OTP:** the overlay uses the same MSG91 widget as signup (`window.sendOtp` / `window.verifyOtp` via `src/utils/msg91Otp.js:initOtpWidget`) before calling `verify-otp`. Journey steps are in [FLOWS.md](FLOWS.md#detailed-journey-giddh-partner-certificate).
+
+### Giddh API (browser)
 
 | Method | Endpoint Path | Base URL | Caller | Auth Required | Request Type | Response Type | Error Statuses |
 |---|---|---|---|---|---|---|---|
@@ -74,7 +87,7 @@ The values are concatenated without `encodeURIComponent`, so `source` is raw JSO
 | GET | `NEXT_PUBLIC_S3_BASE_URL/NEXT_PUBLIC_S3_BUCKET_NAME/{env}/{windows\|mac}/{latest\|preview}/latest[-mac].yml` <!-- verify:ignore --> | `src/utils/s3Config.js:getAppVersion` | public | regex `version:` → label; falls back to `"latest"`. `env` defaults to `NEXT_PUBLIC_APP_ENV`; optional args choose `preview` channel and `prod` vs `test` bucket segment. Download links come from `src/utils/s3Config.js:getDownloadUrl` (`giddh-setup` or `giddh-test-setup` `.exe`/`.dmg`). On the test site (`NEXT_PUBLIC_APP_ENV=test`), `src/components/footer.js` also loads prod preview installers via `getAppVersion(..., "preview", "prod")`. Read only, nothing is uploaded |
 | script + modal | `https://checkout.razorpay.com/v1/checkout.js` <!-- verify:ignore --> | `src/pages/payment.js:payInvoice` | `NEXT_PUBLIC_RAZORPAY_KEY` | options `{ key, amount (v2: body.amount; v1: amount*100), currency (v2: body.currency.code; v1: "INR"), name, description, handler }` |
 | GET | `https://api.db-ip.com/v2/free/self` <!-- verify:ignore --> | `src/hooks/useIntlTelInput.js` (`geoIpLookup`), `src/utils/signupHelpers.js:geoIpLookupHandler` | public | reads `countryCode`, defaulting to `in`. `geoIpLookupHandler` never calls `.json()`, so signup always falls back to `in`. Its `http://ip-api.com` / `ipinfo.io` fallbacks never run |
-| embed | Embarko Giddh contact (`https://giddh-contact.embarko.app/embed.js`), Calendly popup, Trustpilot widget | `src/components/GiddhContactEmbed.js` (`lazyOnload` on `src/pages/contact-us.js` and `src/components/bannerSection.js`), `public/js/giddh-contact-bridge.js`, `public/js/helper.js:openCalendly`, `src/components/navbar.js` | public | Contact buttons use `data-giddh-contact` with `data-purpose` `Sales` or `Support`. `embed.js` copies `utm_*` from the current `location.search`; `giddh-contact-bridge.js` patches `GiddhContact.open` to merge missing `utm_*` from `getLocalStorage` (set by `public/js/helper.js:setUtmParamInLocalStorage`) via a brief `history.replaceState` before open — same persisted attribution Typeform used |
+| embed | Embarko Giddh contact (`https://giddh-contact.embarko.app/embed.js` <!-- verify:ignore -->), Calendly popup, Trustpilot widget | `src/components/GiddhContactEmbed.js` (`lazyOnload` on `src/pages/contact-us.js` and `src/components/bannerSection.js`), `public/js/giddh-contact-bridge.js`, `public/js/helper.js:openCalendly`, `src/components/navbar.js` | public | Contact buttons use `data-giddh-contact` with `data-purpose` `Sales` or `Support`. The Embarko embed copies `utm_*` from the current `location.search`; `giddh-contact-bridge.js` patches `GiddhContact.open` to merge missing `utm_*` from `getLocalStorage` (set by `public/js/helper.js:setUtmParamInLocalStorage`) via a brief `history.replaceState` before open |
 | POST | `NEXT_PUBLIC_MW_EVENTS_URL` (experiment events; unset sends nothing) | `src/utils/experiments.js:mwSend` | body field `key` is `NEXT_PUBLIC_MW_KEY` (publishable, append-only, inlined in the client bundle). No cookies (`credentials` omitted). `navigator.sendBeacon`, else `fetch` with `keepalive` and `AbortSignal.timeout` of 3 seconds. A failure sets `mwOff` and is not retried. The response is never read | `{ key, visitor_id, event, experiment, variant, goal }`. `event` is `exposure` or `conversion`. No page calls `mwSend` yet |
 
 ## Authentication & Authorization Assumptions
@@ -115,6 +128,7 @@ All cookies are written by `public/js/helper.js:setCookie` (30 days, domain rule
 | cookie | `giddh_region` | `gl` / `in` / `ae` / `uk` | `public/js/helper.js:setGiddhRegion`, from `/login`, `/signup`, CA signup |
 | cookie | `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `ref`, `region`, `gclid`, `fbclid` | trimmed string; all nine are rewritten (blank if absent) whenever any one is in the URL | `public/js/helper.js:setUtmParamsInCookies`; read by `src/utils/utmParams.js:getUtmParamsFromCookies` |
 | cookie | `giddh_query` | JSON `{ utm_*, ref, region, source: {…} }` of the landing query | `public/js/helper.js:setUtmParamInLocalStorage`; CA signup merges `source.mrnNumber` |
+| cookie | `giddh_cert_session` | JSON `{ mobile, countryCode }`, **httpOnly** (not readable by page JS) | `src/utils/giddhCert/session.js:setSessionCookie` after `POST /api/giddh-cert/verify-otp`; 7-day `Max-Age`; cleared only by expiry or overwrite |
 | localStorage | `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, `ref`, `region` | JSON-encoded string (`setLocalStorage`) | `public/js/helper.js:setUtmParamInLocalStorage`; read by signup and CA signup |
 | localStorage | `source` | JSON object of non-UTM query params (CA signup adds `mrnNumber`) | helper.js; `src/utils/signupHelpers.js:getSourceParam` |
 | localStorage | `userData` | `{ user: { email \| mobileNo }, accessToken, signupVia }` | read and removed by signup and CA signup (`initOtpSignup`, `resetEverything`). No writer in this repo |
