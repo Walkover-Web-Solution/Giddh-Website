@@ -12,7 +12,7 @@ The accounting product itself is **not** in this repo.
 |---|---|
 | Install dependencies | `npm install` (no lockfile is committed, see [Q-011](docs/OPEN_QUESTIONS.md#active-questions-table)) |
 | Run dev server | `npm run dev` (port 8080) |
-| Build for production | `npm run build` (406 static pages; one existing Sass deprecation warning) |
+| Build for production | `npm run build` (407 static pages; one existing Sass deprecation warning) |
 | Preview production build | `npm run start` (port 8080) |
 | Lint | none working: `npm run lint` fails because Next 16 removed `next lint` ([Q-012](docs/OPEN_QUESTIONS.md#active-questions-table)) |
 | Tests / type check | none exist |
@@ -37,7 +37,7 @@ see [DEVELOPMENT.md](docs/DEVELOPMENT.md#environment-variables-reference). <!-- 
 
 ## Project Rules & Boundaries
 
-1. **No product logic, no new backend.** Don't add `src/pages/api/` routes, server code or mocks. Call only the existing Giddh API through the env base URLs. If a feature needs a capability the API lacks, write the contract in [CONTRACTS.md](docs/CONTRACTS.md#required--unavailable-backend-capabilities) and stop. (User-confirmed non-goal, 2026-10-24.) <!-- verify:ignore -->
+1. **No product logic, no new backend.** Don't add `src/pages/api/` routes beyond the existing Giddh-cert proxies (`src/pages/api/giddh-cert/*` for `/giddh-partner-certificate`; see [CONTRACTS.md](docs/CONTRACTS.md#giddh-partner-certificate-nextjs-api-proxies)). No other server code or mocks. Call only the existing Giddh API through the env base URLs. If a feature needs a capability the API lacks, write the contract in [CONTRACTS.md](docs/CONTRACTS.md#required--unavailable-backend-capabilities) and stop. (User-confirmed non-goal, 2026-10-24; cert proxies are a documented exception pending [Q-034](docs/OPEN_QUESTIONS.md#active-questions-table).) <!-- verify:ignore -->
 2. **Marketing content stays static / SEO-first.** Put copy in page JSON or static markup, never behind a client-side `fetch` or `useEffect`. Browser-fetched pricing is a known open conflict ([Q-003](docs/OPEN_QUESTIONS.md#active-questions-table)), not a pattern to copy.
 3. **Think in four locales.** Most pages exist as `src/pages/<slug>.js` plus `src/pages/{in,ae,uk}/<slug>.js`, and many wrappers share one `src/components/Pages/*.js`. A change to a shared component ships to every locale; a copy change usually needs each locale's JSON. Use GST wording for India and VAT for the UAE and UK.
 4. **A JSON page needs its slug in `pagesToGetData`** (`src/utils/getPageData.js`). Otherwise `pageData` is silently `null` and the page renders without its sections. No error is raised, so check the built HTML.
@@ -68,7 +68,7 @@ see [DEVELOPMENT.md](docs/DEVELOPMENT.md#environment-variables-reference). <!-- 
 
 - **Branch:** `<clickup-task-id>-web`, cut from `web`. Open the PR against `web`.
 - **Pipeline (user-confirmed):** PR → `web` (Netlify test site) → promote `web` → `main` (production giddh.com). Hotfixes use `<id>-main` branches into `main`, and `main` is then merged back into `web`.
-- `web` hasn't been promoted since 2026-02-25 and is 180 commits ahead of `main` ([Q-031](docs/OPEN_QUESTIONS.md#active-questions-table)). Don't assume production matches `web`.
+- `web` hasn't been promoted since 2026-02-25 and is 200 commits ahead of `main` ([Q-031](docs/OPEN_QUESTIONS.md#active-questions-table)). Don't assume production matches `web`.
 - The only CI is `.github/workflows/status-check.yml` (the STATUS.md gate, on every PR); it doesn't build, so your local checks are still the real gate. Merging and deploying follow the team's existing approvals; never push to `main` yourself. Details: [DEVELOPMENT.md](docs/DEVELOPMENT.md#pr-workflow--deployment-pipeline).
 
 ## Documentation Maintenance (weekly)
