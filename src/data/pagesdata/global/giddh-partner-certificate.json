@@ -270,7 +270,7 @@
     "resultPassedSub": "You passed every module with at least 70%. Open your certificate when ready.",
     "resultFailedSub": "Each module needs at least 70%. Retake a failed module to qualify.",
     "moduleCardLabel": "Module {current}",
-    "viewCertificateText": "View certificate",
+    "viewCertificateText": "Download certification",
     "retakeFailedText": "Retake failed module",
     "tabWarningTitle": "Tab switch detected",
     "tabWarningBody": "Tab switching is not allowed. This attempt will be discarded.",
