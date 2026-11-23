@@ -273,8 +273,8 @@
     "moduleCardLabel": "Module {current}",
     "viewCertificateText": "Download certification",
     "retakeFailedText": "Retake failed module",
-    "tabWarningTitle": "Tab switch detected",
-    "tabWarningBody": "Tab switching is not allowed. This attempt will be discarded.",
+    "tabWarningTitle": "Screenshot not allowed",
+    "tabWarningBody": "Screenshot not allowed. This attempt will be discarded.",
     "tabWarningButtonText": "Close attempt"
   },
   "faqs": [
