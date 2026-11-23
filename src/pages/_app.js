@@ -10,6 +10,7 @@ import Toastify from "@/components/toastify";
 import getPageData from "@/utils/getPageData";
 import getPageInfo from "@/utils/getPageInfo";
 import Schema from "@/components/NewComps/Schema";
+import Script from "next/script";
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -77,6 +78,10 @@ export default function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      <Script
+        src="https://giddh-contact.embarko.app/embed.js"
+        strategy="afterInteractive"
+      />
       {loginSignupPathStatus ? (
         <Navbar browserPath={rawBrowserPath} path={path} />
       ) : null}
