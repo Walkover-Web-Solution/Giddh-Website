@@ -275,7 +275,11 @@
     "retakeFailedText": "Retake failed module",
     "tabWarningTitle": "Screenshot not allowed",
     "tabWarningBody": "Screenshot not allowed. This attempt will be discarded.",
-    "tabWarningButtonText": "Close attempt"
+    "tabWarningButtonText": "Close attempt",
+    "idleWarningTitle": "No activity detected",
+    "idleWarningBody": "There is no action since long. Please perform an action or the attempt will be discarded.",
+    "idleWarningContinueText": "Continue attempt",
+    "idleWarningDiscardText": "Close attempt"
   },
   "faqs": [
     {

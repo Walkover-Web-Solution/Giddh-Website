@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   MdAccessTime,
   MdArrowForward,
@@ -7,7 +7,10 @@ import {
   MdEmojiEvents,
   MdInfoOutline,
 } from "react-icons/md";
-import { MODULE_TIMER_SECONDS } from "@/utils/giddhCert/constants";
+import {
+  IDLE_WARNING_SECONDS,
+  MODULE_TIMER_SECONDS,
+} from "@/utils/giddhCert/constants";
 import { scoreModule, scoreOverall } from "@/utils/giddhCert/course";
 import { submitResult } from "@/utils/giddhCert/clientApi";
 import { showToaster } from "@/utils/signupHelpers";
@@ -51,9 +54,13 @@ export default function ExamOverlay({
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [tabWarning, setTabWarning] = useState(false);
+  const [idleWarning, setIdleWarning] = useState(false);
   const [certificatePayload, setCertificatePayload] = useState(
     initialResult?.certificate
   );
+  const lastActivityRef = useRef(Date.now());
+  const idleWarningRef = useRef(false);
+  idleWarningRef.current = idleWarning;
 
   const currentModule = modules[moduleIndex];
   const currentQuestion = currentModule?.questions?.[questionIndex];
@@ -117,6 +124,43 @@ export default function ExamOverlay({
     document.addEventListener("visibilitychange", onVisibility);
     return () => document.removeEventListener("visibilitychange", onVisibility);
   }, [isOpen, phase]);
+
+  useEffect(() => {
+    if (!isOpen || phase !== "quiz" || showInstructions || tabWarning) {
+      return undefined;
+    }
+
+    lastActivityRef.current = Date.now();
+
+    const markActivity = () => {
+      if (idleWarningRef.current) {
+        return;
+      }
+      lastActivityRef.current = Date.now();
+    };
+
+    const events = ["pointerdown", "keydown", "touchstart"];
+    events.forEach((eventName) => {
+      document.addEventListener(eventName, markActivity);
+    });
+
+    const idleCheckId = setInterval(() => {
+      if (idleWarningRef.current) {
+        return;
+      }
+      const idleMs = Date.now() - lastActivityRef.current;
+      if (idleMs >= IDLE_WARNING_SECONDS * 1000) {
+        setIdleWarning(true);
+      }
+    }, 1000);
+
+    return () => {
+      events.forEach((eventName) => {
+        document.removeEventListener(eventName, markActivity);
+      });
+      clearInterval(idleCheckId);
+    };
+  }, [isOpen, phase, showInstructions, tabWarning]);
 
   const timerLabel = useMemo(() => {
     const minutes = String(Math.floor(timer / 60)).padStart(2, "0");
@@ -237,7 +281,13 @@ export default function ExamOverlay({
 
   const handleDiscardAttempt = () => {
     setTabWarning(false);
+    setIdleWarning(false);
     onClose({ discarded: true });
+  };
+
+  const handleContinueAfterIdle = () => {
+    lastActivityRef.current = Date.now();
+    setIdleWarning(false);
   };
 
   const currentScore = moduleScores[moduleIndex];
@@ -574,6 +624,33 @@ export default function ExamOverlay({
                   onClick={handleDiscardAttempt}
                 >
                   {compData?.tabWarningButtonText}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {idleWarning && !tabWarning && (
+            <div className="position-absolute top-0 start-0 end-0 bottom-0 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 rounded-3">
+              <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3 col-11 col-md-8">
+                <h3 className="font-sm font-600 m-0">
+                  {compData?.idleWarningTitle}
+                </h3>
+                <p className="font-sm font-slate-grey m-0">
+                  {compData?.idleWarningBody}
+                </p>
+                <button
+                  type="button"
+                  className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+                  onClick={handleContinueAfterIdle}
+                >
+                  {compData?.idleWarningContinueText}
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+                  onClick={handleDiscardAttempt}
+                >
+                  {compData?.idleWarningDiscardText}
                 </button>
               </div>
             </div>
