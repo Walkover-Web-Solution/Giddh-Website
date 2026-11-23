@@ -67,6 +67,12 @@ export default function ExamOverlay({
   const currentQuestion = currentModule?.questions?.[questionIndex];
   const totalInModule = currentModule?.questions?.length;
   const overall = useMemo(() => {
+    const hasLiveTotals =
+      moduleScores.length > 0 &&
+      moduleScores.every((item) => Number.isFinite(item.total));
+    if (hasLiveTotals) {
+      return scoreOverall(moduleScores);
+    }
     if (initialResult?.overall) {
       return initialResult.overall;
     }
@@ -163,6 +169,8 @@ export default function ExamOverlay({
     setIsSubmitting(true);
     try {
       const data = await submitResult({
+        mobile: learner?.mobile,
+        countryCode: learner?.countryCode,
         score: overallScore.score,
         percentage: overallScore.percentage,
         totalQuestions: overallScore.totalQuestions,
