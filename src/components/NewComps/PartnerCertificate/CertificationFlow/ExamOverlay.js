@@ -37,7 +37,12 @@ export default function ExamOverlay({
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [answers, setAnswers] = useState([]);
-  const [moduleScores, setModuleScores] = useState([]);
+  const [moduleScores, setModuleScores] = useState(() => {
+    if (initialResult?.moduleScores) {
+      return initialResult.moduleScores;
+    }
+    return [];
+  });
   const [phase, setPhase] = useState(initialResult?.phase);
   const [feedback, setFeedback] = useState(null);
   const [timer, setTimer] = useState(MODULE_TIMER_SECONDS);

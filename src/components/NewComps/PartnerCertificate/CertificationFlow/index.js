@@ -1,18 +1,29 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { MODULE_PASS_PERCENT } from "@/utils/giddhCert/constants";
-import { buildExamModules } from "@/utils/giddhCert/course";
+import { buildExamModules, scoreOverall } from "@/utils/giddhCert/course";
 import { resolveDownloadUrl } from "@/utils/giddhCert/clientApi";
 import { showToaster } from "@/utils/signupHelpers";
 
 import ApplyOverlay from "./ApplyOverlay";
 import ExamOverlay from "./ExamOverlay";
 
+function isCertifiedLearner(learner) {
+  const lastAttempt = learner?.lastAttempt;
+  const percentage = Number(lastAttempt?.percentage);
+  return (
+    Number.isFinite(percentage) &&
+    percentage >= MODULE_PASS_PERCENT &&
+    Boolean(lastAttempt?.downloadUrl)
+  );
+}
+
 export default function CertificationFlow({
   isApplyOpen,
   setIsApplyOpen,
   applyOverlay,
   examOverlay,
+  onStartRef,
 }) {
   const [flowPhase, setFlowPhase] = useState("mobile");
   const [mobile, setMobile] = useState("");
@@ -22,6 +33,9 @@ export default function CertificationFlow({
   const [examKey, setExamKey] = useState(0);
   const [modules, setModules] = useState([]);
   const [examInitialResult, setExamInitialResult] = useState(null);
+  const [examStarted, setExamStarted] = useState(false);
+  const [cachedPassResult, setCachedPassResult] = useState(null);
+  const openCertifiedResultRef = useRef(null);
 
   const closeApply = () => {
     setIsApplyOpen(false);
@@ -29,6 +43,8 @@ export default function CertificationFlow({
   };
 
   const openExam = useCallback(() => {
+    setCachedPassResult(null);
+    setExamStarted(true);
     setExamInitialResult({ phase: "quiz" });
     setModules(buildExamModules());
     setExamKey((prev) => prev + 1);
@@ -70,6 +86,7 @@ export default function CertificationFlow({
       }
 
       setLearner(nextLearner);
+      setExamStarted(false);
       setModules(buildExamModules());
       setExamInitialResult({
         phase: "result",
@@ -82,6 +99,54 @@ export default function CertificationFlow({
     },
     [setIsApplyOpen]
   );
+
+  openCertifiedResultRef.current = openCertifiedResult;
+
+  const openCachedPassResult = useCallback(() => {
+    if (!cachedPassResult) {
+      return;
+    }
+    setLearner(cachedPassResult.learner);
+    setExamStarted(false);
+    setExamInitialResult({
+      phase: "result",
+      certificate: cachedPassResult.certificate,
+      overall: cachedPassResult.overall,
+      moduleScores: cachedPassResult.moduleScores,
+    });
+    setExamKey((prev) => prev + 1);
+    setIsApplyOpen(false);
+    setIsExamOpen(true);
+  }, [cachedPassResult, setIsApplyOpen]);
+
+  useEffect(() => {
+    if (!onStartRef) {
+      return undefined;
+    }
+    onStartRef.current = () => {
+      if (cachedPassResult) {
+        openCachedPassResult();
+        return;
+      }
+      if (isCertifiedLearner(learner)) {
+        openCertifiedResultRef.current?.(learner);
+        return;
+      }
+      if (examStarted) {
+        setIsExamOpen(true);
+        return;
+      }
+      setIsApplyOpen(true);
+    };
+    return undefined;
+  }, [
+    onStartRef,
+    cachedPassResult,
+    openCachedPassResult,
+    learner,
+    examStarted,
+    setIsApplyOpen,
+  ]);
 
   const openCertificatePdf = (certPayload) => {
     const downloadUrl = certPayload?.downloadUrl;
@@ -119,9 +184,29 @@ export default function CertificationFlow({
     openExam();
   };
 
-  const handleExamCompleted = (resultData, _moduleScores, openCertOnly) => {
+  const handleExamCompleted = (resultData, moduleScores, openCertOnly) => {
     if (resultData?.learner) {
-      setLearner(resultData.learner);
+      const nextLearner = resultData.learner;
+      if (resultData.certificate?.downloadUrl) {
+        setLearner({
+          ...nextLearner,
+          lastAttempt: {
+            ...nextLearner?.lastAttempt,
+            downloadUrl: resultData.certificate.downloadUrl,
+          },
+        });
+      } else {
+        setLearner(nextLearner);
+      }
+    }
+    if (!openCertOnly && resultData?.certificate && moduleScores) {
+      setCachedPassResult({
+        learner: resultData.learner,
+        certificate: resultData.certificate,
+        overall: scoreOverall(moduleScores),
+        moduleScores,
+      });
+      setExamStarted(false);
     }
     if (openCertOnly) {
       openCertificatePdf(resultData?.certificate);
@@ -130,7 +215,6 @@ export default function CertificationFlow({
 
   const handleExamClose = () => {
     setIsExamOpen(false);
-    setExamInitialResult(null);
   };
 
   return (
