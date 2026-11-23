@@ -73,7 +73,6 @@ export function getDownloadUrl({ mobile, countryCode }) {
   return `${getBaseUrl()}/download?${params.toString()}`;
 }
 
-/** Backend sometimes returns path-only `/public/giddh-cert/download?...` — make absolute. */
 export function resolveDownloadUrl(downloadUrl, { mobile, countryCode }) {
   if (downloadUrl) {
     if (
