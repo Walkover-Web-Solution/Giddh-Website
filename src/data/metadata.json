@@ -747,5 +747,13 @@
     "description": "Your demo request has been submitted successfully. The Giddh team will contact you shortly to walk you through our powerful accounting software. We're excited to help you get started!",
     "ogTitle": "Thank You for Requesting a Demo | Giddh",
     "ogDescription": "Your demo request has been submitted successfully. The Giddh team will contact you shortly to walk you through our powerful accounting software. We're excited to help you get started!"
+  },
+  "/giddh-partner-certificate": {
+    "canonical": "/giddh-partner-certificate",
+    "title": "Become GIDDH Certified | Free Partner Certification Program",
+    "description": "Complete GIDDH's free 3-module self-paced certification for accountants, bookkeepers, and consultants. Earn your verified badge and unlock partner revenue share.",
+    "ogTitle": "Become GIDDH Certified | Free Partner Certification Program",
+    "ogDescription": "Complete GIDDH's free 3-module self-paced certification for accountants, bookkeepers, and consultants. Earn your verified badge and unlock partner revenue share.",
+    "keywords": "giddh partner certification, accounting software certification, cloud accounting partner program"
   }
 }

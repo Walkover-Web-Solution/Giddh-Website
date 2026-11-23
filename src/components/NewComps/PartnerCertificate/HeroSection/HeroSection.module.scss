@@ -1,0 +1,151 @@
+// Only styles not covered by Bootstrap 5 or src/scss/ utilities
+.heroWrapper {
+  background: radial-gradient(
+    circle at 72% 45%,
+    var(--col-faded-blue) 0%,
+    var(--col-extra-light-blue) 45%,
+    var(--col-white) 100%
+  );
+}
+
+.heroGridBackdrop {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--col-blue-light) 26%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--col-blue-light) 26%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 56px 56px;
+}
+
+.eyebrowDot {
+  width: 7px;
+  height: 7px;
+}
+
+.heroTitle {
+  font-size: clamp(46px, 5.2vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -2px;
+}
+
+.heroTitleAccent {
+  font-size: clamp(33px, 3.7vw, 52px);
+  white-space: nowrap;
+  line-height: 1.1;
+}
+
+.mediaStage {
+  max-width: 470px;
+  padding: 20px 18px 20px 24px;
+}
+
+.orbitRingTop {
+  position: absolute;
+  top: -16px;
+  right: -12px;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--col-blue-light) 55%, transparent);
+  pointer-events: none;
+}
+
+.orbitRingBottom {
+  position: absolute;
+  bottom: -40px;
+  left: -54px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--col-blue-light) 48%, transparent);
+  pointer-events: none;
+}
+
+.mediaCard {
+  aspect-ratio: 1 / 1.02;
+  box-shadow: 0 28px 60px -24px color-mix(in srgb, var(--col-primary) 55%, transparent);
+  transform: rotate(1.6deg);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: rotate(0.4deg);
+  }
+}
+
+.mediaImage {
+  position: absolute;
+  inset: 0;
+}
+
+.mediaOverlay {
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--col-primary) 28%, transparent) 0%,
+    transparent 35%,
+    color-mix(in srgb, var(--col-primary) 88%, transparent) 100%
+  );
+}
+
+.playButton {
+  width: 68px;
+  height: 68px;
+  background-color: color-mix(in srgb, var(--col-blue) 84%, var(--col-white));
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--col-primary);
+  }
+}
+
+.mediaTopLabel {
+  top: 24px;
+  left: 24px;
+}
+
+.mediaCaption {
+  padding: 24px 24px 24px 104px;
+}
+
+.durationBar {
+  width: 52px;
+  height: 2px;
+}
+
+.floatingTopBadge {
+  top: 44px;
+  right: -6px;
+}
+
+.floatingBottomBadge {
+  bottom: 42px;
+  left: 0;
+}
+
+@media (max-width: 991px) {
+  .mediaStage {
+    padding: 12px 0;
+  }
+
+  .mediaCard {
+    transform: none;
+  }
+
+  .mediaCaption {
+    padding: 20px;
+  }
+
+  .floatingTopBadge {
+    top: 16px;
+    right: 12px;
+  }
+
+  .floatingBottomBadge {
+    display: none !important;
+  }
+}
