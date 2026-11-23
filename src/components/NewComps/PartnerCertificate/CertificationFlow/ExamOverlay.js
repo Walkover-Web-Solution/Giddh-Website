@@ -24,14 +24,6 @@ function formatCopy(template, values) {
   );
 }
 
-function getResumeModuleScores(modules, overall) {
-  return modules.map((moduleItem) => ({
-    title: moduleItem.title,
-    percent: overall.percentage,
-    passed: overall.allPassed,
-  }));
-}
-
 export default function ExamOverlay({
   isOpen,
   onClose,
@@ -45,12 +37,7 @@ export default function ExamOverlay({
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [answers, setAnswers] = useState([]);
-  const [moduleScores, setModuleScores] = useState(() => {
-    if (initialResult?.phase === "result") {
-      return getResumeModuleScores(modules, initialResult.overall);
-    }
-    return [];
-  });
+  const [moduleScores, setModuleScores] = useState([]);
   const [phase, setPhase] = useState(initialResult?.phase);
   const [feedback, setFeedback] = useState(null);
   const [timer, setTimer] = useState(MODULE_TIMER_SECONDS);
@@ -491,11 +478,16 @@ export default function ExamOverlay({
                   : compData?.resultFailedTitle}
               </h2>
               <p className="font-sm font-grey-deep m-0">
-                {formatCopy(compData?.resultScore, {
-                  percent: overall.percentage,
-                  score: overall.score,
-                  total: overall.totalQuestions,
-                })}
+                {Number.isFinite(overall.score) &&
+                Number.isFinite(overall.totalQuestions)
+                  ? formatCopy(compData?.resultScore, {
+                      percent: overall.percentage,
+                      score: overall.score,
+                      total: overall.totalQuestions,
+                    })
+                  : formatCopy(compData?.resultScorePercentOnly, {
+                      percent: overall.percentage,
+                    })}
               </p>
               <p className="font-sm font-grey-deep m-0 col-lg-10">
                 {allPassed

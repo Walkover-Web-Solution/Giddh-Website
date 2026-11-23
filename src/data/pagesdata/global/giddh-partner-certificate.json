@@ -267,6 +267,7 @@
     "resultPassedTitle": "You're GIDDH Certified",
     "resultFailedTitle": "Assessment complete",
     "resultScore": "Overall {percent}% · {score}/{total} correct",
+    "resultScorePercentOnly": "Overall {percent}%",
     "resultPassedSub": "You passed every module with at least 70%. Open your certificate when ready.",
     "resultFailedSub": "Each module needs at least 70%. Retake a failed module to qualify.",
     "moduleCardLabel": "Module {current}",

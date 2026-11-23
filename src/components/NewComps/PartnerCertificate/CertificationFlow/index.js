@@ -40,8 +40,8 @@ export default function CertificationFlow({
     (nextLearner) => {
       const lastAttempt = nextLearner?.lastAttempt;
       const percentage = Number(lastAttempt?.percentage);
-      const totalQuestions = Number(lastAttempt?.totalQuestions);
       const score = Number(lastAttempt?.score);
+      const totalQuestions = Number(lastAttempt?.totalQuestions);
       const downloadUrl = resolveDownloadUrl(lastAttempt?.downloadUrl, {
         mobile: nextLearner?.mobile,
         countryCode: nextLearner?.countryCode,
@@ -55,19 +55,26 @@ export default function CertificationFlow({
         downloadUrl,
       };
 
+      const overall = {
+        allPassed:
+          Number.isFinite(percentage) && percentage >= MODULE_PASS_PERCENT,
+      };
+      if (Number.isFinite(percentage)) {
+        overall.percentage = percentage;
+      }
+      if (Number.isFinite(score)) {
+        overall.score = score;
+      }
+      if (Number.isFinite(totalQuestions)) {
+        overall.totalQuestions = totalQuestions;
+      }
+
       setLearner(nextLearner);
       setModules(buildExamModules());
       setExamInitialResult({
         phase: "result",
         certificate: certPayload,
-        overall: {
-          percentage,
-          score,
-          totalQuestions: Number.isFinite(totalQuestions)
-            ? totalQuestions
-            : undefined,
-          allPassed: percentage >= MODULE_PASS_PERCENT,
-        },
+        overall,
       });
       setExamKey((prev) => prev + 1);
       setIsApplyOpen(false);
