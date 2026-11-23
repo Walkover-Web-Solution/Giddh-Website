@@ -1,7 +1,7 @@
 ---
 covers: ["src/pages/_app.js", "src/pages/_document.js", "src/utils/getPageInfo.js", "src/utils/getPageData.js", "src/components/**", "src/data/pagesdata/**", "next.config.js", "jsconfig.json"]
-verified_at: ad5219f6
-verified_on: 2026-11-16
+verified_at: 9b1c5d11
+verified_on: 2026-11-22
 ---
 # Architecture & Mental Model
 
@@ -21,7 +21,7 @@ graph TD
     Pages --> Legacy["Legacy pages + components/*.js + scss/scsscomps"]
     Pages --> Blog["blog: _posts/blog/*.mdx via fs"]
     Pages --> API["Giddh API (NEXT_PUBLIC_API_URL / UK_API_URL)"]
-    Pages --> Third["MSG91, Google, Razorpay, S3, Typeform, Calendly"]
+    Pages --> Third["MSG91, Google, Razorpay, S3, Embarko contact, Calendly"]
     API --> GApp["Giddh app (NEXT_PUBLIC_APP_URL)"]
 ```
 
@@ -50,7 +50,7 @@ graph TD
 
 | Module / Layer | Path | Core Responsibility | Sources of Truth | May Depend On | Must NOT Depend On |
 |---|---|---|---|---|---|
-| Routing / Pages | `src/pages/` (+ `src/pages/in/`, `src/pages/ae/`, `src/pages/uk/`, `src/pages/blog/`, `src/pages/v2/`) | One file per URL. Thin locale wrappers or full legacy pages | URL (`router.asPath`) → `path`, `pageInfo` | `src/components/`, `src/data/`, `src/utils/`, `src/hooks/` | Next API routes (none exist; adding them is a non-goal, see [VISION.md](VISION.md)) |
+| Routing / Pages | `src/pages/` (+ `src/pages/in/`, `src/pages/ae/`, `src/pages/uk/`, `src/pages/blog/`, `src/pages/v2/`) | One file per URL. Thin locale wrappers or full legacy pages | URL (`router.asPath`) → `path`, `pageInfo` | `src/components/`, `src/data/`, `src/utils/`, `src/hooks/` | New Next API routes (only `src/pages/api/giddh-cert/*` exists today; see [CONTRACTS.md](CONTRACTS.md#giddh-partner-certificate-nextjs-api-proxies) and [VISION.md](VISION.md)) |
 | App shell | `src/pages/_app.js`, `src/pages/_document.js`, `src/components/header.js`, `src/components/navbar.js`, `src/components/footer.js`, `src/components/globalComponents.js` | Global CSS/JS, scripts, meta/hreflang, nav, footer, download modal (latest + prod-preview desktop builds when `isTestWebsite()`) | `src/data/metadata.json`, `src/data/hrefLangTag.json` | `public/js/helper.js` globals, `src/utils/s3Config.js` | Page-specific data |
 | Page compositions | `src/components/Pages/` | One component per JSON-driven page type, composing sections from `pageData` | `pageData` prop | `src/components/NewComps/` | Direct `fetch`; locale checks (the locale is in the JSON choice) |
 | Section components | `src/components/NewComps/` | Reusable sections (Banner, CTA, FAQs, Features, Stats, forms, Schema…), some with CSS modules (e.g. `src/components/NewComps/FAQs/FAQs.module.scss`) | Props (`compData`, `features`, `faqs`…) | `src/utils/`, `src/hooks/` (forms only) | `src/data/pagesdata/` imports (content comes in via props) |
@@ -76,7 +76,7 @@ A locale is a folder: `src/pages/` (global), `src/pages/in/`, `src/pages/ae/` an
 
 How `getPageData` resolves (`src/utils/getPageData.js:getPageData`):
 
-1. If `pageInfo.page` is not in the hard-coded `pagesToGetData` array (25 slugs), it returns `null` and loads nothing.
+1. If `pageInfo.page` is not in the hard-coded `pagesToGetData` array (26 slugs, including `giddh-partner-certificate`), it returns `null` and loads nothing.
 2. Otherwise it builds ``const filePath = `@/data/pagesdata/${country}/${page}.json` `` and calls `require(filePath)`. The bundler resolves this at build time (the build passes on Turbopack, see `next.config.js`).
 3. `folder` from `getPageInfo` is ignored, so `/<folder>/<page>` URLs look up `<country>/<page>.json`.
 
@@ -88,7 +88,7 @@ How `getPageData` resolves (`src/utils/getPageData.js:getPageData`):
 
 ## Rendering Strategy & Boundaries
 
-- **Rendering Pattern:** pages-router static generation. The `next build` output (Next 16.4.3, Turbopack) generates 406 pages (verified 2026-11-16 at `ad5219f6`). All non-blog routes are `○` (Static, no data functions; `_app` computes `pageData` synchronously while prerendering). Blog posts are `●` SSG: `src/pages/blog/[slug].js` (`getStaticPaths` with `fallback: false` + `getStaticProps`, reading MDX with `fs` and `gray-matter`, and throwing to fail the build when a slug has no file) and `src/pages/blog/page/[page].js`, both via `src/components/blogs/lib/posts.js:fetchPostContent` and `listPostContent`. **Exceptions:** `src/pages/blog/index.js` and `src/pages/blog/tags/[[...slug]].js` use `getServerSideProps` and show as `ƒ` (Dynamic), so they render per request on the host.
+- **Rendering Pattern:** pages-router static generation. The `next build` output (Next 16.4.3, Turbopack) generates 407 pages (verified 2026-11-22 at `9b1c5d11`). All non-blog routes are `○` (Static, no data functions; `_app` computes `pageData` synchronously while prerendering). Blog posts are `●` SSG: `src/pages/blog/[slug].js` (`getStaticPaths` with `fallback: false` + `getStaticProps`, reading MDX with `fs` and `gray-matter`, and throwing to fail the build when a slug has no file) and `src/pages/blog/page/[page].js`, both via `src/components/blogs/lib/posts.js:fetchPostContent` and `listPostContent`. **Exceptions:** `src/pages/blog/index.js` and `src/pages/blog/tags/[[...slug]].js` use `getServerSideProps` and show as `ƒ` (Dynamic), so they render per request on the host. **`src/pages/api/giddh-cert/*`:** four server handlers (`verify-otp`, `profile`, `result`, `download`) run on Netlify for the partner-certificate funnel only ([CONTRACTS.md](CONTRACTS.md#giddh-partner-certificate-nextjs-api-proxies)).
 - **Client vs Server Boundary:** there are no React Server Components and no `"use client"` boundaries that matter (the one in `src/components/toastify.js` is a no-op in the pages router). Everything after first paint is client code: `useEffect` work, form submits, OTP widgets and pricing plans. `next.config.js` sets `webpack` `resolve.fallback.fs = false` so that modules importing `fs` don't break the client bundle. It also sets `turbopack: {}` (explicit opt-in that silences the Next 16 warning about a webpack config being present) and `sassOptions.silenceDeprecations: ['import']` (the SCSS still uses `@import`).
 - **Client-fetched content:** `src/pages/pricing.js` fetches plans in `useEffect` from `NEXT_PUBLIC_API_URL` and shows `src/components/customLoader.js` until they arrive, so plan prices are not in the static HTML (a known gap, see [VISION.md](VISION.md#core-principles--design-philosophy)). `src/pages/login.js`, `src/pages/signup.js`, `src/pages/chartered-accountant-signup.js`, `src/pages/v2/login.js` and `src/pages/payment.js` are prerendered shells that become interactive on the client. `next/dynamic` loads `OtpVerifyModal` and `OtpLogin` in `src/pages/login.js` and `src/pages/signup.js`, and `react-player` in `src/pages/blog/[slug].js` (`ssr: false`).
 - **Hydration & Loading Fallbacks:** there are no Suspense boundaries. Loading is shown with local flags plus `src/components/customLoader.js`. The Bootstrap JS (dropdowns, modals) only works after `MyApp`'s `useEffect` has run.
@@ -134,7 +134,7 @@ How `getPageData` resolves (`src/utils/getPageData.js:getPageData`):
 | Google OAuth | Sign up / log in with Google | Implicit-flow popup to `accounts.google.com`, then `googleapis.com/oauth2/v1/userinfo` | `src/components/googleLogin.js` (`NEXT_PUBLIC_GOOGLE_CLIENT_ID`), `src/pages/googleauth.js` |
 | Razorpay | Paying a Giddh invoice | `checkout.razorpay.com/v1/checkout.js` + `NEXT_PUBLIC_RAZORPAY_KEY` | `src/pages/payment.js` | <!-- verify:ignore -->
 | AWS S3 | Desktop app installers and the version YAML | Public URLs built from `NEXT_PUBLIC_S3_BASE_URL`, `NEXT_PUBLIC_S3_BUCKET_NAME`, `NEXT_PUBLIC_APP_ENV` | `src/utils/s3Config.js` ← `src/components/footer.js`, `src/components/downloadFreeModal.js` |
-| Typeform | "Contact sales" slider form | `@typeform/embed` `createSlider` | `src/pages/contact-us.js`, `src/components/bannerSection.js` |
+| Embarko (`giddh-contact.embarko.app`) | Sales and support contact popup | `embed.js` + `data-giddh-contact` / `data-purpose`; UTM bridge in `public/js/giddh-contact-bridge.js` | `src/components/GiddhContactEmbed.js` on `src/pages/contact-us.js` and `src/components/bannerSection.js` |
 | Calendly | "Book a demo" popup | Script and CSS injected on click | `public/js/helper.js:openCalendly` ← `src/pages/import-data.js`, `src/pages/invoice-software.js`, `src/pages/connect-bank-reconcile.js` and others |
 | Google Tag Manager | Tag container (`GTM-K2L9QG`) | `dataLayer` | `src/pages/_document.js` |
 | Amplify-hosted tracker | Unknown third-party tracker | `<script async>` | `src/pages/_document.js` |

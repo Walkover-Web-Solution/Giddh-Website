@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-18 · **Reviewed up to commit:** `ad5219f6`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-22 · **Reviewed up to commit:** `9b1c5d11`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -32,7 +32,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | 1. Acquire chartered accountants | 🟡 | `src/pages/chartered-accountant-signup.js` collects the MRN, but it never reaches `/v2/register` ([Q-029](docs/OPEN_QUESTIONS.md#active-questions-table)). Global only, no locale variants. |
 | 2. Partner-led growth (affiliates) | 🟡 | `src/pages/affiliate.js` plus `in`/`ae`/`uk` variants and `src/data/pagesdata/*/affiliate.json`. Live form not exercised (no sandbox). |
 | 3. Organic search | 🟡 | 253 MDX posts in `_posts/blog/`, about 2,000 rules in `public/_redirects`. Sitemap stale ([Q-009](docs/OPEN_QUESTIONS.md#active-questions-table)), metadata errors ([Q-008](docs/OPEN_QUESTIONS.md#active-questions-table)). |
-| 4. Feature landing pages and comparisons | 🟡 | 25 page types in `src/components/Pages/`; comparison pages `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`. Bank reconcile slug corrected to `/connect-bank-reconcile` (all locales) with 301s from `/conect-bank-reconcile`. Several feature pages are on `web` only, not production (Q-031). |
+| 4. Feature landing pages and comparisons | 🟡 | 26 page types in `src/components/Pages/` (incl. `PartnerCertificate.js`); comparison pages `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`. Bank reconcile slug corrected to `/connect-bank-reconcile` (all locales) with 301s from `/conect-bank-reconcile`. Several feature pages are on `web` only, not production (Q-031). |
 
 ## Scope items
 
@@ -42,7 +42,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 |---|---|---|
 | ICP: SMBs in India, UAE, UK plus chartered accountants | 🟡 | Locale trees `src/pages/in/` (35 pages), `src/pages/ae/` (32), `src/pages/uk/` (32) and a CA landing page exist. |
 | No accounting product logic in this repo | 🟡 | Held as far as found: pages describe features and hand off to `NEXT_PUBLIC_APP_URL`. Not audited line by line. |
-| No backend or API routes of its own | 🟡 | Held: `src/pages/api/` does not exist. |
+| No backend or API routes of its own | ⛔ | Breach: `src/pages/api/giddh-cert/*` (partner certificate proxies). Pending human decision ([Q-034](docs/OPEN_QUESTIONS.md#active-questions-table)). |
 | Pages static and SEO-first | ⛔ | Breached by browser-fetched pricing in `src/pages/pricing.js` (`useEffect` fetch of `/v2/subscription/plans/all`), blocked on a decision ([Q-003](docs/OPEN_QUESTIONS.md#active-questions-table)). Also [Q-028](docs/OPEN_QUESTIONS.md#active-questions-table), [Q-021](docs/OPEN_QUESTIONS.md#active-questions-table). |
 | Release flow `<id>-web` → `web` → `main` | 🟡 | Followed for PRs into `web`, but `web` has not been promoted since 2026-02-25 ([Q-031](docs/OPEN_QUESTIONS.md#active-questions-table)). A PR status check now runs (`.github/workflows/status-check.yml`). |
 
@@ -62,6 +62,8 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | MDX blog with Decap CMS | 🟡 | 253 posts in `_posts/blog/`; CMS use unconfirmed ([Q-014](docs/OPEN_QUESTIONS.md#active-questions-table)); image field and JSON-LD issues ([Q-025](docs/OPEN_QUESTIONS.md#active-questions-table), [Q-027](docs/OPEN_QUESTIONS.md#active-questions-table)). |
 | Affiliate program | 🟡 | `src/pages/affiliate.js` and locale variants. |
 | Comparison and switching pages | 🟡 | `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`. |
+| GIDDH Partner Certificate | 🟡 | `/giddh-partner-certificate` (global); uses Next API proxies and Giddh `/public/giddh-cert`. Not exercised end-to-end from this repo. |
+| Embarko contact (sales/support) | 🟡 | Replaces Typeform on Contact Us and AE/UK home banners (PR #861). UTM bridge [Q-033](docs/OPEN_QUESTIONS.md#active-questions-table). |
 
 ### Proposals & roadmaps
 
@@ -164,6 +166,9 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-22 · Cursor cloud agent · Weekly docs maintenance at `9b1c5d11`: partner certificate, Embarko contact, 407-page build, Q-034 · Reviewed commit, API-route ⛔, new scope rows
+- 2026-11-21 · Cursor agent · PR #861 review: lazy-load Embarko on contact routes, UTM bridge (`giddh-contact-bridge.js`), Support button spacing · [no status]
+- 2026-11-21 · Cursor agent · Replaced Typeform contact slider with Embarko `giddh-contact.embarko.app` on Contact Us and AE/UK home banner · [no status]
 - 2026-11-18 · Cursor agent · Renamed bank reconcile URL from `/conect-bank-reconcile` to `/connect-bank-reconcile` (pages, SEO, sitemap, links) and added 301s · Feature landing pages notes updated
 - 2026-11-16 · Cursor cloud agent · Weekly docs maintenance (merged PR #847 / #848): 406-page build, CSP ADR-015, partner `redirect_url`, coverage map · doc-only `[no status]`
 - 2026-11-02 · Cursor cloud agent · Moved "Reviewed up to commit" to `26494e62` (adds the `status:check` script to `package.json`) · none
