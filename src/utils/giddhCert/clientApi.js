@@ -1,53 +1,190 @@
+import { MODULE_PASS_PERCENT } from "@/utils/giddhCert/constants";
+import { isValidMobile, normalizeMobile } from "@/utils/giddhCert/serverApi";
+
+function getBaseUrl() {
+  return `${process.env.NEXT_PUBLIC_API_URL}/public/giddh-cert`;
+}
+
+function resolveResumeScreen(body) {
+  const lastAttempt = body?.lastAttempt;
+  const passed =
+    Number(lastAttempt?.percentage) >= MODULE_PASS_PERCENT &&
+    Boolean(lastAttempt?.downloadUrl);
+  if (passed) {
+    return "certificate";
+  }
+  if (body?.canAttempt === false && body?.nextAttemptAt) {
+    return "blocked";
+  }
+  if (body?.profile?.name) {
+    return "test";
+  }
+  return "registration";
+}
+
+function buildLearner(mobile, countryCode, body) {
+  return {
+    mobile,
+    countryCode,
+    profile: body?.profile,
+    canAttempt: body?.canAttempt,
+    nextAttemptAt: body?.nextAttemptAt,
+    lastAttempt: body?.lastAttempt,
+  };
+}
+
 async function request(path, { method = "GET", body } = {}) {
-  const response = await fetch(path, {
+  const response = await fetch(`${getBaseUrl()}${path}`, {
     method,
+    mode: "cors",
+    cache: "no-store",
     headers: body ? { "Content-Type": "application/json" } : undefined,
     body: body ? JSON.stringify(body) : undefined,
-    credentials: "same-origin",
   });
 
   const contentType = response.headers.get("content-type");
-  if (contentType?.includes("application/json")) {
-    const data = await response.json();
-    if (!response.ok || data?.ok === false) {
-      const error = new Error(data?.message);
+  if (!contentType?.includes("application/json")) {
+    if (!response.ok) {
+      const error = new Error(response.statusText);
       error.status = response.status;
-      error.data = data;
       throw error;
     }
-    return data;
+    return response;
   }
 
-  if (!response.ok) {
-    const error = new Error(response.statusText);
+  const data = await response.json();
+  if (!response.ok || data?.status !== "success") {
+    const error = new Error(data?.message);
     error.status = response.status;
+    error.data = data;
     throw error;
   }
 
-  return response;
+  return data;
 }
 
-export function startSession({ mobile, countryCode }) {
-  return request("/api/giddh-cert/verify-otp", {
-    method: "POST",
-    body: { mobile, countryCode },
+export function getDownloadUrl({ mobile, countryCode }) {
+  const normalizedMobile = normalizeMobile(mobile);
+  const normalizedCountryCode = String(countryCode).replace(/\D/g, "");
+  const params = new URLSearchParams({
+    countryCode: normalizedCountryCode,
+    mobile: normalizedMobile,
   });
+  return `${getBaseUrl()}/download?${params.toString()}`;
 }
 
-export function saveProfile(payload) {
-  return request("/api/giddh-cert/profile", {
+/** Backend sometimes returns path-only `/public/giddh-cert/download?...` — make absolute. */
+export function resolveDownloadUrl(downloadUrl, { mobile, countryCode }) {
+  if (downloadUrl) {
+    if (
+      downloadUrl.startsWith("http://") ||
+      downloadUrl.startsWith("https://")
+    ) {
+      return downloadUrl;
+    }
+    if (downloadUrl.startsWith("/")) {
+      return `${process.env.NEXT_PUBLIC_API_URL}${downloadUrl}`;
+    }
+  }
+  return getDownloadUrl({ mobile, countryCode });
+}
+
+export async function startSession({ mobile, countryCode }) {
+  const normalizedMobile = normalizeMobile(mobile);
+  const normalizedCountryCode = String(countryCode).replace(/\D/g, "");
+
+  if (!isValidMobile(normalizedMobile)) {
+    const error = new Error("Please enter a valid mobile number");
+    error.status = 400;
+    throw error;
+  }
+
+  const data = await request("/check", {
     method: "POST",
-    body: payload,
+    body: {
+      countryCode: normalizedCountryCode,
+      mobile: normalizedMobile,
+    },
   });
+
+  const body = data.body;
+  return {
+    ok: true,
+    message: data?.message,
+    resumeScreen: resolveResumeScreen(body),
+    learner: buildLearner(normalizedMobile, normalizedCountryCode, body),
+  };
 }
 
-export function submitResult(payload) {
-  return request("/api/giddh-cert/result", {
+export async function saveProfile({
+  mobile,
+  countryCode,
+  name,
+  email,
+  designation,
+  city,
+}) {
+  const normalizedMobile = normalizeMobile(mobile);
+  const normalizedCountryCode = String(countryCode).replace(/\D/g, "");
+
+  const data = await request("/profile", {
     method: "POST",
-    body: payload,
+    body: {
+      countryCode: normalizedCountryCode,
+      mobile: normalizedMobile,
+      name,
+      email,
+      designation,
+      city,
+    },
   });
+
+  const body = data.body;
+  return {
+    ok: true,
+    message: data?.message,
+    learner: buildLearner(normalizedMobile, normalizedCountryCode, body),
+  };
 }
 
-export function getDownloadUrl() {
-  return "/api/giddh-cert/download";
+export async function submitResult({
+  mobile,
+  countryCode,
+  score,
+  percentage,
+  totalQuestions,
+}) {
+  const normalizedMobile = normalizeMobile(mobile);
+  const normalizedCountryCode = String(countryCode).replace(/\D/g, "");
+
+  const data = await request("/result", {
+    method: "POST",
+    body: {
+      countryCode: normalizedCountryCode,
+      mobile: normalizedMobile,
+      score,
+      percentage,
+      totalQuestions,
+    },
+  });
+
+  const body = data.body;
+  const lastAttempt = body?.lastAttempt;
+  const downloadUrl = resolveDownloadUrl(lastAttempt?.downloadUrl, {
+    mobile: normalizedMobile,
+    countryCode: normalizedCountryCode,
+  });
+
+  return {
+    ok: true,
+    message: data?.message,
+    learner: buildLearner(normalizedMobile, normalizedCountryCode, body),
+    certificate: {
+      learnerName: body?.profile?.name,
+      score: lastAttempt?.percentage,
+      issuedAt: lastAttempt?.completedAt,
+      validUntil: lastAttempt?.validUntil,
+      downloadUrl,
+    },
+  };
 }

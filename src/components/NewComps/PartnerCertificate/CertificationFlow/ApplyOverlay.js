@@ -145,6 +145,8 @@ export default function ApplyOverlay({
     setIsLoading(true);
     try {
       const data = await saveProfile({
+        mobile,
+        countryCode,
         name: form.name.trim(),
         email: form.email.trim(),
         designation: form.profession,

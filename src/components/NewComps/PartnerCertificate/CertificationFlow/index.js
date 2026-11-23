@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 
 import { MODULE_PASS_PERCENT } from "@/utils/giddhCert/constants";
 import { buildExamModules } from "@/utils/giddhCert/course";
-import { getDownloadUrl } from "@/utils/giddhCert/clientApi";
+import { resolveDownloadUrl } from "@/utils/giddhCert/clientApi";
 import { showToaster } from "@/utils/signupHelpers";
 
 import ApplyOverlay from "./ApplyOverlay";
@@ -42,12 +42,17 @@ export default function CertificationFlow({
       const percentage = Number(lastAttempt?.percentage);
       const totalQuestions = Number(lastAttempt?.totalQuestions);
       const score = Number(lastAttempt?.score);
+      const downloadUrl = resolveDownloadUrl(lastAttempt?.downloadUrl, {
+        mobile: nextLearner?.mobile,
+        countryCode: nextLearner?.countryCode,
+      });
+
       const certPayload = {
         learnerName: nextLearner?.profile?.name,
         score: lastAttempt?.percentage,
         issuedAt: lastAttempt?.completedAt,
         validUntil: lastAttempt?.validUntil,
-        downloadUrl: getDownloadUrl(),
+        downloadUrl,
       };
 
       setLearner(nextLearner);
@@ -58,7 +63,9 @@ export default function CertificationFlow({
         overall: {
           percentage,
           score,
-          totalQuestions,
+          totalQuestions: Number.isFinite(totalQuestions)
+            ? totalQuestions
+            : undefined,
           allPassed: percentage >= MODULE_PASS_PERCENT,
         },
       });
