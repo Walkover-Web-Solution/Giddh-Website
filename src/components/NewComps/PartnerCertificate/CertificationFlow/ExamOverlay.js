@@ -84,10 +84,17 @@ export default function ExamOverlay({
     : moduleScores.length > 0 && overall.allPassed;
 
   useEffect(() => {
-    if (!isOpen || phase !== "quiz" || showInstructions) {
+    if (!isOpen || phase !== "quiz") {
       return undefined;
     }
     setTimer(MODULE_TIMER_SECONDS);
+    return undefined;
+  }, [isOpen, phase, moduleIndex]);
+
+  useEffect(() => {
+    if (!isOpen || phase !== "quiz" || showInstructions) {
+      return undefined;
+    }
     const id = setInterval(() => {
       setTimer((prev) => {
         if (prev <= 1) {
