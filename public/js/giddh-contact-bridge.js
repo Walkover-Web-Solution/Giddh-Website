@@ -8,6 +8,10 @@
     "utm_content",
   ];
 
+  var bridgeEl = document.getElementById("giddh-contact-bridge");
+  var isTestSite =
+    bridgeEl && bridgeEl.getAttribute("data-app-env") === "test";
+
   function withStoredUtms(run) {
     if (typeof getLocalStorage !== "function") {
       run();
@@ -42,38 +46,56 @@
   }
 
   function msg91ParamsFromHelper() {
+    if (!isTestSite) return null;
     if (typeof getOtpwidgetConfiguration !== "function") return null;
     var cfg = getOtpwidgetConfiguration(false, null);
     if (!cfg || !cfg.tokenAuth) return null;
     return { tokenAuth: cfg.tokenAuth, widgetId: cfg.widgetId || "" };
   }
 
+  /* Coupled to Embarko embed.js (iframe.gc-frame inside .gc-dialog or legacy .gc-overlay); see CONTRACTS.md */
   function syncMsg91ParamsOnFrame() {
     var params = msg91ParamsFromHelper();
     if (!params) return;
-    var frame = document.querySelector(".gc-overlay .gc-frame");
+    var frame =
+      document.querySelector(".gc-dialog iframe.gc-frame") ||
+      document.querySelector(".gc-overlay iframe.gc-frame") ||
+      document.querySelector("iframe.gc-frame");
     if (!frame || !frame.src) return;
     try {
       var url = new URL(frame.src);
       if (url.searchParams.get("tokenAuth") !== params.tokenAuth) {
         url.searchParams.set("tokenAuth", params.tokenAuth);
       }
-      if (params.widgetId && url.searchParams.get("widgetId") !== params.widgetId) {
+      if (
+        params.widgetId &&
+        url.searchParams.get("widgetId") !== params.widgetId
+      ) {
         url.searchParams.set("widgetId", params.widgetId);
       }
       if (url.toString() !== frame.src) frame.src = url.toString();
-    } catch (e) {
-      /* ignore malformed frame src */
+    } catch (_e) {
+      /* malformed frame src */
     }
   }
 
   function scheduleMsg91Sync() {
+    if (!isTestSite) return;
     requestAnimationFrame(syncMsg91ParamsOnFrame);
     setTimeout(syncMsg91ParamsOnFrame, 0);
   }
 
+  function purposeFromButton(el) {
+    return (
+      el.getAttribute("data-purpose") ||
+      el.getAttribute("data-giddh-contact") ||
+      ""
+    );
+  }
+
   function install() {
-    if (!window.GiddhContact || window.GiddhContact.__utmFromStorage) return;
+    if (!window.GiddhContact || window.GiddhContact.__bridgeInstalled) return;
+
     var orig = window.GiddhContact.open;
     window.GiddhContact.open = function (opts) {
       withStoredUtms(function () {
@@ -81,16 +103,21 @@
         scheduleMsg91Sync();
       });
     };
-  /* embed.js button clicks call an internal open(), not GiddhContact.open — listen in bubble phase after embed registers */
+
+    /* embed.js handles [data-giddh-contact] with an internal open(), not window.GiddhContact.open */
     document.addEventListener(
       "click",
       function (e) {
-        if (!e.target.closest || !e.target.closest("[data-giddh-contact]")) return;
-        scheduleMsg91Sync();
+        var el = e.target.closest && e.target.closest("[data-giddh-contact]");
+        if (!el) return;
+        e.preventDefault();
+        e.stopPropagation();
+        window.GiddhContact.open({ purpose: purposeFromButton(el) });
       },
-      false
+      true
     );
-    window.GiddhContact.__utmFromStorage = true;
+
+    window.GiddhContact.__bridgeInstalled = true;
   }
 
   if (window.GiddhContact) {

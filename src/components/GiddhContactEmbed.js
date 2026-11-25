@@ -13,6 +13,7 @@ export default function GiddhContactEmbed() {
         id="giddh-contact-bridge"
         src="/js/giddh-contact-bridge.js"
         strategy="lazyOnload"
+        data-app-env={process.env.NEXT_PUBLIC_APP_ENV || ""}
       />
     </>
   );
