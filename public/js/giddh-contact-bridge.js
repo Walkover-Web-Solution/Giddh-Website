@@ -41,12 +41,39 @@
     }
   }
 
+  function msg91ParamsFromHelper() {
+    if (typeof getOtpwidgetConfiguration !== "function") return null;
+    var cfg = getOtpwidgetConfiguration(false, null);
+    if (!cfg || !cfg.tokenAuth) return null;
+    return { tokenAuth: cfg.tokenAuth, widgetId: cfg.widgetId || "" };
+  }
+
+  function syncMsg91ParamsOnFrame() {
+    var params = msg91ParamsFromHelper();
+    if (!params) return;
+    var frame = document.querySelector(".gc-overlay .gc-frame");
+    if (!frame || !frame.src) return;
+    try {
+      var url = new URL(frame.src);
+      if (url.searchParams.get("tokenAuth") !== params.tokenAuth) {
+        url.searchParams.set("tokenAuth", params.tokenAuth);
+      }
+      if (params.widgetId && url.searchParams.get("widgetId") !== params.widgetId) {
+        url.searchParams.set("widgetId", params.widgetId);
+      }
+      if (url.toString() !== frame.src) frame.src = url.toString();
+    } catch (e) {
+      /* ignore malformed frame src */
+    }
+  }
+
   function install() {
     if (!window.GiddhContact || window.GiddhContact.__utmFromStorage) return;
     var orig = window.GiddhContact.open;
     window.GiddhContact.open = function (opts) {
       withStoredUtms(function () {
         orig.call(window.GiddhContact, opts);
+        requestAnimationFrame(syncMsg91ParamsOnFrame);
       });
     };
     window.GiddhContact.__utmFromStorage = true;
