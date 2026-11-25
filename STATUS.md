@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-25 · **Reviewed up to commit:** `bb005c0f`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-25 · **Reviewed up to commit:** `dee3bd62`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -63,7 +63,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | Affiliate program | 🟡 | `src/pages/affiliate.js` and locale variants. |
 | Comparison and switching pages | 🟡 | `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`. |
 | GIDDH Partner Certificate | 🟡 | `/giddh-partner-certificate` (global); uses Next API proxies and Giddh `/public/giddh-cert`. Not exercised end-to-end from this repo. |
-| Embarko contact (sales/support) | 🟡 | Contact Us + AE/UK home banners; CSP allowlist for `giddh-contact.embarko.app` in `next.config.js` and `public/_headers`. UTM bridge [Q-033](docs/OPEN_QUESTIONS.md#active-questions-table). |
+| Embarko contact (sales/support) | 🟡 | Contact Us + AE/UK home banners; CSP allowlist for `giddh-contact.embarko.app` in `next.config.js` and `public/_headers`. UTM + MSG91 OTP creds via `giddh-contact-bridge.js` [Q-033](docs/OPEN_QUESTIONS.md#active-questions-table). |
 
 ### Proposals & roadmaps
 
@@ -166,6 +166,7 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-25 · Cursor agent · Embarko bridge forwards MSG91 `tokenAuth`/`widgetId` from `helper.js` into contact iframe for test OTP · Embarko contact row
 - 2026-11-25 · Cursor agent · CSP allowlist `giddh-contact.embarko.app` (script-src, frame-src, form-action) in `next.config.js` and `public/_headers`; removed Typeform CSP entries · Embarko contact + CSP rows
 - 2026-11-22 · Cursor cloud agent · Weekly docs maintenance at `9b1c5d11`: partner certificate, Embarko contact, 407-page build, Q-034 · Reviewed commit, API-route ⛔, new scope rows
 - 2026-11-21 · Cursor agent · PR #861 review: lazy-load Embarko on contact routes, UTM bridge (`giddh-contact-bridge.js`), Support button spacing · [no status]
