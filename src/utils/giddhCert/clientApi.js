@@ -91,6 +91,35 @@ export function resolveDownloadUrl(downloadUrl, { mobile, countryCode }) {
   return getDownloadUrl({ mobile, countryCode });
 }
 
+export async function downloadCertificatePdf(downloadUrl) {
+  if (typeof window === "undefined" || !downloadUrl) {
+    return;
+  }
+
+  const response = await fetch(downloadUrl, {
+    method: "GET",
+    mode: "cors",
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    const error = new Error(response.statusText);
+    error.status = response.status;
+    throw error;
+  }
+
+  const blob = await response.blob();
+  const objectUrl = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = objectUrl;
+  link.download = "giddh-certificate.pdf";
+  link.rel = "noopener";
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(objectUrl);
+}
+
 export async function startSession({ mobile, countryCode }) {
   const normalizedMobile = normalizeMobile(mobile);
   const normalizedCountryCode = String(countryCode).replace(/\D/g, "");

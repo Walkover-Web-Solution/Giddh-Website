@@ -5,7 +5,10 @@ import {
   MODULE_PASS_PERCENT,
 } from "@/utils/giddhCert/constants";
 import { buildExamModules, scoreOverall } from "@/utils/giddhCert/course";
-import { resolveDownloadUrl } from "@/utils/giddhCert/clientApi";
+import {
+  downloadCertificatePdf,
+  resolveDownloadUrl,
+} from "@/utils/giddhCert/clientApi";
 import { showToaster } from "@/utils/signupHelpers";
 
 import ApplyOverlay from "./ApplyOverlay";
@@ -152,10 +155,15 @@ export default function CertificationFlow({
     setIsApplyOpen,
   ]);
 
-  const openCertificatePdf = (certPayload) => {
+  const openCertificatePdf = async (certPayload) => {
     const downloadUrl = certPayload?.downloadUrl;
-    if (typeof window !== "undefined" && downloadUrl) {
-      window.open(downloadUrl, "_blank", "noopener,noreferrer");
+    if (!downloadUrl) {
+      return;
+    }
+    try {
+      await downloadCertificatePdf(downloadUrl);
+    } catch (error) {
+      showToaster(error.message, "error", "top-center");
     }
   };
 

@@ -3835,4 +3835,22 @@
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
+  <url>
+       <loc>https://giddh.com/in/giddh-partner-certificate</loc>
+       <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://giddh.com/ae/giddh-partner-certificate</loc>
+       <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://giddh.com/uk/giddh-partner-certificate</loc>
+       <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.6400</priority>
+  </url>
 </urlset>
