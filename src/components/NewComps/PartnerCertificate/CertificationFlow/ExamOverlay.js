@@ -28,6 +28,27 @@ function formatCopy(template, values) {
   );
 }
 
+function formatDateDdMmYyyy(value) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = String(date.getFullYear());
+  return `${day}/${month}/${year}`;
+}
+
+function resolveRetakeEligibleDate(nextAttemptAt) {
+  if (nextAttemptAt) {
+    return formatDateDdMmYyyy(nextAttemptAt);
+  }
+  // One-month retake period from today (e.g. 25/11/2026 → 25/12/2026).
+  const next = new Date();
+  next.setMonth(next.getMonth() + 1);
+  return formatDateDdMmYyyy(next);
+}
+
 export default function ExamOverlay({
   isOpen,
   onClose,
@@ -59,9 +80,14 @@ export default function ExamOverlay({
   const [certificatePayload, setCertificatePayload] = useState(
     initialResult?.certificate
   );
+  const [nextAttemptAt, setNextAttemptAt] = useState(
+    learner?.nextAttemptAt
+  );
+  const [canAttempt, setCanAttempt] = useState(learner?.canAttempt);
   const lastActivityRef = useRef(Date.now());
   const idleWarningRef = useRef(false);
   idleWarningRef.current = idleWarning;
+  const retakeEligibleDate = resolveRetakeEligibleDate(nextAttemptAt);
 
   const currentModule = modules[moduleIndex];
   const currentQuestion = currentModule?.questions?.[questionIndex];
@@ -224,10 +250,6 @@ export default function ExamOverlay({
     }
 
     const overallScore = scoreOverall(nextScores);
-    if (!overallScore.allPassed) {
-      setPhase("result");
-      return;
-    }
 
     setIsSubmitting(true);
     try {
@@ -238,7 +260,15 @@ export default function ExamOverlay({
         percentage: overallScore.percentage,
         totalQuestions: overallScore.totalQuestions,
       });
-      setCertificatePayload(data.certificate);
+      if (data?.certificate) {
+        setCertificatePayload(data.certificate);
+      }
+      if (data?.learner?.nextAttemptAt) {
+        setNextAttemptAt(data.learner.nextAttemptAt);
+      }
+      if (typeof data?.learner?.canAttempt === "boolean") {
+        setCanAttempt(data.learner.canAttempt);
+      }
       setPhase("result");
       onCompleted?.(data, nextScores);
     } catch (error) {
@@ -549,6 +579,13 @@ export default function ExamOverlay({
                   {compData.certificateIssuerName}
                 </p>
               )}
+              {retakeEligibleDate && compData?.resultRetakeEligible ? (
+                <p className="font-sm font-grey-deep m-0 col-lg-10">
+                  {formatCopy(compData.resultRetakeEligible, {
+                    date: retakeEligibleDate,
+                  })}
+                </p>
+              ) : null}
 
               {allPassed ? (
                 <button
@@ -566,7 +603,7 @@ export default function ExamOverlay({
                   {compData?.viewCertificateText}
                   <MdArrowForward size={16} aria-hidden="true" />
                 </button>
-              ) : (
+              ) : canAttempt === false ? null : (
                 <button
                   type="button"
                   className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"

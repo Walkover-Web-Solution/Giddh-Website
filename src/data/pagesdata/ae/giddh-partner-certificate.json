@@ -278,6 +278,7 @@
     "resultScore": "You scored {percent}%",
     "resultPassedSub": "You scored at least 70% overall. Open your certificate when ready.",
     "resultFailedSub": "You need an overall score of at least 70% to pass. Two attempts are provided; after that, a one-month retake period applies.",
+    "resultRetakeEligible": "You can retake the test after {date}.",
     "certificateIssuerLabel": "Issued by",
     "certificateIssuerName": "Walkover Technologies Pvt Ltd",
     "viewCertificateText": "Download certification",

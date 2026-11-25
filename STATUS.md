@@ -62,7 +62,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | MDX blog with Decap CMS | 🟡 | 253 posts in `_posts/blog/`; CMS use unconfirmed ([Q-014](docs/OPEN_QUESTIONS.md#active-questions-table)); image field and JSON-LD issues ([Q-025](docs/OPEN_QUESTIONS.md#active-questions-table), [Q-027](docs/OPEN_QUESTIONS.md#active-questions-table)). |
 | Affiliate program | 🟡 | `src/pages/affiliate.js` and locale variants. |
 | Comparison and switching pages | 🟡 | `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`. |
-| GIDDH Partner Certificate | 🟡 | `/giddh-partner-certificate` plus `/in`, `/ae`, `/uk` locale routes; JSON per country; Giddh `/public/giddh-cert`. Retake copy: 2 attempts, then 1-month wait. Not exercised end-to-end from this repo. |
+| GIDDH Partner Certificate | 🟡 | `/giddh-partner-certificate` plus `/in`, `/ae`, `/uk` locale routes; JSON per country; Giddh `/public/giddh-cert`. Fail score popup shows retake-eligible date (`nextAttemptAt` or +1 month). Not exercised end-to-end from this repo. |
 | Embarko contact (sales/support) | 🟡 | Replaces Typeform on Contact Us and AE/UK home banners (PR #861). UTM bridge [Q-033](docs/OPEN_QUESTIONS.md#active-questions-table). |
 
 ### Proposals & roadmaps
@@ -166,6 +166,7 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-25 · Cursor agent · Partner certificate fail score popup shows retake-eligible date (API `nextAttemptAt` or +1 month) · Partner Certificate notes updated
 - 2026-11-25 · Cursor agent · Partner certificate locale routes (`/in|/ae|/uk`) + per-country JSON/SEO · Partner Certificate notes updated
 - 2026-11-25 · Cursor agent · Partner certificate retake policy copy: two attempts, then one-month retake period · Partner Certificate notes updated
 - 2026-11-22 · Cursor cloud agent · Weekly docs maintenance at `9b1c5d11`: partner certificate, Embarko contact, 407-page build, Q-034 · Reviewed commit, API-route ⛔, new scope rows
