@@ -1,6 +1,6 @@
 ---
 covers: ["src/utils/**", "src/hooks/**", "src/pages/**/login.js", "src/pages/**/signup.js", "src/pages/chartered-accountant-signup.js", "src/pages/pricing.js", "src/pages/payment.js", "src/pages/api/giddh-cert/**", "src/components/otp*.js", "src/components/googleLogin.js", "src/components/loginWithPassword.js", "src/components/NewComps/BookFreeDemoForm/**", "src/components/NewComps/AffiliateForm/**", "src/components/NewComps/PartnerCertificate/**", "src/data/pagesdata/**", "src/data/giddh-cert/**", "_posts/**", "public/admin/config.yml", "public/js/**", "src/pages/_document.js"]
-verified_at: e82d3305
+verified_at: 7cbd015a
 verified_on: 2026-11-25
 ---
 # Contracts & Data Schemas
