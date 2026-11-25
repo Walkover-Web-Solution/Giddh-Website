@@ -55,14 +55,12 @@ export default function ExamOverlay({
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [tabWarning, setTabWarning] = useState(false);
-  const [screenshotWarning, setScreenshotWarning] = useState(false);
   const [idleWarning, setIdleWarning] = useState(false);
   const [certificatePayload, setCertificatePayload] = useState(
     initialResult?.certificate
   );
   const lastActivityRef = useRef(Date.now());
   const idleWarningRef = useRef(false);
-  const screenshotIntentRef = useRef(false);
   idleWarningRef.current = idleWarning;
 
   const currentModule = modules[moduleIndex];
@@ -135,56 +133,16 @@ export default function ExamOverlay({
       return undefined;
     }
 
-    const isScreenshotShortcut = (event) => {
-      if (event.key === "PrintScreen") {
-        return true;
-      }
-      if (
-        event.metaKey &&
-        event.shiftKey &&
-        (event.key === "3" || event.key === "4" || event.key === "5")
-      ) {
-        return true;
-      }
-      if (
-        event.shiftKey &&
-        (event.metaKey || event.ctrlKey) &&
-        (event.key === "s" || event.key === "S")
-      ) {
-        return true;
-      }
-      return false;
-    };
-
-    const onKeyDown = (event) => {
-      if (!isScreenshotShortcut(event)) {
-        return;
-      }
-      screenshotIntentRef.current = true;
-      setScreenshotWarning(true);
-      setIdleWarning(false);
-      window.setTimeout(() => {
-        screenshotIntentRef.current = false;
-      }, 2000);
-    };
-
     const onVisibility = () => {
       if (!document.hidden) {
-        return;
-      }
-      if (screenshotIntentRef.current) {
-        setScreenshotWarning(true);
-        setIdleWarning(false);
         return;
       }
       setTabWarning(true);
       setIdleWarning(false);
     };
 
-    document.addEventListener("keydown", onKeyDown, true);
     document.addEventListener("visibilitychange", onVisibility);
     return () => {
-      document.removeEventListener("keydown", onKeyDown, true);
       document.removeEventListener("visibilitychange", onVisibility);
     };
   }, [isOpen, phase]);
@@ -194,8 +152,7 @@ export default function ExamOverlay({
       !isOpen ||
       phase !== "quiz" ||
       showInstructions ||
-      tabWarning ||
-      screenshotWarning
+      tabWarning
     ) {
       return undefined;
     }
@@ -230,7 +187,7 @@ export default function ExamOverlay({
       });
       clearInterval(idleCheckId);
     };
-  }, [isOpen, phase, showInstructions, tabWarning, screenshotWarning]);
+  }, [isOpen, phase, showInstructions, tabWarning]);
 
   const timerLabel = useMemo(() => {
     const minutes = String(Math.floor(timer / 60)).padStart(2, "0");
@@ -342,7 +299,6 @@ export default function ExamOverlay({
 
   const handleDiscardAttempt = () => {
     setTabWarning(false);
-    setScreenshotWarning(false);
     setIdleWarning(false);
     onClose({ discarded: true });
   };
@@ -643,27 +599,7 @@ export default function ExamOverlay({
             </div>
           )}
 
-          {screenshotWarning && !tabWarning && (
-            <div className="position-absolute top-0 start-0 end-0 bottom-0 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 rounded-3">
-              <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3 col-11 col-md-8">
-                <h3 className="font-sm font-600 m-0">
-                  {compData?.screenshotWarningTitle}
-                </h3>
-                <p className="font-sm font-slate-grey m-0">
-                  {compData?.screenshotWarningBody}
-                </p>
-                <button
-                  type="button"
-                  className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                  onClick={handleDiscardAttempt}
-                >
-                  {compData?.screenshotWarningButtonText}
-                </button>
-              </div>
-            </div>
-          )}
-
-          {idleWarning && !tabWarning && !screenshotWarning && (
+          {idleWarning && !tabWarning && (
             <div className="position-absolute top-0 start-0 end-0 bottom-0 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 rounded-3">
               <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3 col-11 col-md-8">
                 <h3 className="font-sm font-600 m-0">
