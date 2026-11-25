@@ -351,6 +351,7 @@ User opens `/contact-us` or clicks a CTA on AE/UK legacy home (`src/components/b
 
 - Scripts load with `next/script` `strategy="lazyOnload"` (not on every page; only where `GiddhContactEmbed` mounts).
 - UTM bridge patches `window.GiddhContact.open` to copy missing `utm_*` from `getLocalStorage` into `location.search` briefly (`history.replaceState`), matching attribution behaviour the old Typeform slider had ([Q-033](OPEN_QUESTIONS.md#active-questions-table)).
+- MSG91 bridge appends `tokenAuth` and `widgetId` from `getOtpwidgetConfiguration` onto the Embarko iframe after open. Button clicks use embed.js’s internal `open()`, so the bridge also listens on `[data-giddh-contact]` in bubble phase (registered after embed.js) to run the sync.
 - Contract: [CONTRACTS.md](CONTRACTS.md) embed row.
 
 ---
