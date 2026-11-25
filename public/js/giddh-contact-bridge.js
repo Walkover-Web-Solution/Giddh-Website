@@ -53,14 +53,20 @@
     return { tokenAuth: cfg.tokenAuth, widgetId: cfg.widgetId || "" };
   }
 
-  /* Coupled to Embarko embed.js (iframe.gc-frame inside .gc-dialog or legacy .gc-overlay); see CONTRACTS.md */
+  function activeContactFrame() {
+    var frames = document.querySelectorAll(
+      ".gc-dialog iframe.gc-frame, .gc-overlay iframe.gc-frame"
+    );
+    if (frames.length) return frames[frames.length - 1];
+    frames = document.querySelectorAll("iframe.gc-frame");
+    return frames.length ? frames[frames.length - 1] : null;
+  }
+
+  /* Coupled to Embarko embed.js iframe.gc-frame markup; see CONTRACTS.md */
   function syncMsg91ParamsOnFrame() {
     var params = msg91ParamsFromHelper();
     if (!params) return;
-    var frame =
-      document.querySelector(".gc-dialog iframe.gc-frame") ||
-      document.querySelector(".gc-overlay iframe.gc-frame") ||
-      document.querySelector("iframe.gc-frame");
+    var frame = activeContactFrame();
     if (!frame || !frame.src) return;
     try {
       var url = new URL(frame.src);
@@ -81,8 +87,8 @@
 
   function scheduleMsg91Sync() {
     if (!isTestSite) return;
-    requestAnimationFrame(syncMsg91ParamsOnFrame);
-    setTimeout(syncMsg91ParamsOnFrame, 0);
+    /* embed.js sets frame.src synchronously in open(); rewrite in the same task */
+    syncMsg91ParamsOnFrame();
   }
 
   function purposeFromButton(el) {

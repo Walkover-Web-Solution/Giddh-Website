@@ -166,6 +166,7 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-25 · Cursor agent · Embarko bridge: sync MSG91 on frame, last-match iframe, Q-035 assumption wording · Embarko contact row
 - 2026-11-25 · Cursor agent · Embarko bridge: capture-phase routing to wrapped `open`, MSG91 creds gated on `NEXT_PUBLIC_APP_ENV=test`, docs Q-035 · Embarko contact row
 - 2026-11-25 · Cursor agent · Embarko bridge forwards MSG91 `tokenAuth`/`widgetId` from `helper.js` into contact iframe for test OTP · Embarko contact row
 - 2026-11-25 · Cursor agent · CSP allowlist `giddh-contact.embarko.app` (script-src, frame-src, form-action) in `next.config.js` and `public/_headers`; removed Typeform CSP entries · Embarko contact + CSP rows
