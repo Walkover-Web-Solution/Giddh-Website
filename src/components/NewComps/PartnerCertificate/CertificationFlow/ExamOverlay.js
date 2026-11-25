@@ -9,6 +9,7 @@ import {
 } from "react-icons/md";
 import {
   IDLE_WARNING_SECONDS,
+  MODULE_PASS_PERCENT,
   MODULE_TIMER_SECONDS,
 } from "@/utils/giddhCert/constants";
 import { scoreModule, scoreOverall } from "@/utils/giddhCert/course";
@@ -68,20 +69,28 @@ export default function ExamOverlay({
   const currentQuestion = currentModule?.questions?.[questionIndex];
   const totalInModule = currentModule?.questions?.length;
   const overall = useMemo(() => {
+    const apiPercent = Number(certificatePayload?.score);
     const hasLiveTotals =
       moduleScores.length > 0 &&
       moduleScores.every((item) => Number.isFinite(item.total));
+    let computed;
     if (hasLiveTotals) {
-      return scoreOverall(moduleScores);
+      computed = scoreOverall(moduleScores);
+    } else if (initialResult?.overall) {
+      computed = initialResult.overall;
+    } else {
+      computed = scoreOverall(moduleScores);
     }
-    if (initialResult?.overall) {
-      return initialResult.overall;
+    if (Number.isFinite(apiPercent)) {
+      return {
+        ...computed,
+        percentage: apiPercent,
+        allPassed: apiPercent >= MODULE_PASS_PERCENT,
+      };
     }
-    return scoreOverall(moduleScores);
-  }, [initialResult?.overall, moduleScores]);
-  const allPassed = initialResult?.overall
-    ? initialResult.overall.allPassed
-    : moduleScores.length > 0 && overall.allPassed;
+    return computed;
+  }, [certificatePayload?.score, initialResult?.overall, moduleScores]);
+  const allPassed = overall.allPassed;
 
   useEffect(() => {
     if (!isOpen || phase !== "quiz") {
@@ -316,12 +325,6 @@ export default function ExamOverlay({
   };
 
   const handleContinueModule = () => {
-    if (!moduleScores[moduleIndex].passed) {
-      setPhase("quiz");
-      resetModuleState();
-      setShowInstructions(true);
-      return;
-    }
     setModuleIndex((prev) => prev + 1);
     setPhase("quiz");
     resetModuleState();
@@ -329,12 +332,9 @@ export default function ExamOverlay({
   };
 
   const handleRetakeFailed = () => {
-    const failedIndex = moduleScores.findIndex((item) => !item.passed);
-    if (failedIndex < 0) {
-      return;
-    }
-    setModuleIndex(failedIndex);
-    setModuleScores((prev) => prev.slice(0, failedIndex));
+    setModuleIndex(0);
+    setModuleScores([]);
+    setCertificatePayload(null);
     setPhase("quiz");
     resetModuleState();
     setShowInstructions(true);
@@ -526,49 +526,30 @@ export default function ExamOverlay({
           {phase === "gate" && (
             <div className="d-flex flex-column align-items-center gap-3 text-center">
               <div
-                className={`${styles.statusIcon} rounded-circle d-inline-flex align-items-center justify-content-center ${
-                  currentScore?.passed
-                    ? "bg-light-green font-success"
-                    : "bg-baby-pink font-danger"
-                }`}
+                className={`${styles.statusIcon} rounded-circle d-inline-flex align-items-center justify-content-center bg-light-green font-success`}
               >
-                {currentScore?.passed ? (
-                  <MdCheck size={24} />
-                ) : (
-                  <MdClose size={24} />
-                )}
+                <MdCheck size={24} />
               </div>
               <h2 className="font-lg font-600 font-primary lh-sm m-0">
-                {formatCopy(
-                  currentScore?.passed
-                    ? compData?.gatePassedTitle
-                    : compData?.gateFailedTitle,
-                  {
-                    current: moduleIndex + 1,
-                    correct: currentScore?.correct,
-                    total: currentScore?.total,
-                  }
-                )}
+                {formatCopy(compData?.gatePassedTitle, {
+                  current: moduleIndex + 1,
+                })}
               </h2>
               <p className="font-sm font-grey-deep m-0 col-lg-10">
-                {currentScore?.passed
-                  ? formatCopy(compData?.gatePassedSub, {
-                      next: moduleIndex + 2,
-                      total: modules.length,
-                      title: nextModule.title,
-                    })
-                  : compData?.gateFailedSub}
+                {formatCopy(compData?.gatePassedSub, {
+                  next: moduleIndex + 2,
+                  total: modules.length,
+                  title: nextModule?.title,
+                })}
               </p>
               <button
                 type="button"
                 className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
                 onClick={handleContinueModule}
               >
-                {currentScore?.passed
-                  ? formatCopy(compData?.continueModuleText, {
-                      next: moduleIndex + 2,
-                    })
-                  : compData?.retakeModuleText}
+                {formatCopy(compData?.continueModuleText, {
+                  next: moduleIndex + 2,
+                })}
                 <MdArrowForward size={16} aria-hidden="true" />
               </button>
             </div>
@@ -595,52 +576,23 @@ export default function ExamOverlay({
                   : compData?.resultFailedTitle}
               </h2>
               <p className="font-sm font-grey-deep m-0">
-                {Number.isFinite(overall.score) &&
-                Number.isFinite(overall.totalQuestions)
+                {Number.isFinite(overall.percentage)
                   ? formatCopy(compData?.resultScore, {
                       percent: overall.percentage,
-                      score: overall.score,
-                      total: overall.totalQuestions,
                     })
-                  : formatCopy(compData?.resultScorePercentOnly, {
-                      percent: overall.percentage,
-                    })}
+                  : null}
               </p>
-              <p className="font-sm font-grey-deep m-0 col-lg-10">
-                {allPassed
-                  ? compData?.resultPassedSub
-                  : compData?.resultFailedSub}
-              </p>
-
-              <div className="row g-3 w-100 text-start">
-                {moduleScores.map((item, index) => (
-                  <div key={item.title} className="col-12 col-md-4">
-                    <div
-                      className={`rounded-3 p-3 h-100 border ${
-                        item.passed
-                          ? "bg-light-green border-success"
-                          : "bg-baby-pink border-danger"
-                      }`}
-                    >
-                      <div className="font-xs font-600 font-grey-deep">
-                        {formatCopy(compData?.moduleCardLabel, {
-                          current: index + 1,
-                        })}
-                      </div>
-                      <div
-                        className={`font-lg font-600 lh-1 ${
-                          item.passed ? "font-success" : "font-danger"
-                        }`}
-                      >
-                        {item.percent}%
-                      </div>
-                      <div className="font-xs font-slate-grey">
-                        {item.title}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              {!allPassed && compData?.resultFailedSub ? (
+                <p className="font-sm font-grey-deep m-0 col-lg-10">
+                  {compData.resultFailedSub}
+                </p>
+              ) : null}
+              {allPassed && compData?.certificateIssuerName && (
+                <p className="font-xs font-grey-deep m-0">
+                  {compData?.certificateIssuerLabel}{" "}
+                  {compData.certificateIssuerName}
+                </p>
+              )}
 
               {allPassed ? (
                 <button
@@ -664,7 +616,7 @@ export default function ExamOverlay({
                   className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
                   onClick={handleRetakeFailed}
                 >
-                  {compData?.retakeFailedText}
+                  {compData?.retakeExamText}
                   <MdArrowForward size={16} aria-hidden="true" />
                 </button>
               )}

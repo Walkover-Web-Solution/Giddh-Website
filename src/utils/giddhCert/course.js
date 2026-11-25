@@ -45,12 +45,12 @@ export function scoreModule(answers, questions) {
       correct += 1;
     }
   });
-  const percent = Math.round((correct / total) * 100);
+  const percent =
+    total > 0 ? Math.round((correct / total) * 100) : 0;
   return {
     correct,
     total,
     percent,
-    passed: percent >= MODULE_PASS_PERCENT,
   };
 }
 
@@ -63,12 +63,14 @@ export function scoreOverall(moduleScores) {
     },
     { correct: 0, total: 0 }
   );
-  const percentage = Math.round((totals.correct / totals.total) * 100);
-  const allPassed = moduleScores.every((item) => item.passed);
+  const percentage =
+    totals.total > 0
+      ? Math.round((totals.correct / totals.total) * 100)
+      : 0;
   return {
     score: totals.correct,
     totalQuestions: totals.total,
     percentage,
-    allPassed,
+    allPassed: percentage >= MODULE_PASS_PERCENT,
   };
 }

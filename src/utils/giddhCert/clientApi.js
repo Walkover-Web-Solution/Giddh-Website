@@ -1,4 +1,7 @@
-import { MODULE_PASS_PERCENT } from "@/utils/giddhCert/constants";
+import {
+  CERTIFICATE_ISSUER_NAME,
+  MODULE_PASS_PERCENT,
+} from "@/utils/giddhCert/constants";
 import { isValidMobile, normalizeMobile } from "@/utils/giddhCert/serverApi";
 
 function getBaseUrl() {
@@ -183,6 +186,7 @@ export async function submitResult({
       score: lastAttempt?.percentage,
       issuedAt: lastAttempt?.completedAt,
       validUntil: lastAttempt?.validUntil,
+      issuerName: CERTIFICATE_ISSUER_NAME,
       downloadUrl,
     },
   };

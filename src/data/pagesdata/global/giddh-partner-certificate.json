@@ -118,11 +118,11 @@
         "iconKey": "exam",
         "title": "Certification Exam",
         "summary": "Complete a short online assessment covering real-world client scenarios to earn your official GIDDH Certified Partner badge and digital certificate.",
-        "meta": "Module 03 · ~10 mins · Unlimited retakes",
+        "meta": "Module 03 · ~10 mins · 2 attempts, then 1 month",
         "topics": [
           "Practical multiple-choice scenario questions",
           "Instant scoring with immediate digital badge delivery",
-          "Free retakes if you want to improve your score",
+          "Two attempts provided, followed by a one-month retake period",
           "Direct pathway to GIDDH Partner Program onboarding"
         ]
       }
@@ -145,7 +145,7 @@
       },
       {
         "number": "03",
-        "title": "Tally / Zoho Switchers",
+        "title": "Tally Resellers",
         "description": "Learn how to migrate client data cleanly from legacy desktop or alternative cloud tools to GIDDH with zero disruption."
       },
       {
@@ -190,22 +190,34 @@
     "eyebrow": "Get Started",
     "headingPrimary": "Start now —",
     "headingAccent": "verify mobile & begin.",
-    "description": "Verify your mobile number, complete a short profile, and start the free GIDDH certification assessment. Pass with 70%+ to earn your certificate.",
+    "description": "Verify your mobile number, complete a short profile, and start the free GIDDH certification assessment. Pass with an overall score of at least 70% to earn your certificate.",
     "buttonText": "Start certification",
-    "helperText": "100% free · Mobile OTP · 3 modules · Certificate valid 6 months"
+    "helperText": "100% free · Mobile OTP · 3 modules · Certificate valid 6 months",
+    "consentTextBefore": "By continuing you agree to be contacted about the GIDDH certification and Partnership Program using the mobile number and email you provide. See our ",
+    "consentLinkText": "Privacy Policy",
+    "consentLinkHref": "/privacy-policy",
+    "consentTextAfter": "."
   },
   "applyOverlay": {
     "countryCode": "91",
     "closeAriaLabel": "Close",
     "eyebrow": "Get Started",
     "heading": "Start now — it takes 30 seconds.",
-    "description": "Verify your mobile, tell us who you are, then go straight through Module 1, 2, and 3 right here. Pass with 70% or higher on each module to get your certificate instantly.",
+    "description": "Verify your mobile, tell us who you are, then go straight through Module 1, 2, and 3 right here. Pass with an overall score of at least 70% to get your certificate instantly.",
+    "consentTextBefore": "By continuing you agree to be contacted about the GIDDH certification and Partnership Program using the mobile number and email you provide. See our ",
+    "consentLinkText": "Privacy Policy",
+    "consentLinkHref": "/privacy-policy",
+    "consentTextAfter": ".",
     "mobile": {
       "label": "Mobile number",
       "placeholder": "10-digit mobile number",
       "submitText": "Send OTP",
       "loadingText": "Sending...",
-      "helperText": "Progress is saved on the server for this mobile number."
+      "helperText": "Progress is saved on the server for this mobile number.",
+      "termsAgreePrefix": "I agree to the ",
+      "termsLinkText": "Terms & Conditions",
+      "termsLinkHref": "/terms",
+      "termsAgreeSuffix": "."
     },
     "otp": {
       "label": "Enter OTP",
@@ -228,13 +240,13 @@
       "cityPlaceholder": "Your city",
       "submitText": "Start the course",
       "loadingText": "Saving...",
-      "helperText": "No cost to enroll. By submitting, you agree to be contacted about the GIDDH Certification and Partnership Program.",
+      "helperText": "No cost to enroll.",
       "professions": [
         "Chartered Accountant",
         "Bookkeeper",
         "Consultant",
-        "Reseller Owner",
-        "Reseller / Partner",
+        "Business Owner",
+        "Tally Resellers",
         "Other"
       ]
     }
@@ -248,8 +260,8 @@
       "Tab switching is not allowed during the test.",
       "Certificate validity is 6 months from the issued date.",
       "If you exit or leave the test midway, the ongoing attempt is discarded and you must start again.",
-      "After submitting results, retakes are allowed once every month.",
-      "Each module requires at least 70% to pass."
+      "Two attempts will be provided, followed by a one-month retake period.",
+      "Your overall score across all three modules must be at least 70% to pass."
     ],
     "startModuleText": "Start module",
     "questionMeta": "Question {current} of {total}",
@@ -258,21 +270,18 @@
     "correctAnswerPrefix": "Correct answer:",
     "nextText": "Next",
     "finishText": "Finish",
-    "gatePassedTitle": "Module {current} complete — {correct}/{total} correct",
-    "gateFailedTitle": "Module {current} score — {correct}/{total} correct",
+    "gatePassedTitle": "Module {current} complete",
     "gatePassedSub": "Up next: Module {next} of {total} — {title}.",
-    "gateFailedSub": "You need at least 70% to continue. Retake this module to qualify.",
     "continueModuleText": "Continue to Module {next}",
-    "retakeModuleText": "Retake this module",
     "resultPassedTitle": "You're GIDDH Certified",
     "resultFailedTitle": "Assessment complete",
-    "resultScore": "Overall {percent}% · {score}/{total} correct",
-    "resultScorePercentOnly": "Overall {percent}%",
-    "resultPassedSub": "You passed every module with at least 70%. Open your certificate when ready.",
-    "resultFailedSub": "Each module needs at least 70%. Retake a failed module to qualify.",
-    "moduleCardLabel": "Module {current}",
+    "resultScore": "You scored {percent}%",
+    "resultPassedSub": "You scored at least 70% overall. Open your certificate when ready.",
+    "resultFailedSub": "You need an overall score of at least 70% to pass. Two attempts are provided; after that, a one-month retake period applies.",
+    "certificateIssuerLabel": "Issued by",
+    "certificateIssuerName": "Walkover Technologies Pvt Ltd",
     "viewCertificateText": "Download certification",
-    "retakeFailedText": "Retake failed module",
+    "retakeExamText": "Retake exam",
     "tabWarningTitle": "Tab switch detected",
     "tabWarningBody": "Tab switching is not allowed. This attempt will be discarded.",
     "tabWarningButtonText": "Close attempt",
@@ -295,7 +304,7 @@
     },
     {
       "question": "What happens if I fail the exam?",
-      "answer": "Each module needs at least 70% to pass. You can retake a failed module before submitting final results. After a submitted attempt, the API allows another attempt after 1 month."
+      "answer": "You need an overall score of at least 70% across all three modules to pass. Two attempts will be provided, followed by a one-month retake period."
     },
     {
       "question": "How does the partner revenue share actually work?",
@@ -303,7 +312,7 @@
     },
     {
       "question": "How is the certificate generated?",
-      "answer": "After you pass, your score, issued date, and 6-month validity come from the GIDDH certificate API. You can view the HTML certificate and download the official PDF."
+      "answer": "After you pass, your certificate is issued by Walkover Technologies Pvt Ltd with your score, issue date and 6-month validity. You can view it online and download it as a PDF."
     },
     {
       "question": "What makes certification helpful for my first client setup?",

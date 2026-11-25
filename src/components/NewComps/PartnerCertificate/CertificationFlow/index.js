@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-import { MODULE_PASS_PERCENT } from "@/utils/giddhCert/constants";
+import {
+  CERTIFICATE_ISSUER_NAME,
+  MODULE_PASS_PERCENT,
+} from "@/utils/giddhCert/constants";
 import { buildExamModules, scoreOverall } from "@/utils/giddhCert/course";
 import { resolveDownloadUrl } from "@/utils/giddhCert/clientApi";
 import { showToaster } from "@/utils/signupHelpers";
@@ -68,6 +71,7 @@ export default function CertificationFlow({
         score: lastAttempt?.percentage,
         issuedAt: lastAttempt?.completedAt,
         validUntil: lastAttempt?.validUntil,
+        issuerName: CERTIFICATE_ISSUER_NAME,
         downloadUrl,
       };
 
@@ -200,10 +204,16 @@ export default function CertificationFlow({
       }
     }
     if (!openCertOnly && resultData?.certificate && moduleScores) {
+      const apiPercent = Number(resultData.certificate.score);
+      const computedOverall = scoreOverall(moduleScores);
+      if (Number.isFinite(apiPercent)) {
+        computedOverall.percentage = apiPercent;
+        computedOverall.allPassed = apiPercent >= MODULE_PASS_PERCENT;
+      }
       setCachedPassResult({
         learner: resultData.learner,
         certificate: resultData.certificate,
-        overall: scoreOverall(moduleScores),
+        overall: computedOverall,
         moduleScores,
       });
       setExamStarted(false);

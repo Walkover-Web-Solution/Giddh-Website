@@ -38,7 +38,7 @@ export default function EnrollCardSection({ compData, onStart }) {
               )}
             </div>
 
-            <div className="col-12 col-lg-4">
+            <div className="col-12 col-lg-4 d-flex flex-column gap-3">
               <button
                 type="button"
                 className="btn btn-primary w-100 rounded-1 py-3 lh-lg d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
@@ -47,6 +47,22 @@ export default function EnrollCardSection({ compData, onStart }) {
                 <span>{compData?.buttonText}</span>
                 <MdArrowForward size={16} aria-hidden="true" />
               </button>
+              {compData?.consentTextBefore && (
+                <p className="font-xs font-grey-deep m-0">
+                  {compData?.consentTextBefore}
+                  {compData?.consentLinkHref && compData?.consentLinkText && (
+                    <a
+                      href={compData.consentLinkHref}
+                      className="font-xs font-600 font-primary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {compData.consentLinkText}
+                    </a>
+                  )}
+                  {compData?.consentTextAfter}
+                </p>
+              )}
             </div>
           </div>
         </div>

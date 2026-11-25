@@ -34,6 +34,7 @@ export default function ApplyOverlay({
   const [requestId, setRequestId] = useState("");
   const [resendChannels, setResendChannels] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [termsAgree, setTermsAgree] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -57,6 +58,9 @@ export default function ApplyOverlay({
 
   const handleSendOtp = (event) => {
     event.preventDefault();
+    if (!termsAgree) {
+      return;
+    }
     setIsLoading(true);
     window.sendOtp(
       fullMobileNo,
@@ -79,7 +83,6 @@ export default function ApplyOverlay({
     if (!otp || !requestId) {
       return;
     }
-
     setIsLoading(true);
     window.verifyOtp(
       otp,
@@ -109,7 +112,6 @@ export default function ApplyOverlay({
     if (!requestId) {
       return;
     }
-
     setIsLoading(true);
     setOtp("");
     window.retryOtp(
@@ -227,10 +229,40 @@ export default function ApplyOverlay({
                       required
                     />
                   </div>
+                  {compData?.mobile?.termsAgreePrefix && (
+                    <div className="d-flex align-items-start gap-2">
+                      <input
+                        id="certTermsAgree"
+                        type="checkbox"
+                        className="form-check-input m-0"
+                        checked={termsAgree}
+                        onChange={() => setTermsAgree((prev) => !prev)}
+                        required
+                      />
+                      <label
+                        className="font-xs font-grey-deep m-0"
+                        htmlFor="certTermsAgree"
+                      >
+                        {compData?.mobile?.termsAgreePrefix}
+                        {compData?.mobile?.termsLinkHref &&
+                          compData?.mobile?.termsLinkText && (
+                            <a
+                              href={compData.mobile.termsLinkHref}
+                              className="font-xs font-600 font-primary"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {compData.mobile.termsLinkText}
+                            </a>
+                          )}
+                        {compData?.mobile?.termsAgreeSuffix}
+                      </label>
+                    </div>
+                  )}
                   <button
                     type="submit"
                     className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                    disabled={isLoading}
+                    disabled={isLoading || !termsAgree}
                   >
                     <span>
                       {isLoading
@@ -244,6 +276,23 @@ export default function ApplyOverlay({
                   {compData?.mobile?.helperText && (
                     <p className="font-xs font-grey-deep m-0">
                       {compData?.mobile?.helperText}
+                    </p>
+                  )}
+                  {compData?.consentTextBefore && (
+                    <p className="font-xs font-grey-deep m-0">
+                      {compData?.consentTextBefore}
+                      {compData?.consentLinkHref &&
+                        compData?.consentLinkText && (
+                          <a
+                            href={compData.consentLinkHref}
+                            className="font-xs font-600 font-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {compData.consentLinkText}
+                          </a>
+                        )}
+                      {compData?.consentTextAfter}
                     </p>
                   )}
                 </form>
@@ -439,6 +488,23 @@ export default function ApplyOverlay({
                   {compData?.registration?.helperText && (
                     <p className="font-xs font-grey-deep m-0">
                       {compData?.registration?.helperText}
+                    </p>
+                  )}
+                  {compData?.consentTextBefore && (
+                    <p className="font-xs font-grey-deep m-0">
+                      {compData?.consentTextBefore}
+                      {compData?.consentLinkHref &&
+                        compData?.consentLinkText && (
+                          <a
+                            href={compData.consentLinkHref}
+                            className="font-xs font-600 font-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {compData.consentLinkText}
+                          </a>
+                        )}
+                      {compData?.consentTextAfter}
                     </p>
                   )}
                 </form>
