@@ -154,7 +154,7 @@ Built in the repo but not named in the plan.
 | Salesperson report feature page | 🟡 | `src/pages/salesperson-feature-report.js` plus locale variants. |
 | Security page | 🟡 | `src/pages/security.js` plus locale variants. |
 | NDA policy (all locales) | 🟡 | `src/pages/nda-policy.js` and `in`/`ae`/`uk` wrappers; linked from footer and signup forms. |
-| Site-wide CSP (`public/_headers`) | 🟡 | PRs #842 / #845 ([ADR-015](docs/DECISIONS.md#adr-015-site-wide-content-security-policy-in-netlify-_headers)); not exercised on every third party locally. |
+| Site-wide CSP (`public/_headers` + `next.config.js`) | 🟡 | PRs #842 / #845 ([ADR-015](docs/DECISIONS.md#adr-015-site-wide-content-security-policy-in-netlify-_headers)); Embarko contact origin added; Typeform removed from allowlist. |
 | Login partner `redirect_url` | 🟡 | `src/pages/login.js`, `src/pages/v2/login.js`, `src/utils/signupHelpers.js:getRedirectUrlFromQuery`; live partner flow not submitted from agents. |
 | Footer prod preview installers | 🟡 | `src/components/footer.js` when `NEXT_PUBLIC_APP_ENV=test` fetches preview builds from prod S3 ([ARCHITECTURE.md](docs/ARCHITECTURE.md)). |
 | Desktop-app downloads from S3 | 🟡 | `src/utils/s3Config.js` ([ADR-011](docs/DECISIONS.md#adr-011-desktop-app-download-urls-centralised-in-s3config)). |
