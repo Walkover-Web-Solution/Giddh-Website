@@ -325,7 +325,7 @@ sequenceDiagram
 1. **Route:** global only (`src/pages/giddh-partner-certificate.js` → `src/components/Pages/PartnerCertificate.js`). Navbar/footer stay visible.
 2. **OTP:** same MSG91 widget as signup (`src/utils/msg91Otp.js:initOtpWidget`). After `window.verifyOtp`, `src/utils/giddhCert/clientApi.js:startSession` calls the Next proxy, not the Giddh API directly.
 3. **Resume logic:** `/check` (via `startSession`) maps to `resumeScreen` (`certificate`, `test`, `registration`, or `blocked` with `nextAttemptAt`) so returning learners skip steps.
-4. **Exam:** questions never leave the browser until submit; overall pass threshold 70% (`MODULE_PASS_PERCENT`). `/result` drives retakes: 1st fail → Retake exam immediately; 2nd fail → show unlock datetime, no retake; pass → certificate download, no retake until expiry.
+4. **Exam:** questions never leave the browser until submit; overall pass threshold 70% (`MODULE_PASS_PERCENT`). `/result` drives retakes via `canAttempt` / `nextAttemptAt` (two attempts; midway exit discards one; both fails → retake after one month).
 
 ### 3. Failure Modes
 
