@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MdArrowForward, MdClose } from "react-icons/md";
 
 import { saveProfile, startSession } from "@/utils/giddhCert/clientApi";
+import { isValidMobile } from "@/utils/giddhCert/serverApi";
 import { getResendChannels, initOtpWidget } from "@/utils/msg91Otp";
 import { formatMobileNumber, showToaster } from "@/utils/signupHelpers";
 
@@ -55,10 +56,11 @@ export default function ApplyOverlay({
 
   const fullMobileNo = formatMobileNumber(`${countryCode}${mobile}`);
   const uniqueChannels = getUniqueChannels(resendChannels);
+  const canSendOtp = isValidMobile(mobile) && isTermsAccepted;
 
   const handleSendOtp = (event) => {
     event.preventDefault();
-    if (!isTermsAccepted) {
+    if (!canSendOtp) {
       return;
     }
     setIsLoading(true);
@@ -262,7 +264,7 @@ export default function ApplyOverlay({
                   <button
                     type="submit"
                     className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                    disabled={isLoading || !isTermsAccepted}
+                    disabled={isLoading || !canSendOtp}
                   >
                     <span>
                       {isLoading
