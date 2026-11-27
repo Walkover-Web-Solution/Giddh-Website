@@ -118,11 +118,11 @@
         "iconKey": "exam",
         "title": "Certification Exam",
         "summary": "Complete a short online assessment covering real-world client scenarios to earn your official GIDDH Certified Partner badge and digital certificate.",
-        "meta": "Module 03 · ~10 mins · 2 fails, then 1 month lock",
+        "meta": "Module 03 · ~10 mins · 2 attempts",
         "topics": [
           "Practical multiple-choice scenario questions",
           "Instant scoring with immediate digital badge delivery",
-          "Two fails allowed; second fail locks retakes for one month",
+          "Two attempts; after both fail, retake after one month",
           "Direct pathway to GIDDH Partner Program onboarding"
         ]
       }
@@ -213,7 +213,6 @@
       "placeholder": "10-digit mobile number",
       "submitText": "Send OTP",
       "loadingText": "Sending...",
-      "helperText": "Progress is saved on the server for this mobile number.",
       "termsDescription": "I agree to the ",
       "termsLinkLabel": "Terms & Conditions",
       "termsLinkUrl": "/in/terms",
@@ -258,8 +257,8 @@
     "instructions": [
       "Tab switching is not allowed during the test.",
       "Certificate validity is 6 months from the issued date.",
-      "If you exit or leave the test midway, the ongoing attempt is discarded and you must start again.",
-      "If you fail, you get an immediate second attempt. After two fails, retakes lock for one month. After you pass, retakes stay locked until the certificate expires (6 months).",
+      "If you leave the test midway, that attempt is discarded. You will have one attempt left.",
+      "You get two attempts to pass. If both fail, you can retake after one month.",
       "Your overall score across all three modules must be at least 70% to pass."
     ],
     "startModuleText": "Start module",
@@ -275,8 +274,8 @@
     "resultPassedTitle": "You're GIDDH Certified",
     "resultFailedTitle": "Assessment complete",
     "resultScore": "You scored {percent}%",
-    "resultPassedSub": "You scored at least 70% overall. Your certificate is valid for 6 months; retakes open after it expires.",
-    "resultFailedSub": "You need an overall score of at least 70% to pass. After a first fail you can retake immediately; after a second fail, retakes are locked for one month.",
+    "resultPassedSub": "You scored at least 70% overall. Open your certificate when ready.",
+    "resultFailedSub": "You need at least 70% to pass. You get two attempts; after both fail, retake after one month.",
     "resultRetakeEligible": "You can retake the test after {date}.",
     "certificateIssuerLabel": "Issued by",
     "certificateIssuerName": "Walkover Technologies Pvt Ltd",
@@ -303,7 +302,7 @@
     },
     {
       "question": "What happens if I fail the exam?",
-      "answer": "You need an overall score of at least 70% across all three modules to pass. After a first fail you can retake immediately; after a second fail, retakes are locked for one month. After you pass, retakes stay locked until the certificate expires (6 months)."
+      "answer": "You need at least 70% to pass. You get two attempts. If both fail, you can retake after one month. Leaving midway discards that attempt."
     },
     {
       "question": "How does the partner revenue share actually work?",

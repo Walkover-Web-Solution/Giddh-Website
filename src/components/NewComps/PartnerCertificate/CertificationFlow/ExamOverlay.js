@@ -407,7 +407,7 @@ export default function ExamOverlay({
                   <h3 className="font-sm font-600 font-primary m-0">
                     {compData?.instructionsTitle}
                   </h3>
-                  <ul className="m-0 ps-3 d-flex flex-column gap-2">
+                  <ul className={`${styles.instructionList} m-0 ps-3 d-flex flex-column gap-2`}>
                     {compData?.instructions?.map((item) => (
                       <li key={item} className="font-sm font-slate-grey">
                         {item}
