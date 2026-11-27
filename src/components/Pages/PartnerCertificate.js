@@ -9,7 +9,7 @@ import EnrollCardSection from "@/components/NewComps/PartnerCertificate/EnrollCa
 import CertificationFlow from "@/components/NewComps/PartnerCertificate/CertificationFlow";
 import FAQs from "@/components/NewComps/FAQs";
 
-export default function PartnerCertificate({ pageData }) {
+export default function PartnerCertificate({ pageData, pageInfo }) {
   const [isApplyOpen, setIsApplyOpen] = useState(false);
   const onStartRef = useRef(null);
 
@@ -42,6 +42,7 @@ export default function PartnerCertificate({ pageData }) {
         applyOverlay={pageData?.applyOverlay}
         examOverlay={pageData?.examOverlay}
         onStartRef={onStartRef}
+        country={pageInfo?.country}
       />
     </>
   );

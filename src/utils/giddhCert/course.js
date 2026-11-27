@@ -1,10 +1,34 @@
-import questionsData from "@/data/giddh-cert/questions.json";
+import questionsAe from "@/data/giddh-cert/questions-ae.json";
+import questionsIn from "@/data/giddh-cert/questions-in.json";
+import questionsUk from "@/data/giddh-cert/questions-uk.json";
 import {
   MODULE_PASS_PERCENT,
   QUESTIONS_PER_MODULE,
 } from "./constants";
 
 const OPTION_KEYS = ["A", "B", "C", "D"];
+
+const QUESTIONS_BY_COUNTRY = {
+  in: questionsIn,
+  global: questionsIn,
+  ae: questionsAe,
+  uk: questionsUk,
+};
+
+function getQuestionsData(country) {
+  const key =
+    typeof country === "string" ? country.toLowerCase() : "global";
+  if (key === "uk") {
+    return QUESTIONS_BY_COUNTRY.uk;
+  }
+  if (key === "ae") {
+    return QUESTIONS_BY_COUNTRY.ae;
+  }
+  if (key === "in") {
+    return QUESTIONS_BY_COUNTRY.in;
+  }
+  return QUESTIONS_BY_COUNTRY.global;
+}
 
 function shuffle(list) {
   const next = [...list];
@@ -15,7 +39,8 @@ function shuffle(list) {
   return next;
 }
 
-export function buildExamModules() {
+export function buildExamModules(country) {
+  const questionsData = getQuestionsData(country);
   const all = questionsData.questions;
   const modules = questionsData.modules;
   const chunkSize = Math.ceil(all.length / modules.length);
