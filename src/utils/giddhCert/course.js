@@ -8,22 +8,14 @@ import {
 
 const OPTION_KEYS = ["A", "B", "C", "D"];
 
-const QUESTIONS_BY_COUNTRY = {
-  in: questionsIn,
-  global: questionsIn,
-  ae: questionsAe,
-  uk: questionsUk,
-};
-
 function getQuestionsData(country) {
-  if (typeof country !== "string") {
-    return QUESTIONS_BY_COUNTRY.global;
+  if (country === "uk") {
+    return questionsUk;
   }
-  const bank = QUESTIONS_BY_COUNTRY[country.toLowerCase()];
-  if (bank) {
-    return bank;
+  if (country === "ae") {
+    return questionsAe;
   }
-  return QUESTIONS_BY_COUNTRY.global;
+  return questionsIn;
 }
 
 function shuffle(list) {

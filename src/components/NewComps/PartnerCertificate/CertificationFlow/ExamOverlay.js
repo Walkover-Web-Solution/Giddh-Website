@@ -28,31 +28,6 @@ function formatCopy(template, values) {
   );
 }
 
-function formatNextAttemptAt(nextAttemptAt) {
-  if (typeof nextAttemptAt !== "string" || !nextAttemptAt) {
-    return null;
-  }
-  // API format: dd-MM-yyyy HH:mm:ss
-  const apiMatch = nextAttemptAt.match(
-    /^(\d{2})-(\d{2})-(\d{4})(?:\s+(\d{2}):(\d{2})(?::\d{2})?)?/
-  );
-  if (apiMatch) {
-    const [, day, month, year, hour, minute] = apiMatch;
-    if (hour && minute) {
-      return `${day}/${month}/${year} ${hour}:${minute}`;
-    }
-    return `${day}/${month}/${year}`;
-  }
-  const date = new Date(nextAttemptAt);
-  if (Number.isNaN(date.getTime())) {
-    return null;
-  }
-  const day = String(date.getDate()).padStart(2, "0");
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const year = String(date.getFullYear());
-  return `${day}/${month}/${year}`;
-}
-
 export default function ExamOverlay({
   isOpen,
   onClose,
@@ -89,8 +64,6 @@ export default function ExamOverlay({
   const lastActivityRef = useRef(Date.now());
   const idleWarningRef = useRef(false);
   idleWarningRef.current = idleWarning;
-  const retakeEligibleDate = formatNextAttemptAt(nextAttemptAt);
-
   const currentModule = modules[moduleIndex];
   const currentQuestion = currentModule?.questions?.[questionIndex];
   const totalInModule = currentModule?.questions?.length;
@@ -118,7 +91,7 @@ export default function ExamOverlay({
   }, [certificatePayload?.score, initialResult?.overall, moduleScores]);
   const allPassed = overall.allPassed;
   const showRetakeLockMessage =
-    !allPassed && canAttempt === false && Boolean(retakeEligibleDate);
+    !allPassed && canAttempt === false && Boolean(nextAttemptAt);
 
   const timerLabel = useMemo(() => {
     const minutes = String(Math.floor(timer / 60)).padStart(2, "0");
@@ -589,7 +562,7 @@ export default function ExamOverlay({
               {showRetakeLockMessage && compData?.resultRetakeEligible ? (
                 <p className="font-sm font-grey-deep m-0 col-lg-10">
                   {formatCopy(compData.resultRetakeEligible, {
-                    date: retakeEligibleDate,
+                    date: nextAttemptAt,
                   })}
                 </p>
               ) : null}
