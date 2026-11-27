@@ -16,16 +16,12 @@ const QUESTIONS_BY_COUNTRY = {
 };
 
 function getQuestionsData(country) {
-  const key =
-    typeof country === "string" ? country.toLowerCase() : "global";
-  if (key === "uk") {
-    return QUESTIONS_BY_COUNTRY.uk;
+  if (typeof country !== "string") {
+    return QUESTIONS_BY_COUNTRY.global;
   }
-  if (key === "ae") {
-    return QUESTIONS_BY_COUNTRY.ae;
-  }
-  if (key === "in") {
-    return QUESTIONS_BY_COUNTRY.in;
+  const bank = QUESTIONS_BY_COUNTRY[country.toLowerCase()];
+  if (bank) {
+    return bank;
   }
   return QUESTIONS_BY_COUNTRY.global;
 }
