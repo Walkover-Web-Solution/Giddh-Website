@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   MdAccessTime,
   MdArrowForward,
@@ -7,7 +7,11 @@ import {
   MdEmojiEvents,
   MdInfoOutline,
 } from "react-icons/md";
-import { MODULE_TIMER_SECONDS } from "@/utils/giddhCert/constants";
+import {
+  IDLE_WARNING_SECONDS,
+  MODULE_PASS_PERCENT,
+  MODULE_TIMER_SECONDS,
+} from "@/utils/giddhCert/constants";
 import { scoreModule, scoreOverall } from "@/utils/giddhCert/course";
 import { submitResult } from "@/utils/giddhCert/clientApi";
 import { showToaster } from "@/utils/signupHelpers";
@@ -24,12 +28,25 @@ function formatCopy(template, values) {
   );
 }
 
-function getResumeModuleScores(modules, overall) {
-  return modules.map((moduleItem) => ({
-    title: moduleItem.title,
-    percent: overall.percentage,
-    passed: overall.allPassed,
-  }));
+function formatDateDdMmYyyy(value) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return null;
+  }
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const year = String(date.getFullYear());
+  return `${day}/${month}/${year}`;
+}
+
+function resolveRetakeEligibleDate(nextAttemptAt) {
+  if (nextAttemptAt) {
+    return formatDateDdMmYyyy(nextAttemptAt);
+  }
+  // One-month retake period from today (e.g. 25/11/2026 → 25/12/2026).
+  const next = new Date();
+  next.setMonth(next.getMonth() + 1);
+  return formatDateDdMmYyyy(next);
 }
 
 export default function ExamOverlay({
@@ -41,13 +58,15 @@ export default function ExamOverlay({
   initialResult,
   compData,
 }) {
+  const [canAttempt, setCanAttempt] = useState(learner?.canAttempt);
+  const [nextAttemptAt, setNextAttemptAt] = useState(learner?.nextAttemptAt);
   const [moduleIndex, setModuleIndex] = useState(0);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [answers, setAnswers] = useState([]);
   const [moduleScores, setModuleScores] = useState(() => {
-    if (initialResult?.phase === "result") {
-      return getResumeModuleScores(modules, initialResult.overall);
+    if (initialResult?.moduleScores) {
+      return initialResult.moduleScores;
     }
     return [];
   });
@@ -59,34 +78,60 @@ export default function ExamOverlay({
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [tabWarning, setTabWarning] = useState(false);
+  const [idleWarning, setIdleWarning] = useState(false);
   const [certificatePayload, setCertificatePayload] = useState(
     initialResult?.certificate
   );
+  const lastActivityRef = useRef(Date.now());
+  const idleWarningRef = useRef(false);
+  idleWarningRef.current = idleWarning;
+  const retakeEligibleDate = resolveRetakeEligibleDate(nextAttemptAt);
 
   const currentModule = modules[moduleIndex];
   const currentQuestion = currentModule?.questions?.[questionIndex];
   const totalInModule = currentModule?.questions?.length;
   const overall = useMemo(() => {
+    const apiPercent = Number(certificatePayload?.score);
     const hasLiveTotals =
       moduleScores.length > 0 &&
       moduleScores.every((item) => Number.isFinite(item.total));
+    let computed;
     if (hasLiveTotals) {
-      return scoreOverall(moduleScores);
+      computed = scoreOverall(moduleScores);
+    } else if (initialResult?.overall) {
+      computed = initialResult.overall;
+    } else {
+      computed = scoreOverall(moduleScores);
     }
-    if (initialResult?.overall) {
-      return initialResult.overall;
+    if (Number.isFinite(apiPercent)) {
+      return {
+        ...computed,
+        percentage: apiPercent,
+        allPassed: apiPercent >= MODULE_PASS_PERCENT,
+      };
     }
-    return scoreOverall(moduleScores);
-  }, [initialResult?.overall, moduleScores]);
-  const allPassed = initialResult?.overall
-    ? initialResult.overall.allPassed
-    : moduleScores.length > 0 && overall.allPassed;
+    return computed;
+  }, [certificatePayload?.score, initialResult?.overall, moduleScores]);
+  const allPassed = overall.allPassed;
+
+  const timerLabel = useMemo(() => {
+    const minutes = String(Math.floor(timer / 60)).padStart(2, "0");
+    const seconds = String(timer % 60).padStart(2, "0");
+    return `${minutes}:${seconds}`;
+  }, [timer]);
+
+  useEffect(() => {
+    if (!isOpen || phase !== "quiz") {
+      return undefined;
+    }
+    setTimer(MODULE_TIMER_SECONDS);
+    return undefined;
+  }, [isOpen, phase, moduleIndex]);
 
   useEffect(() => {
     if (!isOpen || phase !== "quiz" || showInstructions) {
       return undefined;
     }
-    setTimer(MODULE_TIMER_SECONDS);
     const id = setInterval(() => {
       setTimer((prev) => {
         if (prev <= 1) {
@@ -117,20 +162,62 @@ export default function ExamOverlay({
     if (!isOpen || phase !== "quiz") {
       return undefined;
     }
+
     const onVisibility = () => {
-      if (document.hidden) {
-        setTabWarning(true);
+      if (!document.hidden) {
+        return;
       }
+      setTabWarning(true);
+      setIdleWarning(false);
     };
+
     document.addEventListener("visibilitychange", onVisibility);
-    return () => document.removeEventListener("visibilitychange", onVisibility);
+    return () => {
+      document.removeEventListener("visibilitychange", onVisibility);
+    };
   }, [isOpen, phase]);
 
-  const timerLabel = useMemo(() => {
-    const minutes = String(Math.floor(timer / 60)).padStart(2, "0");
-    const seconds = String(timer % 60).padStart(2, "0");
-    return `${minutes}:${seconds}`;
-  }, [timer]);
+  useEffect(() => {
+    if (
+      !isOpen ||
+      phase !== "quiz" ||
+      showInstructions ||
+      tabWarning
+    ) {
+      return undefined;
+    }
+
+    lastActivityRef.current = Date.now();
+
+    const markActivity = () => {
+      if (idleWarningRef.current) {
+        return;
+      }
+      lastActivityRef.current = Date.now();
+    };
+
+    const events = ["pointerdown", "keydown", "touchstart"];
+    events.forEach((eventName) => {
+      document.addEventListener(eventName, markActivity);
+    });
+
+    const idleCheckId = setInterval(() => {
+      if (idleWarningRef.current) {
+        return;
+      }
+      const idleMs = Date.now() - lastActivityRef.current;
+      if (idleMs >= IDLE_WARNING_SECONDS * 1000) {
+        setIdleWarning(true);
+      }
+    }, 1000);
+
+    return () => {
+      events.forEach((eventName) => {
+        document.removeEventListener(eventName, markActivity);
+      });
+      clearInterval(idleCheckId);
+    };
+  }, [isOpen, phase, showInstructions, tabWarning]);
 
   if (!isOpen) {
     return null;
@@ -161,10 +248,6 @@ export default function ExamOverlay({
     }
 
     const overallScore = scoreOverall(nextScores);
-    if (!overallScore.allPassed) {
-      setPhase("result");
-      return;
-    }
 
     setIsSubmitting(true);
     try {
@@ -175,7 +258,15 @@ export default function ExamOverlay({
         percentage: overallScore.percentage,
         totalQuestions: overallScore.totalQuestions,
       });
-      setCertificatePayload(data.certificate);
+      if (data?.certificate) {
+        setCertificatePayload(data.certificate);
+      }
+      if (data?.learner?.nextAttemptAt) {
+        setNextAttemptAt(data.learner.nextAttemptAt);
+      }
+      if (typeof data?.learner?.canAttempt === "boolean") {
+        setCanAttempt(data.learner.canAttempt);
+      }
       setPhase("result");
       onCompleted?.(data, nextScores);
     } catch (error) {
@@ -204,7 +295,7 @@ export default function ExamOverlay({
         : compData?.feedbackWrong,
       note: isCorrect
         ? correctAnswer
-        : `${compData?.correctAnswerPrefix} ${correctAnswer}`,
+        : `${compData?.correctAnswerLabel} ${correctAnswer}`,
     });
   };
 
@@ -219,12 +310,6 @@ export default function ExamOverlay({
   };
 
   const handleContinueModule = () => {
-    if (!moduleScores[moduleIndex].passed) {
-      setPhase("quiz");
-      resetModuleState();
-      setShowInstructions(true);
-      return;
-    }
     setModuleIndex((prev) => prev + 1);
     setPhase("quiz");
     resetModuleState();
@@ -232,12 +317,9 @@ export default function ExamOverlay({
   };
 
   const handleRetakeFailed = () => {
-    const failedIndex = moduleScores.findIndex((item) => !item.passed);
-    if (failedIndex < 0) {
-      return;
-    }
-    setModuleIndex(failedIndex);
-    setModuleScores((prev) => prev.slice(0, failedIndex));
+    setModuleIndex(0);
+    setModuleScores([]);
+    setCertificatePayload(null);
     setPhase("quiz");
     resetModuleState();
     setShowInstructions(true);
@@ -245,7 +327,13 @@ export default function ExamOverlay({
 
   const handleDiscardAttempt = () => {
     setTabWarning(false);
+    setIdleWarning(false);
     onClose({ discarded: true });
+  };
+
+  const handleContinueAfterIdle = () => {
+    lastActivityRef.current = Date.now();
+    setIdleWarning(false);
   };
 
   const currentScore = moduleScores[moduleIndex];
@@ -314,7 +402,7 @@ export default function ExamOverlay({
                   >
                     <span className="d-inline-flex align-items-center gap-1">
                       <MdInfoOutline size={16} />
-                      {compData?.instructionsLinkText}
+                      {compData?.instructionsLinkLabel}
                     </span>
                   </button>
                 </div>
@@ -422,49 +510,30 @@ export default function ExamOverlay({
           {phase === "gate" && (
             <div className="d-flex flex-column align-items-center gap-3 text-center">
               <div
-                className={`${styles.statusIcon} rounded-circle d-inline-flex align-items-center justify-content-center ${
-                  currentScore?.passed
-                    ? "bg-light-green font-success"
-                    : "bg-baby-pink font-danger"
-                }`}
+                className={`${styles.statusIcon} rounded-circle d-inline-flex align-items-center justify-content-center bg-light-green font-success`}
               >
-                {currentScore?.passed ? (
-                  <MdCheck size={24} />
-                ) : (
-                  <MdClose size={24} />
-                )}
+                <MdCheck size={24} />
               </div>
               <h2 className="font-lg font-600 font-primary lh-sm m-0">
-                {formatCopy(
-                  currentScore?.passed
-                    ? compData?.gatePassedTitle
-                    : compData?.gateFailedTitle,
-                  {
-                    current: moduleIndex + 1,
-                    correct: currentScore?.correct,
-                    total: currentScore?.total,
-                  }
-                )}
+                {formatCopy(compData?.gatePassedTitle, {
+                  current: moduleIndex + 1,
+                })}
               </h2>
               <p className="font-sm font-grey-deep m-0 col-lg-10">
-                {currentScore?.passed
-                  ? formatCopy(compData?.gatePassedSub, {
-                      next: moduleIndex + 2,
-                      total: modules.length,
-                      title: nextModule.title,
-                    })
-                  : compData?.gateFailedSub}
+                {formatCopy(compData?.gatePassedSub, {
+                  next: moduleIndex + 2,
+                  total: modules.length,
+                  title: nextModule?.title,
+                })}
               </p>
               <button
                 type="button"
                 className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
                 onClick={handleContinueModule}
               >
-                {currentScore?.passed
-                  ? formatCopy(compData?.continueModuleText, {
-                      next: moduleIndex + 2,
-                    })
-                  : compData?.retakeModuleText}
+                {formatCopy(compData?.continueModuleText, {
+                  next: moduleIndex + 2,
+                })}
                 <MdArrowForward size={16} aria-hidden="true" />
               </button>
             </div>
@@ -491,71 +560,71 @@ export default function ExamOverlay({
                   : compData?.resultFailedTitle}
               </h2>
               <p className="font-sm font-grey-deep m-0">
-                {formatCopy(compData?.resultScore, {
-                  percent: overall.percentage,
-                  score: overall.score,
-                  total: overall.totalQuestions,
-                })}
+                {Number.isFinite(overall.percentage)
+                  ? formatCopy(compData?.resultScore, {
+                      percent: overall.percentage,
+                    })
+                  : null}
               </p>
-              <p className="font-sm font-grey-deep m-0 col-lg-10">
-                {allPassed
-                  ? compData?.resultPassedSub
-                  : compData?.resultFailedSub}
-              </p>
-
-              <div className="row g-3 w-100 text-start">
-                {moduleScores.map((item, index) => (
-                  <div key={item.title} className="col-12 col-md-4">
-                    <div
-                      className={`rounded-3 p-3 h-100 border ${
-                        item.passed
-                          ? "bg-light-green border-success"
-                          : "bg-baby-pink border-danger"
-                      }`}
-                    >
-                      <div className="font-xs font-600 font-grey-deep">
-                        {formatCopy(compData?.moduleCardLabel, {
-                          current: index + 1,
-                        })}
-                      </div>
-                      <div
-                        className={`font-lg font-600 lh-1 ${
-                          item.passed ? "font-success" : "font-danger"
-                        }`}
-                      >
-                        {item.percent}%
-                      </div>
-                      <div className="font-xs font-slate-grey">
-                        {item.title}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              {!allPassed && compData?.resultFailedSub ? (
+                <p className="font-sm font-grey-deep m-0 col-lg-10">
+                  {compData.resultFailedSub}
+                </p>
+              ) : null}
+              {allPassed && compData?.certificateIssuerName && (
+                <p className="font-xs font-grey-deep m-0">
+                  {compData?.certificateIssuerLabel}{" "}
+                  {compData.certificateIssuerName}
+                </p>
+              )}
+              {retakeEligibleDate && compData?.resultRetakeEligible ? (
+                <p className="font-sm font-grey-deep m-0 col-lg-10">
+                  {formatCopy(compData.resultRetakeEligible, {
+                    date: retakeEligibleDate,
+                  })}
+                </p>
+              ) : null}
 
               {allPassed ? (
-                <button
-                  type="button"
-                  className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                  disabled={!certificatePayload && isSubmitting}
-                  onClick={() =>
-                    onCompleted?.(
-                      { certificate: certificatePayload, learner },
-                      moduleScores,
-                      true
-                    )
-                  }
-                >
-                  {compData?.viewCertificateText}
-                  <MdArrowForward size={16} aria-hidden="true" />
-                </button>
-              ) : (
+                <div className="d-flex flex-column flex-sm-row gap-2">
+                  <button
+                    type="button"
+                    className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+                    disabled={!certificatePayload && isSubmitting}
+                    onClick={() =>
+                      onCompleted?.(
+                        { certificate: certificatePayload, learner },
+                        moduleScores,
+                        "pdf"
+                      )
+                    }
+                  >
+                    {compData?.viewCertificateText}
+                    <MdArrowForward size={16} aria-hidden="true" />
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+                    disabled={!certificatePayload && isSubmitting}
+                    onClick={() =>
+                      onCompleted?.(
+                        { certificate: certificatePayload, learner },
+                        moduleScores,
+                        "image"
+                      )
+                    }
+                  >
+                    {compData?.downloadShareImageText}
+                    <MdArrowForward size={16} aria-hidden="true" />
+                  </button>
+                </div>
+              ) : canAttempt === false ? null : (
                 <button
                   type="button"
                   className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
                   onClick={handleRetakeFailed}
                 >
-                  {compData?.retakeFailedText}
+                  {compData?.retakeExamText}
                   <MdArrowForward size={16} aria-hidden="true" />
                 </button>
               )}
@@ -577,6 +646,33 @@ export default function ExamOverlay({
                   onClick={handleDiscardAttempt}
                 >
                   {compData?.tabWarningButtonText}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {idleWarning && !tabWarning && (
+            <div className="position-absolute top-0 start-0 end-0 bottom-0 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 rounded-3">
+              <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3 col-11 col-md-8">
+                <h3 className="font-sm font-600 m-0">
+                  {compData?.idleWarningTitle}
+                </h3>
+                <p className="font-sm font-slate-grey m-0">
+                  {compData?.idleWarningBody}
+                </p>
+                <button
+                  type="button"
+                  className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+                  onClick={handleContinueAfterIdle}
+                >
+                  {compData?.idleWarningContinueText}
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-outline-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+                  onClick={handleDiscardAttempt}
+                >
+                  {compData?.idleWarningDiscardText}
                 </button>
               </div>
             </div>

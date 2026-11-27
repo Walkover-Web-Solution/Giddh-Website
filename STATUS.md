@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-25 · **Reviewed up to commit:** `bb005c0f`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-27 · **Reviewed up to commit:** `1ab8290f`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -62,8 +62,8 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | MDX blog with Decap CMS | 🟡 | 253 posts in `_posts/blog/`; CMS use unconfirmed ([Q-014](docs/OPEN_QUESTIONS.md#active-questions-table)); image field and JSON-LD issues ([Q-025](docs/OPEN_QUESTIONS.md#active-questions-table), [Q-027](docs/OPEN_QUESTIONS.md#active-questions-table)). |
 | Affiliate program | 🟡 | `src/pages/affiliate.js` and locale variants. |
 | Comparison and switching pages | 🟡 | `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`. |
-| GIDDH Partner Certificate | 🟡 | `/giddh-partner-certificate` (global); uses Next API proxies and Giddh `/public/giddh-cert`. Not exercised end-to-end from this repo. |
-| Embarko contact (sales/support) | 🟡 | Contact Us + AE/UK home banners; CSP allowlist for `giddh-contact.embarko.app` in `next.config.js` and `public/_headers`. UTM bridge [Q-033](docs/OPEN_QUESTIONS.md#active-questions-table). |
+| GIDDH Partner Certificate | 🟡 | `/giddh-partner-certificate` plus `/in`, `/ae`, `/uk` locale routes; JSON per country; Giddh `/public/giddh-cert`. Pass popup PDF + image download (same API; image via PDFium). Fail retake-eligible date. Not exercised end-to-end from this repo. |
+| Embarko contact (sales/support) | 🟡 | Replaces Typeform on Contact Us and AE/UK home banners (PR #861). UTM bridge [Q-033](docs/OPEN_QUESTIONS.md#active-questions-table). |
 
 ### Proposals & roadmaps
 
@@ -166,7 +166,11 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
-- 2026-11-25 · Cursor agent · CSP allowlist `giddh-contact.embarko.app` (script-src, frame-src, form-action) in `next.config.js` and `public/_headers`; removed Typeform CSP entries · Embarko contact + CSP rows
+- 2026-11-27 · Cursor agent · Partner certificate page naming + hooks order cleanup · [no status]
+- 2026-11-26 · Cursor agent · Partner certificate image download via PDFium (same API) · Partner Certificate notes updated
+- 2026-11-25 · Cursor agent · Partner certificate fail score popup shows retake-eligible date (API `nextAttemptAt` or +1 month) · Partner Certificate notes updated
+- 2026-11-25 · Cursor agent · Partner certificate locale routes (`/in|/ae|/uk`) + per-country JSON/SEO · Partner Certificate notes updated
+- 2026-11-25 · Cursor agent · Partner certificate retake policy copy: two attempts, then one-month retake period · Partner Certificate notes updated
 - 2026-11-22 · Cursor cloud agent · Weekly docs maintenance at `9b1c5d11`: partner certificate, Embarko contact, 407-page build, Q-034 · Reviewed commit, API-route ⛔, new scope rows
 - 2026-11-21 · Cursor agent · PR #861 review: lazy-load Embarko on contact routes, UTM bridge (`giddh-contact-bridge.js`), Support button spacing · [no status]
 - 2026-11-21 · Cursor agent · Replaced Typeform contact slider with Embarko `giddh-contact.embarko.app` on Contact Us and AE/UK home banner · [no status]

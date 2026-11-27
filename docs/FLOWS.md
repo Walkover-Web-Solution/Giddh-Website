@@ -73,7 +73,7 @@ sequenceDiagram
 2. **State & Validation:**
    - `emailDetails` / `mobileDetails` hold `{ email|mobileNo, accessToken, isVerified, signupVia, requestId }`. Email is checked with an inline regex in `sendEmailOtp`. The mobile number is `intl.getNumber()` with `+` stripped (`src/utils/signupHelpers.js:formatMobileNumber`).
    - OTP boxes are DOM inputs (`.email-otp-field`, `.mobile-otp-field`), wired by `src/utils/signupHelpers.js:initiateOtpFieldsAutoMove` and read by `getOtpFromFields`.
-   - Submit is disabled until `termsAgree`. `initiateSignup` requires both `isVerified` flags. If neither is verified and both inputs are filled, it sends the email OTP, then the mobile OTP 3 s later.
+   - Submit is disabled until `isTermsAccepted`. `initiateSignup` requires both `isVerified` flags. If neither is verified and both inputs are filled, it sends the email OTP, then the mobile OTP 3 s later.
 3. **API Dispatch:**
    - `POST /v2/register` with email, email access token, `emailIdAuthType` (`giddh` or `google`), mobile and mobile access token. The body shape is in [CONTRACTS.md](CONTRACTS.md).
    - Google signup: `googleApiSuccessCallback` stores the Google access token as `emailDetails.accessToken` with `signupVia: "google"`, so only the mobile OTP is needed.
@@ -90,7 +90,7 @@ sequenceDiagram
 ### 4. Permissions, Roles & Guard Rails
 
 - **Required Role / Permission:** none. Anonymous visitors can sign up. "Verified" exists only as the client flags described above. The API re-checks the MSG91 or Google access tokens (assumed; the server is outside this repo).
-- **Enforcement Location:** `initiateSignup` checks the flags, and the Submit `disabled={signupInProgress || !termsAgree}`.
+- **Enforcement Location:** `initiateSignup` checks the flags, and the Submit `disabled={signupInProgress || !isTermsAccepted}`.
 - **Unauthorized Behavior:** a toast ("Please verify email" or "Please verify mobile").
 
 ### 5. Failure Modes & Recovery Paths

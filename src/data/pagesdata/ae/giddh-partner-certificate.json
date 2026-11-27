@@ -1,0 +1,343 @@
+{
+  "heroSection": {
+    "eyebrow": "Free certification · Self-paced",
+    "headingPrimary": "Become",
+    "headingAccent": "GIDDH Certified.",
+    "description": "A short, practical course for accountants, bookkeepers, and resellers who want to sell, implement, and support GIDDH with confidence — and unlock GIDDH's partner revenue share.",
+    "primaryCta": {
+      "text": "Start the course",
+      "targetId": "enroll-now"
+    },
+    "secondaryCta": {
+      "text": "See the curriculum",
+      "targetId": "modules"
+    },
+    "stats": [
+      {
+        "value": "3",
+        "label": "Modules"
+      },
+      {
+        "value": "30",
+        "label": "Minutes total"
+      },
+      {
+        "value": "AED 0",
+        "label": "Cost to enroll"
+      },
+      {
+        "value": "50%",
+        "label": "Partner share, yr 1"
+      }
+    ],
+    "media": {
+      "image": "/img/partner-certificate-hero.jpg",
+      "imageAlt": "GIDDH partner certification workspace preview",
+      "topLabel": "GIDDH CERTIFIED",
+      "playAriaLabel": "View GIDDH certification curriculum",
+      "closeVideoAriaLabel": "Close video",
+      "captionTitle": "Learn the platform.",
+      "captionAccent": "Own the outcome.",
+      "duration": "00:30",
+      "topBadge": {
+        "title": "Built for",
+        "subtitle": "real work"
+      },
+      "bottomBadge": {
+        "title": "Earn your",
+        "subtitle": "credential"
+      }
+    },
+    "highlightsStrip": [
+      "Built for Accountants, Bookkeepers & Resellers",
+      "30 Minutes · 3 Modules",
+      "100% Online · Self-Paced"
+    ]
+  },
+  "benefitsSection": {
+    "eyebrow": "Why Certify",
+    "headingPrimary": "One badge,",
+    "headingAccent": "three doors.",
+    "description": "Certification isn't a formality — it is proof that you know the platform inside out, gives your clients confidence from day one, and opens every door in GIDDH's partner program.",
+    "link": {
+      "targetId": "modules",
+      "label": "See the curriculum"
+    },
+    "items": [
+      {
+        "number": "01",
+        "title": "Sell with confidence",
+        "description": "Walk into every client pitch knowing GIDDH's ledger, invoicing, tax compliance, and reporting workflows thoroughly so you can recommend the right setup fast."
+      },
+      {
+        "number": "02",
+        "title": "Qualify for partner program",
+        "description": "Meet the product readiness criteria for the GIDDH Partnership Program and unlock recurring revenue share on every referred client subscription and renewal."
+      },
+      {
+        "number": "03",
+        "title": "Support clients directly",
+        "description": "Resolve day-to-day accounting, inventory, reconciliation, and compliance queries independently while staying backed by dedicated GIDDH partner support."
+      }
+    ]
+  },
+  "modulesSection": {
+    "eyebrow": "Curriculum",
+    "headingPrimary": "Three modules.",
+    "headingAccent": "Start to badge.",
+    "description": "Everything you need to run real client books on GIDDH — structured into three focused modules with practical walkthroughs and an online certification exam.",
+    "modules": [
+      {
+        "number": "01",
+        "iconKey": "walkthrough",
+        "title": "Product Walkthrough",
+        "summary": "Navigate GIDDH end-to-end: company & branch setup, ledger-first accounting, invoicing, bank reconciliation, multi-user permissions, and real-time financial reports.",
+        "meta": "Module 01 · ~10 mins",
+        "topics": [
+          "Company, branch, and chart-of-accounts setup",
+          "Ledger-based voucher entry and smart invoicing",
+          "Inventory, barcode tracking, and multi-currency transactions",
+          "Bank integration, reconciliation, and MIS financial reports"
+        ]
+      },
+      {
+        "number": "02",
+        "iconKey": "compliance",
+        "title": "Compliance Essentials – VAT",
+        "summary": "Master tax configuration, VAT returns, tax invoices, reverse charge, and audit trail best practices.",
+        "meta": "Module 02 · ~10 mins",
+        "topics": [
+          "Tax configuration and automated VAT rules",
+          "Tax invoice workflows and compliance checks",
+          "VAT return preparation and reporting",
+          "Reverse charge and audit trail compliance"
+        ]
+      },
+      {
+        "number": "03",
+        "iconKey": "exam",
+        "title": "Certification Exam",
+        "summary": "Complete a short online assessment covering real-world client scenarios to earn your official GIDDH Certified Partner badge and digital certificate.",
+        "meta": "Module 03 · ~10 mins · 2 attempts, then 1 month",
+        "topics": [
+          "Practical multiple-choice scenario questions",
+          "Instant scoring with immediate digital badge delivery",
+          "Two attempts provided, followed by a one-month retake period",
+          "Direct pathway to GIDDH Partner Program onboarding"
+        ]
+      }
+    ]
+  },
+  "audienceSection": {
+    "eyebrow": "Who It's For",
+    "headingPrimary": "Built for the people",
+    "headingAccent": "already doing this work.",
+    "audiences": [
+      {
+        "number": "01",
+        "title": "Chartered Accountants",
+        "description": "Standardize multi-client accounting, accelerate compliance reconciliations, and add a recurring cloud-software revenue stream to your practice."
+      },
+      {
+        "number": "02",
+        "title": "Bookkeepers & Consultants",
+        "description": "Deliver faster monthly closes, cleaner ledgers, and real-time dashboards for SME clients without legacy desktop bottlenecks."
+      },
+      {
+        "number": "03",
+        "title": "Tally Resellers",
+        "description": "Learn how to migrate client data cleanly from legacy desktop or alternative cloud tools to GIDDH with zero disruption."
+      },
+      {
+        "number": "04",
+        "title": "Business Owners",
+        "description": "Understand how to structure branches, user permissions, invoicing, and live financial reporting across your own growing company."
+      }
+    ]
+  },
+  "revenueShareSection": {
+    "eyebrow": "Partner Revenue Share",
+    "headingPrimary": "Partner revenue",
+    "headingAccent": "share.",
+    "description": "Certified partners qualify for the GIDDH Partnership Program — earning quarterly recurring revenue share on every referred business you onboard and retain.",
+    "link": {
+      "label": "Explore partnership",
+      "url": "/affiliate"
+    },
+    "metrics": [
+      {
+        "value": "50",
+        "unit": "%",
+        "label": "First-year client onboarding"
+      },
+      {
+        "value": "30",
+        "unit": "%",
+        "label": "Second-year renewal"
+      },
+      {
+        "value": "20",
+        "unit": "%",
+        "label": "Third-year renewal"
+      },
+      {
+        "value": "AED 0",
+        "label": "Cost to enroll"
+      }
+    ]
+  },
+  "enrollCardSection": {
+    "eyebrow": "Get Started",
+    "headingPrimary": "Start now —",
+    "headingAccent": "verify mobile & begin.",
+    "description": "Verify your mobile number, complete a short profile, and start the free GIDDH certification assessment. Pass with an overall score of at least 70% to earn your certificate.",
+    "buttonText": "Start certification",
+    "helperText": "100% free · Mobile OTP · 3 modules · Certificate valid 6 months",
+    "consentDescription": "By continuing you agree to be contacted about the GIDDH certification and Partnership Program using the mobile number and email you provide. See our ",
+    "consentLinkLabel": "Privacy Policy",
+    "consentLinkUrl": "/privacy-policy",
+    "consentSuffix": "."
+  },
+  "applyOverlay": {
+    "countryCode": "91",
+    "closeAriaLabel": "Close",
+    "eyebrow": "Get Started",
+    "heading": "Start now — it takes 30 seconds.",
+    "description": "Verify your mobile, tell us who you are, then go straight through Module 1, 2, and 3 right here. Pass with an overall score of at least 70% to get your certificate instantly.",
+    "consentDescription": "By continuing you agree to be contacted about the GIDDH certification and Partnership Program using the mobile number and email you provide. See our ",
+    "consentLinkLabel": "Privacy Policy",
+    "consentLinkUrl": "/privacy-policy",
+    "consentSuffix": ".",
+    "mobile": {
+      "label": "Mobile number",
+      "placeholder": "10-digit mobile number",
+      "submitText": "Send OTP",
+      "loadingText": "Sending...",
+      "helperText": "Progress is saved on the server for this mobile number.",
+      "termsDescription": "I agree to the ",
+      "termsLinkLabel": "Terms & Conditions",
+      "termsLinkUrl": "/terms",
+      "termsSuffix": "."
+    },
+    "otp": {
+      "label": "Enter OTP",
+      "placeholder": "Enter OTP",
+      "sentLabel": "Sent to",
+      "resendLabel": "Resend on",
+      "resendSeparator": " or ",
+      "submitText": "Verify & Continue",
+      "loadingText": "Verifying...",
+      "changeMobileText": "Change mobile number"
+    },
+    "registration": {
+      "nameLabel": "Full name *",
+      "namePlaceholder": "Your full name",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "you@example.com",
+      "professionLabel": "I am a...",
+      "professionPlaceholder": "Choose one",
+      "cityLabel": "City *",
+      "cityPlaceholder": "Your city",
+      "submitText": "Start the course",
+      "loadingText": "Saving...",
+      "helperText": "No cost to enroll.",
+      "professions": [
+        "Chartered Accountant",
+        "Bookkeeper",
+        "Consultant",
+        "Business Owner",
+        "Tally Resellers",
+        "Other"
+      ]
+    }
+  },
+  "examOverlay": {
+    "closeAriaLabel": "Close exam",
+    "moduleHeader": "Module {current} of {total} — {title}",
+    "instructionsTitle": "Test instructions",
+    "instructions": [
+      "Tab switching is not allowed during the test.",
+      "Certificate validity is 6 months from the issued date.",
+      "If you exit or leave the test midway, the ongoing attempt is discarded and you must start again.",
+      "Two attempts will be provided, followed by a one-month retake period.",
+      "Your overall score across all three modules must be at least 70% to pass."
+    ],
+    "startModuleText": "Start module",
+    "questionMeta": "Question {current} of {total}",
+    "feedbackCorrect": "Correct.",
+    "feedbackWrong": "Not quite.",
+    "correctAnswerLabel": "Correct answer:",
+    "nextText": "Next",
+    "finishText": "Finish",
+    "gatePassedTitle": "Module {current} complete",
+    "gatePassedSub": "Up next: Module {next} of {total} — {title}.",
+    "continueModuleText": "Continue to Module {next}",
+    "resultPassedTitle": "You're GIDDH Certified",
+    "resultFailedTitle": "Assessment complete",
+    "resultScore": "You scored {percent}%",
+    "resultPassedSub": "You scored at least 70% overall. Open your certificate when ready.",
+    "resultFailedSub": "You need an overall score of at least 70% to pass. Two attempts are provided; after that, a one-month retake period applies.",
+    "resultRetakeEligible": "You can retake the test after {date}.",
+    "certificateIssuerLabel": "Issued by",
+    "certificateIssuerName": "Walkover Technologies Pvt Ltd",
+    "viewCertificateText": "Download certificate PDF",
+    "downloadShareImageText": "Download certificate image",
+    "retakeExamText": "Retake exam",
+    "tabWarningTitle": "Tab switch detected",
+    "tabWarningBody": "Tab switching is not allowed. This attempt will be discarded.",
+    "tabWarningButtonText": "Close attempt",
+    "idleWarningTitle": "No activity detected",
+    "idleWarningBody": "There is no action since long. Please perform an action or the attempt will be discarded.",
+    "idleWarningContinueText": "Continue attempt",
+    "idleWarningDiscardText": "Close attempt",
+    "instructionsLinkLabel": "Instructions"
+  },
+  "faqs": [
+    {
+      "question": "Is the certification really free?",
+      "answer": "Yes. All three modules, learning materials, the certification exam, and your verified digital badge are completely free with no hidden fees."
+    },
+    {
+      "question": "Do I need to be a partner to take the course?",
+      "answer": "No. Anyone — accountants, bookkeepers, resellers, consultants, or business owners — can enroll and complete the certification before joining the GIDDH Partnership Program."
+    },
+    {
+      "question": "What happens if I fail the exam?",
+      "answer": "You need an overall score of at least 70% across all three modules to pass. Two attempts will be provided, followed by a one-month retake period."
+    },
+    {
+      "question": "How does the partner revenue share actually work?",
+      "answer": "Once enrolled in the GIDDH Partnership Program, you earn 50% on a referred client's first-year subscription, 30% on the second-year renewal, and 20% on the third consecutive year renewal, settled quarterly."
+    },
+    {
+      "question": "How is the certificate generated?",
+      "answer": "After you pass, your certificate is issued by Walkover Technologies Pvt Ltd with your score, issue date and 6-month validity. You can view it online and download it as a PDF."
+    },
+    {
+      "question": "What makes certification helpful for my first client setup?",
+      "answer": "The modules walk you through real GIDDH ledger setup, data migration, tax configuration, and multi-user access so your first client onboarding goes smoothly from day one."
+    }
+  ],
+  "schemas": [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "WebPage",
+      "name": "GIDDH Partner Certification Program",
+      "description": "Become GIDDH Certified for free. Complete 3 self-paced modules covering cloud accounting workflows and compliance essentials, earn your verified badge, and qualify for GIDDH's partner revenue share.",
+      "url": "https://giddh.com/ae/giddh-partner-certificate"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "GIDDH Partner Certification Program",
+      "description": "Free 3-module self-paced certification covering GIDDH cloud accounting workflows, compliance reporting, and partner implementation best practices.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Giddh",
+        "sameAs": "https://giddh.com"
+      },
+      "isAccessibleForFree": true
+    }
+  ]
+}

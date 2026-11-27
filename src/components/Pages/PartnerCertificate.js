@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import HeroSection from "@/components/NewComps/PartnerCertificate/HeroSection";
 import BenefitsSection from "@/components/NewComps/PartnerCertificate/BenefitsSection";
@@ -11,8 +11,15 @@ import FAQs from "@/components/NewComps/FAQs";
 
 export default function PartnerCertificate({ pageData }) {
   const [isApplyOpen, setIsApplyOpen] = useState(false);
+  const onStartRef = useRef(null);
 
-  const openApply = () => setIsApplyOpen(true);
+  const openApply = () => {
+    if (typeof onStartRef.current === "function") {
+      onStartRef.current();
+      return;
+    }
+    setIsApplyOpen(true);
+  };
 
   return (
     <>
@@ -34,6 +41,7 @@ export default function PartnerCertificate({ pageData }) {
         setIsApplyOpen={setIsApplyOpen}
         applyOverlay={pageData?.applyOverlay}
         examOverlay={pageData?.examOverlay}
+        onStartRef={onStartRef}
       />
     </>
   );

@@ -34,6 +34,7 @@ export default function ApplyOverlay({
   const [requestId, setRequestId] = useState("");
   const [resendChannels, setResendChannels] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isTermsAccepted, setIsTermsAccepted] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -57,6 +58,9 @@ export default function ApplyOverlay({
 
   const handleSendOtp = (event) => {
     event.preventDefault();
+    if (!isTermsAccepted) {
+      return;
+    }
     setIsLoading(true);
     window.sendOtp(
       fullMobileNo,
@@ -79,7 +83,6 @@ export default function ApplyOverlay({
     if (!otp || !requestId) {
       return;
     }
-
     setIsLoading(true);
     window.verifyOtp(
       otp,
@@ -109,7 +112,6 @@ export default function ApplyOverlay({
     if (!requestId) {
       return;
     }
-
     setIsLoading(true);
     setOtp("");
     window.retryOtp(
@@ -209,12 +211,12 @@ export default function ApplyOverlay({
                   <div className="d-flex flex-column gap-2">
                     <label
                       className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="certMobile"
+                      htmlFor="mobileNumberInput"
                     >
                       {compData?.mobile?.label}
                     </label>
                     <input
-                      id="certMobile"
+                      id="mobileNumberInput"
                       type="tel"
                       className="form-control"
                       value={mobile}
@@ -227,10 +229,40 @@ export default function ApplyOverlay({
                       required
                     />
                   </div>
+                  {compData?.mobile?.termsDescription && (
+                    <div className="d-flex align-items-start gap-2">
+                      <input
+                        id="termsAcceptanceCheckbox"
+                        type="checkbox"
+                        className="form-check-input m-0"
+                        checked={isTermsAccepted}
+                        onChange={() => setIsTermsAccepted((prev) => !prev)}
+                        required
+                      />
+                      <label
+                        className="font-xs font-grey-deep m-0"
+                        htmlFor="termsAcceptanceCheckbox"
+                      >
+                        {compData?.mobile?.termsDescription}
+                        {compData?.mobile?.termsLinkUrl &&
+                          compData?.mobile?.termsLinkLabel && (
+                            <a
+                              href={compData.mobile.termsLinkUrl}
+                              className="font-xs font-600 font-primary"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {compData.mobile.termsLinkLabel}
+                            </a>
+                          )}
+                        {compData?.mobile?.termsSuffix}
+                      </label>
+                    </div>
+                  )}
                   <button
                     type="submit"
                     className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                    disabled={isLoading}
+                    disabled={isLoading || !isTermsAccepted}
                   >
                     <span>
                       {isLoading
@@ -246,6 +278,23 @@ export default function ApplyOverlay({
                       {compData?.mobile?.helperText}
                     </p>
                   )}
+                  {compData?.consentDescription && (
+                    <p className="font-xs font-grey-deep m-0">
+                      {compData?.consentDescription}
+                      {compData?.consentLinkUrl &&
+                        compData?.consentLinkLabel && (
+                          <a
+                            href={compData.consentLinkUrl}
+                            className="font-xs font-600 font-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {compData.consentLinkLabel}
+                          </a>
+                        )}
+                      {compData?.consentSuffix}
+                    </p>
+                  )}
                 </form>
               )}
 
@@ -257,12 +306,12 @@ export default function ApplyOverlay({
                   <div className="d-flex flex-column gap-2">
                     <label
                       className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="certOtp"
+                      htmlFor="otpInput"
                     >
                       {compData?.otp?.label}
                     </label>
                     <input
-                      id="certOtp"
+                      id="otpInput"
                       type="text"
                       className="form-control"
                       value={otp}
@@ -276,11 +325,11 @@ export default function ApplyOverlay({
                     />
                   </div>
                   <p className="font-xs font-grey-deep m-0">
-                    {compData?.otp?.sentPrefix} +{countryCode} {mobile}.
+                    {compData?.otp?.sentLabel} +{countryCode} {mobile}.
                   </p>
                   {uniqueChannels.length > 0 && (
                     <p className="font-xs font-grey-deep m-0">
-                      {compData?.otp?.resendPrefix}{" "}
+                      {compData?.otp?.resendLabel}{" "}
                       {uniqueChannels.map((channel, index) => (
                         <span key={channel.value}>
                           <button
@@ -330,12 +379,12 @@ export default function ApplyOverlay({
                   <div className="d-flex flex-column gap-2">
                     <label
                       className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="certName"
+                      htmlFor="fullNameInput"
                     >
                       {compData?.registration?.nameLabel}
                     </label>
                     <input
-                      id="certName"
+                      id="fullNameInput"
                       type="text"
                       className="form-control"
                       value={form.name}
@@ -352,12 +401,12 @@ export default function ApplyOverlay({
                   <div className="d-flex flex-column gap-2">
                     <label
                       className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="certEmail"
+                      htmlFor="emailInput"
                     >
                       {compData?.registration?.emailLabel}
                     </label>
                     <input
-                      id="certEmail"
+                      id="emailInput"
                       type="email"
                       className="form-control"
                       value={form.email}
@@ -374,12 +423,12 @@ export default function ApplyOverlay({
                   <div className="d-flex flex-column gap-2">
                     <label
                       className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="certProfession"
+                      htmlFor="professionSelect"
                     >
                       {compData?.registration?.professionLabel}
                     </label>
                     <select
-                      id="certProfession"
+                      id="professionSelect"
                       className="form-select"
                       value={form.profession}
                       onChange={(event) =>
@@ -403,12 +452,12 @@ export default function ApplyOverlay({
                   <div className="d-flex flex-column gap-2">
                     <label
                       className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="certCity"
+                      htmlFor="cityInput"
                     >
                       {compData?.registration?.cityLabel}
                     </label>
                     <input
-                      id="certCity"
+                      id="cityInput"
                       type="text"
                       className="form-control"
                       value={form.city}
@@ -439,6 +488,23 @@ export default function ApplyOverlay({
                   {compData?.registration?.helperText && (
                     <p className="font-xs font-grey-deep m-0">
                       {compData?.registration?.helperText}
+                    </p>
+                  )}
+                  {compData?.consentDescription && (
+                    <p className="font-xs font-grey-deep m-0">
+                      {compData?.consentDescription}
+                      {compData?.consentLinkUrl &&
+                        compData?.consentLinkLabel && (
+                          <a
+                            href={compData.consentLinkUrl}
+                            className="font-xs font-600 font-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {compData.consentLinkLabel}
+                          </a>
+                        )}
+                      {compData?.consentSuffix}
                     </p>
                   )}
                 </form>
