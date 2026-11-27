@@ -1,5 +1,5 @@
 {
-  "course": "Giddh Certificate Course",
+  "course": "Giddh Certificate Course (UAE / Other)",
   "totalQuestions": 200,
   "modules": [
     {
@@ -11,8 +11,8 @@
     {
       "id": "compliance",
       "number": "02",
-      "title": "Compliance Essentials – GST",
-      "summary": "GST, e-invoice, e-way bill, place of supply, and tax reporting essentials."
+      "title": "Compliance Essentials – VAT (UAE / Other)",
+      "summary": "UAE VAT, TRN, FTA filing, and tax reporting essentials for non-India companies."
     },
     {
       "id": "exam",
@@ -26,7 +26,7 @@
       "id": 1,
       "question": "Giddh is mainly used for?",
       "options": {
-        "A": "Online accounting and GST",
+        "A": "Online accounting and VAT",
         "B": "Only making websites",
         "C": "Only sending SMS",
         "D": "Only photo editing"
@@ -126,7 +126,7 @@
       "question": "Estimate in Giddh is used for?",
       "options": {
         "A": "Giving quotation before invoice",
-        "B": "Filing GST return",
+        "B": "Filing VAT return",
         "C": "Bank login",
         "D": "Deleting stock"
       },
@@ -138,7 +138,7 @@
       "options": {
         "A": "A draft invoice before final invoice",
         "B": "A bank statement",
-        "C": "A GST return",
+        "C": "A VAT return",
         "D": "A salary slip"
       },
       "answer": "A"
@@ -182,7 +182,7 @@
       "options": {
         "A": "Cash to bank or bank to cash transfer",
         "B": "Customer quotation",
-        "C": "E-way bill only",
+        "C": "VAT return only",
         "D": "Inventory barcode only"
       },
       "answer": "A"
@@ -222,9 +222,9 @@
     },
     {
       "id": 19,
-      "question": "GST invoice in Giddh helps in?",
+      "question": "VAT invoice in Giddh helps in?",
       "options": {
-        "A": "Tax compliant billing",
+        "A": "Tax compliant billing for UAE businesses",
         "B": "Only changing fonts",
         "C": "Only adding stickers",
         "D": "Only making charts"
@@ -233,9 +233,9 @@
     },
     {
       "id": 20,
-      "question": "GSTR-1 and GSTR-3B in Giddh are related to?",
+      "question": "VAT Return in Giddh is related to?",
       "options": {
-        "A": "GST filing",
+        "A": "UAE VAT filing",
         "B": "Inventory barcode",
         "C": "Theme settings",
         "D": "Mobile lock"
@@ -244,20 +244,20 @@
     },
     {
       "id": 21,
-      "question": "E-invoice gives you?",
+      "question": "Tax Registration Number (TRN) on invoice helps to?",
       "options": {
-        "A": "IRN and QR code",
-        "B": "Only PDF password",
-        "C": "Only email draft",
-        "D": "Only bank UPI"
+        "A": "Identify VAT-registered party correctly",
+        "B": "Only set PDF password",
+        "C": "Only draft emails",
+        "D": "Only add bank IBAN"
       },
       "answer": "A"
     },
     {
       "id": 22,
-      "question": "E-way bill is mainly needed for?",
+      "question": "UAE VAT return feature in Giddh is mainly needed for?",
       "options": {
-        "A": "Goods transport under GST rules",
+        "A": "Filing and managing VAT as per FTA rules",
         "B": "Creating users",
         "C": "Changing company name",
         "D": "Adding custom fields"
@@ -266,9 +266,9 @@
     },
     {
       "id": 23,
-      "question": "Place of Supply on voucher helps in?",
+      "question": "Correct tax rate on a UAE voucher helps in?",
       "options": {
-        "A": "Correct GST tax calculation",
+        "A": "Correct VAT calculation on invoices",
         "B": "Choosing invoice color",
         "C": "Setting barcode size",
         "D": "Choosing app language only"
@@ -277,23 +277,23 @@
     },
     {
       "id": 24,
-      "question": "For sale inside the same state, tax is usually?",
+      "question": "For a standard taxable UAE sale, VAT is usually?",
       "options": {
-        "A": "CGST + SGST",
-        "B": "Only IGST",
-        "C": "Only TDS",
-        "D": "Only CESS"
+        "A": "Standard rate VAT (e.g. 5%)",
+        "B": "Only input VAT reclaim",
+        "C": "Only reverse charge",
+        "D": "No tax ever"
       },
       "answer": "A"
     },
     {
       "id": 25,
-      "question": "For sale to another state, tax is usually?",
+      "question": "Zero-rated supplies in UAE VAT usually mean?",
       "options": {
-        "A": "IGST",
-        "B": "Only CGST",
-        "C": "Only SGST",
-        "D": "No tax ever"
+        "A": "VAT at 0% but still reported",
+        "B": "Only exempt supplies",
+        "C": "Only designated zone rules",
+        "D": "Invoice is deleted"
       },
       "answer": "A"
     },
@@ -324,7 +324,7 @@
       "question": "Barcode in Giddh helps to?",
       "options": {
         "A": "Quickly add product in invoice",
-        "B": "Change GSTIN",
+        "B": "Change TRN",
         "C": "Create Magic Link",
         "D": "Pay subscription"
       },
@@ -488,7 +488,7 @@
       "id": 43,
       "question": "Sales/Purchase Register export now also shows?",
       "options": {
-        "A": "IGST, CGST, SGST, CESS columns",
+        "A": "VAT amount and tax breakup columns",
         "B": "Only emoji list",
         "C": "Only printer brands",
         "D": "Only mobile models"
@@ -541,7 +541,7 @@
     },
     {
       "id": 48,
-      "question": "Tally data can be imported into Giddh for?",
+      "question": "Existing accounting data can be imported into Giddh for?",
       "options": {
         "A": "Easy migration of books",
         "B": "Making songs",
@@ -590,7 +590,7 @@
         "A": "Different users get different permissions",
         "B": "All users can do everything always",
         "C": "No one can login",
-        "D": "Only guests can edit GST"
+        "D": "Only guests can edit VAT"
       },
       "answer": "A"
     },
@@ -644,7 +644,7 @@
       "options": {
         "A": "Same entry repeating every month/period",
         "B": "One-time cash transfer only",
-        "C": "Only e-way bill",
+        "C": "Only VAT return",
         "D": "Only barcode print"
       },
       "answer": "A"
@@ -711,7 +711,7 @@
         "A": "Buy extra vouchers easily",
         "B": "Store customer cash",
         "C": "Pay vendors automatically",
-        "D": "Hold GST credit"
+        "D": "Hold VAT credit"
       },
       "answer": "A"
     },
@@ -732,7 +732,7 @@
       "options": {
         "A": "Online subscription payment",
         "B": "Inventory counting",
-        "C": "E-way bill printing",
+        "C": "VAT return printing",
         "D": "Making journal entry"
       },
       "answer": "A"
@@ -742,7 +742,7 @@
       "question": "When Delivery Challan is made, Giddh can auto create?",
       "options": {
         "A": "Opposite voucher in other branch",
-        "B": "New GSTIN",
+        "B": "New TRN",
         "C": "New mobile app",
         "D": "New tax slab"
       },
@@ -783,12 +783,12 @@
     },
     {
       "id": 70,
-      "question": "For UK companies, VAT payment support is linked with?",
+      "question": "For UAE / other non-India companies, tax support is mainly?",
       "options": {
-        "A": "HMRC",
-        "B": "GSTN only",
-        "C": "EPFO",
-        "D": "MCA"
+        "A": "VAT compliance workflow",
+        "B": "Only Indian GST filing",
+        "C": "Only UK payroll",
+        "D": "Only US payroll"
       },
       "answer": "A"
     },
@@ -1091,9 +1091,9 @@
     },
     {
       "id": 98,
-      "question": "GSTIN is?",
+      "question": "TRN is?",
       "options": {
-        "A": "GST registration number of party/business",
+        "A": "Tax Registration Number of party/business",
         "B": "Bank account number",
         "C": "Invoice color code",
         "D": "Warehouse lock code"
@@ -1102,7 +1102,7 @@
     },
     {
       "id": 99,
-      "question": "HSN/SAC on invoice is used for?",
+      "question": "Commodity / service code on invoice is used for?",
       "options": {
         "A": "Product/service tax classification",
         "B": "Choosing font",
@@ -1140,7 +1140,7 @@
         "A": "Track when customer should pay",
         "B": "Set holiday calendar",
         "C": "Lock warehouse",
-        "D": "Change GST rate automatically"
+        "D": "Change VAT rate automatically"
       },
       "answer": "A"
     },
@@ -1182,7 +1182,7 @@
       "question": "Invoice email markup means?",
       "options": {
         "A": "Extra content/message in invoice email",
-        "B": "Extra GST illegally",
+        "B": "Extra VAT illegally",
         "C": "Extra warehouse",
         "D": "Extra company"
       },
@@ -1190,9 +1190,9 @@
     },
     {
       "id": 107,
-      "question": "GSTR-2A/2B reconciliation helps to?",
+      "question": "VAT reconciliation in Giddh helps to?",
       "options": {
-        "A": "Match purchase data with GST portal",
+        "A": "Match purchase/sales data for VAT return accuracy",
         "B": "Match WhatsApp status",
         "C": "Match invoice fonts",
         "D": "Match theme colors"
@@ -1201,9 +1201,9 @@
     },
     {
       "id": 108,
-      "question": "IRN full form in e-invoice is?",
+      "question": "FTA in UAE tax context mainly refers to?",
       "options": {
-        "A": "Invoice Reference Number",
+        "A": "Federal Tax Authority for VAT compliance",
         "B": "Indian Railway Number",
         "C": "Internal Report Name",
         "D": "Item Return Note"
@@ -1212,9 +1212,9 @@
     },
     {
       "id": 109,
-      "question": "E-invoice is validated on?",
+      "question": "UAE VAT return filing is submitted to?",
       "options": {
-        "A": "Invoice Registration Portal (IRP)",
+        "A": "FTA EmaraTax / UAE VAT portal workflow",
         "B": "YouTube",
         "C": "Play Store",
         "D": "WhatsApp"
@@ -1271,7 +1271,7 @@
       "options": {
         "A": "T-shirt in different sizes/colors",
         "B": "One bank ledger",
-        "C": "One GST return",
+        "C": "One VAT return",
         "D": "One Magic Link"
       },
       "answer": "A"
@@ -1293,7 +1293,7 @@
       "options": {
         "A": "You buy/sell goods with stock tracking",
         "B": "You only send reminders",
-        "C": "You only file GSTR",
+        "C": "You only file VAT return",
         "D": "You only use Ask AI"
       },
       "answer": "A"
@@ -1315,7 +1315,7 @@
       "options": {
         "A": "Payment / expense entry in ledger or voucher",
         "B": "Only estimate",
-        "C": "Only e-way bill",
+        "C": "Only VAT return",
         "D": "Only white label"
       },
       "answer": "A"
@@ -1382,7 +1382,7 @@
         "A": "Recurring voucher",
         "B": "New company every month",
         "C": "Delete old entry every time",
-        "D": "Only e-invoice cancel"
+        "D": "Only VAT invoice cancel"
       },
       "answer": "A"
     },
@@ -1425,7 +1425,7 @@
       "options": {
         "A": "Agent/agency fee is added on voucher",
         "B": "Only creating warehouse",
-        "C": "Only adding GSTIN",
+        "C": "Only adding VAT number",
         "D": "Only printing blank PDF"
       },
       "answer": "A"
@@ -1436,7 +1436,7 @@
       "options": {
         "A": "Subscription Wallet",
         "B": "Stock History",
-        "C": "Place of Supply",
+        "C": "tax setting",
         "D": "Ship Via"
       },
       "answer": "A"
@@ -1468,7 +1468,7 @@
       "question": "Copy old invoice of same customer saves?",
       "options": {
         "A": "Typing time",
-        "B": "GST filing",
+        "B": "VAT filing",
         "C": "Bank interest",
         "D": "Warehouse rent"
       },
@@ -1479,7 +1479,7 @@
       "question": "Inter-branch automation reduces?",
       "options": {
         "A": "Manual entry in other branch",
-        "B": "Need of GST",
+        "B": "Need of VAT",
         "C": "Need of invoice",
         "D": "Need of internet"
       },
@@ -1498,12 +1498,12 @@
     },
     {
       "id": 135,
-      "question": "Wrong Place of Supply can cause?",
+      "question": "Wrong VAT rate or tax setup can cause?",
       "options": {
-        "A": "Wrong GST type on invoice",
-        "B": "Wrong app icon",
-        "C": "Wrong ringtone",
-        "D": "Wrong desktop size"
+        "A": "Wrong VAT type/amount on invoice",
+        "B": "Faster WhatsApp send",
+        "C": "Better theme colors",
+        "D": "Automatic stock jokes"
       },
       "answer": "A"
     },
@@ -1514,7 +1514,7 @@
         "A": "Entry is still not matched with bank",
         "B": "Entry is deleted forever",
         "C": "Entry became invoice",
-        "D": "Entry became e-way bill"
+        "D": "Entry became VAT return"
       },
       "answer": "A"
     },
@@ -1531,9 +1531,9 @@
     },
     {
       "id": 138,
-      "question": "Tally import is useful when?",
+      "question": "Data import is useful when?",
       "options": {
-        "A": "Business is moving from Tally to Giddh",
+        "A": "Business is moving books into Giddh",
         "B": "Business wants to delete all accounts",
         "C": "Business wants only SMS",
         "D": "Business wants only themes"
@@ -1547,7 +1547,7 @@
         "A": "Customers to view their statements/documents",
         "B": "Only admin password reset",
         "C": "Only creating warehouses",
-        "D": "Only filing GSTR-3B"
+        "D": "Only filing VAT return"
       },
       "answer": "A"
     },
@@ -1645,8 +1645,8 @@
       "options": {
         "A": "Match/clear them",
         "B": "Delete company",
-        "C": "Create e-way bill",
-        "D": "Change GSTIN"
+        "C": "Create VAT return",
+        "D": "Change VAT number"
       },
       "answer": "A"
     },
@@ -1762,9 +1762,9 @@
     },
     {
       "id": 159,
-      "question": "Which tax setting on voucher is a latest GST help?",
+      "question": "Which tax setting on voucher is a latest VAT help?",
       "options": {
-        "A": "Place of Supply selection",
+        "A": "Correct VAT rate / tax selection",
         "B": "Place of wallpaper",
         "C": "Place of emoji",
         "D": "Place of ringtone"
@@ -1828,9 +1828,9 @@
     },
     {
       "id": 165,
-      "question": "To file GST returns from Giddh, use?",
+      "question": "To file VAT returns from Giddh, use?",
       "options": {
-        "A": "GST module / GST filing",
+        "A": "VAT module / VAT filing",
         "B": "Only inventory variant",
         "C": "Only warehouse archive",
         "D": "Only template color"
@@ -1839,9 +1839,9 @@
     },
     {
       "id": 166,
-      "question": "To generate IRN, use?",
+      "question": "To show TRN correctly on invoices, use?",
       "options": {
-        "A": "E-invoice feature",
+        "A": "Party tax details / TRN settings",
         "B": "Only contra voucher",
         "C": "Only aging report",
         "D": "Only Magic Link"
@@ -1850,9 +1850,9 @@
     },
     {
       "id": 167,
-      "question": "To create e-way bill, use?",
+      "question": "To manage UAE VAT filing, use?",
       "options": {
-        "A": "E-way bill option in Giddh",
+        "A": "VAT option in Giddh",
         "B": "Only Profit & Loss",
         "C": "Only Trial Balance",
         "D": "Only Stripe"
@@ -1931,7 +1931,7 @@
       "options": {
         "A": "Recurring Voucher",
         "B": "Only Stock Transfer",
-        "C": "Only E-way bill",
+        "C": "Only VAT return",
         "D": "Only PIN code"
       },
       "answer": "A"
@@ -1996,7 +1996,7 @@
       "question": "Ship To on PDF means?",
       "options": {
         "A": "Delivery address details",
-        "B": "Only GST filing status",
+        "B": "Only VAT filing status",
         "C": "Only user permission",
         "D": "Only subscription plan name"
       },
@@ -2009,7 +2009,7 @@
         "A": "Normal latest behavior",
         "B": "A virus",
         "C": "Always a bug",
-        "D": "GST failure"
+        "D": "VAT failure"
       },
       "answer": "A"
     },
@@ -2026,11 +2026,11 @@
     },
     {
       "id": 183,
-      "question": "UK VAT payment feature is for?",
+      "question": "UAE / other-country VAT features are for?",
       "options": {
-        "A": "UK companies",
-        "B": "Only Indian GSTR-1",
-        "C": "Only UAE free zone logo",
+        "A": "Companies outside India using VAT",
+        "B": "Only Indian GST returns",
+        "C": "Only UK payroll logos",
         "D": "Only US payroll"
       },
       "answer": "A"
@@ -2048,9 +2048,9 @@
     },
     {
       "id": 185,
-      "question": "IGST column in export is useful for?",
+      "question": "VAT column in export is useful for?",
       "options": {
-        "A": "Inter-state tax breakup",
+        "A": "Tax breakup on sales/purchases",
         "B": "Only invoice font",
         "C": "Only barcode width",
         "D": "Only theme color"
@@ -2059,9 +2059,9 @@
     },
     {
       "id": 186,
-      "question": "CGST and SGST columns are useful for?",
+      "question": "Standard-rated vs zero-rated columns help to?",
       "options": {
-        "A": "Intra-state tax breakup",
+        "A": "Understand VAT treatment breakup",
         "B": "Only email footer",
         "C": "Only SMS length",
         "D": "Only PDF zoom"
@@ -2070,10 +2070,10 @@
     },
     {
       "id": 187,
-      "question": "CESS column is useful when?",
+      "question": "Exempt supplies column is useful when?",
       "options": {
-        "A": "Item has compensation cess",
-        "B": "Item has no tax ever",
+        "A": "Item/service is VAT exempt",
+        "B": "Item has no tax ever and is hidden",
         "C": "Only for themes",
         "D": "Only for Magic Link"
       },
@@ -2096,7 +2096,7 @@
       "options": {
         "A": "Check dashboard and pending dues",
         "B": "Delete all ledgers",
-        "C": "Change GSTIN daily",
+        "C": "Change VAT number daily",
         "D": "Create new company daily"
       },
       "answer": "A"
@@ -2105,7 +2105,7 @@
       "id": 190,
       "question": "Before sending invoice to customer, check?",
       "options": {
-        "A": "Name, GSTIN, items, tax and total",
+        "A": "Name, TRN, items, tax and total",
         "B": "Only app theme",
         "C": "Only browser zoom",
         "D": "Only wallpaper"
@@ -2152,7 +2152,7 @@
         "A": "Copy from previous invoice",
         "B": "Create new company",
         "C": "Archive warehouse",
-        "D": "Disable GST"
+        "D": "Disable VAT"
       },
       "answer": "A"
     },
@@ -2171,7 +2171,7 @@
       "id": 196,
       "question": "If you want tax correct on bill, set correctly?",
       "options": {
-        "A": "Place of Supply and tax rate",
+        "A": "VAT rate and tax settings",
         "B": "Only invoice color",
         "C": "Only PDF zoom",
         "D": "Only emoji"
@@ -2215,12 +2215,13 @@
       "id": 200,
       "question": "Giddh main benefit for a new regular user is?",
       "options": {
-        "A": "Easy billing, GST, stock, bank and reports in one place",
+        "A": "Easy billing, VAT, stock, bank and reports in one place",
         "B": "Only making memes",
         "C": "Only editing videos",
         "D": "Only playing games"
       },
       "answer": "A"
     }
-  ]
+  ],
+  "region": "ae"
 }

@@ -31,6 +31,7 @@ export default function CertificationFlow({
   applyOverlay,
   examOverlay,
   onStartRef,
+  country,
 }) {
   const [flowPhase, setFlowPhase] = useState("mobile");
   const [mobile, setMobile] = useState("");
@@ -53,11 +54,11 @@ export default function CertificationFlow({
     setCachedPassResult(null);
     setExamStarted(true);
     setExamInitialResult({ phase: "quiz" });
-    setModules(buildExamModules());
+    setModules(buildExamModules(country));
     setExamKey((prev) => prev + 1);
     setIsApplyOpen(false);
     setIsExamOpen(true);
-  }, [setIsApplyOpen]);
+  }, [country, setIsApplyOpen]);
 
   const openCertifiedResult = useCallback(
     (nextLearner) => {
@@ -95,7 +96,7 @@ export default function CertificationFlow({
 
       setLearner(nextLearner);
       setExamStarted(false);
-      setModules(buildExamModules());
+      setModules(buildExamModules(country));
       setExamInitialResult({
         phase: "result",
         certificate: certPayload,
@@ -105,7 +106,7 @@ export default function CertificationFlow({
       setIsApplyOpen(false);
       setIsExamOpen(true);
     },
-    [setIsApplyOpen]
+    [country, setIsApplyOpen]
   );
 
   openCertifiedResultRef.current = openCertifiedResult;

@@ -1,10 +1,22 @@
-import questionsData from "@/data/giddh-cert/questions.json";
+import questionsAe from "@/data/giddh-cert/questions-ae.json";
+import questionsIn from "@/data/giddh-cert/questions-in.json";
+import questionsUk from "@/data/giddh-cert/questions-uk.json";
 import {
   MODULE_PASS_PERCENT,
   QUESTIONS_PER_MODULE,
 } from "./constants";
 
 const OPTION_KEYS = ["A", "B", "C", "D"];
+
+function getQuestionsData(country) {
+  if (country === "uk") {
+    return questionsUk;
+  }
+  if (country === "ae") {
+    return questionsAe;
+  }
+  return questionsIn;
+}
 
 function shuffle(list) {
   const next = [...list];
@@ -15,7 +27,8 @@ function shuffle(list) {
   return next;
 }
 
-export function buildExamModules() {
+export function buildExamModules(country) {
+  const questionsData = getQuestionsData(country);
   const all = questionsData.questions;
   const modules = questionsData.modules;
   const chunkSize = Math.ceil(all.length / modules.length);

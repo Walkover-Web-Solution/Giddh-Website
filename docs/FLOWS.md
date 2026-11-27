@@ -318,22 +318,24 @@ sequenceDiagram
 
 ### 1. Happy Path Sequence
 
-`/giddh-partner-certificate` → marketing sections from `src/data/pagesdata/global/giddh-partner-certificate.json` → "Start the course" → `CertificationFlow` overlay → Indian mobile + MSG91 OTP → `POST /api/giddh-cert/verify-otp` (sets `giddh_cert_session`) → registration form → `POST /api/giddh-cert/profile` → module quizzes from `src/data/giddh-cert/questions.json` → `POST /api/giddh-cert/result` → certificate view → `GET /api/giddh-cert/download` opens the PDF. No redirect to the Giddh app.
+`/giddh-partner-certificate` (plus `/in`, `/ae`, `/uk`) → marketing sections from `src/data/pagesdata/<country>/giddh-partner-certificate.json` → "Start the course" → `CertificationFlow` overlay → mobile + MSG91 OTP → Giddh `/public/giddh-cert/*` → registration → module quizzes from `src/data/giddh-cert/questions-<country>.json` (`questions-in.json` GST, `questions-uk.json` UK VAT, `questions-ae.json` UAE VAT; global uses IN) → result → certificate PDF/image download. No redirect to the Giddh app.
 
 ### 2. Step-by-Step Path & Code Connections
 
 1. **Route:** global only (`src/pages/giddh-partner-certificate.js` → `src/components/Pages/PartnerCertificate.js`). Navbar/footer stay visible.
 2. **OTP:** same MSG91 widget as signup (`src/utils/msg91Otp.js:initOtpWidget`). After `window.verifyOtp`, `src/utils/giddhCert/clientApi.js:startSession` calls the Next proxy, not the Giddh API directly.
-3. **Resume logic:** `verify-otp` returns `resumeScreen` (`certificate`, `test`, `registration`, or `blocked` with `nextAttemptAt`) so returning learners skip steps.
-4. **Exam:** questions never leave the browser until submit; pass threshold 70% per module and overall (`src/utils/giddhCert/constants.js`).
+3. **Resume logic:** `/check` (via `startSession`) maps to `resumeScreen` (`certificate`, `test`, `registration`, or `blocked` with `nextAttemptAt`) so returning learners skip steps.
+4. **Exam:** questions never leave the browser until submit; overall pass threshold 70% (`MODULE_PASS_PERCENT`). `/result` drives retakes: 1st fail → Retake exam immediately; 2nd fail → show unlock datetime, no retake; pass → certificate download, no retake until expiry.
 
 ### 3. Failure Modes
 
 | Failure | UI |
 |---|---|
 | Invalid Indian mobile | Inline validation before OTP send |
-| `canAttempt === false` | Toast with server `message`; overlay stays closed |
-| Missing session on profile/result | 401 from proxy → toast |
+| `canAttempt === false` on `/check` | Toast with server `message`; overlay stays closed |
+| Fail result with `canAttempt === false` | Result screen shows unlock date from `nextAttemptAt`; retake button hidden |
+| Fail result with `canAttempt === true` | Result screen shows Retake exam (immediate 2nd attempt) |
+| Missing session on profile/result | 401 → toast |
 | API/network error | Toast via `showToaster` |
 
 > [!NOTE]

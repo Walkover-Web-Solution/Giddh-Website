@@ -28,27 +28,6 @@ function formatCopy(template, values) {
   );
 }
 
-function formatDateDdMmYyyy(value) {
-  const date = value instanceof Date ? value : new Date(value);
-  if (Number.isNaN(date.getTime())) {
-    return null;
-  }
-  const day = String(date.getDate()).padStart(2, "0");
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const year = String(date.getFullYear());
-  return `${day}/${month}/${year}`;
-}
-
-function resolveRetakeEligibleDate(nextAttemptAt) {
-  if (nextAttemptAt) {
-    return formatDateDdMmYyyy(nextAttemptAt);
-  }
-  // One-month retake period from today (e.g. 25/11/2026 → 25/12/2026).
-  const next = new Date();
-  next.setMonth(next.getMonth() + 1);
-  return formatDateDdMmYyyy(next);
-}
-
 export default function ExamOverlay({
   isOpen,
   onClose,
@@ -85,8 +64,6 @@ export default function ExamOverlay({
   const lastActivityRef = useRef(Date.now());
   const idleWarningRef = useRef(false);
   idleWarningRef.current = idleWarning;
-  const retakeEligibleDate = resolveRetakeEligibleDate(nextAttemptAt);
-
   const currentModule = modules[moduleIndex];
   const currentQuestion = currentModule?.questions?.[questionIndex];
   const totalInModule = currentModule?.questions?.length;
@@ -113,6 +90,8 @@ export default function ExamOverlay({
     return computed;
   }, [certificatePayload?.score, initialResult?.overall, moduleScores]);
   const allPassed = overall.allPassed;
+  const showRetakeLockMessage =
+    !allPassed && canAttempt === false && Boolean(nextAttemptAt);
 
   const timerLabel = useMemo(() => {
     const minutes = String(Math.floor(timer / 60)).padStart(2, "0");
@@ -261,9 +240,7 @@ export default function ExamOverlay({
       if (data?.certificate) {
         setCertificatePayload(data.certificate);
       }
-      if (data?.learner?.nextAttemptAt) {
-        setNextAttemptAt(data.learner.nextAttemptAt);
-      }
+      setNextAttemptAt(data?.learner?.nextAttemptAt);
       if (typeof data?.learner?.canAttempt === "boolean") {
         setCanAttempt(data.learner.canAttempt);
       }
@@ -566,6 +543,11 @@ export default function ExamOverlay({
                     })
                   : null}
               </p>
+              {allPassed && compData?.resultPassedSub ? (
+                <p className="font-sm font-grey-deep m-0 col-lg-10">
+                  {compData.resultPassedSub}
+                </p>
+              ) : null}
               {!allPassed && compData?.resultFailedSub ? (
                 <p className="font-sm font-grey-deep m-0 col-lg-10">
                   {compData.resultFailedSub}
@@ -577,10 +559,10 @@ export default function ExamOverlay({
                   {compData.certificateIssuerName}
                 </p>
               )}
-              {retakeEligibleDate && compData?.resultRetakeEligible ? (
+              {showRetakeLockMessage && compData?.resultRetakeEligible ? (
                 <p className="font-sm font-grey-deep m-0 col-lg-10">
                   {formatCopy(compData.resultRetakeEligible, {
-                    date: retakeEligibleDate,
+                    date: nextAttemptAt,
                   })}
                 </p>
               ) : null}

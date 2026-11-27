@@ -62,7 +62,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | MDX blog with Decap CMS | 🟡 | 253 posts in `_posts/blog/`; CMS use unconfirmed ([Q-014](docs/OPEN_QUESTIONS.md#active-questions-table)); image field and JSON-LD issues ([Q-025](docs/OPEN_QUESTIONS.md#active-questions-table), [Q-027](docs/OPEN_QUESTIONS.md#active-questions-table)). |
 | Affiliate program | 🟡 | `src/pages/affiliate.js` and locale variants. |
 | Comparison and switching pages | 🟡 | `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`. |
-| GIDDH Partner Certificate | 🟡 | `/giddh-partner-certificate` plus `/in`, `/ae`, `/uk` locale routes; JSON per country; Giddh `/public/giddh-cert`. Pass popup PDF + image download (same API; image via PDFium). Fail retake-eligible date. Not exercised end-to-end from this repo. |
+| GIDDH Partner Certificate | 🟡 | `/giddh-partner-certificate` plus `/in`, `/ae`, `/uk`; locale page JSON + question banks. Retake from API `canAttempt`/`nextAttemptAt` (2 fails → 1 month lock; pass → until cert expiry). Pass popup PDF + image (PDFium). Not exercised end-to-end from this repo. |
 | Embarko contact (sales/support) | 🟡 | Replaces Typeform on Contact Us and AE/UK home banners (PR #861). UTM bridge [Q-033](docs/OPEN_QUESTIONS.md#active-questions-table). |
 
 ### Proposals & roadmaps
@@ -166,6 +166,8 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-27 · Cursor agent · Partner cert retake UI follows API `canAttempt`/`nextAttemptAt` (no invented +1 month); locale copy + docs updated · Partner Certificate notes updated
+- 2026-11-27 · Cursor agent · Partner cert locale page copy split (IN GST / UK MTD-HMRC / AE TRN-FTA) + locale links; question banks via `pageInfo.country` · Partner Certificate notes updated
 - 2026-11-27 · Cursor agent · Partner certificate page naming + hooks order cleanup · [no status]
 - 2026-11-26 · Cursor agent · Partner certificate image download via PDFium (same API) · Partner Certificate notes updated
 - 2026-11-25 · Cursor agent · Partner certificate fail score popup shows retake-eligible date (API `nextAttemptAt` or +1 month) · Partner Certificate notes updated
