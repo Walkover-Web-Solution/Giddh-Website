@@ -43,13 +43,13 @@ export default function BenefitsSection({ compData }) {
                 {compData?.description}
               </p>
             )}
-            {compData?.link?.text && (
+            {compData?.link?.label && (
               <button
                 type="button"
                 className="bg-transparent border-0 border-bottom border-primary p-0 font-sm font-600 font-primary d-inline-flex align-items-center gap-2 cursor-pointer"
                 onClick={() => handleScrollToTarget(compData?.link?.targetId)}
               >
-                <span>{compData?.link?.text}</span>
+                <span>{compData?.link?.label}</span>
                 <MdArrowOutward size={15} aria-hidden="true" />
               </button>
             )}

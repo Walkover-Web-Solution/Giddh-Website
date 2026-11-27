@@ -47,20 +47,20 @@ export default function EnrollCardSection({ compData, onStart }) {
                 <span>{compData?.buttonText}</span>
                 <MdArrowForward size={16} aria-hidden="true" />
               </button>
-              {compData?.consentTextBefore && (
+              {compData?.consentDescription && (
                 <p className="font-xs font-grey-deep m-0">
-                  {compData?.consentTextBefore}
-                  {compData?.consentLinkHref && compData?.consentLinkText && (
+                  {compData?.consentDescription}
+                  {compData?.consentLinkUrl && compData?.consentLinkLabel && (
                     <a
-                      href={compData.consentLinkHref}
+                      href={compData.consentLinkUrl}
                       className="font-xs font-600 font-primary"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {compData.consentLinkText}
+                      {compData.consentLinkLabel}
                     </a>
                   )}
-                  {compData?.consentTextAfter}
+                  {compData?.consentSuffix}
                 </p>
               )}
             </div>

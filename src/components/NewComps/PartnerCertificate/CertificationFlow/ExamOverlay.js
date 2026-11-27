@@ -58,6 +58,8 @@ export default function ExamOverlay({
   initialResult,
   compData,
 }) {
+  const [canAttempt, setCanAttempt] = useState(learner?.canAttempt);
+  const [nextAttemptAt, setNextAttemptAt] = useState(learner?.nextAttemptAt);
   const [moduleIndex, setModuleIndex] = useState(0);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [selected, setSelected] = useState(null);
@@ -80,10 +82,6 @@ export default function ExamOverlay({
   const [certificatePayload, setCertificatePayload] = useState(
     initialResult?.certificate
   );
-  const [nextAttemptAt, setNextAttemptAt] = useState(
-    learner?.nextAttemptAt
-  );
-  const [canAttempt, setCanAttempt] = useState(learner?.canAttempt);
   const lastActivityRef = useRef(Date.now());
   const idleWarningRef = useRef(false);
   idleWarningRef.current = idleWarning;
@@ -115,6 +113,12 @@ export default function ExamOverlay({
     return computed;
   }, [certificatePayload?.score, initialResult?.overall, moduleScores]);
   const allPassed = overall.allPassed;
+
+  const timerLabel = useMemo(() => {
+    const minutes = String(Math.floor(timer / 60)).padStart(2, "0");
+    const seconds = String(timer % 60).padStart(2, "0");
+    return `${minutes}:${seconds}`;
+  }, [timer]);
 
   useEffect(() => {
     if (!isOpen || phase !== "quiz") {
@@ -215,12 +219,6 @@ export default function ExamOverlay({
     };
   }, [isOpen, phase, showInstructions, tabWarning]);
 
-  const timerLabel = useMemo(() => {
-    const minutes = String(Math.floor(timer / 60)).padStart(2, "0");
-    const seconds = String(timer % 60).padStart(2, "0");
-    return `${minutes}:${seconds}`;
-  }, [timer]);
-
   if (!isOpen) {
     return null;
   }
@@ -297,7 +295,7 @@ export default function ExamOverlay({
         : compData?.feedbackWrong,
       note: isCorrect
         ? correctAnswer
-        : `${compData?.correctAnswerPrefix} ${correctAnswer}`,
+        : `${compData?.correctAnswerLabel} ${correctAnswer}`,
     });
   };
 
@@ -404,7 +402,7 @@ export default function ExamOverlay({
                   >
                     <span className="d-inline-flex align-items-center gap-1">
                       <MdInfoOutline size={16} />
-                      {compData?.instructionsLinkText}
+                      {compData?.instructionsLinkLabel}
                     </span>
                   </button>
                 </div>

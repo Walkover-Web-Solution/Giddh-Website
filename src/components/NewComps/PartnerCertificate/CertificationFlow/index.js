@@ -34,7 +34,6 @@ export default function CertificationFlow({
 }) {
   const [flowPhase, setFlowPhase] = useState("mobile");
   const [mobile, setMobile] = useState("");
-  const countryCode = applyOverlay?.countryCode;
   const [learner, setLearner] = useState(null);
   const [isExamOpen, setIsExamOpen] = useState(false);
   const [examKey, setExamKey] = useState(0);
@@ -43,6 +42,7 @@ export default function CertificationFlow({
   const [examStarted, setExamStarted] = useState(false);
   const [cachedPassResult, setCachedPassResult] = useState(null);
   const openCertifiedResultRef = useRef(null);
+  const countryCode = applyOverlay?.countryCode;
 
   const closeApply = () => {
     setIsApplyOpen(false);

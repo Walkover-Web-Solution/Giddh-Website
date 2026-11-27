@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-26 · **Reviewed up to commit:** `1ab8290f`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-27 · **Reviewed up to commit:** `1ab8290f`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -166,6 +166,7 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-27 · Cursor agent · Partner certificate page naming + hooks order cleanup · [no status]
 - 2026-11-26 · Cursor agent · Partner certificate image download via PDFium (same API) · Partner Certificate notes updated
 - 2026-11-25 · Cursor agent · Partner certificate fail score popup shows retake-eligible date (API `nextAttemptAt` or +1 month) · Partner Certificate notes updated
 - 2026-11-25 · Cursor agent · Partner certificate locale routes (`/in|/ae|/uk`) + per-country JSON/SEO · Partner Certificate notes updated

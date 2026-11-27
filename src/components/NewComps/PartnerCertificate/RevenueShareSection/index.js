@@ -35,12 +35,12 @@ export default function RevenueShareSection({ compData }) {
                 {compData?.description}
               </p>
             )}
-            {compData?.link?.text && compData?.link?.href && (
+            {compData?.link?.label && compData?.link?.url && (
               <Link
-                href={compData?.link?.href}
+                href={compData?.link?.url}
                 className="font-sm font-600 font-primary text-decoration-none border-bottom border-primary d-inline-flex align-items-center gap-2"
               >
-                <span>{compData?.link?.text}</span>
+                <span>{compData?.link?.label}</span>
                 <MdArrowOutward size={15} aria-hidden="true" />
               </Link>
             )}
