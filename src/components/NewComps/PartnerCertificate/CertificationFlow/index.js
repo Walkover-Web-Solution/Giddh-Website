@@ -9,6 +9,7 @@ import {
   downloadCertificatePdf,
   resolveDownloadUrl,
 } from "@/utils/giddhCert/clientApi";
+import { downloadCertificateShareImage } from "@/utils/giddhCert/shareImage";
 import { showToaster } from "@/utils/signupHelpers";
 
 import ApplyOverlay from "./ApplyOverlay";
@@ -155,13 +156,16 @@ export default function CertificationFlow({
     setIsApplyOpen,
   ]);
 
-  const openCertificatePdf = async (certPayload) => {
-    const downloadUrl = certPayload?.downloadUrl;
-    if (!downloadUrl) {
+  const openCertificateDownload = async (certPayload, downloadType) => {
+    if (!certPayload?.downloadUrl) {
       return;
     }
     try {
-      await downloadCertificatePdf(downloadUrl);
+      if (downloadType === "image") {
+        await downloadCertificateShareImage(certPayload);
+        return;
+      }
+      await downloadCertificatePdf(certPayload.downloadUrl);
     } catch (error) {
       showToaster(error.message, "error", "top-center");
     }
@@ -227,7 +231,7 @@ export default function CertificationFlow({
       setExamStarted(false);
     }
     if (openCertOnly) {
-      openCertificatePdf(resultData?.certificate);
+      openCertificateDownload(resultData?.certificate, openCertOnly);
     }
   };
 

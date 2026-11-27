@@ -588,21 +588,38 @@ export default function ExamOverlay({
               ) : null}
 
               {allPassed ? (
-                <button
-                  type="button"
-                  className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                  disabled={!certificatePayload && isSubmitting}
-                  onClick={() =>
-                    onCompleted?.(
-                      { certificate: certificatePayload, learner },
-                      moduleScores,
-                      true
-                    )
-                  }
-                >
-                  {compData?.viewCertificateText}
-                  <MdArrowForward size={16} aria-hidden="true" />
-                </button>
+                <div className="d-flex flex-column flex-sm-row gap-2">
+                  <button
+                    type="button"
+                    className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+                    disabled={!certificatePayload && isSubmitting}
+                    onClick={() =>
+                      onCompleted?.(
+                        { certificate: certificatePayload, learner },
+                        moduleScores,
+                        "pdf"
+                      )
+                    }
+                  >
+                    {compData?.viewCertificateText}
+                    <MdArrowForward size={16} aria-hidden="true" />
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+                    disabled={!certificatePayload && isSubmitting}
+                    onClick={() =>
+                      onCompleted?.(
+                        { certificate: certificatePayload, learner },
+                        moduleScores,
+                        "image"
+                      )
+                    }
+                  >
+                    {compData?.downloadShareImageText}
+                    <MdArrowForward size={16} aria-hidden="true" />
+                  </button>
+                </div>
               ) : canAttempt === false ? null : (
                 <button
                   type="button"
