@@ -6,7 +6,7 @@ import FeedbackCards from "../NewComps/FeedbackCards";
 import GiddhVs from "../NewComps/GiddhVs";
 import SupportedPlatforms from "../NewComps/SupportedPlatforms";
 
-export default function ConectBankReconcile({ pageData }) {
+export default function ConnectBankReconcile({ pageData }) {
   return (
     <>
       <StackedBanner compData={pageData?.stackedBanner} />

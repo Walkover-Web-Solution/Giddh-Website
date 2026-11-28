@@ -9,7 +9,7 @@ export default function getPageData(pageInfo) {
     "inventory-management-software",
     "small-business-bookkeeping-software",
     "e-invoice",
-    "conect-bank-reconcile",
+    "connect-bank-reconcile",
     "import-data",
     "gst",
     "multi-currency-accounting-software",
