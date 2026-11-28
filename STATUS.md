@@ -1,6 +1,6 @@
 # Status
 
-**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-26 · **Reviewed up to commit:** `1ab8290f`
+**Plan:** Product Vision & Strategic Direction ([docs/VISION.md](docs/VISION.md)), standing in until a dedicated plan doc is named · **Last updated:** 2026-11-28 · **Reviewed up to commit:** `5bd2a33b`
 
 A living scorecard of the repo against its plan. Every status below rests on code or git history found at the reviewed commit. Rules for keeping it current are in [AGENTS.md](AGENTS.md#verification--knowledge-maintenance-expectations); `npm run status:check` enforces them on every PR.
 
@@ -62,7 +62,7 @@ The plan defines no phases. Its nearest equivalent is the priority list under "S
 | MDX blog with Decap CMS | 🟡 | 253 posts in `_posts/blog/`; CMS use unconfirmed ([Q-014](docs/OPEN_QUESTIONS.md#active-questions-table)); image field and JSON-LD issues ([Q-025](docs/OPEN_QUESTIONS.md#active-questions-table), [Q-027](docs/OPEN_QUESTIONS.md#active-questions-table)). |
 | Affiliate program | 🟡 | `src/pages/affiliate.js` and locale variants. |
 | Comparison and switching pages | 🟡 | `src/pages/tally-vs-giddh.js`, `src/pages/zoho-vs-giddh.js`, `src/pages/make-the-switch.js`. |
-| GIDDH Partner Certificate | 🟡 | `/giddh-partner-certificate` plus `/in`, `/ae`, `/uk` locale routes; JSON per country; Giddh `/public/giddh-cert`. Pass popup PDF + image download (same API; image via PDFium). Fail retake-eligible date. Not exercised end-to-end from this repo. |
+| GIDDH Partner Certificate | 🟡 | `/giddh-partner-certificate` plus `/in`, `/ae`, `/uk` locale routes; JSON per country; Giddh `/public/giddh-cert`. Pass popup PDF + image download. Score popup `nextAttemptAt`. After Start module: no backdrop/X close; tab/idle discard only. Instructions cancel does not consume an attempt. Fail retake reshuffles. Not exercised end-to-end from this repo. |
 | Embarko contact (sales/support) | 🟡 | Replaces Typeform on Contact Us and AE/UK home banners (PR #861). UTM bridge [Q-033](docs/OPEN_QUESTIONS.md#active-questions-table). |
 
 ### Proposals & roadmaps
@@ -166,6 +166,29 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-28 · Cursor agent · Partner certificate: unify page roundness to `rounded-3` (circles unchanged) · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: split ApplyForms + useExamGuards + FlowNoticeModal; restore ExamContent · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: extract AttemptDiscardedModal + AttemptLimitModal from flow index · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: modular exam UI (Instructions/Quiz/Gate/Result/DiscardWarning) · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: split ExamOverlay UI into ExamContent · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: show API `nextAttemptAt` as-is; remove `formatRetakeDate` · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: restore MSG91 OTP in ApplyOverlay (local bypass removed) · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: exam locked after Start module (no backdrop/X close; tab/idle still discard) · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: discard only after Start module (instructions cancel/tab safe) · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: discard acknowledgement modal + final-attempt badge (clearer 2-attempt UX) · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate share-image download: prefetch WASM/PDF, scale 1.5, JPEG · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate fail result redesign (clear not-passed state + API retake date) · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: pass/fail show API retake date; idle auto-discards like tab (consumes attempt) · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate attempt-limit modal when API `canAttempt` false (title + nextAttemptAt body) · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate discard calls `/result` 0%; Start/openExam respect API `canAttempt`/`nextAttemptAt` · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate exam edge fixes: pause timer on warnings, tab warn on gate, cache pass only, retake reshuffles, no fake result on API error · Partner Certificate notes updated
+- 2026-11-28 · Cursor agent · Partner certificate: tab switch / idle / midway close now discards attempt (no mid-exam resume) · Partner Certificate notes updated
+- 2026-11-27 · Cursor agent · Partner certificate pass subcopy: “Your GIDDH Certificate is ready to download.” · Partner Certificate notes updated
+- 2026-11-27 · Cursor agent · Partner certificate pass popup copy hierarchy + formatted retake date · Partner Certificate notes updated
+- 2026-11-27 · Cursor agent · Partner certificate pass subcopy: achievement-focused, no 70% reminder · Partner Certificate notes updated
+- 2026-11-27 · Cursor agent · Partner certificate pass popup congratulatory eyebrow + celebrate icon animation · Partner Certificate notes updated
+- 2026-11-27 · Cursor agent · Partner certificate score popup layout: score → message → retake date → issuer · Partner Certificate notes updated
+- 2026-11-27 · Cursor agent · Partner certificate pass score popup also shows retake-eligible date from API `nextAttemptAt` · Partner Certificate notes updated
 - 2026-11-26 · Cursor agent · Partner certificate image download via PDFium (same API) · Partner Certificate notes updated
 - 2026-11-25 · Cursor agent · Partner certificate fail score popup shows retake-eligible date (API `nextAttemptAt` or +1 month) · Partner Certificate notes updated
 - 2026-11-25 · Cursor agent · Partner certificate locale routes (`/in|/ae|/uk`) + per-country JSON/SEO · Partner Certificate notes updated

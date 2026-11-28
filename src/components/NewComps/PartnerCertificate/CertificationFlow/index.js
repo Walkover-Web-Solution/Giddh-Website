@@ -1,19 +1,30 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import { downloadCertificateShareImage } from "@/utils/giddhCert/shareImage";
+import {
+  downloadCertificatePdf,
+  resolveDownloadUrl,
+} from "@/utils/giddhCert/clientApi";
 import {
   CERTIFICATE_ISSUER_NAME,
   MODULE_PASS_PERCENT,
 } from "@/utils/giddhCert/constants";
 import { buildExamModules, scoreOverall } from "@/utils/giddhCert/course";
-import {
-  downloadCertificatePdf,
-  resolveDownloadUrl,
-} from "@/utils/giddhCert/clientApi";
-import { downloadCertificateShareImage } from "@/utils/giddhCert/shareImage";
 import { showToaster } from "@/utils/signupHelpers";
 
 import ApplyOverlay from "./ApplyOverlay";
 import ExamOverlay from "./ExamOverlay";
+import FlowNoticeModal from "./FlowNoticeModal";
+
+function formatCopy(template, values) {
+  if (!template) {
+    return template;
+  }
+  return Object.keys(values).reduce(
+    (text, key) => text.replaceAll(`{${key}}`, String(values[key])),
+    template
+  );
+}
 
 function isCertifiedLearner(learner) {
   const lastAttempt = learner?.lastAttempt;
@@ -23,6 +34,11 @@ function isCertifiedLearner(learner) {
     percentage >= MODULE_PASS_PERCENT &&
     Boolean(lastAttempt?.downloadUrl)
   );
+}
+
+function hasUsedPriorAttempt(learner) {
+  const percentage = Number(learner?.lastAttempt?.percentage);
+  return Number.isFinite(percentage) && percentage < MODULE_PASS_PERCENT;
 }
 
 export default function CertificationFlow({
@@ -42,6 +58,10 @@ export default function CertificationFlow({
   const [examInitialResult, setExamInitialResult] = useState(null);
   const [examStarted, setExamStarted] = useState(false);
   const [cachedPassResult, setCachedPassResult] = useState(null);
+  const [isAttemptLimitOpen, setIsAttemptLimitOpen] = useState(false);
+  const [isAttemptDiscardedOpen, setIsAttemptDiscardedOpen] = useState(false);
+  const [blockedNextAttemptAt, setBlockedNextAttemptAt] = useState(null);
+  const [usedAttemptCount, setUsedAttemptCount] = useState(0);
   const openCertifiedResultRef = useRef(null);
   const countryCode = applyOverlay?.countryCode;
 
@@ -50,15 +70,51 @@ export default function CertificationFlow({
     setFlowPhase("mobile");
   };
 
-  const openExam = useCallback(() => {
-    setCachedPassResult(null);
-    setExamStarted(true);
-    setExamInitialResult({ phase: "quiz" });
-    setModules(buildExamModules(country));
-    setExamKey((prev) => prev + 1);
-    setIsApplyOpen(false);
-    setIsExamOpen(true);
-  }, [country, setIsApplyOpen]);
+  const markPriorAttemptUsed = useCallback((nextLearner) => {
+    if (hasUsedPriorAttempt(nextLearner)) {
+      setUsedAttemptCount((prev) => (prev < 1 ? 1 : prev));
+    }
+  }, []);
+
+  const openAttemptLimitModal = useCallback(
+    (nextLearner) => {
+      if (nextLearner?.canAttempt !== false) {
+        return false;
+      }
+      setBlockedNextAttemptAt(nextLearner?.nextAttemptAt);
+      setIsAttemptDiscardedOpen(false);
+      setIsAttemptLimitOpen(true);
+      setIsApplyOpen(false);
+      setIsExamOpen(false);
+      return true;
+    },
+    [setIsApplyOpen]
+  );
+
+  const openExam = useCallback(
+    (learnerOverride) => {
+      const activeLearner = learnerOverride || learner;
+      if (openAttemptLimitModal(activeLearner)) {
+        return;
+      }
+      setIsAttemptDiscardedOpen(false);
+      const fromApi = hasUsedPriorAttempt(activeLearner);
+      const attemptNumber = usedAttemptCount >= 1 || fromApi ? 2 : 1;
+      setCachedPassResult(null);
+      setExamStarted(true);
+      setExamInitialResult({
+        phase: "quiz",
+        attemptNumber,
+        totalAttempts: 2,
+        isFinalAttempt: attemptNumber === 2,
+      });
+      setModules(buildExamModules(country));
+      setExamKey((prev) => prev + 1);
+      setIsApplyOpen(false);
+      setIsExamOpen(true);
+    },
+    [country, learner, openAttemptLimitModal, setIsApplyOpen, usedAttemptCount]
+  );
 
   const openCertifiedResult = useCallback(
     (nextLearner) => {
@@ -101,6 +157,8 @@ export default function CertificationFlow({
         phase: "result",
         certificate: certPayload,
         overall,
+        nextAttemptAt: nextLearner?.nextAttemptAt,
+        canAttempt: nextLearner?.canAttempt,
       });
       setExamKey((prev) => prev + 1);
       setIsApplyOpen(false);
@@ -145,6 +203,13 @@ export default function CertificationFlow({
         setIsExamOpen(true);
         return;
       }
+      if (openAttemptLimitModal(learner)) {
+        return;
+      }
+      if (learner?.profile?.name) {
+        openExam();
+        return;
+      }
       setIsApplyOpen(true);
     };
     return undefined;
@@ -154,6 +219,8 @@ export default function CertificationFlow({
     openCachedPassResult,
     learner,
     examStarted,
+    openAttemptLimitModal,
+    openExam,
     setIsApplyOpen,
   ]);
 
@@ -175,6 +242,7 @@ export default function CertificationFlow({
   const handleVerified = (data) => {
     const nextLearner = data?.learner;
     setLearner(nextLearner);
+    markPriorAttemptUsed(nextLearner);
 
     if (data?.resumeScreen === "certificate") {
       openCertifiedResult(nextLearner);
@@ -182,14 +250,12 @@ export default function CertificationFlow({
     }
 
     if (data?.resumeScreen === "blocked") {
-      if (data?.message) {
-        showToaster(data.message, "info", "top-center");
-      }
+      openAttemptLimitModal(nextLearner);
       return;
     }
 
     if (data?.resumeScreen === "test") {
-      openExam();
+      openExam(nextLearner);
       return;
     }
 
@@ -202,6 +268,11 @@ export default function CertificationFlow({
   };
 
   const handleExamCompleted = (resultData, moduleScores, openCertOnly) => {
+    if (openCertOnly) {
+      openCertificateDownload(resultData?.certificate, openCertOnly);
+      return;
+    }
+
     if (resultData?.learner) {
       const nextLearner = resultData.learner;
       if (resultData.certificate?.downloadUrl) {
@@ -216,29 +287,66 @@ export default function CertificationFlow({
         setLearner(nextLearner);
       }
     }
-    if (!openCertOnly && resultData?.certificate && moduleScores) {
-      const apiPercent = Number(resultData.certificate.score);
-      const computedOverall = scoreOverall(moduleScores);
-      if (Number.isFinite(apiPercent)) {
-        computedOverall.percentage = apiPercent;
-        computedOverall.allPassed = apiPercent >= MODULE_PASS_PERCENT;
-      }
+
+    setExamStarted(false);
+
+    if (!resultData?.certificate || !moduleScores) {
+      return;
+    }
+
+    const apiPercent = Number(resultData.certificate.score);
+    const computedOverall = scoreOverall(moduleScores);
+    if (Number.isFinite(apiPercent)) {
+      computedOverall.percentage = apiPercent;
+      computedOverall.allPassed = apiPercent >= MODULE_PASS_PERCENT;
+    }
+
+    if (computedOverall.allPassed && resultData.certificate.downloadUrl) {
       setCachedPassResult({
         learner: resultData.learner,
         certificate: resultData.certificate,
         overall: computedOverall,
         moduleScores,
       });
-      setExamStarted(false);
-    }
-    if (openCertOnly) {
-      openCertificateDownload(resultData?.certificate, openCertOnly);
+    } else {
+      setCachedPassResult(null);
+      if (resultData.learner?.canAttempt !== false) {
+        setUsedAttemptCount((prev) => (prev < 1 ? 1 : prev));
+      }
     }
   };
 
-  const handleExamClose = () => {
+  const handleExamClose = (options) => {
     setIsExamOpen(false);
+    if (!options?.discarded) {
+      return;
+    }
+
+    if (options.learner) {
+      setLearner(options.learner);
+    }
+
+    setExamStarted(false);
+    setCachedPassResult(null);
+    setExamInitialResult(null);
+    setModules([]);
+    setExamKey((prev) => prev + 1);
+
+    if (options.learner?.canAttempt === false) {
+      openAttemptLimitModal(options.learner);
+      return;
+    }
+
+    setUsedAttemptCount((prev) => (prev < 1 ? 1 : prev));
+    setIsAttemptDiscardedOpen(true);
   };
+
+  const attemptLimitBody =
+    blockedNextAttemptAt && examOverlay?.attemptLimitBody
+      ? formatCopy(examOverlay.attemptLimitBody, {
+          date: blockedNextAttemptAt,
+        })
+      : null;
 
   return (
     <>
@@ -262,8 +370,31 @@ export default function CertificationFlow({
         modules={modules}
         learner={learner}
         onCompleted={handleExamCompleted}
+        onRetake={openExam}
         initialResult={examInitialResult}
         compData={examOverlay}
+      />
+
+      <FlowNoticeModal
+        isOpen={isAttemptDiscardedOpen}
+        onClose={() => setIsAttemptDiscardedOpen(false)}
+        title={examOverlay?.attemptDiscardedTitle}
+        body={examOverlay?.attemptDiscardedBody}
+        titleClassName="font-danger"
+        primaryText={examOverlay?.attemptDiscardedCta}
+        onPrimary={openExam}
+        secondaryText={examOverlay?.attemptDiscardedLaterText}
+        closeAriaLabel={examOverlay?.closeAriaLabel}
+      />
+
+      <FlowNoticeModal
+        isOpen={isAttemptLimitOpen}
+        onClose={() => setIsAttemptLimitOpen(false)}
+        title={examOverlay?.attemptLimitTitle}
+        body={attemptLimitBody}
+        primaryText={examOverlay?.attemptLimitCloseText}
+        closeOnBackdrop
+        closeAriaLabel={examOverlay?.closeAriaLabel}
       />
     </>
   );

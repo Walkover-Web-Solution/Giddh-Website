@@ -334,7 +334,13 @@ sequenceDiagram
 | Invalid Indian mobile | Inline validation before OTP send |
 | `canAttempt === false` on `/check` | Toast with server `message`; overlay stays closed |
 | Fail result with `canAttempt === false` | Result screen shows unlock date from `nextAttemptAt`; retake button hidden |
+| Pass or fail result with `nextAttemptAt` | Score popup shows retake-eligible copy from API `nextAttemptAt` (no client-invented date) |
 | Fail result with `canAttempt === true` | Result screen shows Retake exam (immediate 2nd attempt) |
+| Tab switch / idle (after Start module) | Consume attempt via `discardAttempt` → POST `/result` 0%. Then pause on **Attempt discarded** modal (1 left) or **Attempt Limit Reached** (locked). Final attempt exam shows Attempt 2 / Final attempt badge + instructions note — does not silently jump to module 1. Backdrop / outside click never closes the exam. After Start module the X is hidden so the attempt cannot be closed accidentally; pre-start instructions cancel and result close remain soft (no discard). |
+| Pass or fail score popup | Shows API `nextAttemptAt` when present (formatted); never invents a date |
+| Fail then Retake | Only if API `canAttempt === true`; parent rebuilds shuffled modules via `openExam` |
+| Both attempts used | Start CTA / openExam blocked; toast uses JSON `resultRetakeEligible` + API `nextAttemptAt` |
+| `/result` network error | Toast; stay on quiz (no fake result screen) |
 | Missing session on profile/result | 401 → toast |
 | API/network error | Toast via `showToaster` |
 
