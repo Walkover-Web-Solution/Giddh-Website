@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { MdClose } from "react-icons/md";
 
 import { downloadCertificateShareImage } from "@/utils/giddhCert/shareImage";
 import {
@@ -15,6 +14,7 @@ import { showToaster } from "@/utils/signupHelpers";
 
 import ApplyOverlay from "./ApplyOverlay";
 import ExamOverlay from "./ExamOverlay";
+import FlowNoticeModal from "./FlowNoticeModal";
 
 function formatCopy(template, values) {
   if (!template) {
@@ -375,105 +375,27 @@ export default function CertificationFlow({
         compData={examOverlay}
       />
 
-      {isAttemptDiscardedOpen ? (
-        <div
-          className="modal fade show d-block bg-dark bg-opacity-75"
-          role="dialog"
-          aria-modal="true"
-        >
-          <div
-            className="modal-dialog modal-dialog-centered"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="modal-content border-0 rounded-3 p-4 p-md-5 outfit-font position-relative">
-              <button
-                type="button"
-                className="btn border-0 bg-transparent position-absolute top-0 end-0 p-3 font-primary"
-                aria-label={examOverlay?.closeAriaLabel}
-                onClick={() => setIsAttemptDiscardedOpen(false)}
-              >
-                <MdClose size={20} />
-              </button>
-              <div className="d-flex flex-column align-items-center gap-3 text-center pe-4">
-                {examOverlay?.attemptDiscardedTitle ? (
-                  <h2 className="font-lg font-600 font-danger lh-sm m-0">
-                    {examOverlay.attemptDiscardedTitle}
-                  </h2>
-                ) : null}
-                {examOverlay?.attemptDiscardedBody ? (
-                  <p className="font-sm font-slate-grey m-0 lh-lg">
-                    {examOverlay.attemptDiscardedBody}
-                  </p>
-                ) : null}
-                {examOverlay?.attemptDiscardedCta ? (
-                  <button
-                    type="button"
-                    className="btn btn-primary rounded-1 px-4 py-3 font-sm font-600"
-                    onClick={openExam}
-                  >
-                    {examOverlay.attemptDiscardedCta}
-                  </button>
-                ) : null}
-                {examOverlay?.attemptDiscardedLaterText ? (
-                  <button
-                    type="button"
-                    className="btn btn-link p-0 font-sm font-600"
-                    onClick={() => setIsAttemptDiscardedOpen(false)}
-                  >
-                    {examOverlay.attemptDiscardedLaterText}
-                  </button>
-                ) : null}
-              </div>
-            </div>
-          </div>
-        </div>
-      ) : null}
+      <FlowNoticeModal
+        isOpen={isAttemptDiscardedOpen}
+        onClose={() => setIsAttemptDiscardedOpen(false)}
+        title={examOverlay?.attemptDiscardedTitle}
+        body={examOverlay?.attemptDiscardedBody}
+        titleClassName="font-danger"
+        primaryText={examOverlay?.attemptDiscardedCta}
+        onPrimary={openExam}
+        secondaryText={examOverlay?.attemptDiscardedLaterText}
+        closeAriaLabel={examOverlay?.closeAriaLabel}
+      />
 
-      {isAttemptLimitOpen ? (
-        <div
-          className="modal fade show d-block bg-dark bg-opacity-75"
-          role="dialog"
-          aria-modal="true"
-          onClick={() => setIsAttemptLimitOpen(false)}
-        >
-          <div
-            className="modal-dialog modal-dialog-centered"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="modal-content border-0 rounded-3 p-4 p-md-5 outfit-font position-relative">
-              <button
-                type="button"
-                className="btn border-0 bg-transparent position-absolute top-0 end-0 p-3 font-primary"
-                aria-label={examOverlay?.closeAriaLabel}
-                onClick={() => setIsAttemptLimitOpen(false)}
-              >
-                <MdClose size={20} />
-              </button>
-              <div className="d-flex flex-column align-items-center gap-3 text-center pe-4">
-                {examOverlay?.attemptLimitTitle ? (
-                  <h2 className="font-lg font-600 font-primary lh-sm m-0">
-                    {examOverlay.attemptLimitTitle}
-                  </h2>
-                ) : null}
-                {attemptLimitBody ? (
-                  <p className="font-sm font-slate-grey m-0 lh-lg">
-                    {attemptLimitBody}
-                  </p>
-                ) : null}
-                {examOverlay?.attemptLimitCloseText ? (
-                  <button
-                    type="button"
-                    className="btn btn-primary rounded-1 px-4 py-3 font-sm font-600"
-                    onClick={() => setIsAttemptLimitOpen(false)}
-                  >
-                    {examOverlay.attemptLimitCloseText}
-                  </button>
-                ) : null}
-              </div>
-            </div>
-          </div>
-        </div>
-      ) : null}
+      <FlowNoticeModal
+        isOpen={isAttemptLimitOpen}
+        onClose={() => setIsAttemptLimitOpen(false)}
+        title={examOverlay?.attemptLimitTitle}
+        body={attemptLimitBody}
+        primaryText={examOverlay?.attemptLimitCloseText}
+        closeOnBackdrop
+        closeAriaLabel={examOverlay?.closeAriaLabel}
+      />
     </>
   );
 }

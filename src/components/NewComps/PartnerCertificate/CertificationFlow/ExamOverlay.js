@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { MdClose } from "react-icons/md";
 import {
-  IDLE_AUTO_DISCARD_SECONDS,
-  IDLE_WARNING_SECONDS,
   MODULE_PASS_PERCENT,
   MODULE_TIMER_SECONDS,
   QUESTIONS_PER_MODULE,
@@ -13,6 +11,8 @@ import { prefetchCertificateShareAssets } from "@/utils/giddhCert/shareImage";
 import { showToaster } from "@/utils/signupHelpers";
 
 import ExamContent from "./ExamContent";
+import ExamDiscardWarning from "./ExamDiscardWarning";
+import useExamGuards from "./useExamGuards";
 
 export default function ExamOverlay({
   isOpen,
@@ -60,9 +60,7 @@ export default function ExamOverlay({
   const [certificatePayload, setCertificatePayload] = useState(
     initialResult?.certificate
   );
-  const lastActivityRef = useRef(Date.now());
-  const idleWarningRef = useRef(false);
-  idleWarningRef.current = idleWarning;
+  const finalizeDiscardRef = useRef(null);
   const currentModule = modules[moduleIndex];
   const currentQuestion = currentModule?.questions?.[questionIndex];
   const totalInModule = currentModule?.questions?.length;
@@ -90,6 +88,24 @@ export default function ExamOverlay({
   }, [certificatePayload?.score, initialResult?.overall, moduleScores]);
   const allPassed = overall.allPassed;
   const showRetakeEligibleDate = Boolean(nextAttemptAt);
+  const isLiveAttempt = phase === "quiz" || phase === "gate";
+  const isCommittedAttempt = isLiveAttempt && hasStartedModule;
+  const timerPaused =
+    showInstructions || tabWarning || idleWarning || isSubmitting;
+
+  useExamGuards({
+    isOpen,
+    isCommittedAttempt,
+    hasStartedModule,
+    phase,
+    showInstructions,
+    tabWarning,
+    idleWarning,
+    isDiscarding,
+    setTabWarning,
+    setIdleWarning,
+    finalizeDiscardRef,
+  });
 
   useEffect(() => {
     if (learner?.nextAttemptAt) {
@@ -126,11 +142,6 @@ export default function ExamOverlay({
     return undefined;
   }, [isOpen, phase, moduleIndex]);
 
-  const isLiveAttempt = phase === "quiz" || phase === "gate";
-  const isCommittedAttempt = isLiveAttempt && hasStartedModule;
-  const timerPaused =
-    showInstructions || tabWarning || idleWarning || isSubmitting;
-
   useEffect(() => {
     if (!isOpen || phase !== "quiz" || timerPaused) {
       return undefined;
@@ -160,81 +171,6 @@ export default function ExamOverlay({
     }
     return undefined;
   }, [timer, timerPaused]);
-
-  useEffect(() => {
-    if (!isOpen || !isCommittedAttempt) {
-      return undefined;
-    }
-
-    const onVisibility = () => {
-      if (!document.hidden) {
-        return;
-      }
-      setTabWarning(true);
-      setIdleWarning(false);
-    };
-
-    document.addEventListener("visibilitychange", onVisibility);
-    return () => {
-      document.removeEventListener("visibilitychange", onVisibility);
-    };
-  }, [isOpen, isCommittedAttempt]);
-
-  useEffect(() => {
-    if (
-      !isOpen ||
-      !hasStartedModule ||
-      phase !== "quiz" ||
-      showInstructions ||
-      tabWarning ||
-      idleWarning
-    ) {
-      return undefined;
-    }
-
-    lastActivityRef.current = Date.now();
-
-    const markActivity = () => {
-      if (idleWarningRef.current) {
-        return;
-      }
-      lastActivityRef.current = Date.now();
-    };
-
-    const events = ["pointerdown", "keydown", "touchstart"];
-    events.forEach((eventName) => {
-      document.addEventListener(eventName, markActivity);
-    });
-
-    const idleCheckId = setInterval(() => {
-      if (idleWarningRef.current) {
-        return;
-      }
-      const idleMs = Date.now() - lastActivityRef.current;
-      if (idleMs >= IDLE_WARNING_SECONDS * 1000) {
-        setIdleWarning(true);
-      }
-    }, 1000);
-
-    return () => {
-      events.forEach((eventName) => {
-        document.removeEventListener(eventName, markActivity);
-      });
-      clearInterval(idleCheckId);
-    };
-  }, [isOpen, hasStartedModule, phase, showInstructions, tabWarning, idleWarning]);
-
-  const finalizeDiscardRef = useRef(null);
-
-  useEffect(() => {
-    if (!isOpen || !hasStartedModule || !idleWarning || tabWarning || isDiscarding) {
-      return undefined;
-    }
-    const id = setTimeout(() => {
-      finalizeDiscardRef.current?.();
-    }, IDLE_AUTO_DISCARD_SECONDS * 1000);
-    return () => clearTimeout(id);
-  }, [isOpen, hasStartedModule, idleWarning, tabWarning, isDiscarding]);
 
   if (!isOpen) {
     return null;
@@ -379,10 +315,6 @@ export default function ExamOverlay({
     }
   };
 
-  const handleDiscardAttempt = () => {
-    finalizeDiscard();
-  };
-
   const canCloseOverlay = phase === "result" || !hasStartedModule;
 
   return (
@@ -439,47 +371,25 @@ export default function ExamOverlay({
             onCompleted={onCompleted}
           />
 
-          {tabWarning && (
-            <div className="position-absolute top-0 start-0 end-0 bottom-0 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 rounded-3">
-              <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3 col-11 col-md-8">
-                <h3 className="font-sm font-600 m-0">
-                  {compData?.tabWarningTitle}
-                </h3>
-                <p className="font-sm font-slate-grey m-0">
-                  {compData?.tabWarningBody}
-                </p>
-                <button
-                  type="button"
-                  className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                  onClick={handleDiscardAttempt}
-                  disabled={isDiscarding}
-                >
-                  {compData?.tabWarningButtonText}
-                </button>
-              </div>
-            </div>
-          )}
+          {tabWarning ? (
+            <ExamDiscardWarning
+              title={compData?.tabWarningTitle}
+              body={compData?.tabWarningBody}
+              buttonText={compData?.tabWarningButtonText}
+              onConfirm={finalizeDiscard}
+              isDiscarding={isDiscarding}
+            />
+          ) : null}
 
-          {idleWarning && !tabWarning && (
-            <div className="position-absolute top-0 start-0 end-0 bottom-0 d-flex align-items-center justify-content-center bg-dark bg-opacity-50 rounded-3">
-              <div className="bg-white rounded-3 p-4 d-flex flex-column gap-3 col-11 col-md-8">
-                <h3 className="font-sm font-600 m-0">
-                  {compData?.idleWarningTitle}
-                </h3>
-                <p className="font-sm font-slate-grey m-0">
-                  {compData?.idleWarningBody}
-                </p>
-                <button
-                  type="button"
-                  className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                  onClick={handleDiscardAttempt}
-                  disabled={isDiscarding}
-                >
-                  {compData?.idleWarningDiscardText}
-                </button>
-              </div>
-            </div>
-          )}
+          {idleWarning && !tabWarning ? (
+            <ExamDiscardWarning
+              title={compData?.idleWarningTitle}
+              body={compData?.idleWarningBody}
+              buttonText={compData?.idleWarningDiscardText}
+              onConfirm={finalizeDiscard}
+              isDiscarding={isDiscarding}
+            />
+          ) : null}
         </div>
       </div>
     </div>

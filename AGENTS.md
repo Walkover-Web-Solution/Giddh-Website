@@ -84,3 +84,13 @@ The docs middleware records its last successful run, coverage map and open gaps 
 - **Judging a request:** follow [VISION.md](docs/VISION.md#how-future-agents-must-evaluate-requests). Improve unclear requests, explain conflicts with the non-goals, and recommend declining those. If the user changes direction on purpose, record it in VISION.md. Never fabricate an integration.
 - **Docs move with the code:** update the owning doc in the same change (env vars → DEVELOPMENT, endpoints → CONTRACTS, journeys → FLOWS, components / SEO → DESIGN, decisions → DECISIONS, unknowns → OPEN_QUESTIONS). Then run `python3 scripts/vendor/ai-docs/verify_docs.py .` and get 0 errors.
 - **Weekly docs maintenance:** the reviewed revision, coverage map and carry-over work for agent runs live in [docs/README.md#docs-maintenance-for-weekly-agent-runs](docs/README.md#docs-maintenance-for-weekly-agent-runs). Update that section when you refresh the doc set.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

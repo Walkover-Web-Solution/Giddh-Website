@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
-import { MdArrowForward, MdClose } from "react-icons/md";
+import { MdClose } from "react-icons/md";
 
 import { saveProfile, startSession } from "@/utils/giddhCert/clientApi";
 import { isValidMobile } from "@/utils/giddhCert/serverApi";
 import { getResendChannels, initOtpWidget } from "@/utils/msg91Otp";
 import { formatMobileNumber, showToaster } from "@/utils/signupHelpers";
+
+import {
+  MobileForm,
+  OtpForm,
+  RegistrationForm,
+} from "./ApplyForms";
 
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
@@ -187,330 +193,57 @@ export default function ApplyOverlay({
 
           <div className="row g-0">
             <div className="col-12 col-lg-6 p-4 p-md-5 d-flex flex-column justify-content-center gap-3">
-              {compData?.eyebrow && (
+              {compData?.eyebrow ? (
                 <p className="font-xs font-600 font-grey-deep m-0">
-                  {compData?.eyebrow}
+                  {compData.eyebrow}
                 </p>
-              )}
-              {compData?.heading && (
-                <h2 className="heading font-600 lh-sm m-0">
-                  {compData?.heading}
-                </h2>
-              )}
-              {compData?.description && (
+              ) : null}
+              {compData?.heading ? (
+                <h2 className="heading font-600 lh-sm m-0">{compData.heading}</h2>
+              ) : null}
+              {compData?.description ? (
                 <p className="font-sm font-slate-grey m-0 lh-lg">
-                  {compData?.description}
+                  {compData.description}
                 </p>
-              )}
+              ) : null}
             </div>
 
             <div className="col-12 col-lg-6 p-4 p-md-5 bg-extra-light-blue d-flex flex-column justify-content-center">
-              {flowPhase === "mobile" && (
-                <form
+              {flowPhase === "mobile" ? (
+                <MobileForm
+                  mobile={mobile}
+                  setMobile={setMobile}
+                  isTermsAccepted={isTermsAccepted}
+                  setIsTermsAccepted={setIsTermsAccepted}
+                  canSendOtp={canSendOtp}
+                  isLoading={isLoading}
                   onSubmit={handleSendOtp}
-                  className="d-flex flex-column gap-3"
-                >
-                  <div className="d-flex flex-column gap-2">
-                    <label
-                      className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="mobileNumberInput"
-                    >
-                      {compData?.mobile?.label}
-                    </label>
-                    <input
-                      id="mobileNumberInput"
-                      type="tel"
-                      className="form-control"
-                      value={mobile}
-                      onChange={(event) =>
-                        setMobile(
-                          event.target.value.replace(/\D/g, "").slice(0, 10)
-                        )
-                      }
-                      placeholder={compData?.mobile?.placeholder}
-                      required
-                    />
-                  </div>
-                  {compData?.mobile?.termsDescription && (
-                    <div className="d-flex align-items-start gap-2">
-                      <input
-                        id="termsAcceptanceCheckbox"
-                        type="checkbox"
-                        className="form-check-input m-0"
-                        checked={isTermsAccepted}
-                        onChange={() => setIsTermsAccepted((prev) => !prev)}
-                        required
-                      />
-                      <label
-                        className="font-xs font-grey-deep m-0"
-                        htmlFor="termsAcceptanceCheckbox"
-                      >
-                        {compData?.mobile?.termsDescription}
-                        {compData?.mobile?.termsLinkUrl &&
-                          compData?.mobile?.termsLinkLabel && (
-                            <a
-                              href={compData.mobile.termsLinkUrl}
-                              className="font-xs font-600 font-primary"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {compData.mobile.termsLinkLabel}
-                            </a>
-                          )}
-                        {compData?.mobile?.termsSuffix}
-                      </label>
-                    </div>
-                  )}
-                  <button
-                    type="submit"
-                    className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                    disabled={isLoading || !canSendOtp}
-                  >
-                    <span>
-                      {isLoading
-                        ? compData?.mobile?.loadingText
-                        : compData?.mobile?.submitText}
-                    </span>
-                    {!isLoading && (
-                      <MdArrowForward size={16} aria-hidden="true" />
-                    )}
-                  </button>
-                  {compData?.mobile?.helperText && (
-                    <p className="font-xs font-grey-deep m-0">
-                      {compData?.mobile?.helperText}
-                    </p>
-                  )}
-                  {compData?.consentDescription && (
-                    <p className="font-xs font-grey-deep m-0">
-                      {compData?.consentDescription}
-                      {compData?.consentLinkUrl &&
-                        compData?.consentLinkLabel && (
-                          <a
-                            href={compData.consentLinkUrl}
-                            className="font-xs font-600 font-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {compData.consentLinkLabel}
-                          </a>
-                        )}
-                      {compData?.consentSuffix}
-                    </p>
-                  )}
-                </form>
-              )}
-
-              {flowPhase === "otp" && (
-                <form
+                  compData={compData}
+                />
+              ) : null}
+              {flowPhase === "otp" ? (
+                <OtpForm
+                  otp={otp}
+                  setOtp={setOtp}
+                  mobile={mobile}
+                  countryCode={countryCode}
+                  uniqueChannels={uniqueChannels}
+                  isLoading={isLoading}
                   onSubmit={handleVerifyOtp}
-                  className="d-flex flex-column gap-3"
-                >
-                  <div className="d-flex flex-column gap-2">
-                    <label
-                      className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="otpInput"
-                    >
-                      {compData?.otp?.label}
-                    </label>
-                    <input
-                      id="otpInput"
-                      type="text"
-                      className="form-control"
-                      value={otp}
-                      onChange={(event) =>
-                        setOtp(
-                          event.target.value.replace(/\D/g, "").slice(0, 6)
-                        )
-                      }
-                      placeholder={compData?.otp?.placeholder}
-                      required
-                    />
-                  </div>
-                  <p className="font-xs font-grey-deep m-0">
-                    {compData?.otp?.sentLabel} +{countryCode} {mobile}.
-                  </p>
-                  {uniqueChannels.length > 0 && (
-                    <p className="font-xs font-grey-deep m-0">
-                      {compData?.otp?.resendLabel}{" "}
-                      {uniqueChannels.map((channel, index) => (
-                        <span key={channel.value}>
-                          <button
-                            type="button"
-                            className="btn btn-link p-0 font-xs font-600 align-baseline"
-                            onClick={() => handleResendOtp(channel.value)}
-                            disabled={isLoading}
-                          >
-                            {channel.name}
-                          </button>
-                          {uniqueChannels.length > index + 1
-                            ? compData?.otp?.resendSeparator
-                            : ""}
-                        </span>
-                      ))}
-                    </p>
-                  )}
-                  <button
-                    type="submit"
-                    className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                    disabled={isLoading}
-                  >
-                    <span>
-                      {isLoading
-                        ? compData?.otp?.loadingText
-                        : compData?.otp?.submitText}
-                    </span>
-                    {!isLoading && (
-                      <MdArrowForward size={16} aria-hidden="true" />
-                    )}
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-link p-0 font-xs font-600 align-self-start"
-                    onClick={handleChangeMobile}
-                  >
-                    {compData?.otp?.changeMobileText}
-                  </button>
-                </form>
-              )}
-
-              {flowPhase === "registration" && (
-                <form
+                  onResend={handleResendOtp}
+                  onChangeMobile={handleChangeMobile}
+                  compData={compData}
+                />
+              ) : null}
+              {flowPhase === "registration" ? (
+                <RegistrationForm
+                  form={form}
+                  setForm={setForm}
+                  isLoading={isLoading}
                   onSubmit={handleRegister}
-                  className="d-flex flex-column gap-3"
-                >
-                  <div className="d-flex flex-column gap-2">
-                    <label
-                      className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="fullNameInput"
-                    >
-                      {compData?.registration?.nameLabel}
-                    </label>
-                    <input
-                      id="fullNameInput"
-                      type="text"
-                      className="form-control"
-                      value={form.name}
-                      onChange={(event) =>
-                        setForm((prev) => ({
-                          ...prev,
-                          name: event.target.value,
-                        }))
-                      }
-                      placeholder={compData?.registration?.namePlaceholder}
-                      required
-                    />
-                  </div>
-                  <div className="d-flex flex-column gap-2">
-                    <label
-                      className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="emailInput"
-                    >
-                      {compData?.registration?.emailLabel}
-                    </label>
-                    <input
-                      id="emailInput"
-                      type="email"
-                      className="form-control"
-                      value={form.email}
-                      onChange={(event) =>
-                        setForm((prev) => ({
-                          ...prev,
-                          email: event.target.value,
-                        }))
-                      }
-                      placeholder={compData?.registration?.emailPlaceholder}
-                      required
-                    />
-                  </div>
-                  <div className="d-flex flex-column gap-2">
-                    <label
-                      className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="professionSelect"
-                    >
-                      {compData?.registration?.professionLabel}
-                    </label>
-                    <select
-                      id="professionSelect"
-                      className="form-select"
-                      value={form.profession}
-                      onChange={(event) =>
-                        setForm((prev) => ({
-                          ...prev,
-                          profession: event.target.value,
-                        }))
-                      }
-                      required
-                    >
-                      <option value="">
-                        {compData?.registration?.professionPlaceholder}
-                      </option>
-                      {compData?.registration?.professions?.map((item) => (
-                        <option key={item} value={item}>
-                          {item}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="d-flex flex-column gap-2">
-                    <label
-                      className="font-xs font-600 font-grey-deep m-0"
-                      htmlFor="cityInput"
-                    >
-                      {compData?.registration?.cityLabel}
-                    </label>
-                    <input
-                      id="cityInput"
-                      type="text"
-                      className="form-control"
-                      value={form.city}
-                      onChange={(event) =>
-                        setForm((prev) => ({
-                          ...prev,
-                          city: event.target.value,
-                        }))
-                      }
-                      placeholder={compData?.registration?.cityPlaceholder}
-                      required
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
-                    disabled={isLoading}
-                  >
-                    <span>
-                      {isLoading
-                        ? compData?.registration?.loadingText
-                        : compData?.registration?.submitText}
-                    </span>
-                    {!isLoading && (
-                      <MdArrowForward size={16} aria-hidden="true" />
-                    )}
-                  </button>
-                  {compData?.registration?.helperText && (
-                    <p className="font-xs font-grey-deep m-0">
-                      {compData?.registration?.helperText}
-                    </p>
-                  )}
-                  {compData?.consentDescription && (
-                    <p className="font-xs font-grey-deep m-0">
-                      {compData?.consentDescription}
-                      {compData?.consentLinkUrl &&
-                        compData?.consentLinkLabel && (
-                          <a
-                            href={compData.consentLinkUrl}
-                            className="font-xs font-600 font-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {compData.consentLinkLabel}
-                          </a>
-                        )}
-                      {compData?.consentSuffix}
-                    </p>
-                  )}
-                </form>
-              )}
+                  compData={compData}
+                />
+              ) : null}
             </div>
           </div>
         </div>
