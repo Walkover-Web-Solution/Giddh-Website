@@ -81,7 +81,7 @@ export default function HeroSection({ compData, onStart }) {
                 {compData?.primaryCta?.text && (
                   <button
                     type="button"
-                    className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center gap-3 font-sm font-600"
+                    className="btn btn-primary rounded-3 px-4 py-3 d-inline-flex align-items-center gap-3 font-sm font-600"
                     onClick={handlePrimaryCta}
                   >
                     <span>{compData?.primaryCta?.text}</span>
@@ -130,7 +130,7 @@ export default function HeroSection({ compData, onStart }) {
                 <span className={styles.orbitRingBottom} aria-hidden="true" />
 
                 <div
-                  className={`position-relative overflow-hidden rounded-4 bg-primary ${styles.mediaCard}`}
+                  className={`position-relative overflow-hidden rounded-3 bg-primary ${styles.mediaCard}`}
                 >
                   {compData?.media?.image && (
                     <Image
@@ -198,7 +198,7 @@ export default function HeroSection({ compData, onStart }) {
 
                 {compData?.media?.topBadge?.title && (
                   <div
-                    className={`position-absolute bg-white rounded-1 border border-light-gray px-3 py-2 d-flex align-items-start gap-2 shadow-sm ${styles.floatingTopBadge}`}
+                    className={`position-absolute bg-white rounded-3 border border-light-gray px-3 py-2 d-flex align-items-start gap-2 shadow-sm ${styles.floatingTopBadge}`}
                   >
                     <MdAutoAwesome
                       size={15}
@@ -220,7 +220,7 @@ export default function HeroSection({ compData, onStart }) {
 
                 {compData?.media?.bottomBadge?.title && (
                   <div
-                    className={`position-absolute bg-white rounded-1 border border-light-gray px-3 py-2 d-flex align-items-start gap-2 shadow-sm ${styles.floatingBottomBadge}`}
+                    className={`position-absolute bg-white rounded-3 border border-light-gray px-3 py-2 d-flex align-items-start gap-2 shadow-sm ${styles.floatingBottomBadge}`}
                   >
                     <MdCheckCircleOutline
                       size={15}

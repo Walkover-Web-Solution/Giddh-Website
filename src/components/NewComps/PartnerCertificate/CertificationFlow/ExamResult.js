@@ -125,7 +125,7 @@ export default function ExamResult({
         <div className="d-flex flex-column flex-sm-row gap-2">
           <button
             type="button"
-            className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+            className="btn btn-primary rounded-3 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
             disabled={!certificatePayload && isSubmitting}
             onClick={() =>
               onCompleted?.(
@@ -140,7 +140,7 @@ export default function ExamResult({
           </button>
           <button
             type="button"
-            className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+            className="btn btn-primary rounded-3 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
             disabled={!certificatePayload && isSubmitting}
             onClick={() =>
               onCompleted?.(
@@ -157,7 +157,7 @@ export default function ExamResult({
       ) : canAttempt === false ? null : (
         <button
           type="button"
-          className="btn btn-primary rounded-1 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+          className="btn btn-primary rounded-3 px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
           onClick={onRetakeFailed}
         >
           {compData?.retakeExamText}

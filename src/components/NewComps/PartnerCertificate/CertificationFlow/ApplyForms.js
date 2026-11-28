@@ -85,7 +85,7 @@ export function MobileForm({
       ) : null}
       <button
         type="submit"
-        className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+        className="btn btn-primary w-100 rounded-3 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
         disabled={isLoading || !canSendOtp}
       >
         <span>
@@ -160,7 +160,7 @@ export function OtpForm({
       ) : null}
       <button
         type="submit"
-        className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+        className="btn btn-primary w-100 rounded-3 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
         disabled={isLoading}
       >
         <span>
@@ -265,7 +265,7 @@ export function RegistrationForm({
       </div>
       <button
         type="submit"
-        className="btn btn-primary w-100 rounded-1 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+        className="btn btn-primary w-100 rounded-3 py-3 d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
         disabled={isLoading}
       >
         <span>

@@ -166,6 +166,7 @@ Built in the repo but not named in the plan.
 
 Newest first: date · who · what · status effect.
 
+- 2026-11-28 · Cursor agent · Partner certificate: unify page roundness to `rounded-3` (circles unchanged) · Partner Certificate notes updated
 - 2026-11-28 · Cursor agent · Partner certificate: split ApplyForms + useExamGuards + FlowNoticeModal; restore ExamContent · Partner Certificate notes updated
 - 2026-11-28 · Cursor agent · Partner certificate: extract AttemptDiscardedModal + AttemptLimitModal from flow index · Partner Certificate notes updated
 - 2026-11-28 · Cursor agent · Partner certificate: modular exam UI (Instructions/Quiz/Gate/Result/DiscardWarning) · Partner Certificate notes updated

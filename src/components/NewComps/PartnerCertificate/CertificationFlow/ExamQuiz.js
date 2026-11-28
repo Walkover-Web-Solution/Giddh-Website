@@ -15,7 +15,7 @@ function formatCopy(template, values) {
 
 function getOptionClassName(index, feedback, selected, correctIndex) {
   const base =
-    "btn w-100 text-start border rounded-2 px-3 py-3 font-sm font-primary";
+    "btn w-100 text-start border rounded-3 px-3 py-3 font-sm font-primary";
   if (feedback) {
     if (index === correctIndex) {
       return `${base} border-success bg-light-green`;
@@ -171,7 +171,7 @@ export default function ExamQuiz({
               </div>
               <button
                 type="button"
-                className="btn btn-primary-outline rounded-1 px-3 py-2 d-inline-flex align-items-center gap-2 font-sm font-600"
+                className="btn btn-primary-outline rounded-3 px-3 py-2 d-inline-flex align-items-center gap-2 font-sm font-600"
                 onClick={onNextQuestion}
                 disabled={isSubmitting}
               >

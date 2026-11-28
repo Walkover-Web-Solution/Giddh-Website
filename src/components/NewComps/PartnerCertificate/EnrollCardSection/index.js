@@ -41,7 +41,7 @@ export default function EnrollCardSection({ compData, onStart }) {
             <div className="col-12 col-lg-4 d-flex flex-column gap-3">
               <button
                 type="button"
-                className="btn btn-primary w-100 rounded-1 py-3 lh-lg d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
+                className="btn btn-primary w-100 rounded-3 py-3 lh-lg d-inline-flex align-items-center justify-content-center gap-2 font-sm font-600"
                 onClick={() => onStart?.()}
               >
                 <span>{compData?.buttonText}</span>
