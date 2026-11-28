@@ -37,11 +37,7 @@ export default function ExamResult({
         <div
           className={`${styles.statusIcon} ${
             allPassed ? styles.statusIconCelebrate : styles.statusIconFail
-          } rounded-circle d-inline-flex align-items-center justify-content-center ${
-            allPassed
-              ? "bg-light-green font-success"
-              : "bg-baby-pink font-danger"
-          }`}
+          } rounded-circle d-inline-flex align-items-center justify-content-center`}
         >
           {allPassed ? <MdEmojiEvents size={28} /> : <MdCancel size={32} />}
         </div>

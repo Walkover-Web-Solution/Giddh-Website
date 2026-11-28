@@ -1,6 +1,5 @@
 .progressTrack {
   display: grid;
-  grid-template-columns: repeat(var(--segments), minmax(0, 1fr));
   gap: 6px;
 }
 
@@ -24,11 +23,15 @@
 }
 
 .statusIconCelebrate {
+  background: var(--col-light-green);
+  color: var(--col-success);
   animation: certCelebrate 0.7s ease-out;
   box-shadow: 0 0 0 8px color-mix(in srgb, var(--col-success) 16%, transparent);
 }
 
 .statusIconFail {
+  background: var(--col-baby-pink);
+  color: var(--col-danger);
   animation: certFailPulse 0.55s ease-out;
   box-shadow: 0 0 0 8px color-mix(in srgb, var(--col-danger) 14%, transparent);
 }

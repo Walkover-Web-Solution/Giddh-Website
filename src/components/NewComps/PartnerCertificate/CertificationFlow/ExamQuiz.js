@@ -101,17 +101,22 @@ export default function ExamQuiz({
       {!showInstructions && (
         <div
           className={styles.progressTrack}
-          style={{ "--segments": totalInModule }}
+          style={{
+            gridTemplateColumns: `repeat(${totalInModule}, minmax(0, 1fr))`,
+          }}
         >
-          {Array.from({ length: totalInModule }).map((_, index) => {
-            let className = styles.progressSeg;
-            if (index < questionIndex) {
-              className += ` ${styles.progressSegDone}`;
-            } else if (index === questionIndex) {
-              className += ` ${styles.progressSegCurrent}`;
-            }
-            return <span key={index} className={className} />;
-          })}
+          {Array.from({ length: totalInModule }).map((_, index) => (
+            <span
+              key={index}
+              className={`${styles.progressSeg} ${
+                index < questionIndex
+                  ? styles.progressSegDone
+                  : index === questionIndex
+                    ? styles.progressSegCurrent
+                    : ""
+              }`}
+            />
+          ))}
         </div>
       )}
 
