@@ -1,4 +1,5 @@
 let libraryPromise;
+const pdfBytesByUrl = new Map();
 
 function saveBlob(blob, filename) {
   const objectUrl = URL.createObjectURL(blob);
@@ -12,16 +13,39 @@ function saveBlob(blob, filename) {
   URL.revokeObjectURL(objectUrl);
 }
 
-/** Same download API PDF → PNG via PDFium. */
-export async function downloadCertificateShareImage(certificate) {
-  if (typeof window === "undefined" || !certificate?.downloadUrl) {
-    return;
+export function prefetchCertificateShareEngine() {
+  if (typeof window === "undefined") {
+    return undefined;
+  }
+  if (!libraryPromise) {
+    libraryPromise = import("@hyzyla/pdfium/browser/cdn").then(
+      ({ PDFiumLibrary }) => PDFiumLibrary.init({ disableCDNWarning: true })
+    );
+  }
+  return libraryPromise;
+}
+
+export function prefetchCertificateShareAssets(downloadUrl) {
+  if (typeof window === "undefined") {
+    return undefined;
+  }
+  const engine = prefetchCertificateShareEngine();
+  if (!downloadUrl) {
+    return engine;
+  }
+  return Promise.all([engine, getPdfBytes(downloadUrl)]);
+}
+
+async function getPdfBytes(downloadUrl) {
+  const cached = pdfBytesByUrl.get(downloadUrl);
+  if (cached) {
+    return cached;
   }
 
-  const response = await fetch(certificate.downloadUrl, {
+  const response = await fetch(downloadUrl, {
     method: "GET",
     mode: "cors",
-    cache: "no-store",
+    cache: "force-cache",
   });
   if (!response.ok) {
     const error = new Error(response.statusText);
@@ -29,24 +53,30 @@ export async function downloadCertificateShareImage(certificate) {
     throw error;
   }
 
-  if (!libraryPromise) {
-    libraryPromise = import("@hyzyla/pdfium/browser/cdn").then(
-      ({ PDFiumLibrary }) => PDFiumLibrary.init({ disableCDNWarning: true })
-    );
+  const bytes = new Uint8Array(await response.arrayBuffer());
+  pdfBytesByUrl.set(downloadUrl, bytes);
+  return bytes;
+}
+
+export async function downloadCertificateShareImage(certificate) {
+  if (typeof window === "undefined" || !certificate?.downloadUrl) {
+    return;
   }
 
-  const library = await libraryPromise;
-  const pdfDocument = await library.loadDocument(
-    new Uint8Array(await response.arrayBuffer())
-  );
+  const [library, pdfBytes] = await Promise.all([
+    prefetchCertificateShareEngine(),
+    getPdfBytes(certificate.downloadUrl),
+  ]);
+
+  const pdfDocument = await library.loadDocument(pdfBytes);
   try {
     const page = pdfDocument.getPage(0);
     try {
-      const rendered = await page.render({ scale: 2, render: "bitmap" });
+      const rendered = await page.render({ scale: 1.5, render: "bitmap" });
       const canvas = window.document.createElement("canvas");
       canvas.width = rendered.width;
       canvas.height = rendered.height;
-      const ctx = canvas.getContext("2d");
+      const ctx = canvas.getContext("2d", { alpha: false });
       if (!ctx) {
         throw new Error("Unable to create share image");
       }
@@ -65,10 +95,11 @@ export async function downloadCertificateShareImage(certificate) {
             result
               ? resolve(result)
               : reject(new Error("Unable to create share image")),
-          "image/png"
+          "image/jpeg",
+          0.9
         );
       });
-      saveBlob(blob, "giddh-certificate.png");
+      saveBlob(blob, "giddh-certificate.jpg");
     } finally {
       page.close();
     }

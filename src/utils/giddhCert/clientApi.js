@@ -220,3 +220,13 @@ export async function submitResult({
     },
   };
 }
+
+export async function discardAttempt({ mobile, countryCode, totalQuestions }) {
+  return submitResult({
+    mobile,
+    countryCode,
+    score: 0,
+    percentage: 0,
+    totalQuestions,
+  });
+}

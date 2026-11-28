@@ -19,8 +19,58 @@
 }
 
 .statusIcon {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
+}
+
+.statusIconCelebrate {
+  animation: certCelebrate 0.7s ease-out;
+  box-shadow: 0 0 0 8px color-mix(in srgb, var(--col-success) 16%, transparent);
+}
+
+.statusIconFail {
+  animation: certFailPulse 0.55s ease-out;
+  box-shadow: 0 0 0 8px color-mix(in srgb, var(--col-danger) 14%, transparent);
+}
+
+.failPanel {
+  width: 100%;
+  background: color-mix(in srgb, var(--col-danger) 6%, var(--col-white));
+  border: 1px solid color-mix(in srgb, var(--col-danger) 18%, var(--col-light-gray));
+}
+
+.congratsEyebrow {
+  letter-spacing: 0.4px;
+}
+
+@keyframes certCelebrate {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.4;
+  }
+  55% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes certFailPulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .instructionList {
